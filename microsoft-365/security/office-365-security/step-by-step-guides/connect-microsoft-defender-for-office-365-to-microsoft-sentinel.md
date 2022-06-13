@@ -1,5 +1,5 @@
 ---
-title: Microsoft Sentinel'e Bağlan Office 365 için Microsoft Defender
+title: Office 365 için Microsoft Defender'ı Microsoft Sentinel'e bağlayın
 description: Office 365 için Microsoft Defender Sentinel'e bağlama adımları. Güvenlik olayı dahil olmak üzere Office 365 için Microsoft Defender verilerinizi (*ve* Microsoft 365 Defender paketinin geri kalanındaki verileri) tek bir cam bölmesi için Microsoft Sentinel'e ekleyin.
 search.product: ''
 search.appverid: ''
@@ -15,16 +15,16 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: ffd954e3bffb7d1781db5b7d0b4819f47aeede39
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: dbdb4c93ea010959c8f2eae61f9add8ea853d2b1
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842513"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043751"
 ---
-# <a name="connect-microsoft-defender-for-office-365-to-microsoft-sentinel"></a>Microsoft Sentinel'e Bağlan Office 365 için Microsoft Defender
+# <a name="connect-microsoft-defender-for-office-365-to-microsoft-sentinel"></a>Office 365 için Microsoft Defender'ı Microsoft Sentinel'e bağlayın
 
 Olaylar da dahil olmak üzere Office 365 için Microsoft Defender verilerinizi (*ve* Microsoft 365 Defender paketinin geri kalanındaki verileri) Microsoft Sentinel'e alabilirsiniz.
 
@@ -34,7 +34,7 @@ Diğer Microsoft 365 kaynaklarından gelen verilerle birlikte zengin güvenlik b
 > Microsoft 365 Defender bağlayıcısı şu anda **ÖNİzLEME aşamasındadır**. Beta, önizleme aşamasında olan veya henüz genel kullanıma sunulmamış Azure özellikleri için geçerli olan ek yasal koşullar için bkz. Microsoft Azure Önizlemeleri için Ek Kullanım Koşulları.>
 
 ## <a name="what-you-will-need"></a>İhtiyacınız olan şey
-- Plan 2 veya üzerini Office 365 için Microsoft Defender.
+- Plan 2 veya üzerini Office 365 için Microsoft Defender. (E5 planlarında bulunur)
 - Microsoft Sentinel [Hızlı Başlangıç kılavuzu](/azure/sentinel/quickstart-onboard).
 - Yeterli izinler (M365'te Güvenlik Yöneticisi & Sentinel'de Okuma/Yazma izinleri).
 

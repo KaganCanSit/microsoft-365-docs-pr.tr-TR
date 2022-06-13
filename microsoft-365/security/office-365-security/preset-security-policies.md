@@ -16,16 +16,16 @@ ms.custom: ''
 description: Yöneticiler, Exchange Online Protection (EOP) ve Office 365 için Microsoft Defender koruma özellikleri arasında Standart ve Katı ilke ayarlarının nasıl uygulanacağını öğrenebilir
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 01fd969461b47b0208dcfd20ff608e829b6a3336
-ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
+ms.openlocfilehash: 06db733b50de51750d6c9f7b3dcf14f28cdff414
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64915983"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66044390"
 ---
 # <a name="preset-security-policies-in-eop-and-microsoft-defender-for-office-365"></a>EOP ve Office 365 için Microsoft Defender'da önceden ayarlanmış güvenlik ilkeleri
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -85,18 +85,25 @@ Profil, koruma düzeyini belirler. Aşağıdaki profiller kullanılabilir:
   > Giden istenmeyen posta ilkeleri önceden ayarlanmış güvenlik ilkelerinin bir parçası değildir. Varsayılan giden istenmeyen posta ilkesi, önceden ayarlanmış güvenlik ilkelerinin üyelerini otomatik olarak korur. Alternatif olarak, önceden ayarlanmış güvenlik ilkelerinin üyeleri için korumayı özelleştirmek için özel giden istenmeyen posta ilkeleri oluşturabilirsiniz. Daha fazla bilgi için bkz. [EOP'de giden istenmeyen posta filtrelemeyi yapılandırma](configure-the-outbound-spam-policy.md).
 
 - **Office 365 için Microsoft Defender ilkeleri**: Bu, Microsoft 365 E5 veya Office 365 için Defender eklenti abonelikleri olan kuruluşları içerir:
-  - Office 365 için Microsoft Defender'da **Standart Ön AyarLı Güvenlik İlkesi** ve **Katı Ön Ayarlı Güvenlik İlkesi** adlı kimlik avı önleme ilkeleri şunlardır:
+  - standart **önayar güvenlik ilkesi** ve **katı önceden ayarlanmış güvenlik** ilkesi adlı Office 365 için Defender kimlik avı önleme ilkeleri, şunlardır:
     - EOP kimlik avı önleme ilkelerinde kullanılabilen kimlik sahtekarlığı [ayarlarının](set-up-anti-phishing-policies.md#spoof-settings) aynısı.
     - [Kimliğe bürünme ayarları](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
     - [Gelişmiş kimlik avı eşikleri](set-up-anti-phishing-policies.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
   - [Kasa](set-up-safe-links-policies.md) **Standart Önceden Ayarlanmış Güvenlik İlkesi**, **Katı Önceden Ayarlanmış Güvenlik İlkesi** ve **Yerleşik Koruma İlkesi** adlı bağlantılar ilkeleri.
   - Kasa **Standart Önceden Ayarlanmış Güvenlik İlkesi, Katı Önceden Ayarlanmış Güvenlik İlkesi** ve **Yerleşik Koruma İlkesi** adlı [Ekler ilkeleri](set-up-safe-attachments-policies.md).
 
-EOP korumalarını Office 365 için Microsoft Defender korumalardan farklı kullanıcılara uygulayabilirsiniz.
+EOP korumalarını Office 365 için Defender korumalardan farklı kullanıcılara uygulayabilir veya aynı alıcılara EOP ve Office 365 için Defender uygulayabilirsiniz.
 
 ### <a name="policy-settings-in-preset-security-policies"></a>Önceden ayarlanmış güvenlik ilkelerindeki ilke ayarları
 
 Koruma profillerindeki ilke ayarlarını değiştiremezsiniz. **Standart**, **Katı** ve **Yerleşik koruma** ilkesi ayarı değerleri [, EOP ve Office 365 için Microsoft Defender güvenliği için önerilen ayarlar](recommended-settings-for-eop-and-office365.md) bölümünde açıklanmıştır.
+
+> [!NOTE]
+> Office 365 için Defender korumalarında, [kullanıcı kimliğe bürünme koruması](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) için gönderenleri ve [etki alanı kimliğe bürünme](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) koruması için iç veya dış etki alanlarını tanımlamanız gerekir.
+>
+> Sahip olduğunuz tüm etki alanları ([kabul edilen etki alanları](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)), önceden ayarlanmış güvenlik ilkelerinde etki alanı kimliğe bürünme korumasını otomatik olarak alır.
+>
+> Tüm alıcılar, önceden ayarlanmış güvenlik ilkelerinde [posta kutusu zekasından](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) otomatik olarak kimliğe bürünme koruması alır.
 
 ### <a name="order-of-precedence-for-preset-security-policies-and-other-policies"></a>Önceden ayarlanmış güvenlik ilkeleri ve diğer ilkeler için öncelik sırası
 
@@ -135,26 +142,75 @@ Başka bir deyişle, **Katı koruma** ilkesinin ayarları Standart **koruma** il
 
 2. **Önceden ayarlanmış güvenlik ilkeleri** sayfasında **, Standart koruma** veya **Katı koruma** bölümlerinde **Yönet'e** tıklayın.
 
-3. **Standart koruma uygulama** veya **Katı koruma uygulama** sihirbazı açılır öğede başlar. **EOP korumaları için geçerlidir** sayfasında, [EOP korumalarının uygulandığı iç alıcıları](#policies-in-preset-security-policies) tanımlayın (alıcı koşulları):
-   - **Kullanıcılar**
-   - **Gruplar**
-   - **Etki alanları**
+3. **Standart koruma uygulama** veya **Katı koruma uygulama** sihirbazı açılır öğede başlar.
 
-   Uygun kutuya tıklayın, bir değer yazmaya başlayın ve sonuçlardan istediğiniz değeri seçin. Bu işlemi gerektiği kadar tekrarlayın. Mevcut bir değeri kaldırmak için Kaldır'a tıklayın ![Kaldır simgesi.](../../media/m365-cc-sc-remove-selection-icon.png) öğesini seçin.
+   **Exchange Online Protection Uygula** sayfasında, [EOP korumalarının uygulandığı iç alıcıları](#policies-in-preset-security-policies) tanımlayın (alıcı koşulları):
+   - **Tüm alıcılar**
+   - **Belirli alıcılar**:
+     - **Kullanıcılar**
+     - **Gruplar**
+     - **Etki alanları**
 
-   Kullanıcılar veya gruplar için çoğu tanımlayıcıyı (ad, görünen ad, diğer ad, e-posta adresi, hesap adı vb.) kullanabilirsiniz, ancak sonuçlarda ilgili görünen ad gösterilir. Kullanıcılar için, tüm kullanılabilir değerleri görmek için tek başına bir yıldız işareti (\*) girin.
+     Uygun kutuya tıklayın, bir değer yazmaya başlayın ve sonuçlardan istediğiniz değeri seçin. Bu işlemi gerektiği kadar tekrarlayın. Mevcut bir değeri kaldırmak için Kaldır'a tıklayın ![Kaldır simgesi.](../../media/m365-cc-sc-remove-selection-icon.png) öğesini seçin.
 
-   - **Bu kullanıcıları, grupları ve etki alanlarını dışlayın**: İlkenin geçerli olduğu iç alıcılara özel durumlar eklemek için (alıcı özel durumları), bu seçeneği belirleyin ve özel durumları yapılandırın. Ayarlar ve davranış, koşullara tam olarak benzer.
+     Kullanıcılar veya gruplar için çoğu tanımlayıcıyı (ad, görünen ad, diğer ad, e-posta adresi, hesap adı vb.) kullanabilirsiniz, ancak sonuçlarda ilgili görünen ad gösterilir. Kullanıcılar için, tüm kullanılabilir değerleri görmek için tek başına bir yıldız işareti (\*) girin.
+
+   - **Hiçbiri**
+
+   - **Bu alıcıları dışla**: İlkenin geçerli olduğu iç alıcılara özel durumlar eklemek için (alıcı özel durumları), bu seçeneği belirleyin ve özel durumları yapılandırın. Ayarlar ve davranış, koşullara tam olarak benzer.
 
    İşiniz bittiğinde **İleri'ye** tıklayın.
 
-4. Office 365 için Microsoft Defender kuruluşlarda, **Office 365 için Microsoft Defender korumalarının geçerli olduğu iç alıcıları** tanımlamak için [Office 365 için Defender korumaların](#policies-in-preset-security-policies) uygulandığı sayfaya yönlendirilirsiniz to (alıcı koşulları).
+   > [!NOTE]
+   > Office 365 için Defender olmayan kuruluşlarda **İleri'ye** tıklamak sizi **Gözden Geçir** sayfasına götürür. **Gözden Geçir** sayfasından önceki kalan adımlar/sayfalar yalnızca Office 365 için Defender sahip kuruluşlarda kullanılabilir.
+
+4. **Office 365 için Defender korumasını uygula** sayfasında, [Office 365 için Defender korumalarının](#policies-in-preset-security-policies) geçerli olduğu iç alıcıları (alıcı koşulları) tanımlayın.
 
    Ayarlar ve davranış, önceki adımda **EOP korumalarının uygulandığı sayfaya** tam olarak benzer.
 
+   Önceki sayfada EOP koruması için seçtiğiniz **alıcıları** kullanmak için Önceden seçilen alıcılar'ı da seçebilirsiniz.
+
    İşiniz bittiğinde **İleri'ye** tıklayın.
 
-5. **Değişikliklerinizi gözden geçirin ve onaylayın** sayfasında, seçimlerinizi doğrulayın ve **onayla'ya** tıklayın.
+5. **Kimliğe Bürünme koruması** sayfasında **İleri'ye** tıklayın.
+
+6. **Saldırganlar tarafından kimliğe bürünüldiğinde bayrak eklemek için e-posta adresleri ekleyin** sayfasında, [kullanıcı kimliğe bürünme koruması](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) tarafından korunan iç ve dış gönderenleri ekleyin.
+
+   > [!NOTE]
+   > Tüm alıcılar, önceden ayarlanmış güvenlik ilkelerinde [posta kutusu zekasından](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) otomatik olarak kimliğe bürünme koruması alır.
+
+   Her giriş bir görünen ad ve bir e-posta adresinden oluşur. Kutulara her değeri girin ve **Ekle'ye** tıklayın. Bu adımı gerektiği kadar tekrarlayın.
+
+   En fazla 350 kullanıcı belirtebilir ve birden çok ilkedeki kullanıcı kimliğe bürünme koruması ayarlarında aynı kullanıcıyı belirtemezsiniz.
+
+   Listeden var olan bir girdiyi kaldırmak için ![Kullanıcıyı kimliğe bürünme koruması simgesinden kaldırın.](../../media/m365-cc-sc-remove.png).
+
+   İşiniz bittiğinde **İleri'ye** tıklayın.
+
+7. **Saldırganlar tarafından kimliğe bürünüldiğinde bayrak eklemek için etki alanları ekle** sayfasında, [etki alanı kimliğe bürünme koruması](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) tarafından korunan iç ve dış etki alanları ekleyin.
+
+   > [!NOTE]
+   > Sahip olduğunuz tüm etki alanları ([kabul edilen etki alanları](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)), önceden ayarlanmış güvenlik ilkelerinde etki alanı kimliğe bürünme korumasını otomatik olarak alır.
+
+   Belirtilen etki alanlarındaki tüm gönderenler etki alanı kimliğe bürünme koruması tarafından korunur.
+
+   Kutuya etki alanını girin ve **Ekle'ye** tıklayın. Bu adımı gerektiği kadar tekrarlayın.
+
+   Listeden var olan bir girdiyi kaldırmak için girdiyi seçin ve ardından ![Kimliğe bürünme koruması simgesinden etki alanını kaldırın.](../../media/m365-cc-sc-remove.png).
+
+   Tüm kimlik avı önleme ilkelerinde etki alanı kimliğe bürünme koruması için belirtebileceğiniz en fazla etki alanı sayısı 50'dir.
+
+   İşiniz bittiğinde **İleri'ye** tıklayın.
+
+8. **Kimliğe bürünme olarak işaretlememek için güvenilen e-posta adresleri ve etki alanları ekle sayfasında, kimliğe bürünme** korumasının dışında tutmak istediğiniz gönderen e-posta adreslerini ve etki alanlarını girin. Bu gönderenlerden gelen iletiler hiçbir zaman kimliğe bürünme saldırısı olarak işaretlenmez, ancak gönderenler EOP ve Office 365 için Defender'deki diğer filtreler tarafından taramaya devam eder.
+
+   Kutuya e-posta adresini veya etki alanını girin ve **Ekle'ye** tıklayın. Bu adımı gerektiği kadar tekrarlayın.
+
+   Listeden var olan bir girdiyi kaldırmak için girdiyi seçin ve ardından ![Kimliğe bürünme koruması simgesinin özel durumlarını kaldırın.](../../media/m365-cc-sc-remove.png).
+
+   İşiniz bittiğinde **İleri'ye** tıklayın.
+
+9. **Bu ilkeyi gözden geçir ve onayla** sayfasında seçimlerinizi doğrulayın ve **onayla'ya** tıklayın.
 
 ### <a name="use-the-microsoft-365-defender-portal-to-modify-the-assignments-of-standard-and-strict-preset-security-policies"></a>Standart ve Katı önceden ayarlanmış güvenlik ilkelerinin atamalarını değiştirmek için Microsoft 365 Defender portalını kullanın
 
@@ -177,7 +233,7 @@ Bu nedenle, **genellikle Yerleşik koruma** önayarlı güvenlik ilkesi için ö
    - **Gruplar**
    - **Etki alanları**
 
-   Uygun kutuya tıklayın, bir değer yazmaya başlayın ve sonuçlardan istediğiniz değeri seçin. Bu işlemi gerektiği kadar tekrarlayın. Mevcut bir değeri kaldırmak için Kaldır'a tıklayın ![Kaldır simgesi.](../../media/m365-cc-sc-remove-selection-icon.png) öğesini seçin.
+   Uygun kutuya tıklayın, bir değer yazmaya başlayın ve sonuçlardan istediğiniz değeri seçin. Bu işlemi gerektiği kadar tekrarlayın. Mevcut bir değeri kaldırmak için Kaldır'a tıklayın ![Yerleşik koruma simgesinden dışlamaları kaldırın.](../../media/m365-cc-sc-remove-selection-icon.png) öğesini seçin.
 
    Kullanıcılar veya gruplar için çoğu tanımlayıcıyı (ad, görünen ad, diğer ad, e-posta adresi, hesap adı vb.) kullanabilirsiniz, ancak sonuçlarda ilgili görünen ad gösterilir. Kullanıcılar için, tüm kullanılabilir değerleri görmek için tek başına bir yıldız işareti (\*) girin.
 

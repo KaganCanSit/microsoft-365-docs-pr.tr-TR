@@ -15,14 +15,14 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: 3a26f20946be39074a18df1b09d392464193599c
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: 234ce1ecb486c01b95c91aa51a0c5fd6b46e7a3c
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842524"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043533"
 ---
 # <a name="prioritize-and-manage-automated-investigations-and-response-air"></a>Otomatik Araştırmalara ve Yanıtlara Öncelik Ver ve Yönet (AIR)
 
@@ -41,7 +41,7 @@ Araştırma eylemlerine (ve araştırmalara) Microsoft Güvenlik portalındaki �
 
 ## <a name="what-youll-need"></a>İhtiyacınız olan şey
 
-- Plan 2 veya üzerini Office 365 için Microsoft Defender
+- Office 365 için Microsoft Defender Plan 2 veya üzeri (E5 ile birlikte)
 - Yeterli izinler (Güvenlik okuyucusu, güvenlik işlemleri veya güvenlik yöneticisi, ayrıca [Arama ve temizleme](../permissions-microsoft-365-security-center.md) rolü)
 
 ## <a name="steps-to-analyze-and-approve-air-actions-directly-from-the-action-center"></a>AIR eylemlerini doğrudan İşlem Merkezi'nden analiz etme ve onaylama adımları
@@ -58,7 +58,7 @@ Araştırma eylemlerine (ve araştırmalara) Microsoft Güvenlik portalındaki �
 1. [Microsoft 365 Defender portalına](https://security.microsoft.com) gidin ve oturum açın.
 2. Sol gezinti bölmesinde **Eylem & gönderimleri'ni** genişletin ve **ardından İşlem Merkezi'ne** tıklayın.
 3. İşlem Merkezi yüklendiğinde **Geçmiş** sekmesine basın.
-4. Alınan kararlar, eylem kaynağı ve uygunsa kararı veren yönetici de dahil olmak üzere AIR'in geçmişini görüntüleyin.
+4. Verilen kararlar, eylem kaynağı ve uygunsa kararı veren yönetici de dahil olmak üzere AIR'in geçmişini görüntüleyin.
 
 ## <a name="more-information"></a>Daha Fazla Bilgi
 

@@ -20,12 +20,12 @@ search.appverid:
 - BCS160
 ms.assetid: 103208f1-e788-4601-aa45-504f896511cd
 description: Bu makalede, Office 365 için Azure ExpressRoute hakkında bilgi edinecek ve ağ planlaması için nasıl kullanacağınızı öğreneceksiniz.
-ms.openlocfilehash: a284472ad84139a5e76eeab38121d62cf3757829
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 59fa69a58bedf6babf2cf277a627d42293487ab1
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095652"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042924"
 ---
 # <a name="network-planning-with-expressroute-for-office-365"></a>Office 365 için ExpressRoute ile Ağ planlaması
 
@@ -46,7 +46,7 @@ Aşağıdaki tabloda, Office 365 bağlamında İnternet ile Azure ExpressRoute b
 |Tahmin edilebilir bir ağ profiliyle doğrudan bağlantı.  <br/> |Hayır  <br/> |Evet  <br/> |
 |IPv6 bağlantısı.  <br/> |Evet  <br/> |Evet  <br/> |
 
-Daha fazla ağ planlama kılavuzu için aşağıdaki başlıkları genişletin. Ayrıca daha derine inen Office 365 Eğitim serisi için 10 parçalık bir [Azure ExpressRoute](https://channel9.msdn.com/series/aer) kaydettik.
+Daha fazla ağ planlama kılavuzu için aşağıdaki başlıkları genişletin.
 
 ## <a name="existing-azure-expressroute-customers"></a>Mevcut Azure ExpressRoute müşterileri
 
@@ -62,7 +62,7 @@ Bu tabloda, devreleriniz üzerinde uygulamayı seçebileceğiniz iki tür eşlem
 |:-----|:-----|:-----|
 |**Hizmetleri** <br/> |IaaS: Azure Sanal Makineler  <br/> |PaaS: Azure genel hizmetleri  <br/> SaaS: Office 365  <br/> SaaS: Dynamics 365  <br/> |
 |Bağlantı başlatma*** <br/> |Müşteriden Microsoft'a  <br/> Microsoft'ta Müşteri  <br/> |Müşteriden Microsoft'a  <br/> Microsoft'ta Müşteri  <br/> |
-|**QoS desteği** <br/> |QoS yok  <br/> |<sup>QoS1</sup> <br/> |
+|**QoS desteği** <br/> |QoS yok  <br/> |QoS<sup>1</sup> <br/> |
 
 <sup>1 </sup> QoS yalnızca şu anda Skype Kurumsal destekler.
   
@@ -104,15 +104,15 @@ Office 365 bağlantıları için ExpressRoute için kullanılan ağ/güvenlik ç
 
 - Müşterilerin, yedeklilik, yüksek kullanılabilirlik ve olağanüstü durum kurtarma için en iyi yöntemlere uygun olarak Office 365 için ExpressRoute ile kullanılacak güvenlik/çevre topolojilerini tasarlamaları teşvik edilir.
 
-Aşağıda, yukarıda açıklanan çevre güvenlik modelleri ile farklı Azure ExpressRoute bağlantı seçeneklerini karşılaştıran woodgrove bank örneği verilmiştir.
+Aşağıda, yukarıda açıklanan çevre güvenlik modelleri ile farklı Azure ExpressRoute bağlantı seçeneklerini karşılaştıran bir Contoso örneği verilmiştir.
   
 ### <a name="example-1-securing-azure-expressroute"></a>Örnek 1: Azure ExpressRoute güvenliğini sağlama
   
-Woodgrove Bank, Azure ExpressRoute'u uygulamayı düşünüyor ve [Office 365 için ExpressRoute ile Yönlendirme için](routing-with-expressroute.md) en uygun mimariyi planladıktan sonra ve bant genişliği gereksinimlerini anlamak için yukarıdaki kılavuzu kullandıktan sonra çevrelerinin güvenliğini sağlamak için en iyi yöntemi belirler.
+Contoso, Azure ExpressRoute'u uygulamayı düşünüyor ve [Office 365 için ExpressRoute ile Yönlendirme için](routing-with-expressroute.md) en uygun mimariyi planladıktan sonra ve bant genişliği gereksinimlerini anlamak için yukarıdaki kılavuzu kullandıktan sonra çevresini korumak için en iyi yöntemi belirler.
   
-Birden çok kıtada konumları olan çok uluslu bir kuruluş olan Woodgrove için güvenliğin tüm çevrelere yayılması gerekir. Woodgrove için en uygun bağlantı seçeneği, her kıtadaki çalışanlarının ihtiyaçlarına hizmet etmek için dünyanın dört bir yanındaki birden fazla eşleme konumuyla çok noktalı bir bağlantıdır. Her kıtada, kıta içindeki yedekli Azure ExpressRoute bağlantı hatları vardır ve güvenlik bunların tümüne yayılmalıdır.
+Birden çok kıtada konumları olan çok uluslu bir kuruluş olan Contoso için güvenliğin tüm çevrelere yayılması gerekir. Contoso için en uygun bağlantı seçeneği, her kıtadaki çalışanlarının ihtiyaçlarına hizmet etmek için dünyanın dört bir yanındaki birden çok eşleme konumuyla çok noktalı bir bağlantıdır. Her kıtada, kıta içindeki yedekli Azure ExpressRoute bağlantı hatları vardır ve güvenlik bunların tümüne yayılmalıdır.
   
-Woodgrove'un mevcut altyapısı güvenilirdir ve ek işleri gerçekleştirebilir. Bunun sonucunda Woodgrove Bank, Azure ExpressRoute ve internet çevre güvenliği için altyapıyı kullanabilir. Böyle bir durum olmasaydı Woodgrove mevcut ekipmanlarını desteklemek veya farklı bir bağlantı türünü işlemek için daha fazla ekipman satın almayı seçebilirdi.
+Contoso'nun mevcut altyapısı güvenilirdir ve ek işleri gerçekleştirebilir. Bunun sonucunda Contoso, Azure ExpressRoute ve internet çevre güvenliği için altyapıyı kullanabilir. Böyle bir durum söz konusu değilse Contoso, mevcut ekipmanlarını desteklemek veya farklı bir bağlantı türünü işlemek için daha fazla ekipman satın almayı seçebilir.
   
 ## <a name="high-availability-and-failover-with-azure-expressroute"></a>Azure ExpressRoute ile yüksek kullanılabilirlik ve yük devretme
 <a name="BKMK_high-availability"> </a>
@@ -158,13 +158,13 @@ Yedek olarak İnternet ile tek bir ExpressRoute bağlantı hattı kullanmanızı
   
 ### <a name="example-2-failover-and-high-availability"></a>Örnek 2: Yük Devretme ve Yüksek Kullanılabilirlik
   
-Woodgrove Bank'ın çok coğrafi tasarımında yönlendirme, bant genişliği, güvenlik gözden geçirildi ve şimdi yüksek kullanılabilirlik gözden geçirmesi gerekiyor. Woodgrove üç kategoriyi kapsayan yüksek kullanılabilirlik hakkında düşünür; dayanıklılık, güvenilirlik ve yedeklilik.
+Contoso'nun çok coğrafi tasarımında yönlendirme, bant genişliği, güvenlik gözden geçirildi ve şimdi yüksek kullanılabilirlik gözden geçirmesi gerekiyor. Contoso üç kategoriyi kapsayan yüksek kullanılabilirlik hakkında düşünür; dayanıklılık, güvenilirlik ve yedeklilik.
   
-Dayanıklılık, Woodgrove'un hatalardan hızlı bir şekilde kurtulmasını sağlar. Güvenilirlik, Woodgrove'un sistem içinde tutarlı bir sonuç sunmasını sağlar. Yedeklilik, Woodgrove'un bir veya daha fazla yansıtılmış altyapı örneği arasında geçiş yapmasını sağlar.
+Dayanıklılık, Contoso'nın hatalardan hızlı bir şekilde kurtulmasını sağlar. Güvenilirlik, Contoso'nın sistem içinde tutarlı bir sonuç sunmasını sağlar. Yedeklilik, Contoso'nun bir veya daha fazla yansıtılmış altyapı örneği arasında geçiş yapmasını sağlar.
   
-Her kenar yapılandırmasında Woodgrove yedekli Güvenlik Duvarları, Proxy'ler ve IDS'ye sahiptir. Woodgrove, Kuzey Amerika için Dallas veri merkezinde bir uç yapılandırmaya ve Virginia veri merkezinde başka bir uç yapılandırmasına sahiptir. Her konumdaki yedekli ekipman, bu konuma dayanıklılık sağlar.
+Her uç yapılandırmasında Contoso'nun yedekli Güvenlik Duvarları, Proxy'leri ve IDS'si vardır. Kuzey Amerika için Contoso'nun Dallas veri merkezinde bir uç yapılandırması ve Virginia veri merkezinde başka bir uç yapılandırması vardır. Her konumdaki yedekli ekipman, bu konuma dayanıklılık sağlar.
   
-Woodgrove Bank'ın ağ yapılandırması birkaç temel ilkeye göre oluşturulmuştur:
+Contoso'daki ağ yapılandırması birkaç temel ilkeye göre oluşturulur:
   
 - Her coğrafi bölgede birden çok Azure ExpressRoute bağlantı hattı vardır.
 
@@ -172,15 +172,15 @@ Woodgrove Bank'ın ağ yapılandırması birkaç temel ilkeye göre oluşturulmu
 
 - Yönlendirme, kullanılabilirliğe, konuma vb. bağlı olarak bir yolu veya diğer yolu açıkça tercih eder.
 
-- Azure ExpressRoute bağlantı hatları arasında yük devretme, Woodgrove tarafından gereken ek yapılandırma veya eylem olmadan otomatik olarak gerçekleşir.
+- Azure ExpressRoute bağlantı hatları arasında yük devretme, Contoso tarafından ek yapılandırma veya eylem gerekmeden otomatik olarak gerçekleşir.
 
-- İnternet devreleri arasında yük devretme, Woodgrove tarafından gereken ek yapılandırma veya eylem olmadan otomatik olarak gerçekleşir.
+- İnternet devreleri arasında yük devretme, Contoso tarafından ek yapılandırma veya eylem gerekmeden otomatik olarak gerçekleşir.
 
-Bu yapılandırmada, fiziksel ve sanal düzeyde yedeklilik ile Woodgrove Bank, güvenilir bir şekilde yerel dayanıklılık, bölgesel dayanıklılık ve küresel dayanıklılık sunabilir. Woodgrove, bölge başına tek bir Azure ExpressRoute bağlantı hattının yanı sıra İnternet'e yük devretme olasılığını değerlendirdikten sonra bu yapılandırmayı seçti.
+Bu yapılandırmada, fiziksel ve sanal düzeyde yedeklilik ile Contoso, güvenilir bir şekilde yerel dayanıklılık, bölgesel dayanıklılık ve küresel dayanıklılık sunabilir. Contoso, bölge başına tek bir Azure ExpressRoute bağlantı hattını ve İnternet'e yük devretme olasılığını değerlendirdikten sonra bu yapılandırmayı seçti.
   
-Woodgrove bölge başına birden çok Azure ExpressRoute bağlantı hattına sahip olamadıysa, Kuzey Amerika kaynaklı trafiğin Asya Pasifik'teki Azure ExpressRoute bağlantı hattına yönlendirilmesi kabul edilemez bir gecikme düzeyi ekler ve gerekli DNS ileticisi yapılandırması karmaşıklık ekler.
+Contoso bölge başına birden çok Azure ExpressRoute bağlantı hattına sahip olamadıysa, Kuzey Amerika kaynaklı trafiğin Asya Pasifik'teki Azure ExpressRoute bağlantı hattına yönlendirilmesi kabul edilemez bir gecikme düzeyi ekler ve gerekli DNS ileticisi yapılandırması karmaşıklık ekler.
   
-İnternet'i yedekleme yapılandırması olarak kullanmak önerilmez. Bu, Woodgrove'un güvenilirlik ilkesini bozarak bağlantıyı tutarsız bir deneyime neden olur. Ayrıca yapılandırılan BGP tanıtımları, NAT yapılandırması, DNS yapılandırması ve ara sunucu yapılandırması dikkate alınarak el ile yapılandırmanın yük devretmesi gerekir. Bu ek yük devretme karmaşıklığı kurtarma süresini artırır ve ilgili adımları tanılama ve sorun giderme becerilerini azaltır.
+İnternet'i yedekleme yapılandırması olarak kullanmak önerilmez. Bu, Contoso'nun güvenilirlik ilkesini bozarak bağlantıyı kullanma konusunda tutarsız bir deneyime neden olur. Ayrıca yapılandırılan BGP tanıtımları, NAT yapılandırması, DNS yapılandırması ve ara sunucu yapılandırması dikkate alınarak el ile yapılandırmanın yük devretmesi gerekir. Bu ek yük devretme karmaşıklığı kurtarma süresini artırır ve ilgili adımları tanılama ve sorun giderme becerilerini azaltır.
   
 Trafik yönetimini veya Azure ExpressRoute'u planlama ve uygulama hakkında hala sorularınız mı var? [Ağ ve performans kılavuzumuzun](./network-planning-and-performance.md) geri kalanını veya [Azure ExpressRoute SSS](/azure/expressroute/expressroute-faqs) bölümünü okuyun.
   

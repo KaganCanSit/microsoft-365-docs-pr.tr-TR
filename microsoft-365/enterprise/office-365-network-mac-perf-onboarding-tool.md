@@ -14,12 +14,12 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 description: Microsoft 365 ağ bağlantısı test aracı
-ms.openlocfilehash: 047a1ad10efa20f2c47491a20855a92bf141eb15
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: ac2ec12ac0da2309e1d5ac0c35bbd0462cc68a62
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705591"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043719"
 ---
 # <a name="microsoft-365-network-connectivity-test-tool"></a>Microsoft 365 ağ bağlantısı test aracı
 
@@ -261,10 +261,17 @@ Windows Dosya Gezgini'da yürütülebilir dosyaya çift tıklayarak çalıştır
 
 Yürütülebilir dosyayı ilk kez başlattığınızda, test yapılmadan önce son kullanıcı lisans sözleşmesini (EULA) kabul etmek isteyip istemediğiniz sorulur. EULA'yı zaten okuduysanız ve kabul ettiyseniz yürütülebilir işlem başlatıldığında geçerli çalışma dizininde Microsoft-365-Network-Connectivity-Test-EULA-accepted.txt adlı boş bir dosya oluşturabilirsiniz. EULA'yı kabul etmek için 'y' yazabilir ve istendiğinde komut satırı penceresinde Enter tuşuna basabilirsiniz.
 
-Yürütülebilir dosya, bu yardım belgelerinin bağlantısını göstermek için /h komut satırı parametresini kabul eder.
+Yürütülebilir dosya aşağıdaki komut satırı parametrelerini kabul eder:
+- Bu yardım belgelerinin bağlantısını göstermek için -h
+- -testlist &lt;test&gt; Çalıştırılacak testleri belirtir. Varsayılan olarak yalnızca temel testler çalıştırılır. Geçerli test adları şunlardır: all, dnsConnectivityPerf, dnsResolverIdentification, bufferBloat, traceroute, proxy, vpn, skype, connectivity, networkInterface
+- -filepath &lt;filedir&gt; Test sonucu dosyalarının dizin yolu. İzin verilen değer, erişilebilir bir dizinin mutlak veya göreli yoludur
+- -city &lt;city&gt; Şehir, eyalet ve ülke alanları için belirtilen değer sağlanırsa kullanılır. Sağlanmazsa konum hizmetleri (WLS) Windows sorgulanır. WLS başarısız olursa, makine ağ çıkışından konum algılanır 
+- -state &lt;state&gt;
+- -ülke ülke &lt;&gt; 
+- -proxy &lt;hesabı&gt; &lt;parolası&gt; İnternet'e erişmek için ara sunucuya ihtiyacınız varsa Ara sunucu hesabı adı ve parolası sağlanabilir
 
 ### <a name="results"></a>Sonuç -ları
-Sonuçların çıktısı, henüz mevcut olmadığı sürece işlemin geçerli çalışma dizininde oluşturulan TestResults adlı klasördeki bir JSON dosyasına yazılır. Çıktının dosya adı biçimi connectivity_test_result_YYYY-MM-DD-HH-MM-SS.json şeklindedir. Sonuçlar, Microsoft 365 ağ bağlantısı test aracı web sitesinin web sayfasında gösterilen çıktıyla eşleşen JSON düğümlerinde bulunur. Her çalıştırdığınızda yeni bir sonuç dosyası oluşturulur ve tek başına yürütülebilir dosya, Sonuçları Yönetim Merkezi Ağ Bağlantısı sayfalarında görüntülemek üzere Microsoft kiracınıza yüklemez.
+Sonuçların çıktısı, henüz mevcut olmadığı sürece işlemin geçerli çalışma dizininde oluşturulan TestResults adlı klasördeki bir JSON dosyasına yazılır. Çıktının dosya adı biçimi connectivity_test_result_YYYY-MM-DD-HH-MM-SS.json şeklindedir. Sonuçlar, Microsoft 365 ağ bağlantısı test aracı web sitesinin web sayfasında gösterilen çıktıyla eşleşen JSON düğümlerinde bulunur. Her çalıştırdığınızda yeni bir sonuç dosyası oluşturulur ve tek başına yürütülebilir dosya, Sonuçları Yönetim Merkezi Ağ Bağlantısı sayfalarında görüntülemek üzere Microsoft kiracınıza yüklemez. Ön kapı kodları, boylamlar ve enlemler sonuç dosyasına dahil değildir.
 
 ### <a name="launching-from-windows-file-explorer"></a>Windows Dosya Gezgini'den başlatma
 Testi başlatmak için yürütülebilir dosyaya çift tıklayabilirsiniz ve bir komut istemi penceresi görüntülenir.

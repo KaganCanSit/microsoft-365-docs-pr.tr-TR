@@ -15,12 +15,12 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: Yöneticiler, kuruluşlarının fiziksel badging sisteminden Microsoft 365 verileri içeri aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, bu verileri, kuruluşunuz için olası bir iç tehdit oluşturabilecek belirli kullanıcılar tarafından fiziksel binalarınıza erişimi algılamanıza yardımcı olmak için şirket içi risk yönetimi ilkelerinde kullanmanıza olanak tanır.
-ms.openlocfilehash: 96017d6477f914c799fecbe834abdac22917bfaa
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 41fd7f1214b231668b56e9326055ad736dcd387e
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077964"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66044026"
 ---
 # <a name="set-up-a-connector-to-import-physical-badging-data-preview"></a>Fiziksel badging verilerini içeri aktarmak için bağlayıcı ayarlama (önizleme)
 
@@ -30,7 +30,7 @@ ms.locfileid: "65077964"
 
 Fiziksel bir badging bağlayıcısı ayarlamak aşağıdaki görevlerden oluşur:
 
-- fiziksel badging verileri içeren bir JSON yükünü kabul eden bir API uç noktasına erişmek için Azure Active Directory 'de (Azure AD) bir uygulama oluşturma.
+- fiziksel badging verileri içeren bir JSON yükünü kabul eden bir API uç noktasına erişmek için Azure Active Directory (Azure AD) içinde bir uygulama oluşturma.
 
 - Fiziksel badging veri bağlayıcısı tarafından tanımlanan bir şema ile JSON yükünü oluşturma.
 
@@ -55,15 +55,15 @@ Fiziksel bir badging bağlayıcısı ayarlamak aşağıdaki görevlerden oluşur
 
 ## <a name="step-1-create-an-app-in-azure-active-directory"></a>1. Adım: Azure Active Directory'de uygulama oluşturma
 
-İlk adım, Azure Active Directory'de (Azure AD) yeni bir uygulama oluşturmak ve kaydetmektir. Uygulama, 3. Adımda oluşturduğunuz fiziksel badging bağlayıcısına karşılık gelir. Bu uygulamanın oluşturulması, Azure AD'nin fiziksel badging verileri içeren JSON yükü için anında iletme isteğinin kimliğini doğrulamasını sağlar. Bu Azure AD uygulamasını oluştururken aşağıdaki bilgileri kaydettiğinizden emin olun. Bu değerler sonraki adımlarda kullanılacaktır.
+İlk adım, Azure Active Directory'de (Azure AD) yeni bir uygulama oluşturmak ve kaydetmektir. Uygulama, 3. Adımda oluşturduğunuz fiziksel badging bağlayıcısına karşılık gelir. Bu uygulamanın oluşturulması, Azure AD fiziksel badging verilerini içeren JSON yükü için anında iletme isteğinin kimliğini doğrulamasını sağlar. Bu Azure AD uygulamasını oluştururken aşağıdaki bilgileri kaydettiğinizden emin olun. Bu değerler sonraki adımlarda kullanılacaktır.
 
-- Azure AD uygulama kimliği ( *uygulama kimliği* veya *istemci kimliği* olarak da adlandırılır)
+- Azure AD uygulama kimliği (*uygulama kimliği* veya *istemci kimliği* olarak da adlandırılır)
 
-- Azure AD uygulama gizli dizisi ( *istemci gizli dizisi* olarak da adlandırılır)
+- Azure AD uygulama gizli dizisi (*istemci gizli dizisi* olarak da adlandırılır)
 
 - Kiracı Kimliği ( *dizin kimliği* olarak da adlandırılır)
 
-Azure AD'de uygulama oluşturmaya yönelik adım adım yönergeler için bkz. [Uygulamayı Microsoft kimlik platformu kaydetme](/azure/active-directory/develop/quickstart-register-app).
+Azure AD'da uygulama oluşturmaya yönelik adım adım yönergeler için bkz. [Uygulamayı Microsoft kimlik platformu kaydetme](/azure/active-directory/develop/quickstart-register-app).
 
 ## <a name="step-2-prepare-a-json-file-with-physical-badging-data"></a>2. Adım: Fiziksel badging verileriyle JSON dosyası hazırlama
 
@@ -150,7 +150,7 @@ Sonraki adım, uyumluluk portalında fiziksel bir badging bağlayıcısı oluşt
 
 4. **Kimlik doğrulama kimlik bilgileri** sayfasında aşağıdakileri yapın ve **İleri'ye** tıklayın:
 
-   1. 1. Adımda oluşturduğunuz Azure uygulaması için Azure AD uygulama kimliğini yazın veya yapıştırın.
+   1. 1. Adımda oluşturduğunuz Azure uygulamasının Azure AD uygulama kimliğini yazın veya yapıştırın.
 
    2. JSON dosyasını oluşturmak için başvurunuzun örnek şemasını indirin.
 
@@ -199,9 +199,9 @@ Betiği çalıştırdıktan sonra, fiziksel badging verilerini içeren JSON dosy
 
    |Parametre|Açıklama|
    |---|---|
-   |tenantId|Bu, 1. Adımda aldığınız Microsoft 365 kuruluşunuzun kimliğidir. Ayrıca Azure AD yönetim merkezindeki **Genel Bakış** dikey penceresinde kuruluşunuzun tenantId değerini de alabilirsiniz. Bu, kuruluşunuzu tanımlamak için kullanılır.|
-   |Appıd|Bu, 1. Adımda Azure AD'de oluşturduğunuz uygulamanın Azure AD uygulama kimliğidir. Bu, betik Microsoft 365 kuruluşunuza erişmeye çalıştığında Azure AD tarafından kimlik doğrulaması için kullanılır.|
-   |appSecret|Bu, 1. Adımda Azure AD'de oluşturduğunuz uygulamanın Azure AD uygulama gizli dizisidir. Bu, kimlik doğrulaması için de kullanılır.|
+   |tenantId|Bu, 1. Adımda aldığınız Microsoft 365 kuruluşunuzun kimliğidir. Ayrıca kuruluşunuzun tenantId değerini Azure AD yönetim merkezindeki **Genel Bakış** dikey penceresinden de edinebilirsiniz. Bu, kuruluşunuzu tanımlamak için kullanılır.|
+   |Appıd|Bu, 1. Adımda Azure AD oluşturduğunuz uygulamanın Azure AD uygulama kimliğidir. Bu, Azure AD tarafından betik Microsoft 365 kuruluşunuza erişmeye çalıştığında kimlik doğrulaması için kullanılır.|
+   |appSecret|Bu, 1. Adımda Azure AD oluşturduğunuz uygulamanın Azure AD uygulama gizli dizisidir. Bu, kimlik doğrulaması için de kullanılır.|
    |Jobıd|Bu, 3. Adımda oluşturduğunuz fiziksel badging bağlayıcısının İş Kimliğidir. Bu, Microsoft buluta gönderilen fiziksel badging verilerini fiziksel badging bağlayıcısıyla ilişkilendirmek için kullanılır.|
    |JsonFilePath|Bu, 2. Adımda oluşturduğunuz JSON dosyasının yerel bilgisayardaki dosya yoludur (betiği çalıştırmak için kullandığınız dosya). Bu dosya, 3. Adım'da açıklanan örnek şemayı izlemelidir.|
    |||
@@ -233,7 +233,7 @@ Fiziksel badging bağlayıcısını oluşturduktan ve fiziksel badging verilerin
 
    ![Fiziksel badging bağlayıcısı günlük dosyası, JSON dosyasından karşıya yüklenen nesne sayısını görüntüler.](..\media\PhysicalBadgingConnectorLogFile.png)
 
-   **RecordsSaved** alanı, JSON dosyasında karşıya yüklenen nesne sayısını gösterir. Örneğin, JSON dosyası dört nesne içeriyorsa, betik JSON dosyasındaki tüm nesneleri başarıyla karşıya yüklediyse **RecordsSaved** alanlarının değeri 4 olur.
+   **RecordsSaved** alanı, JSON dosyasında karşıya yüklenen kayıt sayısını gösterir. Örneğin, JSON dosyası dört kayıt içeriyorsa, betik JSON dosyasındaki tüm kayıtları başarıyla karşıya yüklediyse **RecordsSaved** alanlarının değeri 4 olur. **RecordsSkipped** alanı, JSON dosyasında atlanan kayıt sayısını gösterir. JSON dosyasına kayıt yüklemeden önce kayıtların E-posta kimlikleri doğrulanır. Geçersiz e-posta kimliğine sahip tüm kayıtlar atlanır ve e-posta kimliği **EmailIdsNotSaved** alanında görüntülenir
 
 4. Adımda betiği çalıştırmadıysanız, **Son içeri aktarma** altında betiği indirme bağlantısı görüntülenir. Betiği indirebilir ve ardından çalıştırmak için 4. Adım'daki adımları izleyebilirsiniz.
 

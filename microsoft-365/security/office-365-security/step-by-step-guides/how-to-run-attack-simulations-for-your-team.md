@@ -1,5 +1,5 @@
 ---
-title: Ekibiniz için saldırı simülasyonlarını çalıştırma
+title: Ekibiniz için saldırı simülasyonları nasıl çalıştırılır?
 description: Eğitim için ekibiniz veya kuruluşunuz için hedef kullanıcılarınıza Saldırı Benzetimi yükü gönderme adımları. Sanal saldırılar, kuruluşunuzu gerçek bir saldırı etkilemeden önce savunmasız kullanıcıları, ilkeleri ve uygulamaları belirlemenize ve bulmanıza yardımcı olabilir.
 search.product: ''
 search.appverid: ''
@@ -15,16 +15,16 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: 96b1d512f89cafb782b348a0692fbf5c19902ebf
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: c67c709a36c07b947cd1b92abefcc7548acf8f3a
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842514"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66044311"
 ---
-# <a name="how-to-run-attack-simulations-for-your-team"></a>Ekibiniz için saldırı simülasyonlarını çalıştırma
+# <a name="how-to-run-attack-simulations-for-your-team"></a>Ekibiniz için saldırı simülasyonları nasıl çalıştırılır?
 
 Saldırı simülasyonu eğitimi, kuruluşunuzda gerçekçi ama zararsız siber saldırı senaryoları çalıştırmanızı sağlar. Sanal saldırılar, kuruluşunuzu gerçek bir saldırı etkilemeden önce savunmasız kullanıcıları, ilkeleri ve uygulamaları belirlemenize ve bulmanıza yardımcı olabilir, riski azaltmak ve son kullanıcıları tehditler hakkında daha iyi eğitmek için oluşturulmuş veya özel eğitimden yararlanabilir.
 

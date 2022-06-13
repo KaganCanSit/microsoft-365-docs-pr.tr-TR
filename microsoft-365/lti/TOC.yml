@@ -24,3 +24,9 @@
       href: moodle-plugin-configuration.md
     - name: Moodle ile Microsoft Teams sınıflarını ve toplantılarını kullanma
       href: teams-classes-meetings-with-moodle.md
+- name: Open LMS tümleştirmeleri
+  items:
+    - name: Open LMS için Moodle eklentisini ayarlama ve yapılandırma
+      href: open-lms-plugin-configuration.md
+    - name: Open LMS ile Microsoft Teams sınıflarını ve toplantılarını kullanma
+      href: open-lms-teams-classes-and-meetings.md

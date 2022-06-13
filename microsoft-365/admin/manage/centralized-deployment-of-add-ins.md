@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: b4527d49-4073-4b43-8274-31b7a3166f92
 description: Office Eklentileri dağıtmak için Merkezi Dağıtım'ı kullanabilmek için kiracınızın ve kullanıcılarınızın gereksinimleri karşılayıp karşılamadığını belirleyin.
-ms.openlocfilehash: 4d135e76034880e1419e296f2c201536be98b4bc
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 3b6517724a89572f971710b8c455866ac44f587e
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093778"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043318"
 ---
 # <a name="determine-if-centralized-deployment-of-add-ins-works-for-your-organization"></a>Eklentilerin Merkezi Dağıtımının kuruluşunuz için çalışıp çalışmadığını belirleme
 
@@ -39,7 +39,7 @@ Merkezi Dağıtım şu avantajları sağlar:
 - İlgili Office uygulaması başlatıldığında eklenti otomatik olarak indirilir. Eklenti eklenti komutlarını destekliyorsa, eklenti otomatik olarak Office uygulamasının içindeki şeritte görünür.
 - Yönetici eklentiyi kapatır veya silerse veya kullanıcı Azure Active Directory veya eklentinin atandığı bir gruptan kaldırılırsa, eklentiler artık kullanıcılar için görünmez.
 
-Merkezi Dağıtım, Mac ve Çevrimiçi Office uygulamaları Windows üç masaüstü platformlarını destekler. Merkezi Dağıtım ayrıca iOS ve Android'i de destekler (yalnızca mobil eklentiler Outlook).
+Merkezi Dağıtım, Mac ve Çevrimiçi Office uygulamaları Windows üç masaüstü platformlarını destekler. Merkezi Dağıtım ayrıca iOS ve Android (Yalnızca Mobil Eklentiler Outlook) destekler.
 
 Tüm kullanıcılar için eklentinin istemcide görünmesi 24 saati bulabilir.
 
@@ -123,6 +123,8 @@ Aracın çalışması bittiğinde, virgülle ayrılmış dosya (.csv) biçiminde
 - Office planı - Lisanslandıkları Office planı
 - Office Etkinleştirildi - Office'i etkinleştirdiyse
 - Desteklenen Posta Kutusu - OAuth özellikli bir posta kutusu kullanıyorsa
+
+Microsoft 365 raporlarınızda gerçek kullanıcı adları yerine anonim kullanıcı adları gösteriliyorsa, Microsoft 365 yönetim merkezi raporlar ayarını değiştirerek bu sorunu düzeltin. Ayrıntılı adımlar için bkz. [Microsoft 365 raporlar gerçek kullanıcı adları yerine anonim kullanıcı adlarını gösterir](/office365/troubleshoot/miscellaneous/reports-show-anonymous-user-name).
 
 > [!NOTE]
 > Merkezi Dağıtım PowerShell modülü kullanılırken çok faktörlü kimlik doğrulaması desteklenmez. Modül yalnızca Temel kimlik doğrulaması ile çalışır.

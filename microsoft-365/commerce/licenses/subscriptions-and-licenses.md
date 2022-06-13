@@ -22,16 +22,16 @@ ms.custom:
 search.appverid: MET150
 description: Aldığınız uygulamalar ve hizmetler, İş için Microsoft 365 Uygulamaları gibi satın aldığınız Microsoft 365 ürüne bağlıdır.
 ms.date: 05/12/2022
-ms.openlocfilehash: 48186847368af2bc43831c6e27ef7d347981f1b3
-ms.sourcegitcommit: 4e7ff69f4d7d27c2d419f763cfcb069e3b0d0d9f
+ms.openlocfilehash: 56b650a4690151c913855d0007a34d2e2ddcba89
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65403238"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043425"
 ---
 # <a name="understand-subscriptions-and-licenses-in-microsoft-365-for-business"></a>Microsoft 365 İş'teki abonelikleri ve lisansları anlama
 
-İşletmeler için Microsoft 365 aboneliği satın aldığınızda, aylık veya yıllık olarak ödeme yaptığınız bir dizi uygulama ve hizmet için kaydolabilirsiniz. Aboneliğinizin bir parçası olarak aldığınız uygulamalar ve hizmetler, İş için Microsoft 365 Uygulamaları veya Microsoft 365 İş Standart gibi satın aldığınız ürüne bağlıdır. [Küçük ve orta ölçekli işletmeler için Microsoft 365](https://products.office.com/compare-all-microsoft-office-products?&activetab=tab:primaryr1) sayfasında her ürünle birlikte gelenleri görebilirsiniz.
+İşletmeler için Microsoft 365 aboneliği satın aldığınızda, aylık veya yıllık olarak ödeme yaptığınız bir dizi uygulama ve hizmet için kaydolabilirsiniz. Aboneliğinizin bir parçası olarak aldığınız uygulamalar ve hizmetler, İş için Microsoft 365 Uygulamaları veya Microsoft 365 İş Standart gibi satın aldığınız ürüne bağlıdır. [Küçük ve orta ölçekli işletmeler için Microsoft 365](https://www.microsoft.com/microsoft-365/business/compare-all-microsoft-365-business-products) sayfasında her ürünle birlikte gelenleri görebilirsiniz.
 
 Abonelik satın alırken, kuruluşunuzdaki kişi sayısına bağlı olarak ihtiyacınız olan lisans sayısını belirtirsiniz. Abonelik satın aldıktan sonra, kuruluşunuzdaki kişiler için hesaplar oluşturur ve ardından her kişiye bir lisans atarsınız. Kuruluş gereksinimleriniz değiştikçe, yeni kişileri barındırmak için daha fazla lisans satın alabilir veya birisi kuruluşunuzdan ayrıldığında diğer kullanıcılara lisansları yeniden atayabilirsiniz.
 
@@ -55,10 +55,10 @@ Aboneliğiniz aşağıdaki ürünlerden herhangi birini içeriyorsa, her kişi e
 Aşağıdaki tabloda birine lisans atadığınızda otomatik olarak nelerin gerçekleştiği listelenir:
   
 |Aboneliğe bu hizmet dahilse|Bu işlem otomatik olarak yapılır|
-|:-----|:-----|
-|Exchange Online|O kişi için bir posta kutusu oluşturulur. <br/> Bu görevin tamamlanması için SLA hakkında bilgi edinmek için bkz. ["Ayarlanıyor..." Microsoft 365 yönetim merkezi iletileri](https://support.microsoft.com/help/2635238/setting-up-messages-in-the-office-365-admin-center). |
+|---|---|
+|Exchange Online|O kişi için bir posta kutusu oluşturulur. <br/> Bu görevin tamamlanması için SLA hakkında bilgi edinmek için bkz. ["Ayarlanıyor..." Microsoft 365 yönetim merkezi iletileri](https://support.microsoft.com/help/2635238/setting-up-messages-in-the-office-365-admin-center).|
 |SharePoint Online|Kişiye varsayılan SharePoint Online ekip sitesi üzerinde düzenleme izinleri atanır.|
-|Skype Kurumsal Çevrimiçi|Kişinin lisansla ilişkili özelliklere erişimi vardır.|
+|Microsoft Teams|Kişinin lisansla ilişkili özelliklere erişimi vardır.|
 |Kurumlar için Microsoft 365 Uygulamaları ve İş için Microsoft 365 Uygulamaları|Kişi en fazla beş Mac bilgisayara veya bilgisayara, beş tablete ve beş akıllı telefona Office uygulamaları indirebilir.|
 
 ## <a name="understand-licenses-for-non-user-mailboxes"></a>Kullanıcıya ait olmayan posta kutularına yönelik lisansları anlama
@@ -74,7 +74,7 @@ Kaynak posta kutuları, oda posta kutuları ve paylaşılan posta kutuları 50 g
 Farklı türdeki yöneticiler, rollerine bağlı olarak lisanslarla farklı şekillerde çalışabilir. Aşağıdaki tabloda en yaygın seçenekler listelenmiştir. Yönetici rollerinin ve ayrıcalıklarının tam listesi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
   
 |Yönetici rolü|Lisans atama|Lisansın atamasını kaldırma|Daha fazla lisans satın alma|Hesabı silme|
-|:-----|:-----|:-----|:-----|:-----|
+|---|:---:|:---:|:---:|:---:|
 |Faturalama yöneticisi|Hayır|Hayır|Evet|Hayır|
 |Genel yönetici|Evet|Evet|Evet|Evet|
 |Lisans yöneticisi|Evet|Evet|Hayır|Hayır|

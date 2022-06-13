@@ -15,12 +15,12 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: mde
 ms.date: 06/06/2022
-ms.openlocfilehash: 335dd72bcbdee469f1e0b1c396c934c94d0339fd
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 503740e6dc16aea98fd44b71d9693d2b4a5844a8
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66013866"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043643"
 ---
 # <a name="microsoft-defender-for-endpoint-device-control-removable-storage-access-control"></a>Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Access Control
 
@@ -125,7 +125,7 @@ Erişim denetimi ilkesini oluşturmak için aşağıdaki özellikleri kullanabil
 
     1. Grup 1: Herhangi bir çıkarılabilir depolama birimi ve CD/DVD. Bu kullanım örneğine örnek olarak: Grup **9b28fae8-72f7-4267-a1a5-685f747a7146** [örnekteki Tüm Çıkarılabilir Depolama ve CD-DVD Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) dosyası.
 
-    2. Grup 2: Örnek [Onaylanmamış USB'ler Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) dosyasındaki Cihaz özelliklerine göre onaylanmamış USB'ler, örneğin Satıcı Kimliği / Ürün Kimliği, Kolay Ad – Grup **65fa649a-a111-4912-9294-fb6337a25038**.
+    2. Grup 2: Örnek [Onaylanmamış USB'ler Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) dosyasındaki Cihaz özelliklerine göre onaylanmamış USB'ler, örneğin Satıcı Kimliği / Ürün Kimliği, Kolay Ad - Grup **65fa649a-a111-4912-9294-fb6337a25038**.
 
     > [!TIP]
     > değerini ile `&amp;` değiştirin`&`.
@@ -149,116 +149,144 @@ Erişim denetimi ilkesini oluşturmak için aşağıdaki özellikleri kullanabil
 Intune'da ilke dağıtımı için hesabın cihaz yapılandırma profillerini oluşturma, düzenleme, güncelleştirme veya silme izinleri olmalıdır. Bu izinlerle özel roller oluşturabilir veya yerleşik rollerden herhangi birini kullanabilirsiniz.
 
 - İlke ve profil Yöneticisi rolü
-
 - Cihaz Yapılandırma profilleri için Raporları Oluşturma/Düzenleme/Güncelleştirme/Okuma/Silme/Görüntüleme izinlerinin açık olduğu özel rol
-
 - Genel yönetici
 
 ### <a name="deploying-removable-storage-access-control-by-using-intune-oma-uri"></a>Intune OMA-URI kullanarak Çıkarılabilir Depolama Access Control dağıtma
 
 Microsoft Endpoint Manager yönetim merkezine (<https://endpoint.microsoft.com/>) **> Cihazlar > Profil oluşturma > Platform: Windows 10 ve üzeri, Profil türü: Şablonlar > Özel'e** gidin
 
-1. Çıkarılabilir Depolama Access Control (RSAC) etkinleştirme veya devre dışı bırakma:<br> Çıkarılabilir Depolama Access Control aşağıdaki gibi etkinleştirebilirsiniz: 
-    - **Özel > Yapılandırma ayarları'nın** altında **Ekle'ye** tıklayın.
-    - **Satır Ekle** bölmesine şunu girin:
-        - **RSAC'yi Etkinleştir** olarak **adlandır** 
+1. Çıkarılabilir Depolama Access Control (RSAC) etkinleştirme veya devre dışı bırakma:
 
-        - **OMA-URI** olarak `./Vendor/MSFT/Defender/Configuration/DeviceControlEnabled`
+   Çıkarılabilir Depolama Access Control aşağıdaki gibi etkinleştirebilirsiniz:
 
-        - **Tamsayı** Olarak **Veri Türü**
-       
-        - **1** olarak **değer**
-        
-           `Disable: 0` `Enable: 1`
+   - **Özel > Yapılandırma ayarları'nın** altında **Ekle'ye** tıklayın.
+   - **Satır Ekle** bölmesine şunu girin:
+     - **RSAC'yi Etkinleştir** olarak **adlandır**
+     - **OMA-URI** olarak `./Vendor/MSFT/Defender/Configuration/DeviceControlEnabled`
+     - **Tamsayı** Olarak **Veri Türü**
+     - **1** olarak **değer**
 
-        - **Kaydet**'e tıklayın.
-    
-    :::image type="content" source="images/enable-rsac.png" alt-text="Çıkarılabilir Depolama Access Control ilkesini etkinleştirme işleminin ekran görüntüsü" lightbox="images/enable-rsac.png":::
-      
-2. Varsayılan Zorlamayı Ayarla:<br> 
-    İlke yoksa çıkarılabilir medyaya varsayılan erişimi (Reddet veya İzin Ver) ayarlayabilirsiniz. <br> 
-    Örneğin, RemovableMediaDevices için Reddet veya İzin Ver ilkeniz vardır, ancak CdRomDevices veya WpdDevices için herhangi bir ilkeniz yoktur. Bu ilke aracılığıyla Varsayılan Reddetme'yi ayarlarsınız, ardından CdRomDevices veya WpdDevices'e Okuma/Yazma/Yürütme erişimi engellenir. 
+       `Disable: 0`
+       `Enable: 1`
 
-    - **Satır Ekle** bölmesine şunu girin:
-        - **Varsayılan Reddetme** Olarak **Adlandır**
-        - **OMA-URI** olarak `./Vendor/MSFT/Defender/Configuration/DefaultEnforcement`
+     - **Kaydet**'e tıklayın.
 
-        - **Tamsayı** Olarak **Veri Türü**
-        
-        - **1** veya **2** olarak **değer**
-        
-          `DefaultEnforcementAllow = 1`
-          `DefaultEnforcementDeny = 2`
-        - **Kaydet**'e tıklayın.
-    
-    :::image type="content" source="images/default-deny.png" alt-text="Varsayılan Zorlama'nın Reddet olarak ayarlanmasının ekran görüntüsü" lightbox="images/default-deny.png":::    
+   :::image type="content" source="images/enable-rsac.png" alt-text="Çıkarılabilir Depolama Access Control ilkesini etkinleştirme işleminin ekran görüntüsü" lightbox="images/enable-rsac.png":::
 
-3. Varsayılan Reddetmeyi Denetle:<br> Varsayılan Reddetme için Denetim ilkesini aşağıdaki gibi oluşturabilirsiniz:
-    - **Satır Ekle** bölmesine şunu girin:
-        - **Varsayılan ReddetmeYi Denetle** Olarak **Adlandır**
-        - **OMA-URI** olarak     
-          `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7bf3520ea7-fd1b-4237-8ebc-96911db44f8e%7d/RuleData`
-         :::image type="content" source="images/audit-default-deny-1.png" alt-text="Varsayılan Denetim Reddetme ilkesini oluşturma işleminin ekran görüntüsü" lightbox="images/audit-default-deny-1.png":::
-        - **Dize Olarak Veri Türü** **(XML dosyası)**
-        - **Denetim Varsayılanı Deny.xml** dosyası olarak **özel XML**. <br>
-            XML dosya yolu: [mdatp-devicecontrol/Audit Default Deny.xml at main · microsoft/mdatp-devicecontrol (github.com](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Audit%20Default%20Deny.xml)
-            <br>Varsayılan Reddetme için Denetim ilkesi oluşturmak için aşağıdaki XML verilerini kullanın:
+2. Varsayılan Zorlamayı Ayarla:
 
-            :::image type="content" source="images/audit-default-deny-xml-file-1.png" alt-text="Varsayılan reddetme xml dosyasını denetle ekran görüntüsü":::
-        
-   
-4. ReadOnly - Grup: ReadOnly erişimi ile aşağıdaki gibi çıkarılabilir depolama grubu oluşturabilirsiniz:
-    - **Satır Ekle** bölmesine şunu girin:
-        - **Herhangi Bir Çıkarılabilir Depolama Grubu** Olarak **Adlandır**
-        - **OMA-URI** olarak   
-         `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b9b28fae8-72f7-4267-a1a5-685f747a7146%7d/GroupData`
-        :::image type="content" source="images/any-removable-storage-group.png" alt-text="Çıkarılabilir Depolama Grubu oluşturma işleminin ekran görüntüsü" lightbox="images/any-removable-storage-group.png":::
-        - **Dize Olarak Veri Türü** **(XML dosyası)**
-        - **Herhangi Bir Çıkarılabilir Depolama ve CD-DVD ve WPD Group.xml** dosyası olarak **Özel XML** <br>
-            XML dosya yolu: [mdatp-devicecontrol/Any Removable Depolama ve CD-DVD ve WPD Group.xml at main · microsoft/mdatp-devicecontrol (github.com](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Any%20Removable%20Storage%20and%20CD-DVD%20and%20WPD%20Group.xml)<br>
-            ReadOnly erişimiyle 'Herhangi bir Çıkarılabilir Depolama ve CD-DVD ve WPD Grubu' oluşturmak için aşağıdaki XML verilerini kullanın:
-       
-           :::image type="content" source="images/read-only-group-xml-file.png" alt-text="Salt okunur grup xml dosyasının ekran görüntüsü":::
-      
-    
-5. ReadOnly - İlke: ReadOnly ilkesi oluşturabilir ve okuma etkinliğine aşağıdaki gibi izin vermek için ReadOnly çıkarılabilir depolama grubuna uygulayabilirsiniz:
-    - **Satır Ekle** bölmesine şunu girin:
-        - **Okuma Etkinliğine İzin Ver** Olarak **Adlandır**
-        - :::image type="content" source="images/allow-read-activity.png" alt-text="Okuma Etkinliğine İzin Ver ilkesinin Ekran Görüntüsü" lightbox= "images/allow-read-activity.png"::: Olarak `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7bf7e75634-7eec-4e67-bec5-5e7750cb9e02%7d/RuleData`
-          **OMA-URI**
-        - **Dize Olarak Veri Türü** **(XML dosyası)**
-        - **Read.xmldosyasına İzin Ver** olarak **Özel XML** <br>
-            XML dosya yolu: [mdatp-devicecontrol/Allow Read.xml at main · microsoft/mdatp-devicecontrol (github.com)](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Allow%20Read.xml)<br>
-            ReadOnly ilkesi oluşturmak ve ReadOnly çıkarılabilir depolama grubuna uygulamak için aşağıdaki XML verilerini kullanın: :::image type="content" source="images/read-only-policy-xml-file.png" alt-text="Salt okunur ilke xml dosyasının ekran görüntüsü":::
-     
+   İlke yoksa çıkarılabilir medyaya varsayılan erişimi (Reddet veya İzin Ver) ayarlayabilirsiniz.
+
+   Örneğin, RemovableMediaDevices için Reddet veya İzin Ver ilkeniz vardır, ancak CdRomDevices veya WpdDevices için herhangi bir ilkeniz yoktur. Bu ilke aracılığıyla Varsayılan Reddetme'yi ayarlarsınız, ardından CdRomDevices veya WpdDevices'e Okuma/Yazma/Yürütme erişimi engellenir.
+
+   - **Satır Ekle** bölmesine şunu girin:
+     - **Varsayılan Reddetme** Olarak **Adlandır**
+     - **OMA-URI** olarak `./Vendor/MSFT/Defender/Configuration/DefaultEnforcement`
+     - **Tamsayı** Olarak **Veri Türü**
+     - **1** veya **2** olarak **değer**
+
+       `DefaultEnforcementAllow = 1`
+       `DefaultEnforcementDeny = 2`
+
+     - **Kaydet**'e tıklayın.
+
+   :::image type="content" source="images/default-deny.png" alt-text="Varsayılan Zorlama'nın Reddet olarak ayarlanmasının ekran görüntüsü" lightbox="images/default-deny.png":::
+
+3. Varsayılan Reddetmeyi Denetle:
+
+   Varsayılan Reddetme için Denetim ilkesini aşağıdaki gibi oluşturabilirsiniz:
+
+   - **Satır Ekle** bölmesine şunu girin:
+     - **Varsayılan ReddetmeYi Denetle** Olarak **Adlandır**
+     - **OMA-URI** olarak `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7bf3520ea7-fd1b-4237-8ebc-96911db44f8e%7d/RuleData`
+
+       :::image type="content" source="images/audit-default-deny-1.png" alt-text="Varsayılan Denetim Reddetme ilkesini oluşturma işleminin ekran görüntüsü" lightbox="images/audit-default-deny-1.png":::
+
+     - **Dize Olarak Veri Türü** **(XML dosyası)**
+     - **Denetim Varsayılanı Deny.xml** dosyası olarak **özel XML**.
+
+       XML dosya yolu: <https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Audit%20Default%20Deny.xml>
+
+       Varsayılan Reddetme için Denetim ilkesi oluşturmak için aşağıdaki XML verilerini kullanın:
+
+       :::image type="content" source="images/audit-default-deny-xml-file-1.png" alt-text="Varsayılan reddetme xml dosyasını denetle ekran görüntüsü":::
+
+4. ReadOnly - Grup:
+
+   ReadOnly erişimi ile aşağıdaki gibi çıkarılabilir depolama grubu oluşturabilirsiniz:
+
+   - **Satır Ekle** bölmesine şunu girin:
+     - **Herhangi Bir Çıkarılabilir Depolama Grubu** Olarak **Adlandır**
+     - **OMA-URI** olarak `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b9b28fae8-72f7-4267-a1a5-685f747a7146%7d/GroupData`
+
+       :::image type="content" source="images/any-removable-storage-group.png" alt-text="Çıkarılabilir Depolama Grubu oluşturma işleminin ekran görüntüsü" lightbox="images/any-removable-storage-group.png":::
+
+     - **Dize Olarak Veri Türü** **(XML dosyası)**
+       - **Herhangi Bir Çıkarılabilir Depolama ve CD-DVD ve WPD Group.xml** dosyası olarak **Özel XML**
+
+         XML dosya yolu: <https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Any%20Removable%20Storage%20and%20CD-DVD%20and%20WPD%20Group.xml>
+
+         ReadOnly erişimiyle 'Herhangi bir Çıkarılabilir Depolama ve CD-DVD ve WPD Grubu' oluşturmak için aşağıdaki XML verilerini kullanın:
+
+         :::image type="content" source="images/read-only-group-xml-file.png" alt-text="Salt okunur grup xml dosyasının ekran görüntüsü":::
+
+5. ReadOnly - İlke:
+
+   ReadOnly ilkesi oluşturabilir ve okuma etkinliğine aşağıdaki gibi izin vermek için ReadOnly çıkarılabilir depolama grubuna uygulayabilirsiniz:
+
+   - **Satır Ekle** bölmesine şunu girin:
+     - **Okuma Etkinliğine İzin Ver** Olarak **Adlandır**
+     - **OMA-URI** olarak `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7bf7e75634-7eec-4e67-bec5-5e7750cb9e02%7d/RuleData`
+
+       :::image type="content" source="images/allow-read-activity.png" alt-text="Okuma Etkinliğine İzin Ver ilkesinin ekran görüntüsü" lightbox= "images/allow-read-activity.png":::
+
+     - **Dize Olarak Veri Türü** **(XML dosyası)**
+     - **Read.xmldosyasına İzin Ver** olarak **Özel XML**
+
+       XML dosya yolu: <https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Allow%20Read.xml>
+
+       ReadOnly ilkesi oluşturmak ve ReadOnly çıkarılabilir depolama grubuna uygulamak için aşağıdaki XML verilerini kullanın:
+
+       :::image type="content" source="images/read-only-policy-xml-file.png" alt-text="Salt okunur ilke xml dosyasının ekran görüntüsü":::
+
 6. İzin Verilen Medyalar için Grup Oluştur: İzin verilen medyalar grubunu aşağıdaki gibi oluşturabilirsiniz:
-    - **Satır Ekle** bölmesine şunu girin:
-        - **Onaylı USBs Grubu** Olarak **Adlandır**
-        - **OMA-URI** olarak     
-         `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b65fa649a-a111-4912-9294-fb6337a25038%7d/GroupData`
-    :::image type="content" source="images/create-group-allowed-medias.png" alt-text="Onaylı USB'ler grubu oluşturma işleminin ekran görüntüsü" lightbox="images/create-group-allowed-medias.png"::: 
-        - **Dize Olarak Veri Türü** **(XML dosyası)** 
-        - **Onaylı USB'ler Group.xml** dosyası olarak **özel XML** <br>
-            XML dosya yolu: [mdatp-devicecontrol/Approved USBs Group.xml at main · microsoft/mdatp-devicecontrol (github.com)](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Approved%20USBs%20Group.xml)<br>
-            İzin verilen medya grubu oluşturmak için aşağıdaki XML verilerini kullanın: :::image type="content" source="images/create-group-allowed-medias-xml-file.png" alt-text="İzin verilen medyalar xml dosyası için grup oluşturma ekran görüntüsü":::
-      
-   
+   - **Satır Ekle** bölmesine şunu girin:
+     - **Onaylı USBs Grubu** Olarak **Adlandır**
+     - **OMA-URI** olarak `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b65fa649a-a111-4912-9294-fb6337a25038%7d/GroupData`
+
+       :::image type="content" source="images/create-group-allowed-medias.png" alt-text="Onaylı USB'ler grubu oluşturma işleminin ekran görüntüsü" lightbox="images/create-group-allowed-medias.png":::
+
+     - **Dize Olarak Veri Türü** **(XML dosyası)**
+     - **Onaylı USB'ler Group.xml** dosyası olarak **özel XML**
+
+       XML dosya yolu: <https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Approved%20USBs%20Group.xml>
+
+       İzin verilen medya grubu oluşturmak için aşağıdaki XML verilerini kullanın:
+
+       :::image type="content" source="images/create-group-allowed-medias-xml-file.png" alt-text="İzin verilen medias xml dosyası için grup oluşturma işleminin ekran görüntüsü":::
+
 7. Onaylanan USB Grubuna izin vermek için İlke Oluştur: Onaylanan USB grubuna aşağıdaki gibi izin vermek için ilke oluşturabilirsiniz:
-    - **Satır Ekle** bölmesine şunu girin:
-        - **Erişime izin ver ve Dosya bilgilerini denetle** olarak **adlandır**
-        - **OMA-URI** olarak     
-         `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7bb2061588-029e-427d-8404-6dfec096a571%7d/RuleData`
-    :::image type="content" source="images/allow-access-audit-file-information-1.png" alt-text="Erişim ve denetim dosyası bilgilerine izin ver ekran görüntüsü" lightbox= "images/allow-access-audit-file-information-1.png":::
-        - **Dize Olarak Veri Türü** **(XML dosyası)** 
-        - **Tam erişime ve denetim file.xmldosyasına izin ver** olarak **özel XML** <br>
-            XML dosya yolu: [mdatp-devicecontrol/Main'da tam erişim ve denetim file.xml izin ver · microsoft/mdatp-devicecontrol (github.com)](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Allow%20full%20access%20and%20audit%20file.xml)<br>
-            Onaylanan USB grubuna izin vermek üzere ilke oluşturmak için aşağıdaki XML verilerini kullanın: :::image type="content" source="images/create-policy-allow-approved-usb-group-xml-intune.png" alt-text="Onaylanan USB Grubu XML dosyasına izin vermek için ilke oluşturma işleminin ekran görüntüsü":::
-      
-           İlkedeki '47' ne anlama gelir? <br> 
-           9 + 2 + 36 = 47'dir: <br>
-           Okuma erişimi: 1+8 = 9 <br>
-           Yazma erişimi: disk düzeyi 2 <br>
-           Yürütme: 4 + 32 = 36
+   - **Satır Ekle** bölmesine şunu girin:
+     - **Erişime izin ver ve Dosya bilgilerini denetle** olarak **adlandır**
+     - **OMA-URI** olarak `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7bb2061588-029e-427d-8404-6dfec096a571%7d/RuleData`
+
+       :::image type="content" source="images/allow-access-audit-file-information-1.png" alt-text="Erişim ve denetim dosyası bilgilerine izin ver ekran görüntüsü" lightbox= "images/allow-access-audit-file-information-1.png":::
+
+     - **Dize Olarak Veri Türü** **(XML dosyası)**
+     - **Tam erişime ve denetim file.xmldosyasına izin ver** olarak **özel XML**
+
+       XML dosya yolu: <https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Allow%20full%20access%20and%20audit%20file.xml>
+
+       Onaylanan USB grubuna izin vermek üzere ilke oluşturmak için aşağıdaki XML verilerini kullanın:
+
+       :::image type="content" source="images/create-policy-allow-approved-usb-group-xml-intune.png" alt-text="Onaylanan USB Grubu XML dosyasına izin vermek için ilke oluşturma işleminin ekran görüntüsü":::
+
+       İlkedeki '47' ne anlama geliyor? 9 + 2 + 36 = 47' dır:
+
+       - Okuma erişimi: 1 + 8 = 9.
+       - Yazma erişimi: disk düzeyi 2.
+       - Yürütme: 4 + 32 = 36.
 
 ## <a name="deploying-and-managing-policy-by-using-intune-user-interface"></a>Intune kullanıcı arabirimini kullanarak ilkeyi dağıtma ve yönetme
 
@@ -274,68 +302,102 @@ Microsoft Endpoint Manager yönetim merkezine (<https://endpoint.microsoft.com/>
 
 ### <a name="deploying-removable-storage-access-control-by-using-group-policy"></a>grup ilkesi kullanarak Çıkarılabilir Depolama Access Control dağıtma
 
-1. Çıkarılabilir Depolama Access Control Etkinleştirme veya Devre Dışı Bırakma: <br> Çıkarılabilir Depolama Access Control (RSAC) aşağıdaki gibi etkinleştirebilirsiniz:<br> 
-    - **Bilgisayar Yapılandırması > Yönetim Şablonları > Windows Bileşenler > Microsoft Defender Virüsten Koruma > Özellikleri > Cihaz Denetimi'ne** gidin
-    - **Cihaz Denetimi** penceresinde **Etkin'i** seçin.
-      
-    :::image type="content" source="images/enable-rsac-gp.png" alt-text="grup ilkesi kullanarak RSAC'yi etkinleştirme işleminin ekran görüntüsü " lightbox="images/enable-rsac-gp.png":::
-      
-2. Varsayılan Zorlamayı Ayarla: <br> 
-    Aşağıdaki gibi bir ilke yoksa, çıkarılabilir medyaya varsayılan erişimi (Reddet veya İzin Ver) ayarlayabilirsiniz: 
-    - **Bilgisayar Yapılandırması > Yönetim Şablonları > Windows Bileşenler > Microsoft Defender Virüsten Koruma > Özellikleri > Cihaz Denetimi'ne gidin > Cihaz Denetimi Varsayılan Zorlaması'nı seçin**
+1. Çıkarılabilir Depolama Access Control Etkinleştirme veya Devre Dışı Bırakma:
 
-    - **Cihaz Denetimi Varsayılan Zorlamayı Seç** penceresinde **Varsayılan Reddet'i** seçin:
-    
-     :::image type="content" source="images/set-default-enforcement-deny-gp.png" alt-text="Varsayılan Zorlama = grup ilkesi kullanarak reddet ayarının ekran görüntüsü" lightbox="images/set-default-enforcement-deny-gp.png":::    
+   Çıkarılabilir Depolama Access Control (RSAC) aşağıdaki gibi etkinleştirebilirsiniz:
 
-3. Varsayılan Reddetmeyi Denetle: <br> Varsayılan Reddetme için Denetim ilkesi oluşturmak için aşağıdaki XML verilerini kullanın:
-    
-    :::image type="content" source="images/audit-default-deny-gp.png" alt-text="Varsayılan reddetme xml verilerini denetleme ekran görüntüsü":::
-      
-  
-4. ReadOnly - Grup: <br>
+   - **Bilgisayar Yapılandırması > Yönetim Şablonları > Windows Bileşenler > Microsoft Defender Virüsten Koruma > Özellikleri > Cihaz Denetimi'ne** gidin
+   - **Cihaz Denetimi** penceresinde **Etkin'i** seçin.
+
+   :::image type="content" source="images/enable-rsac-gp.png" alt-text="grup ilkesi kullanarak RSAC'yi etkinleştirme işleminin ekran görüntüsü " lightbox="images/enable-rsac-gp.png":::
+
+2. Varsayılan Zorlamayı Ayarla:
+
+   Aşağıdaki gibi bir ilke yoksa, çıkarılabilir medyaya varsayılan erişimi (Reddet veya İzin Ver) ayarlayabilirsiniz:
+
+   - **Bilgisayar Yapılandırması > Yönetim Şablonları > Windows Bileşenler > Microsoft Defender Virüsten Koruma > Özellikleri > Cihaz Denetimi'ne gidin > Cihaz Denetimi Varsayılan Zorlaması'nı seçin**
+
+   - **Cihaz Denetimi Varsayılan Zorlamayı Seç** penceresinde **Varsayılan Reddet'i** seçin:
+
+   :::image type="content" source="images/set-default-enforcement-deny-gp.png" alt-text="Varsayılan Zorlama = grup ilkesi kullanarak reddet ayarının ekran görüntüsü" lightbox="images/set-default-enforcement-deny-gp.png":::
+
+3. Varsayılan Reddetmeyi Denetle:
+
+   Varsayılan Reddetme için Denetim ilkesi oluşturmak için aşağıdaki XML verilerini kullanın:
+
+   :::image type="content" source="images/audit-default-deny-gp.png" alt-text="Varsayılan reddetme xml verilerini denetleme ekran görüntüsü":::
+
+4. ReadOnly - Grup:
+
    ReadOnly erişimiyle çıkarılabilir depolama grubu oluşturmak için aşağıdaki XML verilerini kullanın:
- 
+
    :::image type="content" source="images/read-only-group-gp.png" alt-text="Salt okunur çıkarılabilir depolama grubu xml verilerinin ekran görüntüsü":::
-      
-    
-5. ReadOnly - İlke: <br> ReadOnly ilkesi oluşturmak ve okuma etkinliğine izin vermek için ReadOnly çıkarılabilir depolama grubuna uygulamak için aşağıdaki XML verilerini kullanın:
-  
+
+5. ReadOnly - İlke:
+
+   ReadOnly ilkesi oluşturmak ve okuma etkinliğine izin vermek için ReadOnly çıkarılabilir depolama grubuna uygulamak için aşağıdaki XML verilerini kullanın:
+
     :::image type="content" source="images/read-only-policy-gp.png" alt-text="Salt okunur ilke xml verilerinin ekran görüntüsü" lightbox="images/read-only-policy-gp.png":::
-        
-   
-6. İzin Verilen Medyalar için Grup Oluştur: <br> Çıkarılabilir depolama izin verilen medya grubu oluşturmak için aşağıdaki XML verilerini kullanın:
-    
+
+6. İzin Verilen Medyalar için Grup Oluştur:
+
+   Çıkarılabilir depolama izin verilen medya grubu oluşturmak için aşağıdaki XML verilerini kullanın:
+
    :::image type="content" source="images/create-group-allowed-medias-gp.png" alt-text="İzin verilen medyalar için grup oluşturmaya yönelik xml verilerinin ekran görüntüsü" lightbox="images/create-group-allowed-medias-gp.png":::
-      
-    
-7. Onaylanan USB Grubuna izin vermek için İlke oluşturun: <br> Onaylanan USB grubuna izin verecek bir ilke oluşturmak için aşağıdaki XML verilerini kullanın:
-    
-    :::image type="content" source="images/create-policy-allow-approved-usb-group-xml.png" alt-text="onaylanan USB Grubuna grup ilkesi kullanarak izin vermek için ilke oluşturmaya ilişkin XML verilerinin ekran görüntüsü" lightbox="images/create-policy-allow-approved-usb-group-xml.png":::
-      
-   İlkedeki '47' ne anlama gelir? <br> 9 + 2 + 36 = 47'dir: <br>
-   Okuma erişimi: 1+8 = 9 <br>
-   Yazma erişimi: disk düzeyi 2 <br>
-   Yürütme: 4 + 32 = 36
 
-8. Grupları tek bir XML dosyasında birleştirin: <br> Cihaz denetim ilkesi gruplarını tek bir XML dosyasında aşağıdaki gibi birleştirebilirsiniz:<br> 
-    - **Bilgisayar Yapılandırması > Yönetim Şablonları > Windows Bileşenleri > Microsoft Defender Virüsten Koruma > Cihaz Denetimi'ne gidin > Cihaz denetimi ilke gruplarını tanımlama Cihaz denetimi ilke gruplarını**
-    :::image type="content" source="images/define-device-control-policy-grps-gp.png" alt-text="tanımlama ekran görüntüsü" lightbox="images/define-device-control-policy-grps-gp.png":::
-    - **Cihaz denetim ilkesi gruplarını tanımla** penceresinde, XML grupları verilerini içeren dosya yolunu girin. <br>
-    XML dosya yolu: [mdatp-devicecontrol/Demo_Groups.xml at main · microsoft/mdatp-devicecontrol (github.com)](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Group%20Policy/Demo_Groups.xml)<br>
-    Cihaz denetim ilkesi grupları xml şeması aşağıdadır: :::image type="content" source="images/combine-grps-xml-file-gp.png" alt-text="Grupları tek bir XML dosyasında birleştirme işleminin ekran görüntüsü":::
+7. Onaylanan USB Grubuna izin vermek için İlke oluşturun:
 
-9. İlkeleri tek bir XML dosyasında birleştirin: <br> Cihaz denetim ilkesi kurallarını tek bir XML dosyasında aşağıdaki gibi birleştirebilirsiniz:<br> 
-    - **Cihaz denetimi ilkesi kurallarını tanımlama > Bilgisayar Yapılandırması > Yönetim Şablonları > Windows Bileşenleri > Microsoft Defender Virüsten Koruma > Cihaz Denetimi > Cihaz denetimi ilkesi kurallarını**
-    :::image type="content" source="images/define-device-cntrl-policy-rules-gp.png" alt-text="tanımlama ekran görüntüsü" lightbox="images/define-device-cntrl-policy-rules-gp.png":::
-    - **Cihaz denetimi ilkesi kurallarını tanımla** penceresinde **Etkin'i** seçin ve XML kuralları verilerini içeren dosya yolunu girin. <br>
-    XML dosya yolu: [mdatp-devicecontrol/Demo_Policies.xml at main · microsoft/mdatp-devicecontrol (github.com)](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Group%20Policy/Demo_Policies.xml)<br>
-    Cihaz denetim ilkesi kuralları xml şeması aşağıdadır: :::image type="content" source="images/combine-policies-xml-gp.png" alt-text="İlkeleri tek bir XML dosyasında birleştirme işleminin ekran görüntüsü":::
+   Onaylanan USB grubuna izin verecek bir ilke oluşturmak için aşağıdaki XML verilerini kullanın:
 
-10. Dosyanın bir kopyası için konum ayarlayın (kanıt): <br>Yazma erişimi gerçekleştiğinde dosyanın bir kopyasına (kanıt) sahip olmak istiyorsanız, sistemin kopyayı kaydedebileceği konumu ayarlamanız gerekir.<br>
+   :::image type="content" source="images/create-policy-allow-approved-usb-group-xml.png" alt-text="onaylanan USB Grubuna grup ilkesi kullanarak izin vermek için ilke oluşturmaya ilişkin XML verilerinin ekran görüntüsü" lightbox="images/create-policy-allow-approved-usb-group-xml.png":::
+
+   İlkedeki '47' ne anlama geliyor? 9 + 2 + 36 = 47' dır:
+
+   - Okuma erişimi: 1+8 = 9.
+   - Yazma erişimi: disk düzeyi 2.
+   - Yürütme: 4 + 32 = 36.
+
+8. Grupları tek bir XML dosyasında birleştirin:
+
+   Cihaz denetim ilkesi gruplarını tek bir XML dosyasında aşağıdaki gibi birleştirebilirsiniz:
+
+   - **Cihaz Denetimi Cihaz denetimi** \> **ilke gruplarını tanımlama** Microsoft Defender Virüsten Koruma **Bilgisayar Yapılandırması** \> **Yönetim Şablonları** \> **Windows** \> **Bileşenler'e** \> gidin.
+
+    :::image type="content" source="images/define-device-control-policy-grps-gp.png" alt-text="Cihaz denetimi ilke gruplarını tanımlama ekran görüntüsü" lightbox="images/define-device-control-policy-grps-gp.png":::
+
+   - **Cihaz denetim ilkesi gruplarını tanımla** penceresinde, XML grupları verilerini içeren dosya yolunu girin.
+
+     XML dosya yolu: <https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Group%20Policy/Demo_Groups.xml>
+
+     Cihaz denetim ilkesi grupları xml şeması aşağıdadır:
+
+     :::image type="content" source="images/combine-grps-xml-file-gp.png" alt-text="Grupları tek bir XML dosyasında birleştirme ekran görüntüsü":::
+
+9. İlkeleri tek bir XML dosyasında birleştirin:
+
+   Cihaz denetim ilkesi kurallarını tek bir XML dosyasında aşağıdaki gibi birleştirebilirsiniz:
+
+   - **Cihaz denetimi ilkesi kurallarını tanımlama > Bilgisayar Yapılandırması > Yönetim Şablonları > Windows Bileşenleri > Microsoft Defender Virüsten Koruma > Cihaz Denetimi'ne** gidin
+
+     :::image type="content" source="images/define-device-cntrl-policy-rules-gp.png" alt-text="Cihaz denetimi ilkesi kurallarını tanımlama ekran görüntüsü" lightbox="images/define-device-cntrl-policy-rules-gp.png":::
+
+   - **Cihaz denetimi ilkesi kurallarını tanımla** penceresinde **Etkin'i** seçin ve XML kuralları verilerini içeren dosya yolunu girin.
+
+     XML dosya yolu: <https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Group%20Policy/Demo_Policies.xml>
+
+     Cihaz denetim ilkesi kuralları xml şeması aşağıdadır:
+
+    :::image type="content" source="images/combine-policies-xml-gp.png" alt-text="İlkeleri tek bir XML dosyasında birleştirme ekran görüntüsü":::
+
+10. Dosyanın bir kopyası için konum ayarlayın (kanıt):
+
+    Yazma erişimi gerçekleştiğinde dosyanın bir kopyasına (kanıt) sahip olmak istiyorsanız, sistemin kopyayı kaydedebileceği konumu ayarlamanız gerekir.
+
     - **Cihaz Denetimi kanıt verilerinin uzak konumunu tanımlama > Bilgisayar Yapılandırması > Yönetim Şablonları > Windows Bileşenler > Microsoft Defender Virüsten Koruma > Cihaz Denetimi'ne** gidin.
-    - **Cihaz Denetimi kanıt verilerini uzak konumu tanımla** penceresinde **Etkin'i** seçin ve yerel veya ağ paylaşımı klasör yolunu girin. <br>
-    :::image type="content" source="images/evidence-data-remote-location-gp.png" alt-text="Cihaz Denetimi kanıt verilerini uzak konumu tanımlama ekran görüntüsü" lightbox="images/evidence-data-remote-location-gp.png":::
+
+    - **Cihaz Denetimi kanıt verilerini uzak konumu tanımla** penceresinde **Etkin'i** seçin ve yerel veya ağ paylaşımı klasör yolunu girin.
+
+      :::image type="content" source="images/evidence-data-remote-location-gp.png" alt-text="Cihaz Denetimi kanıt verilerini uzak konumu tanımlama ekran görüntüsü" lightbox="images/evidence-data-remote-location-gp.png":::
 
 ## <a name="view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint"></a>Cihaz Denetimi Çıkarılabilir Depolama Access Control verilerini Uç Nokta için Microsoft Defender'da görüntüleme
 
@@ -365,20 +427,20 @@ DeviceEvents
 ```
 
 ```kusto
-//information of file written to removable storage 
+//information of file written to removable storage
 DeviceEvents
 | where ActionType contains "RemovableStorageFileEvent"
 | extend parsed=parse_json(AdditionalFields)
-| extend Policy = tostring(parsed.Policy) 
-| extend PolicyRuleId = tostring(parsed.PolicyRuleId) 
+| extend Policy = tostring(parsed.Policy)
+| extend PolicyRuleId = tostring(parsed.PolicyRuleId)
 | extend MediaClassName = tostring(parsed.ClassName)
 | extend MediaInstanceId = tostring(parsed.InstanceId)
 | extend MediaName = tostring(parsed.MediaName)
-| extend MediaProductId = tostring(parsed.ProductId) 
-| extend MediaVendorId = tostring(parsed.VendorId) 
-| extend MediaSerialNumber = tostring(parsed.SerialNumber) 
+| extend MediaProductId = tostring(parsed.ProductId)
+| extend MediaVendorId = tostring(parsed.VendorId)
+| extend MediaSerialNumber = tostring(parsed.SerialNumber)
 | extend FileInformationOperation = tostring(parsed.DuplicatedOperation)
-| extend FileEvidenceLocation = tostring(parsed.TargetFileLocation) 
+| extend FileEvidenceLocation = tostring(parsed.TargetFileLocation)
 | project Timestamp, DeviceId, DeviceName, InitiatingProcessAccountName, ActionType, Policy, PolicyRuleId, FileInformationOperation, MediaClassName, MediaInstanceId, MediaName, MediaProductId, MediaVendorId, MediaSerialNumber, FileName, FolderPath, FileSize, FileEvidenceLocation, AdditionalFields
 | order by Timestamp desc
 ```
@@ -395,9 +457,9 @@ GUID'yi çevrimiçi açık kaynak veya PowerShell aracılığıyla oluşturabili
 
 ### <a name="what-are-the-removable-storage-media-and-policy-limitations"></a>Çıkarılabilir depolama ortamı ve ilke sınırlamaları nelerdir?
 
-Microsoft Endpoint Manager yönetim merkezinden (Intune) veya Microsoft Graph API aracılığıyla arka uç çağrısı OMA-URI (OKUNACAK GET veya GÜNCELLEŞTIRILECEK PATCH) aracılığıyla yapılır ve bu nedenle sınırlama, Microsoft'taki XML dosyaları için resmi olarak 350.000 karakter olan OMA-URI özel yapılandırma profiliyle aynıdır. 
-    
-Örneğin, kullanıcı SID'sinde belirli kullanıcıları "İzin Ver"/"Denetime izin verildi" olarak iki giriş bloğuna ve sonunda "Reddet" tümüne iki giriş bloğuna ihtiyacınız varsa, 2.276 kullanıcıyı yönetebilirsiniz. 
+Microsoft Endpoint Manager yönetim merkezinden (Intune) veya Microsoft Graph API aracılığıyla arka uç çağrısı OMA-URI (OKUNACAK GET veya GÜNCELLEŞTIRILECEK PATCH) aracılığıyla yapılır ve bu nedenle sınırlama, Microsoft'taki XML dosyaları için resmi olarak 350.000 karakter olan OMA-URI özel yapılandırma profiliyle aynıdır.
+
+Örneğin, kullanıcı SID'sinde belirli kullanıcıları "İzin Ver"/"Denetime izin verildi" olarak iki giriş bloğuna ve sonunda "Reddet" tümüne iki giriş bloğuna ihtiyacınız varsa, 2.276 kullanıcıyı yönetebilirsiniz.
 
 ### <a name="why-does-the-policy-not-work"></a>İlke neden çalışmıyor?
 

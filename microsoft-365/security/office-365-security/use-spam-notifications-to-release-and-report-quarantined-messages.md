@@ -21,16 +21,16 @@ ms.custom:
 description: Yöneticiler, Exchange Online Protection(EOP) içinde karantinaya alınan iletiler için son kullanıcı istenmeyen posta bildirimleri hakkında bilgi edinebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c1688e4a56787c9593aae7006a05d52b16558647
-ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
+ms.openlocfilehash: 44ed83a95fe8f588369f0a1bbae4809f32581f87
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393490"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043483"
 ---
 # <a name="use-quarantine-notifications-to-release-and-report-quarantined-messages"></a>Karantinaya alınan iletileri serbest bırakmak ve bildirmek için karantina bildirimlerini kullanma
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -52,7 +52,9 @@ Paylaşılan posta kutuları için karantina bildirimleri yalnızca paylaşılan
 > [!NOTE]
 > Varsayılan olarak, yüksek güvenilirlikli kimlik avı, kötü amaçlı yazılım, posta akışı kuralları (aktarım kuralları olarak da bilinir) veya Office 365 için Defender Kasa Ekler ilkeleri olarak karantinaya alınan iletiler yalnızca yöneticiler tarafından kullanılabilir (varsayılan olarak AdminOnlyAccessPolicy karantina ilkesi kullanılır). Daha fazla bilgi için bkz. [Karantinaya alınan iletileri ve dosyaları EOP'de yönetici olarak yönetme](manage-quarantined-messages-and-files.md).
 >
-> Şu anda, karantina bildirimleri gruplar için desteklenmemektedir.
+> Dağıtım gruplarına veya posta etkin güvenlik gruplarına gönderilen iletiler için karantina bildirimleri tüm grup üyelerine gönderilir.
+>
+> Microsoft 365 Grupları gönderilen iletiler için karantina bildirimleri, yalnızca **Grup konuşmalarının ve olaylarının kopyalarını grup** üyelerine gönder ayarı açıksa tüm grup üyelerine gönderilir.
 
 Karantina bildirimi aldığınızda, karantinaya alınan her ileti için her zaman aşağıdaki bilgiler kullanılabilir:
 

@@ -17,16 +17,16 @@ ms.collection:
 description: Outlook ve Web üzerinde Outlook için, tek tek kullanıcılar için veya kuruluşunuzun tamamı için Rapor İletisi veya Rapor Kimlik Avı eklentilerini etkinleştirmeyi öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a4166b36888c96b12a8aa410848c392c2afdaeb5
-ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
+ms.openlocfilehash: b0882a37161989248b8c970a5dbe01efc0bcff65
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2022
-ms.locfileid: "65144849"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043773"
 ---
 # <a name="enable-the-report-message-or-the-report-phishing-add-ins"></a>Rapor İletisini veya Rapor Kimlik Avı eklentilerini etkinleştirme
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -59,7 +59,7 @@ Genel yönetici veya Exchange Online yöneticisiyseniz ve Exchange OAuth kimlik 
   - Enterprise için Microsoft 365 uygulamalarına dahil Outlook
   - iOS ve Android için Outlook uygulaması
 
-- Paylaşılan posta kutuları için her iki eklenti de kullanılamaz.
+- Paylaşılan, gruplandırılmış veya temsilci olarak atanan posta kutuları için her iki eklenti de kullanılamaz (eklentiler gri görünür).
 
 - Her iki eklenti de şirket içi Exchange posta kutuları için kullanılamaz.
 

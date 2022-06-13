@@ -1,5 +1,5 @@
 ---
-title: Önceden ayarlanmış güvenlik ilkeleriyle her zaman en uygun güvenlik denetimlerine sahip olduğunuzdan emin olun
+title: Önceden ayarlanmış güvenlik ilkeleriyle her zaman en uygun güvenlik denetimlerine sahip olmanızı sağlayarak
 description: Önceden ayarlanmış güvenlik ilkeleriyle her zaman en iyi güvenlik denetimlerine sahip olduğunuzdan emin olmak için adımlar. Önceden ayarlanmış ilkeler, Standart veya Katı bir güvenlik profili seçmenize olanak verir. Microsoft, Office 365 için Microsoft Defender genelinde güvenlik denetimlerini sizin için yönetir ve korur.
 search.product: ''
 search.appverid: ''
@@ -15,23 +15,23 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: 029f3503c1b93b17efc9ec5a89f29a0c40a3703f
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: e768635d3bb804dbf586ce652203689942901e4f
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842543"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042957"
 ---
-# <a name="ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies"></a>Önceden ayarlanmış güvenlik ilkeleriyle her zaman en uygun güvenlik denetimlerine sahip olduğunuzdan emin olun
+# <a name="ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies"></a>Önceden ayarlanmış güvenlik ilkeleriyle her zaman en uygun güvenlik denetimlerine sahip olmanızı sağlayarak
 
 Önceden ayarlanmış güvenlik ilkeleri Standart veya Katı güvenlik profili seçmenize ve Microsoft'un sizin için Office 365 için Microsoft Defender genelinde güvenlik denetimlerini yönetmesini ve korumasını sağlar.
 
 Yeni denetimler eklendikçe veya bir güvenlik denetimi için en iyi yöntem ayarı gelişen tehdit ortamıyla değişirse Microsoft, Standart veya Katı ön ayarlı güvenlik ilkesine atanan kullanıcılar için güvenlik denetimi ayarlarını otomatik olarak güncelleştirir. Güvenlik Hazır Ayarı ilkelerini kullanarak, kullanıcılarınız için her zaman Microsoft'un önerdiği en iyi yöntem yapılandırmasına sahip olursunuz.
 
 ## <a name="what-you-will-need"></a>İhtiyacınız olan şey
-- Office 365 için Microsoft Defender Plan 1
+- Office 365 için Microsoft Defender Plan 1 veya üzeri (E5'e dahildir)
 - Yeterli izinler (Güvenlik Yöneticisi rolü)
 - Aşağıdaki adımları gerçekleştirmek için 5 dakika.
 

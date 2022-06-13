@@ -25,12 +25,12 @@ search.appverid:
 - MOE150
 ms.assetid: 1dbcf12f-a9de-4d1d-b0b3-a227f8a736d8
 description: Microsoft 365 kullanıcıya başka bir kullanıcının posta kutusuna erişme hakkı verin. Bu, kullanıcının diğer kullanıcının posta kutusundan e-posta okumasına ve göndermesine olanak tanır.
-ms.openlocfilehash: 80c316f0615c13d5f46410582abe2ec3516c8a8a
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 5b770b2967072ab6cc8b8abfec8176a7b6aac2c9
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436723"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042384"
 ---
 # <a name="give-mailbox-permissions-to-another-microsoft-365-user---admin-help"></a>Başka bir Microsoft 365 kullanıcıya posta kutusu izinleri verme - Yönetici yardımı
 
@@ -39,7 +39,7 @@ Yönetici olarak, bir kullanıcıya başka bir kullanıcının posta kutusuna er
 Paylaşılan posta kutularını oluşturma ve yönetme hakkında bilgi arıyorsanız, [Paylaşılan posta kutusu oluşturma](../email/create-a-shared-mailbox.md) konusunu gözden geçirin.
 
 > [!TIP]
-> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken işe alımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
+> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
     
 ## <a name="looking-to-set-up-mailbox-permissions"></a>Posta kutusu izinlerini ayarlamak mı istiyorsunuz?
 
@@ -167,6 +167,8 @@ Size erişim verildikten sonra, posta kutusuna erişmenizin birkaç farklı yolu
 
 ::: moniker-end
 
+> [!NOTE]
+> Posta kutusunda *HiddenFromAddressListsEnabled* parametresi **True** olarak ayarlanmış Outlook Masaüstü istemcisinde Farklı **Gönder** ve **Adına Gönder** izinleri çalışmaz, çünkü posta kutusunun Genel Adres Listesi aracılığıyla Outlook görünür olmasını gerektirir.
 
 ## <a name="related-content"></a>İlgili içerik
   

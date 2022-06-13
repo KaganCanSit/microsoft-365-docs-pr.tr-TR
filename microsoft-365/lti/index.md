@@ -13,12 +13,12 @@ ms.collection:
 - M365-modern-desktop
 ms.localizationpriority: ''
 description: Öğrenme Araçları Birlikte Çalışabilirliği (LTI) Microsoft uygulamaları hakkında bilgi edinin ve Microsoft uygulamalarını Öğrenme Yönetim Sistemine (LMS) ile tümleştirirken eğitimcilere nasıl yardımcı olacaklarını öğrenin.
-ms.openlocfilehash: 99ae862890989b0422cb819f65781a0a99340135
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 994abf0351a3694e1eeb534a328745691cb6a379
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65414776"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66044301"
 ---
 # <a name="integrating-microsoft-products-with-your-learning-management-system-lms"></a>Microsoft ürünlerini Öğrenme Yönetim Sisteminizle (LMS) tümleştirme
 
@@ -81,6 +81,7 @@ Yapılandırma adımları için bkz:
 
 - [Tuval ile Microsoft Teams Toplantıları](teams-meetings-with-canvas.md).
 - [Moodle ile Microsoft Teams Toplantıları](teams-classes-meetings-with-moodle.md).
+- [Open LMS ile Microsoft Teams Toplantıları](open-lms-teams-classes-and-meetings.md).
 
 ### <a name="teams-classes-lti"></a>Teams sınıflar LTI
 
@@ -88,6 +89,7 @@ Microsoft Teams sınıflar LTI uygulaması, eğitimcilerin ve öğrencilerin LMS
 
 Yapılandırma adımları için bkz:
 
-- [Tuval ile Teams Sınıflar LTI](teams-classes-with-canvas.md).
-- [Blackboard ile Teams Sınıflar LTI](teams-classes-with-blackboard.md).
-- [Moodle ile Teams Sınıflar LTI](teams-classes-meetings-with-moodle.md).
+- [Tuval ile Microsoft Teams Sınıflar LTI](teams-classes-with-canvas.md).
+- [Blackboard ile Microsoft Teams Sınıflar LTI](teams-classes-with-blackboard.md).
+- [Moodle ile Microsoft Teams Sınıflar LTI](teams-classes-meetings-with-moodle.md).
+- [Open LMS ile Microsoft Teams Sınıflar LTI](open-lms-teams-classes-and-meetings.md).

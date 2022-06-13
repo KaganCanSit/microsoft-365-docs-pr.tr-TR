@@ -15,16 +15,16 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: 3670d4c1c55cbaaab739a8de2df359f06b53ae80
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: 99bfcd9003d55ced96364f033080992fa4447188
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842486"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042934"
 ---
-# <a name="protect-your-c-suite-with-priority-account-protection"></a>C-suite'inizi öncelikli hesap korumasıyla koruma
+# <a name="protect-your-c-suite-with-priority-account-protection"></a>C-paketinizi öncelikli hesap korumasıyla koruyun
 
 Öncelikli hesap koruması, BT ve güvenlik ekiplerinin kuruluşunuzdaki kritik kişiler için yüksek hizmet kalitesi ve koruma sağlamasına yardımcı olur. Bir hesabın öncelik hesabı olarak etiketlenmesi, şirket yöneticilerini hedefleyen posta akışı düzenleri için ayarlanmış ek korumanın yanı sıra raporlarda, uyarılarda ve araştırmalarda ek görünürlük sağlar.
 
@@ -49,7 +49,7 @@ Hangi öncelik hesabı etiketlerinin olduğunu öğrenmek için bkz. [Öncelik h
 [Öncelik hesapları olarak etiketlenen kullanıcılar için farklı korumayı gözden geçirin](../../office-365-security/configure-review-priority-account.md).
 
 ## <a name="powershell-configuration"></a>PowerShell yapılandırması
-Bu adımları PowerShell aracılığıyla gerçekleştirmek istiyorsanız, bunu aşağıdaki cmdlet'leri kullanarak yapabilirsiniz:
+Bu adımları [PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) aracılığıyla gerçekleştirmek istiyorsanız, bunu aşağıdaki cmdlet'leri kullanarak yapabilirsiniz:
 1. Öncelik hesaplarının listesini görüntüleme: **Get-User -IsVIP | Kimlik'i seçin**
 1. Öncelik hesapları listesine kullanıcı ekleme: **Set-User -VIP:$true -Identity \<Identity\>**
 1. Kullanıcıyı öncelik hesapları listesinden kaldırma: **Set-User -VIP:$false -Identity \<Identity\>**

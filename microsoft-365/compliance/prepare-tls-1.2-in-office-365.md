@@ -13,14 +13,16 @@ ms.author: shmehta
 ms.reviewer: krowley
 appliesto:
 - Office 365 Business
-ms.openlocfilehash: 8e5664149ef571a8fed3a1aee433fa97c9ed8ca4
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 584bf2b27be9c33399a9158038853dac195e3146
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760437"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66044235"
 ---
 # <a name="preparing-for-tls-12-in-office-365-and-office-365-gcc"></a>Office 365 ve Office 365 GCC'de TLS 1.2'ye hazırlanma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 ## <a name="summary"></a>Özet
 
@@ -30,7 +32,7 @@ Microsoft, müşterilerimize sınıfının en iyisi şifreleme sağlamak için O
 
 TLS 1.0 ve 1.1 bağımlılıklarının nasıl kaldırılacağı hakkında bilgi için aşağıdaki makaleye bakın: [TLS 1.0 problemini çözme](https://www.microsoft.com/download/details.aspx?id=55266).
 
-TLS 1.2'ye yükselttikten sonra, kullandığınız şifre paketlerinin Azure Front Door tarafından desteklendiğinden emin olun. Microsoft 365 ve Azure Front Door'un şifre paketi desteğinde küçük farklılıklar vardır. Ayrıntılar için bkz. [Azure Front Door tarafından desteklenen geçerli şifreleme paketleri nelerdir?](/azure/frontdoor/front-door-faq#what-are-the-current-cipher-suites-supported-by-azure-front-door-).
+TLS 1.2'ye yükselttikten sonra, kullandığınız şifre paketlerinin Azure Front Door tarafından desteklendiğinden emin olun. Microsoft 365 ve Azure Front Door'un şifre paketi desteğinde küçük farklılıklar vardır. Ayrıntılar için bkz. [Azure Front Door tarafından desteklenen geçerli şifreleme paketleri nelerdir?](/azure/frontdoor/concept-end-to-end-tls#supported-cipher-suites).
 
 ## <a name="more-information"></a>Daha fazla bilgi
 

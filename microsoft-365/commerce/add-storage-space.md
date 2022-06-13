@@ -25,12 +25,12 @@ ms.custom:
 search.appverid: MET150
 description: Microsoft 365 aboneliğinize dosya depolama alanı ekleyin. Ek dosya depolama alanıyla, SharePoint daha fazla içerik depolayabilirsiniz.
 ms.date: 05/24/2022
-ms.openlocfilehash: a4a86966ccee1632f60b687696b9062ca3446778
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: bd0edd85718acc51559f5e409de4661a756cd787
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65678887"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043982"
 ---
 # <a name="add-more-sharepoint-storage-to-your-subscription"></a>Aboneliğinize daha fazla SharePoint depolama alanı ekleyin
 
@@ -70,7 +70,7 @@ Aboneliğiniz için henüz ek depolama alanı satın almadıysanız bunu yapabil
 4. Gerekirse temel aboneliği seçin ve eklemek istediğiniz gigabayt depolama alanı sayısını girin.
 5. **Şimdi kullanıma alma'ya** tıklayın.
 6. **Bu nasıl görünüyor?** sayfasında, seçtiğiniz gigabayt depolama alanı sayısını doğrulayın, fiyatlandırma bilgilerini gözden geçirin ve **İleri'yi** seçin.
-7. **Siparişi tamamla** sayfasında toplamı doğrulayın. Herhangi bir değişiklik yapmanız gerekiyorsa **Siparişi düzenle'yi** seçin. Sipariş için kredi denetimi gerekiyorsa onay kutusunu seçin. İşiniz bittiğinde **Siparişi** \> ver **Giriş Yönetici git'i** seçin.
+7. **Siparişi tamamla** sayfasında toplamı doğrulayın. Herhangi bir değişiklik yapmanız gerekiyorsa **Siparişi düzenle'yi** seçin. Sipariş için kredi denetimi gerekiyorsa onay kutusunu seçin. İşiniz bittiğinde **Sipariş** \> ver **Yönetici Giriş Sayfasına Git'i** seçin.
 
 ## <a name="increase-or-decrease-your-extra-storage"></a>Ek depolama alanınızı artırma veya azaltma
 
@@ -104,6 +104,7 @@ Office 365 Ek Dosya Depolama Alanı aşağıdaki aboneliklere sağlanır:
 - Microsoft 365 E3
 - Microsoft 365 E5
 - Microsoft 365 F1
+- Microsoft 365 F3
 
 > [!NOTE]
 > Office 365 Ek Dosya Depolama GCC, yüksek GCC ve DOD planları için de kullanılabilir.

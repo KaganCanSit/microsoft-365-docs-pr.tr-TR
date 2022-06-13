@@ -20,12 +20,12 @@ ms.custom:
 search.appverid: MET150
 description: İşletmeler için Microsoft 365 aboneliğiniz için kullanıcılardan gelen lisans isteklerini gözden geçirmeyi ve onaylamayı veya reddetmeyi öğrenin.
 ms.date: 04/22/2022
-ms.openlocfilehash: 802b84445c83c2831e5fd88598cc00fb8b0ab867
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: dfe8410ce894e19489664396866917e4c5bb3dd4
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098702"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66044257"
 ---
 # <a name="manage-license-requests"></a>Lisans isteklerini yönetme
 
@@ -50,7 +50,7 @@ Kuruluşunuzun kendi istek işlemi varsa, bunu kullanabilirsiniz. Kullanıcılar
 > [!IMPORTANT]
 > Kendi istek işleminizi kullanıyorsanız, İstekler sekmesinde hiçbir istek **görüntülenmez** . İletinizi eklemeden önce gelen mevcut istekler, siz onaylayana veya reddedene kadar gösterilmeye devam eder.
 
-1. Yönetim merkezinde <a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank">BillingLicenses</a>  >  sayfasına gidin ve **İstekler** sekmesini seçin.
+1. Yönetim merkezinde **Faturalama** > <a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank">Lisansları</a> sayfasına gidin ve **ardından İstekler** sekmesini seçin.
 2. **Bunun yerine Mevcut istek işleminizi kullan'ı** seçin.
 3. Sağ bölmedeki **İleti** kutusuna, kullanıcıların lisans istediğinde görmesini istediğiniz iletiyi yazın. Kuruluş ilkenizin veya diğer belgelerin bağlantısını da eklemek istiyorsanız **Belgelere bağlan (isteğe bağlı)** metin kutusuna URL'yi girin.
 4. **Kaydet**'i seçin.
@@ -59,14 +59,14 @@ Kuruluşunuzun kendi istek işlemi varsa, bunu kullanabilirsiniz. Kullanıcılar
 
 ## <a name="stop-using-your-own-request-process"></a>Kendi istek işleminizi kullanmayı durdurma
 
-1. Yönetim merkezinde <a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank">BillingLicenses</a>  >  sayfasına gidin ve **İstekler** sekmesini seçin.
+1. Yönetim merkezinde **Faturalama** > <a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank">Lisansları</a> sayfasına gidin ve **ardından İstekler** sekmesini seçin.
 2. **Bunun yerine Mevcut istek işleminizi kullan'ı** seçin.
 3. Sağ bölmede **Kuruluşumun istek işlemini kullan** onay kutusunu temizleyin.
 4. **Kaydet**'i seçin.
 
 ## <a name="approve-or-deny-a-license-request"></a>Lisans isteğini onaylama veya reddetme
 
-1. Yönetim merkezinde <a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank">BillingLicenses</a>  >  sayfasına gidin ve **İstekler** sekmesini seçin.
+1. Yönetim merkezinde **Faturalama** > <a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank">Lisansları</a> sayfasına gidin ve **ardından İstekler** sekmesini seçin.
 2. Gözden geçirmek istediğiniz isteği içeren satırı seçin. Sağ bölmede, ürüne lisans isteyen kullanıcılarla ilgili ayrıntılar gösterilir.
 3. İsteğin tamamını reddetmek için **Onaylama'yı** seçin ve iletişim kutusunda **Onaylama'yı** seçin.
 4. İstek için bazı kullanıcıları reddetmek, ancak diğerlerini onaylamak için, kaldırmak istediğiniz kullanıcıların adına göre X işaretini seçin. Adları **Bu kullanıcılara atama'nın** altına taşınır.
@@ -81,4 +81,5 @@ Kuruluşunuzun kendi istek işlemi varsa, bunu kullanabilirsiniz. Kullanıcılar
 
 [Kullanıcılara lisans atama](../../admin/manage/assign-licenses-to-users.md) (makale)\
 [Kullanıcıları farklı bir aboneliğe taşıma](../subscriptions/move-users-different-subscription.md) (makale)\
-[Abonelik lisanslarını satın alma veya kaldırma](buy-licenses.md) (makale)
+[Abonelik lisanslarını satın alma veya kaldırma](buy-licenses.md) (makale)\
+[Self servis satın alma hakkında SSS](../subscriptions/self-service-purchase-faq.yml)

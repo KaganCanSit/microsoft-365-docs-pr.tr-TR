@@ -16,12 +16,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 2bc051baa8d2ac6df9e29f1679402e63c2774cac
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: 6c39db3cceec62ef80cf19f34bbf3d89a219a4f3
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65679318"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042988"
 ---
 # <a name="set-preferences-for-microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın
 
@@ -37,7 +37,7 @@ ms.locfileid: "65679318"
 > [!IMPORTANT]
 > Bu konu, kurumsal ortamlarda Linux üzerinde Uç Nokta için Defender tercihlerini ayarlama yönergelerini içerir. Ürünü bir cihazda komut satırından yapılandırmak istiyorsanız bkz [. Kaynaklar](linux-resources.md#configure-from-the-command-line).
 
-Kurumsal ortamlarda, Linux üzerinde Uç Nokta için Defender bir yapılandırma profili aracılığıyla yönetilebilir. Bu profil, seçtiğiniz yönetim aracından dağıtılır. Kuruluş tarafından yönetilen tercihler, cihazda yerel olarak ayarlanan tercihlerden önceliklidir. Başka bir deyişle, kuruluşunuzdaki kullanıcılar bu yapılandırma profili aracılığıyla ayarlanan tercihleri değiştiremez.
+Kurumsal ortamlarda, Linux üzerinde Uç Nokta için Defender bir yapılandırma profili aracılığıyla yönetilebilir. Bu profil, seçtiğiniz yönetim aracından dağıtılır. Kuruluş tarafından yönetilen tercihler, cihazda yerel olarak ayarlanan tercihlerden önceliklidir. Başka bir deyişle, kuruluşunuzdaki kullanıcılar bu yapılandırma profili aracılığıyla ayarlanan tercihleri değiştiremez. Dışlamalar yönetilen yapılandırma profili aracılığıyla eklendiyse, yalnızca yönetilen yapılandırma profili aracılığıyla kaldırılabilir. Komut satırı, yerel olarak eklenen dışlamalar için çalışır.
 
 Bu makalede, bu profilin yapısı (başlamak için kullanabileceğiniz önerilen bir profil dahil) ve profilin nasıl dağıtılacağına ilişkin yönergeler açıklanmaktadır.
 
@@ -53,16 +53,11 @@ Yapılandırma profilinin en üst düzeyi, ürünün alt ürünleri için ürün
 
 Yapılandırma profilinin *antivirusEngine* bölümü, ürünün virüsten koruma bileşeninin tercihlerini yönetmek için kullanılır.
 
-<br>
-
-****
-
 |Açıklama|Değer|
 |---|---|
 |**Anahtar**|antivirusEngine|
 |**Veri türü**|Sözlük (iç içe tercih)|
 |**Açıklamalar**|Sözlük içeriğinin açıklaması için aşağıdaki bölümlere bakın.|
-|
 
 #### <a name="enforcement-level-for-antivirus-engine"></a>Virüsten koruma altyapısı için zorlama düzeyi
 
@@ -77,18 +72,12 @@ Virüsten koruma altyapısının zorlama tercihini belirtir. Zorlama düzeyini a
   - Otomatik tehdit düzeltme kapalı.
   - Güvenlik bilgileri güncelleştirmeleri açıktır.
 
-<br>
-
-****
-
 |Açıklama|Değer|
 |---|---|
 |**Anahtar**|enforcementLevel|
 |**Veri türü**|Dize|
 |**Olası değerler**|real_time (varsayılan) <p> on_demand <p> Pasif|
 |**Açıklamalar**|Uç Nokta için Defender sürüm 101.10.72 veya sonraki sürümlerde kullanılabilir.|
-|
-
 
 #### <a name="enabledisable-behavior-monitoring"></a>Davranış izlemeyi etkinleştirme/devre dışı bırakma 
 
@@ -102,16 +91,12 @@ Cihazda davranış izleme ve engelleme özelliğinin etkinleştirilip etkinleşt
 |---|---|
 |**Anahtar**|behaviorMonitoring|
 |**Veri türü**|Dize|
-|**Olası değerler**|devre dışı (varsayılan) <p> Etkin |
+|**Olası değerler**|devre dışı (varsayılan) <p> Etkin|
 |**Açıklamalar**|Uç Nokta için Defender sürüm 101.45.00 veya üzeri sürümlerde kullanılabilir.|
   
 #### <a name="run-a-scan-after-definitions-are-updated"></a>Tanımlar güncelleştirildikten sonra tarama çalıştırma
 
 Cihaza yeni güvenlik bilgileri güncelleştirmeleri indirildikten sonra işlem taraması başlatılıp başlatılmayacağını belirtir. Bu ayarın etkinleştirilmesi, cihazın çalışan işlemlerinde virüsten koruma taraması tetikler.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
@@ -119,15 +104,10 @@ Cihaza yeni güvenlik bilgileri güncelleştirmeleri indirildikten sonra işlem 
 |**Veri türü**|Boole|
 |**Olası değerler**|true (varsayılan) <p> False|
 |**Açıklamalar**|Uç Nokta için Defender sürüm 101.45.00 veya üzeri sürümlerde kullanılabilir.|
-|
 
 #### <a name="scan-archives-on-demand-antivirus-scans-only"></a>Arşivleri tara (yalnızca isteğe bağlı virüsten koruma taramaları)
 
 İsteğe bağlı virüsten koruma taramaları sırasında arşivlerin taranıp taranmayacağını belirtir.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
@@ -135,15 +115,10 @@ Cihaza yeni güvenlik bilgileri güncelleştirmeleri indirildikten sonra işlem 
 |**Veri türü**|Boole|
 |**Olası değerler**|true (varsayılan) <p> False|
 |**Açıklamalar**|Uç Nokta için Microsoft Defender sürüm 101.45.00 veya üzeri sürümlerde kullanılabilir.|
-|||
 
 #### <a name="degree-of-parallelism-for-on-demand-scans"></a>İsteğe bağlı taramalar için paralellik derecesi
 
 İsteğe bağlı taramalar için paralellik derecesini belirtir. Bu, taramayı gerçekleştirmek için kullanılan iş parçacığı sayısına karşılık gelir ve CPU kullanımını ve isteğe bağlı tarama süresini etkiler.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
@@ -151,16 +126,10 @@ Cihaza yeni güvenlik bilgileri güncelleştirmeleri indirildikten sonra işlem 
 |**Veri türü**|Tamsayı|
 |**Olası değerler**|2 (varsayılan). İzin verilen değerler 1 ile 64 arasındaki tamsayılardır.|
 |**Açıklamalar**|Uç Nokta için Microsoft Defender sürüm 101.45.00 veya üzeri sürümlerde kullanılabilir.|
-|||
-  
 
 #### <a name="exclusion-merge-policy"></a>Dışlama birleştirme ilkesi
 
 Dışlamalar için birleştirme ilkesini belirtir. Yönetici tanımlı ve kullanıcı tanımlı dışlamaların (`merge`) veya yalnızca yönetici tanımlı dışlamaların (`admin_only`) birleşimi olabilir. Bu ayar, yerel kullanıcıların kendi dışlamalarını tanımlamasını kısıtlamak için kullanılabilir.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
@@ -168,46 +137,31 @@ Dışlamalar için birleştirme ilkesini belirtir. Yönetici tanımlı ve kullan
 |**Veri türü**|Dize|
 |**Olası değerler**|merge (varsayılan) <p> admin_only|
 |**Açıklamalar**|Uç Nokta için Defender sürüm 100.83.73 veya sonraki sürümlerde kullanılabilir.|
-|
 
 #### <a name="scan-exclusions"></a>Tarama dışlamaları
 
 Taramanın dışında tutulan varlıklar. Dışlamalar tam yollar, uzantılar veya dosya adlarıyla belirtilebilir.
 (Dışlamalar bir öğe dizisi olarak belirtilir, yönetici gerektiği kadar öğeyi herhangi bir sırada belirtebilir.)
 
-<br>
-
-****
-
 |Açıklama|Değer|
 |---|---|
 |**Anahtar**|Dışlamalar|
 |**Veri türü**|Sözlük (iç içe tercih)|
 |**Açıklamalar**|Sözlük içeriğinin açıklaması için aşağıdaki bölümlere bakın.|
-|
 
 ##### <a name="type-of-exclusion"></a>Dışlama türü
 
 Taramanın dışında tutulan içerik türünü belirtir.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
 |**Anahtar**|$type|
 |**Veri türü**|Dize|
 |**Olası değerler**|excludedPath <p> excludedFileExtension <p> excludedFileName|
-|
 
 ##### <a name="path-to-excluded-content"></a>Dışlanan içeriğin yolu
 
 İçeriği taramadan tam dosya yolu ile dışlamak için kullanılır.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
@@ -215,15 +169,10 @@ Taramanın dışında tutulan içerik türünü belirtir.
 |**Veri türü**|Dize|
 |**Olası değerler**|geçerli yollar|
 |**Açıklamalar**|Yalnızca *$type* *excludedPath* olduğunda uygulanabilir|
-|
 
 ##### <a name="path-type-file--directory"></a>Yol türü (dosya / dizin)
 
 *path* özelliğinin bir dosyaya veya dizine başvurup başvurmadığını gösterir.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
@@ -231,15 +180,10 @@ Taramanın dışında tutulan içerik türünü belirtir.
 |**Veri türü**|Boole|
 |**Olası değerler**|false (varsayılan) <p> True|
 |**Açıklamalar**|Yalnızca *$type* *excludedPath* olduğunda uygulanabilir|
-|
 
 ##### <a name="file-extension-excluded-from-the-scan"></a>Dosya uzantısı taramanın dışında bırakıldı
 
 İçeriği dosya uzantısına göre taramanın dışında tutmak için kullanılır.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
@@ -247,15 +191,10 @@ Taramanın dışında tutulan içerik türünü belirtir.
 |**Veri türü**|Dize|
 |**Olası değerler**|geçerli dosya uzantıları|
 |**Açıklamalar**|Yalnızca *$type* *excludedFileExtension* olduğunda geçerlidir|
-|
 
 ##### <a name="process-excluded-from-the-scan"></a>Taramanın dışında tutulan işlem*
 
 Tüm dosya etkinliğinin taramanın dışında bırakıldığı bir işlemi belirtir. İşlem adıyla (örneğin, `cat`) veya tam yoluyla (örneğin, `/bin/cat`) belirtilebilir.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
@@ -263,29 +202,19 @@ Tüm dosya etkinliğinin taramanın dışında bırakıldığı bir işlemi beli
 |**Veri türü**|Dize|
 |**Olası değerler**|herhangi bir dize|
 |**Açıklamalar**|Yalnızca *$type* *excludedFileName* olduğunda geçerlidir|
-|
 
 #### <a name="allowed-threats"></a>İzin verilen tehditler
 
 Ürün tarafından engellenmeyen ve bunun yerine çalışmasına izin verilen tehditlerin (adıyla tanımlanır) listesi.
 
-<br>
-
-****
-
 |Açıklama|Değer|
 |---|---|
 |**Anahtar**|allowedThreats|
 |**Veri türü**|Dize dizisi|
-|
 
 #### <a name="disallowed-threat-actions"></a>İzin verilmeyen tehdit eylemleri
 
 Bir cihazın yerel kullanıcısının tehdit algılandığında gerçekleştirebileceği eylemleri kısıtlar. Bu listede yer alan eylemler kullanıcı arabiriminde görüntülenmez.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
@@ -293,37 +222,26 @@ Bir cihazın yerel kullanıcısının tehdit algılandığında gerçekleştireb
 |**Veri türü**|Dize dizisi|
 |**Olası değerler**|allow (kullanıcıların tehditlere izin vermelerini kısıtlar) <p> geri yükleme (kullanıcıların karantinadan tehditleri geri yüklemesini kısıtlar)|
 |**Açıklamalar**|Uç Nokta için Defender sürüm 100.83.73 veya sonraki sürümlerde kullanılabilir.|
-|
 
 #### <a name="threat-type-settings"></a>Tehdit türü ayarları
 
 Virüsten koruma altyapısındaki *threatTypeSettings* tercihi, belirli tehdit türlerinin ürün tarafından nasıl işlenme şeklini denetlemek için kullanılır.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
 |**Anahtar**|threatTypeSettings|
 |**Veri türü**|Sözlük (iç içe tercih)|
 |**Açıklamalar**|Sözlük içeriğinin açıklaması için aşağıdaki bölümlere bakın.|
-|
 
 ##### <a name="threat-type"></a>Tehdit türü
 
 Davranışın yapılandırıldığı tehdit türü.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
 |**Anahtar**|Anahtar|
 |**Veri türü**|Dize|
 |**Olası değerler**|potentially_unwanted_application <p> archive_bomb|
-|
 
 ##### <a name="action-to-take"></a>Gerçekleştirecek eylem
 
@@ -333,24 +251,15 @@ Davranışın yapılandırıldığı tehdit türü.
 - **Engelle**: Cihaz bu tür tehditlere karşı korunur ve güvenlik konsolunda size bildirilir.
 - **Kapalı**: Cihaz bu tür tehditlere karşı korunmaz ve hiçbir şey günlüğe kaydedilmez.
 
-<br>
-
-****
-
 |Açıklama|Değer|
 |---|---|
 |**Anahtar**|Değer|
 |**Veri türü**|Dize|
 |**Olası değerler**|denetim (varsayılan) <p> Blok <p> kapalı|
-|
 
 #### <a name="threat-type-settings-merge-policy"></a>Tehdit türü ayarları birleştirme ilkesi
 
 Tehdit türü ayarları için birleştirme ilkesini belirtir. Bu, yönetici tanımlı ve kullanıcı tanımlı ayarların () veya yalnızca yönetici tanımlı ayarların (`merge``admin_only`) birleşimi olabilir. Bu ayar, yerel kullanıcıların farklı tehdit türleri için kendi ayarlarını tanımlamasını kısıtlamak için kullanılabilir.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
@@ -358,15 +267,10 @@ Tehdit türü ayarları için birleştirme ilkesini belirtir. Bu, yönetici tan�
 |**Veri türü**|Dize|
 |**Olası değerler**|merge (varsayılan) <p> admin_only|
 |**Açıklamalar**|Uç Nokta için Defender sürüm 100.83.73 veya sonraki sürümlerde kullanılabilir.|
-|
 
 #### <a name="antivirus-scan-history-retention-in-days"></a>Virüsten koruma tarama geçmişi saklama (gün olarak)
 
 Sonuçların cihazdaki tarama geçmişinde tutulacağını gün sayısını belirtin. Eski tarama sonuçları geçmişten kaldırılır. Diskten de kaldırılan eski karantinaya alınan dosyalar.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
@@ -374,15 +278,10 @@ Sonuçların cihazdaki tarama geçmişinde tutulacağını gün sayısını beli
 |**Veri türü**|Dize|
 |**Olası değerler**|90 (varsayılan). İzin verilen değerler 1 günden 180 güne kadardır.|
 |**Açıklamalar**|Uç Nokta için Defender sürüm 101.04.76 veya sonraki sürümlerde kullanılabilir.|
-|
 
 #### <a name="maximum-number-of-items-in-the-antivirus-scan-history"></a>Virüsten koruma tarama geçmişindeki en fazla öğe sayısı
 
 Tarama geçmişinde tutulacak en fazla girdi sayısını belirtin. Girişler, geçmişte gerçekleştirilen tüm isteğe bağlı taramaları ve tüm virüsten koruma algılamalarını içerir.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
@@ -390,52 +289,36 @@ Tarama geçmişinde tutulacak en fazla girdi sayısını belirtin. Girişler, ge
 |**Veri türü**|Dize|
 |**Olası değerler**|10000 (varsayılan). İzin verilen değerler 5000 öğeden 15000 öğeye kadardır.|
 |**Açıklamalar**|Uç Nokta için Defender sürüm 101.04.76 veya sonraki sürümlerde kullanılabilir.|
-|
 
 ### <a name="cloud-delivered-protection-preferences"></a>Bulut tabanlı koruma tercihleri
 
 Yapılandırma profilindeki *cloudService* girdisi, ürünün bulut tabanlı koruma özelliğini yapılandırmak için kullanılır.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
 |**Anahtar**|cloudService|
 |**Veri türü**|Sözlük (iç içe tercih)|
 |**Açıklamalar**|Sözlük içeriğinin açıklaması için aşağıdaki bölümlere bakın.|
-|
 
 #### <a name="enable--disable-cloud-delivered-protection"></a>Bulut teslimli korumayı etkinleştirme/devre dışı bırakma
 
 Cihazda bulut tabanlı korumanın etkinleştirilip etkinleştirilmediğini belirler. Hizmetlerinizin güvenliğini artırmak için bu özelliği açık tutmanızı öneririz.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
 |**Anahtar**|Etkin|
 |**Veri türü**|Boole|
 |**Olası değerler**|true (varsayılan) <p> False|
-|
 
 #### <a name="diagnostic-collection-level"></a>Tanılama toplama düzeyi
 
 Tanılama verileri Uç Nokta için Defender'ı güvenli ve güncel tutmak, sorunları algılamak, tanılamak ve düzeltmek ve ürün geliştirmeleri yapmak için kullanılır. Bu ayar, ürün tarafından Microsoft'a gönderilen tanılama düzeyini belirler.
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
 |**Anahtar**|diagnosticLevel|
 |**Veri türü**|Dize|
 |**Olası değerler**|isteğe bağlı (varsayılan) <p> Gerekli|
-|
 
 #### <a name="enable--disable-automatic-sample-submissions"></a>Otomatik örnek gönderimlerini etkinleştirme/devre dışı bırakma
 
@@ -445,31 +328,21 @@ Tanılama verileri Uç Nokta için Defender'ı güvenli ve güncel tutmak, sorun
 - **Kasa**: Yalnızca kişisel bilgiler (PII) içermeyen şüpheli örnekler otomatik olarak gönderilir. Bu ayar için varsayılan değer budur.
 - **Tümü**: Tüm şüpheli örnekler Microsoft'a gönderilir.
 
-<br>
-
-****
-
 |Açıklama|Değer|
 |---|---|
 |**Anahtar**|automaticSampleSubmissionConsent|
 |**Veri türü**|Dize|
 |**Olası değerler**|yok <p> güvenli (varsayılan) <p> Tüm|
-|
 
 #### <a name="enable--disable-automatic-security-intelligence-updates"></a>Otomatik güvenlik bilgileri güncelleştirmelerini etkinleştirme/devre dışı bırakma
 
 Güvenlik zekası güncelleştirmelerinin otomatik olarak yüklenip yüklenmediğini belirler:
-
-<br>
-
-****
 
 |Açıklama|Değer|
 |---|---|
 |**Anahtar**|automaticDefinitionUpdateEnabled|
 |**Veri türü**|Boole|
 |**Olası değerler**|true (varsayılan) <p> False|
-|
 
 ## <a name="recommended-configuration-profile"></a>Önerilen yapılandırma profili
 

@@ -18,12 +18,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 516b74eb8d1e62194718e0ad3234b3269e07fb83
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: ec3002a30e9b5f20636a272574dcc3d6d00e4389
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731383"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66044420"
 ---
 # <a name="devicelogonevents"></a>DeviceLogonEvents
 
@@ -58,14 +58,14 @@ Gelişmiş tehdit avcılığı şemasındaki diğer tablolar hakkında bilgi iç
 | `IsLocalAdmin` | `boolean` | Kullanıcının makinede yerel yönetici olup olmadığını gösteren Boole göstergesi |
 | `LogonId` | `string` | Oturum açma oturumlarının tanımlayıcısı. Bu tanımlayıcı aynı makinede yalnızca yeniden başlatmalar arasında benzersizdir |
 | `RemoteDeviceName` | `string` | Etkilenen makinede uzak işlem gerçekleştiren makinenin adı. Bildirilen olaya bağlı olarak, bu ad tam etki alanı adı (FQDN), NetBIOS adı veya etki alanı bilgisi olmayan bir ana bilgisayar adı olabilir |
-| `RemoteIP` | `string` | Bağlanılmakta olan IP adresi |
+| `RemoteIP` | `string` | Oturum açma girişiminin gerçekleştirildiği cihazın IP adresi |
 | `RemoteIPType` | `string` | Genel, Özel, Ayrılmış, Geri Döngü, Teredo, FourToSixMapping ve Broadcast gibi IP adresi türü |
 | `RemotePort` | `int` | Bağlı olan uzak cihazda TCP bağlantı noktası |
 | `InitiatingProcessAccountDomain` | `string` | Olaydan sorumlu işlemi çalıştıran hesabın etki alanı |
 | `InitiatingProcessAccountName` | `string` | Olaydan sorumlu işlemi çalıştıran hesabın kullanıcı adı |
 | `InitiatingProcessAccountSid` | `string` | Olaydan sorumlu işlemi çalıştıran hesabın Güvenlik Tanımlayıcısı (SID) |
 | `InitiatingProcessAccountUpn` | `string` | Olaydan sorumlu işlemi çalıştıran hesabın kullanıcı asıl adı (UPN) |
-| ` InitiatingProcessAccountObjectId` | `string` | Olaydan sorumlu işlemi çalıştıran kullanıcı hesabının Azure AD nesne kimliği |
+| ` InitiatingProcessAccountObjectId` | `string` | Olaydan sorumlu işlemi çalıştıran kullanıcı hesabının nesne kimliğini Azure AD |
 | `InitiatingProcessIntegrityLevel` | `string` | Olayı başlatan işlemin bütünlük düzeyi. Windows, bir internet indirmesinden başlatılmış olmaları gibi belirli özelliklere göre süreçlere bütünlük düzeyleri atar. Bu bütünlük düzeyleri kaynaklara yönelik izinleri etkiler |
 | `InitiatingProcessTokenElevation` | `string` | Olayı başlatan işleme uygulanan Kullanıcı Access Control (UAC) ayrıcalık yükseltmesinin varlığını veya yokluğunu gösteren belirteç türü |
 | `InitiatingProcessSHA1` | `string` | Olayı başlatan işlemin SHA-1 'i (görüntü dosyası) |

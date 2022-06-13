@@ -23,12 +23,12 @@ ms.custom:
 search.appverid: MET150
 description: Ürün lisanslarının atamasını kaldırmak için kullandığınız yöntem, lisansları belirli kullanıcılardan mı yoksa belirli bir üründen mi kaldırdığınıza bağlıdır.
 ms.date: 04/22/2022
-ms.openlocfilehash: 29d46ac745487328ecfe49bf658fdaa79fa346d9
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 23fc9ea04f45cdeb50acb0ec2d62d584974d6499
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65465810"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043252"
 ---
 # <a name="unassign-microsoft-365-licenses-from-users"></a>Kullanıcılardan Microsoft 365 lisanslarının atamasını kaldırma
 
@@ -112,13 +112,13 @@ Lisansları kaldırmak için **Etkin kullanıcılar** sayfasını kullandığın
 
 3. Üst kısımda **Ürün lisanslarını yönet'i** seçin.
 
-4. **Ürün lisanslarını yönet** bölmesinde **Tümünün atamasını kaldırKaydet değişikliklerini kaldır'ı** seçin. > 
+4. **Ürün lisanslarını yönet** bölmesinde Tüm  > **Kaydet değişikliklerinin** **atamasını kaldır'ı** seçin.
 
 5. Bölmenin alt kısmında **Bitti'yi** seçin.  
 
 ## <a name="what-happens-to-a-users-data-when-you-remove-their-license"></a>Lisansını kaldırdığınızda kullanıcının verilerine ne olur?
 
-- Kullanıcıdan lisans kaldırıldığında, bu hesapla ilişkili çevrimiçi veriler Exchange 30 gün boyunca tutulur. 30 günlük yetkisiz kullanım süresinden sonra veriler silinir ve kurtarılamaz.
+- Kullanıcıdan lisans kaldırıldığında, bu hesapla ilişkili Exchange Online veriler 30 gün boyunca tutulur. 30 günlük yetkisiz kullanım süresinden sonra veriler silinir ve kurtarılamaz. Ancak, bekletme ilkesine bağlanır ve bekletme etiketleriyle eşleşen içerik bulma için korunur.
 - OneDrive İş kaydedilen dosyalar, kullanıcı Microsoft 365 yönetim merkezi silinmediği veya Active Directory eşitlemesi aracılığıyla kaldırılmadığı sürece silinmez. Daha fazla bilgi için bkz. [OneDrive saklama ve silme](/onedrive/retention-and-deletion).
 - Lisans kaldırıldığında, kullanıcının posta kutusu artık İçerik Arama veya eBulma (Premium) gibi bir eBulma aracı kullanılarak aranamaz. Daha fazla bilgi için, [Microsoft 365'de İçerik Arama'da](../../compliance/content-search.md) "Bağlantısı kesilmiş veya lisanslı olmayan posta kutularını arama" bölümüne bakın.
 - Office 365 Kurumsal E3 gibi bir Enterprise aboneliğiniz varsa, Exchange Online etkin olmayan posta kutularını kullanarak silinen bir kullanıcı hesabının [posta kutusu](../../compliance/inactive-mailboxes-in-office-365.md) verilerini korumanıza olanak tanır. Daha fazla bilgi için bkz. [Exchange Online'da etkin olmayan posta kutuları oluşturma ve yönetme](../../compliance/create-and-manage-inactive-mailboxes.md).

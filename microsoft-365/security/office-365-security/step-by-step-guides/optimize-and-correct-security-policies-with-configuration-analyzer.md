@@ -1,5 +1,5 @@
 ---
-title: Yapılandırma çözümleyicisi ile güvenlik ilkelerini iyileştirme ve düzeltme
+title: Yapılandırma çözümleyicisi ile güvenlik ilkelerini iyileştirin ve düzeltin
 description: Yapılandırma çözümleyicisi ile güvenlik ilkelerini iyileştirme ve düzeltme adımları. Yapılandırma çözümleyicisi, kiracınızda yapılandırdığınız e-posta güvenlik ilkelerini yönetmek ve görüntülemek için merkezi bir konum ve tek bölmedir.
 search.product: ''
 search.appverid: ''
@@ -15,21 +15,21 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: dcb40c0abd619291da2f05fdfa362c03f853181e
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: 765eaffd2f57687c0ee16ace30aff97ddd91462c
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842544"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042166"
 ---
-# <a name="optimize-and-correct-security-policies-with-configuration-analyzer"></a>Yapılandırma çözümleyicisi ile güvenlik ilkelerini iyileştirme ve düzeltme
+# <a name="optimize-and-correct-security-policies-with-configuration-analyzer"></a>Yapılandırma çözümleyicisi ile güvenlik ilkelerini iyileştirin ve düzeltin
 
 Yapılandırma çözümleyicisi, kiracınızda yapılandırdığınız e-posta güvenlik ilkelerini yönetmek ve görüntülemek için merkezi bir konum ve tek bölmedir. Standart ve Katı önerilen ayarlarımızla ayarlarınızın yan yana karşılaştırmasını yapabilir, öneriler uygulayabilir ve duruşunuzu etkileyen geçmiş değişiklikleri görüntüleyebilirsiniz.
 
 ## <a name="what-youll-need"></a>İhtiyacınız olan şey
-- Office 365 için Microsoft Defender Plan 1
+- Exchange Online Protection
 - Yeterli izinler (Güvenlik Yöneticisi rolü)
 - Aşağıdaki adımları gerçekleştirmek için 5 dakika.
 

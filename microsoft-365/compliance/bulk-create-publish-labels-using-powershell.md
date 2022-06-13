@@ -19,12 +19,12 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Microsoft Purview uyumluluk portalından bağımsız olarak komut satırından bekletme etiketleri oluşturmak ve yayımlamak için PowerShell'i kullanmayı öğrenin.
-ms.openlocfilehash: f2a01024f6c2a05eb5d584112f9a828ac2c3058c
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: fb39e3dee9f1bd0492c443e4a3c5f5c878808990
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66011770"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043513"
 ---
 # <a name="create-and-publish-retention-labels-by-using-powershell"></a>PowerShell kullanarak bekletme etiketleri oluşturma ve yayımlama
 
@@ -33,41 +33,40 @@ ms.locfileid: "66011770"
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft 365'da belgeleri ve e-postaları saklamanıza veya silmenize yardımcı olması için [bekletme etiketlerini](retention.md) kullanmaya karar verdikten sonra, oluşturup yayımlamak için birçok ve muhtemelen yüzlerce bekletme etiketine sahip olduğunuzu fark etmiş olabilirsiniz. Büyük ölçekte bekletme etiketleri oluşturmak için önerilen yöntem, Microsoft Purview uyumluluk portalından [dosya planını](file-plan-manager.md) kullanmaktır. Ancak [PowerShell'i](retention.md#powershell-cmdlets-for-retention-policies-and-retention-labels) de kullanabilirsiniz.
-  
+
 Bekletme etiketlerini toplu olarak oluşturmanıza ve bekletme etiketi ilkelerinde yayımlamanıza yardımcı olması için bu makaledeki bilgileri, şablon dosyalarını ve örnekleri ve betiği kullanın. Ardından bekletme etiketleri [yöneticiler ve kullanıcılar tarafından uygulanabilir](create-apply-retention-labels.md#how-to-apply-published-retention-labels).
 
 Sağlanan yönergeler, otomatik olarak uygulanan bekletme etiketlerini desteklemez.
 
-Genel bakış: 
+Genel bakış:
 
 1. Excel'da bekletme etiketlerinizin listesini ve bekletme etiketi ilkelerinin listesini oluşturun.
 
 2. Bu listelerde bekletme etiketleri ve bekletme etiketi ilkeleri oluşturmak için PowerShell'i kullanın.
-  
+
 ## <a name="disclaimer"></a>Reddi
 
 Bu makalede sağlanan örnek betikler herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betikler, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiklerin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
-  
+
 ## <a name="step-1-create-a-csv-file-for-the-retention-labels"></a>1. Adım: Bekletme etiketleri için .csv dosyası oluşturma
 
-1. Bir şablon için aşağıdaki örnek .csv dosyasını ve dört farklı bekletme etiketi için örnek girdileri kopyalayıp Excel yapıştırın. 
+1. Bir şablon için aşağıdaki örnek .csv dosyasını ve dört farklı bekletme etiketi için örnek girdileri kopyalayıp Excel yapıştırın.
 
 2. Metni sütunlara dönüştürme: **Veri** sekmesi \> Metni **Sınırlandırılmış** \> **Sütunlara** \> **VirgülLe** \> **Genel**
 
-2. Örnekleri kendi bekletme etiketlerinizin ve ayarlarınızın girdileriyle değiştirin. Parametre değerleri hakkında daha fazla bilgi için bkz. [New-ComplianceTag](/powershell/module/exchange/new-compliancetag).
+3. Örnekleri kendi bekletme etiketlerinizin ve ayarlarınızın girdileriyle değiştirin. Parametre değerleri hakkında daha fazla bilgi için bkz. [New-ComplianceTag](/powershell/module/exchange/new-compliancetag).
 
-3. Çalışma sayfasını .csv dosyası olarak daha sonraki bir adımda kolayca bulunabilecek bir konuma kaydedin. Örneğin: C:\>Scripts\Labels.csv
+4. Çalışma sayfasını .csv dosyası olarak daha sonraki bir adımda kolayca bulunabilecek bir konuma kaydedin. Örneğin: C:\>Scripts\Labels.csv
 
-  
 Notlar:
 
 - .csv dosyası zaten var olan dosyayla aynı ada sahip bir bekletme etiketi içeriyorsa, betik bu bekletme etiketini oluşturmayı atlar. Yinelenen bekletme etiketleri oluşturulmaz.
-    
+
 - Sağlanan örnek .csv dosyasından sütun üst bilgilerini değiştirmeyin veya yeniden adlandırmayın; aksi takdirde betik başarısız olur.
-    
+
 ### <a name="sample-csv-file-for-retention-labels"></a>Bekletme etiketleri için örnek .csv dosyası
 
-```
+```text
 Name (Required),Comment (Optional),IsRecordLabel (Required),RetentionAction (Optional),RetentionDuration (Optional),RetentionType (Optional),ReviewerEmail (Optional)
 LabelName_t_1,Record - keep and delete - 2 years,$true,KeepAndDelete,730,CreationAgeInDays,
 LabelName_t_2,Keep and delete tag - 7 years,$false,KeepAndDelete,2555,ModificationAgeInDays,
@@ -77,24 +76,23 @@ LabelName_t_4,Record label tag - financial,$true,Keep,730,CreationAgeInDays,
 
 ## <a name="step-2-create-a-csv-file-for-the-retention-label-policies"></a>2. Adım: Bekletme etiketi ilkeleri için .csv dosyası oluşturma
 
-1. Bir şablon için aşağıdaki örnek .csv dosyasını ve üç farklı bekletme etiketi ilkesi için örnek girdileri kopyalayıp Excel yapıştırın. 
+1. Bir şablon için aşağıdaki örnek .csv dosyasını ve üç farklı bekletme etiketi ilkesi için örnek girdileri kopyalayıp Excel yapıştırın.
 
 2. Metni sütunlara dönüştürme: **Veri** sekmesi \> Metni **Sınırlandırılmış** \> **Sütunlara** \> **VirgülLe** \> **Genel**
 
-2. Örnekleri kendi bekletme etiketi ilkeleriniz ve bunların ayarları için girişlerle değiştirin. Bu cmdlet'in parametre değerleri hakkında daha fazla bilgi için bkz. [New-RetentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy).
+3. Örnekleri kendi bekletme etiketi ilkeleriniz ve bunların ayarları için girişlerle değiştirin. Bu cmdlet'in parametre değerleri hakkında daha fazla bilgi için bkz. [New-RetentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy).
 
-3. Çalışma sayfasını .csv dosyası olarak daha sonraki bir adımda kolayca bulunabilecek bir konuma kaydedin. Örneğin: `<path>Policies.csv`
-
+4. Çalışma sayfasını .csv dosyası olarak daha sonraki bir adımda kolayca bulunabilecek bir konuma kaydedin. Örneğin: `<path>Policies.csv`
 
 Notlar:
-  
+
 - .csv dosyası zaten mevcut olanla aynı ada sahip bir bekletme etiketi ilkesi içeriyorsa, betik bu bekletme etiketi ilkesini oluşturmayı atlar. Yinelenen bekletme etiketi ilkesi oluşturulmaz.
-    
+
 - Sağlanan örnek .csv dosyasından sütun üst bilgilerini değiştirmeyin veya yeniden adlandırmayın; aksi takdirde betik başarısız olur.
-    
+
 ### <a name="sample-csv-file-for-retention-policies"></a>Bekletme ilkeleri için örnek .csv dosyası
 
-```
+```text
 Policy Name (Required),PublishComplianceTag (Required),Comment (Optional),Enabled (Required),ExchangeLocation (Optional),ExchangeLocationException (Optional),ModernGroupLocation (Optional),ModernGroupLocationException (Optional),OneDriveLocation (Optional),OneDriveLocationException (Optional),PublicFolderLocation (Optional),SharePointLocation (Optional),SharePointLocationException (Optional),SkypeLocation (Optional),SkypeLocationException (Optional)
 Publishing Policy Red1,"LabelName_t_1, LabelName_t_2, LabelName_t_3, LabelName_t_4",N/A,$true,All,,All,,All,,,All,,,
 Publishing Policy Orange1,"LabelName_t_1, LabelName_t_2",N/A,$true,All,,,,,,,,,,
@@ -110,8 +108,8 @@ Publishing Policy Yellow1,"LabelName_t_3, LabelName_t_4",N/A,$false,All,,,,,,,,,
 Notlar:
 
 - Betik, önceki iki adımda oluşturduğunuz iki kaynak dosyayı sağlamanızı ister:
-    - Bekletme etiketlerini oluşturmak için kaynak dosyayı belirtmezseniz, betik bekletme etiketi ilkelerini oluşturmak için devam eder. 
-    - Bekletme etiketi ilkelerini oluşturmak için kaynak dosyayı belirtmezseniz, betik yalnızca bekletme etiketlerini oluşturur.
+  - Bekletme etiketlerini oluşturmak için kaynak dosyayı belirtmezseniz, betik bekletme etiketi ilkelerini oluşturmak için devam eder.
+  - Bekletme etiketi ilkelerini oluşturmak için kaynak dosyayı belirtmezseniz, betik yalnızca bekletme etiketlerini oluşturur.
 
 - Betik, gerçekleştirilen her eylemi ve eylemin başarılı veya başarısız olup olmadığını kaydeden bir günlük dosyası oluşturur. Bu günlük dosyasını bulma yönergeleri için son adıma bakın.
 
@@ -120,15 +118,15 @@ Notlar:
 ```Powershell
 <#
 . Steps: Import and publish retention labels
-    ○ Load retention labels csv file 
-    ○ Validate csv file input
-    ○ Create retention labels
-    ○ Create retention policies
-    ○ Publish retention labels for the policies
-    ○ Generate the log for retention labels and policies creation
-    ○ Generate the csv result for the labels and policies created
+    - Load retention labels csv file
+    - Validate csv file input
+    - Create retention labels
+    - Create retention policies
+    - Publish retention labels for the policies
+    - Generate the log for retention labels and policies creation
+    - Generate the csv result for the labels and policies created
 . Syntax
-    .\Publish-ComplianceTag.ps1 [-LabelListCSV <string>] [-PolicyListCSV <string>] 
+    .\Publish-ComplianceTag.ps1 [-LabelListCSV <string>] [-PolicyListCSV <string>]
 . Detailed Description
     1) [-LabelListCSV <string>]
     -LabelListCSV ".\SampleInputFile_LabelList.csv"
@@ -158,13 +156,13 @@ Function FileExist
     $inputFileExist = Test-Path $FilePath
     if (!$inputFileExist)
     {
-        if ($Warning -eq $false) 
-        { 
+        if ($Warning -eq $false)
+        {
             WriteToLog -Type "Failed" -Message "[File: $FilePath] The file doesn't exist"
-            throw 
+            throw
         }
-        else 
-        { 
+        else
+        {
             WriteToLog -Type "Warning" -Message "[File: $FilePath] The file doesn't exist"
         }
     }
@@ -259,7 +257,7 @@ Function InvokePowerShellCmdlet
     )
     try
     {
-        WriteToLog -Type "Start" -Message "Execute Cmdlet : '$CmdLet'" 
+        WriteToLog -Type "Start" -Message "Execute Cmdlet : '$CmdLet'"
         return Invoke-Expression $CmdLet -ErrorAction SilentlyContinue
     }
     catch
@@ -279,10 +277,10 @@ Function CreateComplianceTag
         [Parameter(Mandatory = $true)]
         [String]$FilePath
     )
-    
+
     WriteToLog -Type "Start" "Start to create Compliance Tag"
     FileExist $FilePath
-    
+
     # TODO Validate CSV file for the Header
     try
     {
@@ -319,7 +317,7 @@ Function CreateComplianceTag
             if (![String]::IsNullOrEmpty($lab.'RetentionAction (Optional)'))
             {
                 $para = $lab.'RetentionAction (Optional)'
-                $cmdlet += " -RetentionAction " + $para 
+                $cmdlet += " -RetentionAction " + $para
             }
             if (![String]::IsNullOrEmpty($lab.'RetentionDuration (Optional)'))
             {
@@ -342,7 +340,7 @@ Function CreateComplianceTag
                         $eml += "'{0}'," -f $email
                     }
                     $eml = $eml.Substring(0, $eml.Length - 1) + ')'
-                    
+
                     $cmdlet += " -ReviewerEmail " + $eml
                 }
             }
@@ -351,9 +349,9 @@ Function CreateComplianceTag
             {
                 # Create compliance tag
                 $msg = "Execute Cmdlet : {0}" -f $cmdlet
-                
+
                 $ret = InvokePowerShellCmdlet $cmdlet
-            
+
                 if ($ret -eq $null)
                 {
                     WriteToLog -Type "Failed" $error[0]
@@ -381,7 +379,7 @@ Function CreateRetentionCompliancePolicy
         [Parameter(Mandatory = $true)]
         [String]$FilePath
     )
-    
+
     WriteToLog -Type "Start" "Start to Create Retention Policy"
     FileExist $FilePath
     try
@@ -422,7 +420,7 @@ Function CreateRetentionCompliancePolicy
                 $para = $rp.'ExchangeLocation (Optional)'
                 $cmdlet += " -ExchangeLocation " + $para
             }
-         
+
             if (![String]::IsNullOrEmpty($rp.'ExchangeLocationException (Optional)'))
             {
                 $para = $rp.'ExchangeLocationException (Optional)'
@@ -478,9 +476,9 @@ Function CreateRetentionCompliancePolicy
             {
                 # Create retention compliance policy
                 $msg = "Execute Cmdlet : {0}" -f $cmdlet
-            
+
                 $ret = invokepowershellcmdlet $cmdlet
-            
+
                 if ($ret -eq $null)
                 {
                     WriteToLog -Type "Failed" $error[0]
@@ -493,13 +491,13 @@ Function CreateRetentionCompliancePolicy
                 WriteToLog -Type "Warning" -Message "The policy '$name' already exists! Skip for creation!"
                 $rpid = ($policies | ? { $_.Name.ToLower() -eq $name.ToLower() }).Guid
             }
-                        
+
             # Retrieve tag name for publishing
             $ts = $rp.'PublishComplianceTag (Required)'
             $tagList = $ts.Split(",") | ForEach-Object { $_.Trim() }
-            
-            WriteToLog -Type "Message" -Message "Publish Tags : '$ts'" 
-            
+
+            WriteToLog -Type "Message" -Message "Publish Tags : '$ts'"
+
             PublishComplianceTag -PolicyGuid $rpid -TagName $tagList
         }
     }
@@ -519,14 +517,14 @@ Function PublishComplianceTag
         [Parameter(Mandatory = $true)]
         [String[]]$TagNames
     )
-    
+
     WriteToLog -Type "Start" "Start to Publish Compliance Tag"
     try
     {
         # Retrieve existing rule related to the given compliance policy
         $rule = InvokePowerShellCmdlet ("Get-RetentionComplianceRule -Policy {0}" -f $PolicyGuid)
         $tagGuids = New-Object System.Collections.ArrayList
-        
+
         foreach ($tn in $TagNames)
         {
             $t = InvokePowerShellCmdlet ("Get-ComplianceTag {0}" -f $tn)
@@ -550,13 +548,13 @@ Function PublishComplianceTag
                 }
             }
         }
-        
+
         foreach($t in $tagGuids)
         {
             # Publish compliance tag
             $cmdlet = "New-RetentionComplianceRule -Policy {0} -PublishComplianceTag {1}" -f $PolicyGuid, $t
             $ret = InvokePowerShellCmdlet $cmdlet
-            
+
             if ($ret -eq $null)
             {
                 WriteToLog -Type "Failed" $error[0]
@@ -578,7 +576,7 @@ Function ExportCreatedComplianceTag
         [Parameter(Mandatory = $true)]
         [String]$LabelFilePath
     )
-    
+
     WriteToLog -Type "Start" "Start to Export Compliance Tag Created"
     try
     {
@@ -594,7 +592,7 @@ Function ExportCreatedComplianceTag
         $col5 = New-Object system.Data.DataColumn RetentionDuration,([string])
         $col6 = New-Object system.Data.DataColumn RetentionType,([string])
         $col7 = New-Object system.Data.DataColumn ReviewerEmail,([string])
-        
+
         # Add the Columns
         $table.columns.add($col1)
         $table.columns.add($col2)
@@ -606,7 +604,7 @@ Function ExportCreatedComplianceTag
         foreach($lab in $labels)
         {
             $t = InvokePowerShellCmdlet ("Get-ComplianceTag '{0}' " -f $lab.'Name (Required)')
-            
+
             # Create a result row
             $row = $table.NewRow()
             $row['Name'] = $t.Name
@@ -616,7 +614,7 @@ Function ExportCreatedComplianceTag
             $row['RetentionDuration'] = $t.RetentionDuration
             $row['RetentionType'] = $t.RetentionType
             $row['ReviewerEmail'] = $t.ReviewerEmail
-            
+
             # Add the row to the table
             $table.Rows.Add($row)
         }
@@ -636,7 +634,7 @@ Function ExportPublishedComplianceTagAndPolicy
         [Parameter(Mandatory = $true)]
         [String[]]$PolicyFilePath
     )
-    
+
     WriteToLog -Type "Start" "Start to Export Published Compliance Tag and Policy"
     try
     {
@@ -660,7 +658,7 @@ Function ExportPublishedComplianceTagAndPolicy
         $col13 = New-Object system.Data.DataColumn SharePointLocationException,([string])
         $col14 = New-Object system.Data.DataColumn SkypeLocation,([string])
         $col15 = New-Object system.Data.DataColumn SkypeLocationException,([string])
-        
+
         # Add the Columns
         $table.columns.add($col1)
         $table.columns.add($col2)
@@ -680,11 +678,11 @@ Function ExportPublishedComplianceTagAndPolicy
         foreach($policy in $policies)
         {
             $t = InvokePowerShellCmdlet ("Get-RetentionCompliancePolicy '{0}' -DistributionDetail" -f $policy.'Policy Name (Required)')
-            
+
             # Create a result row
             $row = $table.NewRow()
             $row['Policy Name'] = $t.Name
-            
+
             $rules = InvokePowerShellCmdlet ("Get-RetentionComplianceRule -Policy {0}" -f $t.Guid)
             $tagList = [String]::Empty
             foreach($rule in $rules)
@@ -713,7 +711,7 @@ Function ExportPublishedComplianceTagAndPolicy
             $row['SharePointLocationException'] = $t.SharePointLocationException
             $row['SkypeLocation'] = $t.SkypeLocation
             $row['SkypeLocationException'] = $t.SkypeLocationException
-            
+
             # Add the row to the table
             $table.Rows.Add($row)
         }
@@ -732,9 +730,8 @@ CreateRetentionCompliancePolicy -FilePath $PolicyListCSV
 if ($ResultCSV)
 {
     ExportCreatedComplianceTag -LabelFilePath $LabelListCSV
-    ExportPublishedComplianceTagAndPolicy -PolicyFilePath $PolicyListCSV 
+    ExportPublishedComplianceTagAndPolicy -PolicyFilePath $PolicyListCSV
 }
-
 ```
 
 ## <a name="step-4-run-the-powershell-script"></a>4. Adım: PowerShell betiğini çalıştırma
@@ -742,15 +739,15 @@ if ($ResultCSV)
 İlk olarak[, Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 Ardından bekletme etiketlerini oluşturan ve yayımlayan betiği çalıştırın:
-  
+
 1. Güvenlik & Uyumluluğu PowerShell oturumunuzda yolu girin, ardından betiğin karakterlerini `.\` ve dosya adını girin ve ardından betiği çalıştırmak için ENTER tuşuna basın. Örneğin:
-    
+
     ```powershell
     <path>.\CreateRetentionSchedule.ps1
     ```
 
 2. Betik, önceki adımlarda oluşturduğunuz .csv dosyalarının konumlarını ister. Yolu girin, ardından .csv dosyasının karakterlerini `.\` ve dosya adını girin ve ENTER tuşuna basın. Örneğin, ilk istem için:
-    
+
     ```powershell
     <path>.\Labels.csv
     ```
@@ -760,7 +757,7 @@ Ardından bekletme etiketlerini oluşturan ve yayımlayan betiği çalıştırı
 Sonuçları denetlemek ve çözülmesi gereken hataları belirlemek için betiğin oluşturduğu günlük dosyasını kullanın.
 
 Örnek dosya adındaki basamaklar farklılık gösterse de günlük dosyasını aşağıdaki konumda bulabilirsiniz.
-  
-```
+
+```DOS
 <path>.\Log_Publish_Compliance_Tag_01112018_151239.txt
 ```

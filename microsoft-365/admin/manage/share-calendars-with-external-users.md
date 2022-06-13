@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 ms.assetid: fb00dd4e-2d5f-4e8d-8ff4-94b2cf002bdd
 description: Kullanıcıların takvimlerini kuruluş içindeki veya dışındaki herkesle paylaşabilmesi için Microsoft 365 yönetim merkezi takvim paylaşımını etkinleştirin.
-ms.openlocfilehash: 9179e79e27320df2b943a9342ee0c2a91c866448
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: b3ca1d4f2a6ef24a6958b4fe805ccf617c0984e7
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65468568"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043154"
 ---
 # <a name="share-microsoft-365-calendars-with-external-users"></a>dış kullanıcılarla Microsoft 365 takvimleri paylaşma
 
@@ -41,7 +41,7 @@ Microsoft 365 yönetim merkezi kuruluşunuzdaki tüm kullanıcılar için takvim
   
 ## <a name="enable-calendar-sharing-using-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezi kullanarak takvim paylaşımını etkinleştirme
 
-1. Yönetim merkezinde **Ayarlar** \> **Kuruluş ayarları'na** gidin ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2053743" target="_blank">**Hizmetler** sekmesinde</a> **Takvim'i** seçin.
+1. Yönetim merkezinde **Genel Yönetici** olarak oturum açın, **Ayarlar** \> **Kuruluş ayarları'na** gidin ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2053743" target="_blank">**Hizmetler** sekmesinde</a> **Takvim'i** seçin.
   
 3. **Takvim** sayfasında, kullanıcıların takvimlerini kuruluşunuzun dışında Microsoft 365 veya Exchange sahip kişilerle paylaşmasına izin vermek isteyip istemediğinizi seçin. Anonim kullanıcıların (kimlik bilgileri olmayan kullanıcıların) takvimlere e-posta daveti aracılığıyla erişmesine izin vermek isteyip istemediğinizi seçin.
 
@@ -57,7 +57,25 @@ Kiracınızın dışında paylaşım için anlık eşitleme şu anda desteklenmi
 
 ## <a name="invite-people-to-access-calendars"></a>Kişileri takvimlere erişmeleri için davet etme
 
-Paylaşım etkinleştirildikten sonra, takvim sahipleri davetleri belirli kullanıcılara genişletebilir. Yönergeler için bkz[. Outlook Web App takviminizi paylaşma](https://support.microsoft.com/office/7ecef8ae-139c-40d9-bae2-a23977ee58d5).
+Paylaşım etkinleştirildikten sonra, takvim sahipleri davetleri belirli kullanıcılara genişletebilir.
+
+1. [Web'de Outlook](https://outlook.office365.com) açın.
+
+2. Sayfanın üst kısmında uygulama başlatıcıyı ve **ardından Takvim'i** seçin. Varsayılan olarak, birincil takviminiz "Takvim" olarak adlandırılır. Başka takvimler oluşturduysanız, paylaşmak üzere bunlardan birini seçebilirsiniz. Başkalarının sahip olduğu takvimleri paylaşamazsınız.
+
+3. E-postada **paylaşım daveti gönder** kutusuna takviminizi paylaşmak istediğiniz kişinin adını veya e-posta adresini girin.
+
+4. Bu kişinin ne kadar bilgi görmesini istediğinizi seçin:
+
+     - **Meşgul olduğum zamanları görüntüleyebilir** , kişinin ne zaman meşgul olduğunuzu görmesine izin verir ancak olay konumu gibi ayrıntıları içermez.
+
+     - **Başlıkları ve konumları görüntüleyebilir** , kişinin meşgul olduğunuz zamanları ve etkinliklerin başlığını ve konumunu görmesine olanak tanır.
+
+     - **Tüm ayrıntıları görüntüleyebilir** , kişinin etkinliklerinizin tüm ayrıntılarını görmesine olanak tanır.
+
+     - **Düzenleyebilir özelliği** , kişinin etkinliklerinizin tüm ayrıntılarını görmesine ve takviminizi düzenlemesine olanak tanır (yalnızca kuruluşunuzdaki kişilerle paylaşırken kullanılabilir).
+
+5. **Paylaş'ı** seçin. 
 
 ## <a name="related-content"></a>İlgili içerik
 

@@ -406,6 +406,8 @@
           href: step-by-step-guides/how-to-configure-quarantine-permissions-with-quarantine-policies.md
         - name: Önceden ayarlanmış güvenlik ilkeleriyle her zaman en uygun güvenlik denetimlerine sahip olmanızı sağlayarak
           href: step-by-step-guides/ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies.md
+        - name: 'Microsoft 365 Defender''da olaylar nasıl Önceliklendirilir, Yönetilir, Araştırılır ve Yanıtlanır?'
+          href: step-by-step-guides/how-to-prioritize-manage-investigate-and-respond-to-incidents-in-microsoft-365-defender.md
         - name: Ekibiniz için saldırı simülasyonları nasıl çalıştırılır?
           href: step-by-step-guides/how-to-run-attack-simulations-for-your-team.md
         - name: Saldırı simülasyon eğitiminde otomatik saldırılar ve eğitim nasıl kurulur?

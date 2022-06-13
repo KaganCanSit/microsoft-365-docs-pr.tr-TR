@@ -20,16 +20,16 @@ ms.custom:
 search.appverid: MET150
 description: Kullanıcıları abonelikler arasında taşımayı öğrenin.
 ms.date: 05/12/2022
-ms.openlocfilehash: b790b708ba9095b40ab9f79a27f531a5267c9c08
-ms.sourcegitcommit: 4e7ff69f4d7d27c2d419f763cfcb069e3b0d0d9f
+ms.openlocfilehash: 06d9c6f2ef76ed317705c1e519822db3a8706062
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65403304"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66044333"
 ---
 # <a name="move-users-to-a-different-subscription"></a>Kullanıcıları farklı bir aboneliğe taşıma
 
-Birden fazla aboneliğiniz varsa, bir abonelik için lisansı olan kullanıcılarınız varsa ancak bunları başka bir aboneliğe taşımak istiyorsanız, mevcut lisanslarını farklı bir abonelikle değiştirebilirsiniz.
+Birden fazla ürününüz varsa, bir ürün için lisansı olan kullanıcılarınız varsa ancak bunları başka bir ürüne taşımak istiyorsanız, mevcut lisanslarını farklı bir ürünle değiştirebilirsiniz.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -49,7 +49,7 @@ Lisansları atamak için Genel, Lisans veya Kullanıcı yöneticisi olmanız ger
 
 ::: moniker-end
 
-2. Mevcut lisanslarını değiştirmek istediğiniz kullanıcıların adlarının yanındaki daireleri seçin.
+2. Mevcut lisanslarını değiştirmek istediğiniz kullanıcıların adlarının yanındaki onay kutularını seçin.
 
 3. Üst kısımda **Ürün lisanslarını yönet'i** seçin.
 

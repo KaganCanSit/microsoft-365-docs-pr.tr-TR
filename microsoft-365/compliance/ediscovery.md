@@ -20,12 +20,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview; Exchange posta kutuları, SharePoint ve OneDrive İş siteleri, Microsoft 365 Grupları, Microsoft Teams ve konuşmaları Skype Kurumsal. eBulma (Standart) ve eBulma (Premium), araştırmalarınızı yönetmenize yardımcı olacak birçok ek özellik sağlar.
-ms.openlocfilehash: f5660b8a31cad45b110e6e32450dc03b75d5f533
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 9262f2773d17f19bd5adaea3eed9e747e343e625
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095872"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043403"
 ---
 # <a name="microsoft-purview-ediscovery-solutions"></a>Microsoft Purview eKeşif çözümleri
 
@@ -145,6 +145,8 @@ Aşağıdaki bölümlerde İçerik arama, eBulma (Standart) ve eBulma (Premium) 
 
 ### <a name="ediscovery-standard"></a>eKeşif (Standart)
 
+- Exchange çevrimiçi Plan 2
+- Sharepoint online Plan 2
 - aboneliği Microsoft 365 E3
 - aboneliği Microsoft 365 G3
 - aboneliği Microsoft 365 İş Ekstra

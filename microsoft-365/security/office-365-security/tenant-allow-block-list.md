@@ -17,12 +17,12 @@ ms.custom: ''
 description: Yöneticiler, Güvenlik portalındaki Kiracı İzin Ver/Engelle Listesi'nde izin ve blokları yönetmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e1832f641c5efc582bee7837dcf8e5b67a9256f6
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: 8b99f4f9805f34485457a0f376f4bfea04d96192
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772101"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043741"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Kiracı İzin Verilenler/Engellenenler Listesini Yönetme
 
@@ -74,16 +74,13 @@ Bu makalede, Microsoft 365 Defender portalında veya PowerShell'de (Exchange Onl
 - Exchange Online PowerShell'e bağlanmak için bkz. [PowerShell'Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell). Tek başına EOP PowerShell'e bağlanmak için bkz. [PowerShell'i Exchange Online Protection için Bağlan](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
 - Bu makaledeki yordamları gerçekleştirmeden önce Exchange Online'de izinlerin atanmış olması gerekir:
-  - **Gönderenler, URL'ler ve dosyalar**:
     - Kiracı İzin Ver/Engelle Listesinden değer eklemek ve kaldırmak için
       - **Kuruluş Yönetimi** veya **Güvenlik Yöneticisi** rol grubu (**Güvenlik yöneticisi rolü**)
       - **Güvenlik İşleci** rol grubu (**Kiracı AllowBlockList Manager**).
     - Kiracı İzin Ver/Engelle Listesi'ne salt okunur erişim için
       - **Genel Okuyucu**  rol grubu
       - **Güvenlik Okuyucusu** rol grubu
-  - **Kimlik sahtekarlığına:** Aşağıdaki birleşimlerden biri:
-    - **Kuruluş Yönetimi**
-    - **Güvenlik Yöneticisi** <u>ve</u> **Yalnızca Görüntüleme Yapılandırması** veya **Yalnızca Görüntüleme Kuruluş Yönetimi**.
+      - **Yalnızca Görüntüleme Yapılandırması* rol grubu.
 
   Daha fazla bilgi için bkz. [Exchange Online'de İzinler](/exchange/permissions-exo/permissions-exo).
 
@@ -468,7 +465,6 @@ Kiracı İzin Ver/Engelle Listesindeki kimlik sahtekarı bir gönderen için etk
 - **Altyapı gönderiliyor**: Bu değer, sahte kullanıcıdan gelen iletilerin kaynağını gösterir. Geçerli değerler şunlardır:
   - Kaynak e-posta sunucusunun IP adresinin (örneğin, fabrikam.com) ters DNS aramasında (PTR kaydı) bulunan etki alanı.
   - Kaynak IP adresinin PTR kaydı yoksa, gönderen altyapı /24 olarak \<source IP\>tanımlanır (örneğin, 192.168.100.100/24).
-  - Doğrulanmış bir DKIM etki alanı.
 
 Sahte gönderenleri tanımlamak için geçerli etki alanı çiftlerinin bazı örnekleri aşağıda verilmiştir:
 

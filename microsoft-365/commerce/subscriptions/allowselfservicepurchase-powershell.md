@@ -18,86 +18,86 @@ ms.custom:
 - AdminSurgePortfolio
 search.appverid:
 - MET150
-description: Self servis satın alma hizmetini açmak veya kapatmak için AllowSelfServicePurchase PowerShell cmdlet'ini nasıl kullanabileceğinizi öğrenin.
+description: Self servis satın alma özelliğini açmak veya kapatmak için AllowSelfServicePurchase PowerShell cmdlet'ini kullanmayı öğrenin.
 ROBOTS: NOINDEX, NOFOLLOW
-ms.date: 12/15/2021
-ms.openlocfilehash: a3800f82386fafe509d9bdabb25cd91422cf058d
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.date: 4/7/2022
+ms.openlocfilehash: e4423892f2dc045a9729e68519c85d471838d5ac
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63315729"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042198"
 ---
 # <a name="use-allowselfservicepurchase-for-the-mscommerce-powershell-module"></a>MSCommerce PowerShell modülü için AllowSelfServicePurchase kullanma
 
-**MSCommerce** PowerShell modülü artık [PowerShell Galerisi'nde kullanılabilir](https://aka.ms/allowselfservicepurchase-powershell-gallery). Modül, **allowSelfServicePurchase** için bir **PolicyID** parametre değeri içerir ve bu değer, organizasyonlu kullanıcıların self servis satın almalar yapma olanaklarını denetlemenize olanak sağlar.
+**MSCommerce** PowerShell modülü artık [PowerShell Galerisi'de](https://aka.ms/allowselfservicepurchase-powershell-gallery) kullanılabilir. Modül, **allowSelfServicePurchase** için kuruluşunuzdaki kullanıcıların self servis satın alma işlemi yapıp yapamayacağını denetlemenize olanak tanıyan bir **PolicyID** parametre değeri içerir.
 
-**MSCommerce PowerShell modülünü** kullanarak şunları yapmak için kullanabilirsiniz:
+**MSCommerce** PowerShell modülünü kullanarak şunları yapabilirsiniz:
 
-- Etkin veya devre dışı olsa da **AllowSelfServicePurchase** parametre değerinin varsayılan durumunu görüntüleme
-- Geçerli ürünlerin listesini ve self servis alışverişin etkinleştirildiğinde veya devre dışı bırakılmıştır
+- **AllowSelfServicePurchase** parametre değerinin varsayılan durumunu (etkin veya devre dışı) görüntüleyin
+- Geçerli ürünlerin listesini ve self servis satın alma özelliğinin etkinleştirilip etkinleştirilmediğini görüntüleme
 - Belirli bir ürünü etkinleştirmek veya devre dışı bırakmak için geçerli ayarı görüntüleme veya değiştirme
 
 ## <a name="requirements"></a>Gereksinimler
 
-**MSCommerce** PowerShell modülünü kullanmak için gerekenler:
+**MSCommerce** PowerShell modülünü kullanmak için şunları yapmanız gerekir:
 
 - Windows 10 cihazı
-- PowerShell 5 veya daha altında. Şu anda, bu modülde PowerShell 6.x/7.x desteklenmiyor.
+- PowerShell 5 veya üzeri. PowerShell 6.x/7.x şu anda bu modülde desteklenmiyor.
 - Cihaz için yönetici izni
-- Kiracınız için Genel veya Fatura Yöneticisi rolü
+- Kiracınız için Genel veya Faturalama Yöneticisi rolü
 
 ## <a name="install-the-mscommerce-powershell-module"></a>MSCommerce PowerShell modülünü yükleme
 
-**MSCommerce** PowerShell modülünü Windows 10 cihazınıza yükleyebilir ve ardından bu modülü başlatan her PowerShell oturumuna aktarabilirsiniz. **PowerShell Galerisi'den MSCommerce** [PowerShell modülünü indirin](https://aka.ms/allowselfservicepurchase-powershell-gallery).
+**MSCommerce** PowerShell modülünü Windows 10 cihazınıza bir kez yükler ve ardından başlattığınız her PowerShell oturumuna aktarırsınız. **MSCommerce** PowerShell modülünü [PowerShell Galerisi](https://aka.ms/allowselfservicepurchase-powershell-gallery) indirin.
 
-**PowerShellGet ile MSCommerce** PowerShell modülünü **yüklemek** için aşağıdaki komutu çalıştırın:
+**MSCommerce** PowerShell modülünü **PowerShellGet** ile yüklemek için aşağıdaki komutu çalıştırın:
 
 ```powershell
 Install-Module -Name MSCommerce
 ```
 
-## <a name="import-mscommerce-into-the-powershell-session"></a>MSCommerce'ı PowerShell oturumuna aktarma
+## <a name="import-mscommerce-into-the-powershell-session"></a>MSCommerce'i PowerShell oturumuna aktarma
 
-Modülü Windows 10 cihazınıza yükledikten sonra, bu modülü başlatan her PowerShell oturumuna içeri aktarın. PowerShell oturumuna içeri aktarma işlemi için aşağıdaki komutu çalıştırın:
+Modülü Windows 10 cihazınıza yükledikten sonra, başlattığınız her PowerShell oturumuna aktarırsınız. Bir PowerShell oturumuna aktarmak için aşağıdaki komutu çalıştırın:
 
 ```powershell
 Import-Module -Name MSCommerce
 ```
 
-## <a name="connect-to-mscommerce-with-your-credentials"></a>Bağlan bilgilerinizle MSCommerce'a oturum açma
+## <a name="connect-to-mscommerce-with-your-credentials"></a>Kimlik bilgilerinizle MSCommerce'e Bağlan
 
-PowerShell modülüne kimlik bilgilerinizle bağlanmak için aşağıdaki komutu çalıştırın.
+Kimlik bilgilerinizle PowerShell modülüne bağlanmak için aşağıdaki komutu çalıştırın.
 
 ```powershell
 Connect-MSCommerce
 ```
 
-Bu komut, geçerli PowerShell oturumunu bir Azure Active Directory bağlar. Komut, bağlanmak istediğiniz kiracı için bir kullanıcı adı ve parola ister. Kimlik bilgileriniz için çok faktörlü kimlik doğrulaması etkinleştirildiyse, oturum açmak için etkileşimli seçeneği kullanırsanız.
+Bu komut geçerli PowerShell oturumunu bir Azure Active Directory kiracısına bağlar. Komut, bağlanmak istediğiniz kiracı için bir kullanıcı adı ve parola ister. Kimlik bilgileriniz için çok faktörlü kimlik doğrulaması etkinleştirildiyse, oturum açmak için etkileşimli seçeneği kullanırsınız.
 
 ## <a name="view-details-for-allowselfservicepurchase"></a>AllowSelfServicePurchase için ayrıntıları görüntüleme
 
-Kuruluşa bağlı olarak **AllowSelfServicePurchase** parametre değerinin ve varsayılan durumunun açıklamasını görüntülemek için aşağıdaki komutu çalıştırın:
+**AllowSelfServicePurchase** parametre değerinin açıklamasını ve kuruluşunuza bağlı olarak varsayılan durumu görüntülemek için aşağıdaki komutu çalıştırın:
 
 ```powershell
 Get-MSCommercePolicy -PolicyId AllowSelfServicePurchase
 ```
 
-## <a name="view-a-list-of-self-service-purchase-products-and-their-status"></a>Self servis satın alınan ürünlerin listesini ve durumlarını görüntüleme
+## <a name="view-a-list-of-self-service-purchase-products-and-their-status"></a>Self servis satın alma ürünlerinin listesini ve durumlarını görüntüleme
 
-Kullanılabilir tüm self servis satın alma ürünlerinin listesini ve her bir ürünle ilgili durumu görüntülemek için aşağıdaki komutu çalıştırın:
+Kullanılabilir tüm self servis satın alma ürünlerinin listesini ve her birinin durumunu görüntülemek için aşağıdaki komutu çalıştırın:
 
 ```powershell
 Get-MSCommerceProductPolicies -PolicyId AllowSelfServicePurchase
 ```
 
-Aşağıdaki tabloda, kullanılabilir ürünler ve bunların **ProductId'leri listelemektedir**.
+Aşağıdaki tabloda, kullanılabilir ürünler ve **bunların ProductId'leri** listelenir.
 
-| Ürün | ÜrünKimlik |
+| Ürün | Productıd |
 |-----------------------------|--------------|
-| Power Apps başına bir değer | CFQ7TTC0KP0P |
-| Power Automate başına bir değer | CFQ7TTC0KP0N |
-| Power Automate RPA | CFQ7TTC0KXG6  |
+| Kullanıcı başına Power Apps | CFQ7TTC0LH2H |
+| Kullanıcı başına Power Automate | CFQ7TTC0KP0N |
+| RPA Power Automate | CFQ7TTC0KXG6  |
 | Power BI Premium (tek başına) | CFQ7TTC0KXG7  |
 | Power BI Pro | CFQ7TTC0L3PB |
 | Project Plan 1* | CFQ7TTC0HDB1 |
@@ -106,13 +106,13 @@ Aşağıdaki tabloda, kullanılabilir ürünler ve bunların **ProductId'leri li
 | Visio Plan 2* | CFQ7TTC0HD32 |
 | Windows 365 Enterprise | CFQ7TTC0HHS9 |
 | Windows 365 Business | CFQ7TTC0J203 |
-| Windows Karma Avantajı olan Windows 365 İş | CFQ7TTC0HX99 |
+| Windows Hibrit Avantajı ile Windows 365 Business | CFQ7TTC0HX99 |
 
-*Bu kimlikler değişti. Eski kimlikleri kullanan ürünleri daha önce engelle ettiysanız, yeni kimlikler kullanılarak bunlar otomatik olarak engellenir. Ek çalışma gerekmez.
+*Bu kimlikler değişti. Eski kimlikleri kullanan ürünleri daha önce engellediyseniz, yeni kimlikler kullanılarak otomatik olarak engellenir. Ek çalışma gerekmez.
 
 ## <a name="view-or-set-the-status-for-allowselfservicepurchase"></a>AllowSelfServicePurchase durumunu görüntüleme veya ayarlama
 
-Self servis satın alma için kullanılabilen ürünlerin listesini görüntüledikten sonra, belirli bir ürünün ayarını ekleyebilirsiniz veya değiştirebilirsiniz.
+Self servis satın alma için kullanılabilen ürünlerin listesini görüntüledikten sonra, belirli bir ürünün ayarını görüntüleyebilir veya değiştirebilirsiniz.
 
 Belirli bir ürünün ilke ayarını almak için aşağıdaki komutu çalıştırın:
 
@@ -120,7 +120,7 @@ Belirli bir ürünün ilke ayarını almak için aşağıdaki komutu çalıştı
 Get-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId CFQ7TTC0KP0N
 ```
 
-Belirli bir ürünün ilke ayarını etkinleştirmek için aşağıdaki komutu çalıştırın:
+Belirli bir ürün için ilke ayarını etkinleştirmek için aşağıdaki komutu çalıştırın:
 
 ```powershell
 Update-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId CFQ7TTC0KP0N -Enabled $True
@@ -132,18 +132,18 @@ Belirli bir ürünün ilke ayarını devre dışı bırakmak için aşağıdaki 
 Update-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId CFQ7TTC0KP0N -Enabled $False
 ```
 
-## <a name="example-script-to-disable-allowselfservicepurchase"></a>AllowSelfServicePurchase'i devre dışı bırakmak için örnek betik
+## <a name="example-script-to-disable-allowselfservicepurchase"></a>AllowSelfServicePurchase'ı devre dışı bırakmak için örnek betik
 
-Aşağıdaki örnek, **MSCommerce** modülünü içeri aktarma, hesabınızla oturum açma, Power Automate için **ProductId'yi** alma ve sonra bu ürün için **AllowSelfServicePurchase'i** devre dışı bırakma adımlarıyla size yol sağlar.
+Aşağıdaki örnek **, MSCommerce** modülünü içeri aktarma, hesabınızla oturum açma, kullanıcı başına Power Automate için **ProductId** alma ve ardından bu ürün için **AllowSelfServicePurchase'ı** devre dışı bırakma konusunda size yol gösterir.
 
 ```powershell
 Import-Module -Name MSCommerce
 Connect-MSCommerce #sign-in with your global or billing administrator account when prompted
-$product = Get-MSCommerceProductPolicies -PolicyId AllowSelfServicePurchase | where {$_.ProductName -match 'Power Automate'}
+$product = Get-MSCommerceProductPolicies -PolicyId AllowSelfServicePurchase | where {$_.ProductName -match 'Power Automate per user'}
 Update-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId $product.ProductID -Enabled $false
 ```
 
-Ürün için birden çok değer varsa, aşağıdaki örnekte gösterildiği gibi her değer için komutu tek tek çalıştırabilirsiniz:
+Ürün için birden çok değer varsa, aşağıdaki örnekte gösterildiği gibi komutu her değer için ayrı ayrı çalıştırabilirsiniz:
 
 ```powershell
 Update-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId $product[0].ProductID -Enabled $false
@@ -155,21 +155,21 @@ Update-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId $pr
 
 ### <a name="problem"></a>Sorun
 
-Aşağıdaki hata iletisini görüyorsunuz:
+Aşağıdaki hata iletisini görürsünüz:
 
-> HandleError: PolicyId 'AllowSelfServicePurchase', ErrorMessage ile ilke alınamadı - Temel bağlantı kapatıldı: Gönderme sırasında beklenmeyen bir hata oluştu.
+> HandleError: policyId 'AllowSelfServicePurchase' ile alınamadı, ErrorMessage - Temel alınan bağlantı kapatıldı: Gönderme sırasında beklenmeyen bir hata oluştu.
 
-Bunun nedeni Aktarım Katmanı Güvenliği'nin (TLS) eski bir sürümü olabilir. Bu hizmeti bağlamak için TLS 1.2 veya daha büyük bir değer kullan
+Bunun nedeni Aktarım Katmanı Güvenliği'nin (TLS) eski bir sürümü olabilir. Bu hizmeti bağlamak için TLS 1.2 veya üzerini kullanmanız gerekir
 
 ### <a name="solution"></a>Çözüm
 
-TLS 1.2'ye yükseltin. Aşağıdaki söz dizimi ServicePointManager Güvenlik Protokolü'ünü TLS1.2 olarak ler:
+TLS 1.2'ye yükseltin. Aşağıdaki söz dizimi ServicePointManager Güvenlik Protokolü'ni TLS1.2 olarak güncelleştirir:
 
 ```powershell
  [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
 ```
 
-Daha fazla bilgi için bkz [. TLS 1.2'yi etkinleştirme](/mem/configmgr/core/plan-design/security/enable-tls-1-2).
+Daha fazla bilgi için bkz. [TLS 1.2'yi etkinleştirme](/mem/configmgr/core/plan-design/security/enable-tls-1-2).
 
 <!--
 ## Uninstall the MSCommerce module

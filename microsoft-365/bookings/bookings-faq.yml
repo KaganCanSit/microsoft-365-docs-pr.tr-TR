@@ -9,12 +9,12 @@ metadata:
   ms.service: bookings
   ms.localizationpriority: medium
   description: Microsoft Bookings sık sorulan sorular.
-  ms.openlocfilehash: 6a61179849e01f60e46a53f12f1ad5c125987527
-  ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+  ms.openlocfilehash: 1d966f6689bb242a49279cc4d2345b8a7f97d16a
+  ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/27/2022
-  ms.locfileid: "65096038"
+  ms.lasthandoff: 06/13/2022
+  ms.locfileid: "66043296"
 title: Microsoft Bookings Sık Sorulan Sorular
 summary: ''
 sections:
@@ -23,18 +23,18 @@ sections:
   - question: >
       Microsoft Bookings nedir?
     answer: >
-      Microsoft Bookings, randevuları zamanlamayı ve yönetmeyi kolaylaştıran Microsoft 365 bir uygulamadır. Bookings Web tabanlı bir rezervasyon takvimi içerir ve personelinizin takvimini iyileştirmek için Outlook tümleştirerek müşterilerinizin kendilerine en uygun zamanı ayırma esnekliğini sağlar. Otomatik bildirim e-postaları gösterilmemesini azaltır ve kuruluşlar yinelenen zamanlama görevlerinde azalmayla zaman kazandırır. Bookings, sanal randevuları Skype veya Microsoft Teams aracılığıyla kolayca yönetmenize yardımcı olur ve Teams'daki Bookings uygulaması aracılığıyla günlük zamanlamayı yönetmenize yardımcı olur. Yerleşik özelleştirme özelliği sayesinde Bookings, herhangi bir kuruluşun birden çok parçasının gereksinimlerini karşılayacak şekilde tasarlanmıştır.
+      Microsoft Bookings, randevuları zamanlamayı ve yönetmeyi kolaylaştıran Microsoft 365 bir uygulamadır. Rezervasyonlar Web tabanlı bir rezervasyon takvimi içerir ve personelinizin takvimini iyileştirmek için Outlook ile tümleştirerek müşterilerinizin kendilerine en uygun zamanı ayırma esnekliğini sağlar. Otomatik bildirim e-postaları gösterilmemesini azaltır ve kuruluşlar yinelenen zamanlama görevlerinde azalmayla zaman kazandırır. Bookings, sanal randevuları Skype veya Microsoft Teams aracılığıyla kolayca gerçekleştirmenize yardımcı olur ve Teams'daki Bookings uygulaması aracılığıyla günlük zamanlamayı yönetmenize yardımcı olur. Yerleşik özelleştirme özelliğiyle Bookings, herhangi bir kuruluşun birden çok parçasının gereksinimlerini karşılayacak şekilde tasarlanmıştır.
   - question: >
       Aboneliğim için Bookings kullanılabilir mi?
-    answer: "Bookings aşağıdaki aboneliklerle kullanılabilir: \n- Office 365: A3, A5, E1, E3, E5, F1, F3, Office 365 21Vianet tarafından çalıştırılır.\n- Microsoft 365: A3, A5, E3, E5, F1, F3, Business Basic, Business Standard, business Premium. Bookings bir iOS ve Android yardımcı uygulamasıyla kullanabilirsiniz. Bookings tek başına uygulama olarak kullanılamaz. Outlook Web App veya Web üzerinde Outlook, verileri Outlook içinde depoladıkça Bookings kullanmak için etkinleştirilmelidir.\n\nBookings lisansı, takvim oluşturma ve yönetme dahil olmak üzere tam işlevsellik sağlar. Kullanıcılar, bir Yönetici veya Görüntüleyici rolüne personel olarak eklendiğinde mevcut takvimleri görüntüleyebilir ve düzenleyebilir.\n"
+    answer: "Rezervasyonlar aşağıdaki aboneliklerle kullanılabilir: \n- Office 365: A3, A5, E1, E3, E5, F1, F3, Office 365 21Vianet tarafından çalıştırılır.\n- Microsoft 365: A3, A5, E3, E5, F1, F3, Business Basic, Business Standard, business Premium. Bookings'i bir iOS ve Android eşlikçisi uygulamasıyla kullanabilirsiniz. Bookings tek başına bir uygulama olarak kullanılamaz. Outlook Web App veya Web üzerinde Outlook, verileri Outlook içinde depoladıkça Bookings'i kullanmak için etkinleştirilmelidir.\n\nBookings lisansı, takvim oluşturma ve yönetme dahil olmak üzere tam işlevsellik sağlar. Kullanıcılar, bir Yönetici veya Görüntüleyici rolüne personel olarak eklendiğinde mevcut takvimleri görüntüleyebilir ve düzenleyebilir.\n"
   - question: >
       Microsoft Bookings kullanmak Nasıl yaparım??
     answer: >
-      Bookings çevrimiçi bir hizmet olduğundan hiçbir şey indirmeniz gerekmez. Microsoft 365 Web deneyiminde uygulama seçiciye gitmeniz gerekir. Yöneticiler ayrıca müşteriler ve randevularıyla ilgili en son bilgilerle güncel kalmak için Bookings yardımcı uygulamasını kullanabilir.
+      Bookings çevrimiçi bir hizmettir, bu nedenle herhangi bir şey indirmenize gerek yoktur. Microsoft 365 Web deneyiminde uygulama seçiciye gitmeniz gerekir. Yöneticiler ayrıca Bookings eşlikçisi uygulamasını kullanarak müşteriler ve randevularıyla ilgili en son bilgileri güncel olarak kullanabilir.
   - question: >
       Müşterilerim kişisel takvimimi mi yoksa iş takvimimi mi görecek?
     answer: >
-      Müşterileriniz yalnızca seçtiğiniz hizmetler, saatler ve personel için çevrimiçi olarak yayımladığınız Bookings takvimi görür.
+      Müşterileriniz yalnızca seçtiğiniz hizmetler, saatler ve personel için çevrimiçi olarak yayımladığınız Bookings takvimini görür.
   - question: >
       Personeli yönet'in altında ayrılabilir bir özniteliği değiştirmek Nasıl yaparım??
     answer: >
@@ -42,33 +42,37 @@ sections:
   - question: >
       Son kullanıcılar Bookings uygulamasına nasıl erişecek?
     answer: >
-      Desteklenen bir abonelik için lisanslanan veya Yönetici veya Görüntüleyici rollerine personel üyesi olarak eklenen herkes, Microsoft 365 Web deneyimindeki uygulama seçicideki Bookings erişebilir. Ayrıca iOS ve Android için kullanılabilen bir yardımcı uygulama da vardır.
+      Desteklenen bir abonelik için lisanslanan veya Yönetici veya Görüntüleyici rollerine personel üyesi olarak eklenen herkes, Microsoft 365 Web deneyimindeki uygulama seçicide Bookings'e erişebilir. ayrıca iOS ve Android için bir yardımcı uygulama da mevcuttur.
   - question: >
-      Bookings kendi Web sitemde kullanabilir miyim?
+      Bookings'i kendi Web sitemde kullanabilir miyim?
     answer: >
-      Evet. Bookings takviminizi bir iFrame aracılığıyla sitenize eklemenin bir yolunu sağlıyoruz. Bağlantı ekleme kodu, Bookings uygulamasının **Bookings sayfa** sekmesinde bulunur.
+      Evet. Bookings takviminizi bir iFrame aracılığıyla sitenize eklemenin bir yolunu sağlıyoruz. Bağlantı ekleme kodu **Bookings uygulamasının Bookings sayfa** sekmesinde bulunur.
   - question: >
-      İşletmem için bir Web sayfası olmasa bile Bookings kullanabilir miyim?
+      İşletmem için bir Web sayfası olmasa bile Bookings'i kullanabilir miyim?
     answer: >
       Evet. Web uygulamasının Rezervasyon sayfası sekmesinde yer alan **rezervasyon sayfanızın** bağlantısını sağlıyoruz. Bu bağlantıyı müşterilerinize veya müşterilerinize sağlamanız yeterlidir ve işletmeniz için en son kullanılabilirlik bilgilerini görürler. Alternatif olarak, rezervasyon sayfasını sosyal medyada paylaşabilir, hatta ekleme özelliğini kullanarak bir iFrame'de barındırabilirsiniz. Ayrıca doğrudan arama altyapısı dizin oluşturmayı devre dışı bırakarak ve erişimi yalnızca kuruluşunuzdakilerle kısıtlayarak sayfaya kimlerin erişebileceğini de denetleyebilirsiniz.
   - question: >
-      BT departmanımız son kullanıcıların Bookings erişip erişemeyeceğini denetleyebiliyor mu?
+      BT departmanımız son kullanıcıların Bookings'e erişip erişemeyeceğini denetleyebiliyor mu?
     answer: >
-      Yöneticiler Bookings Microsoft 365 yönetim merkezi kapatabilir. Bunu yapmak için [bu yönergeleri izleyin](turn-bookings-on-or-off.md).
+      Yöneticiler tercih ettikleri takdirde Microsoft 365 yönetim merkezi Bookings'i kapatabilir. Bunu yapmak için [bu yönergeleri izleyin](turn-bookings-on-or-off.md).
 
 
-      Müşteri kiracısında belirli uygun lisanslar için Bookings erişimini devre dışı bırakmak isterse, lisansları kısıtlamak için grup ilkesi kullanabilir veya yeni Bookings takvim oluşturabilecek kullanıcıları kısıtlayacak bir OWA Posta Kutusu ilkesi uygulayabilir.
+      Müşteri kiracısında belirli uygun lisanslar için Bookings erişimini devre dışı bırakmak isterse, lisansları kısıtlamak için bir grup ilkesi kullanabilir veya yeni Bookings takvimlerini kimlerin oluşturabileceğini kısıtlayacak bir OWA Posta Kutusu ilkesi uygulayabilir.
 
 
-      Bookings erişimini devre dışı bırakmak için bir OWA Posta Kutusu ilkesi kullanırsanız, tüm kullanıcılar Bookings lisansına sahip olur, ancak uygulamaya erişmeye çalıştıkları zaman, yalnızca ilkenin bir parçası olduklarında veya mevcut bir Bookings takvimine personel olarak eklendiklerinde başarılı olurlar. [Buradaki](turn-bookings-on-or-off.md) "Yalnızca seçili kullanıcıların Bookings takvim oluşturmasına izin ver" bölümündeki ayrıntılar.
+      Bookings'e erişimi devre dışı bırakmak için bir OWA Posta Kutusu ilkesi kullanırsanız tüm kullanıcılar bookings lisansına sahip olur, ancak uygulamaya erişmeye çalıştıklarında ancak ilkenin bir parçası olduklarında veya mevcut bookings takvimine personel olarak eklendiklerinde başarılı olurlar. "Yalnızca [](turn-bookings-on-or-off.md) seçili kullanıcıların Bookings takvimleri oluşturmasına izin ver" bölümündeki ayrıntılar.
+  - question: >
+      Rezervasyonlarıma bir ödeme seçeneği bağlayabilir miyim?
+    answer: >
+      Hayır. Microsoft'a ait ödeme sistemi kullanımdan kaldırıldı.
   - question: >
       Bookings özelleştirilebilir mi?
     answer: >
-      Evet, Bookings özelleştirilebilir ve çeşitli senaryolar için kullanılabilir. Bookings takvimi ayarlarken, Web tabanlı zamanlama sayfasının birçok yönü, iş bilgileriniz, personel ayrıntılarınız, hizmet türleri ve zamanlama ilkeleriniz özelleştirilebilir.
+      Evet, Bookings özelleştirilebilir ve çeşitli senaryolar için kullanılabilir. Bookings takvimini ayarlarken Web tabanlı zamanlama sayfasının birçok yönü, iş bilgileriniz, personel ayrıntılarınız, hizmet türleri ve zamanlama ilkeleriniz özelleştirilebilir.
   - question: >
-      Özgün Bookings Web uygulamasının tüm işlevleri Microsoft Teams'de kullanılabilir mi?
+      Orijinal Bookings Web uygulamasının tüm işlevleri Microsoft Teams'de kullanılabilir mi?
     answer: >
-      Bookings'ın basit bir sürümü artık Teams'da uygulama olarak kullanılabilir. Bu konuda daha fazla bilgi [Teams'daki Bookings uygulamasına genel bakış](https://support.microsoft.com/office/overview-of-the-bookings-app-in-teams-7b8569e1-0c8a-444e-b712-d9968b05110b) bölümünde bulunabilir. Web uygulamasında açılan derin bağlantı işlevselliği vardır ve kurulumdan sonra Bookings günlük kullanımı Teams ayrılmadan yapılabilir. Bilgi platformlar arasında akar.
+      Bookings'in basit bir sürümü artık Teams'da uygulama olarak kullanılabilir. Bu konuda daha fazla bilgi [Teams'deki Bookings uygulamasına genel bakış](https://support.microsoft.com/office/overview-of-the-bookings-app-in-teams-7b8569e1-0c8a-444e-b712-d9968b05110b) bölümünde bulunabilir. Web uygulamasında açılan ayrıntılı bağlantı işlevselliği vardır ve kurulumdan sonra Bookings'in günlük kullanımı Teams ayrılmadan yapılabilir. Bilgi platformlar arasında akar.
   - question: >
       Bookings küçük bir işletme teklifi mi, Enterprise teklifi mi yoksa her ikisi birden mi?
     answer: >
@@ -124,7 +128,7 @@ sections:
     answer: >
       Geçerli sağlayıcınızı koruyabilirsiniz, ancak Bookings tüm bildirimleri Microsoft 365 hesabınızda kullanılan e-postaya gönderir.
   - question: >
-      Çalışanlarım Microsoft 365 hesabı olmadan Bookings kullanabilir mi?
+      Çalışanlarım Bookings'i Microsoft 365 hesabı olmadan kullanabilir mi?
     answer: >
       Evet. Personelinizi herhangi bir e-postayla ekleyebilirsiniz ve birisi randevu alırken e-posta onayını ve takvim davetini almaya devam eder.
   - question: >
@@ -134,54 +138,54 @@ sections:
 - name: Ürün özellikleri
   questions:
   - question: >
-      Microsoft 365 kiracımda Bookings takvimler nerede görünür?
+      Microsoft 365 kiracımda Bookings takvimleri nerede görünür?
     answer: >
-      Her yeni Bookings takvim, Exchange'de karşılık gelen bir posta kutusu ve Azure Active Directory'da (AAD) ilgili bir girdi oluşturur ve burada girdi lisanssız kullanıcı olarak listelenir.
+      Her yeni Bookings takvimi, Exchange'de karşılık gelen bir posta kutusu ve girişin lisanssız kullanıcı olarak listelendiği Azure Active Directory (AAD) içinde ilgili bir giriş oluşturur.
   - question: >
-      Önceden oluşturulmuş bir Bookings takvimi silebilir miyim?
+      Önceden oluşturulmuş bir Bookings takvimini silebilir miyim?
     answer: >
-      Bookings takvimi silmek için, Exchange'da ilişkili posta kutusunu silmeniz gerekir.
+      Bookings takvimini silmek için Exchange'da ilişkili posta kutusunu silmeniz gerekir.
   - question: >
-      Bir takvim oluşturursam ve başka biri Bookings erişebilirse takvimimi görebilir mi?
+      Bir takvim oluşturursam ve başka biri Bookings'e erişirse takvimimi görebilir mi?
     answer: >
-      Oluşturduğunuz Bookings takvimlere erişimi olan kişiler (Web uygulaması aracılığıyla) yalnızca Yönetici veya Görüntüleyici rolünde personel olarak eklenmiş olan kişilerdir. Kiracı yöneticileri, Exchange ve AAD tüm Bookings posta kutularının listesini görebilir.
+      Oluşturduğunuz Bookings takvimlerine erişimi olan tek kişi (Web uygulaması aracılığıyla) Yönetici veya Görüntüleyici rolünde personel olarak eklenmiş olan herkestir. Kiracı yöneticileri, Exchange ve AAD'deki tüm Bookings posta kutularının listesini görebilir.
   - question: >
       Görüntülü konferans toplantıları Bookings uygulamasıyla tümleştirilmiş mi?
     answer: >
-      çevrimiçi toplantılar, Skype veya Microsoft Teams istemcileri kullanılırken Bookings içinde kullanılabilir. Çevrimiçi toplantılar hizmet düzeyinde etkinleştirilebilir ve seçtiğiniz toplantı istemcisi (Skype veya Teams) rezervasyonu yapılan personel üyesi için varsayılan olarak ayarlanan toplantı istemcisi olur. Çevrimiçi toplantılara katılmak için her yeni randevunun randevuya ekli benzersiz bir toplantı bağlantısı olur ve ayrıca kolay katılma seçenekleri etkinliğe ve onay e-postalarına eklenir.
+      Skype veya Microsoft Teams müşterileri kullanırken Bookings'te çevrimiçi toplantılar yapılabilir. Çevrimiçi toplantılar hizmet düzeyinde etkinleştirilebilir ve seçtiğiniz toplantı istemcisi (Skype veya Teams) rezervasyonu yapılan personel üyesi için varsayılan olarak ayarlanan toplantı istemcisi olur. Çevrimiçi toplantılara katılmak için her yeni randevunun randevuya ekli benzersiz bir toplantı bağlantısı olur ve ayrıca kolay katılma seçenekleri etkinliğe ve onay e-postalarına eklenir.
   - question: >
       Zamanlama ilkesi nasıl çalışır?
     answer: >
       **Maksimum sağlama süresi** adlı ayar, rezervasyonun yapılabilmesi için en uzak (gün cinsinden ölçülür) değerini belirler. **Minimum sağlama süresi** (rezervasyonlar ve iptaller için minimum sağlama süresi, saat cinsinden) ile Maksimum sağlama süresi arasında en az 24 saat olmalıdır. Minimum sağlama süresi 0 saat olarak ayarlanırsa maksimum sağlama süresi bir gün olarak ayarlanabilir. Bu durumda müşteri, bir rezervasyonu başladığı zamana kadar iptal edebilir ve müşteriler yalnızca randevu sonraki gün içindeyse rezervasyonları zamanlayabilir.
 
 
-      :::image type="content" source="media/bookings-faq-scheduling.png" alt-text="Bookings'da zamanlama":::
+      :::image type="content" source="media/bookings-faq-scheduling.png" alt-text="Bookings'te Zamanlama":::
   - question: >
       Bookings saat dilimleri arasında nasıl çalışır?
     answer: >
-      Tüm zamanlar varsayılan olarak iş saat dilimindedir (yerel saat diliminiz). çalışma saatleri gibi Bookings takvim için yapılandırdığınız tüm ayarlar bu saat diliminde görünür. Self servis sayfası, son kullanıcının saat dilimindeki tüm randevu saatlerini görüntüleme özelliğine sahiptir ve bu da isterseniz kapatılabilir. **İş saat dilimindeki zaman dilimlerini her zaman göster** seçeneği Bookings sayfa sekmesinde işaretlenmemiş olarak kalırsa, sayfayı ziyaret eden kişiler kendi yerel saat dilimlerinde zaman dilimlerini görür.
+      Tüm zamanlar varsayılan olarak iş saat dilimindedir (yerel saat diliminiz). Bookings takvimi için yapılandırdığınız çalışma saatleri gibi tüm ayarlar bu saat diliminde görünür. Self servis sayfası, son kullanıcının saat dilimindeki tüm randevu saatlerini görüntüleme özelliğine sahiptir ve bu da isterseniz kapatılabilir. **İş saat dilimindeki zaman aralıklarını her zaman göster** seçeneği Bookings sayfa sekmesinde işaretlenmemiş olarak kalırsa, sayfayı ziyaret eden kişiler kendi yerel saat dilimlerinde zaman dilimlerini görür.
 
 
-      :::image type="content" source="media/bookings-faq-region.png" alt-text="bölge ve saat dilimi ayarlarını Bookings":::
+      :::image type="content" source="media/bookings-faq-region.png" alt-text="Bookings bölge ve saat dilimi ayarları":::
 
 
-      Bookings personeli için saat dilimi ayarlamaya yönelik bir sağlama yoktur. Personel saat dilimi ve dolayısıyla iş saatleri iş saat diliminde olacaktır.
+      Bookings'te personel için saat dilimi ayarlamaya yönelik bir hüküm yoktur. Personel saat dilimi ve dolayısıyla iş saatleri iş saat diliminde olacaktır.
   - question: >
       E-posta bildirimleri kiracı etki alanı adı olarak gönderilebilir mi?
     answer: >
       E-posta adresleri, Microsoft 365 ayarları düzeyinde denetlenip yönetilir ve buradaki etki alanı yapılandırma ayarlarına bağlıdır. Daha fazla bilgiyi [burada](/powershell/module/exchange/get-accepteddomain) bulabilirsiniz.
   - question: >
-      SMS iletileri gönderme özelliği farklı bir hizmete veya belirli bir yapılandırmaya bağlı mı?
+      SMS iletileri gönderme özelliği farklı bir hizmete veya belirli bir yapılandırmaya bağımlı mı?
     answer: >
-      SMS iletileri şu anda Kuzey Amerika'de kullanılabilir ve SMS teslimi için bir Skype veya Twilio hesabı kullanılacaktır.
+      SMS iletiler şu anda Kuzey Amerika'de kullanılabilir ve SMS teslimi için bir Skype veya Twilio hesabı kullanılır.
   - question: >
-      Bookings randevular bir kişinin takviminde nasıl gösterilebilir?
+      Bookings randevuları bir kişinin takviminde nasıl gösterilebilir?
     answer: >
       Rezervasyonun onayı hem servis sağlayıcısının hem de müşterinin gelen kutularına gönderilir. Onay e-postası bir *.ics dosya eki içerir. Bu ek, ilgili tüm randevu ayrıntılarıyla birlikte kullanıcının takvimine eklenebilir.
   - question: >
       Hizmet sağlayıcısını veya personel ile müşteri e-postalarını tetikleyen nedir?
     answer: >
-      E-postalar, Bookings Web uygulamasının Hizmetler sekmesindeki ayarlara göre tetiklenir. Müşteri tarafından Self servis sayfasında veya Bookings Web uygulamasının Takvim sekmesinde yapılan bir rezervasyon, bir onay ve/veya anımsatıcı e-postası tetikler. Birisi onay e-postasında veya Web uygulamasında rezervasyonu yönet düğmesi aracılığıyla **rezervasyonda** bir değişiklik yaptığında da aynı şey olur. Anımsatıcı e-postaları, Bookings Web uygulamasının Hizmetler sekmesinde açıklandığı gibi randevudan önceki belirli bir zaman aralığında gönderilir.
+      E-postalar Bookings Web uygulamasının Hizmetler sekmesindeki ayarlara göre tetiklenir. Müşteri tarafından Self servis sayfasında veya Bookings Web uygulamasının Takvim sekmesinde yapılan bir rezervasyon, bir onay ve/veya anımsatıcı e-postası tetikler. Birisi onay e-postasında veya Web uygulamasında rezervasyonu yönet düğmesi aracılığıyla **rezervasyonda** bir değişiklik yaptığında da aynı şey olur. Anımsatıcı e-postaları, Bookings Web uygulamasının Hizmetler sekmesinde ayrıntılı olarak açıklandığı gibi, randevudan önceki belirli bir zaman aralığında gönderilir.
   - question: >
       1:1 yerine 1: çok olan sınıf stili randevular alabilir miyim?
     answer: >
@@ -189,30 +193,30 @@ sections:
   - question: >
       Takvimler yayımdan kaldırılmaya devam edebilir (genel kullanıma yönelik değil) ancak belirlenen kullanıcılar tarafından erişilebilir durumda kalabilir mi?
     answer: >
-      Evet. Web uygulamasının Rezervasyon sayfası sekmesinde bir onay kutusu vardır: **Rezervasyon yapmak için kuruluşumdan bir Microsoft 365 veya Office 365 hesabı gerektir**. Bu onay kutusunun seçilmesi Self servis sayfa erişimini yalnızca kiracınızdakilerle kısıtlar. Oluşturma ve yönetim için Web uygulamasında yer alan Bookings takvimine yalnızca Yönetici veya Görüntüleyici rolleriyle sayfaya personel olarak eklenen kişiler erişebilir.
+      Evet. Web uygulamasının Rezervasyon sayfası sekmesinde bir onay kutusu vardır: **Rezervasyon yapmak için kuruluşumdan bir Microsoft 365 veya Office 365 hesabı gerektir**. Bu onay kutusunun seçilmesi Self servis sayfa erişimini yalnızca kiracınızdakilerle kısıtlar. Oluşturma ve yönetim için Web uygulamasında yer alan Bookings takvimine yalnızca Yönetici veya Görüntüleyici rolleri ile sayfaya personel olarak eklenen kişiler erişebilir.
 
 
-      :::image type="content" source="media/bookings-faq-access-ctrl.png" alt-text="Bookings'de rezervasyon sayfası erişim denetimi":::
+      :::image type="content" source="media/bookings-faq-access-ctrl.png" alt-text="Bookings'te rezervasyon sayfası erişim denetimi":::
   - question: >
       Giriş sayfası ne sıklıkta güncelleştirilir?
     answer: >
-      Web uygulaması her yüklendiğinde Giriş sayfanıza bağlı en son veriler alınır. Bookings tarafından izlenen bilgilerin türü hakkında daha fazla bilgi için bu [destek makalesine](metrics-and-activity-tracking.md) bakın.
+      Web uygulaması her yüklendiğinde Giriş sayfanıza bağlı en son veriler alınır. Bookings tarafından izlenen bilgilerin türü hakkında daha fazla bilgi için bu [destek makalesine bakın](metrics-and-activity-tracking.md).
   - question: >
       E-posta bildirimlerini Zaman kapalı olarak kapatabilir miyim?
     answer: >
-      Bookings Web uygulamasında kayıt süresi her zaman personel üyelerine bir bildirim e-postası tetikler. Herhangi bir personelin bildirimle ilgili kafaları karışırsa, personeli yönetici tarafında gerçekleşenler hakkında daha iyi bilgilendirmek için Time-Off bildiriminin notlarına veya başlığına daha fazla ayrıntı eklemenizi öneririz.
+      Bookings Web uygulamasında kayıt zaman aşımı, personel üyelerine her zaman bir bildirim e-postası tetikler. Herhangi bir personelin bildirimle ilgili kafaları karışırsa, personeli yönetici tarafında gerçekleşenler hakkında daha iyi bilgilendirmek için Time-Off bildiriminin notlarına veya başlığına daha fazla ayrıntı eklemenizi öneririz.
   - question: >
-      Bookings takvimler kopyalanabilir veya çoğaltılabilir ve kolay ölçeklendirme için şablon oluşturulabilir mi?
+      Bookings takvimleri kopyalanabilir veya çoğaltılabilir ve kolay ölçeklendirme için şablon oluşturulabilir mi?
     answer: >
       İşlem, posta kutusu ayrıntılarını almak için Graph API kullanmak ve ardından bu ayrıntıları kullanarak yeni bir posta kutusu oluşturmaktır. API belgeleri [buradadır](/graph/api/resources/booking-api-overview?view=graph-rest-beta).
   - question: >
-      Bookings'da hangi raporlama kullanılabilir?
+      Bookings'te hangi raporlama kullanılabilir?
     answer: >
-      Yönetici rolüne atanan tüm Bookings personeli sekmeyle ayrılmış değerleri ( indirebilir. Son 120 gün içinde yapılan tüm rezervasyonları içeren TSV) dosyası. Bookings raporları içinde indirilebilir. Bookings sayfasının Giriş sekmesindeki TSV formu. Bookings API'si bu verileri daha özelleştirilmiş ve belirli amaçlarla toplamak için de kullanılabilir.
+      Yönetici rolüne atanan tüm Bookings personeli sekmeyle ayrılmış değerleri (. Son 120 gün içinde yapılan tüm rezervasyonları içeren TSV) dosyası. Bookings raporları uygulamasından indirilebilir. Bookings sayfasının Giriş sekmesindeki TSV formu. Bookings API'sini kullanarak bu verileri daha özelleştirilmiş ve belirli amaçlarla toplayabilirsiniz.
   - question: >
       Self servis sayfasında aynı anda yalnızca bir hizmeti paylaşmak mümkün mü?
     answer: >
-      Evet, her hizmet için ayrı Bookings takvimler oluşturabilir veya Hizmetler sekmesine gidebilir, bir hizmeti düzenleyebilir ve sayfanın en üstünde yalnızca belirli bir hizmet için URL paylaşma seçeneği görürsünüz.
+      Evet, her hizmet için ayrı Bookings takvimleri oluşturabilir veya Hizmetler sekmesine gidebilir, bir hizmeti düzenleyebilir ve sayfanın en üstünde yalnızca söz konusu hizmet için URL paylaşma seçeneği görürsünüz.
   - question: >
       Randevu rezervasyonu yapanlar için onay formu veya açıklama eklemek için hangi seçenekler kullanılabilir?
     answer: >
@@ -220,28 +224,28 @@ sections:
   - question: >
       Self servis rezervasyon sayfasında personel seçim özelliğinde hangi değişiklikler yapılabilir?
     answer: >
-      Rezervasyon sırasında müşterilerin belirli personel üyelerini seçme olanağı, Rezervasyon sayfasından veya Hizmetler bölümünden **Müşterilerin rezervasyon için belirli bir kişiyi seçmesine izin ver** seçeneği kaldırılarak tamamen kaldırılabilir. Bookings, personel uygunluk durumuna bağlı olarak rezervasyona otomatik olarak uygun bir personel üyesini rastgele atar.
+      Rezervasyon sırasında müşterilerin belirli personel üyelerini seçme olanağı, Rezervasyon sayfasından veya Hizmetler bölümünden **Müşterilerin rezervasyon için belirli bir kişiyi seçmesine izin ver** seçeneği kaldırılarak tamamen kaldırılabilir. Rezervasyonlar, personel uygunluk durumuna bağlı olarak rezervasyona otomatik olarak uygun bir personel üyesini rastgele atar.
   - question: >
       Bookings birçok eşzamanlı rezervasyon isteğini ve Self servis sayfa ziyaretlerini destekleyebilir mi?
     answer: >
-      Rezervasyon, bir kerede çok sayıda ziyaretçiyi ve rezervasyonu destekleyebilir. Sayfada büyük miktarda trafik varsa, kullanıcılar "sunucu meşgul" hatası alır. Randevu kullanılabilirliği, sayfa yüklendiğinde ve bir rezervasyon yapıldığında güncelleştirilir. Aynı randevuyu aynı anda birden çok kişi rezerve etmeye çalışıyorsa, Bookings yalnızca bir kişinin o zaman rezervasyon yapmasına izin verir ve diğer olası müşterilere bildirim iletisi verir ve farklı bir zaman bulmalarını ister.
+      Rezervasyon, bir kerede çok sayıda ziyaretçiyi ve rezervasyonu destekleyebilir. Sayfada büyük miktarda trafik varsa, kullanıcılar "sunucu meşgul" hatası alır. Randevu kullanılabilirliği, sayfa yüklendiğinde ve bir rezervasyon yapıldığında güncelleştirilir. Aynı randevuyu aynı anda birden çok kişi ayırmaya çalışıyorsa Bookings, yalnızca bir kişinin o zaman rezervasyon yapmasına izin verir ve diğer olası müşterilere bildirim iletisi verir ve farklı bir zaman bulmalarını ister.
 - name: Gizlilik
   questions:
   - question: >
-      Bookings veriler nerede depolanır?
+      Bookings verileri nerede depolanır?
     answer: >
-      Bookings Microsoft 365 bir uygulamadır, yani tüm veriler Microsoft 365 platformunda ve Exchange depolanır. Bookings, microsoft tarafından ayarlanan ve tüm Office uygulamaların izlediği ilkeler olan tüm veri depolama ilkelerini izler. Bookings müşteri, personel, hizmet ve randevu ayrıntılarını depolamak için Exchange paylaşılan posta kutularını kullanır. Exchange paylaşılan posta kutuları için uyumluluk ilkeleri, Bookings posta kutuları için de geçerlidir. Tüm müşteri verileri (rezervasyon sırasında müşteriler tarafından sağlanan bilgiler dahil) Bookings yakalanır ve uygulama içinde depolanır, bu nedenle Exchange içinde depolanır. Microsoft Bookings burada bulabileceğiniz Microsoft 365 tarafından kullanılan ilkelerin aynısını kullanır[.](https://www.microsoft.com/online/legal/v2/?docid=22&langid=en-us)
+      Bookings Microsoft 365 bir uygulamadır, yani tüm veriler Microsoft 365 platformunda ve Exchange içinde depolanır. Bookings, Microsoft tarafından ayarlanan ve tüm Office uygulamaların izlediği ilkelerle aynı olan tüm veri depolama ilkelerini izler. Bookings, müşteri, personel, hizmet ve randevu ayrıntılarını depolamak için Exchange paylaşılan posta kutularını kullanır. Exchange'deki paylaşılan posta kutuları için uyumluluk ilkeleri Bookings posta kutuları için de geçerlidir. Tüm müşteri verileri (rezervasyon sırasında müşteriler tarafından sağlanan bilgiler dahil) Bookings'te yakalanır ve uygulama içinde depolanır, bu nedenle Exchange içinde depolanır. Microsoft Bookings burada bulabileceğiniz Microsoft 365 tarafından kullanılan ilkelerin aynısını kullanır[.](https://www.microsoft.com/online/legal/v2/?docid=22&langid=en-us)
   - question: >
       Bookings takvimlerini tüm kullanıcılar için merkezi olarak yönetmenin bir yolu var mı?
     answer: >
-      Her Bookings takvim bağımsız olarak korunur. Giriş sayfasındaki şapka işaretine tıkladıktan sonra açılan arama açılan listesinden başka bir birleştirilmiş görünüm yoktur.
+      Her Bookings takvimi bağımsız olarak korunur. Giriş sayfasındaki şapka işaretine tıkladıktan sonra açılan arama açılan listesinden başka bir birleştirilmiş görünüm yoktur.
   - question: >
       Kullanıcıların kimliği nasıl doğrulanır?
     answer: >
-      Bookings Web uygulamasına erişim, normal Azure Active Directory (AAD) kimlik doğrulaması aracılığıyla kimlik doğrulamasını içerir. Self servis rezervasyon sayfası, Web sayfası bağlantısıyla herkesin kullanımına sunulur. Ancak **Kuruluşumdan kitap almak için Microsoft 365 veya Office 365 hesabı gerektir** ayarı seçildiğinde, sayfa yalnızca Microsoft 365 kiracı içinde (AAD kimlik doğrulaması kullanılarak) kullanılmak üzere kısıtlanır.
+      Bookings Web uygulamasına erişim, normal Azure Active Directory (AAD) kimlik doğrulaması aracılığıyla kimlik doğrulamasını içerir. Self servis rezervasyon sayfası, Web sayfası bağlantısıyla herkesin kullanımına sunulur. Ancak Kuruluşumdan kitap almak için **Microsoft 365 veya Office 365 hesabı gerektir** ayarı seçildiğinde, sayfa yalnızca Microsoft 365 kiracı içinde (AAD kimlik doğrulaması kullanılarak) kullanılmak üzere kısıtlanır.
 
 
-      :::image type="content" source="media/bookings-faq-access-ctrl.png" alt-text="Bookings'de rezervasyon sayfası erişim denetimi":::
+      :::image type="content" source="media/bookings-faq-access-ctrl.png" alt-text="Bookings'te rezervasyon sayfası erişim denetimi":::
   - question: >
       Müşteri verileri herhangi bir nedenle üretim sisteminden ayrılır mı?
     answer: >
@@ -249,7 +253,7 @@ sections:
   - question: >
       Müşteri yanıtları için e-posta adreslerini özelleştirme özelliği var mı?
     answer: >
-      Müşterinin yanıtlarını hangi e-posta adresine gönderdiğini tanımlama özelliği vardır. Bu ayar **İş bilgileri** sekmesindedir. Bookings posta kutusu adının kendisi, her zamanki Exchange posta kutusu yeniden adlandırma işlemleri aracılığıyla Exchange içinde de değiştirilebilir.
+      Müşterinin yanıtlarını hangi e-posta adresine gönderdiğini tanımlama özelliği vardır. Bu ayar **İş bilgileri** sekmesindedir. Bookings posta kutusu adı, normal Exchange posta kutusu yeniden adlandırma işlemleri aracılığıyla Exchange içinde de değiştirilebilir.
   - question: >
       Müşterinin rezervasyon işlemi sırasında hüküm ve koşullarımızı kabul etmelerini istiyoruz. Bu mümkün mü?
     answer: >
@@ -258,7 +262,7 @@ sections:
 
       Bu bölüm zengin metinleri desteklemez, ancak iş bilgileri bölümünün altına bağlantılar eklenebileceğini ve onay onay kutusunun hemen altında görüneceğini düşünün.
   - question: >
-      Exchange Bookings ilişkili posta kutuları nasıl tanımlanabilir?
+      Exchange'daki Bookings ile ilişkili posta kutuları nasıl tanımlanabilir?
     answer: >
       Aşağıdaki komut, tüm Bookings posta kutularının ve bunlara erişimi olan kullanıcıların bilgilerini almak için kullanılabilir.
 
@@ -269,23 +273,23 @@ sections:
   - question: >
       Bir kullanıcı çevrimiçi toplantıdan oluşan bir hizmet için randevu zamanlarsa, isteğe bağlı e-posta adresi alanını boş bırakırsa toplantının Microsoft Teams bağlantısını nasıl alır?
     answer: >
-      Sistemde müşterinin e-posta bilgileri yoksa, onay postasının müşteriye teslim edilmesine imkan yoktur ve bu nedenle Teams bağlantısı almaz. Çözüm, e-posta adresini gerekli bir alan olarak ayarlamaktır ve bunu Bookings Hizmetler sekmesinde yapabilirsiniz. Bookings'de yeni bir hizmet oluşturduğunuzda, müşteri e-posta alanının varsayılan olarak gerekli bir alan olarak ayarlandığını unutmayın.
+      Sistemde müşterinin e-posta bilgileri yoksa, onay postasının müşteriye teslim edilmesine imkan yoktur ve bu nedenle Teams bağlantısı almaz. Çözüm, e-posta adresini gerekli bir alan olarak ayarlamaktır. Bunu Bookings'in Hizmetler sekmesinde yapabilirsiniz. Bookings'te yeni bir hizmet oluşturduğunuzda, müşteri e-posta alanının varsayılan olarak gerekli bir alan olarak ayarlandığını unutmayın.
   - question: "\"Herkes\" seçildiğinde veya müşterilerin randevu için personel üyesi seçme olanağı olmadığında randevulara personel nasıl atanır?\n"
     answer: >
-      Bu senaryolarda personele, randevunun rezerve edildiği sırada mevcut olan tüm personel üyelerinden rastgele atanır. Şu anda, rastgele atanan randevuların tüm personel üyeleri arasında eşit dağıtımını sağlamanın veya her personel üyesine atanan randevu sayısını kapsamanın hiçbir yolu yoktur. Birçok rastgele atamadan sonra personeliniz genelinde yapılması gereken yük dengeleme varsa, Bookings sayfasının Takvim sekmesinde el ile yapılabilir.
+      Bu senaryolarda personele, randevunun rezerve edildiği sırada mevcut olan tüm personel üyelerinden rastgele atanır. Şu anda, rastgele atanan randevuların tüm personel üyeleri arasında eşit dağıtımını sağlamanın veya her personel üyesine atanan randevu sayısını kapsamanın hiçbir yolu yoktur. Birçok rastgele atamadan sonra personeliniz genelinde yapılması gereken yük dengeleme varsa, bu işlem Bookings sayfasının Takvim sekmesinden el ile yapılabilir.
   - question: >
       Daha önce kabul etmiş olan kullanıcılar SMS iletilerini almayı nasıl geri çevirebilir?
     answer: >
-      SMS kısa mesajları etkin bir randevu rezervasyonu yaparken, müşteriler her rezervasyonda kabul etme kutusunu işaretlemeleri istenir. Müşteriler ayrıca, mesajların durmasını istediklerini belirten SMS mesajına (SMS sağlayıcısı) doğrudan yanıt verebilir ve ardından bu telefon numarasına başka mesaj gönderilmez. Müşteri, Bookings'dan değil sağlayıcıdan kısa mesaj almayı kabul ederse, Bookings sayfasından kabul ederken bile gelecekte SMS mesajları almaz.
+      SMS kısa mesajların etkinleştirildiği bir randevu için rezervasyon yaparken, müşteriler her rezervasyonda kabul etme kutusunu işaretlemeleri istenir. Müşteriler ayrıca iletilerin durmasını istediklerini belirten SMS iletisini (SMS sağlayıcısı) doğrudan yanıtlayabilir ve ardından bu telefon numarasına başka mesaj gönderilmez. Müşteri Bookings'in kendisinden değil sağlayıcıdan kısa mesaj almayı geri çevirdiğinde, Bookings sayfasından kabul ederken bile gelecekte SMS mesaj almaz.
 - name: Sorun giderme
   questions:
   - question: >
       Bu personel üyesinin takvimi eşitlenemiyor
-    answer: "\"Bu personel üyesinin takvimi eşitlenemiyor\" hatasını alırsanız, bu bölümde hatayı çözmenize yardımcı olacak çeşitli sorun giderme yordamları bulunur.\n\nPersonelinizin takvimini eşitleme hakkında bilgi arıyorsanız bkz. [Bookings personel ekleme](add-staff.md). **Personel ayrıntıları** sayfasında **Takvimdeki etkinlikler kullanılabilirliği etkiler** seçeneğinin işaretli olduğundan emin olun.\n"
+    answer: "\"Bu personel üyesinin takvimi eşitlenemiyor\" hatasını alırsanız, bu bölümde hatayı çözmenize yardımcı olacak çeşitli sorun giderme yordamları bulunur.\n\nPersonelinizin takvimini eşitleme hakkında bilgi arıyorsanız bkz. [Bookings'e personel ekleme](add-staff.md). **Personel ayrıntıları** sayfasında **Takvimdeki etkinlikler kullanılabilirliği etkiler** seçeneğinin işaretli olduğundan emin olun.\n"
   - question: >
       Personel üyesinin takvim izinlerini değiştirmesi gerekiyor
     answer: >
-      Bookings personel üyelerinizin takvimleriyle düzgün bir şekilde eşitleyebilmesi için, her personel üyesinin takvimini paylaşması gerekir. Her personel üyesinin kendi takvimini paylaşmak için bu yönergeleri izlemesi gerekir.
+      Bookings'in personel üyelerinizin takvimleriyle düzgün bir şekilde eşitlenebilmesi için her personel üyesinin kendi takvimini paylaşması gerekir. Her personel üyesinin kendi takvimini paylaşmak için bu yönergeleri izlemesi gerekir.
 
 
       1. Microsoft 365 oturum açın ve uygulama başlatıcıdan **Outlook** seçin.
@@ -300,7 +304,7 @@ sections:
       1. **Kuruluşunuzun içindeki kişiler** bölümünde **Kuruluşum'un** yanındaki açılan kutuyu seçin ve ardından **Meşgul olduğumda görüntüleyebilir'i** seçin.
 
          > [!NOTE]
-         > Bu ayar, serbest/meşgul bilgilerinizi Bookings ve kuruluşunuzdaki diğer kullanıcılarla paylaşır. Ne tür bir randevu zamanladığınız, randevuyu kiminle zamanladığınız veya konum gibi başka hiçbir bilgi içermez.
+         > Bu ayar, serbest/meşgul bilgilerinizi Bookings ile ve kuruluşunuzdaki diğer kullanıcılarla paylaşır. Ne tür bir randevu zamanladığınız, randevuyu kiminle zamanladığınız veya konum gibi başka hiçbir bilgi içermez.
 
          > [!div class="mx-imgBorder"]
          > ![Meşgul olduğumda görüntülenebilir seçeneğinin etkinleştirildiği takvim paylaşım ekranının resmi](../media/bookings-view-busy.png)
@@ -309,7 +313,7 @@ sections:
   - question: >
       Kuruluşumuzda personel üyesi bulamıyoruz
     answer: >
-      Bir çalışan şirketinizden ayrıldıysa ve onu Microsoft 365 veya Office 365 kuruluşunuzdan kaldırdıysanız, takvimde görünmemesi ve müşterilerin randevu rezervasyonu yapmasını önlemek için bu kullanıcıyı Bookings kaldırmanız gerekir.
+      Bir çalışan şirketinizden ayrıldıysa ve onu Microsoft 365 veya Office 365 kuruluşunuzdan kaldırdıysanız, takvimde görünmemesi ve müşterilerin randevu rezervasyonu yapmasını önlemek için bu kullanıcıyı Bookings'ten kaldırmanız gerekir.
 
 
       1. Microsoft 365 oturum açın ve **Bookings** \> **Personeli'ne** gidin.
@@ -340,4 +344,4 @@ sections:
 
 
       Bu hatayı uzun bir süre sonra görmeye devam ediyorsanız veya sık sık görüyorsanız lütfen desteğe başvurun.
-additionalContent: "\n## <a name=\"additional-resources\"></a>Ek kaynaklar\n\n- [Microsoft Bookings kuruluşlar blogunda kullanılabilirliği genişletiyor](https://techcommunity.microsoft.com/t5/microsoft-bookings-blog/microsoft-bookings-expands-availability-in-enterprises/ba-p/1214065)\n\n- [Microsoft Bookings Nasıl Çalışır videosu](https://support.office.com/article/microsoft-bookings-69c45b78-6de4-4f28-9449-cdcc18b7ae45)\n\n- [Microsoft Bookings kullanmaya başlama](get-access.md)\n\n- [Microsoft Bookings’i açma veya kapatma](turn-bookings-on-or-off.md)\n\n- [Kullanıcıları tek tek veya toplu olarak ekleme](../admin/add-users/add-users.md)\n\n- [Bookings’e personel ekleme](add-staff.md)\n\n- [Şablon tanımlandıktan sonra otomatik hale getirmek için API bileşenleri](/graph/api/bookingbusiness-post-bookingbusinesses)\n\n- [Görüntü için Bookings Takvim URL'si](https://outlook.office.com/bookings/calendar)\n\n- [uyumluluk ilkelerini Bookings](/compliance/regulatory/gdpr-dsr-Office365#bookings)\n\n- [Rezervasyon sayfanızı özelleştirme ve yayımlama](customize-booking-page.md)\n\n- [Kiracı Posta Kutusu yapılandırması](/powershell/module/exchange/get-accepteddomain)\n\n- [Grup Bookings](https://techcommunity.microsoft.com/t5/microsoft-bookings-blog/microsoft-bookings-now-supports-online-meetings-and-group/ba-p/1214120)\n\n- [Bookings ölçümleri ve etkinlik izleme](metrics-and-activity-tracking.md)\n\n- [M365 Genel Yol Haritası](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=bookings)"
+additionalContent: "\n## <a name=\"additional-resources\"></a>Ek kaynaklar\n\n- [Microsoft Bookings kuruluşlar blogunda kullanılabilirliği genişletiyor](https://techcommunity.microsoft.com/t5/microsoft-bookings-blog/microsoft-bookings-expands-availability-in-enterprises/ba-p/1214065)\n\n- [Microsoft Bookings Nasıl Çalışır videosu](https://support.office.com/article/microsoft-bookings-69c45b78-6de4-4f28-9449-cdcc18b7ae45)\n\n- [Microsoft Bookings kullanmaya başlama](get-access.md)\n\n- [Microsoft Bookings’i açma veya kapatma](turn-bookings-on-or-off.md)\n\n- [Kullanıcıları tek tek veya toplu olarak ekleme](../admin/add-users/add-users.md)\n\n- [Bookings’e personel ekleme](add-staff.md)\n\n- [Şablon tanımlandıktan sonra otomatik hale getirmek için API bileşenleri](/graph/api/bookingbusiness-post-bookingbusinesses)\n\n- [Görüntüleme için Bookings Takvimi URL'si](https://outlook.office.com/bookings/calendar)\n\n- [Bookings uyumluluk ilkeleri](/compliance/regulatory/gdpr-dsr-Office365#bookings)\n\n- [Rezervasyon sayfanızı özelleştirme ve yayımlama](customize-booking-page.md)\n\n- [Kiracı Posta Kutusu yapılandırması](/powershell/module/exchange/get-accepteddomain)\n\n- [Grup Rezervasyonları](https://techcommunity.microsoft.com/t5/microsoft-bookings-blog/microsoft-bookings-now-supports-online-meetings-and-group/ba-p/1214120)\n\n- [Rezervasyon ölçümleri ve etkinlik izleme](metrics-and-activity-tracking.md)\n\n- [M365 Genel Yol Haritası](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=bookings)"

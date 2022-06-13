@@ -1,5 +1,5 @@
 ---
-title: Saldırı simülasyonu eğitimi içinde otomatik saldırıları ve eğitimi ayarlama
+title: Saldırı simülasyon eğitiminde otomatik saldırılar ve eğitim nasıl kurulur?
 description: Saldırı Benzetimi eğitimini otomatikleştirme ve hedef kullanıcılara yük gönderme adımları. Bu kılavuzu izleyerek, belirli tekniklere ve yüklere sahip otomatik saldırı akışları oluşturmayı öğreneceksiniz.
 search.product: ''
 search.appverid: ''
@@ -15,16 +15,16 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: 008d4fd4aeb4725a4c96c917e077c900af1741e2
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: ccf4222878777789fb7f89b6382c858eaad9f0c2
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842479"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042146"
 ---
-# <a name="how-to-setup-automated-attacks-and-training-within-attack-simulation-training"></a>Saldırı simülasyonu eğitimi içinde otomatik saldırıları ve eğitimi ayarlama
+# <a name="how-to-setup-automated-attacks-and-training-within-attack-simulation-training"></a>Saldırı simülasyon eğitiminde otomatik saldırılar ve eğitim nasıl kurulur?
 
 Saldırı simülasyonu eğitimi, kimlik avı riskinizi değerlendirmek ve kullanıcılarınıza kimlik avı saldırılarından nasıl daha iyi kaçınabileceğinizi öğretmek için kuruluşunuzda zararsız saldırı simülasyonları çalıştırmanıza olanak tanır. Bu kılavuzu izleyerek, otomatik akışları belirli tekniklerle ve belirtilen koşullar karşılandığında çalıştırılan yüklerle yapılandıracak ve kuruluşunuzda simülasyonlar başlatacaksınız.
 

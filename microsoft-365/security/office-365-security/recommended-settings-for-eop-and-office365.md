@@ -19,16 +19,16 @@ ms.collection:
 description: Exchange Online Protection (EOP) ve Office 365 için Defender güvenlik ayarları için en iyi yöntemler nelerdir? Standart koruma için geçerli öneriler neleri içerir? Daha katı olmak istiyorsanız ne kullanılmalıdır? Ayrıca Office 365 için Defender kullanıyorsanız ne kadar ekstra alırsınız?
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 921523ea3c1d73dc83c148cc2e61aab416ed9302
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: bd30be87a277d271fece74a9700a60992a562399
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599309"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043039"
 ---
 # <a name="recommended-settings-for-eop-and-microsoft-defender-for-office-365-security"></a>EOP ve Office 365 için Microsoft Defender güvenliği için önerilen ayarlar
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -208,10 +208,10 @@ Bu ayarlar hakkında daha fazla bilgi için bkz[. Office 365 için Microsoft Def
 |Güvenlik özelliği adı|Varsayılan|Standard|Sıkı|Açıklama ekleme|
 |---|:---:|:---:|:---:|---|
 |**Kimlik avı eşiği & koruma**|||||
-|**Kullanıcıların korumasını sağlama** (kimliğine bürünülen kullanıcı koruması) <br/><br/> _EnableTargetedUserProtection_ <br/><br/> _TargetedUsersToProtect_|Seçili değil <br/><br/> `$false` <br/><br/> yok|Seçili <br/><br/> `$true` <br/><br/> \<list of users\>|Seçili <br/><br/> `$true` <br/><br/> \<list of users\>|Önemli rollere kullanıcı (ileti gönderenler) eklemenizi öneririz. Dahili olarak, korunan gönderenler CEO'nuz, CFO'nuz ve diğer üst düzey liderler olabilir. Dışarıdan, korunan gönderenler konsey üyelerini veya yönetim kurulunuzu içerebilir. <br/><br/> Önceden ayarlanmış güvenlik ilkelerinde, korunacak kullanıcıları belirtemezsiniz. Önceden ayarlanmış güvenlik ilkelerini devre dışı bırakmanız ve kullanıcıları önerilen anahtar rollere eklemek için özel kimlik avı önleme ilkeleri kullanmanız gerekir.|
+|**Kullanıcıların korumasını sağlama** (kimliğine bürünülen kullanıcı koruması) <br/><br/> _EnableTargetedUserProtection_ <br/><br/> _TargetedUsersToProtect_|Seçili değil <br/><br/> `$false` <br/><br/> yok|Seçili <br/><br/> `$true` <br/><br/> \<list of users\>|Seçili <br/><br/> `$true` <br/><br/> \<list of users\>|Önemli rollere kullanıcı (ileti gönderenler) eklemenizi öneririz. Dahili olarak, korunan gönderenler CEO'nuz, CFO'nuz ve diğer üst düzey liderler olabilir. Dışarıdan, korunan gönderenler konsey üyelerini veya yönetim kurulunuzu içerebilir.|
 |**Etki alanlarının korunmasını etkinleştirme** (kimliğine bürünülen etki alanı koruması)|Seçili değil|Seçili|Seçili||
 |**Sahip olduğum etki alanlarını dahil et** <br/><br/> _EnableOrganizationDomainsProtection_|Kapalı <br/><br/> `$false`|Seçili <br/><br/> `$true`|Seçili <br/><br/> `$true`||
-|**Özel etki alanları ekleme** <br/><br/> _EnableTargetedDomainsProtection_ <br/><br/> _TargetedDomainsToProtect_|Kapalı <br/><br/> `$false` <br/><br/> yok|Seçili <br/><br/> `$true` <br/><br/> \<list of domains\>|Seçili <br/><br/> `$true` <br/><br/> \<list of domains\>|Sahip olmadığınız ancak sık sık etkileşimde olduğunuz etki alanlarını (gönderen etki alanları) eklemenizi öneririz. <br/><br/> Önceden ayarlanmış güvenlik ilkelerinde, korunacak custm etki alanlarını belirtemezsiniz. Önceden ayarlanmış güvenlik ilkelerini devre dışı bırakmanız ve önerilen şekilde korumak üzere özel etki alanları eklemek için özel kimlik avı önleme ilkeleri kullanmanız gerekir.|
+|**Özel etki alanları ekleme** <br/><br/> _EnableTargetedDomainsProtection_ <br/><br/> _TargetedDomainsToProtect_|Kapalı <br/><br/> `$false` <br/><br/> yok|Seçili <br/><br/> `$true` <br/><br/> \<list of domains\>|Seçili <br/><br/> `$true` <br/><br/> \<list of domains\>|Sahip olmadığınız ancak sık sık etkileşimde olduğunuz etki alanlarını (gönderen etki alanları) eklemenizi öneririz.|
 |**Güvenilir gönderenler ve etki alanları ekleme** <br/><br/> _ExcludedSenders_ <br/><br/> _ExcludedDomains_|Yok|Yok|Yok|Kuruluşunuza bağlı olarak, kimliğine bürünme girişimleri olarak yanlış tanımlanan gönderenler veya etki alanları eklemenizi öneririz.|
 |**Posta kutusu zekasını etkinleştirme** <br/><br/> _EnableMailboxIntelligence_|Seçili <br/><br/> `$true`|Seçili <br/><br/> `$true`|Seçili <br/><br/> `$true`||
 |**Kimliğe bürünme koruması için zekayı etkinleştirme** <br/><br/> _EnableMailboxIntelligenceProtection_|Kapalı <br/><br/> `$false`|Seçili <br/><br/> `$true`|Seçili <br/><br/> `$true`|Bu ayar, posta kutusu zekası tarafından kimliğe bürünme algılamaları için belirtilen eyleme izin verir.|

@@ -1,5 +1,5 @@
 ---
-title: Karantina izinlerini ve ilkelerini yapılandırma
+title: Karantina izinleri ve ilkeleri nasıl yapılandırılır?
 description: AdminOnlyPolicy, sınırlı erişim, tam erişim ve güvenlik yöneticilerine ve kullanıcılara hatalı pozitif klasörleri yönetmek için basit bir yol sağlama gibi farklı gruplar arasında karantina ilkeleri ve izinleri yapılandırma adımları.
 search.product: ''
 search.appverid: ''
@@ -15,16 +15,16 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: d2a3de0af3e824fcc8276bd339469253d1e3588c
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: c8f739a82223a9315e5082377b4951a88b1ea1df
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842478"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043675"
 ---
-# <a name="how-to-configure-quarantine-permissions-and-policies"></a>Karantina izinlerini ve ilkelerini yapılandırma
+# <a name="how-to-configure-quarantine-permissions-and-policies"></a>Karantina izinleri ve ilkeleri nasıl yapılandırılır?
 
 Karma çalışmanın evrimi ile daha agresif bir güvenlik duruşu talebi arttıkça, güvenlik yöneticilerine ve kullanıcılara hatalı pozitif klasörleri yönetmek için çok basit bir yol sağlamak çok önemlidir. Yöneticiler ve kullanıcılar, açıklayıcı bir yaklaşım benimsedi ve bunu aşağıdaki yönergelerle gerçekleştirebilir.
 
@@ -37,7 +37,7 @@ Karma çalışmanın evrimi ile daha agresif bir güvenlik duruşu talebi arttı
 
 ## <a name="creating-custom-quarantine-policies-with-request-release-flow"></a>İstek yayın akışı ile Özel karantina ilkeleri oluşturma
 
-Özel ilkelerimiz, kullanıcıların ***False positive** _ klasöründe hangi öğeleri önceliklendirmek için kullanabileceklerine karar verme olanağı sağlar ve kullanıcının bu öğelerin _release* klasörden istemesine olanak tanır.
+Özel ilkelerimiz, kullanıcıların ***False positive** _ klasöründe hangi öğelerin önceliklerini belirleyebileceğine karar verme olanağı sağlar ve kullanıcının bu öğelerin _release* klasörden istemesine olanak tanır.
 
 1. Kullanıcınızın önceliklendirmesini değil önceliklendirmesini istediğiniz öğelerin hangi karar kategorilerine (toplu, istenmeyen posta, kimlik avı, yüksek güvenilirlikli kimlik avı veya kötü amaçlı yazılım) karar verin.
 1. Kullanıcıların önceliklendirmesini istemediğiniz kategoriler için, öğeleri **AdminOnlyPolicy'ye** atayın. Kullanıcıların sınırlı erişimle önceliklendirmesini istediğiniz kategoriye gelince, istek yayın erişimiyle *özel bir ilke oluşturabilir* ve kullanıcıları bu kategoriye atayabilirsiniz.
@@ -46,11 +46,11 @@ Karma çalışmanın evrimi ile daha agresif bir güvenlik duruşu talebi arttı
 > [!IMPORTANT]
 > Ayrıntılı özel ilkelerin nasıl oluşturulabileceği hakkında daha fazla bilgi için bkz[. Karantina ilkeleri - Office 365 | Microsoft Docs](../../office-365-security/quarantine-policies.md).
 
-## <a name="assigning-quarantine-polices-and-enabling-notification-with-organization-branding"></a>Karantina ilkeleri atama ve kuruluş markasıyla bildirimi etkinleştirme
+## <a name="assigning-quarantine-policies-and-enabling-notification-with-organization-branding"></a>Karantina ilkeleri atama ve kuruluş markasıyla bildirimi etkinleştirme
 
-Kullanıcıların önceliklendirebileceği veya önceliklendirmeyebileceği öğe kategorilerine karar verildikten ve karşılık gelen karantina ilkeleri oluşturulduktan sonra, yöneticilerin bu ilkeleri ilgili kullanıcılara ataması ve bildirimleri etkinleştirmesi gerekir.
+Kullanıcıların önceliklendirebileceği veya önceliklendirmeyebileceği öğe kategorilerine karar verildikten ve karşılık gelen karantina ilkelerini oluşturduktan sonra, yöneticilerin bu ilkeleri ilgili kullanıcılara ataması ve bildirimleri etkinleştirmesi gerekir.
 
-1. *Tam erişim* kategorisine dahil etmek istediğiniz kullanıcıları, grupları veya etki alanlarını ve *sınırlı erişim* kategorisini ve *Yalnızca Yönetici* kategorisini belirleyin.
+1. *Tam erişim* kategorisine eklemek istediğiniz kullanıcıları, grupları veya etki alanlarını, *sınırlı erişim* kategorisiyle *Yalnızca Yönetici* kategorisi karşılaştırmasını belirleyin.
 1. [Microsoft Güvenlik portalında](https://security.microsoft.com) oturum açın.
 1. **E-posta & işbirliği** > **İlkeleri & kurallarını** seçin.
 1. **Tehdit ilkeleri'ne tıklayın**.

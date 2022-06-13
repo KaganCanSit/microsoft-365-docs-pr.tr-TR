@@ -14,12 +14,12 @@ ms.custom: AdminSurgePortfolio
 search.appverid: MET150
 ROBOTS: NOINDEX, NOFOLLOW
 description: Microsoft 365 yönetim merkezi tümleşik uygulamalar portalından kuruluşunuzdaki kullanıcılar ve gruplar için Microsoft ve Microsoft iş ortağı uygulamalarını bulun, test edin ve dağıtın.
-ms.openlocfilehash: 491315b36a7698399bcd22c60173db8cec482148
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 7d28f541c319622a4c15ac4eb4619b805cd0f13b
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094670"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043176"
 ---
 # <a name="test-and-deploy-microsoft-365-apps-by-partners-in-the-integrated-apps-portal"></a>Tümleşik uygulamalar portalında iş ortakları tarafından Microsoft 365 Uygulamaları test edin ve dağıtın
 
@@ -60,7 +60,7 @@ Tümleşik uygulamalar portalı, kuruluşunuza dağıtılan iş ortaklarının t
 
 Tümleşik uygulamalar sayfasındaki listede henüz görünmeyen yayımlanmış uygulamaları bulabilir, test edebilir ve tam olarak dağıtabilirsiniz. Uygulamaları yönetim merkezinden satın alıp lisanslayarak, Microsoft ve Microsoft iş ortağı uygulamalarını tek bir konumdan listenize ekleyebilirsiniz.
 
-1. Yönetim merkezinde, sol gezinti bölmesinde **Ayarlar** ve ardından <a href="https://go.microsoft.com/fwlink/p/?linkid=2125823" target="_blank">**Tümleşik uygulamalar'ı**</a> seçin.
+1. Yönetim merkezinde, sol gezinti bölmesinde **Ayarlar** ve ardından <a href="https://admin.microsoft.com/adminportal/home?#/Settings/IntegratedApps" target="_blank">**Tümleşik uygulamalar'ı**</a> seçin.
 
 2. Uygulamaların görünümünü almak için **Uygulamaları al'ı** seçin.
 
@@ -87,7 +87,7 @@ Aşağıdaki senaryolar için Tümleşik uygulamalar portalından iş ortağı t
 
 - Aynı eklenti birden fazla SaaS teklifine bağlıdır.
 - SaaS teklifi eklentilere bağlıdır, ancak Microsoft Graph ile tümleştirilmez ve AAD Uygulama Kimliği sağlanmaz.
-- SaaS teklifi eklentilere bağlıdır, ancak Microsoft Graph tümleştirmesi için sağlanan AAD Uygulama Kimliği birden çok SaaS teklifinde paylaşılır.
+- SaaS teklifi eklentilere bağlıdır, ancak Microsoft Graph tümleştirmesi için sağlanan AAD Uygulama Kimliği birden çok SaaS teklifi arasında paylaşılır.
 
 ## <a name="upload-custom-line-of-business-apps-for-testing-and-full-deployment"></a>Test ve tam dağıtım için özel iş kolu uygulamalarını Upload
 
@@ -115,7 +115,7 @@ Eklentiler aşağıdaki avantajları sağlar:
 
 - Yönetici eklentiyi kapatır veya silerse veya kullanıcı Azure Active Directory veya eklentinin atandığı bir gruptan kaldırılırsa, eklentiler artık kullanıcılar için görünmez. 
 
-Eklentiler, mac ve Çevrimiçi Office uygulamaları Windows üç masaüstü platformunda desteklenir. Ayrıca iOS ve Android'de de desteklenir (Yalnızca Mobil Eklentiler Outlook). 
+Eklentiler, mac ve Çevrimiçi Office uygulamaları Windows üç masaüstü platformunda desteklenir. Ayrıca iOS ve Android 'de de desteklenir (Yalnızca Mobil Eklentiler Outlook). 
 
 Tüm kullanıcılar için eklentinin istemcide görünmesi 24 saati bulabilir. 
 

@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Defender'de Tehdit Gezgini'nde e-postaları arama ve tehditleri düzeltme
+title: Microsoft 365 Defender'da Tehdit Gezgini’ni kullanarak e-postaları arayın ve tehditleri düzeltin
 description: Microsoft 365 Defender'da Tehdit Gezgini'nde el ile düzeltme gerçekleştirme adımları, en iyi performansı elde etme ve düzeltmeyi çağıran senaryolar da dahil olmak üzere.
 search.product: ''
 search.appverid: ''
@@ -15,21 +15,21 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: 6bce250add79d4119f82730c05f3042f3e3dbafe
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: acc3f81c789722a460a43df56a3e2794855dad0c
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842487"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043523"
 ---
 # <a name="steps-to-use-manual-email-remediation-in-threat-explorer"></a>Tehdit Gezgini'nde el ile e-posta düzeltmeyi kullanma adımları
 
 E-posta düzeltme, yöneticilerin tehdit olan e-postalar üzerinde işlem yapmalarına yardımcı olan zaten mevcut bir özelliktir.
 
 ## <a name="what-youll-need"></a>İhtiyacınız olan şey
-- Office 365 için Microsoft Defender Plan 2
+- Office 365 için Microsoft Defender Plan 2 (E5 planlarında bulunur)
 - Yeterli izinler (hesaba [Arama ve Temizleme](https://sip.security.microsoft.com/securitypermissions) rolü verdiğinden emin olun)
 
 ## <a name="create-and-track-the-remediation"></a>Düzeltmeyi oluşturma ve izleme
@@ -38,8 +38,8 @@ E-posta düzeltme, yöneticilerin tehdit olan e-postalar üzerinde işlem yapmal
 1. Yan bölme açılır ve düzeltme, önem derecesi ve açıklama için ad gibi ayrıntılar istenir. Bilgiler gözden geçirildikten sonra **Gönder'e** basın.
 1. Yönetici bu eylemi onaylar onaylamaz Onay Kimliği'ni ve [burada](https://security.microsoft.com/action-center/history) Microsoft 365 Defender İşlem Merkezi'nin bağlantısını görür. Bu sayfa **, eylemlerin izlenebileceği** yerdir.
 
-    1. **eylem uyarısı Yönetici** - Uyarı kuyruğunda 'Yönetici tarafından gönderilen yönetim eylemi' adlı bir sistem uyarısı gösterilir. Bu, bir yöneticinin varlığı düzeltme eylemini aldığını gösterir. Eylemi gerçekleştiren yöneticinin adı, araştırma bağlantısı ve zamanı gibi ayrıntılar sağlar. Bu, yöneticilerin varlıklar üzerinde gerçekleştirilen düzeltme gibi her önemli eylemi fark etmelerini sağlar.
-    1. **eylem araştırması Yönetici** - Varlıklardaki analiz yönetici tarafından zaten yapıldığından ve gerçekleştirilen eyleme bu neden olduğundan, sistem tarafından ek analiz yapılmaz. İlgili uyarı, düzeltme için seçilen varlık, gerçekleştirilen eylem, düzeltme durumu, varlık sayısı ve eylemi onaylayan gibi ayrıntıları gösterir. Bu, yöneticilerin *el ile* gerçekleştirilen araştırmayı ve eylemleri (yönetici eylemi araştırması) izlemesine olanak tanır.
+    1. **Yönetici eylemi uyarısı** - Uyarı kuyruğunda 'Yönetici tarafından gönderilen yönetim eylemi' adlı bir sistem uyarısı gösterilir. Bu, bir yöneticinin varlığı düzeltme eylemini aldığını gösterir. Eylemi gerçekleştiren yöneticinin adı, araştırma bağlantısı ve zamanı gibi ayrıntılar sağlar. Bu, yöneticilerin varlıklar üzerinde gerçekleştirilen düzeltme gibi her önemli eylemi fark etmelerini sağlar.
+    1. **Yönetici eylemi araştırması** - Varlıklardaki analiz yönetici tarafından zaten yapıldığından ve gerçekleştirilen eyleme bu neden olduğundan, sistem tarafından ek analiz yapılmaz. İlgili uyarı, düzeltme için seçilen varlık, gerçekleştirilen eylem, düzeltme durumu, varlık sayısı ve eylemi onaylayan gibi ayrıntıları gösterir. Bu, yöneticilerin *el ile* gerçekleştirilen araştırmayı ve eylemleri (yönetici eylemi araştırması) izlemesine olanak tanır.
 1. **Birleşik işlem merkezindeki eylem günlükleri** - Geçici silme ve silinmiş öğeler klasörüne taşıma gibi e-posta eylemlerine yönelik geçmiş ve eylem günlüklerinin tümü, birleşik **İşlem Merkezi** > **Geçmişi sekmesinin** altındaki *merkezi bir görünümde kullanılabilir*. 
 1. **Birleşik işlem merkezindeki filtreler** - Düzeltme adı, onay kimliği, Araştırma Kimliği, durum, eylem kaynağı ve eylem türü gibi birden çok filtre vardır. Bunlar, birleşik İşlem merkezinde e-posta eylemlerini bulmak ve izlemek için kullanışlıdır.
 

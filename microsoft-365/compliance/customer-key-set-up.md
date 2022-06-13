@@ -12,12 +12,12 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Müşteri Anahtarını ayarlamayı öğrenin.
-ms.openlocfilehash: 42c89c23f823f5f4297f31308516888633a1c06c
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: 93cf56ba30f333697ccb1ef6f4064918e73d4fcf
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363180"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042450"
 ---
 # <a name="set-up-customer-key"></a>Müşteri Anahtarını Ayarlama
 
@@ -107,7 +107,7 @@ Müşteri Anahtarını etkinleştirme teklifi göndermek için şu adımları ta
 
 2. Oturum açtıktan sonra uygun etki alanını seçin.
 
-3. Seçili etki alanı için üst gezinti çubuğundan **Hizmet iste'yi** seçin ve kullanılabilir tekliflerin listesini gözden geçirin.
+3. Seçili etki alanı için üst gezinti çubuğundan **Dağıt'ı** seçin ve kullanılabilir tekliflerin listesini gözden geçirin.
 
 4. Sizin için geçerli olan teklifin bilgi kartını seçin:
 
@@ -146,7 +146,7 @@ Kök şifreleme anahtarlarının geçici veya kalıcı olarak kaybedilmesi hizme
 
 - Tüm kiracı kullanıcıları için çevrimiçi SharePoint ve OneDrive İş içeriği (Teams dosyaları dahil) şifrelemek üzere DEP'ler atamak üzere Müşteri Anahtarı'nın etkinleştirilmesi için [spock@microsoft.com](mailto:spock@microsoft.com) başvurun.
 
-- Tüm kiracı kullanıcıları için birden çok Microsoft 365 iş yükünde (Exchange Online, Teams, Microsoft Purview Bilgi Koruması) içeriği şifrelemek üzere DEP'ler atamak üzere Müşteri Anahtarı'nın etkinleştirilmesi için [m365-ck@service.microsoft.com](mailto:m365-ck@service.microsoft.com) başvurun.
+- Tüm kiracı kullanıcıları için birden çok Microsoft 365 iş yükünde (Exchange Online, Teams, Microsoft Purview Information Protection) içeriği şifrelemek üzere DEP'ler atamak üzere Müşteri Anahtarı'nın etkinleştirilmesi için [m365-ck@service.microsoft.com](mailto:m365-ck@service.microsoft.com) başvurun.
 
 - E-postanıza aşağıdaki bilgileri ekleyin:
 
@@ -230,11 +230,11 @@ Uygulamanıza bağlı olarak her anahtar kasası için üç ayrı izin kümesi t
    Set-AzKeyVaultAccessPolicy -VaultName <vault name> -PermissionsToKeys wrapKey,unwrapKey,get -ServicePrincipalName <Office 365 appID>
    ```
 
-   Nerede:
+   Konum:
    - *kasa adı* , oluşturduğunuz anahtar kasasının adıdır.
    - Exchange Online ve Skype Kurumsal için *Office 365 appID* değerini şununla değiştirin:`00000002-0000-0ff1-ce00-000000000000`
    - SharePoint Online, OneDrive İş ve Teams dosyaları için *Office 365 appID* değerini şununla değiştirin:`00000003-0000-0ff1-ce00-000000000000`
-   - Tüm kiracı kullanıcıları için geçerli olan çok iş yükü ilkesi (Exchange, Teams, Microsoft Purview Bilgi Koruması) için *Office 365 appID* değerini şununla değiştirin:`c066d759-24ae-40e7-a56f-027002b5d3e4`
+   - Tüm kiracı kullanıcıları için geçerli olan çok iş yükü ilkesi (Exchange, Teams, Microsoft Purview Information Protection) için *Office 365 appID* değerini şununla değiştirin:`c066d759-24ae-40e7-a56f-027002b5d3e4`
 
   Örnek: Exchange Online ve Skype Kurumsal için izinleri ayarlama:
 

@@ -16,18 +16,18 @@ search.appverid:
 - MET150
 ms.assetid: a8bdcbdd-9298-462f-b889-df26037a990c
 description: arşiv posta kutusunu etkinleştirin ve Microsoft 365 bir posta kutusunun Kurtarılabilir Öğeler klasörünün boyutunu artırmak için otomatik genişletme arşivlemeyi açın.
-ms.openlocfilehash: bbeb72c6a055be42e06c450afccb35965d149dce
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: d426afffb1002e1187adafc794d5340d730cc7e7
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015026"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66044148"
 ---
 # <a name="increase-the-recoverable-items-quota-for-mailboxes-on-hold"></a>Beklemedeki posta kutuları için Kurtarılabilir Öğeler kotasını artırma
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Exchange Online'daki yeni posta kutularına otomatik olarak uygulanan varsayılan Exchange bekletme *ilkesi (Varsayılan MRM İlkesi* olarak adlandırılır) Kurtarılabilir Öğeler adlı bir bekletme etiketi içerir 14 gün arşive taşınır. Bu bekletme etiketi, bir öğenin 14 günlük saklama süresi dolduktan sonra öğeleri kullanıcının birincil posta kutusunda bulunan Kurtarılabilir Öğeler klasöründen kullanıcının arşiv posta kutusunda Kurtarılabilir Öğeler klasörüne taşır. Bunun gerçekleşmesi için kullanıcının arşiv posta kutusunun etkinleştirilmesi gerekir. Arşiv posta kutusu etkinleştirilmemişse hiçbir eylem yapılmaz; başka bir deyişle, 14 günlük saklama süresi dolduktan sonra, bekleyen bir posta kutusu için Kurtarılabilir Öğeler klasöründeki öğeler arşiv posta kutusuna taşınmaz. Beklemedeki bir posta kutusundan hiçbir şey silinmediğinden, özellikle de kullanıcının arşiv posta kutusu etkinleştirilmemişse Kurtarılabilir Öğeler klasörünün depolama kotası aşılabilir.
+Exchange Online'daki yeni posta kutularına otomatik olarak uygulanan varsayılan Exchange bekletme *ilkesi (Varsayılan MRM İlkesi* olarak adlandırılır) Kurtarılabilir Öğeler adlı bir bekletme etiketi içerir 14 gün arşive taşınır. Bu bekletme etiketi, bir öğenin 14 günlük saklama süresi dolduktan sonra öğeleri kullanıcının birincil posta kutusunda bulunan Kurtarılabilir Öğeler klasöründen kullanıcının arşiv posta kutusunda Kurtarılabilir Öğeler klasörüne taşır. Silmeler klasöründeki e-postalar **RetainDeletedItemsFor** parametresine göre korunur ve kurtarılabilir silinmiş öğelerdeki diğer klasörlere ve ardından arşiv posta kutusuna taşınır. Bunun gerçekleşmesi için kullanıcının arşiv posta kutusunun etkinleştirilmesi gerekir. Arşiv posta kutusu etkinleştirilmemişse hiçbir eylem yapılmaz; başka bir deyişle, 14 günlük saklama süresi dolduktan sonra, bekleyen bir posta kutusu için Kurtarılabilir Öğeler klasöründeki öğeler arşiv posta kutusuna taşınmaz. Beklemedeki bir posta kutusundan hiçbir şey silinmediğinden, özellikle de kullanıcının arşiv posta kutusu etkinleştirilmemişse Kurtarılabilir Öğeler klasörünün depolama kotası aşılabilir.
 
 Bu sınırı aşma olasılığını azaltmaya yardımcı olmak için, Exchange Online bir posta kutusuna ayrı tutma yerleştirildiğinde Kurtarılabilir Öğeler klasörünün depolama kotası otomatik olarak 30 GB'tan 100 GB'a yükseltilir. Arşiv posta kutusu etkinleştirilirse, arşiv posta kutusunda Kurtarılabilir Öğeler klasörünün depolama kotası da 30 GB'tan 100 GB'a yükseltilir. Exchange Online'da otomatik genişletme arşivleme özelliği etkinleştirilirse, Kurtarılabilir Öğeler klasörü de dahil olmak üzere kullanıcının arşiv posta kutusu için toplam depolama kotası 1,5 TB'tır.
 

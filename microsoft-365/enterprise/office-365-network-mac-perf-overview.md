@@ -15,12 +15,12 @@ ms.collection:
 - Strat_O365_Enterprise
 - m365initiative-coredeploy
 description: Microsoft 365 Yönetici Merkezi'nde ağ bağlantısına genel bakış
-ms.openlocfilehash: 4d23990253b96e57df04411a2207d089c90711ca
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 19aa6beaf299a80b76753357e4cbe4f8f0966362
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621808"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043864"
 ---
 # <a name="network-connectivity-in-the-microsoft-365-admin-center"></a>Microsoft 365 Yönetici Merkezi'nde ağ bağlantısı
 
@@ -34,8 +34,8 @@ Microsoft 365 Yönetici Merkezi artık Microsoft 365 kiracınızdan toplanan top
 > [!div class="mx-imgBorder"]
 > ![Ağ performansı sayfası.](../media/m365-mac-perf/m365-mac-perf-page-nav.png)
 
->[!NOTE]
->Yönetim Merkezi'ndeki ağ bağlantısı WW Ticari ve Almanya'daki kiracıları destekler, ancak Orta, GCC Yüksek, DoD veya Çin GCC desteklemez.
+> [!NOTE]
+> Yönetim Merkezi'ndeki ağ bağlantısı WW Ticari ve Almanya'daki kiracıları destekler, ancak Orta, GCC Yüksek, DoD veya Çin GCC desteklemez.
 
 Ağ performansı sayfasına ilk gittiğinizde, genel ağ performansı haritasını, kiracının tamamının kapsamına alınmış bir ağ değerlendirmesinin, uzaktan çalışan kullanıcılarınızın yüzdesini ve daha fazla araştırma yapmak ve/veya araştırmak için geçerli sorunların listesini görmek için konumlarınızı yapılandırmanız gerekir. Genel bakış bölmesinden, konuma göre belirli ağ performansı ölçümlerini ve sorunlarını görüntülemek için detaya gidebilirsiniz. Daha fazla bilgi için [Microsoft 365 Yönetici Merkezi'nde ağ performansına genel bakış](#network-connectivity-overview-in-the-microsoft-365-admin-center) bölümüne bakın.
 
@@ -202,14 +202,46 @@ CSV dosyasında bulunan bir şehir konumu userEntered sütununda boş, el ile ek
    > [!div class="mx-imgBorder"]
    > ![CSV içeri aktarmaya hazır ileti.](../media/m365-mac-perf/m365-mac-perf-import-ready.png)
 
+## <a name="cqd-tsv-import-for-lan-subnet-office-locations"></a>LAN alt ağı ofis konumları için CQD TSV İçeri Aktarma
+
+Derleme verilerini Çağrı Kalitesi Panonuza yüklediyseniz, ağ bağlantılarını değerlendirmeye başlamak için bu konumları buraya ekleyebilirsiniz. Bu, mevcut konumlarınızı etkilemez.
+
+Çağrı Kalitesi Panosu'nda [Kiracı Verileri Upload'ne gidin](https://cqd.teams.microsoft.com/spd/#/TenantDataUpload). Derleme verilerinizi karşıya yüklediyseniz bir .tsv dosyasına indirme seçeneği görürsünüz. Arama Kalitesi Panosu'ndan .tsv dosyasını indirin, ardından aşağıdaki adımları izleyerek CQD açılır öğesinde karşıya yükleyin. .tsv dosyasını el ile oluşturmak istiyorsanız, şemayı veri dosyası oluşturma Upload bununla hizalayın veya bunun yerine LAN alt ağı ofis konumları için CSV İçeri Aktarma'yı deneyin.
+
+1. Microsoft 365 ana Bağlantısı penceresinde **Konumlar** sekmesine tıklayın.
+
+2. Konum listesinin hemen üstündeki **Birden çok konumu yönet** düğmesine tıklayın.
+
+   > [!div class="mx-imgBorder"]
+   > ![Birden çok konumu yönet menüsü.](../media/m365-mac-perf/m365-mac-perf-import-cqd-manage-multiple.png)
+
+3. **Arama Kalitesi Panosu'ndan Konum ekle'ye** tıklayın; **Arama Kalitesi Panosu'ndan konum ekle** açılır öğesi görüntülenir.
+
+   > [!div class="mx-imgBorder"]
+   > ![Arama Kalitesi Panosu açılır öğesinden konumlar ekleyin.](../media/m365-mac-perf/m365-mac-perf-import-cqd-add-locations.png)
+
+4. **Karşıya yüklenecek bir .tsv dosyası seçin** alanının yanındaki **Gözat** düğmesine tıklayın ve kaydedilen TSV dosyasını seçin. Lütfen dosyadaki değerin sekmeyle ayrıldığından emin olun.
+
+5. Dosya otomatik olarak doğrulanır ve office konumları listesine ayrıştırılır. Doğrulama hataları varsa, hataları listelemek için **Dosyanızı karşıya yükleyemedik** açılır öğesi görüntülenir.
+
+   > [!div class="mx-imgBorder"]
+   > ![Dosya açılır öğenizi karşıya yükleyemedik.](../media/m365-mac-perf/m365-mac-perf-import-cqd-couldnt-upload.png)
+
+6. Dosyada hata yoksa şu iletiyi görürsünüz: _test.tsv dosyanız karşıya yüklendi ve hazır. Bilgilerinizi karşıya yüklemek için İçeri Aktar'ı seçin._
+
+   > [!div class="mx-imgBorder"]
+   > ![Karşıya yüklenecek .tsc dosyasını seçin.](../media/m365-mac-perf/m365-mac-perf-import-cqd-select-tsv.png)
+
+7. Ofis konumlarını karşıya yüklemek için panelin alt kısmındaki **Upload** düğmesine tıklayın.
+
 ## <a name="faq"></a>SSS
 
 ### <a name="what-is-a-microsoft-365-service-front-door"></a>Microsoft 365 hizmeti ön kapı nedir?
 
 Microsoft 365 hizmeti ön kapısı, Microsoft'un genel ağında Office istemci ve hizmetlerin ağ bağlantılarını sonlandırdığı bir giriş noktasıdır. Microsoft 365 en uygun ağ bağlantısı için ağ bağlantınızın en yakın Microsoft 365 ön kapıya sonlandırılması önerilir.
 
->[!NOTE]
->Microsoft 365 hizmeti front door' un Azure Market'te bulunan Azure Front Door Service ürünüyle doğrudan bir ilişkisi yoktur.
+> [!NOTE]
+> Microsoft 365 hizmeti front door' un Azure Market'te bulunan Azure Front Door Service ürünüyle doğrudan bir ilişkisi yoktur.
 
 ### <a name="what-is-an-optimal-microsoft-365-service-front-door"></a>En uygun Microsoft 365 hizmeti ön kapı nedir?
 
