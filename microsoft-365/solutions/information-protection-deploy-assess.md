@@ -17,12 +17,12 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 description: Veri gizliliği düzenlemelerini, ilgili senaryoları, hazır olma durumunuzu ve Microsoft 365 ortamınızdaki hassas bilgi türlerini belirleyin.
-ms.openlocfilehash: e2d87599315e7bb43b289d74b5f192b29aecd965
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 73cf1f3a51806fb53d5f04eb835a2fbcc7cd7b3b
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973484"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015048"
 ---
 # <a name="assess-data-privacy-risks-and-identify-sensitive-items-with-microsoft-365"></a>veri gizliliği risklerini değerlendirme ve Microsoft 365 ile hassas öğeleri tanımlama
 
@@ -200,9 +200,9 @@ Microsoft Purview uyumluluk portalı, çoğu kişisel verileri tanımlama ve bul
 
 Çalışan kimlikleri için özel biçim veya yerleşik hassas bilgi türü kapsamında olmayan diğer kişisel bilgiler gibi kuruluşa özgü veya bölgesel türde hassas öğeleri tanımlamanız ve korumanız gerekiyorsa, şu yöntemlerle özel bir hassas bilgi türü oluşturabilirsiniz:
 
-- PowerShell
+- Güvenlik & Uyumluluğu PowerShell
 - Tam veri eşleşmesi (EDM) ile özel kurallar
-- [Uyumluluk Puanı ve Uyumluluk Yöneticisi'ni Kullanma makalesinde](information-protection-deploy-compliance.md) vurgulandığı gibi Uyumluluk Merkezi yönetici kullanıcı arabirimi aracılığıyla
+- [Uyumluluk Puanını ve Uyumluluk Yöneticisini Kullanma makalesinde](information-protection-deploy-compliance.md) vurgulandığı gibi Microsoft 365 Purview uyumluluk portalı aracılığıyla
 
 Ayrıca mevcut, yerleşik hassas bilgi türünü özelleştirebilirsiniz.
 
@@ -210,8 +210,8 @@ Daha fazla bilgi için şu makalelere bakın:
 
 - [Yerleşik hassas bilgi türünü özelleştirme](../compliance/customize-a-built-in-sensitive-information-type.md)
 - [Hassas bilgi türleri hakkında daha fazla bilgi edinme](../compliance/sensitive-information-type-learn-about.md)
-- [Güvenlik & Uyumluluk Merkezi'nde özel hassas bilgi türü oluşturma](../compliance/create-a-custom-sensitive-information-type.md)
-- [Güvenlik & Uyumluluk Merkezi PowerShell'de özel hassas bilgi türü oluşturma](../compliance/create-a-custom-sensitive-information-type-in-scc-powershell.md)
+- [Microsoft 365 Purview uyumluluk portalında özel hassas bilgi türü oluşturma](../compliance/create-a-custom-sensitive-information-type.md)
+- [Güvenlik & Uyumluluk PowerShell'de özel hassas bilgi türü oluşturma](../compliance/create-a-custom-sensitive-information-type-in-scc-powershell.md)
 - [Tam Veri Eşleşmesi tabanlı sınıflandırma ile özel hassas bilgi türleri oluşturma](../compliance/create-custom-sensitive-information-types-with-exact-data-match-based-classification.md)
 
 ### <a name="content-explorer"></a>İçerik Gezgini

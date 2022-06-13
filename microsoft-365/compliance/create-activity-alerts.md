@@ -19,12 +19,12 @@ search.appverid:
 ms.assetid: 72bbad69-035b-4d33-b8f4-549a2743e97d
 ROBOTS: NOINDEX, NOFOLLOW
 description: Kullanıcılar belirli etkinlikleri gerçekleştirdiğinde Microsoft 365 size e-posta bildirimleri göndermesi için Microsoft Purview uyumluluk portalında etkinlik uyarıları ekleme ve yönetme
-ms.openlocfilehash: 99cbbe4a03047b5cf8ef366a228fc78fe9dfbda1
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: b08c23ec80562418112266d03c58f4b764a128ba
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097018"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66018107"
 ---
 # <a name="create-activity-alerts"></a>Etkinlik uyarıları oluşturma
 
@@ -128,7 +128,7 @@ Etkinlik uyarısını yeniden açmak için bu adımları yineleyin ve **Kapalı*
     |Bir e-posta iletisini posta kutusundan kalıcı olarak siler (temizler).  |İletileri posta kutusundan temizleme  | Posta kutusu etkinliklerini Exchange  |
     |Paylaşılan posta kutusundan e-posta iletisi gönderir.  |Farklı Gönder izinleri kullanılarak gönderilen ileti  <br/> Ve  <br/> Adına Gönder izinleri kullanılarak gönderilen ileti  | Posta kutusu etkinliklerini Exchange  |
 
-- Etkinlik uyarıları oluşturmak ve düzenlemek için Güvenlik & Uyumluluk Merkezi PowerShell'de **New-ActivityAlert** ve **Set-ActivityAlert** cmdlet'lerini de kullanabilirsiniz. Etkinlik uyarıları oluşturmak veya düzenlemek için bu cmdlet'leri kullanıyorsanız aşağıdaki şeyleri göz önünde bulundurun:
+- Etkinlik uyarıları oluşturmak ve düzenlemek için Güvenlik & Uyumluluk PowerShell'de **New-ActivityAlert** ve **Set-ActivityAlert** cmdlet'lerini de kullanabilirsiniz. Etkinlik uyarıları oluşturmak veya düzenlemek için bu cmdlet'leri kullanıyorsanız aşağıdaki şeyleri göz önünde bulundurun:
 
   - **Uyarıya Etkinlikler** açılan listesinde listelenmeyen bir etkinlik eklemek için bir cmdlet kullanırsanız, uyarının özellik sayfasında "Bu uyarının seçicide listelenmeyen özel işlemleri var" şeklinde bir ileti görüntülenir.
 

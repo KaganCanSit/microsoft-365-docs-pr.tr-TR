@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 recommendations: false
 description: Microsoft 365 grupların süre sonu ilkeleri hakkında bilgi edinin.
-ms.openlocfilehash: 431d2ae027e92c83d645a4b27ab515d17326c1b7
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 05d66c4c05289cefeea9478256a016def6561a52
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535812"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014574"
 ---
 # <a name="microsoft-365-group-expiration-policy"></a>grup süre sonu ilkesini Microsoft 365
 
@@ -58,7 +58,7 @@ Süre sonunun varsayılan olarak kapalı olduğunu bilmek önemlidir. Kullanmak 
 
 ## <a name="how-to-set-the-expiration-policy"></a>Süre sonu ilkesini ayarlama
 
-Yukarıda belirtildiği gibi, süre sonu varsayılan olarak kapalıdır. Bir yöneticinin süre sonu ilkesini etkinleştirmesi ve etkili olması için özelliklerini ayarlaması gerekir. Etkinleştirmek için **Azure Active Directory** >  **GroupsExpiration'a** >  gidin. Burada varsayılan grup ömrünü ayarlayabilir ve birinci ve ikinci süre sonu bildirimlerinin grup sahibine ne kadar önceden gitmesini istediğinizi belirtebilirsiniz.
+Yukarıda belirtildiği gibi, süre sonu varsayılan olarak kapalıdır. Bir yöneticinin süre sonu ilkesini etkinleştirmesi ve etkili olması için özelliklerini ayarlaması gerekir. Etkinleştirmek için **Azure Active Directory** >  **Groups** > **Süre Sonu'na** gidin. Burada varsayılan grup ömrünü ayarlayabilir ve birinci ve ikinci süre sonu bildirimlerinin grup sahibine ne kadar önceden gitmesini istediğinizi belirtebilirsiniz.
 
 Grup ömrü gün cinsinden belirtilir ve 180, 365 veya belirttiğiniz özel bir değere ayarlanabilir. Özel değerin en az 30 gün olması gerekir.
 
@@ -70,7 +70,7 @@ Grubun sahibi yoksa, süre sonu e-postaları belirtilen yöneticiye gider.
 
 ## <a name="how-expiry-works-with-the-retention-policy"></a>Süre sonu bekletme ilkesiyle nasıl çalışır?
 
-Güvenlik ve Uyumluluk merkezinde gruplar için bir bekletme ilkesi ayarladıysanız, süre sonu ilkesi bekletme ilkesiyle sorunsuz çalışır. Grubun süresi dolduğunda, grubun posta kutusu konuşmaları ve grup sitesindeki dosyaları bekletme ilkesinde tanımlanan belirli sayıda gün boyunca bekletme kapsayıcısında tutulur. Ancak kullanıcılar süre dolduktan sonra grubu veya içeriğini göremez.
+Microsoft Purview uyumluluk portalında gruplar için bir bekletme ilkesi ayarladıysanız, süre sonu ilkesi bekletme ilkesiyle sorunsuz çalışır. Grubun süresi dolduğunda, grubun posta kutusu konuşmaları ve grup sitesindeki dosyaları bekletme ilkesinde tanımlanan belirli sayıda gün boyunca bekletme kapsayıcısında tutulur. Ancak kullanıcılar süre dolduktan sonra grubu veya içeriğini göremez.
 
 ## <a name="how-and-when-a-group-owner-learns-if-their-groups-are-going-to-expire"></a>Grup sahibi gruplarının süresinin dolup dolmadığını nasıl ve ne zaman öğrenir?
 

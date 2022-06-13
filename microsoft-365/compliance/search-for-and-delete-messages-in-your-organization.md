@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.assetid: 3526fd06-b45f-445b-aed4-5ebd37b3762a
 description: Kuruluşunuzdaki tüm posta kutularında e-posta iletisi aramak ve silmek için Microsoft Purview uyumluluk portalındaki arama ve temizleme özelliğini kullanın.
-ms.openlocfilehash: 9e6159bcd6cdd8a06a310c5de9f07b105dbb4122
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: f4cf7b3f6aeefc3af71739f91322736354c1b68e
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094912"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017252"
 ---
 # <a name="search-for-and-delete-email-messages"></a>E-posta iletilerini arama ve silme
 
@@ -50,7 +50,7 @@ Kuruluşunuzdaki tüm posta kutularında e-posta iletilerini aramak ve silmek i�
   > [!NOTE]
   > **Kuruluş Yönetimi** rol grubu hem Exchange Online hem de uyumluluk portalında bulunur. Bunlar, farklı izinler veren ayrı rol gruplarıdır. Exchange Online'da **Kuruluş Yönetimi** üyesi olmak, e-posta iletilerini silmek için gerekli izinleri vermez. Uyumluluk merkezinde (doğrudan veya **Kuruluş Yönetimi** gibi bir rol grubu aracılığıyla) **Arama ve Temizleme** rolü size atanmazsa, 3. Adım'da **New-ComplianceSearchAction** cmdlet'ini çalıştırdığınızda "Parametre adı 'Purge' ile eşleşen bir parametre bulunamıyor" iletisiyle bir hata alırsınız.
 
-- İletileri silmek için Güvenlik & Uyumluluk Merkezi PowerShell'i kullanmanız gerekir. Bağlanma hakkında yönergeler için [bkz. 1. Adım](#step-1-connect-to-security--compliance-center-powershell) .
+- İletileri silmek için Güvenlik & Uyumluluğu PowerShell'i kullanmanız gerekir. Bağlanma yönergeleri için bkz[. 1. Adım: Güvenlik & Uyumluluğu PowerShell'e Bağlan](#step-1-connect-to-security--compliance-powershell).
 
 - Posta kutusu başına bir kerede en fazla 10 öğe kaldırılabilir. İletileri arama ve kaldırma özelliği bir olay yanıtı aracı olması amaçlandığından, bu sınır iletilerin posta kutularından hızla kaldırılmasına yardımcı olur. Bu özellik, kullanıcı posta kutularını temizlemeye yönelik değildir.
 
@@ -60,9 +60,9 @@ Kuruluşunuzdaki tüm posta kutularında e-posta iletilerini aramak ve silmek i�
 
 - eBulma (Premium) durumundaki bir gözden geçirme kümesindeki e-posta öğeleri bu makaledeki yordamlar kullanılarak silinemez. Bunun nedeni, bir gözden geçirme kümesindeki öğelerin canlı hizmette değil Azure Depolama konumunda depolanmasıdır. Bu, 1. Adımda oluşturduğunuz içerik araması tarafından döndürülmeyecekleri anlamına gelir. Gözden geçirme kümesindeki öğeleri silmek için, gözden geçirme kümesini içeren eBulma (Premium) servis talebini silmeniz gerekir. Daha fazla bilgi için bkz. [eBulma (Premium) servis talebini kapatma veya silme](close-or-delete-case.md).
 
-## <a name="step-1-connect-to-security--compliance-center-powershell"></a>1. Adım: Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan
+## <a name="step-1-connect-to-security--compliance-powershell"></a>1. Adım: Güvenlik & Uyumluluğu PowerShell'e Bağlan
 
-İlk adım, kuruluşunuz için Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmaktır. Adım adım yönergeler için bkz[. Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+İlk adım, kuruluşunuz için Güvenlik & Uyumluluk PowerShell'e bağlanmaktır. Adım adım yönergeler için bkz[. Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 ## <a name="step-2-create-a-content-search-to-find-the-message-to-delete"></a>2. Adım: Silinecek iletiyi bulmak için İçerik Araması oluşturma
 
@@ -121,7 +121,7 @@ Kaldırmak istediğiniz iletileri döndürmek için bir İçerik araması oluşt
 > [!NOTE]
 > Daha önce belirtildiği gibi, Microsoft Teams İçerik araması tarafından döndürülen öğeler **New-ComplianceSearchAction -Purge** komutunu çalıştırdığınızda silinmez.
 
-İletileri silmek üzere aşağıdaki komutları çalıştırmak için [Güvenlik & Uyumluluk Merkezi PowerShell'e bağlı olduğunuzdan](/powershell/exchange/connect-to-scc-powershell) emin olun.
+İletileri silmek üzere aşağıdaki komutları çalıştırmak için [Güvenlik & Uyumluluğu PowerShell'e bağlı](/powershell/exchange/connect-to-scc-powershell) olduğunuzdan emin olun.
 
 ### <a name="soft-delete-messages"></a>geçici silme iletileri
 

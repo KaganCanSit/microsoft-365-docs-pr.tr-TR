@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Kullanıcıların e-posta, belgeler ve konuşmalarla oluşturduğu içeriğin denetimini verimli bir şekilde korumak için bekletme ilkesi kullanın. İstediğinizi koruyun ve istemediğinizden kurtulun.
-ms.openlocfilehash: abb18142517ceb6c5442ccd372c4f392db706bc1
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 6243db961e9c7789ea1a43f41d848d3d9cbda9e2
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65284962"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016470"
 ---
 # <a name="create-and-configure-retention-policies"></a>Bekletme ilkeleri oluşturma ve yapılandırma
 
@@ -78,7 +78,7 @@ Birden fazla bekletme ilkeniz varsa ve bekletme etiketlerini de kullandığını
 > [!NOTE]
 > Bekletme ilkeleri artık şu anda önizleme aşamasında olan [paylaşılan kanalları](/MicrosoftTeams/shared-channels) destekliyor. **Teams kanalı ileti** konumu için bekletme ayarlarını yapılandırdığınızda, bir ekibin paylaşılan kanalları varsa, bekletme ayarlarını üst ekibinden devralır.
 
-1. [Microsoft Purview uyumluluk portalından](https://compliance.microsoft.com/) **Veri yaşam döngüsü yönetimiYenileştirme** >  **İlkeleri'ni** seçin.
+1. [Microsoft Purview uyumluluk portalından](https://compliance.microsoft.com/) **Veri yaşam döngüsü yönetimi** > **Bekletme İlkeleri'ni** seçin.
 
 2. Bekletme ilkesi oluştur yapılandırmasını başlatmak için **Yeni bekletme ilkesi'ni** seçin ve yeni bekletme ilkenizi adlandırın.
 
@@ -134,7 +134,7 @@ Microsoft 365 gruplarına, SharePoint sitelerine veya OneDrive hesaplarına uygu
 >
 > Bu özelliği kullanmak için Yammer ağınızın Karma [Mod değil Yerel Mod](/yammer/configure-your-yammer-network/overview-native-mode) olması gerekir.
 
-1. [Microsoft Purview uyumluluk portalından](https://compliance.microsoft.com/) **Veri yaşam döngüsü yönetimiYenileştirme** >  **İlkeleri'ni** seçin.
+1. [Microsoft Purview uyumluluk portalından](https://compliance.microsoft.com/) **Veri yaşam döngüsü yönetimi** > **Bekletme İlkeleri'ni** seçin.
 
 2. **Yeni bir bekletme ilkesi** oluşturmak için Yeni bekletme ilkesi'ni seçin.
 
@@ -182,7 +182,7 @@ Bu hizmetlerden herhangi biri için geçerli olan bekletme ilkeleri için aşağ
 - grupları Microsoft 365
 - Skype Kurumsal
 
-1. [Microsoft Purview uyumluluk portalından](https://compliance.microsoft.com/) **Veri yaşam döngüsü yönetimiYenileştirme** >  **İlkeleri'ni** seçin.
+1. [Microsoft Purview uyumluluk portalından](https://compliance.microsoft.com/) **Veri yaşam döngüsü yönetimi** > **Bekletme İlkeleri'ni** seçin.
 
 2. Bekletme ilkesi oluştur yapılandırmasını başlatmak için **Yeni bekletme ilkesi'ni** seçin ve yeni bekletme ilkenizi adlandırın.
 
@@ -214,7 +214,7 @@ Bir bekletme ilkesi oluşturup gönderdiğinizde, bekletme ilkesinin uygulanmas�
 
 İlk olarak, bekletme ilkesinin seçtiğiniz konumlara dağıtılması ve ardından içeriğe uygulanması gerekir. Bekletme ilkesini Microsoft Purview uyumluluk portalındaki **Bekletme ilkeleri** sayfasından seçerek bekletme ilkesinin dağıtım durumunu istediğiniz zaman de kontrol edebilirsiniz. Açılır bölmeden, duruma **(Hata)** eklendiğini görürseniz ve konumların ayrıntılarında ilkeyi dağıtmanın veya ilkeyi yeniden dağıtmayı denemenin beklenenden uzun sürdüğünü belirten bir ileti görürseniz, ilke dağıtımını yeniden denemek için [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) veya [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
 
-1. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 2. Aşağıdaki komutlardan birini çalıştırın:
     

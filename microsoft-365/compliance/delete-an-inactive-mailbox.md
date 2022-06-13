@@ -18,12 +18,12 @@ ms.assetid: f5caf497-5e8d-4b7a-bfff-d02942f38150
 ms.custom:
 - seo-marvel-apr2020
 description: Artık etkin olmayan Microsoft 365 posta kutusunun içeriğini korumanız gerekmediğinde, etkin olmayan posta kutusunu kalıcı olarak silebilirsiniz.
-ms.openlocfilehash: 640a118a2fc277b05edc181e19008836027dc468
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: 1f45e5ce3aca79e4f5abbc13442876ecbb22e90c
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772390"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017952"
 ---
 # <a name="delete-an-inactive-mailbox"></a>Etkin olmayan posta kutusunu silme
 
@@ -38,7 +38,7 @@ Etkin olmayan posta kutusundan ayrı tutmalar kaldırıldıktan sonra ne olacağ
   
 ## <a name="before-you-delete-an-inactive-mailbox"></a>Etkin olmayan posta kutusunu silmeden önce
 
-- Etkin olmayan posta kutusundan ayrı tutmaları kaldırmak için powershell Exchange Online kullanmanız gerekir. Bu yordamlar için Exchange yönetim merkezini (EAC) veya Microsoft Purview uyumluluk portalı kullanamazsınız. Exchange Online PowerShell'i kullanmaya yönelik adım adım yönergeler için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+- Etkin olmayan posta kutusundan ayrı tutmaları kaldırmak için powershell Exchange Online kullanmanız gerekir. Bu yordamlar için Exchange yönetim merkezini (EAC) veya Microsoft Purview uyumluluk portalını kullanamazsınız. Exchange Online PowerShell'i kullanmaya yönelik adım adım yönergeler için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Etkin olmayan bir posta kutusunun içeriğini başka bir posta kutusuna kopyalayarak saklamayı kaldırabilir ve etkin olmayan bir posta kutusunu silebilirsiniz. Ayrıntılar için bkz. [Office 365'da etkin olmayan posta kutusunu geri yükleme](restore-an-inactive-mailbox.md).
 
@@ -118,7 +118,7 @@ Set-Mailbox <identity of inactive mailbox> -ExcludeFromAllOrgHolds
 
 #### <a name="remove-an-inactive-mailbox-from-a-specific-location-retention-policy"></a>Etkin olmayan posta kutusunu belirli bir konum saklama ilkesinden kaldırma
 
-Açık saklama ilkesinden etkin olmayan posta kutusunu kaldırmak için [Güvenlik & Uyumluluk Merkezi PowerShell'i](/powershell/exchange/connect-to-scc-powershell) kullanın:
+Açık saklama ilkesinden etkin olmayan posta kutusunu kaldırmak için [Güvenlik & Uyumluluğu PowerShell'i](/powershell/exchange/connect-to-scc-powershell) kullanın:
 
 ```powershell
 Set-RetentionCompliancePolicy -Identity <retention policy GUID without prefix or suffix> -RemoveExchangeLocation <identity of inactive mailbox>

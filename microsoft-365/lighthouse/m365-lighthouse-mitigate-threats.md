@@ -4,6 +4,7 @@ f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: algreer
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -16,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için Microsoft Defender Virüsten Koruma tehditleri azaltma hakkında bilgi edinin.
-ms.openlocfilehash: da8a10b1ffc1932a6b4f84447028d2fa9b865e64
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 3c600c8119ba3d4a252efcf5675ab58138a69b83
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023667"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016690"
 ---
 # <a name="mitigate-threats-in-microsoft-365-lighthouse-with-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma ile Microsoft 365 Lighthouse tehditleri azaltma
 

@@ -17,12 +17,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: bir Microsoft Desteği olayı için eBulma tanılama bilgilerini toplama hakkında bilgi edinin.
-ms.openlocfilehash: 2759156a3948339629ea7d988eaaa5464da197fa
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: f5dba88a598a73441c67e3eaa08a59b7258ea712
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095894"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014442"
 ---
 # <a name="collect-ediscovery-diagnostic-information"></a>eKeşif tanılama bilgilerini toplama
 
@@ -35,9 +35,9 @@ Bazen Microsoft Desteği mühendisleri, Microsoft Purview eKeşif (Standart) vey
 
 ## <a name="collect-diagnostic-information-for-ediscovery-standard"></a>eBulma için tanılama bilgilerini toplama (Standart)
 
-eBulma (Standart) için tanılama bilgilerini toplama cmdlet tabanlıdır, bu nedenle Güvenlik & Uyumluluk Merkezi PowerShell'i kullanmanız gerekir. Aşağıdaki PowerShell örnekleri cmdlet'leri çalıştırır ve çıkışı belirtilen bir metin dosyasına kaydeder. Çoğu destek durumunda, bu komutlardan yalnızca birini çalıştırmanız gerekir.
+eBulma (Standart) için tanılama bilgilerini toplama cmdlet tabanlıdır, bu nedenle Güvenlik & Uyumluluk PowerShell'i kullanmanız gerekir. Aşağıdaki PowerShell örnekleri cmdlet'leri çalıştırır ve çıkışı belirtilen bir metin dosyasına kaydeder. Çoğu destek durumunda, bu komutlardan yalnızca birini çalıştırmanız gerekir.
 
-Aşağıdaki cmdlet'leri çalıştırmak [için Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanın</span>](/powershell/exchange/connect-to-scc-powershell). Bağlandıktan sonra aşağıdaki komutlardan birini veya daha fazlasını çalıştırın ve yer tutucuları gerçek nesne adlarıyla değiştirdiğinizden emin olun.
+Aşağıdaki cmdlet'leri çalıştırmak [için Güvenlik & Uyumluluk PowerShell'e bağlanın</span>](/powershell/exchange/connect-to-scc-powershell). Bağlandıktan sonra aşağıdaki komutlardan birini veya daha fazlasını çalıştırın ve yer tutucuları gerçek nesne adlarıyla değiştirdiğinizden emin olun.
 
 Oluşturulan metin dosyasını gözden geçirdikten ve hassas bilgileri yeniden işledikten sonra, olayınız üzerinde çalışan Microsoft Desteği mühendisine gönderin.
 
@@ -80,13 +80,13 @@ Get-ComplianceCase "<eDiscovery (Standard) case name>"| %{$_|fl;"`t==Searches=="
 
 eBulma (**Premium**) durumundaki Ayarlar sekmesi, servis talebi için tanılama bilgilerini hızla kopyalamanıza olanak tanır. Tanılama bilgileri panoya kaydedilir, böylece bunu bir metin dosyasına yapıştırabilir ve Microsoft Desteği gönderebilirsiniz.
 
-1. Uyumluluk portalına gidin ve **eBulmaGeldi'yi** >  seçin.<a href="https://go.microsoft.com/fwlink/p/?linkid=2174006" target="_blank"></a>
+1. Uyumluluk portalına gidin ve **eBulma Gelişmiş'i** >  seçin.<a href="https://go.microsoft.com/fwlink/p/?linkid=2174006" target="_blank"></a>
 
 2. Bir servis talebi seçin ve **Ayarlar** sekmesine tıklayın.
 
 3. **Servis Talebi Bilgileri'nin** altında **Seç'e** tıklayın.
 
-4. Açılır sayfada **, bilgileri** panoya kopyalamak için **EylemlerDestem** >  bilgilerini kopyala'ya tıklayın.
+4. Açılır sayfada **Eylemler** > **Destek bilgilerini kopyalama'ya** tıklayarak bilgileri panoya kopyalayın.
 
 5. Bir metin dosyası açın (Not Defteri) ve ardından bilgileri metin dosyasına yapıştırın.
 

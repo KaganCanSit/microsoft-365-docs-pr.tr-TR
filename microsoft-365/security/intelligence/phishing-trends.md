@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 search.appverid: met150
 ms.technology: m365d
-ms.openlocfilehash: c56478f4dbe496f7e2080e9c73d6466df0e2c5d7
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 7bfad3fdad392c2ea0795d24e21d6f8c2848f70b
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666756"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016086"
 ---
 # <a name="phishing-trends-and-techniques"></a>Kimlik avı eğilimleri ve teknikleri
 
@@ -68,7 +68,7 @@ Balina avcılığı, belirli şirketlerdeki üst düzey veya üst düzey yöneti
 
 ## <a name="more-information-about-phishing-attacks"></a>Kimlik avı saldırıları hakkında daha fazla bilgi
 
-En son kimlik avı saldırıları, teknikler ve eğilimler hakkında bilgi için Microsoft [Güvenlik blogu'nda](https://www.microsoft.com/security/blog/product/windows/) şu girdileri okuyabilirsiniz:
+En son kimlik avı saldırıları, teknikler ve eğilimler hakkında bilgi için Microsoft [Güvenlik blogu'nda](https://www.microsoft.com/security/blog/) şu girdileri okuyabilirsiniz:
 
 - [Kimlik avı avcıları PDF eklerini kullanarak basit ama etkili sosyal mühendislik tekniklerini açığa çıkarıyor](https://cloudblogs.microsoft.com/microsoftsecure/2017/01/26/phishers-unleash-simple-but-effective-social-engineering-techniques-using-pdf-attachments/?source=mmpc)
 - [Vergi dosyası sezonunda vergi temalı kimlik avı ve kötü amaçlı yazılım saldırıları çoğalıyor](https://cloudblogs.microsoft.com/microsoftsecure/2017/03/20/tax-themed-phishing-and-malware-attacks-proliferate-during-the-tax-filing-season/?source=mmpc)

@@ -4,6 +4,7 @@ f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: ragovind
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -16,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için çok faktörlü kimlik doğrulamasını yönetmeyi öğrenin.
-ms.openlocfilehash: 53f1b0fa9a477ae74b48c96f76f9b2523fe45c10
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 6db13adbce775ea276352b715cf25f0da7324b87
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023205"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017730"
 ---
 # <a name="manage-multifactor-authentication-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse'de çok faktörlü kimlik doğrulamasını yönetme
 
@@ -33,7 +34,7 @@ Microsoft, küçük ve orta ölçekli işletme (SMB) müşterileri için [güven
 
 Kiracı listede görünmeden önce aşağıdaki koşulların karşılanması gerekir:
 
-- Müşteri kiracısının her kullanıcı için bir Azure AD Premium lisansı olmalıdır. MFA'yı destekleyen lisanslar hakkında daha fazla bilgi için bkz. [Azure AD Multi-Factor Authentication için özellikler ve lisanslar](/azure/active-directory/authentication/concept-mfa-licensing).
+- Müşteri kiracısının her kullanıcı için bir Azure AD Premium lisansı olmalıdır. MFA'yı hangi lisansların desteklediği hakkında daha fazla bilgi için bkz. [Azure AD Multi-Factor Authentication için özellikler ve lisanslar](/azure/active-directory/authentication/concept-mfa-licensing).
 
 - Müşteri kiracısının Microsoft 365 Lighthouse içinde etkin olması gerekir. Kiracının etkin olup olmadığını belirlemeyi öğrenmek için bkz. [Microsoft 365 Lighthouse kiracı listesine genel bakış](/microsoft-365/lighthouse/m365-lighthouse-tenant-list-overview).
 
@@ -49,7 +50,7 @@ Kiracı listede görünmeden önce aşağıdaki koşulların karşılanması ger
 
 5. **Değişiklikleri kaydet'i** seçin.
 
-Koşullu Erişim aracılığıyla MFA'yı etkinleştirmek için bkz [. Öğretici: Azure AD Multi-Factor Authentication ile kullanıcı oturum açma olaylarının güvenliğini](/azure/active-directory/authentication/tutorial-enable-azure-mfa) sağlama.
+Koşullu Erişim aracılığıyla MFA'yı etkinleştirmek için bkz[. Öğretici: Azure AD Multi-Factor Authentication ile kullanıcı oturum açma olaylarının güvenliğini](/azure/active-directory/authentication/tutorial-enable-azure-mfa) sağlama.
 
 ## <a name="notify-users-who-arent-registered-for-mfa"></a>MFA'ya kayıtlı olmayan kullanıcılara bildirme
 
@@ -69,7 +70,7 @@ Farklı bir e-posta hesabı kullanmak istiyorsanız, kullanıcı listesini bir d
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-MFA etkinleştirildikten sonra Azure Active Directory (Azure AD) self servis parola sıfırlamayı etkinleştirebilirsiniz. Bu özellik, kullanıcılara yönetici veya yardım masası katılımı olmadan parolalarını değiştirme veya sıfırlama olanağı sağlar. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse'de self servis parola sıfırlamayı yönetme](m365-lighthouse-manage-sspr.md).
+MFA etkinleştirildikten sonra, Azure Active Directory (Azure AD) self servis parola sıfırlamayı etkinleştirebilirsiniz. Bu özellik, kullanıcılara yönetici veya yardım masası katılımı olmadan parolalarını değiştirme veya sıfırlama olanağı sağlar. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse'de self servis parola sıfırlamayı yönetme](m365-lighthouse-manage-sspr.md).
 
 ## <a name="related-content"></a>İlgili içerik
 

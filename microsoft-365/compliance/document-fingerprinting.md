@@ -12,18 +12,18 @@ ms.service: exchange-online
 ms.collection: M365-security-compliance
 ms.localizationpriority: medium
 description: Kuruluşunuzdaki bilgi çalışanları, tipik bir gün boyunca birçok türde hassas bilgiyi işler. Belge Parmak İzi Özelliği, kuruluşunuz genelinde kullanılan standart formları tanımlayarak bu bilgileri korumanızı kolaylaştırır. Bu konu başlığında, Belge Parmak İzi Oluşturma'nın arkasındaki kavramlar ve PowerShell kullanılarak nasıl oluşturulacağı açıklanmaktadır.
-ms.openlocfilehash: 744b96f693676cf94357034a4404f63f0fbd2c45
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: 3df4b7cf6f9fa09e81cf326cc58cc8114c025be9
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65754488"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014486"
 ---
 # <a name="document-fingerprinting"></a>Belge Parmak İzi
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Kuruluşunuzdaki bilgi çalışanları, tipik bir gün boyunca birçok türde hassas bilgiyi işler. Microsoft Purview uyumluluk portalı belge parmak izi oluşturma, kuruluşunuz genelinde kullanılan standart formları tanımlayarak bu bilgileri korumanızı kolaylaştırır. Bu konu başlığında, Belge Parmak İzi Oluşturma'nın arkasındaki kavramlar ve PowerShell kullanılarak nasıl oluşturulacağı açıklanmaktadır.
+Kuruluşunuzdaki bilgi çalışanları, tipik bir gün boyunca birçok türde hassas bilgiyi işler. Microsoft Purview uyumluluk portalında Belge Parmak İzi Özelliği, kuruluşunuz genelinde kullanılan standart formları belirleyerek bu bilgileri korumanızı kolaylaştırır. Bu konu başlığında, Belge Parmak İzi Oluşturma'nın arkasındaki kavramlar ve PowerShell kullanılarak nasıl oluşturulacağı açıklanmaktadır.
 
 ## <a name="basic-scenario-for-document-fingerprinting"></a>Belge Parmak İzi Oluşturma için temel senaryo
 
@@ -68,7 +68,7 @@ Belge Parmak İzi Oluşturma, aşağıdaki durumlarda hassas bilgileri algılama
 
 ## <a name="use-powershell-to-create-a-classification-rule-package-based-on-document-fingerprinting"></a>Belge parmak izine dayalı bir sınıflandırma kuralı paketi oluşturmak için PowerShell kullanma
 
-Şu anda, yalnızca [Güvenlik & Uyumluluk Merkezi PowerShell'de](/powershell/exchange/connect-to-scc-powershell) belge parmak izi oluşturabilirsiniz.
+Şu anda yalnızca [Güvenlik & Uyumluluk PowerShell'de](/powershell/exchange/connect-to-scc-powershell) belge parmak izi oluşturabilirsiniz.
 
 DLP, hassas içeriği algılamak için sınıflandırma kuralı paketlerini kullanır. Belge parmak izini temel alan bir sınıflandırma kuralı paketi oluşturmak için **New-DlpFingerprint** ve **New-DlpSensitiveInformationType** cmdlet'lerini kullanın. **New-DlpFingerprint** sonuçları veri sınıflandırma kuralının dışında depolanmadığından, aynı PowerShell oturumunda her zaman **New-DlpFingerprint** ve **New-DlpSensitiveInformationType** veya **Set-DlpSensitiveInformationType** çalıştırırsınız. Aşağıdaki örnek, C:\Belgelerim\Contoso Employee Template.docx dosyasını temel alan yeni bir belge parmak izi oluşturur. Aynı PowerShell oturumunda **New-DlpSensitiveInformationType** cmdlet'iyle kullanabilmek için yeni parmak izini bir değişken olarak depolarsınız.
 
@@ -87,13 +87,13 @@ New-DlpSensitiveInformationType -Name "Contoso Customer Confidential" -Fingerpri
 
 Artık tüm DLP veri sınıflandırma kuralı paketlerini bulmak için **Get-DlpSensitiveInformationType** cmdlet'ini kullanabilirsiniz ve bu örnekte "Contoso Müşteri Gizli" veri sınıflandırma kuralı paketleri listesinin bir parçasıdır.
 
-Son olarak, "Contoso Müşteri Gizli" veri sınıflandırma kuralı paketini Microsoft Purview uyumluluk portalı bir DLP ilkesine ekleyin. Bu örnek, var olan "ConfidentialPolicy" adlı bir DLP ilkesine kural ekler.
+Son olarak, Microsoft Purview uyumluluk portalındaki bir DLP ilkesine "Contoso Müşteri Gizli" veri sınıflandırma kuralı paketini ekleyin. Bu örnek, var olan "ConfidentialPolicy" adlı bir DLP ilkesine kural ekler.
 
 ```powershell
 New-DlpComplianceRule -Name "ContosoConfidentialRule" -Policy "ConfidentialPolicy" -ContentContainsSensitiveInformation @{Name="Contoso Customer Confidential"} -BlockAccess $True
 ```
 
-Veri sınıflandırma kuralı paketini, aşağıdaki örnekte gösterildiği gibi Exchange Online'daki posta akışı kurallarında da kullanabilirsiniz. Bu komutu çalıştırmak için önce [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell) gerekir. Kural paketinin Microsoft Purview uyumluluk portalı Exchange yönetim merkezine eşitlenmesinin zaman aldığını da unutmayın.
+Veri sınıflandırma kuralı paketini, aşağıdaki örnekte gösterildiği gibi Exchange Online'daki posta akışı kurallarında da kullanabilirsiniz. Bu komutu çalıştırmak için önce [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell) gerekir. Kural paketinin Microsoft Purview uyumluluk portalından Exchange yönetim merkezine eşitlenmesinin zaman aldığını da unutmayın.
 
 ```powershell
 New-TransportRule -Name "Notify :External Recipient Contoso confidential" -NotifySender NotifyOnly -Mode Enforce -SentToScope NotInOrganization -MessageContainsDataClassification @{Name=" Contoso Customer Confidential"}

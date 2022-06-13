@@ -17,20 +17,20 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 1d463dda-a3b5-4675-95d4-83db19c9c4a3
-description: Güvenlik & Uyumluluk Merkezi PowerShell kullanarak arama oluşturma ve raporları çalıştırma gibi İçerik Arama görevlerini otomatikleştirmeyi öğrenin.
+description: Güvenlik & Uyumluluğu PowerShell kullanarak arama oluşturma ve raporları çalıştırma gibi İçerik Arama görevlerini otomatikleştirmeyi öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 8ef806b9be55b8c39ad26f477d35eb076b22c16b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 50d0a66957e4bdca1e39cb42c837aa0f992bad98
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099289"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66018085"
 ---
 # <a name="create-report-on-and-delete-multiple-content-searches"></a>Birden çok İçerik Araması oluşturma, raporlama ve silme
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
- Bulma aramalarını hızla oluşturmak ve raporlamak, temel alınan veriler ve aramalarınızın zenginliği ve kalitesi hakkında bilgi edinmeye çalışırken eBulma ve araştırmalarda genellikle önemli bir adımdır. Bunu yapmanıza yardımcı olmak için Güvenlik & Uyumluluk Merkezi PowerShell, zaman alan İçerik Arama görevlerini otomatikleştirmek için bir dizi cmdlet sunar. Bu betikler, bir dizi arama oluşturmak için hızlı ve kolay bir yol sağlar ve ardından söz konusu veri miktarını belirlemenize yardımcı olabilecek tahmini arama sonuçlarının raporlarını çalıştırır. Betikleri, her birinin ürettiği sonuçları karşılaştırmak üzere aramaların farklı sürümlerini oluşturmak için de kullanabilirsiniz. Bu betikler, verilerinizi hızlı ve verimli bir şekilde tanımlamanıza ve iptal etmenize yardımcı olabilir.
+ Bulma aramalarını hızla oluşturmak ve raporlamak, temel alınan veriler ve aramalarınızın zenginliği ve kalitesi hakkında bilgi edinmeye çalışırken eBulma ve araştırmalarda genellikle önemli bir adımdır. Bunu yapmanıza yardımcı olmak için Güvenlik & Uyumluluğu PowerShell, zaman alan İçerik Arama görevlerini otomatikleştirmek için bir dizi cmdlet sunar. Bu betikler, bir dizi arama oluşturmak için hızlı ve kolay bir yol sağlar ve ardından söz konusu veri miktarını belirlemenize yardımcı olabilecek tahmini arama sonuçlarının raporlarını çalıştırır. Betikleri, her birinin ürettiği sonuçları karşılaştırmak üzere aramaların farklı sürümlerini oluşturmak için de kullanabilirsiniz. Bu betikler, verilerinizi hızlı ve verimli bir şekilde tanımlamanıza ve iptal etmenize yardımcı olabilir.
 
 ## <a name="before-you-create-a-content-search"></a>İçerik Araması oluşturmadan önce
 
@@ -77,9 +77,9 @@ Bu adımda oluşturduğunuz virgülle ayrılmış değer (CSV) dosyası, aramak 
 
 3. Excel dosyasını CSV dosyası olarak yerel bilgisayarınızdaki bir klasöre kaydedin. 3. Adımda oluşturduğunuz betik, aramaları oluşturmak için bu CSV dosyasındaki bilgileri kullanır.
 
-## <a name="step-2-connect-to-security--compliance-center-powershell"></a>2. Adım: Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan
+## <a name="step-2-connect-to-security--compliance-powershell"></a>2. Adım: Güvenlik & Uyumluluğu PowerShell'e Bağlan
 
-Sonraki adım, kuruluşunuz için Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmaktır. Adım adım yönergeler için bkz[. Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+Sonraki adım, kuruluşunuz için Güvenlik & Uyumluluk PowerShell'e bağlanmaktır. Adım adım yönergeler için bkz[. Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 ## <a name="step-3-run-the-script-to-create-and-start-the-searches"></a>3. Adım: Aramaları oluşturmak ve başlatmak için betiği çalıştırın
 

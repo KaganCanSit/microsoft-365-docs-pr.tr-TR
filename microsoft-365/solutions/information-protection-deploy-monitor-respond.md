@@ -17,12 +17,12 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 description: Kişisel veri olaylarını izlemek ve yanıtlamak için denetim ve uyarı ilkelerini ve veri sahibi isteklerini kullanın.
-ms.openlocfilehash: 730eb42fdf6aed66f5beac69621981848ffa6510
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 5954fc193f6071dbf94277ff57f599e3bb98f7d2
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953337"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66013276"
 ---
 # <a name="monitor-and-respond-to-data-privacy-incidents-in-your-organization"></a>Kuruluşunuzdaki veri gizliliği olaylarını izleme ve yanıtlama
 
@@ -61,7 +61,7 @@ Veri gizliliği düzenlemelerine yönelik Microsoft 365'de izleme ve yanıt şem
 - Farklı veri türleri ve kaynakları için günlük izleme, araştırma ve raporlama teknikleri ne tür kullanılabilir?
 - Veri sahibi isteklerini (DSR) ve anonimleştirme, yeniden düzenleme ve silme gibi tüm düzeltme eylemlerini işlemek için hangi mekanizmaların gerekli olacağı.
 
-## <a name="auditing-and-alert-policies-in-the-security-and-compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'nde Denetim ve Uyarı İlkeleri
+## <a name="auditing-and-alert-policies-in-the-microsoft-purview-compliance-portal"></a>Microsoft Purview uyumluluk portalında Denetim ve Uyarı İlkeleri
 
 Denetim, gelişmiş denetim ve uyarı ilkelerini ayarlamak için şu makalelere bakın:
 
@@ -76,7 +76,7 @@ Microsoft 365'da DSR'ye yanıt verme hakkında bilgi için bkz[. GDPR ve CCPA i�
 
 ## <a name="manage-deleted-users-in-microsoft-stream"></a>Microsoft Stream'de silinen kullanıcıları yönetme
 
-Microsoft Stream için, bir kullanıcı Azure Active Directory'dan (Azure AD) silindiğinde, adı bu noktadan önce gönderilen bir Stream videosuyla ilişkilendirildiyse, e-posta adresi videoyla ilişkili kalır. Kaldırmak için bkz. [Silinmiş kullanıcıları Microsoft Stream'den yönetme](/stream/managing-deleted-users).
+Microsoft Stream için, bir kullanıcı Azure Active Directory'den (Azure AD) silindiğinde, adı bu noktadan önce gönderilen bir Stream videosuyla ilişkilendirildiyse, e-posta adresi videoyla ilişkili kalır. Kaldırmak için bkz. [Silinmiş kullanıcıları Microsoft Stream'den yönetme](/stream/managing-deleted-users).
 
 ## <a name="insider-risk-management-as-an-investigative-tool"></a>Araştırma aracı olarak Insider risk yönetimi
 

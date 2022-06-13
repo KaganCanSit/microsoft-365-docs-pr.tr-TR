@@ -4,6 +4,7 @@ f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: crimora
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -16,12 +17,12 @@ ms.custom:
 - M365-Lighthous
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için, Özellik alanına göre Lighthouse ile ilgili bilinen sorunların listesine bakın.
-ms.openlocfilehash: aa3b5980b60e966b4edfbac4a6e8d706c399e943
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 7a175d6c14e9b434240ff1a85f901a919ea79dcc
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022789"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016734"
 ---
 # <a name="known-issues-with-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse ile ilgili bilinen sorunlar
 
@@ -73,10 +74,7 @@ Bu makalede, özellik alanına göre Microsoft 365 Lighthouse ile ilgili bilinen
 
 ## <a name="granular-delegated-admin-privileges-gdap"></a>Ayrıntılı Yönetici Ayrıcalıkları (GDAP)
 
-> [!NOTE]
-> GDAP, genel kullanıma sunulmadan önce iş ortaklarının ayrıntılı izinler atamasına izin vermek için şu anda [teknik önizleme](/partner-center/announcements/2022-february#6) aşamasındadır (genel önizleme).
-
-Şu anda, Lighthouse'a müşteri eklemek için DAP gereklidir. Ayrıca daha güvenli temsilci erişimi sağlamak için müşterilerinizle GDAP oluşturmanızı öneririz. DAP ve GDAP birlikte bulunurken, her iki modelin de bulunduğu müşteriler için GDAP öncelikli olacaktır. Yakında yalnızca GDAP (ve DAP olmayan) müşteriler Lighthouse'a eklenecek.<br><br>
+Müşterileri Lighthouse'a eklemek için Ayrıntılı Yönetici Ayrıcalıkları (GDAP) ve dolaylı bayi ilişkisi ya da Temsilci Yönetici Ayrıcalıkları (DAP) ilişkisi gerekir. MÜŞTERI kiracısında DAP ve GDAP birlikte varsa, GDAP özellikli güvenlik gruplarındaki MSP teknisyenleri için GDAP izinleri önceliklidir. Yakında yalnızca GDAP ilişkilerine (dolaylı kurumsal bayi ilişkileri olmadan) sahip müşteriler Lighthouse'a eklenecek.<br><br>
 
 | Sorun | Açıklama | Çözüm |
 | ---------------- | ---------------- | ---------------- |

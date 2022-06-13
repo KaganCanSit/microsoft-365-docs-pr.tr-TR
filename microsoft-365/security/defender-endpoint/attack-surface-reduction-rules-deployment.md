@@ -20,12 +20,12 @@ ms.collection:
 - m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 8743d13939e73e25cefd08724d9a2f8d5a7fa410
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 18654dfb1ae6ae10596889fb4491604a37b8ffe8
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705548"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017441"
 ---
 # <a name="attack-surface-reduction-asr-rules-deployment-overview"></a>Saldırı yüzeyini azaltma (ASR) kuralları dağıtımına genel bakış
 
@@ -46,7 +46,7 @@ Farklı saldırı yüzeylerini azaltarak saldırıların gerçekleşmesini önle
 >[!IMPORTANT]
 >Bu kılavuz, ASR kurallarını yapılandırmaya karar vermenize yardımcı olacak görüntüler ve örnekler sağlar; bu görüntüler ve örnekler ortamınız için en iyi yapılandırma seçeneklerini yansıtmayabilir.
 
-Başlamadan önce, temel bilgiler için [Saldırı yüzeyi azaltmaya genel bakış](overview-attack-surface-reduction.md) ve [Saldırı yüzeyi azaltma kurallarını kaldırma - Bölüm 1'i](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-1/ba-p/1306420) gözden geçirin. Kapsam alanlarını ve olası etkiyi anlamak için, mevcut ASR kuralları kümesini tanıyın; [bkz. Saldırı yüzeyi azaltma kuralları başvurusu](attack-surface-reduction-rules-reference.md).  ASR kural kümesi hakkında bilgi sahibi olurken kural başına GUID eşlemelerini not edin; bkz. [ASR kuralları ve GUID matrisi](attack-surface-reduction-rules-reference.md#asr-rules-and-guids-matrix).
+Başlamadan önce, temel bilgiler için [Saldırı yüzeyi azaltmaya genel bakış](overview-attack-surface-reduction.md) ve [Saldırı yüzeyi azaltma kurallarını kaldırma - Bölüm 1'i](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-1/ba-p/1306420) gözden geçirin. Kapsam alanlarını ve olası etkiyi anlamak için, mevcut ASR kuralları kümesini tanıyın; [bkz. Saldırı yüzeyi azaltma kuralları başvurusu](attack-surface-reduction-rules-reference.md).  ASR kural kümesi hakkında bilgi sahibi olurken kural başına GUID eşlemelerini not edin; bkz. [ASR kuralı- GUID matrisi](attack-surface-reduction-rules-reference.md#asr-rule-to-guid-matrix).
 
 ASR kuralları, Uç Nokta için Microsoft Defender içindeki saldırı yüzeyi azaltma özelliklerinin yalnızca bir özelliğidir. Bu belge, insan tarafından çalıştırılan fidye yazılımı ve diğer tehditler gibi gelişmiş tehditleri durdurmak için ASR kurallarını etkili bir şekilde dağıtma hakkında daha ayrıntılı bilgi sağlayacaktır.  
 
@@ -129,13 +129,13 @@ Microsoft Defender Virüsten Koruma sürümleri güncel tutmak ASR kurallarını
 
 ## <a name="additional-topics-in-this-deployment-collection"></a>Bu dağıtım koleksiyonundaki ek konular
 
-[Test saldırı yüzeyi azaltma (ASR) kuralları](attack-surface-reduction-rules-deployment-test.md)
+[Saldırı yüzeyini azaltma (ASR) kuralları testi](attack-surface-reduction-rules-deployment-test.md)
 
-[Saldırı yüzeyi azaltma (ASR) kurallarını etkinleştirme](attack-surface-reduction-rules-deployment-implement.md)
+[Saldırı yüzeyini azaltma (ASR) kurallarını etkinleştirme](attack-surface-reduction-rules-deployment-implement.md)
 
 [Saldırı yüzeyini azaltma (ASR) kurallarını kullanıma hazır hale getirme](attack-surface-reduction-rules-deployment-operationalize.md)
 
-[Saldırı yüzeyi azaltma (ASR) kuralları başvurusu](attack-surface-reduction-rules-reference.md)
+[Saldırı yüzeyini azaltma (ASR) kuralları başvurusu](attack-surface-reduction-rules-reference.md)
 
 ## <a name="reference"></a>Başvuru
 

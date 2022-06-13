@@ -1,5 +1,5 @@
 ---
-title: E-Kasa, E-posta SharePoint, OneDrive için Ekleri Açma Microsoft Teams
+title: SharePoint, OneDrive ve Microsoft Teams için Güvenli Ekleri açma
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -16,57 +16,57 @@ ms.assetid: 07e76024-0c80-40dc-8c48-1dd0d0f863cb
 ms.collection:
 - M365-security-compliance
 - SPO_Content
-description: Yöneticiler, algılanan dosyalar için uyarılar ayarlama Kasa da içinde olmak üzere, SharePoint, OneDrive ve Microsoft Teams için Ekleri nasıl açabilirsiniz?
+description: Yöneticiler, algılanan dosyalar için uyarı ayarlama da dahil olmak üzere SharePoint, OneDrive ve Microsoft Teams için Kasa Eklerini açmayı öğrenebilir.
 ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 6501097251f4001c58a651db7ddb34bc623e9b0a
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 55923b13cf47e0309a7246ba43dcb9adaf3c58ff
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021690"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016020"
 ---
-# <a name="turn-on-safe-attachments-for-sharepoint-onedrive-and-microsoft-teams"></a>E-Kasa, E-posta SharePoint, OneDrive için Ekleri Açma Microsoft Teams
+# <a name="turn-on-safe-attachments-for-sharepoint-onedrive-and-microsoft-teams"></a>SharePoint, OneDrive ve Microsoft Teams için Güvenli Ekleri açma
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-**Geçerli olduğu yer:**
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+**Uygulandığı öğe**
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-SharePoint, Office 365 OneDrive ve Microsoft Teams için Microsoft Defender Microsoft Teams, kötü amaçlı dosyaları istemeden paylaşmaya karşı korur. Daha fazla bilgi için bkz[. Kasa, Dosya ve SharePoint OneDrive Ekleri'Microsoft Teams](mdo-for-spo-odb-and-teams.md).
+SharePoint, OneDrive ve Microsoft Teams için Office 365 için Microsoft Defender, kuruluşunuzu yanlışlıkla kötü amaçlı dosyaları paylaşmaya karşı korur. Daha fazla bilgi için bkz[. SharePoint, OneDrive ve Microsoft Teams için ekleri Kasa](mdo-for-spo-odb-and-teams.md).
 
-Bu makalede, E-posta, Otomatik Bağlantı ve Diğer Kasa Ekleri SharePoint OneDrive ve yapılandırma Microsoft Teams.
+Bu makale SharePoint, OneDrive ve Microsoft Teams için Kasa Eklerini etkinleştirme ve yapılandırma adımlarını içerir.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
-- Microsoft 365 Defender portalını açın<https://security.microsoft.com>. Doğrudan Ekler sayfasına **Kasa için**, kullanın<https://security.microsoft.com/safeattachmentv2>.
+- Microsoft 365 Defender portalını adresinde <https://security.microsoft.com>açarsınız. **Doğrudan Kasa Ekler** sayfasına gitmek için kullanın<https://security.microsoft.com/safeattachmentv2>.
 
-- SharePoint, OneDrive ve Microsoft Teams eklerini açmak için, Microsoft 365 Defender portalında Kuruluş Yönetimi veya Güvenlik Yöneticisi rol gruplarının üyesi Microsoft 365 Defender gerekir. Kasa   Daha fazla bilgi için bkz[. Microsoft 365 Defender portalına.](permissions-microsoft-365-security-center.md)
+- SharePoint, OneDrive ve Microsoft Teams için Kasa Eklerini açmak için, Microsoft 365 Defender portalında **Kuruluş Yönetimi** veya **Güvenlik Yöneticisi** rol gruplarının üyesi olmanız gerekir. Daha fazla bilgi için bkz. [Microsoft 365 Defender portalında İzinler](permissions-microsoft-365-security-center.md).
 
-- Kişilerin kötü amaçlı dosyaları SharePoint için SharePoint Online PowerShell'i kullanmak için, Genel Yönetici'ye veya Azure AD'de [SharePoint](/azure/active-directory/roles/permissions-reference#sharepoint-administrator) Yönetici rollerine üye olun.[](/azure/active-directory/roles/permissions-reference#global-administrator)
+- kişilerin kötü amaçlı dosyaları indirmesini önlemek için SharePoint Online PowerShell kullanmak için, Azure AD'da [Genel Yönetici](/azure/active-directory/roles/permissions-reference#global-administrator) veya [SharePoint Yöneticisi](/azure/active-directory/roles/permissions-reference#sharepoint-administrator) rollerinin üyesi olmanız gerekir.
 
-- Kuruluşta denetim günlüğünün etkinleştirildiğinden emin olun. Daha fazla bilgi için bkz [. Denetim günlüğü aramalarını açma veya kapatma](../../compliance/turn-audit-log-search-on-or-off.md).
+- Kuruluşunuz için denetim günlüğünün etkinleştirildiğini doğrulayın. Daha fazla bilgi için bkz [. Denetim günlüğü aramasını açma veya kapatma](../../compliance/turn-audit-log-search-on-or-off.md).
 
-- Ayarların etkili olmasına 30 dakika kadar bekleyin.
+- Ayarların geçerlilik kazanması için 30 dakikaya kadar bekleyin.
 
-## <a name="step-1-use-the-microsoft-365-defender-portal-to-turn-on-safe-attachments-for-sharepoint-onedrive-and-microsoft-teams"></a>1. Adım: Microsoft 365 Defender, E-posta ve Kasa Ekleri'SharePoint için OneDrive portalını Microsoft Teams
+## <a name="step-1-use-the-microsoft-365-defender-portal-to-turn-on-safe-attachments-for-sharepoint-onedrive-and-microsoft-teams"></a>1. Adım: SharePoint, OneDrive ve Microsoft Teams için Kasa Eklerini açmak için Microsoft 365 Defender portalını kullanın
 
-1. aşağıdaki Microsoft 365 Defender portalında İlkeler ve <https://security.microsoft.com>kurallar **& Ahd** \>  \> Kasa **İlkeler** **bölümüne** gidin. Doğrudan Ekler sayfasına **Kasa için**, kullanın<https://security.microsoft.com/safeattachmentv2>.
+1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**İlkeler & kuralları** \> **Tehdit ilkeleri** \> **Kasa İlkeler** **bölümündeki** Ekler'e gidin. **Doğrudan Kasa Ekler** sayfasına gitmek için kullanın<https://security.microsoft.com/safeattachmentv2>.
 
-2. Ekler **sayfasında Kasa ayarlar'a** **tıklayın**.
+2. **Kasa Ekler** sayfasında **Genel ayarlar'a** tıklayın.
 
-3. Görüntülenen **Genel ayarlar** açılır sayfasında Dosya, Dosya ve Dosya **SharePoint'de OneDrive bölümüne Microsoft Teams** gidin.
+3. Görüntülenen **Genel ayarlar** açılır penceresinde SharePoint **, OneDrive ve Microsoft Teams dosyaları koruma** bölümüne gidin.
 
-   Office 365 **, OneDrive için SharePoint Defender** Office 365 ve Microsoft Teams iki durumlu düğmeyi ![açık olarak hareket ettirin.](../../media/scc-toggle-on.png) SharePoint, OneDrive için Kasa'i açmak Microsoft Teams.
+   **SharePoint, OneDrive ve Microsoft Teams için Office 365 için Defender aç** iki durumlu düğmesini sağ ![Geçiş açık konuma getirin.](../../media/scc-toggle-on.png) SharePoint, OneDrive ve Microsoft Teams için Kasa Eklerini açmak için.
 
    Bitirdiğinizde, **Kaydet**'i tıklatın.
 
-### <a name="use-exchange-online-powershell-to-turn-on-safe-attachments-for-sharepoint-onedrive-and-microsoft-teams"></a>Exchange Online, OneDrive ve diğer Kasa Ekleri açmak için SharePoint PowerShell'i Microsoft Teams
+### <a name="use-exchange-online-powershell-to-turn-on-safe-attachments-for-sharepoint-onedrive-and-microsoft-teams"></a>SharePoint, OneDrive ve Microsoft Teams için Kasa Eklerini açmak için Exchange Online PowerShell'i kullanın
 
-SharePoint, OneDrive ve Microsoft Teams için Kasa Eklerini açmak için PowerShell kullanmayı tercih ediyorsanız, [Exchange Online PowerShell'e](/powershell/exchange/connect-to-exchange-online-powershell) bağlanın ve aşağıdaki komutu çalıştırın:
+SharePoint, OneDrive ve Microsoft Teams için Kasa Eklerini açmak için PowerShell'i kullanmayı tercih ederseniz, [powershell'Exchange Online bağlanın](/powershell/exchange/connect-to-exchange-online-powershell) ve aşağıdaki komutu çalıştırın:
 
 ```powershell
 Set-AtpPolicyForO365 -EnableATPForSPOTeamsODB $true
@@ -74,13 +74,13 @@ Set-AtpPolicyForO365 -EnableATPForSPOTeamsODB $true
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Set-AtpPolicyForO365](/powershell/module/exchange/set-atppolicyforo365).
 
-## <a name="step-2-recommended-use-sharepoint-online-powershell-to-prevent-users-from-downloading-malicious-files"></a>2. Adım: (Önerilen) Kullanıcıların kötü amaçlı dosyaları SharePoint için SharePoint Online PowerShell'i kullanma
+## <a name="step-2-recommended-use-sharepoint-online-powershell-to-prevent-users-from-downloading-malicious-files"></a>2. Adım: (Önerilen) Kullanıcıların kötü amaçlı dosyaları indirmesini önlemek için çevrimiçi SharePoint PowerShell kullanın
 
-Varsayılan olarak,<sup>\*</sup> kullanıcılar SharePoint, OneDrive ve diğer dosya ekleri ile algılanan kötü amaçlı dosyaları Kasa dosya aç SharePoint, OneDrive veya Microsoft Teams. Ancak, kötü amaçlı dosyaları silebilir ve indirebilirler.
+Varsayılan olarak, kullanıcılar SharePoint, OneDrive ve Microsoft Teams için Kasa Ekleri tarafından algılanan kötü amaçlı dosyaları açamaz, taşıyamaz, kopyalayamaz veya paylaşamaz<sup>\*</sup>. Ancak, kötü amaçlı dosyaları silebilir ve indirebilirler.
 
-<sup>\*</sup>Kullanıcılar Erişimi **yönet'e giderse****, Paylaş** seçeneği yine kullanılabilir.
+<sup>\*</sup> Kullanıcılar **Erişimi yönet'e** giderse **Paylaş** seçeneği hala kullanılabilir durumdadır.
 
-Kullanıcıların kötü amaçlı dosyaları indirmesini önlemek için SharePoint [Online PowerShell'e bağlanın](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) ve aşağıdaki komutu çalıştırın:
+Kullanıcıların kötü amaçlı dosyaları indirmesini önlemek [için SharePoint Online PowerShell'e bağlanın](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) ve aşağıdaki komutu çalıştırın:
 
 ```powershell
 Set-SPOTenant -DisallowInfectedFileDownload $true
@@ -89,63 +89,63 @@ Set-SPOTenant -DisallowInfectedFileDownload $true
 **Notlar**:
 
 - Bu ayar hem kullanıcıları hem de yöneticileri etkiler.
-- Kişiler, kötü amaçlı dosyaları silebilir.
+- Kişiler kötü amaçlı dosyaları silmeye devam edebilir.
 
-Ayrıntılı söz dizimi ve parametre bilgileri için bkz [. SPOTenant Ayarlama](/powershell/module/sharepoint-online/Set-SPOTenant).
+Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Set-SPOTenant](/powershell/module/sharepoint-online/Set-SPOTenant).
 
-## <a name="step-3-recommended-use-the-microsoft-365-defender-portal-to-create-an-alert-policy-for-detected-files"></a>3. Adım (Önerilen) Microsoft 365 Defender dosyalar için uyarı ilkesi oluşturmak üzere Bu Portal'a
+## <a name="step-3-recommended-use-the-microsoft-365-defender-portal-to-create-an-alert-policy-for-detected-files"></a>3. Adım (Önerilen) Algılanan dosyalar için uyarı ilkesi oluşturmak üzere Microsoft 365 Defender portalını kullanma
 
-SharePoint, OneDrive ve bir kötü amaçlı dosya algılayana kadar Kasa yöneticilere ve size SharePoint Microsoft Teams bir uyarı ilkesi oluşturabilirsiniz. Uyarılar hakkında daha fazla bilgi edinmek için bkz. [Uyarı ilkeleri](../../compliance/alert-policies.md).
+SharePoint, OneDrive ve Microsoft Teams için Ekleri Kasa kötü amaçlı bir dosya algıladığında sizi ve diğer yöneticileri bilgilendiren bir uyarı ilkesi oluşturabilirsiniz. Uyarılar hakkında daha fazla bilgi edinmek için bkz. [Uyarı ilkeleri](../../compliance/alert-policies.md).
 
-1. Aşağıdaki Microsoft 365 Defender portalında İlkeler <https://security.microsoft.com>ve **Kurallar &** **ilkesi'ne**\> gidin. Doğrudan Uyarı ilkesi **sayfasına gitmek için** kullanın <https://security.microsoft.com/alertpolicies>.
+1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**İlkeler & kuralları** \> **Uyarı ilkesi'ne** gidin. **Doğrudan Uyarı ilkesi** sayfasına gitmek için kullanın<https://security.microsoft.com/alertpolicies>.
 
-2. Uyarı ilkesi **sayfasında Yeni** uyarı **ilkesi'ne tıklayın**.
+2. **Uyarı ilkesi** sayfasında **Yeni uyarı ilkesi'ne** tıklayın.
 
-3. Yeni **uyarı ilkesi** sihirbazı açılır. Uyarınızı **adla** sayfasında aşağıdaki ayarları yapılandırabilirsiniz:
-   - **Ad**: Benzersiz ve açıklayıcı bir ad yazın. Örneğin, Kitaplıklarda Kötü Amaçlı Dosyalar.
-   - **Açıklama**: İsteğe bağlı bir açıklama yazın. Örneğin, SharePoint Online, OneDrive veya başka dosyalarda kötü amaçlı dosyalar algılandığında yöneticilere Microsoft Teams.
-   - **Önem Derecesi**: Açılan **listeden** **Düşük**, Orta **veya Yüksek'i** seçin.
-   - **Kategori**: Açılan **listeden Tehdit** yönetimi'ne tıklayın.
+3. **Yeni uyarı ilkesi** sihirbazı açılır. **Uyarınızı adlandırın** sayfasında aşağıdaki ayarları yapılandırın:
+   - **Ad**: Benzersiz ve açıklayıcı bir ad yazın. Örneğin, Kitaplıklardaki Kötü Amaçlı Dosyalar.
+   - **Açıklama**: İsteğe bağlı bir açıklama yazın. Örneğin, SharePoint Online, OneDrive veya Microsoft Teams'da kötü amaçlı dosyalar algılandığında yöneticileri bilgilendirin.
+   - **Önem Derecesi**: Açılan listeden **Düşük**, **Orta** veya **Yüksek'i** seçin.
+   - **Kategori**: Açılan listeden **Tehdit yönetimi'ni** seçin.
 
-   Bitirdikten sonra, Sonraki'ne **tıklayın**.
+   İşiniz bittiğinde **İleri'ye** tıklayın.
 
-4. Uyarı **ayarları oluştur sayfasında** aşağıdaki ayarları yapılandırabilirsiniz:
-   - **Ne hakkında uyarı almaksınız?** Bölüm \> **: Açılan** \> listeden **Dosyada kötü amaçlı yazılım algılandı** öğesini seçin.
-   - **Uyarının nasıl tetiklenir?** bölüm: Bir etkinlik **kuralla her eş olduğunda varsayılan değeri seçili** olarak bırakın.
+4. **Uyarı ayarları oluştur** sayfasında aşağıdaki ayarları yapılandırın:
+   - **Ne hakkında uyarı vermek istiyorsunuz?** bölümünde \> **Etkinlik,** \> açılan listeden **Dosyada kötü amaçlı yazılım algılandı'yı** seçin.
+   - **Uyarının nasıl tetiklanmasını istiyorsunuz?** section: Bir **etkinlik seçili kuralla her eşleştiğinde** varsayılan değeri bırakın.
 
-   Bitirdikten sonra, Sonraki'ne **tıklayın**.
+   İşiniz bittiğinde **İleri'ye** tıklayın.
 
-5. Alıcılarınızı **ayarlayın sayfasında** aşağıdaki ayarları yapılandırabilirsiniz:
-   - **E-posta bildirimlerini gönder'in seçili** olduğunu doğrulayın. **E-posta alıcıları kutusunda**, kötü amaçlı bir dosya algılandığında bildirim alacak bir veya birden çok genel yönetici, güvenlik yöneticisi veya güvenlik okuyucusu seçin.
-   - **Günlük bildirim sınırı**: Varsayılan Sınır yok **değerini seçili** bırakın.
+5. **Alıcılarınızı ayarlayın** sayfasında aşağıdaki ayarları yapılandırın:
+   - **E-posta bildirimleri gönder'in** seçili olduğunu doğrulayın. **E-posta alıcıları** kutusunda, kötü amaçlı bir dosya algılandığında bildirim alması gereken bir veya daha fazla genel yöneticiyi, güvenlik yöneticisini veya güvenlik okuyucuyu seçin.
+   - **Günlük bildirim sınırı**: Varsayılan değeri **Sınır yok** seçeneğini belirleyin.
 
-   Bitirdikten sonra, Sonraki'ne **tıklayın**.
+   İşiniz bittiğinde **İleri'ye** tıklayın.
 
-6. Ayarlarınızı **gözden geçirme sayfasında** , ayarlarınızı gözden geçirebilirsiniz. Bölümün içindeki **ayarları değiştirmek** için her bölümde Düzenle'yi seçebilirsiniz. Geri'ye **tıklar** veya sihirbazda belirli bir sayfayı seçersiniz.
+6. **Ayarlarınızı gözden geçirin** sayfasında ayarlarınızı gözden geçirin. Bölümün içindeki ayarları değiştirmek için her bölümde **Düzenle'yi** seçebilirsiniz. Ya da **Geri'ye** tıklayabilir veya sihirbazdaki belirli bir sayfayı seçebilirsiniz.
 
-   **İlkeyi hemen açmak istiyor musunuz?** bölümünde, varsayılan Evet **değerini bırakın, hemen aç'a** tıklayın.
+   **İlkeyi hemen açmak istiyor musunuz?** bölümünde, varsayılan **Evet, hemen aç** ayarını seçili bırakın.
 
-   Bitirdikten sonra Son'a **tıklayın**.
+   İşiniz bittiğinde **Son'a** tıklayın.
 
-### <a name="use-security--compliance-powershell-to-create-an-alert-policy-for-detected-files"></a>Algılanan dosyalar & için uyarı ilkesi oluşturmak için Güvenlik ve Uyumluluk PowerShell kullanma
+### <a name="use-security--compliance-powershell-to-create-an-alert-policy-for-detected-files"></a>Algılanan dosyalar için uyarı ilkesi oluşturmak için Güvenlik & Uyumluluğu PowerShell'i kullanma
 
-Önceki bölümde açıklanan uyarı ilkesiyle aynı uyarı ilkesi oluşturmak için PowerShell kullanmayı tercih ediyorsanız, Güvenlik ve Uyumluluk Merkezi [PowerShell'e &](/powershell/exchange/connect-to-scc-powershell) komutu çalıştırın:
+Önceki bölümde açıklandığı gibi aynı uyarı ilkesini oluşturmak için PowerShell'i kullanmak isterseniz [Güvenlik & Uyumluluğu PowerShell'e bağlanın](/powershell/exchange/connect-to-scc-powershell) ve aşağıdaki komutu çalıştırın:
 
 ```powershell
 New-ActivityAlert -Name "Malicious Files in Libraries" -Description "Notifies admins when malicious files are detected in SharePoint Online, OneDrive, or Microsoft Teams" -Category ThreatManagement -Operation FileMalwareDetected -NotifyUser "admin1@contoso.com","admin2@contoso.com"
 ```
 
-**Not**: Varsayılan _Önem Derecesi değeri_ Düşüktür. Orta veya Yüksek değerini belirtmek için, _komuta Önem Derecesi_ parametresini ve değerini yazın.
+**Not**: Varsayılan _Önem Derecesi_ değeri Düşük'dür. Orta veya Yüksek belirtmek için, komuta _Önem Derecesi_ parametresini ve değerini ekleyin.
 
-Ayrıntılı söz dizimi ve parametre bilgileri için [bkz. New-ActivityAlert](/powershell/module/exchange/new-activityalert).
+Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [New-ActivityAlert](/powershell/module/exchange/new-activityalert).
 
-### <a name="how-do-you-know-these-procedures-worked"></a>Bu yordamların çalıştığını nasıl biliyorsunuz?
+### <a name="how-do-you-know-these-procedures-worked"></a>Bu yordamların işe yaramış olduğunu nasıl anlarsınız?
 
-- SharePoint, OneDrive ve Kasa Ekleri'Microsoft Teams başarıyla açık olduğunu doğrulamak için, aşağıdaki adımlardan birini kullanın:
+- SharePoint, OneDrive ve Microsoft Teams için Kasa Eklerini başarıyla açtığınızı doğrulamak için aşağıdaki adımlardan birini kullanın:
 
-  - Microsoft 365 Defender portalında   **İlkeler &** \> \> \> kuralları Tehdit İlkeleri **bölümüne Kasa** Ekleri'ne gidin, Genel ayarlar'ı seçin ve SharePoint için Office 365 için **Defender'ı Aç seçeneğinin OneDrive ve Microsoft Teams** seçin.
+  - Microsoft 365 Defender portalında **, ekler Kasa İlkeler & kurallar** \> **Tehdit İlkeleri** \> bölümüne  \> gidin, **Genel ayarlar'ı** seçin ve **SharePoint için Office 365 için Defender aç'ın değerini doğrulayın. OneDrive ve Microsoft Teams** ayarı.
 
-  - PowerShell Exchange Online, özellik ayarını doğrulamak için aşağıdaki komutu çalıştırın:
+  - Exchange Online PowerShell'de, özellik ayarını doğrulamak için aşağıdaki komutu çalıştırın:
 
     ```powershell
     Get-AtpPolicyForO365 | Format-List EnableATPForSPOTeamsODB
@@ -153,17 +153,17 @@ Ayrıntılı söz dizimi ve parametre bilgileri için [bkz. New-ActivityAlert](/
 
     Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Get-AtpPolicyForO365](/powershell/module/exchange/get-atppolicyforo365).
 
-- Kişilerin kötü amaçlı dosyaları indirmesi başarıyla engellenmiş olduğunu doğrulamak için, SharePoint Online PowerShell'i açın ve özellik değerini doğrulamak için aşağıdaki komutu çalıştırın:
+- Kişilerin kötü amaçlı dosyaları indirmesini başarıyla engellediğinizden emin olmak için, SharePoint Online PowerShell'i açın ve özellik değerini doğrulamak için aşağıdaki komutu çalıştırın:
 
   ```powershell
   Get-SPOTenant | Format-List DisallowInfectedFileDownload
   ```
 
-  Ayrıntılı söz dizimi ve parametre bilgileri için bkz [. Get-SPOTenant](/powershell/module/sharepoint-online/Set-SPOTenant).
+  Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Get-SPOTenant](/powershell/module/sharepoint-online/Set-SPOTenant).
 
-- Algılanan dosyalar için bir uyarı ilkesi başarıyla yapılandırıldığından emin olmak için, aşağıdaki adımlardan herhangi birini kullanın:
-  - Microsoft 365 Defender portalında İlkeler **ve kurallar & Uyarı** \> **ilkesi'ne** \> gidin ve ayarları doğrulayın.
-  - Uygulama Microsoft 365 Defender PowerShell'de\<AlertPolicyName\>, uyarı ilkesi adıyla değiştirin, aşağıdaki komutu çalıştırın ve özellik değerlerini doğrulayın:
+- Algılanan dosyalar için bir uyarı ilkesini başarıyla yapılandırdığınızdan emin olmak için aşağıdaki adımlardan birini kullanın:
+  - Microsoft 365 Defender portalında **İlkeler & kuralları** \> **Uyarı ilkesi'ne** \> gidin, uyarı ilkesini seçin ve ayarları doğrulayın.
+  - Microsoft 365 Defender portal PowerShell'de değerini uyarı ilkesinin adıyla değiştirin\<AlertPolicyName\>, aşağıdaki komutu çalıştırın ve özellik değerlerini doğrulayın:
 
     ```powershell
     Get-ActivityAlert -Identity "<AlertPolicyName>"
@@ -171,4 +171,4 @@ Ayrıntılı söz dizimi ve parametre bilgileri için [bkz. New-ActivityAlert](/
 
     Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Get-ActivityAlert](/powershell/module/exchange/get-activityalert).
 
-- Tehdit koruması [durum raporunu kullanarak dosyalarda](view-email-security-reports.md#threat-protection-status-report), dosyalarda veya dosyalarda SharePoint OneDrive bilgileri Microsoft Teams. Özel olarak, Verileri görüntüleme: **İçerik Kötü Amaçlı Yazılım görünümü'ne göre \> kullanabilirsiniz** .
+- algılanan dosyalar hakkındaki bilgileri SharePoint, OneDrive ve Microsoft Teams görüntülemek için [Tehdit koruması durum raporunu](view-email-security-reports.md#threat-protection-status-report) kullanın. Özellikle, **Verileri görüntüleme ölçütü: İçerik \> Kötü Amaçlı Yazılım** görünümünü kullanabilirsiniz.

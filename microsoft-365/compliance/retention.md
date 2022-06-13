@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: İhtiyaç duyduklarınızı korumanıza ve saklamadığınız şeyleri silmenize yardımcı olan bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin.
-ms.openlocfilehash: 95d79bd95aa816b82e69399b9bde99500fcc8b6b
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 7124d97c56e414a7c5a47488805bb4134426f073
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419538"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66018040"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin
 
@@ -177,7 +177,7 @@ Bekletme etiketlerinin ana amacı içeriği saklamak veya silmek olsa da, beklet
 
 #### <a name="using-a-retention-label-as-a-condition-in-a-dlp-policy"></a>DLP ilkesinde koşul olarak bekletme etiketi kullanma
 
-SharePoint belgeler için Microsoft Purview Veri Kaybı Önleme (DLP) ilkesinde koşul olarak bir bekletme etiketi belirtebilirsiniz. Örneğin, belgelere belirtilen bir bekletme etiketi uygulanmışsa, belgelerin kuruluş dışında paylaşılmasını önlemek için bir DLP ilkesi yapılandırın.
+SharePoint'deki belgeler için Microsoft Purview Veri Kaybı Önleme (DLP) ilkesinde koşul olarak bir bekletme etiketi belirtebilirsiniz. Örneğin, belgelere belirtilen bir bekletme etiketi uygulanmışsa, belgelerin kuruluş dışında paylaşılmasını önlemek için bir DLP ilkesi yapılandırın.
 
 Daha fazla bilgi için bkz. [DLP ilkesinde koşul olarak bekletme etiketi kullanma](data-loss-prevention-policies.md#using-a-retention-label-as-a-condition-in-a-dlp-policy).
 
@@ -237,7 +237,7 @@ Bekletme etiketleri öğeleri kayıt veya mevzuat kaydı olarak işaretlediğind
 
 #### <a name="monitoring-retention-labels"></a>Bekletme etiketlerini izleme
 
-Microsoft Purview uyumluluk portalı **Veri sınıflandırması'nı** ve **Genel Bakış** sayfasını seçerek bekletme etiketlerinizin kiracınızda nasıl kullanıldığını izleyin ve etiketlenen öğelerinizin nerede bulunduğunu belirleyin. Önemli önkoşullar da dahil olmak üzere daha fazla bilgi için bkz. [Veri sınıflandırması hakkında bilgi edinin](data-classification-overview.md).
+Microsoft Purview uyumluluk portalından **Veri sınıflandırması'nı** ve **Genel Bakış** sayfasını seçerek bekletme etiketlerinizin kiracınızda nasıl kullanıldığını izleyin ve etiketli öğelerinizin nerede bulunduğunu belirleyin. Önemli önkoşullar da dahil olmak üzere daha fazla bilgi için bkz. [Veri sınıflandırması hakkında bilgi edinin](data-classification-overview.md).
 
 Ardından [içerik gezginini](data-classification-content-explorer.md) ve [etkinlik gezginini](data-classification-activity-explorer.md) kullanarak ayrıntılara gidebilirsiniz.
 
@@ -369,7 +369,7 @@ Kaydedilmiş bir web seminerini izlemek için (kayıt gerektirir), [Uyarlamalı 
 
 ## <a name="policy-lookup"></a>İlke araması
 
-Microsoft 365 konumlar için birden çok bekletme ilkesi ve yayımladığınız veya otomatik uyguladığınız birden çok bekletme etiketi ilkesi yapılandırabilirsiniz. Belirli kullanıcılara, sitelere ve Microsoft 365 gruplarına atanan bekletme ilkelerini bulmak için, Microsoft Purview uyumluluk portalı **Veri yaşam döngüsü yönetimi** veya **Kayıt yönetimi** çözümlerinden **İlke araması'nı** kullanın.
+Microsoft 365 konumlar için birden çok bekletme ilkesi ve yayımladığınız veya otomatik uyguladığınız birden çok bekletme etiketi ilkesi yapılandırabilirsiniz. Belirli kullanıcılara, sitelere ve Microsoft 365 gruplarına atanan bekletme ilkelerini bulmak için, Microsoft Purview uyumluluk portalındaki **Veri yaşam döngüsü yönetimi** veya **Kayıt yönetimi** çözümlerinden **İlke araması'nı** kullanın.
 
 Örneğin:
 
@@ -550,7 +550,7 @@ Denetim olayları olarak günlüğe kaydedilen bekletme eylemleri yalnızca bekl
 
 ## <a name="powershell-cmdlets-for-retention-policies-and-retention-labels"></a>Bekletme ilkeleri ve bekletme etiketleri için PowerShell cmdlet'leri
 
-Bekletme cmdlet'lerini kullanmak [için önce Office 365 Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmanız](/powershell/exchange/connect-to-scc-powershell) gerekir. Ardından aşağıdaki cmdlet'lerden birini kullanın:
+Bekletme cmdlet'lerini kullanmak [için önce Office 365 Güvenlik & Uyumluluğu PowerShell'e bağlanmanız](/powershell/exchange/connect-to-scc-powershell) gerekir. Ardından aşağıdaki cmdlet'lerden birini kullanın:
 
 - [Get-ComplianceTag](/powershell/module/exchange/get-compliancetag)
 

@@ -4,6 +4,7 @@ f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: katmartin
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -16,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için Windows 365 (Bulut bilgisayarları) sayfası hakkında bilgi edinin.
-ms.openlocfilehash: 325fe39c144227052c966b81a8a2109a07fb0cf2
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: b96660f2666d7edce383a1d2e222e23d9b17a5b3
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100291"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017476"
 ---
 # <a name="overview-of-the-windows-365-cloud-pcs-page-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse'daki Windows 365 (Bulut Bilgisayarlar) sayfasına genel bakış  
   
@@ -32,7 +33,7 @@ Windows 365 hakkında daha fazla bilgi için bkz[. Windows 365 nedir?](/windows-
 > [!IMPORTANT]
 > Lighthouse'da yönetebilmeniz için önce her müşteri kiracısı için Bulut bilgisayarları sağlamak için [MEM'e](https://go.microsoft.com/fwlink/p/?linkid=2150463) gitmeniz gerekir. Lighthouse'un içinden sağlayamazsınız.
 
-Müşteri kiracınız için Bulut bilgisayarları sağladıktan sonra, Microsoft 365 Giriş sayfasındaki Windows 365 kartı, sağlanması başarısız olan Bulut bilgisayarlarının sayısı ve Azure ağ bağlantısı hataları gibi eyleme ihtiyacı olan Bulut bilgisayarları hakkında kısa bir uyarı sağlar. Ayrıntılı bir durum elde etmek için Windows 365 kartındaki düğmeyi seçin (veya sol gezinti bölmesinde **Windows 365** seçin) ve Windows 365 sayfasını açın. Bu sayfadan, müşteri kiracılarınıza atanan Bulut bilgisayarlarının durum genel bakışını alabilir, yönettiğiniz tüm Bulut bilgisayarlarının ve bunların atandığı kiracıların listesini görüntüleyebilir ve müşteri kiracılarınızla Azure Active Directory (Azure AD) arasındaki Azure ağ bağlantılarını ve bunların durumunu görüntüleyebilirsiniz.
+Müşteri kiracınız için Bulut bilgisayarları sağladıktan sonra, Microsoft 365 Giriş sayfasındaki Windows 365 kartı, sağlanması başarısız olan Bulut bilgisayarlarının sayısı ve Azure ağ bağlantısı hataları gibi eyleme ihtiyacı olan Bulut bilgisayarları hakkında kısa bir uyarı sağlar. Ayrıntılı bir durum elde etmek için Windows 365 kartındaki düğmeyi seçin (veya sol gezinti bölmesinde **Windows 365** seçin) ve Windows 365 sayfasını açın. Bu sayfadan, müşteri kiracılarınıza atanan Bulut bilgisayarlarının durum genel bakışını alabilir, yönettiğiniz tüm Bulut bilgisayarlarının ve bunların atandığı kiracıların listesini görüntüleyebilir ve müşteri kiracılarınız ile Azure Active Directory (Azure AD) arasındaki Azure ağ bağlantılarını ve durumlarını görüntüleyebilirsiniz.
 
 ## <a name="overview-tab"></a>Genel Bakış sekmesi
 

@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: SharePoint, Microsoft Teams sitelerdeki ve Microsoft 365 gruplarındaki içeriği korumak için duyarlılık etiketlerini kullanın.
-ms.openlocfilehash: 125be09f9d3d9a519e1985a37c0880e3f2465245
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: dfe76e31eb5816e53a3f6d4ab598f1737cdebaa1
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772693"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014310"
 ---
 # <a name="use-sensitivity-labels-to-protect-content-in-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Microsoft Teams, Microsoft 365 grupları ve SharePoint sitelerindeki içeriği korumak için duyarlılık etiketlerini kullanma
 
@@ -67,7 +67,7 @@ Kapsayıcılar için duyarlılık etiketlerini henüz etkinleştirmediyseniz, a�
 
 1. Bu özellik Azure AD işlevselliği kullandığından, duyarlılık etiketi desteğini etkinleştirmek için Azure AD belgelerindeki yönergeleri izleyin: [Azure Active Directory'da Microsoft 365 gruplarına duyarlılık etiketleri atama](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels).
 
-2. Şimdi duyarlılık etiketlerinizi Azure AD eşitlemeniz gerekir. İlk olarak [Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanın](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
+2. Şimdi duyarlılık etiketlerinizi Azure AD eşitlemeniz gerekir. İlk olarak [Güvenlik & Uyumluluk PowerShell'e bağlanın](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
 
    Örneğin, yönetici olarak çalıştırdığınız bir PowerShell oturumunda genel yönetici hesabıyla oturum açın.
 
@@ -180,7 +180,7 @@ Bu önizleme için bilinen sınırlamalar:
 
 ### <a name="configure-settings-for-the-default-sharing-link-type-for-a-site-by-using-powershell-advanced-settings"></a>PowerShell gelişmiş ayarlarını kullanarak site için varsayılan paylaşım bağlantı türü ayarlarını yapılandırma
 
-Microsoft Purview uyumluluk portalı yapılandırabileceğiniz sitelerin ve grupların etiket ayarlarına ek olarak, site için varsayılan paylaşım bağlantı türünü de yapılandırabilirsiniz. Belgeler için duyarlılık etiketleri, varsayılan paylaşım bağlantı türü için de yapılandırılabilir. Kullanıcılar Office uygulamalarında **Paylaş** düğmesini seçtiğinde, aşırı paylaşımı önlemeye yardımcı olan bu ayarlar otomatik olarak seçilir. 
+Microsoft Purview uyumluluk portalından yapılandırabileceğiniz sitelerin ve grupların etiket ayarlarına ek olarak, site için varsayılan paylaşım bağlantı türünü de yapılandırabilirsiniz. Belgeler için duyarlılık etiketleri, varsayılan paylaşım bağlantı türü için de yapılandırılabilir. Kullanıcılar Office uygulamalarında **Paylaş** düğmesini seçtiğinde, aşırı paylaşımı önlemeye yardımcı olan bu ayarlar otomatik olarak seçilir. 
 
 Daha fazla bilgi ve yönergeler için bkz. [SharePoint ve OneDrive'da siteler ve belgeler için varsayılan paylaşım bağlantı türünü yapılandırmak için duyarlılık etiketlerini kullanma](sensitivity-labels-default-sharing-link.md).
 
@@ -313,7 +313,7 @@ SharePoint Online Management Shell'in 16.0.19418.12000 veya sonraki bir sürüm�
 
 1. **Yönetici Olarak Çalıştır** seçeneğiyle bir PowerShell oturumu açın.
 
-2. Etiket GUID'nizi bilmiyorsanız: [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) ve duyarlılık etiketlerinin ve guid'lerinin listesini alın.
+2. Etiket GUID'nizi bilmiyorsanız: [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) ve duyarlılık etiketlerinin ve guid'lerinin listesini alın.
 
    ```powershell
    Get-Label |ft Name, Guid
@@ -361,7 +361,7 @@ Duyarlılık etiketlerini destekleyen yönetim merkezlerini kullandığınızda,
 
 Aşağıdaki uygulamalar ve hizmetler, siteler ve grup ayarları için yapılandırılan duyarlılık etiketlerini destekler:
 
-- Yönetici merkezleri:
+- Yönetim merkezleri:
 
   - SharePoint yönetim merkezi
   - Teams yönetim merkezi
@@ -379,7 +379,7 @@ Aşağıdaki uygulamalar ve hizmetler, siteler ve grup ayarları için yapıland
 
 Aşağıdaki uygulamalar ve hizmetler şu anda siteler ve grup ayarları için yapılandırılmış duyarlılık etiketlerini desteklemez:
 
-- Yönetici merkezleri:
+- Yönetim merkezleri:
 
   - Exchange yönetim merkezi
 
@@ -421,7 +421,7 @@ Siteler ve gruplar için duyarlılık etiketlerinin ve Azure AD sınıflandırma
 
 ### <a name="use-powershell-to-convert-classifications-for-microsoft-365-groups-to-sensitivity-labels"></a>Microsoft 365 gruplarının sınıflandırmalarını duyarlılık etiketlerine dönüştürmek için PowerShell kullanma
 
-1. İlk olarak [Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanın](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
+1. İlk olarak [Güvenlik & Uyumluluk PowerShell'e bağlanın](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
 
    Örneğin, yönetici olarak çalıştırdığınız bir PowerShell oturumunda genel yönetici hesabıyla oturum açın:
 

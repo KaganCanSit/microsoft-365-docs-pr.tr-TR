@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 description: Bu makale, İçerik arama hakkındaki birçok ayrıntıyı öğrenmenize yardımcı olmak için Microsoft Purview uyumluluk portalındaki İçerik arama eBulma aracı hakkında başvuru bilgileri içerir.
-ms.openlocfilehash: 8d7f1497a0dbd400536dd74c5abd4b9e3be7e29f
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: ec80cd12efc3c314f891972b1ac48232f02c072f
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097128"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66018129"
 ---
 # <a name="feature-reference-for-content-search"></a>İçerik arama için özellik referansı
 
@@ -62,7 +62,7 @@ Arama sorgusu oluşturmak için anahtar sözcük listesini kullanırken aşağı
 
 - İçerik araması çalıştırdığınızda, Microsoft 365 arama sorgunuzda desteklenmeyen karakterleri ve büyük harfe dönüştürülemeyen Boole işleçlerini otomatik olarak denetler. Desteklenmeyen karakterler genellikle gizlenir ve genellikle bir arama hatasına neden olur veya istenmeyen sonuçlar döndürür. Denetlenen desteklenmeyen karakterler hakkında daha fazla bilgi için bkz. [İçerik Arama sorgunuzda hatalar olup olmadığını denetleme](check-your-content-search-query-for-errors.md).
 
-- İngilizce olmayan karakterler (çince karakterler gibi) için anahtar sözcükler içeren bir arama sorgunuz varsa, İçerik arama'da **Sorgu dili-ülke/bölgeKimlik**![ dili-ülkesi/bölge simgesine tıklayabilirsiniz.](../media/8d4b60c8-e1f1-40f9-88ae-ee2a7eca0886.png) ve arama için bir dil-ülke kültür kodu değeri seçin. Varsayılan dil/bölge nötrdür. İçerik araması için dil ayarını değiştirmeniz gerekip gerekmediğini nasıl anlayabilirsiniz? Belirli içerik konumları aradığınız İngilizce olmayan karakterleri içeriyorsa ancak arama sonuç döndürmezse, bunun nedeni dil ayarı olabilir.
+- İngilizce olmayan karakterler (çince karakterler gibi) için anahtar sözcükler içeren bir arama sorgunuz varsa, İçerik aramasında **Sorgu dili-ülke/bölge**![Sorgu dili-ülke/bölge simgesine tıklayabilirsiniz.](../media/8d4b60c8-e1f1-40f9-88ae-ee2a7eca0886.png) ve arama için bir dil-ülke kültür kodu değeri seçin. Varsayılan dil/bölge nötrdür. İçerik araması için dil ayarını değiştirmeniz gerekip gerekmediğini nasıl anlayabilirsiniz? Belirli içerik konumları aradığınız İngilizce olmayan karakterleri içeriyorsa ancak arama sonuç döndürmezse, bunun nedeni dil ayarı olabilir.
 
 ## <a name="partially-indexed-items"></a>Kısmen dizine eklenen öğeler
 
@@ -192,7 +192,7 @@ Yammer Gruplarındaki konuşma öğelerini özel olarak aramak için **ItemClass
 
 ## <a name="searching-inactive-mailboxes"></a>Etkin olmayan posta kutularını arama
 
-İçerik aramasında etkin olmayan posta kutularında arama yapabilirsiniz. Kuruluşunuzdaki etkin olmayan posta kutularının listesini almak için powershell Exchange Online komutunu `Get-Mailbox -InactiveMailboxOnly` çalıştırın. Alternatif olarak, Microsoft Purview uyumluluk portalında **Veri yaşam döngüsü yönetimi** \> **Bekletme'ye** gidebilir ve ardından **Daha FazlaKızlama**![ Çubuğu üç nokta simgesine tıklayabilirsiniz.](../media/9723029d-e5cd-4740-b5b1-2806e4f28208.gif) \>**Etkin olmayan posta kutuları**.
+İçerik aramasında etkin olmayan posta kutularında arama yapabilirsiniz. Kuruluşunuzdaki etkin olmayan posta kutularının listesini almak için powershell Exchange Online komutunu `Get-Mailbox -InactiveMailboxOnly` çalıştırın. Alternatif olarak, Microsoft Purview uyumluluk portalında **Veri yaşam döngüsü yönetimi** \> **Bekletme'ye** gidip **Diğer**![Gezinti Çubuğu üç noktalarına tıklayabilirsiniz.](../media/9723029d-e5cd-4740-b5b1-2806e4f28208.gif) \>**Etkin olmayan posta kutuları**.
 
 Etkin olmayan posta kutularında arama yaparken göz önünde bulundurmak istediğiniz birkaç şey aşağıdadır.
 
@@ -200,7 +200,7 @@ Etkin olmayan posta kutularında arama yaparken göz önünde bulundurmak istedi
 
 - Bazen kullanıcının etkin bir posta kutusu ve aynı SMTP adresine sahip etkin olmayan bir posta kutusu olabilir. Bu durumda, yalnızca içerik araması için konum olarak seçtiğiniz belirli posta kutusu aranılır. Başka bir deyişle, bir kullanıcının posta kutusunu aramaya eklerseniz, hem etkin hem de etkin olmayan posta kutularının arandığını varsayamazsınız. Yalnızca aramaya açıkça eklediğiniz posta kutusu aranacak.
 
-- Etkin olmayan bir posta kutusunda arama yapmak üzere içerik araması oluşturmak için Güvenlik & Uyumluluk Merkezi PowerShell'i kullanabilirsiniz. Bunu yapmak için, bir nokta ( ön eklemeniz gerekir. ) yazın. Örneğin, aşağıdaki komut, e-posta adresi pavelb@contoso.onmicrosoft.com etkin olmayan bir posta kutusunda arama sağlayan bir içerik araması oluşturur:
+- Etkin olmayan bir posta kutusunda arama yapmak üzere içerik araması oluşturmak için Güvenlik & Uyumluluğu PowerShell'i kullanabilirsiniz. Bunu yapmak için, bir nokta ( ön eklemeniz gerekir. ) yazın. Örneğin, aşağıdaki komut, e-posta adresi pavelb@contoso.onmicrosoft.com etkin olmayan bir posta kutusunda arama sağlayan bir içerik araması oluşturur:
 
    ```powershell
    New-ComplianceSearch -Name InactiveMailboxSearch -ExchangeLocation .pavelb@contoso.onmicrosoft.com -AllowNotFoundExchangeLocationsEnabled $true

@@ -15,16 +15,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Yasal düzenleme gereksinimlerini karşılamanıza ve dolandırıcı yöneticilere karşı korumanıza yardımcı olması için saklama ilkeleri ve bekletme etiketi ilkeleriyle Koruma Kilidi'ni kullanın.
-ms.openlocfilehash: 6ee7937bad487fcac8d1ee15483becfb276d9579
-ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
+ms.openlocfilehash: 228d4cd1a7778b5352df6d10d31b7e4c25af915f
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65922229"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016294"
 ---
 # <a name="use-preservation-lock-to-restrict-changes-to-retention-policies-and-retention-label-policies"></a>Saklama ilkeleri ve bekletme etiketi ilkelerindeki değişiklikleri kısıtlamak için Koruma Kilidi'ni kullanma
 
->*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -58,7 +58,7 @@ Koruma Kilidi kullanmanız gerekiyorsa PowerShell'i kullanmanız gerekir. Yönet
 
 Herhangi bir yapılandırmaya sahip tüm bekletme ilkeleri Koruma Kilidi'ne sahiptir. Saklama etiketi ilkesine Koruma Kilidi uygulamak için yalnızca öğeleri düzenleyici kayıt olarak işaretleyen etiketler içermelidir.
 
-1. [Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanın](/powershell/exchange/connect-to-scc-powershell).
+1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 2. [Get-RetentionCompliancePolicy](/powershell/module/exchange/get-retentioncompliancepolicy) komutunu çalıştırarak kilitlemek istediğiniz ilkenin adını bulun. Örneğin:
     

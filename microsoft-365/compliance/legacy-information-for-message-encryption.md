@@ -1,5 +1,5 @@
 ---
-title: Yeni e-Office 365 İleti Şifrelemesi
+title: Office 365 İleti Şifrelemesi için eski bilgiler
 f1.keywords:
 - NOCSH
 ms.author: krowley
@@ -19,299 +19,301 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 - admindeeplinkEXCHANGE
-description: Eski dosyaları kuruluş için OME Office 365 İleti Şifrelemesi geçişini anlıyoruz.
-ms.openlocfilehash: 6213aec3edd8d55c21ba4137a2052b08147aedc3
-ms.sourcegitcommit: 99067d5eb1fa7b094e7cdb1f7be65acaaa235a54
+description: Kuruluşunuz için eski dosyaların Office 365 İleti Şifrelemesi'ne (OME) nasıl geçirilmesini anlayın.
+ms.openlocfilehash: 2d994e2c521f11a70c6946e2f1a9a3a1a5766ba3
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2022
-ms.locfileid: "63010053"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014916"
 ---
-# <a name="legacy-information-for-office-365-message-encryption"></a>Yeni e-Office 365 İleti Şifrelemesi
+# <a name="legacy-information-for-office-365-message-encryption"></a>Office 365 İleti Şifrelemesi için eski bilgiler
 
-Henüz organizasyonlarınızı yeni OME özelliklerine taşıdıysanız, ancak OME'nin zaten dağıtmış olduğu bilgiler, bu makaledeki bilgiler organizasyonunız için geçerlidir. Microsoft, yeni OME özelliklerine, kurum için uygun olduğu anda bir plan yapmanızı önerir. Yönergeler için bkz[. Azure Information Protection Office 365 İleti Şifrelemesi üzerine yerleşik yeni güvenlik özellikleri ayarlama](set-up-new-message-encryption-capabilities.md). Yeni becerilerin nasıl ilk kez çalışması hakkında daha fazla bilgi almak için [bkz. Office 365 İleti Şifrelemesi](ome.md). Bu makalenin kalan bölümü, yeni OME özelliklerini piyasaya çıkarmadan önce OME davranışını ifade eder.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Bu Office 365 İleti Şifrelemesi, kuruluş içindeki ve dışındaki kişiler arasında şifrelenmiş e-posta iletileri gönderebilir ve alabilirsiniz. Office 365 İleti Şifrelemesi. Outlook.com, Yahoo, Gmail ve diğer e-posta hizmetleriyle çalışır. E-posta iletisi şifrelemesi, yalnızca hedeflenen alıcıların ileti içeriğini görüntüleyemelerini sağlamaya yardımcı olur.
+Kuruluşunuzu henüz Microsoft Purview İleti Şifrelemesi'ne taşımadıysanız ancak OME'yi zaten dağıttıysanız, bu makaledeki bilgiler kuruluşunuz için geçerlidir. Microsoft, kuruluşunuz için makul olduğu anda Microsoft Purview İleti Şifrelemesi'ne geçmek için bir plan yapmanızı önerir. Yönergeler için bkz. [Microsoft Purview İleti Şifrelemesini Ayarlama](set-up-new-message-encryption-capabilities.md). Yeni ileti şifrelemesi hakkında daha fazla bilgi edinmek istiyorsanız bkz. [İleti şifreleme](ome.md). Bu makalenin geri kalanı, Microsoft Purview İleti Şifrelemesi'nin yayımlanmasından önceki OME davranışını ifade eder.
+
+Office 365 İleti Şifrelemesi ile kuruluşunuz, kuruluşunuzun içindeki ve dışındaki kişiler arasında şifreli e-posta iletileri gönderebilir ve alabilir. Office 365 İleti Şifrelemesi Outlook.com, Yahoo, Gmail ve diğer e-posta hizmetleriyle çalışır. E-posta iletisi şifrelemesi, yalnızca hedeflenen alıcıların ileti içeriğini görüntüleyebilmesine yardımcı olur.
 
 İşte birkaç örnek:
 
-- Bir banka çalışanı müşterilere kredi kartı deyimleri gönderiyor
+- Banka çalışanı müşterilere kredi kartı ekstreleri gönderiyor
 - Sigorta şirketi temsilcisi müşterilere ilke ayrıntıları sağlar
-- Kredi aracısı, kredi uygulaması için müşteriden finansal bilgi istiyor
-- Sağlık sağlayıcısı hastalar için sağlık hizmetleri bilgilerini gönderiyor
-- Bir avukat müşteri veya başka bir avukata gizli bilgiler gönderiyor
+- Bir ipotek komisyoncusu, kredi başvurusu için müşteriden finansal bilgiler talep eder
+- Bir sağlık hizmeti sağlayıcısı hastalara sağlık hizmeti bilgileri gönderir
+- Avukat bir müşteriye veya başka bir avukata gizli bilgiler gönderir
 
-## <a name="how-office-365-message-encryption-works-without-the-new-capabilities"></a>Yeni Office 365 İleti Şifrelemesi olmadan nasıl çalışır?
+## <a name="how-office-365-message-encryption-works-without-the-new-capabilities"></a>Office 365 İleti Şifrelemesi yeni özellikler olmadan nasıl çalışır?
 
-Office 365 İleti Şifrelemesi, Hak Yönetimi (Azure RMS) Microsoft Azure bir çevrimiçi hizmettir. Azure RMS ile yöneticiler şifreleme koşullarını belirlemek için posta akışı kurallarını tanımlayabilir. Örneğin, kural, belirli bir alıcıya gönderilen tüm iletilerin şifrelenirken şifrelenir.
+Office 365 İleti Şifrelemesi, Microsoft Azure Rights Management (Azure RMS) üzerinde oluşturulmuş bir çevrimiçi hizmettir. Azure RMS ile yöneticiler, şifreleme koşullarını belirlemek için posta akışı kuralları tanımlayabilir. Örneğin, bir kural belirli bir alıcıya gönderilen tüm iletilerin şifrelenmesini gerektirebilir.
 
-Birisi bir şifreleme kuralıyla eşleşen bir Exchange Online e-posta iletisi gönderdiğinde, ileti bir HTML ekiyle gönderilir. Alıcı HTML ekını açar ve posta portalında şifrelenmiş iletiyi görüntüleme Office 365 İleti Şifrelemesi izler. Alıcı, Microsoft hesabıyla ya da Office 365 ile ilişkilendirilmiş bir iş veya okulla oturum açın ya da tek seferlik geçiş kodu kullanarak iletiyi görüntülemeyi seçebilir. Her iki seçenek de, şifrelenmiş iletiyi yalnızca hedeflenen alıcının görüntüleye olduğundan emin olmak için yardımcı olur. Bu işlem, yeni OME özellikleri için çok farklıdır.
+Birisi Exchange Online şifreleme kuralıyla eşleşen bir e-posta iletisi gönderdiğinde, ileti bir HTML eki ile gönderilir. Alıcı HTML ekini açar ve şifrelenmiş iletiyi Office 365 İleti Şifrelemesi portalında görüntülemek için yönergeleri izler. Alıcı, bir Microsoft hesabıyla veya Office 365 ilişkili bir iş veya okulla oturum açarak ya da tek seferlik bir geçiş kodu kullanarak iletiyi görüntülemeyi seçebilir. Her iki seçenek de şifrelenmiş iletiyi yalnızca hedeflenen alıcının görüntüleyebilmesini sağlamaya yardımcı olur. Bu işlem Microsoft Purview İleti Şifrelemesi için çok farklıdır.
 
-Aşağıdaki diyagramda, şifreleme ve şifre çözme işlemi aracılığıyla bir e-posta iletisinin pasajı özetlenir.
+Aşağıdaki diyagramda, şifreleme ve şifre çözme işlemi aracılığıyla bir e-posta iletisinin geçişi özetlenmiştir.
 
-![Şifreli bir e-postanın yolunu gösteren diyagram.](../media/O365-Office365MessageEncryption-Concept.png)
+![Şifrelenmiş e-postanın yolunu gösteren diyagram.](../media/O365-Office365MessageEncryption-Concept.png)
 
-Daha fazla bilgi için [bkz. Yeni OME Office 365 İleti Şifrelemesi öncesi eski işletim sistemi özellikleriyle ilgili hizmet bilgileri](legacy-information-for-message-encryption.md#LegacyServiceInfo).
+Daha fazla bilgi için bkz. [Microsoft Purview İleti Şifrelemesi'nin yayımlanmasından önce eski Office 365 İleti Şifrelemesi için hizmet bilgileri](legacy-information-for-message-encryption.md#LegacyServiceInfo).
 
-## <a name="defining-mail-flow-rules-for-office-365-message-encryption-that-dont-use-the-new-ome-capabilities"></a>Yeni OME Office 365 İleti Şifrelemesi kullanmayan e-postalar için posta akış kurallarını tanımlama
+## <a name="defining-mail-flow-rules-for-office-365-message-encryption-that-dont-use-microsoft-purview-message-encryption"></a>Microsoft Purview İleti Şifrelemesi kullanmayan Office 365 İleti Şifrelemesi için posta akışı kuralları tanımlama
 
-Kullanıcıların yeni Office 365 İleti Şifrelemesi olmadan e-postayı etkinleştirmek için, Exchange Online ve Exchange Online Protection yöneticileri posta Exchange kurallarını tanımlar. Bu kurallar, hem e-posta iletilerinin şifrelenmeleri gereken koşullar hem de ileti şifrelemesini kaldırma koşullarını belirler. Bir şifreleme eylemi kural için ayar olduğunda, hizmet iletileri göndermeden önce kural koşullarına uygun tüm iletiler üzerinde eylemi gerçekleştirir.
+yeni özellikler olmadan Office 365 İleti Şifrelemesini etkinleştirmek için, Exchange Online ve Exchange Online Protection yöneticileri Exchange posta akışı kuralları tanımlar. Bu kurallar, e-posta iletilerinin şifrelenmesi gereken koşulların yanı sıra ileti şifrelemesini kaldırma koşullarını belirler. Bir kural için bir şifreleme eylemi ayarlandığında, hizmet, iletileri göndermeden önce kural koşullarıyla eşleşen tüm iletilerde eylemi gerçekleştirir.
 
-Posta akış kuralları esnektir ve koşulları bir araya getirir ve böylelikle tek bir kuralda belirli güvenlik gereksinimlerini karşılar. Örneğin, belirtilen anahtar sözcükleri içeren ve dış alıcılara gönderilen tüm iletileri şifrelemek için bir kural oluşturabilirsiniz. Office 365 İleti Şifrelemesi e-posta alıcılarından gelen yanıtları da şifreler ve e-posta kullanıcılarınıza kolaylık sağlamak için bu yanıtların şifresini çözen bir kural oluşturabilirsiniz. Bu şekilde, kurumuz kullanıcılar yanıtları görüntülemek için şifreleme portalında oturum açmaz.
+Posta akışı kuralları esnektir ve koşulları birleştirerek belirli güvenlik gereksinimlerini tek bir kuralda karşılamanızı sağlar. Örneğin, belirtilen anahtar sözcükleri içeren ve dış alıcılara gönderilen tüm iletileri şifrelemek için bir kural oluşturabilirsiniz. Office 365 İleti Şifrelemesi, şifrelenmiş e-posta alıcılarından gelen yanıtları da şifreler ve e-posta kullanıcılarınıza kolaylık sağlamak için bu yanıtların şifresini çözen bir kural oluşturabilirsiniz. Bu şekilde, kuruluşunuzdaki kullanıcıların yanıtları görüntülemek için şifreleme portalında oturum açması gerekmez.
 
-Posta akış kuralları oluşturma hakkında daha Exchange için bkz. Posta akış [kuralları için Office 365 İleti Şifrelemesi](define-mail-flow-rules-to-encrypt-email.md).
+Exchange posta akışı kuralları oluşturma hakkında daha fazla bilgi için bkz. [Office 365 İleti Şifrelemesi için Kuralları Tanımlama](define-mail-flow-rules-to-encrypt-email.md).
 
-### <a name="use-the-eac-to-create-a-mail-flow-rule-for-encrypting-email-messages-without-the-new-ome-capabilities"></a>Yeni OME özellikleri olmadan e-posta iletilerini şifrelemek için e-posta akış kuralı oluşturmak üzere EAC kullanma
+### <a name="use-the-eac-to-create-a-mail-flow-rule-for-encrypting-email-messages-without-microsoft-purview-message-encryption"></a>EAC kullanarak Microsoft Purview İleti Şifrelemesi olmadan e-posta iletilerini şifrelemek için bir posta akışı kuralı oluşturma
 
-1. Web tarayıcısında, genel yönetici izinlerine sahip bir iş veya okul hesabı kullanarak [Office 365.](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser)
+1. Web tarayıcısında, genel yönetici izinleri verilmiş bir iş veya okul hesabı kullanarak [Office 365 oturum açın](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser).
 
-2. Yönetici **kutucuğunu** seçin.
+2. **Yönetici** kutucuğunu seçin.
 
-3. Genel Microsoft 365 yönetim merkezi Yönetim **merkezleri'ni Exchange**\>.<a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank"></a>
+3. Microsoft 365 yönetim merkezi **yönetim merkezleri** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">**Exchange**</a> seçin.
 
-4. EAC'de, Posta akışı **Kuralları'ne gidin** \> **ve** Yeni Yeni **simgesi'yi** ![seçin.](../media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \>**Yeni kural oluşturma**. EAC'nin kullanımı hakkında daha fazla bilgi için bkz[. Exchange Yönetim Merkezi'Exchange Online](/exchange/exchange-admin-center).
+4. EAC'de **Posta akışı** \> **Kuralları'na** gidin ve **Yeni Yeni simgesi'ni** ![seçin.](../media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \>**Yeni bir kural oluşturun**. EAC'yi kullanma hakkında daha fazla bilgi için bkz. [Exchange Online Exchange yönetim merkezi](/exchange/exchange-admin-center).
 
-5. Ad **kutusuna** kural için Bir ad yazın; örneğin Posta şifreleme DrToniRamos@hotmail.com.
+5. **Ad** alanına kural için DrToniRamos@hotmail.com için posta şifreleme gibi bir ad yazın.
 
-6. Bu **kuralı uygula altında bir** koşul seçin ve gerekirse bir değer girin. Örneğin, iletileri şifrelemek için şunları DrToniRamos@hotmail.com:
+6. **Bir koşul seçerseniz bu kuralı uygula** alanına bir değer girin ve gerekirse bir değer girin. Örneğin, DrToniRamos@hotmail.com giden iletileri şifrelemek için:
 
-   1. Şu **durumda bu kuralı uygula'da** **alıcıyı seçin**.
+   1. **Bu kuralı uygula** alanında **alıcıyı** seçin.
 
-   2. Kişi listesinden mevcut bir adı seçin veya onay adları kutusuna yeni bir **e-posta adresi** yazın.
+   2. Kişi listesinden var olan bir adı seçin veya **onay adları** kutusuna yeni bir e-posta adresi yazın.
 
-      - Var olan bir adı seçmek için, listeden adı seçin ve ardından Tamam'a **tıklayın**.
+      - Var olan bir adı seçmek için listeden seçin ve **ardından Tamam'a** tıklayın.
 
-      - Yeni bir ad girmek için, onay adları kutusuna bir **e-posta adresi yazın** ve adları onayla **Tamam'ı** \> **seçin**.
+      - Yeni bir ad girmek için, **onay adları** kutusuna bir e-posta adresi yazın ve ardından **adları** \> **denetle Tamam'ı** seçin.
 
-7. Daha fazla koşul eklemek için Diğer **seçenekler'i** , sonra koşul **ekle'yi seçin** ve listeden seçim yapabilirsiniz.
+7. Daha fazla koşul eklemek için **Diğer seçenekler'i** ve ardından **Koşul ekle'yi** seçin ve listeden seçin.
 
-   Örneğin, kuralı yalnızca alıcı kuruluş dışında olursa uygulamak için koşul ekle'yi seçin ve sonra  Alıcı, Kuruluş dışında **/** \> şirket dışında **Tamam'ı** \> **seçin**.
+   Örneğin, kuralı yalnızca alıcı kuruluşunuzun dışındaysa uygulamak için **Koşul ekle'yi** ve ardından Alıcı **kuruluş** \> **dışından/kuruluş** \> dışında **Tamam'ı** seçin.
 
-8. Yeni OME özelliklerini kullanmadan şifrelemeyi etkinleştirmek için,  \> Aşağıdakini yapın'da İleti güvenliğini değiştir'i seçin. **OME'nin** önceki sürümünü uygula'ya ve sonra da Kaydet'e **tıklayın**.
+8. Yeni OME özelliklerini kullanmadan şifrelemeyi etkinleştirmek için **Aşağıdakileri yapın** bölümünde **İleti güvenliğini** \> değiştir **OME'nin önceki sürümünü uygula'yı** ve ardından **Kaydet'i** seçin.
 
-   IRM lisansının etkinleştirilmemiş olduğu hatasını alırsanız eski OME'yi kullanasınız.
+   IRM lisanslamanın etkinleştirilmediğini belirten bir hata alırsanız eski OME kullanmıyorsunuz demektir.
 
-9. (İsteğe bağlı) Başka **bir eylem belirtmek** için Eylem ekle'yi seçin.
+9. (İsteğe bağlı) Başka bir eylem belirtmek için **Eylem ekle'yi** seçin.
 
-### <a name="use-exchange-online-powershell-to-create-a-mail-flow-rule-for-encrypting-email-messages-without-the-new-ome-capabilities"></a>Yeni Exchange Online OME özellikleri olmadan e-posta iletilerini şifrelemek için bir posta akış kuralı oluşturmak üzere PowerShell'i kullanma
+### <a name="use-exchange-online-powershell-to-create-a-mail-flow-rule-for-encrypting-email-messages-without-the-new-ome-capabilities"></a>Exchange Online PowerShell kullanarak yeni OME özellikleri olmadan e-posta iletilerini şifrelemek için bir posta akışı kuralı oluşturun
 
-1. Exchange Online PowerShell’e bağlanın. Daha fazla bilgi için bkz[. Bağlan PowerShell Exchange Online e geri Exchange Online.](/powershell/exchange/connect-to-exchange-online-powershell)
+1. Exchange Online PowerShell’e bağlanın. Daha fazla bilgi için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
-2. **New-TransportRule cmdlet'ini** kullanarak bir kural oluşturun ve _ApplyOME_ parametresini 'a ayarlayın`$true`.
+2. **New-TransportRule** cmdlet'ini kullanarak bir kural oluşturun ve _ApplyOME_ parametresini olarak `$true`ayarlayın.
 
-   Bu örnekte, bu e-posta iletilerine gönderilen DrToniRamos@hotmail.com şifrelenmeleri gerekir.
+   Bu örnek, DrToniRamos@hotmail.com gönderilen tüm e-posta iletilerinin şifrelenmesini gerektirir.
 
    ```powershell
    New-TransportRule -Name "Encrypt rule for Dr Toni Ramos" -SentTo "DrToniRamos@hotmail.com" -SentToScope "NotinOrganization" -ApplyOME $true
    ```
 
-   Burada,
+   Nerede
 
    - Yeni kuralın benzersiz adı "Dr Toni Ramos için kuralı şifrele" şeklindedir.
-   - _SentTo parametresi_ ileti alıcılarını (ad, e-posta adresi, ayırt edici ad vb. ile tanımlanır) belirtir. Bu örnekte alıcı, "Adres" e-posta adresiyle DrToniRamos@hotmail.com.
-   - _SentToScope_ parametresi ileti alıcılarının konumunu belirtir. Bu örnekte, alıcının posta kutusu Hotmail'dedir ve kuruluşun bir parçası değildir; dolayısıyla değer `NotInOrganization` kullanılır.
+   - _SentTo_ parametresi ileti alıcılarını belirtir (ad, e-posta adresi, ayırt edici ad vb. ile tanımlanır). Bu örnekte, alıcı "DrToniRamos@hotmail.com" e-posta adresiyle tanımlanır.
+   - _SentToScope_ parametresi, ileti alıcılarının konumunu belirtir. Bu örnekte, alıcının posta kutusu hotmail'dedir ve kuruluşun bir parçası olmadığından değer `NotInOrganization` kullanılır.
 
    Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [New-TransportRule](/powershell/module/exchange/New-TransportRule).
 
-### <a name="remove-encryption-from-email-replies-encrypted-without-the-new-ome-capabilities"></a>Yeni OME özellikleri olmadan şifrelenen e-posta yanıtlarından şifrelemeyi kaldırma
+### <a name="remove-encryption-from-email-replies-encrypted-without-microsoft-purview-message-encryption"></a>Microsoft Purview İleti Şifrelemesi olmadan şifrelenen e-posta yanıtlarından şifrelemeyi kaldırma
 
-E-posta kullanıcılarınız şifrelenmiş iletiler gönderirken, bu iletilerin alıcıları şifrelenmiş yanıtlarla yanıt gönderebilir. E-posta kullanıcılarının iletileri görüntülemek için şifreleme portalında oturum açmaları gerektirsin diye yanıtlardan şifrelemeyi otomatik olarak kaldırmak için posta akışı kuralları oluşturabilirsiniz. Bu kuralları tanımlamak için EAC veya Windows PowerShell cmdlet'lerini kullanabilirsiniz. Şifresini çözebilirsiniz ve bu iletilerin şifresini çözebilirsiniz ve bu iletiler kuruluş içinden gönderilen iletilere yanıt olarak gönderilir. Kuruluş dışından kaynaklanan şifreli iletilerin şifresini çözesiniz.
+E-posta kullanıcılarınız şifreli iletiler gönderdiğinde, bu iletilerin alıcıları şifrelenmiş yanıtlarla yanıt verebilir. Kuruluşunuzdaki e-posta kullanıcılarının bunları görüntülemek için şifreleme portalında oturum açmasını gerektirmeyecek şekilde yanıtlardan şifrelemeyi otomatik olarak kaldırmak için posta akışı kuralları oluşturabilirsiniz. Bu kuralları tanımlamak için EAC veya Exchange Online PowerShell cmdlet'lerini kullanabilirsiniz. Kuruluşunuzun içinden gönderilen iletilerin veya kuruluşunuzun içinden gönderilen iletilere yanıt olan iletilerin şifresini çözebilirsiniz. Kuruluşunuzun dışından gelen şifrelenmiş iletilerin şifresini çözemezsiniz.
 
-#### <a name="use-the-eac-to-create-a-rule-for-removing-encryption-from-email-replies-encrypted-without-the-new-ome-capabilities"></a>Yeni OME özellikleri olmadan şifrelenmiş e-posta yanıtlarından şifrelemeyi kaldırmak için EAC'i kullanma
+#### <a name="use-the-eac-to-create-a-rule-for-removing-encryption-from-email-replies-encrypted-without-microsoft-purview-message-encryption"></a>Microsoft Purview İleti Şifrelemesi olmadan şifrelenmiş e-posta yanıtlarından şifrelemeyi kaldırmaya yönelik bir kural oluşturmak için EAC'yi kullanın
 
-1. Bir web tarayıcısında, yönetici izinleri verilmiş olan bir iş veya okul hesabı [kullanarak Office 365.](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser)
+1. Bir web tarayıcısında, yönetici izinleri verilmiş bir iş veya okul hesabı kullanarak [Office 365 oturum açın](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser).
 
-2. Yönetici **kutucuğunu** seçin.
+2. **Yönetici** kutucuğunu seçin.
 
-3. Daha fazla bilgi >Microsoft 365 yönetim merkezi Yönetim **merkezleri'ni** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">**Exchange**</a>.
+3. Microsoft 365 yönetim merkezi **yönetim merkezleri** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">**Exchange**</a> seçin.
 
-4. EAC'de, Posta akışı **Kuralları'ne gidin** \> **ve** Yeni Yeni **simgesi'yi** ![seçin.](../media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \>**Yeni kural oluşturma**. EAC'nin kullanımı hakkında daha fazla bilgi için bkz[. Exchange Yönetim Merkezi'Exchange Online](/exchange/exchange-admin-center).
+4. EAC'de **Posta akışı** \> **Kuralları'na** gidin ve **Yeni Yeni simgesi'ni** ![seçin.](../media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \>**Yeni bir kural oluşturun**. EAC'yi kullanma hakkında daha fazla bilgi için bkz. [Exchange Online Exchange yönetim merkezi](/exchange/exchange-admin-center).
 
-5. Ad **kutusuna** kural için bir ad yazın; örneğin Gelen postadan şifrelemeyi kaldır.
+5. **Ad** alanına kural için gelen postadan şifrelemeyi kaldır gibi bir ad yazın.
 
-6. Alıcı **Kuruluş içinde yer alıyor** gibi iletilerden şifrelemenin kaldırılması gereken koşulları seçerse Bu **kuralı** \> **uygula'da.**
+6. İletilerden şifrelemenin kaldırılması gereken koşulları (örneğin Alıcı kuruluş içinde **bulunur**\>) seçerseniz **, Bu kuralı uygula** **bölümünde.**
 
-7. Bunu **yapın'da** İleti **güvenliğini değiştir OME'nin** \> **önceki sürümünü kaldır'ı seçin**.
+7. **Aşağıdakileri yapın bölümünde** **İleti güvenliğini** \> değiştir **OME'nin önceki sürümünü kaldır'ı** seçin.
 
 8. **Kaydet**'i seçin.
 
-#### <a name="use-exchange-online-powershell-to-create-a-rule-to-remove-encryption-from-email-replies-encrypted-without-the-new-ome-capabilities"></a>Yeni OME Exchange Online olmadan şifrelenmiş e-posta yanıtlarından şifrelemeyi kaldırmak üzere bir kural oluşturmak için PowerShell'i kullanma
+#### <a name="use-exchange-online-powershell-to-create-a-rule-to-remove-encryption-from-email-replies-encrypted-without-the-new-ome-capabilities"></a>Exchange Online PowerShell kullanarak yeni OME özellikleri olmadan şifrelenmiş e-posta yanıtlarından şifrelemeyi kaldırma kuralı oluşturma
 
-1. Exchange Online PowerShell’e bağlanın. Daha fazla bilgi için bkz[. Bağlan PowerShell Exchange Online e geri Exchange Online.](/powershell/exchange/connect-to-exchange-online-powershell)
+1. Exchange Online PowerShell’e bağlanın. Daha fazla bilgi için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
-2. **New-TransportRule cmdlet'ini** kullanarak bir kural oluşturun ve _RemoveOME parametresini 'a_ ayarlayın`$true`.
+2. **New-TransportRule** cmdlet'ini kullanarak bir kural oluşturun ve _RemoveOME_ parametresini olarak `$true`ayarlayın.
 
-   Bu örnek, kuruluşta alıcılara gönderilen tüm postalardan şifrelemeyi kaldırır.
+   Bu örnek, kuruluştaki alıcılara gönderilen tüm postalardan şifrelemeyi kaldırır.
 
    ```powershell
    New-TransportRule -Name "Remove encryption from incoming mail" -SentToScope "InOrganization" -RemoveOME $true
    ```
 
-   Burada,
+   Nerede
 
-   - Yeni kuralın benzersiz adı "Gelen postadan şifrelemeyi kaldır" adıdır.
-   - _SentToScope_ parametresi ileti alıcılarının konumunu belirtir. Bu örnekte, değer `InOrganization` değeri kullanılır ve bu da aşağıdakilerden birini gösterir:
-     - Alıcı, kurum içinde posta kutusu, posta kullanıcısı, grup veya posta özelliği etkin bir ortak klasördür.
-     - Alıcının e-posta adresi yetkili etki alanı veya kuruluşta iç geçiş etki alanı olarak yapılandırılmış kabul edilen bir etki alanındadır ve ileti kimliği doğrulanmış bir bağlantı üzerinden gönderilmiş veya alınmıştır. 
+   - Yeni kuralın benzersiz adı "Gelen postadan şifrelemeyi kaldır" şeklindedir.
+   - _SentToScope_ parametresi, ileti alıcılarının konumunu belirtir. Bu örnekte, aşağıdakilerden birini gösteren değer `InOrganization` değeri kullanılır:
+     - Alıcı, kuruluşunuzda posta kutusu, posta kullanıcısı, grup veya posta özellikli bir ortak klasördür.
+     - Alıcının e-posta adresi, kuruluşunuzda yetkili bir etki alanı veya iç geçiş etki alanı olarak yapılandırılmış kabul edilen bir etki alanındadır _ve_ ileti kimliği doğrulanmış bir bağlantı üzerinden gönderilmiş veya alınmış.
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [New-TransportRule](/powershell/module/exchange/New-TransportRule).
 
 ## <a name="sending-viewing-and-replying-to-messages-encrypted-without-the-new-capabilities"></a>Yeni özellikler olmadan şifrelenmiş iletileri gönderme, görüntüleme ve yanıtlama
 
-Otomatik Office 365 İleti Şifrelemesi, e-posta iletileri yönetici tanımlı kurallara göre otomatik olarak şifrelenir. Şifreli bir iletiyi alıcının Gelen Kutusu'na ekli bir HTML dosyasıyla birlikte gönderen bir e-posta gelir.
+Office 365 İleti Şifrelemesi ile, e-posta iletileri yönetici tanımlı kurallara göre otomatik olarak şifrelenir. Şifrelenmiş ileti taşıyan bir e-posta, alıcının Gelen Kutusu'na ekli bir HTML dosyasıyla gelir.
 
-Alıcılar iletide verilen yönergeleri izleyerek eki açar ve Microsoft hesabı ya da Microsoft hesabı ya da microsoft hesabıyla ilişkilendirilmiş bir iş veya Office 365. Alıcıların iki hesabı da yoksa, şifreli iletiyi görüntülemek için oturum açmalarına izin vermeleri için bir Microsoft hesabı oluşturmaları gönderilir. Alternatif olarak, alıcılar iletiyi görüntülemek için tek seferlik geçiş kodu alır. Oturum açtıktan veya tek seferlik geçiş kodunu kullandıktan sonra, alıcılar şifresi çözülen iletiyi görüntüler ve şifrelenmiş bir yanıt gönderebilir.
+Alıcılar eki açmak için iletideki yönergeleri izler ve bir Microsoft hesabı veya Office 365 ile ilişkilendirilmiş bir iş veya okul kullanarak kimlik doğrulaması yapar. Alıcıların iki hesabı da yoksa, şifrelenmiş iletiyi görüntülemek için oturum açmalarını sağlayacak bir Microsoft hesabı oluşturmaya yönlendirilirler. Alternatif olarak, alıcılar iletiyi görüntülemek için tek seferlik bir geçiş kodu almayı seçebilir. Oturum açtıktan veya tek seferlik bir geçiş kodu kullandıktan sonra, alıcılar şifresi çözülen iletiyi görüntüleyebilir ve şifreli bir yanıt gönderebilir.
 
-## <a name="customize-encrypted-messages-with-office-365-message-encryption"></a>Şifreli iletileri iletilerle Office 365 İleti Şifrelemesi
+## <a name="customize-encrypted-messages-with-office-365-message-encryption"></a>şifrelenmiş iletileri Office 365 İleti Şifrelemesi ile özelleştirme
 
-Bir Exchange Online yöneticisi Exchange Online Protection olarak, şifrelenmiş iletilerinizi özelleştirebilirsiniz. Örneğin, şirketinizin markasını ve logosunu ekleyebilir, bir giriş belirtebilirsiniz ve şifreli iletilerde ve alıcıların şifreli iletilerinizi görüntüley haberleri olduğu portalda tekz yazı  eklersiniz. Bu Windows PowerShell cmdlet'lerini kullanarak, şifreli e-posta iletilerini alıcıları için görüntüleme deneyiminin aşağıdaki yönlerini özelleştirebilirsiniz:
+Exchange Online ve Exchange Online Protection yöneticisi olarak şifrelenmiş iletilerinizi özelleştirebilirsiniz. Örneğin, şirketinizin markasını ve logosunu ekleyebilir, bir giriş belirtebilir, şifrelenmiş iletilere ve alıcıların şifrelenmiş iletilerinizi görüntülediği portalda sorumluluk reddi metni ekleyebilirsiniz. Exchange Online PowerShell cmdlet'lerini kullanarak, şifrelenmiş e-posta iletilerinin alıcıları için görüntüleme deneyiminin aşağıdaki yönlerini özelleştirebilirsiniz:
 
-- Şifreli iletiyi içeren e-postanın giriş metni
-- Şifreli iletiyi içeren e-postanın yasal uyarı metni
-- Portal metni, portalı görüntüleme iletisinde görünür
-- E-posta iletisinde ve portal görüntülemede görünen logo
+- Şifrelenmiş iletiyi içeren e-postanın giriş metni
+- Şifrelenmiş iletiyi içeren e-postanın yasal uyarı metni
+- İleti görüntüleme portalında görünecek portal metni
+- E-posta iletisinde ve görüntüleme portalında görünecek logo
 
-Ayrıca, herhangi bir anda varsayılan görünüme ve görünüme geri dönabilirsiniz.
+Ayrıca istediğiniz zaman varsayılan görünüme geri dönebilirsiniz.
 
-Aşağıdaki örnekte, e-posta ekine ContosoPharma için özel bir logo gösterir:
+Aşağıdaki örnekte, e-posta ekinde ContosoPharma için özel bir logo gösterilmektedir:
 
 > [!div class="mx-imgBorder"]
 > ![Görünüm şifreli ileti sayfasının örneği.](../media/TA-OME-3attachment2.jpg)
 
-### <a name="to-customize-encryption-email-messages-and-the-encryption-portal-with-your-organizations-brand"></a>Şifreleme e-posta iletilerini ve şifreleme portalını kuruluş markasıyla özelleştirmek için
+### <a name="to-customize-encryption-email-messages-and-the-encryption-portal-with-your-organizations-brand"></a>Şifreleme e-posta iletilerini ve şifreleme portalını kuruluşunuzun markasıyla özelleştirmek için
 
-1. Bağlan PowerShell Exchange Online'i kullanma konusunda açıklandığı [gibi Uzak PowerShell Bağlan Exchange Online kadar kullanabilirsiniz](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
-2. Aşağıda Set-OMEConfiguration cmdlet'ini kullanın: [Set-OMEConfiguration veya](/powershell/module/exchange/set-omeconfiguration) kılavuz için aşağıdaki tabloyu kullanın.
-
-   **Şifreleme özelleştirme seçenekleri**
-
-   |Şifreleme deneyiminin bu özelliğini özelleştirmek için|Bu Windows PowerShell kullanın|
-   |---|---|
-   |Şifreli e-posta iletilerine eşlikan varsayılan metin <p> Şifreli iletileri görüntüleme yönergelerinin üzerinde varsayılan metin görüntülenir|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -EmailText "<string of up to 1024 characters>"` <p> **Örnek:** `Set-OMEConfiguration -Identity "OME Configuration" -EmailText "Encrypted message from ContosoPharma secure messaging system"`|
-   |Şifreli iletiyi içeren e-postada Yasal Uyarı bildirimi|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> DisclaimerText "<your disclaimer statement, string of up to 1024 characters>"` <p> **Örnek:** `Set-OMEConfiguration -Identity "OME Configuration" -DisclaimerText "This message is confidential for the use of the addressee only"`|
-   |Şifreli posta görüntüleme portalının en üstünde görünen metin|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -PortalText "<text for your portal, string of up to 128 characters>"` <p> **Örnek:** `Set-OMEConfiguration -Identity "OME Configuration" -PortalText "ContosoPharma secure email portal"`|
-   |Logo|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -Image <Byte[]>` <p> **Örnek:** `Set-OMEConfiguration -Identity "OME configuration" -Image ([System.IO.File]::ReadAllBytes('C:\Temp\contosologo.png'))` <p> Desteklenen dosya biçimleri: .png, .jpg, .bmp veya .tiff <p> Logo dosyasının en iyi boyutu: 40 KB'den küçük <p> Logo resminin en uygun boyutu: 170x70 piksel|
-
-### <a name="to-remove-brand-customizations-from-encryption-email-messages-and-the-encryption-portal"></a>Şifreleme e-posta iletilerinden ve şifreleme portalında marka özelleştirmelerini kaldırmak için
-
-1. Bağlan PowerShell Exchange Online'i kullanma konusunda açıklandığı [gibi Uzak PowerShell Bağlan Exchange Online kadar kullanabilirsiniz](/powershell/exchange/connect-to-exchange-online-powershell).
-
-2. Aşağıda açıklandığı Set-OMEConfiguration kullanın: [Set-OMEConfiguration](/powershell/module/exchange/set-omeconfiguration). DisclaimerText, EmailText ve PortalText değerlerinden, organizasyon markalı özelleştirmelerini kaldırmak için, değeri boş bir dizeye, ayarlayın. `""` Logo gibi tüm resim değerleri için değeri olarak ayarlayın `"$null"`.
+2. Burada açıklandığı gibi Set-OMEConfiguration cmdlet'ini kullanın: [Set-OMEConfiguration](/powershell/module/exchange/set-omeconfiguration) veya rehberlik için aşağıdaki tabloyu kullanın.
 
    **Şifreleme özelleştirme seçenekleri**
 
-   |Şifreleme deneyiminin bu özelliğini varsayılan metin ve görüntüye geri döndürme|Bu Windows PowerShell kullanın|
+   |Şifreleme deneyiminin bu özelliğini özelleştirmek için|Bu Exchange Online PowerShell komutlarını kullanın|
    |---|---|
-   |Şifreli e-posta iletilerine eşlikan varsayılan metin <p> Şifreli iletileri görüntüleme yönergelerinin üzerinde varsayılan metin görüntülenir|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -EmailText "<empty string>"` <p> **Örnek:** `Set-OMEConfiguration -Identity "OME Configuration" -EmailText ""`|
-   |Şifreli iletiyi içeren e-postada Yasal Uyarı bildirimi <p> |`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> DisclaimerText "<empty string>"` <p> **Örnek:** `Set-OMEConfiguration -Identity "OME Configuration" -DisclaimerText ""`|
-   |Şifreli posta görüntüleme portalının en üstünde görünen metin|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -PortalText "<empty string>"` <p> **Varsayılan değere geri döndürülen örnek:** `Set-OMEConfiguration -Identity "OME Configuration" -PortalText ""`|
-   |Logo|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -Image <"$null">` <p> **Varsayılan değere geri döndürülen örnek:** `Set-OMEConfiguration -Identity "OME configuration" -Image $null`|
+   |Şifrelenmiş e-posta iletilerine eşlik eden varsayılan metin <p> Şifrelenmiş iletileri görüntüleme yönergelerinin üzerinde varsayılan metin görüntülenir|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -EmailText "<string of up to 1024 characters>"` <p> **Örnek:** `Set-OMEConfiguration -Identity "OME Configuration" -EmailText "Encrypted message from ContosoPharma secure messaging system"`|
+   |Şifrelenmiş iletiyi içeren e-postadaki yasal uyarı deyimi|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> DisclaimerText "<your disclaimer statement, string of up to 1024 characters>"` <p> **Örnek:** `Set-OMEConfiguration -Identity "OME Configuration" -DisclaimerText "This message is confidential for the use of the addressee only"`|
+   |Şifrelenmiş posta görüntüleme portalının en üstünde görünen metin|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -PortalText "<text for your portal, string of up to 128 characters>"` <p> **Örnek:** `Set-OMEConfiguration -Identity "OME Configuration" -PortalText "ContosoPharma secure email portal"`|
+   |Logo|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -Image <Byte[]>` <p> **Örnek:** `Set-OMEConfiguration -Identity "OME configuration" -Image ([System.IO.File]::ReadAllBytes('C:\Temp\contosologo.png'))` <p> Desteklenen dosya biçimleri: .png, .jpg, .bmp veya .tiff <p> En uygun logo dosyası boyutu: 40 KB'tan az <p> En uygun logo görüntüsü boyutu: 170x70 piksel|
 
-## <a name="service-information-for-legacy-office-365-message-encryption-prior-to-the-release-of-the-new-ome-capabilities"></a>Yeni OME Office 365 İleti Şifrelemesi öncesi eski sürümler için hizmet bilgileri
+### <a name="to-remove-brand-customizations-from-encryption-email-messages-and-the-encryption-portal"></a>Şifreleme e-posta iletilerinden ve şifreleme portalından marka özelleştirmelerini kaldırmak için
+
+1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+
+2. Burada açıklandığı gibi Set-OMEConfiguration cmdlet'ini kullanın: [Set-OMEConfiguration](/powershell/module/exchange/set-omeconfiguration). Kuruluşunuzun markalı özelleştirmelerini DisclaimerText, EmailText ve PortalText değerlerinden kaldırmak için değeri boş bir dize olarak `""`ayarlayın. Logo gibi tüm görüntü değerleri için değerini olarak `"$null"`ayarlayın.
+
+   **Şifreleme özelleştirme seçenekleri**
+
+   |Şifreleme deneyiminin bu özelliğini varsayılan metin ve görüntüye geri döndürmek için|Bu Exchange Online PowerShell komutlarını kullanın|
+   |---|---|
+   |Şifrelenmiş e-posta iletilerine eşlik eden varsayılan metin <p> Şifrelenmiş iletileri görüntüleme yönergelerinin üzerinde varsayılan metin görüntülenir|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -EmailText "<empty string>"` <p> **Örnek:** `Set-OMEConfiguration -Identity "OME Configuration" -EmailText ""`|
+   |Şifrelenmiş iletiyi içeren e-postadaki yasal uyarı deyimi <p> |`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> DisclaimerText "<empty string>"` <p> **Örnek:** `Set-OMEConfiguration -Identity "OME Configuration" -DisclaimerText ""`|
+   |Şifrelenmiş posta görüntüleme portalının en üstünde görünen metin|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -PortalText "<empty string>"` <p> **Varsayılana geri dönme örneği:** `Set-OMEConfiguration -Identity "OME Configuration" -PortalText ""`|
+   |Logo|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -Image <"$null">` <p> **Varsayılana geri dönme örneği:** `Set-OMEConfiguration -Identity "OME configuration" -Image $null`|
+
+## <a name="service-information-for-legacy-office-365-message-encryption-prior-to-the-release-of-the-new-ome-capabilities"></a>Yeni OME özellikleri yayımlanmadan önce eski Office 365 İleti Şifrelemesi için hizmet bilgileri
 <a name="LegacyServiceInfo"> </a>
 
-Aşağıdaki tablo, yeni OME Office 365 İleti Şifrelemesi öncesi hizmet için teknik ayrıntılar sağlar.
+Aşağıdaki tabloda, Microsoft Purview İleti Şifrelemesi'nin yayımlanmasından önce Office 365 İleti Şifrelemesi hizmeti için teknik ayrıntılar sağlanır.
 
 |Hizmet ayrıntıları|Açıklama|
 |---|---|
-|İstemci cihazı gereksinimleri|HTML eki Form Gönderisini destekleyen modern bir tarayıcıda açılabilir olduğu sürece, şifrelenmiş iletiler tüm istemci cihazlarında ılabilir.|
-|Şifreleme algoritması ve Federal Bilgi İşleme Standartları (FIPS) uyumluluğu|Office 365 İleti Şifrelemesi Azure Bilgi Hakları Yönetimi (IRM) ile aynı şifreleme anahtarlarını kullanır ve Şifreleme Modu 2'Windows (RSA için 2K anahtar ve SHA-1 sistemleri için 256 bit tuşu) destekler. Temel IRM şifreleme modları hakkında daha fazla bilgi için bkz. [AD RMS Şifreleme Modları](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh867439(v=ws.10)).|
-|Desteklenen ileti türleri|Office 365 İleti Şifrelemesi IPM ileti sınıfı kimliğine sahip öğeler için **destekler. Not**. Daha fazla bilgi için bkz [. Öğe türleri ve ileti sınıfları](/office/vba/outlook/Concepts/Forms/item-types-and-message-classes).|
-|İleti boyutu sınırları|Office 365 İleti Şifrelemesi 25 megabayta kadar olan iletileri şifreler. İleti boyutu sınırları hakkında daha fazla ayrıntı için bkz. [Exchange Online tıklayın](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).|
-|Exchange Online-posta bekletme ilkelerini gönderme|Exchange Online iletileri depolamaz.|
-|Destek için dil Office 365 İleti Şifrelemesi|Office 365 şifreleme, aşağıdaki Microsoft 365 dilleri destekler: <p> Gelen e-posta iletileri ve ekli HTML dosyaları, gönderenin dil ayarlarına göre yerelleştirilmiştir. <p> Görüntüleme portalı, alıcının tarayıcı ayarlarına göre yerelleştirilmiştir. <p> Şifreli iletinin gövdesi (içeriği) yerelleştirilmiş değildir.|
-|OME Portalı ve OME Görüntüleyicisi Uygulaması için gizlilik bilgileri|Microsoft [Office 365 Şifreleme Portalı](https://privacy.microsoft.com/privacystatement) gizlilik bildirimi, Microsoft'un özel bilgilerinizi kullanarak ne yaptığını ve bu konuda bir şey yapmama hakkında ayrıntılı bilgi sağlar.|
+|İstemci cihaz gereksinimleri|Html eki Form Post'u destekleyen modern bir tarayıcıda açıldığı sürece şifrelenmiş iletiler herhangi bir istemci cihazında görüntülenebilir.|
+|Şifreleme algoritması ve Federal Bilgi İşleme Standartları (FIPS) uyumluluğu|Office 365 İleti Şifrelemesi, Windows Azure Information Rights Management (IRM) ile aynı şifreleme anahtarlarını kullanır ve Şifreleme Modu 2'yi (RSA için 2K anahtar ve SHA-1 sistemleri için 256 bit anahtar) destekler. Temel alınan IRM şifreleme modları hakkında daha fazla bilgi için bkz. [AD RMS Şifreleme Modları](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh867439(v=ws.10)).|
+|Desteklenen ileti türleri|Office 365 İleti Şifrelemesi yalnızca IPM ileti sınıfı kimliğine sahip öğeler için desteklenir **. Not.** Daha fazla bilgi için bkz [. Öğe türleri ve ileti sınıfları](/office/vba/outlook/Concepts/Forms/item-types-and-message-classes).|
+|İleti boyutu sınırları|Office 365 İleti Şifrelemesi en fazla 25 megabaytlık iletileri şifreleyebilir. İleti boyutu sınırları hakkında daha fazla bilgi için bkz. [Exchange Online Sınırları](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).|
+|E-posta bekletme ilkelerini Exchange Online|Exchange Online şifrelenmiş iletileri depolamaz.|
+|Office 365 İleti Şifrelemesi için dil desteği|Office 365 İleti şifrelemesi aşağıdaki gibi Microsoft 365 dilleri destekler: <p> Gelen e-posta iletileri ve ekli HTML dosyaları, gönderenin dil ayarlarına göre yerelleştirilir. <p> Görüntüleme portalı, alıcının tarayıcı ayarlarına göre yerelleştirilir. <p> Şifrelenmiş iletinin gövdesi (içeriği) yerelleştirilmemiş.|
+|OME Portalı ve OME Görüntüleyici Uygulaması için gizlilik bilgileri|[Office 365 Microsoft Mesajlaşma Şifreleme Portalı gizlilik bildirimi](https://privacy.microsoft.com/privacystatement), Microsoft'un özel bilgilerinizle ne yaptığı ve neleri yapmadığı hakkında ayrıntılı bilgi sağlar.|
 
 ## <a name="frequently-asked-questions-about-legacy-ome"></a>Eski OME hakkında Sık Sorulan Sorular
 <a name="LegacyServiceInfo"> </a>
 
-Bu konuda sorularınız Office 365 İleti Şifrelemesi? İşte bazı yanıtlar. Size gerekenleri bulamıyorsanız, daha fazla bilgi için [Microsoft Tech Community forumlarına Office 365](https://techcommunity.microsoft.com/t5/Office-365/ct-p/Office365).
+Office 365 İleti Şifrelemesi hakkında sorularınız mı var? İşte bazı yanıtlar. İhtiyacınız olanı bulamıyorsanız Office 365 [için Microsoft Tech Community forumlarına](https://techcommunity.microsoft.com/t5/Office-365/ct-p/Office365) bakın.
 
- **Q. Kullanıcılarım, kuruluşlarımızın dışındaki alıcılara şifreli e-posta iletileri gönderiyor. Dış alıcıların e-posta iletileriyle şifrelenmiş e-posta iletilerini okumak ve yanıtlamak için bir şey yapmaları Office 365 İleti Şifrelemesi?**
+ **S. Kullanıcılarım kuruluş dışındaki alıcılara şifreli e-posta iletileri gönderiyor. Office 365 İleti Şifrelemesi ile şifrelenmiş e-posta iletilerini okumak ve yanıtlamak için dış alıcıların yapması gereken bir şey var mı?**
 
-Şifreli ileti alan ve Microsoft 365 olan alıcılar, bunları iki şekilden birini görüntüleyebilirsiniz:
+Kuruluşunuzun dışındaki Microsoft 365 şifrelenmiş ileti alan alıcılar bunları iki yoldan biriyle görüntüleyebilir:
 
-- Microsoft hesabıyla ya da microsoft hesabıyla ilişkilendirilmiş bir iş veya okul hesabıyla oturum Office 365.
+- Microsoft hesabıyla veya Office 365 ile ilişkilendirilmiş bir iş veya okul hesabıyla oturum açarak.
 
 - Tek seferlik geçiş kodu kullanarak.
 
- **Q. Şifrelenmiş Microsoft 365 bulutta mı yoksa Microsoft sunucularında mı depolanıyor?**
+ **S. Şifrelenmiş Microsoft 365 iletiler bulutta mı yoksa Microsoft sunucularında mı depolanır?**
 
-Hayır, şifreli iletiler alıcının e-posta sisteminde tutulur ve alıcı iletiyi açtığında, geçici olarak Microsoft sunucularında görüntülemek için gönderilir. İletiler burada depolanmaz.
+Hayır, şifrelenmiş iletiler alıcının e-posta sisteminde tutulur ve alıcı iletiyi açtığında, microsoft sunucularında görüntülenmek üzere geçici olarak gönderilir. İletiler orada depolanmaz.
 
- **Q. Şifreli e-posta iletilerini markam ile özelleştirilebilir miyim?**
+ **S. Şifrelenmiş e-posta iletilerini markamla özelleştirebilir miyim?**
 
-Evet. Windows PowerShell cmdlet'lerini kullanarak, şifrelenmiş e-posta iletilerinin üstünde görünen varsayılan metni, e-posta iletisi ve şifreleme portalı için kullanmak istediğiniz logoyu özelleştirebilirsiniz. Bu özellik artık OMEv2'de kullanılabilir. Ayrıntılar için bkz [. Şifreli iletilere markalama ekleme](add-your-organization-brand-to-encrypted-messages.md).
+Evet. Exchange Online PowerShell cmdlet'lerini kullanarak şifrelenmiş e-posta iletilerinin en üstünde görünen varsayılan metni, yasal uyarı metnini ve e-posta iletisi ile şifreleme portalında kullanmak istediğiniz logoyu özelleştirebilirsiniz. Bu özellik artık OMEv2'de kullanılabilir. Ayrıntılar için bkz. [Şifrelenmiş iletilere marka ekleme](add-your-organization-brand-to-encrypted-messages.md).
 
- **Q. Bu hizmet kuruluşumda her kullanıcı için bir lisans gerektirir mi?**
+ **S. Hizmet, kuruluşumdaki her kullanıcı için bir lisans gerektiriyor mu?**
 
-Kuruluşta şifreli e-posta gönderen her kullanıcı için bir lisans gereklidir.
+Kuruluştaki şifrelenmiş e-posta gönderen her kullanıcı için bir lisans gereklidir.
 
- **Q. Dış alıcılar abonelik gerektirir mi?**
+ **S. Dış alıcılar için abonelik gerekiyor mu?**
 
-Hayır, dış alıcıların şifreli iletileri okuması veya yanıtlaması için abonelik gerektirmez.
+Hayır, dış alıcıların şifrelenmiş iletileri okuması veya yanıtlaması için abonelik gerekmez.
 
- **Q. Hak Yönetimi Office 365 İleti Şifrelemesi (RMS) arasında ne fark vardır?**
+ **S. Office 365 İleti Şifrelemesi'nin Rights Management Hizmetleri'nden (RMS) farkı nedir?**
 
-RMS, şu tür yerleşik şablonlar sağlayarak kuruluşun dahili e-postaları için Bilgi Hakları Koruma özellikleri sağlar: Iletme ve Şirket için Gizli değil. Office 365 İleti Şifrelemesi hem dış alıcılara hem de iç alıcılara gönderilen iletiler için e-posta iletisi şifrelemesi destekler.
+RMS, aşağıdakiler gibi yerleşik şablonlar sağlayarak kuruluşun iç e-postaları için Bilgi Hakları Koruması özellikleri sağlar: İletme ve Şirkete Özel. Office 365 İleti Şifrelemesi, hem dış alıcılara hem de iç alıcılara gönderilen iletiler için e-posta iletisi şifrelemesini destekler.
 
- **Q. S/MIME Office 365 İleti Şifrelemesi den farklı olan nedir?**
+ **S. Office 365 İleti Şifrelemesi'nin S/MIME'den farkı nedir?**
 
-S/MIME temelde istemci tarafı bir şifreleme teknolojisidir ve karmaşık sertifika yönetimi ve yayımlama altyapısı gerektirir. Office 365 İleti Şifrelemesi akış kurallarını (aktarım kuralları olarak da bilinir) kullanır ve sertifika yayımlamaya bağlı değildir.
+S/MIME temelde bir istemci tarafı şifreleme teknolojisidir ve karmaşık sertifika yönetimi ve yayımlama altyapısı gerektirir. Office 365 İleti Şifrelemesi posta akışı kurallarını (aktarım kuralları olarak da bilinir) kullanır ve sertifika yayımlamaya bağımlı değildir.
 
- **Q. Mobil cihazlar üzerinden şifreli iletileri okuyabilir miyim?**
+ **S. Şifrelenmiş iletileri mobil cihazlar üzerinden okuyabilir miyim?**
 
-Evet, Google Play mağazasından ve Apple App Store'dan OME Görüntüleyicisi uygulamalarını indirerek Android ve iOS'ta iletileri görüntüleyebilirsiniz. OME Görüntüleyicisi uygulamasında HTML ekini açın ve sonra şifreli iletinizi açmak için yönergeleri izleyin. Diğer mobil cihazlarda, posta istemciniz Form Gönderisi'yi desteklediği sürece HTML ekini açabilirsiniz.
+Evet, Google Play mağazasından ve Apple App Store'dan OME Görüntüleyicisi uygulamalarını indirerek iletileri Android ve iOS görüntüleyebilirsiniz. OME Görüntüleyicisi uygulamasında HTML ekini açın ve ardından şifrelenmiş iletinizi açmak için yönergeleri izleyin. Posta istemciniz Form Post'u desteklediği sürece diğer mobil cihazlar için HTML ekini açabilirsiniz.
 
- **Q. Yanıtlar ve iletili iletiler şifrelenir mi?**
+ **S. Yanıtlar ve iletilen iletiler şifrelenir mi?**
 
-Evet. Yanıtlar, ileti dizi süresi boyunca şifrelenmeye devam eder.
+Evet. Yanıtlar iş parçacığı süresi boyunca şifrelenmeye devam eder.
 
- **Q. Yerel Office 365 İleti Şifrelemesi sağlar mı?**
+ **S. Office 365 İleti Şifrelemesi yerelleştirme sağlar mı?**
 
-Gelen e-posta ve HTML içeriği, gönderen e-posta ayarlarına göre yerelleştirilmiştir. Görüntüleme portalı, alıcının tarayıcı ayarlarına göre yerelleştirilmiştir. Ancak, şifrelenmiş iletinin gerçek gövdesi (içeriği) yerelleştirilmiş değildir.
+Gelen e-posta ve HTML içeriği, gönderen e-posta ayarlarına göre yerelleştirilir. Görüntüleme portalı, alıcının tarayıcı ayarlarına göre yerelleştirilir. Ancak, şifrelenmiş iletinin gerçek gövdesi (içeriği) yerelleştirilmemiştir.
 
- **Q. E-doğrulama için hangi şifreleme Office 365 İleti Şifrelemesi?**
+ **S. Office 365 İleti Şifrelemesi için hangi şifreleme yöntemi kullanılır?**
 
-Office 365 İleti Şifrelemesi şifreleme altyapısı olarak Rights Management Services'i (RMS) kullanır. Kullanılan şifreleme yöntemi, iletileri şifrelemek ve şifrelerini çözmek için kullanılan RMS anahtarlarını nereden edin sayfanız olduğuna bağlıdır.
+Office 365 İleti Şifrelemesi, şifreleme altyapısı olarak Rights Management Hizmetleri'ni (RMS) kullanır. Kullanılan şifreleme yöntemi, iletileri şifrelemek ve şifresini çözmek için kullanılan RMS anahtarlarını nereden aldığınıza bağlıdır.
 
-- Anahtarları almak Microsoft Azure RMS kullanıyorsanız Şifreleme Modu 2 kullanılır. Şifreleme Modu 2, güncelleştirilmiş ve geliştirilmiş bir AD RMS şifreleme uygulamasıdır. İmza ve şifreleme için RSA 2048'i destekler ve imza için SHA-256'yı destekler.
+- Anahtarları almak için Microsoft Azure RMS kullanırsanız Şifreleme Modu 2 kullanılır. Şifreleme Modu 2, güncelleştirilmiş ve geliştirilmiş bir AD RMS şifreleme uygulamasıdır. İmza ve şifreleme için RSA 2048'i ve imza için SHA-256'yı destekler.
 
-- Anahtarları almak için Active Directory (AD) RMS kullanıyorsanız, Şifreleme Modu 1 veya Şifreleme Modu 2 kullanılır. Kullanılan yöntem, şirket içi AD RMS dağıtımınıza bağlıdır. Şifreleme Modu 1, özgün AD RMS şifreleme uygulamasıdır. İmza ve şifreleme için RSA 1024'ü destekler ve imza için SHA-1'i destekler. Bu mod, tüm geçerli RMS sürümleri tarafından destek büyümeye devam eder.
+- Anahtarları almak için Active Directory (AD) RMS kullanıyorsanız Şifreleme Modu 1 veya Şifreleme Modu 2 kullanılır. Kullanılan yöntem, şirket içi AD RMS dağıtımınıza bağlıdır. Şifreleme Modu 1, özgün AD RMS şifreleme uygulamasıdır. İmza ve şifreleme için RSA 1024'i ve imza için SHA-1'i destekler. Bu mod, RMS'nin tüm geçerli sürümleri tarafından desteklenmeye devam eder.
 
-Daha fazla bilgi için bkz [. AD RMS Şifreleme Modları](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh867439(v=ws.10)).
+Daha fazla bilgi için bkz. [AD RMS Şifreleme Modları](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh867439(v=ws.10)).
 
-**S. Neden bazı şifreli iletilerde iletilerin e-postadan Office365@messaging.microsoft.com** ?
+**S. Neden bazı şifreli iletiler Office365@messaging.microsoft.com geldiğini söylüyor** ?
 
-Şifreleme portalında veya OME Görüntüleyicisi uygulaması aracılığıyla şifrelenmiş bir yanıt gönderiliyorsa, şifrelenmiş ileti bir Microsoft uç noktası üzerinden gönderildiği için Office365@messaging.microsoft.com e-posta adresi Office365@messaging.microsoft.com olarak ayarlanır. Bu, şifreli iletilerin istenmeyen posta olarak işaretlenmelerini önlemeye yardımcı olur. E-postada görüntülenen ad ve şifreleme portalında yer alan adres bu etiket nedeniyle değişmez. Ayrıca, bu etiket diğer e-posta istemcileri üzerinden değil, yalnızca portal aracılığıyla gönderilen iletiler için geçerlidir.
+Şifreleme portalından veya OME Görüntüleyicisi uygulamasından şifrelenmiş bir yanıt gönderildiğinde, şifrelenmiş ileti bir Microsoft uç noktası üzerinden gönderildiğinden, gönderen e-posta adresi Office365@messaging.microsoft.com olarak ayarlanır. Bu, şifrelenmiş iletilerin istenmeyen posta olarak işaretlenmesini önlemeye yardımcı olur. E-postada görüntülenen ad ve şifreleme portalındaki adres bu etiketleme nedeniyle değiştirilmez. Ayrıca, bu etiketleme yalnızca portaldan gönderilen iletiler için geçerlidir, diğer e-posta istemcilerinden değil.
 
- **Q. Exchange Barındırılan Şifreleme (EHE) abonesiyim. Yeni bir sürüme yükseltme hakkında nereden daha fazla Office 365 İleti Şifrelemesi?**
+ **S. Exchange Barındırılan Şifreleme (EHE) abonesiyim. Office 365 İleti Şifrelemesi'ne yükseltme hakkında nereden daha fazla bilgi edinebilirim?**
 
-Tüm EHE müşterileri e-Office 365 İleti Şifrelemesi. Daha fazla bilgi için Barındırılan [Şifreleme Exchange Merkezi'ne bakın](../security/office-365-security/exchange-online-protection-overview.md).
+Tüm EHE müşterileri Office 365 İleti Şifrelemesi'ne yükseltildi. Daha fazla bilgi için [Exchange Barındırılan Şifreleme Yükseltme Merkezi'ni ziyaret edin](../security/office-365-security/exchange-online-protection-overview.md).
 
- **Q. Kuruluşumda destek olmak için güvenlik duvarında URL'leri, IP adreslerini veya bağlantı noktalarını açmam Office 365 İleti Şifrelemesi?**
+ **S. Office 365 İleti Şifrelemesini desteklemek için kuruluşumun güvenlik duvarındaki URL'leri, IP adreslerini veya bağlantı noktalarını açmam gerekiyor mu?**
 
-Evet. E-posta tarafından şifrelenen iletilerde Exchange Online kimlik doğrulamasını etkinleştirmek için, bu iletilerin URL'lerini Office 365 İleti Şifrelemesi. URL'leri Exchange Online için bkz. [MICROSOFT 365 VE IP adresi aralıkları](../enterprise/urls-and-ip-address-ranges.md).
+Evet. Office 365 İleti Şifrelemesi ile şifrelenen iletiler için kimlik doğrulamasını etkinleştirmek için kuruluşunuzun izin verme listesine Exchange Online URL'leri eklemeniz gerekir. Exchange Online URL'lerin listesi için bkz. [Microsoft 365 URL'ler ve IP adresi aralıkları](../enterprise/urls-and-ip-address-ranges.md).
 
- **Q. Şifreli bir iletiyi kaç Microsoft 365 gönderebilirim?**
+ **S. Microsoft 365 şifreli iletiyi kaç alıcıya gönderebilirim?**
 
-Alıcı sınırı ileti başına 500 alıcıdır veya dağıtım listesi genişletildikten sonra bir araya geldiğinde, iletinin Son alanında (hangisi önce gelirse) 11.980 karakterdir.
+Alıcı sınırı, ileti başına 500 alıcıdır veya dağıtım listesi genişletildikten sonra birleştirildiğinde iletinin **Kime** alanında 11.980 karakter (hangisi önce gerçekleşirse) olur.
 
- **Q. Belirli bir alıcıya gönderilen bir iletiyi iptal etmek mümkün mü?**
+ **S. Belirli bir alıcıya gönderilen iletiyi iptal etmek mümkün mü?**
 
-Hayır. Gönderildikten sonra belirli bir kişiye gönderilen iletiyi iptal etmeyebilirsiniz.
+Hayır. İleti gönderildikten sonra belirli bir kişiye ileti gönderemezsiniz.
 
- **Q. Alınan ve okunan şifreli iletilerin raporunu  görüntülemem gerekir mi?**
+ **S. Alınan ve okunan şifrelenmiş iletilerin raporunu görüntüleyebilir miyim?**
 
-Şifreli bir iletinin görüntülenen sayısını gösteren bir rapor yok, ancak örneğin belirli bir posta akışı kuralıyla (aktarım kuralı olarak da bilinir) eşlenen ileti sayısını belirlemek için yararlanabilirsiniz Microsoft 365 raporları da vardır.
+Şifrelenmiş bir iletinin görüntülenip görüntülenmediğini gösteren bir rapor yoktur, ancak örneğin belirli bir posta akışı kuralıyla (aktarım kuralı olarak da bilinir) eşleşen ileti sayısını belirlemek için kullanabileceğiniz Microsoft 365 rapor vardır.
 
- **Q. Microsoft, OME Portalı ve OME Görüntüleyicisi Uygulaması aracılığıyla bilgilerim ile ne yapar?**
+ **S. Microsoft, OME Portalı ve OME Görüntüleyici Uygulaması aracılığıyla sağladığım bilgilerle ne yapar?**
 
-Microsoft [Office 365 Şifreleme Portalı](https://privacy.microsoft.com/privacystatement) gizlilik bildirimi, Microsoft'un özel bilgilerinizi kullanarak ne yaptığını ve bu konuda bir şey yapmama hakkında ayrıntılı bilgi sağlar.
+[Office 365 Microsoft Mesajlaşma Şifreleme Portalı gizlilik bildirimi](https://privacy.microsoft.com/privacystatement), Microsoft'un özel bilgilerinizle ne yaptığı ve neleri yapmadığı hakkında ayrıntılı bilgi sağlar.
 
-**Q. İsteğim sonrasında tek seferlik geçiş kodunu alam olursa ne yapabilirim?**
+**S. İstedikten sonra tek seferlik geçiş kodunu alamazsam ne yapmalıyım?**
 
-İlk olarak, e-posta istemcinizin gereksiz veya istenmeyen posta klasörünü kontrol edin. DkIM ve DMARC ayarları, bu e-postaların istenmeyen posta olarak filtrelenmiş olarak bitimini neden olabilir.
+İlk olarak, e-posta istemcinizdeki gereksiz veya istenmeyen posta klasörünü denetleyin. Kuruluşunuzun DKIM ve DMARC ayarları bu e-postaların istenmeyen posta olarak filtrelenmesine neden olabilir.
 
-Ardından, Güvenlik ve Uyumluluk Merkezi'nde karantinayı & alın. Çoğu zaman, tek seferlik geçiş kodunu içeren iletiler, özellikle de kuruma ilk alınanlar karantinaya alınır.
+Ardından, Güvenlik & Uyumluluk Merkezi'nde karantinayı denetleyin. Genellikle, tek seferlik bir geçiş kodu içeren iletiler, özellikle kuruluşunuzun ilk aldığı iletiler karantinaya alınıyor.

@@ -12,12 +12,12 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Müşteri Anahtarı'nı ayarladıktan sonra, AKV anahtarlarını geri yükleyerek ve izinleri yöneterek ve veri şifreleme ilkeleri oluşturup atayarak anahtarı yönetmeyi öğrenin.
-ms.openlocfilehash: a1fab2694be866acd6035af90929b5ab690da031
-ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
+ms.openlocfilehash: 08fae19a5f0f27ff530c734c46453f885ea9043e
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65663480"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015758"
 ---
 # <a name="manage-customer-key"></a>Müşteri Anahtarını Yönet
 
@@ -30,8 +30,8 @@ Müşteri Anahtarını ayarladıktan sonra bir veya daha fazla veri şifreleme i
 Başlamadan önce Müşteri Anahtarını ayarlamak için gereken görevleri tamamladığınızdan emin olun. Bilgi için bkz. [Müşteri Anahtarını Ayarlama](customer-key-set-up.md). DEP'yi oluşturmak için kurulum sırasında aldığınız Key Vault URI'lere ihtiyacınız vardır. Bilgi için bkz. [Her Azure Key Vault anahtarı için URI'yi alma](customer-key-set-up.md#obtain-the-uri-for-each-azure-key-vault-key).
 
 Çok iş yüküne sahip bir DEP oluşturmak için şu adımları izleyin:
-  
-1. Yerel bilgisayarınızda, kuruluşunuzda genel yönetici veya uyumluluk yöneticisi izinlerine sahip bir iş veya okul hesabı kullanarak [Windows PowerShell penceresinde Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
+
+1. Yerel bilgisayarınızda, kuruluşunuzda genel yönetici veya uyumluluk yöneticisi izinlerine sahip bir iş veya okul hesabı kullanarak [Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. DEP oluşturmak için New-M365DataAtRestEncryptionPolicy cmdlet'ini kullanın.
 
@@ -73,15 +73,15 @@ Set-M365DataAtRestEncryptionPolicyAssignment -DataEncryptionPolicy "Contoso_Glob
 
 ## <a name="create-a-dep-for-use-with-exchange-online-mailboxes"></a>Exchange Online posta kutularıyla kullanmak için DEP oluşturma
 
-Başlamadan önce Azure Key Vault ayarlamak için gereken görevleri tamamladığınızdan emin olun. Bilgi için bkz. [Müşteri Anahtarını Ayarlama](customer-key-set-up.md). Windows PowerShell ile Exchange Online uzaktan bağlanarak bu adımları tamamlayacaksınız.
+Başlamadan önce Azure Key Vault ayarlamak için gereken görevleri tamamladığınızdan emin olun. Bilgi için bkz. [Müşteri Anahtarını Ayarlama](customer-key-set-up.md). Bu adımları PowerShell Exchange Online de tamamlayacaksınız.
 
 DEP, Azure Key Vault'de depolanan bir dizi anahtarla ilişkilendirilir. Microsoft 365 bir posta kutusuna DEP atarsınız. Microsoft 365 daha sonra posta kutusunu şifrelemek için ilkede tanımlanan anahtarları kullanır. DEP'yi oluşturmak için kurulum sırasında aldığınız Key Vault URI'lere ihtiyacınız vardır. Bilgi için bkz. [Her Azure Key Vault anahtarı için URI'yi alma](customer-key-set-up.md#obtain-the-uri-for-each-azure-key-vault-key).
 
 Hatırla! DEP oluşturduğunuzda iki farklı Azure Key Vault'ta iki anahtar belirtirsiniz. Coğrafi olarak yedeklilik sağlamak için bu anahtarları iki ayrı Azure bölgesinde oluşturun.
 
 Posta kutusuyla kullanılacak bir DEP oluşturmak için şu adımları izleyin:
-  
-1. Yerel bilgisayarınızda, kuruluşunuzda genel yönetici veya Exchange Online yönetici izinlerine sahip bir iş veya okul hesabı kullanarak Windows PowerShell penceresinde [Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
+
+1. Yerel bilgisayarınızda, kuruluşunuzda genel yönetici veya Exchange Online yönetici izinlerine sahip bir iş veya okul hesabı kullanarak [Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. DEP oluşturmak için aşağıdaki komutu yazarak New-DataEncryptionPolicy cmdlet'ini kullanın.
 
@@ -100,7 +100,7 @@ Posta kutusuyla kullanılacak bir DEP oluşturmak için şu adımları izleyin:
    - *KeyVaultURI2* , ilkedeki ikinci anahtarın URI'sini oluşturur. Örneğin, <https://contoso_EastUS2vault01.vault.azure.net/keys/USA_Key_02>. İki URI'yi virgül ve boşlukla ayırın.
 
    Örneğin:
-  
+
    ```powershell
    New-DataEncryptionPolicy -Name USA_mailboxes -Description "Root key for mailboxes in USA and its territories" -AzureKeyIDs https://contoso_EastUSvault02.vault.azure.net/keys/USA_key_01, https://contoso_CentralUSvault02.vault.azure.net/keys/USA_Key_02
    ```
@@ -110,7 +110,7 @@ Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [New-DataEncryptionPo
 ### <a name="assign-a-dep-to-a-mailbox"></a>Posta kutusuna DEP atama
 
 Set-Mailbox cmdlet'ini kullanarak DEP'yi bir posta kutusuna atayın. İlkeyi atadıktan sonra, Microsoft 365 posta kutusunu DEP'te tanımlanan anahtarla şifreleyebilir.
-  
+
 ```powershell
 Set-Mailbox -Identity <MailboxIdParameter> -DataEncryptionPolicy <PolicyName>
 ```
@@ -128,16 +128,16 @@ Burada *MailUserIdParameter* bir posta kullanıcı (posta etkin kullanıcı olar
 ## <a name="create-a-dep-for-use-with-sharepoint-online-onedrive-for-business-and-teams-files"></a>SharePoint Online, OneDrive İş ve Teams dosyalarıyla kullanmak üzere bir DEP oluşturma
 
 Başlamadan önce Azure Key Vault ayarlamak için gereken görevleri tamamladığınızdan emin olun. Bilgi için bkz. [Müşteri Anahtarını Ayarlama](customer-key-set-up.md).
-  
-SharePoint Online, OneDrive İş ve Teams dosyaları için Müşteri Anahtarını ayarlamak için Windows PowerShell ile SharePoint Online'a uzaktan bağlanarak bu adımları tamamlarsınız.
-  
+
+SharePoint Online, OneDrive İş ve Teams dosyaları için Müşteri Anahtarı'nın ayarlanması için SharePoint Online PowerShell'de bu adımları tamamlarsınız.
+
 DeP'i Azure Key Vault'da depolanan bir dizi anahtarla ilişkilendirirsiniz. Tüm verilerinize coğrafi olarak da adlandırılan tek bir coğrafi konumda bir DEP uygularsınız. Office 365 çok coğrafi özelliğini kullanıyorsanız, coğrafi olarak farklı anahtarlar kullanma özelliğine sahip coğrafi bölge başına bir DEP oluşturabilirsiniz. Çok coğrafi bölge kullanmıyorsanız, kuruluşunuzda SharePoint Online, OneDrive İş ve Teams dosyalarıyla kullanmak üzere bir DEP oluşturabilirsiniz. Microsoft 365, bu coğrafi bölgede verilerinizi şifrelemek için DEP'de tanımlanan anahtarları kullanır. DEP'yi oluşturmak için kurulum sırasında aldığınız Key Vault URI'lere ihtiyacınız vardır. Bilgi için bkz. [Her Azure Key Vault anahtarı için URI'yi alma](customer-key-set-up.md#obtain-the-uri-for-each-azure-key-vault-key).
-  
+
 Hatırla! DEP oluşturduğunuzda iki farklı Azure Key Vault'ta iki anahtar belirtirsiniz. Coğrafi olarak yedeklilik sağlamak için bu anahtarları iki ayrı Azure bölgesinde oluşturun.
-  
-DEP oluşturmak için Windows PowerShell kullanarak SharePoint Online'a uzaktan bağlanmanız gerekir.
-  
-1. Yerel bilgisayarınızda, kuruluşunuzda genel yönetici izinlerine sahip bir iş veya okul hesabı kullanarak [Çevrimiçi PowerShell'i SharePoint Bağlan](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?preserve-view=true&view=sharepoint-ps).
+
+DEP oluşturmak için SharePoint Online PowerShell kullanmanız gerekir.
+
+1. Yerel bilgisayarınızda, kuruluşunuzda genel yönetici izinlerine sahip bir iş veya okul hesabı kullanarak [SharePoint Online PowerShell'e bağlanın](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?preserve-view=true&view=sharepoint-ps).
 
 2. Microsoft Office SharePoint Online Yönetim Kabuğu'nda Register-SPODataEncryptionPolicy cmdlet'ini aşağıdaki gibi çalıştırın:
 
@@ -146,7 +146,7 @@ DEP oluşturmak için Windows PowerShell kullanarak SharePoint Online'a uzaktan 
    ```
 
    Örneğin:
-  
+
    ```powershell
    Register-SPODataEncryptionPolicy -PrimaryKeyVaultName 'stageRG3vault' -PrimaryKeyName 'SPKey3' -PrimaryKeyVersion 'f635a23bd4a44b9996ff6aadd88d42ba' -SecondaryKeyVaultName 'stageRG5vault' -SecondaryKeyName 'SPKey5' -SecondaryKeyVersion '2b3e8f1d754f438dacdec1f0945f251a'
    ```
@@ -186,7 +186,7 @@ Office 365 geçirmeden önce posta kutusuna DEP atamak için Set-MailUser cmdlet
 ### <a name="determine-the-dep-assigned-to-a-mailbox"></a>Posta kutusuna atanan DEP'yi belirleme
 
 Bir posta kutusuna atanan DEP'yi belirlemek için Get-MailboxStatistics cmdlet'ini kullanın. Cmdlet benzersiz bir tanımlayıcı (GUID) döndürür.
-  
+
 1. Kuruluşunuzda genel yönetici izinlerine sahip bir iş veya okul hesabı kullanarak [Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
 
    ```powershell
@@ -194,9 +194,9 @@ Bir posta kutusuna atanan DEP'yi belirlemek için Get-MailboxStatistics cmdlet'i
    ```
 
    *Burada GeneralMailboxOrMailUserIdParameter* bir posta kutusu belirtir ve DataEncryptionPolicyID de DEP'in GUID'sini döndürür. Get-MailboxStatistics cmdlet'i hakkında daha fazla bilgi için bkz. [Get-MailboxStatistics](/powershell/module/exchange/get-mailboxstatistics).
-  
+
 2. Posta kutusunun atandığı DEP'nin kolay adını bulmak için Get-DataEncryptionPolicy cmdlet'ini çalıştırın.
-  
+
    ```powershell
    Get-DataEncryptionPolicy <GUID>
    ```
@@ -210,9 +210,9 @@ müşteri anahtarı aldıysanız, yeni bir DEP atadıysanız veya bir posta kutu
 ### <a name="verify-encryption-completes-for-exchange-online-mailboxes"></a>Exchange Online posta kutuları için şifrelemenin tamamlanmasını doğrulama
 
 Posta kutusunun şifrelenmesi biraz zaman alabilir. İlk kez şifreleme için, hizmetin posta kutusunu şifreleyebilmesi için önce posta kutusunun bir veritabanından diğerine tamamen taşınması gerekir.
-  
+
 Posta kutusunun şifrelenip şifrelenmediğini belirlemek için Get-MailboxStatistics cmdlet'ini kullanın.
-  
+
 ```powershell
 Get-MailboxStatistics -Identity <GeneralMailboxOrMailUserIdParameter> | fl IsEncrypted
 ```
@@ -230,7 +230,7 @@ Get-SPODataEncryptionPolicy cmdlet'ini aşağıdaki gibi çalıştırarak şifre
 ```
 
 Bu cmdlet'ten elde edilen çıkış şunları içerir:
-  
+
 - Birincil anahtarın URI'sini.
 
 - İkincil anahtarın URI'sini.
@@ -251,40 +251,40 @@ Bu cmdlet'ten elde edilen çıkış şunları içerir:
 
 Birden çok iş yüküyle kullanmak üzere oluşturduğunuz tüm DEP'ler hakkında ayrıntılı bilgi edinmek için şu adımları tamamlayın:
 
-1. Yerel bilgisayarınızda, kuruluşunuzda genel yönetici veya uyumluluk yöneticisi izinlerine sahip bir iş veya okul hesabı kullanarak [Windows PowerShell penceresinde Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
+1. Yerel bilgisayarınızda, kuruluşunuzda genel yönetici veya uyumluluk yöneticisi izinlerine sahip bir iş veya okul hesabı kullanarak [Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
 
    - Kuruluştaki tüm çok iş yükü DEP'lerinin listesini döndürmek için bu komutu çalıştırın.
 
      ```powershell
-        Get-M365DataAtRestEncryptionPolicy
+     Get-M365DataAtRestEncryptionPolicy
      ```
 
    - Belirli bir DEP hakkındaki ayrıntıları döndürmek için bu komutu çalıştırın. Bu örnek, DEP için "Contoso_Global" adlı ayrıntılı bilgileri döndürür.
 
      ```powershell
-        Get-M365DataAtRestEncryptionPolicy -Identity "Contoso_Global"
+     Get-M365DataAtRestEncryptionPolicy -Identity "Contoso_Global"
      ```
 
 ## <a name="get-multi-workload-dep-assignment-information"></a>Çok iş yükü dep atama bilgilerini alma
 
-Kiracınıza atanmış olan DEP'yi bulmak için aşağıdaki adımları izleyin. 
+Kiracınıza atanmış olan DEP'yi bulmak için aşağıdaki adımları izleyin.
 
-1. Yerel bilgisayarınızda, kuruluşunuzda genel yönetici veya uyumluluk yöneticisi izinlerine sahip bir iş veya okul hesabı kullanarak [Windows PowerShell penceresinde Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
+1. Yerel bilgisayarınızda, kuruluşunuzda genel yönetici veya uyumluluk yöneticisi izinlerine sahip bir iş veya okul hesabı kullanarak [Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Bu komutu yazın.
 
    ```powershell
-      Get-M365DataAtRestEncryptionPolicyAssignment
+   Get-M365DataAtRestEncryptionPolicyAssignment
    ```
 
 ## <a name="disable-a-multi-workload-dep"></a>Çok iş yükülü DEP'yi devre dışı bırakma
 
 Çok iş yüküne sahip bir DEP'yi devre dışı bırakmadan önce kiracınızdaki iş yüklerinden DEP'nin atamasını kaldırın. Birden çok iş yüküyle kullanılan bir DEP'yi devre dışı bırakmak için şu adımları tamamlayın:
 
-1. Yerel bilgisayarınızda, kuruluşunuzda genel yönetici veya uyumluluk yöneticisi izinlerine sahip bir iş veya okul hesabı kullanarak [Windows PowerShell penceresinde Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
+1. Yerel bilgisayarınızda, kuruluşunuzda genel yönetici veya uyumluluk yöneticisi izinlerine sahip bir iş veya okul hesabı kullanarak [Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Set-M365DataAtRestEncryptionPolicy cmdlet'ini çalıştırın.
-  
+
    ```powershell
    Set-M365DataAtRestEncryptionPolicy -[Identity] "PolicyName" -Enabled $false
    ```
@@ -300,19 +300,19 @@ Set-M365DataAtRestEncryptionPolicy -Identity "Contoso_Global" -Enabled $false
 ## <a name="restore-azure-key-vault-keys"></a>Azure Key Vault anahtarlarını geri yükleme
 
 Geri yükleme gerçekleştirmeden önce geçici silme tarafından sağlanan kurtarma özelliklerini kullanın. Müşteri Anahtarı ile kullanılan tüm anahtarların geçici silmenin etkinleştirilmesi gerekir. Geçici silme, geri dönüşüm kutusu gibi davranır ve geri yüklemeye gerek kalmadan 90 güne kadar kurtarma sağlar. Geri yükleme yalnızca anahtar veya anahtar kasasının kaybolması gibi aşırı veya olağan dışı durumlarda gerekli olmalıdır. Müşteri Anahtarı ile kullanmak üzere bir anahtarı geri yüklemeniz gerekiyorsa, Azure PowerShell Restore-AzureKeyVaultKey cmdlet'ini aşağıdaki gibi çalıştırın:
-  
+
 ```powershell
 Restore-AzKeyVaultKey -VaultName <vault name> -InputFile <filename>
 ```
 
 Örneğin:
-  
+
 ```powershell
 Restore-AzKeyVaultKey -VaultName Contoso-O365EX-NA-VaultA1 -InputFile Contoso-O365EX-NA-VaultA1-Key001-Backup-20170802.backup
 ```
 
 Anahtar kasası aynı ada sahip bir anahtar içeriyorsa geri yükleme işlemi başarısız olur. Restore-AzKeyVaultKey anahtar adı da dahil olmak üzere anahtar için tüm anahtar sürümlerini ve tüm meta verileri geri yükler.
-  
+
 ## <a name="manage-key-vault-permissions"></a>Anahtar kasası izinlerini yönetme
 
 Anahtar kasası izinlerini görüntülemenizi ve gerekirse kaldırmanızı sağlayan çeşitli cmdlet'ler mevcuttur. Örneğin, bir çalışan takımdan ayrıldığında izinleri kaldırmanız gerekebilir. Bu görevlerin her biri için Azure PowerShell kullanacaksınız. Azure PowerShell hakkında bilgi için bkz. [Azure PowerShell genel bakış](/powershell/azure/).
@@ -330,7 +330,7 @@ Get-AzKeyVault -VaultName Contoso-O365EX-NA-VaultA1
 ```
 
 Yönetici izinlerini kaldırmak için Remove-AzKeyVaultAccessPolicy cmdlet'ini çalıştırın:
-  
+
 ```powershell
 Remove-AzKeyVaultAccessPolicy -VaultName <vault name> -UserPrincipalName <UPN of user>
 ```
@@ -359,13 +359,13 @@ Posta kutusu DEP'lerinin atamasını silmek için Set-Mailbox PowerShell cmdlet'
 2. Set-Mailbox cmdlet'ini çalıştırın.
 
    ```powershell
-   Set-Mailbox -Identity <mailbox> -DataEncryptionPolicy $NULL
+   Set-Mailbox -Identity <mailbox> -DataEncryptionPolicy $null
    ```
 
 Bu cmdlet'in çalıştırılması, şu anda atanmış olan DEP'nin atamasını kaldırın ve varsayılan Microsoft tarafından yönetilen anahtarlarla ilişkilendirilmiş DEP'yi kullanarak posta kutusunun şifresini yeniden şifreler. Microsoft tarafından yönetilen anahtarlar tarafından kullanılan DEP'nin atamasını kaldıramazsınız. Microsoft tarafından yönetilen anahtarları kullanmak istemiyorsanız, posta kutusuna başka bir Müşteri Anahtarı DEP'i atayabilirsiniz.
 
 > [!IMPORTANT]
-> SharePoint Online, OneDrive İş ve Teams dosyaları için Müşteri Anahtarı'ndan Microsoft tarafından yönetilen anahtarlara geri alma desteklenmez. 
+> SharePoint Online, OneDrive İş ve Teams dosyaları için Müşteri Anahtarı'ndan Microsoft tarafından yönetilen anahtarlara geri alma desteklenmez.
 
 ## <a name="revoke-your-keys-and-start-the-data-purge-path-process"></a>Anahtarlarınızı iptal etme ve veri temizleme yolu işlemini başlatma
 
@@ -412,7 +412,7 @@ Veri temizleme yolunu başlatmak için şu adımları tamamlayın:
 
 ### <a name="revoke-your-customer-keys-and-the-availability-key-for-sharepoint-online-onedrive-for-business-and-teams-files"></a>SharePoint Online, OneDrive İş ve Teams dosyaları için Müşteri Anahtarlarınızı ve kullanılabilirlik anahtarınızı iptal etme
 
-müşteri anahtarında SharePoint, iş veya okul için OneDrive ve Teams dosya DEP'lerinin temizlenmesi desteklenmez. Bu çoklu iş yükü DEP'leri, tüm kiracı kullanıcıları genelinde birden çok iş yükündeki verileri şifrelemek için kullanılır. Böyle bir DEP'nin temizlenmesi birden çok iş yükünden gelen verilerin erişilemez hale gelmesine neden olur. Microsoft 365 hizmetlerden tamamen çıkmaya karar verirseniz, belgelenen işlem başına kiracı silme yolunu takip edebilirsiniz. [Azure Active Directory'da kiracıyı silmeyi](/azure/active-directory/enterprise-users/directory-delete-howto) öğrenin.  
+müşteri anahtarında SharePoint, iş veya okul için OneDrive ve Teams dosya DEP'lerinin temizlenmesi desteklenmez. Bu çoklu iş yükü DEP'leri, tüm kiracı kullanıcıları genelinde birden çok iş yükündeki verileri şifrelemek için kullanılır. Böyle bir DEP'nin temizlenmesi birden çok iş yükünden gelen verilerin erişilemez hale gelmesine neden olur. Microsoft 365 hizmetlerden tamamen çıkmaya karar verirseniz, belgelenen işlem başına kiracı silme yolunu takip edebilirsiniz. [Azure Active Directory'da kiracıyı silmeyi](/azure/active-directory/enterprise-users/directory-delete-howto) öğrenin.
 
 ## <a name="related-articles"></a>İlgili makaleler
 

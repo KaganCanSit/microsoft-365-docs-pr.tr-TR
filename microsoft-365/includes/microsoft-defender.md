@@ -1,6 +1,6 @@
 ---
-title: Microsoft 365 Defender kılavuzu
-description: Önemli bilgilerle ilgili Microsoft 365 Defender notu.
+title: Microsoft 365 Defender önemli kılavuz
+description: Önemli Microsoft 365 Defender yönergeleriyle ilgili bir not.
 ms.date: 09/21/2020
 ms.reviewer: ''
 manager: dansimp

@@ -17,18 +17,18 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: 30764562ebe60842f2824d7e313bec73e03f2ffa
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: 2d003ce76db677b22b3873f6f19df05b34f06b96
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65838879"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016206"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Saldırı yüzeyi azaltma kuralları başvurusu
 
 **Şunlar için geçerlidir:**
 
-- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta Planı 1 için Microsoft Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 - Microsoft Defender Virüsten Koruma
@@ -42,17 +42,15 @@ Bu makalede saldırı azaltma kuralları hakkında bilgi sağlanır:
 - [Desteklenen işletim sistemi sürümleri](#supported-operating-systems)
 - [Desteklenen yapılandırma yönetim sistemleri](#supported-configuration-management-systems)
 - [Kural başına uyarı ve bildirim ayrıntıları](#per-rule-alert-and-notification-details)
-- [ASR kuralları ve GUID matrisi](#asr-rules-and-guids-matrix)
+- [ASR kuralı-GUID matrisi](#asr-rule-to-guid-matrix)
 - [ASR kural modları](#asr-rule-modes)
 - [Kural başına açıklama sayısı](#per-rule-descriptions)
-  - Kural açıklamaları
-  - Yapılandırma yönetim sistemi kural adları
 
 ## <a name="supported-operating-systems"></a>Desteklenen işletim sistemleri
 
 Aşağıdaki tabloda, şu anda genel kullanıma sunulan kurallar için desteklenen işletim sistemleri listelenmektedir. Kurallar bu tabloda alfabetik sırada listelenmiştir.
 
-> [!Note]
+> [!NOTE]
 >
 > Aksi belirtilmedikçe, en düşük Windows&nbsp; 10 derlemesi sürüm 1709 (RS3, derleme 16299) veya üzeridir; en düşük Windows&nbsp; Server derlemesi sürüm 1809 veya üzeridir.
 >
@@ -60,7 +58,7 @@ Aşağıdaki tabloda, şu anda genel kullanıma sunulan kurallar için desteklen
 
 | Kural adı| &nbsp;Windows 11 <br>ve<br> &nbsp;Windows 10 | &nbsp;Windows Server <br> 2022 <br>ve<br>  &nbsp;Windows Server <br> 2019 | Windows Server | &nbsp;Windows Server <br> 2016 <sup>[[1, 2](#fn1)]<sup></sup> | &nbsp;Windows Server <br> 2012&nbsp;R2 <sup>[[1, 2](#fn1)]<sup></sup> |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| [Güvenlik açığı bulunan imzalı sürücülerin kötüye kullanılması engellendi](#block-abuse-of-exploited-vulnerable-signed-drivers) | E | E | E <br> sürüm 1803 (Altı Aylık Kanal) veya üzeri | E | E |
+| [Güvenlik açığı bulunan imzalı sürücülerin kötüye kullanılması engellendi](#block-abuse-of-exploited-vulnerable-signed-drivers) | E | E | E <br> sürüm 1803 (Altı Aylık Enterprise Kanalı) veya üzeri | E | E |
 | [Adobe Reader'ın alt işlemler oluşturmalarını engelleme](#block-adobe-reader-from-creating-child-processes) | E <br> sürüm 1809 veya üzeri <sup>[[3](#fn1)]<sup></sup> | E | E | E | E |
 | [Tüm Office uygulamalarının alt işlemler oluşturmalarını engelleme](#block-all-office-applications-from-creating-child-processes) | E | E | E | E | E |
 | [Windows yerel güvenlik yetkilisi alt sisteminden (lsass.exe) kimlik bilgilerinin çalınmalarını engelleme](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) | E <br> sürüm 1803 veya üzeri <sup>[[3](#fn1)]<sup></sup> | E | E | E | E |
@@ -142,7 +140,7 @@ Blok modundaki tüm kurallar için bildirim bildirimleri oluşturulur. Diğer mo
 |[Office makrolardan Win32 API çağrılarını engelleme](#block-win32-api-calls-from-office-macros) |   | N | E |
 |[Fidye yazılımına karşı gelişmiş koruma kullanma](#use-advanced-protection-against-ransomware) | Denetim&nbsp;\|&nbsp;Bloğu | Y \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir  | N \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir |
   
-## <a name="asr-rules-and-guids-matrix"></a>ASR kuralları ve GUID matrisi
+## <a name="asr-rule-to-guid-matrix"></a>ASR kuralı-GUID matrisi
 
 | Kural Adı | Kural GUID'i |
 |:-----|:-----|
@@ -165,16 +163,16 @@ Blok modundaki tüm kurallar için bildirim bildirimleri oluşturulur. Diğer mo
 
 ## <a name="asr-rule-modes"></a>ASR kural modları
 
-- **Yapılandırılmadı** veya **Devre Dışı Bırak**: Bu, ASR kuralının etkinleştirilmediği veya devre dışı bırakıldığı durumdur. Bu durum için kod = 0.
-- **Engelle**: Bu, ASR kuralının etkinleştirildiği durumdur. Bu durum için kod 1'dir.
-- **Denetim**: AsR kuralının dağıtıldığı kuruluşa veya ortama yönelik etkili davranışı için değerlendirildiği durumdur. Bu durum için kod 2'dir.
-- **Uyarmak** Bu, ASR kuralının etkinleştirildiği ve son kullanıcıya bir bildirim sunduğu durumdur, ancak son kullanıcının bloğu atlamasına izin verir. Bu durum için kod 6'dır.
+- **Yapılandırılmadı** veya **Devre Dışı Bırak**: ASR kuralının etkinleştirilmediği veya devre dışı bırakıldığı durum. Bu durum için kod = 0.
+- **Engelle**: ASR kuralının etkinleştirildiği durum. Bu durum için kod 1'dir.
+- **Denetim**: ASR kuralının etkinse kuruluş veya ortam üzerindeki etkisine göre değerlendirildiği durumdur (engelleyecek veya uyaracak şekilde ayarlanır). Bu durum için kod 2'dir.
+- **Uyarmak** ASR kuralının etkinleştirildiği ve son kullanıcıya bir bildirim sunduğu ancak son kullanıcının bloğu atlamasına izin veren durum. Bu durum için kod 6'dır.
 
 _Uyarı modu_ , kullanıcıları riskli olabilecek eylemler hakkında uyaran bir blok modu türüdür. Kullanıcılar blok uyarısı iletisini atlamayı ve temel eyleme izin vermeyi seçebilir. Kullanıcılar bloğu zorlamak için **Tamam'ı** seçebilir veya blok sırasında oluşturulan son kullanıcı açılır bildirimi aracılığıyla atlama seçeneğini ( **Engellemeyi Kaldır** ) seçebilir. Uyarının engeli kaldırıldıktan sonra, son kullanıcının eylemi yeniden oluşturması gerekeceği uyarı iletisinin bir sonraki oluş zamanına kadar işleme izin verilir.
 
-İzin ver düğmesine tıklanırsa, blok 24 saat boyunca gizlenecektir. 24 saat sonra, son kullanıcının engellemeye yeniden izin vermesi gerekir. ASR kuralları için uyarı modu yalnızca RS5+ (1809+) cihazlarda desteklenir. Eski sürümleri olan cihazlarda ASR kurallarına atlama atanırsa, kural engellenmiş modda olur.
+İzin ver düğmesine tıklandığında, blok 24 saat boyunca gizlenecektir. 24 saat sonra, son kullanıcının engellemeye yeniden izin vermesi gerekir. ASR kuralları için uyarı modu yalnızca RS5+ (1809+) cihazlarda desteklenir. Eski sürümleri olan cihazlarda ASR kurallarına atlama atanırsa, kural engellenmiş modda olur.
 
-Ayrıca, AttackSurfaceReductionRules_Actions "Uyar" olarak belirterek PowerShell aracılığıyla uyarı modunda da bir kural ayarlayabilirsiniz. Örneğin:
+Ayrıca, AttackSurfaceReductionRules_Actions "Uyar" olarak belirterek PowerShell aracılığıyla uyarı modunda bir kural ayarlayabilirsiniz. Örneğin:
 
 ```powershell
 -command "& {&'Add-MpPreference' -AttackSurfaceReductionRules_Ids 56a863a9-875e-4185-98a7-b882c64b5ce5 -AttackSurfaceReductionRules_Actions Warn"} 
@@ -217,7 +215,7 @@ Dependencies: none provided by engineering
 
 Bu kural, Adobe Reader'ın işlem oluşturmasını engelleyerek saldırıları engeller.
 
-Sosyal mühendislik veya açıklardan yararlanma yoluyla kötü amaçlı yazılım yükleri indirip başlatabilir ve Adobe Reader'ın dışına atılabilir. Alt işlemlerin Adobe Reader tarafından oluşturulması engellenerek, bunu vektör olarak kullanmaya çalışan kötü amaçlı yazılımların yayılması engellenir.
+Kötü amaçlı yazılımlar, sosyal mühendislik veya açıklardan yararlanarak adobe reader'ın yüklerini indirip başlatabilir ve bu yükten kurtulabilir. Alt işlemlerin Adobe Reader tarafından oluşturulması engellenerek, Adobe Reader'ı saldırı vektöru olarak kullanmaya çalışan kötü amaçlı yazılımların yayılması engellenir.
 
 Intune adı:`Process creation from Adobe Reader (beta)`
 
@@ -255,7 +253,7 @@ Bağımlılıklar: MDAV
 
 Bu kural, Yerel Güvenlik Yetkilisi Alt Sistem Hizmeti'ni (LSASS) kilitleyerek kimlik bilgilerinin çalınmasını önlemeye yardımcı olur.
 
-LSASS, Windows bilgisayarda oturum açan kullanıcıların kimliğini doğrular. Windows'deki Microsoft Defender Credential Guard normalde LSASS'den kimlik bilgilerini ayıklama girişimlerini engeller. Ancak bazı kuruluşlar, özel akıllı kart sürücüleriyle veya Yerel Güvenlik Yetkilisi'ne (LSA) yüklenen diğer programlarla ilgili uyumluluk sorunları nedeniyle Credential Guard'ı tüm bilgisayarlarında etkinleştiremiyor. Bu gibi durumlarda saldırganlar, Cleartext parolalarını ve LSASS'den NTLM karmalarını kazımak için Mimikatz gibi hack araçlarını kullanabilir.
+LSASS, Windows bilgisayarda oturum açan kullanıcıların kimliğini doğrular. Windows'deki Microsoft Defender Credential Guard normalde LSASS'den kimlik bilgilerini ayıklama girişimlerini engeller. Bazı kuruluşlar, özel akıllı kart sürücüleri veya Yerel Güvenlik Yetkilisi'ne (LSA) yüklenen diğer programlarla ilgili uyumluluk sorunları nedeniyle Credential Guard'ı tüm bilgisayarlarında etkinleştiremiyor. Bu gibi durumlarda saldırganlar, Cleartext parolalarını ve LSASS'den NTLM karmalarını kazımak için Mimikatz gibi araçları kullanabilir.
 
 > [!NOTE]
 > Bazı uygulamalarda kod, çalışan tüm işlemleri numaralandırır ve bunları kapsamlı izinlerle açmaya çalışır. Bu kural, uygulamanın işlem açma eylemini reddeder ve ayrıntıları güvenlik olay günlüğüne kaydeder. Bu kural çok fazla gürültü oluşturabilir. LSASS'yi numaralandıran ancak işlevsellikte gerçek bir etkisi olmayan bir uygulamanız varsa, bunu dışlama listesine eklemeniz gerekmez. Bu olay günlüğü girdisi tek başına kötü amaçlı bir tehdit anlamına gelmez.
@@ -334,7 +332,7 @@ Bu kural, belirsiz bir betik içindeki şüpheli özellikleri algılar.
 > [!IMPORTANT]
 > PowerShell betikleri, geçmişte karşılaşılan büyük ölçekli FP sorunları nedeniyle geçici olarak "Belirsiz olabilecek betiklerin yürütülmesini engelle" kuralının dışında bırakılmıştır.
 
-Betik karartma, hem kötü amaçlı yazılım yazarlarının hem de yasal uygulamaların fikri mülkiyeti gizlemek veya betik yükleme sürelerini azaltmak için kullandığı yaygın bir tekniktir. Kötü amaçlı yazılım yazarları, kötü amaçlı kodların okunmasını zorlaştırmak için de karartma kullanır ve bu da insanlar ve güvenlik yazılımları tarafından yakından inceleme yapılmasını önler.
+Betik karartma, hem kötü amaçlı yazılım yazarlarının hem de yasal uygulamaların fikri mülkiyeti gizlemek veya betik yükleme sürelerini azaltmak için kullandığı yaygın bir tekniktir. Kötü amaçlı yazılım yazarları, kötü amaçlı kodları okumayı zorlaştırmak için de karartma kullanır ve bu da insanlar ve güvenlik yazılımları tarafından yakından incelemeyi engeller.
 
 > [!IMPORTANT]
 > Çok sayıda hatalı pozitif sonuç nedeniyle bu kural şu anda PowerShell betiklerini algılamaz; bu geçici bir çözümdür. Kural güncelleştirilecek ve yakında PowerShell betiklerini yeniden algılamaya başlayacaktır.
@@ -459,7 +457,7 @@ Bağımlılıklar: MDAV, RPC
 
 ### <a name="block-process-creations-originating-from-psexec-and-wmi-commands"></a>PSExec ve WMI komutlarından kaynaklanan işlem oluşturma işlemlerini engelleme
 
-Bu kural [, PsExec](/sysinternals/downloads/psexec) ve [WMI](/windows/win32/wmisdk/about-wmi) aracılığıyla oluşturulan işlemlerin çalışmasını engeller. Hem PsExec hem de WMI uzaktan kod yürütebilir, bu nedenle kötü amaçlı yazılımların komut ve denetim amacıyla bu işlevselliği kötüye kullanma veya kuruluşun ağına bulaşma riski vardır.
+Bu kural [, PsExec](/sysinternals/downloads/psexec) ve [WMI](/windows/win32/wmisdk/about-wmi) aracılığıyla oluşturulan işlemlerin çalışmasını engeller. Hem PsExec hem de WMI uzaktan kod yürütebilir. PsExec ve WMI'nin komut ve denetim amacıyla işlevselliğini kötüye kullanma veya kuruluşun ağına bulaşma riski vardır.
 
 > [!WARNING]
 > Bu kuralı yalnızca cihazlarınızı [Intune](/intune) veya başka bir MDM çözümüyle yönetiyorsanız kullanın. Bu kural[, Configuration Manager](/configmgr) istemcisinin düzgün çalışması için kullandığı WMI komutlarını engellediğinden, bu kural Microsoft Endpoint Configuration Manager aracılığıyla yönetimle uyumsuzdur.
@@ -480,6 +478,9 @@ Bağımlılıklar: MDAV
 ### <a name="block-untrusted-and-unsigned-processes-that-run-from-usb"></a>USB'den çalıştırılan güvenilmeyen ve imzalanmamış işlemleri engelleme
 
 Bu kuralla, yöneticiler imzalanmamış veya güvenilmeyen yürütülebilir dosyaların SD kartlar da dahil olmak üzere USB çıkarılabilir sürücülerden çalıştırılmasını engelleyebilir. Engellenen dosya türleri yürütülebilir dosyaları (.exe, .dll veya .scr gibi) içerir
+
+> [!IMPORTANT]
+> USB'den disk sürücüsüne kopyalanan dosyalar, disk sürücüsünde yürütülmek üzereyse ve yürütülmek üzere olduğunda bu kural tarafından engellenir.
 
 Intune adı:`Untrusted and unsigned processes that run from USB`
 

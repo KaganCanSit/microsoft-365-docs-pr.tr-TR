@@ -5,6 +5,7 @@ metadata:
   ms.author: sharik
   author: SKjerland
   manager: scotv
+  ms-reviewer: crimora
   audience: Admin
   ms.topic: faq
   ms.prod: microsoft-365-lighthouse
@@ -17,12 +18,12 @@ metadata:
   - M365-Lighthouse
   search.appverid: MET150
   description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için Microsoft 365 Lighthouse hakkında sık sorulan soruların (SSS) yanıtlarını alın.
-  ms.openlocfilehash: 8afa3364c7b646110dcd4d6cf2b8786c1840eb76
-  ms.sourcegitcommit: 852075d8d8a4ca052f69e854396d1565ef713500
+  ms.openlocfilehash: a980a6fe8376c71470331ff3efc1d5b1f08acb33
+  ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/26/2022
-  ms.locfileid: "65692815"
+  ms.lasthandoff: 06/10/2022
+  ms.locfileid: "66016778"
 title: Microsoft 365 Lighthouse sık sorulan sorular (SSS)
 summary: >
   Bu makale, Microsoft 365 Lighthouse hakkında sık sorulan soruların (SSS) yanıtlarını içerir.
@@ -55,9 +56,9 @@ sections:
       Lighthouse'a kaydolmak için CSP programına kaydolmanız gerekir. Şu anda dolaylı sağlayıcılar desteklenemiyor. Kaydolma yönergeleri için bkz. [Microsoft 365 Lighthouse için kaydolma](m365-lighthouse-sign-up.md). CSP programı hakkında daha fazla bilgi edinmek için [bkz. Bulut Çözümü Sağlayıcısı programına genel bakış](/partner-center/csp-overview).
   - question: Kaydolmayı bitirdim, bu nedenle neden müşteri kiracısı verileri görmüyorum?
     answer: >
-      Müşteri kiracı verilerinin Lighthouse içinde yüklenmesi 48 saate kadar sürebilir. Ekleme işlemini tamamladığınızdan bu yana 48 saatten fazla zaman geçtiyse lütfen yardım için Destek ekibimize ulaşın. Ekleme işlemini tamamladığınızda onlara bildirmeniz ve ilgili ekran görüntülerini ve günlükleri sağlamanız gerekir. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse için yardım ve destek alma](m365-lighthouse-get-help-and-support.md).
+      Müşteri kiracı verilerinin Lighthouse içinde yüklenmesi 48 saate kadar sürebilir. Ekleme işlemini tamamladığınızdan bu yana 48 saatten fazla zaman geçtiyse yardım için Destek ekibimize ulaşın. Ekleme işlemini tamamladığınızda onlara bildirmeniz ve ilgili ekran görüntülerini ve günlükleri sağlamanız gerekir. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse için yardım ve destek alma](m365-lighthouse-get-help-and-support.md).
   - question: Neden bazı müşteri kiracıları için veri görüyorum ama diğerleri için göremiyorum?
-    answer: "Müşteri kiracı verilerinin Lighthouse'da gösterilmesi için MSP'lerin müşteri kiracısını yönetmek için temsilci erişimi oluşturması gerekir. Müşterileri Lighthouse'a eklemek için temsilci Yönetici Ayrıcalıkları (DAP) gerekir. Daha güvenli temsilci erişimi sağlamak için müşterilerinizle Ayrıntılı Temsilcili Yönetici Ayrıcalıkları (GDAP) oluşturmanızı öneririz. [Lighthouse'un](m365-lighthouse-overview-of-permissions.md) kullanılması için temsilci ve iş ortağı kiracı rollerinin önerildiği ek ayrıntılar için bkz. Microsoft 365 Lighthouse izinlere genel bakış. DAP ve GDAP birlikte bulunurken, her iki modelin de bulunduğu müşteriler için GDAP öncelikli olacaktır. Yakında yalnızca GDAP (ve DAP olmayan) müşteriler Lighthouse'a eklenecek. Temsilci erişimi hakkında daha fazla bilgi için bkz. [İş Ortağı Merkezi'nde müşteriyle kurumsal bayi ilişkisi isteme](/partner-center/request-a-relationship-with-a-customer). Kiracılar ayrıca en az bir Microsoft 365 İş Ekstra, Microsoft 365 E3, Microsoft 365 E5, Windows 365 Business veya İş için Microsoft Defender olmalıdır  ve kiracılarında en fazla 1000 lisanslı kullanıcı. Daha fazla bilgi için bkz[. Microsoft 365 Lighthouse gereksinimleri](m365-lighthouse-requirements.md) ve [Microsoft 365 Lighthouse'deki Kiracılar sayfasına genel bakış](m365-lighthouse-tenants-page-overview.md).  \n"
+    answer: "Müşteri kiracı verilerinin Lighthouse'da gösterilmesi için MSP'lerin müşteri kiracısını yönetmek için temsilci erişimi oluşturması gerekir. Müşterileri Lighthouse'a eklemek için Ayrıntılı Yönetici Ayrıcalıkları (GDAP) ve dolaylı bayi ilişkisi ya da Temsilci Yönetici Ayrıcalıkları (DAP) ilişkisi gerekir. Daha güvenli temsilci erişimi sağlamak için müşterilerinizle GDAP oluşturmanızı öneririz. MÜŞTERI kiracısında DAP ve GDAP birlikte varsa, GDAP özellikli güvenlik gruplarındaki MSP teknisyenleri için GDAP izinleri önceliklidir. Yakında yalnızca GDAP ilişkilerine (dolaylı kurumsal bayi ilişkileri olmadan) sahip müşteriler Lighthouse'a eklenecek. Temsilci erişimi hakkında daha fazla bilgi için bkz. [İş Ortağı Merkezi'nde müşteriyle kurumsal bayi ilişkisi isteme](/partner-center/request-a-relationship-with-a-customer). Kiracılar ayrıca en az bir Microsoft 365 İş Ekstra, Microsoft 365 E3, Microsoft 365 E5, Windows 365 Business veya İş için Microsoft Defender olmalıdır  ve kiracılarında en fazla 1000 lisanslı kullanıcı. Daha fazla bilgi için bkz[. Microsoft 365 Lighthouse gereksinimleri](m365-lighthouse-requirements.md) ve [Microsoft 365 Lighthouse'deki Kiracılar sayfasına genel bakış](m365-lighthouse-tenants-page-overview.md).\n\nMüşteriyle GDAP oluşturulduysa, bir MSP teknisyeninin, söz konusu müşterinin verilerini Lighthouse'da yönetebilmek için uygun rollere atanmış GDAP özellikli bir güvenlik grubunda olması gerekir. Bu güvenlik grubuna atanan GDAP rolleri, Lighthouse'da hangi müşteri verilerinin yönetilebileceğini etkiler. [Lighthouse'un](m365-lighthouse-overview-of-permissions.md) kullanılması için temsilci ve iş ortağı kiracı rollerinin önerildiği ayrıntılar için bkz. Microsoft 365 Lighthouse izinlerine genel bakış. Lighthouse'da farklı müşteri kiracıları için size hangi GDAP rollerinin atandığını görüntüleme yönergeleri için bkz. [Microsoft 365 Lighthouse'de Azure Active Directory rollerinizi görüntüleme](m365-lighthouse-view-your-roles.md).   \n"
   - question: Microsoft 365 Lighthouse'da belirli kiracıları görmek istemezsem ne olur?
     answer: >
       Lighthouse'da belirli kiracıları ve bunların verilerini görmek istemiyorsanız, bu kiracıları devre dışı bırakabilirsiniz. Kiracıyı devre dışı bırakmak için şu adımları izleyin:

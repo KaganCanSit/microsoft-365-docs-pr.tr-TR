@@ -1,6 +1,6 @@
 ---
-title: Uç Nokta Ön Sürüm Için Microsoft Defender Yasal Uyarı
-description: Uç Nokta için Microsoft Defender'ın yayın öncesi sürümü ile ilgili uyarı.
+title: Uç Nokta için Microsoft Defender Yayın Öncesi Yasal Uyarı
+description: Uç Nokta için Microsoft Defender yayın öncesi sürümü için uyarı.
 ms.date: 08/28/2017
 ms.reviewer: ''
 manager: dansimp
@@ -15,4 +15,4 @@ ms.lasthandoff: 08/05/2021
 ms.locfileid: "62959704"
 ---
 > [!IMPORTANT]
-> Bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabilir, önceden satın alınan ürünle ilgilidir. Microsoft, burada sağlanan bilgilerle ilgili olarak açık veya zımni hiçbir garanti vermez.
+> Bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünle ilgilidir. Microsoft, burada sağlanan bilgilerle ilgili olarak açık veya zımni hiçbir garanti vermez.

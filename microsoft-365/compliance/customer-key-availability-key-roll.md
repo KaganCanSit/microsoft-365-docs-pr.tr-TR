@@ -12,14 +12,16 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Müşteri Anahtarı ile birlikte kullanılan Azure Key Vault depolanan müşteri kök anahtarlarının nasıl alındığını öğrenin. Hizmetler Exchange Online, Skype Kurumsal, SharePoint Online, OneDrive İş ve Teams dosyalarını içerir.
-ms.openlocfilehash: 81d82f49c056f5a6ec9b8731b549aee68d5d658b
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: f34e79ee772df1a88058625c0b2df5f62413bcfd
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64761361"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017344"
 ---
 # <a name="roll-or-rotate-a-customer-key-or-an-availability-key"></a>Bir Müşteri Anahtarını veya uygunluk anahtarını toplama veya döndürme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!CAUTION]
 > Yalnızca güvenlik veya uyumluluk gereksinimleriniz anahtarın alınması gerektiğini belirlediğinde Müşteri Anahtarı ile kullandığınız bir şifreleme anahtarını yuvarlayın. Ayrıca, ilkelerle ilişkilendirilmiş veya ilişkili anahtarları silmeyin. Anahtarlarınızı yuvarladığınızda, önceki anahtarlarla şifrelenmiş içerik olacaktır. Örneğin, etkin posta kutuları sık sık yeniden şifrelenirken, etkin olmayan, bağlantısı kesilmiş ve devre dışı bırakılmış posta kutuları önceki anahtarlarla yine de şifrelenebilir. SharePoint Online, geri yükleme ve kurtarma amacıyla içeriğin yedeğini gerçekleştirir, bu nedenle eski anahtarları kullanan arşivlenmiş içerik olabilir.
@@ -53,7 +55,7 @@ Birden çok iş yüküyle kullanılan bir DEP ile ilişkili Azure Key Vault anah
 
 Müşteri Anahtarı'na birden çok iş yükünü şifrelemek için yeni anahtarı kullanmasını bildirmek için şu adımları tamamlayın:
 
-1. Yerel bilgisayarınızda, kuruluşunuzda genel yönetici veya uyumluluk yöneticisi izinlerine sahip bir iş veya okul hesabı kullanarak [Windows PowerShell penceresinde Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
+1. Yerel bilgisayarınızda, kuruluşunuzda genel yönetici veya uyumluluk yöneticisi izinlerine sahip bir iş veya okul hesabı kullanarak [Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Set-M365DataAtRestEncryptionPolicy cmdlet'ini çalıştırın.
   
@@ -103,10 +105,10 @@ SharePoint Online, aynı anda yalnızca bir anahtar almanızı sağlar. Anahtar 
 
 ## <a name="related-articles"></a>İlgili makaleler
 
-- [Office 365 için Müşteri Anahtarı ile hizmet şifrelemesi](customer-key-overview.md)
+- [Müşteri Anahtarı ile hizmet şifrelemesi](customer-key-overview.md)
 
-- [Office 365 için Müşteri Anahtarını Ayarlama](customer-key-set-up.md)
+- [Müşteri Anahtarını Ayarlama](customer-key-set-up.md)
 
-- [Office 365 için Müşteri Anahtarını Yönetme](customer-key-manage.md)
+- [Müşteri Anahtarını Yönet](customer-key-manage.md)
 
 - [Kullanılabilirlik anahtarı hakkında bilgi edinin](customer-key-availability-key-understand.md)

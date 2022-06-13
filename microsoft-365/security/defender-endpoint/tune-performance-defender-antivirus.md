@@ -14,17 +14,17 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 43b39cac260f5bda773af6a428304dc898444771
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 558358cca679d9600f9a95c13c4fac6147764b75
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419604"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66013364"
 ---
 # <a name="performance-analyzer-for-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma için performans çözümleyicisi
 
 **Uygulandığı öğe**
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
@@ -72,7 +72,7 @@ Sistem olaylarını kaydetmeye başlamak için PowerShell'i yönetim modunda aç
 Komut satırı parametreleri ve seçenekleri hakkında daha fazla bilgi için bkz. [New-MpPerformanceRecording](#new-mpperformancerecording) ve [Get-MpPerformanceReport](#get-mpperformancereport).
 
 > [!NOTE]
-> Kayıt çalıştırırken "Windows Performans Kaydedicisi zaten kayıtta olduğundan performans kaydı başlatılamıyor" hatasını alırsanız, yeni komutla var olan izlemeyi durdurmak için aşağıdaki komutu çalıştırın: **wpr -cancel -instancename MSFT_MpPerformanceRecording**
+> Kayıt çalıştırırken "Performans Kaydedicisi Windows zaten kayıt olduğundan performans kaydı başlatılamıyor" hatasını alırsanız, yeni komutla var olan izlemeyi durdurmak için aşağıdaki komutu çalıştırın: **wpr -cancel -instancename MSFT_MpPerformanceRecording**
 
 ## <a name="performance-tuning-data-and-information"></a>Performans ayarlama verileri ve bilgileri
 
@@ -103,7 +103,7 @@ Microsoft Defender Virüsten Koruma performans çözümleyicisi aşağıdaki ön
 
 - Desteklenen Windows sürümleri: Windows 10, Windows 11 ve Windows Server 2016 ve üzeri
 - Platform Sürümü: 4.18.2108.7+
-- PowerShell Sürümü: PowerShell Sürüm 5.1, PowerShell ISE, Uzak PowerShell (4.18.2201.10+), PowerShell 7.x (4.18.2201.10+)
+- PowerShell Sürümü: PowerShell Sürüm 5.1, PowerShell ISE, uzak PowerShell (4.18.2201.10+), PowerShell 7.x (4.18.2201.10+)
 
 ## <a name="powershell-reference"></a>PowerShell başvurusu
 
@@ -160,9 +160,11 @@ New-MpPerformanceRecording -RecordTo C:\LocalPathOnServer02\trace.etl -Session $
 Yukarıdaki komut Server02'de bir performans kaydı toplar (Session parametresinin bağımsız değişkeni $s belirtildiği gibi) ve bunu belirtilen yola kaydeder: **Server02'de C:\LocalPathOnServer02\trace.etl** .
 
 ##### <a name="example-3-collect-a-performance-recording-in-non-interactive-mode"></a>Örnek 3: Etkileşimli olmayan modda performans kaydı toplama
+
 ```powershell
-New-MpPerformanceRecording -RecordTo:.\Defender-scans.etl -Seconds 60 
+New-MpPerformanceRecording -RecordTo:.\Defender-scans.etl -Seconds 60
 ```
+
 Yukarıdaki komut, -Seconds parametresi tarafından belirtilen saniye cinsinden süre için bir performans kaydı toplar. Bu, etkileşim veya istem gerektirmeyen toplu koleksiyonlar yürüten kullanıcılar için önerilir.
 
 #### <a name="parameters-new-mpperformancerecording"></a>Parametreler: New-MpPerformanceRecording
@@ -192,6 +194,7 @@ Accept wildcard characters: False
 ```
 
 ##### <a name="-seconds"></a>-Saniye
+
 Performans kaydının süresini saniye cinsinden belirtir. Bu, etkileşim veya istem gerektirmeyen toplu koleksiyonlar yürüten kullanıcılar için önerilir.
 
 ```yaml
@@ -280,11 +283,13 @@ Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopProcesses:10 -TopExtensio
 ```powershell
 Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:100 -MinDuration:100ms
 ```
+
 ##### <a name="example-5-using--raw-parameter"></a>Örnek 5: -Raw parametresini kullanma
 
 ```powershell
 Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopFiles:10 -TopExtensions:10 -TopProcesses:10 -TopScans:10 -Raw | ConvertTo-Json
 ```
+
 Yukarıdaki komutta -Raw kullanılması, çıkışın makine tarafından okunabilir ve JSON gibi serileştirme biçimlerine dönüştürülebilir olması gerektiğini belirtir
 
 #### <a name="parameters-get-mpperformancereport"></a>Parametreler: Get-MpPerformanceReport
@@ -312,9 +317,10 @@ Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
 ```
+
 ##### <a name="-raw"></a>-Ham
 
-Performans kaydının çıktısının makine tarafından okunabilir ve JSON gibi serileştirme biçimlerine (örneğin, JSON'a Dönüştür komutu aracılığıyla) dönüştürülebilir olması gerektiğini belirtir. Bu, diğer veri işleme sistemleriyle toplu işlemeyle ilgilenen kullanıcılar için önerilir. 
+Performans kaydının çıktısının makine tarafından okunabilir ve JSON gibi serileştirme biçimlerine (örneğin, JSON'a Dönüştür komutu aracılığıyla) dönüştürülebilir olması gerektiğini belirtir. Bu, diğer veri işleme sistemleriyle toplu işlemeyle ilgilenen kullanıcılar için önerilir.
 
 ```yaml
 Type: <SwitchParameter>
@@ -537,4 +543,4 @@ Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz
 - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
 - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-- [uç nokta için Defender'ı Android özelliklerinde yapılandırma IOS özelliklerinde](android-configure.md)-  [Uç Nokta için Microsoft Defender yapılandırma](ios-configure-features.md)
+- [Android özelliklerinde Uç Nokta için Defender'ı](android-configure.md)[yapılandırma iOS özelliklerinde](ios-configure-features.md)-  Uç Nokta için Microsoft Defender yapılandırma

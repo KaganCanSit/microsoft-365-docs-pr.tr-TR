@@ -18,12 +18,12 @@ description: Office 365'de Outlook kurallarını ve özel form ekleme saldırıl
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 268e50059ad1b128e583a5be383788b545fa6190
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+ms.openlocfilehash: 370fa7cf6e8003954044290b7c19c3d839b0a145
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65874106"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016042"
 ---
 # <a name="detect-and-remediate-outlook-rules-and-custom-forms-injections-attacks"></a>Outlook Kurallarını ve Özel Form Ekleme Saldırılarını Algılama ve Düzeltme
 
@@ -155,7 +155,7 @@ Betik, kuralları ve formları okumak için kiracıdaki her posta kutusuna bağl
 
 ## <a name="how-to-stop-and-remediate-the-outlook-rules-and-forms-attack"></a>Outlook Kuralları ve Formları saldırısını durdurma ve düzeltme
 
-Bu saldırılardan herhangi biriyle ilgili herhangi bir kanıt bulursanız, düzeltme basittir, kuralı veya formu posta kutusundan silmeniz gerekir. Bunu Outlook istemcisiyle veya kuralları kaldırmak için uzak PowerShell kullanarak yapabilirsiniz.
+Bu saldırılardan herhangi biriyle ilgili herhangi bir kanıt bulursanız, düzeltme basittir, kuralı veya formu posta kutusundan silmeniz gerekir. Bunu Outlook istemcisiyle veya kuralları kaldırmak için Exchange PowerShell kullanarak yapabilirsiniz.
 
 ### <a name="using-outlook"></a>Outlook kullanma
 
@@ -171,11 +171,11 @@ Bu saldırılardan herhangi biriyle ilgili herhangi bir kanıt bulursanız, düz
 
 ### <a name="using-powershell"></a>PowerShell kullanma
 
-Tehlikeli kuralları kaldırmak veya devre dışı bırakmak için kullanabileceğiniz iki uzak PowerShell cmdlet'i vardır. Adımları izlemen yeter.
+Tehlikeli kuralları kaldırmak veya devre dışı bırakmak için kullanabileceğiniz iki Exchange PowerShell cmdlet'i vardır. Adımları izlemen yeter.
 
 #### <a name="steps-for-mailboxes-that-are-on-an-exchange-server"></a>Exchange sunucusundaki posta kutuları için adımlar
 
-1. uzak PowerShell kullanarak Exchange sunucusuna Bağlan. [Uzak PowerShell kullanarak sunucuları Exchange için Bağlan'deki](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell) adımları izleyin.
+1. Uzak PowerShell veya Exchange Yönetim Kabuğu'nu kullanarak Exchange sunucusuna Bağlan. [Uzak PowerShell kullanarak sunucuları Exchange için Bağlan'deki](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell) adımları izleyin veya [Exchange Yönetim Kabuğunu açın](/powershell/exchange/open-the-exchange-management-shell).
 
 2. Bir posta kutusundan tek bir kuralı, birden çok kuralı veya tüm kuralları tamamen kaldırmak istiyorsanız [Remove-InboxRule cmdlet'ini](/powershell/module/exchange/Remove-InboxRule) kullanın.
 
@@ -183,7 +183,7 @@ Tehlikeli kuralları kaldırmak veya devre dışı bırakmak için kullanabilece
 
 #### <a name="steps-for-mailboxes-in-exchange-online"></a>Exchange Online'da posta kutuları için adımlar
 
-1. [PowerShell kullanarak Exchange Online için Bağlan'deki](/powershell/exchange/connect-to-exchange-online-powershell) adımları izleyin.
+1. [PowerShell'i Exchange Online için Bağlan'deki](/powershell/exchange/connect-to-exchange-online-powershell) adımları izleyin.
 
 2. Bir posta kutusundan tek bir kuralı, birden çok kuralı veya tüm kuralları tamamen kaldırmak istiyorsanız [Gelen Kutusu Kuralını Kaldır cmdlet'ini](/powershell/module/exchange/Remove-InboxRule) kullanın.
 

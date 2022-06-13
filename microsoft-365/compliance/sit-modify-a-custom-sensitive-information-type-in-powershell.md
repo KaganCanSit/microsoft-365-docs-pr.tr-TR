@@ -1,5 +1,5 @@
 ---
-title: PowerShell kullanarak özel duyarlı bilgi türünü değiştirme
+title: PowerShell kullanarak özel hassas bilgi türünü değiştirme
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -15,70 +15,72 @@ search.appverid:
 - MOE150
 - MET150
 description: PowerShell kullanarak özel hassas bilgileri değiştirmeyi öğrenin.
-ms.openlocfilehash: 2f1bc44dca9ec4a938c8cd3d4158163f9d5e2e2f
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+ms.openlocfilehash: deb50679702cec69187392337511b4dde2d1ceb3
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015474"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014398"
 ---
-# <a name="modify-a-custom-sensitive-information-type-using-powershell"></a>PowerShell kullanarak özel duyarlı bilgi türünü değiştirme
+# <a name="modify-a-custom-sensitive-information-type-using-powershell"></a>PowerShell kullanarak özel hassas bilgi türünü değiştirme
 
-Uyumluluk Merkezi PowerShell'de, özel hassas bilgi türünde değişiklik yapmak için şunları yapmak gerekir:
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-1. Özel duyarlı bilgi türünü içeren var olan kural paketini bir XML dosyasına aktarın (veya varsa varolan XML dosyasını kullanın).
+Güvenlik & Uyumluluğu PowerShell'de, özel bir hassas bilgi türünü değiştirmek için şunlar gerekir:
 
-2. Dışarı aktarıldı XML dosyasında özel duyarlı bilgi türünü değiştirme.
+1. Özel hassas bilgi türünü içeren mevcut kural paketini bir XML dosyasına aktarın (veya varsa mevcut XML dosyasını kullanın).
 
-3. Güncelleştirilmiş XML dosyasını var olan kural paketine geri aktarın.
+2. Dışarı aktarılan XML dosyasındaki özel hassas bilgi türünü değiştirin.
 
-Uyumluluk Merkezi PowerShell'e bağlanmak için bkz[. Bağlan PowerShell Uyumluluk Merkezi'ne bağlanma](/powershell/exchange/exchange-online-powershell).
+3. Güncelleştirilmiş XML dosyasını mevcut kural paketine geri aktarın.
 
-### <a name="step-1-export-the-existing-rule-package-to-an-xml-file"></a>1. Adım: Var olan kural paketini BIR XML dosyasına dışarı aktarma
+Güvenlik & Uyumluluğu PowerShell'e bağlanmak için bkz [. Güvenlik & Uyumluluk PowerShell](/powershell/exchange/exchange-online-powershell).
+
+## <a name="step-1-export-the-existing-rule-package-to-an-xml-file"></a>1. Adım: Var olan kural paketini XML dosyasına aktarma
 
 > [!NOTE]
-> XML dosyasının bir kopyasına sahipsanız (örneğin, az önce oluşturdunız ve bunu dışarı aktardınız), XML dosyasını değiştirmek için sonraki adıma geçebilirsiniz.
+> XML dosyasının bir kopyasına sahipseniz (örneğin, yeni oluşturup içeri aktardıysanız), XML dosyasını değiştirmek için sonraki adıma atlayabilirsiniz.
 
-1. Daha önce bilmiyorsanız, özel kural paketinin adını bulmak için [Get-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/get-dlpsensitiveinformationtype) cmdlet'ini çalıştırın:
+1. Henüz bilmiyorsanız, özel kural paketinin adını bulmak için [Get-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/get-dlpsensitiveinformationtype) cmdlet'ini çalıştırın:
 
    ```powershell
    Get-DlpSensitiveInformationTypeRulePackage
    ```
 
    > [!NOTE]
-   > Yerleşik hassas bilgi türlerini içeren yerleşik kural paketi Microsoft Kural Paketi olarak adlandırılmıştır. Uyumluluk merkezi kullanıcı arabiriminde oluşturduğunuz özel hassas bilgi türlerini içeren kural paketi Microsoft.SCCManaged.CustomRulePack olarak adlandırılmıştır.
+   > Yerleşik hassas bilgi türlerini içeren yerleşik kural paketi Microsoft Kural Paketi olarak adlandırılır. Uyumluluk merkezi kullanıcı arabiriminde oluşturduğunuz özel hassas bilgi türlerini içeren kural paketi Microsoft.SCCManaged.CustomRulePack olarak adlandırılır.
 
-2. Özel kural [paketini bir değişkende depolamak için Get-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/get-dlpsensitiveinformationtyperulepackage) cmdlet'ini kullanın:
+2. Özel kural paketini bir değişkene [depolamak için Get-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/get-dlpsensitiveinformationtyperulepackage) cmdlet'ini kullanın:
 
    ```powershell
    $rulepak = Get-DlpSensitiveInformationTypeRulePackage -Identity "RulePackageName"
    ```
 
-   Örneğin, kural paketinin adı "Çalışan Kimliği Özel Kural Paketi" ise, aşağıdaki cmdlet'i çalıştırın:
+   Örneğin, kural paketinin adı "Çalışan Kimliği Özel Kural Paketi" ise aşağıdaki cmdlet'i çalıştırın:
 
    ```powershell
    $rulepak = Get-DlpSensitiveInformationTypeRulePackage -Identity "Employee ID Custom Rule Pack"
    ```
 
-3. Özel kural paketini bir XML dosyasına dışarı aktaracak şekilde aşağıdaki söz dizimi kullanın:
+3. Özel kural paketini xml dosyasına aktarmak için aşağıdaki söz dizimini kullanın:
 
    ```powershell
    [System.IO.File]::WriteAllBytes('XMLFileAndPath', $rulepak.SerializedClassificationRuleCollection)
    ```
 
-   Bu örnekte, kural paketi C:\Belgelerim klasöründeki ExportedRulePackage.xml dosya olarak adlandırılmıştır.
+   Bu örnek, kural paketini C:\Belgelerim klasöründeki ExportedRulePackage.xml adlı dosyaya aktarır.
 
    ```powershell
    [System.IO.File]::WriteAllBytes('C:\My Documents\ExportedRulePackage.xml', $rulepak.SerializedClassificationRuleCollection)
    ```
 
-#### <a name="step-2-modify-the-sensitive-information-type-in-the-exported-xml-file"></a>2. Adım: Dışarı aktaran XML dosyasında hassas bilgi türünü değiştirme
+## <a name="step-2-modify-the-sensitive-information-type-in-the-exported-xml-file"></a>2. Adım: Dışarı aktarılan XML dosyasındaki hassas bilgi türünü değiştirme
 
-XML dosyasındaki hassas bilgi türleri ve dosyanın diğer öğeleri bu konunun başlarında açıklanmıştır.
+XML dosyasındaki hassas bilgi türleri ve dosyadaki diğer öğeler bu konunun başlarında açıklanmıştır.
 
-#### <a name="step-3-import-the-updated-xml-file-back-into-the-existing-rule-package"></a>3. Adım: Güncelleştirilmiş XML dosyasını var olan kural paketine geri aktarma
+## <a name="step-3-import-the-updated-xml-file-back-into-the-existing-rule-package"></a>3. Adım: Güncelleştirilmiş XML dosyasını mevcut kural paketine geri aktarma
 
-Güncelleştirilmiş XML'yi var olan kural paketine geri almak için [Set-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/set-dlpsensitiveinformationtyperulepackage) cmdlet'ini kullanın:
+Güncelleştirilmiş XML'yi mevcut kural paketine geri aktarmak için [Set-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/set-dlpsensitiveinformationtyperulepackage) cmdlet'ini kullanın:
 
 ```powershell
 Set-DlpSensitiveInformationTypeRulePackage -FileData ([System.IO.File]::ReadAllBytes('C:\My Documents\External Sensitive Info Type Rule Collection.xml'))
@@ -88,6 +90,6 @@ Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Set-DlpSensitiveInfo
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- [Veri kaybını önleme hakkında bilgi](dlp-learn-about-dlp.md)
+- [Microsoft Purview Veri Kaybı Önleme hakkında bilgi edinin](dlp-learn-about-dlp.md)
 - [Hassas bilgi türü varlık tanımları](sensitive-information-type-entity-definitions.md)
 - [Hassas bilgi türü işlevleri](sit-functions.md)

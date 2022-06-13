@@ -20,16 +20,16 @@ description: Kullanıcılara güvenlik veya uyumluluk özelliklerinden herhangi 
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5bf2f6f99af13de0858b041807f01e25e3516da8
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 4e0ca3874f03d9f0c386a84c9e8b56ea58bbfe72
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130768"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66018018"
 ---
 # <a name="give-users-access-to-the-security--compliance-center"></a>Kullanıcılara Güvenlik ve Uyumluluk Merkezi'ne erişim izni verme
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -56,15 +56,15 @@ Güvenlik & Uyumluluk Merkezi'nde kullanıcılara verebileceğiniz farklı izinl
 
 2. Rol grupları listesinden rol grubunu seçin ve **Düzenle simgesine** tıklayın ![.](../../media/O365-MDM-CreatePolicy-EditIcon.gif).
 
-3. Rol grubunun özellikler sayfasında **Üyeler'in** altında **EkleEkle**![ Simgesi'ne tıklayın.](../../media/ITPro-EAC-AddIcon.gif) ve eklemek istediğiniz kullanıcının (veya kullanıcıların) adını seçin.
+3. Rol grubunun özellikler sayfasında **Üyeler'in** altında Ekle **Simgesi'ne**![tıklayın.](../../media/ITPro-EAC-AddIcon.gif) ve eklemek istediğiniz kullanıcının (veya kullanıcıların) adını seçin.
 
 4. Rol grubuna eklemek istediğiniz tüm kullanıcıları seçtiğinizde **ekle'ye\>** ve ardından **Tamam'a** tıklayın.
 
 5. Bitirdiğinizde, **Kaydet**'i tıklatın.
 
-## <a name="use-security--compliance-center-powershell-to-give-another-user-access-to-the-security--compliance-center"></a>Başka bir kullanıcıya Güvenlik & Uyumluluk Merkezi'ne erişim vermek için Güvenlik & Uyumluluk Merkezi PowerShell'i kullanma
+## <a name="use-security--compliance-powershell-to-give-another-user-access-to-the-security--compliance-center"></a>Güvenlik & Uyumluluk Merkezi'ne başka bir kullanıcıya erişim vermek için Güvenlik & Uyumluluğu PowerShell'i kullanın
 
-1. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 2. Aşağıdaki sözdizimini kullanın:
 
@@ -88,7 +88,7 @@ Güvenlik & Uyumluluk Merkezi'ne başarıyla erişim izni verdiğini doğrulamak
 
 - Güvenlik & Uyumluluk Merkezi'nde **İzinler'e** gidin ve rol grubunu seçin. Açılan ayrıntılar açılır penceresinde rol grubunun üyelerini doğrulayın.
 
-- Güvenlik & Uyumluluk Merkezi PowerShell'de öğesini rol grubunun adıyla değiştirin \<RoleGroupName\> ve aşağıdaki komutu çalıştırın:
+- Güvenlik & Uyumluluk PowerShell'inde öğesini rol grubunun adıyla değiştirin \<RoleGroupName\> ve aşağıdaki komutu çalıştırın:
 
   ```powershell
   Get-RoleGroupMember -Identity "<RoleGroupName>"

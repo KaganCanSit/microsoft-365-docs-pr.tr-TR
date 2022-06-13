@@ -19,12 +19,12 @@ search.appverid:
 ms.assetid: e3cbc79c-5e97-43d3-8371-9fbc398cd92e
 ms.custom: seo-marvel-apr2020
 description: Belirli bir posta kutusu veya site klasöründeki öğeleri arayan hedefli bir koleksiyon gerçekleştirmek için Microsoft Purview uyumluluk portalındaki İçerik arama özelliğini kullanın.
-ms.openlocfilehash: 396c42183667e59e738779f618ca077d909db419
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 224da8e651599d1d007684a069b0dbb9d30a6119
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094934"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015550"
 ---
 # <a name="use-content-search-for-targeted-collections"></a>Hedeflenen koleksiyonlar için İçerik aramasını kullanma
 
@@ -41,12 +41,12 @@ Microsoft Purview uyumluluk portalındaki İçerik arama aracı, kullanıcı ara
 
 - Ayrıca, Exchange Online kuruluşunuzda Posta Alıcıları rolüne de atanmış olmanız gerekir. Betikte bulunan **Get-MailboxFolderStatistics** cmdlet'ini çalıştırmak için bu gereklidir. Varsayılan olarak, Posta Alıcıları rolü Exchange Online'deki Kuruluş Yönetimi ve Alıcı Yönetimi rol gruplarına atanır. Exchange Online izin atama hakkında daha fazla bilgi için bkz. [Rol grubu üyelerini yönetme](/exchange/manage-role-group-members-exchange-2013-help). Ayrıca özel bir rol grubu oluşturabilir, buna Posta Alıcıları rolünü atayabilir ve ardından 1. Adımda betiği çalıştırması gereken üyeleri ekleyebilirsiniz. Daha fazla bilgi için bkz. [Rol gruplarını yönetme](/Exchange/permissions-exo/role-groups).
 
-- Bu makaledeki betik modern kimlik doğrulamasını destekler. Microsoft 365 veya Microsoft 365 GCC bir kuruluşsanız betiği olduğu gibi kullanabilirsiniz. Office 365 Almanya kuruluşu, Microsoft 365 GCC High kuruluşu veya Microsoft 365 DoD kuruluşuysanız, betiği başarıyla çalıştırmak için düzenlemeniz gerekir. Özellikle, Exchange Online PowerShell'e bağlanmak için satırı `Connect-ExchangeOnline` düzenlemeniz ve *ExchangeEnvironmentName* parametresini (ve kuruluşunuzun türü için uygun değeri) kullanmanız gerekir.  Ayrıca, Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmak için satırı `Connect-IPPSSession` düzenlemeniz ve *ConnectionUri* ve *AzureADAuthorizationEndpointUri* parametrelerini (ve kuruluşunuzun türü için uygun değerleri) kullanmanız gerekir. Daha fazla bilgi için [PowerShell'i Exchange Online ve Güvenlik &](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-without-using-mfa) [Uyumluluk Merkezi PowerShell'e Bağlan Bağlan'deki örneklere](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa) bakın.
+- Bu makaledeki betik modern kimlik doğrulamasını destekler. Microsoft 365 veya Microsoft 365 GCC bir kuruluşsanız betiği olduğu gibi kullanabilirsiniz. Office 365 Almanya kuruluşu, Microsoft 365 GCC High kuruluşu veya Microsoft 365 DoD kuruluşuysanız, betiği başarıyla çalıştırmak için düzenlemeniz gerekir. Özellikle, Exchange Online PowerShell'e bağlanmak için satırı `Connect-ExchangeOnline` düzenlemeniz ve *ExchangeEnvironmentName* parametresini (ve kuruluşunuzun türü için uygun değeri) kullanmanız gerekir.  Ayrıca, Güvenlik & Uyumluluğu PowerShell'e bağlanmak için satırı `Connect-IPPSSession` düzenlemeniz ve *ConnectionUri* ve *AzureADAuthorizationEndpointUri* parametrelerini (ve kuruluşunuzun türü için uygun değerleri) kullanmanız gerekir. Daha fazla bilgi için [PowerShell'i Exchange Online ve Güvenlik &](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-without-using-mfa) [Uyumluluğu PowerShell'e Bağlan için Bağlan örneklerine](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa) bakın.
 
-- Betiği her çalıştırdığınızda yeni bir uzak PowerShell oturumu oluşturulur. Bu, kullanabileceğiniz tüm uzak PowerShell oturumlarını kullanabileceğiniz anlamına gelir. Bunun olmasını önlemek için, etkin uzak PowerShell oturumlarınızın bağlantısını kesmek için aşağıdaki komutu çalıştırın.
+- Betiği her çalıştırdığınızda yeni bir uzak PowerShell oturumu oluşturulur. Bu, kullanabileceğiniz tüm uzak PowerShell oturumlarını kullanabileceğiniz anlamına gelir. Bunun olmasını önlemek için, etkin uzak PowerShell oturumlarınızın bağlantısını kesmek için aşağıdaki komutları çalıştırın.
 
   ```powershell
-  Get-PSSession | Remove-PSSession
+  Get-PSSession | Remove-PSSession; Disconnect-ExchangeOnline
   ```
 
     Daha fazla bilgi için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
@@ -67,7 +67,7 @@ Bu ilk adımda çalıştırdığınız betik, posta kutusu klasörlerinin veya S
 
   - **OneDrive İş**:`https://contoso-my.sharepoint.com/personal/stacig_contoso_onmicrosoft_com`
 
-- **Kullanıcı kimlik bilgileriniz**: Betik, modern kimlik doğrulaması kullanarak Exchange Online PowerShell'e veya Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmak için kimlik bilgilerinizi kullanır. Daha önce açıklandığı gibi, bu betiği başarıyla çalıştırmak için size uygun izinler atanmalıdır.
+- **Kullanıcı kimlik bilgileriniz**: Betik, modern kimlik doğrulaması kullanarak Exchange Online PowerShell'e veya Güvenlik & Uyumluluk PowerShell'e bağlanmak için kimlik bilgilerinizi kullanır. Daha önce açıklandığı gibi, bu betiği başarıyla çalıştırmak için size uygun izinler atanmalıdır.
 
 Posta kutusu klasörlerinin veya site belge bağlantısı (yol) adlarının listesini görüntülemek için:
 
@@ -132,7 +132,7 @@ Posta kutusu klasörlerinin veya site belge bağlantısı (yol) adlarının list
       $searchActionName = "SPFoldersSearch_Preview"
       # List the folders for the SharePoint or OneDrive for Business Site
       $siteUrl = $addressOrSite
-      # Connect to Security & Compliance Center PowerShell
+      # Connect to Security & Compliance PowerShell
       if (!$SccSession)
       {
           Import-Module ExchangeOnlineManagement
@@ -222,7 +222,7 @@ Belirli bir kullanıcının klasör kimliklerinin veya belge bağlantılarının
 
 1. <https://compliance.microsoft.com> 1. Adımda betiği çalıştırmak için kullandığınız hesabı ve kimlik bilgilerini kullanarak gidin ve oturum açın.
 
-2. Uyumluluk merkezinin sol bölmesinde **Tümünü** >  **gösterKoşullu aramayı** göster'e ve ardından **Yeni arama'ya** tıklayın.
+2. Uyumluluk merkezinin sol bölmesinde **Tüm** > **İçerik aramasını** göster'e ve ardından **Yeni arama'ya** tıklayın.
 
 3. **Anahtar Sözcükler** kutusuna, 1. Adım'da betik tarafından döndürülen veya `documentlink:<path>/*` değerini yapıştırın`folderid:<folderid>`.
 

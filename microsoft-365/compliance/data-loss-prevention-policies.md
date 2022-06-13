@@ -25,19 +25,19 @@ ms.custom:
 ROBOTS: NOINDEX, NOFOLLOW
 feedback_system: None
 description: veri kaybı önleme başvuru malzemesi
-ms.openlocfilehash: 55e8e5bd16b850ecce84cc87d43e7269746a7999
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: b7546d41310942a0e6eab99511a78c594822ee2a
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65754830"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017296"
 ---
 # <a name="data-loss-prevention-reference"></a>Veri kaybı önleme başvurusu
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!IMPORTANT]
-> Bu başvuru konusu artık Microsoft Purview Veri Kaybı Önleme (DLP) bilgileri için ana kaynak değildir. DLP içerik kümesi güncelleştiriliyor ve yeniden yapılandırılıyor. Bu makalede ele alınan konular yeni, güncelleştirilmiş makalelere taşınacaktır. DLP hakkında daha fazla bilgi için bkz. [Veri kaybını önleme hakkında bilgi edinin](dlp-learn-about-dlp.md).
+> Bu başvuru konusu artık Microsoft Purview Veri Kaybı Önleme (DLP) bilgilerinin ana kaynağı değildir. DLP içerik kümesi güncelleştiriliyor ve yeniden yapılandırılıyor. Bu makalede ele alınan konular yeni, güncelleştirilmiş makalelere taşınacaktır. DLP hakkında daha fazla bilgi için bkz. [Veri kaybını önleme hakkında bilgi edinin](dlp-learn-about-dlp.md).
 
 <!-- this topic needs to be split into smaller, more coherent ones. It is confusing as it is. -->
 <!-- move this note to a more appropriate place, no topic should start with a note -->
@@ -73,9 +73,9 @@ With a DLP policy, you can:
 -->
 ## <a name="create-and-manage-dlp-policies"></a>DLP ilkeleri oluşturma ve yönetme
 
-DLP ilkelerini Microsoft Purview uyumluluk portalı veri kaybı önleme sayfasında oluşturur ve yönetirsiniz.
+DLP ilkelerini Microsoft Purview uyumluluk portalındaki veri kaybı önleme sayfasında oluşturur ve yönetirsiniz.
 
-![Microsoft Purview uyumluluk portalı veri kaybı önleme sayfası](../media/943fd01c-d7aa-43a9-846d-0561321a405e.png)
+![Microsoft Purview uyumluluk portalında veri kaybı önleme sayfası](../media/943fd01c-d7aa-43a9-846d-0561321a405e.png)
 
 <!-- MOVED TO LEARN ABOUT ## What a DLP policy contains
 
@@ -493,7 +493,7 @@ DLP, derin içerik analizi (yalnızca basit bir metin taraması değil) kullanar
 
 ### <a name="policies-are-synced"></a>İlkeler eşitlenir
 
-Microsoft Purview uyumluluk portalı bir DLP ilkesi oluşturduktan sonra, bu ilke merkezi bir ilke deposunda depolanır ve ardından aşağıdakiler gibi çeşitli içerik kaynaklarıyla eşitlenir:
+Microsoft Purview uyumluluk portalında bir DLP ilkesi oluşturduktan sonra, bu ilke merkezi bir ilke deposunda depolanır ve ardından aşağıdakiler gibi çeşitli içerik kaynaklarıyla eşitlenir:
 
 - Exchange Online ve oradan Web üzerinde Outlook ve Outlook.
 
@@ -531,7 +531,7 @@ DLP, dizine alınabilecek tüm içeriği değerlendirir. Hangi dosya türlerinin
 
 ### <a name="policy-evaluation-in-exchange-online-outlook-and-outlook-on-the-web"></a>Exchange Online, Outlook ve Web üzerinde Outlook ilke değerlendirmesi
 
-Konum olarak Exchange Online içeren bir DLP ilkesi oluşturduğunuzda, ilke Microsoft Purview uyumluluk portalı ile Exchange Online eşitlenir ve ardından Exchange Online Web üzerinde Outlook ve Outlook.
+Konum olarak Exchange Online içeren bir DLP ilkesi oluşturduğunuzda, ilke Microsoft Purview uyumluluk portalından Exchange Online ve Exchange Online ile Web üzerinde Outlook ve Outlook eşitlenir.
 
 Outlook'da bir ileti oluşturulurken, oluşturulan içerik DLP ilkelerine göre değerlendirildikçe kullanıcı ilke ipuçlarını görebilir. İleti gönderildikten sonra, Exchange <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">yönetim merkezinde</a> oluşturulan Exchange posta akışı kuralları (taşıma kuralları olarak da bilinir) ve DLP ilkeleriyle birlikte posta akışının normal bir parçası olarak DLP ilkelerine göre değerlendirilir. DLP ilkeleri hem iletiyi hem de ekleri tarar.
 
@@ -545,15 +545,15 @@ Office'da DLP ilkesi değerlendirmesi, programların performansını veya içeri
 ### <a name="policy-evaluation-in-microsoft-teams"></a>Microsoft Teams'de ilke değerlendirmesi
  <!--what do you mean that it's synched to user accounts?  I thought DLP policies were applied to locations not users like sensitivity labels are  -->
 
-Konum olarak Microsoft Teams içeren bir DLP ilkesi oluşturduğunuzda, ilke Microsoft Purview uyumluluk portalı kullanıcı hesaplarıyla, Microsoft Teams kanallarıyla sohbet iletileriyle eşitlenir. DLP ilkelerinin nasıl yapılandırıldığına bağlı olarak, birisi Microsoft Teams sohbette veya kanal iletisinde hassas bilgileri paylaşmayı denediğinde, ileti engellenebilir veya iptal edilebilir. Ayrıca, hassas bilgiler içeren ve konuklarla (dış kullanıcılar) paylaşılan belgeler bu kullanıcılar için açılmaz. Daha fazla bilgi edinmek için bkz[. Veri kaybı önleme ve Microsoft Teams](dlp-microsoft-teams.md).
+Konum olarak Microsoft Teams içeren bir DLP ilkesi oluşturduğunuzda, ilke Microsoft Purview uyumluluk portalından kullanıcı hesaplarına, Microsoft Teams kanallarına ve sohbet iletilerine eşitlenir. DLP ilkelerinin nasıl yapılandırıldığına bağlı olarak, birisi Microsoft Teams sohbette veya kanal iletisinde hassas bilgileri paylaşmayı denediğinde, ileti engellenebilir veya iptal edilebilir. Ayrıca, hassas bilgiler içeren ve konuklarla (dış kullanıcılar) paylaşılan belgeler bu kullanıcılar için açılmaz. Daha fazla bilgi edinmek için bkz[. Veri kaybı önleme ve Microsoft Teams](dlp-microsoft-teams.md).
 
 ## <a name="permissions"></a>İzinler
 
-Varsayılan olarak, Genel yöneticiler, Güvenlik yöneticileri ve Uyumluluk yöneticileri DLP ilkesi oluşturma ve uygulama erişimine sahip olur. DLP ilkeleri oluşturacak uyumluluk ekibinizin diğer üyelerinin Microsoft Purview uyumluluk portalı izinlerine sahip olması gerekir. Varsayılan olarak, Kiracı yöneticiniz bu konuma erişebilir ve uyumluluk görevlilerine ve diğer kişilere kiracı yöneticisinin tüm izinlerini vermeden Microsoft Purview uyumluluk portalı erişim izni verebilir. Bunu yapmak için şunları yapmanızı öneririz:
+Varsayılan olarak, Genel yöneticiler, Güvenlik yöneticileri ve Uyumluluk yöneticileri DLP ilkesi oluşturma ve uygulama erişimine sahip olur. DLP ilkeleri oluşturacak uyumluluk ekibinizin diğer Üyelerinin Microsoft Purview uyumluluk portalında izinlere sahip olması gerekir. Varsayılan olarak, Kiracı yöneticiniz bu konuma erişebilir ve uyumluluk görevlilerine ve diğer kişilere Kiracı yöneticisinin tüm izinlerini vermeden Microsoft Purview uyumluluk portalına erişim izni verebilir. Bunu yapmak için şunları yapmanızı öneririz:
 
 1. Microsoft 365'de bir grup oluşturun ve gruba uyumluluk görevlileri ekleyin.
 
-2. Microsoft Purview uyumluluk portalı **İzinler** sayfasında bir rol grubu oluşturun.
+2. Microsoft Purview uyumluluk portalının **İzinler** sayfasında bir rol grubu oluşturun.
 
 3. Rol grubunu oluştururken **Rol Seç** bölümünü kullanarak Rol Grubuna şu rolü ekleyin: **DLP Uyumluluk Yönetimi**.
 
@@ -569,13 +569,13 @@ Bu izinler yalnızca DLP ilkesi oluşturmak ve uygulamak için gereklidir. İlke
 
 Microsoft Purview uyumluluk portalı cmdlet'lerinin çoğunu kullanmak için şunları yapmanız gerekir:
 
-1. [Uzak PowerShell kullanarak Office 365 Microsoft Purview uyumluluk portalı Bağlan](/powershell/exchange/connect-to-scc-powershell).
+1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 2. Bu [ilke ve uyumluluk-dlp cmdlet'lerinden](/powershell/module/exchange/export-dlppolicycollection) herhangi birini kullanın.
 
-Ancak DLP raporlarının Exchange Online dahil olmak üzere Microsoft 365 genelinden veri çekmesi gerekir. Bu nedenle ***, DLP raporlarına yönelik cmdlet'ler Microsoft Purview uyumluluk portalı PowerShell'de değil Exchange Online PowerShell'de kullanılabilir***. Bu nedenle, DLP raporları için cmdlet'leri kullanmak için şunları yapmanız gerekir:
+Ancak DLP raporlarının Exchange Online dahil olmak üzere Microsoft 365 genelinden veri çekmesi gerekir. Bu nedenle ***, DLP raporlarına yönelik cmdlet'ler Microsoft Purview uyumluluk portalı Powershell'de değil Exchange Online Powershell'de kullanılabilir***. Bu nedenle, DLP raporları için cmdlet'leri kullanmak için şunları yapmanız gerekir:
 
-1. [Uzak PowerShell kullanarak Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. DLP raporları için şu cmdlet'lerden birini kullanın:
 

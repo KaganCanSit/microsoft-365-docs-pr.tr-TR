@@ -19,12 +19,12 @@ ms.localizationpriority: high
 f1.keywords: NOCSH
 recommendations: false
 description: Bu makalede, kimliği doğrulanmamış kullanıcılarla dosya ve klasör paylaşmaya yönelik en iyi yöntemler hakkında bilgi edineceksiniz.
-ms.openlocfilehash: bd153d34e6e9ddc4a4b627a79df90286661353d3
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 783dfce365b34b694f048c7e65e3158678bea244
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65128598"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017996"
 ---
 # <a name="best-practices-for-sharing-files-and-folders-with-unauthenticated-users"></a>Kimliği doğrulanmamış kullanıcılarla dosya ve klasör paylaşmaya yönelik en iyi yöntemler
 
@@ -87,7 +87,8 @@ Kuruluşunuz için *Herkes* paylaşım etkinleştirildiğinde varsayılan payla�
 
 Varsayılan bağlantı ayarını yalnızca kuruluşunuzdaki kişiler için çalışan bir bağlantı olarak değiştirerek bu riski azaltabilirsiniz. Kimliği doğrulanmamış kişilerle paylaşmak isteyen kullanıcıların bu seçeneği özellikle belirtmesi gerekir.
 
-Kuruluş için varsayılan dosya ve klasör paylaşım bağlantısını ayarlamak için
+Kuruluş için varsayılan dosya ve klasör paylaşım bağlantısını ayarlamak için:
+
 1. SharePoint yönetim merkezini açın ve <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Paylaşım'ı**</a> seçin.
 1. **Dosya ve klasör** **bağlantıları'nın altında Yalnızca kuruluşunuzdaki kişiler'i** seçin.
 
@@ -95,7 +96,7 @@ Kuruluş için varsayılan dosya ve klasör paylaşım bağlantısını ayarlama
 
 1. **Kaydet'i** seçin
 
-Belirli bir site için varsayılan dosya ve klasör paylaşım bağlantısını ayarlamak için
+Belirli bir site için varsayılan dosya ve klasör paylaşım bağlantısını ayarlamak için:
 
 1. SharePoint yönetim merkezini açın, **Siteler'i** genişletin ve <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**ardından Etkin siteler'i**</a> seçin.
 1. Değiştirmek istediğiniz siteyi ve ardından **Paylaşım'ı** seçin.
@@ -109,7 +110,8 @@ Belirli bir site için varsayılan dosya ve klasör paylaşım bağlantısını 
 
 Hassas içeriğin kimliği doğrulanmamış şekilde paylaşılmasını önlemek için [Microsoft Purview Veri Kaybı Önleme'yi (DLP)](../compliance/dlp-learn-about-dlp.md) kullanabilirsiniz. Veri kaybı önleme, dosyanın duyarlılık etiketine, bekletme etiketine veya dosyanın kendisindeki hassas bilgilere göre işlem yapabilir.
 
-DLP kuralı oluşturmak için
+DLP kuralı oluşturmak için:
+
 1. Microsoft Purview yönetim merkezinde [Veri kaybı önleme sayfasına](https://compliance.microsoft.com/datalossprevention) gidin.
 2. **İlke oluştur'a** tıklayın.
 3. **Özel'i** seçin ve **İleri'ye** tıklayın.
@@ -133,18 +135,11 @@ DLP kuralı oluşturmak için
 
 ## <a name="protect-against-malicious-files"></a>Kötü amaçlı dosyalara karşı koruma
 
-Anonim kullanıcıların dosyaları karşıya yüklemesine izin verdiğinizde, birinin kötü amaçlı bir dosyayı karşıya yükleme riski artar. Microsoft 365'da, karşıya yüklenen dosyaları otomatik olarak taramak ve güvenli olmayan dosyaları karantinaya almak için Office 365 için Defender Kasa *Ekler* özelliğini kullanabilirsiniz.
+Anonim kullanıcıların dosyaları karşıya yüklemesine izin verdiğinizde, birinin kötü amaçlı bir dosyayı karşıya yükleme riski artar. Office 365 için Microsoft Defender Plan 1 veya Plan 2 lisanslarına sahip kuruluşlarda (örneğin, Microsoft 365 E5 veya eklenti olarak), karşıya yüklenen dosyaları korumalı bir sanal ortamda patlatıp güvenli olmayan dosyaları karantinaya almak için *Kasa Ekleri* özelliğini kullanabilirsiniz.
 
-Güvenli ekleri açmak için
-1. Güvenlik ve Uyumluluk yönetim merkezinde [ATP Kasa Ekler sayfasını](https://protection.office.com/safeattachmentv2) açın.
-2. **Genel ayarlar'a** tıklayın.
-3. SharePoint, OneDrive ve Microsoft Teams için ATP'yi açın.
+Yönergeler için bkz. [SharePoint, OneDrive ve Microsoft Teams için Kasa Eklerini açma](../security/office-365-security/turn-on-mdo-for-spo-odb-and-teams.md).
 
-   ![Güvenlik ve Uyumluluk merkezinde güvenli ekler ayarının ekran görüntüsü.](../media/safe-attachments-setting.png)
-
-4. İsteğe bağlı olarak Kasa Belgeleri de açın ve **kaydet'e** tıklayın
-
-Ek yönergeler için bkz. [SharePoint, OneDrive ve Microsoft Teams için](../security/office-365-security/mdo-for-spo-odb-and-teams.md) [ATP'yi açma ve SharePoint, OneDrive ve Microsoft Teams için ATP'yi açma](../security/office-365-security/turn-on-mdo-for-spo-odb-and-teams.md).
+Microsoft 365 A5 veya E5 Güvenlik lisanslarınız varsa, *Kasa Belgeleri* özelliğini de açabilirsiniz (ve kullanabilirsiniz). Daha fazla bilgi için bkz[. Microsoft 365 A5 veya E5 Güvenliğinde belgeler Kasa](../security/office-365-security/safe-docs.md).
 
 ## <a name="add-copyright-information-to-your-files"></a>Dosyalarınıza telif hakkı bilgileri ekleme
 

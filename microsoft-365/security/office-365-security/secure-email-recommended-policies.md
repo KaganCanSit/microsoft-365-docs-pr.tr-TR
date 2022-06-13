@@ -20,12 +20,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: a355ed4c31cf2355ee6166987651da092c7afb33
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 592b5733844dc6a3df1a1d207e3a2c3deda7d7b7
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945483"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015224"
 ---
 # <a name="policy-recommendations-for-securing-email"></a>E-postanın güvenliğini sağlamaya yönelik ilke önerileri
 
@@ -33,7 +33,7 @@ Bu makalede, modern kimlik doğrulaması ve koşullu erişimi destekleyen kurums
 
 Bu öneriler, gereksinimlerinizin ayrıntı düzeyine göre uygulanabilecek üç farklı güvenlik ve koruma katmanını temel alır: **başlangıç noktası**, **kuruluş** ve **özel güvenlik**. Bu güvenlik katmanları ve önerilen istemci işletim sistemleri hakkında daha fazla bilgi edinmek için önerilen [güvenlik ilkeleri ve yapılandırmalarına giriş](microsoft-365-policies-configurations.md) bölümünde bu önerilere başvurabilirsiniz.
 
-Bu öneriler, kullanıcılarınızın mobil cihazlarda iOS ve Android için Outlook dahil olmak üzere modern e-posta istemcilerini kullanmasını gerektirir. iOS ve Android için Outlook, Office 365 en iyi özellikleri için destek sağlar. Bu mobil Outlook uygulamaları, mobil kullanımı destekleyen ve diğer Microsoft bulut güvenliği özellikleriyle birlikte çalışan güvenlik özellikleriyle de tasarlanır. Daha fazla bilgi için bkz. [iOS ve Android için Outlook SSS](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-faq).
+Bu öneriler, kullanıcılarınızın mobil cihazlarda iOS ve Android için Outlook de dahil olmak üzere modern e-posta istemcilerini kullanmasını gerektirir. iOS ve Android için Outlook, Office 365 en iyi özellikleri için destek sağlar. Bu mobil Outlook uygulamaları, mobil kullanımı destekleyen ve diğer Microsoft bulut güvenliği özellikleriyle birlikte çalışan güvenlik özellikleriyle de tasarlanır. Daha fazla bilgi için bkz[. iOS ve Android SSS için Outlook](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-faq).
 
 ## <a name="update-common-policies-to-include-email"></a>Ortak ilkeleri e-posta içerecek şekilde güncelleştirme
 
@@ -72,7 +72,7 @@ Kullanıcıların yönetilmeyen cihazlardaki ekleri Web üzerinde Outlook indirm
 
 Adımlar şunlardır:
 
-1. [Exchange Online Uzak PowerShell oturumuna Bağlan](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell).
+1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell).
 2. Henüz bir OWA posta kutusu ilkeniz yoksa [, New-OwaMailboxPolicy](/powershell/module/exchange/new-owamailboxpolicy) cmdlet'iyle bir tane oluşturun.
 3. Eklerin görüntülenmesine izin vermek ancak indirilmek istemiyorsanız şu komutu kullanın:
 
@@ -98,7 +98,7 @@ Adımlar şunlardır:
 
 iOS ve Android cihaz kullanıcılarının yalnızca iOS ve Android için Outlook kullanarak iş veya okul içeriğine erişebildiğinden emin olmak için, bu olası kullanıcıları hedefleyen bir Koşullu Erişim ilkesine ihtiyacınız vardır.
 
-[iOS ve Android için Outlook kullanarak mesajlaşma işbirliği erişimini yönetme](/mem/intune/apps/app-configuration-policies-outlook#apply-conditional-access) bölümünde bu ilkeyi yapılandırma adımlarına bakın.
+iOS [ve Android için Outlook kullanarak mesajlaşma işbirliği erişimini yönetme](/mem/intune/apps/app-configuration-policies-outlook#apply-conditional-access) bölümünde bu ilkeyi yapılandırma adımlarına bakın.
 
 ## <a name="set-up-message-encryption"></a>İleti şifrelemeyi ayarlama
 

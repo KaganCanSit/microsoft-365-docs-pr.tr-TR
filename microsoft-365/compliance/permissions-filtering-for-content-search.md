@@ -20,12 +20,12 @@ search.appverid:
 ms.assetid: 1adffc35-38e5-4f7d-8495-8e0e8721f377
 description: eBulma yöneticilerinin kuruluşunuzdaki posta kutularının ve sitelerin yalnızca bir alt kümesini aramasına izin vermek için arama izinleri filtrelemesini kullanın.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: ba8cfaaec45ceefff89b17b561a5e80bebbdade6
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 067e1a3c785d624579af80f92476d2641266f4dc
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098812"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66018063"
 ---
 # <a name="configure-permissions-filtering-for-ediscovery"></a>eBulma için izin filtrelemeyi yapılandırma
 
@@ -59,7 +59,7 @@ Güvenlik & Uyumluluğu PowerShell'deki aşağıdaki dört cmdlet, arama izinler
 
 - Uyumluluk güvenlik filtresi cmdlet'lerini çalıştırmak için, uyumluluk portalında Kuruluş Yönetimi rol grubunun üyesi olmanız gerekir. Daha fazla bilgi için bkz [. Güvenlik & Uyumluluk Merkezi'ndeki İzinler](../security/office-365-security/permissions-in-the-security-and-compliance-center.md).
 
-- Uyumluluk güvenlik filtresi cmdlet'lerini kullanmak için hem Exchange Online hem de Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmanız gerekir. Bu cmdlet'ler posta kutusu özelliklerine erişim gerektirdiği için bu gereklidir; bu nedenle Exchange Online PowerShell'e bağlanmanız gerekir. Sonraki bölümdeki adımlara bakın.
+- Uyumluluk güvenlik filtresi cmdlet'lerini kullanmak için hem Exchange Online hem de Güvenlik & Uyumluluğu PowerShell'e bağlanmanız gerekir. Bu cmdlet'ler posta kutusu özelliklerine erişim gerektirdiği için bu gereklidir; bu nedenle Exchange Online PowerShell'e bağlanmanız gerekir. Sonraki bölümdeki adımlara bakın.
 
 - Arama izinleri filtreleri hakkında ek [bilgi için Daha fazla bilgi](#more-information) bölümüne bakın.
 
@@ -69,7 +69,7 @@ Güvenlik & Uyumluluğu PowerShell'deki aşağıdaki dört cmdlet, arama izinler
 
 - Bir kuruluşta oluşturulabilecek arama izni filtrelerinin sayısıyla ilgili bir sınır yoktur. Ancak, arama sorgusu en fazla 100 koşula sahip olabilir. Bu durumda, bir koşul Boole işleci ( **AND**, **OR** ve **NEAR** gibi) tarafından sorguya bağlı bir şey olarak tanımlanır. Koşul sayısı sınırı, arama sorgusunun kendisini ve aramayı çalıştıran kullanıcıya uygulanan tüm arama izinleri filtrelerini içerir. Bu nedenle, ne kadar çok arama izni filtreniz varsa (özellikle bu filtreler aynı kullanıcı veya kullanıcı grubuna uygulanırsa), arama için en fazla koşul sayısını aşma olasılığı o kadar yüksek olur. Kuruluşunuzun koşullar sınırına ulaşmasını önlemek için, iş gereksinimlerinizi karşılamak için kuruluşunuzdaki arama izni filtrelerinin sayısını mümkün olduğunca az tutun. Daha fazla bilgi için bkz. [eBulma araştırmaları için uyumluluk sınırlarını ayarlama](set-up-compliance-boundaries.md#frequently-asked-questions).
 
-## <a name="connect-to-exchange-online-and-security--compliance-center-powershell-in-a-single-session"></a>Exchange Online ve Güvenlik & Uyumluluk Merkezi PowerShell'e tek bir oturumda Bağlan
+## <a name="connect-to-exchange-online-and-security--compliance-powershell-in-a-single-session"></a>Exchange Online ve Güvenlik & Uyumluluğu PowerShell'e tek bir oturumda Bağlan
 
 Bu bölümdeki betiği başarıyla çalıştırabilmeniz için önce Exchange Online PowerShell V2 modülünü indirip yüklemeniz gerekir. Bilgi için bkz. [Exchange Online PowerShell V2 modülü hakkında](/powershell/exchange/exchange-online-powershell-v2#install-and-maintain-the-exo-v2-module).
 
@@ -89,13 +89,13 @@ Bu bölümdeki betiği başarıyla çalıştırabilmeniz için önce Exchange On
     .\ConnectEXO-SCC.ps1
     ```
 
-Bunun işe yarayip yaramadığını nasıl anlarsınız? Betiği çalıştırdıktan sonra, Exchange Online ve Güvenlik & Uyumluluğu PowerShell cmdlet'leri yerel Windows PowerShell oturumunuza aktarılır. Herhangi bir hata almazsanız başarıyla bağlandınız. Hızlı test, Exchange Online ve Güvenlik & Uyumluluk Merkezi PowerShell cmdlet'lerini çalıştırmaktır. Örneğin, **Get-Mailbox** ve **Get-ComplianceSearch** komutunu çalıştırabilirsiniz.
+Bunun işe yarayip yaramadığını nasıl anlarsınız? Betiği çalıştırdıktan sonra, Exchange Online PowerShell ve Güvenlik & Uyumluluğu PowerShell cmdlet'leri kullanılabilir. Herhangi bir hata almazsanız başarıyla bağlandınız. PowerShell ve Güvenlik & Uyumluluk PowerShell cmdlet'lerini Exchange Online çalıştırmak hızlı bir testtir. Örneğin, **Get-Mailbox** ve **Get-ComplianceSearch** komutunu çalıştırabilirsiniz.
 
 PowerShell bağlantı hatalarını gidermek için bkz:
 
 - [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell#how-do-you-know-this-worked)
 
-- [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell#how-do-you-know-this-worked)
+- [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell#how-do-you-know-this-worked)
 
 ## <a name="new-compliancesecurityfilter"></a>New-ComplianceSecurityFilter
 
@@ -111,7 +111,7 @@ Aşağıdaki bölümlerde bu cmdlet'in parametreleri açıklanmaktadır. Arama i
 
 _FilterName_ parametresi, izin filtresinin adını belirtir. Bu ad **Get-ComplianceSecurityFilter, Set-ComplianceSecurityFilter** ve **Remove-ComplianceSecurityFilter** cmdlet'leri kullanılırken bir filtreyi tanımlamak için kullanılır.
 
-### <a name="filters"></a>*Filtre*
+### <a name="filters"></a>*Filtreler*
 
 _Filters_ parametresi, uyumluluk güvenlik filtresi için arama ölçütlerini belirtir. Üç farklı filtre türü oluşturabilirsiniz:  
 
@@ -282,7 +282,7 @@ _Users_ parametresi, aramalarına bu filtreyi uygulayan kullanıcıları belirti
 
 Uyumluluk portalı rol grubunu belirtmek için  _Users_ parametresini de kullanabilirsiniz. Bu, özel bir rol grubu oluşturmanıza ve ardından bu rol grubuna bir arama izinleri filtresi atamanıza olanak tanır. Örneğin, çok uluslu bir şirketin ABD yan kuruluşu için eKeşif yöneticileri için özel bir rol grubunuz olduğunu varsayalım. Bu rol grubunu belirtmek için  _Users_ parametresini kullanabilirsiniz (rol grubunun Name özelliğini kullanarak) ve ardından  _Filter_ parametresini kullanarak yalnızca ABD'deki posta kutularının aranmasına izin vekleyebilirsiniz. Bu parametreyle dağıtım grupları belirtemezsiniz.
 
-### <a name="filters"></a>*Filtre*
+### <a name="filters"></a>*Filtreler*
 
 _Filters_ parametresi, uyumluluk güvenlik filtresi için arama ölçütlerini belirtir. Üç farklı filtre türü oluşturabilirsiniz:
 

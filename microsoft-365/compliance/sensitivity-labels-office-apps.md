@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: BT yöneticilerinin masaüstü, mobil ve web için Office uygulamalarında duyarlılık etiketlerini yönetmesine yönelik bilgiler.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 71f704e8215265409e5cf0edbbb3324d8925b0e3
-ms.sourcegitcommit: 37111bc0c5a6cc4690f7144a019bbff11d44858f
+ms.openlocfilehash: ff0a64ed04aecff83634172ecf57263482f90dc6
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65463219"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014200"
 ---
 # <a name="manage-sensitivity-labels-in-office-apps"></a>Office uygulamalarında duyarlılık etiketlerini yönetme
 
@@ -29,7 +29,7 @@ ms.locfileid: "65463219"
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview uyumluluk portalı duyarlılık etiketlerini [yayımladığınızda](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy), bunlar kullanıcıların verileri oluşturuldukça veya düzenlendikçe sınıflandırması ve koruması için Office uygulamalarda görünmeye başlar.
+Microsoft Purview uyumluluk portalından [duyarlılık etiketleri yayımladığınızda](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy), bunlar kullanıcıların verileri oluşturuldukça veya düzenlendikçe sınıflandırması ve koruması için Office uygulamalarda görünmeye başlar.
 
 Office uygulamalarında duyarlılık etiketlerini başarıyla yönetmenize yardımcı olması için bu makaledeki bilgileri kullanın. Örneğin, yerleşik etiketlemeye özgü özellikler için ihtiyacınız olan en düşük uygulama sürümlerini, bu özellikler için ek yapılandırma bilgilerini belirleyin ve Azure Information Protection birleşik etiketleme istemcisi ve diğer uygulamalar ve hizmetlerle etkileşimleri anlayın.
 
@@ -45,7 +45,7 @@ Aşağıdaki tablolarda, Office uygulamalarında yerleşik olarak bulunan duyarl
 
 Office uygulamalarının yeni sürümleri farklı güncelleştirme kanalları için farklı zamanlarda kullanıma sunulur. Windows için yeni özellikleri daha önce Semi-Annual Enterprise Kanalı yerine Geçerli Kanal veya Aylık Enterprise Kanalı'ndayken alırsınız. En düşük sürüm numaraları bir güncelleştirme kanalından diğerine de farklı olabilir. Daha fazla bilgi için bkz[. Microsoft 365 Uygulamaları güncelleştirme kanallarına genel bakış](/deployoffice/overview-update-channels) ve [Microsoft 365 Uygulamaları için Güncelleştirme geçmişi](/officeupdates/update-history-microsoft365-apps-by-date).
 
-Özel önizlemedeki yeni özellikler tabloya dahil değildir, ancak kuruluşunuzu [Microsoft Bilgi Koruması özel önizleme programına](https://aka.ms/mip-preview) aday göstererek bu önizlemelere katılabilirsiniz.
+Özel önizlemedeki yeni özellikler tabloya dahil değildir, ancak kuruluşunuzu [Microsoft Information Protection özel önizleme programına](https://aka.ms/mip-preview) aday göstererek bu önizlemelere katılabilirsiniz.
 
 iOS ve Android için Office için Office: Duyarlılık etiketleri [Office uygulaması](https://www.microsoft.com/en-us/microsoft-365/blog/2020/02/19/new-office-app-android-ios-available/) yerleşik olarak bulunur.
 
@@ -77,6 +77,7 @@ Listelenen sayılar, her özellik için gereken en düşük Office uygulama sür
 |[İçeriğe otomatik olarak bir hassasiyet etiketi uygulama](apply-sensitivity-label-automatically.md) <br /> - Hassas bilgi türlerini kullanma                    | Güncel Kanal: 2009+ <br /><br> Aylık Enterprise Kanalı: 2009+ <br /><br> Semi-Annual Enterprise Kanalı: 2102+ | 16.44+ | İnceleme altında | İnceleme altında | [Evet - kabul et](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[İçeriğe otomatik olarak bir hassasiyet etiketi uygulama](apply-sensitivity-label-automatically.md) <br /> - Eğitilebilir sınıflandırıcıları kullanma                    | Güncel Kanal: 2105+ <br /><br> Aylık Enterprise Kanalı: 2105+ <br /><br> Semi-Annual Enterprise Kanalı: 2108+ | 16.49+ | İnceleme altında | İnceleme altında | [Evet - kabul et](sensitivity-labels-sharepoint-onedrive-files.md) |
 |Etiketlenmiş ve şifrelenmiş belgeler için [birlikte yazma ve Otomatik Kaydetme](sensitivity-labels-coauthoring.md) desteği | Güncel Kanal: 2107+ <br /><br> Aylık Enterprise Kanalı: 2107+ <br /><br> Semi-Annual Enterprise Kanalı: 2202+ |  16.51+ | Önizleme: [Kabul ettiğinizde](sensitivity-labels-coauthoring.md#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) 2,58+ | Önizleme: [Kabul ettiğinizde](sensitivity-labels-coauthoring.md#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) 16.0.14931+ | [Evet - kabul et](sensitivity-labels-sharepoint-onedrive-files.md) |
+|[PDF desteği](#pdf-support)| Önizleme: [Beta Kanalına](https://office.com/insider) Dağıtım |  İnceleme altında | İnceleme altında | İnceleme altında | İnceleme altında |
 
 
 ### <a name="sensitivity-label-capabilities-in-outlook"></a>Outlook'da duyarlılık etiketi özellikleri
@@ -102,6 +103,7 @@ Listelenen sayılar, her özellik için gereken en düşük Office uygulama sür
 |[İçeriğe otomatik olarak bir hassasiyet etiketi uygulama](apply-sensitivity-label-automatically.md) <br /> - Hassas bilgi türlerini kullanma                    | Güncel Kanal: 2009+ <br /><br> Aylık Enterprise Kanalı: 2009+ <br /><br> Semi-Annual Enterprise Kanalı: 2102+ | 16.44+ <sup>\*</sup>                    | İnceleme altında           | İnceleme altında               | Evet |
 |[İçeriğe otomatik olarak bir hassasiyet etiketi uygulama](apply-sensitivity-label-automatically.md) <br /> - Eğitilebilir sınıflandırıcıları kullanma                    | Güncel Kanal: 2105+ <br /><br> Aylık Enterprise Kanalı: 2105+ <br /><br> Semi-Annual Enterprise Kanalı: 2108+ | 16.49+ | İnceleme altında           | İnceleme altında               | Evet |
 |[Varsayılan etiket ve zorunlu etiketleme için farklı ayarlar](#outlook-specific-options-for-default-label-and-mandatory-labeling)                    | Güncel Kanal: 2105+ <br /><br> Aylık Enterprise Kanalı: 2105+ <br /><br> Semi-Annual Enterprise Kanalı: 2108+ | 16.43+ <sup>\*</sup>                   | 4.2111+           | 4.2111+               | Evet |
+|[PDF desteği](#pdf-support) | İnceleme altında|  İnceleme altında | İnceleme altında | İnceleme altında | İnceleme altında |
 |
 
 **Dipnot:**
@@ -119,9 +121,9 @@ AIP istemcisiyle etiketleme desteği hakkında daha fazla bilgi edinmek ve bu is
 
 ## <a name="if-you-need-to-turn-off-built-in-labeling-in-office-apps-on-windows"></a>Windows'daki Office uygulamalarında yerleşik etiketlemeyi kapatmanız gerekiyorsa
 
-Office yerleşik etiketleme istemcisi, duyarlılık etiketlerini ve duyarlılık etiketi ilke ayarlarını Microsoft Purview uyumluluk portalı indirir.
+Office yerleşik etiketleme istemcisi, Microsoft Purview uyumluluk portalından duyarlılık etiketlerini ve duyarlılık etiketi ilkesi ayarlarını indirir.
 
-Office yerleşik etiketleme istemcisini kullanmak için, Microsoft Purview uyumluluk portalı kullanıcılara yayımlanmış bir veya daha fazla [etiket ilkeniz](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) ve [desteklenen bir Office sürümüne](#support-for-sensitivity-label-capabilities-in-apps) sahip olmanız gerekir.
+Office yerleşik etiketleme istemcisini kullanmak için Microsoft Purview uyumluluk portalından kullanıcılara yayımlanmış bir veya daha fazla [etiket ilkeniz](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) ve [desteklenen bir Office sürümüne](#support-for-sensitivity-label-capabilities-in-apps) sahip olmanız gerekir.
 
 Bu koşulların her ikisi de karşılanıyorsa ancak Windows Office uygulamalarında yerleşik etiketleri kapatmanız gerekiyorsa, aşağıdaki grup ilkesi ayarını kullanın:
 
@@ -153,7 +155,7 @@ Office 365 İleti Şifrelemesi için tanımladığınızlar gibi yönetici tanı
 
 Şifreleme uygulamak için yapılandırdığınız duyarlılık etiketleri, kullanıcıların kendi şifreleme ayarlarını belirtme karmaşıklığını ortadan kaldırır. Birçok Office uygulamada bu tek tek şifreleme ayarları, Bilgi Rights Management (IRM) seçenekleri kullanılarak kullanıcılar tarafından el ile yapılandırılmaya devam edebilir. Örneğin, Windows uygulamaları için:
 
-- Belge için: **FileInfoProtect** >  >  **DocumentRestrict Access** > 
+- Belge için: **Dosya** > **Bilgileri** > **Belgeyi** >  Koru **Erişimi Kısıtla**
 - e-posta için: **Seçenekler** sekmesinden **Şifrele** > 
   
 Kullanıcılar başlangıçta bir belgeyi veya e-postayı etiketlediğinde, etiket yapılandırma ayarlarınızı kendi şifreleme ayarlarıyla geçersiz kılabilir. Örneğin:
@@ -306,7 +308,7 @@ Bu senaryolarda, yerleşik etiketlemesi olan bir kullanıcı, Office uygulamalar
 | `${Item.Name}` | Etiketlenen içeriğin dosya adı veya e-posta konusu | **Sales.docx** |
 | `${Item.Location}` | Etiketlenen belgenin yolu ve dosya adı veya etiketlenen bir e-postanın e-posta konusu | **\\\Sales\2020\Q3\Report.docx**|
 | `${User.Name}` | Etiketi uygulayan kullanıcının görünen adı | **Richard Simone** |
-| `${User.PrincipalName}` | Etiketi uygulayan kullanıcının Azure AD kullanıcı asıl adı (UPN) | **rsimone\@ contoso.com** |
+| `${User.PrincipalName}` | Etiketi uygulayan kullanıcının Azure AD kullanıcı asıl adı (UPN) | **rsimone\@contoso.com** |
 | `${Event.DateTime}` | İçeriğin etiketlendiği tarih ve saat, etiketi Microsoft 365 uygulamalarında uygulayan kullanıcının yerel saat diliminde veya Office Çevrimiçi ve otomatik etiketleme ilkeleri için UTC (Eşgüdümlü Evrensel Saat) | **10.08.2020 13:30** |
 
 > [!NOTE]
@@ -370,6 +372,8 @@ Yerleşik etiketleme için ek bilgiler:
 
 - Zorunlu etiketleme etkin olduğunda, kullanıcılar belgelerden duyarlılık etiketlerini kaldıramaz, ancak var olan bir etiketi değiştirebilir.
 
+- Zorunlu etiketleme etkin olduğunda, belge etiketlendiğinde veya şifrelendiğinde PDF'ye yazdır seçeneği kullanılamaz. Daha fazla bilgi için bu sayfadaki [PDF desteği](#pdf-support) bölümüne bakın.
+
 Bu ayarın ne zaman kullanılacağı hakkında yönergeler için [ilke ayarları](sensitivity-labels.md#what-label-policies-can-do) hakkındaki bilgilere bakın.
 
 > [!NOTE]
@@ -385,24 +389,56 @@ Yerleşik etiketleme için, bu sayfadaki Outlook [için capabilities tablosunu](
 
 Outlook uygulaması, belgeler için varsayılan etiket ayarından farklı bir varsayılan etiket ayarını desteklediğinde:
 
-- Microsoft Purview uyumluluk portalı etiket ilkesi yapılandırmasında, **E-postalara varsayılan etiket uygula** sayfasında: Etiketlenmemiş tüm e-postalara uygulanacak veya varsayılan etiket olmayan duyarlılık etiketi seçiminizi belirtebilirsiniz. Bu ayar, yapılandırmanın önceki Belgeler **için İlke ayarları** sayfasındaki **Bu etiketi varsayılan olarak belgelere uygula** ayarından bağımsızdır.
+- Microsoft Purview uyumluluk portalındaki etiket ilkesi yapılandırmasında, **E-postalara varsayılan etiket uygula** sayfasında: Etiketlenmemiş tüm e-postalara uygulanacak veya varsayılan etiket olmayan duyarlılık etiketi seçiminizi belirtebilirsiniz. Bu ayar, yapılandırmanın önceki Belgeler **için İlke ayarları** sayfasındaki **Bu etiketi varsayılan olarak belgelere uygula** ayarından bağımsızdır.
 
 Outlook uygulaması, belgeler için varsayılan etiket ayarından farklı bir varsayılan etiket ayarını desteklemediğinde: Outlook her zaman etiket ilkesi yapılandırmasının **Belgeler için ilke ayarları** sayfasındaki **Belgelere varsayılan olarak bu etiketi uygula** için belirttiğiniz değeri kullanır.
 
 Outlook uygulaması zorunlu etiketlemeyi kapatmayı desteklediğinde:
 
-- Microsoft Purview uyumluluk portalı etiket ilkesi yapılandırmasında, **İlke ayarları** sayfasında: **Kullanıcıların e-postalarına veya belgelerine etiket uygulamasını gerektir'i** seçin. Ardından **İleriİleri'yi**  >  seçin ve **Kullanıcıların e-postalarına etiket uygulamasını gerektir** onay kutusunu temizleyin. Zorunlu etiketlemenin e-postalara ve belgelere uygulanmasını istiyorsanız onay kutusunu seçili tutun.
+- Microsoft Purview uyumluluk portalındaki etiket ilkesi yapılandırmasında, **İlke ayarları** sayfasında: **Kullanıcıların e-postalarına veya belgelerine etiket uygulamasını gerektir'i** seçin. Ardından **İleri İleri'yi** >  seçin ve **Kullanıcıların e-postalarına etiket uygulamasını gerektir** onay kutusunu temizleyin. Zorunlu etiketlemenin e-postalara ve belgelere uygulanmasını istiyorsanız onay kutusunu seçili tutun.
 
 Outlook uygulaması zorunlu etiketlemeyi kapatmayı desteklemediğinde: **Kullanıcıların e-postalarına veya belgelerine ilke ayarı olarak etiket uygulamasını gerektir'i** seçerseniz, Outlook kullanıcılardan etiketsiz e-postalar için her zaman bir etiket seçmelerini ister.
 
 > [!NOTE]
 > [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) veya [New-LabelPolicy](/powershell/module/exchange/new-labelpolicy) cmdlet'lerini kullanarak **PowerShell gelişmiş ayarlarını OutlookDefaultLabel** ve **DisableMandatoryInOutlook** yapılandırdıysanız:
 > 
-> Bu PowerShell ayarları için seçtiğiniz değerler Microsoft Purview uyumluluk portalı etiket ilkesi yapılandırmasına yansıtılır ve bu ayarları destekleyen Outlook uygulamalar için otomatik olarak çalışır. Diğer PowerShell gelişmiş ayarları yalnızca Azure Information Protection birleşik etiketleme istemcisi için desteklenmektedir.
+> Bu PowerShell ayarları için seçtiğiniz değerler Microsoft Purview uyumluluk portalındaki etiket ilkesi yapılandırmasına yansıtılır ve bu ayarları destekleyen Outlook uygulamalar için otomatik olarak çalışır. Diğer PowerShell gelişmiş ayarları yalnızca Azure Information Protection birleşik etiketleme istemcisi için desteklenmektedir.
+
+## <a name="pdf-support"></a>PDF desteği
+
+Yerleşik etiketleme için, desteklenen en düşük sürümleri belirlemek için bu sayfadaki [özellikler](#support-for-sensitivity-label-capabilities-in-apps) bölümündeki tabloları kullanın. Azure Information Protection birleşik etiketleme istemcisi, Office uygulamalarında PDF'yi desteklemez.
+
+Word, Excel ve PowerPoint, Office bir belgeyi PDF belgesine dönüştürmek için aşağıdaki yöntemleri destekler:
+
+- Dosya > PDF > Farklı Kaydet 
+- Pdf > Dışarı Aktarma > Dosya
+- Pdf > Kopya Gönderme > Paylaş
+
+PDF oluşturulduğunda, herhangi bir içerik işareti ve şifreleme içeren etiketi devralır. Şifrelenmiş PDF'ler Windows veya Mac'te Microsoft Edge ile açılabilir. Daha fazla bilgi ve alternatif [okuyucular için bkz. Korumalı PDF'ler için hangi PDF okuyucular desteklenir?](/azure/information-protection/rms-client/protected-pdf-readers#viewing-protected-pdfs-in-microsoft-edge-on-windows-or-mac)
+
+
+PDF senaryoları desteklenmez:
+
+- PDF'ye yazdır
+    
+    Kullanıcılar bu seçeneği belirlerse, belgenin etiketin ve şifrelemenin (uygulandıysa) korumasını kaybedeceği ve devam etmek için onaylamaları gerektiği konusunda uyarılırlar. Duyarlılık etiketi ilkeniz bir etiketi kaldırmak veya sınıflandırmasını düşürmek için gerekçe gerektiriyorsa, bu istemi görür.
+    
+    Bu seçenek duyarlılık etiketini kaldırdığından, zorunlu etiketleme kullanıyorsanız bu seçenek kullanıcılar tarafından kullanılamaz. Bu yapılandırma, kullanıcıların e-postalarına ve belgelerine etiket uygulamasını gerektiren duyarlılık etiketi ilkesi ayarını ifade eder.
+
+- PDF/A biçimi ve şifrelemesi
+    
+     Etiket uygulandığında uzun süreli arşivleme için tasarlanan bu PDF biçimi desteklenmez ve kullanıcıların Office belgeleri PDF'ye dönüştürmesini engeller.
+    
+- Parola koruması ve şifreleme
+    
+    **Belgenin** etiketi şifreleme uyguladığında Dosya  > **Bilgileri** > **Belgeyi** > **Parolayla Şifrele** seçeneğinin kullanılması desteklenmez. Bu senaryoda parolayla şifrele seçeneği kullanıcılar için kullanılamaz hale gelir.
+
+Bu özellik hakkında daha fazla bilgi için bkz. [Office uygulamalarla oluşturulan PDF'lere duyarlılık etiketleri uygulama](https://insider.office.com/blog/apply-sensitivity-labels-to-pdfs-created-with-office-apps).
+
 
 ## <a name="auditing-labeling-activities"></a>Etiketleme etkinliklerini denetleme
 
-Duyarlılık etiketi etkinlikleri tarafından oluşturulan denetim olayları hakkında bilgi için, [Microsoft Purview uyumluluk portalı denetim günlüğünde arama](search-the-audit-log-in-security-and-compliance.md) bölümündeki [Duyarlılık etiketi etkinlikleri](search-the-audit-log-in-security-and-compliance.md#sensitivity-label-activities) bölümüne bakın.
+Duyarlılık etiketi etkinlikleri tarafından oluşturulan denetim olayları hakkında bilgi için [Microsoft Purview uyumluluk portalında Denetim günlüğünde arama'nın](search-the-audit-log-in-security-and-compliance.md) [Duyarlılık etiketi etkinlikleri](search-the-audit-log-in-security-and-compliance.md#sensitivity-label-activities) bölümüne bakın.
 
 Bu denetim bilgileri, duyarlılık etiketlerinizin nasıl kullanıldığını ve etiketlenmiş içeriğin nerede bulunduğunu anlamanıza yardımcı olmak için [içerik gezgininde](data-classification-content-explorer.md) ve [etkinlik gezgininde](data-classification-activity-explorer.md) görsel olarak temsil edilir. 
 
@@ -410,8 +446,8 @@ Ayrıca [, denetim günlüğü kayıtlarını dışarı aktarıp yapılandırır
 
 > [!TIP]
 > Özel raporlar oluşturmaya yardımcı olmak için aşağıdaki blog gönderilerine bakın:
-> - [O365 Yönetim API'si aracılığıyla denetim günlüğü etkinliklerini Microsoft Purview - 1. Bölüm](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-365-compliance-audit-log-activities-via-o365/ba-p/2957171)
-> - [O365 Yönetim API'si aracılığıyla denetim günlüğü etkinliklerini Microsoft Purview - 2. Bölüm](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-365-compliance-audit-log-activities-via-o365/ba-p/2957297)
+> - [O365 Yönetim API'si aracılığıyla Microsoft Purview denetim günlüğü etkinlikleri - 1. Bölüm](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-365-compliance-audit-log-activities-via-o365/ba-p/2957171)
+> - [O365 Yönetim API'si aracılığıyla Microsoft Purview denetim günlüğü etkinlikleri - 2. Bölüm](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-365-compliance-audit-log-activities-via-o365/ba-p/2957297)
 
 ## <a name="end-user-documentation"></a>Son kullanıcı belgeleri
 

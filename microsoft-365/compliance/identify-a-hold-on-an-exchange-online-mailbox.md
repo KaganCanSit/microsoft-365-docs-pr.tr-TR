@@ -18,12 +18,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Microsoft 365'da bir Exchange Online posta kutusuna yerleştirilebilen farklı saklama türlerini tanımlamayı öğrenin.
-ms.openlocfilehash: 4b4ff5064f59285412c4c20108df9dbbae992f7e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: f38376fe3d7517b877239a9bb6add5fbf9952d59
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097766"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017908"
 ---
 # <a name="how-to-identify-the-type-of-hold-placed-on-an-exchange-online-mailbox"></a>Exchange Online posta kutusuna yerleştirilmiş saklama türünü tanımlama
 
@@ -130,9 +130,9 @@ Bir posta kutusuna uygulanan ayrı tutmanın GUID'sini aldıktan sonra, sonraki 
 
 ### <a name="ediscovery-holds"></a>eBulma tutmaları
 
-Posta kutusuna uygulanan bir eBulma ayrı tutmasını tanımlamak için Güvenlik & Uyumluluk Merkezi PowerShell'de aşağıdaki komutları çalıştırın. 1. Adımda tanımladığınız eBulma ayrılığı için GUID'yi (UniH ön eki dahil değil) kullanın. 
+Posta kutusuna uygulanan bir eBulma ayrı tutmasını belirlemek için Güvenlik & Uyumluluk PowerShell'de aşağıdaki komutları çalıştırın. 1. Adımda tanımladığınız eBulma ayrılığı için GUID'yi (UniH ön eki dahil değil) kullanın. 
 
-Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmak için bkz. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+Güvenlik & Uyumluluk PowerShell'e bağlanmak için bkz. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 İlk komut, ayrı tutma hakkında bilgi içeren bir değişken oluşturur. Bu değişken diğer komutlarda kullanılır. İkinci komut, ayrı tutmanın ilişkili olduğu eBulma olayının adını görüntüler. Üçüncü komut, ayrı tutmanın adını ve ayrı tutmanın geçerli olduğu posta kutularının listesini görüntüler.
 
@@ -163,7 +163,7 @@ In-Place Tutma guid'i ön ek ile `cld` başlıyorsa, önceki komutu çalıştır
 
 ### <a name="microsoft-365-retention-policies"></a>Microsoft 365 bekletme ilkeleri
 
-[Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) ve posta kutusuna uygulanan Microsoft 365 bekletme ilkesini (kuruluş genelinde veya belirli bir konum) tanımlamak için aşağıdaki komutu çalıştırın. 1. Adımda tanımladığınız GUID'yi (mbx, skp, grp ön eki veya eylem soneki dahil değil) kullanın.
+[Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) ve posta kutusuna uygulanan Microsoft 365 bekletme ilkesini (kuruluş genelinde veya belirli bir konum) tanımlamak için aşağıdaki komutu çalıştırın. 1. Adımda tanımladığınız GUID'yi (mbx, skp, grp ön eki veya eylem soneki dahil değil) kullanın.
 
 ```powershell
 Get-RetentionCompliancePolicy <hold GUID without prefix or suffix> -DistributionDetail  | FL Name,*Location
@@ -292,7 +292,7 @@ Bir saklama ilkesi artık bir posta kutusuna uygulanmadığında, içeriğin tem
 
 Bir posta kutusuna uygulanan ayrı tutmaları belirledikten sonra saklama süresini değiştirme, saklamayı geçici veya kalıcı olarak kaldırma ya da etkin olmayan bir posta kutusunu Microsoft 365 bekletme ilkesinden dışlama gibi görevleri gerçekleştirebilirsiniz. Ayrı tutmalarla ilgili görevleri gerçekleştirme hakkında daha fazla bilgi için aşağıdaki konulardan birine bakın:
 
-- Güvenlik [& Uyumluluk Merkezi PowerShell'de](/powershell/exchange/connect-to-scc-powershell) [Set-RetentionCompliancePolicy -Identity \<Policy Name> -AddExchangeLocationException \<user mailbox>](/powershell/module/exchange/set-retentioncompliancepolicy) komutunu çalıştırarak bir posta kutusunu kuruluş genelinde Microsoft 365 bekletme ilkesinden hariç tutun. Bu komut yalnızca *ExchangeLocation* özelliğinin değerinin eşit `All`olduğu bekletme ilkeleri için kullanılabilir.
+- Güvenlik & [Uyumluluk PowerShell'de](/powershell/exchange/connect-to-scc-powershell) [Set-RetentionCompliancePolicy -Identity \<Policy Name> -AddExchangeLocationException \<user mailbox>](/powershell/module/exchange/set-retentioncompliancepolicy) komutunu çalıştırarak bir posta kutusunu kuruluş genelindeki Microsoft 365 bekletme ilkesinin dışında tutun. Bu komut yalnızca *ExchangeLocation* özelliğinin değerinin eşit `All`olduğu bekletme ilkeleri için kullanılabilir.
 
 - [Etkin olmayan posta kutusunun bekletme süresini değiştirme](change-the-hold-duration-for-an-inactive-mailbox.md)
 

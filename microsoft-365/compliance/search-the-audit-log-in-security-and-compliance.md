@@ -1,5 +1,5 @@
 ---
-title: Microsoft Purview uyumluluk portalı denetim günlüğünde arama yapma
+title: Microsoft Purview uyumluluk portalında denetim günlüğünde arama yapma
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -17,22 +17,22 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 0d4d0f35-390b-4518-800e-0c7ec95e946c
-description: Kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntülemek üzere birleşik denetim günlüğünde arama yapmak için Microsoft Purview uyumluluk portalı kullanın.
+description: Kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntülemek üzere birleşik denetim günlüğünde arama yapmak için Microsoft Purview uyumluluk portalını kullanın.
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: 9d556facba3fa1a9c1dbafbfe2b2cb519f1b362d
-ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
+ms.openlocfilehash: 80ddd03eb37bd1b8984585a3e6d38b25a3a2b983
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65810976"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014288"
 ---
 # <a name="search-the-audit-log-in-the-compliance-portal"></a>Uyumluluk portalında denetim günlüğünde arama yapma
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Kullanıcının belirli bir belgeyi görüntüleyip görüntülemediğini veya bir öğeyi posta kutusundan temizleyip temizlemediğini bulmanız mı gerekiyor? Öyleyse, kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntülemek üzere birleşik denetim günlüğünde arama yapmak için Microsoft Purview uyumluluk portalı'deki denetim günlüğü arama aracını kullanabilirsiniz. Onlarca Microsoft 365 hizmeti ve çözümünde gerçekleştirilen binlerce kullanıcı ve yönetici işlemi, kuruluşunuzun birleşik denetim günlüğünde yakalanır, kaydedilir ve saklanır. Kuruluşunuzdaki kullanıcılar, bu işlemlerin denetim kayıtlarını aramak, görüntülemek ve dışarı aktarmak (CSV dosyasına) için denetim günlüğü arama aracını kullanabilir.
+Kullanıcının belirli bir belgeyi görüntüleyip görüntülemediğini veya bir öğeyi posta kutusundan temizleyip temizlemediğini bulmanız mı gerekiyor? Öyleyse, kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntülemek üzere birleşik denetim günlüğünde arama yapmak için Microsoft Purview uyumluluk portalındaki denetim günlüğü arama aracını kullanabilirsiniz. Onlarca Microsoft 365 hizmeti ve çözümünde gerçekleştirilen binlerce kullanıcı ve yönetici işlemi, kuruluşunuzun birleşik denetim günlüğünde yakalanır, kaydedilir ve saklanır. Kuruluşunuzdaki kullanıcılar, bu işlemlerin denetim kayıtlarını aramak, görüntülemek ve dışarı aktarmak (CSV dosyasına) için denetim günlüğü arama aracını kullanabilir.
 
 ## <a name="microsoft-365-services-that-support-auditing"></a>Denetimi destekleyen Microsoft 365 hizmetleri
 
@@ -107,7 +107,7 @@ Denetim günlüğünde arama yapmaya başlamadan önce aşağıdaki öğeleri ok
     > [!NOTE]
     > Posta kutusu denetimi varsayılan olarak açık olsa bile, uyumluluk portalında veya Office 365 Yönetim Etkinliği API'sinde bazı kullanıcılar için posta kutusu denetim olaylarının denetim günlüğü aramalarında bulunmadığını fark edebilirsiniz. Daha fazla bilgi için bkz. [Posta kutusu denetim günlüğü hakkında daha fazla bilgi](enable-mailbox-auditing.md#more-information).
 
-- Kuruluşunuz için denetim günlüğü aramasını kapatmak istiyorsanız, Exchange Online kuruluşunuza bağlı uzak PowerShell'de aşağıdaki komutu çalıştırabilirsiniz:
+- Kuruluşunuz için denetim günlüğü aramasını kapatmak istiyorsanız, PowerShell'Exchange Online aşağıdaki komutu çalıştırabilirsiniz:
 
   ```powershell
   Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $false
@@ -573,8 +573,8 @@ Aşağıdaki tabloda, SharePoint Online ve OneDrive İş dosya eşitleme etkinli
 
 |Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Bilgisayarın dosyaları eşitlemesine izin verildi|ManagedSyncClientAllowed|Kullanıcı bir siteyle başarıyla eşitleme ilişkisi kurar. Kullanıcının bilgisayarı, kuruluşunuzdaki belge kitaplıklarına erişebilen etki alanları listesine ( *güvenli alıcılar listesi* olarak adlandırılır) eklenmiş bir etki alanının üyesi olduğundan eşitleme ilişkisi başarılı olur. <br/><br/> Bu özellik hakkında daha fazla bilgi için bkz[. Güvenli alıcılar listesindeki etki alanları için OneDrive eşitleme etkinleştirmek için Windows PowerShell cmdlet'leri kullanma](/powershell/module/sharepoint-online/).|
-|Bilgisayarın dosyaları eşitlemesi engellendi|UnmanagedSyncClientBlocked|Kullanıcı, kuruluşunuzun etki alanının üyesi olmayan veya kuruluşunuzdaki belge kitaplıklarına erişebilen etki alanları listesine (  *güvenilir alıcılar listesi*  olarak adlandırılır) eklenmemiş bir etki alanının üyesi olan bir bilgisayardan siteyle eşitleme ilişkisi kurmaya çalışır. Eşitleme ilişkisine izin verilmez ve kullanıcının bilgisayarının dosyaları bir belge kitaplığına eşitlemesi, indirmesi veya karşıya yüklemesi engellenir. <br/><br/> Bu özellik hakkında bilgi için bkz. [Güvenli alıcılar listesindeki etki alanları için OneDrive eşitleme etkinleştirmek için Windows PowerShell cmdlet'lerini kullanma](/powershell/module/sharepoint-online/).|
+|Bilgisayarın dosyaları eşitlemesine izin verildi|ManagedSyncClientAllowed|Kullanıcı bir siteyle başarıyla eşitleme ilişkisi kurar. Kullanıcının bilgisayarı, kuruluşunuzdaki belge kitaplıklarına erişebilen etki alanları listesine ( *güvenli alıcılar listesi* olarak adlandırılır) eklenmiş bir etki alanının üyesi olduğundan eşitleme ilişkisi başarılı olur. <br/><br/> Bu özellik hakkında daha fazla bilgi için bkz. [Güvenli alıcılar listesindeki etki alanları için OneDrive eşitleme etkinleştirmek için PowerShell cmdlet'lerini kullanma](/powershell/module/sharepoint-online/).|
+|Bilgisayarın dosyaları eşitlemesi engellendi|UnmanagedSyncClientBlocked|Kullanıcı, kuruluşunuzun etki alanının üyesi olmayan veya kuruluşunuzdaki belge kitaplıklarına erişebilen etki alanları listesine (  *güvenilir alıcılar listesi*  olarak adlandırılır) eklenmemiş bir etki alanının üyesi olan bir bilgisayardan siteyle eşitleme ilişkisi kurmaya çalışır. Eşitleme ilişkisine izin verilmez ve kullanıcının bilgisayarının dosyaları bir belge kitaplığına eşitlemesi, indirmesi veya karşıya yüklemesi engellenir. <br/><br/> Bu özellik hakkında bilgi için bkz. [Güvenli alıcılar listesindeki etki alanları için OneDrive eşitleme etkinleştirmek için PowerShell cmdlet'lerini kullanma](/powershell/module/sharepoint-online/).|
 |Bilgisayara indirilen dosyalar|FileSyncDownloadedFull|Kullanıcı SharePoint belge kitaplığından veya OneDrive eşitleme uygulamasını (OneDrive.exe) kullanarak OneDrive İş bilgisayarına dosya indirir.|
 |Bilgisayara indirilen dosya değişiklikleri|FileSyncDownloadedPartial|Bu olay, eski OneDrive İş eşitleme uygulaması (Groove.exe) ile birlikte kullanım dışı bırakıldı.|
 |Belge kitaplığına dosya yüklendi|FileSyncUploadedFull|Kullanıcı, OneDrive eşitleme uygulamasını (OneDrive.exe) kullanarak yeni bir dosyayı veya değişiklikleri SharePoint belge kitaplığına veya OneDrive İş bir dosyaya yükler.|
@@ -645,7 +645,7 @@ Aşağıdaki tabloda, SharePoint Online'da site yönetimi görevlerinden kaynakl
 
 Aşağıdaki tabloda, posta kutusu denetim günlüğü tarafından günlüğe kaydedilebilecek etkinlikler listelenir. Posta kutusu sahibi, temsilci kullanıcı veya yönetici tarafından gerçekleştirilen posta kutusu etkinlikleri, denetim günlüğüne otomatik olarak 90 güne kadar günlüğe kaydedilir. Bir yöneticinin kuruluşunuzdaki tüm kullanıcılar için posta kutusu denetim günlüğünü kapatması mümkündür. Bu durumda, hiçbir kullanıcı için hiçbir posta kutusu eylemi günlüğe kaydedilmez. Daha fazla bilgi için bkz. [Posta kutusu denetimini yönetme](enable-mailbox-auditing.md).
 
- Exchange Online PowerShell'de [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlet'ini kullanarak da posta kutusu etkinliklerini arayabilirsiniz.
+ Exchange Online [PowerShell'de](/powershell/exchange/connect-to-exchange-online-powershell) [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlet'ini kullanarak da posta kutusu etkinliklerini arayabilirsiniz.
 
 |Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
@@ -785,7 +785,7 @@ Günlüğe kaydedilen eBulma etkinliklerinin listesi ve ayrıntılı açıklamas
 
 ### <a name="ediscovery-premium-activities"></a>eBulma (Premium) etkinlikleri
 
-Microsoft Purview eBulma (Premium) içindeki etkinlikler için denetim günlüğünde de arama yapabilirsiniz. Bu etkinliklerin açıklaması [için denetim günlüğünde eBulma](search-for-ediscovery-activities-in-the-audit-log.md#ediscovery-premium-activities) etkinliklerini arama bölümündeki "eBulma (Premium) etkinlikleri" bölümüne bakın.
+Denetim günlüğünde Microsoft Purview eKeşif (Premium) etkinlikleri için de arama yapabilirsiniz. Bu etkinliklerin açıklaması [için denetim günlüğünde eBulma](search-for-ediscovery-activities-in-the-audit-log.md#ediscovery-premium-activities) etkinliklerini arama bölümündeki "eBulma (Premium) etkinlikleri" bölümüne bakın.
 
 ### <a name="power-bi-activities"></a>Power BI etkinlikleri
 
@@ -805,9 +805,9 @@ Workplace Analytics, grupların kuruluşunuz genelinde nasıl işbirliği yaptı
 |Silinen sonuç|DeletedResult|Analist bir sorgu sonucunu sildi.|
 |İndirilen rapor|İndirilen Rapor|Analist bir sorgu sonuç dosyası indirdi.|
 |Yürütülen sorgu|ExecutedQuery|Analist bir sorgu çalıştırmıştı.|
-|Güncelleştirilmiş veri erişimi ayarı|UpdatedDataAccessSetting|Yönetici güncelleştirilmiş veri erişim ayarları.|
-|Güncelleştirilmiş gizlilik ayarı|UpdatedPrivacySetting|Yönetici güncelleştirilmiş gizlilik ayarları; örneğin, en düşük grup boyutu.|
-|Karşıya yüklenen kuruluş verileri|UploadedOrgData|Yönetici kurumsal veri dosyası.|
+|Güncelleştirilmiş veri erişimi ayarı|UpdatedDataAccessSetting|Yönetici, veri erişim ayarlarını güncelleştirdi.|
+|Güncelleştirilmiş gizlilik ayarı|UpdatedPrivacySetting|Yönetici, gizlilik ayarlarını güncelleştirdi; örneğin, en düşük grup boyutu.|
+|Karşıya yüklenen kuruluş verileri|UploadedOrgData|Yönetici kurumsal veri dosyasını karşıya yükledi.|
 |Oturum açan kullanıcı<sup>*</sup>| UserLoggedIn |Microsoft 365 kullanıcı hesabında oturum açan bir kullanıcı.|
 |Kullanıcı oturumu kapattı<sup>*</sup>| UserLoggedOff |Bir kullanıcı, Microsoft 365 kullanıcı hesabında oturumu kapatmış.
 |Araştırıldı|ViewedExplore|Analist görselleştirmeleri bir veya daha fazla Araştır sayfası sekmesinde görüntüledi.|
@@ -930,7 +930,7 @@ Bir Forms etkinliği bir ortak yazar veya anonim yanıtlayıcı tarafından ger�
 |Görüntülenen yanıt|ViewResponse|Form sahibi belirli bir yanıtı görüntüler. <br><br>Property ResponseId:string ve Property ResponderId:string hangi sonucun görüntülendiğini gösterir. <br><br>Anonim yanıtlayıcı için ResponderId özelliği null olur.|
 |Özet bağlantısı oluşturuldu|GetSummaryLink|Form sahibi, sonuçları paylaşmak için özet sonuçlar bağlantısı oluşturur.|
 |Silinen özet bağlantısı|DeleteSummaryLink|Form sahibi özet sonuçları bağlantısını siler.|
-|Form kimlik avı durumu güncelleştirildi|UpdatePhishingStatus|Bu olay, iç güvenlik durumunun ayrıntılı değeri değiştirildiğinde, bunun son güvenlik durumunu değiştirip değiştirmediğine bakılmaksızın günlüğe kaydedilir (örneğin, form artık Kapalı veya Açık durumdadır). Bu, son güvenlik durumu değişikliği olmadan yinelenen olaylar görebileceğiniz anlamına gelir. Bu olayın olası durum değerleri şunlardır:<br/>- Aşağı Al <br/>- Yönetici <br/>- Yönetici Engeli Kaldırıldı <br/>- Otomatik Engellendi <br/>- Otomatik Engeli Kaldırıldı <br/>- Müşteri Tarafından Bildirilen <br/>- Bildirilen Müşteriyi Sıfırla|
+|Form kimlik avı durumu güncelleştirildi|UpdatePhishingStatus|Bu olay, iç güvenlik durumunun ayrıntılı değeri değiştirildiğinde, bunun son güvenlik durumunu değiştirip değiştirmediğine bakılmaksızın günlüğe kaydedilir (örneğin, form artık Kapalı veya Açık durumdadır). Bu, son güvenlik durumu değişikliği olmadan yinelenen olaylar görebileceğiniz anlamına gelir. Bu olayın olası durum değerleri şunlardır:<br/>- Aşağı Al <br/>- Yönetici tarafından Indir <br/>- Yönetici Engeli Kaldırıldı <br/>- Otomatik Engellendi <br/>- Otomatik Engeli Kaldırıldı <br/>- Müşteri Tarafından Bildirilen <br/>- Bildirilen Müşteriyi Sıfırla|
 |Kullanıcı kimlik avı durumu güncelleştirildi|UpdateUserPhishingStatus|Bu olay, kullanıcı güvenlik durumu değeri her değiştirildiğinde günlüğe kaydedilir. Denetim kaydındaki kullanıcı durumunun değeri, Kullanıcı Microsoft Online güvenlik ekibi tarafından indirilmiş bir kimlik avı formu oluşturduğunda **Kimlik Avı Olarak Onaylandı şeklindedir** . Yönetici kullanıcının engellemesini kaldırırsa, kullanıcının durumunun değeri **Normal Kullanıcı Olarak Sıfırla olarak** ayarlanır.|
 |Gönderilmiş Formlar Pro daveti|ProInvitation|Kullanıcı bir Pro deneme sürümünü etkinleştirmek için tıklar.|
 |Güncelleştirilmiş form ayarı<sup>*</sup> |UpdateFormSetting|Form sahibi bir veya birden çok form ayarlarını güncelleştirir. <br><br>FormSettingName:string özelliği, güncelleştirilmiş hassas ayarların adını gösterir. NewFormSettings:string özelliği, güncelleştirilmiş ayarların adını ve yeni değerini gösterir. thankYouMessageContainsLink:boolean özelliği, güncelleştirilmiş teşekkür iletisinin bir URL bağlantısı içerdiğini gösterir.|
@@ -1024,8 +1024,8 @@ Aşağıdaki tabloda, myAnalytics'teki Microsoft 365 denetim günlüğüne kayde
 
 |**Kolay ad**|**Işlem**|**Açıklama**|
 |:-----|:-----|:-----|
-|Kuruluş MyAnalytics ayarları güncelleştirildi|UpdatedOrganizationMyAnalyticsSettings|Yönetici MyAnalytics için kuruluş düzeyi ayarlarını güncelleştirir. |
-|Kullanıcı MyAnalytics ayarları güncelleştirildi|UpdatedUserMyAnalyticsSettings|Yönetici MyAnalytics için kullanıcı ayarlarını güncelleştirir.|
+|Kuruluş MyAnalytics ayarları güncelleştirildi|UpdatedOrganizationMyAnalyticsSettings|Yönetici, MyAnalytics için kuruluş düzeyi ayarlarını güncelleştirir. |
+|Kullanıcı MyAnalytics ayarları güncelleştirildi|UpdatedUserMyAnalyticsSettings|Yönetici, MyAnalytics için kullanıcı ayarlarını güncelleştirir.|
 
 ### <a name="information-barriers-activities"></a>Bilgi engelleri etkinlikleri
 
@@ -1064,7 +1064,7 @@ Aşağıdaki tabloda, Microsoft 365 denetim günlüğüne kaydedilen kullanım r
 
 |**Kolay ad**|**Işlem**|**Açıklama**|
 |:-----|:-----|:-----|
-|Kullanım raporu gizlilik ayarları güncelleştirildi|UpdateUsageReportsPrivacySetting|Yönetici kullanım raporları için güncelleştirilmiş gizlilik ayarları. |
+|Kullanım raporu gizlilik ayarları güncelleştirildi|UpdateUsageReportsPrivacySetting|Yönetici kullanım raporları için gizlilik ayarlarını güncelleştirdi. |
 
 ### <a name="exchange-admin-audit-log"></a>yönetici denetim günlüğünü Exchange
 
@@ -1134,7 +1134,7 @@ Evet, aşağıdaki yöntemleri kullanarak denetim günlüklerini alabilirsiniz:
 
 - [Office 365 Yönetim Etkinliği API'si](/office/office-365-management-api/office-365-management-activity-api-reference).
 
-- Microsoft Purview uyumluluk portalı [denetim günlüğü arama aracı](search-the-audit-log-in-security-and-compliance.md).
+- Microsoft Purview uyumluluk portalındaki [denetim günlüğü arama aracı](search-the-audit-log-in-security-and-compliance.md) .
 
 - Exchange Online PowerShell'de [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) cmdlet'i.
 

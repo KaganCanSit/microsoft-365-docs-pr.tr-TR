@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 description: Tam veri eşleşmesi hassas bilgi türü/kural paketi oluşturma
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: d18147e576db356a5fb7904c3901003bbf48855e
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: ff493f7af88d377bcf008d13752969107cfd65e7
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435269"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017196"
 ---
 # <a name="create-exact-data-match-sensitive-information-typerule-package"></a>Tam veri eşleşmesi hassas bilgi türü/kural paketi oluşturma
 
@@ -60,7 +60,7 @@ Bkz [. Hassas bilgi türü varlık tanımları](sensitive-information-type-entit
 
 ### <a name="use-the-exact-data-match-schema-and-sensitive-information-type-pattern-wizard"></a>Tam veri eşleme şemasını ve hassas bilgi türü deseni sihirbazını kullanma
 
-1. Kiracınızın Microsoft Purview uyumluluk portalı **Veri sınıflandırmasıExact** >  **veri eşleşmeleri'ne** gidin.
+1. Kiracınızın Microsoft Purview uyumluluk portalında **Veri sınıflandırması** > **Tam veri eşleşmeleri'ne** gidin.
 
 2. Hassas bilgi türü yapılandırma sihirbazını açmak için **EDM hassas bilgi türlerini** ve **EDM hassas bilgi türü oluştur'u** seçin.
 
@@ -89,7 +89,7 @@ Bkz [. Hassas bilgi türü varlık tanımları](sensitive-information-type-entit
 
 ### <a name="edit-or-delete-the-sensitive-information-type-pattern"></a>Hassas bilgi türü desenini düzenleme veya silme
 
-1. **Uyumluluk merkeziVeri** >  **sınıflandırmasıExact** >  veri eşleşmelerini açın.
+1. **Uyumluluk merkezi** > **Veri sınıflandırması** > **Tam veri eşleşmelerini** açın.
 
 2. **EDM hassas bilgi türlerini** seçin.
 
@@ -138,7 +138,7 @@ Bazı durumlarda, geçmiş nedenlerden dolayı standartlaştırılmış bir dese
 
 ## <a name="create-a-rule-package-manually"></a>El ile kural paketi oluşturma
 
-Bu yordamda, kural paketi (Unicode kodlamalı) olarak adlandırılan XML biçiminde bir dosya oluşturma ve uyumluluk merkezi PowerShell cmdlet'lerini kullanarak Microsoft Purview karşıya yükleme işlemi gösterilir.
+Bu yordamda, kural paketi (Unicode kodlamalı) olarak adlandırılan XML biçiminde bir dosya oluşturma ve ardından Güvenlik & Uyumluluğu PowerShell cmdlet'lerini kullanarak dosyayı Microsoft Purview'a yükleme işlemi gösterilmektedir.
 
 > [!NOTE]
 > Eşlediğiniz SIT çok sözcüklü doğrulayıcı kanıtı algılayabilirse, el ile oluşturulan bir kural paketinde tanımladığınız ikincil öğeler SIT ile eşlenebilir. Örneğin, bu destekleyici kanıt alanı bu deseni algılayan bir SIT ile eşlenmediyse, içerikteki içeriği alanlardan birinde karşıya yüklenen terimle `John Smith` ayrı ayrı karşılaştırıp `John` `Smith` bulduğumuz için ad `John Smith` ikincil öğe olarak eşleşmez.

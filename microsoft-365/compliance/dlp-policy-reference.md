@@ -19,12 +19,12 @@ ms.collection:
 recommendations: false
 description: DLP ilkesi bileşeni ve yapılandırma başvurusu
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: 1ad00a36f48849ca110a598f92c5536ef7b21843
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: b62289cfe4d18b4c6e2e79bb9a308f8b88978451
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65648614"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015802"
 ---
 # <a name="data-loss-prevention-policy-reference"></a>Veri Kaybı Önleme ilkesi başvurusu
 
@@ -525,8 +525,9 @@ Kullanıcı, bir kuralın koşullarını ve özel durumlarını karşılayan bir
 
 ![İleti çubuğu, Excel 2016 ilke ipucunu gösterir](../media/7002ff54-1656-4a6c-993f-37427d6508c8.png)
 
-> [!NOTE]
-> Bildirim e-postaları korumasız gönderilir.
+> [!IMPORTANT]
+> - Bildirim e-postaları korumasız gönderilir.
+> - E-posta bildirimleri yalnızca Microsoft 365 hizmetleri için desteklenir.
 
 Ayrıca kişilere [ilkeyi geçersiz kılma](#user-overrides) seçeneği de verebilirsiniz; böylece geçerli bir iş ihtiyaçları varsa veya ilke yanlış pozitif algılarsa engellenmez.
 

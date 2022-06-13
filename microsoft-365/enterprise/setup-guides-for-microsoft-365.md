@@ -21,12 +21,12 @@ search.appverid:
 - BCS160
 ms.assetid: 165f46e8-3533-4d76-be57-97f81ebd40f2
 description: Kiracınızın lisanslarındaki özellikleri planlamak, geçirmek ve uygulamak için adım adım araçlar edinin. Çalıştırmanız gereken bir hizmeti veya uygulamayı ayarlamaya yönelik bir kılavuz bulun.
-ms.openlocfilehash: 5ffb0652b145bba6ae4e834815c5cb51b7ad2b94
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 451f92aade8a6e7910630629b805065e6910b9de
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535934"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017130"
 ---
 # <a name="setup-guides-for-microsoft-365-and-office-365-services"></a>Microsoft 365 ve Office 365 hizmetleri için kurulum kılavuzları
 
@@ -162,7 +162,7 @@ Kuruluşunuzdaki cihazları yönetmek için Microsoft Intune ayarlayın. Şirket
 
 Microsoft Exchange Online Koruması (EOP), kuruluşunuzu mesajlaşma ilkesi ihlallerine karşı korumaya yönelik özelliklere sahip, istenmeyen postalara ve kötü amaçlı yazılımlara karşı koruma için bulut tabanlı bir e-posta filtreleme hizmetidir.
 
-Şirket içi posta kutularında üç dağıtım senaryosundan&mdash; hangisinin, karma (şirket içi ve bulutun karışımı) posta kutularının veya tüm bulut&mdash; posta kutularının kuruluşunuza uygun olduğunu seçerek EOP'yi ayarlamak için [Exchange Online Protection kurulum kılavuzunu](https://aka.ms/EOPguidance) kullanın. Kılavuz, güvenlik & Uyumluluk Merkezi'nde kullanıcı lisansını ayarlayıp gözden geçirmek, Microsoft 365 yönetim merkezi izin atamak ve kuruluşunuzun kötü amaçlı yazılımdan ve istenmeyen postadan koruma ilkelerini yapılandırmak için bilgi ve kaynaklar sağlar.
+Şirket içi üç dağıtım senaryosundan&mdash;hangisinin, karma (şirket içi ve bulutun karışımı) posta kutularının veya tüm bulut&mdash;posta kutularının kuruluşunuza uygun olduğunu seçerek EOP'yi ayarlamak için [Exchange Online Protection kurulum kılavuzunu](https://aka.ms/EOPguidance) kullanın. Kılavuz, güvenlik & Uyumluluk Merkezi'nde kullanıcı lisansını ayarlayıp gözden geçirmek, Microsoft 365 yönetim merkezi izin atamak ve kuruluşunuzun kötü amaçlı yazılımdan ve istenmeyen postadan koruma ilkelerini yapılandırmak için bilgi ve kaynaklar sağlar.
 
 ### <a name="microsoft-defender-for-office-365-setup-guide"></a>Office 365 için Microsoft Defender kurulum kılavuzu
 
@@ -181,11 +181,11 @@ Bu kılavuzdaki çözümler, kuruluşunuz genelinde yerel sinyaller ve zenginle�
 * İletişim uyumluluğu çözümüyle, iş yerinde şiddet, içeriden ticaret, taciz, davranış kuralları ve mevzuat uyumluluğu ihlalleri gibi öğeler için iletişim risklerini belirleyebilir ve bu riskler üzerinde işlem yapabilirsiniz.
 * Insider risk yönetimi çözümü fikri mülkiyet hırsızlığı, hassas veri sızıntıları, güvenlik ihlalleri, veri taşması ve gizlilik ihlalleri risklerini belirlemenize, araştırmanıza ve bu riskler üzerinde işlem yapmanıza yardımcı olur.
 
-### <a name="microsoft-purview-information-protection-setup-guide"></a>kurulum kılavuzunu Microsoft Purview Bilgi Koruması
+### <a name="microsoft-purview-information-protection-setup-guide"></a>Microsoft Purview Information Protection kurulum kılavuzu
 
-Hassas bilgilerinizin korunduğundan emin olmak için bilgi koruma stratejinize uygulayabileceğiniz özelliklere genel bir bakış elde edin. Hassas bilgileri keşfetme, sınıflandırma, koruma ve izleme işlemlerinden oluşan dört aşamalı bir yaşam döngüsü yaklaşımı kullanın. [Microsoft Purview Bilgi Koruması kurulum kılavuzu](https://aka.ms/microsoftpurviewinformationprotectionsetupguide), bu aşamaların her birini tamamlamak için rehberlik sağlar.
+Hassas bilgilerinizin korunduğundan emin olmak için bilgi koruma stratejinize uygulayabileceğiniz özelliklere genel bir bakış elde edin. Hassas bilgileri keşfetme, sınıflandırma, koruma ve izleme işlemlerinden oluşan dört aşamalı bir yaşam döngüsü yaklaşımı kullanın. [Microsoft Purview Information Protection kurulum kılavuzu](https://aka.ms/microsoftpurviewinformationprotectionsetupguide), bu aşamaların her birini tamamlamak için rehberlik sağlar.
 
-### <a name="microsoft-purview-data-lifecycle-management-setup-guide"></a>kurulum kılavuzu Microsoft Purview Veri Yaşam Döngüsü Yönetimi
+### <a name="microsoft-purview-data-lifecycle-management-setup-guide"></a>Microsoft Purview Veri Yaşam Döngüsü Yönetimi kurulum kılavuzu
 
 [Microsoft Purview Veri Yaşam Döngüsü Yönetimi kurulum kılavuzu](https://aka.ms/migsetupguide), verilerinizin belirlediğiniz belirli yaşam döngüsü yönergelerine göre sınıflandırıldığından ve yönetildiğinden emin olmak için kuruluşunuzun idare stratejisini ayarlamak ve yönetmek için ihtiyacınız olan bilgileri sağlar. Bu kılavuzla, kuruluşunuzun içerik ve uyumluluk kayıtlarına uygulanan bekletme etiketleri, bekletme etiketi ilkeleri ve bekletme ilkeleri oluşturmayı, otomatik uygulamayı veya yayımlamayı öğreneceksiniz. Ayrıca toplu senaryolar için bir dosya planıyla CSV dosyalarını içeri aktarma veya bunları tek tek belgelere el ile uygulama hakkında da bilgi edineceksiniz.
 
@@ -250,3 +250,7 @@ Configuration Manager kullanan kuruluşlarda, [Configuration Manager danışman�
 ### <a name="intune-configuration-manager-co-management-setup-guide"></a>Intune Configuration Manager ortak yönetim kurulum kılavuzu
 
 Kuruluşunuzun hem Microsoft Intune hem de Microsoft Intune ile birlikte yönetmek istediği mevcut Configuration Manager istemci cihazlarını ve yeni internet tabanlı cihazları ayarlamak için Intune Configuration Manager [ortak yönetim kurulum kılavuzunu](https://aka.ms/comanagementsetup) kullanın Configuration Manager. Ortak yönetim, Windows 10 cihazları yönetmenize ve kuruluşunuzun cihazlarına yeni işlevler eklerken her iki çözümün de avantajlarından yararlanmanıza olanak tanır.
+
+#### <a name="school-data-sync-rollover-setup-guide"></a>School Data Sync geçiş kurulum kılavuzu
+
+[SDS Rollover kurulum kılavuzu](https://aka.ms/sdsrolloversetupguide), kuruluşunuzun öğrenci bilgileri verilerini Azure Active Directory ve Office 365 eşitlemesine yardımcı olacak adımlar sağlar. Bu kılavuz, Exchange Online ve SharePoint Online için Office 365 Grupları, Microsoft Teams ve OneNote için sınıf ekipleri ve Intune oluşturarak yaşam döngüsü yönetimi sürecini kolaylaştırır  Eğitim için, üçüncü taraf uygulamalar için liste oluşturma ve çoklu oturum açma tümleştirmesi. Yıl sonu kapanışı, kiracı temizleme ve arşiv, yeni okul yılı hazırlığı ve yeni okul yılı lansmanı gerçekleştireceksiniz. Ardından, kuruluşunuza uygun eşitleme dağıtım yöntemini kullanarak yeni profiller oluşturabilirsiniz.

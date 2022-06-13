@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Duyarlılık etiketi oluşturduğunuzda, dosyalara ve e-postalara otomatik olarak bir etiket atayabilir veya kullanıcılardan önerdiğiniz etiketi seçmelerini isteyebilirsiniz.
-ms.openlocfilehash: 9998f71d275d28f10fc950b978cc13ce7fd3c335
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: 3124427ff556cd08a56ee83cf8f83bc4dbf8eb72
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65840441"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017974"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>İçeriğe otomatik olarak bir hassasiyet etiketi uygulama
 
@@ -31,7 +31,7 @@ ms.locfileid: "65840441"
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!TIP]
-> Veri eşlemesine otomatik olarak duyarlılık etiketi uygulama hakkında bilgi için bkz. [Microsoft Purview Veri Eşlemesi'nde etiketleme](/azure/purview/create-sensitivity-label).
+> Veri eşlemesine otomatik olarak duyarlılık etiketi uygulama hakkında bilgi için bkz. [Microsoft Purview Veri Haritası'nda etiketleme](/azure/purview/create-sensitivity-label).
 
 Duyarlılık etiketi oluşturduğunuzda, belirttiğiniz koşullarla eşleştiğinde bu etiketi dosyalara ve e-postalara otomatik olarak atayabilirsiniz.
 
@@ -100,7 +100,7 @@ Microsoft 365 içeriğine otomatik olarak duyarlılık etiketi uygulamak için i
 |Başka bir kuruluştan gönderilen e-postalar için Rights Management sahibi atama |Hayır |Evet|
 |E-postalar için, aynı veya daha düşük önceliğe sahip mevcut etiketi değiştirin |Hayır |Evet (yapılandırılabilir)|
 
-\* Arka uç Azure bağımlılığı nedeniyle otomatik etiketleme şu anda tüm bölgelerde kullanılamamaktadır. Kiracınız bu işlevi destekleyemiyorsa **Otomatik etiketleme** sekmesi Microsoft Purview uyumluluk portalı görünmez. Daha fazla bilgi için bkz. [Ülkeye göre Azure bağımlılığı kullanılabilirliği](/troubleshoot/azure/general/dependency-availability-by-country).
+\* Arka uç Azure bağımlılığı nedeniyle otomatik etiketleme şu anda tüm bölgelerde kullanılamamaktadır. Kiracınız bu işlevselliği destekleyemiyorsa, **Otomatik etiketleme** sekmesi Microsoft Purview uyumluluk portalında görünmez. Daha fazla bilgi için bkz. [Ülkeye göre Azure bağımlılığı kullanılabilirliği](/troubleshoot/azure/general/dependency-availability-by-country).
 
 ## <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>Birden çok etikete uygulandığında birden çok koşul nasıl değerlendirilir?
 
@@ -126,7 +126,7 @@ Otomatik etiketlemenin var olan bir etiketi geçersiz kılıp geçersiz kılmaya
 - Otomatik etiketleme, otomatik olarak uygulanan [düşük öncelikli duyarlılık etiketinin](sensitivity-labels.md#label-priority-order-matters) yerini alır, ancak daha yüksek öncelikli bir etiketi değiştirmez.
     
     > [!TIP]
-    > Örneğin, Microsoft Purview uyumluluk portalı listenin en üstündeki duyarlılık etiketi 0 sipariş numarasıyla (öncelik) **Genel** olarak, listenin en altındaki duyarlılık etiketi ise sipariş numarası (öncelik 4) ile **Çok Gizli** olarak adlandırılır. **Çok Gizli** etiketi **Genel** etiketi geçersiz kılabilir, ancak tersine geçersiz kılabilir.
+    > Örneğin, Microsoft Purview uyumluluk portalında listenin en üstündeki duyarlılık etiketi 0 sipariş numarasıyla (öncelik) **Genel** olarak, listenin en altındaki duyarlılık etiketi ise sipariş numarası (öncelik 4) ile **Çok Gizli** olarak adlandırılır. **Çok Gizli** etiketi **Genel** etiketi geçersiz kılabilir, ancak tersine geçersiz kılabilir.
 
 Yalnızca e-posta otomatik etiketleme ilkeleri için, nasıl uygulandığından bağımsız olarak mevcut duyarlılık etiketini her zaman geçersiz kılmak için bir ayar seçebilirsiniz.
 
@@ -297,7 +297,7 @@ Son olarak, simülasyon modunu kullanarak otomatik etiketleme ilkenizi çalışt
 
 ### <a name="creating-an-auto-labeling-policy"></a>Otomatik etiketleme ilkesi oluşturma
 
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> duyarlılık etiketlerine gidin:
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalında</a> duyarlılık etiketlerine gidin:
 
     - **Çözümleri** >  **Bilgi koruması**
 
@@ -409,9 +409,9 @@ Ayrıca, uygun [izinlere](data-classification-content-explorer.md#permissions) s
 
 ### <a name="use-powershell-for-auto-labeling-policies"></a>Otomatik etiketleme ilkeleri için PowerShell kullanma
 
-Otomatik etiketleme ilkeleri oluşturmak ve yapılandırmak için [Güvenlik & Uyumluluk Merkezi PowerShell'i](/powershell/exchange/scc-powershell) kullanabilirsiniz. Bu, otomatik etiketleme ilkelerinizin oluşturulmasını ve bakımını tam olarak oluşturabileceğiniz anlamına gelir ve bu da OneDrive ve SharePoint konumlar için birden çok URL belirtmek için daha verimli bir yöntem sağlar.
+Otomatik etiketleme ilkeleri oluşturmak ve yapılandırmak için [Güvenlik & Uyumluluk PowerShell'i](/powershell/exchange/scc-powershell) kullanabilirsiniz. Bu, otomatik etiketleme ilkelerinizin oluşturulmasını ve bakımını tam olarak oluşturabileceğiniz anlamına gelir ve bu da OneDrive ve SharePoint konumlar için birden çok URL belirtmek için daha verimli bir yöntem sağlar.
 
-PowerShell'de komutları çalıştırmadan önce [Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmanız](/powershell/exchange/connect-to-scc-powershell) gerekir.
+PowerShell'de komutları çalıştırmadan önce [Güvenlik & Uyumluluk PowerShell'e bağlanmanız](/powershell/exchange/connect-to-scc-powershell) gerekir.
 
 Yeni bir otomatik etiketleme ilkesi oluşturmak için:
 
