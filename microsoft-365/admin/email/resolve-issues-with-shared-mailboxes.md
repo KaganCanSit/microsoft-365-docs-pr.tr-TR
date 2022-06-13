@@ -23,12 +23,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Paylaşılan posta kutularını ayarlarken hata alabilirsiniz. Paylaşılan posta kutularıyla ilgili sorun yaşıyorsanız bu çözümleri deneyin.
-ms.openlocfilehash: cf121504b53951e0aaaf248d43d045cfa937f4ed
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 08b5bbaa1ea952ee2b9bb6c626328fdb6b91d71c
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65437117"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66008589"
 ---
 # <a name="resolve-issues-with-shared-mailboxes"></a>Paylaşılan posta kutularında sorunları çözme
 
@@ -38,9 +38,9 @@ Paylaşılan posta kutusu oluştururken veya kullanırken hata iletileri görür
 
 Hata iletisini görürseniz, **"smtp:<paylaşılan posta kutusu adı\>" proxy adresi veya "\<name>" LegacyExchangeDN'si tarafından zaten kullanılıyordur. Lütfen başka bir ara sunucu adresi seçin**; bu, paylaşılan posta kutusuna zaten kullanımda olan bir ad vermeye çalıştığınız anlamına gelir. Örneğin, paylaşılan posta kutularını info@domain1 ve info@domain2 olarak adlandırmak istediğinizi varsayalım. Bunu yapmanın iki yolu vardır:
 
-  - Windows PowerShell'i kullanın. Yönergeler için bu blog gönderisini izleyin: [Farklı Etki Alanlarında Aynı Diğer Adla Paylaşılan Posta Kutuları Oluşturma](https://www.cogmotive.com/blog/office-365-tips/create-shared-mailboxes-with-same-alias-at-different-domains-in-office-365)
-    
-  - İkinci paylaşılan posta kutusuna hatayla ilgili olarak başlangıçtan farklı bir ad verin. Ardından yönetim merkezinde paylaşılan posta kutusunu istediğiniz gibi yeniden adlandırın.
+- PowerShell Exchange Online kullanın. Yönergeler için bu blog gönderisini izleyin: [Farklı Etki Alanlarında Aynı Diğer Adla Paylaşılan Posta Kutuları Oluşturma](https://www.cogmotive.com/blog/office-365-tips/create-shared-mailboxes-with-same-alias-at-different-domains-in-office-365)
+
+- İkinci paylaşılan posta kutusuna hatayla ilgili olarak başlangıçtan farklı bir ad verin. Ardından yönetim merkezinde paylaşılan posta kutusunu istediğiniz gibi yeniden adlandırın.
 
 ## <a name="error-about-not-having-send-permissions-when-using-a-shared-mailbox"></a>Paylaşılan posta kutusu kullanırken gönderme izinlerine sahip olmama hatası
 

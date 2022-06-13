@@ -19,12 +19,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: Office 365 Güvenlik & Uyumluluk Merkezi'nde anahtar sözcük sözlüğü oluşturmanın temel adımlarını öğrenin.
-ms.openlocfilehash: ceb410d09d9869d87681128f2c6e7b45cd8363cb
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: d00ba4a93c6ead4ecde75ac5415ccac08812feb3
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65753682"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66013342"
 ---
 # <a name="create-a-keyword-dictionary"></a>Anahtar sözcük sözlüğü oluşturma
 
@@ -34,7 +34,7 @@ Microsoft Purview Veri Kaybı Önleme (DLP), hassas öğelerinizi tanımlayabili
 
 ## <a name="keyword-dictionary-limits"></a>Anahtar sözcük sözlüğü sınırları
 
-Kiracı başına oluşturulabilecek 50 anahtar sözcük sözlüğü tabanlı hassas bilgi türü sınırı vardır. Kiracınızda kaç anahtar sözcük sözlükünüzün olduğunu öğrenmek için, [Bağlan güvenlik & Uyumluluk Merkezi PowerShell'e](/powershell/exchange/connect-to-scc-powershell) bağlanarak kiracınıza bağlanın ve bu PowerShell betiğini çalıştırın.
+Kiracı başına oluşturulabilecek 50 anahtar sözcük sözlüğü tabanlı hassas bilgi türü sınırı vardır. Kiracınızda kaç anahtar sözcük sözlükünüzün olduğunu öğrenmek için, kiracınıza bağlanmak ve bu PowerShell betiğini çalıştırmak [için Bağlan Güvenlik & Uyumluluğu PowerShell'e](/powershell/exchange/connect-to-scc-powershell) Bağlan yordamlarını kullanarak bağlanın.
 
 ```powershell
 $rawFile = $env:TEMP + "\rule.xml"
@@ -76,7 +76,7 @@ Remove-Item $rawFile
 
 Sözlüğünüzün anahtar sözcükleri, en yaygın olarak hizmette veya PowerShell cmdlet'i tarafından içeri aktarılan bir dosyadan (.csv veya .txt listesi gibi), doğrudan PowerShell cmdlet'ine girdiğiniz bir listeden veya mevcut bir sözlükten gelen çeşitli kaynaklardan gelebilir. Anahtar sözcük sözlüğü oluşturduğunuzda aynı temel adımları izlersiniz:
 
-1. *<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> kullanın veya **Microsoft Purview uyumluluk portalı PowerShell'e bağlanın**.
+1. *<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalını</a> kullanın veya  **Microsoft Purview uyumluluk portalı PowerShell'e bağlanın**.
 
 2. **Anahtar sözcüklerinizi hedeflenen kaynağınızdan tanımlayın veya yükleyin**. Sihirbaz ve cmdlet,özel anahtar sözcük sözlüğü oluşturmak için virgülle ayrılmış bir anahtar sözcük listesi kabul eder, bu nedenle bu adım anahtar sözcüklerinizin nereden geldiğine bağlı olarak biraz farklılık gösterir. Yüklendikten sonra, içeri aktarılmadan önce kodlanır ve bir bayt dizisine dönüştürülür.
 
@@ -86,7 +86,7 @@ Sözlüğünüzün anahtar sözcükleri, en yaygın olarak hizmette veya PowerSh
 
 Özel bir sözlük için anahtar sözcükler oluşturmak ve içeri aktarmak için aşağıdaki adımları kullanın:
 
-1. Microsoft Purview uyumluluk portalı <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Bağlan</a>.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalına</a> Bağlan.
 
 2. **Sınıflandırmalar > Hassas bilgi türleri'ne** gidin.
 
@@ -112,7 +112,7 @@ Sözlüğünüzün anahtar sözcükleri, en yaygın olarak hizmette veya PowerSh
 
 ## <a name="create-a-keyword-dictionary-from-a-file-using-powershell"></a>PowerShell kullanarak bir dosyadan anahtar sözcük sözlüğü oluşturma
 
-Genellikle büyük bir sözlük oluşturmanız gerektiğinde, bir dosyadan veya başka bir kaynaktan dışarı aktarılan bir listeden anahtar sözcükler kullanmaktır. Bu durumda, dış e-postada ekrana alınacak uygun olmayan dilin listesini içeren bir anahtar sözcük sözlüğü oluşturacaksınız. Öncelikle [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) gerekir.
+Genellikle büyük bir sözlük oluşturmanız gerektiğinde, bir dosyadan veya başka bir kaynaktan dışarı aktarılan bir listeden anahtar sözcükler kullanmaktır. Bu durumda, dış e-postada ekrana alınacak uygun olmayan dilin listesini içeren bir anahtar sözcük sözlüğü oluşturacaksınız. Öncelikle [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) gerekir.
 
 1. Anahtar sözcükleri bir metin dosyasına kopyalayın ve her anahtar sözcüğün ayrı bir satırda olduğundan emin olun.
 

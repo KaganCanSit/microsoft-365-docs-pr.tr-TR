@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Azure Information Protection (AIP) birleşik etiketleme istemcisini kullandığınızda, AIP eklentisi yerine Office uygulamalar için yerleşik etiketleme kullanmanın avantajlarını anlayın.
-ms.openlocfilehash: 161f05c1f9c27723ff4940087c715e0556484b79
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: c790ee691e6a72228c865b8cdf9911ee83f4dfd4
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65287144"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66011603"
 ---
 # <a name="why-choose-built-in-labeling-over-the-aip-add-in-for-office-apps"></a>neden Office uygulamalar için AIP eklentisi yerine yerleşik etiketlemeyi seçmelisiniz?
 
@@ -32,7 +32,7 @@ ms.locfileid: "65287144"
 
 Windows bilgisayarlardaki Microsoft 365 Uygulamaları [duyarlılık etiketlerini](sensitivity-labels.md) kullandığınızda, Office uygulamalarında yerleşik olarak bulunan etiketlemeyi veya [Azure Information Protection (AIP) birleşik etiketleme istemcisinden bir eklentiyi](/azure/information-protection/rms-client/aip-clientv2) kullanabilirsiniz. 
 
-Yerleşik etiketleme[, Microsoft Purview bilgi koruma dağıtımının](information-protection-solution.md) temel taşını oluşturur çünkü bu etiketleme teknolojisi hem platformlar (Windows, macOS, iOS, Android ve web) hem de Microsoft uygulamaları ve hizmetleri ve ötesinde genişler. Yerleşik etiketleme ayrıca veri sınıflandırma ve Microsoft Purview veri kaybı önleme (DLP) gibi diğer Microsoft Purview özellikleriyle çalışacak şekilde tasarlanmıştır.
+Yerleşik etiketleme[, Microsoft Purview bilgi koruma dağıtımının](information-protection-solution.md) temel taşını oluşturur çünkü bu etiketleme teknolojisi hem platformlar (Windows, macOS, iOS, Android ve web) hem de Microsoft uygulamaları ve hizmetleri ve daha fazlası için genişler. Yerleşik etiketleme ayrıca veri sınıflandırma ve Microsoft Purview veri kaybı önleme (DLP) gibi diğer Microsoft Purview özellikleriyle çalışacak şekilde tasarlanmıştır.
 
 Yerleşik etiketler Office Eklentisi kullanmadığından daha fazla kararlılık ve daha iyi performanstan yararlanırlar. Ayrıca gelişmiş sınıflandırıcılar gibi en son Microsoft Purview özelliklerini de destekler.
 
@@ -76,6 +76,7 @@ Bazı özellikler yalnızca Office uygulamalar için yerleşik etiketlemeyle des
     - [Eğitilebilir sınıflandırıcılar](classifier-learn-about.md), [tam veri eşleşmesi (EDM)](sit-learn-about-exact-data-match-based-sits.md) ve [adlandırılmış varlıklar](named-entities-learn.md) içeren akıllı sınıflandırma hizmetlerine erişim
     - Kullanıcılar yazarken hassas bilgilerin algılanması
     - Word'de, kullanıcılar tanımlanan hassas içeriği gözden geçirebilir ve kaldırabilir
+- [PDF desteği](sensitivity-labels-office-apps.md#pdf-support)
 - Kullanıcıların izin atamasına izin veren etiketler için kullanıcılara veya gruplara farklı izinler (Okuma veya Değiştirme) verilebilir
 - E-postalar için Encrypt-Only
 - Durum çubuğunda etiketlerin görünürlüğü
@@ -120,7 +121,7 @@ AIP eklentisini devre dışı bırakmak için bu yöntemi kullandığınızda, e
 
 AIP eklentisi tarafından desteklenen etiketleme özelliklerinin çoğu artık yerleşik etiketleme tarafından desteklenmektedir. Özelliklerin daha ayrıntılı listesi, gerekli olabilecek en düşük sürümler ve yapılandırma bilgileri için bkz. [Office uygulamalarında duyarlılık etiketlerini yönetme](sensitivity-labels-office-apps.md).
 
-Daha fazla özellik planlanıyor ve geliştiriliyor. İlgilendiğiniz belirli bir özellik varsa [Microsoft 365 yol haritasını](https://aka.ms/MIPC/Roadmap) gözden geçirin ve [Office Özel Önizleme'de Microsoft Bilgi Koruması](https://aka.ms/MIP/PreviewRing) katılmayı düşünün.
+Daha fazla özellik planlanıyor ve geliştiriliyor. İlgilendiğiniz belirli bir özellik varsa [Microsoft 365 yol haritasını](https://aka.ms/MIPC/Roadmap) gözden geçirin ve [microsoft Information Protection Office Özel Önizleme'ye](https://aka.ms/MIP/PreviewRing) katılmayı düşünün.
 
 AIP eklentisinden henüz yerleşik etiketleme tarafından desteklenmeyen bir özellik kullanıp kullanmadığınızı belirlemenize yardımcı olması için aşağıdaki bilgileri kullanın:
 

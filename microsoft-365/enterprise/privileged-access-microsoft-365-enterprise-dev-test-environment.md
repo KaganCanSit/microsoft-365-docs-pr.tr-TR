@@ -15,12 +15,12 @@ ms.collection:
 - M365-security-compliance
 ms.custom: Ent_TLGs
 description: Kurumsal test ortamı için Microsoft 365 ayrıcalıklı erişim yönetimini etkinleştirmek için bu Test Laboratuvarı Kılavuzu'nu kullanın.
-ms.openlocfilehash: 0c92cbd398e4c388fe3c5999c5e0aa9973c4ee06
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 8520e4cf224164c62c10858e67359c0fa1a9fc85
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092105"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66008451"
 ---
 # <a name="privileged-access-management-for-your-microsoft-365-for-enterprise-test-environment"></a>Kurumsal test ortamınız için Microsoft 365 ayrıcalıklı erişim yönetimi
 
@@ -45,8 +45,8 @@ Ayrıcalıklı erişim yönetimini minimum gereksinimlerle basit bir şekilde ya
   
 Sanal bir kuruluşta ayrıcalıklı erişim yönetimini yapılandırmak istiyorsanız Doğrudan [kimlik doğrulamasındaki](pass-through-auth-m365-ent-test-environment.md) yönergeleri izleyin.
   
->[!NOTE]
->Ayrıcalıklı erişim yönetimini test etmek, İnternet'e bağlı bir sanal intranet ve bir Active Directory Domain Services ormanı için dizin eşitlemesi içeren sanal kurumsal test ortamını gerektirmez. Ayrıcalıklı erişim yönetimini test edebilmeniz ve tipik bir kuruluşu temsil eden bir ortamda denemeler yapabilmeniz için burada bir seçenek olarak sağlanır.
+> [!NOTE]
+> Ayrıcalıklı erişim yönetimini test etmek, İnternet'e bağlı bir sanal intranet ve bir Active Directory Domain Services ormanı için dizin eşitlemesi içeren sanal kurumsal test ortamını gerektirmez. Ayrıcalıklı erişim yönetimini test edebilmeniz ve tipik bir kuruluşu temsil eden bir ortamda denemeler yapabilmeniz için burada bir seçenek olarak sağlanır.
 
 ## <a name="phase-2-configure-privileged-access-management"></a>2. Aşama: Ayrıcalıklı erişim yönetimini yapılandırma
 
@@ -54,11 +54,11 @@ Bu aşamada, bir onaylayan grubu yapılandırın ve kurumsal test ortamı için 
 
 Kuruluşunuzda ayrıcalıklı erişimi ayarlamak ve kullanmak için aşağıdaki adımları uygulayın.
 
-#### <a name="step-1-create-an-approvers-group"></a>[1. Adım: Onaylayan grubu oluşturma](../compliance/privileged-access-management-configuration.md#step-1-create-an-approvers-group)
+### <a name="step-1-create-an-approvers-group"></a>[1. Adım: Onaylayan grubu oluşturma](../compliance/privileged-access-management-configuration.md#step-1-create-an-approvers-group)
 
 Ayrıcalıklı erişimi kullanmaya başlamadan önce, yükseltilmiş ve ayrıcalıklı görevlere erişim için gelen istekler için kimlerin onay yetkisine sahip olacağını belirleyin. Onaylayanlar grubunun parçası olan tüm kullanıcılar erişim isteklerini onaylayabilir. Ayrıcalıklı erişimi kullanmak için, Microsoft 365 posta özellikli bir güvenlik grubu oluşturmanız gerekir. Test ortamınızda yeni güvenlik grubunu "Privileged Access Approvers" olarak adlandırın ve önceki test laboratuvarı kılavuzu adımlarında daha önce oluşturulmuş olan "Kullanıcı 3" öğesini ekleyin.
 
-#### <a name="step-2-enable-privileged-access"></a>[2. Adım: Ayrıcalıklı erişimi etkinleştirme](../compliance/privileged-access-management-configuration.md#step-2-enable-privileged-access)
+### <a name="step-2-enable-privileged-access"></a>[2. Adım: Ayrıcalıklı erişimi etkinleştirme](../compliance/privileged-access-management-configuration.md#step-2-enable-privileged-access)
 
 Ayrıcalıklı erişimin, varsayılan onaylayan grubuyla Microsoft 365 açıkça açılması ve ayrıcalıklı erişim yönetimi erişim denetiminden dışlanmasını istediğiniz bir dizi sistem hesabı içermesi gerekir. Bu kılavuzun 3. aşamasına başlamadan önce kuruluşunuzda ayrıcalıklı erişimi etkinleştirdiğinizden emin olun.
 
@@ -68,24 +68,28 @@ Bu aşamada ayrıcalıklı erişim ilkesinin çalıştığını ve kullanıcıla
 
 ### <a name="test-the-ability-to-execute-a-task-not-defined-in-a-privileged-access-policy"></a>Ayrıcalıklı erişim ilkesinde tanımlanmayan bir görevi yürütme özelliğini test etme
 
-İlk olarak, test ortamınızda Exchange Rol Yönetimi rolüyle yapılandırılmış bir kullanıcının kimlik bilgileriyle Exchange Yönetimi PowerShell'e bağlanın ve yeni bir Günlük kuralı oluşturmayı deneyin. [New-JournalRule](/powershell/module/exchange/new-journalrule) görevi şu anda kuruluşunuz için ayrıcalıklı erişim ilkesinde tanımlanmamıştır.
+İlk olarak, PowerShell'Exchange Online yeni bir Günlük kuralı oluşturmayı deneyin. [New-JournalRule](/powershell/module/exchange/new-journalrule) görevi şu anda kuruluşunuz için ayrıcalıklı erişim ilkesinde tanımlanmamıştır.
 
-1. Yerel bilgisayarınızda, test ortamınız için Exchange Rol Yönetimi rolüne sahip kimlik bilgilerini kullanarak **Microsoft Corporation** >  **Microsoft Exchange Online Uzak PowerShell Modülü'nde Exchange Online Uzak PowerShell Modülü'nü** açın ve oturum açın.
-2. Exchange Yönetimi PowerShell'de kuruluşunuz için yeni bir Günlük kuralı oluşturun:
+1. Yerel bilgisayarınızda, test ortamınız için Exchange Rol Yönetimi rolüne sahip kimlik bilgilerini kullanarak [PowerShell'i](/powershell/exchange/connect-to-exchange-online-powershell) Exchange Online Bağlan.
+2. Aşağıdaki komutu çalıştırarak kuruluşunuz için yeni bir Günlük kuralı oluşturun:
 
-   ```ExchangeManagementPowerShell
+   ```PowerShell
    New-JournalRule -Name "JournalRule1" -Recipient joe@contoso.onmicrosoft.com -JournalEmailAddress barbara@adatum.com -Scope Global -Enabled $true
    ```
 
-3. Yeni Günlük Kuralının Exchange Yönetimi PowerShell'de başarıyla oluşturulduğunu görüntüleyin.
+3. Yeni Günlük Kuralının başarıyla oluşturulduğunu doğrulayın:
+
+   ```PowerShell
+   Get-JournalRule -Identity "JournalRule1"
+   ```
 
 ### <a name="create-a-new-privileged-access-policy-for-the-new-journalrule-task"></a>New-JournalRule görevi için yeni bir ayrıcalıklı erişim ilkesi oluşturma
 
->[!NOTE]
->Bu kılavuzun 2. Aşamasından 1. ve 2. Adımları henüz tamamlamadıysanız, test ortamınızda ayrıcalıklı erişimi etkinleştirmek için onaylayanın "Privilege Access Approvers" adlı grubunu oluşturma adımlarını izlediğinizden emin olun.
+> [!NOTE]
+> Bu kılavuzun 2. Aşamasından 1. ve 2. Adımları henüz tamamlamadıysanız, test ortamınızda ayrıcalıklı erişimi etkinleştirmek için onaylayanın "Privilege Access Approvers" adlı grubunu oluşturma adımlarını izlediğinizden emin olun.
 
 1. Test ortamınız için [Exchange](https://admin.microsoft.com) Rol Yönetimi rolüyle kimlik bilgilerini kullanarak Microsoft 365 yönetim merkezi oturum açın.
-2. Yönetim Merkezi'nde **Ayarlar** >  **Güvenlik &** **GizlilikGizli** >  erişim'e gidin.
+2. Yönetim Merkezi'nde **Ayarlar** >  **Güvenlik & Gizlilik** > **Ayrıcalıklı erişimi'ne** gidin.
 3. **Erişim ilkelerini ve isteklerini yönet'i** seçin.
 4. **İlkeleri yapılandır'ı** ve ardından **İlke ekle'yi** seçin.
 5. Açılan alanlardan aşağıdaki değerleri seçin veya girin:
@@ -96,17 +100,17 @@ Bu aşamada ayrıcalıklı erişim ilkesinin çalıştığını ve kullanıcıla
 
 ### <a name="test-approval-requirement-for-the-new-journalrule-task-defined-in-a-privileged-access-policy"></a>Ayrıcalıklı erişim ilkesinde tanımlanan New-JournalRule görevi için test onayı gereksinimi
 
-1. Yerel bilgisayarınızda, test ortamınız için Exchange Rol Yönetimi rolüne sahip kimlik bilgilerini kullanarak **Microsoft Corporation** >  **Microsoft Exchange Online Uzak PowerShell Modülü'nde Exchange Online Uzak PowerShell Modülü'nü** açın ve oturum açın.
+1. Yerel bilgisayarınızda, test ortamınız için Exchange Rol Yönetimi rolüne sahip kimlik bilgilerini kullanarak [PowerShell'i](/powershell/exchange/connect-to-exchange-online-powershell) Exchange Online Bağlan.
 
-2. Exchange Yönetimi PowerShell'de kuruluşunuz için yeni bir Günlük kuralı oluşturun:
+2. Exchange Online PowerShell'de kuruluşunuz için yeni bir Günlük kuralı oluşturun:
 
-   ```ExchangeManagementPowerShell
+   ```PowerShell
    New-JournalRule -Name "JournalRule2" -Recipient user1@<your subscription domain> -JournalEmailAddress user1@<your subscription domain> -Scope Global -Enabled $true
    ```
 
-3. Exchange Yönetimi PowerShell'de "Yetersiz izinler" hatasını görüntüleyin:
+3. Exchange Online PowerShell'de "Yetersiz izinler" hatasını görüntüleyin:
 
-   ```ExchangeManagementPowerShell
+   ```PowerShell
    Insufficient permissions. Please raise an elevated access request for this task.
        + CategoryInfo          : NotSpecified: (:) [], LocalizedException
        + FullyQualifiedErrorId : [Server=CY1PR00MB0220,RequestId=7b8c7470-ddd0-4528-a01e-5e20ecc9bd54,TimeStamp=9/19/2018
@@ -118,7 +122,7 @@ Bu aşamada ayrıcalıklı erişim ilkesinin çalıştığını ve kullanıcıla
 
 1. Test ortamınız için [Exchange](https://admin.microsoft.com) Rol Yönetimi rolüyle kimlik bilgilerini kullanarak Microsoft 365 yönetim merkezi oturum açın.
 
-2. Yönetim Merkezi'nde **Ayarlar** >  **Güvenlik &** **GizlilikGizli** >  erişim'e gidin.
+2. Yönetim Merkezi'nde **Ayarlar** >  **Güvenlik & Gizlilik** > **Ayrıcalıklı erişimi'ne** gidin.
 
 3. **Erişim ilkelerini ve isteklerini yönet'i** seçin.
 
@@ -132,7 +136,7 @@ Bu aşamada ayrıcalıklı erişim ilkesinin çalıştığını ve kullanıcıla
 
 1. Test ortamınızdaki Kullanıcı 3 için kimlik bilgilerini kullanarak [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) oturum açın (test ortamınızdaki "Ayrıcalıklı Erişim Onaylayanları" güvenlik grubunun üyesi).
 
-2. Yönetim Merkezi'nde **Ayarlar** >  **Güvenlik &** **GizlilikGizli** >  erişim'e gidin.
+2. Yönetim Merkezi'nde **Ayarlar** >  **Güvenlik & Gizlilik** > **Ayrıcalıklı erişimi'ne** gidin.
 
 3. **Erişim ilkelerini ve isteklerini yönet'i** seçin.
 
@@ -140,15 +144,19 @@ Bu aşamada ayrıcalıklı erişim ilkesinin çalıştığını ve kullanıcıla
 
 ### <a name="test-creating-a-new-journal-rule-with-privileged-access-approved-for-the-new-journalrule-task"></a>New-JournalRule görevi için ayrıcalıklı erişim onaylı yeni bir Günlük Kuralı oluşturmayı test edin
 
-1. Yerel bilgisayarınızda, test ortamınız için Exchange Rol Yönetimi rolüne sahip kimlik bilgilerini kullanarak **Microsoft Corporation** >  **Microsoft Exchange Online Uzak PowerShell Modülü'nde Exchange Online Uzak PowerShell Modülü'nü** açın ve oturum açın.
+1. Yerel bilgisayarınızda, test ortamınız için Exchange Rol Yönetimi rolüne sahip kimlik bilgilerini kullanarak [PowerShell'i](/powershell/exchange/connect-to-exchange-online-powershell) Exchange Online Bağlan.
 
-2. Exchange Yönetimi PowerShell'de kuruluşunuz için yeni bir Günlük kuralı oluşturun:
+2. Exchange Online PowerShell'de kuruluşunuz için yeni bir Günlük kuralı oluşturun:
 
-   ```ExchangeManagementPowerShell
+   ```PowerShell
    New-JournalRule -Name "JournalRule2" -Recipient user1@<your subscription domain> -JournalEmailAddress user1@<your subscription domain> -Scope Global -Enabled $true
    ```
 
-3. Yeni Günlük Kuralının Exchange Yönetimi PowerShell'de başarıyla oluşturulduğunu görüntüleyin.
+3. Yeni Günlük kuralının başarıyla oluşturulduğunu doğrulayın:
+
+   ```PowerShell
+   Get-JournalRule -Identity "JournalRule2"
+   ```
 
 ## <a name="next-step"></a>Sonraki adım
 

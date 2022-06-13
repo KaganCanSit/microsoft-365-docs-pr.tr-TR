@@ -17,23 +17,23 @@ search.appverid:
 - MOE150
 - MET150
 description: İhtiyacınız olanı korumak ve istemediğinizleri silmek için etiketleri otomatik olarak uygulayabilmeniz için otomatik etiketleme bekletme ilkeleri oluşturun
-ms.openlocfilehash: f5a6ec9cd0d221cd025f4bce71008b9d01749590
-ms.sourcegitcommit: 61bdfa84f2d6ce0b61ba5df39dcde58df6b3b59d
+ms.openlocfilehash: 1b8871cba184772bd82e5e608c6e38113d4b0024
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2022
-ms.locfileid: "65940436"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66012890"
 ---
 # <a name="automatically-apply-a-retention-label-to-retain-or-delete-content"></a>İçeriği korumak veya silmek için otomatik olarak bekletme etiketi uygulama
 
->*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!NOTE]
-> Bu senaryo, SharePoint'teki belge kümesi veya kitaplığı ya da Exchange'deki bir klasör gibi düzenleme yapısı için [düzenleme kayıtları](records-management.md#records) veya varsayılan etiketler için desteklenmez. Bu senaryolar [için yayımlanmış bir bekletme etiketi ilkesi](create-apply-retention-labels.md) gerekir.
+> Bu senaryo, SharePoint belge kümesi veya kitaplığı ya da Exchange bir klasör gibi düzenleme yapısı için [düzenleme kayıtları](records-management.md#records) veya varsayılan etiketler için desteklenmez. Bu senaryolar [için yayımlanmış bir bekletme etiketi ilkesi](create-apply-retention-labels.md) gerekir.
 
-[Bekletme etiketlerinin](retention.md) en güçlü özelliklerinden biri, bunları belirtilen koşullarla eşleşen içeriğe otomatik olarak uygulayabilmektir. Bu durumda kuruluşunuzdaki kişilerin bekletme etiketlerini uygulaması gerekmez. Microsoft 365 onlar için iş yapar.
+[Bekletme etiketlerinin](retention.md) en güçlü özelliklerinden biri, bunları belirtilen koşullarla eşleşen içeriğe otomatik olarak uygulayabilmektir. Bu durumda kuruluşunuzdaki kişilerin bekletme etiketlerini uygulaması gerekmez. Microsoft 365 işi onlar için yapar.
   
 Bekletme etiketlerini otomatik uygulama güçlü bir nedendir çünkü:
   
@@ -43,10 +43,10 @@ Bekletme etiketlerini otomatik uygulama güçlü bir nedendir çünkü:
     
 - Kullanıcıların artık veri idaresi ilkeleri hakkında bilgi sahibi olmaları gerekmez; çalışmalarına odaklanabilir.
     
-Bu içerikte henüz bir bekletme etiketi uygulanmamışsa ve hassas bilgiler, anahtar sözcükler veya aranabilir özellikler ya da [eğitilebilir sınıflandırıcılar](classifier-get-started-with.md) için eşleşme içerdiğinde içeriğe otomatik olarak bekletme etiketleri uygulayabilirsiniz. Artık önizleme aşamasında, SharePoint veya OneDrive'da depolanan bulut eklerine otomatik olarak bir bekletme etiketi uygulayabilirsiniz.
+Bu içerikte henüz bir bekletme etiketi uygulanmamışsa ve hassas bilgiler, anahtar sözcükler veya aranabilir özellikler ya da [eğitilebilir sınıflandırıcılar](classifier-get-started-with.md) için eşleşme içerdiğinde içeriğe otomatik olarak bekletme etiketleri uygulayabilirsiniz. Artık önizleme aşamasında, SharePoint veya OneDrive depolanan bulut eklerine otomatik olarak bir bekletme etiketi uygulayabilirsiniz.
 
 > [!TIP]
-> [Teams toplantı kayıtlarını](#microsoft-teams-meeting-recordings) ve [duyarlılık etiketi uygulanmış öğeleri](#identify-files-and-emails-that-have-a-sensitivity-label) tanımlamak için aranabilir özellikleri kullanın.
+> [Duyarlılık etiketi uygulanmış](#identify-files-and-emails-that-have-a-sensitivity-label) [Teams toplantı kayıtlarını](#microsoft-teams-meeting-recordings) ve öğeleri tanımlamak için aranabilir özellikleri kullanın.
 
 Bu koşullara göre otomatik olarak bir bekletme etiketi uygulama işlemleri:
 
@@ -57,7 +57,7 @@ Bu koşullara göre otomatik olarak bir bekletme etiketi uygulama işlemleri:
 > [!NOTE]
 > Otomatik ilkeler, öğelere bekletme etiketlerini otomatik olarak uygulamak için hizmet tarafı etiketlemesini koşullarla birlikte kullanır. Ayrıca, aşağıdakileri yaptığınızda otomatik olarak etiket ilkesi içeren bir bekletme etiketi uygulayabilirsiniz: 
 >
-> - SharePoint Syntex'te belge anlama modeline bekletme etiketi uygulama
+> - SharePoint Syntex'da belge anlama modeline bekletme etiketi uygulama
 > - SharePoint ve Outlook için varsayılan bekletme etiketi uygulama
 > - Outlook kurallarını kullanarak e-postaya bekletme etiketi uygulama
 >
@@ -93,7 +93,7 @@ Otomatik uygulama ilkesi oluşturduğunuzda, belirttiğiniz koşullara göre iç
 
 5. Seçtiğiniz kapsama bağlı olarak:
     
-    - **Uyarlamalı**: **Uyarlamalı ilke kapsamlarını ve konumlarını seçin** sayfasında **Kapsam ekle'yi** seçin ve oluşturulmuş bir veya daha fazla uyarlamalı kapsam seçin. Ardından bir veya daha fazla konum seçin. Seçebileceğiniz konumlar eklenen [kapsam türlerine](retention-settings.md#configuration-information-for-adaptive-scopes) bağlıdır. Örneğin, yalnızca bir **Kullanıcı** kapsam türü eklediyseniz **, Exchange e-postasını** seçebilirsiniz ancak **SharePoint sitelerini** seçemezsiniz. 
+    - **Uyarlamalı**: **Uyarlamalı ilke kapsamlarını ve konumlarını seçin** sayfasında **Kapsam ekle'yi** seçin ve oluşturulmuş bir veya daha fazla uyarlamalı kapsam seçin. Ardından bir veya daha fazla konum seçin. Seçebileceğiniz konumlar eklenen [kapsam türlerine](retention-settings.md#configuration-information-for-adaptive-scopes) bağlıdır. Örneğin, yalnızca bir **Kullanıcı** kapsam türü eklediyseniz, **Exchange e-postayı** seçebilirsiniz, ancak **siteleri SharePoint seçemezsiniz**. 
     
     - **Statik**' i seçtiyseniz: **Konumları seçin** sayfasında konumlardan herhangi birini açın veya kapatın. Her konum için, [ilkeyi konumun tamamına uygulamak için](retention-settings.md#a-policy-that-applies-to-entire-locations) varsayılan olarak bırakabilir veya [ekleme ve dışlamaları belirtebilirsiniz](retention-settings.md#a-policy-with-specific-inclusions-or-exclusions)
     
@@ -140,14 +140,14 @@ SharePoint ve OneDrive:
 |Belirli anahtar sözcükler veya aranabilir özellikler| Evet |Evet |
 |Eğitilebilir sınıflandırıcılar| Evet | Evet (yalnızca son altı ay) |
 
-Ayrıca, taslakta yer alan veya hiç yayımlanmamış SharePoint öğeleri bu senaryo için desteklenmez.
+Ayrıca, taslakta yer alan veya hiç yayımlanmamış SharePoint öğeler bu senaryo için desteklenmez.
 
 #### <a name="auto-apply-labels-to-content-with-specific-types-of-sensitive-information"></a>Belirli türde hassas bilgilere sahip içeriğe etiketleri otomatik uygulama
 
 > [!IMPORTANT]
-> Hassas bilgileri tanımlayarak otomatik olarak uyguladığınız e-postalar için, microsoft 365 gruplarından gelen posta kutularını içeren tüm posta kutuları otomatik olarak eklenir.
+> Hassas bilgileri tanımlayarak otomatik olarak uyguladığınız e-postalar için, tüm posta kutuları otomatik olarak eklenir ve bu, Microsoft 365 gruplardan gelen posta kutularını içerir.
 > 
-> Grup posta kutuları genellikle **Microsoft 365 Grupları** konumu seçilerek dahil edilse de, bu ilke yapılandırması için grup konumu yalnızca Bir Microsoft 365 grubuna bağlı SharePoint sitelerini içerir.
+> Grup posta kutuları genellikle **Microsoft 365 Grupları** konumu seçilerek dahil edilse de, bu ilke yapılandırması için grup konumu yalnızca Microsoft 365 grubuna bağlı SharePoint siteleri içerir.
 
 Hassas bilgiler için otomatik uygulama bekletme etiketi ilkeleri oluşturduğunuzda, bir Microsoft Purview Veri Kaybı Önleme (DLP) ilkesi oluşturduğunuzda kullandığınız ilke şablonlarının listesini görürsünüz. Her şablon, belirli türlerdeki hassas bilgileri aramak için önceden yapılandırılmıştır. Aşağıdaki örnekte, hassas bilgi türleri **Gizlilik** kategorisinden ve **ABD Kişisel Bilgiler (PII) Veri** şablonundan alınmaktadır:
 
@@ -168,7 +168,7 @@ Bu seçenekler hakkında daha fazla bilgi için DLP belgelerinin [Eşleştirmesi
 
 Bekletme etiketlerini otomatik olarak uygulamak için hassas bilgi türlerini kullanırken dikkate almak için:
 
-- Özel hassas bilgi türleri kullanıyorsanız, bunlar SharePoint ve OneDrive'daki mevcut öğeleri otomatik olarak etiketleyemez.
+- Özel hassas bilgi türleri kullanıyorsanız, bunlar SharePoint ve OneDrive mevcut öğeleri otomatik olarak etiketleyemez.
 
 - E-postalar için dahil etmek veya hariç tutmak üzere belirli alıcıları seçemezsiniz; yalnızca **Tüm alıcılar** ayarı desteklenir ve yalnızca bu yapılandırma için Microsoft 365 gruplarından gelen posta kutularını içerir. 
 
@@ -178,7 +178,7 @@ Belirli sözcükleri, tümcecikleri veya aranabilir özelliklerin değerlerini i
 
 ![Sorgu düzenleyicisi.](../media/new-retention-query-editor.png)
 
-Anahtar Sözcük Sorgu Dili (KQL) kullanan sorgu söz dizimi hakkında daha fazla bilgi için bkz [. Anahtar Sözcük Sorgu Dili (KQL) söz dizimi başvurusu](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
+Anahtar Sözcük Sorgu Dili (KQL) kullanan sorgu söz dizimi hakkında daha fazla bilgi için bkz[. Anahtar Sözcük Sorgu Dili (KQL) söz dizimi başvurusu](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
 
 Sorgu tabanlı otomatik uygulama ilkeleri, içeriği tanımlamak için eBulma içerik araması ile aynı arama dizinini kullanır. Kullanabileceğiniz aranabilir özellikler hakkında daha fazla bilgi için bkz [. İçerik Arama için anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md).
 
@@ -188,7 +188,7 @@ Bekletme etiketlerini otomatik olarak uygulamak için anahtar sözcükler veya a
 
 - Özel bir özelliği iyileştirici özelliklerinden biriyle eşlerseniz, bekletme etiketi için KQL sorgunuzda kullanmadan önce 24 saat bekleyin.
 
-- SharePoint yönetilen özellikleri diğer adlar kullanılarak yeniden adlandırılsa da, etiketlerinizde KQL sorguları için bunları kullanmayın. Yönetilen özelliğin gerçek adını her zaman belirtin; örneğin, "RefinableString01".
+- SharePoint yönetilen özellikler diğer adlar kullanılarak yeniden adlandırılabilir, ancak etiketlerinizdeki KQL sorgular için bunları kullanmayın. Yönetilen özelliğin gerçek adını her zaman belirtin; örneğin, "RefinableString01".
 
 - Boşluk veya özel karakter içeren değerleri aramak için çift tırnak işareti (`" "`) kullanarak tümceciği (örneğin, `subject:"Financial Statements"`) kullanın.
 
@@ -217,13 +217,13 @@ SharePoint için aşağıdaki sorgu, söz konusu dosyalar **parola**, **parola**
 (password OR passwords OR pw) AND (filetype:doc* OR filetype:xls*)
 ```
 
-Aşağıdaki Exchange sorgusu, söz konusu belgeler bir e-postaya eklendiğinde **nda** sözcüğünü veya **gizlilik sözleşmesi** tümceciği içeren herhangi bir Word belgesini veya PDF'yi tanımlar:
+Exchange için aşağıdaki sorgu, söz konusu belgeler bir e-postaya eklendiğinde **nda** veya **tümcecik gizlilik sözleşmesi** sözcüğünü içeren herhangi bir Word belgesini veya PDF'sini tanımlar:
 
 ```
 (nda OR "non disclosure agreement") AND (attachmentnames:.doc* OR attachmentnames:.pdf)
 ```
 
-Aşağıdaki SharePoint sorgusu, kredi kartı numarası içeren belgeleri tanımlar: 
+SharePoint için aşağıdaki sorgu, kredi kartı numarası içeren belgeleri tanımlar: 
 
 ```
 sensitivetype:"credit card number"
@@ -243,32 +243,32 @@ Aşağıdaki sorgu, insan kaynaklarına yönelik belgeleri veya e-postaları tan
 
 Bu son örnekte anahtar sözcükler arasında her zaman işleçler dahil olmak için en iyi yöntemin kullanıldığına dikkat edin. Anahtar sözcükler (veya iki özellik:değer ifadesi) arasındaki boşluk, AND kullanımıyla aynıdır. Her zaman işleçler ekleyerek, bu örnek sorgunun anahtar sözcüklerden herhangi birini içeren içerik yerine yalnızca tüm bu anahtar sözcükleri içeren içeriği tanımlayacağını görmek daha kolaydır. Amacınız anahtar sözcüklerden herhangi birini içeren içeriği tanımlamaksa AND yerine OR değerini belirtin. Bu örnekte gösterildiği gibi, her zaman işleçleri belirttiğinizde sorguyu doğru yorumlamak daha kolaydır. 
 
-##### <a name="microsoft-teams-meeting-recordings"></a>Microsoft Teams toplantı kayıtları
+##### <a name="microsoft-teams-meeting-recordings"></a>Toplantı kayıtlarını Microsoft Teams
 
 > [!NOTE]
-> Kayıtlar OneDrive veya SharePoint'e kaydedilmeden önce Teams toplantı kayıtlarını tutma ve silme özelliği çalışmaz. Daha fazla bilgi için bkz. [Toplantı kayıtları için OneDrive İş'i ve SharePoint Online'ı veya Stream'i kullanma](/MicrosoftTeams/tmr-meeting-recording-change).
+> Kayıtlar OneDrive veya SharePoint kaydedilmeden önce Teams toplantı kayıtlarını tutma ve silme özelliği çalışmaz. Daha fazla bilgi için bkz[. OneDrive İş kullanma ve toplantı kayıtları için Çevrimiçi SharePoint veya Stream](/MicrosoftTeams/tmr-meeting-recording-change).
 
-Kullanıcıların OneDrive hesaplarında veya SharePoint'te depolanan Microsoft Teams toplantı kayıtlarını tanımlamak için **Anahtar Sözcük sorgu düzenleyicisi** için aşağıdakileri belirtin:
+Kullanıcıların OneDrive hesaplarında veya SharePoint depolanan Microsoft Teams toplantı kayıtlarını belirlemek için **Anahtar Sözcük sorgu düzenleyicisi** için aşağıdakileri belirtin:
 
 ```
 ProgID:Media AND ProgID:Meeting
 ```
 
-Çoğu zaman toplantı kayıtları OneDrive'a kaydedilir. Ancak kanal toplantıları SharePoint'e kaydedilir.
+Çoğu zaman toplantı kayıtları OneDrive kaydedilir. Ancak kanal toplantıları için SharePoint kaydedilir.
 
 ##### <a name="identify-files-and-emails-that-have-a-sensitivity-label"></a>Duyarlılık etiketi olan dosyaları ve e-postaları tanımlama
 
-SharePoint veya OneDrive'daki dosyaları ve belirli bir [duyarlılık etiketi](sensitivity-labels.md) uygulanmış Exchange e-postalarını tanımlamak için **Anahtar Sözcük sorgu düzenleyicisi** için aşağıdakileri belirtin:
+SharePoint veya OneDrive dosyaları tanımlamak ve belirli bir [duyarlılık etiketi](sensitivity-labels.md) uygulanmış e-postaları Exchange için **Anahtar Sözcük sorgu düzenleyicisi** için aşağıdakileri belirtin:
 
 ```
 InformationProtectionLabelId:<GUID>
 ```
 
-GUID'yi bulmak için [Güvenlik & Uyumluluk Merkezi PowerShell'den](/powershell/exchange/scc-powershell) [Get-Label](/powershell/module/exchange/get-label) cmdlet'ini kullanın:
+GUID'yi bulmak için [Güvenlik & Uyumluluğu PowerShell'in](/powershell/exchange/scc-powershell) [Get-Label](/powershell/module/exchange/get-label) cmdlet'ini kullanın:
 
-````powershell
+```powershell
 Get-Label | Format-Table -Property DisplayName, Name, Guid
-````
+```
 
 #### <a name="auto-apply-labels-to-content-by-using-trainable-classifiers"></a>Eğitilebilir sınıflandırıcıları kullanarak içeriğe etiketleri otomatik uygulama
 
@@ -279,7 +279,7 @@ Eğitilebilir sınıflandırıcı seçeneğini belirlediğinizde, önceden eğit
 > [!CAUTION]
 > Çok sayıda hatalı pozitif sonuç ürettiğinden **, Rahatsız Edici Dil** önceden eğitilmiş sınıflandırıcıyı kullanım dışı bırakıyoruz. Bu sınıflandırıcıyı kullanmayın ve şu anda kullanıyorsanız iş süreçlerinizi bundan çıkarmanızı ve bunun yerine **Hedeflenen Taciz**, **Küfür** ve **Tehdit** önceden eğitilmiş sınıflandırıcıları kullanmanızı öneririz.
 
-Bu seçeneği kullanarak otomatik olarak etiket uygulamak için, SharePoint sitelerinin ve posta kutularının en az 10 MB veriye sahip olması gerekir.
+Bu seçeneği kullanarak otomatik olarak etiket uygulamak için sitelerin ve posta kutularının SharePoint en az 10 MB veriye sahip olması gerekir.
 
 Eğitilebilir sınıflandırıcılar hakkında daha fazla bilgi için bkz. [Eğitilebilir sınıflandırıcılar hakkında bilgi edinin](classifier-learn-about.md).
 
@@ -288,35 +288,35 @@ Eğitilebilir sınıflandırıcılar hakkında daha fazla bilgi için bkz. [Eği
 
 Bekletme etiketlerini otomatik olarak uygulamak için eğitilebilir sınıflandırıcıları kullanırken göz önünde bulundurmak için:
 
-- Altı aydan eski SharePoint ve OneDrive öğelerini otomatik olarak etiketleyemezsiniz.
+- Altı aydan eski SharePoint ve OneDrive öğeleri otomatik olarak etiketleyemezsiniz.
 
 #### <a name="auto-apply-labels-to-cloud-attachments"></a>Bulut eklerine etiketleri otomatik uygulama
 
 > [!NOTE]
 > Bu seçenek önizleme aşamasında aşamalı olarak kullanıma sunulmuştur ve değiştirilebilir.
 
-Kiracınızda kullanıcıların iletişimleri üzerinden gönderilen tüm dosya kopyalarını yakalamanız ve saklamanız gerekiyorsa bu seçeneği kullanmanız gerekebilir. İletişim hizmetlerinin kendileri, Exchange ve Teams için bekletme ilkeleriyle birlikte bu seçeneği kullanırsınız.
+Kiracınızda kullanıcıların iletişimleri üzerinden gönderilen tüm dosya kopyalarını yakalamanız ve saklamanız gerekiyorsa bu seçeneği kullanmanız gerekebilir. Bu seçeneği iletişim hizmetleri, Exchange ve Teams için bekletme ilkeleriyle birlikte kullanırsınız.
 
 > [!IMPORTANT]
 > Bulut ekleri için bekletme etiketlerini otomatik olarak uygulamak için kullanılacak bir etiket seçtiğinizde, etiket bekletme ayarının **Bekletme süresini başlangıç** olarak **ne zaman öğelerinin etiketlendiği** şeklinde olduğundan emin olun.
 
-Bazen modern ekler olarak da bilinen bulut ekleri, bulutta depolanan dosyalara eklenmiş bağlantıları kullanan bir paylaşım mekanizmasıdır. Sürüm denetimi gibi işbirliğine dayalı avantajlara sahip paylaşılan içerik için merkezi depolamayı destekler. Bulut ekleri, dosyanın ekli kopyaları veya dosyaya URL metin bağlantısı değildir. [Outlook](/office365/troubleshoot/retention/cannot-retain-cloud-attachments#cloud-attachments-in-outlook) ve [Teams'de](/office365/troubleshoot/retention/cannot-retain-cloud-attachments#cloud-attachments-in-teams) desteklenen bulut ekleri için görsel denetim listelerine başvurmak yararlı olabilir.
+Bazen modern ekler olarak da bilinen bulut ekleri, bulutta depolanan dosyalara eklenmiş bağlantıları kullanan bir paylaşım mekanizmasıdır. Sürüm denetimi gibi işbirliğine dayalı avantajlara sahip paylaşılan içerik için merkezi depolamayı destekler. Bulut ekleri, dosyanın ekli kopyaları veya dosyaya URL metin bağlantısı değildir. [Outlook](/office365/troubleshoot/retention/cannot-retain-cloud-attachments#cloud-attachments-in-outlook) ve [Teams](/office365/troubleshoot/retention/cannot-retain-cloud-attachments#cloud-attachments-in-teams) desteklenen bulut ekleri için görsel denetim listelerine başvurmak yararlı olabilir.
 
 Bulut eklerine bekletme etiketi uygulama seçeneğini belirlediğinizde, uyumluluk amacıyla bu dosyanın bir kopyası paylaşım sırasında oluşturulur. Daha sonra seçilen bekletme etiketi kopyaya uygulanır ve bu etiket [eBulma kullanılarak tanımlanabilir](advanced-ediscovery-cloud-attachments.md). Kullanıcılar, Koruma Bekletme kitaplığında depolanan kopyanın farkında değildir. Bekletme etiketi iletinin kendisine veya özgün dosyaya uygulanmaz.
 
 Dosya yeniden değiştirilir ve paylaşılırsa, dosyanın yeni sürüm olarak yeni bir kopyası Koruma Bekletme kitaplığına kaydedilir. **Öğeler etiketlendiğinde** etiket ayarını neden kullanmanız gerektiği de dahil olmak üzere daha fazla bilgi için bkz. [Bulut ekleriyle bekletme nasıl çalışır](retention-policies-sharepoint.md#how-retention-works-with-cloud-attachments)?
 
-Bu seçenek için desteklenen bulut ekleri, SharePoint ve OneDrive'da depolanan belgeler, videolar ve resimler gibi dosyalardır. Teams için sohbet iletilerinde paylaşılan bulut ekleri ve standart ve özel kanallar desteklenir. Toplantı davetleri ve Teams veya Outlook dışındaki uygulamalar üzerinden paylaşılan bulut ekleri desteklenmez. Bulut ekleri kullanıcılar tarafından paylaşılmalıdır; botlar aracılığıyla gönderilen bulut ekleri desteklenmez.
+Bu seçenek için desteklenen bulut ekleri, SharePoint ve OneDrive depolanan belgeler, videolar ve görüntüler gibi dosyalardır. Teams için sohbet iletilerinde paylaşılan bulut ekleri ve standart ve özel kanallar desteklenir. Toplantı davetleri ve Teams veya Outlook dışındaki uygulamalar üzerinden paylaşılan bulut ekleri desteklenmez. Bulut ekleri kullanıcılar tarafından paylaşılmalıdır; botlar aracılığıyla gönderilen bulut ekleri desteklenmez.
 
-Bu seçenek için gerekli olmasa da, paylaşılan sürümün doğru bir şekilde yakalanabilmesi için SharePoint siteleriniz ve OneDrive hesaplarınız için sürüm oluşturmanın etkinleştirildiğinden emin olmanız önerilir. Sürüm oluşturma etkin değilse, kullanılabilir son sürüm korunur. Taslaktaki veya hiç yayımlanmamış belgeler desteklenmez.
+Bu seçenek için gerekli olmasa da, paylaşılan sürümün doğru bir şekilde yakalanması için SharePoint siteleriniz ve OneDrive hesaplarınız için sürüm oluşturmanın etkinleştirildiğinden emin olmanız önerilir. Sürüm oluşturma etkin değilse, kullanılabilir son sürüm korunur. Taslaktaki veya hiç yayımlanmamış belgeler desteklenmez.
 
 Bulut ekleri için bekletme etiketlerini otomatik olarak uygulamak için kullanılacak bir etiket seçtiğinizde, Etiket bekletme ayarının **Saklama süresini başlatma ayarının** **Öğeler etiketlendiğinde** olduğundan emin olun. 
 
 Bu seçenek için konumları yapılandırırken şunları seçebilirsiniz:
 
-- **SharePoint iletişim sitelerinde** depolanan paylaşılan dosyalar, Microsoft 365 grupları tarafından bağlanmamış ekip siteleri ve klasik siteler için SharePoint siteleri. 
-- **Microsoft 365 grupları** tarafından bağlanan ekip sitelerinde depolanan paylaşılan dosyalar için Microsoft 365 Grupları.
-- Kullanıcıların **OneDrive'ında** depolanan paylaşılan dosyalar için OneDrive hesapları.
+- **SharePoint iletişim sitelerinde** depolanan paylaşılan dosyalar, Microsoft 365 grupları tarafından bağlanmamış ekip siteleri ve klasik siteler için siteleri SharePoint. 
+- **Microsoft 365** grupları tarafından bağlanan ekip sitelerinde depolanan paylaşılan dosyalar için Microsoft 365 Grupları.
+- Kullanıcıların OneDrive depolanan paylaşılan dosyalar için **hesapları** OneDrive.
 
 Özgün dosyaları, e-posta iletilerini veya Teams iletilerini korumak veya silmek istiyorsanız ayrı bekletme ilkeleri oluşturmanız gerekir.
 
@@ -330,7 +330,7 @@ Bulut eklerine bekletme etiketlerinin otomatik olarak uygulandığını göz ön
 - Teams ve Outlook dışında paylaşılan bulut ekleri desteklenmez.
 
 - Aşağıdaki öğeler, saklanabilen bulut ekleri olarak desteklenmez:
-    - SharePoint siteleri, sayfalar, listeler, formlar, klasörler, belge kümeleri ve OneNote sayfaları.
+    - Siteler, sayfalar, listeler, formlar, klasörler, belge kümeleri ve OneNote sayfaları SharePoint.
     - Bu dosyalara erişimi olmayan kullanıcılar tarafından paylaşılan dosyalar.
     - Bulut eki gönderilmeden önce silinen veya taşınan dosyalar. Örneğin, kullanıcı önce dosyanın hala kullanılabilir olduğunu onaylamadan daha önce paylaşılan bir eki başka bir iletiden kopyalayıp yapıştırır. Ya da dosya silindiğinde birisi eski bir iletiyi iletir.
     - Kuruluşunuz dışındaki konuklar veya kullanıcılar tarafından paylaşılan dosyalar.
@@ -343,9 +343,9 @@ Hassas bilgilere, anahtar sözcüklere veya aranabilir özelliklere ya da eğiti
   
 ![Otomatik uygulama etiketlerinin ne zaman etkin olduğunu açıklayan diyagram.](../media/retention-labels-autoapply-timings.png)
 
-Beklenen etiketler yedi gün sonra görünmüyorsa, Microsoft Purview uyumluluk portalındaki **Etiket ilkeleri** sayfasından seçerek otomatik uygulama ilkesinin **durumunu** denetleyin. **Kapalı (Hata)** durumunu görüyorsanız ve konumların ayrıntılarında ilkenin dağıtılmasının beklenenden uzun sürdüğünü belirten bir ileti görüyorsanız (SharePoint için) veya ilkeyi yeniden dağıtmayı denemek için (OneDrive için), ilke dağıtımını yeniden denemek için [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
+Beklenen etiketler yedi gün sonra görünmüyorsa, Microsoft Purview uyumluluk portalındaki **Etiket ilkeleri** sayfasından seçerek otomatik uygulama ilkesinin **durumunu** denetleyin. **Kapalı (Hata)** durumunu görürseniz ve konumların ayrıntılarında ilkeyi dağıtmanın (SharePoint için) veya ilkeyi yeniden dağıtmayı (OneDrive için) denemenin beklenenden uzun sürdüğünü belirten bir ileti görürseniz, ilke dağıtımını yeniden denemek için [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
 
-1. [Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanın](/powershell/exchange/connect-to-scc-powershell).
+1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 2. Aşağıdaki komutu çalıştırın:
     
@@ -383,4 +383,4 @@ Otomatik etiketleme ilkelerinizden uygulanan etiketleri izlemenize yardımcı ol
 - [Belirli bir bekletme etiketine sahip tüm içeriği bulmak için İçerik Arama'yı kullanma](retention.md#using-content-search-to-find-all-content-with-a-specific-retention-label)
 - [Bekletme eylemlerini denetleme](retention.md#auditing-retention-actions)
 
-SharePoint'te yönetilen özelliklere sahip bir bekletme etiketi ilkesini otomatik uygulama ve saklama süresini başlatmak için olay tabanlı saklama kullanan örnek senaryo için bkz. SharePoint'te [depolanan belgelerin yaşam döngüsünü yönetmek için bekletme etiketlerini kullanma](auto-apply-retention-labels-scenario.md) .
+SharePoint'da yönetilen özelliklere sahip bir otomatik uygulama bekletme etiketi ilkesi ve bekletme süresini başlatmak için olay tabanlı saklama kullanan örnek bir senaryo için bkz. SharePoint [depolanan belgelerin yaşam döngüsünü yönetmek için bekletme etiketlerini kullanma](auto-apply-retention-labels-scenario.md).

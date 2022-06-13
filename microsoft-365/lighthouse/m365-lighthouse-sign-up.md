@@ -4,6 +4,7 @@ f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: crimora
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -17,12 +18,12 @@ ms.custom:
 - intro-get-started
 search.appverid: MET150
 description: Yönetilen Hizmet Sağlayıcıları (MSP) için Microsoft 365 Lighthouse kaydolmayı öğrenin.
-ms.openlocfilehash: 8d845ed454a672b1480ca0b6fe6f471cc30a37a6
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 5596005ff9a3db4e5a873a32f87b2677cdc8efaa
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172204"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66007140"
 ---
 # <a name="sign-up-for-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse için kaydolun
 
@@ -30,7 +31,7 @@ Bu makalede, Microsoft 365 Lighthouse kaydolma yönergeleri sağlanır. Microsof
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- Microsoft 365 Lighthouse yalnızca iş ortağı kiracısında&mdash; dağıtılır, ancak sizin ve müşteri kiracılarınızın [Microsoft 365 Lighthouse gereksinimlerinde listelenen gereksinimleri](m365-lighthouse-requirements.md) karşıladığından emin olun.
+- Microsoft 365 Lighthouse iş ortağı kiracısında yalnızca&mdash;müşteri kiracılarında dağıtılmaz, aynı zamanda sizin ve müşteri kiracılarınızın [Microsoft 365 Lighthouse gereksinimlerinde listelenen gereksinimleri](m365-lighthouse-requirements.md) karşıladığından emin olun.
 
 - Oturum açmakta olduğunuz iş ortağı kiracısında Genel Yönetici olmanız gerekir.
 
@@ -38,7 +39,7 @@ Bu makalede, Microsoft 365 Lighthouse kaydolma yönergeleri sağlanır. Microsof
 
 1. konumundaki Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> gidin ve iş ortağı kiracı kimlik bilgilerinizi kullanarak oturum açın. 
 
-1. **BillingPurchase** >  **ServicesOther** **Services'a** >  gidin.
+1. **Faturalama** > **Satın Alma Hizmetleri****Diğer Hizmetler'e** >  gidin.
 
     Microsoft 365 Lighthouse hizmetler listesinde yoksa **Diğer tüm hizmet ürünlerini gör'e** tıklayın.
 

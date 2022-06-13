@@ -22,18 +22,18 @@ ms.assetid: c4639c2e-7223-4302-8e0d-b6e10f1c3be3
 ms.custom:
 - seo-marvel-apr2020
 description: Microsoft 365'daki eBulma arama araçlarını kullanarak arama yapabileceğiniz e-posta ve belge özellikleri hakkında bilgi edinin.
-ms.openlocfilehash: d6a918f41004a366b9e8c7c53c7e0f2153d57c3b
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: ebea983caedc73c8471d6e460b58314bd76f1861
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319066"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66012350"
 ---
 # <a name="keyword-queries-and-search-conditions-for-ediscovery"></a>eBulma için anahtar sözcük sorguları ve arama koşulları
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Bu makalede, e-posta öğelerinde arayabileceğiniz e-posta ve belge özellikleri ve Exchange Online sohbet konuşmaları Microsoft Teams ve SharePoint ve OneDrive İş sitelerinde depolanan belgeler, Microsoft Purview uyumluluk portalı. Buna İçerik arama, Microsoft Purview eBulma (Standart) ve Microsoft Purview eBulma (Premium) dahildir (eBulma'da (Premium) eBulma aramalarına *koleksiyon* adı verilir). Bu özellikleri aramak için Güvenlik & Uyumluluk Merkezi PowerShell'deki -ComplianceSearch cmdlet'lerini de kullanabilirsiniz **\***. Makalede ayrıca şunlar açıklanmaktadır:
+Bu makalede, e-posta öğelerinde arayabileceğiniz e-posta ve belge özellikleri ve Exchange Online sohbet konuşmaları Microsoft Teams ve Microsoft Purview uyumluluk portalındaki eBulma arama araçlarını kullanarak SharePoint ve OneDrive İş sitelerinde depolanan belgeler açıklanmaktadır. Buna İçerik arama, Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium) dahildir (eBulma'daki (Premium) eBulma aramalarına *koleksiyon* adı verilir). Bu özellikleri aramak için Güvenlik & Uyumluluk PowerShell'deki -ComplianceSearch cmdlet'lerini de kullanabilirsiniz **\***. Makalede ayrıca şunlar açıklanmaktadır:
 
 - Arama sonuçlarınızı daraltmak için Boole arama işleçlerini, arama koşullarını ve diğer arama sorgusu tekniklerini kullanma.
 - SharePoint ve OneDrive İş hassas veri türlerini ve özel hassas veri türlerini arama.
@@ -46,7 +46,7 @@ Farklı eBulma aramaları oluşturma hakkında adım adım yönergeler için bkz
 - [eBulma'da taslak koleksiyon oluşturma (Premium)](create-draft-collection.md)
 
 > [!NOTE]
-> Uyumluluk portalında eBulma aramaları ve Güvenlik & Uyumluluk Merkezi PowerShell'deki ilgili **\*-ComplianceSearch** cmdlet'leri Anahtar Sözcük Sorgu Dili'ni (KQL) kullanır. Daha ayrıntılı bilgi için bkz [. Anahtar Sözcük Sorgu Dili söz dizimi başvurusu](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
+> Uyumluluk portalında eBulma aramaları ve Güvenlik & Uyumluluk PowerShell'deki ilgili **\*-ComplianceSearch** cmdlet'leri Anahtar Sözcük Sorgu Dili'ni (KQL) kullanır. Daha ayrıntılı bilgi için bkz [. Anahtar Sözcük Sorgu Dili söz dizimi başvurusu](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
 
 ## <a name="searchable-email-properties"></a>Aranabilir e-posta özellikleri
 
@@ -92,7 +92,7 @@ Ancak, arama sorgusunda alıcının genişlemesini engellemenin, arama sonuçlar
 
 ## <a name="searchable-site-properties"></a>Aranabilir site özellikleri
 
-Aşağıdaki tabloda, Microsoft Purview uyumluluk portalı eBulma arama araçları kullanılarak veya **New-ComplianceSearch** veya **Set-ComplianceSearch** cmdlet'i kullanılarak aranabilecek bazı SharePoint ve OneDrive İş özellikleri listelenmiştir. Tabloda her  _özellik için property:value_ söz dizimi örneği ve örnekler tarafından döndürülen arama sonuçlarının açıklaması yer alır.
+Aşağıdaki tabloda, Microsoft Purview uyumluluk portalındaki eBulma arama araçları kullanılarak veya **New-ComplianceSearch** veya **Set-ComplianceSearch** cmdlet'i kullanılarak aranabilecek SharePoint ve OneDrive İş özelliklerinden bazıları listelenmiştir. Tabloda her  _özellik için property:value_ söz dizimi örneği ve örnekler tarafından döndürülen arama sonuçlarının açıklaması yer alır.
 
 Aranabilecek SharePoint özelliklerin tam listesi için bkz. [SharePoint'da gezinilen ve yönetilen özelliklere genel bakış](/SharePoint/technical-reference/crawled-and-managed-properties-overview). **Sorgulanabilir** sütununda **Evet** ile işaretlenmiş özellikler aranabilir.
 
@@ -146,7 +146,7 @@ Aşağıdaki tabloda, dizine alınan ve eBulma arama araçlarını kullanarak ar
 
 SharePoint ve OneDrive İş sitelerindeki belgelerde depolanan kredi kartı numaraları veya sosyal güvenlik numaraları gibi hassas verileri aramak için uyumluluk portalındaki eBulma arama araçlarını kullanabilirsiniz. Bunu yapmak için anahtar sözcük sorgusundaki `SensitiveType` hassas bilgi türünün özelliğini ve adını (veya kimliğini) kullanabilirsiniz. Örneğin, sorgu `SensitiveType:"Credit Card Number"` kredi kartı numarası içeren belgeleri döndürür. Sorgu  `SensitiveType:"U.S. Social Security Number (SSN)"` , ABD sosyal güvenlik numarası içeren belgeleri döndürür.
 
-Arayabileceğiniz hassas bilgi türlerinin listesini görmek için uyumluluk portalında **Veri sınıflandırmaları** \> **Hassas bilgi türleri'ne** gidin. Hassas bilgi türlerinin listesini görüntülemek için Güvenlik & Uyumluluk Merkezi PowerShell'de **Get-DlpSensitiveInformationType** cmdlet'ini de kullanabilirsiniz.
+Arayabileceğiniz hassas bilgi türlerinin listesini görmek için uyumluluk portalında **Veri sınıflandırmaları** \> **Hassas bilgi türleri'ne** gidin. Hassas bilgi türlerinin listesini görüntülemek için Güvenlik & Uyumluluk PowerShell'deki **Get-DlpSensitiveInformationType** cmdlet'ini de kullanabilirsiniz.
 
 özelliğini kullanarak `SensitiveType` sorgu oluşturma hakkında daha fazla bilgi için bkz. [Sitelerde depolanan hassas verileri bulmak için sorgu oluşturma](form-a-query-to-find-sensitive-data-stored-on-sites.md).
 
@@ -154,7 +154,7 @@ Arayabileceğiniz hassas bilgi türlerinin listesini görmek için uyumluluk por
 
 - Özel hassas bilgi türlerini aramak için özelliğinde hassas bilgi türünün `SensitiveType` kimliğini belirtmeniz gerekir. Özel bir hassas bilgi türünün adını kullanmak (önceki bölümde yerleşik hassas bilgi türleri örneğinde gösterildiği gibi) hiçbir sonuç döndürmez. Yerleşik **ve** özel hassas bilgi türlerini ayırt etmek için uyumluluk merkezindeki **Hassas bilgi türleri** sayfasındaki (veya PowerShell'deki Publisher özelliği) **Publisher** sütununu kullanın. Yerleşik hassas veri türleri **, Publisher** özelliği için değerine `Microsoft Corporation` sahiptir.
 
-  Kuruluşunuzdaki özel hassas veri türlerinin adını ve kimliğini görüntülemek için Güvenlik & Uyumluluk Merkezi PowerShell'de aşağıdaki komutu çalıştırın:
+  Kuruluşunuzdaki özel hassas veri türlerinin adını ve kimliğini görüntülemek için Güvenlik & Uyumluluk PowerShell'de aşağıdaki komutu çalıştırın:
 
   ```powershell
   Get-DlpSensitiveInformationType | Where-Object {$_.Publisher -ne "Microsoft Corporation"} | FT Name,Id
@@ -178,13 +178,13 @@ Arayabileceğiniz hassas bilgi türlerinin listesini görmek için uyumluluk por
 |YAKIN -INDAKİ|keyword1 NEAR(n) anahtar sözcüğü2|Birbirine yakın sözcükler içeren öğeleri döndürür; burada n sözcük sayısı birbirinden ayrılır. Örneğin, `best NEAR(5) worst` "en kötü" sözcüğünün "en iyi" sözcüğünün beş sözcüğü içinde olduğu herhangi bir öğeyi döndürür. Sayı belirtilmezse, varsayılan uzaklık sekiz sözcük olur. <sup>2</sup>|
 |:|property:value|İki nokta üst üste (:) söz diziminde  `property:value` , aranmakta olan özelliğin değerinin belirtilen değeri içerdiğini belirtir. Örneğin,  `recipients:garthf@contoso.com` garthf@contoso.com gönderilen tüm iletileri döndürür.|
 |=|property=value|**ile aynıdır:** işleci.|
-|\<|propertyvalue\<|Aranmakta olan özelliğin belirtilen değerden küçük olduğunu belirtir. <sup>1</sup>|
-|\>|propertyvalue\>|Aranmakta olan özelliğin belirtilen değerden büyük olduğunu belirtir. <sup>1</sup>|
+|\<|özellik\<değeri|Aranmakta olan özelliğin belirtilen değerden küçük olduğunu belirtir. <sup>1</sup>|
+|\>|özellik\>değeri|Aranmakta olan özelliğin belirtilen değerden büyük olduğunu belirtir. <sup>1</sup>|
 |\<=|property\<=value|Aranan özelliğin belirli bir değerden küçük veya buna eşit olduğunu belirtir. <sup>1</sup>|
 |\>=|property\>=value|Aranan özelliğin belirli bir değerden büyük veya buna eşit olduğunu belirtir. <sup>1</sup>|
 |..|property:value1.. değer2|Aranan özelliğin değer1'den büyük veya buna eşit ve değer2'den küçük veya buna eşit olduğunu belirtir. <sup>1</sup>|
 |"  "|"eşit değer" <p> konu:"Çeyreklik Mali Durumlar"|Anahtar sözcük sorgusunda (anahtar **sözcük kutusuna** `property:value` çifti yazdığınız yerde), tam bir tümcecik veya terim aramak için çift tırnak işareti (" ") kullanın. Ancak **Konu** veya **Konu/Başlık** [arama koşulu](#search-conditions) koşulu kullanıyorsanız, bu arama koşulları kullanılırken tırnak işaretleri otomatik olarak eklendiğinden değere çift tırnak işareti eklemeyin. Değere tırnak işareti eklerseniz, koşul değerine iki çift çift tırnak eklenir ve arama sorgusu hata döndürür. |
-|\*|Kedi\* <p> subject:set\*|Anahtar sözcüklerde veya `property:value` sorgularda bir sözcüğün sonuna joker karakter ( * ) yerleştirildiği önek aramaları (*ön ek eşleştirme* olarak da adlandırılır). Ön ek aramalarında arama, sözcüğü içeren terimleri ve ardından sıfır veya daha fazla karakteri içeren sonuçlar döndürür. Örneğin, `title:set*` belge başlığında "set", "setup" ve "setting" sözcüklerini (ve "set" ile başlayan diğer sözcükleri) içeren belgeleri döndürür. <p> **Not:** Yalnızca ön ek aramalarını kullanabilirsiniz; örneğin, **cat\**_ veya _* set\**_. Sonek aramaları (_*\*kedi**), infix aramaları (**ct\***) ve alt dize aramaları (**\*kedi\***) desteklenmez. <p> Ayrıca nokta ekleme ( \. ) için bir ön ek araması döndürülen sonuçları değiştirir. Bunun nedeni noktanın bir durdurma sözcüğü olarak değerlendirilmesidir. Örneğin, **cat\**_ araması ve _* cat.\* araması** farklı sonuçlar döndürür. Ön ek aramasında nokta kullanmamanızı öneririz.|
+|\*|Kedi\* <p> subject:set\*|Anahtar sözcüklerde veya `property:value` sorgularda bir sözcüğün sonuna joker karakter ( * ) yerleştirildiği önek aramaları (*ön ek eşleştirme* olarak da adlandırılır). Ön ek aramalarında arama, sözcüğü içeren terimleri ve ardından sıfır veya daha fazla karakteri içeren sonuçlar döndürür. Örneğin, `title:set*` belge başlığında "set", "setup" ve "setting" sözcüklerini (ve "set" ile başlayan diğer sözcükleri) içeren belgeleri döndürür. <p> **Not:** Yalnızca ön ek aramalarını kullanabilirsiniz; örneğin, **cat\**_ veya _* set\**_. Sonek aramaları (_*\*kedi**), infix aramaları (**c\*t**) ve alt dize aramaları (**\*kedi\***) desteklenmez. <p> Ayrıca nokta ekleme ( \. ) için bir ön ek araması döndürülen sonuçları değiştirir. Bunun nedeni noktanın bir durdurma sözcüğü olarak değerlendirilmesidir. Örneğin, **cat\**_ araması ve _* cat.\* araması** farklı sonuçlar döndürür. Ön ek aramasında nokta kullanmamanızı öneririz.|
 |(  )|(adil VEYA ücretsiz) AND (kimden:contoso.com) <p> (IPO VEYA başlangıç) AND (hisse senedi VEYA hisse senetleri) <p> (üç aylık finansallar)|Parantezler Boole tümceciklerini,  `property:value` öğelerini ve anahtar sözcüklerini bir arada gruplandırıyor. Örneğin,  `(quarterly financials)` üç aylık ve finansal sözcükleri içeren öğeleri döndürür.|
 
 > [!NOTE]
@@ -445,7 +445,7 @@ Karakter sınırları hakkında daha fazla bilgi için bkz. [eBulma arama sını
 
 - Kime, Kimden, Bilgi veya Alıcılar gibi bir alıcı özelliğinde arama yaparken, alıcıyı belirtmek için SMTP adresi, diğer ad veya görünen ad kullanabilirsiniz. Örneğin, pilarp@contoso.com, pilarp veya "Pilar Pinilla" kullanabilirsiniz.
 
-- Yalnızca ön ek aramalarını kullanabilirsiniz; örneğin, **cat\**_ veya _* set\**_. Sonek aramaları (_*\*kedi**), infix aramaları (**ct\***) ve alt dize aramaları (**\*kedi\***) desteklenmez.
+- Yalnızca ön ek aramalarını kullanabilirsiniz; örneğin, **cat\**_ veya _* set\**_. Sonek aramaları (_*\*kedi**), infix aramaları (**c\*t**) ve alt dize aramaları (**\*kedi\***) desteklenmez.
 
 - Bir özellikte arama yaparken, arama değeri birden çok sözcükden oluşuyorsa çift tırnak işareti (" ") kullanın. Örneğin `subject:budget Q1` , konu satırında **bütçe** içeren ve iletinin herhangi bir yerinde veya ileti özelliklerinden herhangi birinde **Q1** içeren iletileri döndürür. kullanma `subject:"budget Q1"` , konu satırının herhangi bir yerinde **bütçe Q1** içeren tüm iletileri döndürür.
 

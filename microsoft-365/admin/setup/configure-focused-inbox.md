@@ -22,17 +22,17 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 613a845c-4b71-41de-b331-acdcf5b6625d
-description: Bir işletmede herkesin e-posta ayarlarını yapılandırmadan sorumluysanız, bu makalede kullanıcılar için Odaklanmış Gelen Kutusu'na nasıl yapılandırılan açıklanmıştır.
-ms.openlocfilehash: b2c315b6fb4a4c80f245bcf4731b93996753586a
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: İşletmedeki herkes için e-posta ayarlarını yapılandırmaktan sorumluysanız, bu makalede kullanıcılar için Odaklanmış Gelen Kutusu'nu yapılandırma açıklanmaktadır.
+ms.openlocfilehash: 9c3b17c632c2316f3c36a4f79362895d790b1c7b
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984706"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66010222"
 ---
 # <a name="configure-focused-inbox-for-everyone-in-your-organization"></a>Kuruluşunuzdaki herkes için Odaklanmış Gelen Kutusu'nu yapılandırma
 
-İşletmede HERKES için e-postanın nasıl çalışacağını yapılandırmaktan sorumluysanız, bu makale tam size göre! İşletmeniz için nasıl özelleştirebileceğinizi veya kapatacaklarını açıklar ve sık [sorulan soruları yanıtlar](#faq-for-focused-inbox).
+İşletmede HERKES için e-postanın nasıl çalışacağını yapılandırmaktan sorumluysanız, bu makale tam size göre! İşletmeniz için nasıl özelleştirebileceğinizi veya kapattığınızı açıklar ve [sık sorulan soruları](#faq-for-focused-inbox) yanıtlar.
 
 Odaklanmış Gelen Kutusu'nu yalnızca kendiniz için kapatmak istiyorsanız, bkz. [Odaklanmış Gelen Kutusu'nu kapatma](https://support.microsoft.com/office/f714d94d-9e63-4217-9ccb-6cb2986aa1b2).      
 
@@ -40,13 +40,13 @@ Kullanıcılarınızın işle ilgili, örneğin İK veya Muhasebe bölümünden 
   
 ## <a name="turn-focused-inbox-on-or-off-in-your-organization"></a>Kuruluşunuzda Odaklanmış Gelen Kutusu'nu açma veya kapatma
 
-Kuruluşunuzda herkes için Odaklanmış Gelen Kutusu'nu açma veya kapatma işlemini PowerShell kullanarak yaparsınız. Bunu en son ne zaman yapmak Microsoft 365 yönetim merkezi? Bunu Mühendislik ekibimize iletin. **[Buradan oylayın!](https://go.microsoft.com/fwlink/?linkid=862489)**
+Kuruluşunuzda herkes için Odaklanmış Gelen Kutusu'nu açma veya kapatma işlemini PowerShell kullanarak yaparsınız. Bunu Microsoft 365 yönetim merkezi yapmak ister misin? Bunu Mühendislik ekibimize iletin. **[Buradan oylayın!](https://go.microsoft.com/fwlink/?linkid=862489)**
   
 **Odaklanmış Gelen Kutusu'nu kapatmak için:**
   
 Aşağıdaki PowerShell örneği, kuruluşunuzda Odaklanmış Gelen Kutusu'nu **Kapalı** duruma getirir. Ancak, kullanıcılarınıza sağlanan özelliklerin kullanılabilmesini engellemez. İsterlerse, istemcilerinin her biri için Odaklanmış Gelen Kutusu'nu yeniden etkinleştirebilirler. 
   
-1. [Bağlan PowerShell Exchange Online'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Bu yordamı veya yordamları gerçekleştirebilmeniz için, önce izinlerin atanması gerekir. Size hangi izinlerin gerektiğini görmek için, [Mesajlaşma ilkesi ve uyumluluk izinleri](/exchange/messaging-policy-and-compliance-permissions-exchange-2013-help) konusunda yer alan "Aktarım kuralları" girdisine bakın.
 
@@ -90,13 +90,13 @@ Kullanıcı, Odaklanmış Gelen Kutusu'nu kullanmaya karar verdiğinde İkincil 
   
 ## <a name="turn-focused-inbox-on-or-off-for-specific-users"></a>Odaklanmış Gelen Kutusu'nu belirli kullanıcılar için açma ve kapatma
 
-Bu örnek, Contoso kuruluşundaki Fatih Kara için Odaklanmış Gelen Kutusunu **Kapalı** olarak ayarlar. Ancak bu kişiye sağlanan özelliklerin kullanılabilmesini engellemez. Isterse, istemcilerinin her biri için Odaklanmış Gelen Kutusu'na yeniden etkinleştirebilirsiniz. 
+Bu örnek, Contoso kuruluşundaki Fatih Kara için Odaklanmış Gelen Kutusunu **Kapalı** olarak ayarlar. Ancak bu kişiye sağlanan özelliklerin kullanılabilmesini engellemez. İstediği takdirde, her istemcisinde Odaklanmış Gelen Kutusu'nu yeniden etkinleştirebilir. 
   
-1. [Bağlan PowerShell Exchange Online'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Bu yordamı veya yordamları gerçekleştirebilmeniz için, önce izinlerin atanması gerekir. Size hangi izinlerin gerektiğini görmek için, Mesajlaşma ilkesi ve uyumluluk izinleri konusunda yer alan "Aktarım kuralları" girişine bakın.
 
-3. **Get-FocusedInbox** cmdlet'ini çalıştırın; örneğin: 
+3. **Get-FocusedInbox** cmdlet'ini çalıştırın, örneğin: 
 
     ```powershell
     Get-FocusedInbox -Identity <tim@contoso.com>
@@ -106,7 +106,7 @@ Bu örnek, Contoso kuruluşundaki Fatih Kara için Odaklanmış Gelen Kutusunu *
 
     ![Response from PowerShell on state of Focused Inbox.](../../media/419d8caa-89b9-45c5-91d9-8c023297456e.png)
   
-5. Odaklanmış Gelen Kutusu'na kapatmak için aşağıdaki cmdlet'i çalıştırın:
+5. Odaklanmış Gelen Kutusu'nu kapatmak için aşağıdaki cmdlet'i çalıştırın:
 
     ```powershell
     Set-FocusedInbox -Identity <tim@contoso.com> -FocusedInboxOn $false
@@ -122,40 +122,40 @@ Bu örnek, Contoso kuruluşundaki Fatih Kara için Odaklanmış Gelen Kutusunu *
 
 1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezine</a> gidin.
 
-2. Posta akışı **Kuralları'nına** \> **gidin**. ![EAC Ekle simgesi'ne tıklayın.](../../media/795e5bdd-48bb-433f-8e07-3c7a19f8eca2.gif) ve ardından Yeni **kural oluştur... öğesini seçin**. 
+2. **Posta akışı** \> **Kuralları'na** gidin. EAC Ekle simgesi'ne tıklayın ![.](../../media/795e5bdd-48bb-433f-8e07-3c7a19f8eca2.gif) ve ardından **Yeni kural oluştur...** öğesini seçin. 
 
-3. Yeni kuralı oluşturmayı bitirdikten sonra, kuralı başlatmak **için Kaydet'i** seçin.
+3. Yeni kuralı oluşturmayı tamamladıktan sonra, kuralı başlatmak için **Kaydet'i** seçin.
 
-    Aşağıdaki resimde , "Bordro Bölümü" gelen tüm iletilerin Odaklanmış Gelen Kutusu'na teslim edilecek olduğu bir örnek gösterilir.
+    Aşağıdaki görüntüde, "Bordro Departmanı"ndan gelen tüm iletilerin Odaklanmış Gelen Kutusu'na teslim edildiği bir örnek gösterilmektedir.
 
-    ![focusedinbox payroll'i seçin.](../../media/focusedinbox-transport-rule.PNG)
+    ![focusedinbox bordrosu.](../../media/focusedinbox-transport-rule.PNG)
 
     > [!NOTE]
-    > Bu örnekteki ileti üstbilgisi değeri **X-MS-Exchange-Organization-BypassFocusedInbox'tır**.
+    > Bu örnekteki ileti üst bilgisi değeri metni, **X-MS-Exchange-Organization-BypassFocusedInbox şeklindedir**.
   
 ## <a name="use-powershell-to-create-a-transport-rule-to-direct-email-messages-to-the-focused-view-for-all-your-users"></a>Tüm kullanıcılarınızın e-posta iletilerini Odaklanmış görünüme yönlendirecek aktarım kuralını oluşturmak için PowerShell kullanma
 
-1. [Bağlan PowerShell Exchange Online'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Bu yordamı veya yordamları gerçekleştirebilmeniz için, önce izinlerin atanması gerekir. Size hangi izinlerin gerektiğini görmek için, [Mesajlaşma ilkesi ve uyumluluk izinleri](/exchange/messaging-policy-and-compliance-permissions-exchange-2013-help) konusunda yer alan "Aktarım kuralları" girdisine bakın.
 
-3. "Bordro Bölümü" örneğinden gelen tüm iletilerin Odaklanmış Gelen Kutusu'na teslim  olmasına izin vermek için aşağıdaki komutu çalıştırın.
+3. "Bordro Departmanı"ndan gelen tüm iletilerin (örneğin, Odaklanmış Gelen Kutusuna) teslim edilmesine izin vermek için aşağıdaki komutu çalıştırın.
 
     ```powershell
     New-TransportRule -Name <name_of_the_rule> -From "Payroll Department" -SetHeaderName "X-MS-Exchange-Organization-BypassFocusedInbox" -SetHeaderValue "true"
     ```
 
 > [!IMPORTANT]
-> Bu örnekte, hem "X-MS-Exchange-Organization-BypassFocusedInbox" hem de "true" büyük/küçük harfe duyarlıdır.
-> Ayrıca, Odaklanmış Gelen Kutusu İkincil özelliğini atlayan X üstbilgisinde de uygun olur, dolayısıyla bu ayarı İkincil'de kullanırsanız Odaklanmış Gelen Kutusu'da kullanılacaktır. Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [New-TransportRule](/powershell/module/exchange/new-transportrule).
+> Bu örnekte hem "X-MS-Exchange-Organization-BypassFocusedInbox" hem de "true" büyük/küçük harfe duyarlıdır.
+> Ayrıca, Odaklanmış Gelen Kutusu İkincil'i atlayan X üst bilgisini kabul eder, bu nedenle bu ayarı İkincil'de kullanırsanız, Odaklanmış Gelen Kutusu'nda kullanılır. Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [New-TransportRule](/powershell/module/exchange/new-transportrule).
 
 ### <a name="how-do-you-know-this-worked"></a>Bunun çalıştığını nasıl anlarsınız?
 
-E-posta iletilerinin Odaklanmış Gelen Kutusu aktarım kuralını atlaması nedeniyle Gelen Kutusuna ulaşıp ulaşmadığını görmek için e-posta iletisi üst bilgilerini denetleyebilirsiniz. Kuruluşunuzda, Odaklanmış Gelen Kutusu aktarım kuralının uygulandığı posta kutusundan bir e-posta iletisi seçin. İletide yazılı üst bilgilere bakın; **X-MS-Exchange-Organization-BypassFocusedInbox: true** üst bilgisini görmeniz gerekir. Bu atlama işleminin çalıştığı anlamına gelir. Üst bilgileri [bulma hakkında bilgi için, E-posta iletisi için](https://go.microsoft.com/fwlink/p/?LinkId=822530) İnternet üst bilgilerini görüntüleme makalesine bakın.
+E-posta iletilerinin Odaklanmış Gelen Kutusu aktarım kuralını atlaması nedeniyle Gelen Kutusuna ulaşıp ulaşmadığını görmek için e-posta iletisi üst bilgilerini denetleyebilirsiniz. Kuruluşunuzda, Odaklanmış Gelen Kutusu aktarım kuralının uygulandığı posta kutusundan bir e-posta iletisi seçin. İletide yazılı üst bilgilere bakın; **X-MS-Exchange-Organization-BypassFocusedInbox: true** üst bilgisini görmeniz gerekir. Bu atlama işleminin çalıştığı anlamına gelir. [Üst bilgi bilgilerini bulma hakkında bilgi için E-posta iletisi için İnternet üst](https://go.microsoft.com/fwlink/p/?LinkId=822530) bilgi bilgilerini görüntüleme makalesine göz atın.
 
-### <a name="what-will-the-user-see"></a>Kullanıcı neleri görebilir?
+### <a name="what-will-the-user-see"></a>Kullanıcı ne görecek?
 
-Aktarım kuralı varsa, geçersiz kılma için bir bildirim gösterilir. Web üzerinde Outlook, "Her zaman Diğer'e Taşı" seçeneği devre dışı bırakarak bir araç ipucu gösterir. Outlook istemcilerde "Her zaman Diğer'e geç" seçimine izin ve bir iletişim kutusu açılır.
+Aktarım kuralı varsa geçersiz kılma için bir bildirim gösterilir. Web üzerinde Outlook "Her zaman Diğer'e taşı" seçeneğini devre dışı bırakır ve bir araç ipucu gösterir. Masaüstündeki Outlook istemcileri "Her zaman Diğer'e taşı" seçeneğinin seçilmesine izin verir ve bir iletişim kutusu açılır.
 
 ## <a name="turn-onoff-clutter"></a>İkincil özelliğini açma/kapatma
 
@@ -171,7 +171,7 @@ Evet. Odaklanmış Gelen Kutusu'nu kuruluşun tamamı için açıp kapatabilece�
   
 ### <a name="is-the-focused-inbox-feature-only-available-for-office-2016-clients"></a>Odaklanmış Gelen Kutusu özelliği YALNIZCA Office 2016 istemcilerinde mi kullanılabilir?
 
-Evet, bu özellik yalnızca Office 2016 kullanıcılarına sunulur; Outlook 2013 ve önceki sürümlere taşınmaz.
+Evet, yalnızca Office 2016'ya sahip kullanıcılar etkilenir. Özellik, Outlook 2013 veya önceki sürümlerine geri aktarılmaz.
   
 ### <a name="how-long-does-it-take-for-focused-inbox-changes-to-take-place-in-outlook"></a>Odaklanmış Gelen Kutusu değişikliklerinin Outlook'ta geçerlilik kazanması ne kadar sürer?
 
@@ -209,10 +209,10 @@ Odaklanmış Gelen Kutusu'nu denetlemek için iki cmdlet vardır. Posta kutusu i
   
 ### <a name="can-i-run-a-script-to-see-who-has-turned-on-focused-inbox"></a>Odaklanmış Gelen Kutusu'nu etkinleştiren kişileri görmek için bir betik çalıştırabilir miyim?
 
-Hayır ve bu tasarımdandır. Odaklanmış Gelen Kutusu'nun etkinleştirmesi bir istemci tarafı ayarıdır, bu nedenle cmdlet'in tüm yaprı, kullanıcının posta kutusunun istemci deneyimine uygun olup olduğunu söylemektir. Örneğin, Outlook uygulamasında ve Outlook Mobile'da etkinken, bazı istemcilerde aynı anda etkinleştirilebilir ve bazı istemcilerde devre dışı Web üzerinde Outlook.
+Hayır, ve bu tasarım gereği. Odaklanmış Gelen Kutusu etkinleştirmesi bir istemci tarafı ayarı olduğundan, cmdlet'in tüm yapabilecekleri kullanıcının posta kutusunun istemci deneyimi için uygun olup olmadığını size bildirmektir. Örneğin Outlook uygulamasında ve Outlook Mobile'da etkinleştirilip Web üzerinde Outlook devre dışı bırakılan bazı istemcilerde aynı anda etkinleştirilebilir ve bazılarında devre dışı bırakılabilir.
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Organizasyonu için karışık e-postayı yapılandırma](../email/configure-clutter.md) (makale)\
+[Kuruluşunuz için İkincil'i yapılandırma](../email/configure-clutter.md) (makale)\
 [Paylaşılan posta kutusu ayarlarını yapılandırma](../email/configure-a-shared-mailbox.md) (makale)\
-[İmzalar ve sorumluluklar oluşturma](create-signatures-and-disclaimers.md) (video)
+[İmzalar ve sorumluluk reddi oluşturma](create-signatures-and-disclaimers.md) (video)

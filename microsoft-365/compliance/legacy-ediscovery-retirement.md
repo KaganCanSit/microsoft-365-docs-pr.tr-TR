@@ -14,12 +14,12 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: Exchange Online In-Place eBulma ve In-Place Tutma (ve ilgili PowerShell cmdlet'leri) 2020'nin ilk yarısında kullanımdan kaldırılacaktır. Search-Mailbox cmdlet'i ve Microsoft Purview eKeşif (Premium) v1.0 da aynı süre içinde kullanımdan kaldırılıyor.
-ms.openlocfilehash: 367b020a5804ac120f226962ea48a49b73dd70e6
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 36883f7edae391ff3461d5d6c135112a4f058671
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094492"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66012298"
 ---
 # <a name="retirement-of-legacy-ediscovery-tools"></a>Eski eKeşif araçlarını kullanımdan kaldırma
 
@@ -32,7 +32,7 @@ Microsoft, yıllar içinde e-posta içeriğini Exchange Online aramanıza, öniz
 
 Uyumluluk portalındaki bu yeni ve geliştirilmiş eBulma işlevinin bir sonucu olarak, Exchange Online ve Microsoft 365 e-posta içeriğini aramayla ilgili aşağıdaki eBulma ile ilgili özellikleri ve işlevleri kullanımdan kaldırıyoruz:
 
-- Exchange yönetim merkezinde [Yerinde eBulma](/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery) ve [Yerinde Tutmalar](/exchange/security-and-compliance/create-or-remove-in-place-holds).
+- [Exchange](/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery) yönetim merkezinde Yerinde eKeşif ve [Yerinde Tutmalar](/exchange/security-and-compliance/create-or-remove-in-place-holds).
 
 - In-Place eBulma ve In-Place Tutmalarını destekleyen Exchange Online PowerShell cmdlet'leri (bu cmdlet'ler topluca **-MailboxSearch* cmdlet'leri olarak tanımlanır). Bu, aşağıdaki cmdlet'leri içerir:
 
@@ -173,7 +173,7 @@ PowerShell kullanarak eKeşif aramalarını ve tutmalarını EAC'den In-Place ge
 
 1 Temmuz 2017'de Exchange yönetim merkezinde duyurulan özgün bildirime göre, In-Place eBulma & Tutma işlevi ve ilgili **\*-MailboxSearch** cmdlet'leri kullanımdan kaldırılıyor. Bu cmdlet'ler kullanıcılara yasal, mevzuat ve genel istekler için posta kutusu içeriğini arama, saklama ve dışarı aktarma olanağı sağlar.
 
-Bu özellikler artık [<span class="underline">uyumluluk portalında</span>](./microsoft-365-compliance-center.md) ve gelişmiş performans ve ölçeklenebilirlikle Office 365 Güvenlik & Uyumluluk Merkezi PowerShell'de kullanılabildiğinden, bu geliştirilmiş cmdlet'leri kullanmanız gerekir. Bu cmdlet'ler -ComplianceCase, [<span class="underline">\*-ComplianceSearch</span>](/powershell/module/exchange/get-compliancesearch), [<span class="underline">\*-CaseHoldPolicy</span>](/powershell/module/exchange/get-caseholdpolicy), [<span class="underline">\*-CaseHoldRule</span>](/powershell/module/exchange/get-caseholdrule) ve [<span class="underline">\*-ComplianceSearchAction'ı</span>](/powershell/module/exchange/get-compliancesearchaction) içerir[<span class="underline">\*</span>](/powershell/module/exchange/get-compliancecase).
+Bu özellikler artık [<span class="underline">uyumluluk portalında</span>](./microsoft-365-compliance-center.md) ve gelişmiş performans ve ölçeklenebilirlikle Güvenlik & Uyumluluk PowerShell'i Office 365 için bu geliştirilmiş cmdlet'leri kullanmanız gerekir. Bu cmdlet'ler -ComplianceCase, [<span class="underline">\*-ComplianceSearch</span>](/powershell/module/exchange/get-compliancesearch), [<span class="underline">\*-CaseHoldPolicy</span>](/powershell/module/exchange/get-caseholdpolicy), [<span class="underline">\*-CaseHoldRule</span>](/powershell/module/exchange/get-caseholdrule) ve [<span class="underline">\*-ComplianceSearchAction'ı</span>](/powershell/module/exchange/get-compliancesearchaction) içerir[<span class="underline">\*</span>](/powershell/module/exchange/get-compliancecase).
 
 ### <a name="scope-of-affected-organizations"></a>Etkilenen kuruluşların kapsamı
 
@@ -254,7 +254,7 @@ Evet, arama oluşturma ve değiştirme özelliğini kaldırsak da, bir sonraki b
 
 ## <a name="search-mailbox-cmdlet"></a>Search-Mailbox cmdlet
 
-Exchange Online PowerShell'deki **Search-Mailbox** cmdlet'i, ilk olarak 2018'den başlayarak cmdlet çıkışındaki bir uyarıda duyurulduğu gibi kullanımdan kaldırılıyor. **Search-Mailbox** cmdlet'i başlangıçta kullanıcının posta kutusunda arama yapmak ve kötü amaçlı içeriği temizlemek için kullanılmıştır. İçeriği aramak ve temizlemek için Office 365 Güvenlik & Uyumluluk Merkezi PowerShell'de **New-ComplianceSearch** ve **New-ComplianceSearchAction** cmdlet'lerini kullanmaya başlamanızı öneririz. Yerleşik güvenlik deneyimi için[<span class="underline">, Microsoft 365 güvenlik özellikleri</span>](../security/index.yml) e-posta ve diğer birçok Microsoft hizmetleri için güçlü tehdit koruması sağlar.
+Exchange Online PowerShell'deki **Search-Mailbox** cmdlet'i, ilk olarak 2018'den başlayarak cmdlet çıkışındaki bir uyarıda duyurulduğu gibi kullanımdan kaldırılıyor. **Search-Mailbox** cmdlet'i başlangıçta kullanıcının posta kutusunda arama yapmak ve kötü amaçlı içeriği temizlemek için kullanılmıştır. İçeriği aramak ve temizlemek için Office 365 Security & Compliance PowerShell'de **New-ComplianceSearch** ve **New-ComplianceSearchAction** cmdlet'lerini kullanmaya başlamanızı öneririz. Yerleşik güvenlik deneyimi için[<span class="underline">, Microsoft 365 güvenlik özellikleri</span>](../security/index.yml) e-posta ve diğer birçok Microsoft hizmetleri için güçlü tehdit koruması sağlar.
 
 ### <a name="scope-of-affected-organizations"></a>Etkilenen kuruluşların kapsamı
 
@@ -356,7 +356,7 @@ Microsoft 365'deki yeni eBulma (Premium) çözümü (*eBulma (Premium) v2.0* ola
 
 eBulma (Premium) v2.0'a erişmek için:
 
-Uyumluluk portalına gidin, **eBulmaGelmiş'i** >  seçin ve bir eBulma (Standart) servis talebi açın.<a href="https://go.microsoft.com/fwlink/p/?linkid=2174006" target="_blank"></a>
+Uyumluluk portalına gidin, **eBulma Gelişmiş'i** >  seçin ve bir eBulma (Standart) servis talebi açın.<a href="https://go.microsoft.com/fwlink/p/?linkid=2174006" target="_blank"></a>
 
 Şu anda, eBulma iş akışınızı yeni eBulma (Premium) işlevine geçirmenizi öneririz. Gerekirse, içeriği dışarı aktarıp çevrimdışı olarak depolayarak eBulma (Premium) 1.0 servis talebinizi arşivleyebilirsiniz. Mevcut durumlarda 31 Aralık 2020'ye kadar eBulma (Premium) v1.0'a erişmeye devam edebilirsiniz ancak Microsoft Desteği 1 Ekim 2020'ye kadar destek sağlamaz. Diğer ayrıntılar için aşağıdaki zaman çizelgesine bakın.
 

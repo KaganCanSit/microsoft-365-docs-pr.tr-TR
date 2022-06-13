@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Denetim günlüğü saklama ilkeleri, yeni Microsoft Purview Denetimi (Premium) özelliklerinin bir parçasıdır. Denetim günlüğü saklama ilkesi, kuruluşunuzda denetim günlüklerinin ne kadar süre tutulacağını belirtmenize olanak tanır.
-ms.openlocfilehash: 0a35177c160e80cef2263382e4a1bc04057963b5
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: e75c88ba3ddd47b433e733984b76716532ab3ffa
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099685"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66012438"
 ---
 # <a name="manage-audit-log-retention-policies"></a>Denetim günlüğü saklama ilkelerini yönetme
 
@@ -102,7 +102,7 @@ Ayrıca, açılır sayfada ayarlarını görüntülemek için bir ilke seçebili
 
 > [!IMPORTANT]
 >
-> **New-UnifiedAuditLogRetentionPolicy** cmdlet'ini kullanıyorsanız, panodaki **Denetim bekletme ilkesi oluşturma** aracında bulunmayan kayıt türleri veya etkinlikler için bir denetim günlüğü bekletme ilkesi oluşturabilirsiniz. Bu durumda, ilkeyi **Denetim bekletme ilkeleri** panosundan düzenleyemezsiniz (örneğin, bekletme süresini değiştiremez veya etkinlik ekleyip kaldıramazsınız). İlkeyi yalnızca uyumluluk merkezinde görüntüleyebilir ve silebilirsiniz. İlkeyi düzenlemek için Güvenlik & Uyumluluk Merkezi PowerShell.>'da [Set-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/set-unifiedauditlogretentionpolicy) cmdlet'ini kullanmanız gerekir
+> **New-UnifiedAuditLogRetentionPolicy** cmdlet'ini kullanıyorsanız, panodaki **Denetim bekletme ilkesi oluşturma** aracında bulunmayan kayıt türleri veya etkinlikler için bir denetim günlüğü bekletme ilkesi oluşturabilirsiniz. Bu durumda, ilkeyi **Denetim bekletme ilkeleri** panosundan düzenleyemezsiniz (örneğin, bekletme süresini değiştiremez veya etkinlik ekleyip kaldıramazsınız). İlkeyi yalnızca Microsoft Purview uyumluluk portalında görüntüleyebilir ve silebilirsiniz. İlkeyi düzenlemek için Güvenlik & Uyumluluğu PowerShell.>'da [Set-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/set-unifiedauditlogretentionpolicy) cmdlet'ini kullanmanız gerekir
 >
 > **Ipucu:** PowerShell kullanılarak düzenlenmesi gereken ilkeler için açılır sayfa üst kısmında bir ileti görüntülenir.
 
@@ -112,13 +112,13 @@ Ayrıca, açılır sayfada ayarlarını görüntülemek için bir ilke seçebili
 
 ## <a name="create-and-manage-audit-log-retention-policies-in-powershell"></a>PowerShell'de denetim günlüğü saklama ilkeleri oluşturma ve yönetme
 
-Denetim günlüğü saklama ilkeleri oluşturmak ve yönetmek için Güvenlik & Uyumluluk Merkezi PowerShell'i de kullanabilirsiniz. PowerShell'i kullanmanın bir nedeni, kullanıcı arabiriminde bulunmayan bir kayıt türü veya etkinliği için ilke oluşturmaktır.
+Denetim günlüğü saklama ilkeleri oluşturmak ve yönetmek için Güvenlik & Uyumluluk PowerShell'i de kullanabilirsiniz. PowerShell'i kullanmanın bir nedeni, kullanıcı arabiriminde bulunmayan bir kayıt türü veya etkinliği için ilke oluşturmaktır.
 
 ### <a name="create-an-audit-log-retention-policy-in-powershell"></a>PowerShell'de denetim günlüğü saklama ilkesi oluşturma
 
 PowerShell'de denetim günlüğü saklama ilkesi oluşturmak için şu adımları izleyin:
 
-1. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 2. Denetim günlüğü saklama ilkesi oluşturmak için aşağıdaki komutu çalıştırın:
 
@@ -143,7 +143,7 @@ Daha fazla bilgi için bkz. [New-UnifiedAuditLogRetentionPolicy](/powershell/mod
 
 ### <a name="view-policies-in-powershell"></a>PowerShell'de ilkeleri görüntüleme
 
-Denetim günlüğü saklama ilkelerini görüntülemek için Güvenlik & Uyumluluk Merkezi PowerShell'de [Get-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/get-unifiedauditlogretentionpolicy) cmdlet'ini kullanın.
+Denetim günlüğü saklama ilkelerini görüntülemek için Güvenlik & Uyumluluk PowerShell'de [Get-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/get-unifiedauditlogretentionpolicy) cmdlet'ini kullanın.
 
 Burada, kuruluşunuzdaki tüm denetim günlüğü saklama ilkelerinin ayarlarını görüntülemek için örnek bir komut verilmiştir. Bu komut ilkeleri en yüksekten en düşük önceliğe sıralar.
 
@@ -156,11 +156,11 @@ Get-UnifiedAuditLogRetentionPolicy | Sort-Object -Property Priority -Descending 
 
 ### <a name="edit-policies-in-powershell"></a>PowerShell'de ilkeleri düzenleme
 
-Mevcut denetim günlüğü saklama ilkesini düzenlemek için Güvenlik & Uyumluluk Merkezi PowerShell'de [Set-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/set-unifiedauditlogretentionpolicy) cmdlet'ini kullanın.
+Mevcut denetim günlüğü saklama ilkesini düzenlemek için Güvenlik & Uyumluluk PowerShell'de [Set-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/set-unifiedauditlogretentionpolicy) cmdlet'ini kullanın.
 
 ### <a name="delete-policies-in-powershell"></a>PowerShell'de ilkeleri silme
 
-Denetim günlüğü saklama ilkesini silmek için Güvenlik & Uyumluluk Merkezi PowerShell'de [Remove-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/remove-unifiedauditlogretentionpolicy) cmdlet'ini kullanın. İlkenin kuruluşunuzdan kaldırılması 30 dakika kadar sürebilir.
+Denetim günlüğü saklama ilkesini silmek için Güvenlik & Uyumluluk PowerShell'de [Remove-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/remove-unifiedauditlogretentionpolicy) cmdlet'ini kullanın. İlkenin kuruluşunuzdan kaldırılması 30 dakika kadar sürebilir.
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
