@@ -17,12 +17,12 @@ ms.custom: ''
 description: Yöneticiler, Güvenlik portalındaki Kiracı İzin Ver/Engelle Listesi'nde izin ve blokları yönetmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a25d1b7ad11c57bc63035086d9a043bcac504c16
-ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
+ms.openlocfilehash: ea60746554c9ad52c3e8b6d23989b2b7659cd0ad
+ms.sourcegitcommit: 52e2a67a1badd7faaabbcf99c65f464e23a47805
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66057615"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66060948"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Kiracı İzin Verilenler/Engellenenler Listesini Yönetme
 
@@ -73,14 +73,16 @@ Bu makalede, Microsoft 365 Defender portalında veya PowerShell'de (Exchange Onl
 
 - Exchange Online PowerShell'e bağlanmak için bkz. [PowerShell'Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell). Tek başına EOP PowerShell'e bağlanmak için bkz. [PowerShell'i Exchange Online Protection için Bağlan](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
-- Bu makaledeki yordamları gerçekleştirmeden önce Exchange Online'de izinlerin atanmış olması gerekir:
-    - Kiracı İzin Ver/Engelle Listesinden değer eklemek ve kaldırmak için
-      - **Kuruluş Yönetimi** veya **Güvenlik Yöneticisi** rol grubu (**Güvenlik yöneticisi rolü**)
-      - **Güvenlik İşleci** rol grubu (**Kiracı AllowBlockList Manager**).
-    - Kiracı İzin Ver/Engelle Listesi'ne salt okunur erişim için
-      - **Genel Okuyucu**  rol grubu
-      - **Güvenlik Okuyucusu** rol grubu
-      - **Yalnızca Görüntüleme Yapılandırması** rol grubu.
+- Bu makaledeki yordamları gerçekleştirebilmeniz için **önce Exchange Online'de** izinlerin atanmış olması gerekir:
+  - Kiracı İzin Ver/Engelle Listesinden girdi eklemek ve kaldırmak için aşağıdaki rol gruplarından birinin üyesi olmanız gerekir:
+    - **Kuruluş Yönetimi** ( **Güvenlik yöneticisi** rolü).
+    - **Güvenlik Yöneticisi** ( **Güvenlik yöneticisi** rolü).
+    - **Güvenlik İşleci** ( **Kiracı AllowBlockList Manager** rolü).
+
+  - Kiracı İzin Ver/Engelle Listesi'ne salt okunur erişim için aşağıdaki rol gruplarından birinin üyesi olmanız gerekir:
+    - **Genel Okuyucu** rol grubu.
+    - **Güvenlik Okuyucusu** rol grubu.
+    - **Yalnızca Görüntüleme Yapılandırması** rol grubu.
 
   Daha fazla bilgi için bkz. [Exchange Online'de İzinler](/exchange/permissions-exo/permissions-exo).
 
@@ -482,7 +484,6 @@ Etki alanı çifti eklemek yalnızca kimlik sahtekarlığına sahip kullanıcın
 - **Altyapı**: tms.mx.com
 
 Yalnızca bu etki alanından gelen *ve* altyapı çifti gönderen iletilerin kimlik sahtekarlığına izin verilir. gmail.com sahtekarlık yapmaya çalışan diğer gönderenlere izin verilmez. diğer etki alanlarındaki tms.mx.com gelen gönderenlerden gelen iletiler kimlik sahtekarlığına göre denetleniyor.
-
 
 ## <a name="what-to-expect-after-you-add-an-allow-or-block-entry"></a>İzin ver veya engelle girdisi ekledikten sonra beklenmesi gerekenler
 
