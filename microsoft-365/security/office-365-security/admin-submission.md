@@ -17,16 +17,16 @@ ms.custom: seo-marvel-apr2020
 description: Yöneticiler, Microsoft 365 Defender portalında Gönderiler portalını kullanarak şüpheli e-postalar, şüpheli kimlik avı postaları, istenmeyen postalar ve diğer zararlı olabilecek iletileri, URL'leri ve e-posta eklerini yeniden tarama amacıyla Microsoft'a göndermeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8e9faf6114551725dc1fc3b8b6af173bbe1e21b4
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 09c0e80c8e8632c088aa42af558c90cbf0f0fc71
+ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417962"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66057681"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Şüpheli istenmeyen postaları, kimlik avı, URL'leri ve dosyaları Microsoft'a göndermek için Gönderimler portalını kullanın
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -180,7 +180,7 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
      İşiniz bittiğinde **Uygula'ya** tıklayın.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/admin-submission-customize-columns.png" alt-text="Yönetici gönderimleri için Yeni Özelleştir sütun seçenekleri" lightbox="../../media/admin-submission-customize-columns.png":::
+     > :::image type="content" source="../../media/email-admin-submission-customize-columns.png" alt-text="Yönetici gönderimleri için Yeni Özelleştir sütun seçenekleri" lightbox="../../media/email-admin-submission-customize-columns.png":::
 
    - Girişleri filtrelemek için **Filtre'ye** tıklayın. Kullanılabilir filtreler şunlardır:
      - **Gönderilme tarihi**: **Başlangıç tarihi** ve **Bitiş tarihi**.
@@ -197,10 +197,10 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
      İşiniz bittiğinde **Uygula'ya** tıklayın.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/admin-submission-filters.png" alt-text="Yönetici gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/admin-submission-filters.png":::
+     > :::image type="content" source="../../media/email-admin-submission-filters.png" alt-text="Yönetici gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/email-admin-submission-filters.png":::
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
-     - **Yok**
+     - **Hiçbiri**
      - **Tür**
      - **Neden**
      - **Durum**
@@ -268,7 +268,7 @@ Geçersiz kılma bulunduysa, sonucun birkaç dakika içinde kullanılabilir olma
      > :::image type="content" source="../../media/admin-submission-reported-messages.png" alt-text="Kullanıcı gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/admin-submission-reported-messages.png":::
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
-     - **Yok**
+     - **Hiçbiri**
      - **Neden**
      - **Gönderen**
      - **Rapor eden**
@@ -287,7 +287,7 @@ Geçersiz kılma bulunduysa, sonucun birkaç dakika içinde kullanılabilir olma
 
 Kullanıcı özel posta kutusuna şüpheli bir e-posta gönderdikten sonra, kullanıcı ve yöneticinin gönderimi geri alma seçeneği yoktur. Kullanıcı e-postayı kurtarmak isterse, Silinmiş Öğeler veya Gereksiz E-posta klasörlerinde kurtarma için kullanılabilir.
 
-### <a name="converting-user-reported-messages-from-the-custom-mailbox-into-an-admin-submission"></a>Kullanıcı tarafından bildirilen iletileri özel posta kutusundan yönetici gönderimine dönüştürme
+### <a name="convert-user-reported-messages-from-the-custom-mailbox-into-an-admin-submission"></a>Kullanıcı tarafından bildirilen iletileri özel posta kutusundan yönetici gönderimine dönüştürme
 
 Özel posta kutusunu, iletileri Microsoft'a göndermeden kullanıcı tarafından bildirilen iletileri kesecek şekilde yapılandırdıysanız, analiz için belirli iletileri bulabilir ve Microsoft'a gönderebilirsiniz.
 

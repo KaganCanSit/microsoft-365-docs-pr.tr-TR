@@ -1,7 +1,7 @@
 ---
-title: Microsoft 365 Defender Akışı API'sinde desteklenen veri akışı olay türleri
-description: Akış API'si tarafından hangi akış olay türlerinin (tabloları) destekle ilgili bilgi edinin
-keywords: ham veri dışarı aktarma, Akış API'si, API, Etkinlik hub'ları, Azure depolama, depolama hesabı, Koruma, ham veri paylaşımı
+title: Olay Akışı API'sinde desteklenen Microsoft 365 Defender akış olayı türleri
+description: Akış API'sinde hangi akış olay türlerinin (tablolar) desteklendiği hakkında bilgi edinin
+keywords: ham veri dışarı aktarma, Akış API'si, API, Olay hub'ları, Azure depolama, depolama hesabı, Tehdit Avcılığı, ham veri paylaşımı
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -16,48 +16,49 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: e8264ccb9e3181f6b58a6206417eb2b842bec6e7
-ms.sourcegitcommit: 317fab13e84b2867087a6ba0a593313ecf43bbed
+ms.openlocfilehash: 4f6f098c9d2ec09a777110955b8acb1663e102ed
+ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "62988812"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66057861"
 ---
-# <a name="supported-microsoft-365-defender-streaming-event-types-in-event-streaming-api"></a>Olay Microsoft 365 Defender API'sinde akış olay türleri için destek
+# <a name="supported-microsoft-365-defender-streaming-event-types-in-event-streaming-api"></a>Olay akışı API Microsoft 365 Defender sinde olay akış türleri desteklenir
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
 
-Olay Akışı API'si daha fazla olay türü desteklemek için sürekli genişletiliyor. Şu anda genel önizlemede olan veya henüz desteklememiş olan hangi Tablo tablolarını genel olarak kullanılabilir olduğunu öğrenin. 
-**Yeni - E-posta olay türleri/tabloları artık GA oldu**
+Olay Akışı API'si, daha fazla olay türünü destekleyecek şekilde sürekli genişletiliyor. Şu anda genel önizleme aşamasında olan veya henüz desteklenmeyen Hangi Avcılık tablolarının genel kullanıma sunulduğu hakkında bilgi edinin. 
+**Yeni - E-posta olay türleri/tabloları artık GA**
 
-## <a name="hunting-tables-support-status-in-event-streaming-api"></a>Etkinlik Akışı API'sinde tablo desteği durumu
+## <a name="hunting-tables-support-status-in-event-streaming-api"></a>Olay Akışı API'sinde tehdit avcılığı tabloları destek durumu
 
-Aşağıdaki tablo yalnızca akış API'sinde desteklenen tabloların listesini içerir ve tüm AH şemasını içermez. API'nin tam listesi için bkz [. Şema tablolarını öğrenme](advanced-hunting-schema-tables.md#learn-the-schema-tables).
+Aşağıdaki tablo yalnızca akış API'sinde desteklenen tabloların listesini içerir ve tüm AH şeması dahil değildir. API'nin tam listesi için bkz. [Şema tablolarını öğrenme](advanced-hunting-schema-tables.md#learn-the-schema-tables).
 
-
-| Tablo adı | Durum |
-|------------|-------------|
-| **[AlertEvidence](advanced-hunting-alertevidence-table.md)** | GA |
-| **[UyarıBilgileri](advanced-hunting-alertinfo-table.md)** | GA  |
-| **[DeviceEvents](advanced-hunting-deviceevents-table.md)** |GA |
-| **[DeviceFileCertificateInfo](advanced-hunting-DeviceFileCertificateInfo-table.md)** |GA |
-| **[DeviceFileEvents](advanced-hunting-devicefileevents-table.md)** | GA |
-| **[DeviceImageLoadEvents](advanced-hunting-deviceimageloadevents-table.md)** | GA |
-| **[CihazBilgileri](advanced-hunting-deviceinfo-table.md)** | GA |
-| **[DeviceLogonEvents](advanced-hunting-devicelogonevents-table.md)** | GA |
-| **[DeviceNetworkEvents](advanced-hunting-devicenetworkevents-table.md)** |GA |
-| **[DeviceNetworkInfo](advanced-hunting-devicenetworkinfo-table.md)** | GA |
-| **[DeviceProcessEvents](advanced-hunting-deviceprocessevents-table.md)** | GA |
-| **[DeviceRegistryEvents](advanced-hunting-deviceregistryevents-table.md)** | GA |
-| **[EmailAttachmentInfo](advanced-hunting-emailattachmentinfo-table.md)** | GA |
-| **[EmailEvents](advanced-hunting-emailevents-table.md)** | GA |
-| **[EmailPostDeliveryEvents](advanced-hunting-emailpostdeliveryevents-table.md)** | GA |
-| **[EmailUrlInfo](advanced-hunting-emailurlinfo-table.md)** | GA |
-
-
+| Tablo adı | Durum<br>(Ticari) | GCC | yüksek GCC | Dod |
+|----|----|----|----|----|
+| **[AlertEvidence](advanced-hunting-alertevidence-table.md)** | GA | GA | GA | GA |
+| **[AlertInfo](advanced-hunting-alertinfo-table.md)** | GA | GA | GA | GA |
+| **[DeviceEvents](advanced-hunting-deviceevents-table.md)** |GA | GA | GA | GA |
+| **[DeviceFileCertificateInfo](advanced-hunting-DeviceFileCertificateInfo-table.md)** |GA | GA | GA | GA |
+| **[DeviceFileEvents](advanced-hunting-devicefileevents-table.md)** | GA | GA | GA | GA |
+| **[DeviceImageLoadEvents](advanced-hunting-deviceimageloadevents-table.md)** | GA | GA | GA | GA |
+| **[DeviceInfo](advanced-hunting-deviceinfo-table.md)** | GA | GA | GA | GA |
+| **[DeviceLogonEvents](advanced-hunting-devicelogonevents-table.md)** | GA | GA | GA | GA |
+| **[DeviceNetworkEvents](advanced-hunting-devicenetworkevents-table.md)** |GA | GA | GA | GA |
+| **[DeviceNetworkInfo](advanced-hunting-devicenetworkinfo-table.md)** | GA | GA | GA | GA |
+| **[DeviceProcessEvents](advanced-hunting-deviceprocessevents-table.md)** | GA | GA | GA | GA |
+| **[DeviceRegistryEvents](advanced-hunting-deviceregistryevents-table.md)** | GA | GA | GA | GA |
+| **[EmailAttachmentInfo](advanced-hunting-emailattachmentinfo-table.md)** | GA |![Hayır](../defender-endpoint/images/svg/check-no.svg)|![Hayır](../defender-endpoint/images/svg/check-no.svg)|![Hayır](../defender-endpoint/images/svg/check-no.svg)|
+| **[EmailEvents](advanced-hunting-emailevents-table.md)** | GA |![Hayır](../defender-endpoint/images/svg/check-no.svg)|![Hayır](../defender-endpoint/images/svg/check-no.svg)|![Hayır](../defender-endpoint/images/svg/check-no.svg)|
+| **[EmailPostDeliveryEvents](advanced-hunting-emailpostdeliveryevents-table.md)** | GA |![Hayır](../defender-endpoint/images/svg/check-no.svg)|![Hayır](../defender-endpoint/images/svg/check-no.svg)|![Hayır](../defender-endpoint/images/svg/check-no.svg)|
+| **[EmailUrlInfo](advanced-hunting-emailurlinfo-table.md)** | GA |![Hayır](../defender-endpoint/images/svg/check-no.svg)|![Hayır](../defender-endpoint/images/svg/check-no.svg)|![Hayır](../defender-endpoint/images/svg/check-no.svg)|
+| **[IdentityLogonEvents](advanced-hunting-identitylogonevents-table.md)**|GA|![Hayır](../defender-endpoint/images/svg/check-no.svg)|![Hayır](../defender-endpoint/images/svg/check-no.svg)|![Hayır](../defender-endpoint/images/svg/check-no.svg)|
+| **[IdentityQueryEvents](advanced-hunting-identityqueryevents-table.md)**|GA|![Hayır](../defender-endpoint/images/svg/check-no.svg)|![Hayır](../defender-endpoint/images/svg/check-no.svg)|![Hayır](../defender-endpoint/images/svg/check-no.svg)|
+| **[IdentityDirectoryEvents](advanced-hunting-identitydirectoryevents-table.md)**|GA|![Hayır](../defender-endpoint/images/svg/check-no.svg)|![Hayır](../defender-endpoint/images/svg/check-no.svg)|![Hayır](../defender-endpoint/images/svg/check-no.svg)|
+| **[CloudAppEvents](advanced-hunting-cloudappevents-table.md)**|GA|![Hayır](../defender-endpoint/images/svg/check-no.svg)|![Hayır](../defender-endpoint/images/svg/check-no.svg)|![Hayır](../defender-endpoint/images/svg/check-no.svg)|

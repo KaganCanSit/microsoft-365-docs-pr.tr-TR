@@ -17,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için hata iletilerini ve sorunlarını giderme konusunda yardım alın.
-ms.openlocfilehash: 6508e3aca49bb2047d2f04a60c469d7b0888f765
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: a93e6816effdc68253c4ec465fa79213258d7581
+ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66011914"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66057839"
 ---
 # <a name="troubleshoot-error-messages-and-problems-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse hata iletilerini ve sorunlarını giderme
 
@@ -56,7 +56,7 @@ Bu makalede, Microsoft 365 Lighthouse kullanırken karşılaşabileceğiniz hata
 
 - Müşteri kiracısını yönetebilmek için Yönetilen Hizmet Sağlayıcısı (MSP) için temsilci erişimi ayarlanmış olmalıdır*
 - En az bir Microsoft 365 İş Ekstra, Microsoft 365 E3, Microsoft 365 E5, Windows 365 Business veya İş için Microsoft Defender lisansı olmalıdır
-- En fazla 1000 lisanslı kullanıcı olmalıdır 
+- En fazla 2500 lisanslı kullanıcı olmalıdır 
 
 **Çözünürlük:** Aşağıdaki tabloda eylem gerektiren farklı kiracı durumları ve bunların nasıl çözümlendiği açıklanmaktadır.
 
@@ -67,7 +67,7 @@ Müşterileri Lighthouse'a eklemek için Ayrıntılı Yönetici Ayrıcalıkları
 | Etkin olmayan | Kiracı, MSP'nin isteği üzerine kapatıldı ve artık Lighthouse'da yönetilmedi. | Kiracıyı yeniden etkinleştirmeniz gerekir. **Kiracılar** sayfasında, yeniden etkinleştirmek istediğiniz kiracının yanındaki üç noktayı (daha fazla eylem) seçin ve ardından **Kiracıyı etkinleştir'i** seçin. İlk müşteri verilerinin Lighthouse'da görünmesi 24-48 saat sürebilir. |
 | Uygun değil - DAP veya GDAP ayarlanmadı | Lighthouse'un gerektirdiği kiracıyla ayarlanmış DAP veya GDAP ve dolaylı kurumsal bayi yöneticisi ayrıcalıklarınız yoktur. | Microsoft İş Ortağı Merkezi'nde DAP veya GDAP ve dolaylı bayi yöneticisi ayrıcalıklarını ayarlayın. |
 | Uygun değil - Gerekli lisans eksik | Kiracıda gerekli bir lisans eksik. En az bir Microsoft 365 İş Ekstra, Microsoft 365 E3, Microsoft 365 E5 veya İş için Microsoft Defender lisansı gerekir. | Kiracının en az bir Microsoft 365 İş Ekstra, Microsoft 365 E3, Microsoft 365 E5, Windows 365 Business veya İş için Microsoft Defender lisansı olduğundan emin olun Atanan. |
-| Uygun değil - Kullanıcı sayısı aşıldı | Kiracı, Lighthouse tarafından izin verilen en fazla 1000 lisanslı kullanıcıya sahiptir. | Kiracının 1000'den fazla lisanslı kullanıcısı olmadığını doğrulayın. |
+| Uygun değil - Kullanıcı sayısı aşıldı | Kiracı, Lighthouse tarafından izin verilen en fazla 2500 lisanslı kullanıcıya sahiptir. | Kiracının 2500'den fazla lisanslı kullanıcısı olmadığını doğrulayın. |
 | Uygun değil - Coğrafi denetim başarısız oldu | Siz ve müşteriniz Lighthouse'un gerektirdiği aynı coğrafi bölgede ikamet etmezsiniz. | Müşterinin coğrafi bölgenizde bulunduğunu doğrulayın. Aksi takdirde, Lighthouse'da kiracıyı yönetemezsiniz. |
 | İşlemde | Lighthouse kiracıyı keşfetti ama hala ekleme aşamasında. | Lighthouse'un kiracıyı ekleme işlemini tamamlaması için 48 saat bekleyin. |
 

@@ -21,12 +21,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: 40e0285f185d112fa508d871e0ccd70c2a09120e
-ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
+ms.openlocfilehash: b80bbb747ab9a0aefebaa4dd5721370ba56a3890
+ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65739427"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66057725"
 ---
 # <a name="investigate-alerts-in-microsoft-365-defender"></a>Microsoft 365 Defender'da uyarıları araştırma
 
@@ -37,7 +37,7 @@ ms.locfileid: "65739427"
 - Microsoft 365 Defender
 
 >[!Note]
->Bu makalede Microsoft 365 Defender'deki güvenlik uyarıları açıklanmaktadır. Ancak, kullanıcılar Microsoft 365 belirli etkinlikler gerçekleştirdiğinde kendinize veya diğer yöneticilere e-posta bildirimleri göndermek için etkinlik uyarılarını kullanabilirsiniz. Daha fazla bilgi için bkz[. Etkinlik uyarıları oluşturma - Microsoft Purview | Microsoft Docs](../../compliance/create-activity-alerts.md).
+>Bu makalede Microsoft 365 Defender'deki güvenlik uyarıları açıklanmaktadır. Ancak, kullanıcılar Microsoft 365 belirli etkinlikler gerçekleştirdiğinde kendinize veya diğer yöneticilere e-posta bildirimleri göndermek için etkinlik uyarılarını kullanabilirsiniz. Daha fazla bilgi için bkz. [Etkinlik uyarıları oluşturma - Microsoft Purview | Microsoft Docs](../../compliance/create-activity-alerts.md).
 
 Uyarılar tüm olayların temelini oluşturur ve ortamınızda kötü amaçlı veya şüpheli olayların oluştuğuna işaret eder. Uyarılar genellikle daha geniş kapsamlı bir saldırının parçasıdır ve bir olay hakkında ipuçları sağlar.
 
@@ -218,3 +218,4 @@ Otomasyonun sorunsuz bir iş akışı oluşturmak için verimli bir şekilde nas
 - [Olaylara genel bakış](incidents-overview.md)
 - [Olayları yönetin](manage-incidents.md)
 - [Olayları araştırın](investigate-incidents.md)
+- [Veri kaybı olaylarını araştırma](investigate-dlp.md)

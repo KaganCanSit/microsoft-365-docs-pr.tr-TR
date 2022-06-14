@@ -17,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Hizmet Sağlayıcıları (MSP' ler) için Microsoft 365 Lighthouse kullanmak için gereksinimlerin listesini alın.
-ms.openlocfilehash: 4dae28206ba06b8e942290da29ba6a86b49ca7fd
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 27d5440b70916ebdb3b761ac4308d3b97ccb27da
+ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017570"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66057784"
 ---
 # <a name="requirements-for-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse için gereksinimler
 
@@ -34,7 +34,7 @@ Ayrıca, her MSP müşteri kiracısının aşağıdaki gereksinimleri karşılay
 
 - Müşteri kiracısını yönetebilmek için Yönetilen Hizmet Sağlayıcısı (MSP) için temsilci erişimi ayarlanmış olmalıdır*
 - En az bir Microsoft 365 İş Ekstra, Microsoft 365 E3, Microsoft 365 E5, Windows 365 Business veya İş için Microsoft Defender lisansı olmalıdır
-- En fazla 1000 lisanslı kullanıcı olmalıdır
+- En fazla 2500 lisanslı kullanıcı olmalıdır
 
 Müşterileri Lighthouse'a eklemek için Ayrıntılı Yönetici Ayrıcalıkları (GDAP) ve dolaylı bayi ilişkisi ya da Temsilci Yönetici Ayrıcalıkları (DAP) ilişkisi gerekir. MÜŞTERI kiracısında DAP ve GDAP birlikte varsa, GDAP özellikli güvenlik gruplarındaki MSP teknisyenleri için GDAP izinleri önceliklidir. Yakında yalnızca GDAP ilişkilerine (dolaylı kurumsal bayi ilişkileri olmadan) sahip müşteriler Lighthouse'a eklenecek.
 
