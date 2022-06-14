@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Temel Hareketlilik ve Güvenlik’i ayarlayıp kullanarak Microsoft 365 kuruluşunuza bağlı mobil cihazları yönetin ve güvenliklerini sağlayın.
-ms.openlocfilehash: 9a9b3d433408d4ce5225f1a74351d01150744132
-ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
+ms.openlocfilehash: 15f9c1f64f43c57de41082962bfc1741b40aa0dd
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65863216"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042242"
 ---
 # <a name="overview-of-basic-mobility-and-security-for-microsoft-365"></a>Microsoft 365 için Temel Hareketlilik ve Güvenlik'e genel bakış
 
@@ -34,7 +34,7 @@ Temel Hareketlilik ve Güvenlik’i kullanarak, Microsoft 365 kuruluşunuza bağ
 
 ## <a name="what-types-of-devices-can-you-manage"></a>Hangi cihaz türlerini yönetebilirsiniz?
 
-Temel Hareketlilik ve Güvenlik'i kullanarak Windows Phone, Android, iPhone ve iPad gibi birçok mobil cihaz türlerini yönetebilirsiniz. Kuruluşunuzdaki kişiler tarafından kullanılan mobil cihazları yönetmek için her kişinin geçerli bir Microsoft 365 lisansına sahip olması ve cihazlarının Temel Hareketlilik ve Güvenlik'e kayıtlı olması gerekir.
+Android, iPhone ve iPad gibi birçok mobil cihazı yönetmek için Temel Hareketlilik ve Güvenlik'i kullanabilirsiniz. Kuruluşunuzdaki kişiler tarafından kullanılan mobil cihazları yönetmek için her kişinin geçerli bir Microsoft 365 lisansına sahip olması ve cihazlarının Temel Hareketlilik ve Güvenlik'e kayıtlı olması gerekir.
 
 Temel Hareketlilik ve Güvenlik’in her bir cihaz türü için neleri desteklediğini görmek için, bkz. [Temel Hareketlilik ve Güvenlik Özellikleri](capabilities.md).
 
@@ -46,7 +46,7 @@ Adımların özeti şöyledir:
 
 **1. Adım:** [Temel Hareketlilik ve Güvenlik’i Ayarlama](set-up.md)’daki adımları izleyerek Temel Hareketlilik ve Güvenlik’i etkinleştirin.
 
-**2. Adım:** Örneğin, iOS cihazlarını yönetmek için bir APNs sertifikası oluşturarak ve etki alanınız için Windows telefonlarını desteklemek üzere bir Etki Alanı Adı Sistemi (DNS) kaydı ekleyerek Temel Hareketlilik ve Güvenlik’i ayarlayın.
+**2. Adım:** Örneğin, iOS cihazlarını yönetmek için bir APNs sertifikası oluşturarak ve etki alanınız için bir Etki Alanı Adı Sistemi (DNS) kaydı ekleyerek Temel Hareketlilik ve Güvenliği ayarlayın.
 
 **3. Adım:** Cihaz ilkeleri oluşturun ve bunları kullanıcı gruplarına uygulayın. Bunu yaptığınızda, kullanıcılarınız cihazlarına kayıt iletisi alır ve kayıtlarını tamamladıklarında cihazları, onlar için ayarladığınız ilkeler tarafından kısıtlanır. Daha fazla bilgi için bkz. [Mobil cihazınızı Temel Hareketlilik ve Güvenlik kullanarak kaydettirin](enroll-your-mobile-device.md). 
 
