@@ -15,19 +15,19 @@ ms.custom: nextgen
 ms.reviewer: ''
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 6faca5dde477908010f4426ff9009f383b63c58c
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 0dd59d2196ebb2c2af80fb53d43a009ff3a367d0
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418620"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66102338"
 ---
 # <a name="configure-exclusions-for-files-opened-by-processes"></a>İşlemler tarafından açılan dosyalar için dışlamaları yapılandırma
 
 
 **Şunlar için geçerlidir:**
 
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
@@ -39,8 +39,6 @@ Belirli işlemler tarafından açılmış dosyaları Microsoft Defender Virüste
 Bu makalede dışlama listelerinin nasıl yapılandırıldığı açıklanır.
 
 ## <a name="examples-of-exclusions"></a>Dışlama örnekleri
-
-<br/><br/>
 
 |Dışlama|Örnek|
 |---|---|
@@ -99,8 +97,6 @@ Cmdlet'lerin biçimi:
 
 aşağıdakiler olarak \<cmdlet\>izin verilir:
 
-<br/><br/>
-
 |Yapılandırma eylemi|PowerShell cmdlet'i|
 |---|---|
 |Listeyi oluşturma veya üzerine yazma|`Set-MpPreference`|
@@ -141,8 +137,6 @@ Yönergeler için bkz. [Windows Güvenliği uygulamasında dışlama ekleme](mic
 Özellikle soru işaretini (`?`) joker karakter kullanamazsınız ve yıldız işareti (`*`) joker karakteri yalnızca tam bir yolun sonunda kullanılabilir. İşlem dışlama listesindeki öğeleri tanımlarken joker karakter olarak ortam değişkenlerini (örneğin `%ALLUSERSPROFILE%`) kullanmaya devam edebilirsiniz.
 
 Aşağıdaki tabloda joker karakterlerin işlem dışlama listesinde nasıl kullanılabildiği açıklanmaktadır:
-
-<br/><br/>
 
 |Joker|Örnek kullanım|Örnek eşleşmeler|
 |---|---|---|
@@ -191,7 +185,7 @@ $WDAVprefs.ExclusionProcess
 [PowerShell'i Microsoft Defender Virüsten Koruma](use-powershell-cmdlets-microsoft-defender-antivirus.md) ile kullanma hakkında daha fazla bilgi için bkz. PowerShell [cmdlet'lerini Microsoft Defender Virüsten Koruma ve Microsoft Defender Virüsten Koruma cmdlet'lerini](/powershell/module/defender) yapılandırmak ve çalıştırmak için kullanma.
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> Diğer platformlar için Antivirüs ile ilgili bilgi arıyorsanız bkz:
 > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
 > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: 35d0ecdb-7cb0-44be-ad5c-69df2f8f8b25
 ms.custom: seo-marvel-apr2020
 description: etkin olmayan posta kutusunun içeriğini içeren yeni bir posta kutusuna dönüştürerek Office 365'da etkin olmayan posta kutusunun içeriğini kurtarmayı öğrenin.
-ms.openlocfilehash: 027abe49a6e517a783f6458013bdcb4d0faee78b
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 2c679407cb4f7203bb69d88c871bd844694a7c47
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435401"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66101612"
 ---
 # <a name="recover-an-inactive-mailbox"></a>Etkin olmayan posta kutusunu kurtarma
 
@@ -109,7 +109,7 @@ Etkin olmayan bir posta kutusunu kurtardıktan sonra yeni bir kullanıcı hesab�
   Get-Mailbox -InactiveMailboxOnly <identity of inactive mailbox> | Format-List ExternalDirectoryObjectId
   ```
     
-    - **ExternalDirectoryObjectId** özelliği için bir değer varsa, posta kutusu saklama süresi dolmuş demektir ve **New-Mailbox -InactiveMailbox** komutunu çalıştırarak etkin olmayan posta kutusunu kurtarabilirsiniz.
+    - **ExternalDirectoryObjectId** özelliği için değer yoksa, posta kutusu saklama süresi dolmuş demektir ve **New-Mailbox -InactiveMailbox** komutunu çalıştırarak etkin olmayan posta kutusunu kurtarabilirsiniz.
     - **ExternalDirectoryObjectId** özelliği için bir değer varsa, geçici olarak silinen posta kutusu saklama süresi dolmaz ve [kullanıcı hesabını geri yükleyerek](../admin/add-users/delete-a-user.md) posta kutusunu kurtarmanız gerekir.
 
 - **Etkin olmayan bir posta kutusunu kurtardıktan sonra arşiv posta kutusunu etkinleştirmeyi göz önünde bulundurun.** Bu, geri dönen kullanıcının veya yeni çalışanın eski iletileri arşiv posta kutusuna taşımasına olanak tanır. Bekletme saklama süresi dolduğunda, Exchange Online posta kutularına atanan varsayılan Exchange MRM bekletme ilkesinin parçası olan arşiv ilkesi, iki yıl veya daha eski olan öğeleri arşiv posta kutusuna taşır. Arşiv posta kutusunu etkinleştirmezseniz, iki yıldan eski öğeler kullanıcının birincil posta kutusunda kalır. Daha fazla bilgi için bkz [. Arşiv posta kutularını etkinleştirme](enable-archive-mailboxes.md).

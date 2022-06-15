@@ -1,11 +1,11 @@
 ---
-title: İşletmeler Microsoft 365 yenileme
+title: İş için Microsoft 365 yenileme
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
 ms.author: cmcatee
 manager: scotv
-ms.reviewer: jkinma, jmueller
+ms.reviewer: sgautam, jmueller
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -19,60 +19,60 @@ ms.custom:
 - AdminSurgePortfolio
 - AdminTemplateSet
 search.appverid: MET150
-description: Yinelenen faturalamayı kapatarak veya Microsoft 365 abonelikleri için çoğu aboneliği yenilemeyi öğrenin.
+description: Yinelenen faturalamayı kapatarak veya açarak iş abonelikleri için Microsoft 365 çoğunu yenilemeyi öğrenin.
 ms.date: 05/04/2021
-ms.openlocfilehash: b50e92bf71d4c172b55aa69db33fc3572d660684
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 5a0b9550df77c7482173e378f4d367af8f363887
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63330167"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66102268"
 ---
-# <a name="renew-microsoft-365-for-business"></a>İşletmeler Microsoft 365 yenileme
+# <a name="renew-microsoft-365-for-business"></a>İş için Microsoft 365 yenileme
 
 > [!IMPORTANT]
-> 26 Ocak 2021'den itibaren yeni banka hesapları, Artık Belçika, Fransa, İtalya, Lüksemburg, Portekiz, İspanya ve ABD'daki müşteriler için desteklemeyecek. Bu ülkelerden birsinde mevcut müşteriniz varsa, aboneliğiniz için ödeme yapmaya mevcut bir banka hesabıyla devam edebilirsiniz ve buna yeni abonelikler ekleyebilir, ancak banka hesabı uygun olduğu sürece bunu kullanabilirsiniz.
+> 26 Ocak 2021'den itibaren artık Belçika, Fransa, İtalya, Lüksemburg, Portekiz, İspanya, Hollanda ve Amerika Birleşik Devletleri'ndeki müşteriler için yeni banka hesapları desteklenmemektedir. Bu ülkelerden birinde müşteriniz varsa, aboneliğiniz için mevcut banka hesabıyla ödeme yapmaya devam edebilirsiniz ve yeni abonelikler ekleyebilirsiniz. Ancak bunu banka hesabı iyi durumda olduğu sürece yapabilirsiniz.
 
-Bu makale, iş abonelikleri için Microsoft 365 abonelikleri için geçerlidir.
+Bu makale, iş abonelikleri için çoğu ücretli Microsoft 365 için geçerlidir.
   
-Perakende satış mağazasından veya Microsoft iş ortağından satın almış olun ve ürün anahtarını kullanarak yenilemek için bkz. [Ürün anahtarınızı bulma ve girme](../enter-your-product-key.md).
+Perakende satış mağazasından veya Microsoft iş ortağından satın aldığınız bir ürün anahtarını kullanarak yenilemek için bkz. [Ürün anahtarınızı bulma ve girme](../enter-your-product-key.md).
 
 > [!NOTE]
-> Banka hesabıyla ödeme bazı ülkelerde veya bölgelerde kullanılamaz.
+> Bazı ülkelerde veya bölgelerde banka hesabıyla ödeme yapılamaz.
   
 ## <a name="turn-recurring-billing-off-or-on"></a>Yinelenen faturalamayı kapatma veya açma
 
-Kredi kartı veya banka hesabıyla ödeme yaptısanız, **Yinelenen faturalama** varsayılan olarak açıktır. Yinelenen **faturalama** açık olduğunda, aboneliğiniz her yıl abone olduğunuz gün faturalandır olmaya devam eder. Aboneliğiniz etkinse yönetim merkezinde bu hizmeti kapatabilirsiniz veya yeniden açabilirsiniz.
+Kredi kartı veya banka hesabıyla ödeme yaparsanız, **yinelenen ödeme** varsayılan olarak açıktır. **Yinelenen faturalama** açık olduğunda aboneliğiniz her yıl abone olduğunuz günde faturalandırılmaya devam eder. Aboneliğiniz etkinse yönetim merkezinde bu özelliği kapatabilir veya yeniden açabilirsiniz.
   
-Aboneliğiniz ürün anahtarıyla ön ödemeli ödendiğinde, abonelik süresinin sonunda aboneliğinizin süresi dolar. Aboneliğinizin her **yıl abone** olunan gün faturalandır olmaya devam olması için Yinelenen faturalamayı açabilirsiniz ve kredi kartı veya banka hesabı bilgilerini sebilirsiniz. Ayrıca, her ay ödeme veya tüm yıl için ön ödeme seçeneğine de sahipsiniz. İlk abonelik döneminiz sona erene kadar kredi kartınızdan veya banka hesabınızdan ücret tahsil edilecektir.
+Aboneliğiniz için bir ürün anahtarıyla ön ödeme yaparsanız aboneliğinizin süresi abonelik döneminin sonunda sona erer. Aboneliğinizin abone olduğunuz günde her yıl faturalandırılmaya devam etmesi için **Yinelenen faturalamayı** açabilir ve kredi kartı veya banka hesabı bilgilerini sağlayabilirsiniz. Ayrıca her ay ödeme veya tüm yılın ödemesini peşin ödeme seçeneğiniz vardır. İlk abonelik süreniz dolana kadar kredi kartınızdan veya banka hesabınızdan ücret alınmaz.
 
 ::: moniker range="o365-worldwide"
 
-1. Yönetim merkezinde Ürünlerinizi Faturalandırma **sayfasına** \> gidin.<a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank"></a>
+1. Yönetim merkezinde **Faturalama** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Ürünleriniz</a> sayfasına gidin.
 
 ::: moniker-end
 
 ::: moniker range="o365-21vianet"
 
-1. Yönetim merkezinde Ürünlerinizi Faturalandırma **sayfasına** \> gidin.<a href="https://go.microsoft.com/fwlink/p/?linkid=850626" target="_blank"></a>
+1. Yönetim merkezinde **Faturalama** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=850626" target="_blank">Ürünleriniz</a> sayfasına gidin.
 
 ::: moniker-end
 
 2. Yinelenen faturalamayı yönetmek istediğiniz aboneliği seçin.
-3. Abonelik ayrıntıları sayfasında, Abonelik ve ödeme **ayarları'nın altında Yinelenen** faturalamayı **düzenle'yi seçin**.
-4. Yinelenen **faturalamayı düzenle bölmesinde** Aç **, Aç,** ancak **bir kez yenile'yi veya** **Kapat'ı seçin**.
+3. Abonelik ayrıntıları sayfasındaki **Abonelik ve ödeme ayarları'nın** altında **Yinelenen ödemeyi düzenle'yi** seçin.
+4. **Yinelenen faturalamayı düzenle** bölmesinde **Açık**, **Açık, ancak bir kez yenile'yi** veya **Kapat'ı** seçin.
 5. **Kaydet**'i seçin.
 
     > [!NOTE]
     >
-    > - Yinelenen faturalama ayarını yalnızca **etkin aboneliklerde** değiştirebilirsiniz. Aboneliğinizin süresi zaten doldu ise veya aboneliğiniz devre dışı bırakıldısa, Yinelenen [](reactivate-your-subscription.md) faturalamayı açmak veya kapatmak için önce aboneliği **yeniden** etkinleştirmeniz gerekir.
-    > - **Yinelenen faturalama** kapalı olduğunda, abonelik iptal edilmez. Aboneliği etkin tutmak için faturayı el ile ödemeniz gerekir.
-    > - Yinelenen faturalamayı **kapatsanız** bile abonelik süresi dolana kadar etkin kalır. Abonelik ve ödeme ayarları bölümündeki abonelik ayrıntıları sayfasında son **kullanma tarihini görebilirsiniz** .
+    > - Yalnızca etkin abonelikler için **Yinelenen faturalama** ayarını değiştirebilirsiniz. Aboneliğinizin süresi zaten dolduysa veya devre dışı bırakıldıysa, **Yinelenen faturalamayı** açıp kapatabilmeniz için önce aboneliği [yeniden etkinleştirmeniz](reactivate-your-subscription.md) gerekir.
+    > - **Yinelenen faturalama** kapatıldığında abonelik iptal olmaz. Aboneliği etkin tutmak istiyorsanız faturayı el ile ödemeniz gerekir.
+    > - **Yinelenen faturalamayı** kapatırsanız abonelik süresi dolana kadar etkin kalır. **Abonelik ve ödeme ayarları** bölümündeki abonelik ayrıntıları sayfasında son kullanma tarihini görüntüleyebilirsiniz.
     > - Aboneliği hemen iptal etmeyi öğrenmek için bkz. [Aboneliğimi iptal etme](cancel-your-subscription.md).
 
 ## <a name="related-content"></a>İlgili içerik
 
 [Aboneliğinizi yeniden etkinleştirme](reactivate-your-subscription.md) (makale)\
-[Aboneliğim sonlandığında verilerime ve erişimime ne olur?](what-if-my-subscription-expires.md) (article)\
+[Aboneliğim sonlandığında verilerime ve erişimime ne olur?](what-if-my-subscription-expires.md) (makale)\
 [Ürün anahtarınızı girin](../enter-your-product-key.md) (makale)\
-[Microsoft 365 İş deneme sürümü satın alma](../try-or-buy-microsoft-365.md) (makale)
+[İş için Microsoft 365 deneme sürümünüzü satın alma](../try-or-buy-microsoft-365.md) (makale)

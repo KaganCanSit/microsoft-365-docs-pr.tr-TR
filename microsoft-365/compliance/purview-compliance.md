@@ -14,12 +14,12 @@ ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: m365-security-compliance
-ms.openlocfilehash: ad165fcdca11edbafd55a5cb0d37d12d0fba49c3
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: c56c855983e27a3882796cd1e222c97305a627c4
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/15/2022
-ms.locfileid: "66090640"
+ms.locfileid: "66101553"
 ---
 # <a name="microsoft-purview-risk-and-compliance-solutions"></a>risk ve uyumluluk çözümlerini Microsoft Purview
 
@@ -57,6 +57,12 @@ Hassas öğelerin yanlışlıkla paylaşılması kuruluşunuza finansal zarar ve
 [Microsoft Purview Veri Yaşam Döngüsü Yönetimi](/microsoft-365/compliance/manage-data-governance#microsoft-purview-data-lifecycle-management) (eski adıyla Microsoft Information Governance), Exchange, SharePoint OneDrive, Microsoft 365 Grupları, Teams ve Yammer. E-postaların, belgelerin ve iletilerin korunması ve silinmesi genellikle uyumluluk ve mevzuat gereksinimleri için gereklidir. Ancak artık iş değeri olmayan içeriklerin silinmesi saldırı yüzeyinizi de azaltır.
 
 Daha fazla bilgi için bkz. [Veri yaşam döngüsü yönetimi hakkında bilgi edinin](/microsoft-365/compliance/data-lifecycle-management).
+
+### <a name="encrypt-your-data-and-control-your-encryption-keys"></a>Verilerinizi şifreleme ve şifreleme anahtarlarınızı kontrol etme
+
+[Şifreleme](/microsoft-365/compliance/encryption) , dosya koruma ve bilgi koruma stratejinizin önemli bir parçasıdır. Şifreleme işlemi verilerinizi (düz metin olarak adlandırılır) şifreleme metnine kodlar. Düz metinden farklı olarak, şifre metni şifresi çözülene kadar ve şifresi çözülene kadar kişiler veya bilgisayarlar tarafından kullanılamaz. Şifre çözme, yalnızca yetkili kullanıcıların sahip olduğu bir şifreleme anahtarı gerektirir. Şifreleme, içeriğinizin şifresini yalnızca yetkili alıcıların çözebilmesine yardımcı olur.
+
+[Microsoft Purview Çift Anahtarlı Şifreleme](/microsoft-365/compliance/double-key-encryption), en katı koruma gereksinimlerine tabi olan en hassas verilerinizin güvenliğini sağlar. [Microsoft Purview Müşteri Anahtarı](/microsoft-365/compliance/customer-key-overview), kök anahtarları denetlemeye yönelik mevzuat veya uyumluluk yükümlülüklerini karşılamanıza yardımcı olur. eBulma, kötü amaçlı yazılımdan koruma, istenmeyen posta önleme, arama dizini oluşturma vb. gibi katma değerli bulut hizmetleri sağlamak için şifreleme anahtarlarınızı kullanmak üzere Microsoft 365 hizmetlerini açıkça yetkilendirebilirsiniz.
 
 ## <a name="identify-data-risks-and-manage-regulatory-compliance-requirements"></a>Veri risklerini belirleme ve mevzuat uyumluluğu gereksinimlerini yönetme
 

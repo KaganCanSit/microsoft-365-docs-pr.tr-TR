@@ -21,16 +21,16 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 08fd6e2fed34296b42fb3b12bec9b5b2b4cb91f8
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 551d2f0f2da872ff24da2bd0d691eea775894c08
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535856"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66102580"
 ---
 # <a name="view-defender-for-office-365-reports-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında Office 365 için Defender raporları görüntüleme
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
@@ -48,7 +48,7 @@ Office 365 için Microsoft Defender kuruluşlar (örneğin, Microsoft 365 E5 abo
 
 ### <a name="download-reports"></a>Raporları indirme
 
-1. konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com>**, İndirmek için** **RaporlarEmail** >  **& işbirliği** \> Raporları'na gidin. İndirme raporları sayfasına doğrudan gitmek **için** kullanın <https://security.microsoft.com/ReportsForDownload?viewid=custom>.
+konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com>**, İndirmek için** **Raporlar** > **E-posta & işbirliği** \> Raporları'na gidin. İndirme raporları sayfasına doğrudan gitmek **için** kullanın <https://security.microsoft.com/ReportsForDownload?viewid=custom>.
 
 :::image type="content" source="../../media/email-collaboration-download-reports.png" alt-text="Microsoft 365 Defender portalındaki E-posta & işbirliği raporları sayfası" lightbox="../../media/email-collaboration-download-reports.png":::
 
@@ -224,7 +224,7 @@ PowerShell raporlama cmdlet'leri:
 
 |Rapor|Konu|
 |---|---|
-|En çok gönderenler ve alıcılar|[Get-MailTrafficTopReport](/powershell/module/exchange/get-mailtraffictopreport) <p> [Get-MailTrafficSummaryReport](/powershell/module/exchange/get-mailtrafficsummaryreport)|
+|En çok gönderenler ve alıcılar|[Get-MailTrafficSummaryReport](/powershell/module/exchange/get-mailtrafficsummaryreport)|
 |En iyi kötü amaçlı yazılım|[Get-MailTrafficSummaryReport](/powershell/module/exchange/get-mailtrafficsummaryreport)|
 |Posta trafiği|[Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <p> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|
 |Güvenli Bağlantılar|[Get-SafeLinksAggregateReport](/powershell/module/exchange/get-safelinksaggregatereport) <p> [Get-SafeLinksDetailReport](/powershell/module/exchange/get-safelinksdetailreport)|

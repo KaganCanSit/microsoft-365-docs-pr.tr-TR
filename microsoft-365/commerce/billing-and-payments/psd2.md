@@ -1,11 +1,11 @@
 ---
-title: Ticari müşteriler için Ödeme Hizmetleri Yönergeleri 2 ve Güçlü Müşteri Kimlik Doğrulaması
+title: Ticari müşteriler için Ödeme Hizmetleri Yönergesi 2 ve Güçlü Müşteri Kimlik Doğrulaması
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
 ms.author: cmcatee
 manager: scotv
-ms.reviewer: jamitche, jmueller
+ms.reviewer: lishepar, vikdesai
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -17,43 +17,43 @@ ms.custom:
 - commerce_billing
 - AdminSurgePortfolio
 search.appverid: MET150
-description: 14 Eylül 2019'dan itibaren, Avrupa Ekonomik Alanı'nın 31 ülkelerindeki bankalar, ödemenin işlenmeden önce çevrimiçi satın alma yapan kişinin kimliğini doğrulamak için gereklidir.
+description: 14 Eylül 2019 itibariyle, ödemenin işlenebilmesi için önce Avrupa Ekonomik Alanı'nın 31 ülkesindeki bankaların çevrimiçi alışveriş yapan kişinin kimliğini doğrulamaları gerekmektedir.
 ms.date: 11/03/2020
-ms.openlocfilehash: 72b0ab8c118d0fa94e3ced5fe2748a11247335ca
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 3a0bd979cb16de024c2e87f67a8099b952324692
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63321117"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66101578"
 ---
-# <a name="payment-services-directive-2-and-strong-customer-authentication-for-commercial-customers"></a>Ticari müşteriler için Ödeme Hizmetleri Yönergeleri 2 ve Güçlü Müşteri Kimlik Doğrulaması
+# <a name="payment-services-directive-2-and-strong-customer-authentication-for-commercial-customers"></a>Ticari müşteriler için Ödeme Hizmetleri Yönergesi 2 ve Güçlü Müşteri Kimlik Doğrulaması
 
-14 Eylül 2019'dan itibaren, Avrupa Ekonomik Alanı'nın 31 ülkelerindeki bankalar, ödemenin işlenmeden önce çevrimiçi satın alma yapan kişinin kimliğini doğrulamak için gereklidir. Bu doğrulama, çevrimiçi satın alma işleminizin güvenli ve korumalı olmasını sağlamak için çok faktörlü kimlik doğrulaması gerektirir. Bu doğrulama gereksiniminin tarihi bazı ülkelerde gecikecek.
+14 Eylül 2019 itibariyle, ödemenin işlenebilmesi için önce Avrupa Ekonomik Alanı'nın 31 ülkesindeki bankaların çevrimiçi alışveriş yapan kişinin kimliğini doğrulamaları gerekmektedir. Bu doğrulama, çevrimiçi satın almalarınızın güvenli ve korumalı olduğundan emin olmak için çok faktörlü kimlik doğrulaması gerektirir. Bu doğrulama gereksiniminin tarihi bazı ülkeler için gecikecektir.
 
-Daha fazla bilgi için bkz. [Ödeme Hizmetleri Yönergeleri 2 ve Güçlü Müşteri Kimlik Doğrulaması hakkında Microsoft SSS](https://support.microsoft.com/help/4517854/microsoft-account-open-banking-customer-authentication).
+Daha fazla bilgi için bkz. [Ödeme Hizmetleri Yönergesi 2 ve Güçlü Müşteri Kimlik Doğrulaması hakkında Microsoft SSS](https://support.microsoft.com/help/4517854/microsoft-account-open-banking-customer-authentication).
 
 ## <a name="when-is-multi-factor-authentication-required"></a>Çok faktörlü kimlik doğrulaması ne zaman gereklidir?
 
-Şu anda, çok faktörlü kimlik doğrulamasının kullanımı bu yönerge için yalnızca Avrupa Ekonomik Alanı'nın 31 bölgesinde bankaların kredi kartlarını kullanan müşteriler için geçerlidir. Bazen müşterilere, yaptıkları bir eylemden dolayı istendiğinde ve bazen de mevcut aboneliklerinde veya hizmetlerinde olan olaylardan dolayı bu istenmektedir.
+Şu anda, çok faktörlü kimlik doğrulaması kullanan bu yönerge için doğrulama gereksinimleri yalnızca Avrupa Ekonomik Alanı'nın 31 ülkesindeki bankaların kredi kartlarını kullanan müşteriler için geçerlidir. Bazen müşteriler, yaptıkları bir eylem nedeniyle ve bazen de mevcut abonelikleri veya hizmetleriyle ilgili olaylar nedeniyle sorulur.
 
 ### <a name="customer-actions"></a>Müşteri Eylemleri
 
-Bankanız, çok faktörlü kimlik doğrulaması aracılığıyla doğrulama işlemi gerekli olabilir. Bazı örnekler:
+Bankanız çok faktörlü kimlik doğrulaması aracılığıyla doğrulama gerektirebilir. Bazı örnekler şunlardır:
 
-- Yeni abonelik için kaydolma
+- Yeni aboneliğe kaydolma
 - Aboneliğe lisans ekleme
-- Abonelik veya hizmetin ödemesini yapmak için kullanılan kredi kartını ekleme veya değiştirme
-- Ödeme profiline kredi kartı ekleme veya değiştirme
+- Abonelik veya hizmet için ödeme yapmak için kullanılan kredi kartını ekleme veya değiştirme
+- Faturalama profilinde kredi kartı ekleme veya değiştirme
 - Uygulama satın alma
 
-### <a name="subscription-lifecycle-events"></a>Abonelik yaşam döngüsü etkinlikleri
+### <a name="subscription-lifecycle-events"></a>Abonelik yaşam döngüsü olayları
 
-Yinelenen ödemeler için ücretler başarısız olabilir. Böyle bir şey olursa, takip etme yönergelerini içeren bir e-posta alırsınız. Doğrulama isteğini yanıtlamanız ve geçerli ödemenizi girmeniz istenir.
+Yinelenen ödemeler için ücretler başarısız olabilir. Varsa, izlemeniz gereken yönergeleri içeren bir e-posta alırsınız. Doğrulama isteğine yanıt vermeniz ve geçerli ödemenizi yapmanız istenir.
 
-## <a name="need-more-help"></a>Daha fazla yardım mı gerekiyor?
+## <a name="need-more-help"></a>Daha fazla yardım ister misiniz?
 
-Finansal kurumunuz şu senaryolar için en iyi iletişim sağlar:
+Finansal kurumunz bu senaryolar için en iyi iletişimdir:
 
-- Bir doğrulama kodu alamadı.  
-- Doğrulama kodu gönderildikten sonra doğrulama işlemi çalışmadı.
-- Kredi kartının iletişim bilgilerini doğru olup olmadığınız emin değilsiniz.
+- Doğrulama kodu almadınız.  
+- Doğrulama kodunu gönderdikten sonra doğrulama işlemi çalışmadı.
+- Kredi kartınızın iletişim bilgilerinin doğru olup olmadığından emin değilsiniz.

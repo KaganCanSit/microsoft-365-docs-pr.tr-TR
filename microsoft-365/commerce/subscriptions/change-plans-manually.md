@@ -1,11 +1,11 @@
 ---
-title: İş Microsoft 365 el ile değiştirme
+title: İş planlarının Microsoft 365 el ile değiştirme
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
 ms.author: cmcatee
 manager: scotv
-ms.reviewer: jkinma, jmueller
+ms.reviewer: nalinkla, jmueller
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -17,103 +17,103 @@ ms.custom:
 - commerce_subscriptions
 - AdminSurgePortfolio
 search.appverid: MET150
-description: Yeni abonelik satın alarak ve hem aboneliklerin liste hem de etkin olmasını sağlayarak abonelikleri el ile değiştirebilirsiniz.
+description: Yeni bir abonelik satın alarak ve her iki aboneliğin de listelenmiş ve etkin olduğundan emin olarak abonelikleri el ile değiştirin.
 ROBOTS: NOINDEX
 ms.date: 03/17/2021
-ms.openlocfilehash: adc76ff3fbfa5fd81893f0b260e76018288350f1
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: d7969821cceb0864ac2ee20674e7aa67d8a12e39
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63328435"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66101608"
 ---
 # <a name="change-plans-manually"></a>Planları el ile değiştirme
 
-## <a name="step-1-decide-how-to-change-plans"></a>1. Adım: Planların nasıl değiştir tarihine karar verme
+## <a name="step-1-decide-how-to-change-plans"></a>1. Adım: Planları nasıl değiştireceğini belirleme
 
-Tüm kullanıcılarınızı bir plandan diğerine değiştirmenin en iyi yolu [, Yükselt sekmesini kullanmaktır](upgrade-to-different-plan.md). Bazen bu mümkün değildir. Bunun yerine planları el ile değiştirme:
+Tüm kullanıcılarınızı bir plandan diğerine değiştirmenin en iyi yolu [Yükselt sekmesini kullanmaktır](upgrade-to-different-plan.md). Bazen bu mümkün değildir. Bunun yerine planları el ile değiştirin:
 
-- Yükselt **sekmesi** geçerli planı yükseltey değerinizi gösteriyorsa.
+- **Yükselt** sekmesi geçerli planı yükseltemediğini gösterirse.
 
-- Yükselt sekmesini **seçerek** istediğiniz plan listelenmiyorsa.
+- **Yükselt** sekmesini seçtiğinizde istediğiniz plan listelenmiyorsa.
 
-- Tüm kullanıcılarınızı aynı şekilde yükseltmek istemiyorsanız. Bazı işletmeler için farklı planlara farklı kullanıcıların abonesi gerekir. Bunun için el ile bir değişiklik kullanın.
+- Tüm kullanıcılarınızı aynı şekilde yükseltmek istemiyorsanız. Bazı işletmelerin farklı planlara abone olan farklı kullanıcılara ihtiyacı vardır. Bunun için el ile değişiklik kullanın.
 
-El ile yapılan bir değişiklikle devam etmek için bu [konudaki 2. Adım: Yeni abonelik](#step-2-buy-a-new-subscription) satın alma konusunu okuyun.
+El ile yapılan bir değişikliğe devam etmek için bu [konudaki 2. Adım: Yeni abonelik satın alma](#step-2-buy-a-new-subscription) konusunu okuyun.
 
 > [!IMPORTANT]
-> Geçerli planınıza göre veriyle ilgili daha az hizmetle ilgili bir plana (not verme) farklı bir plana dönüyorsanız, tutmak istediğiniz tüm verileri el ile ihtiyacınız vardır. Daha fazla bilgi için bkz [. Planları değiştirmeden önce verileri koruma](back-up-data-before-switching-plans.md).
+> Geçerli planınızdan daha az veriyle ilgili hizmet içeren bir plana (düşürme) geçiş yaparsanız, saklamak istediğiniz tüm verileri el ile yedeklemeniz gerekir. Daha fazla bilgi için bkz. [Planları değiştirmeden önce verileri yedekleme](back-up-data-before-switching-plans.md).
 
 ## <a name="step-2-buy-a-new-subscription"></a>2. Adım: Yeni abonelik satın alma
 
-**Zaten satın alma var mı?** Kullanıcıları taşımak istediğiniz bir aboneliğiniz zaten varsa bu adımı atlayıp 3. Adım [:](#step-3-check-your-new-subscription-and-licenses) Bu konudaki Yeni aboneliğinizi ve lisanslarınızı denetleme başlığına gidin.
+**Zaten satın mı alınmış?** Kullanıcıları taşımak istediğiniz bir aboneliğiniz zaten varsa, bu adımı atlayın ve 3. Adım: Bu konudaki [yeni aboneliğinizi ve lisanslarınızı denetleyin](#step-3-check-your-new-subscription-and-licenses) bölümüne gidin.
 
 VEYA
 
-**Yeni abonelik ve lisans satın alma:** Yeni abonelik satın almak [için Microsoft 365 Aboneliği satın alma'daki](../try-or-buy-microsoft-365.md) adımları izleyin.
+**Yeni bir abonelik ve lisans satın alın:** Yeni [abonelik satın almak için İş aboneliği için başka bir Microsoft 365 satın alma](../try-or-buy-microsoft-365.md) bölümündeki adımları izleyin.
 
-Kullanıcıların şu anda dahil olduğu kuruluş için abonelik satın aldığınızdan emin olun. Örneğin, taşımak istediğiniz kullanıcıların e-posta adreslerini kontrol edin. E-posta adresleri e-contoso.com \@e-posta adresleri varsa, bu adresler için yeni bir abonelik contoso.com.
-Taşımak istediğiniz her kullanıcı için bir lisans dahil etme.
+Kullanıcıların şu anda içinde olduğu kuruluş için bir abonelik satın aldığınızdan emin olun. Örneğin, taşımak istediğiniz kullanıcıların e-posta adreslerini denetleyin. E-posta adresleri contoso.com içeriyorsa \@, contoso.com için yeni bir abonelik satın almalısınız.
+Taşımak istediğiniz her kullanıcı için bir lisans ekleyin.
 
 ## <a name="step-3-check-your-new-subscription-and-licenses"></a>3. Adım: Yeni aboneliğinizi ve lisanslarınızı denetleme
 
-1. Yönetim merkezinde Ürünlerinizi Faturalandırma **sayfasına** \> gidin.<a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank"></a>
+1. Yönetim merkezinde **Faturalama** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Ürünleriniz</a> sayfasına gidin.
 
-2. **Her iki aboneliğin de listelenmiş ve etkin olduğunu doğrulama** Kullanıcıları dahil etmekte olduğunuz abonelik ve kullanıcılarını da taşınmaya devam etmek istediğiniz abonelik birlikte listelenmiş olmalı. İlk denetlemede yeni abonelik yoksa, daha sonra yeniden deneyin. Her iki aboneliğin de etkin olup olduğunu kontrol edin. [Yeni abonelik listelenmiyor veya etkin değil](#the-new-subscription-isnt-listed-or-isnt-active).
+2. **Her iki aboneliğin de listelendiğini ve etkin olduğunu doğrulayın** Kullanıcıları taşıdığınız abonelik ve kullanıcıları taşıdığınız abonelik birlikte listelenmelidir. İlk kontrol ettiğinizde yeni abonelik yoksa daha sonra yeniden deneyin. Her iki aboneliğin de etkin olup olmadığını denetleyin. [Yeni abonelik listede yok veya etkin değil](#the-new-subscription-isnt-listed-or-isnt-active).
 
-3. **Her kullanıcı için yeterli lisansa sahip olup olmadığını kontrol edin** Her kullanıcının, aboneliğiyle eşleşen bir lisansa ihtiyacı vardır. Dolayısıyla, on kullanıcıyı başka bir Microsoft 365 İş Ekstra, on lisansın kullanılabilir olduğundan emin olun.
+3. **Her kullanıcı için yeterli lisansa sahip olup olmadığınızı denetleyin** Her kullanıcının aboneliğiyle eşleşen bir lisansa ihtiyacı vardır. Bu nedenle, on kullanıcıyı Microsoft 365 İş Ekstra taşımak istiyorsanız, on lisansın kullanılabilir olduğundan emin olmanız gerekir.
 
 4. **Yeni abonelik için daha fazla lisansa mı ihtiyacınız var?**
-   Ürünleriniz **sayfasına gidin** ve daha [fazla lisans satın alın](../licenses/buy-licenses.md).
+   **Ürünleriniz** sayfasına gidin ve [daha fazla lisans satın alın](../licenses/buy-licenses.md).
 
 > [Eski lisanslar ne olacak?](#what-about-the-old-licenses)
 
 ### <a name="the-new-subscription-isnt-listed-or-isnt-active"></a>Yeni abonelik listelenmiyor veya etkin değil
 
-- **İki abonelik satın aldıysanız ve her ikisi** de burada listelenmiyorsa, bunlar farklı kuruluşlar için (farklı etki alanları için) satın alınmıştı. Abonelikler kuruluş sınırları arasında kesiş kullanılamaz.
+- **İki abonelik satın aldıysanız ve ikisi de burada listelenmiyorsa**, farklı kuruluşlar (farklı etki alanları için) için satın alınmış olabilir. Abonelikler kuruluş sınırlarını aşamaz.
 
-- **Ek bir aboneliğiniz olduğunu ve burada listelenmiyorsa** veya etkin olmadığını biliyorsanız [Microsoft desteğini arayın](../../admin/get-help-support.md).
+- **Ek aboneliğiniz olduğunu biliyorsanız** ve bu abonelik burada listelenmiyorsa veya etkin değilse [Microsoft desteğini arayın](../../admin/get-help-support.md).
 
 ### <a name="what-about-the-old-licenses"></a>Eski lisanslar ne olacak?
 
-Geçerli aboneliğin lisansları daha sonra kaldırılacaktır; bu sürenin sonunda yalnızca yeni kullanıcı lisansları için ödeme ücreti ödersiniz.
+Geçerli aboneliğin lisansları daha sonra kaldırılacaktır; o tarihten itibaren yalnızca yeni kullanıcı lisansları için ödeme yaparsınız.
 
 ## <a name="step-4-reassign-licenses"></a>4. Adım: Lisansları yeniden atama
 
-Office 365 planından Microsoft 365 planına yükseltme işlemi sırasında, tüm kullanıcıların lisans atamalarını değiştirebilirsiniz. Planları el ile değiştir ilk değiştiriyken lisanslar otomatik olarak atanmamış olur.
+bir Office 365 planından Microsoft 365 planına yükseltirken, tüm kullanıcıların lisans atamalarını değiştirmeniz gerekir. Planları el ile değiştirdiğinizde lisanslar otomatik olarak atanamaz.
 
-### <a name="reassign-a-license-for-one-user"></a>Bir kullanıcının lisansını yeniden atama
-
-1. Yönetici merkezinde, **Kullanıcılar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Etkin kullanıcılar</a> sayfasına gidin.
-
-2. Etkin **kullanıcılar** sayfasında, lisans atamak istediğiniz kullanıcıyı seçin.
-
-3. Lisanslar **ve Uygulamalar sekmesinde** **Lisanslar'ı** genişletin, atamak istediğiniz lisansların kutularını seçin ve ardından Değişiklikleri **kaydet'i seçin**.
-
-### <a name="reassign-licenses-for-multiple-users-at-once"></a>Aynı anda birden çok kullanıcının lisanslarını yeniden atama
+### <a name="reassign-a-license-for-one-user"></a>Bir kullanıcı için lisansı yeniden atama
 
 1. Yönetici merkezinde, **Kullanıcılar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Etkin kullanıcılar</a> sayfasına gidin.
 
-2. Var olan lisanslarını değiştirmek istediğiniz kullanıcıların adlarının yanındaki daireleri seçin.
+2. **Etkin kullanıcılar** sayfasında, lisans atamak istediğiniz kullanıcıyı seçin.
 
-3. Üst kısmında üç noktayı (diğer eylemler) ve ardından Ürün lisanslarını **yönet'i seçin**.
+3. **Lisanslar ve Uygulamalar** sekmesinde **Lisanslar'ı** genişletin, atamak istediğiniz lisansların kutularını seçin ve ardından **Değişiklikleri kaydet'i** seçin.
+
+### <a name="reassign-licenses-for-multiple-users-at-once"></a>Aynı anda birden çok kullanıcı için lisansları yeniden atama
+
+1. Yönetici merkezinde, **Kullanıcılar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Etkin kullanıcılar</a> sayfasına gidin.
+
+2. Var olan lisansları değiştirmek istediğiniz kullanıcıların adlarının yanındaki daireleri seçin.
+
+3. Üst kısımda üç noktayı (diğer eylemler) ve ardından **Ürün lisanslarını yönet'i** seçin.
 
 4. **Mevcut ürün lisansı atamalarını değiştir** \> **İleri**'yi seçin.
 
-5. Bu kullanıcılara atamak **istediğiniz** ürünler için iki durumlu düğmeyi Açık konuma getirin.
+5. Bu kullanıcılara atamak istediğiniz ürünlerin iki durumlu düğmesini **Açık** konumuna getirin.
 
     > [!TIP]
-    > - Kullanıcının hangi hizmetlerin kullanılabilir olduğunu sınırlamak için, o kullanıcı için kaldırmak istediğiniz hizmetlerin iki durumlu düğmelerini Kapalı konuma getirin. Örneğin, kullanıcının Skype Kurumsal Online dışındaki tüm kullanılabilir hizmetlere erişimine sahip olmak için Skype Kurumsal Online hizmetinin iki durumlu düğmeyi Kapalı **konuma getirin**.
+    > - Kullanıcının kullanabileceği hizmetleri sınırlamak için, bu kullanıcı için kaldırmak istediğiniz hizmetlerin **Kapalı** konumuna geçiş yapın. Örneğin, kullanıcının Skype Kurumsal Online dışındaki tüm kullanılabilir hizmetlere erişmesini istiyorsanız, Skype Kurumsal Online hizmetinin iki durumlu düğmesini **Kapalı** konumuna geçirebilirsiniz.
     > - Seçili kullanıcıların önceki tüm lisans atamaları kaldırılacaktır.
 
-6. Mevcut ürünleri değiştir **bölmesinin en altında,** Kapat'ı **değiştir'i** \> **seçin**.
+6. **Var olan ürünleri değiştir** bölmesinin en altında **Kapat'ı Değiştir'i** \> seçin.
 
-## <a name="step-5-cancel-subscriptions-or-remove-licenses-that-you-no-longer-need-optional"></a>5. Adım: Artık ihtiyacınız olan abonelikleri iptal etme veya lisansları kaldırma (İsteğe bağlı)
+## <a name="step-5-cancel-subscriptions-or-remove-licenses-that-you-no-longer-need-optional"></a>5. Adım: Abonelikleri iptal etme veya artık ihtiyacınız olmayan lisansları kaldırma (İsteğe bağlı)
 
 Tüm kullanıcıları bir abonelikten diğerine taşıdıysanız ve başlangıçtaki aboneliğe artık ihtiyacınız yoksa, [aboneliği iptal edebilirsiniz](cancel-your-subscription.md).
 
-Yalnızca bazı kullanıcıları farklı bir aboneliğe taşıdıysanız, [artık ihtiyacınız](../licenses/buy-licenses.md) olmadığını lisansları kaldırın.
+Yalnızca bazı kullanıcıları farklı bir aboneliğe taşıdıysanız, artık ihtiyacınız olmayan [lisansları kaldırın](../licenses/buy-licenses.md) .
 
-## <a name="call-support-to-help-you-change-plans"></a>Planları değiştirmeye yardımcı olmak için desteği arayın
+## <a name="call-support-to-help-you-change-plans"></a>Planları değiştirmenize yardımcı olması için desteği arayın
 
-[Microsoft Destek'i arayın](../../admin/get-help-support.md).
+[Microsoft desteğini arayın](../../admin/get-help-support.md).

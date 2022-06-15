@@ -5,7 +5,7 @@ f1.keywords:
 author: cmcatee-MSFT
 ms.author: cmcatee
 manager: scotv
-ms.reviewer: jkinma, jmueller
+ms.reviewer: nalinkla, jmueller
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -21,12 +21,12 @@ ms.custom:
 search.appverid: MET150
 description: Planları yükseltmenin en kolay yolu, yönetim merkezindeki Yükseltme sekmesini kullanmaktır. Ancak Yükseltme sekmesi her zaman desteklenmez.
 ms.date: 04/21/2021
-ms.openlocfilehash: 1867a161f8de02e20261553bb4dbb10b92ce523f
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: 4578730d82fddd5bdd3d0d25dd7fd1e16414808b
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66042406"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66102272"
 ---
 # <a name="upgrade-to-a-different-plan"></a>Başka bir plana yükseltme
 
@@ -36,7 +36,7 @@ ms.locfileid: "66042406"
 
 **Yükseltme** sekmesini kullandığınızda, yeni bir plan satın alma işleminde size yol gösterilir. Yeni planda tüm kullanıcılara otomatik olarak lisans atanır ve eski planınız sizin için iptal edilir.
 
-1. Yönetim merkezinde <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Ürünlerinizi</a> **Faturalama** \> sayfasına gidin.
+1. Yönetici merkezinde <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Ürünlerinizi</a> **Faturalama** \> sayfasına gidin.
 2. Yükseltmek istediğiniz aboneliği seçin.
 3. Abonelik ayrıntıları sayfasındaki **Ürün ayrıntıları ve yükseltmeleri'nin** altında **Kuruluşunuz için önerilen yükseltmeleri görüntüle'yi** seçin.
 4. Yükseltmek istediğiniz planı bulun, ardından **Yükselt** düğmesini seçin.

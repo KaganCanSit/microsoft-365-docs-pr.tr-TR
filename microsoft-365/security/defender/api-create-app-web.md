@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.technology: m365d
 ms.custom: api
-ms.openlocfilehash: 1fb5e5087d03842832e89a3982826df1e94b857c
-ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
+ms.openlocfilehash: 05450912d78e7da774de76e02dfe4d42a1569084
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2022
-ms.locfileid: "65268847"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66102404"
 ---
 # <a name="create-an-app-to-access-microsoft-365-defender-without-a-user"></a>Kullanıcı olmadan Microsoft 365 Defender erişmek için uygulama oluşturma
 
@@ -67,7 +67,7 @@ Bu makalede şunların nasıl yapılacağını açıklar:
 
 3. Formda, uygulamanız için bir ad seçin ve ardından **Kaydet'i** seçin.
 
-4. Uygulama sayfanızda **API İzinleri** **EkleGerekli** **izinlerGereklilikler** >  >  kuruluşum > kullanıyor'u seçin, **Microsoft Tehdit Koruması** yazın ve **Microsoft Tehdit Koruması'yı** seçin. Uygulamanız artık Microsoft 365 Defender erişebilir.
+4. Uygulama sayfanızda **API İzinleri** Kuruluşumun > kullandığı izin  > **API'leri** >  **ekle'yi** seçin, **Microsoft Tehdit Koruması** yazın ve **Microsoft Tehdit Koruması'yı** seçin. Uygulamanız artık Microsoft 365 Defender erişebilir.
 
    > [!TIP]
    > *Microsoft Tehdit Koruması*, Microsoft 365 Defender için eski bir addır ve özgün listede görünmez. Görünmesini sağlamak için metin kutusuna adını yazmaya başlamanız gerekir.
@@ -155,35 +155,38 @@ return $token
 ### <a name="get-an-access-token-using-c"></a>C kullanarak erişim belirteci alma\#
 
 > [!NOTE]
-> Aşağıdaki kod Nuget Microsoft.IdentityModel.Clients.ActiveDirectory 3.19.8 ile test edilmiştir.
+> Aşağıdaki kod Nuget Microsoft.Identity.Client 3.19.8 ile test edilmiştir.
 
 > [!IMPORTANT]
 > [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) NuGet paketi ve Azure AD Kimlik Doğrulama Kitaplığı (ADAL) kullanım dışı bırakıldı. 30 Haziran 2020'den bu yana yeni özellik eklenmemiş.   Yükseltmenizi kesinlikle öneririz. Diğer ayrıntılar için [geçiş kılavuzuna](/azure/active-directory/develop/msal-migration) bakın.
 
 1. Yeni bir konsol uygulaması oluşturun.
 
-1. [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/) NuGet yükleyin.
+1. [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/) NuGet yükleyin.
 
 1. Aşağıdaki satırı ekleyin:
 
     ```C#
-    using Microsoft.IdentityModel.Clients.ActiveDirectory;
+    using Microsoft.Identity.Client;
     ```
 
 1. Aşağıdaki kodu kopyalayıp uygulamanıza yapıştırın (üç değişkeni güncelleştirmeyi unutmayın: `tenantId`, `clientId`, `appSecret`):
 
     ```C#
-    string tenantId = ""; // Paste your directory (tenant) ID here
-    string clientId = ""; // Paste your application (client) ID here
-    string appSecret = ""; // Paste your own app secret here to test, then store it in a safe place, such as the Azure Key Vault!
+    csharp
+    string tenantId = "00000000-0000-0000-0000-000000000000"; // Paste your own tenant ID here
+    string appId = "11111111-1111-1111-1111-111111111111"; // Paste your own app ID here
+    string appSecret = "22222222-2222-2222-2222-222222222222"; // Paste your own app secret here for a test, and then store it in a safe place! 
+    const string authority = https://login.microsoftonline.com;
+    const string audience = https://api.securitycenter.microsoft.com;
 
-    const string authority = "https://login.windows.net";
-    const string wdatpResourceId = "https://api.security.microsoft.com";
+    IConfidentialClientApplication myApp = ConfidentialClientApplicationBuilder.Create(appId).WithClientSecret(appSecret).WithAuthority($"{authority}/{tenantId}").Build();
 
-    AuthenticationContext auth = new AuthenticationContext($"{authority}/{tenantId}/");
-    ClientCredential clientCredential = new ClientCredential(clientId, appSecret);
-    AuthenticationResult authenticationResult = auth.AcquireTokenAsync(wdatpResourceId, clientCredential).GetAwaiter().GetResult();
-    string token = authenticationResult.AccessToken;
+    List<string> scopes = new List<string>() { $"{audience}/.default" };
+
+    AuthenticationResult authResult = myApp.AcquireTokenForClient(scopes).ExecuteAsync().GetAwaiter().GetResult();
+
+    string token = authResult.AccessToken;
     ```
 
 ### <a name="get-an-access-token-using-python"></a>Python kullanarak erişim belirteci alma

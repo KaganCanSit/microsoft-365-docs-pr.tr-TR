@@ -5,7 +5,7 @@ f1.keywords:
 author: cmcatee-MSFT
 ms.author: cmcatee
 manager: scotv
-ms.reviewer: mijeffer, jmueller
+ms.reviewer: amberb, vikdesai
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -21,12 +21,12 @@ ms.custom:
 - AdminTemplateSet
 description: Farklı bölgelerdeki Microsoft 365 iş aboneliğiniz için ne kadar vergi tahsil edeceğinizi öğrenin.
 ms.date: 03/17/2021
-ms.openlocfilehash: 35442bc495b6179a844bdbe3a6b98a4f58556140
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: 049b361f75dec9402464aa4216e15388a8174f1d
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731239"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66101643"
 ---
 # <a name="tax-information"></a>Vergi bilgileri
 
