@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: İhtiyacınız olanı korumak ve istemediğinizleri silmek için etiketleri otomatik olarak uygulayabilmeniz için otomatik etiketleme bekletme ilkeleri oluşturun
-ms.openlocfilehash: 1b8871cba184772bd82e5e608c6e38113d4b0024
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: b059a90c8a4f1406e8368cb399ca5de58b2538dd
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012890"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66089870"
 ---
 # <a name="automatically-apply-a-retention-label-to-retain-or-delete-content"></a>İçeriği korumak veya silmek için otomatik olarak bekletme etiketi uygulama
 
@@ -75,7 +75,7 @@ Bekletme etiketi ilkenizi oluşturmadan önce **bunun uyarlamalı** mı yoksa **
 
 Otomatik uygulama ilkesi oluşturduğunuzda, belirttiğiniz koşullara göre içeriğe otomatik olarak uygulanacak bir bekletme etiketi seçersiniz.
 
-1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com/) aşağıdaki konumlardan birine gidin:
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) aşağıdaki konumlardan birine gidin:
     
     - Kayıt yönetimi kullanıyorsanız:
         - **Çözümleri** >  **Kayıt yönetimi** > > **Etiket ilkeleri** sekmesi > **Otomatik etiket uygulama**
@@ -149,7 +149,7 @@ Ayrıca, taslakta yer alan veya hiç yayımlanmamış SharePoint öğeler bu sen
 > 
 > Grup posta kutuları genellikle **Microsoft 365 Grupları** konumu seçilerek dahil edilse de, bu ilke yapılandırması için grup konumu yalnızca Microsoft 365 grubuna bağlı SharePoint siteleri içerir.
 
-Hassas bilgiler için otomatik uygulama bekletme etiketi ilkeleri oluşturduğunuzda, bir Microsoft Purview Veri Kaybı Önleme (DLP) ilkesi oluşturduğunuzda kullandığınız ilke şablonlarının listesini görürsünüz. Her şablon, belirli türlerdeki hassas bilgileri aramak için önceden yapılandırılmıştır. Aşağıdaki örnekte, hassas bilgi türleri **Gizlilik** kategorisinden ve **ABD Kişisel Bilgiler (PII) Veri** şablonundan alınmaktadır:
+Hassas bilgiler için otomatik uygulama bekletme etiketi ilkeleri oluşturduğunuzda, bir Microsoft Purview Veri Kaybı Önleme (DLP) ilkesi oluştururken kullandığınız ilke şablonlarının listesini görürsünüz. Her şablon, belirli türlerdeki hassas bilgileri aramak için önceden yapılandırılmıştır. Aşağıdaki örnekte, hassas bilgi türleri **Gizlilik** kategorisinden ve **ABD Kişisel Bilgiler (PII) Veri** şablonundan alınmaktadır:
 
 ![Hassas bilgi türlerine sahip ilke şablonları.](../media/sensitive-info-configuration.png)
 
@@ -327,6 +327,8 @@ Bulut eklerine bekletme etiketlerinin otomatik olarak uygulandığını göz ön
 
 - Yalnızca yeni paylaşılan bulut ekleri bekletme için otomatik olarak etiketlenir.
 
+- Bir kullanıcı bir Teams konuşmasına eklendiğinde ve konuşmanın tam geçmişine erişim verildiğinde, bu geçmiş bulut eklerini içerebilir. Kullanıcı konuşmaya eklendikten sonra 48 saat içinde paylaşıldıysa, bulut eklerinin geçerli kopyaları bekletme için otomatik olarak etiketlenir. Bu zaman aralığından önce paylaşılan bulut ekleri yeni eklenen kullanıcılar için desteklenmez.
+
 - Teams ve Outlook dışında paylaşılan bulut ekleri desteklenmez.
 
 - Aşağıdaki öğeler, saklanabilen bulut ekleri olarak desteklenmez:
@@ -343,7 +345,7 @@ Hassas bilgilere, anahtar sözcüklere veya aranabilir özelliklere ya da eğiti
   
 ![Otomatik uygulama etiketlerinin ne zaman etkin olduğunu açıklayan diyagram.](../media/retention-labels-autoapply-timings.png)
 
-Beklenen etiketler yedi gün sonra görünmüyorsa, Microsoft Purview uyumluluk portalındaki **Etiket ilkeleri** sayfasından seçerek otomatik uygulama ilkesinin **durumunu** denetleyin. **Kapalı (Hata)** durumunu görürseniz ve konumların ayrıntılarında ilkeyi dağıtmanın (SharePoint için) veya ilkeyi yeniden dağıtmayı (OneDrive için) denemenin beklenenden uzun sürdüğünü belirten bir ileti görürseniz, ilke dağıtımını yeniden denemek için [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
+Beklenen etiketler yedi gün sonra görünmüyorsa, Microsoft Purview uyumluluk portalı **Etiket ilkeleri** sayfasından seçerek otomatik uygulama ilkesinin **Durumunu** denetleyin. **Kapalı (Hata)** durumunu görürseniz ve konumların ayrıntılarında ilkeyi dağıtmanın (SharePoint için) veya ilkeyi yeniden dağıtmayı (OneDrive için) denemenin beklenenden uzun sürdüğünü belirten bir ileti görürseniz, ilke dağıtımını yeniden denemek için [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
 
 1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 

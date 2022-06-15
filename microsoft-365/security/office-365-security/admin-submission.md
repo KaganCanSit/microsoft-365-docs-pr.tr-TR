@@ -17,12 +17,12 @@ ms.custom: seo-marvel-apr2020
 description: Yöneticiler, Microsoft 365 Defender portalında Gönderiler portalını kullanarak şüpheli e-postalar, şüpheli kimlik avı postaları, istenmeyen postalar ve diğer zararlı olabilecek iletileri, URL'leri ve e-posta eklerini yeniden tarama amacıyla Microsoft'a göndermeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 125e151873e45717a4621bf2798e3587671c6b8d
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: 47e97b728fb27d8df6ad813946d3cdbe08c52085
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078974"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66089121"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Şüpheli istenmeyen postaları, kimlik avı, URL'leri ve dosyaları Microsoft'a göndermek için Gönderimler portalını kullanın
 
@@ -180,7 +180,7 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
      İşiniz bittiğinde **Uygula'ya** tıklayın.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/email-admin-submission-customize-columns.png" alt-text="Yönetici gönderimleri için Yeni Özelleştir sütun seçenekleri" lightbox="../../media/email-admin-submission-customize-columns.png":::
+     > :::image type="content" source="../../media/email-admin-submission-customize-columns.png" alt-text="E-posta yöneticisi gönderimleri için sütun seçeneğini özelleştirin." lightbox="../../media/email-admin-submission-customize-columns.png":::
 
    - Girişleri filtrelemek için **Filtre'ye** tıklayın. Kullanılabilir filtreler şunlardır:
      - **Gönderilme tarihi**: **Başlangıç tarihi** ve **Bitiş tarihi**.
@@ -197,7 +197,7 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
      İşiniz bittiğinde **Uygula'ya** tıklayın.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/email-admin-submission-filters.png" alt-text="Yönetici gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/email-admin-submission-filters.png":::
+     > :::image type="content" source="../../media/email-admin-submission-filters.png" alt-text="E-posta yöneticisi gönderimleri için filtre seçenekleri." lightbox="../../media/email-admin-submission-filters.png":::
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
      - **Hiçbiri**
@@ -231,8 +231,7 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
 
      İşiniz bittiğinde **Uygula'ya** tıklayın.
 
-     > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/email-attachment-admin-submission-customize-columns.png" alt-text="Yönetici gönderimleri için Yeni Özelleştir sütun seçenekleri" lightbox="../../media/email-attachment-admin-submission-customize-columns.png":::
+     :::image type="content" source="../../media/email-attachment-admin-submission-customize-columns.png" alt-text="E-posta eki yönetici gönderimleri için sütun seçeneklerini özelleştirin.":::
 
    - Girişleri filtrelemek için **Filtre'ye** tıklayın. Kullanılabilir filtreler şunlardır:
      - **Gönderilme tarihi**: **Başlangıç tarihi** ve **Bitiş tarihi**.
@@ -245,8 +244,7 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
 
      İşiniz bittiğinde **Uygula'ya** tıklayın.
 
-     > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/email-attachment-admin-submission-customize-columns.png" alt-text="Yönetici gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/email-attachment-admin-submission-filters.png":::
+     :::image type="content" source="../../media/email-attachment-admin-submission-filters.png" alt-text="E-posta eki yönetici gönderimleri için filtre seçenekleri.":::
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
      - **Hiçbiri**
@@ -280,8 +278,7 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
 
      İşiniz bittiğinde **Uygula'ya** tıklayın.
 
-     > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/url-admin-submission-customize-columns.png" alt-text="Yönetici gönderimleri için Yeni Özelleştir sütun seçenekleri" lightbox="../../media/url-admin-submission-customize-columns.png":::
+     :::image type="content" source="../../media/url-admin-submission-customize-columns.png" alt-text="URL yöneticisi gönderimleri için sütun seçeneklerini özelleştirin.":::
 
    - Girişleri filtrelemek için **Filtre'ye** tıklayın. Kullanılabilir filtreler şunlardır:
      - **Gönderilme tarihi**: **Başlangıç tarihi** ve **Bitiş tarihi**.
@@ -294,8 +291,7 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
 
      İşiniz bittiğinde **Uygula'ya** tıklayın.
 
-     > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/url-admin-submission-customize-columns.png" alt-text="Yönetici gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/url-admin-submission-filters.png":::
+     :::image type="content" source="../../media/url-admin-submission-customize-columns.png" alt-text="URL yöneticisi gönderimleri için filtre seçenekleri.":::
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
      - **Yok**

@@ -15,12 +15,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security-compliance
-ms.openlocfilehash: b5fb9fabad337570744dbd94b76c39d446431cf6
-ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
+ms.openlocfilehash: daa32cf5b20d62a9574ed90660bfc705ad7ed5e5
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65663502"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66090552"
 ---
 # <a name="get-microsoft-defender-for-business"></a>İş için Microsoft Defender alma
 
@@ -32,10 +32,6 @@ Henüz İş için Microsoft Defender yoksa, çeşitli seçenekler arasından se�
 
 Deneme sürümüne kaydolmuşsanız, kabul e-postanızı aldıktan sonra [denemenizi etkinleştirebilir ve kullanıcı lisansları atayabilir](#how-to-activate-your-trial) ve [sonraki adımlarınıza](#next-steps) geçebilirsiniz.
 
->
-> **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
->
 
 ## <a name="try-or-buy-microsoft-defender-for-business"></a>İş için Microsoft Defender deneyin veya satın alın
 

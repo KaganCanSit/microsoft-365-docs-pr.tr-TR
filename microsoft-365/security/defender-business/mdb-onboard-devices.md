@@ -16,21 +16,17 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 8f716f692687276e5c1c4482429ab016f9574f2f
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 58b2756bead1df85e12e3276d0da475d6882b589
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621313"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088989"
 ---
 # <a name="onboard-devices-to-microsoft-defender-for-business"></a>Cihazları İş için Microsoft Defender ekleme
 
 İş için Microsoft Defender ile, şirketinizin cihazlarını eklemek için aralarından seçim yapabileceğiniz çeşitli seçenekler vardır. Bu makale, seçeneklerinizde size yol gösterir ve eklemenin nasıl çalıştığına ilişkin bir genel bakış içerir.
 
->
-> **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
->
 
 ## <a name="what-to-do"></a>Yapılması gerekenler
 
@@ -180,7 +176,7 @@ Yerel betiği macOS bir cihazda çalıştırdığınızda, Azure Active Director
 
 8. **Devam'ı** seçin, Lisans koşullarını kabul edin ve istendiğinde parolanızı girin.
 
-9. Microsoft'tan bir sürücünün yüklenmesine izin vermeniz istenir ("Sistem Uzantısı Engellendi" veya "Yükleme beklemede" veya her ikisi de. Sürücünün yüklenmesine izin verilmelidir. Yüklemeye izin vermek için **Güvenlik Tercihlerini Aç'ı** veya **Sistem Tercihlerini** >  **AçGüvenlik & Gizlilik'i** ve ardından **İzin Ver'i** seçin.
+9. Microsoft'tan bir sürücünün yüklenmesine izin vermeniz istenir ("Sistem Uzantısı Engellendi" veya "Yükleme beklemede" veya her ikisi de. Sürücünün yüklenmesine izin verilmelidir. Yüklemeye izin vermek için **Güvenlik Tercihlerini Aç'ı** veya **Sistem Tercihleri** > **Güvenlik & Gizlilik'i** açın ve ardından **İzin Ver'i** seçin.
 
 10. Ekleme paketini çalıştırmak için Bash'te aşağıdaki Python komutunu kullanın: `/usr/bin/python MicrosoftDefenderATPOnboardingMacOs.sh`
 
@@ -219,7 +215,7 @@ Cihazları Intune kaydetmek için kullanılabilecek çeşitli yöntemler vardır
 
 1. Cihazın şirketinizle ilişkili olduğunu onaylamak için Bash'te aşağıdaki Python komutunu kullanın: `mdatp health --field org_id`.
 
-2. macOS 10.15 (Catalina) veya sonraki bir sürümü kullanıyorsanız cihazınızı korumak için İş için Defender'a onay verin. **Sistem TercihleriGüvenlik** >  **&** **PrivacyPrivacyFull** >  **Disk Erişimi'ne** >  gidin. Değişiklik yapmak için kilit simgesini seçin (iletişim kutusunun en altında) ve ardından **İş için Microsoft Defender** (veya gördüğünüz buysa **Uç Nokta için Defender**)'ı seçin.
+2. macOS 10.15 (Catalina) veya sonraki bir sürümü kullanıyorsanız cihazınızı korumak için İş için Defender'a onay verin. **Sistem Tercihleri** > **Güvenliği & Gizlilik** > **Gizliliği** > **Tam Disk Erişimi'ne** gidin. Değişiklik yapmak için kilit simgesini seçin (iletişim kutusunun en altında) ve ardından **İş için Microsoft Defender** (veya gördüğünüz buysa **Uç Nokta için Defender**)'ı seçin.
 
 3. Cihazın eklendiğini doğrulamak için Bash'te aşağıdaki komutu kullanın: `mdatp health --field real_time_protection_enabled`
 

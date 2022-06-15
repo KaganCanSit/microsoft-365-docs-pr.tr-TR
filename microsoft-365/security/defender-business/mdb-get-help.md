@@ -15,12 +15,12 @@ ms.collection:
 search.appverid: MET150
 ms.reviewer: shlomiakirav
 description: İş için Defender ile ilgili herhangi bir sorununuz varsa yardım alın veya desteğe başvurun.
-ms.openlocfilehash: 37e41f8e5d5f6421739fb98a38d99bb6aa0597c6
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 4f2a45514ba701eac27af32b2585c9a765dcc1f2
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173147"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66090331"
 ---
 # <a name="get-help-and-support-for-microsoft-defender-for-business"></a>İş için Microsoft Defender için yardım ve destek alma
 
@@ -30,10 +30,6 @@ ms.locfileid: "65173147"
 
 Sorunuza yanıt bulamazsanız bir destek bileti açabilirsiniz. Bkz. [Destek alma](../../admin/get-help-support.md)
 
->
-> **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
->
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

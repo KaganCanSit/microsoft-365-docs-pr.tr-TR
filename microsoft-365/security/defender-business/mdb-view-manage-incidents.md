@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 04c8d32c6bb016d4640094013d1f71eb248a8d6c
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 5d28d8b7d0a95d7b8f4311f064729198628881ca
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172705"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66089914"
 ---
 # <a name="view-and-manage-incidents-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da olayları görüntüleme ve yönetme
 
@@ -33,10 +33,6 @@ Tehditler algılandığında ve uyarılar tetiklendiğinde olaylar oluşturulur.
 - [Uyarı önem derecesi](#alert-severity)
 - [Sonraki adımlar](#next-steps)
 
->
-> **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
->
 
 ## <a name="monitor-your-incidents--alerts"></a>Olaylarınızı & uyarılarınızı izleme
 

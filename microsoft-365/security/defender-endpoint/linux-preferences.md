@@ -16,12 +16,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 6c39db3cceec62ef80cf19f34bbf3d89a219a4f3
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: 23d216e4fb831ef6425bff93bf3fc0063a263852
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66042988"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66089726"
 ---
 # <a name="set-preferences-for-microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın
 
@@ -318,8 +318,9 @@ Tanılama verileri Uç Nokta için Defender'ı güvenli ve güncel tutmak, sorun
 |---|---|
 |**Anahtar**|diagnosticLevel|
 |**Veri türü**|Dize|
-|**Olası değerler**|isteğe bağlı (varsayılan) <p> Gerekli|
-
+|**Olası değerler**|Isteğe bağlı <p> gerekli (varsayılan)|
+|
+  
 #### <a name="enable--disable-automatic-sample-submissions"></a>Otomatik örnek gönderimlerini etkinleştirme/devre dışı bırakma
 
 Şüpheli örneklerin (tehdit içerme olasılığı yüksek) Microsoft'a gönderilip gönderilmeyeceğini belirler. Örnek gönderimini denetlemek için üç düzey vardır:

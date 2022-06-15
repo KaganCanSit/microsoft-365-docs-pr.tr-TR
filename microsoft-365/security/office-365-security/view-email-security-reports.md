@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ef22f0873e6a61864cf3b2abf2d8a4bc26f80c4d
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: 5501477e14bd5053f6adbe597642470854616a5e
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078996"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66089980"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında e-posta güvenlik raporlarını görüntüleme
 
@@ -355,7 +355,7 @@ Grafik aşağıdaki bilgileri gösterir:
 - **Geçirmek**
 - **Başarısız**
 - **SoftPass**
-- **Hiçbiri**
+- **Yok**
 - **Diğer**
 
 Grafikte bir günün (veri noktası) üzerine geldiğinizde, kaç sahte ileti algılandığını ve bunun nedenini görebilirsiniz.
@@ -367,7 +367,7 @@ Grafikte bir günün (veri noktası) üzerine geldiğinizde, kaç sahte ileti al
   - **Geçirmek**
   - **Başarısız**
   - **SoftPass**
-  - **Hiçbiri**
+  - **Yok**
   - **Diğer**
 - **Kimlik sahtekarı türü**: **İç** ve **Dış**
 
@@ -424,7 +424,7 @@ Grafik aşağıdaki bilgileri gösterir:
   - **Bekleyen**
   - **Tamamlandı**
 
-Grafiğin altındaki ayrıntılar tablosu aynı bilgileri gösterir ve **E-posta & işbirliği** \> **Gönderimleri'ndeki** **Analiz için gönderildi** sekmesindeki **Grupla** veya **Sütunları özelleştir** seçenekleriyle aynıdır. Daha fazla bilgi için bkz. [Microsoft'a yönetici gönderimlerini görüntüleme](admin-submission.md#view-urls-admin-submissions-to-microsoft).
+Grafiğin altındaki ayrıntılar tablosu aynı bilgileri gösterir ve **E-posta & işbirliği** \> **Gönderimleri'ndeki** **Analiz için gönderildi** sekmesindeki **Grupla** veya **Sütunları özelleştir** seçenekleriyle aynıdır. Daha fazla bilgi için bkz. [Microsoft'a e-posta yöneticisi gönderimlerini görüntüleme](admin-submission.md#view-email-admin-submissions-to-microsoft).
 
 **Gönderimler** sayfasında **[Dışarı Aktar](#export-report)** düğmesi kullanılabilir.
 
@@ -990,7 +990,7 @@ Filtreleri yapılandırmayı bitirdiğinizde **Uygula**, **İptal veya** **Filtr
 
 Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
 
-- **Hiçbiri**
+- **Yok**
 - **Neden**
 - **Gönderen**
 - **Rapor eden**

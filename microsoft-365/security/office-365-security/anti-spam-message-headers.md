@@ -1,5 +1,5 @@
 ---
-title: İstenmeyen posta önleme ileti üst bilgileri
+title: İstenmeyen posta önleme iletisi üst bilgileri
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -14,93 +14,93 @@ ms.assetid: 2e3fcfc5-5604-4b88-ac0a-c5c45c03f1db
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
-description: Yöneticiler, EOP (EOP) tarafından iletilere eklenen üst Exchange Online Protection bilgi edinebilirsiniz. Bu üst bilgi alanları ileti ve nasıl işlenmeleri hakkında bilgi sağlar.
+description: Yöneticiler, Exchange Online Protection (EOP) tarafından iletilere eklenen üst bilgi alanları hakkında bilgi edinebilir. Bu üst bilgi alanları, ileti ve nasıl işlendiği hakkında bilgi sağlar.
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 33cebd8cfd0d61b09a5d4976baec9708082c8ca3
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 2d9c98446b7963581654c5920c30202f547ce271
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679444"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66089033"
 ---
-# <a name="anti-spam-message-headers-in-microsoft-365"></a>İletide istenmeyen posta önleme ileti Microsoft 365
+# <a name="anti-spam-message-headers-in-microsoft-365"></a>Microsoft 365'da istenmeyen postadan koruma iletisi üst bilgileri
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Tüm Microsoft 365, Exchange Online Protection (EOP) istenmeyen posta, kötü amaçlı yazılım ve diğer tehditlere karşı tüm gelen iletileri tarar. Bu taramaların sonuçları iletilerde aşağıdaki üst bilgi alanlarına eklenir:
+tüm Microsoft 365 kuruluşlarda, Exchange Online Protection (EOP) tüm gelen iletileri istenmeyen posta, kötü amaçlı yazılım ve diğer tehditler için tarar. Bu taramaların sonuçları iletilerde aşağıdaki üst bilgi alanlarına eklenir:
 
-- **X-Forefront-Antispam-Report**: İleti ve nasıl işlenmeleri hakkında bilgi içerir.
+- **X-Forefront-Antispam-Report**: İleti ve nasıl işlendiği hakkında bilgi içerir.
 
-- **X-Microsoft-Antispam**: Toplu posta ve kimlik avı hakkında ek bilgi içerir.
+- **X-Microsoft-Antispam**: Toplu posta ve kimlik avı hakkında ek bilgiler içerir.
 
 - **Kimlik doğrulama sonuçları**: SPF, DKIM ve DMARC (e-posta kimlik doğrulaması) sonuçları hakkında bilgi içerir.
 
-Bu makalede, bu üst bilgi alanlarında nelerin kullanılabilir olduğu açıklanmıştır.
+Bu makalede, bu üst bilgi alanlarında kullanılabilenler açıklanmaktadır.
 
-Çeşitli e-posta istemcilerinde e-posta iletisi üst bilgilerini görüntüleme hakkında bilgi için bkz. E-posta ileti [üst bilgilerini Outlook](https://support.microsoft.com/office/cd039382-dc6e-4264-ac74-c048563d212c).
+Çeşitli e-posta istemcilerinde e-posta iletisi üst bilgisini görüntüleme hakkında bilgi için bkz. [Outlook'de internet iletisi üst bilgilerini görüntüleme](https://support.microsoft.com/office/cd039382-dc6e-4264-ac74-c048563d212c).
 
 > [!TIP]
-> İleti üst bilgisi içeriğini kopyalayıp İleti Üst Bilgisi Çözümleyicisi [aracına yapıştırabilirsiniz](https://mha.azurewebsites.net/) . Bu araç, üst bilgileri ayrıştırmanıza ve daha okunabilir bir biçime dönüştürmeye yardımcı olur.
+> İleti üst bilgisinin içeriğini kopyalayıp [İleti Üst Bilgisi Çözümleyicisi](https://mha.azurewebsites.net/) aracına yapıştırabilirsiniz. Bu araç üst bilgileri ayrıştırma ve daha okunabilir bir biçime yerleştirmeye yardımcı olur.
 
 ## <a name="x-forefront-antispam-report-message-header-fields"></a>X-Forefront-Antispam-Report ileti üst bilgisi alanları
 
-İleti üst bilgilerini edindikten sonra **X-Forefront-Antispam-Report üst bilgisini** bulun. Bu üst bilgide birden çok alan ve değer çiftleri noktalı virgülle (üç tane;). Örneğin:
+İleti üst bilgisi bilgilerini aldıktan sonra **X-Forefront-Antispam-Report** üst bilgisini bulun. Bu üst bilgide noktalı virgülle (;)) ayrılmış birden çok alan ve değer çifti olacaktır. Örneğin:
 
 `...CTRY:;LANG:hr;SCL:1;SRV:;IPV:NLI;SFV:NSPM;PTR:;CAT:NONE;SFTY:;...`
 
-Ayrı ayrı alanlar ve değerler aşağıdaki tabloda açıklanmıştır.
+Tek tek alanlar ve değerler aşağıdaki tabloda açıklanmıştır.
 
 > [!NOTE]
-> **X-Forefront-Antispam-Report üst** bilgisi birçok farklı alan ve değer içerir. Tabloda açık olmayan alanlar tanılama amacıyla Microsoft istenmeyen posta önleme ekibi tarafından özel olarak kullanılır.
+> **X-Forefront-Antispam-Report** üst bilgisi birçok farklı alan ve değer içerir. Tabloda açıklanmayan alanlar, tanılama amacıyla yalnızca Microsoft istenmeyen posta önleme ekibi tarafından kullanılır.
 
 |Alan|Açıklama|
 |---|---|
-|`ARC`|Protokolde `ARC` aşağıdaki alanlar vardır: <ul><li>`AAR`: DMARC'dan **Kimlik Doğrulama sonuçları** üst bilgisinde yer alan içeriği kayıtları.</li><li>`AMS`: İletinin şifreleme imzalarını içerir.</li><li>`AS`: İleti üst bilgilerinin şifreleme imzalarını içerir. Bu alan, zincir doğrulamanın sonucunu yok`"cv="`, geçti veya başarısız olarak içeren, , adlı bir **zincir** **doğrulama etiketi** **içerir**.</li></ul>|
-|`CAT:`|İletiye uygulanan koruma ilkesi kategorisi: <ul><li>`BULK`: Toplu</li><li>`DIMP`: Etki Alanı Kimliğine Bürünme</li><li>`GIMP`: [Posta kutusu zekası tabanlı kimliğe bürünme](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>`HPHSH` veya `HPHISH` : Yüksek güven amaçlı kimlik avı</li><li>`HSPM`: Yüksek güven istenmeyen posta</li><li>`MALW`: Kötü amaçlı yazılım</li><li>`PHSH`: Kimlik avı</li><li>`SPM`: İstenmeyen posta</li><li>`SPOOF`: Spoofing</li><li>`UIMP`: Kullanıcı Kimliğine Bürünme</li><li>`AMP`: Kötü amaçlı yazılımdan koruma</li><li>`SAP`: Kasa ekleme</li><li>`OSPM`: Giden istenmeyen posta</li></ul> <p> Gelen bir ileti, birden çok koruma formu ve birden çok algılama taramasıyla işaretlenmiş olabilir. İlkelerin farklı öncelikleri vardır ve önce en yüksek önceliğe sahip ilke uygulanır. Daha fazla bilgi için bkz [. Birden çok koruma yöntemi ve algılama taramaları e-postanızı tararsa hangi ilke geçerlidir](how-policies-and-protections-are-combined.md).|
-|`CIP:[IP address]`|Bağlantı IP adresi. Bu IP adresini IP İzin Listesi'ne veya IP Engelleme Listesi'ne kullanabilirsiniz. Daha fazla bilgi için bkz [. Bağlantı filtrelemeyi yapılandırma](configure-the-connection-filter-policy.md).|
-|`CTRY`|Bağlantı IP adresiyle belirlenen kaynak ülkedir ve bu, gönderen IP adresiyle aynı olabilir.|
-|`H:[helostring]`|Bağlantı e-posta sunucusunun HELO veya EHLO dizesi.|
-|`IPV:CAL`|Kaynak IP adresi IP İzin Listesi'nin içinde olduğu için ileti istenmeyen posta filtrelemeyi atlandı. Daha fazla bilgi için bkz [. Bağlantı filtrelemeyi yapılandırma](configure-the-connection-filter-policy.md).|
-|`IPV:NLI`|IP adresi hiçbir IP itibarı listesinde bulunamadı.|
-|`LANG`|İletinin ülke kodunda belirtilen dili (örneğin, Rusça için ru_RU).|
+|`ARC`|Protokol `ARC` aşağıdaki alanlara sahiptir: <ul><li>`AAR`: DMARC'den **Authentication-results** üst bilgisinin içeriğini kaydeder.</li><li>`AMS`: İletinin şifreleme imzalarını içerir.</li><li>`AS`: İleti üst bilgilerinin şifreleme imzalarını içerir. Bu alan, zincir doğrulamasının **sonucunu yok**, **geçti** veya **başarısız** olarak içeren adlı `"cv="`bir zincir doğrulaması etiketi içerir.</li></ul>|
+|`CAT:`|İletiye uygulanan koruma ilkesi kategorisi: <ul><li>`BULK`: Toplu</li><li>`DIMP`: Etki Alanı Kimliğe Bürünme</li><li>`GIMP`: [Posta kutusu zekası tabanlı kimliğe bürünme](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>`HPHSH` veya `HPHISH` : Yüksek güvenilirlikli kimlik avı</li><li>`HSPM`: Yüksek güvenilirlikli istenmeyen posta</li><li>`MALW`: Kötü amaçlı yazılım</li><li>`PHSH`: Kimlik avı</li><li>`SPM`: İstenmeyen posta</li><li>`SPOOF`: Sahtekarlık</li><li>`UIMP`: Kullanıcı Kimliğe Bürünme</li><li>`AMP`: Kötü amaçlı yazılımdan koruma</li><li>`SAP`: ekleri Kasa</li><li>`OSPM`: Giden istenmeyen posta</li></ul> <p> Bir gelen ileti, birden çok koruma biçimi ve birden çok algılama taraması ile işaretlenebilir. İlkelerin farklı öncelikleri vardır ve önce en yüksek önceliğe sahip ilke uygulanır. Daha fazla bilgi için bkz [. E-postanızda birden çok koruma yöntemi ve algılama taraması çalıştırıldığında hangi ilke geçerli](how-policies-and-protections-are-combined.md) olur?|
+|`CIP:[IP address]`|Bağlanan IP adresi. Bu IP adresini IP İzin Ver Listesi'nde veya IP Engelleme Listesi'nde kullanabilirsiniz. Daha fazla bilgi için bkz. [Bağlantı filtrelemeyi yapılandırma](configure-the-connection-filter-policy.md).|
+|`CTRY`|Kaynak ülke, bağlanan IP adresi tarafından belirlenen ve kaynak gönderen IP adresiyle aynı olmayabilir.|
+|`H:[helostring]`|Bağlanan e-posta sunucusunun HELO veya EHLO dizesi.|
+|`IPV:CAL`|Kaynak IP adresi IP İzin Verme Listesi'nde olduğundan ileti istenmeyen posta filtrelemeyi atladı. Daha fazla bilgi için bkz. [Bağlantı filtrelemeyi yapılandırma](configure-the-connection-filter-policy.md).|
+|`IPV:NLI`|IP adresi herhangi bir IP saygınlığı listesinde bulunamadı.|
+|`LANG`|Ülke kodu tarafından belirtilen iletinin yazıldığı dil (örneğin, Rusça için ru_RU).|
 |`PTR:[ReverseDNS]`|Kaynak IP adresinin PTR kaydı (ters DNS araması olarak da bilinir).|
-|`SCL`|İletinin istenmeyen posta güven düzeyi (SCL). Daha yüksek bir değer iletinin istenmeyen posta olma olasılığı daha yüksek olduğunu gösterir. Daha fazla bilgi için bkz. [İstenmeyen posta güven düzeyi (SCL)](spam-confidence-levels.md).|
-|`SFTY`|İleti kimlik avı olarak tanımlandı ve aşağıdaki değerlerden biri ile de işaretlenir: <ul><li>9.19: Etki alanı kimliğine bürünme. Gönderen etki alanı, korumalı bir etki alanının [kimliğine bürünme girişiminde bulundurdu](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365). Etki güvenlik ipucu kimliğine bürünme özelliği etkinleştirilmişse iletiye eklenir.</li><li>9.20: Kullanıcı kimliğine bürünme. Gönderen kullanıcı, alıcının kuruluşunda bir kullanıcının kimliğine bürünme veya Office 365 için Microsoft [Defender'da](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) kimlik avı önleme ilkesinde belirtilen korumalı bir kullanıcının kimliğine bürünme girişiminde Office 365. Kullanıcı güvenlik ipucu kimliğine bürünme özelliği etkinleştirilmişse, iletiye eklenir.</li></ul>|
-|`SFV:BLK`|Filtreleme atlandı ve ileti, kullanıcının Engellenen Gönderenler listesinde bir adresten gönderildiği için engellendi. <p> Yöneticilerin bir kullanıcının Engellenen Gönderenler listesini nasıl yönetecekleri hakkında daha fazla bilgi için bkz. Posta kutuları üzerinde gereksiz [Exchange Online yapılandırma](configure-junk-email-settings-on-exo-mailboxes.md).|
-|`SFV:NSPM`|İstenmeyen posta filtreleme iletiyi istenmeyen posta değil olarak işaretledi ve ileti hedeflenen alıcılara gönderildi.|
-|`SFV:SFE`|Filtreleme atlandı ve bir kullanıcının Gönderenler listesinde yer alan bir adresten gönderildiği için iletiye izin Kasa. <p> Yöneticilerin bir kullanıcının Posta Gönderenler listesini nasıl yönetecekleri hakkında daha fazla Kasa için bkz. Posta kutuları üzerinde gereksiz [Exchange Online yapılandırma](configure-junk-email-settings-on-exo-mailboxes.md).|
-|`SFV:SKA`|İleti istenmeyen posta filtrelemeyi atlandı ve Gelen Kutusu'na teslim edildi çünkü gönderen, istenmeyen posta önleme ilkesinde izin verilen gönderenler listesinde veya izin verilen etki alanları listesinde yer alıyor. Daha fazla bilgi için bkz [. İstenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md).|
-|`SFV:SKB`|İleti, istenmeyen posta önleme ilkesinde engellenen gönderenler listesinde yer alan veya engellenen etki alanları listesinde yer alan bir gönderenle eş olduğundan istenmeyen posta olarak işaretlendi. Daha fazla bilgi için bkz [. İstenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md).|
-|`SFV:SKI`|SFV:SKN'ye benzer şekilde, ileti istenmeyen posta filtrelemeyi başka bir nedenle atlar (örneğin, kiracı içindeki bir şirket içi e-posta).|
-|`SFV:SKN`|İleti, istenmeyen posta filtrelemesi tarafından işlenmeden önce istenmeyen posta değil olarak işaretlendi. Örneğin, ileti SCL -1 olarak işaretlenmiş veya **Posta akış kuralıyla istenmeyen posta filtresini** atla olarak işaretlenmiştir.|
-|`SFV:SKQ`|İleti karantinadan çıkarıldı ve gönderilmek üzere alıcılara gönderildi.|
-|`SFV:SKS`|İleti, istenmeyen posta filtrelemesi tarafından işlenmeden önce istenmeyen posta olarak işaretlenmiştir. Örneğin, ileti bir posta akış kuralı tarafından SCL 5 - 9 arasında olarak işaretlenmiştir.|
-|`SFV:SPM`|İleti, istenmeyen posta filtrelemesi ile istenmeyen posta olarak işaretlendi.|
-|`SRV:BULK`|İleti, istenmeyen posta filtreleme ve toplu şikayet düzeyi (BCL) eşiği tarafından toplu e-posta olarak tanımlandı. _MarkAsSpamBulkMail_ `On` parametresi (varsayılan olarak açıktır) olduğunda, toplu e-posta iletisi istenmeyen posta (SCL 6) olarak işaretlenir. Daha fazla bilgi için bkz [. İstenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md).|
-|`X-CustomSpam: [ASFOption]`|İleti, Gelişmiş İstenmeyen Posta Filtresi (ASF) ayarıyla eşdü. Her ASF ayarının X üstbilgisi değerini görmek için bkz. [Gelişmiş İstenmeyen Posta Filtresi (ASF) ayarları](advanced-spam-filtering-asf-options.md).|
+|`SCL`|İletinin istenmeyen posta güvenilirlik düzeyi (SCL). Daha yüksek bir değer, iletinin istenmeyen posta olma olasılığının daha yüksek olduğunu gösterir. Daha fazla bilgi için bkz. [İstenmeyen posta güvenilirlik düzeyi (SCL)](spam-confidence-levels.md).|
+|`SFTY`|İleti kimlik avı olarak tanımlandı ve aşağıdaki değerlerden biriyle işaretlenecek: <ul><li>9.19: Etki alanı kimliğe bürünme. Gönderen etki alanı [korumalı bir etki alanının kimliğine bürünmeye](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) çalışır. Etki alanı kimliğe bürünme güvenlik ipucu iletiye eklenir (etkinse).</li><li>9.20: Kullanıcı kimliğine bürünme. Gönderen kullanıcı, alıcının kuruluşundaki bir kullanıcının veya [Office 365 için Microsoft Defender'daki kimlik avı önleme ilkesinde belirtilen korumalı bir kullanıcının](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) kimliğine bürünmeye çalışır. kullanıcı kimliğe bürünme güvenlik ipucu iletiye eklenir (etkinse).</li><li>9.25: İlk iletişim güvenlik ipucu. Bu değer şüpheli veya kimlik avı iletisinin göstergesi _olabilir_ . Daha fazla bilgi için bkz. [İlk kişi güvenlik ipucu](set-up-anti-phishing-policies.md#first-contact-safety-tip).</li></ul>|
+|`SFV:BLK`|Filtreleme atlandı ve kullanıcının Engellenen Gönderenler listesindeki bir adresten gönderildiği için ileti engellendi. <p> Yöneticilerin kullanıcının Engellenen Gönderenler listesini nasıl yönetebileceği hakkında daha fazla bilgi için bkz. [Exchange Online posta kutularında gereksiz e-posta ayarlarını yapılandırma](configure-junk-email-settings-on-exo-mailboxes.md).|
+|`SFV:NSPM`|İstenmeyen posta filtrelemesi iletiyi istenmeyen posta değil olarak işaretledi ve ileti hedeflenen alıcılara gönderildi.|
+|`SFV:SFE`|Filtreleme atlandı ve kullanıcının Kasa Gönderenler listesindeki bir adresten gönderildiği için iletiye izin verildi. <p> Yöneticilerin kullanıcının Kasa Gönderenler listesini nasıl yönetebileceği hakkında daha fazla bilgi için bkz. [Exchange Online posta kutularında gereksiz e-posta ayarlarını yapılandırma](configure-junk-email-settings-on-exo-mailboxes.md).|
+|`SFV:SKA`|İleti istenmeyen posta filtrelemeyi atladı ve gönderen bir istenmeyen posta önleme ilkesinde izin verilen gönderenler listesinde veya izin verilen etki alanları listesinde olduğundan Gelen Kutusu'na teslim edildi. Daha fazla bilgi için bkz. [İstenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md).|
+|`SFV:SKB`|İleti, istenmeyen posta önleme ilkesindeki engellenen gönderenler listesindeki veya engellenen etki alanları listesindeki bir gönderenle eşleştiğinden istenmeyen posta olarak işaretlendi. Daha fazla bilgi için bkz. [İstenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md).|
+|`SFV:SKI`|SFV:SKN'ye benzer şekilde, ileti istenmeyen posta filtrelemeyi başka bir nedenle atladı (örneğin, kiracı içindeki kuruluş içi e-posta).|
+|`SFV:SKN`|İleti, istenmeyen posta filtrelemesi tarafından işlenmeden önce istenmeyen posta değil olarak işaretlendi. Örneğin, ileti bir posta akışı kuralıyla SCL -1 veya **İstenmeyen posta filtrelemesini atla** olarak işaretlendi.|
+|`SFV:SKQ`|İleti karantinadan çıkarıldı ve hedeflenen alıcılara gönderildi.|
+|`SFV:SKS`|İleti, istenmeyen posta filtrelemesi tarafından işlenmeden önce istenmeyen posta olarak işaretlendi. Örneğin, ileti bir posta akışı kuralı tarafından SCL 5 ile 9 olarak işaretlendi.|
+|`SFV:SPM`|İleti, istenmeyen posta filtrelemesi tarafından istenmeyen posta olarak işaretlendi.|
+|`SRV:BULK`|İleti, istenmeyen posta filtreleme ve toplu şikayet düzeyi (BCL) eşiği tarafından toplu e-posta olarak tanımlandı. _MarkAsSpamBulkMail_ parametresi (`On`varsayılan olarak açıktır) olduğunda, toplu e-posta iletisi istenmeyen posta (SCL 6) olarak işaretlenir. Daha fazla bilgi için bkz. [İstenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md).|
+|`X-CustomSpam: [ASFOption]`|İleti, Gelişmiş İstenmeyen Posta Filtresi (ASF) ayarıyla eşleşmiştir. Her ASF ayarının X üst bilgisi değerini görmek için bkz [. Gelişmiş İstenmeyen Posta Filtresi (ASF) ayarları](advanced-spam-filtering-asf-options.md).|
 
 ## <a name="x-microsoft-antispam-message-header-fields"></a>X-Microsoft-Antispam ileti üst bilgisi alanları
 
-Aşağıdaki tabloda, **X-Microsoft-Antispam ileti üst bilgisinde yararlı alanlar** açıklanmıştır. Bu üst bilgide yer alan diğer alanlar tanılama amacıyla Microsoft istenmeyen posta önleme ekibi tarafından özel olarak kullanılır.
+Aşağıdaki tabloda **, X-Microsoft-Antispam** ileti üst bilgisindeki yararlı alanlar açıklanmaktadır. Bu üst bilgideki diğer alanlar yalnızca Microsoft istenmeyen posta önleme ekibi tarafından tanılama amacıyla kullanılır.
 
 |Alan|Açıklama|
 |---|---|
-|`BCL`|İletinin toplu şikayet düzeyi (BCL). Daha yüksek bir BCL, toplu posta iletisinin şikayet oluşturma olasılığı daha yüksek (ve bu nedenle istenmeyen posta olma olasılığı daha yüksek) olduğunu gösterir. Daha fazla bilgi için bkz [. Toplu şikayet düzeyi (BCL)](bulk-complaint-level-values.md).|
+|`BCL`|İletinin toplu şikayet düzeyi (BCL). Daha yüksek bir BCL, toplu posta iletisinin şikayet oluşturma olasılığının daha yüksek olduğunu gösterir (ve bu nedenle istenmeyen posta olma olasılığı daha yüksektir). Daha fazla bilgi için bkz [. Toplu şikayet düzeyi (BCL)](bulk-complaint-level-values.md).|
 
 ## <a name="authentication-results-message-header"></a>Kimlik doğrulama sonuçları ileti üst bilgisi
 
-SPF, DKIM ve DMARC için **e-posta** kimlik doğrulaması denetimlerinin sonuçları, gelen iletilerde Kimlik doğrulama sonuçları ileti üst bilgisine kaydedilir (damgalanır).
+SPF, DKIM ve DMARC için e-posta kimlik doğrulaması denetimlerinin sonuçları, gelen iletilerde **Kimlik doğrulama sonuçları** ileti üst bilgisine kaydedilir (damgalı).
 
-Aşağıdaki listede, her tür **e-posta** kimlik doğrulaması denetimi için Kimlik Doğrulama Sonuçları üst bilgisinde eklenen metin açıklanmıştır:
+Aşağıdaki listede, her **e-posta kimlik doğrulaması denetimi türü için Authentication-Results** üst bilgisine eklenen metin açıklanmaktadır:
 
-- SPF aşağıdaki söz dizimi kullanır:
+- SPF aşağıdaki söz dizimini kullanır:
 
   ```text
   spf=<pass (IP address)|fail (IP address)|softfail (reason)|neutral|none|temperror|permerror> smtp.mailfrom=<domain>
@@ -113,7 +113,7 @@ Aşağıdaki listede, her tür **e-posta** kimlik doğrulaması denetimi için K
   spf=fail (sender IP is 127.0.0.1) smtp.mailfrom=contoso.com
   ```
 
-- DKIM aşağıdaki söz dizimi kullanır:
+- DKIM aşağıdaki söz dizimini kullanır:
 
   ```text
   dkim=<pass|fail (reason)|none> header.d=<domain>
@@ -126,7 +126,7 @@ Aşağıdaki listede, her tür **e-posta** kimlik doğrulaması denetimi için K
   dkim=fail (body hash did not verify) header.d=contoso.com
   ```
 
-- VSEÇMARC aşağıdaki söz dizimlerini kullanır:
+- DMARC aşağıdaki söz dizimini kullanır:
 
   ```text
   dmarc=<pass|fail|bestguesspass|none> action=<permerror|temperror|oreject|pct.quarantine|pct.reject> header.from=<domain>
@@ -143,16 +143,16 @@ Aşağıdaki listede, her tür **e-posta** kimlik doğrulaması denetimi için K
 
 ### <a name="authentication-results-message-header-fields"></a>Kimlik doğrulama sonuçları ileti üst bilgisi alanları
 
-Aşağıdaki tabloda, her e-posta kimlik doğrulaması denetimi için alanlar ve olası değerler açık almaktadır.
+Aşağıdaki tabloda, her e-posta kimlik doğrulaması denetimi için alanlar ve olası değerler açıklanmaktadır.
 
 |Alan|Açıklama|
 |---|---|
-|`action`|DMARC denetimi sonuçlarına dayalı olarak istenmeyen posta filtresi tarafından  alınan eylemi gösterir. Örneğin: <ul><li>**orect veya** **o.reject: Reddetmeyi** geçersiz kılmanın açılımı. Bu durumda Microsoft 365, DMARC TXT kaydı p=reddetme ilkesine sahip bir etki alanında DMARC denetimine başarısız olan bir ileti geldiğinde bu eylemi kullanır. İletiyi silmek veya reddetmek yerine, Microsoft 365 istenmeyen posta olarak işaretler. E-postaların neden Microsoft 365 yapılandırıldı hakkında daha fazla bilgi için bkz. Microsoft 365 [DMARC'da başarısız olan gelen e-postayı işleme](use-dmarc-to-validate-email.md#how-microsoft-365-handles-inbound-email-that-fails-dmarc).</li><li>**pct.karantina**: DMARC'ı geç kullanmayan iletilerin yüzde 100'den az bir yüzdesinin yine de teslim olacağını gösterir. Bu, iletinin DMARC başarısız olduğu ve ilkenin karantinaya alınamadı anlamına gelir, ancak PCT alanı %100 olarak ayarilmemiştir ve sistem belirtilen etki alanının ilkesine göre DMARC eylemlerini uygulamamak üzere rastgele karar verdi.</li><li>**pct.reject**: Yine de DMARC'ı geçemedi iletilerinin yüzde 100'den az bir yüzdesinin teslim olacağını gösterir. Bu, iletinin DMARC başarısız olduğu ve ilkenin reddedecek şekilde ayar olduğu, ancak PCT alanının %100 olarak ayarlanmadlı olduğu ve sistem belirtilen etki alanının ilkesine göre DMARC eyleminin uygulanmayacak şekilde rastgele belirlen ayarlaması anlamına gelir.</li><li>**permerror**: DNS'de yanlış 365 DMARC TXT kaydıyla karşılaşma gibi, DMARC değerlendirme sırasında kalıcı bir hata oluştu. Bu iletiyi yeniden gönderme girişiminin farklı bir sonuçla bit olasılığı yok. Bunun yerine, sorunu çözmek için etki alanının sahibine başvurabilirsiniz.</li><li>**bir hata oluştu**. DMARC değerlendirme sırasında geçici bir hata oluştu. E-postayı düzgün bir şekilde işlemesi için gönderenden daha sonra iletiyi yeniden göndermelerini isteğinizi gönderebilirsiniz.</li></ul>|
-|`compauth`|Bileşik kimlik doğrulama sonucu. Kimlik Microsoft 365, iletinin kimliği doğrulanmış olup olmadığını belirlemek üzere SPF, DKIM, DMARC veya iletinin başka herhangi bir bölümü gibi birden çok kimlik doğrulama türü birleştirmek üzere kullanılır. Değerlendirme temeli olarak From: etki alanını kullanır.|
-|`dkim`|DKIM denetiminin ileti sonuçlarını açıklar. Olası değerler şunlardır: <ul><li>**geçiş**: DkIM onay kutusunu iletiyle ilgili olarak gösterir.</li><li>**başarısız (neden)**: İletinin başarısız olup başarısız olduğunu DKIM onay kutusunu gösterir. Örneğin, ileti imzalanmamışsa veya imza doğrulanmamışsa.</li><li>**yok**: İletinin imza olmadığını gösterir. Bu, etki alanının bir DKIM kaydı olduğunu veya DKIM kaydının bir sonucu değerlendirme olmadığını, yalnızca bu iletinin imza olmadığını belirtebilirsiniz.</li></ul>|
-|`dmarc`|DMARC denetiminin iletiye olan sonuçlarını açıklar. Olası değerler şunlardır: <ul><li>**geçiş**: DMARC denetiminden geçen iletiyi gösterir.</li><li>**başarısız**: İletinin başarısız olduğunu DMARC denetimi gösterir.</li><li>**bestguesspass**: Etki alanı için DMARC TXT kaydının olmadığını belirtir, ama varsa, iletinin DMARC denetimi geçmiş olabilir.</li><li>**yok**: DNS'de gönderen etki alanı için DMARC TXT kaydının olmadığını gösterir.|
-|`header.d`|DKIM imzalarında tanımlanan etki alanı (varsa). Bu, ortak anahtar için sorgulanan etki alanıdır.|
-|`header.from`|E-posta iletisi üst `5322.From` bilgisinde adresin etki alanı (Gönderen adresi veya P2 gönderen olarak da bilinir). Alıcı, e-posta istemcilerinin Gönderen adresini görüyor.|
-|`reason`|Bileşik kimlik doğrulamasının geçen veya başarısız olan nedeni. Değer 3 basamaklı bir koddur. Örneğin: <ul><li>**000**: İleti açık kimlik doğrulaması başarısız oldu (`compauth=fail`). Örneğin, ileti bir DMARC'ı karantina veya reddetme eylemiyle başarısız oldu.</li><li>**001**: İleti örtülü kimlik doğrulaması () başarısız oldu`compauth=fail`. Bu, gönderen etki alanının yayımlanmış e-posta kimlik doğrulama kayıtları olmadığını veya varsa zayıf bir hata ilkesi (SPF yumuşak başarısız veya nötr, DMARC `p=none`ilkesi) olduğu anlamına gelir.</li><li>**002**: Kuruluş, gönderen/etki alanı çifti için, kimliği doğru olmayan e-posta göndermenin açıkça yasak olduğu bir ilkesine sahip. Bu ayar yönetici tarafından el ile ayarlanır.</li><li>**010**: İleti, DMARC'ye reddetme veya karantinaya alınmış bir eylemle başarısız oldu ve gönderen etki alanı da organizasyonlu kabul edilen etki alanlarından biri (kendi kendine yapılan veya kendi kendine yapılan veya kuruluş içi bir hesabın parçasıdır).</li><li>**1xx veya** **7xx**: İleti kimlik doğrulamasını () geçti`compauth=pass`. Son iki rakam, posta kodu tarafından kullanılan Microsoft 365.</li><li>**2xx**: İleti, örtülü kimlik doğrulamasına () yumuşak geçti`compauth=softpass`. Son iki rakam, posta kodu tarafından kullanılan Microsoft 365.</li><li>**3xx**: İleti, bileşik kimlik doğrulaması () için denetlendi`compauth=none`.</li><li>**4xx** veya **9xx**: İleti bileşik kimlik doğrulamasını () atlar`compauth=none`. Son iki rakam, posta kodu tarafından kullanılan Microsoft 365.</li><li>**6xx**: İleti, örtülü e-posta kimlik doğrulaması başarısız oldu ve gönderen etki alanı da organizasyonlu kabul edilen etki alanlarından biri (kendi kendine veya kuruluş kimlik doğrulamasının bir bölümüdür).</li></ul>|
-|`smtp.mailfrom`|Adresin etki alanı `5321.MailFrom` (POSTA GÖNDEREN adresi, P1 gönderen veya zarf gönderen olarak da bilinir). Bu, teslim edililmeyen raporlar (NDR'ler veya geri dönen iletiler olarak da bilinir) için kullanılan e-posta adresidir.|
-|`spf`|İletiyle ilgili SPF denetimi sonuçlarını açıklar. Olası değerler şunlardır: <ul><li>`pass (IP address)`: İletiyi içeren SPF denetimi, gönderenin IP adresini içerir. İstemci, gönderenin etki alanı adına e-posta gönderme veya geçiş yetkisine sahip.</li><li>`fail (IP address)`: İleti için SPF denetimi başarısız oldu ve gönderenin IP adresini içerir. Buna bazen zor başarısız _denir_.</li><li>`softfail (reason)`: SPF kaydı ana bilgisayarı göndermesine izin verilmedi ancak geçişte olduğunu belirledi.</li><li>`neutral`: SPF kaydı, IP adresinin gönderme yetkisi olup olmadığını açıkça onaylamaz.</li><li>`none`: Etki alanının bir SPF kaydı yok veya SPF kaydı bir sonucu değerlendirmez.</li><li>`temperror`: Geçici bir hata oluştu. Örneğin, bir DNS hatası. Aynı denetim daha sonra başarılı olabilir.</li><li>`permerror`: Kalıcı bir hata oluştu. Örneğin, etki alanının kötü biçimlendirilmiş bir SPF kaydı var.</li></ul>|
+|`action`|DMARC denetiminin sonuçlarına göre istenmeyen posta filtresi tarafından gerçekleştirilen eylemi gösterir. Örneğin: <ul><li>**oreject** veya **o.reject**: Geçersiz kılma reddi anlamına gelir. Bu durumda Microsoft 365, DMARC TXT kaydı p=reject ilkesine sahip bir etki alanından DMARC denetimi başarısız olan bir ileti aldığında bu eylemi kullanır. İletiyi silmek veya reddetmek yerine Microsoft 365 iletiyi istenmeyen posta olarak işaretler. Microsoft 365 neden bu şekilde yapılandırıldığı hakkında daha fazla bilgi için bkz. [Microsoft 365 DMARC'de başarısız olan gelen e-postaları işleme](use-dmarc-to-validate-email.md#how-microsoft-365-handles-inbound-email-that-fails-dmarc).</li><li>**pct.quarantine**: DMARC'den geçmeyen iletilerin %100'den azının yine de teslim edileceğini gösterir. Bu, iletinin DMARC'de başarısız olduğu ve ilkenin karantinaya alınacağı, ancak pct alanının %100 olarak ayarlanmadığı ve sistemin belirtilen etki alanının ilkesine göre DMARC eylemini uygulamadığı rastgele belirlendiği anlamına gelir.</li><li>**pct.reject**: DMARC'den geçmeyen iletilerin %100'den azının yine de teslim edileceğini gösterir. Bu, iletinin DMARC'de başarısız olduğu ve ilkenin reddedilmek üzere ayarlandığı, ancak pct alanının %100 olarak ayarlanmadığı ve sistemin belirtilen etki alanının ilkesine göre DMARC eylemini uygulamamaya rastgele belirlendiği anlamına gelir.</li><li>**permerror**: DNS'de yanlış biçimlendirilmiş bir DMARC TXT kaydıyla karşılaşma gibi DMARC değerlendirmesi sırasında kalıcı bir hata oluştu. Bu iletiyi yeniden gönderme girişiminin farklı bir sonuçla bitmesi olası değildir. Bunun yerine, sorunu çözmek için etki alanının sahibine başvurmanız gerekebilir.</li><li>**temperror**: DMARC değerlendirmesi sırasında geçici bir hata oluştu. E-postayı düzgün bir şekilde işlemek için gönderenden iletiyi daha sonra yeniden göndermesini isteyebilirsiniz.</li></ul>|
+|`compauth`|Bileşik kimlik doğrulama sonucu. Microsoft 365 tarafından SPF, DKIM, DMARC veya iletinin başka bir bölümü gibi birden çok kimlik doğrulaması türünü birleştirerek iletinin kimliğinin doğrulanıp doğrulanmadığını belirlemek için kullanılır. Değerlendirmenin temeli olarak Kimden: etki alanını kullanır.|
+|`dkim`|İleti için DKIM denetiminin sonuçlarını açıklar. Olası değerler şunlardır: <ul><li>**pass**: Geçirilen ileti için DKIM denetimini gösterir.</li><li>**fail (reason)**: İleti için DKIM denetiminin başarısız olduğunu ve nedenini gösterir. Örneğin, ileti imzalanmamışsa veya imza doğrulanmamışsa.</li><li>**none**: İletinin imzalanmadığını gösterir. Bu, etki alanının DKIM kaydı olduğunu veya DKIM kaydının bir sonuç olarak değerlendirilmediğini, yalnızca bu iletinin imzalanmadığını gösterebilir veya göstermeyebilir.</li></ul>|
+|`dmarc`|İleti için DMARC denetiminin sonuçlarını açıklar. Olası değerler şunlardır: <ul><li>**pass**: Geçirilen ileti için DMARC denetimini gösterir.</li><li>**fail**: İleti için DMARC denetiminin başarısız olduğunu gösterir.</li><li>**bestguesspass**: Etki alanı için DMARC TXT kaydı olmadığını gösterir, ancak varsa, ileti için DMARC denetimi geçirilirdi.</li><li>**none**: DNS'de gönderen etki alanı için DMARC TXT kaydı olmadığını gösterir.|
+|`header.d`|Varsa DKIM imzasında tanımlanan etki alanı. Bu, ortak anahtar için sorgulanan etki alanıdır.|
+|`header.from`|E-posta iletisi üst bilgisindeki adresin `5322.From` etki alanı (Kimden adresi veya P2 göndereni olarak da bilinir). Alıcı e-posta istemcilerinde Kimden adresine bakın.|
+|`reason`|Bileşik kimlik doğrulamasının başarılı veya başarısız olmasının nedeni. Değer 3 basamaklı bir koddur. Örneğin: <ul><li>**000**: İleti açık kimlik doğrulaması (`compauth=fail`) başarısız oldu. Örneğin, bir DMARC alınan ileti karantina veya reddetme eylemiyle başarısız olur.</li><li>**001**: İleti örtük kimlik doğrulaması (`compauth=fail`) başarısız oldu. Bu, gönderen etki alanının yayımlanmış e-posta kimlik doğrulama kayıtlarının olmadığı veya varsa daha zayıf bir hata ilkesine (SPF geçici başarısız veya nötr, DMARC ilkesi `p=none`) sahip olduğu anlamına gelir.</li><li>**002**: Kuruluşun gönderen/etki alanı çifti için sahte e-posta göndermesi açıkça yasaklanmış bir ilkesi vardır. Bu ayar bir yönetici tarafından el ile ayarlanır.</li><li>**010**: İleti DMARC'yi reddetme veya karantinaya alma eylemiyle başarısız oldu ve gönderen etki alanı kuruluşunuzun kabul edilen etki alanlarından biridir (bu, kendi kendine veya kuruluş içi kimlik sahtekarlığına ait bir parçasıdır).</li><li>**1xx** veya **7xx**: İleti kimlik doğrulamasından (`compauth=pass`) geçti. Son iki basamak Microsoft 365 tarafından kullanılan iç kodlardır.</li><li>**2xx**: Geçici olarak geçirilen örtük kimlik doğrulaması (`compauth=softpass`) iletisi. Son iki basamak Microsoft 365 tarafından kullanılan iç kodlardır.</li><li>**3xx**: İleti bileşik kimlik doğrulaması (`compauth=none`) için denetlenmedi.</li><li>**4xx** veya **9xx**: İleti bileşik kimlik doğrulamasını atladı (`compauth=none`). Son iki basamak Microsoft 365 tarafından kullanılan iç kodlardır.</li><li>**6xx**: İleti örtük e-posta kimlik doğrulamasında başarısız oldu ve gönderen etki alanı kuruluşunuzun kabul edilen etki alanlarından biridir (bu, kendi kendine veya kuruluş içi kimlik sahtekarlığına yöneliktir).</li></ul>|
+|`smtp.mailfrom`|Adresin `5321.MailFrom` etki alanı (POSTA KIMDEN adresi, P1 gönderen veya zarf gönderen olarak da bilinir). Bu, teslim edilemez raporlar (NDR'ler veya geri dönen iletiler olarak da bilinir) için kullanılan e-posta adresidir.|
+|`spf`|İleti için SPF denetiminin sonuçlarını açıklar. Olası değerler şunlardır: <ul><li>`pass (IP address)`: Geçirilen ileti için SPF denetimi ve gönderenin IP adresini içerir. İstemci, gönderenin etki alanı adına e-posta gönderme veya aktarma yetkisine sahip.</li><li>`fail (IP address)`: İleti için SPF denetimi başarısız oldu ve gönderenin IP adresini içeriyor. Bu bazen _zor başarısız olarak_ adlandırılır.</li><li>`softfail (reason)`: SPF kaydı, konağı göndermesine izin verilmediğini ancak geçişte olduğunu belirledi.</li><li>`neutral`: SPF kaydı, IP adresinin gönderme yetkisi olup olmadığını açıkça belirtmektedir.</li><li>`none`: Etki alanının SPF kaydı yok veya SPF kaydı bir sonuç olarak değerlendirilmez.</li><li>`temperror`: Geçici bir hata oluştu. Örneğin, bir DNS hatası. Aynı denetim daha sonra başarılı olabilir.</li><li>`permerror`: Kalıcı bir hata oluştu. Örneğin, etki alanının hatalı biçimlendirilmiş bir SPF kaydı vardır.</li></ul>|

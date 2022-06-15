@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 438d43548b4318499c44aea65399a7d5a3a5f43d
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 5c73b840b127770c4581dda4d03b3c95066df515
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174357"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66089538"
 ---
 # <a name="review-remediation-actions-in-the-action-center"></a>İşlem merkezindeki düzeltme eylemlerini gözden geçirme
 
@@ -34,10 +34,6 @@ Tehditler algılandıkçe düzeltme eylemleri devreye girer. Belirli bir tehdide
 - [İşlem merkezini kullanma](#how-to-use-the-action-center)
 - [Düzeltme eylemleri](#remediation-actions)
 
->
-> **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
->
 
 ## <a name="how-to-use-the-action-center"></a>İşlem merkezini kullanma
 

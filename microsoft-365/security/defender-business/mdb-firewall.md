@@ -1,6 +1,6 @@
 ---
 title: İş için Microsoft Defender'de güvenlik duvarı
-description: İş için Defender Windows Defender Güvenlik Duvarı ayarları hakkında bilgi edinin. Güvenlik duvarı, istenmeyen ağ trafiğinin şirket cihazlarınıza akmasını önlemeye yardımcı olabilir.
+description: İş için Defender'da Windows Defender Güvenlik Duvarı ayarları hakkında bilgi edinin. Güvenlik duvarı, istenmeyen ağ trafiğinin şirket cihazlarınıza akmasını önlemeye yardımcı olabilir.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
@@ -15,16 +15,16 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 9a22af2e1ef047de0deaf98c6eea37cda15dcc5f
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 9ec6e0b10812c42c90266fd2793557ae6f3b2efc
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172678"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66090354"
 ---
 # <a name="firewall-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'de güvenlik duvarı
 
-İş için Microsoft Defender, [Windows Defender Güvenlik Duvarı ile güvenlik duvarı](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security) özelliklerini içerir. Güvenlik duvarı koruması, hangi ağ trafiğinin cihazlara girmesine veya cihazlardan akmasını sağlayan kurallarla cihazların güvenliğinin korunmasına yardımcı olur. 
+İş için Microsoft Defender[, Windows Defender Güvenlik Duvarı](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security) güvenlik duvarı özelliklerini içerir. Güvenlik duvarı koruması, hangi ağ trafiğinin cihazlara girmesine veya cihazlardan akmasını sağlayan kurallarla cihazların güvenliğinin korunmasına yardımcı olur. 
 
 Çeşitli konumlardaki cihazlarda bağlantılara izin verilip verilmeyeceğini veya bağlantının engellenip engellenmeyeceğini belirtmek için güvenlik duvarı korumasını kullanabilirsiniz. Örneğin, güvenlik duvarı ayarlarınız şirketinizin iç ağına bağlı cihazlarda gelen bağlantılara izin verebilir, ancak cihaz güvenilmeyen cihazlara sahip bir ağdayken bu bağlantıları engelleyebilir.
 
@@ -33,10 +33,6 @@ ms.locfileid: "65172678"
 - [İş için Defender'da varsayılan güvenlik duvarı ayarları](#default-firewall-settings-in-defender-for-business)
 - [İş için Defender'da yapılandırabileceğiniz güvenlik duvarı ayarları](#firewall-settings-you-can-configure-in-defender-for-business)
 
->
-> **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
->
 
 ## <a name="default-firewall-settings-in-defender-for-business"></a>İş için Defender'da varsayılan güvenlik duvarı ayarları
 

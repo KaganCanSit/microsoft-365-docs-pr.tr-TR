@@ -1,6 +1,6 @@
 ---
-title: Android'de Uç Nokta için Microsoft Defender'deki yenilikler
-description: Android'de önceki Uç Nokta için Microsoft Defender sürümlerine yönelik önemli değişiklikler hakkında bilgi edinin.
+title: Android'da Uç Nokta için Microsoft Defender'deki yenilikler
+description: Android'da önceki Uç Nokta için Microsoft Defender sürümlerindeki önemli değişiklikler hakkında bilgi edinin.
 keywords: microsoft, defender, Uç Nokta için Microsoft Defender, mac, installation, macos, whatsnew
 ms.prod: m365-security
 ms.mktglfcycl: security
@@ -14,14 +14,14 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 95c4d77014e31c748cc4bd6662a148810c01f79a
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: d1379836a2d55a8c6c256ce734c40acc5fc48599
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64825200"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66090508"
 ---
-# <a name="whats-new-in-microsoft-defender-for-endpoint-on-android"></a>Android'de Uç Nokta için Microsoft Defender'deki yenilikler
+# <a name="whats-new-in-microsoft-defender-for-endpoint-on-android"></a>Android'da Uç Nokta için Microsoft Defender'deki yenilikler
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
@@ -30,6 +30,13 @@ ms.locfileid: "64825200"
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+
+## <a name="network-protection"></a>Ağ koruması
+Uç Nokta için Microsoft Defender'da Ağ Koruması artık genel önizleme aşamasındadır. Ağ koruması, sahte Wi-Fi ilgili tehditlere, ananas cihazları gibi sahte donanımlara karşı koruma sağlar ve ilgili bir tehdit algılandığında kullanıcıya bildirir. Kullanıcılar güvenli olmayan bir bağlantıya bağlandıklarında güvenli ağlara bağlanmak ve ağları değiştirmek için kılavuzlu bir deneyim de görür.
+
+Özelliği Microsoft Endpoint Manager Yönetici merkezinden yapılandırma gibi esneklik sunmak için çeşitli yönetici denetimleri içerir. Yöneticiler, uç nokta için Defender tarafından Android cihazlardan gönderilen verileri yapılandırmak için gizlilik denetimlerini de etkinleştirebilir. 
+
+Bu genel önizlemeye katılmak istiyorsanız lütfen kiracı kimliğinizi networkprotection@microsoft.com bizimle paylaşın. Daha fazla bilgi için bkz. [ağ koruması](/microsoft-365/security/defender-endpoint/android-configure).
 
 >[!NOTE]
 >Microsoft Defender artık 1.0.3011.0302'nin altındaki sürümler için desteklenmiyor. Kullanıcıların cihazlarının güvenliğini sağlamak için en son sürümlere yükseltmeleri istenir.
@@ -46,13 +53,13 @@ Uç Nokta için Microsoft Defender artık play store'da **Microsoft Defender** o
 
 ## <a name="threat-and-vulnerability-management"></a>Tehdit ve Güvenlik Açığı Yönetimi
 
-25 Ocak 2022'de Android ve iOS'ta Tehdit ve Güvenlik Açığı yönetiminin genel kullanılabilirliğini duyurduk. Diğer ayrıntılar için [buradaki techcommunity gönderisine](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-general-availability-of-vulnerability-management/ba-p/3071663) bakın.
+25 Ocak 2022'de tehdit ve güvenlik açığı yönetiminin Android ve iOS genel kullanıma sunulduğu duyuruldu. Diğer ayrıntılar için [buradaki techcommunity gönderisine](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-general-availability-of-vulnerability-management/ba-p/3071663) bakın.
 
-## <a name="upcoming-permission-changes-for-microsoft-defender-for-endpoint-running-android-11-or-later-nov-2021"></a>Android 11 veya sonraki bir sürümü çalıştıran Uç Nokta için Microsoft Defender için yaklaşan izin değişiklikleri (2021'in 2021'in Başında)
+## <a name="upcoming-permission-changes-for-microsoft-defender-for-endpoint-running-android-11-or-later-nov-2021"></a>Android 11 veya sonraki bir sürümü çalıştıran Uç Nokta için Microsoft Defender için yaklaşan izin değişiklikleri (2021'in 2021'e Kadar)
 
-Sürüm Derlemesi: 1.0.3501.0301 Sürüm ayı: Kasım 2021 Uç Nokta için Microsoft Defender[, Google'ın](https://developer.android.com/distribute/play-policies#APILevel30) Android API 30'a yükseltmesi için gereken bu güncelleştirmeyi yayımladı. Bu değişiklik, Android 11 veya sonraki bir sürümü çalıştıran cihazlar için [yeni depolama iznine](https://developer.android.com/training/data-storage/manage-all-files#all-files-access-google-play) erişmek isteyen kullanıcılara sorulacaktır. Kullanıcıların Defender uygulamasını sürüm 1.0.3501.0301 veya sonraki bir sürümle güncelleştirdikten sonra bu yeni depolama iznini kabul etmeleri gerekir. Bu, Uç Nokta için Defender'ın uygulama güvenliği özelliğinin herhangi bir kesinti olmadan çalışmasını sağlar. Daha fazla bilgi için aşağıdaki bölümleri gözden geçirin.
+Sürüm Derlemesi: 1.0.3501.0301 Sürüm ayı: Kasım 2021 Uç Nokta için Microsoft Defender[, Google'ın](https://developer.android.com/distribute/play-policies#APILevel30) Android API 30'a yükseltmesi için gereken bu güncelleştirmeyi yayımladı. Bu değişiklik, 11 veya sonraki Android çalıştıran cihazlar için [yeni depolama iznine](https://developer.android.com/training/data-storage/manage-all-files#all-files-access-google-play) erişmek isteyen kullanıcılara sorulacaktır. Kullanıcıların Defender uygulamasını sürüm 1.0.3501.0301 veya sonraki bir sürümle güncelleştirdikten sonra bu yeni depolama iznini kabul etmeleri gerekir. Bu, Uç Nokta için Defender'ın uygulama güvenliği özelliğinin herhangi bir kesinti olmadan çalışmasını sağlar. Daha fazla bilgi için aşağıdaki bölümleri gözden geçirin.
 
-**Bu durum kuruluşunuzu nasıl etkiler:** Bu değişiklikler, Android 11 veya sonraki sürümleri çalıştıran cihazlarda Uç Nokta için Microsoft Defender kullanıyorsanız ve Uç Nokta için Defender'ı 1.0.3501.0301 veya sonraki bir derlemeyi yayınlayacak şekilde güncelleştirdiyseniz geçerlilik kazanır.
+**Bu durum kuruluşunuzu nasıl etkiler:** bu değişiklikler, Android 11 veya sonraki sürümleri çalıştıran cihazlarda Uç Nokta için Microsoft Defender kullanıyorsanız ve Uç Nokta için Defender'ı 1.0.3501.0301 veya sonraki bir derlemeyi yayınlayacak şekilde güncelleştirdiyseniz geçerlilik kazanır.
 
 > [!NOTE]
 > Yeni depolama izinleri yönetici tarafından Microsoft Endpoint Manager aracılığıyla 'Otomatik Onayla' olarak yapılandırılamaz. Kullanıcının bu izne erişim sağlamak için işlem gerçekleştirmesi gerekir.

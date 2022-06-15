@@ -106,6 +106,8 @@
       href: m365bp-maintain-environment.md
     - name: Kullanıcıları kaldırma
       href: ../admin/add-users/remove-former-employee.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
+    - name: Kullanıcıları ekleme
+      href: m365bp-add-users.md
     - name: Verileri cihazlardan kaldırma
       href: m365bp-remove-company-data.md
     - name: Cihazları fabrika ayarlarına sıfırlama

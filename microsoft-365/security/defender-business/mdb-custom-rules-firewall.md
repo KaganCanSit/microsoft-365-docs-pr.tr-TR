@@ -15,12 +15,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: acc183abcbae89cd952011cfc637161bb409a95f
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: e8ab0981b2e4cfbcd5d885bdfc26f42c6f432aa6
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174509"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66090398"
 ---
 # <a name="manage-your-custom-rules-for-firewall-policies-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'de güvenlik duvarı ilkeleri için özel kurallarınızı yönetme
 
@@ -34,16 +34,12 @@ Güvenlik duvarı ilkeleri ve ayarları hakkında daha fazla bilgi edinmek için
 - [Güvenlik duvarı ilkesi için özel kural düzenleme](#edit-a-custom-rule-for-a-firewall-policy)
 - [Özel kuralı silme](#delete-a-custom-rule)
 
->
-> **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
->
 
 ## <a name="create-a-custom-rule-for-a-firewall-policy"></a>Güvenlik duvarı ilkesi için özel kural oluşturma
 
 1. Microsoft 365 Defender portalına ([https://security.microsoft.com](https://security.microsoft.com)) gidin ve oturum açın.
 
-2. **EndpointsCihaz** >  yapılandırması'na gidin ve ilke listesini gözden geçirin.
+2. **Uç Noktalar** > **Cihaz yapılandırması'na** gidin ve ilke listesini gözden geçirin.
 
 3. **Güvenlik duvarı** bölümünde var olan bir ilkeyi seçin veya yeni bir ilke ekleyin.
 
@@ -66,7 +62,7 @@ Güvenlik duvarı ilkeleri ve ayarları hakkında daha fazla bilgi edinmek için
 
 1. Microsoft 365 Defender portalına ([https://security.microsoft.com](https://security.microsoft.com)) gidin ve oturum açın.
 
-2. **EndpointsCihaz** >  yapılandırması'na gidin ve ilke listesini gözden geçirin.
+2. **Uç Noktalar** > **Cihaz yapılandırması'na** gidin ve ilke listesini gözden geçirin.
 
 3. **Güvenlik duvarı** bölümünde var olan bir ilkeyi seçin veya yeni bir ilke ekleyin.
 
@@ -91,7 +87,7 @@ Güvenlik duvarı ilkeleri ve ayarları hakkında daha fazla bilgi edinmek için
 
 1. Microsoft 365 Defender portalına ([https://security.microsoft.com](https://security.microsoft.com)) gidin ve oturum açın.
 
-2. **EndpointsCihaz** >  yapılandırması'na gidin ve ilke listesini gözden geçirin.
+2. **Uç Noktalar** > **Cihaz yapılandırması'na** gidin ve ilke listesini gözden geçirin.
 
 3. **Güvenlik duvarı** bölümünde var olan bir ilkeyi seçin veya yeni bir ilke ekleyin.
 

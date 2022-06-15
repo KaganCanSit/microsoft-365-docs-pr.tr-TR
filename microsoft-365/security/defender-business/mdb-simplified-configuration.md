@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 0662ab458a3163e998de7b054926ceff31559a9e
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: f6cb1ff397233a60b0ad02a08486333790d079cc
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174422"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66089450"
 ---
 # <a name="the-simplified-configuration-process-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'de basitleştirilmiş yapılandırma işlemi
 
@@ -38,10 +38,6 @@ Söz konusu cihazları ekleme ve şirketinizin cihazları için güvenlik ayarla
 2. [İş için Defender'da basitleştirilmiş yapılandırma süreci hakkında daha fazla bilgi edinin](#why-we-recommend-using-the-simplified-configuration-process)
 3. [Sonraki adımlarınıza geçin](#next-steps)
 
->
-> **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
->
 
 ## <a name="review-your-setup-and-configuration-options"></a>Kurulum ve yapılandırma seçeneklerinizi gözden geçirin
 

@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 9d401c5be4fc0454ce1d895fe5ea49267e5c5f70
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: c7b01355b782a3b08b76f95b31db5b0a9f5e1188
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65469183"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66090332"
 ---
 # <a name="view-and-edit-your-security-policies-and-settings-in-microsoft-defender-for-business"></a>güvenlik ilkelerinizi ve ayarlarınızı İş için Microsoft Defender görüntüleme ve düzenleme
 
@@ -53,10 +53,6 @@ Güvenlik ilkelerinizi ve ayarlarınızı yönetmek için bu makaleyi kılavuz o
 6. [Microsoft 365 Defender portalında diğer ayarları görüntüleyin](#view-and-edit-other-settings-in-the-microsoft-365-defender-portal). 
 7. [Sonraki adımlarınıza geçin](#next-steps).
 
->
-> **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
->
 
 ## <a name="choose-where-to-manage-security-policies-and-devices"></a>Güvenlik ilkelerinin ve cihazların nerede yönetileceğini seçme
 
@@ -125,7 +121,7 @@ Web içeriği filtreleme, Windows Defender SmartScreen (Microsoft Edge) ve Ağ K
 
 Yeni nesil koruma, güvenlik duvarı ve web içeriği filtreleme ilkelerine ek olarak, İş için Defender gelişmiş güvenlik özellikleri içerir. Bu özellikler önerilen ayarlar kullanılarak önceden yapılandırılmış; ancak bunları gözden geçirebilir ve gerekirse ayarları iş gereksinimlerinize uyacak şekilde düzenleyebilirsiniz.
 
-Gelişmiş özelliklerin ayarlarına erişmek için Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com) ) **Ayarlar** >  EndpointsGeneralAdvanced >  >  **özellikler'e** gidin.
+Gelişmiş özelliklerin ayarlarına erişmek için Microsoft 365 Defender portalında ()[https://security.microsoft.com](https://security.microsoft.com) **Ayarlar** >  **Endpoints** > **Genel** > **Gelişmiş özellikler'e** gidin.
 
 Aşağıdaki tabloda gelişmiş özelliklerin ayarları açıklanmaktadır:
 

@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 85845ec12b8ad43abe965e277f8ea3f6c67e1d7d
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: c5606c19e4cef64e701d34a5e4ccc2143f51f394
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174185"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66090376"
 ---
 # <a name="view-or-edit-policies-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'de ilkeleri görüntüleme veya düzenleme
 
@@ -34,10 +34,6 @@ ms.locfileid: "65174185"
 - [Var olan bir ilkeyi düzenleme](#edit-an-existing-policy)
 - [Yeni ilke oluşturma](#create-a-new-policy)
 
->
-> **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
->
 
 ## <a name="default-policies-in-defender-for-business"></a>İş için Defender'da varsayılan ilkeler
 

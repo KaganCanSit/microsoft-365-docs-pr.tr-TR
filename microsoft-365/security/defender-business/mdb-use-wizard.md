@@ -17,21 +17,17 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-get-started
-ms.openlocfilehash: 042f20cce0e0d30195ed241b376bf304abeaa2aa
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 034c37e0b87ab77c2e4119ab87563da06925501a
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172788"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66089011"
 ---
 # <a name="use-the-setup-wizard-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da kurulum sihirbazını kullanma
 
 İş için Microsoft Defender küçük ve orta ölçekli işletmelere zaman ve çaba kazandırmak için tasarlanmıştır. Örneğin, bir kurulum sihirbazıyla ilk kurulumu ve yapılandırmayı yapabilirsiniz. Kurulum sihirbazı, güvenlik ekibinize erişim izni verme, güvenlik ekibiniz için e-posta bildirimleri ayarlama ve şirketinizin Windows cihazlarını ekleme konusunda size yol gösterir.
 
->
-> **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
->
 
 > [!TIP]
 > Kurulum sihirbazını kullanmak isteğe bağlıdır. Kurulum ve yapılandırma işlemi boyunca el ile çalışmayı seçebilirsiniz. Daha fazla bilgi için şu makalelere bakın:
@@ -42,7 +38,7 @@ ms.locfileid: "65172788"
 
 Kurulum sihirbazı, şirketinizdeki biri Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com)) ilk kez oturum açtığında çalışacak şekilde tasarlanmıştır. 
 
-Şirketiniz Microsoft 365 İş Ekstra kullanıyorsa, birisi **EndpointsCihaz** >  **envanterine** ilk kez gittiğinde İş için Defender kurulum sihirbazı çalıştırılır. 
+Şirketiniz Microsoft 365 İş Ekstra kullanıyorsa, birisi **Endpoints** > **Cihaz envanterine** ilk kez gittiğinde İş için Defender kurulum sihirbazı çalıştırılır. 
 
 Kurulum sihirbazı başlangıç ekranı aşağıdaki görüntüye benzer:
 
@@ -59,7 +55,7 @@ Kurulum sihirbazı, İş için Defender'ı hızlı ve verimli bir şekilde ayarl
 
    İş için Defender'da güvenlik ekibinizin üyelerine aşağıdaki üç rolden biri atanabilir:<br/>
    
-   - **Genel Yönetici**: Genel yönetici, Microsoft 365 kiracınızdaki tüm ayarları görüntüleyebilir ve düzenleyebilir. Şirketinizin Microsoft 365 aboneliği için ilk kurulum ve yapılandırmayı genel yönetici yapar. 
+   - **Genel Yönetici**: Genel yönetici Microsoft 365 kiracınızdaki tüm ayarları görüntüleyebilir ve düzenleyebilir. Şirketinizin Microsoft 365 aboneliği için ilk kurulum ve yapılandırmayı genel yönetici yapar. 
    - **Güvenlik Yöneticisi: Güvenlik** yöneticisi güvenlik ayarlarını görüntüleyebilir ve düzenleyebilir ve tehditler algılandığında eylem gerçekleştirebilir.
    - **Güvenlik Okuyucusu: Güvenlik** okuyucusu raporlardaki bilgileri görüntüleyebilir, ancak hiçbir güvenlik ayarlarını değiştiremez. 
 

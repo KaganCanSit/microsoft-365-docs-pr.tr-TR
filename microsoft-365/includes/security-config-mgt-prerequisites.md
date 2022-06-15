@@ -4,12 +4,12 @@ description: dosyayı dahil et
 author: mjcaparas
 ms.service: microsoft-365-enterprise
 ms.author: macapara
-ms.openlocfilehash: 3da0554f55e25f765702fa0d0fbf169ba2e66438
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: 61d7b5f00a42789a2d4f46aa41eb3f8865fb6e03
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65601690"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66091474"
 ---
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -123,7 +123,7 @@ Aşağıdaki tablo, MDE ayarlarını yapılandırabilen ilkelerin farklı senary
 
 Microsoft Endpoint Manager yönetim merkezi aracılığıyla Uç Nokta için Microsoft Defender güvenlik yapılandırması yönetimini desteklemek için, her konsolun içinden aralarındaki iletişimi etkinleştirmeniz gerekir.
 
-1. [Microsoft 365 Defender portalında](https://security.microsoft.com/) oturum açın ve **Ayarlar** >  **EndpointsConfiguration** >  **ManagementEnforcement** >  Scope'a gidin ve güvenlik ayarları yönetimi için platformları etkinleştirin:
+1. [Microsoft 365 Defender portalında](https://security.microsoft.com/) oturum açın ve **Ayarlar** >  **Endpoints****Yapılandırma Yönetimi** > **Zorlama Kapsamı'na** gidin ve güvenlik ayarları yönetimi için platformları  >  etkinleştirin:
 
    :::image type="content" source="../media/security-settings-mgt.png" alt-text="Defender konsolunda Uç Nokta için Microsoft Defender ayarları yönetimini etkinleştirin.":::
     
@@ -134,7 +134,7 @@ Microsoft Endpoint Manager yönetim merkezi aracılığıyla Uç Nokta için Mic
   > [!TIP]
   > Az sayıda cihazda dağıtımınızı test etmek ve doğrulamak için pilot modu ve uygun cihaz etiketlerini kullanın. Pilot modu kullanılmadan, yapılandırılan kapsama giren tüm cihazlar otomatik olarak kaydedilir.
 
-1. İlgili kullanıcıların Microsoft Endpoint Manager uç nokta güvenlik ayarlarını yönetme izinlerine sahip olduğundan emin olun veya Defender portalında bir rol yapılandırarak bu izinleri verin. **Ayarlar** >  **RolesAdd** >  **öğesi'ne** gidin:
+1. İlgili kullanıcıların Microsoft Endpoint Manager uç nokta güvenlik ayarlarını yönetme izinlerine sahip olduğundan emin olun veya Defender portalında bir rol yapılandırarak bu izinleri verin. **Ayarlar** >  **Roles** > **Öğe ekle'ye** gidin:
 
    :::image type="content" source="../media/add-role-in-mde.png" alt-text="Defender portalında yeni bir rol oluşturun.":::
 
@@ -158,14 +158,11 @@ Microsoft Endpoint Manager yönetim merkezi aracılığıyla Uç Nokta için Mic
 Uç Nokta için Microsoft Defender, cihazları eklemek için çeşitli seçenekleri destekler. Geçerli yönergeler için Uç Nokta için Defender belgelerindeki [Windows cihazlar için ekleme araçları ve yöntemleri](/microsoft-365/security/defender-endpoint/security-config-management) bölümüne bakın.
 
 
-> [!IMPORTANT]
-> Bir cihaz Uç Nokta için Microsoft Defender ekledikten sonra, Uç Nokta için Microsoft Defender için Güvenlik Yönetimi'ne kaydedilebilmesi için **önce MDE-Management** ile etiketlenmelidir ve etiketlenmelidir. MDE'de cihaz etiketleme hakkında daha fazla bilgi için bkz. [*Cihaz etiketlerini oluşturma ve yönetme*](/microsoft-365/security/defender-endpoint/machine-tags).
-
 
 ## <a name="co-existence-with-microsoft-endpoint-configuration-manager"></a>Microsoft Endpoint Configuration Manager ile birlikte yaşama
 Bazı ortamlarda, [Configuration Manager kiracı iliştirilmiş](/mem/configmgr/tenant-attach/endpoint-security-get-started) Uç Nokta için Microsoft Defender için Güvenlik Yönetimi'nin kullanılması istenebilir. Her ikisini de kullanırsanız, birden fazla kanal kullanmak çakışmalar ve istenmeyen sonuçlar için fırsat oluşturduğundan, ilkeyi tek bir kanal üzerinden denetlemeniz gerekir.
 
-Bunu desteklemek için *, Configuration Manager seçeneğini Kapalı olarak değiştirerek Güvenlik ayarlarını yapılandırın*.  [Microsoft 365 Defender portalında](https://security.microsoft.com/) oturum açın ve **Ayarlar** >  **EndpointsConfiguration** >  **ManagementEnforcement** >  Kapsamı'na gidin:
+Bunu desteklemek için *, Configuration Manager seçeneğini Kapalı olarak değiştirerek Güvenlik ayarlarını yapılandırın*.  [Microsoft 365 Defender portalında](https://security.microsoft.com/) oturum açın ve **Ayarlar** >  **Endpoints** > **Yapılandırma Yönetimi** > **Zorlama Kapsamı'na** gidin:
 
 :::image type="content" source="../media/manage-security-settings-cfg-mgr.png" alt-text="Configuration Manager ayarını kullanarak güvenlik ayarlarını yönetin.":::
 
@@ -181,7 +178,7 @@ Uç Nokta için Microsoft Defender kaydedilmiş ancak Intune veya Configuration 
 
 1. [Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) oturum açın.
 
-2. **CihazlarTüm** >  **cihazlar'a** gidin ve ardından cihazların görünümünü sıralamak için **Yönetilen** sütununu seçin.
+2. **Cihazlar** > **Tüm cihazlar'a** gidin ve ardından cihazların görünümünü sıralamak için **Yönetilen** sütununu seçin.
 
    Uç Nokta için Microsoft Defender eklenen ve kayıtlı olan ancak Intune tarafından yönetilmeyen cihazlar *, Yönetilen* sütununda **Uç Nokta için Microsoft Defender** görüntüler. Bunlar, Uç Nokta için Microsoft Defender için güvenlik yönetimi ilkesi alabilen cihazlardır.
 
