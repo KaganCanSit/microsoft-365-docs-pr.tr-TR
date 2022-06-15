@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Defender'da Microsoft Defender for Cloud Apps
+title: Microsoft 365 Defender'de Microsoft Defender for Cloud Apps (Önizleme)
 description: Microsoft Defender for Cloud Apps Microsoft 365 Defender değişiklikleri hakkında bilgi edinin
 keywords: Microsoft 365 Defender kullanmaya başlama, Microsoft Defender for Cloud Apps
 ms.prod: microsoft-365-enterprise
@@ -19,14 +19,14 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
-ms.openlocfilehash: 28ad4e490e1347c3e17d9e99d1bc9d0f8ea5b60f
-ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
+ms.openlocfilehash: 2cd146cfb0fe9b6af10f562bbf6eb00bc5bf9a3d
+ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66057907"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66078403"
 ---
-# <a name="microsoft-defender-for-cloud-apps-in-microsoft-365-defender"></a>Microsoft 365 Defender'da Microsoft Defender for Cloud Apps
+# <a name="microsoft-defender-for-cloud-apps-in-microsoft-365-defender-preview"></a>Microsoft 365 Defender'de Microsoft Defender for Cloud Apps (Önizleme)
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
@@ -68,9 +68,12 @@ Aşağıdaki resimde ve tabloda Microsoft Defender for Cloud Apps ile Microsoft 
 | Dosyalar | Bulut için Defender Uygulamaları portalında kalan |
 | Kullanıcılar ve hesaplar | Varlıklar -> Kimlikleri |
 | Güvenlik yapılandırması | Bulut için Defender Uygulamaları portalında kalan |
-| Kimlik güvenliği duruşu | Bulut için Defender Uygulamaları portalında kalan |
+| Kimlik güvenliği duruşu | [Kimlik için Microsoft Defender kimlik güvenliği duruş değerlendirmeleri](/defender-for-identity/isp-overview) |
 | OAuth uygulamaları | Bulut uygulamaları -> OAuth uygulamaları |
 | Bağlı uygulamalar | Bulut için Defender Uygulamaları portalında kalan |
+
+> [!NOTE]
+> Microsoft 365 Defender portalındaki yeni Bulut için Defender Uygulamaları deneyimi, Bulut için Defender [Uygulamalarında yerleşik yönetici rollerinde](/defender-cloud-apps/manage-admins#built-in-admin-roles-in-defender-for-cloud-apps) tanımlanan roller dışında yönetici [erişimini yönetme](/defender-cloud-apps/manage-admins) bölümünde ayrıntılı olarak belirtilen tüm kullanıcılar tarafından kullanılabilir.
 
 ## <a name="whats-changed"></a>Değişenler
 

@@ -15,18 +15,18 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: Yöneticiler, çalışan verilerini kuruluşlarının insan kaynakları (İk) sisteminden Microsoft 365 aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, kuruluşunuz için iç tehdit oluşturabilecek belirli kullanıcıların etkinliklerini algılamanıza yardımcı olmak için şirket içi risk yönetimi ilkelerinde İk verilerini kullanmanıza olanak tanır.
-ms.openlocfilehash: 4da4546ef42854c8265254b2c9e1a51b528a8d7d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: cfde990b002d05962b3b7489f1adc9f5122af7c5
+ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092811"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66078578"
 ---
 # <a name="set-up-a-connector-to-import-hr-data"></a>İk verilerini içeri aktarmak için bağlayıcı ayarlama
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Kullanıcının istifası veya kullanıcının iş düzeyindeki bir değişiklik gibi olaylarla ilgili insan kaynakları (İk) verilerini içeri aktarmak için Microsoft Purview uyumluluk portalında bir veri bağlayıcısı ayarlayabilirsiniz. daha sonra İk verileri, kuruluşunuzdaki kullanıcılar tarafından olası kötü amaçlı etkinlikleri veya veri hırsızlığını tanımlamanıza yardımcı olabilecek risk göstergeleri oluşturmak için [insider risk yönetimi çözümü](insider-risk-management.md) tarafından kullanılabilir.
+kullanıcının istifası veya kullanıcının iş düzeyindeki bir değişiklik gibi olaylarla ilgili insan kaynakları (İk) verilerini içeri aktarmak için Microsoft Purview uyumluluk portalı bir veri bağlayıcısı ayarlayabilirsiniz. daha sonra İk verileri, kuruluşunuzdaki kullanıcılar tarafından olası kötü amaçlı etkinlikleri veya veri hırsızlığını tanımlamanıza yardımcı olabilecek risk göstergeleri oluşturmak için [insider risk yönetimi çözümü](insider-risk-management.md) tarafından kullanılabilir.
 
 Insider risk yönetimi ilkelerinin risk göstergeleri oluşturmak için kullanabileceği İk verileri için bağlayıcı ayarlamak, İk verilerini içeren bir CSV dosyası oluşturmak, kimlik doğrulaması için kullanılan Azure Active Directory'de bir uygulama oluşturmak, uyumluluk portalında İk veri bağlayıcısı oluşturmak ve ardından İK verilerini CSV dosyalarına alan bir betiğin (zamanlanmış olarak) Microsoft bulutunda kullanılabilir olması için çalıştırılmasından oluşur  öğesini insider risk yönetimi çözümüne ekleyin.
 
@@ -39,7 +39,7 @@ Insider risk yönetimi ilkelerinin risk göstergeleri oluşturmak için kullanab
 
 - Kuruluşunuzun İk sisteminden (ve düzenli olarak) verilerin nasıl alınacağını veya dışarı aktarıldığını belirleyin ve 1. Adımda oluşturduğunuz CSV dosyalarına ekleyin. 4. Adımda çalıştırdığınız betik, CSV dosyalarındaki İk verilerini Microsoft buluta yükler.
 
-- 3. Adımda İk bağlayıcısını oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
+- 3. Adımda İk bağlayıcısını oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
 - 4. Adımda çalıştırdığınız örnek betik, İk verilerinizi Microsoft buluta yükleyerek insider risk yönetimi çözümü tarafından kullanılabilmesini sağlar. Bu örnek betik, herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betik, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiğin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
 
@@ -169,7 +169,7 @@ Aşağıdaki tabloda, performans gözden geçirme verileri için CSV dosyasında
 ### <a name="csv-file-for-employee-profile-data-preview"></a>Çalışan profili verileri için CSV dosyası (önizleme)
 
 > [!NOTE]
-> Çalışan profili verileri için İk bağlayıcısı oluşturma özelliği genel önizleme aşamasındadır. Çalışan profili verilerini destekleyen bir İk bağlayıcısı oluşturmak için uyumluluk portalındaki **Veri bağlayıcıları** sayfasına gidin, **Bağlayıcılar** sekmesini seçin ve ardından **Bağlayıcı** >  **ekleHR (önizleme)'** ye tıklayın. [3. Adım: İk bağlayıcısı oluşturma başlığı altında bağlayıcı oluşturma adımlarını](#step-3-create-the-hr-connector) izleyin.
+> Çalışan profili verileri için İk bağlayıcısı oluşturma özelliği genel önizleme aşamasındadır. Çalışan profili verilerini destekleyen bir İk bağlayıcısı oluşturmak için uyumluluk portalındaki **Veri bağlayıcıları** sayfasına gidin, **Bağlayıcılar** sekmesini seçin ve ardından Bağlayıcı  > **İk (önizleme) ekle'ye** tıklayın. [3. Adım: İk bağlayıcısı oluşturma başlığı altında bağlayıcı oluşturma adımlarını](#step-3-create-the-hr-connector) izleyin.
 
 Burada çalışan profili verilerine yönelik bir CSV dosyası örneği verilmiştir.
 
@@ -219,11 +219,11 @@ Birden çok veri türüne sahip bir CSV dosyasını yapılandırma gereksinimler
 
 - Her veri türü için gerekli sütunları (ve bunları kullanıyorsanız isteğe bağlı) ve üst bilgi satırına karşılık gelen sütun adını eklemeniz gerekir. Veri türü bir sütuna karşılık gelmiyorsa, değeri boş bırakabilirsiniz.
 
-- Birden çok İk verisi türüne sahip bir CSV dosyası kullanmak için İk bağlayıcısının CSV dosyasındaki hangi satırların hangi tür İk verilerini içerdiğini bilmesi gerekir. Bu, CSV dosyasına ek bir **HRScenario** sütunu eklenerek gerçekleştirilir. Bu sütundaki değerler, her satırdaki İk verilerinin türünü tanımlar. Örneğin, dört İk senaryosuna karşılık gelen değerler İstifa\`, İş düzeyi değişikliği\`, \`Performans gözden geçirmesi\`, \`\`Performans geliştirme planı\` ve \`Çalışan profili\` olabilir\`.
+- Birden çok İk verisi türüne sahip bir CSV dosyası kullanmak için İk bağlayıcısının CSV dosyasındaki hangi satırların hangi tür İk verilerini içerdiğini bilmesi gerekir. Bu, CSV dosyasına ek bir **HRScenario** sütunu eklenerek gerçekleştirilir. Bu sütundaki değerler, her satırdaki İk verilerinin türünü tanımlar. Örneğin İk senaryolarına karşılık gelen değerler İstifa\`, İş düzeyi değişikliği\`, \`Performans gözden geçirmesi\`, \`\`Performans geliştirme planı\` ve \`Çalışan profili\` olabilir\`.
 
 - HRScenario** sütunu içeren birden çok CSV dosyanız varsa, her dosyanın aynı sütun adını ve belirli İk senaryolarını tanımlayan değerleri kullandığından emin olun.
 
-Aşağıdaki örnekte **HRScenario** sütununu içeren bir CSV dosyası gösterilmektedir. HRScenario sütunundaki değerler, karşılık gelen satırdaki veri türünü tanımlar.
+Aşağıdaki örnekte **HRScenario** sütununu içeren bir CSV dosyası gösterilmektedir. HRScenario sütunundaki değerler, karşılık gelen satırdaki veri türünü tanımlar. Aşağıdaki örnek, dört İk senaryosu \`olan İstifa\`, \`İş düzeyi değişikliği\`, \`Performans incelemesi\` ve \`Performans iyileştirme planını\` kapsar.
 
 ```text
 HRScenario,EmailAddress,ResignationDate,LastWorkingDate,EffectiveDate,Remarks,Rating,OldLevel,NewLevel
@@ -246,15 +246,15 @@ Kuruluşunuzun İk sistemlerine ve İk verilerini CSV dosyasına nasıl aktaraca
 
 ## <a name="step-2-create-an-app-in-azure-active-directory"></a>2. Adım: Azure Active Directory'de uygulama oluşturma
 
-Sonraki adım, Azure Active Directory'de (Azure AD) yeni bir uygulama oluşturmak ve kaydetmektir. Uygulama, 3. Adımda oluşturduğunuz İk bağlayıcısına karşılık gelir. Bu uygulamayı oluşturmak, Azure AD'nin çalıştırıldığında ve kuruluşunuza erişmeye çalıştığında İk bağlayıcısının kimliğini doğrulamasını sağlar. Bu uygulama, İk verilerinizi Microsoft buluta yüklemek için 4. Adımda çalıştırdığınız betiğin kimliğini doğrulamak için de kullanılır. Bu Azure AD uygulamasını oluştururken aşağıdaki bilgileri kaydettiğinizden emin olun. Bu değerler 3. Adım ve 4. Adım'da kullanılır.
+Sonraki adım, Azure Active Directory'de (Azure AD) yeni bir uygulama oluşturup kaydetmektir. Uygulama, 3. Adımda oluşturduğunuz İk bağlayıcısına karşılık gelir. Bu uygulamanın oluşturulması, Azure AD çalıştığında ve kuruluşunuza erişmeye çalıştığında İk bağlayıcısının kimliğini doğrulamasını sağlar. Bu uygulama, İk verilerinizi Microsoft buluta yüklemek için 4. Adımda çalıştırdığınız betiğin kimliğini doğrulamak için de kullanılır. Bu Azure AD uygulamasını oluştururken aşağıdaki bilgileri kaydettiğinizden emin olun. Bu değerler 3. Adım ve 4. Adım'da kullanılır.
 
-- Azure AD uygulama kimliği ( *uygulama kimliği* veya *istemci kimliği* olarak da adlandırılır)
+- Azure AD uygulama kimliği (*uygulama kimliği* veya *istemci kimliği* olarak da adlandırılır)
 
-- Azure AD uygulama gizli dizisi ( *istemci gizli dizisi* olarak da adlandırılır)
+- Azure AD uygulama gizli dizisi (*istemci gizli dizisi* olarak da adlandırılır)
 
 - Kiracı Kimliği ( *dizin kimliği* olarak da adlandırılır)
 
-Azure AD'de uygulama oluşturmaya yönelik adım adım yönergeler için bkz. [Uygulamayı Microsoft kimlik platformu kaydetme](/azure/active-directory/develop/quickstart-register-app).
+Azure AD'da uygulama oluşturmaya yönelik adım adım yönergeler için bkz. [Uygulamayı Microsoft kimlik platformu kaydetme](/azure/active-directory/develop/quickstart-register-app).
 
 ## <a name="step-3-create-the-hr-connector"></a>3. Adım: İk bağlayıcısını oluşturma
 
@@ -341,8 +341,8 @@ Henüz yapmadıysanız **, Azure Uygulaması Kimliği** ve **Bağlayıcı iş ki
    | Parametre | Açıklama |
    |:-----|:-----|:-----|
    |`tenantId`|Bu, 2. Adımda aldığınız Microsoft 365 kuruluşunuzun kimliğidir. Ayrıca, Azure AD yönetim merkezindeki **Genel Bakış** dikey penceresinde kuruluşunuzun kiracı kimliğini de alabilirsiniz. Bu, kuruluşunuzu tanımlamak için kullanılır.|
-   |`appId` |Bu, 2. Adımda Azure AD'de oluşturduğunuz uygulamanın Azure AD uygulama kimliğidir. Bu, betik Microsoft 365 kuruluşunuza erişmeye çalıştığında Azure AD tarafından kimlik doğrulaması için kullanılır. | 
-   |`appSecret`|Bu, 2. Adımda Azure AD'de oluşturduğunuz uygulamanın Azure AD uygulama gizli dizisidir. Bu, kimlik doğrulaması için de kullanılır.|
+   |`appId` |Bu, 2. Adımda Azure AD oluşturduğunuz uygulamanın Azure AD uygulama kimliğidir. Bu, Azure AD tarafından betik Microsoft 365 kuruluşunuza erişmeye çalıştığında kimlik doğrulaması için kullanılır. | 
+   |`appSecret`|Bu, 2. Adımda Azure AD oluşturduğunuz uygulamanın Azure AD uygulama gizli dizisidir. Bu, kimlik doğrulaması için de kullanılır.|
    |`jobId`|Bu, 3. Adımda oluşturduğunuz İk bağlayıcısının iş kimliğidir. Bu, Microsoft buluta yüklenen İk verilerini İk bağlayıcısıyla ilişkilendirmek için kullanılır.|
    |`filePath`|Bu, 1. Adımda oluşturduğunuz dosyanın (betikle aynı sistemde depolanan) dosya yoludur. Dosya yolunda boşluklardan kaçınmaya çalışın; aksi takdirde tek tırnak işareti kullanın.|
    |||

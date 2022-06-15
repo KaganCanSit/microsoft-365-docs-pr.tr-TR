@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Yöneticiler, SharePoint ve OneDrive'da Word, Excel ve PowerPoint dosyaları için duyarlılık etiketi desteğini etkinleştirebilir.
-ms.openlocfilehash: 9130558bb7ae1af86981e1c052a17565f6d943af
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 0c9ba0a72b9bd02097817bcea04bf25200fca657
+ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014266"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66078393"
 ---
 # <a name="enable-sensitivity-labels-for-office-files-in-sharepoint-and-onedrive"></a>SharePoint ve OneDrive'daki Office dosyaları için hassasiyet etiketlerini etkinleştirme
 
@@ -32,7 +32,7 @@ ms.locfileid: "66014266"
 
 Kullanıcıların [duyarlılık etiketlerinizi](sensitivity-labels.md) Web için Office uygulayabilmesi için SharePoint ve OneDrive'da [desteklenen Office dosyaları](sensitivity-labels-office-apps.md#office-file-types-supported) için yerleşik etiketlemeyi etkinleştirin. Bu özellik etkinleştirildiğinde, kullanıcılar şeritte **Duyarlılık** düğmesini görür ve böylece etiketleri uygulayabilir ve durum çubuğunda uygulanan etiket adlarını görebilir.
 
-Bu özelliğin etkinleştirilmesi, SharePoint ve OneDrive duyarlılık etiketi kullanılarak şifrelenmiş Office dosyaların içeriğini işleyebilmesine de neden olur. Etiket Web için Office veya Office masaüstü uygulamalarına uygulanabilir ve SharePoint ve OneDrive yüklenebilir veya kaydedilebilir. Bu özelliği etkinleştirene kadar bu hizmetler şifrelenmiş dosyaları işleyemez; başka bir deyişle birlikte yazma, eBulma, Microsoft Purview veri kaybını önleme, arama ve diğer işbirliğine dayalı özellikler bu dosyalar için çalışmaz.
+Bu özelliğin etkinleştirilmesi, SharePoint ve OneDrive duyarlılık etiketi kullanılarak şifrelenmiş Office dosyaların içeriğini işleyebilmesine de neden olur. Etiket Web için Office veya Office masaüstü uygulamalarına uygulanabilir ve SharePoint ve OneDrive yüklenebilir veya kaydedilebilir. Bu özelliği etkinleştirene kadar bu hizmetler şifrelenmiş dosyaları işleyemez; bu da birlikte yazma, eBulma, Microsoft Purview veri kaybını önleme, arama ve diğer işbirliğine dayalı özelliklerin bu dosyalar için çalışmayabileceği anlamına gelir.
 
 SharePoint ve OneDrive Office dosyaları için duyarlılık etiketlerini etkinleştirdikten sonra, bulut tabanlı bir anahtarla şifreleme uygulayan (ve [Çift Anahtarlı Şifreleme](double-key-encryption.md) kullanmayan) duyarlılık etiketine sahip yeni ve değiştirilmiş dosyalar için:
 
@@ -81,7 +81,7 @@ Windows'da OneDrive eşitleme uygulama sürümü 19.002.0121.0008 veya üzerini 
 
 - SharePoint ve OneDrive, Azure Information Protection etiketlerini kullanarak zaten şifrelediğiniz mevcut dosyalara otomatik olarak duyarlılık etiketleri uygulamaz. Bunun yerine, SharePoint ve OneDrive Office dosyaları için duyarlılık etiketlerini etkinleştirdikten sonra özelliklerin çalışması için şu görevleri tamamlayın:
 
-    1. [Azure Information Protection etiketlerini duyarlılık etiketlerine geçirdiğinizden](/azure/information-protection/configure-policy-migrate-labels) ve bunları Microsoft Purview uyumluluk portalından [yayımladığınızdan](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) emin olun.
+    1. [Azure Information Protection etiketlerini duyarlılık etiketlerine geçirdiğinizden](/azure/information-protection/configure-policy-migrate-labels) ve [bunları Microsoft Purview uyumluluk portalı yayımladığınızdan](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) emin olun.
     2. Etiketli dosyaları indirin ve SharePoint veya OneDrive özgün konumlarına yükleyin.
 
 - SharePoint ve OneDrive, şifrelemeyi uygulayan etiket şifreleme [için aşağıdaki yapılandırmalardan](encryption-sensitivity-labels.md#configure-encryption-settings) herhangi birine sahip olduğunda şifrelenmiş dosyaları işleyemiyor:
@@ -108,7 +108,7 @@ Windows'da OneDrive eşitleme uygulama sürümü 19.002.0121.0008 veya üzerini 
 - Varsayılan olarak, Office masaüstü uygulamaları ve mobil uygulamalar, şifreleme ile etiketlenmiş dosyalar için birlikte yazmayı desteklemez. Bu uygulamalar etiketli ve şifrelenmiş dosyaları özel düzenleme modunda açmaya devam ediyor.
 
     > [!NOTE]
-    > Birlikte yazma artık Windows ve macOS için desteklenmektedir. Daha fazla bilgi için bkz. [Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirme](sensitivity-labels-coauthoring.md).
+    > Birlikte yazma artık Windows ve macOS için ve önizlemede iOS ve Android için desteklenmektedir. Daha fazla bilgi için bkz. [Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirme](sensitivity-labels-coauthoring.md).
 
 - Yönetici, kullanıcıların eşitleme istemcisine indirilen dosyalara zaten uygulanmış yayımlanmış bir etiketin ayarlarını değiştirirse, kullanıcılar dosyada yaptıkları değişiklikleri OneDrive Eşitleme klasörüne kaydedemeyebilir. Bu senaryo, şifreleme ile etiketlenen dosyalara ve ayrıca etiket değişikliği şifreleme uygulayan bir etikete şifreleme uygulanmayan bir etiketten geldiğinde geçerlidir. Kullanıcılar [beyaz çapraz simge hatası içeren kırmızı bir daire](https://support.office.com/article/what-do-the-onedrive-icons-mean-11143026-8000-44f8-aaa9-67c985aa49b3) görür ve yeni değişiklikleri ayrı bir kopya olarak kaydetmeleri istenir. Bunun yerine dosyayı kapatıp yeniden açabilir veya Web için Office kullanabilirler.
 
@@ -125,13 +125,13 @@ Windows'da OneDrive eşitleme uygulama sürümü 19.002.0121.0008 veya üzerini 
 
 ## <a name="how-to-enable-sensitivity-labels-for-sharepoint-and-onedrive-opt-in"></a>SharePoint ve OneDrive için duyarlılık etiketlerini etkinleştirme (kabul etme)
 
-Microsoft Purview uyumluluk portalını veya PowerShell'i kullanarak yeni özellikleri etkinleştirebilirsiniz. SharePoint ve OneDrive için tüm kiracı düzeyindeki yapılandırma değişikliklerinde olduğu gibi, değişikliğin geçerli olması yaklaşık 15 dakika sürer.
+yeni özellikleri etkinleştirmek için Microsoft Purview uyumluluk portalı veya PowerShell kullanabilirsiniz. SharePoint ve OneDrive için tüm kiracı düzeyindeki yapılandırma değişikliklerinde olduğu gibi, değişikliğin geçerli olması yaklaşık 15 dakika sürer.
 
-### <a name="use-the-microsoft-purview-compliance-portal-to-enable-support-for-sensitivity-labels"></a>Duyarlılık etiketleri desteğini etkinleştirmek için Microsoft Purview uyumluluk portalını kullanma
+### <a name="use-the-microsoft-purview-compliance-portal-to-enable-support-for-sensitivity-labels"></a>Duyarlılık etiketleri desteğini etkinleştirmek için Microsoft Purview uyumluluk portalı kullanın
 
 Bu seçenek, SharePoint ve OneDrive için duyarlılık etiketlerini etkinleştirmenin en kolay yoludur, ancak kiracınız için genel yönetici olarak oturum açmanız gerekir.
 
-1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com/) genel yönetici olarak oturum açın ve **Çözüm** > **Bilgileri koruma** > **Etiketleri'ne** gidin
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) genel yönetici olarak oturum açın ve **Çözüm** > **Bilgileri koruma** > **Etiketleri'ne** gidin
 
 2. Office çevrimiçi dosyalarda içerik işleme özelliğini açmak için bir ileti görürseniz **Şimdi aç'ı** seçin:
 
@@ -144,7 +144,7 @@ Bu seçenek, SharePoint ve OneDrive için duyarlılık etiketlerini etkinleştir
 
 ### <a name="use-powershell-to-enable-support-for-sensitivity-labels"></a>Duyarlılık etiketleri desteğini etkinleştirmek için PowerShell kullanma
 
-Microsoft Purview uyumluluk portalını kullanmaya alternatif olarak, SharePoint Online [PowerShell'in Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) cmdlet'ini kullanarak duyarlılık etiketleri desteğini etkinleştirebilirsiniz.
+Microsoft Purview uyumluluk portalı kullanmaya alternatif olarak, SharePoint Online [PowerShell'den Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) cmdlet'ini kullanarak duyarlılık etiketleri desteğini etkinleştirebilirsiniz.
 
 Microsoft 365 Multi-Geo kullanıyorsanız, tüm coğrafi konumlarınızda bu desteği etkinleştirmek için PowerShell'i kullanmanız gerekir.
 

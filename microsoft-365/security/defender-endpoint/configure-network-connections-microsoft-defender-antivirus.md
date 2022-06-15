@@ -16,18 +16,18 @@ ms.date: 02/03/2022
 ms.reviewer: mkaminska; pahuijbr
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 8da099332ffbe2cc3d860faef504e4c5d9663614
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 0365f8a9d2f267d7ebc0cfeddd5b7d1d5c16a72a
+ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418642"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66078798"
 ---
 # <a name="configure-and-validate-microsoft-defender-antivirus-network-connections"></a>Microsoft Defender Virüsten Koruma ağ bağlantılarını yapılandırın ve doğrulayın
 
 **Şunlar için geçerlidir:**
 
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
@@ -90,7 +90,7 @@ Daha fazla bilgi için bkz. [mpcmdrun.exe komut satırı aracıyla Microsoft Def
 
 ### <a name="attempt-to-download-a-fake-malware-file-from-microsoft"></a>Microsoft'tan sahte kötü amaçlı yazılım dosyası indirme girişimi
 
-Buluta düzgün bir şekilde bağlıysanız Microsoft Defender Virüsten Koruma algılayıp engelleyecek bir örnek dosya indirebilirsiniz. Dosyayı indirmek için ziyaret edin [https://aka.ms/ioavtest](https://aka.ms/ioavtest) .
+Buluta düzgün bir şekilde bağlıysanız Microsoft Defender Virüsten Koruma algılayıp engelleyecek bir örnek dosya indirebilirsiniz. Dosyayı indirmek için ziyaret edin [https://aka.ms/ioavtest1](https://aka.ms/ioavtest1) .
 
 > [!NOTE]
 > İndirilen dosya tam olarak kötü amaçlı yazılım değildir. Buluta düzgün bir şekilde bağlanıp bağlanmadığınızı test etmek için tasarlanmış sahte bir dosyadır.
@@ -119,7 +119,7 @@ Internet Explorer kullanıyorsanız benzer bir ileti oluşur:
    Windows olay günlüğünde [de Windows Defender istemci olay kimliği 1116](troubleshoot-microsoft-defender-antivirus.md) gösterilir.
 
     > [!TIP]
-    > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+    > Diğer platformlar için Antivirüs ile ilgili bilgi arıyorsanız bkz:
     > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
     > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
     > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

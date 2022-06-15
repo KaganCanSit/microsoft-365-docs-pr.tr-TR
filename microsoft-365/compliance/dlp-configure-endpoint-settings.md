@@ -18,12 +18,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Uç nokta veri kaybı önleme (DLP) merkezi ayarlarını yapılandırmayı öğrenin.
-ms.openlocfilehash: f76f6ec18464229fa50ad54a06fc7969abb3dd23
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: edf5d42421aa9fb0c54d0121655e3a31d4a729f6
+ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952830"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66078776"
 ---
 # <a name="configure-endpoint-data-loss-prevention-settings"></a>Uç noktada veri kaybı önleme ayarlarını yapılandırma
 
@@ -37,7 +37,7 @@ Uç nokta veri kaybı önleme (DLP) davranışının birçok yönü merkezi olar
 
 - Bulut çıkış kısıtlamaları
 - Uygulama başına kullanıcı etkinlikleri üzerinde çeşitli kısıtlayıcı eylem türleri.
-- Windows ve macOS cihazları için dosya yolu dışlamaları.
+- Windows ve macOS cihazlar için dosya yolu dışlamaları.
 - Tarayıcı ve etki alanı kısıtlamaları.
 - İlkeleri geçersiz kılmaya yönelik iş gerekçeleri ilke ipuçlarında nasıl görünür?
 - Office, PDF ve CSV dosyalarındaki etkinlikler otomatik olarak denetleniyorsa.
@@ -48,14 +48,14 @@ Başlamadan önce DLP ayarlarınızı ayarlamanız gerekir.
 
 ### <a name="endpoint-dlp-windows-1011-and-macos-settings"></a>Uç nokta DLP Windows 10/11 ve macOS ayarları
 
-|Ayar |Windows 10, 1809 ve üzeri, Windows 11  |macOS Catalina 10.15 veya üzeri |Notlar  |
+|Ayar |Windows 10, 1809 ve üzeri, Windows 11  |Catalina 10.15 veya üzerini macOS |Notlar  |
 |---------|---------|---------|---------|
-|Dosya yolu dışlamaları     |Destekleniyor         |Destekleniyor         |macOS varsayılan olarak açık olan dışlamaların önerilen bir listesini içerir          |
+|Dosya yolu dışlamaları     |Destekleniyor         |Destekleniyor         |macOS varsayılan olarak açık olan önerilen dışlama listesini içerir          |
 |Kısıtlı uygulamalar     |Destekleniyor         |Destekleniyor         |         |
 |Kısıtlı uygulama grupları |Destekleniyor |Desteklenmiyor
 |İzin verilmeyen Bluetooth uygulamaları    |Destekleniyor         |Desteklenmiyor         |         |
 |Hassas öğelere yönelik tarayıcı ve etki alanı kısıtlamaları      |Destekleniyor         |Destekleniyor         |         |
-|Uç Nokta DLP için ek ayarlar     |Destekleniyor         |Destekleniyor         |MacOS cihazları için yalnızca varsayılan iş gerekçeleri desteklenir         |
+|Uç Nokta DLP için ek ayarlar     |Destekleniyor         |Destekleniyor         |macOS cihazlar için yalnızca varsayılan iş gerekçeleri desteklenir         |
 |Cihazlar için her zaman dosya etkinliğini denetleme     |Destekleniyor         |Destekleniyor         |         |
 |İzin verilmeyen uygulamalardan dosyayı otomatik olarak karantinaya al | Destekleniyor | Desteklenmiyor| |
 |Gelişmiş sınıflandırma | Destekleniyor | Desteklenmiyor| |
@@ -83,7 +83,7 @@ Bu Windows sürümleri gelişmiş sınıflandırma taramasını ve korumasını 
 
 ### <a name="file-path-exclusions"></a>Dosya yolu dışlamaları
 
-[Microsoft Purview uyumluluk portalını](https://compliance.microsoft.com) >  **açınVeri kaybı önlemeEndpoint** >  **DLP ayarlarıDosya** >  **yolu dışlamaları**.
+[Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com) >  **Veri kaybı önleme** > **Uç Noktası DLP ayarları** > **Dosya yolu dışlamalarını** açın.
 
 Cihazlarınızda DLP izleme, DLP uyarısı ve DLP ilkesi zorlamasından belirli yolları dışlamak isteyebilirsiniz çünkü bunlar çok gürültülü veya ilgilendiğiniz dosyaları içermez. Bu konumlardaki dosyalar denetlenmeyecek ve bu konumlarda oluşturulan veya değiştirilen dosyalar DLP ilkesi uygulamasına tabi olmayacaktır. DLP ayarlarında yol dışlamalarını yapılandırabilirsiniz.
 
@@ -105,9 +105,9 @@ Windows 10 cihazlar için dışlama yollarınızı oluşturmak için bu mantığ
 
 - Yukarıdakilerin bir karışımı. <br/>Örneğin: `%SystemDrive%\Users\*\Documents\*(2)\Sub\`
 
-#### <a name="macos-devices"></a>macOS cihazları
+#### <a name="macos-devices"></a>cihazları macOS
 
-Windows 10 cihazlara benzer şekilde, macOS cihazları için kendi dışlamalarınızı ekleyebilirsiniz.
+Windows 10 cihazlara benzer şekilde, macOS cihazlar için kendi dışlamalarınızı ekleyebilirsiniz.
 
 - Dosya yolu tanımları büyük/küçük harfe duyarlı değildir, bu nedenle `User` ile `user`aynıdır.
 
@@ -115,7 +115,7 @@ Windows 10 cihazlara benzer şekilde, macOS cihazları için kendi dışlamalar�
 
 #####  <a name="recommended-file-path-exclusions-preview"></a>Önerilen dosya yolu dışlamaları (önizleme)
 
-Performans nedenleriyle Endpoint DLP, macOS cihazları için önerilen dosya yolu dışlamalarının listesini içerir. Bu dışlamalar varsayılan olarak açıktır. **Mac için önerilen dosya yolu dışlamalarını ekle iki durumlu** düğmesini açarak bunları devre dışı bırakabilirsiniz. Liste şunları içerir:
+Performans nedenleriyle Endpoint DLP, macOS cihazlar için önerilen dosya yolu dışlamalarının listesini içerir. Bu dışlamalar varsayılan olarak açıktır. **Mac için önerilen dosya yolu dışlamalarını ekle iki durumlu** düğmesini açarak bunları devre dışı bırakabilirsiniz. Liste şunları içerir:
 
 - /Applications/*
 - /System/*
@@ -139,7 +139,7 @@ Bir ilkede **Kısıtlı uygulamalar tarafından erişim** seçildiğinde ve kull
 > [!IMPORTANT]
 > Kısıtlı uygulamalar listesinde yer alan uygulamalar için tanımlanan eylem (`audit`, `block with override`veya `block`) yalnızca kullanıcı korumalı bir öğeye ***erişmeye*** çalıştığında geçerlidir. 
 
-#### <a name="file-activities-for-apps-in-restricted-app-groups-preview"></a>Kısıtlı uygulama gruplarındaki uygulamalar için dosya etkinlikleri (önizleme)
+#### <a name="file-activities-for-apps-in-restricted-app-groups"></a>Kısıtlı uygulama gruplarındaki uygulamalar için dosya etkinlikleri
 
 Kısıtlı uygulama grupları, DLP ayarlarında oluşturduğunuz ve ardından ilkedeki bir kurala eklediğiniz uygulama koleksiyonlarıdır. İlkeye kısıtlı bir uygulama grubu eklediğinizde, bu tabloda tanımlanan eylemleri gerçekleştirebilirsiniz.
 
@@ -154,11 +154,11 @@ Kısıtlı uygulama grupları, DLP ayarlarında oluşturduğunuz ve ardından il
 
 #### <a name="how-dlp-applies-restrictions-to-activities"></a>DLP etkinliklere kısıtlamaları nasıl uygular?
 
-**Kısıtlı uygulama gruplarındaki (önizleme) uygulamalar için Dosya etkinlikleri**, **Tüm uygulamalar için Dosya etkinlikleri** ve **Kısıtlanmış uygulama etkinlikleri listesi arasındaki etkileşimler** aynı kural kapsamındadır.
+**Kısıtlı uygulama gruplarındaki uygulamalar için Dosya etkinlikleri**, **Tüm uygulamalar için Dosya etkinlikleri** ve **Kısıtlanmış uygulama etkinlikleri listesi arasındaki etkileşimler** aynı kural kapsamındadır.
 
 ##### <a name="restricted-app-groups-overrides"></a>Kısıtlanmış uygulama grupları geçersiz kılmaları
 
-**Kısıtlı uygulama gruplarındaki uygulamalar için Dosya etkinlikleri (önizleme) içinde** tanımlanan yapılandırmalar **, Kısıtlı uygulama etkinlikleri** listesindeki yapılandırmaları ve aynı kuraldaki **tüm uygulamalar için Dosya etkinlikleri'ni** geçersiz kılar.
+**Kısıtlı uygulama gruplarındaki uygulamalar için Dosya etkinlikleri'nde** tanımlanan yapılandırmalar **, Kısıtlanmış uygulama etkinlikleri** listesindeki yapılandırmaları ve aynı kuraldaki **tüm uygulamalar için Dosya etkinlikleri'ni** geçersiz kılar.
 
 ##### <a name="restricted-app-activities-and-file-activities-for-all-apps"></a>Tüm uygulamalar için kısıtlı uygulama etkinlikleri ve Dosya etkinlikleri
 
@@ -185,22 +185,22 @@ A kullanıcısı Not Defteri kullanarak DLP korumalı bir dosya açar. DLP, eri�
    
 ##### <a name="file-activities-for-all-apps-only"></a>Yalnızca tüm uygulamalar için dosya etkinlikleri
 
-Bir uygulama **kısıtlı uygulama gruplarındaki uygulamalar için Dosya etkinliklerinde değilse (önizleme)** veya **Kısıtlı uygulama etkinlikleri** listesinde değilse veya bir eylemiyle `Audit only`**Kısıtlanmış uygulama etkinlikleri** listesindeyse veya 'Geçersiz kılmayla engelle' durumundaysa, **tüm uygulamalar için Dosya etkinliklerinde** tanımlanan tüm kısıtlamalar aynı kuralda uygulanır.  
+Bir uygulama **kısıtlanmış uygulama gruplarındaki uygulamalar için Dosya etkinliklerinde** değilse veya **Kısıtlı uygulama etkinlikleri** listesinde değilse veya eylemiyle `Audit only`**Kısıtlanmış uygulama etkinlikleri** listesindeyse veya 'Geçersiz kılmayla engelle' durumundaysa, **tüm uygulamalar için Dosya etkinliklerinde** tanımlanan tüm kısıtlamalar aynı kuralda uygulanır.  
 
-#### <a name="macos-devices"></a>macOS cihazları
+#### <a name="macos-devices"></a>cihazları macOS
 
-Windows cihazlarda olduğu gibi, artık macOS uygulamalarının hassas verilere erişmesini **Kısıtlanmış uygulama etkinlikleri** listesinde tanımlayarak engelleyebilirsiniz. 
+Windows cihazlarda olduğu gibi, artık macOS uygulamaların hassas verilere erişmesini **Kısıtlanmış uygulama etkinlikleri** listesinde tanımlayarak engelleyebilirsiniz. 
 
 > [!NOTE]
 > Platformlar arası uygulamaların, üzerinde çalıştıkları işletim sistemine göre benzersiz yolları ile girilmesi gerektiğini unutmayın.
 
 Mac uygulamalarının tam yolunu bulmak için:
 
-1. macOS cihazında **Etkinlik İzleyicisi'ni** açın. Kısıtlamak istediğiniz işlemi bulma ve çift tıklama
+1. macOS cihazda **Etkinlik İzleyicisi'ni** açın. Kısıtlamak istediğiniz işlemi bulma ve çift tıklama
 
 2. **Dosyaları ve Bağlantı Noktalarını Aç** sekmesini seçin.
   
-3. macOS uygulamaları için, uygulamanın adı da dahil olmak üzere tam yol adına ihtiyacınız vardır.
+3. macOS uygulamalarda, uygulamanın adı da dahil olmak üzere tam yol adına ihtiyacınız vardır.
 
 #### <a name="protect-sensitive-data-from-cloud-synchronization-apps"></a>Hassas verileri bulut eşitleme uygulamalarından koruma
 
@@ -227,18 +227,18 @@ Kişilerin ilkeleriniz tarafından korunan dosyaları belirli Bluetooth uygulama
 
 Windows cihazlar için, bulut hizmetlerine yükleme kısıtlamasının geçersiz kılmayı engellemek veya engellemek için ayarlandığı zorunlu bir DLP ilkesinin koşullarıyla eşleşen dosyalara erişmesi engellenecek, yürütülebilir adlarıyla tanımlanan tarayıcılar eklersiniz. Bu tarayıcıların bir dosyaya erişimi engellendiğinde, son kullanıcılar dosyayı Microsoft Edge aracılığıyla açmalarını isteyen bir bildirim görür.
 
-macOS cihazları için tam dosya yolunu eklemeniz gerekir. Mac uygulamalarının tam yolunu bulmak için:
+macOS cihazlar için tam dosya yolunu eklemeniz gerekir. Mac uygulamalarının tam yolunu bulmak için:
 
-1. macOS cihazında **Etkinlik İzleyicisi'ni** açın. Kısıtlamak istediğiniz işlemi bulma ve çift tıklama
+1. macOS cihazda **Etkinlik İzleyicisi'ni** açın. Kısıtlamak istediğiniz işlemi bulma ve çift tıklama
 
 2. **Dosyaları ve Bağlantı Noktalarını Aç** sekmesini seçin.
   
-3. macOS uygulamaları için, uygulamanın adı da dahil olmak üzere tam yol adına ihtiyacınız vardır.
+3. macOS uygulamalarda, uygulamanın adı da dahil olmak üzere tam yol adına ihtiyacınız vardır.
 
 #### <a name="service-domains"></a>Hizmet etki alanları
 
 > [!NOTE]
-> **Hizmet etki alanları** ayarı yalnızca [Microsoft Edge veya Microsoft Purview Uzantısı](dlp-chrome-learn-about.md#learn-about-the-microsoft-purview-extension) yüklü Google Chrome kullanılarak karşıya yüklenen dosyalar için geçerlidir.
+> **Hizmet etki alanları** ayarı yalnızca Microsoft Purview [Uzantısı](dlp-chrome-learn-about.md#learn-about-the-microsoft-purview-extension) yüklü Microsoft Edge veya Google Chrome kullanılarak yüklenen dosyalar için geçerlidir.
 
 İlkeleriniz tarafından korunan hassas dosyaların Microsoft Edge belirli hizmet etki alanlarına yüklenip yüklenemeyeceğini denetleyebilirsiniz.
 
@@ -294,7 +294,7 @@ Dosya etkinliği, etkin bir ilkeye dahil olup olmadıklarına bakılmaksızın e
 - [Bir DLP ilkesi oluşturma, test etme ve ayarlama](create-test-tune-dlp-policy.md)
 - [Etkinlik gezgini ile Kullanmaya başlayın](data-classification-activity-explorer.md)
 - [Uç Nokta için Microsoft Defender](/windows/security/threat-protection/)
-- [Windows 10 ve Windows 11 cihazlarını Microsoft Purview'a eklemeye genel bakış](/microsoft-365/compliance/device-onboarding-overview)
+- [Windows 10 ve Windows 11 cihazlarını Microsoft Purview genel bakışa ekleme](/microsoft-365/compliance/device-onboarding-overview)
 - [aboneliği Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1)
 - [Azure Active Directory (AAD) katıldı](/azure/active-directory/devices/concept-azure-ad-join)
 - [Chromium dayalı yeni Microsoft Edge indirme](https://support.microsoft.com/help/4501095/download-the-new-microsoft-edge-based-on-chromium)

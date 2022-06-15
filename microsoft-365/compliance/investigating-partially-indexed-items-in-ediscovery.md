@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
-ms.date: 05/13/2022
+ms.date: 06/14/2022
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -18,18 +18,18 @@ ms.assetid: 4e8ff113-6361-41e2-915a-6338a7e2a1ed
 ms.custom:
 - seo-marvel-apr2020
 description: Kuruluşunuzdaki Exchange, SharePoint ve OneDrive İş kısmen dizine alınmış öğeleri (dizine alınmamış öğeler olarak da adlandırılır) yönetmeyi öğrenin.
-ms.openlocfilehash: 373072ff1b1a893a8de970ccb6eacbdcd14b48d3
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 528693febbb6d02f6ea143d94aaae154d3dfde7e
+ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014960"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66078754"
 ---
 # <a name="investigating-partially-indexed-items-in-ediscovery"></a>eBulma'da kısmen dizine alınan öğeleri araştırma
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview uyumluluk portalından çalıştırdığınız bir eBulma araması, bir arama çalıştırdığınızda tahmini arama sonuçlarında otomatik olarak kısmen dizine alınmış öğeler içerir. Kısmen dizine alınan öğeler, SharePoint ve OneDrive İş sitelerindeki posta kutusu öğeleri ve belgeleri Exchange ve herhangi bir nedenle arama için tamamen dizine eklenmedi. Çoğu e-posta iletisi ve site belgesi, [e-posta iletileri için Dizin oluşturma sınırları](limits-for-content-search.md#indexing-limits-for-email-messages) içinde olduğundan başarıyla dizinlenir. Ancak, bazı öğeler bu dizin oluşturma sınırlarını aşabilir ve kısmen dizine alınabilir. eBulma araması çalıştırdığınızda öğelerin arama için dizine alınamamalarının ve kısmen dizine alınan öğeler olarak döndürüllerinin diğer nedenleri şunlardır:
+Microsoft Purview uyumluluk portalı çalıştırdığınız bir eBulma araması, bir arama çalıştırdığınızda tahmini arama sonuçlarında otomatik olarak kısmen dizine alınan öğeler içerir. Kısmen dizine alınan öğeler, SharePoint ve OneDrive İş sitelerindeki posta kutusu öğeleri ve belgeleri Exchange ve herhangi bir nedenle arama için tamamen dizine eklenmedi. Çoğu e-posta iletisi ve site belgesi, [e-posta iletileri için Dizin oluşturma sınırları](limits-for-content-search.md#indexing-limits-for-email-messages) içinde olduğundan başarıyla dizinlenir. Ancak, bazı öğeler bu dizin oluşturma sınırlarını aşabilir ve kısmen dizine alınabilir. eBulma araması çalıştırdığınızda öğelerin arama için dizine alınamamalarının ve kısmen dizine alınan öğeler olarak döndürüllerinin diğer nedenleri şunlardır:
   
 - E-posta iletilerinin ekli bir dosyası vardır ve bu dosya açılamaz; Bu, kısmen dizine alınan e-posta öğelerinin en yaygın nedenidir.
 
@@ -116,12 +116,13 @@ Aşağıda dizin oluşturma hatalarının listesi ve hatanın olası nedeninin a
 | `wordbreakertruncated` <br/> |Dizin oluşturma sırasında belgede çok fazla sözcük tanımlandı. Sınıra ulaşıldığında özelliğin işlenmesi durduruldu ve özellik kesildi.  <br/> |
 
 Hata alanları, Hata Etiketleri alanında listelenen işleme hatasından hangi alanların etkilendiğini açıklar. veya `participants`gibi `subject` bir özelliği arıyorsanız, iletinin gövdesindeki hatalar aramanızın sonuçlarını etkilemez. Bu, tam olarak hangi kısmen dizine alınan öğeleri daha fazla araştırmanız gerekebileceğini belirlerken yararlı olabilir.
-  
-## <a name="using-a-powershell-script-to-determine-your-organizations-exposure-to-partially-indexed-email-items"></a>Kuruluşunuzun kısmen dizine alınan e-posta öğelerine maruz kalmasını belirlemek için PowerShell betiği kullanma
 
-Aşağıdaki adımlar, tüm Exchange posta kutularındaki tüm öğeleri arayan ve ardından kuruluşunuzun kısmen dizine eklenmiş e-posta öğelerinin oranı (sayı ve boyuta göre) hakkında bir rapor oluşturan ve oluşan her dizin oluşturma hatası için öğe sayısını (ve dosya türlerini) görüntüleyen bir PowerShell betiğinin nasıl çalıştırıldığını gösterir. Dizin oluşturma hatasını tanımlamak için önceki bölümdeki hata etiketi açıklamalarını kullanın.
+<!--
+## Using a PowerShell script to determine your organization's exposure to partially indexed email items
+
+The following steps show you how to run a PowerShell script that searches for all items in all Exchange mailboxes, and then generates a report about your organization's ratio of partially indexed email items (by count and by size) and displays the number of items (and their file type) for each indexing error that occurs. Use the error tag descriptions in the previous section to identify the indexing error.
   
-1. Aşağıdaki metni .ps1 dosya adı soneki kullanarak bir Windows PowerShell betik dosyasına kaydedin; örneğin, `PartiallyIndexedItems.ps1`.
+1. Save the following text to a Windows PowerShell script file by using a filename suffix of .ps1; for example, `PartiallyIndexedItems.ps1`.
 
    ```powershell
      write-host "**************************************************"
@@ -166,25 +167,26 @@ Aşağıdaki adımlar, tüm Exchange posta kutularındaki tüm öğeleri arayan 
      }
    ```
 
-2. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/exchange-online-powershell).
+2. [Connect to Security & Compliance PowerShell](/powershell/exchange/exchange-online-powershell).
 
-3. Güvenlik & Uyumluluğu PowerShell'de, 1. adımda betiği kaydettiğiniz klasöre gidin ve betiği çalıştırın; örneğin:
+3. In Security & Compliance PowerShell, go to the folder where you saved the script in step 1, and then run the script; for example:
 
    ```powershell
    .\PartiallyIndexedItems.ps1
    ```
 
-Aşağıda betik tarafından döndürülen çıkışa bir örnek verilmişti.
+Here's an example fo the output returned by the script.
   
-![Kuruluşunuzun kısmen dizine alınan e-posta öğelerine maruz kalmasını gösteren bir rapor oluşturan betik çıktısı örneği.](../media/aeab5943-c15d-431a-bdb2-82f135abc2f3.png)
+![Example of output from script that generates a report on your organization's exposure to partially indexed email items.](../media/aeab5943-c15d-431a-bdb2-82f135abc2f3.png)
 
 > [!NOTE]
-> Aşağıdakilere dikkat edin:
+> Note the following:
 >  
-> - E-posta öğelerinin toplam sayısı ve boyutu ve kuruluşunuzun kısmen dizine alınan e-posta öğelerinin oranı (sayıya ve boyuta göre).
+> - The total number and size of email items, and your organization's ratio of partially indexed email items (by count and by size).
 > 
-> - Hata etiketlerini ve hatanın oluştuğu ilgili dosya türlerini listeleyin.
-  
+> - A list error tags and the corresponding file types for which the error occurred.
+-->
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [eBulma'da kısmen dizine alınan öğeler](partially-indexed-items-in-content-search.md)

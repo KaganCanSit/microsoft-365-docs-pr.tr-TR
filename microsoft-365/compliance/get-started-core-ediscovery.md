@@ -1,5 +1,5 @@
 ---
-title: Microsoft Purview'da eBulma (Standart) durumlarıyla Kullanmaya başlayın
+title: Microsoft Purview'de eBulma (Standart) durumlarıyla Kullanmaya başlayın
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -17,15 +17,15 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Purview'da eKeşif (Standart) kullanmaya başlamayı açıklar. eBulma izinlerini atadıktan ve bir servis talebi oluşturduktan sonra, üyeleri ekleyebilir, eBulma tutmaları oluşturabilir ve ardından araştırmanızla ilgili içeriği arayabilir ve dışarı aktarabilirsiniz.
-ms.openlocfilehash: e224bf22741d0e1599d099802470e231b11fd785
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Microsoft Purview'de eBulma (Standart) kullanmaya başlamayı açıklar. eBulma izinlerini atadıktan ve bir servis talebi oluşturduktan sonra, üyeleri ekleyebilir, eBulma tutmaları oluşturabilir ve ardından araştırmanızla ilgili içeriği arayabilir ve dışarı aktarabilirsiniz.
+ms.openlocfilehash: 38e4d24405810293c9261c1c7f728ece0714cd66
+ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094956"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66078490"
 ---
-# <a name="get-started-with-ediscovery-standard-in-microsoft-purview"></a>Microsoft Purview'da eBulma (Standart) ile Kullanmaya başlayın
+# <a name="get-started-with-ediscovery-standard-in-microsoft-purview"></a>Microsoft Purview'de eBulma (Standart) ile Kullanmaya başlayın
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -37,7 +37,7 @@ Bu makalede, eBulma'yı (Standart) ayarlamak için gereken adımlar ele alınmak
 
 eBulma için lisanslama (Standart) için uygun kuruluş aboneliği ve kullanıcı başına lisanslama gerekir.
 
-- **Kuruluş aboneliği:** Microsoft Purview uyumluluk portalında eBulma 'ya (Standart) erişmek ve ayrı tutma ve dışarı aktarma özelliklerini kullanmak için kuruluşunuzun bir Microsoft 365 E3 veya Office 365 E3 aboneliği veya üzeri olması gerekir. Microsoft 365 Frontline kuruluşlarının F5 aboneliği olmalıdır.
+- **Kuruluş aboneliği:** Microsoft Purview uyumluluk portalı eBulma'ya (Standart) erişmek ve ayrı tutma ve dışarı aktarma özelliklerini kullanmak için kuruluşunuzun Exchange çevrimiçi Plan 2 veya Microsoft 365 E3 ya da Office 365 E3 aboneliği veya üzeri olması gerekir. Microsoft 365 Frontline kuruluşlarının F5 aboneliği olmalıdır.
 
 - **Kullanıcı başına lisanslama:** Posta kutularına ve sitelere eBulma ayrılığı yerleştirmek için, kuruluş aboneliğinize bağlı olarak kullanıcılara aşağıdaki lisanslardan birinin atanması gerekir:
 

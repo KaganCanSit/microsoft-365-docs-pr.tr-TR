@@ -17,12 +17,12 @@ ms.custom: seo-marvel-apr2020
 description: Yöneticiler, Microsoft 365 Defender portalında Gönderiler portalını kullanarak şüpheli e-postalar, şüpheli kimlik avı postaları, istenmeyen postalar ve diğer zararlı olabilecek iletileri, URL'leri ve e-posta eklerini yeniden tarama amacıyla Microsoft'a göndermeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 09c0e80c8e8632c088aa42af558c90cbf0f0fc71
-ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
+ms.openlocfilehash: 125e151873e45717a4621bf2798e3587671c6b8d
+ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66057681"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66078974"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Şüpheli istenmeyen postaları, kimlik avı, URL'leri ve dosyaları Microsoft'a göndermek için Gönderimler portalını kullanın
 
@@ -149,13 +149,13 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
 > [!NOTE]
 > Kötü amaçlı yazılım filtreleme, ileti eklerini Kötü Amaçlı Yazılım Uyarısı Text.txt dosyasıyla değiştirdiyse, özgün ekleri içeren özgün iletiyi karantinadan göndermeniz gerekir. Karantinaya alma ve kötü amaçlı yazılım hatalı pozitifleri içeren iletilerin nasıl serbest bırakıldığı hakkında daha fazla bilgi için bkz. [Karantinaya alınan iletileri ve dosyaları yönetici olarak yönetme](manage-quarantined-messages-and-files.md).
 
-## <a name="view-admin-submissions-to-microsoft"></a>Microsoft'a yönetici gönderimlerini görüntüleme
+## <a name="view-email-admin-submissions-to-microsoft"></a>Microsoft'a e-posta yöneticisi gönderimlerini görüntüleme
 
 1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**Eylemler & Gönderimler sayfasındaki Gönderimler** \> **sayfasına gidin**. Doğrudan **Gönderimler** sayfasına gitmek için kullanın <https://security.microsoft.com/reportsubmission>.
 
-2. **Gönderimler** sayfasında **E-postalar**, **URL** veya **E-posta eki** sekmesinin seçili olduğunu doğrulayın.
+2. **Gönderimler** sayfasında **E-postalar** sekmesinin seçili olduğunu doğrulayın.
 
-   - Kullanılabilir bir sütun üst bilgisine tıklayarak girişleri sıralayabilirsiniz. En fazla yedi sütunu göstermek için **Sütunları özelleştir'e** tıklayın. Varsayılan değerler yıldız işaretiyle (<sup>\*</sup>):
+   - Kullanılabilir bir sütun üst bilgisine tıklayarak girişleri sıralayabilirsiniz. İhtiyacınız olan sütunları seçmek için **Sütunları özelleştir'e** tıklayın. Tüm sütunlar seçilebilir ve gönderim kılavuzunda gösterilebilir. Varsayılan değerler yıldız işaretiyle (<sup>\*</sup>):
      - **Gönderim adı**<sup>\*</sup>
      - **Gönderen**<sup>\*</sup>
      - **Alıcı**
@@ -201,7 +201,6 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
      - **Hiçbiri**
-     - **Tür**
      - **Neden**
      - **Durum**
      - **Sonuç**
@@ -209,7 +208,105 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
 
    - Girdileri dışarı aktarmak için **Dışarı Aktar'a** tıklayın. Görüntülenen iletişim kutusunda .csv dosyasını kaydedin.
 
-### <a name="admin-submission-result-details"></a>Yönetici gönderimi sonuç ayrıntıları
+## <a name="view-email-attachment-admin-submissions-to-microsoft"></a>Microsoft'a e-posta eki yönetici gönderimlerini görüntüleme
+
+1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**Eylemler & Gönderimler sayfasındaki Gönderimler** \> **sayfasına gidin**. Doğrudan **Gönderimler** sayfasına gitmek için kullanın <https://security.microsoft.com/reportsubmission>.
+
+2. **Gönderimler** sayfasında **, E-posta ekleri** sekmesinin seçili olduğunu doğrulayın.
+
+   - Kullanılabilir bir sütun üst bilgisine tıklayarak girişleri sıralayabilirsiniz. İhtiyacınız olan sütunları seçmek için **Sütunları özelleştir'e** tıklayın. Tüm sütunlar seçilebilir ve gönderim kılavuzunda gösterilebilir. Varsayılan değerler yıldız işaretiyle (<sup>\*</sup>):
+     - **Ek adı**<sup>\*</sup>
+     - **Gönderilme tarihi**<sup>\*</sup>
+     - **Gönderme nedeni**<sup>\*</sup>
+     - **Durum**<sup>\*</sup>
+     - **Sonuç**<sup>\*</sup>
+     - **Filtre kararı**
+     - **Teslim/Engelleme nedeni**
+     - **Gönderim Kimliği**
+     - **Nesne Kimliği**
+     - **İlke eylemi**
+     - **Gönderen**
+     - **Etiketler**<sup>\*</sup>
+     - **İzin ver**
+
+     İşiniz bittiğinde **Uygula'ya** tıklayın.
+
+     > [!div class="mx-imgBorder"]
+     > :::image type="content" source="../../media/email-attachment-admin-submission-customize-columns.png" alt-text="Yönetici gönderimleri için Yeni Özelleştir sütun seçenekleri" lightbox="../../media/email-attachment-admin-submission-customize-columns.png":::
+
+   - Girişleri filtrelemek için **Filtre'ye** tıklayın. Kullanılabilir filtreler şunlardır:
+     - **Gönderilme tarihi**: **Başlangıç tarihi** ve **Bitiş tarihi**.
+     - **Gönderme Kimliği**: Her gönderime atanan bir GUID değeri.
+     - **Ek dosya adı**
+     - **Gönderen**
+     - **Gönderme nedeni**
+     - **Durum**
+     - **Etiketler**
+
+     İşiniz bittiğinde **Uygula'ya** tıklayın.
+
+     > [!div class="mx-imgBorder"]
+     > :::image type="content" source="../../media/email-attachment-admin-submission-customize-columns.png" alt-text="Yönetici gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/email-attachment-admin-submission-filters.png":::
+
+   - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
+     - **Hiçbiri**
+     - **Neden**
+     - **Durum**
+     - **Sonuç**
+     - **Etiketler**
+
+   - Girdileri dışarı aktarmak için **Dışarı Aktar'a** tıklayın. Görüntülenen iletişim kutusunda .csv dosyasını kaydedin.
+
+## <a name="view-urls-admin-submissions-to-microsoft"></a>Microsoft'a yapılan URL'ler yönetici gönderimlerini görüntüleme
+
+1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**Eylemler & Gönderimler sayfasındaki Gönderimler** \> **sayfasına gidin**. Doğrudan **Gönderimler** sayfasına gitmek için kullanın <https://security.microsoft.com/reportsubmission>.
+
+2. **Gönderimler** sayfasında **URL'ler** sekmesinin seçili olduğunu doğrulayın.
+
+   - Kullanılabilir bir sütun üst bilgisine tıklayarak girişleri sıralayabilirsiniz. İhtiyacınız olan sütunları seçmek için **Sütunları özelleştir'e** tıklayın. Tüm sütunlar seçilebilir ve gönderim kılavuzunda gösterilebilir. Varsayılan değerler yıldız işaretiyle (<sup>\*</sup>):
+     - **URL**<sup>\*</sup>
+     - **Gönderilme tarihi**<sup>\*</sup>
+     - **Gönderme nedeni**<sup>\*</sup>
+     - **Durum**<sup>\*</sup>
+     - **Sonuç**<sup>\*</sup>
+     - **Filtre kararı**
+     - **Teslim/Engelleme nedeni**
+     - **Gönderim Kimliği**
+     - **Nesne Kimliği**
+     - **İlke eylemi**
+     - **Gönderen**
+     - **Etiketler**<sup>\*</sup>
+     - **İzin ver**
+
+     İşiniz bittiğinde **Uygula'ya** tıklayın.
+
+     > [!div class="mx-imgBorder"]
+     > :::image type="content" source="../../media/url-admin-submission-customize-columns.png" alt-text="Yönetici gönderimleri için Yeni Özelleştir sütun seçenekleri" lightbox="../../media/url-admin-submission-customize-columns.png":::
+
+   - Girişleri filtrelemek için **Filtre'ye** tıklayın. Kullanılabilir filtreler şunlardır:
+     - **Gönderilme tarihi**: **Başlangıç tarihi** ve **Bitiş tarihi**.
+     - **Gönderme Kimliği**: Her gönderime atanan bir GUID değeri.
+     - **URL**
+     - **Gönderen**
+     - **Gönderme nedeni**
+     - **Durum**
+     - **Etiketler**
+
+     İşiniz bittiğinde **Uygula'ya** tıklayın.
+
+     > [!div class="mx-imgBorder"]
+     > :::image type="content" source="../../media/url-admin-submission-customize-columns.png" alt-text="Yönetici gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/url-admin-submission-filters.png":::
+
+   - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
+     - **Yok**
+     - **Neden**
+     - **Durum**
+     - **Sonuç**
+     - **Etiketler**
+
+   - Girdileri dışarı aktarmak için **Dışarı Aktar'a** tıklayın. Görüntülenen iletişim kutusunda .csv dosyasını kaydedin.
+
+### <a name="admin-submission-result-details"></a>gönderim sonucu ayrıntılarını Yönetici
 
 Yönetici gönderimlerinde gönderilen iletiler gözden geçirilir ve sonuçlar gönderim ayrıntıları açılır öğesinde gösterilir:
 
@@ -268,7 +365,7 @@ Geçersiz kılma bulunduysa, sonucun birkaç dakika içinde kullanılabilir olma
      > :::image type="content" source="../../media/admin-submission-reported-messages.png" alt-text="Kullanıcı gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/admin-submission-reported-messages.png":::
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
-     - **Hiçbiri**
+     - **Yok**
      - **Neden**
      - **Gönderen**
      - **Rapor eden**
