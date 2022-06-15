@@ -170,8 +170,6 @@
               href: use-arc-exceptions-to-mark-trusted-arc-senders.md
         - name: EOP'de posta akışı
           href: mail-flow-in-eop.md
-        - name: Kullanıcı gönderim ilkeleri
-          href: user-submission.md
         - name: IPv6 üzerinden anonim gelen e-posta desteği ekleme
           href: support-for-anonymous-inbound-email-messages-over-ipv6.md
         - name: Office için Application Guard yükleme
@@ -328,6 +326,8 @@
               href: enable-the-report-message-add-in.md
             - name: Outlook'ta yanlış pozitifleri ve yanlış negatifleri bildirme
               href: report-false-positives-and-false-negatives.md
+            - name: Kullanıcı tarafından bildirilen ileti ayarları
+              href: user-submission.md
             - name: Kullanıcıların Microsoft'a ne bildirdiğini görmek için posta akışı kurallarını kullanma
               href: /exchange/security-and-compliance/mail-flow-rules/use-rules-to-see-what-users-are-reporting-to-microsoft
             - name: Kötü amaçlı yazılımları ve kötü amaçlı olmayan yazılımları Microsoft'a gönderme
@@ -404,6 +404,8 @@
           href: step-by-step-guides/how-to-handle-false-positives-in-microsoft-defender-for-office-365.md
         - name: Karantina izinleri ve ilkeleri nasıl yapılandırılır?
           href: step-by-step-guides/how-to-configure-quarantine-permissions-with-quarantine-policies.md
+        - name: İleti merkezini kullanarak Office 365 için Microsoft Defender’da yapılacak değişikliklerden haberdar olun
+          href: step-by-step-guides/stay-informed-with-message-center.md
         - name: Önceden ayarlanmış güvenlik ilkeleriyle her zaman en uygun güvenlik denetimlerine sahip olmanızı sağlayarak
           href: step-by-step-guides/ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies.md
         - name: 'Microsoft 365 Defender''da olaylar nasıl Önceliklendirilir, Yönetilir, Araştırılır ve Yanıtlanır?'

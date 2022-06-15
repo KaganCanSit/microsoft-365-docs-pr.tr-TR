@@ -14,6 +14,8 @@
               href: microsoft-365-security-center-mde.md
             - name: Microsoft 365 Defender'da Office 365 için Defender
               href: microsoft-365-security-center-mdo.md
+            - name: Microsoft 365 Defender'da Bulut Uygulamaları için Defender
+              href: microsoft-365-security-center-defender-cloud-apps.md
             - name: Uç Nokta için Defender'ı Microsoft 365 Defender'a yönlendirme
               href: microsoft-365-security-mde-redirection.md
             - name: Kimlik için Defender'ı Microsoft 365 Defender'a yönlendirme
@@ -166,6 +168,8 @@
               items:
                 - name: Olaylar
                   href: investigate-incidents.md
+                - name: Veri kaybı olayları
+                  href: investigate-dlp.md
                 - name: Uyarılar
                   href: investigate-alerts.md
                 - name: Taktik defterini notlandırma uyarısı
