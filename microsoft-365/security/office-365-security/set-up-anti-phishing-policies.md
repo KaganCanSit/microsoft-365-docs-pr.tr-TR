@@ -17,16 +17,16 @@ ms.custom:
 description: Yöneticiler, Exchange Online Protection (EOP) ve Office 365 için Microsoft Defender'de kullanılabilen kimlik avı önleme ilkeleri hakkında bilgi edinebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 786a71e37e9602be2c8de4637ffd5f83a70e7e59
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 1a1265e70c0d22182e8ee4db865eeb53ac8168b7
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438893"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115905"
 ---
 # <a name="anti-phishing-policies-in-microsoft-365"></a>Microsoft 365'de kimlik avı önleme ilkeleri
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -86,6 +86,15 @@ Aşağıdaki ilke ayarları EOP ve Office 365 için Defender kimlik avı önleme
 
   > [!NOTE]
   > İlkenin <u>geçerli</u> olduğu ileti **alıcılarını** tanımlamak için özel kimlik avı önleme ilkelerinde **Kullanıcılar, gruplar ve etki alanları** ayarlarında en az bir seçim yapılması gerekir. Office 365 için Defender'deki kimlik avı önleme ilkeleri, bu makalenin devamında açıklandığı gibi <u>kimliğe bürünme koruması alacak</u> tek tek gönderen e-posta adreslerini veya gönderen etki alanlarını belirtebileceğiniz [kimliğe bürünme ayarlarına](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) da sahiptir.
+  >
+  > Birden çok farklı koşul veya özel durum ek değildir; Onlar kapsayıcı. İlke _yalnızca_ belirtilen alıcı filtrelerinin _tümüyle_ eşleşen alıcılara uygulanır. Örneğin, ilkede aşağıdaki değerlerle bir alıcı filtresi koşulu yapılandırabilirsiniz:
+  >
+  > - Alıcı: romain@contoso.com
+  > - Alıcı şu üyelerin üyesidir: Yöneticiler
+  >
+  > İlke, _romain@contoso.com yalnızca_ Yönetici gruplarının da üyesiyse uygulanır. Grubun üyesi değilse ilke ona uygulanmaz.
+  >
+  > Benzer şekilde, ilkenin özel durumu olarak aynı alıcı filtresini kullanırsanız, ilke _romain@contoso.com yalnızca_ Yöneticiler gruplarının da üyesiyse uygulanmaz. Grubun üyesi değilse, ilke hala onun için geçerlidir.
 
 ## <a name="spoof-settings"></a>Kimlik sahtekarı ayarları
 

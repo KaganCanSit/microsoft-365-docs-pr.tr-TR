@@ -17,12 +17,12 @@ ms.custom: ''
 description: Yöneticiler, karantinaya alınan iletilere kullanıcıların yapabileceklerini denetlemek için karantina ilkelerini kullanmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ef3fc69cf07f4b643e12bab96a73b68627e07203
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 74f1a657cbf675b8a55edc169339cb16a22f4dbe
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65648249"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115685"
 ---
 # <a name="quarantine-policies"></a>Karantina ilkeleri
 
@@ -685,6 +685,9 @@ Karantina ilkesi **Tam erişim** izinleri atarsa (tüm kullanılabilir izinler),
   - **Gözden geçirin**
 
   :::image type="content" source="../../media/quarantine-tags-esn-full-access.png" alt-text="Karantina ilkesi kullanıcıya tam erişim izinleri verirse karantina bildirimindeki kullanılabilir düğmeler" lightbox="../../media/quarantine-tags-esn-full-access.png":::
+
+> [!NOTE]
+> Daha önce açıklandığı gibi, karantina **ilkesiNde Tam erişim** izin grubu atanmış olsa bile, karantina bildirimleri DefaultFullAccessPolicy adlı varsayılan karantina ilkesinde devre dışı bırakılmıştır. Karantina bildirimleri yalnızca oluşturduğunuz özel karantina ilkelerinde veya NotificationEnabledPolicy adlı varsayılan karantina erişim [ilkesinde (bu ilke kuruluşunuzda kullanılabiliyorsa) kullanılabilir](#full-access-permissions-and-quarantine-notifications).
 
 ### <a name="individual-permissions"></a>Bireysel izinler
 

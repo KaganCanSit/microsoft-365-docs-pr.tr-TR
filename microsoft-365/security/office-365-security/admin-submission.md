@@ -17,12 +17,12 @@ ms.custom: seo-marvel-apr2020
 description: Yöneticiler, Microsoft 365 Defender portalında Gönderiler portalını kullanarak şüpheli e-postalar, şüpheli kimlik avı postaları, istenmeyen postalar ve diğer zararlı olabilecek iletileri, URL'leri ve e-posta eklerini yeniden tarama amacıyla Microsoft'a göndermeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 47e97b728fb27d8df6ad813946d3cdbe08c52085
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: bd56ce39cbb1d48470742f80a8b07747dd52f33a
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66089121"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66116057"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Şüpheli istenmeyen postaları, kimlik avı, URL'leri ve dosyaları Microsoft'a göndermek için Gönderimler portalını kullanın
 
@@ -247,7 +247,7 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
      :::image type="content" source="../../media/email-attachment-admin-submission-filters.png" alt-text="E-posta eki yönetici gönderimleri için filtre seçenekleri.":::
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
-     - **Hiçbiri**
+     - **Yok**
      - **Neden**
      - **Durum**
      - **Sonuç**
@@ -294,7 +294,7 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
      :::image type="content" source="../../media/url-admin-submission-customize-columns.png" alt-text="URL yöneticisi gönderimleri için filtre seçenekleri.":::
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
-     - **Yok**
+     - **Hiçbiri**
      - **Neden**
      - **Durum**
      - **Sonuç**
@@ -361,7 +361,7 @@ Geçersiz kılma bulunduysa, sonucun birkaç dakika içinde kullanılabilir olma
      > :::image type="content" source="../../media/admin-submission-reported-messages.png" alt-text="Kullanıcı gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/admin-submission-reported-messages.png":::
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
-     - **Yok**
+     - **Hiçbiri**
      - **Neden**
      - **Gönderen**
      - **Rapor eden**
@@ -394,3 +394,7 @@ Kullanıcı özel posta kutusuna şüpheli bir e-posta gönderdikten sonra, kull
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="../../media/admin-submission-main-action-button.png" alt-text="Eylem düğmesindeki Yeni seçenekler" lightbox="../../media/admin-submission-main-action-button.png":::
+
+İleti Microsoft'a bildirilirse, **Yöneticiye dönüştürülen gönderim** değeri **hayır'dan** **evet'e** dönüşür. İlgili kullanıcı tarafından bildirilen iletinin gönderim açılır öğesi içindeki taşma **menüsünden Dönüştürülmüş yönetici gönderimini görüntüle'ye** tıklayarak doğrudan yönetici gönderimine erişebilirsiniz.
+
+:::image type="content" source="../../media/view-converted-admin-submission.png" alt-text="Kullanıcı tarafından bildirilen bir iletiden oluşturulan yönetici gönderimini görüntüleme seçeneği.":::

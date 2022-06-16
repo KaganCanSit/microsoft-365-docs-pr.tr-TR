@@ -14,16 +14,16 @@ search.appverid: MET150
 description: Tehdit düzeltme
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d584ce10f4e119ec4fe8aa2991c6cac0edd5377c
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 6102d1e7d3b7e39787c3787b8bc0851eedbdcefb
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621887"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115553"
 ---
 # <a name="remediate-malicious-email-delivered-in-office-365"></a>Office 365'te teslim edilen kötü amaçlı e-postaları düzeltme
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Office 365 için Microsoft Defender plan 2](defender-for-office-365.md)
@@ -36,6 +36,8 @@ Düzeltme, bir tehdide karşı belirlenmiş bir eylem gerçekleştirme anlamına
 ## <a name="what-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
 Yöneticiler e-postalar üzerinde gerekli eylemleri gerçekleştirebilir, ancak bu eylemlerin onaylanması için Microsoft 365 Defender portalındaki **E-posta & işbirliği** izinlerinde Kendilerine *Arama ve Temizleme* rolü atanmış olmalıdır. Rol gruplarından birine *Arama ve temizleme"* rolü eklenmeden, eylemi yürütemezler.
+
+E-posta eylemleri arka uçta otomatik araştırma oluşturduğundan *, Otomatik Araştırma'yı* etkinleştirmeniz gerekir. **Ayarlar** \> **Uç Noktalar** \> **Gelişmiş özellikleri'ne** gidin ve **Otomatik Araştırma'yi** açın.
 
 ## <a name="manual-and-automated-remediation"></a>El ile ve otomatik düzeltme
 
@@ -55,7 +57,7 @@ Explorer aracılığıyla e-postalar seçildikten sonra, doğrudan işlem yapara
 
 - Doğrudan onay: *Gelen kutusuna taşıma*, *gereksiz öğeye taşıma*, *silinmiş öğelere taşıma*, *geçici silme* veya *sabit silme* gibi eylemler uygun izinlere sahip güvenlik personeli tarafından seçildiğinde ve düzeltmedeki sonraki adımlar izlendiğinde, düzeltme işlemi seçilen eylemi yürütmeye başlar.
 > [!NOTE]
-> Düzeltme başlatılırken paralel olarak bir uyarı ve araştırma oluşturur. Uyarı, uyarı kuyruğunda güvenlik personelinin varlığı düzeltme eylemini gerçekleştirmesini öneren "Yönetici tarafından gönderilen yönetim eylemi" adıyla gösterilir. Eylemi gerçekleştiren kişinin adı, destekleyici araştırma bağlantısı, zaman vb. gibi ayrıntılar sunar. Varlıklarda düzeltme gibi sert bir eylemin her gerçekleştirildiğini bilmek gerçekten iyi çalışır. Tüm bu eylemler **Eylemler & Gönderimler** **İşlem** **merkeziHistory** \>  ->  sekmesinde (genel önizleme) izlenebilir.
+> Düzeltme başlatılırken paralel olarak bir uyarı ve araştırma oluşturur. Uyarı, uyarı kuyruğunda güvenlik personelinin varlığı düzeltme eylemini gerçekleştirmesini öneren "Yönetici tarafından gönderilen yönetim eylemi" adıyla gösterilir. Eylemi gerçekleştiren kişinin adı, destekleyici araştırma bağlantısı, zaman vb. gibi ayrıntılar sunar. Varlıklarda düzeltme gibi sert bir eylemin her gerçekleştirildiğini bilmek gerçekten iyi çalışır. Tüm bu eylemler **Eylemler & Gönderimler** \> **İşlem merkezi**  -> **Geçmişi sekmesinde** (genel önizleme) izlenebilir.
 
 - İki adımlı onay: "Düzeltmeye ekle" eylemi, uygun izinlere sahip olmayan veya eylemi yürütmek için beklemesi gereken yöneticiler tarafından yapılabilir. Bu durumda, hedeflenen e-postalar bir düzeltme kapsayıcısına eklenir. Düzeltme yürütülmeden önce onay gerekir.
 
@@ -64,9 +66,9 @@ Explorer aracılığıyla e-postalar seçildikten sonra, doğrudan işlem yapara
 > [!div class="mx-imgBorder"]
 > [![Zap yürütme zamanını gösteren "Zapped" sayfasındaki kötü amaçlı yazılım içeren posta.](../../media/tp-RemediationArticle3.png)](../../media/tp-RemediationArticle3.png#lightbox)
 
-Gezgin, Gelişmiş avcılık veya Otomatik araştırma aracılığıyla oluşturulan tüm düzeltmeler (doğrudan onaylar) İşlem Merkezi'nde görüntülenir. Bunlara **Eylemler & Gönderimler İşlem merkeziHistory** \>   ->  sekmesinin altındaki sol gezinti paneli aracılığıyla **erişin**.
+Gezgin, Gelişmiş avcılık veya Otomatik araştırma aracılığıyla oluşturulan tüm düzeltmeler (doğrudan onaylar) İşlem Merkezi'nde görüntülenir. Bunlara **Eylemler & Gönderimler** \> **İşlem merkezi**  -> **Geçmişi sekmesinin** altındaki sol gezinti paneli aracılığıyla erişin.
 
-Gezgin veya Gelişmiş avcılık veya Otomatik araştırma aracılığıyla oluşturulan tüm düzeltmeler (doğrudan onaylar) İşlem Merkezi'nde görüntülenir. Bunlara **Eylemler & Gönderimler İşlem merkeziHistory** \>   ->  sekmesinin altındaki sol gezinti paneli aracılığıyla **erişin**. 
+Gezgin veya Gelişmiş avcılık veya Otomatik araştırma aracılığıyla oluşturulan tüm düzeltmeler (doğrudan onaylar) İşlem Merkezi'nde görüntülenir. Bunlara **Eylemler & Gönderimler** \> **İşlem merkezi**  -> **Geçmişi sekmesinin** altındaki sol gezinti paneli aracılığıyla erişin. 
 
 İki aşamalı onay işlemini kullanarak onay bekleyen el ile eylemler (1. bir güvenlik işlemi ekip üyesi tarafından düzeltmeye ekle, 2. başka bir güvenlik işlemi ekip üyesi tarafından gözden geçirilir ve onaylanır) yalnızca eski Office 365 için Defender işlem merkezinde **İnceleme** \> **İşlem merkezi'nde** görünür; olaylar/araştırmalarda ve Birleşik İşlem merkezinde görünmez.
 

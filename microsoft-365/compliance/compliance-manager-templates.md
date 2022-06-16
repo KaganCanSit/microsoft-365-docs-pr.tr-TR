@@ -1,5 +1,5 @@
 ---
-title: Microsoft Purview Uyumluluk Yöneticisi'nde değerlendirme şablonlarıyla çalışma
+title: Microsoft Purview Uyumluluk Yöneticisi'nde değerlendirme şablonları hakkında bilgi edinin
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Uyumluluk Yöneticisi'nde değerlendirme oluşturmak için şablonların nasıl kullanılacağını ve yönetileceğini anlama. Biçimlendirilmiş bir Excel dosyası kullanarak şablonlar oluşturun ve değiştirin.
-ms.openlocfilehash: 009b2d742ab135abcde7c3ab73f9ec15c05c8f29
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: e83e079ba47a9e9ab33b3219ca648d1b4af9f124
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972793"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66116015"
 ---
 # <a name="learn-about-assessment-templates-in-compliance-manager"></a>Uyumluluk Yöneticisi'nde değerlendirme şablonları hakkında bilgi edinin
 
@@ -36,13 +36,16 @@ ms.locfileid: "64972793"
 
 ## <a name="templates-overview"></a>Şablonlara genel bakış
 
-Şablon, Uyumluluk Yöneticisi'nde değerlendirme oluşturmaya yönelik denetimlerin bir çerçevesidir. Kapsamlı şablon kümemiz, kuruluşunuzun verilerin toplanması ve kullanımını yöneten ulusal, bölgesel ve sektöre özgü gereksinimlere uymasına yardımcı olabilir.
+Şablon, Uyumluluk Yöneticisi'nde değerlendirme oluşturmaya yönelik denetimlerin bir çerçevesidir. Kapsamlı şablon kümemiz, kuruluşunuzun verilerin toplanması ve kullanımını yöneten ulusal, bölgesel ve sektöre özgü gereksinimlere uymasına yardımcı olabilir. Şablonları, AB GDPR şablonu ve ISO/IEC 27701:2019 şablonu gibi temel sertifikasyon veya düzenlemeleriyle aynı ada göre adlandırıyoruz.
 
 ## <a name="template-versions-microsoft-and-universal"></a>Şablon sürümleri: Microsoft ve evrensel
 
-Şablonları, AB GDPR şablonu ve ISO/IEC 27701:2019 şablonu gibi temel sertifikasyon veya düzenlemeleriyle aynı ada göre adlandırıyoruz.
+Uyumluluk Yöneticisi, farklı ürün türlerini değerlendirmek için kullanılabilir. [Microsoft Veri Koruma Temeli](compliance-manager-assessments.md#data-protection-baseline-default-assessment) varsayılan şablonu dışındaki tüm şablonlar iki sürümde sunulur:
 
-Uyumluluk Yöneticisi, farklı ürün türlerini değerlendirmek için kullanılabilir. Temel dışındaki tüm şablonlar, Microsoft 365 gibi önceden tanımlanmış bir ürün için geçerli olan en az bir sürüm ve diğer ürünlere uyacak şekilde uyarlanabilir evrensel bir sürümde sunulur. Evrensel şablonlardan yapılan değerlendirmeler daha genelleştirilmiştir ancak kuruluşunuzun uyumluluğunu birden çok üründe kolayca izlemenize yardımcı olabileceğinden genişletilmiş çok yönlülük sunar.
+1. Microsoft 365 gibi önceden tanımlanmış bir ürün için geçerli olan bir sürüm ve
+2. Diğer ürünlere uyacak şekilde uyarlanabilir evrensel bir sürüm.
+
+Evrensel şablonlardan yapılan değerlendirmeler daha genelleştirilmiştir ancak kuruluşunuzun uyumluluğunu birden çok üründe kolayca izlemenize yardımcı olabileceğinden genişletilmiş çok yönlülük sunar.
 
 US Government Community (GCC) Moderate, GCC High ve Department of Defense (DoD) müşterilerinin şu anda evrensel şablonları kullanamayacağını unutmayın.
 
@@ -80,7 +83,7 @@ GCC Yüksek ve DOD hesapları [toplu lisanslama](https://www.microsoft.com/licen
 
 Satın alma işlemi yapmadan önce premium şablonları denemek için lisansların deneme sürümlerini de alabilirsiniz. Deneme lisansları, 90 gün boyunca 25 şablona kadar kullanılabilir. Deneme lisansınızı aldıktan sonra şablonlar 48 saat içinde kiracınızda kullanılabilir duruma gelir.
 
-Kuruluşunuzun Uyumluluk Yöneticisi için ticari lisansı varsa, [Microsoft Purview Compliance Manager premium değerlendirmeleri için ücretsiz deneme sürümü hakkında](compliance-easy-trials-compliance-manager-assessments.md) makalesinde deneme sürümünüzü nasıl başlatacağınızı öğrenebilirsiniz.
+Kuruluşunuzun Uyumluluk Yöneticisi için ticari lisansı varsa, [Microsoft Purview Uyumluluk Yöneticisi premium değerlendirmeleri için ücretsiz deneme sürümü hakkında sayfasında denemenizi](compliance-easy-trials-compliance-manager-assessments.md) nasıl başlatacağınızı öğrenebilirsiniz.
 
 Kuruluşunuz GCC veya DOD lisansı altındaysa, kuruluşunuz için uygun deneme bağlantısını seçin:
 

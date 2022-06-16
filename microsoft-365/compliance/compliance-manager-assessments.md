@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Kuruluşunuz için önemli olan düzenlemelerin ve sertifikaların gereksinimlerini karşılamanıza yardımcı olmak için Microsoft Purview Uyumluluk Yöneticisi'nde değerlendirmeler oluşturun.
-ms.openlocfilehash: 841d48951eebf0d04bf5c97a708a250218b44c65
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: cb2d90bf8dfbdcb2ec2ca534d1659a19d27998bc
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972573"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115751"
 ---
 # <a name="build-and-manage-assessments-in-compliance-manager"></a>Uyumluluk Yöneticisi'nde değerlendirme oluşturma ve yönetme
 
@@ -79,11 +79,11 @@ Yeni bir değerlendirme oluştururken grup oluşturabilirsiniz. Gruplar tek baş
 
 ## <a name="understand-templates-before-creating-assessments"></a>Değerlendirme oluşturmadan önce şablonları anlama
 
-Değerlendirme şablonları, farklı gizlilik düzenlemelerine ve standartlarına yönelik sertifikasyonlara dayalı olarak değerlendirmeler için denetimler ve eylem önerileri içerir. Kuruluşunuzun kullanılabilir şablonları, satın aldığınız ek premium şablonların yanı sıra lisans sözleşmenizin bir parçası olarak dahil edilen bir veya daha fazla şablon içerebilir.
+Değerlendirme şablonları, farklı gizlilik düzenlemelerine ve standartlarına yönelik sertifikasyonlara dayalı olarak değerlendirmeler için denetimler ve eylem önerileri içerir. Kuruluşunuz lisans sözleşmenize bağlı olarak en az bir ve muhtemelen daha fazla **dahil** edilen şablonla başlar. Kuruluşunuz ek **premium** şablonlar da satın alabilir.
 
-Dahil edilen veya premium olan her şablon iki sürümde bulunur: biri Microsoft 365 (veya kullanılabilir diğer Microsoft ürünleri) ile kullanım için ve kullandığınız diğer ürünleri değerlendirmek için uyarlanabilir evrensel bir sürüm. Değerlendirmek istediğiniz ürün için uygun şablon türünü seçebilirsiniz.
+Her şablon iki sürümde bulunur: biri Microsoft 365 (veya kullanılabilir diğer Microsoft ürünleri) ile kullanım için ve kullandığınız diğer ürünleri değerlendirmek için uyarlanabilir evrensel bir sürüm. Değerlendirmek istediğiniz ürün için uygun şablon türünü seçebilirsiniz.
 
-Şablonlar hakkında daha fazla bilgi edinmek için bkz [. Değerlendirme şablonlarıyla çalışma](compliance-manager-templates.md).
+Şablonlar hakkında daha fazla ayrıntı için [Bkz. Uyumluluk Yöneticisi'nde değerlendirme şablonları hakkında bilgi edinin](compliance-manager-templates.md).
 
 ## <a name="create-assessments"></a>Değerlendirme oluşturma
 

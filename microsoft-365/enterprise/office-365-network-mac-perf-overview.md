@@ -3,11 +3,12 @@ title: Microsoft 365 Yönetici Merkezi'nde ağ bağlantısı
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 12/06/2021
+ms.date: 06/15/2022
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 ms.localizationpriority: medium
+ms.reviewer: pandrew1
 search.appverid:
 - MET150
 ms.collection:
@@ -15,12 +16,12 @@ ms.collection:
 - Strat_O365_Enterprise
 - m365initiative-coredeploy
 description: Microsoft 365 Yönetici Merkezi'nde ağ bağlantısına genel bakış
-ms.openlocfilehash: 19aa6beaf299a80b76753357e4cbe4f8f0966362
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: 5c360820c39be6ec1c42ecdfa0a045a51716e408
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66043864"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115661"
 ---
 # <a name="network-connectivity-in-the-microsoft-365-admin-center"></a>Microsoft 365 Yönetici Merkezi'nde ağ bağlantısı
 
@@ -35,7 +36,7 @@ Microsoft 365 Yönetici Merkezi artık Microsoft 365 kiracınızdan toplanan top
 > ![Ağ performansı sayfası.](../media/m365-mac-perf/m365-mac-perf-page-nav.png)
 
 > [!NOTE]
-> Yönetim Merkezi'ndeki ağ bağlantısı WW Ticari ve Almanya'daki kiracıları destekler, ancak Orta, GCC Yüksek, DoD veya Çin GCC desteklemez.
+> Yönetici Merkezi'ndeki ağ bağlantısı WW Ticari ve Almanya'daki kiracıları destekler ancak Orta, GCC Yüksek, DoD veya Çin GCC desteklemez.
 
 Ağ performansı sayfasına ilk gittiğinizde, genel ağ performansı haritasını, kiracının tamamının kapsamına alınmış bir ağ değerlendirmesinin, uzaktan çalışan kullanıcılarınızın yüzdesini ve daha fazla araştırma yapmak ve/veya araştırmak için geçerli sorunların listesini görmek için konumlarınızı yapılandırmanız gerekir. Genel bakış bölmesinden, konuma göre belirli ağ performansı ölçümlerini ve sorunlarını görüntülemek için detaya gidebilirsiniz. Daha fazla bilgi için [Microsoft 365 Yönetici Merkezi'nde ağ performansına genel bakış](#network-connectivity-overview-in-the-microsoft-365-admin-center) bölümüne bakın.
 
@@ -47,19 +48,22 @@ Başlamak için Konum Servisleri'ni Windows kullanarak cihazlardan otomatik olar
 
 ### <a name="1-enable-windows-location-services"></a>1. Windows Konum Hizmetlerini etkinleştirme
 
-Bu seçenek için, ön koşulları destekleyen her ofis konumunda çalışan en az iki bilgisayar olmalıdır. Windows sürüm için OneDrive güncel olmalı ve her bilgisayara yüklenmelidir. OneDrive sürümler hakkında daha fazla bilgi için [OneDrive sürüm notlarına](https://support.office.com/article/onedrive-release-notes-845dcf18-f921-435e-bf28-4e24b95e5fc0) bakın. Ağ ölçümlerinin yakında diğer Office 365 istemci uygulamalarına eklenmesi planlanıyor.
+Bu seçenek için, ön koşulları destekleyen her ofis konumunda çalışan en az iki bilgisayar olmalıdır. Windows sürüm için OneDrive güncel olmalı ve her bilgisayara yüklenmelidir. Ağ testleri günde rastgele bir zamanda en fazla bir kez çalıştırılır. Ağ ölçümlerinin yakında diğer Office 365 istemci uygulamalarına eklenmesi planlanıyor.
 
 Windows Konum Hizmeti makinelerde onaylanmalıdır. **Haritalar** uygulamasını çalıştırıp kendinizi bularak bunu test edebilirsiniz. Ayarlar | ile tek bir makinede etkinleştirilebilir **Gizlilik |** _Uygulamaların konumunuza erişmesine izin ver_ ayarının etkinleştirildiği konum. Windows Konum Hizmetleri onayı, MDM kullanılarak bilgisayarlara dağıtılabilir veya _LetAppsAccessLocation_ ayarıyla grup ilkesi.
 
-Şehir çözünürlüğünde otomatik olarak tanımlandıkları için Yönetim Merkezi'ne bu yöntemle konum eklemeniz gerekmez. Windows Konum Hizmetleri kullanılırken aynı şehir içindeki birden çok ofis konumu gösterilmez. Konum bilgileri, daha hassas konum bilgilerine erişilemeyecek şekilde en yakın 300 metreye 300 metre yuvarlanmış olur.
+Bu yöntemle Yönetici Merkezi'ne konum eklemeniz gerekmez çünkü şehir çözünürlüğünde otomatik olarak tanımlanırlar. Windows Konum Hizmetleri kullanılırken aynı şehir içindeki birden çok ofis konumu gösterilmez. Konum bilgileri, daha hassas konum bilgilerine erişilemeyecek şekilde en yakın 300 metreye 300 metre yuvarlanmış olur. Windows Konum Hizmetleri'nin ağ ölçümleri için kullanılması müşteriler için varsayılan olarak kapalıdır. Ağ Bağlantısı Ayarlar Konumu açılır öğesinde etkinleştirmeniz gerekir.
+
+   > [!div class="mx-imgBorder"]
+   > ![Konumu etkinleştir](../media/m365-mac-perf/m365-mac-perf-location-enable.png)
 
 Makinelerin ethernet kablosu yerine Wi-Fi ağı olmalıdır. Ethernet kablosu olan makinelerin konum bilgileri doğru değildir.
 
-Ölçüm örnekleri ve ofis konumları, bu önkoşullar karşılandıktan 24 saat sonra görünmeye başlamalıdır.
+Ölçüm örnekleri ve ofis konumları, bu önkoşullar karşılandıktan 24 saat sonra görünmeye başlamalıdır. Windows Konum Hizmetleri'nden bulunan Office konumlar Şehir başına toplanır ve örnekler artık alınmadıktan sonra 90 gün boyunca görünümünüzde tutulur. YÖNETICI tarafından LAN alt ağ bilgileriyle eklenen ofis konumlarına geçmeyi seçerseniz Konum Hizmetleri Windows'ni devre dışı bırakabilir ve bulunan tüm konumları gizleyebilirsiniz. Bunlar 90 günlük süreden sonra kaldırılacaktır.
 
 ### <a name="2-add-locations-and-provide-lan-subnet-information"></a>2. Konum ekleme ve LAN alt ağı bilgilerini sağlama
 
-Bu seçenek için konum hizmetlerini Windows veya Wi-Fi gerekli değildir. Windows sürümü için OneDrive güncel olmalı ve konumdaki en az bir bilgisayara yüklenmiş olmalıdır.
+Bu seçenek için konum hizmetlerini Windows veya Wi-Fi gerekli değildir. Windows sürümü için OneDrive güncel olmalı ve konumdaki en az bir bilgisayara yüklenmiş olmalıdır ve her ofis için LAN alt ağ bilgilerinizi bilmeniz gerekir. Bu seçenek, şehir başına birden çok ofis konumuna izin verir ve ofis konumlarınızı adlandırabilirsiniz. Bunları diğer kaynaklardan da karşıya yükleyebilirsiniz.
 
 **Ayrıca konumlar sayfasına** konum eklediğinizden veya bunları csv dosyasından içeri aktardığınızdan emin olun. Eklenen konumlar office LAN alt ağ bilgilerinizi içermelidir. Konum ekleme veya düzenleme iletişim kutusunda, bir dizi LAN alt ağı ve bir dizi genel çıkış IP alt ağı belirtebilirsiniz. LAN alt ağları gereklidir ve sonuçların gösterilmesi için bunlardan birinin alınan ağ değerlendirmesinde LAN alt ağı özniteliğiyle eşleşmesi gerekir. Süper ağlar desteklenmez, bu nedenle LAN alt ağı tam olarak eşleşmelidir.
 
@@ -73,9 +77,9 @@ Bu seçenek, bir şehirde birden çok ofis tanımlamanızı sağlar.
 
 ### <a name="3-manually-gather-test-reports-with-the-microsoft-365-network-connectivity-test-tool"></a>3. Microsoft 365 ağ bağlantısı test aracıyla test raporlarını el ile toplayın
 
-Bu seçenek için her konumda bir kişiyi tanımlamanız gerekir. Yönetici izinlerine sahip oldukları bir Windows makinesinde Microsoft 365 [ağ bağlantısı testine](https://connectivity.office.com) göz atmalarını isteyin. Web sitesinde, sonuçları görmek istediğiniz kuruluş için Office 365 hesaplarında oturum açmaları gerekir. Ardından **Testi çalıştır'a** tıklamaları gerekir. Test sırasında indirilmiş bir Bağlantı testi EXE'sı vardır. Bunu açıp yürütmeleri gerekir. Testler tamamlandıktan sonra test sonucu Yönetim Merkezi'ne yüklenir.
+Bu seçenek için her konumda bir kişiyi tanımlamanız gerekir. Yönetici izinlerine sahip oldukları bir Windows makinesinde Microsoft 365 [ağ bağlantısı testine](https://connectivity.office.com) göz atmalarını isteyin. Web sitesinde, sonuçları görmek istediğiniz kuruluş için Office 365 hesaplarında oturum açmaları gerekir. Ardından **Testi çalıştır'a** tıklamaları gerekir. Test sırasında indirilmiş bir Bağlantı testi EXE'sı vardır. Bunu açıp yürütmeleri gerekir. Testler tamamlandıktan sonra test sonucu Yönetici Merkezi'ne yüklenir.
 
-Test raporları LAN alt ağı bilgileriyle eklenmişse bir konuma bağlanır, aksi takdirde yalnızca şehir konumunda gösterilir.
+Test raporları LAN alt ağ bilgileriyle eklenmişse bir konuma bağlanır, aksi takdirde bunlar yalnızca bulunan Şehir konumunda gösterilir.
 
 Ölçüm örnekleri ve ofis konumları, test raporu tamamlandıktan 2-3 dakika sonra görünmeye başlamalıdır. Daha fazla bilgi için bkz. [ağ bağlantısı test Microsoft 365](office-365-network-mac-perf-onboarding-tool.md).
 

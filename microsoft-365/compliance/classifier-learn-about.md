@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Eğitilebilir sınıflandırıcılar, etiketleme veya ilke uygulamasına bakılması için pozitif ve negatif örnekler vererek çeşitli içerik türlerini tanıyabilir.
-ms.openlocfilehash: 955e94aad0c7c4c20a020a76ebf4b4ffc1871d9a
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: ed2b744c1c136afde38151dc424eef547607ef27
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078820"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115861"
 ---
 # <a name="learn-about-trainable-classifiers"></a>Eğitilebilir sınıflandırıcılar hakkında daha fazla bilgi edinme
 
@@ -57,7 +57,7 @@ Bu sınıflandırma yöntemi, el ile veya otomatik desen eşleştirme yöntemler
 
 ### <a name="where-you-can-use-classifiers"></a>Sınıflandırıcıları kullanabileceğiniz yerler
 
-Sınıflandırıcılar[, duyarlılık etiketleriyle otomatik etiketleme,](apply-sensitivity-label-automatically.md) bir koşula göre ve [iletişim uyumluluğuna](communication-compliance.md) [göre bekletme etiketi ilkesini otomatik uygulama](apply-retention-labels-automatically.md#configuring-conditions-for-auto-apply-retention-labels) Office için bir koşul olarak kullanılabilir. 
+Sınıflandırıcılar[, duyarlılık etiketleriyle otomatik etiketleme,](apply-sensitivity-label-automatically.md) bir koşula göre ve [iletişim uyumluluğuna](communication-compliance.md) [göre bekletme etiketi ilkesini otomatik uygulama](apply-retention-labels-automatically.md#configuring-conditions-for-auto-apply-retention-labels) Office için bir koşul olarak kullanılabilir.
 
 Duyarlılık etiketleri sınıflandırıcıları koşul olarak kullanabilir. Bkz. [İçeriğe otomatik olarak duyarlılık etiketi uygulama](apply-sensitivity-label-automatically.md).
 
@@ -73,15 +73,11 @@ Duyarlılık etiketleri sınıflandırıcıları koşul olarak kullanabilir. Bkz
 
 Microsoft 365 önceden eğitilmiş birden çok sınıflandırıcı ile birlikte gelir:
 
-- **Adult, Racy ve Gory**: Bu tür görüntüleri algılar. Görüntülerin boyutu 50 kilobayt (KB) ile 4 megabayt (MB) arasında olmalı ve yükseklik x genişlik boyutlarında 50 x 50 pikselden büyük olmalıdır. Tarama ve algılama, Exchange Online e-posta iletileri ve Microsoft Teams kanalları ve sohbetler için desteklenir. .jpeg, .png, .gif ve .bmp dosyalarındaki içeriği algılar.
+- **Yetişkin, müstehcen ve gory**: Bu tür görüntüleri algılar. Görüntülerin boyutu 50 kilobayt (KB) ile 4 megabayt (MB) arasında olmalı ve yükseklik x genişlik boyutlarında 50 x 50 pikselden büyük olmalıdır. Tarama ve algılama, Exchange Online e-posta iletileri ve Microsoft Teams kanalları ve sohbetler için desteklenir. .jpeg, .png, .gif ve .bmp dosyalarındaki içeriği algılar.
 
 - **Sözleşmeler**: İfşa etmeme sözleşmeleri, iş beyanları, kredi ve kira sözleşmeleri, istihdam ve rekabet dışı sözleşmeler gibi yasal sözleşmelerle ilgili içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml dosyalarındaki içeriği algılar.
 
-- **Özgeçmişler**: bir başvuru sahibinin kişisel, eğitim, mesleki nitelikleri, iş deneyimi ve diğer kişisel tanımlayıcı bilgilerinin metinsel hesapları olan docx, .pdf, .rtf, .txt öğelerini algılar
-
-- **Kaynak Kodu**: GitHub üzerinde kullanılan ilk 25 bilgisayar programlama dilinde yazılmış bir dizi yönerge ve deyim içeren öğeleri algılar: ActionScript, C, C#, C++, Clojure, CoffeeScript, Go, Haskell, Java, JavaScript, Lua, MATLAB, Objective-C, Perl, PHP, Python, R, Ruby, Scala, Shell, Swift, TeX, Vim Script. .msg, .as, .h, .c, .cs, .cc, .cpp, .hpp, .cxx, .hh, .c++, .clj, .edn, .cljc, .cljs, .coffee, .litcoffee, .go, .hs, .lhs, .java, .jar, .js, .mjs, .lua, .m, .mm, .pl, .pm, .t, .xs, .pod, .php, .phar, .php4, .pyc, . R, .r, .rda, . RData, .rds, .rb, .scala, .sc, .sh, .swift dosyaları.
-
-- **Müşteri Şikayetleri**: Müşteri şikayetleri sınıflandırıcısı, kuruluşunuzun ürünleri veya hizmetleri hakkında yapılan geri bildirimleri ve şikayetleri algılar. Bu sınıflandırıcı, Tüketici Finansal Koruma Bürosu ve Gıda ve İlaç Yönetimi gereksinimleri gibi şikayetlerin tespiti ve önceliklendirmesi ile ilgili mevzuat gereksinimlerini karşılamanıza yardımcı olabilir. İletişim Uyumluluğu için .msg ve .eml dosyalarındaki içeriği algılar. Microsoft Purview Bilgi Koruması hizmetlerinin geri kalanında .docx, .pdf, .txt, .rtf, .jpg, .jpeg, .png, .gif, .bmp, .svg dosyalarındaki içeriği algılar.
+- **Müşteri şikayetleri**: Müşteri şikayetleri sınıflandırıcısı, kuruluşunuzun ürünleri veya hizmetleri hakkında yapılan geri bildirimleri ve şikayetleri algılar. Bu sınıflandırıcı, Tüketici Finansal Koruma Bürosu ve Gıda ve İlaç Yönetimi gereksinimleri gibi şikayetlerin tespiti ve önceliklendirmesi ile ilgili mevzuat gereksinimlerini karşılamanıza yardımcı olabilir. İletişim Uyumluluğu için .msg ve .eml dosyalarındaki içeriği algılar. Microsoft Purview Bilgi Koruması hizmetlerinin geri kalanında .docx, .pdf, .txt, .rtf, .jpg, .jpeg, .png, .gif, .bmp, .svg dosyalarındaki içeriği algılar.
 
 - **Ayrımcılık**: Açık ayrımcı dili algılar ve diğer topluluklarla karşılaştırıldığında Afrikalı Amerikalı/Siyah topluluklara karşı ayrımcı dile duyarlıdır.
 
@@ -97,27 +93,26 @@ Microsoft 365 önceden eğitilmiş birden çok sınıflandırıcı ile birlikte 
 
 - **BT**: Ağ ayarları, bilgi güvenliği, donanım ve yazılım gibi Bilgi Teknolojisi ve Siber Güvenlik kategorilerindeki içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
 
-- **Hukuk İşleri**: Dava, yasal süreç, yasal yükümlülük, yasal terminoloji, hukuk ve mevzuat gibi hukuk işleri ile ilgili kategorilerdeki içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml dosyalarındaki içeriği algılar.
+- **Yasal işler**: Dava, yasal süreç, yasal yükümlülük, yasal terminoloji, hukuk ve mevzuat gibi hukuk işleri ile ilgili kategorilerdeki içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml dosyalarındaki içeriği algılar.
 
 - **Tedarik**: Teklif verme, alıntılama, satın alma ve mal ve hizmet tedariki için ödeme kategorilerindeki içeriği algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, .xla dosyalarındaki içeriği algılar.
 
-- **Küfür**: Çoğu kişiyi utandıran ifadeler içeren belirli bir rahatsız edici dil metin öğeleri kategorisini algılar.
+- **Küfür**: Çoğu kişiyi utandıran ifadeler içeren belirli bir rahatsız edici dil metin öğeleri kategorisini algılar. .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg dosyalarındaki içeriği algılar.
 
-- **Özgeçmişler**: bir başvuru sahibinin kişisel, eğitim, mesleki nitelikleri, iş deneyimi ve diğer kişisel tanımlayıcı bilgilerinin metinsel hesapları olan docx, .pdf, .rtf, .txt öğelerini algılar
+- **Özgeçmiş**: Bir başvuru sahibinin kişisel, eğitim, mesleki nitelikleri, iş deneyimi ve diğer kişisel tanımlayıcı bilgilerinin metinsel hesapları olan docx, .pdf, .rtf, .txt öğelerini algılar
 
-- **Kaynak Kodu**: GitHub üzerinde kullanılan ilk 25 bilgisayar programlama dilinde yazılmış bir dizi yönerge ve deyim içeren öğeleri algılar: ActionScript, C, C#, C++, Clojure, CoffeeScript, Go, Haskell, Java, JavaScript, Lua, MATLAB, Objective-C, Perl, PHP, Python, R, Ruby, Scala, Shell, Swift, TeX, Vim Script.
+- **Kaynak kodu**: GitHub üzerinde bilgisayar programlama dilleri yazılmış bir dizi yönerge ve deyim içeren öğeleri algılar: ActionScript, C, C#, C++, Clojure, CoffeeScript, Go, Haskell, Java, JavaScript, Lua, MATLAB, Objective-C, Perl, PHP, Python, R, Ruby, Scala, Shell, Swift, TeX, Vim Betiği. .msg, .as, .h, .c, .cs, .cc, .cpp, .hpp, .cxx, .hh, .c++, .clj, .edn, .cljc, .cljs, .coffee, .litcoffee, .go, .hs, .lhs, .java, .jar, .js, .mjs, .lua, .m, .mm, .pl, .pm, .t, .xs, .pod, .php, .phar, .php4, .pyc, . R, .r, .rda, . RData, .rds, .rb, .scala, .sc, .sh, .swift dosyaları.
 
-    > [!NOTE]
-    > Kaynak Kodu, metnin büyük kısmının kaynak kodu olduğunu algılamak için eğitilir. Düz metinle kesişen kaynak kodu metnini algılamaz.
+  > [!NOTE]
+  > Kaynak Kodu, metnin büyük kısmının kaynak kodu olduğunu algılamak için eğitilir. Düz metinle kesişen kaynak kodu metnini algılamaz.
 
 - **Vergi: Vergi** planlaması, vergi formları, vergi dosyalama, vergi düzenlemeleri gibi Vergi ilişkisi içeriğini algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
 
 - **Tehdit**: Şiddet uygulama veya bir kişi ya da mülke fiziksel zarar verme ya da zarar verme tehditleriyle ilgili belirli bir rahatsız edici dil metin öğesi kategorisini algılar.
-- **Küfür**: Çoğu kişiyi utandıran ifadeler içeren belirli bir rahatsız edici dil metin öğeleri kategorisini algılar. .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg dosyalarındaki içeriği algılar.
-- **Vergi: Vergi** planlaması, vergi formları, vergi dosyalama, vergi düzenlemeleri gibi Vergi ilişkisi içeriğini algılar. .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xltm, .xlam, .xla dosyaları.
+
 - **Tehdit**: Şiddet uygulama veya bir kişi ya da mülke fiziksel zarar verme ya da zarar verme tehditleriyle ilgili belirli bir rahatsız edici dil metin öğesi kategorisini algılar. .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg dosyalarındaki içeriği algılar.
 
-Bunlar **Microsoft Purview uyumluluk portalı** >  **Veri sınıflandırması** > **Eğitilebilir sınıflandırıcılar** görünümünde durumuyla `Ready to use`gösterilir.
+Bu sınıflandırıcılar **, Microsoft Purview uyumluluk portalı** \> **Veri sınıflandırması** \> **Eğitilebilir sınıflandırıcılar** görünümünde durumunu `Ready to use`gösterir.
 
 ![classifiers-pre-trained-classifiers.](../media/classifiers-ready-to-use-classifiers.png)
 
@@ -145,7 +140,7 @@ Diğerleri sadece şu anda İngilizce.
 
 Önceden eğitilmiş sınıflandırıcılar gereksinimlerinizi karşılamadığında kendi sınıflandırıcılarınızı oluşturabilir ve eğitebilirsiniz. Kendi çalışmanızı oluşturma konusunda daha fazla iş vardır, ancak bunlar kuruluşunuzun ihtiyaçlarına göre çok daha iyi uyarlanır.
 
-Özel eğitilebilir sınıflandırıcıyı, kesinlikle kategoride yer alan örnekleri besleyerek oluşturmaya başlarsınız. Bu örnekleri işledikten sonra, hem eşleşen hem de eşleşmeyen örneklerin bir karışımını vererek test edebilirsiniz. Ardından sınıflandırıcı, belirli bir öğenin oluşturduğunuz kategoriye girip girmediğine ilişkin tahminlerde bulunur. Ardından, tahminlerinin doğruluğunu artırmaya yardımcı olmak için gerçek pozitifleri, gerçek negatifleri, hatalı pozitifleri ve hatalı negatifleri sıralayarak sonuçlarını onaylarsınız. 
+Özel eğitilebilir sınıflandırıcıyı, kesinlikle kategoride yer alan örnekleri besleyerek oluşturmaya başlarsınız. Bu örnekleri işledikten sonra, hem eşleşen hem de eşleşmeyen örneklerin bir karışımını vererek test edebilirsiniz. Ardından sınıflandırıcı, belirli bir öğenin oluşturduğunuz kategoriye girip girmediğine ilişkin tahminlerde bulunur. Ardından, tahminlerinin doğruluğunu artırmaya yardımcı olmak için gerçek pozitifleri, gerçek negatifleri, hatalı pozitifleri ve hatalı negatifleri sıralayarak sonuçlarını onaylarsınız.
 
 Sınıflandırıcıyı yayımladığınızda, SharePoint Online, Exchange ve OneDrive gibi konumlardaki öğeleri sıralar ve içeriği sınıflandırır. Sınıflandırıcıyı yayımladıktan sonra, ilk eğitim sürecine benzer bir geri bildirim işlemi kullanarak eğitmeye devam edebilirsiniz.
 

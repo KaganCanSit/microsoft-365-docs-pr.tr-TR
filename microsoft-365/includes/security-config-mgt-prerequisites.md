@@ -4,12 +4,12 @@ description: dosyayı dahil et
 author: mjcaparas
 ms.service: microsoft-365-enterprise
 ms.author: macapara
-ms.openlocfilehash: 61d7b5f00a42789a2d4f46aa41eb3f8865fb6e03
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: 31008df3e43c99f3a97dad3dce037b96e3b0c4b5
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/15/2022
-ms.locfileid: "66091474"
+ms.locfileid: "66116304"
 ---
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -33,7 +33,7 @@ Etki alanına katılmış bir cihaz Azure Active Directory ile güven oluşturdu
 - Azure Active Directory Bağlan (AAD Bağlan) Uç Nokta için Microsoft Defender'dan kullanılan kiracıyla eşitlenmelidir
 - Karma Azure Active Directory Katılma ortamınızda yapılandırılmalıdır (Federasyon veya AAD Bağlan Eşitleme aracılığıyla)
 - AAD Bağlan Eşitlemesi, Azure Active Directory ile *eşitleme için cihaz* nesnelerini kapsama eklemelidir (birleştirme için gerektiğinde)
-- Eşitleme için AAD Bağlan kuralları Server 2012 R2 için değiştirilmelidir (Server 2012 R2 desteği gerektiğinde)
+- Eşitleme için AAD Bağlan kuralları [Server 2012 R2 için değiştirilmelidir (Server](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt?view=o365-worldwide#instructions-for-applying-computer-join-rule-in-aad-connect) 2012 R2 desteği gerektiğinde)
 - Tüm cihazların Uç Nokta için Microsoft Defender barındıran kiracının Azure Active Directory kaydolması gerekir. Kiracılar arası senaryolar desteklenmez. 
 
 ### <a name="connectivity-requirements"></a>Bağlantı Gereksinimleri

@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: İhtiyacınız olanı korumak ve istemediğinizleri silmek için etiketleri otomatik olarak uygulayabilmeniz için otomatik etiketleme bekletme ilkeleri oluşturun
-ms.openlocfilehash: b059a90c8a4f1406e8368cb399ca5de58b2538dd
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: a349ce1678c6cc28a82aa6c97c31358a57970f35
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66089870"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115619"
 ---
 # <a name="automatically-apply-a-retention-label-to-retain-or-delete-content"></a>İçeriği korumak veya silmek için otomatik olarak bekletme etiketi uygulama
 
@@ -34,15 +34,13 @@ ms.locfileid: "66089870"
 > Bu senaryo, SharePoint belge kümesi veya kitaplığı ya da Exchange bir klasör gibi düzenleme yapısı için [düzenleme kayıtları](records-management.md#records) veya varsayılan etiketler için desteklenmez. Bu senaryolar [için yayımlanmış bir bekletme etiketi ilkesi](create-apply-retention-labels.md) gerekir.
 
 [Bekletme etiketlerinin](retention.md) en güçlü özelliklerinden biri, bunları belirtilen koşullarla eşleşen içeriğe otomatik olarak uygulayabilmektir. Bu durumda kuruluşunuzdaki kişilerin bekletme etiketlerini uygulaması gerekmez. Microsoft 365 işi onlar için yapar.
-  
+
 Bekletme etiketlerini otomatik uygulama güçlü bir nedendir çünkü:
-  
+
 - Kullanıcılarınızı tüm sınıflandırmalarınız hakkında eğitmeniz gerekmez.
-    
 - Tüm içeriği doğru sınıflandırmak için kullanıcılara güvenmeniz gerekmez.
-    
 - Kullanıcıların artık veri idaresi ilkeleri hakkında bilgi sahibi olmaları gerekmez; çalışmalarına odaklanabilir.
-    
+
 Bu içerikte henüz bir bekletme etiketi uygulanmamışsa ve hassas bilgiler, anahtar sözcükler veya aranabilir özellikler ya da [eğitilebilir sınıflandırıcılar](classifier-get-started-with.md) için eşleşme içerdiğinde içeriğe otomatik olarak bekletme etiketleri uygulayabilirsiniz. Artık önizleme aşamasında, SharePoint veya OneDrive depolanan bulut eklerine otomatik olarak bir bekletme etiketi uygulayabilirsiniz.
 
 > [!TIP]
@@ -55,7 +53,7 @@ Bu koşullara göre otomatik olarak bir bekletme etiketi uygulama işlemleri:
 İki yönetici adımı için aşağıdaki yönergeleri kullanın.
 
 > [!NOTE]
-> Otomatik ilkeler, öğelere bekletme etiketlerini otomatik olarak uygulamak için hizmet tarafı etiketlemesini koşullarla birlikte kullanır. Ayrıca, aşağıdakileri yaptığınızda otomatik olarak etiket ilkesi içeren bir bekletme etiketi uygulayabilirsiniz: 
+> Otomatik ilkeler, öğelere bekletme etiketlerini otomatik olarak uygulamak için hizmet tarafı etiketlemesini koşullarla birlikte kullanır. Ayrıca, aşağıdakileri yaptığınızda otomatik olarak etiket ilkesi içeren bir bekletme etiketi uygulayabilirsiniz:
 >
 > - SharePoint Syntex'da belge anlama modeline bekletme etiketi uygulama
 > - SharePoint ve Outlook için varsayılan bekletme etiketi uygulama
@@ -65,7 +63,7 @@ Bu koşullara göre otomatik olarak bir bekletme etiketi uygulama işlemleri:
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Kuruluşunuzun genel yöneticisi, bekletme etiketleri ve ilkelerini oluşturmak ve düzenlemek için tam izinlere sahiptir. Genel yönetici olarak oturum açmıyorsanız, kullandığınız çözüme bağlı olarak [kayıt yönetimi](get-started-with-records-management.md#permissions) veya [veri yaşam alanı yönetimi](get-started-with-data-lifecycle-management.md#permissions-for-retention-policies-and-retention-labels) için izin bilgilerine bakın.
+Kuruluşunuzun genel yöneticisi, bekletme etiketleri ve ilkelerini oluşturmak ve düzenlemek için tam izinlere sahiptir. Genel yönetici olarak oturum açmadıysanız, kullandığınız çözüme bağlı olarak [kayıt yönetimi](get-started-with-records-management.md#permissions) veya [veri yaşam döngüsü yönetimi](get-started-with-data-lifecycle-management.md#permissions-for-retention-policies-and-retention-labels) için izin bilgilerine bakın.
 
 Öğelere uygulamak istediğiniz [bekletme etiketlerini oluşturduğunuzdan](file-plan-manager.md#create-retention-labels) emin olun.
 
@@ -76,13 +74,13 @@ Bekletme etiketi ilkenizi oluşturmadan önce **bunun uyarlamalı** mı yoksa **
 Otomatik uygulama ilkesi oluşturduğunuzda, belirttiğiniz koşullara göre içeriğe otomatik olarak uygulanacak bir bekletme etiketi seçersiniz.
 
 1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) aşağıdaki konumlardan birine gidin:
-    
+
     - Kayıt yönetimi kullanıyorsanız:
-        - **Çözümleri** >  **Kayıt yönetimi** > > **Etiket ilkeleri** sekmesi > **Otomatik etiket uygulama**
-    
+        - **Çözümleri** \> **Kayıt yönetimi** \> **Etiket ilkeleri** sekmesi \> **Etiketi otomatik uygulama**
+
     - Data lifeycle yönetimi kullanıyorsanız:
-        - **Çözümleri** >  **Veri yaşamsal veri yönetimi** >  **Etiket ilkeleri** sekmesi > **Etiketi otomatik uygulama**
-    
+        - **Çözümleri** \> **Veri yaşamsal veri yönetimi** \> **Etiket ilkeleri** sekmesi \> **Etiketi otomatik uygulama**
+
     Gezinti bölmesinde çözümünüzü hemen görmüyor musunuz? İlk olarak **Tümünü göster'i** seçin.
 
 2. Bu otomatik etiketleme ilkesi için bir ad ve açıklama girin ve **İleri'yi** seçin.
@@ -92,11 +90,11 @@ Otomatik uygulama ilkesi oluşturduğunuzda, belirttiğiniz koşullara göre iç
 4. **Oluşturulacak bekletme ilkesinin türünü seçin** sayfasında, [Başlamadan önce](#before-you-begin) yönergelerinden yaptığınız seçime bağlı olarak **Uyarlamalı** veya **Statik'i** seçin. Uyarlamalı kapsamlar oluşturmadıysanız **Uyarlamalı'yı** seçebilirsiniz, ancak seçilecek uyarlamalı kapsam olmayacağından, sihirbazı bu seçenekle tamamlayamazsınız.
 
 5. Seçtiğiniz kapsama bağlı olarak:
-    
-    - **Uyarlamalı**: **Uyarlamalı ilke kapsamlarını ve konumlarını seçin** sayfasında **Kapsam ekle'yi** seçin ve oluşturulmuş bir veya daha fazla uyarlamalı kapsam seçin. Ardından bir veya daha fazla konum seçin. Seçebileceğiniz konumlar eklenen [kapsam türlerine](retention-settings.md#configuration-information-for-adaptive-scopes) bağlıdır. Örneğin, yalnızca bir **Kullanıcı** kapsam türü eklediyseniz, **Exchange e-postayı** seçebilirsiniz, ancak **siteleri SharePoint seçemezsiniz**. 
-    
+
+    - **Uyarlamalı**: **Uyarlamalı ilke kapsamlarını ve konumlarını seçin** sayfasında **Kapsam ekle'yi** seçin ve oluşturulmuş bir veya daha fazla uyarlamalı kapsam seçin. Ardından bir veya daha fazla konum seçin. Seçebileceğiniz konumlar eklenen [kapsam türlerine](retention-settings.md#configuration-information-for-adaptive-scopes) bağlıdır. Örneğin, yalnızca bir **Kullanıcı** kapsam türü eklediyseniz, **Exchange e-postayı** seçebilirsiniz, ancak **siteleri SharePoint seçemezsiniz**.
+
     - **Statik**' i seçtiyseniz: **Konumları seçin** sayfasında konumlardan herhangi birini açın veya kapatın. Her konum için, [ilkeyi konumun tamamına uygulamak için](retention-settings.md#a-policy-that-applies-to-entire-locations) varsayılan olarak bırakabilir veya [ekleme ve dışlamaları belirtebilirsiniz](retention-settings.md#a-policy-with-specific-inclusions-or-exclusions)
-    
+
     Konum seçenekleri hakkında bilgi için bkz [. Konumlar](retention-settings.md#locations).
 
 6. Bir bekletme etiketi seçmek için sihirbazdaki istemleri izleyin ve yapılandırma seçeneklerinizi gözden geçirip gönderin.
@@ -146,7 +144,7 @@ Ayrıca, taslakta yer alan veya hiç yayımlanmamış SharePoint öğeler bu sen
 
 > [!IMPORTANT]
 > Hassas bilgileri tanımlayarak otomatik olarak uyguladığınız e-postalar için, tüm posta kutuları otomatik olarak eklenir ve bu, Microsoft 365 gruplardan gelen posta kutularını içerir.
-> 
+>
 > Grup posta kutuları genellikle **Microsoft 365 Grupları** konumu seçilerek dahil edilse de, bu ilke yapılandırması için grup konumu yalnızca Microsoft 365 grubuna bağlı SharePoint siteleri içerir.
 
 Hassas bilgiler için otomatik uygulama bekletme etiketi ilkeleri oluşturduğunuzda, bir Microsoft Purview Veri Kaybı Önleme (DLP) ilkesi oluştururken kullandığınız ilke şablonlarının listesini görürsünüz. Her şablon, belirli türlerdeki hassas bilgileri aramak için önceden yapılandırılmıştır. Aşağıdaki örnekte, hassas bilgi türleri **Gizlilik** kategorisinden ve **ABD Kişisel Bilgiler (PII) Veri** şablonundan alınmaktadır:
@@ -156,7 +154,7 @@ Hassas bilgiler için otomatik uygulama bekletme etiketi ilkeleri oluşturduğun
 Duyarlılık bilgi türleri hakkında daha fazla bilgi edinmek için bkz. [Hassas bilgi türleri hakkında bilgi edinin](sensitive-information-type-learn-about.md#learn-about-sensitive-information-types). Şu anda, bu senaryo için [tam veri eşleşmesi tabanlı hassas bilgi türleri](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types) ve [belge parmak izi kullanımı](document-fingerprinting.md) desteklenmez.
 
 İlke şablonunu seçtikten sonra, herhangi bir tür hassas bilgi ekleyebilir veya kaldırabilir, güvenilirlik düzeyini ve örnek sayısını değiştirebilirsiniz. Önceki örnek ekran görüntüsünde, bekletme etiketinin yalnızca aşağıdaki durumlarda otomatik olarak uygulanması için bu seçenekler değiştirilmiştir:
-  
+
 - Algılanan hassas bilgi türü, iki hassas bilgi türü için en az **Orta düzeyde bir** eşleşme doğruluğuna (veya [güvenilirlik düzeyine](sensitive-information-type-learn-about.md#more-on-confidence-levels)) ve biri için **Yüksek güvenilirlik** düzeyine sahiptir. Birçok hassas bilgi türü, daha yüksek eşleşme doğruluğuna sahip bir desenin daha fazla kanıt bulunmasını gerektirdiği (anahtar sözcükler, tarihler veya adresler gibi) birden çok desenle tanımlanırken, daha düşük eşleşme doğruluğuna sahip bir desen daha az kanıt gerektirir. Güvenilirlik düzeyi ne kadar düşükse, içeriğin koşulla eşleşmesi o kadar kolay olur, ancak daha fazla hatalı pozitif sonuç olasılığı vardır.
 
 - İçerik, bu üç hassas bilgi türünden herhangi birinin 1 ila 9 örneğini içerir. için **varsayılan değer** **Any'tir**.
@@ -170,7 +168,7 @@ Bekletme etiketlerini otomatik olarak uygulamak için hassas bilgi türlerini ku
 
 - Özel hassas bilgi türleri kullanıyorsanız, bunlar SharePoint ve OneDrive mevcut öğeleri otomatik olarak etiketleyemez.
 
-- E-postalar için dahil etmek veya hariç tutmak üzere belirli alıcıları seçemezsiniz; yalnızca **Tüm alıcılar** ayarı desteklenir ve yalnızca bu yapılandırma için Microsoft 365 gruplarından gelen posta kutularını içerir. 
+- E-postalar için dahil etmek veya hariç tutmak üzere belirli alıcıları seçemezsiniz; yalnızca **Tüm alıcılar** ayarı desteklenir ve yalnızca bu yapılandırma için Microsoft 365 gruplarından gelen posta kutularını içerir.
 
 #### <a name="auto-apply-labels-to-content-with-keywords-or-searchable-properties"></a>Anahtar sözcükler veya aranabilir özellikler içeren içeriğe etiketleri otomatik uygulama
 
@@ -192,12 +190,13 @@ Bekletme etiketlerini otomatik olarak uygulamak için anahtar sözcükler veya a
 
 - Boşluk veya özel karakter içeren değerleri aramak için çift tırnak işareti (`" "`) kullanarak tümceciği (örneğin, `subject:"Financial Statements"`) kullanın.
 
-- Url'sine göre bir öğeyle eşleştirmek için *Path* yerine *DocumentLink* özelliğini kullanın. 
+- Url'sine göre bir öğeyle eşleştirmek için *Path* yerine *DocumentLink* özelliğini kullanın.
 
 - Sonek joker karakter aramaları (örneğin `*cat`) veya alt dize joker karakter aramaları (gibi `*cat*`) desteklenmez. Ancak, ön ek joker karakter aramaları (gibi `cat*`) desteklenir.
 
 - Kısmen dizine alınmış öğelerin beklediğiniz öğeleri etiketlememekten veya NOT işlecini kullanırken etiketlemenin dışında tutulmasını beklediğiniz öğeleri etiketlemeden sorumlu olabileceğini unutmayın. Daha fazla bilgi için bkz. [İçerik Arama'da kısmen dizine alınan öğeler](partially-indexed-items-in-content-search.md).
 
+- Belgelerdeki RefinableStrings değerlerinde sözcükler arasında boşluklar kullanmamanızı öneririz. RefinableString bir sözcük sonu özelliği değildir.
 
 Örnek sorgular:
 
@@ -213,35 +212,35 @@ Daha karmaşık örnekler:
 
 SharePoint için aşağıdaki sorgu, söz konusu dosyalar **parola**, **parola** veya **pw** anahtar sözcüklerini içerdiğinde Word belgelerini veya Excel elektronik tablolarını tanımlar:
 
-```
+```KQL
 (password OR passwords OR pw) AND (filetype:doc* OR filetype:xls*)
 ```
 
 Exchange için aşağıdaki sorgu, söz konusu belgeler bir e-postaya eklendiğinde **nda** veya **tümcecik gizlilik sözleşmesi** sözcüğünü içeren herhangi bir Word belgesini veya PDF'sini tanımlar:
 
-```
+```KQL
 (nda OR "non disclosure agreement") AND (attachmentnames:.doc* OR attachmentnames:.pdf)
 ```
 
-SharePoint için aşağıdaki sorgu, kredi kartı numarası içeren belgeleri tanımlar: 
+SharePoint için aşağıdaki sorgu, kredi kartı numarası içeren belgeleri tanımlar:
 
-```
+```KQL
 sensitivetype:"credit card number"
 ```
 
 Aşağıdaki sorgu, yasal içerik içeren belgeleri veya e-postaları tanımlamaya yardımcı olacak bazı tipik anahtar sözcükler içerir:
 
-```
+```KQL
 ACP OR (Attorney Client Privilege*) OR (AC Privilege)
 ```
 
-Aşağıdaki sorgu, insan kaynaklarına yönelik belgeleri veya e-postaları tanımlamaya yardımcı olacak tipik anahtar sözcükler içerir: 
+Aşağıdaki sorgu, insan kaynaklarına yönelik belgeleri veya e-postaları tanımlamaya yardımcı olacak tipik anahtar sözcükler içerir:
 
-```
+```KQL
 (resume AND staff AND employee AND salary AND recruitment AND candidate)
 ```
 
-Bu son örnekte anahtar sözcükler arasında her zaman işleçler dahil olmak için en iyi yöntemin kullanıldığına dikkat edin. Anahtar sözcükler (veya iki özellik:değer ifadesi) arasındaki boşluk, AND kullanımıyla aynıdır. Her zaman işleçler ekleyerek, bu örnek sorgunun anahtar sözcüklerden herhangi birini içeren içerik yerine yalnızca tüm bu anahtar sözcükleri içeren içeriği tanımlayacağını görmek daha kolaydır. Amacınız anahtar sözcüklerden herhangi birini içeren içeriği tanımlamaksa AND yerine OR değerini belirtin. Bu örnekte gösterildiği gibi, her zaman işleçleri belirttiğinizde sorguyu doğru yorumlamak daha kolaydır. 
+Bu son örnekte anahtar sözcükler arasında her zaman işleçler dahil olmak için en iyi yöntemin kullanıldığına dikkat edin. Anahtar sözcükler (veya iki özellik:değer ifadesi) arasındaki boşluk, AND kullanımıyla aynıdır. Her zaman işleçler ekleyerek, bu örnek sorgunun anahtar sözcüklerden herhangi birini içeren içerik yerine yalnızca tüm bu anahtar sözcükleri içeren içeriği tanımlayacağını görmek daha kolaydır. Amacınız anahtar sözcüklerden herhangi birini içeren içeriği tanımlamaksa AND yerine OR değerini belirtin. Bu örnekte gösterildiği gibi, her zaman işleçleri belirttiğinizde sorguyu doğru yorumlamak daha kolaydır.
 
 ##### <a name="microsoft-teams-meeting-recordings"></a>Toplantı kayıtlarını Microsoft Teams
 
@@ -250,7 +249,7 @@ Bu son örnekte anahtar sözcükler arasında her zaman işleçler dahil olmak i
 
 Kullanıcıların OneDrive hesaplarında veya SharePoint depolanan Microsoft Teams toplantı kayıtlarını belirlemek için **Anahtar Sözcük sorgu düzenleyicisi** için aşağıdakileri belirtin:
 
-```
+```KQL
 ProgID:Media AND ProgID:Meeting
 ```
 
@@ -260,7 +259,7 @@ ProgID:Media AND ProgID:Meeting
 
 SharePoint veya OneDrive dosyaları tanımlamak ve belirli bir [duyarlılık etiketi](sensitivity-labels.md) uygulanmış e-postaları Exchange için **Anahtar Sözcük sorgu düzenleyicisi** için aşağıdakileri belirtin:
 
-```
+```KQL
 InformationProtectionLabelId:<GUID>
 ```
 
@@ -310,11 +309,11 @@ Bu seçenek için desteklenen bulut ekleri, SharePoint ve OneDrive depolanan bel
 
 Bu seçenek için gerekli olmasa da, paylaşılan sürümün doğru bir şekilde yakalanması için SharePoint siteleriniz ve OneDrive hesaplarınız için sürüm oluşturmanın etkinleştirildiğinden emin olmanız önerilir. Sürüm oluşturma etkin değilse, kullanılabilir son sürüm korunur. Taslaktaki veya hiç yayımlanmamış belgeler desteklenmez.
 
-Bulut ekleri için bekletme etiketlerini otomatik olarak uygulamak için kullanılacak bir etiket seçtiğinizde, Etiket bekletme ayarının **Saklama süresini başlatma ayarının** **Öğeler etiketlendiğinde** olduğundan emin olun. 
+Bulut ekleri için bekletme etiketlerini otomatik olarak uygulamak için kullanılacak bir etiket seçtiğinizde, Etiket bekletme ayarının **Saklama süresini başlatma ayarının** **Öğeler etiketlendiğinde** olduğundan emin olun.
 
 Bu seçenek için konumları yapılandırırken şunları seçebilirsiniz:
 
-- **SharePoint iletişim sitelerinde** depolanan paylaşılan dosyalar, Microsoft 365 grupları tarafından bağlanmamış ekip siteleri ve klasik siteler için siteleri SharePoint. 
+- **SharePoint iletişim sitelerinde** depolanan paylaşılan dosyalar, Microsoft 365 grupları tarafından bağlanmamış ekip siteleri ve klasik siteler için siteleri SharePoint.
 - **Microsoft 365** grupları tarafından bağlanan ekip sitelerinde depolanan paylaşılan dosyalar için Microsoft 365 Grupları.
 - Kullanıcıların OneDrive depolanan paylaşılan dosyalar için **hesapları** OneDrive.
 
@@ -332,17 +331,17 @@ Bulut eklerine bekletme etiketlerinin otomatik olarak uygulandığını göz ön
 - Teams ve Outlook dışında paylaşılan bulut ekleri desteklenmez.
 
 - Aşağıdaki öğeler, saklanabilen bulut ekleri olarak desteklenmez:
-    - Siteler, sayfalar, listeler, formlar, klasörler, belge kümeleri ve OneNote sayfaları SharePoint.
-    - Bu dosyalara erişimi olmayan kullanıcılar tarafından paylaşılan dosyalar.
-    - Bulut eki gönderilmeden önce silinen veya taşınan dosyalar. Örneğin, kullanıcı önce dosyanın hala kullanılabilir olduğunu onaylamadan daha önce paylaşılan bir eki başka bir iletiden kopyalayıp yapıştırır. Ya da dosya silindiğinde birisi eski bir iletiyi iletir.
-    - Kuruluşunuz dışındaki konuklar veya kullanıcılar tarafından paylaşılan dosyalar.
-    - Taslak e-postalardaki ve gönderilmeyen iletilerdeki dosyalar.
-    - Boş dosyalar.
+  - Siteler, sayfalar, listeler, formlar, klasörler, belge kümeleri ve OneNote sayfaları SharePoint.
+  - Bu dosyalara erişimi olmayan kullanıcılar tarafından paylaşılan dosyalar.
+  - Bulut eki gönderilmeden önce silinen veya taşınan dosyalar. Örneğin, kullanıcı önce dosyanın hala kullanılabilir olduğunu onaylamadan daha önce paylaşılan bir eki başka bir iletiden kopyalayıp yapıştırır. Ya da dosya silindiğinde birisi eski bir iletiyi iletir.
+  - Kuruluşunuz dışındaki konuklar veya kullanıcılar tarafından paylaşılan dosyalar.
+  - Taslak e-postalardaki ve gönderilmeyen iletilerdeki dosyalar.
+  - Boş dosyalar.
 
 ## <a name="how-long-it-takes-for-retention-labels-to-take-effect"></a>Bekletme etiketlerinin etkili olması ne kadar sürer?
 
 Hassas bilgilere, anahtar sözcüklere veya aranabilir özelliklere ya da eğitilebilir sınıflandırıcılara göre bekletme etiketlerini otomatik olarak uyguladığınızda, bekletme etiketlerinin uygulanması yedi güne kadar sürebilir:
-  
+
 ![Otomatik uygulama etiketlerinin ne zaman etkin olduğunu açıklayan diyagram.](../media/retention-labels-autoapply-timings.png)
 
 Beklenen etiketler yedi gün sonra görünmüyorsa, Microsoft Purview uyumluluk portalı **Etiket ilkeleri** sayfasından seçerek otomatik uygulama ilkesinin **Durumunu** denetleyin. **Kapalı (Hata)** durumunu görürseniz ve konumların ayrıntılarında ilkeyi dağıtmanın (SharePoint için) veya ilkeyi yeniden dağıtmayı (OneDrive için) denemenin beklenenden uzun sürdüğünü belirten bir ileti görürseniz, ilke dağıtımını yeniden denemek için [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
@@ -350,7 +349,7 @@ Beklenen etiketler yedi gün sonra görünmüyorsa, Microsoft Purview uyumluluk 
 1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
 2. Aşağıdaki komutu çalıştırın:
-    
+
     ```PowerShell
     Set-RetentionCompliancePolicy -Identity <policy name> -RetryDistribution
     ```
@@ -362,6 +361,7 @@ Hassas bilgiler, anahtar sözcükler veya aranabilir özellikler için yapıland
 Bulut ekleri için yapılandırılan bekletme etiketi ilkelerini otomatik uygulama için: Bu ilke mevcut dosyalar yerine yeni paylaşılan dosyalar için geçerli olduğundan, seçilen etiket ve ilke yapılandırmasında yapılan bir değişiklik yalnızca yeni paylaşılan içeriğe otomatik olarak uygulanır.
 
 Etiket veya ilke oluşturulduktan ve kaydedildikten sonra bazı ayarlar değiştirilemez; bunlar şunlardır:
+
 - Bekletme etiketleri ve ilkeleri, kapsam türü (uyarlamalı veya statik) ve bekletme süresi dışında bekletme ayarları için adlar. Ancak, bekletme süresinin öğelerin etiketlendiği zamanlara göre olduğu saklama süresini değiştiremezsiniz.
 - Öğeleri kayıt olarak işaretleme seçeneği.
 

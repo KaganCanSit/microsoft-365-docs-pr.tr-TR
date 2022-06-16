@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview'de eBulma (Standart) kullanmaya başlamayı açıklar. eBulma izinlerini atadıktan ve bir servis talebi oluşturduktan sonra, üyeleri ekleyebilir, eBulma tutmaları oluşturabilir ve ardından araştırmanızla ilgili içeriği arayabilir ve dışarı aktarabilirsiniz.
-ms.openlocfilehash: 38e4d24405810293c9261c1c7f728ece0714cd66
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: c8a3ca883191c450ebc20ddb555018b8b480199b
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078490"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115883"
 ---
 # <a name="get-started-with-ediscovery-standard-in-microsoft-purview"></a>Microsoft Purview'de eBulma (Standart) ile Kullanmaya başlayın
 
@@ -41,6 +41,10 @@ eBulma için lisanslama (Standart) için uygun kuruluş aboneliği ve kullanıc�
 
 - **Kullanıcı başına lisanslama:** Posta kutularına ve sitelere eBulma ayrılığı yerleştirmek için, kuruluş aboneliğinize bağlı olarak kullanıcılara aşağıdaki lisanslardan birinin atanması gerekir:
 
+  -  çevrimiçi Plan 2 lisansı Exchange
+
+   VEYA
+   
   - Microsoft 365 E3 veya Office 365 E3 lisansı veya üzeri
 
    VEYA

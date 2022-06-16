@@ -14,16 +14,16 @@ ms.custom: AdminSurgePortfolio
 search.appverid: MET150
 ROBOTS: NOINDEX, NOFOLLOW
 description: Microsoft 365 yönetim merkezi tümleşik uygulamalar portalından kuruluşunuzdaki kullanıcılar ve gruplar için Microsoft ve Microsoft iş ortağı uygulamalarını bulun, test edin ve dağıtın.
-ms.openlocfilehash: 7d28f541c319622a4c15ac4eb4619b805cd0f13b
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: 862d70fe57974d2940458cb1fa59d05674d7ff58
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66043176"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115509"
 ---
 # <a name="test-and-deploy-microsoft-365-apps-by-partners-in-the-integrated-apps-portal"></a>Tümleşik uygulamalar portalında iş ortakları tarafından Microsoft 365 Uygulamaları test edin ve dağıtın
 
-Microsoft 365 yönetim merkezi tek mağaza uygulamalarını, özel iş kolu uygulamalarını ve Microsoft 365 iş ortağı uygulamalarını tek bir konumdan dağıtma esnekliği sağlar. Konuma Tümleşik uygulamalar'daki Microsoft Yönetim merkezi ayarlarından erişilebilir. Tümleşik uygulamalar portalından Microsoft iş ortakları tarafından satın alınan ve lisanslı uygulamaları bulma, test etme ve tam olarak dağıtma olanağı, kuruluşunuzun iş hizmetlerini düzenli olarak güncel tutmak ve verimli bir şekilde çalışmasını sağlamak için gereken kolaylık ve avantajları sağlar.
+Microsoft 365 yönetim merkezi tek mağaza uygulamalarını, özel iş kolu uygulamalarını ve Microsoft 365 iş ortağı uygulamalarını tek bir konumdan dağıtma esnekliği sağlar. Konuma Microsoft Yönetici merkezi ayarlarından Tümleşik uygulamalar'dan erişilebilir. Tümleşik uygulamalar portalından Microsoft iş ortakları tarafından satın alınan ve lisanslı uygulamaları bulma, test etme ve tam olarak dağıtma olanağı, kuruluşunuzun iş hizmetlerini düzenli olarak güncel tutmak ve verimli bir şekilde çalışmasını sağlamak için gereken kolaylık ve avantajları sağlar.
 
 Kuruluşunuz için iş ortaklarından uygulama satın alma ve lisanslama Microsoft 365 hakkında ek bilgi için bkz. [Microsoft 365 yönetim merkezi Microsoft 365 Uygulamaları yönetme ve dağıtma](https://techcommunity.microsoft.com/t5/microsoft-365-blog/manage-and-deploy-microsoft-365-apps-from-the-microsoft-365/ba-p/1194324).
 
@@ -242,7 +242,7 @@ Eklentilerin güncelleştirmeleri aşağıdaki gibi olur:
 - **Office Store eklentisi**: Yönetici Office Store'dan bir eklenti seçtiğinde, Office Store'da bir eklenti güncelleştirilirse, ilgili Office uygulamaları bir sonraki başlatışında eklenti güncelleştirilir. Web uygulaması her an değişebilir. 
 
 > [!NOTE]
-> Word için, Excel ve PowerPoint, Microsoft 365 bağlantısı ve/veya SharePoint eklentileri için destek gerekmeyen şirket içi bir ortamdaki kullanıcılara eklenti dağıtmak için SharePoint [Uygulama Kataloğu](https://dev.office.com/docs/add-ins/publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog) kullanır. Outlook için Microsoft 365 bağlantısı olmadan şirket içi bir ortamda dağıtmak üzere Exchange denetim masası kullanın.  
+> Word, Excel ve PowerPoint, Microsoft 365 bağlantısı ve/veya SharePoint eklentileri için destek gerekmeyen şirket içi bir ortamdaki kullanıcılara eklenti dağıtmak için SharePoint [Uygulama Kataloğu'nu](/sharepoint/dev/sp-add-ins/publish-sharepoint-add-ins) kullanır. Outlook için Microsoft 365 bağlantısı olmadan şirket içi bir ortamda dağıtmak üzere Exchange denetim masası kullanın.  
 
 ## <a name="add-in-states"></a>Eklenti durumları
 Eklenti **Açık** veya **Kapalı** durumda olabilir. 
@@ -284,7 +284,7 @@ Dağıtılan bir eklentiyi de silebilirsiniz.
 
 ## <a name="scenarios-where-exchange-admin-cannot-deploy-an-add-in"></a>Exchange yöneticisinin eklenti dağıtamadığı senaryolar 
 
-bir Exchange Yöneticisinin eklenti dağıtamayacağı iki durum vardır:
+bir Exchange Yönetici bir eklentiyi dağıtamayacağı iki durum vardır:
 - Bir eklentinin MS Graph API'leri için izin alması ve genel yöneticiden onay alması gerekiyorsa.
 - Bir eklenti iki veya daha fazla eklentiye ve web uygulamasına bağlıysa ve bu eklentilerden en az biri başka bir yönetici (exchange/global) tarafından dağıtılıyorsa ve kullanıcı ataması tekdüzen değilse. Eklentilerin dağıtımına yalnızca kullanıcı ataması zaten dağıtılmış olan tüm uygulamalar için aynı olduğunda izin veririz.  
 

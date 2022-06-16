@@ -19,12 +19,12 @@ ms.custom: ''
 description: Yöneticiler, Office 365 için Microsoft Defender Kasa Bağlantılar ilkelerini ve genel Kasa Bağlantıları ayarlarını görüntülemeyi, oluşturmayı, değiştirmeyi ve silmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 969e3f3bb3b139a21cd2d84b4a0bd698a74b5107
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: 5e66b1b079f67d6454754d056ca9fedf5fefb74f
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772456"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115795"
 ---
 # <a name="set-up-safe-links-policies-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da Kasa Bağlantıları ilkelerini ayarlama
 
@@ -116,6 +116,16 @@ Microsoft 365 Defender portalında özel bir Kasa Bağlantıları ilkesi oluştu
    Aynı koşuldaki birden çok değer OR mantığını kullanır (örneğin, _\<recipient1\>_ veya _\<recipient2\>_). Farklı koşullar AND mantığını kullanır (örneğin, _\<recipient1\>_ ve _\<member of group 1\>_).
 
    - **Bu kullanıcıları, grupları ve etki alanlarını dışlayın**: İlkenin geçerli olduğu iç alıcılara özel durumlar eklemek için (alıcı özel durumları), bu seçeneği belirleyin ve özel durumları yapılandırın. Ayarlar ve davranış, koşullara tam olarak benzer.
+
+   > [!IMPORTANT]
+   > Birden çok farklı koşul veya özel durum ek değildir; Onlar kapsayıcı. İlke _yalnızca_ belirtilen alıcı filtrelerinin _tümüyle_ eşleşen alıcılara uygulanır. Örneğin, ilkede aşağıdaki değerlerle bir alıcı filtresi koşulu yapılandırabilirsiniz:
+   >
+   > - Alıcı: romain@contoso.com
+   > - Alıcı şu üyelerin üyesidir: Yöneticiler
+   >
+   > İlke, _romain@contoso.com yalnızca_ Yönetici gruplarının da üyesiyse uygulanır. Grubun üyesi değilse ilke ona uygulanmaz.
+   >
+   > Benzer şekilde, ilkenin özel durumu olarak aynı alıcı filtresini kullanırsanız, ilke _romain@contoso.com yalnızca_ Yöneticiler gruplarının da üyesiyse uygulanmaz. Grubun üyesi değilse, ilke hala onun için geçerlidir.
 
    İşiniz bittiğinde **İleri'ye** tıklayın.
 
