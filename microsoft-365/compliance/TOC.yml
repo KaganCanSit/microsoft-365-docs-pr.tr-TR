@@ -1,6 +1,8 @@
-- name: Microsoft Purview uyumluluk
+- name: Microsoft Purview risk ve uyumluluk çözümleri
   href: index.yml
-- name: Microsoft Purview'daki yenilikler
+- name: Risk ve uyumluluk çözümleri hakkında bilgi edinin
+  href: purview-compliance.md
+- name: Risk ve uyumluluk çözümlerindeki yenilikler
   href: whats-new.md
 - name: Uyumluluk ücretsiz denemeleri
   items:
@@ -1001,6 +1003,8 @@
           href: set-up-basic-audit.md
         - name: Denetim günlüğünde arama yapma
           href: search-the-audit-log-in-security-and-compliance.md
+        - name: Yeni Arama Denetimi
+          href: audit-new-search.md
         - name: 'Denetim günlüğü kayıtlarını dışa aktarma, yapılandırma ve görüntüleme'
           href: export-view-audit-log-records.md
         - name: Denetim günlüğünü aramak için PowerShell betiği kullanma
