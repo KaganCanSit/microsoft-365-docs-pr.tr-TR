@@ -1,6 +1,6 @@
 ---
-title: Cihaz denetimiyle kuruluş verilerinizi koruma
-description: Cihaz denetimi raporları aracılığıyla cihazınızın veri güvenliğini izleme.
+title: Cihaz denetimiyle kuruluşunuzun verilerini koruma
+description: Cihaz denetimi raporları aracılığıyla kuruluşunuzun veri güvenliğini izleyin.
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,71 +14,68 @@ manager: dansimp
 audience: ITPro
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 8a31ce05ed6986159d9f6e4c489e6f7707cfecc4
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 6fe93be2ec244628f2bf2195eb453307235ea06f
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64465299"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66129195"
 ---
 # <a name="device-control-report"></a>Cihaz denetimi raporu
 
-**Aşağıdakiler için geçerlidir:** 
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:** 
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-Uç Nokta için Microsoft Defender denetimi, çıkarılabilir depolama cihazlarının ve USB sürücülerinin kullanımı gibi organizasyon cihazları tarafından medya kullanımını izleme ve denetlemeyle veri kaybına karşı koruma sağlar.
+Uç Nokta için Microsoft Defender cihaz denetimi, kuruluşunuzdaki çıkarılabilir depolama cihazları ve USB sürücüleri gibi cihazların medya kullanımını izleyerek ve denetleyerek veri kaybına karşı koruma sağlar.
 
-Cihaz denetim raporuyla, medya kullanımıyla ilgili olayları görüntüebilirsiniz; örneğin:
+Cihaz denetimi raporuyla, medya kullanımıyla ilgili olayları görüntüleyebilirsiniz. Bu tür olaylar şunlardır:
 
-- **Denetim olayları:** Dış medya bağlandıktan sonra oluşan denetim olaylarının sayısını gösterir.
-- **İlke olayları:** Cihaz denetimi ilkesi tetiklendiğinde oluşan ilke olaylarının sayısını gösterir.
+- **Denetim olayları:** Dış medya bağlandığında gerçekleşen denetim olaylarının sayısını gösterir.
+- **İlke olayları:** Cihaz denetimi ilkesi tetiklendiğinde gerçekleşen ilke olaylarının sayısını gösterir.
 
 > [!NOTE]
-> Medya kullanımını izlemeyle ilgili denetim olayı, medya kullanımına hazır cihazlar için varsayılan Uç Nokta için Microsoft Defender.
+> Medya kullanımını izlemeye yönelik denetim olayı, Uç Nokta için Microsoft Defender eklenen cihazlar için varsayılan olarak etkindir.
 
 ## <a name="understanding-the-audit-events"></a>Denetim olaylarını anlama
 
 Denetim olayları şunlardır:
 
-- **USB sürücü bağlama ve takma cihazını çıkar:** USB sürücü takılı veya bağlı değilken oluşturulan denetim olayları.
-- **PnP:** Tak ve Kullan bir depolama alanı, yazıcı veya medya bağlı olduğunda denetim Bluetooth olayları oluşturulur.
-- **Çıkarılabilir depolama alanı erişim denetimi:** Çıkarılabilir bir depolama erişimi denetimi ilkesi tetiklendiğinde olaylar oluşturulur. Denetim, Engelle veya İzin Ver olabilir.
+- **USB sürücü bağlama ve çıkarma:** BIR USB sürücüsü takıldığında veya çıkarıldığında oluşturulan olayları denetleyin.
+- **PnP:** Çıkarılabilir depolama birimi, yazıcı veya Bluetooth medya bağlandığında Tak ve Kullan denetim olayları oluşturulur.
+- **Çıkarılabilir depolama birimi erişim denetimi:** Çıkarılabilir depolama erişim denetimi ilkesi tetiklendiğinde olaylar oluşturulur. Denetim, Engelleme veya İzin Ver olabilir.
 
 ## <a name="monitor-device-control-security"></a>Cihaz denetimi güvenliğini izleme
 
-Denetimler altında Uç Nokta için Microsoft Defender, güvenlik yöneticilerine, raporlar aracılığıyla kuruluşlarının cihaz denetimi güvenliğini izlemelerine olanak sağlayan araçlar sağlar. Cihaz denetimi raporunu Raporlar ve Cihaz Microsoft 365 Defender'a > **bulabilirsiniz**.
+Uç Nokta için Defender'daki cihaz denetimi, güvenlik yöneticilerine kuruluşlarının cihaz denetimi güvenliğini raporlar aracılığıyla izlemelerini sağlayan araçlarla güçlendiriyor. Cihaz denetim raporunu Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com) ) bulabilirsiniz. **Raporlar** > **Genel** > **Güvenlik raporu'na** gidin. **Cihaz denetim** kartını bulun ve raporu açmak için bağlantıyı seçin. 
 
-Raporlar panosunda Cihaz **koruma** kartı, son 180 gün içinde medya türü tarafından üretilen denetim olaylarının sayısını gösterir.
+**Raporlar** panosundaki Cihaz koruma kartı, son 180 gün içinde medya türü tarafından oluşturulan denetim olaylarının sayısını gösterir.
 
-> [!div class="mx-imgBorder"]
-> ![DeviceControlReportCard](https://user-images.githubusercontent.com/81826151/138504137-e9a7673e-e988-48cd-820d-2625ec6df352.png)
+**Ayrıntıları görüntüle** düğmesi **, cihaz denetimi rapor** sayfasında daha fazla medya kullanım verisi gösterir.
 
-Ayrıntıları **görüntüle düğmesi** , cihaz denetim raporu sayfasında daha fazla **medya kullanım verisi** gösterir.
-
-Sayfa, tür başına toplam olay sayısı ve bir olay listesiyle birlikte bir pano sağlar. Yöneticiler saat aralığı, medya sınıfı adı ve cihaz kimliğine göre filtre uygulama.
+Sayfa, tür başına toplam olay sayısı ve olay listesi içeren bir pano sağlar ve sayfa başına 500 olay gösterir, ancak Yöneticiler daha fazla olay görmek için aşağı kaydırabilir ve zaman aralığına, medya sınıfı adına ve cihaz kimliğine göre filtreleyebilir.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="images/Detaileddevicecontrolreport.png" alt-text="Microsoft 365 Defender portalında Cihaz Denetimi Microsoft 365 Defender sayfası" lightbox="images/Detaileddevicecontrolreport.png":::
+> :::image type="content" source="images/Detaileddevicecontrolreport.png" alt-text="Microsoft 365 Defender portalındaki Cihaz Denetimi Raporu Ayrıntıları sayfası" lightbox="images/Detaileddevicecontrolreport.png":::
 
-Bir olayı seçinca, size daha fazla bilgi gösteren bir açılır sayfa görüntülenir:
+Bir olayı seçtiğinizde, size daha fazla bilgi gösteren bir açılır öğe görüntülenir:
 
-- **Genel ayrıntılar:** Bu olayın tarihi, Eylem modu, ilke ve Access.
-- **Medya bilgileri:** Medya bilgileri Medya adı, Sınıf adı, Sınıf GUID, Cihaz Kimliği, Satıcı Kimliği, Seri numarası ve Veri türü bilgilerini içerir.
+- **Genel ayrıntılar:** Tarih, Eylem modu, ilke ve Bu olayın Erişimi.
+- **Medya bilgileri:** Medya bilgileri Medya adı, Sınıf adı, Sınıf GUID'si, Cihaz Kimliği, Satıcı Kimliği, Seri numarası ve Veri Yolu türünü içerir.
 - **Konum ayrıntıları:** Cihaz adı, Kullanıcı ve MDATP cihaz kimliği.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="images/devicecontrolreportfilter.png" alt-text="Cihaz Denetim Raporuna Göre FiltreLe sayfası" lightbox="images/devicecontrolreportfilter.png":::
+> :::image type="content" source="images/devicecontrolreportfilter.png" alt-text="Cihaz Denetimi Raporundaki Filtre sayfası" lightbox="images/devicecontrolreportfilter.png":::
 
-Kuruluş genelinde bu medyanın gerçek zamanlı etkinliğini görmek için Gelişmiş avı **aç düğmesini** seçin. Bu, eklenmiş, önceden tanımlanmış bir sorguyu içerir.
-
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="images/Devicecontrolreportquery.png" alt-text="Cihaz Denetim Raporu Sayfasında Sorgu" lightbox="images/Devicecontrolreportquery.png":::
-
-Cihazın güvenliğini görmek için açılır sayfada **Cihazı aç** sayfa düğmesini seçin. Bu düğme, cihaz varlık sayfasını açar.
+Kuruluş genelinde bu medyanın gerçek zamanlı etkinliğini görmek için **Gelişmiş Avcılığı Aç** düğmesini seçin. Bu ekli, önceden tanımlanmış bir sorguyu içerir.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="images/Devicesecuritypage.png" alt-text="Cihaz Varlık Sayfası" lightbox="images/Devicesecuritypage.png":::
+> :::image type="content" source="images/Devicecontrolreportquery.png" alt-text="Cihazda Sorgu Denetimi Raporu sayfası" lightbox="images/Devicecontrolreportquery.png":::
 
-## <a name="reporting-delays"></a>Gecikmeleri bildirme
+Cihazın güvenliğini görmek için açılır listede **Cihazı aç sayfası** düğmesini seçin. Bu düğme, cihaz varlığı sayfasını açar.
 
-Cihaz denetimi raporu, medya bağlantısının olayın karta veya etki alanı listesine yansıt karşılaşması nedeniyle 12 saatlik bir gecikme süresine sahip olabilir.
+> [!div class="mx-imgBorder"]
+> :::image type="content" source="images/Devicesecuritypage.png" alt-text="Cihaz Varlığı Sayfası" lightbox="images/Devicesecuritypage.png":::
+
+## <a name="reporting-delays"></a>Raporlama gecikmeleri
+
+Medya bağlantısının gerçekleşmesinden olayın karta veya etki alanı listesine yansıtılacağı zamana kadar 12 saate kadar bir gecikme olabilir.

@@ -18,12 +18,12 @@ ms.custom: ''
 description: Yöneticiler, Exchange Online Protection (EOP) içinde istenmeyen posta önleme ilkelerini görüntülemeyi, oluşturmayı, değiştirmeyi ve silmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 20372843af62c28f4aae05c40d714bdfcdca203b
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: d72b99b73a7c399147360364fc2de0a6cee6435b
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115993"
+ms.locfileid: "66128733"
 ---
 # <a name="configure-anti-spam-policies-in-eop"></a>EOP'de istenmeyen posta önleme ilkelerini yapılandırma
 
@@ -177,6 +177,8 @@ Microsoft 365 Defender portalında özel bir istenmeyen posta önleme ilkesi olu
      > <sup>2</sup> Bu değeri, iletiyi filtrelemek veya yönlendirmek için posta akışı kurallarında koşul olarak kullanabilirsiniz.
      >
      > <sup>3</sup> Boş **bir İlke değeri seçin** , söz konusu karar için varsayılan karantina ilkesinin kullanıldığı anlamına gelir. İstenmeyen posta önleme ilkesini daha sonra düzenlediğinizde veya ayarları görüntülediğinizde varsayılan karantina ilkesi adı gösterilir. İstenmeyen posta filtresi kararları için kullanılan varsayılan karantina ilkeleri hakkında daha fazla bilgi için [bu tabloya](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features) bakın.
+     >
+     > Kullanıcılar, yüksek güvenilirlikli kimlik avı olarak karantinaya alınan kendi iletilerini yayınlayamaz. Yöneticiler en iyi durumda karantina ilkesini yapılandırarak kullanıcıların karantinaya alınan yüksek güvenilirlikli kimlik avı iletilerinin yayınlanmasını isteyebilir.
 
    - **İstenmeyen postaları şu kadar gün boyunca karantinada tutun**: İstenmeyen posta filtreleme kararı için eylem olarak **İletiyi karantinaya al** seçeneğini belirlediyseniz iletiyi ne kadar süreyle karantinada tutabileceğinizi belirtir. Süre dolduktan sonra ileti silinir ve kurtarılamaz. Geçerli bir değer 1 ila 30 gündür.
 

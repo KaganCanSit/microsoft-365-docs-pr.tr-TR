@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: İhtiyacınız olanı korumak ve istemediğinizleri silmek için etiketleri otomatik olarak uygulayabilmeniz için otomatik etiketleme bekletme ilkeleri oluşturun
-ms.openlocfilehash: a349ce1678c6cc28a82aa6c97c31358a57970f35
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: 87328b69f2649a1e6a6c6755892e17e7c04aac53
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115619"
+ms.locfileid: "66128843"
 ---
 # <a name="automatically-apply-a-retention-label-to-retain-or-delete-content"></a>İçeriği korumak veya silmek için otomatik olarak bekletme etiketi uygulama
 
@@ -78,8 +78,8 @@ Otomatik uygulama ilkesi oluşturduğunuzda, belirttiğiniz koşullara göre iç
     - Kayıt yönetimi kullanıyorsanız:
         - **Çözümleri** \> **Kayıt yönetimi** \> **Etiket ilkeleri** sekmesi \> **Etiketi otomatik uygulama**
 
-    - Data lifeycle yönetimi kullanıyorsanız:
-        - **Çözümleri** \> **Veri yaşamsal veri yönetimi** \> **Etiket ilkeleri** sekmesi \> **Etiketi otomatik uygulama**
+    - Veri yaşam döngüsü yönetimi kullanıyorsanız:
+        - **Çözümleri** \> **Veri yaşam döngüsü yönetimi** \> **Etiket ilkeleri** sekmesi \> **Etiketi otomatik uygulama**
 
     Gezinti bölmesinde çözümünüzü hemen görmüyor musunuz? İlk olarak **Tümünü göster'i** seçin.
 

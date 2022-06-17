@@ -20,12 +20,12 @@ ms.custom:
 search.appverid: MET150
 description: İş için Microsoft 365 aboneliğinizin süresi dolduğunda, devre dışı bırakıldığında veya iptal ettiğinizde verilerinize ne olacağını öğrenin.
 ms.date: 09/16/2021
-ms.openlocfilehash: a96ef700c522577e8d22f734ea6a8a94b410d83a
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: a9837a146ff6494ceaa94adeefeeaf6ed7769986
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66102334"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128711"
 ---
 # <a name="what-happens-to-my-data-and-access-when-my-microsoft-365-for-business-subscription-ends"></a>Microsoft 365 İş aboneliğim sona erdiğinde verilerime ve erişimime ne olur?
 
@@ -55,7 +55,7 @@ Aşağıdaki tabloda, ücretli bir iş Microsoft 365 aboneliğinin süresi doldu
   
 > [!NOTE]
 >
-> **"Müşteri verileri" nedir?** [Microsoft Çevrimiçi Hizmet Koşulları'nda](https://go.microsoft.com/fwlink/p/?LinkId=613649) tanımlandığı gibi müşteri verileri, müşterinin Microsoft 365 hizmetlerini kullanması yoluyla veya adına Microsoft'a sağlanan tüm metin, ses veya görüntü dosyaları dahil olmak üzere tüm verileri ifade eder. Müşteri verilerinin korunması hakkında daha fazla bilgi edinmek için [Bkz. Microsoft Hizmet Güveni Portalı ile Kullanmaya başlayın](../../compliance/get-started-with-service-trust-portal.md).
+> **"Müşteri verileri" nedir?** [Microsoft Çevrimiçi Hizmet Koşulları'nda](https://www.microsoft.com/en-us/licensing/product-licensing/products) tanımlandığı gibi müşteri verileri, müşterinin Microsoft 365 hizmetlerini kullanması yoluyla veya adına Microsoft'a sağlanan tüm metin, ses veya görüntü dosyaları dahil olmak üzere tüm verileri ifade eder. Müşteri verilerinin korunması hakkında daha fazla bilgi edinmek için [Bkz. Microsoft Hizmet Güveni Portalı ile Kullanmaya başlayın](../../compliance/get-started-with-service-trust-portal.md).
 
 ## <a name="what-happens-if-i-cancel-a-subscription"></a>Aboneliği iptal edersem ne olur?
 

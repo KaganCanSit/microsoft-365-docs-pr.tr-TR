@@ -21,12 +21,12 @@ description: Kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntüle
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: 0e8ac4e3a8705960f307314717127c969a26c2f6
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: 76cee49b8f37f946f9aa8e67bf40e8642f242fac
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078512"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128833"
 ---
 # <a name="search-the-audit-log-in-the-compliance-portal"></a>Uyumluluk portalında denetim günlüğünde arama yapma
 
@@ -63,6 +63,7 @@ Neden birleşik denetim günlüğü? Çünkü denetim günlüğünde farklı Mic
 | Bekletme ilkeleri ve bekletme etiketleri|MIPLabel, MipAutoLabelExchangeItem, MipAutoLabelSharePointItem, MipAutoLabelSharePointPolicyLocation|
 | Hassas bilgi türleri|DlpSensitiveInformationType|
 | Duyarlılık etiketleri|MIPLabel, SensitivityLabelAction, SensitivityLabeledFileAction, SensitivityLabelPolicyMatch|
+| Şifrelenmiş ileti portalı|OMEPortal|
 | SharePoint Online|SharePoint, SharePointFileOperation,SharePointSharingOperation, SharePointListOperation, SharePointCommentOperation |
 | Stream|MicrosoftStream|
 | Tehdit Analizi|ThreatIntelligence, ThreatIntelligenceUrl, ThreatFinder, ThreatIntelligenceAtpContent|
@@ -409,7 +410,7 @@ Belirli bir tabloya gitmek için aşağıdaki bağlantılardan birine tıklayın
         [Şifrelenmiş ileti portalı etkinlikleri](#encrypted-message-portal-activities)
     :::column-end:::
     :::column:::
-        [SystemSync etkinlikleri] (#systemsync-etkinlikler)
+        [SystemSync etkinlikleri](#systemsync-activities)
     :::column-end:::
     :::column:::
         

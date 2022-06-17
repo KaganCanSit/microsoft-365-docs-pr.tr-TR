@@ -23,12 +23,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Ortak görevleri yönetmek için Microsoft 365 yönetim merkezi basitleştirilmiş görünümü veya daha karmaşık ayarlar ve görevler için pano görünümünü kullanın.
-ms.openlocfilehash: d553eff9a9ed78225200320bbadb5a7e28d517f0
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: f3f9d1616189a5e3347a882a6caec0df28e274c0
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436151"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66129041"
 ---
 # <a name="overview-of-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezine genel bakış
 
@@ -45,7 +45,7 @@ ms.locfileid: "65436151"
 
 İş hesabınızla Office.com'da oturum açın ve uygulama başlatıcısını seçin.
 
-Yönetim merkezine erişim izniniz varsa, listede **Yönetici'yi** görürsünüz. Seçin.
+Yönetim merkezine erişim izniniz varsa listede **Yönetici** görürsünüz. Seçin.
 
 Yönetim merkezinin üst kısmında sizin için en üstteki eylemleri gözden geçirin. Yeni hesaplar oluşturma, Teams kullanma, e-postayı ayarlama ve Office uygulamaları yükleme gibi önceden ayarladığınız işlemlere bağlı olarak farklı eylemler görebilirsiniz.
 
@@ -67,7 +67,7 @@ Yardıma ihtiyacınız varsa **Yardım & destek'i** seçin. Yardım almak istedi
 
 Güvenlik veya Cihaz yönetimi gibi uzman çalışma alanları daha ayrıntılı denetim sağlar. Yönetim merkezlerinin birlikte nasıl çalıştığı hakkında daha fazla bilgi için, bu [makaledeki belirli BT rolü türleri ve Güvenlik, Cihaz Yönetimi veya Exchange gibi diğer çalışma alanları hakkında bilgi](#what-about-the-specific-types-of-it-roles-and-other-workspaces-like-security-device-management-or-exchange) edinin.
 
-Microsoft 365 yönetim merkezi ulaşmak için [admin.microsoft.com'e](https://admin.microsoft.com) gidin veya oturum açtıysanız uygulama başlatıcıyı seçin ve **Yönetici'yi** seçin.
+Microsoft 365 yönetim merkezi ulaşmak için [admin.microsoft.com](https://admin.microsoft.com) gidin veya zaten oturum açtıysanız uygulama başlatıcıyı seçin ve **Yönetici'ı** seçin.
 
 Giriş sayfasında, sık gerçekleştirdiğiniz görevler için kartlar oluşturabilirsiniz. Yeni kart eklemek için **Kart ekle'yi** ve ardından eklemek istediğiniz kartın yanındaki artı işaretini seçin. İşiniz bittiğinde pencereyi kapatın. Kartları seçip istediğiniz yere sürükleyerek yeniden düzenleyebilirsiniz. Kartı kaldırmak için üç noktayı (diğer eylemler) ve ardından **Kaldır'ı** seçin.
 
@@ -149,7 +149,7 @@ Parolanızı sıfırlamak, hesap silmek veya diğer görevleri tamamlamak için 
 
 3. **Herkes için Hedeflenen sürüm'e** veya **seçili kullanıcılar için hedeflenen sürüm'e** tıklayın. Seçili kullanıcılar için Hedefli sürüm'i seçerseniz, yönetici hesabınızı (ve kuruluşunuzdaki katılmak isteyen diğer yöneticileri) seçili kullanıcılar listesine eklediğinizden emin olun.
 
-## <a name="admin-center-feedback"></a>Yönetim merkezi geri bildirimi
+## <a name="admin-center-feedback"></a>Yönetici merkezi geri bildirimi
 
 Yönetim merkezindeyken, her sayfanın altındaki **Yardıma mı ihtiyacınız var?** düğmesinin yanındaki **Geri bildirimde bulunmak için Geri bildirimde bulunmak** için Microsoft'a deneyiminiz hakkında geri bildirim sağlayabilirsiniz. Neleri beğenip neleri daha iyi yapabileceğimizi bize söyleyin. Buna ek olarak, zaman zaman genel gösterimleriniz veya yeni yayınlanan belirli bir deneyim hakkında sorular soran açılır anketler alabilirsiniz. Bu makalenin sonunda Bu **bilgiler yararlı oldu mu?** seçeneğini belirleyerek de geri bildirimde bulunabilirsiniz.
 
@@ -171,13 +171,13 @@ Daha fazla bilgi için bkz[. İş için Microsoft 365 aboneliğini deneme veya s
 
 Sizden haber almaktan çok isteriz! Hataları bildirme ve geri bildirim paylaşma, Microsoft 365 yönetim merkezi daha iyi hale getirmemize yardımcı olur. Geri bildirimde bulunmak için sayfanın altındaki **Geri Bildirim** düğmesini seçin ve düşüncelerinizi bize göndermek için formu kullanın. Microsoft 365 yönetim merkezi ekibinden birinin yorumlarınızı izlemesini istiyorsanız onay kutusunu seçin ve e-posta adresinizi onaylayın. Geri bildirimlerin her parçasını takip etmeye söz veyemiyoruz, ancak deneyeceğiz!
 
-UserVoice forumumuzda yönetim merkezi dışından da geri bildirimde bulunabilirsiniz. Bu sayfayı, diğer forum kullanıcıları tarafından oylanabilir özellik önerilerinde bulunmak için kullanabilirsiniz: [Yeni yönetim merkezi için UserVoice forumu](https://go.microsoft.com/fwlink/?linkid=2024994).
+<!---You can also give feedback from outside of the admin center on our UserVoice forum. You can use this page to make feature suggestions that can be voted on by other forum users: [UserVoice forum for the new admin center](https://go.microsoft.com/fwlink/?linkid=2024994).--->
 
 ### <a name="what-about-the-specific-types-of-it-roles-and-other-workspaces-like-security-device-management-or-exchange"></a>Belirli BT rolü türleri ve Güvenlik, Cihaz Yönetimi veya Exchange gibi diğer çalışma alanları ne olacak?
 
 <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a>, Microsoft 365 yöneten tüm ekipler ve roller için ortak giriş noktasıdır. Deneyim, bilgi ve denetimler, her yönetici ve rol için özelleştirilebilir ve uyarlanır. Ayrıca, uzman çalışma alanları derin, ayrıntılı kontrol sağlar. Bu uzman çalışma alanları SharePoint, Teams Skype &amp; , Exchange, Güvenlik, Uyumluluk, Cihaz Yönetimi ve Azure Active Directory içerir. Uzman çalışma alanlarını konumundaki Microsoft 365 yönetim merkezi [https://admin.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2024339)gezinti bölmesinde bulabilirsiniz.
 
-### <a name="what-language-options-are-available-the-admin-center"></a>Yönetim Merkezi'ne hangi dil seçenekleri sağlanır?
+### <a name="what-language-options-are-available-the-admin-center"></a>Yönetici Merkezi'ni hangi dil seçenekleri kullanabilir?
 
 Microsoft 365 yönetim merkezi 40 dilde tamamen yerelleştirilmiştir.
 

@@ -13,12 +13,12 @@ ms.collection: M365-modern-desktop
 ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
 description: Microsoft Teams toplantıları Canvas ile tümleştirme
-ms.openlocfilehash: cbb24972dba7fafe60cb460e514a0fede64a08fb
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 59b4ee7a31d1c88f0417d2a9d3e0af1335155076
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621466"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66129173"
 ---
 # <a name="use-microsoft-teams-meetings-with-canvas"></a>Canvas ile Microsoft Teams toplantılarını kullanma
 
@@ -31,9 +31,10 @@ Microsoft Teams toplantılar, eğitimcilerin ve öğrencilerin Learning Yönetim
 >
 > - Kiracınızın bir Microsoft Education lisansı olmalıdır.
 > - Kullanıcıları Canvas ile Microsoft arasında eşlemek için yalnızca tek bir Microsoft kiracısı kullanılabilir.
-> - Grupların çoğaltılmasını önlemek için Sınıf Teams LTI'yi kullanmadan önce School Data Sync (SDS) kapatmanız gerekir.
+> - Canvas Microsoft Teams Eşitleme özelliğini Microsoft'un School Data Sync (SDS) ile eşzamanlı olarak kullanmayı planlıyorsanız, SDS eşitlemenize sınıf ve sınıf listesi verilerini eklemeyin. Kullanıcılar, kuruluşlar, üst kişiler ve demografik bilgiler de dahil olmak üzere diğer tüm verileri eşitlemek için SDS kullanmaya devam edebilirsiniz.
+> - **Kurs Eşitleme'yi** etkinleştirmeden Teams Toplantıları LTI'sini kullanabilirsiniz. Ancak Tüm **sınıfı ekle** seçeneğini kullanamazsınız. Katılımcıların e-posta adreslerini yazabilir veya kopyalayıp yapıştırabilir ya da toplantılara mevcut ekiplerin kanallarını ekleyebilirsiniz.
 
-## <a name="microsoft-office-365-admin"></a>Microsoft Office 365 Yöneticisi
+## <a name="microsoft-office-365-admin"></a>Microsoft Office 365 Yönetici
 
 Instructure Canvas içindeki Microsoft Teams tümleştirmesini yönetmeden önce, kuruluşunuzun Microsoft Office 365 yöneticisi tarafından onaylanan Canvas **Microsoft-Teams-Sync-for-Canvas** Azure uygulamasının Canvas yöneticisi kurulumunu tamamlamadan önce kiracıyı Microsoft Azure.
 
@@ -52,7 +53,7 @@ Instructure Canvas içindeki Microsoft Teams tümleştirmesini yönetmeden önce
 
 5. İşiniz bittiğinde **Ayarlar güncelleştir'i** seçin.
 
-6. **Canvas'ın Microsoft-Teams-Sync-for-Canvas Azure uygulamasına** erişimi onaylamak için **Kiracı erişimi ver** bağlantısını seçin. Microsoft Kimlik Platformu Yönetici Onayı Uç Noktası'na yönlendirilirsiniz.
+6. **Canvas'ın Microsoft-Teams-Sync-for-Canvas Azure uygulamasına** erişimi onaylamak için **Kiracı erişimi ver** bağlantısını seçin. Microsoft Kimlik Platformu Yönetici Onay Uç Noktası'na yönlendirilirsiniz.
 
    ![Izin.](media/permissions.png)
 
@@ -65,15 +66,15 @@ Instructure Canvas içindeki Microsoft Teams tümleştirmesini yönetmeden önce
 
    ![teams-sync.](media/teams-sync.png)
 
-## <a name="canvas-admin"></a>Canvas Yöneticisi
+## <a name="canvas-admin"></a>Canvas Yönetici
 
 Microsoft Teams LTI 1.3 Tümleştirmesini ayarlayın.
 
-Canvas Yöneticisi olarak ortamınıza Microsoft Teams toplantıları LTI uygulamasını eklemeniz gerekir. Uygulamanın LTI İstemci Kimliğini not edin.
+Canvas Yönetici olarak ortamınıza Microsoft Teams toplantıları LTI uygulamasını eklemeniz gerekir. Uygulamanın LTI İstemci Kimliğini not edin.
 
- - Microsoft Teams toplantıları - 170000000000703
+- Microsoft Teams toplantıları - 170000000000703
 
-1. **Erişim Yöneticisi** **ayarlarıUygulamalar** > .
+1. Erişim **Yönetici ayarları** > **Uygulamalar**.
 
 2. Teams LTI uygulamalarını eklemek için **+ Uygulama'ya** tıklayın.
 

@@ -17,12 +17,12 @@ ms.custom: ''
 description: Yöneticiler, karantinaya alınan iletilere kullanıcıların yapabileceklerini denetlemek için karantina ilkelerini kullanmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 74f1a657cbf675b8a55edc169339cb16a22f4dbe
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: a3d50debf31f53f75177e7c8cf8c7116ae3789b6
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115685"
+ms.locfileid: "66128865"
 ---
 # <a name="quarantine-policies"></a>Karantina ilkeleri
 
@@ -212,6 +212,9 @@ Varsayılan karantina ilkeleri, önceden ayarlanmış izin grupları ve izinler 
 > Varsayılan karantina ilkeleri tarafından sağlanan (veya sağlanmayan) varsayılan son kullanıcı izinlerinden ve karantina bildirimlerinden memnunsanız, hiçbir şey yapmanız gerekmez. Kullanıcının karantinaya alınan iletileri için son kullanıcı özelliklerini (kullanılabilir düğmeler) eklemek veya kaldırmak ya da karantina bildirimlerini etkinleştirmek ve karantina bildirimlerinde aynı özellikleri eklemek veya kaldırmak istiyorsanız, karantina eylemine farklı bir karantina ilkesi atayabilirsiniz.
 
 ## <a name="assign-quarantine-policies-in-supported-policies-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında desteklenen ilkelerde karantina ilkeleri atama
+
+> [!NOTE]
+> Kullanıcılar, karantina ilkesinin nasıl yapılandırıldığına bakılmaksızın kötü amaçlı yazılım (kötü amaçlı yazılımdan koruma ilkeleri) veya yüksek güvenilirlikli kimlik avı (istenmeyen posta önleme ilkeleri) olarak karantinaya alınan kendi iletilerini yayınlayamaz. Yöneticiler en iyi durumda karantina ilkesini yapılandırarak kullanıcıların karantinaya alınan kötü amaçlı yazılımlarının veya yüksek güvenilirlikli kimlik avı iletilerinin yayınlanmasını isteyebilmesini sağlayabilir.
 
 ### <a name="anti-spam-policies"></a>İstenmeyen posta önleme ilkeleri
 

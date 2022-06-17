@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bekletme etiketlerini yayımlama yönergelerini kullanarak, ihtiyacınız olan şeyleri korumak ve olmayanları silmek için bunları uygulamalara uygulayabilirsiniz.
-ms.openlocfilehash: 3acbe0632a387139bbe865b854a92f8e51609cc1
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: b96d5f3df440db58aff63bffca11523f7c09d8ee
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66007338"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128931"
 ---
 # <a name="publish-retention-labels-and-apply-them-in-apps"></a>Bekletme etiketlerini yayımlama ve uygulamalarda uygulama
 
@@ -58,13 +58,13 @@ Kuruluşunuzun genel yöneticisi, bekletme etiketleri ve ilkelerini oluşturmak 
 
 Bekletme etiketi ilkenizi oluşturmadan önce **bunun uyarlamalı** mı yoksa **statik** mi olacağını belirleyin. Daha fazla bilgi için bkz. [Bekletme için uyarlamalı veya statik ilke kapsamları](retention.md#adaptive-or-static-policy-scopes-for-retention). Uyarlamalı bir ilke kullanmaya karar verirseniz, bekletme etiketi ilkenizi oluşturmadan önce bir veya daha fazla uyarlamalı kapsam oluşturmanız ve ardından bekletme etiketi oluşturma ilkesi işlemi sırasında bunları seçmeniz gerekir. Yönergeler için bkz [. Uyarlamalı kapsamlar için yapılandırma bilgileri](retention-settings.md#configuration-information-for-adaptive-scopes).
 
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalında</a> aşağıdaki konumlardan birine gidin:
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> aşağıdaki konumlardan birine gidin:
     
     - Kayıt yönetimi kullanıyorsanız:
         - **Çözümleri** >  **Kayıt yönetimi** > > **Etiket ilkeleri** sekmesi > **Etiketleri yayımla**
     
     - Veri yaşam döngüsü yönetimi kullanıyorsanız:
-        - **Çözümleri** >  **Veri yaşamsal veri yönetimi** >  **Etiket ilkeleri** sekmesi > **Etiketleri yayımla**
+        - **Çözümleri** >  **Veri yaşam döngüsü yönetimi** >  **Etiket ilkeleri** sekmesi > **Etiketleri yayımla**
     
     Gezinti bölmesinde çözümünüzü hemen görmüyor musunuz? İlk olarak **Tümünü göster'i** seçin. 
 
@@ -92,7 +92,7 @@ Bekletme etiketlerini Exchange yayımlarsanız, bu bekletme etiketlerinin kullan
 
 ![Yayımlanan etiketlerin ne zaman etkin olduğunu açıklayan diyagram.](../media/retention-labels-published-timings.png)
 
-Etiketler yedi gün sonra görünmüyorsa, Microsoft Purview uyumluluk portalındaki **Etiket ilkeleri** sayfasından etiket ilkesini seçerek etiket ilkesinin **Durumunu** denetleyin. Duruma **(Hata)** eklendiğini ve konumların ayrıntılarında ilkenin dağıtılmasının beklenenden uzun sürdüğünü veya ilkeyi yeniden dağıtmayı denediğini belirten bir ileti görürseniz, ilke dağıtımını yeniden denemek için [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) veya [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
+Etiketler yedi gün sonra görünmüyorsa, Microsoft Purview uyumluluk portalı Etiket **ilkeleri** sayfasından etiket ilkesini seçerek etiket ilkesinin **Durumunu** denetleyin. Duruma **(Hata)** eklendiğini ve konumların ayrıntılarında ilkenin dağıtılmasının beklenenden uzun sürdüğünü veya ilkeyi yeniden dağıtmayı denediğini belirten bir ileti görürseniz, ilke dağıtımını yeniden denemek için [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) veya [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
 
 1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 

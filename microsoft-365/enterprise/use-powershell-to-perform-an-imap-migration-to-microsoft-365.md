@@ -18,12 +18,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.assetid: c28de4a5-1e8e-4491-9421-af066cde7cdd
 description: PowerShell kullanarak Microsoft 365 İnternet Posta Erişim Protokolü (IMAP) geçişi gerçekleştirmeyi öğrenin.
-ms.openlocfilehash: 7f0fd2ded375729d1e738215fec3558fbc93257b
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: e3375af79ce4332ebf8f44e88181d7d8dc0e430f
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012670"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128799"
 ---
 # <a name="use-powershell-to-perform-an-imap-migration-to-microsoft-365"></a>Microsoft 365'e IMAP geçişi gerçekleştirmek için PowerShell'i kullanma
 
@@ -208,7 +208,7 @@ Get-MigrationBatch -Identity IMAPBatch1 | Format-List Status
 
 E-posta sistemleri, e-postaların teslim edileceği yeri belirlemek için MX kaydı olarak adlandırılan bir DNS kaydını kullanır. E-posta geçiş işlemi sırasında, MX kaydınız kaynak e-posta sisteminize işaret ediyor olur. Microsoft 365'a e-posta geçişi tamamlandıktan sonra MX kaydınızı Microsoft 365 işaret etme zamanı geldi. Bu, e-postanın Microsoft 365 posta kutularınıza teslim edilmiş olmasına yardımcı olur. MX kaydını taşıyarak, hazır olduğunuzda eski e-posta sisteminizi de kapatabilirsiniz.
 
-Birçok DNS sağlayıcısı için, MX kaydınızı değiştirmeye yönelik belirli yönergeler sağlanmıştır. DNS sağlayıcınız bunların arasında değilse veya genel yönergeler hakkında fikir edinmek istiyorsanız, [genel MX kaydı yönergeleri](https://go.microsoft.com/fwlink/?LinkId=397449) de sağlanmıştır.
+Birçok DNS sağlayıcısı için, MX kaydınızı değiştirmeye yönelik belirli yönergeler sağlanmıştır. DNS sağlayıcınız bunların arasında değilse veya genel yönergeler hakkında fikir edinmek istiyorsanız, [genel MX kaydı yönergeleri](/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide#add-an-mx-record-for-email-outlook-exchange-online) de sağlanmıştır.
 
 Müşterilerinizin ve iş ortaklarınızın e-posta sistemlerinin değişen MX kaydını fark etmesi 72 saat kadar sürebilir. Sonraki göreve geçmeden önce en az 72 saat bekleyin: 6. Adım: IMAP geçiş toplu işlemini silme.
 

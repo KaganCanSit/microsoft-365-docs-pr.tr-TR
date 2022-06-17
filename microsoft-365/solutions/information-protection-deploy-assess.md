@@ -17,12 +17,12 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 description: Veri gizliliği düzenlemelerini, ilgili senaryoları, hazır olma durumunuzu ve Microsoft 365 ortamınızdaki hassas bilgi türlerini belirleyin.
-ms.openlocfilehash: 73cf1f3a51806fb53d5f04eb835a2fbcc7cd7b3b
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: a09e447733baa352a5302490b88e95a08a2775a4
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015048"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66129063"
 ---
 # <a name="assess-data-privacy-risks-and-identify-sensitive-items-with-microsoft-365"></a>veri gizliliği risklerini değerlendirme ve Microsoft 365 ile hassas öğeleri tanımlama
 
@@ -192,7 +192,7 @@ Bu adım, belirli yasal denetimlere tabi olan belirli hassas bilgi türlerinin t
 
 Ortamınızda kişisel içerik içeren içerik bulmak, daha önce Uyumluluk Arama, eBulma, eBulma (Premium), DLP ve denetim kullanmanın bir birleşimini içeren önemli bir görev olabilir.
 
-Microsoft Purview uyumluluk portalındaki yeni **Veri Sınıflandırma** çözümü ile bu, kişisel verilerle ilgili olanlar da dahil olmak üzere yerleşik veya özel hassas bilgi türleriyle çalışan [İçerik Gezgini](../compliance/data-classification-content-explorer.md) özelliğiyle çok daha kolay hale gelmiştir.
+Microsoft Purview uyumluluk portalı yeni **Veri Sınıflandırma** çözümüyle bu, kişisel verilerle ilgili olanlar da dahil olmak üzere yerleşik veya özel hassas bilgi türleriyle çalışan [İçerik Gezgini](../compliance/data-classification-content-explorer.md) özelliğiyle çok daha kolay hale gelmiştir.
 
 ### <a name="sensitive-information-types"></a>Hassas bilgi türleri
 
@@ -210,13 +210,13 @@ Daha fazla bilgi için şu makalelere bakın:
 
 - [Yerleşik hassas bilgi türünü özelleştirme](../compliance/customize-a-built-in-sensitive-information-type.md)
 - [Hassas bilgi türleri hakkında daha fazla bilgi edinme](../compliance/sensitive-information-type-learn-about.md)
-- [Microsoft 365 Purview uyumluluk portalında özel hassas bilgi türü oluşturma](../compliance/create-a-custom-sensitive-information-type.md)
-- [Güvenlik & Uyumluluk PowerShell'de özel hassas bilgi türü oluşturma](../compliance/create-a-custom-sensitive-information-type-in-scc-powershell.md)
-- [Tam Veri Eşleşmesi tabanlı sınıflandırma ile özel hassas bilgi türleri oluşturma](../compliance/create-custom-sensitive-information-types-with-exact-data-match-based-classification.md)
+- [Güvenlik & Uyumluluk Merkezi'nde özel hassas bilgi türü oluşturma](../compliance/create-a-custom-sensitive-information-type.md)
+- [Güvenlik & Uyumluluk Merkezi PowerShell'de özel hassas bilgi türü oluşturma](../compliance/create-a-custom-sensitive-information-type-in-scc-powershell.md)
+- [Tam Veri Eşleşmesi tabanlı sınıflandırma ile özel hassas bilgi türleri oluşturma](/microsoft-365/compliance/sit-get-started-exact-data-match-based-sits-overview?view=o365-worldwide)
 
 ### <a name="content-explorer"></a>İçerik Gezgini
 
-Ortamınızda hassas öğelerin oluşumunu belirlemek için microsoft Purview yönetim merkezindeki yeni [İçerik Gezgini'nin](../compliance/data-classification-content-explorer.md) önemli bir aracıdır. Hassas bilgi türlerinin ortaya çıkması ve sonuçların görüntülenmesi için Microsoft 365 aboneliğinizin tamamının ilk ve devam eden taraması için otomatikleştirilmiş bir araçtır.
+Ortamınızda hassas öğelerin oluşumunu belirlemek için Microsoft Purview yönetim merkezindeki yeni [İçerik Gezgini'nin](../compliance/data-classification-content-explorer.md) önemli bir aracıdır. Hassas bilgi türlerinin ortaya çıkması ve sonuçların görüntülenmesi için Microsoft 365 aboneliğinizin tamamının ilk ve devam eden taraması için otomatikleştirilmiş bir araçtır.
 
 Yeni İçerik Gezgini aracı, yerleşik hassas bilgi türlerini veya özel bilgileri kullanarak ortamınızdaki hassas öğelerin konumlarını hızla tanımlamanızı sağlar. Bu, hassas öğelerin varlığını ve konumunu düzenli olarak araştırmak için bir süreç oluşturmayı ve sorumluluk atamayı içerebilir.
 

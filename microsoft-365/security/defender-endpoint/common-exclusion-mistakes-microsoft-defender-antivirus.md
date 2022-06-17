@@ -14,279 +14,173 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.topic: article
-ms.date: 10/19/2021
+ms.date: 06/16/2022
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 23c079f8f845e6116bc39b9edb3fb186883ef576
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 99d59c2027d3b34ad5c9c19444a51dd08cc22276
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418236"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128668"
 ---
 # <a name="common-mistakes-to-avoid-when-defining-exclusions"></a>Dışlamaları tanımlarken kaçınılması gereken yaygın hatalar
 
 **Şunlar için geçerlidir:**
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Uç Nokta için Microsoft Defender Planı 1
 - Microsoft Defender Virüsten Koruma 
 
 **Platform**
+
 - Windows
 - macOS
 - Linux
 
-Microsoft Defender Virüsten Koruma taramasını istemediğiniz öğeler için bir dışlama listesi tanımlayabilirsiniz. Bu tür dışlanan öğeler, cihazınızı savunmasız hale getiren tehditler içerebilir. Bu makalede, dışlamaları tanımlarken kaçınmanız gereken bazı yaygın hatalar açıklanmaktadır.
+> [!IMPORTANT]
+> **Dışlamaları dikkatli bir şekilde ekleyin**. Microsoft Defender Virüsten Koruma taramaları için dışlamalar, cihazlar için koruma düzeyini azaltır.
+
+Microsoft Defender Virüsten Koruma taramasını istemediğiniz öğeler için bir dışlama listesi tanımlayabilirsiniz. Ancak, dışlanan öğeler cihazınızı savunmasız hale getiren tehditler içerebilir. Bu makalede, dışlamaları tanımlarken kaçınmanız gereken bazı yaygın hatalar açıklanmaktadır.
 
 Dışlama listelerinizi tanımlamadan önce [dışlamaları tanımlamaya yönelik Öneriler](configure-exclusions-microsoft-defender-antivirus.md#recommendations-for-defining-exclusions) bölümüne bakın.
 
 ## <a name="excluding-certain-trusted-items"></a>Belirli güvenilen öğeleri dışlama
 
-Bazı dosyalar, dosya türleri, klasörler veya işlemler, kötü amaçlı olmadığından emin olsanız bile taramanın dışında tutulmamalıdır.
+Bazı dosyaların, dosya türlerinin, klasörlerin veya işlemlerin kötü amaçlı olmamasına güvenseniz bile taramanın dışında tutulmaması gerekir.
 
 Aşağıdaki bölümlerde listelenen klasör konumları, dosya uzantıları ve işlemler için dışlamalar tanımlamayın:
-- Klasör konumları
-- Dosya uzantıları
-- Süreç
+
+- [Klasör konumları](#folder-locations)
+- [Dosya uzantıları](#file-extensions)
+- [Süreç](#processes)
 
 ### <a name="folder-locations"></a>Klasör konumları
 
+> [!IMPORTANT]
+> Bazı klasörler, kötü amaçlı dosyaların bırakılacağı klasörler olduğundan taramaların dışında tutulmamalıdır.
+
 Genel olarak, aşağıdaki klasör konumları için dışlama tanımlamayın:
 
-`%systemdrive%`
-
-`C:`
-
-`C:\`
-
-`C:\*`
-
-`%ProgramFiles%\Java`
-
-`C:\Program Files\Java`
-
-`%ProgramFiles%\Contoso\`
-
-`C:\Program Files\Contoso\`
-
-`%ProgramFiles(x86)%\Contoso\`
-
-`C:\Program Files (x86)\Contoso\`
-
-`C:\Temp`
-
-`C:\Temp\`
-
-`C:\Temp\*`
-
-`C:\Users\`
-
-`C:\Users\*`
-
-`C:\Users\<UserProfileName>\AppData\Local\Temp\`**SharePoint için aşağıdaki özel duruma dikkat edin**: [SharePoint'da dosya düzeyinde virüsten koruma](https://support.microsoft.com/office/certain-folders-may-have-to-be-excluded-from-antivirus-scanning-when-you-use-file-level-antivirus-software-in-sharepoint-01cbc532-a24e-4bba-8d67-0b1ed733a3d9) kullandığınızda hariç tutun`C:\Users\ServiceAccount\AppData\Local\Temp`.
-
-`C:\Users\<UserProfileName>\AppData\LocalLow\Temp\`**SharePoint için aşağıdaki özel duruma dikkat edin**: [SharePoint'da dosya düzeyinde virüsten koruma](https://support.microsoft.com/office/certain-folders-may-have-to-be-excluded-from-antivirus-scanning-when-you-use-file-level-antivirus-software-in-sharepoint-01cbc532-a24e-4bba-8d67-0b1ed733a3d9) kullandığınızda hariç tutun`C:\Users\Default\AppData\Local\Temp`.
-
-`%Windir%\Prefetch`
-
-`C:\Windows\Prefetch`
-
-`C:\Windows\Prefetch\`
-
-`C:\Windows\Prefetch\*`
-
-`%Windir%\System32\Spool`
-
-`C:\Windows\System32\Spool`
-
-`C:\Windows\System32\CatRoot2`
-`%Windir%\Temp`
-
-`C:\Windows\Temp`
-
-`C:\Windows\Temp\`
-
-`C:\Windows\Temp\*`
+- `%systemdrive%`
+- `C:`, `C:\`veya `C:\*`
+- `%ProgramFiles%\Java` Veya `C:\Program Files\Java`
+- `%ProgramFiles%\Contoso\`, `C:\Program Files\Contoso\`, `%ProgramFiles(x86)%\Contoso\`veya `C:\Program Files (x86)\Contoso\`
+- `C:\Temp`, `C:\Temp\`veya `C:\Temp\*`
+- `C:\Users\` Veya `C:\Users\*`
+- `C:\Users\<UserProfileName>\AppData\Local\Temp\`veya .`C:\Users\<UserProfileName>\AppData\LocalLow\Temp\` **SharePoint için aşağıdaki önemli özel durumları not edin: SharePoint** [dosya düzeyinde virüsten korumayı](https://support.microsoft.com/office/certain-folders-may-have-to-be-excluded-from-antivirus-scanning-when-you-use-file-level-antivirus-software-in-sharepoint-01cbc532-a24e-4bba-8d67-0b1ed733a3d9) **hariç tutun** `C:\Users\ServiceAccount\AppData\Local\Temp` veya `C:\Users\Default\AppData\Local\Temp` kullandığınızda.
+- `%Windir%\Prefetch`, `C:\Windows\Prefetch`, `C:\Windows\Prefetch\`veya `C:\Windows\Prefetch\*`
+- `%Windir%\System32\Spool` Veya `C:\Windows\System32\Spool`
+- `C:\Windows\System32\CatRoot2`
+- `%Windir%\Temp`, `C:\Windows\Temp`, `C:\Windows\Temp\`veya `C:\Windows\Temp\*`
 
 #### <a name="linux-and-macos-platforms"></a>Linux ve macOS Platformları
 
-`/`
+Genel olarak, aşağıdaki klasör konumları için dışlama tanımlamayın:
 
-`/bin`
-
-`/sbin`
-
-`/usr/lib`
-
+- `/`
+- `/bin` Veya `/sbin`
+- `/usr/lib`
 
 ### <a name="file-extensions"></a>Dosya uzantıları
 
+> [!IMPORTANT]
+> Bazı dosya uzantıları, bir saldırıda kullanılan dosya türleri olabileceğinden dışlanmamalıdır.
+
 Genel olarak, aşağıdaki dosya uzantıları için dışlama tanımlamayın:
 
-`.7z`
-
-`.bat`
-
-`.bin`
-
-`.cab`
-
-`.cmd`
-
-`.com`
-
-`.cpl`
-
-`.dll`
-
-`.exe`
-
-`.fla`
-
-`.gif`
-
-`.gz`
-
-`.hta`
-
-`.inf`
-
-`.java`
-
-`.jar`
-
-`.job`
-
-`.jpeg`
-
-`.jpg`
-
-`.js`
-
-`.ko`
-
-`.ko.gz`
-
-`.msi`
-
-`.ocx`
-
-`.png`
-
-`.ps1`
-
-`.py`
-
-`.rar`
-
-`.reg`
-
-`.scr`
-
-`.sys`
-
-`.tar`
-
-`.tmp`
-
-`.url`
-
-`.vbe`
-
-`.vbs`
-
-`.wsf`
-
-`.zip`
+- `.7z`
+- `.bat`
+- `.bin`
+- `.cab`
+- `.cmd`
+- `.com`
+- `.cpl`
+- `.dll`
+- `.exe`
+- `.fla`
+- `.gif`
+- `.gz`
+- `.hta`
+- `.inf`
+- `.java`
+- `.jar`
+- `.job`
+- `.jpeg`
+- `.jpg`
+- `.js`
+- `.ko` Veya `.ko.gz`
+- `.msi`
+- `.ocx`
+- `.png`
+- `.ps1`
+- `.py`
+- `.rar`
+- `.reg`
+- `.scr`
+- `.sys`
+- `.tar`
+- `.tmp`
+- `.url`
+- `.vbe`
+- `.vbs`
+- `.wsf`
+- `.zip`
 
 ### <a name="processes"></a>Süreç
 
+> [!IMPORTANT]
+> Bazı işlemler saldırılar sırasında kullanıldığından dışlanmamalıdır.
+
 Genel olarak, aşağıdaki işlemler için dışlama tanımlamayın:
 
-`AcroRd32.exe`
-
-`bitsadmin.exe`
-
-`excel.exe`
-
-`iexplore.exe`
-
-`java.exe`
-
-`outlook.exe`
-
-`psexec.exe`
-
-`powerpnt.exe`
-
-`powershell.exe`
-
-`schtasks.exe`
-
-`svchost.exe`
-
-`wmic.exe`
-
-`winword.exe`
-
-`wuauclt.exe`
-
-`addinprocess.exe`
-
-`addinprocess32.exe`
-
-`addinutil.exe`
-
-`bash.exe`
-
-`bginfo.exe`
-
-`cdb.exe`
-
-`csi.exe`
-
-`dbghost.exe`
-
-`dbgsvc.exe`
-
-`dnx.exe`
-
-`dotnet.exe`
-
-`fsi.exe`
-
-`fsiAnyCpu.exe`
-
-`kd.exe`
-
-`ntkd.exe`
-
-`lxssmanager.dll`
-
-`msbuild.exe`
-
-`mshta.exe`
-
-`ntsd.exe`
-
-`rcsi.exe`
-
-`system.management.automation.dll`
-
-`windbg.exe`
-
-#### <a name="linux-and-macos-platforms"></a>Linux ve macOS Platformları
-
-`bash`
-
-`sh`
-
-`python` Ve `python3`
-
-`java`
-
-`zsh`
+- `AcroRd32.exe`
+- `addinprocess.exe`
+- `addinprocess32.exe`
+- `addinutil.exe`
+- `bash.exe`
+- `bginfo.exe`
+- `bitsadmin.exe`
+- `cdb.exe`
+- `csi.exe`
+- `dbghost.exe`
+- `dbgsvc.exe`
+- `dnx.exe`
+- `dotnet.exe`
+- `excel.exe`
+- `fsi.exe`
+- `fsiAnyCpu.exe`
+- `iexplore.exe`
+- `java.exe`
+- `kd.exe`
+- `lxssmanager.dll`
+- `msbuild.exe`
+- `mshta.exe`
+- `ntkd.exe`
+- `ntsd.exe`
+- `outlook.exe`
+- `psexec.exe`
+- `powerpnt.exe`
+- `powershell.exe`
+- `rcsi.exe`
+- `svchost.exe`
+- `schtasks.exe`
+- `system.management.automation.dll`
+- `windbg.exe`
+- `winword.exe`
+- `wmic.exe`
+- `wuauclt.exe`
 
 > [!NOTE]
 > , `.jpg`, `.jpeg`gibi `.gif`dosya türlerini hariç tutabilirsiniz veya `.png` ortamınızda güvenlik açıklarını işlemek için katı bir güncelleştirme ilkesine sahip modern, güncel bir yazılım varsa bunu hariç tutabilirsiniz.
+
+#### <a name="linux-and-macos-platforms"></a>Linux ve macOS Platformları
+
+Genel olarak, aşağıdaki işlemler için dışlama tanımlamayın:
+
+- `bash`
+- `java`
+- `python` Ve `python3`
+- `sh`
+- `zsh`
 
 ## <a name="using-just-the-file-name-in-the-exclusion-list"></a>Dışlama listesindeki yalnızca dosya adını kullanma
 
@@ -303,7 +197,7 @@ Microsoft Defender Virüsten Koruma Hizmeti, LocalSystem hesabını kullanarak s
 Dışlama listelerinde joker karakterleri kullanma hakkında bilgi için bkz. [Dosya adı ve klasör yolu veya uzantı dışlama listelerinde](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists) joker karakterler kullanma.
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> Diğer platformlar için Antivirüs ile ilgili bilgi arıyorsanız bkz:
 > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
 > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

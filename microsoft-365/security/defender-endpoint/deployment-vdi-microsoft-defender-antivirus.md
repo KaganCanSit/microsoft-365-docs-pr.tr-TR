@@ -14,12 +14,12 @@ ms.reviewer: jesquive
 manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 8cb3dcec3690ae3a4433bfffee53dc99842c0028
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+ms.openlocfilehash: f788c72c9b437dba7528c59adedb3ced21539ada
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65872324"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66129129"
 ---
 # <a name="deployment-guide-for-microsoft-defender-antivirus-in-a-virtual-desktop-infrastructure-vdi-environment"></a>Sanal Masaüstü Altyapısı (VDI) ortamında Microsoft Defender Virüsten Koruma için dağıtım klavuzu
 
@@ -31,13 +31,10 @@ ms.locfileid: "65872324"
 **Platform**
 - Windows
 
-Standart şirket içi veya donanım yapılandırmalarına ek olarak, Microsoft Defender Virüsten Koruma uzak masaüstü (RDS) veya kalıcı olmayan sanal masaüstü altyapısı (VDI) ortamında da kullanabilirsiniz.
+Standart şirket içi veya donanım yapılandırmalarına ek olarak, Microsoft Defender Virüsten Koruma uzak masaüstü (RDS) veya kalıcı olmayan sanal masaüstü altyapısı (VDI) ortamında kullanabilirsiniz. Güncelleştirmeleri VDI'lerde çalışan VM'lere kolayca dağıtma özelliğiyle, makinelerinizde güncelleştirmeleri hızlı ve kolay bir şekilde alabilirsiniz. Güncelleştirmeler konak sunucusundaki bileşen bitlerine genişletildiğinden ve açıldığında doğrudan VM'ye indirildiğinden, artık düzenli aralıklarla altın renkli görüntüler oluşturmanız ve mühürlemeniz gerekmez.
 
-Microsoft Uzak Masaüstü Hizmetleri ve VDI desteği hakkında daha fazla bilgi için bkz. [Azure Sanal Masaüstü Belgeleri](/azure/virtual-desktop).
-
-Azure tabanlı sanal makineler için bkz[. Bulut için Microsoft Defender'de Endpoint Protection yükleme](/azure/defender-for-cloud/endpoint-protection-recommendations-technical).
-
-Güncelleştirmeleri VDI'lerde çalışan VM'lere kolayca dağıtabilme özelliği sayesinde, makinelerinizde güncelleştirmeleri hızlı ve kolay bir şekilde nasıl edinebileceğinize odaklanmak için bu kılavuzu kısaltdık. Güncelleştirmeler konak sunucusundaki bileşen bitlerine genişletildiğinden ve açıldığında doğrudan VM'ye indirildiğinden, artık düzenli aralıklarla altın renkli görüntüler oluşturmanız ve mühürlemeniz gerekmez.
+> [!NOTE]
+> konumundaki `demo.wd.microsoft.com` Uç Nokta için Defender tanıtım sitesi kullanım dışıdır ve gelecekte kaldırılacaktır.
 
 Bu kılavuzda, aşağıdakiler de dahil olmak üzere VM'lerinizi en iyi koruma ve performans için yapılandırma işlemleri açıklanmaktadır:
 
@@ -51,12 +48,12 @@ Bu kılavuzda, aşağıdakiler de dahil olmak üzere VM'lerinizi en iyi koruma v
 
 Ayrıca, performans testi ve virüsten koruma performansını kendi VDI'nizde nasıl test edebileceğinize ilişkin yönergelerle birlikte yeni paylaşılan güvenlik zekası güncelleştirme özelliğine bakan [teknik inceleme Microsoft Defender Virüsten Koruma](https://demo.wd.microsoft.com/Content/wdav-testing-vdi-ssu.pdf) Sanal Masaüstü Altyapısı'a indirebilirsiniz.
 
-> [!NOTE]
-> demo.wd.microsoft.com'daki Uç Nokta için Defender tanıtım sitesi kullanım dışıdır ve gelecekte kaldırılacaktır.
+Microsoft Uzak Masaüstü Hizmetleri ve VDI desteği hakkında daha fazla bilgi için bkz. [Azure Sanal Masaüstü Belgeleri](/azure/virtual-desktop).
+
+Azure tabanlı sanal makineler için bkz[. Bulut için Microsoft Defender'de Endpoint Protection yükleme](/azure/defender-for-cloud/endpoint-protection-recommendations-technical).
 
 > [!IMPORTANT]
 > VDI Windows Server 2012 veya Windows Server 2016 üzerinde barındırılsa da, Windows önceki sürümlerinde kullanılamayan artan koruma teknolojileri ve özellikleri nedeniyle sanal makinelerin (VM) en az 1607 Windows 10 çalışıyor olması gerekir.
->
 > Microsoft Defender AV'nin Windows 10 Insider Preview, derleme 18323 (ve üzeri) içinde sanal makinelerde çalışma yönteminde performans ve özellik iyileştirmeleri vardır. Insider Preview derlemesi kullanmanız gerekiyorsa bu kılavuzda bunu belirleyeceğiz; belirtilmezse, en iyi koruma ve performans için gereken en düşük sürüm 1607 Windows 10.
 
 ## <a name="set-up-a-dedicated-vdi-file-share"></a>Ayrılmış bir VDI dosya paylaşımı ayarlama
@@ -114,9 +111,8 @@ Günde bir kez ile başlamanızı öneririz, ancak etkiyi anlamak için sıklı�
 Güvenlik bilgileri paketleri genellikle her üç-dört saatte bir yayımlanır. Bir sıklığın dört saatten kısa ayarlanması önerilmiyor çünkü bu, yönetim makinenizdeki ağ ek yükünü hiçbir fayda sağlamadan artıracaktır.
 
 Ayrıca tek sunucunuzu veya makinenizi vm'ler adına belirli bir aralıkta güncelleştirmeleri getirecek ve bunları kullanım için dosya paylaşımına yerleştirecek şekilde ayarlayabilirsiniz.
-Bu, cihazların güncelleştirmeleri alabilmesi için paylaşıma okuma erişimi için paylaşıma ve NTFS izinlerine sahip olması durumunda mümkündür.
+Bu, cihazların güncelleştirmeleri alabilmesi için paylaşıma okuma erişimi için paylaşıma ve NTFS izinlerine sahip olması durumunda mümkündür. Bunu yapmak için:
 
-Bunu yapmak için:
  1. SMB/CIFS dosya paylaşımı oluşturun. 
  
  2. Aşağıdaki paylaşım izinlerine sahip bir dosya paylaşımı oluşturmak için aşağıdaki örneği kullanın.
@@ -134,7 +130,7 @@ Bunu yapmak için:
 
     Bu örnekte dosya paylaşımı şu şekildedir:
 
-    \\\fileserver.fqdn\mdatp$\wdav-update
+    `\\fileserver.fqdn\mdatp$\wdav-update`
 
 ### <a name="set-a-scheduled-task-to-run-the-powershell-script"></a>PowerShell betiğini çalıştırmak için zamanlanmış görev ayarlama
 
@@ -208,7 +204,6 @@ Bildirimlerin gizlenmesi, taramalar yapıldığında veya düzeltme eylemleri ge
 
 > [!TIP]
 > İşlem Merkezi'ni Windows 10 veya Windows 11 açmak için aşağıdaki adımlardan birini uygulayın:
->
 > - Görev çubuğunun sağ ucunda İşlem Merkezi simgesini seçin.
 > - Windows logo tuşu düğmesi + A tuşlarına basın.
 > - Dokunmatik ekranlı bir cihazda, ekranın sağ kenarından içeri doğru çekin.
@@ -231,6 +226,18 @@ Güncelleştirmeden sonra taramanın devre dışı bırakılması, bir güncelle
 5. grup ilkesi nesnenizi her zamanki gibi dağıtın.
 
 Bu ilke, bir güncelleştirmeden hemen sonra taramanın çalışmasını engeller.
+
+## <a name="disable-the-scanonlyifidle-option"></a>`ScanOnlyIfIdle` Seçeneği devre dışı bırakma
+
+Pasif moddaysa cihaz boşta kaldığında hızlı veya zamanlanmış taramayı durdurmak için aşağıdaki cmdlet'i kullanın.
+
+```PowerShell
+Set-MpPreference -ScanOnlyIfIdleEnabled $false
+```
+
+Yerel veya etki alanı grup ilkesi aracılığıyla yapılandırmaya göre Microsoft Defender Virüsten Koruma seçeneğini de devre dışı bırakabilirsiniz`ScanOnlyIfIdle`. Bu, yüksek yoğunluklu ortamlarda önemli CPU çekişmesini önler.
+
+Daha fazla bilgi için bkz. [Zamanlanmış taramayı yalnızca bilgisayar açıkken ancak kullanımda değilken başlatma](https://admx.help/?Category=SystemCenterEndpointProtection&Policy=Microsoft.Policies.Antimalware::scan_scanonlyifidle).
 
 ## <a name="scan-vms-that-have-been-offline"></a>Çevrimdışı olan VM'leri tarama
 

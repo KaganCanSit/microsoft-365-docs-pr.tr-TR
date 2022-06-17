@@ -22,12 +22,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Microsoft 365 için gizlilik ve onay bildirimiyle oturum açma sayfanızı özelleştirin.
-ms.openlocfilehash: fb56a6de2b916f9b9699e0963f9f1cd1bd8bba16
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: 34aff0437b08bc5cb34064b5b7ed474e9b2cf094
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65893295"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66129019"
 ---
 # <a name="customize-your-sign-in-page-with-a-privacy-and-consent-notice"></a>Gizlilik ve onay bildirimiyle oturum açma sayfanızı özelleştirme
 
@@ -46,7 +46,7 @@ Güncelleştirebileceğiniz öğeler şunlardır:
 - Başlık logosu
 - Kullanıcı adı ipucu
 
-Gizlilik ve onay bildirimlerinin örnekleri için bkz. [Bilgisayarları Arama ve Ele Geçirme ve Cezai Araştırmalarda Elektronik Kanıt Alma](https://www.justice.gov/sites/default/files/criminal-ccips/legacy/2015/01/14/ssmanual2009.pdf) bölümünde Ek A.
+Gizlilik ve onay bildirimlerinin örnekleri için bkz. [Bilgisayarları Arama ve Ele Geçirme ve Cezai Araştırmalarda Elektronik Kanıt Alma](https://www.justice.gov/file/442111/download) bölümünde Ek A.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
