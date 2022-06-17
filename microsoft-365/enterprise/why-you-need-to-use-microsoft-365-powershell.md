@@ -14,12 +14,12 @@ f1.keywords:
 ms.custom: admindeeplinkEXCHANGE
 ms.assetid: b3209b1a-40c7-4ede-8e78-8a88bb2adc8a
 description: 'Özet: Microsoft 365 yönetmek için neden PowerShell kullanmanız gerektiğini, bazı durumlarda daha verimli ve diğer durumlarda gerekliliği anlayın.'
-ms.openlocfilehash: 114b97ff27ae1b79e58589eb746a261f83dc422f
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0da00ffe3c492b3bac3da9f435ece89219b4113f
+ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097942"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66139373"
 ---
 # <a name="why-you-need-to-use-powershell-for-microsoft-365"></a>Microsoft 365 için neden PowerShell kullanmanız gerekiyor?
 
@@ -172,7 +172,7 @@ Microsoft 365 yönetim merkezi, çoğu ortam için geçerli olan yaygın, yararl
 
 Örneğin, Skype Kurumsal Online yönetim merkezi özel toplantı davetleri oluşturmak için birkaç seçenek sağlar:
 
-![Skype Kurumsal Online Yönetim merkezinde özel toplantı davetlerinin görüntülenmesi örneği.](../media/o365-powershell-meeting-invitation.png)
+![Skype Kurumsal Online Yönetici merkezinde özel toplantı davetlerinin görüntülenmesi örneği.](../media/o365-powershell-meeting-invitation.png)
 
 Bu ayarlarla toplantı davetlerine kişiselleştirme ve profesyonellik dokunuşu ekleyebilirsiniz. Ancak, yalnızca özel toplantı davetleri oluşturmak yerine toplantı yapılandırma ayarlarından daha fazlası vardır. Örneğin, varsayılan olarak toplantılar şunları sağlar:
 
@@ -189,7 +189,7 @@ Set-CsMeetingConfiguration -AdmitAnonymousUsersByDefault $False -AllowConference
 ```
 
 > [!NOTE]
-> Bu komutu çalıştırmak için [Skype Kurumsal Online PowerShell Modülünü](https://www.microsoft.com/download/details.aspx?id=39366) yüklemeniz gerekir.
+> Bu komutu çalıştırmak için [Skype Kurumsal Online PowerShell Modülünü](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-the-skype-for-business-online-connector) yüklemeniz gerekir.
 
 Bu PowerShell komutunun yorumu şöyledir:
 
@@ -221,7 +221,7 @@ Son örnekte, birkaç yüz SharePoint Çevrimiçi siteniz olduğunu ve Ken Meyer
 
 4. **Paylaş** iletişim kutusunda, site üzerinde izinleri olan tüm kullanıcıları gösteren bağlantıyı seçin:
 
-     ![SharePoint Online Yönetim merkezinde bir SharePoint Online sitesinin üyelerini görüntüleme örneği.](../media/o365-powershell-view-permissions.png)
+     ![SharePoint Online Yönetici merkezinde bir SharePoint Online sitesinin üyelerini görüntüleme örneği.](../media/o365-powershell-view-permissions.png)
 
 5. **Paylaşılan** iletişim kutusunda **Gelişmiş'i** seçin.
 
@@ -238,7 +238,7 @@ Get-SPOSite | ForEach {Remove-SPOUser -Site $_.Url -LoginName "kenmyer@litwarein
 > [!NOTE]
 > Bu komut[, SharePoint Online PowerShell modülünü](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) yüklemenizi gerektirir.
 
-Bu PowerShell komutunun yorumu şöyledir: Geçerli Microsoft 365 aboneliğindeki (**Get-SPOSite**) tüm SharePoint sitelerini alın ve her site için Ken Meyer'i buna erişebilen kullanıcılar listesinden kaldırın (**ForEach {Remove-SPOUser -Site $\_). Url -LoginName "kenmyer\@ litwareinc.com"}**).
+Bu PowerShell komutunun yorumu şöyledir: Geçerli Microsoft 365 aboneliğindeki (**Get-SPOSite**) tüm SharePoint sitelerini alın ve her site için Ken Meyer'i buna erişebilen kullanıcılar listesinden kaldırın (**ForEach {Remove-SPOUser -Site $\_). Url -LoginName "kenmyer\@litwareinc.com"}**).
 
 Microsoft 365 Ken Meyer'i erişimi olmayanlar da dahil olmak üzere her siteden kaldırmasını söyleriz. Bu nedenle sonuçlar, erişimi olmayan sitelerle ilgili hatalar gösterir. Ken Meyer'i yalnızca oturum açma listelerinde bulunan sitelerden kaldırmak için bu komutta ek bir koşul kullanabiliriz. Ancak döndürülen hatalar sitelerin kendilerine zarar vermez. Bu komutun yüzlerce site üzerinde çalışması birkaç dakika sürebilir, Microsoft 365 yönetim merkezi üzerinden çalışma saatleri yerine.
 
@@ -248,7 +248,7 @@ Microsoft 365 Ken Meyer'i erişimi olmayanlar da dahil olmak üzere her siteden 
 Get-SPOSite | ForEach {Add-SPOUser -Site $_.Url -LoginName "bkearney@litwareinc.com" -Group "Members"}
 ```
 
-Bu PowerShell komutunun yorumu şöyledir: Geçerli Microsoft 365 aboneliğindeki tüm SharePoint siteleri alın ve her site için bonnie Kearney'e sitenin Üyeler grubuna oturum açma adını ekleyerek erişim izni verin (**ForEach {Add-SPOUser -Site $\_). Url -LoginName "bkearney\@ litwareinc.com" -Group "Members"}**).
+Bu PowerShell komutunun yorumu şöyledir: Geçerli Microsoft 365 aboneliğindeki tüm SharePoint siteleri alın ve her site için bonnie Kearney'e sitenin Üyeler grubuna oturum açma adını ekleyerek erişim izni verin (**ForEach {Add-SPOUser -Site $\_). Url -LoginName "bkearney\@litwareinc.com" -Group "Members"}**).
 
 ## <a name="powershell-for-microsoft-365-is-great-at-filtering-data"></a>Microsoft 365 için PowerShell, verileri filtreleme konusunda harikadır
 
@@ -258,7 +258,7 @@ Microsoft 365 yönetim merkezi, hedeflenen bir bilgi alt kümesini kolayca bulma
 
 <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezi</a>, filtre ölçütlerini birleştirmenizi de sağlar. Örneğin, Bloomington'da yaşayan ve Finans departmanında çalışan tüm kişilerin posta kutularını bulabilirsiniz.
 
-Ancak, Exchange Yönetim merkezinde yapabileceklerinin sınırlamaları vardır. Örneğin, Bloomington veya San Diego'da yaşayan kişilerin posta kutularını *veya* Bloomington'da yaşamayan tüm kişilerin posta kutularını kolayca bulamazsınız.
+Ancak Exchange Yönetici merkezinde yapabileceklerinin sınırlamaları vardır. Örneğin, Bloomington veya San Diego'da yaşayan kişilerin posta kutularını *veya* Bloomington'da yaşamayan tüm kişilerin posta kutularını kolayca bulamazsınız.
 
 Bloomington veya San Diego'da yaşayan tüm kişilerin posta kutularının listesini almak için aşağıdaki Microsoft 365 için PowerShell komutunu kullanabilirsiniz:
 
@@ -330,7 +330,7 @@ Bu PowerShell komutunun yorumu şöyledir: Geçerli Microsoft 365 aboneliğindek
 
 Microsoft 365 yönetim merkezi, veri listelerini görüntülemenizi sağlar. Skype Kurumsal Online için etkinleştirilen kullanıcıların listesini görüntüleyen Skype Kurumsal Online yönetim merkezi örneği aşağıda verilmişti:
 
-![Skype Kurumsal Online için etkinleştirilen kullanıcıların listesini görüntüleyen Skype Kurumsal Çevrimiçi Yönetim merkezi örneği.](../media/o365-powershell-lync-users.png)
+![Skype Kurumsal Online için etkinleştirilen kullanıcıların listesini görüntüleyen Skype Kurumsal Online Yönetici merkezi örneği.](../media/o365-powershell-lync-users.png)
 
 Bu bilgileri bir dosyaya kaydetmek için bir belgeye veya Microsoft Excel çalışma sayfasına yapıştırmanız gerekir. Her iki durumda da ek biçimlendirme gerekebilir. Ayrıca, Microsoft 365 yönetim merkezi görüntülenen listeyi doğrudan yazdırmak için bir yol sağlamaz.
 
@@ -378,7 +378,7 @@ Tüm kullanıcılarınız için aşağıdaki bilgileri gösteren bir rapor oluş
 
 - Kullanıcının Skype Kurumsal Online için etkinleştirilip etkinleştirilmediği
 
-Microsoft 365 yönetim merkezi kolayca böyle bir rapor oluşturamazsınız. Bunun yerine, bilgileri depolamak için Excel çalışma sayfası gibi ayrı bir belge oluşturmanız gerekir. Ardından, Microsoft 365 yönetim merkezi tüm kullanıcı adlarını ve lisans bilgilerini alın, <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezinden</a> posta kutusu bilgilerini alın, Skype Kurumsal Çevrimiçi Yönetim merkezinden çevrimiçi Skype Kurumsal bilgileri alın ve bu bilgileri birleştirin.
+Microsoft 365 yönetim merkezi kolayca böyle bir rapor oluşturamazsınız. Bunun yerine, bilgileri depolamak için Excel çalışma sayfası gibi ayrı bir belge oluşturmanız gerekir. Ardından, Microsoft 365 yönetim merkezi tüm kullanıcı adlarını ve lisans bilgilerini alın, <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezinden</a> posta kutusu bilgilerini alın, Skype Kurumsal Online Yönetici Skype Kurumsal Online bilgilerini alın  ortalayıp bu bilgileri birleştirin.
 
 Alternatif olarak, raporu sizin için derlemek için bir PowerShell betiği kullanabilirsiniz.
 

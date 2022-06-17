@@ -15,12 +15,12 @@ ms.technology: mde
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: ba9102f96ea08bf33f72a260779b4b37d6a6f0f4
-ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
+ms.openlocfilehash: 3d6f763bd2ac2c4352f1b200c05c3079bc615aaf
+ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65217386"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66139351"
 ---
 # <a name="customize-controlled-folder-access"></a>Denetimli klasör erişimini özelleştirin
 
@@ -33,7 +33,7 @@ ms.locfileid: "65217386"
 - Windows
 
 > [!TIP]
-> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 Denetimli klasör erişimi, değerli verileri fidye yazılımı gibi kötü amaçlı uygulamalardan ve tehditlerden korumanıza yardımcı olur. Windows Server 2019, Windows Server 2022, Windows 10 ve Windows 11 istemcilerinde denetimli klasör erişimi desteklenir. Bu makalede, denetimli klasör erişim özelliklerinin nasıl özelleştirileceği açıklanır ve aşağıdaki bölümler yer alır:
 
@@ -177,4 +177,4 @@ Bir kural tetiklendiğinde ve bir uygulama veya dosyayı engellediğinde bildiri
 
 - [Denetimli klasör erişimiyle önemli klasörleri koruma](controlled-folders.md)
 - [Denetimli klasör erişimini etkinleştirin](enable-controlled-folders.md)
-- [Saldırı yüzeyi azaltma kurallarını değerlendirme](evaluate-attack-surface-reduction.md)
+- [Saldırı yüzeyi azaltma kurallarını etkinleştirme](enable-attack-surface-reduction.md)

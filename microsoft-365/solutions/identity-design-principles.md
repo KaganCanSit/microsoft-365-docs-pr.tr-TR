@@ -14,12 +14,12 @@ ms.collection:
 - M365solutions
 ms.custom: seo-marvel-jun2020
 f1.keywords: NOCSH
-ms.openlocfilehash: 065e9a124deb7c064b31666d96a11f076d65abdd
-ms.sourcegitcommit: 52e2a67a1badd7faaabbcf99c65f464e23a47805
+ms.openlocfilehash: 71b4fc8a671f4b30d70a4c3ec026c39b24c1a9a4
+ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66060971"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66139529"
 ---
 # <a name="to-identity-and-beyondone-architects-viewpoint"></a>Kimlik ve ötesine—Mimarlardan birinin bakış açısı
 
@@ -139,7 +139,7 @@ Bu genişletilmiş yetkilendirme tanımına katılıyorsanız ek çözümler uyg
 - [Microsoft Defender for Cloud Apps](/cloud-app-security/) (Bulut için Defender Uygulamaları)
 - [Microsoft 365 Defender](../security/defender/microsoft-365-defender.md)
 - [Microsoft Intune](/mem/intune/)
-- [Microsoft Purview Information Protection](../compliance/information-protection.md)
+- [Microsoft Purview Bilgi Koruması](../compliance/information-protection.md)
 - [Microsoft Sentinel](/azure/sentinel/)
 
 Tabii ki, Azure AD ek olarak, çeşitli hizmet ve uygulamaların kendi özel yetkilendirme modelleri vardır. Bunlardan bazıları daha sonra temsilci seçme bölümünde ele alınmıştır.
@@ -194,7 +194,7 @@ Bu çok kiracılı senaryolarda müşteriler genellikle bazı yapılandırmalar�
 - Performans avantajları sağlamaz. [Ağ tasarımı](https://aka.ms/office365networking) doğru değilse performansı daha kötü hale getirebilir. Cihazları verilerinize değil Microsoft ağına "yakın" alın.
 - [GDPR uyumluluğu](https://www.microsoft.com/trust-center/privacy/gdpr-overview) için bir çözüm değildir. GDPR, veri hakimiyetine veya depolama konumlarına odaklanmaz. Bunun için başka uyumluluk çerçeveleri de vardır.
 - Yönetim temsilcisi seçme (aşağıya bakın) veya [bilgi engellerini](../compliance/information-barriers.md) çözmez.
-- Çok kiracılı ile aynı değildir ve ek [kullanıcı sağlama](https://github.com/MicrosoftDocs/azure-docs-pr/blob/master/articles/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation.md) iş akışları gerektirir.
+- Çok kiracılı ile aynı değildir ve ek [kullanıcı sağlama](/azure/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation) iş akışları gerektirir.
 - Kiracınızı (Azure AD) başka bir coğrafyaya [taşımaz](../enterprise/moving-data-to-new-datacenter-geos.md).
 
 ## <a name="delegation-of-administration"></a>Yönetim temsilcisi
@@ -227,7 +227,7 @@ Bazen senaryolar bir role dış kullanıcı eklemeyi çağırır (yukarıdaki ç
 
 ### <a name="microsoft-365-defender-and-microsoft-365-purview-compliance-portals"></a>Purview uyumluluk portallarını Microsoft 365 Defender ve Microsoft 365
 
-Microsoft 365 Defender [portalında](../security/office-365-security/permissions-microsoft-365-security-center.md) **e-posta & İşbirliği rolleri** ve [Microsoft 365 Purview uyumluluk portalındaki](../compliance/microsoft-365-compliance-center-permissions.md) *_*Microsoft Purview çözümleri için rol grupları_*, Azure AD rollerden ayrı ve ayrı olan bir "rol grupları" koleksiyonu. Bu rol gruplarından bazıları Azure AD rolleriyle (örneğin, Güvenlik Okuyucusu) aynı ada sahip olduğundan, ancak farklı üyelikleri olabileceğinden bu durum kafa karıştırıcı olabilir. Azure AD rollerini kullanmayı tercih ederim. Her rol grubu bir veya daha fazla "rolden" oluşur (aynı sözcüğü yeniden kullanma hakkında ne demek istediğimi görün?) ve e-posta özellikli nesneler olan Azure AD üyeleri vardır. Ayrıca, rolle aynı ada sahip bir rol grubu oluşturabilirsiniz; bu rol bu rolü içerebilir veya içermeyebilir (bu karışıklığı önleyin).
+**E-posta &** [Microsoft 365 Defender portalında](../security/office-365-security/permissions-microsoft-365-security-center.md) işbirliği rolleri ve Microsoft 365 [Purview uyumluluk portalındaki Microsoft Purview](../compliance/microsoft-365-compliance-center-permissions.md) *_çözümleri için *Rol grupları_*, Azure AD rollerden ayrı ve ayrı olan bir "rol grupları" koleksiyonu. Bu rol gruplarından bazıları Azure AD rolleriyle (örneğin, Güvenlik Okuyucusu) aynı ada sahip olduğundan, ancak farklı üyelikleri olabileceğinden bu durum kafa karıştırıcı olabilir. Azure AD rollerini kullanmayı tercih ederim. Her rol grubu bir veya daha fazla "rolden" oluşur (aynı sözcüğü yeniden kullanma hakkında ne demek istediğimi görün?) ve e-posta özellikli nesneler olan Azure AD üyeleri vardır. Ayrıca, rolle aynı ada sahip bir rol grubu oluşturabilirsiniz; bu rol bu rolü içerebilir veya içermeyebilir (bu karışıklığı önleyin).
 
 Bir anlamda, bu izinler Exchange rol grupları modelinin bir evrimidir. Ancak Exchange Online kendi [rol grubu yönetim](/exchange/permissions-exo) arabirimine sahiptir. Exchange Online'deki bazı rol grupları kilitlenir ve Azure AD veya Microsoft 365 Defender ve Microsoft 365 Purview uyumluluk portallarından yönetilir, ancak diğerleri aynı veya benzer adlara sahip olabilir ve Exchange Online ( karışıklığa neden olur). Exchange yönetimi için kapsamlara ihtiyacınız olmadığı sürece Exchange Online kullanıcı arabirimini kullanmaktan kaçınmanızı öneririz.
 
@@ -280,7 +280,7 @@ Diğer API'ler aracılığıyla erişilen Microsoft 365 günlüklerine örnek ol
 - [Azure AD](/azure/azure-monitor/platform/diagnostic-settings) (Office 365 ile ilgili olmayan etkinlikler)
 - [Exchange İleti İzleme](/powershell/module/exchange/get-messagetrace)
 - Yukarıda açıklanan Tehdit/UEBA Sistemleri (örneğin, kimlik koruması, Microsoft Defender for Cloud Apps, Uç Nokta için Microsoft Defender vb. Azure AD)
-- [Microsoft Purview Information Protection](../compliance/data-classification-activity-explorer.md)
+- [Microsoft Purview Bilgi Koruması](../compliance/data-classification-activity-explorer.md)
 - [Uç Nokta için Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/api-power-bi)
 - [Microsoft Graph](https://graph.microsoft.com)
 

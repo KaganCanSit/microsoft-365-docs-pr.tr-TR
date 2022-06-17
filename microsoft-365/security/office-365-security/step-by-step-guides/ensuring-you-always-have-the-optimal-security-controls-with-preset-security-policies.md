@@ -17,12 +17,12 @@ audience: ITPro
 ms.collection: m365-guidance-templates
 ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: e768635d3bb804dbf586ce652203689942901e4f
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: 534e548dbd0950b387e757bfb81ebb446f617086
+ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66042957"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66139462"
 ---
 # <a name="ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies"></a>Önceden ayarlanmış güvenlik ilkeleriyle her zaman en uygun güvenlik denetimlerine sahip olmanızı sağlayarak
 
@@ -58,13 +58,13 @@ Kullanıcılarınız için Standart ve Katı güvenlik önayar ilkeleri arasınd
 1. **Tehdit ilkeleri'ne tıklayın**.
 1. Şablonlu ilkeler başlığının altında **Önceden Ayarlanmış Güvenlik** **İlkeleri'ni** seçin
 1. Standart koruma ön ayarının altında **Yönet'i** seçin.
-1. Standart ön ayarını uygulamak istediğiniz kullanıcıları, grupları veya etki alanlarını EOP korumalarının uygulandığı bölüme ekleyin. **İleri** düğmesine tıklayın.
-1. Standart ön ayarını uygulamak istediğiniz kullanıcıları, grupları veya etki alanlarını MDO korumaları için geçerlidir bölümüne ekleyin. **İleri** düğmesine tıklayın.
-1. **Onayla** düğmesine tıklayın.
-1. Katı koruma ön ayarında **Yönet** bağlantısını seçin.
-1. Standart ön ayarını uygulamak istediğiniz kullanıcıları, grupları veya etki alanlarını EOP korumalarının uygulandığı bölüme ekleyin. **İleri** düğmesine tıklayın.
-1. Standart ön ayarını uygulamak istediğiniz kullanıcıları, grupları veya etki alanlarını MDO korumaları için geçerlidir bölümüne ekleyin. **İleri** düğmesine tıklayın.
-1. **Onayla** düğmesine tıklayın.
+1. Kiracı genelinde Exchange Online Protection uygulamak için **Tüm Alıcılar'ı** seçin veya koruma ilkesini uygulamak istediğiniz kullanıcıları, grupları veya etki alanlarını el ile eklemek için **Belirli alıcılar'ı** seçin. **İleri** düğmesine tıklayın.
+1. Office 365 için Defender Koruması kiracısı genelinde uygulamak için **Tüm Alıcılar'ı** seçin veya koruma ilkesini uygulamak istediğiniz kullanıcıları, grupları veya etki alanlarını el ile eklemek için **Belirli alıcılar'ı** seçin. **İleri** düğmesine tıklayın.
+1. **Kimliğe Bürünme Koruması bölümünde, kimliğe bürünme** saldırılarından korunmak için e-posta adreslerini & etki alanları ekleyin, ardından kimliğe bürünme korumasının uygulanmasını istemediğiniz güvenilen gönderenleri ve etki alanlarını ekleyin ve **ardından İleri'ye** basın
+3. **Onayla** düğmesine tıklayın.
+4. Katı koruma ön ayarında **Yönet** bağlantısını seçin.
+5. 7-10 arası adımları tekrarlayın, ancak kullanıcılar için sıkı koruma uygulanmalıdır. (varsa)
+7. **Onayla** düğmesine tıklayın.
 
 > [!TIP]
 > Önceden ayarlanmış polcies hakkında daha fazla bilgi edinmek için [buraya](../../office-365-security/preset-security-policies.md) tıklayın

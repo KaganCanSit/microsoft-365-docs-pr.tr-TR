@@ -18,12 +18,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.assetid: a20f9dbd-6102-4ffa-b72c-ff813e700930
 description: Microsoft 365 aşamalı geçiş kullanarak zaman içinde kaynak e-posta sisteminden içerik taşımak için PowerShell'i kullanmayı öğrenin.
-ms.openlocfilehash: 26c12208c00e6b9b33b0be850a4791ddca804c8c
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 0c40e617fbd069ab9894d572a5582985194e7a6e
+ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014222"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66139551"
 ---
 # <a name="use-powershell-to-perform-a-staged-migration-to-microsoft-365"></a>Microsoft 365'e aşamalı geçiş gerçekleştirmek için PowerShell'i kullanma
 
@@ -65,7 +65,7 @@ Aşamalı geçiş kullanarak posta kutularını Microsoft 365 geçirmeden önce,
 
 - Şirket içi Exchange posta kutunuza bağlanmak için şirket ağınızın dışından Outlook'u kullanın.
 
-- Bağlantı ayarlarınızı test etmek için [Microsoft Uzak Bağlantı Çözümleyicisi'ni](https://https://testconnectivity.microsoft.com/) kullanın. Her Yerden Outlook (HTTP üzerinden RPC) veya Outlook Otomatik Bulma testlerini kullanın.
+- Bağlantı ayarlarınızı test etmek için [Microsoft Uzak Bağlantı Çözümleyicisi'ni](https://testconnectivity.microsoft.com/) kullanın. Her Yerden Outlook (HTTP üzerinden RPC) veya Outlook Otomatik Bulma testlerini kullanın.
 
 - Exchange Online PowerShell'de aşağıdaki komutları çalıştırın:
 

@@ -19,12 +19,12 @@ description: Microsoft 365'da otomatik bir araştırma sırasında ve sonrasınd
 ms.date: 01/29/2021
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b99573f73d5b53b6ea0e8d0cd1e44b539fa47db9
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 6e3234168383a0dad6d8a9de3fb680b27b7ce6cb
+ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65649087"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66139705"
 ---
 # <a name="details-and-results-of-an-automated-investigation-in-microsoft-365"></a>Microsoft 365'da otomatik araştırmanın ayrıntıları ve sonuçları
 
@@ -45,9 +45,9 @@ Araştırma durumu, analizin ve eylemlerin ilerleme durumunu gösterir. Araştı
 |Durum|Açıklama|
 |---|---|
 |**Başlıyor**|Araştırma tetiklendi ve çalışmaya başlamayı bekliyor.|
-|**Çalışan**|Araştırma süreci başlamıştır ve devam etmektedir. Bu durum [, bekleyen eylemler](air-review-approve-pending-completed-actions.md#approve-or-reject-pending-actions) onaylandığında da oluşur.|
+|**Çalışıyor**|Araştırma süreci başlamıştır ve devam etmektedir. Bu durum [, bekleyen eylemler](air-review-approve-pending-completed-actions.md#approve-or-reject-pending-actions) onaylandığında da oluşur.|
 |**Tehdit Bulunamadı**|Araştırma tamamlandı ve hiçbir tehdit (kullanıcı hesabı, e-posta iletisi, URL veya dosya) belirlendi. <p> **İpucu**: Bir şeyin eksik olduğundan şüpheleniyorsanız (hatalı negatif gibi), [Tehdit Gezgini'ne](threat-explorer.md) kullanarak işlem yapabilirsiniz.|
-|**Bulunan Tehditler**|Otomatik araştırma sorunları buldu, ancak bu sorunları çözmek için belirli bir düzeltme eylemi yok. <p> **Tehdit bulundu** durumu, bir tür kullanıcı etkinliği tanımlandığında ancak kullanılabilir temizleme eylemi olmadığında oluşabilir. Örnek olarak aşağıdaki kullanıcı etkinliklerinden herhangi biri verilebilir: <ul><li>[Veri kaybı önleme](../../compliance/dlp-learn-about-dlp.md) olayı</li><li>Anomali gönderen bir e-posta</li><li>Gönderilen kötü amaçlı yazılım</li><li>Gönderilen kimlik avı</li></ul> <p> Araştırmada düzeltilmesi gereken kötü amaçlı URL' ler, dosyalar veya e-posta iletileri bulunamadı ve iletme kurallarını veya temsilci seçmeyi kapatma gibi düzeltilmesi gereken bir posta kutusu etkinliği bulunamadı. <p> **İpucu**: Bir şeyin kaçırıldığından şüpheleniyorsanız (hatalı negatif gibi), [Tehdit Gezgini'ne](threat-explorer.md) kullanarak araştırma yapabilir ve işlem yapabilirsiniz|
+|**Kısmen Araştırıldı**|Otomatik araştırma sorunları buldu, ancak bu sorunları çözmek için belirli bir düzeltme eylemi yok. <p> **Kısmen Araştırılan** durum, bir tür kullanıcı etkinliği tanımlandığında ancak kullanılabilir temizleme eylemi olmadığında ortaya çıkabilir. Örnek olarak aşağıdaki kullanıcı etkinliklerinden herhangi biri verilebilir: <ul><li>[Veri kaybı önleme](../../compliance/dlp-learn-about-dlp.md) olayı</li><li>Anomali gönderen bir e-posta</li><li>Gönderilen kötü amaçlı yazılım</li><li>Gönderilen kimlik avı</li></ul> <p> **Not**: Bu **Kısmen Araştırılan** durum, Tehdit **Bulundu** olarak etiketlenmişti. <p> Araştırmada düzeltilmesi gereken kötü amaçlı URL' ler, dosyalar veya e-posta iletileri bulunamadı ve iletme kurallarını veya temsilci seçmeyi kapatma gibi düzeltilmesi gereken bir posta kutusu etkinliği bulunamadı. <p> **İpucu**: Bir şeyin kaçırıldığından şüpheleniyorsanız (hatalı negatif gibi), [Tehdit Gezgini'ne](threat-explorer.md) kullanarak araştırma yapabilir ve işlem yapabilirsiniz|
 |**Sistem Tarafından Sonlandırıldı**|Soruşturma durduruldu. Araştırma birkaç nedenden dolayı durdurulabilir: <ul><li>Araştırmanın bekleyen eylemlerinin süresi doldu. Bir hafta boyunca onay beklendikten sonra bekleyen eylemler zaman aşımına uğradı</li><li>Çok fazla eylem var. Örneğin, kötü amaçlı URL'lere tıklayan çok fazla kullanıcı varsa, araştırmanın tüm çözümleyicileri çalıştırma becerisini aşabilir, böylece araştırma durdurulabilir</li></ul> <p> **İpucu**: Bir araştırma eylemler gerçekleştirilmeden önce durursa tehditleri bulmak ve ele almak için [Tehdit Gezgini'ne](threat-explorer.md) kullanmayı deneyin.|
 |**Bekleyen Eylem**|Araştırmada kötü amaçlı e-posta, kötü amaçlı URL veya riskli posta kutusu ayarı gibi bir tehdit ve bu tehdidi düzeltmeye yönelik bir eylem [onay bekliyor](air-review-approve-pending-completed-actions.md). <p> Karşılık gelen eylem içeren herhangi bir tehdit bulunduğunda **Bekleyen Eylem** durumu tetikleniyor. Ancak, bir araştırma çalıştırıldığında bekleyen eylemlerin listesi artabilir. Diğer öğelerin hala tamamlanmasının beklenip beklenmediğini görmek için araştırma ayrıntılarını görüntüleyin.|
 |**Düzeltilmiş**|Araştırma tamamlandı ve tüm düzeltme eylemleri onaylandı (tamamen düzeltildiği kaydedildi). <p> **NOT**: Onaylanan düzeltme eylemleri, eylemlerin gerçekleştirilmesini engelleyen hatalara neden olabilir. Düzeltme eylemlerinin başarıyla tamamlanıp tamamlanmadığına bakılmaksızın, araştırma durumu değişmez. Araştırma ayrıntılarını görüntüleyin.|
@@ -79,7 +79,7 @@ Bazı uyarı türleri, Microsoft 365 otomatik araştırmayı tetikler. Daha fazl
 
 - E-posta sayıları araştırma sırasında hesaplanır ve araştırma açılır öğelerini açtığınızda (temel alınan sorguya göre) bazı sayılar yeniden hesaplanır.
 
-- E-posta sekmesindeki e-posta kümeleri için gösterilen **e-posta** sayısı ve küme açılır öğesinde gösterilen e-posta miktarı değeri araştırma sırasında hesaplanır ve değişmez.
+- E-posta sekmesindeki e-posta kümeleri için gösterilen **e-posta** sayıları ve küme açılır öğesinde gösterilen e-posta miktarı değeri araştırma sırasında hesaplanır ve değişmez.
 
 - E-posta kümesi açılır öğesinin **E-posta** sekmesinin en altında gösterilen e-posta sayısı ve Gezgin'de gösterilen e-posta iletilerinin sayısı, araştırmanın ilk analizinden sonra alınan e-posta iletilerini yansıtır.
 
@@ -91,7 +91,7 @@ Bazı uyarı türleri, Microsoft 365 otomatik araştırmayı tetikler. Daha fazl
 
 - Birim anomalileri olası bir tehdidi temsil eder ve buna göre virüsten koruma motorları, patlama veya kötü amaçlı itibar kullanılarak tanımlanan kötü amaçlı yazılım veya kimlik avı tehditlerine kıyasla daha az ciddi olabilir.
 
-- Her eylemi onaylamanız gerekmez. Önerilen eylemi kabul etmiyorsanız veya kuruluşunuz belirli eylem türlerini seçmiyorsa, **Eylemleri reddet'i** seçebilir veya yalnızca bunları yoksayabilir ve hiçbir işlem gerçekleştiremezsiniz.
+- Her eylemi onaylamanız gerekmez. Önerilen eylemi kabul etmiyorsanız veya kuruluşunuz belirli eylem türlerini seçmiyorsa, **Eylemleri reddet'i** seçebilir veya yalnızca bunları yoksayıp hiçbir işlem gerçekleştirmeyebilirsiniz.
 
 - Tüm eylemlerin onaylanması ve/veya reddedilmesi, araştırmanın tamamen kapanmasına (durum düzeltilir) olanak tanırken, bazı eylemlerin tamamlanmamış olması, araştırma durumunun kısmen düzeltilmiş duruma dönüşmesine neden olur.
 

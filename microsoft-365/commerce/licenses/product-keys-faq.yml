@@ -12,12 +12,12 @@ metadata:
   ms.custom: commerce_vl
   ms.localizationpriority: medium
   description: Ürün Anahtarları Hakkında Sık Sorulan Sorular
-  ms.openlocfilehash: e42553a7ae588464481bc1573442016f8ce15b55
-  ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+  ms.openlocfilehash: aac4f6aeed6fb8320929d333cdc7b58addfbd221
+  ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/08/2022
-  ms.locfileid: "64715219"
+  ms.lasthandoff: 06/17/2022
+  ms.locfileid: "66139661"
 title: Ürün Anahtarları Hakkında Sık Sorulan Sorular
 summary: ''
 sections:
@@ -35,7 +35,7 @@ sections:
       Daha fazla bilgi için bkz [. Açık programlar için Çevrimiçi Hizmet Etkinleştirme hakkında SSS](/licensing/online-service-activation-faq).
   - question: >
       ürün anahtarlarını Microsoft 365 yönetim merkezi Nasıl yaparım? bulabilirsiniz?
-    answer: "1. Microsoft 365 yönetim merkezi oturum açın. \n2. **FaturalamaUygulama** >  Ürünlerinizi  >  görüntülemeYeni **lisanslamaİler** >  **& anahtarlarını yükler** > ürünün üzerine gelin ve **Anahtarları görüntüle'yi** seçin.\n\nHer ürün için ürün anahtarı bilgilerini, lisanslama türünü (Toplu Lisanslama Anahtarı, Anahtar Yönetim Merkezi (KMS) ve Birden Çok Etkinleştirme Anahtarı (MAK) ile kullanılan ve kullanılabilir MAK etkinleştirmelerinin sayısını bulabilirsiniz.\n\nLisans için görüntülenen anahtarları yerel bir sürücüye indirmek için **Tüm ürün anahtarlarını indir'i** seçin.\n"
+    answer: "1. Microsoft 365 yönetim merkezi oturum açın. \n2. **Ürünlerinizi** >  **Faturalama** > **Toplu lisanslama** > **İndirmeleri & anahtarları** bölümüne gidin > ürünün üzerine gelin ve **Anahtarları görüntüle'yi** seçin.\n\nHer ürün için ürün anahtarı bilgilerini, lisanslama türünü (Toplu Lisanslama Anahtarı, Anahtar Yönetim Merkezi (KMS) ve Birden Çok Etkinleştirme Anahtarı (MAK) ile kullanılan ve kullanılabilir MAK etkinleştirmelerinin sayısını bulabilirsiniz.\n\nLisans için görüntülenen anahtarları yerel bir sürücüye indirmek için **Tüm ürün anahtarlarını indir'i** seçin.\n"
   - question: >
       SQL Server ürün anahtarını bulmak Nasıl yaparım??
     answer: >
@@ -45,7 +45,7 @@ sections:
       Ayrıca SQL ISO dosyasını yönetim merkezinden > indirebilirsiniz. \x64 klasör > DefaultSetup.ini dosyası. SQL sürümlerini yüklemeden veya yükseltmeden önce mevcut sürümleri yedeklediğinden emin olun. Ürün yüklemesi veya çevrimiçi hizmet etkinleştirme sırasında teknik sorunları giderme konusunda yardıma ihtiyacınız varsa, bir [Teknik Destek isteği](https://support.microsoft.com/oas) göndererek Microsoft Teknik Destek'e başvurun.
   - question: >
       Toplu Lisanslama satın alma işlemi için bir ürün anahtarı bulmak Nasıl yaparım??
-    answer: "Sözleşmeniz anahtar gerektiren bir ürüne erişim yetkisine sahipse, Bu anahtarları Bulmak için **FaturalamaUygulamalarısaygulamayı** >  >  >  indir **& anahtarlar** bölümüne gidin. \n\nAncak bazı ürünler için ürün anahtarı gerekmez. Bu bilgiler, İndirmeler ve Anahtarlar kataloğundaki ürün açıklamasında listelenir.\n\nÜrününüzün anahtar gerekip gerekmediğini belirlemek için [Ürün etkinleştirme ve anahtar bilgileri'ne](https://licensingapps.microsoft.com/product-activation) gidin. Ürün Bul'un altında bir ürün seçin veya ürün adınızı arayın.\n"
+    answer: "Sözleşmeniz anahtar gerektiren bir ürüne erişim yetkisi verirse,**Ürünlerinizi** >  **Faturalama** > **Toplu lisanslama** > **İndirmeleri & anahtarlar** bölümüne giderek bu anahtarları bulabilirsiniz. \n\nAncak bazı ürünler için ürün anahtarı gerekmez. Bu bilgiler, İndirmeler ve Anahtarlar kataloğundaki ürün açıklamasında listelenir.\n\nÜrününüzün anahtar gerekip gerekmediğini belirlemek için [Ürün etkinleştirme ve anahtar bilgileri'ne](https://licensingapps.microsoft.com/product-activation) gidin. Ürün Bul'un altında bir ürün seçin veya ürün adınızı arayın.\n"
   - question: >
       Kurulum anahtarı nedir?
     answer: >
@@ -67,7 +67,7 @@ sections:
 
       > [!NOTE]
 
-      > Tüm müşteriler yeniden görüntüleme ve düşürme amacıyla ürün anahtarlarını kullanma hakkına sahiptir. Artı'yı seçin, Kurumsal Anlaşma (EA) ve Select müşterileri eğitim ve yedekleme için sınırlı değerlendirme haklarına sahiptir. Daha fazla bilgi için bkz [. Ürün lisanslama bilgileri](/licensing/learn-more/volume-licensing-briefs).
+      > Tüm müşteriler yeniden görüntüleme ve düşürme amacıyla ürün anahtarlarını kullanma hakkına sahiptir. Artı'yı seçin, Kurumsal Anlaşma (EA) ve Select müşterileri eğitim ve yedekleme için sınırlı değerlendirme haklarına sahiptir. Daha fazla bilgi için bkz [. Ürün lisanslama bilgileri](https://www.microsoft.com/licensing/docs/view/Licensing-Briefs).
 - name: Toplu etkinleştirme
   questions:
   - question: >
@@ -168,7 +168,7 @@ sections:
       Sunucu medyanızı VLSC'den indirdikten sonra ürün etkinleştirme sihirbazını kullanarak etkinleştirebilirsiniz. VLSC'de bir toplu lisans anahtarı veya ürün kurulum anahtarı bulmanız gerekmez. Tüm etkinleştirme sihirbazı adımlarının tamamlanması, Sunucudan verileri doğrulamak için İnternet üzerinden Microsoft Clearing House'a bağlanmasını ister. Alternatif olarak, çevrimdışı sunucular için etkinleştirme sihirbazı telefon veya web etkinleştirmesi sunar.
 
 
-      Başlamak için sunucu için bir Uzak Masaüstü Lisanslama rolü atayın (**StartAdministrative** >  Tools  > **Sunucu Yöneticisi**) ve ardından Uzak Masaüstü Lisans Yöneticisi'nden RDS Hizmetini etkinleştirin. **StartAdministrative** >  **ToolsRemote** >  Desktop Services'ı ve ardından **Uzak Masaüstü/Terminal Lisans Yöneticisi'ni** seçin.
+      Başlamak için sunucu için bir Uzak Masaüstü Lisanslama rolü atayın (**Yönetim Araçlarını** >  **Başlat** >  **Sunucu Yöneticisi**) ve ardından RdS Hizmetini Uzak Masaüstü Lisans Yöneticisi'nden etkinleştirin. **Yönetim Araçları** > **Uzak Masaüstü Hizmetlerini** **Başlat'ı** >  ve ardından **Uzak Masaüstü/Terminal Lisans Yöneticisi'ni** seçin.
 
 
       Etkinleştirme sırasında Lisans Programı ve Sözleşme Numarası'nı seçmeniz istenir. Açık Lisans müşterileri için Yetkilendirme Numaranızı girin. MPSA için Satın Alma Hesabı Numaranızı girin (MPSA Sözleşme numarasını girin). CAL lisanslarınızı satın almak için kullanılan Lisans Kimliği için program türünden emin değilseniz **VLSC İlişki Özeti'ne** gidin ve **Üst Program** sütununa bakın.
@@ -190,10 +190,10 @@ sections:
       > Açık Lisans müşterisiyseniz, ürün medyasına erişim elde etmek ve bir ürün anahtarı almak için yeniden görüntülemek istediğiniz ürünün en az bir birimini satın almanız gerekir.
 
 
-      Yeniden görüntüleme hakları hakkında daha fazla bilgi için bkz [. Ürün lisanslama bilgileri](/licensing/learn-more/volume-licensing-briefs).
+      Yeniden görüntüleme hakları hakkında daha fazla bilgi için bkz [. Ürün lisanslama bilgileri](https://www.microsoft.com/licensing/docs/view/Licensing-Briefs).
   - question: >
       Anahtarlarımı yerel bir dosyaya Nasıl yaparım? indirebilirsiniz?
-    answer: "Microsoft 365 yönetim merkezi, ürün anahtarlarını daha sonra kullanmak üzere yerel bir dosyaya indirme seçeneği sunar. ürün anahtarlarını İndirmeler ve Anahtarlar sayfasından indirdiğinizde, dosya yönetim merkezi profilinizdeki sözleşmelerle ilişkili tüm Toplu Lisans Anahtarlarını içerir. Ancak, anahtarları İlişki Özeti sayfasındaki Lisans Kimliği görünümünden indirirseniz, dosya yalnızca görüntülemekte olduğunuz Lisans kimliğiyle ilişkili anahtarları içerir.\n\nİndirilebilir ürün anahtarı dosyası sekmeyle ayrılmış biçimdedir ve anahtarları sıralamak ve görüntülemek için Excel veya metin düzenleyicisinde açılabilir. Bunlar dosyaya dahil edilen sütunlardır: **Lisans Kimliği**, **Üst Program**, **Kuruluş**, **Ürün**, **Ürün Anahtarı**, **Tür** ve **MAK Etkinleştirmeleri-Kullanılan/Kullanılabilir, Koltuklar ve OSA Durumu**. \n\nİndirilen bir dosyayı Excel açmak için şu adımları tamamlayın:\n  1. Microsoft Excel açın.\n  2. **DosyaAç'ı** >  ve ardından indirilen CSV dosyasını seçin.\n  3. **Sınırlandırılmış** (varsayılan) seçeneğini belirleyin ve ardından **Sekmeyle ayrılmış** 'ı seçin (tüm verilerin tek bir sütunda görüntülenmesini önlemek için).\n  4. **Bitir'i** seçin. \n\n.CSV dosyası Excel açılır ve veriler ayrı sütunlarda görüntülenir.\n"
+    answer: "Microsoft 365 yönetim merkezi, ürün anahtarlarını daha sonra kullanmak üzere yerel bir dosyaya indirme seçeneği sunar. ürün anahtarlarını İndirmeler ve Anahtarlar sayfasından indirdiğinizde, dosya yönetim merkezi profilinizdeki sözleşmelerle ilişkili tüm Toplu Lisans Anahtarlarını içerir. Ancak, anahtarları İlişki Özeti sayfasındaki Lisans Kimliği görünümünden indirirseniz, dosya yalnızca görüntülemekte olduğunuz Lisans kimliğiyle ilişkili anahtarları içerir.\n\nİndirilebilir ürün anahtarı dosyası sekmeyle ayrılmış biçimdedir ve anahtarları sıralamak ve görüntülemek için Excel veya metin düzenleyicisinde açılabilir. Bunlar dosyaya dahil edilen sütunlardır: **Lisans Kimliği**, **Üst Program**, **Kuruluş**, **Ürün**, **Ürün Anahtarı**, **Tür** ve **MAK Etkinleştirmeleri-Kullanılan/Kullanılabilir, Koltuklar ve OSA Durumu**. \n\nİndirilen bir dosyayı Excel açmak için şu adımları tamamlayın:\n  1. Microsoft Excel açın.\n  2. **Dosya** > **Aç'ı** ve ardından indirilen CSV dosyasını seçin.\n  3. **Sınırlandırılmış** (varsayılan) seçeneğini belirleyin ve ardından **Sekmeyle ayrılmış** 'ı seçin (tüm verilerin tek bir sütunda görüntülenmesini önlemek için).\n  4. **Bitir'i** seçin. \n\n.CSV dosyası Excel açılır ve veriler ayrı sütunlarda görüntülenir.\n"
 - name: Destek
   questions:
   - question: >

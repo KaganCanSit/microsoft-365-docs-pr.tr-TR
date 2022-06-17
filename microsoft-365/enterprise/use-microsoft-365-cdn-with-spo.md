@@ -21,12 +21,12 @@ search.appverid:
 - SPO160
 ms.assetid: bebb285f-1d54-4f79-90a5-94985afc6af8
 description: SharePoint Online varlıklarınızın teslimini hızlandırmak için Office 365 Content Delivery Network (CDN) kullanmayı öğrenin.
-ms.openlocfilehash: 42836fa8a43b7251be27cfd841b67d47e12b036e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 8b106840133f5c690fd0df80700fdb79a3590d92
+ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092017"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66139573"
 ---
 # <a name="use-the-office-365-content-delivery-network-cdn-with-sharepoint-online"></a>SharePoint Online ile Office 365 Content Delivery Network (CDN) kullanma
 
@@ -518,7 +518,7 @@ Kuruluşunuzun özel çıkış noktalarını kullanmasını sağlamak için aşa
 Set-PnPTenantCdnEnabled -CdnType Private -Enable $true
 ```
 
-Bu cmdlet hakkında daha fazla bilgi için bkz. [Set-PnPTenantCdnEnabled](/powershell/module/sharepoint-pnp/set-pnptenantcdnenabled).
+Bu cmdlet hakkında daha fazla bilgi için bkz. [Set-PnPTenantCdnEnabled](https://pnp.github.io/powershell/cmdlets/Set-PnPTenantCdnEnabled.html).
 
 <a name="Office365CDNforPnPPoshFileType"> </a>
 ### <a name="change-the-list-of-file-types-to-include-in-the-office-365-cdn-optional"></a>Dosya türlerinin listesini Office 365 CDN eklenecek şekilde değiştirme (İsteğe bağlı)
@@ -546,7 +546,7 @@ CDN tarafından şu anda hangi dosya türlerine izin verıldığını görmek i�
 Get-PnPTenantCdnPolicies -CdnType <Public | Private>
 ```
 
-Bu cmdlet'ler hakkında daha fazla bilgi için bkz. [Set-PnPTenantCdnPolicy](/powershell/module/sharepoint-pnp/set-pnptenantcdnpolicy) ve [Get-PnPTenantCdnPolicies](/powershell/module/sharepoint-pnp/get-pnptenantcdnpolicies).
+Bu cmdlet'ler hakkında daha fazla bilgi için bkz. [Set-PnPTenantCdnPolicy](https://pnp.github.io/powershell/cmdlets/Set-PnPTenantCdnPolicy.html) ve [Get-PnPTenantCdnPolicies](https://pnp.github.io/powershell/cmdlets/Get-PnPTenantCdnPolicies.html).
 
 <a name="Office365CDNforPnPPoshSiteClassification"> </a>
 ### <a name="change-the-list-of-site-classifications-you-want-to-exclude-from-the-office-365-cdn-optional"></a>Office 365 CDN dışında tutmak istediğiniz site sınıflandırmaları listesini değiştirme (İsteğe bağlı)
@@ -579,7 +579,7 @@ _ExcludeRestrictedSiteClassifications_ özelliği, CDN dışında tutmak istedi�
 
 _ExcludeIfNoScriptDisabled_ özelliği, site düzeyi _NoScript_ öznitelik ayarlarına göre içeriği CDN dışında tutar. Varsayılan olarak _, NoScript_ özniteliği _Modern_ siteler için **etkin** ve _Klasik_ siteler için **devre dışı** olarak ayarlanır. Bu, kiracı ayarlarınıza bağlıdır.
 
-Bu cmdlet'ler hakkında daha fazla bilgi için bkz. [Set-PnPTenantCdnPolicy](/powershell/module/sharepoint-pnp/set-pnptenantcdnpolicy) ve [Get-PnPTenantCdnPolicies](/powershell/module/sharepoint-pnp/get-pnptenantcdnpolicies).
+Bu cmdlet'ler hakkında daha fazla bilgi için bkz. [Set-PnPTenantCdnPolicy](https://pnp.github.io/powershell/cmdlets/Set-PnPTenantCdnPolicy.html) ve [Get-PnPTenantCdnPolicies](https://pnp.github.io/powershell/cmdlets/Get-PnPTenantCdnPolicies.html).
 
 <a name="Office365CDNforSPOOriginPnPPosh"> </a>
 ### <a name="add-an-origin-for-your-assets"></a>Varlıklarınız için kaynak ekleme
@@ -626,7 +626,7 @@ Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl sites/test/siteassets/folder%
 Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl "sites/test/siteassets/folder 1"
 ```
 
-Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz. [Add-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/add-pnptenantcdnorigin).
+Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz. [Add-PnPTenantCdnOrigin](https://pnp.github.io/powershell/cmdlets/Add-PnPTenantCdnOrigin.html).
 
 > [!NOTE]
 > Özel kaynaklarda, bir kaynaktan paylaşılan varlıkların CDN erişilebilmesi için önce yayımlanmış bir ana sürüme sahip olması gerekir.
@@ -650,7 +650,7 @@ Normalde, Office 365 CDN etkinleştirdiğinizde bu kaynaklar varsayılan olarak 
   Add-PnPTenantCdnOrigin -CdnType Public -OriginUrl */masterpage
   ```
 
-Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz. [Add-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/add-pnptenantcdnorigin).
+Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz. [Add-PnPTenantCdnOrigin](https://pnp.github.io/powershell/cmdlets/Add-PnPTenantCdnOrigin.html).
 
 Komutunu çalıştırdıktan sonra sistem yapılandırmayı veri merkezi genelinde eşitler. Bu işlem 15 dakika kadar sürebilir.
 
@@ -675,7 +675,7 @@ Komutunu çalıştırdıktan sonra sistem yapılandırmayı veri merkezi genelin
   Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl */publishingimages
   ```
 
-Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz. [Add-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/add-pnptenantcdnorigin).
+Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz. [Add-PnPTenantCdnOrigin](https://pnp.github.io/powershell/cmdlets/Add-PnPTenantCdnOrigin.html).
 
 Komutunu çalıştırdıktan sonra sistem yapılandırmayı veri merkezi genelinde eşitler. Bu işlem 15 dakika kadar sürebilir.
 
@@ -688,7 +688,7 @@ Site koleksiyonunu özel kaynak olarak tanımlamak için **Add-PnPTenantCdnOrigi
 Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl sites/site1/siteassets
 ```
 
-Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz. [Add-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/add-pnptenantcdnorigin).
+Bu komut ve söz dizimi hakkında daha fazla bilgi için bkz. [Add-PnPTenantCdnOrigin](https://pnp.github.io/powershell/cmdlets/Add-PnPTenantCdnOrigin.html).
 
 Komutunu çalıştırdıktan sonra sistem yapılandırmayı veri merkezi genelinde eşitler. SharePoint Online kiracısı CDN hizmetine bağlandığından beklenen yapılandırma _beklemede_ iletisi görebilirsiniz. Bu işlem 15 dakika kadar sürebilir.
 
@@ -713,7 +713,7 @@ Kaynak olarak tanımladığınız bir klasöre veya SharePoint kitaplığına er
 Remove-PnPTenantCdnOrigin -OriginUrl <path> -CdnType <Public | Private | Both>
 ```
 
-Bu cmdlet'in nasıl kullanılacağı hakkında bilgi için bkz [. Remove-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/remove-pnptenantcdnorigin).
+Bu cmdlet'in nasıl kullanılacağı hakkında bilgi için bkz [. Remove-PnPTenantCdnOrigin](https://pnp.github.io/powershell/cmdlets/Remove-PnPTenantCdnOrigin.html).
 
 <a name="Office365CDNforSPOModifyOriginPnPPosh"> </a>
 #### <a name="modify-an-origin-in-the-office-365-cdn"></a>Office 365 CDN kaynağı değiştirme
@@ -737,7 +737,7 @@ CDN özel çıkış noktalarının kullanımını devre dışı bırakmak için 
 Set-PnPTenantCdnEnabled -CdnType Private -Enable $false
 ```
 
-Bu cmdlet hakkında daha fazla bilgi için bkz. [Set-PnPTenantCdnEnabled](/powershell/module/sharepoint-pnp/set-pnptenantcdnenabled).
+Bu cmdlet hakkında daha fazla bilgi için bkz. [Set-PnPTenantCdnEnabled](https://pnp.github.io/powershell/cmdlets/Set-PnPTenantCdnEnabled.html).
 
 </details>
 
