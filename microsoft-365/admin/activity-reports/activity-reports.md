@@ -22,12 +22,12 @@ search.appverid:
 - GEA150
 ms.assetid: 0d6dfb17-8582-4172-a9a9-aed798150263
 description: Kuruluşunuzdaki kişilerin Microsoft 365 hizmetlerini nasıl kullandığını gösteren düzenli bir rapor alın ve daha fazla içgörü için her grafikte detaya gidin.
-ms.openlocfilehash: 6d773b3f6bf7f2660a2608085b503b1cde1c05c9
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 9dbd1ef7044db3a27c93cfe7e2acd09aaa32cd14
+ms.sourcegitcommit: f302de988d98628922eea1f509a3f639634ddc64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66007250"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66151172"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center"></a>Yönetim merkezinde raporları Microsoft 365
 
@@ -113,6 +113,7 @@ Aboneliğinize bağlı olarak, tüm ortamlardaki kullanılabilir raporlar aşağ
 |[Skype Kurumsal Çevrimiçi Sürüm eşler arası etkinlik](/SkypeForBusiness/skype-for-business-online-reporting/peer-to-peer-activity-report)|Evet|Evet|<sup>Hayır 1</sup>|<sup>Hayır 1</sup>|Evet|
 |[Viva Öğrenme etkinliği](viva-learning-activity.md)|Evet|Yok|Yok|Yok|Yok|
 |[Viva Analizler etkinliği](viva-insights-activity.md)|Evet|Evet|Yok|Yok|Yok|
+|[Project etkinliği](project-activity.md)|Evet|Evet|Yok|Yok|Yok|
 
 Yok<sup>1</sup>: Rapor gelecekte yayımlanmayı planlıyor. <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=" target="_blank">Microsoft 365 Yol Haritası</a> yayından önce güncelleştirilecektir.
 Yok<sup>2</sup>: Hizmet ortamda kullanılamaz, bu nedenle raporu serbest bırakma planı yoktur.
@@ -151,7 +152,7 @@ Genel yöneticiler, kiracıları için bu değişikliği geri alabilir ve kurulu
 
 3. Deyiminin işaretini kaldırın **Tüm raporlarda gizli kullanıcı, grup ve site adlarını görüntüleyin** ve değişikliklerinizi kaydedin.
 
-Bu değişikliklerin rapor panosundaki raporlarına yansıması birkaç dakika sürer. Bu ayar[, Microsoft](/graph/api/resources/report) Graph ve Power BI'daki [Microsoft 365](/microsoft-365/admin/usage-analytics/usage-analytics) kullanım [raporları ile Microsoft Teams Yönetim merkezindeki kullanım raporları](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference) için de geçerlidir. Tanımlanabilir kullanıcı bilgilerinin gösterilmesi, Microsoft Purview uyumluluk portalı denetim günlüğünde günlüğe kaydedilen bir olaydır.
+Bu değişikliklerin rapor panosundaki raporlarına yansıması birkaç dakika sürer. Bu ayar[, Microsoft](/graph/api/resources/report) Graph ve Power BI'daki [Microsoft 365](/microsoft-365/admin/usage-analytics/usage-analytics) kullanım [raporları ile Microsoft Teams Yönetici merkezindeki kullanım raporları](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference) için de geçerlidir. Tanımlanabilir kullanıcı bilgilerini göstermek, Microsoft Purview uyumluluk portalı denetim günlüğünde günlüğe kaydedilen bir olaydır.
 
 ## <a name="what-happens-to-usage-data-when-a-user-account-is-closed"></a>Kullanıcı hesabı kapatıldığında kullanım verilerine ne olur?
 

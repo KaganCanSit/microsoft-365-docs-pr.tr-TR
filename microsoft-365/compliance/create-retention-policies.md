@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Kullanıcıların e-posta, belgeler ve konuşmalarla oluşturduğu içeriğin denetimini verimli bir şekilde korumak için bekletme ilkesi kullanın. İstediğinizi koruyun ve istemediğinizden kurtulun.
-ms.openlocfilehash: 6243db961e9c7789ea1a43f41d848d3d9cbda9e2
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 7b8ca4e909893ec417d3466f825c2c0a1c5c736a
+ms.sourcegitcommit: f302de988d98628922eea1f509a3f639634ddc64
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66016470"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66151194"
 ---
 # <a name="create-and-configure-retention-policies"></a>Bekletme ilkeleri oluşturma ve yapılandırma
 
@@ -78,7 +78,7 @@ Birden fazla bekletme ilkeniz varsa ve bekletme etiketlerini de kullandığını
 > [!NOTE]
 > Bekletme ilkeleri artık şu anda önizleme aşamasında olan [paylaşılan kanalları](/MicrosoftTeams/shared-channels) destekliyor. **Teams kanalı ileti** konumu için bekletme ayarlarını yapılandırdığınızda, bir ekibin paylaşılan kanalları varsa, bekletme ayarlarını üst ekibinden devralır.
 
-1. [Microsoft Purview uyumluluk portalından](https://compliance.microsoft.com/) **Veri yaşam döngüsü yönetimi** > **Bekletme İlkeleri'ni** seçin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) **Veri yaşam döngüsü yönetimi** > **Bekletme İlkeleri'ni** seçin.
 
 2. Bekletme ilkesi oluştur yapılandırmasını başlatmak için **Yeni bekletme ilkesi'ni** seçin ve yeni bekletme ilkenizi adlandırın.
 
@@ -134,7 +134,7 @@ Microsoft 365 gruplarına, SharePoint sitelerine veya OneDrive hesaplarına uygu
 >
 > Bu özelliği kullanmak için Yammer ağınızın Karma [Mod değil Yerel Mod](/yammer/configure-your-yammer-network/overview-native-mode) olması gerekir.
 
-1. [Microsoft Purview uyumluluk portalından](https://compliance.microsoft.com/) **Veri yaşam döngüsü yönetimi** > **Bekletme İlkeleri'ni** seçin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) **Veri yaşam döngüsü yönetimi** > **Bekletme İlkeleri'ni** seçin.
 
 2. **Yeni bir bekletme ilkesi** oluşturmak için Yeni bekletme ilkesi'ni seçin.
 
@@ -162,15 +162,11 @@ Bekletme ilkelerinin Yammer için nasıl çalıştığı hakkında daha fazla bi
 
 #### <a name="additional-retention-policies-needed-to-support-yammer"></a>Yammer desteklemek için gereken ek saklama ilkeleri
 
-Yammer yalnızca topluluk iletileri ve özel iletiler değildir. Yammer ağınıza yönelik e-posta iletilerini korumak ve silmek için, **Microsoft 365 Grupları konumunu kullanarak** Yammer için kullanılan tüm Microsoft 365 gruplarını içeren ek bir bekletme ilkesi yapılandırın. 
+Yammer yalnızca topluluk iletileri ve özel iletiler değildir. Yammer ağınıza yönelik e-posta iletilerini korumak ve silmek için, **Microsoft 365 Grupları konumunu kullanarak** Yammer için kullanılan tüm Microsoft 365 gruplarını içeren ek bir bekletme ilkesi yapılandırın.
 
-Yammer depolanan dosyaları korumak ve silmek için, Microsoft 365 Grupları konumunu veya **OneDrive** **hesap konumlarını** içeren bir bekletme ilkesine ihtiyacınız vardır:
+Bu konum, Yammer topluluklara yüklenen dosyaları da içerir. Bu dosyalar, Yammer topluluğu için gruba bağlı SharePoint sitesinde depolanır.
 
-- Özel iletilerde paylaşılan dosyalar, dosyayı paylaşan kullanıcının OneDrive hesabında depolanır. 
-
-- Topluluklara yüklenen dosyalar, Yammer topluluğunun gruba bağlı SharePoint sitesinde depolanır.
-
-SharePoint sitelerine veya OneDrive hesaplarına uygulanan bir bekletme ilkesi, bu iletiler silinmeden önce Yammer iletide başvuruda bulunan bir dosyayı silebilir. Bu senaryoda, dosya hala Yammer iletisinde görüntülenir, ancak kullanıcılar dosyayı seçtiğinde "Dosya bulunamadı" hatası alır. Bu davranış bekletme ilkelerine özgü değildir ve bir kullanıcı dosyayı SharePoint veya OneDrive'dan el ile silerse de oluşabilir.
+SharePoint sitelere uygulanan bir bekletme ilkesi, bu iletiler silinmeden önce Yammer iletide başvuruda bulunan bir dosyayı silebilir. Bu senaryoda, dosya hala Yammer iletisinde görüntülenir, ancak kullanıcılar dosyayı seçtiğinde "Dosya bulunamadı" hatası alır. Bu davranış bekletme ilkelerine özgü değildir ve bir kullanıcı dosyayı SharePoint'dan el ile silerse de oluşabilir.
 
 ### <a name="retention-policy-for-locations-other-than-teams-and-yammer"></a>Teams ve Yammer dışındaki konumlar için bekletme ilkesi
 
@@ -182,7 +178,7 @@ Bu hizmetlerden herhangi biri için geçerli olan bekletme ilkeleri için aşağ
 - grupları Microsoft 365
 - Skype Kurumsal
 
-1. [Microsoft Purview uyumluluk portalından](https://compliance.microsoft.com/) **Veri yaşam döngüsü yönetimi** > **Bekletme İlkeleri'ni** seçin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) **Veri yaşam döngüsü yönetimi** > **Bekletme İlkeleri'ni** seçin.
 
 2. Bekletme ilkesi oluştur yapılandırmasını başlatmak için **Yeni bekletme ilkesi'ni** seçin ve yeni bekletme ilkenizi adlandırın.
 
@@ -212,7 +208,7 @@ Bir bekletme ilkesi oluşturup gönderdiğinizde, bekletme ilkesinin uygulanmas�
   
 ![Bekletme ilkesinin ne zaman etkin olduğunu açıklayan diyagram.](../media/retention-policy-timings.png)
 
-İlk olarak, bekletme ilkesinin seçtiğiniz konumlara dağıtılması ve ardından içeriğe uygulanması gerekir. Bekletme ilkesini Microsoft Purview uyumluluk portalındaki **Bekletme ilkeleri** sayfasından seçerek bekletme ilkesinin dağıtım durumunu istediğiniz zaman de kontrol edebilirsiniz. Açılır bölmeden, duruma **(Hata)** eklendiğini görürseniz ve konumların ayrıntılarında ilkeyi dağıtmanın veya ilkeyi yeniden dağıtmayı denemenin beklenenden uzun sürdüğünü belirten bir ileti görürseniz, ilke dağıtımını yeniden denemek için [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) veya [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
+İlk olarak, bekletme ilkesinin seçtiğiniz konumlara dağıtılması ve ardından içeriğe uygulanması gerekir. Bekletme ilkesinin dağıtım durumunu her zaman Microsoft Purview uyumluluk portalı **Bekletme ilkeleri** sayfasından seçerek de kontrol edebilirsiniz. Açılır bölmeden, duruma **(Hata)** eklendiğini görürseniz ve konumların ayrıntılarında ilkeyi dağıtmanın veya ilkeyi yeniden dağıtmayı denemenin beklenenden uzun sürdüğünü belirten bir ileti görürseniz, ilke dağıtımını yeniden denemek için [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) veya [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
 
 1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 

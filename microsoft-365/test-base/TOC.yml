@@ -6,7 +6,7 @@
       href: overview.md
 - name: Hızlı Başlangıçlar
   items:
-    - name: Test Base Hesabı Oluşturun
+    - name: Test Temel Hesabı Oluşturma
       href: createaccount.md
     - name: Uygulamanızı Test Base üzerinde test edin
       items:
@@ -40,6 +40,8 @@
       href: memory.md
     - name: CPU Regresyon Çözümlemesi
       href: cpu.md
+    - name: Erişim düzeyini değiştirme isteği
+      href: accesslevel.md
     - name: SDK ve API
       href: sdkapi.md
 - name: Başvuru
