@@ -302,8 +302,6 @@
                   href: end-life-cycle-groups-teams-sites-yammer.md
         - name: Microsoft 365 ile SharePoint'te dosya işbirliği
           href: /sharepoint/deploy-file-collaboration
-        - name: Kuruluşlar için OneDrive Rehberi
-          href: /onedrive/plan-onedrive-enterprise
     - name: Uyumluluk
       items:
         - name: Microsoft Purview'da içeriden risk çözümleri

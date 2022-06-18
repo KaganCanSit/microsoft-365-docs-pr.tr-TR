@@ -23,12 +23,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Ortak görevleri yönetmek için Microsoft 365 yönetim merkezi basitleştirilmiş görünümü veya daha karmaşık ayarlar ve görevler için pano görünümünü kullanın.
-ms.openlocfilehash: f3f9d1616189a5e3347a882a6caec0df28e274c0
-ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
+ms.openlocfilehash: 056072e454b0df3e7c4b06ce39735b1db3961b25
+ms.sourcegitcommit: b0b1be67de8f40b199bb9b51eb3568e59377e93a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66129041"
+ms.lasthandoff: 06/18/2022
+ms.locfileid: "66159564"
 ---
 # <a name="overview-of-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezine genel bakış
 
@@ -108,11 +108,7 @@ Parolanızı sıfırlamak, hesap silmek veya diğer görevleri tamamlamak için 
 
 ## <a name="admin-center-features-and-settings"></a>Yönetim merkezi özellikleri ve ayarları
 
-İşte, yönetim merkezi sol gezinti bölmesinde bulacağınız özellikler ve ayarlar. [yönetici yardımı](Microsoft 365 yönetim merkezi genel bakış](admin-center-overview.md) bölümünde yönetici görevleri hakkında daha fazla bilgi edinin.
-
-<br>
-
-****
+İşte, yönetim merkezi sol gezinti bölmesinde bulacağınız özellikler ve ayarlar. [Yönetici yardımı](/microsoft-365/admin/) bölümünde yönetici görevleri hakkında daha fazla bilgi edinin.
 
 |Menü|Kullanım amacı|
 |-----|-----|

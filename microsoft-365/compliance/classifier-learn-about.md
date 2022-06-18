@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Eğitilebilir sınıflandırıcılar, etiketleme veya ilke uygulamasına bakılması için pozitif ve negatif örnekler vererek çeşitli içerik türlerini tanıyabilir.
-ms.openlocfilehash: ed2b744c1c136afde38151dc424eef547607ef27
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: 03c0c0991188982fbfc4fb9ec908f6e5f4ab3bba
+ms.sourcegitcommit: b0b1be67de8f40b199bb9b51eb3568e59377e93a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115861"
+ms.lasthandoff: 06/18/2022
+ms.locfileid: "66159586"
 ---
 # <a name="learn-about-trainable-classifiers"></a>Eğitilebilir sınıflandırıcılar hakkında daha fazla bilgi edinme
 
@@ -53,7 +53,7 @@ Bu sınıflandırma yöntemi, el ile veya otomatik desen eşleştirme yöntemler
 
 > [!NOTE]
 > Önizlemede - Filtreler panelinde Eğitilebilir Sınıflandırıcılar'ı genişleterek içerik gezgininde **eğitilebilir sınıflandırıcıları** görüntüleyebilirsiniz. Eğitilebilir sınıflandırıcılar etiketleme gerektirmeden SharePoint, Teams ve OneDrive bulunan olay sayısını otomatik olarak görüntüler.
-> Bu özelliği kullanmak istemiyorsanız, ilk çalıştırma sınıflandırmasını devre dışı bırakmak için Microsoft Desteği ile bir istekte bulunmanız gerekir. Bu, etiketleme ilkeleri oluşturmadan önce hassas ve etiketlenmiş içeriğinizin taranmalarını devre dışı bırakır.
+> Bu özelliği kullanmak istemiyorsanız, Microsoft Desteği ile bir istekte bulunmanız gerekir. Bu, İçerik Gezgini'ndeki hiçbir etiketleme ilkesinde kullanılmayan hassas verilerinizin görüntülenmesini devre dışı bırakır. Verilerinizi taramayı da devre dışı bırakabilirsiniz. Tarama kapalıysa, bu sınıflandırıcılarla duyarlılık etiketleme ve DLP ilkeleri çalışmaz
 
 ### <a name="where-you-can-use-classifiers"></a>Sınıflandırıcıları kullanabileceğiniz yerler
 
