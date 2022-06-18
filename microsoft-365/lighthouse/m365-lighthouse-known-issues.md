@@ -17,12 +17,12 @@ ms.custom:
 - M365-Lighthous
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için, Özellik alanına göre Lighthouse ile ilgili bilinen sorunların listesine bakın.
-ms.openlocfilehash: 7a175d6c14e9b434240ff1a85f901a919ea79dcc
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 61073729b9589033ab361973c1c87bac2b28959a
+ms.sourcegitcommit: 04a93269fbbbdb5513335422cabdc1b269ead5ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66016734"
+ms.lasthandoff: 06/18/2022
+ms.locfileid: "66160830"
 ---
 # <a name="known-issues-with-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse ile ilgili bilinen sorunlar
 
@@ -66,15 +66,15 @@ Bu makalede, özellik alanına göre Microsoft 365 Lighthouse ile ilgili bilinen
 | **Devre dışı bırakma ve Yeniden etkinleştirme eylemleri denetim günlüklerinde listelenmiyor** | Aşağıdaki etkinlikler şu anda Lighthouse'un Denetim günlükleri sayfasında bildirilmiyor: <ul><li>Ad: offboardTenant \| Action: Müşteriyi devre dışı bırakma</li> <li>Ad: resetTenantOnboardingStatus \| Action: Reactive customer</li></ul> | Geçici bir çözüm yoktur, ancak bir düzeltme üzerinde çalışıyoruz. Düzeltme hizmete dağıtıldıktan sonra bu etkinlikler denetim günlüklerinde görünür. |
 | **Filtre tüm kullanıcıları göstermiyor** | MSP teknisyenleri **Tarafından Başlatılan'ı** kullanarak filtrelemeye çalıştığında, denetim günlükleri oluşturan eylemleri başlatan teknisyenlerin e-posta kimliklerine karşılık gelen tüm Kullanıcı Asıl Adlarının (UPN) listesi filtre altında tam olarak görüntülenmez.<br><br>Denetim günlüklerinin tamamen görüntüleneceğini unutmayın; yalnızca **Tarafından Başlatılarak** filtrelenebilme özelliği etkilenir. | Geçici bir çözüm yoktur, ancak bir düzeltme üzerinde çalışıyoruz. Düzeltme hizmete dağıtıldıktan sonra filtre, filtrelenecek UPN'lerin tam listesini görüntüleyerek beklenen davranışına geri döner. |
 
-## <a name="delegated-admin-privileges-dap"></a>Yönetici Ayrıcalıkları Temsilcisi (DAP)
+## <a name="delegated-admin-privileges-dap"></a>Temsilci Yönetici Ayrıcalıkları (DAP)
 
 | Sorun | Açıklama | Çözüm |
 | ---------------- | ---------------- | ---------------- |
-| **DAP rollerini değiştirirken izin gecikmesi** | Yönetici Aracısı veya Yardım Masası Aracısı grubuna bir MSP teknisyeni eklenirse veya gruptan kaldırılırsa Lighthouse'da uygun izinlerin yansıtılmasında gecikme olabilir. | Sorun 30 dakika içinde çözülecektir. Ek adım gerekmez. |
+| **DAP rollerini değiştirirken izin gecikmesi** | bir MSP teknisyeni Yönetici Aracısı veya Yardım Masası Aracısı grubuna eklenirse veya gruptan kaldırılırsa, Lighthouse içindeki uygun izinlerin yansıtılmasında gecikme olabilir. | Sorun 30 dakika içinde çözülecektir. Ek adım gerekmez. |
 
-## <a name="granular-delegated-admin-privileges-gdap"></a>Ayrıntılı Yönetici Ayrıcalıkları (GDAP)
+## <a name="granular-delegated-admin-privileges-gdap"></a>Ayrıntılı Temsilci Yönetici Ayrıcalıkları (GDAP)
 
-Müşterileri Lighthouse'a eklemek için Ayrıntılı Yönetici Ayrıcalıkları (GDAP) ve dolaylı bayi ilişkisi ya da Temsilci Yönetici Ayrıcalıkları (DAP) ilişkisi gerekir. MÜŞTERI kiracısında DAP ve GDAP birlikte varsa, GDAP özellikli güvenlik gruplarındaki MSP teknisyenleri için GDAP izinleri önceliklidir. Yakında yalnızca GDAP ilişkilerine (dolaylı kurumsal bayi ilişkileri olmadan) sahip müşteriler Lighthouse'a eklenecek.<br><br>
+Müşterileri Lighthouse'a eklemek için Ayrıntılı Temsilcili Yönetici Ayrıcalıkları (GDAP) ve dolaylı bayi ilişkisi ya da Temsilci Yönetici Ayrıcalıkları (DAP) ilişkisi gerekir. MÜŞTERI kiracısında DAP ve GDAP birlikte varsa, GDAP özellikli güvenlik gruplarındaki MSP teknisyenleri için GDAP izinleri önceliklidir. Yalnızca GDAP ilişkileri olan müşteriler (dolaylı kurumsal bayi ilişkileri olmadan) şu anda Lighthouse'a eklenemez, ancak gelecekteki bir sürümde ekleme yapabilir.<br><br>
 
 | Sorun | Açıklama | Çözüm |
 | ---------------- | ---------------- | ---------------- |
