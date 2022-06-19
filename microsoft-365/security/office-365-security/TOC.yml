@@ -223,13 +223,13 @@
         - name: Kiracı İzin Verilenler/Engellenenler Listesi
           items:
             - name: Kiracı İzin Verilenler/Engellenenler Listesini Yönetme
-              href: tenant-allow-block-list.md
-            - name: Kiracı İzin Verilenler/Engellenenler Listesine engellemeler ekleme
-              href: manage-tenant-blocks.md
-            - name: Kiracı İzin Verilenler/Engellenenler Listesine izinler ekleme
-              href: manage-tenant-allows.md
-            - name: Kiracı İzin Verilenler/Engellenenler Listesinde girdileri değiştirme ve kaldırma
-              href: modify-remove-entries-tenant-allow-block.md
+              href: manage-tenant-allow-block-list.md
+            - name: Kiracı İzin Ver/Engelle Listesini kullanarak e-postalara izin verme veya e-postaları engelleme
+              href: allow-block-email-spoof.md
+            - name: Kiracı İzin Ver/Engelle Listesini kullanarak URL'lere izin verme veya URL’leri engelleme
+              href: allow-block-urls.md
+            - name: Kiracı İzin Ver/Engelle Listesini kullanarak dosyalara izin verme veya dosyaları engelleme
+              href: allow-block-files.md
         - name: Göndereni engelle listeleri oluşturma
           href: Create-block-sender-lists-in-office-365.md
         - name: Güvenilir gönderen listeleri oluşturma

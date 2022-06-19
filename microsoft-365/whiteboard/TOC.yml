@@ -1,0 +1,24 @@
+- name: Microsoft Whiteboard
+  href: index.md
+- name: Kuruluşlar için Whiteboard
+  items:
+    - name: Erişimi etkinleştirin ve yönetin
+      href: enable-whiteboard-access-organizations.md
+    - name: Verileri yönetin
+      href: manage-data-organizations.md
+    - name: Paylaşımı yönetin
+      href: manage-sharing-organizations.md
+    - name: Windows cihazlarda dağıtın
+      href: deploy-on-windows-organizations.md
+- name: Kamu için Whiteboard
+  items:
+    - name: Erişimi etkinleştirme ve yönetme - GCC High
+      href: enable-whiteboard-access-gcc-high.md
+    - name: Verileri yönetme - GCC High
+      href: manage-data-gcc-high.md
+    - name: Paylaşımı yönetme - GCC High
+      href: manage-sharing-gcc-high.md
+    - name: İstemcileri yönetme - GCC High
+      href: manage-clients-gcc-high.md
+- name: Whiteboard PowerShell
+  href: /powershell/module/whiteboard/
