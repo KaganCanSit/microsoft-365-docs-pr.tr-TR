@@ -9,20 +9,26 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 116d7a84-a7a0-4911-a1e9-debb2cca7c43
 description: Microsoft Bookings uygulamasındaki rezervasyon sayfanızın renk temasını değiştirin.
-ms.openlocfilehash: 1c00f87f3447b7002bf647086ee60c756662803d
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: df91e0855615612cfca1fc24a3ddf4cdcb992b0e
+ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637813"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66185115"
 ---
 # <a name="customize-and-publish-your-booking-page"></a>Rezervasyon sayfanızı özelleştirme ve yayımlama
 
 Rezervasyon Sayfası, dış rezervasyon sayfanızın nasıl görüneceğini ayarladığınız yerdir. Rezervasyon sayfanızı özelleştirip yayımladığınızda, kişiler bu sayfayı sizinle randevu almak için kullanır.
 
-Rezervasyon sayfanızı özelleştirmek için [Office.com'da](https://office.com) oturum açın ve **Bookings** \> **Rezervasyon sayfasına** gidin. Rezervasyon sayfasını aşağıdaki seçeneklerle özelleştirebilirsiniz. Rezervasyon Sayfanızı ayarladıktan sonra, kişilerin sizinle randevu rezervasyonu yapmaya başlayabilmesi için sayfayı yayımlayabilirsiniz.
+Rezervasyon sayfanızı özelleştirmek için [Office.com'da](https://office.com) oturum açın ve **Bookings** \> **Booking sayfasına** gidin. Rezervasyon sayfasını aşağıdaki seçeneklerle özelleştirebilirsiniz. Rezervasyon Sayfanızı ayarladıktan sonra, kişilerin sizinle randevu rezervasyonu yapmaya başlayabilmesi için sayfayı yayımlayabilirsiniz.
 
-1. Microsoft 365'da uygulama başlatıcıyı ve ardından **Bookings'ı** seçin.
+## <a name="watch-customize-and-publish-your-booking-page"></a>İzleyin: Rezervasyon sayfanızı özelleştirme ve yayımlama
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWuYil]
+
+## <a name="steps"></a>Adımlar
+
+1. Microsoft 365'da uygulama başlatıcıyı ve ardından **Bookings'i** seçin.
 
 1. Takviminizi seçin.
 
@@ -44,31 +50,31 @@ Aşağıdaki bölümde rezervasyon sayfanızı ayarlama ve sayfanızı yayımlam
 
 - **Zamanlama ilkesi**, **E-posta bildirimleri** ve **Personel** Bu ayarların tümü, Hizmetler sekmesindeki her hizmet için kullanılabilen ayarlara benzer.
 
-- **Kullanılabilir -lik** Bu, bir hizmet için belirli saat ve tarih kullanılabilirlik aralıklarını ayarlama seçeneğidir. Aksi takdirde, Bookings varsayılan olarak iş saatleriniz olur. Tatiller veya genişletilmiş saatler gibi senaryolar için burada **Kullanılabilirlik** seçeneğini kullanabilirsiniz.
+- **Kullanılabilir -lik** Bu, bir hizmet için belirli saat ve tarih kullanılabilirlik aralıklarını ayarlama seçeneğidir. Aksi takdirde Bookings varsayılan olarak iş saatlerinize ayarlanır. Tatiller veya genişletilmiş saatler gibi senaryolar için burada **Kullanılabilirlik** seçeneğini kullanabilirsiniz.
 
 - **Sayfanızı özelleştirme** marka tutarlılığı gibi Self-Service sayfasında görünen renkleri ve logoları seçin.
 
-- **Bölge ve saat dilimi ayarları** Burada, Self-Service sayfası için saat dilimi ve dil tercihlerinizi ayarlayabilirsiniz. Yerel saat diliminizi ayarlamanızı öneririz. Self-Service sayfanızın ziyaretçileri için Bookings yerel saat dilimlerini otomatik olarak algılar ve kendilerine kendi saat dilimlerinde kullanılabilirlik gösterir. Örneğin, saat 13:00 PST'de bir randevu varsa, CST'deki biri uygun saati 15:00 CST olarak görüntüler.
+- **Bölge ve saat dilimi ayarları** Burada, Self-Service sayfası için saat dilimi ve dil tercihlerinizi ayarlayabilirsiniz. Yerel saat diliminizi ayarlamanızı öneririz. Self-Service sayfanıza gelen ziyaretçiler için Bookings yerel saat dilimlerini otomatik olarak algılar ve kendilerine kendi saat dilimlerinde uygunluk durumunu gösterir. Örneğin, saat 13:00 PST'de bir randevu varsa, CST'deki biri uygun saati 15:00 CST olarak görüntüler.
 
 Rezervasyon sayfanızı yayımladığınızda, müşteriler sizinle randevu rezervasyonu yapabilecekleri rezervasyon sayfanızı görür. Müşteriye yönelik rezervasyon sayfası şöyle görünür:
 
 :::image type="content" source="media/bookings-self-service-2.png" alt-text="Müşteriye yönelik rezervasyon sayfası.":::
 
-## <a name="publish-the-booking-page"></a>Rezervasyon sayfasını yayımlama
+<!-- ## Publish the booking page
 
-Bu videoyu izleyin veya rezervasyon sayfanızı yayımlamak veya yayımdan kaldırmak için aşağıdaki adımları izleyin.
+Watch this video or follow the steps below to publish or unpublish your booking page.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWuYil]
 
-1. Microsoft 365'da uygulama başlatıcıyı ve ardından **Bookings'ı** seçin.
+1. In Microsoft 365, select the app launcher, and then select **Bookings**.
 
-1. Gezinti bölmesinde **Rezervasyon sayfası'nı** seçin.
+1. In the navigation pane, select **Booking page**.
 
-1. Zamanlama ilkelerinizin doğru olduğunu doğrulayın. Daha fazla bilgi için bkz [. Zamanlama ilkelerinizi ayarlama](set-scheduling-policies.md) .
+1. Verify your scheduling policies are correct. See [Set your scheduling policies](set-scheduling-policies.md) for more information.
 
-1. **Kaydet ve yayımla'yı** seçin. Bir onay iletisi görürsünüz.
+1. Select **Save and publish**. You'll see a confirmation message.
 
-1. **Sayfanızı** web tarayıcısında görmek için Yayımlanan sayfayı aç'ı seçin.
+1. Select **Open published page** to see your page in a web browser. -->
 
 ## <a name="unpublish-the-booking-page"></a>Rezervasyon sayfasını yayımdan kaldırma
 

@@ -14,20 +14,20 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview çözümleri deneme sürümü ve nasıl kaydolacağınızı öğrenin.
-ms.openlocfilehash: 653c80e7c8b412ac1d9c14a021519ca80baab6e9
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 425c9c3aecd4df38a53a5b6bee818f466f167a27
+ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188844"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66185137"
 ---
 # <a name="about-the-microsoft-purview-solutions-trial"></a>Microsoft Purview çözümleri deneme sürümü hakkında
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview çözümleri, kuruluşunuzun dosya ve e-postalardaki uygunsuz izinlerden kaynaklanan iç tehditlere karşı korunmasına yardımcı olur ve kuruluşunuzun mevzuat ve şirket içi iş gereksinimlerine uymasına yardımcı olur.
+Microsoft Purview çözümleri, kuruluşunuzun dosyalar ve e-postalar üzerindeki uygunsuz izinlerden kaynaklanan iç tehditlere karşı korunmasına yardımcı olur ve kuruluşunuzun mevzuat ve şirket içi iş gereksinimlerine uymasına yardımcı olur.
 
-Microsoft Purview çözümleri deneme sürümü, Microsoft Purview çözümlerinin tüm özelliklerini denemenin en kolay yoludur ve kurulumu yalnızca birkaç dakika sürer. Deneme kurulumu tamamlandıktan sonra, Microsoft E5 lisans paketinin tüm özellikleri 90 güne kadar kullanabilirsiniz.
+Microsoft Purview çözümleri deneme sürümü, Microsoft Purview çözümlerin tüm özelliklerini denemenin ve ayarlamanın yalnızca birkaç dakika sürmesinin en kolay yoludur. Deneme kurulumu tamamlandıktan sonra, Microsoft E5 lisans paketinin tüm özellikleri 90 güne kadar kullanabilirsiniz.
 
 ## <a name="terms-and-conditions"></a>Hüküm ve koşullar
 
@@ -54,7 +54,7 @@ Kullanıcıların bir deneme sürümüne kaydolmak veya bu denemeyi sonlandırma
 
 Deneme sürümüne kaydolmak için [Microsoft 365 deneme merkezini](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) ziyaret edin. Aşağıdaki adımları da izleyebilirsiniz:
 
-1. [Microsoft Purview uyumluluk portalında](https://go.microsoft.com/fwlink/p/?linkid=2077149) sol gezinti **bölmesinden Denemeler'i** seçerek Microsoft 365 deneme sürümü hub'ına gidin.
+1. [Microsoft Purview uyumluluk portalı](https://go.microsoft.com/fwlink/p/?linkid=2077149) sol gezinti **bölmesinden Denemeler'i** seçerek Microsoft 365 denemeler hub'ına gidin.
 2. **Uyumluluk denemeleri'nin** altında **Microsoft Purview çözümleri** kartını bulun ve **Şimdi deneyin'i** seçin.
 3. **Microsoft Purview çözümleri deneme sürümü** açılır öğesi bölmesinde, deneme sürümünü başlattığınızda nelerin dahil olduğu ve neler bekleyebileceğiniz hakkındaki bilgileri gözden geçirin, ardından **Denemeyi başlat'ı seçin.**
 
@@ -64,7 +64,7 @@ Deneme sürümünüz 90 gün boyunca hemen geçerli olacaktır. Tüm Purview ç�
 
 #### <a name="getting-started"></a>Başlarken
 
-Purview çözümlerini Microsoft Purview uyumluluk portalında gördüğünüz anda kullanmaya başlayabilirsiniz. Hiçbir şey otomatik olarak oluşturulmaz ve kullanıcılar etkilenmez. Her çözüme gittiğinizde, özellikleri kullanmaya başlamak için ek kurulum yapılandırmaları yapmanız için size yol gösterilebilir.
+Purview çözümlerini Microsoft Purview uyumluluk portalı gördüğünüz anda kullanmaya başlayabilirsiniz. Hiçbir şey otomatik olarak oluşturulmaz ve kullanıcılar etkilenmez. Her çözüme gittiğinizde, özellikleri kullanmaya başlamak için ek kurulum yapılandırmaları yapmanız için size yol gösterilebilir.
 
 Başlamanıza yardımcı olması için [deneme playbook'umuzu](compliance-easy-trials-compliance-playbook.md) kullanın.
 
@@ -88,11 +88,11 @@ Yöneticiler, Microsoft 365 denemeler hub'ında **Purview çözümleri deneme** 
 
 - **Denetim**
 
-  Microsoft Purview Audit (Premium), kuruluşların araştırma yürütmek için gereken denetim günlüğü saklama süresini artırarak, risk kapsamını belirlemeye yardımcı olan önemli olaylara erişim sağlayarak ve Office 365 Yönetim Etkinliği API'sine daha hızlı erişim sağlayarak, kuruluşların adli ve uyumluluk araştırmaları gerçekleştirmesine yardımcı olur. [Denetim](advanced-audit.md) hakkında daha fazla bilgi edinin
+  Microsoft Purview Denetim (Premium), kuruluşların bir araştırma yürütmek için gereken denetim günlüğü saklama süresini artırarak, risk kapsamını belirlemeye yardımcı olan önemli olaylara erişim sağlayarak ve Office 365 Yönetim Etkinliği API'sine daha hızlı erişim sağlayarak adli ve uyumluluk araştırmaları gerçekleştirmelerine yardımcı olur. [Denetim](advanced-audit.md) hakkında daha fazla bilgi edinin
 
 - **İletişim Uyumluluğu**
 
-  Microsoft Purview İletişim Uyumluluğu, uygunsuz iletileri otomatik olarak yakalamanıza, olası ilke ihlallerini araştırmanıza ve düzeltme adımları gerçekleştirmenize yardımcı olarak iç ve dış iletişimlerle ilişkili modern uyumluluk güçlüklerinin üstesinden gelmenize yardımcı olur. [İletişim Uyumluluğu](communication-compliance.md) hakkında daha fazla bilgi edinin
+  Microsoft Purview İletişim Uyumluluğu, uygunsuz iletileri otomatik olarak yakalamanıza, olası ilke ihlallerini araştırmanıza ve düzeltmeye yönelik adımlar atmanıza yardımcı olarak iç ve dış iletişimlerle ilişkili modern uyumluluk güçlüklerinin üstesinden gelmenize yardımcı olur. [İletişim Uyumluluğu](communication-compliance.md) hakkında daha fazla bilgi edinin
 
 - **Uyumluluk Yöneticisi**
 
@@ -109,7 +109,7 @@ Yöneticiler, Microsoft 365 denemeler hub'ında **Purview çözümleri deneme** 
    Deneme süresi sona erdiğinde:
 
   - Siz kapatmadığınız sürece mevcut ilkeleriniz açık kalır.
-  - Deneme süresi sona erdikten sonra Teams veya Cihazlar konumlarını içeren DLP ilkelerini düzenlerseniz, bu konumlar ilkeden kaldırılır.
+  - Artık mevcut veya yeni ilkelerde Teams veya Cihazlar konumlarını düzenleyemez veya ekleyemezsiniz.
 
 - **Ediscovery**
 
@@ -117,7 +117,7 @@ Yöneticiler, Microsoft 365 denemeler hub'ında **Purview çözümleri deneme** 
 
 - **Information Protection**
 
-  Microsoft Purview Information Protection [duyarlılık etiketleriyle](sensitivity-labels.md) uygulayarak hassas içeriğinizi nerede yaşarsa yaşasın veya nereye giderse gitsin keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olur. Denemeler sayesinde kullanıcıların e-postalarına ve belgelerine duyarlılık etiketleri uygulamasını, hassas içeriği bulup otomatik olarak etiketlemesini, makine öğrenmesi tabanlı sınıflandırıcılardan yararlanmasını ve önerilen etiketleri ve ilkelerimizi hızlı bir şekilde kullanmaya başlamasını önerebilirsiniz.
+  Hassas içeriğinizi nerede olursa olsun keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olmak için [duyarlılık etiketleriyle](sensitivity-labels.md) Microsoft Purview Bilgi Koruması uygulayın. Denemeler sayesinde kullanıcıların e-postalarına ve belgelerine duyarlılık etiketleri uygulamasını, hassas içeriği bulup otomatik olarak etiketlemesini, makine öğrenmesi tabanlı sınıflandırıcılardan yararlanmasını ve önerilen etiketleri ve ilkelerimizi hızlı bir şekilde kullanmaya başlamasını önerebilirsiniz.
 
   Information Protection deneme sürümü, Teams ve cihazlar tarafından paylaşılan kredi kartı numaralarını korumak için size varsayılan etiketler, belgeler ve e-postalar için otomatik etiketleme ve veri kaybı önleme sağlar. Sizin için oluşturduğumuz varsayılan ilkeler hızlı bir şekilde çalışmaya başlamanızı sağlar, ancak bunları istediğiniz gibi tamamen özelleştirebilirsiniz.
 
@@ -127,9 +127,9 @@ Yöneticiler, Microsoft 365 denemeler hub'ında **Purview çözümleri deneme** 
   - Siz kapatmadığınız sürece mevcut ilkeleriniz açık kalır.
   - Deneme süresi sona erdikten sonra otomatik etiketleme ilkeleri düzenlenemez, ancak silinebilir.
   
-  Önceden yapılandırılmış bu özelliklerin her biri ve kullanıcıları nasıl etkileyecekleri hakkında daha fazla bilgi için bkz. [Microsoft Purview Information Protection için ücretsiz deneme](mip-easy-trials.md) sürümü hakkında bilgi edinin.
+  Önceden yapılandırılmış bu özelliklerin her biri ve kullanıcıları nasıl etkileyecekleri hakkında daha fazla bilgi için bkz. [Microsoft Purview Bilgi Koruması için ücretsiz deneme](mip-easy-trials.md) hakkında bilgi edinin.
 
-  Microsoft Purview Information Protection için tüm özellikler hakkında daha fazla bilgi için bkz. [Microsoft Purview Information Protection](information-protection.md).
+  Microsoft Purview Bilgi Koruması için tüm özellikler hakkında daha fazla bilgi için bkz. [Microsoft Purview Bilgi Koruması](information-protection.md).
 
 - **Insider Risk Management**
 

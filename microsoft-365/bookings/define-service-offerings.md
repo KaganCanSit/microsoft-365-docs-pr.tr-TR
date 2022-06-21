@@ -9,24 +9,28 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 4a1c391e-524f-48e0-bef8-185df3a9634b
 description: Hizmet adı, açıklama, konum, süre ve fiyatlandırma gibi hizmet teklifleri bilgilerini girme yönergeleri. Hizmeti sağlamak için uygun çalışanları da etiketleyebilirsiniz.
-ms.openlocfilehash: 0c302e8d84274fa2df8eea27362407ded4a468e3
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 2daae2139e3d2d4107f4aaed1b94ca655877000a
+ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637791"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66185093"
 ---
-# <a name="define-your-service-offerings-in-bookings"></a>hizmet tekliflerinizi Bookings'de tanımlama
+# <a name="define-your-service-offerings-in-bookings"></a>Bookings'te hizmet tekliflerinizi tanımlama
 
 hizmet tekliflerinizi Microsoft Bookings tanımlarken, bir hizmet adı, açıklama, konum (şahsen toplantı yapmak mı yoksa çevrimiçi toplantı mı yapmak istediğinizi seçin), süre, müşterilere ve personele varsayılan anımsatıcılar, hizmetle ilgili iç notlar ve fiyatlandırma ayarlarsınız. Hizmeti sağlamak için uygun çalışanları da etiketleyebilirsiniz. Ardından, müşteriler iş web sitenize randevu almak için geldiğinde, tam olarak ne tür randevular olduğunu görebilir, hizmeti sağlamak istedikleri kişiyi ve hizmetlerinin maliyetini seçebilirler.
 
 Ayrıca, birisi rezervasyon sayfanız aracılığıyla bir hizmet rezervasyonu yaparken gönderdiğiniz e-posta onayına ve anımsatıcılara özelleştirilmiş bilgiler ve URL'ler ekleyebilirsiniz.
 
-## <a name="create-the-service-details"></a>Hizmet ayrıntılarını oluşturma
+## <a name="watch-create-a-new-service"></a>İzleyin: Yeni hizmet oluşturma
 
-1. Microsoft 365'da Uygulama başlatıcıyı ve ardından **Bookings'ı** seçin.
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWuKXH]
 
-2. **Takvim** >  **Hizmetleriniz'e** gidin ve **Yeni hizmet ekle'yi** seçin.
+## <a name="steps"></a>Adımlar
+
+1. Microsoft 365'da Uygulama başlatıcıyı ve ardından **Bookings'i** seçin.
+
+2. **Takvim** > **Hizmetleriniz'e** gidin ve **Yeni hizmet ekle'yi** seçin.
 
 3. **Temel ayrıntılar** sayfasında seçimlerinizi ekleyin.
 
@@ -42,7 +46,7 @@ Ayrıca, birisi rezervasyon sayfanız aracılığıyla bir hizmet rezervasyonu y
      - Rezervasyona özgü bir Teams veya Skype toplantısının bağlantısı, arayarak bağlanma bilgilerinin yanı sıra hem personelin hem de müşterilerin takvimlerindeki takvim etkinliğine eklenir.
      - Toplantıya katılma bağlantısı, aşağıdaki örnekte gösterildiği gibi tüm onay ve anımsatıcı e-postalarına eklenir:
 
-       :::image type="content" source="media/bookings-teams-meeting-link.jpg" alt-text="Bookings'da Teams toplantısına katılma bağlantısı örneği.":::
+       :::image type="content" source="media/bookings-teams-meeting-link.jpg" alt-text="Bookings'te Teams toplantısına katılma bağlantısı örneği.":::
 
        > [!NOTE]
        > Teams toplantılara Teams mobil uygulaması, Teams masaüstü uygulaması, Web tarayıcısında veya telefonla arayarak bağlanma yoluyla katılabilirsiniz. Sanal randevuları ayırma konusunda en iyi deneyimi sağlamak için Teams kiracınız için varsayılan çevrimiçi toplantı hizmeti olarak etkinleştirmenizi kesinlikle öneririz.
@@ -58,11 +62,11 @@ Ayrıca, birisi rezervasyon sayfanız aracılığıyla bir hizmet rezervasyonu y
 
    **Fiyat ayarlanmadı**: Self-Service sayfasında görüntülenecek fiyat seçeneklerini belirleyin. **Fiyat ayarlanmadı** seçilirse maliyet veya fiyatlandırmaya dair hiçbir fiyat veya başvuru görünmez.
 
-   **Notlar**: Bu alan, rezervasyonu yapılan personelin rezervasyon etkinliğinde ve Bookings web uygulamasının Takvim sekmesinde görünen olayda görünür.
+   **Notlar**: Bu alan, rezervasyon yapılan personelin rezervasyon etkinliğinde ve Bookings web uygulamasının Takvim sekmesinde görünen olayda görünür.
 
-   **Etkinlik başına maksimum katılımcı** sayısı: Bu ayar, birden çok kişinin aynı randevu saatini ve aynı personeli (fitness sınıfı gibi) rezerve edebilmesini gerektiren hizmetler oluşturmanıza olanak tanır. Seçilen hizmet, personel ve saat için randevu zaman aralığı, sizin belirttiğiniz maksimum katılımcı sayısına ulaşılana kadar rezervasyon için kullanılabilir. Geçerli randevu kapasitesi ve katılımcılar, Bookings Web uygulamasının Takvim sekmesinde görüntülenebilir.
+   **Etkinlik başına maksimum katılımcı** sayısı: Bu ayar, birden çok kişinin aynı randevu saatini ve aynı personeli (fitness sınıfı gibi) rezerve edebilmesini gerektiren hizmetler oluşturmanıza olanak tanır. Seçilen hizmet, personel ve saat için randevu zaman aralığı, sizin belirttiğiniz maksimum katılımcı sayısına ulaşılana kadar rezervasyon için kullanılabilir. Geçerli randevu kapasitesi ve katılımcılar Bookings Web uygulamasının Takvim sekmesinde görüntülenebilir.
 
-   :::image type="content" source="media/bookings-maximum-attendees.jpg" alt-text="Bookings'da maksimum katılımcıyı ayarlama örneği":::
+   :::image type="content" source="media/bookings-maximum-attendees.jpg" alt-text="Bookings'te maksimum katılımcıyı ayarlama örneği":::
 
    **Müşterinin rezervasyonunu yönetmesine izin ver**: Bu ayar, Bookings Web uygulamasının Takvim sekmesinden rezervasyon yapılması koşuluyla müşterinin rezervasyonunu değiştirip değiştiremeyeceğini veya iptal edip etmeyeceğini belirler.
 
@@ -74,13 +78,13 @@ Ayrıca, birisi rezervasyon sayfanız aracılığıyla bir hizmet rezervasyonu y
      - **Rezervasyonu iptal et** Bu işlem rezervasyonu iptal eder ve personelin takviminden kaldırır.
      - **Yeni rezervasyon** Bu seçenek, kullanıcıyı yeni bir rezervasyon zamanlaması için tüm hizmetlerin ve personelin listelendiği Self-Service sayfasına getirir.
 
-        :::image type="content" source="media/bookings-manage-booking-button.jpg" alt-text="Bookings'de Bookings Yönet düğmesi.":::
+        :::image type="content" source="media/bookings-manage-booking-button.jpg" alt-text="Bookings'teki Bookings'i Yönet düğmesi.":::
 
       Bu ayarı yalnızca Self-Service sayfasına erişen müşterilerle rahat ediyorsanız etkin bırakmanızı öneririz.
 
    - Devre dışı:
 
-     Kullanıcı, Bookings Web uygulamasının Takvim sekmesinden rezervasyon yaparken rezervasyonunu yeniden zamanlayabilme veya iptal etme olanağına sahip olmayacaktır. Ancak Self-Service sayfasından rezervasyon yaparken, müşteriler bu ayar devre dışı bırakıldığında bile **Rezervasyonu Yönet** düğmesine ve tüm seçeneklerine sahip olmaya devam eder.
+     Kullanıcı Bookings Web uygulamasındaki Takvim sekmesinden rezervasyon yaparken rezervasyonunu yeniden zamanlayabilme veya iptal etme olanağına sahip olmayacaktır. Ancak Self-Service sayfasından rezervasyon yaparken, müşteriler bu ayar devre dışı bırakıldığında bile **Rezervasyonu Yönet** düğmesine ve tüm seçeneklerine sahip olmaya devam eder.
 
      Self-Service sayfasına erişimi sınırlamak istiyorsanız bu ayarı devre dışı bırakmanızı öneririz. Ayrıca, müşterilerinize ofisi arayarak veya yardım masasına e-posta göndererek başka yollarla rezervasyonlarında nasıl değişiklik yapacaklarını bildiren onay ve anımsatıcı e-postalarınıza metin eklemenizi öneririz.
 
@@ -88,7 +92,7 @@ Ayrıca, birisi rezervasyon sayfanız aracılığıyla bir hizmet rezervasyonu y
 
 5. **Varsayılan fiyat**  Bu, Self-Service sayfasında görüntülenecek fiyattır. **Fiyat ayarlanmadı** seçilirse maliyet veya fiyatlandırmaya dair hiçbir fiyat veya başvuru görünmez.
 
-6. **Notlar** Bu alan, rezervasyonu yapılan personelin rezervasyon etkinliğinde ve Bookings web uygulamasının Takvim sekmesinde görünen olayda görünür.
+6. **Notlar** Bu alan, rezervasyon yapılan personelin rezervasyon etkinliğinde ve Bookings web uygulamasının Takvim sekmesinde görünen olayda görünür.
 
 7. **Özel alanlar** , belirli bir randevu her rezerve edildiğinde gereken bilgileri toplarken yararlı olabilir. Örnek olarak klinik ziyareti öncesinde sigorta sağlayıcısı, kredi danışmaları için kredi türü, akademik danışmanlık için çalışmanın büyük bölümü veya aday görüşmeleri için başvuran kimliği verilebilir. Bu alanlar, müşterileriniz sizinle ve personelinizle randevu rezervasyonu gerçekleştirdiğinde Rezervasyon sayfasında görünür.
 
@@ -96,22 +100,22 @@ Ayrıca, birisi rezervasyon sayfanız aracılığıyla bir hizmet rezervasyonu y
 
 8. **Anımsatıcılar ve Onaylar** sayfasında, gönderdiğiniz anımsatıcıları ve bildirimleri ayarlayabilirsiniz. Anımsatıcılar ve bildirimler, randevudan önce belirli bir zamanda müşterilere, personel üyelerine veya her ikisine de gönderilir. Tercihinize göre her randevu için birden çok ileti oluşturulabilir.
 
-   :::image type="content" source="media/bookings-remind-confirm-2.png" alt-text="Bookings bir onay e-postası.":::
+   :::image type="content" source="media/bookings-remind-confirm-2.png" alt-text="Bookings'ten bir onay e-postası.":::
 
    Yeniden zamanlama veya müşterilerin randevu için getirmesi gerekenler gibi istediğiniz ek metinleri buraya ekleyebilirsiniz. Aşağıda, **E-posta Onayı için ek bilgiler** alanında görülen özgün onay e-postasına eklenen özelleştirilmiş metin örneği verilmiştir:
 
-   :::image type="content" source="media/bookings-additional-info.jpg" alt-text="Bookings e-postadaki ek bilgiler.":::
+   :::image type="content" source="media/bookings-additional-info.jpg" alt-text="Bookings e-postasında ek bilgiler.":::
 
 9. **Müşteriniz için kısa mesaj bildirimlerini etkinleştirme** Seçilirse, SMS iletiler müşteriye gönderilir, ancak yalnızca kabul ederlerse gönderilir.
 
    - El ile rezervasyon ve Self-Service Sayfasında kabul etme kutusu:
 
-     :::image type="content" source="media/bookings-opt-In-boc.jpg" alt-text="Bookings'daki kabul etme kutusu.":::
+     :::image type="content" source="media/bookings-opt-In-boc.jpg" alt-text="Bookings'teki kabul etme kutusu.":::
 
    - Kısa mesaj bildirimleri aşağıdaki gibi görünür (SMS bildirimlerinin şu anda yalnızca Kuzey Amerika'da kullanılabildiğini unutmayın):
 
-     :::image type="content" source="media/bookings-text-notifications.jpg" alt-text="Bookings'dan kısa mesaj bildirimi.":::
+     :::image type="content" source="media/bookings-text-notifications.jpg" alt-text="Bookings'ten kısa mesaj bildirimi.":::
 
 10. **Varsayılan zamanlama seçenekleri** varsayılan olarak açıktır. Müşterilerin belirli bir personel üyesini nasıl ayırttığını özelleştirmek istiyorsanız iki durumlu düğmeyi kapatın.
 
-11. **Yayımlama seçenekleri** Bu hizmetin Self-Service sayfasında rezerve edilebilir olarak görünmesini mi yoksa hizmetin yalnızca Bookings Web uygulamasının Takvim sekmesinde rezerve edilebilir olmasını mı istediğinizi seçin.
+11. **Yayımlama seçenekleri** Bu hizmetin Self-Service sayfasında rezerve edilebilir olarak görünmesini mi yoksa hizmetin yalnızca Bookings Web uygulamasındaki Takvim sekmesinde rezerve edilebilir olmasını mı istediğinizi seçin.

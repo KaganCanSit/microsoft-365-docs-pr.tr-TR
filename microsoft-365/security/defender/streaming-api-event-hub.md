@@ -17,12 +17,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 9cae28cc69d67bb18058e2c81cd8235ffce79997
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: ec18c23df27329598b6e48446ccf43d062b163ad
+ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65754410"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66185379"
 ---
 # <a name="configure-microsoft-365-defender-to-stream-advanced-hunting-events-to-your-azure-event-hub"></a>Gelişmiş Tehdit Avcılığı olaylarını Azure Olay Hub'ınıza akışla aktaracak şekilde Microsoft 365 Defender yapılandırma
 
@@ -111,6 +111,23 @@ Olay özelliklerinin veri türlerini almak için aşağıdaki adımları uygulay
 - Cihaz Bilgileri olayına bir örnek aşağıda verilmiştir:
 
   :::image type="content" source="../defender-endpoint/images/machine-info-datatype-example.png" alt-text="Cihaz bilgileri için örnek sorgu" lightbox="../defender-endpoint/images/machine-info-datatype-example.png":::
+
+## <a name="estimating-initial-event-hub-capacity"></a>İlk Olay Hub'ı kapasitesini tahmin etme
+Aşağıdaki Gelişmiş Tehdit Avcılığı sorgusu, olaylara/sn'ye ve tahmini MB/sn'ye göre veri hacmi aktarım hızı ve ilk olay hub'ı kapasitesinin kabaca tahminini sağlamaya yardımcı olabilir. 'Gerçek' aktarım hızını yakalamak için sorguyu normal iş saatlerinde çalıştırmanızı öneririz.
+ 
+```kusto 
+let bytes_ = 500;
+union withsource=MDTables*
+| where Timestamp > startofday(ago(6h))
+| summarize count() by bin(Timestamp, 1m), MDTables
+| extend EPS = count_ /60
+| summarize avg(EPS), estimatedMBPerSec = (avg(EPS) * bytes_ ) / (1024*1024) by MDTables
+| sort by toint(estimatedMBPerSec) desc
+```
+
+## <a name="monitoring-created-resources"></a>Oluşturulan kaynakları izleme
+
+**Azure İzleyici'yi** kullanarak akış API'sinin oluşturduğu kaynakları izleyebilirsiniz. Daha fazla bilgi için bkz. [Azure İzleyici'de Log Analytics çalışma alanı verilerini dışarı aktarma](/azure/azure-monitor/logs/logs-data-export). 
 
 ## <a name="related-topics"></a>İlgili konular
 

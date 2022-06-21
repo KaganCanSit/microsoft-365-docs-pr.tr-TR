@@ -8,7 +8,7 @@ ms.prod: microsoft-365-enterprise
 ms.topic: article
 f1.keywords:
 - NOCSH
-ms.date: 05/05/2022
+ms.date: 06/20/2022
 ms.reviewer: georgiah
 ms.custom:
 - it-pro
@@ -16,18 +16,18 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.collection:
 - M365-subscription-management
-ms.openlocfilehash: 839d320bfb52175f58009b8d254ec37eadeb4cb1
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: fc0c9186f506cdead968668959c401517551a4d3
+ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66007316"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66185401"
 ---
 # <a name="cross-tenant-mailbox-migration-preview"></a>Kiracılar arası posta kutusu geçişi (önizleme)
 
 Genellikle, birleştirmeler veya bakışlar sırasında, kullanıcınızın Exchange Online posta kutusunu yeni bir kiracıya taşıyabilmeniz gerekir. Kiracılar arası posta kutusu geçişi, kiracı yöneticilerinin kullanıcıları yeni kuruluşlarına geçiş yapmak için Exchange Online PowerShell ve MRS gibi iyi bilinen arabirimleri kullanmasına olanak tanır.
 
-Yöneticiler, kiracılar arası taşımaları yürütmek için Posta Kutularını Taşı yönetim rolü aracılığıyla sağlanan New-MigrationBatch cmdlet'ini kullanabilir.
+Yöneticiler, kiracılar arası taşımaları yürütmek için _Posta Kutularını Taşı_ yönetim rolü aracılığıyla sağlanan **New-MigrationBatch** cmdlet'ini kullanabilir.
 
 Geçiş yapılan kullanıcılar hedef kiracı Exchange Online sisteminde PostaKullanıçları olarak bulunmalıdır ve kiracılar arası taşımaları etkinleştirmek için belirli özniteliklerle işaretlenmelidir. Sistem, hedef kiracıda düzgün ayarlanmayan kullanıcılar için taşımalarda başarısız olur.
 
@@ -208,19 +208,11 @@ Aboneliğin kiracı kimliğini almak için [Microsoft 365 yönetim merkezi](http
 
 ### <a name="how-do-i-know-this-worked"></a>Nasıl yaparım? çalıştığını biliyor musun?
 
-Hedef kiracınızda oluşturduğunuz kiracılar arası geçiş uç noktasında [Test-MigrationServerAvailability](/powershell/module/exchange/Test-MigrationServerAvailability) cmdlet'ini çalıştırarak kiracılar arası posta kutusu geçiş yapılandırmasını doğrulayabilirsiniz.
+[Test-MigrationServerAvailability](/powershell/module/exchange/Test-MigrationServerAvailability) cmdlet'ini hedef kiracınızda oluşturduğunuz kiracılar arası geçiş uç noktasında çalıştırarak kiracılar arası posta kutusu geçiş yapılandırmasını doğrulayabilirsiniz.
 
-   > [!NOTE]
-   >
-   > - Hedef kiracı:
-   >
-   > Test-MigrationServerAvailability -Endpoint "[kiracılar arası geçiş uç noktanızın adı]"
-   >
-   > Get-OrganizationRelationship | fl name, DomainNames, MailboxMoveEnabled, MailboxMoveCapability
-   >
-   > - Kaynak kiracı:
-   >
-   > Get-OrganizationRelationship | fl name, DomainNames, MailboxMoveEnabled, MailboxMoveCapability
+```powershell
+Test-MigrationServerAvailability -EndPoint "Migration endpoint for cross-tenant mailbox moves" - TestMailbox "Primary SMTP of MailUser object in target tenant"
+```
 
 ### <a name="move-mailboxes-back-to-the-original-source"></a>Posta kutularını özgün kaynağa geri taşıma
 
@@ -377,19 +369,19 @@ Posta kutusu kaynaktan hedefe geçtikten sonra, hem kaynak hem de hedefteki şir
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
-**Taşıma sonrasında şirket içi kaynaktaki RemoteMailbox'ları güncelleştirmemiz gerekiyor mu?**
+### <a name="do-we-need-to-update-remotemailboxes-in-source-on-premises-after-the-move"></a>Taşıma sonrasında şirket içi kaynaktaki RemoteMailbox'ları güncelleştirmemiz gerekiyor mu?
 
 Evet, kaynak kiracı posta kutusu hedef kiracıya geçtiğinde kaynak şirket içi kullanıcıların targetAddress (RemoteRoutingAddress/ExternalEmailAddress) güncelleştirmeniz gerekir.  Posta yönlendirme, farklı targetAddresses'e sahip birden çok posta kullanıcısı arasındaki başvuruları izleyebilirken, posta kullanıcıları için Serbest/Meşgul aramaları posta kutusu kullanıcısının konumunu hedeflemeLIDIR. Serbest/Meşgul aramaları birden çok yeniden yönlendirmeyi kovalamaz.
 
-**Teams toplantılar kiracılar arası geçiş yapar mı?**
+### <a name="do-teams-meetings-migrate-cross-tenant"></a>Teams toplantılar kiracılar arası geçiş yapar mı?
 
 Toplantılar taşınır, ancak öğeler kiracılar arası geçiş yaparken Teams toplantı URL'si güncelleştirilmez. HEDEF kiracıda URL geçersiz olacağından, Teams toplantılarını kaldırmanız ve yeniden oluşturmanız gerekir.
 
-**Teams sohbet klasörü içeriği kiracılar arası geçiş yapar mı?**
+### <a name="does-the-teams-chat-folder-content-migrate-cross-tenant"></a>Teams sohbet klasörü içeriği kiracılar arası geçiş yapar mı?
 
 Hayır, Teams sohbet klasörü içeriği kiracılar arası geçiş yapmaz.
 
-**Ekleme ve biniş dışı hareketlerimi değil, yalnızca kiracılar arası taşımalar olan taşımaları nasıl görebilirim?**
+### <a name="how-can-i-see-just-moves-that-are-cross-tenant-moves-not-my-onboarding-and-off-boarding-moves"></a>Ekleme ve biniş dışı hareketlerimi değil, yalnızca kiracılar arası taşımalar olan taşımaları nasıl görebilirim?
 
 _Flags_ parametresini kullanın. Burada bir örnek verilmiştir.
 
@@ -397,7 +389,7 @@ _Flags_ parametresini kullanın. Burada bir örnek verilmiştir.
 Get-MoveRequest -Flags "CrossTenant"
 ```
 
-**Testte kullanılan öznitelikleri kopyalamak için örnek betikler sağlayabilir misiniz?**
+### <a name="can-you-provide-example-scripts-for-copying-attributes-used-in-testing"></a>Testte kullanılan öznitelikleri kopyalamak için örnek betikler sağlayabilir misiniz?
 
 > [!NOTE]
 > ÖRNEK – OLDUĞU GIBI GARANTİ YOK Bu betik, hem kaynak posta kutusuna (kaynak değerleri almak için) hem de etki alanı hizmetleri şirket içi Active Directory hedefine (ADUser nesnesini damgalama amacıyla) bir bağlantı olduğunu varsayar. Kaynakta dava açma veya tek öğe kurtarma etkinleştirildiyse, bunu hedef hesapta ayarlayın.  Bu, hedef hesabın dökümü boyutunu 100 GB'a yükseltecektir.
@@ -434,7 +426,7 @@ Get-MoveRequest -Flags "CrossTenant"
    Start-ADSyncSyncCycle
    ```
 
-**Kullanım posta kutusu taşındıktan sonra 1. Günde Outlook nasıl erişebiliriz?**
+### <a name="how-do-we-access-outlook-on-day-1-after-the-use-mailbox-is-moved"></a>Kullanım posta kutusu taşındıktan sonra 1. Günde Outlook nasıl erişebiliriz?
 
 Bir etki alanına yalnızca bir kiracı sahip olabileceğinden, posta kutusu taşıma işlemi tamamlandığında eski birincil SMTPAddress hedef kiracıdaki kullanıcıyla ilişkilendirilmez; yalnızca yeni kiracıyla ilişkili etki alanları. Outlook, hizmette kimlik doğrulaması yapmak için yeni UPN kullanıcılarını kullanır ve Outlook profili, hedef sistemdeki posta kutusuyla eşleşecek eski birincil SMTPAddress'i bulmayı bekler. Eski adres hedef Sistemde olmadığından, outlook profili yeni taşınan posta kutusunu bulmak için bağlanmayacak.
 
@@ -443,7 +435,7 @@ Bu ilk dağıtım için kullanıcıların profillerini yeni UPN, birincil SMTP a
 > [!NOTE]
 > Tamamlama için kullanıcılarınızı toplu iş olarak planlayın. Outlook istemci profilleri oluşturulduğunda ve izleyen OST ve OAB dosyaları istemcilere indirildiğinde ağ kullanımını ve kapasitesini dikkate almanız gerekir.
 
-**Kiracılar arası taşımayı ayarlamak veya tamamlamak için hangi Exchange RBAC rollerine üye olmak istiyorum?**
+### <a name="what-exchange-rbac-roles-do-i-need-to-be-member-of-to-set-up-or-complete-a-cross-tenant-move"></a>Kiracılar arası taşımayı ayarlamak veya tamamlamak için hangi Exchange RBAC rollerine üye olmak istiyorum?
 
 Posta kutusu taşıma işlemi yürütülürken temsilci görevleri varsayımını temel alan bir rol matrisi vardır. Şu anda iki rol gereklidir:
 
@@ -451,17 +443,17 @@ Posta kutusu taşıma işlemi yürütülürken temsilci görevleri varsayımın�
 
 - Gerçek taşıma komutlarını yürütme rolü alt düzey bir işleve devredilebilir. Posta Kutularını Taşı rolü, posta kutularını kuruluşa veya kuruluş dışına taşıma özelliğine atanır.
 
-**Dönüştürülen posta kutusunda (MailUser dönüştürmesine) targetAddress (TargetDeliveryDomain) için hangi SMTP adresinin seçildiğini nasıl hedefleyeceğiz?**
+### <a name="how-do-we-target-which-smtp-address-is-selected-for-targetaddress-targetdeliverydomain-on-the-converted-mailbox-to-mailuser-conversion"></a>Dönüştürülen posta kutusunda (MailUser dönüştürmesine) targetAddress (TargetDeliveryDomain) için hangi SMTP adresinin seçildiğini nasıl hedefleyeceğiz?
 
 Exchange posta kutusu, hedef nesnedeki bir e-posta adresiyle (proxyAddress) eşleşerek bir MailUser'a dönüştürülürken özgün kaynak posta kutusunda TARGETAddress'i MRS oluşturarak taşınır. İşlem, taşıma komutuna geçirilen -TargetDeliveryDomain değerini alır ve ardından hedef taraftaki etki alanı için eşleşen bir ara sunucuyu denetler. Bir eşleşme bulduğumuzda, dönüştürülen posta kutusu (şimdi MailUser) nesnesinde ExternalEmailAddress (targetAddress) ayarlamak için eşleşen proxyAddress kullanılır.
 
-**Posta kutusu izinleri nasıl geçiş yapar?**
+### <a name="how-do-mailbox-permissions-transition"></a>Posta kutusu izinleri nasıl geçiş yapar?
 
 Posta kutusu izinleri, Adına Gönder ve Posta Kutusu Erişimi'ni içerir:
 
 - Adına Gönder (AD:publicDelegates), kullanıcının posta kutusuna temsilci olarak erişimi olan alıcıların DN'sini depolar. Bu değer Active Directory'de depolanır ve şu anda posta kutusu geçişinin bir parçası olarak taşınmaz. Kaynak posta kutusunda publicDelegates ayarlandıysa, MEU'nun posta kutusuna dönüştürme işlemi çalıştırılarak `Set-Mailbox <principle> -GrantSendOnBehalfTo <delegate>`hedef ortamda tamamlandıktan sonra hedef Posta Kutusu'nda publicDelegates'i yeniden örneklemeniz gerekir.
 
-- Posta kutusunda depolanan Posta Kutusu İzinleri, hem sorumlu hem de temsilci hedef sisteme taşındığında posta kutusuyla birlikte taşınır. Örneğin, kullanıcıya TestUser_7 kiracı SourceCompany.onmicrosoft.com posta kutusu TestUser_8 FullAccess verilir. Posta kutusu TargetCompany.onmicrosoft.com taşındıktan sonra hedef dizinde aynı izinler ayarlanır. Hem kaynak hem de hedef kiracılarda TestUser_7 için *Get-MailboxPermission* kullanan örnekler aşağıda gösterilmiştir. Exchange cmdlet'lere kaynak ve hedef eklenmiştir.
+- Posta kutusunda depolanan Posta Kutusu İzinleri, hem sorumlu hem de temsilci hedef sisteme taşındığında posta kutusuyla birlikte taşınır. Örneğin, kullanıcıya TestUser_7 kiracı SourceCompany.onmicrosoft.com posta kutusu TestUser_8 FullAccess verilir. Posta kutusu TargetCompany.onmicrosoft.com taşındıktan sonra hedef dizinde aynı izinler ayarlanır. Hem kaynak hem de hedef kiracılarda TestUser_7 için _Get-MailboxPermission_ kullanan örnekler aşağıda gösterilmiştir. Exchange cmdlet'lere kaynak ve hedef eklenmiştir.
 
 Taşımadan önce posta kutusu izni çıkışının bir örneği aşağıda verilmiştir.
 
@@ -488,7 +480,7 @@ TestUser_8@TargetCompany.onmicrosoft.com         {FullAccess}                   
 > [!NOTE]
 > Kiracılar arası posta kutusu ve takvim izinleri DESTEKLENMEZ. Bu bağlı posta kutularının kaynak kiracıdan aynı anda geçiş yapması için sorumluları ve temsilcileri birleştirilmiş taşıma toplu işlerinde düzenlemeniz gerekir.
 
-**Geçişi etkinleştirmek için hedef MailUser proxy adreslerine hangi X500 proxy eklenmelidir?**
+### <a name="what-x500-proxy-should-be-added-to-the-target-mailuser-proxy-addresses-to-enable-migration"></a>Geçişi etkinleştirmek için hedef MailUser proxy adreslerine hangi X500 proxy eklenmelidir?
 
 Kiracılar arası posta kutusu geçişi, kaynak posta kutusu nesnesinin LegacyExchangeDN değerinin hedef MailUser nesnesine x500 e-posta adresi olarak damgalanması gerekir.
 
@@ -505,11 +497,11 @@ x500:/o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn
 > [!NOTE]
 > Bu X500 proxy'sine ek olarak, kaynaktaki posta kutusundan hedefteki posta kutusuna tüm X500 proxy'lerini kopyalamanız gerekir.
 
-**Kaynak ve hedef kiracı aynı etki alanı adını kullanabilir mi?**
+### <a name="can-the-source-and-target-tenant-utilize-the-same-domain-name"></a>Kaynak ve hedef kiracı aynı etki alanı adını kullanabilir mi?
 
 Hayır. Kaynak ve hedef kiracı etki alanı adları benzersiz olmalıdır. Örneğin, contoso.com kaynak etki alanı ve fourthcoffee.com hedef etki alanı.
 
-**Paylaşılan posta kutuları taşınacak ve çalışmaya devam edecek mi?**
+### <a name="will-shared-mailboxes-move-and-still-work"></a>Paylaşılan posta kutuları taşınacak ve çalışmaya devam edecek mi?
 
 Evet, ancak mağaza izinlerini yalnızca şu makalelerde açıklandığı gibi saklarız:
 
@@ -517,35 +509,43 @@ Evet, ancak mağaza izinlerini yalnızca şu makalelerde açıklandığı gibi s
 
 - [Microsoft Desteği | ayrılmış Office 365 Exchange ve Outlook posta kutusu izinleri verme](https://support.microsoft.com/topic/how-to-grant-exchange-and-outlook-mailbox-permissions-in-office-365-dedicated-bac01b2c-08ff-2eac-e1c8-6dd01cf77287)
 
-**Toplu iş önerileriniz var mı?**
+### <a name="do-you-have-any-recommendations-for-batches"></a>Toplu iş önerileriniz var mı?
 
 Toplu iş başına 2000 posta kutusunu aşmayın. Eşitleme sırasında son kullanıcılar üzerinde herhangi bir etki olmadığından, toplu iş göndermeyi kesme tarihinden iki hafta önce kesinlikle öneririz. 50.000'den fazla posta kutusu miktarı için rehberliğe ihtiyacınız varsa, crosstenantmigrationpreview@service.microsoft.com Mühendislik Geri Bildirim Dağıtım Listesi'ne ulaşabilirsiniz.
 
-**Müşteri Anahtarı ile Hizmet şifrelemesi kullanırsam ne olur?**
+### <a name="what-if-i-use-service-encryption-with-customer-key"></a>Müşteri Anahtarı ile Hizmet şifrelemesi kullanırsam ne olur?
 
 Posta kutusunun şifresi taşınmadan önce çözülür. Müşteri Anahtarının hala gerekliyse hedef kiracıda yapılandırıldığından emin olun. Daha fazla bilgi için [buraya](/microsoft-365/compliance/customer-key-overview) bakın.
 
-**Tahmini geçiş süresi nedir?**
+### <a name="what-is-the-estimated-migration-time"></a>Tahmini geçiş süresi nedir?
 
 Geçişinizi planlamanıza yardımcı olmak için [buradaki](/exchange/mailbox-migration/office-365-migration-best-practices#estimated-migration-times) tabloda toplu posta kutusu geçişlerinin veya tek tek geçişlerin ne zaman tamamlanmasını bekleyebileceğinize ilişkin yönergeler gösterilir. Bu tahminler, önceki müşteri geçişlerinin veri analizini temel alır. Her ortam benzersiz olduğundan, tam geçiş hızınız farklılık gösterebilir.
 
 Bu özelliğin şu anda önizlemede ve SLA'da olduğunu ve ilgili Hizmet Düzeylerinin bu özelliğin önizleme durumu sırasındaki performans veya kullanılabilirlik sorunları için geçerli olmadığını unutmayın.
 
-**Kaynak kiracıdaki belgeleri koruma hedef kiracıdaki kullanıcılar tarafından kullanılabilir.**
+### <a name="protecting-documents-in-the-source-tenant-consumable-by-users-in-the-destination-tenant"></a>Hedef kiracıdaki kullanıcılar tarafından kullanılabilir kaynak kiracıdaki belgeleri koruma.**
 
 Kiracılar arası geçiş yalnızca posta kutusu verilerini geçirir ve başka bir şey geçirmez. Aşağıdaki blog gönderisinde belgelenen ve yardımcı olabilecek birden çok seçenek daha vardır: <https://techcommunity.microsoft.com/t5/security-compliance-and-identity/mergers-and-spinoffs/ba-p/910455>
 
-**Hedef kiracıda, kuruluşlar arasındaki hizalamaya bağlı olarak, geçirilen kullanıcılar için tek etiket kümesi veya ek bir etiket kümesi olarak kaynak kiracıda sahip olduğunuz etiketlerin aynısını alabilir miyim?**
+### <a name="can-i-have-the-same-labels-in-the-destination-tenant-as-you-had-in-the-source-tenant-either-as-the-only-set-of-labels-or-an-additional-set-of-labels-for-the-migrated-users-depending-on-alignment-between-the-organizations"></a>Hedef kiracıda, kuruluşlar arasındaki hizalamaya bağlı olarak, geçirilen kullanıcılar için tek etiket kümesi veya ek bir etiket kümesi olarak kaynak kiracıda sahip olduğunuz etiketlerin aynısını alabilir miyim.**
 
 Kiracılar arası geçişler etiketleri dışarı aktarmadığından ve kiracılar arasında etiketleri paylaşmanın bir yolu olmadığından, bunu yalnızca hedef kiracıdaki etiketleri yeniden oluşturarak gerçekleştirebilirsiniz.
 
-**Microsoft 365 Grupları taşımayı destekliyor musunuz?**
+### <a name="do-you-support-moving-microsoft-365-groups"></a>Microsoft 365 Grupları taşımayı destekliyor musunuz?
 
 Şu anda Kiracılar Arası posta kutusu geçişleri özelliği Microsoft 365 Grupları geçişini desteklemiyor.
 
-**Kaynak kiracı yöneticisi, posta kutusu yeni/hedef kiracıya geçirildikten sonra posta kutusunda eBulma araması yapabilir mi?**
+### <a name="can-a-source-tenant-admin-perform-an-ediscovery-search-against-a-mailbox-after-the-mailbox-has-been-migrated-to-the-newtarget-tenant"></a>Kaynak kiracı yöneticisi, posta kutusu yeni/hedef kiracıya geçirildikten sonra posta kutusunda eBulma araması yapabilir mi?
 
 Hayır, kiracılar arası posta kutusu geçişinin ardından, geçirilen kullanıcının kaynaktaki posta kutusuna karşı eBulma çalışmaz. Bunun nedeni, posta kutusu hedef kiracıya geçirildiğinden ve artık hedef kiracıya ait olduğundan kaynakta artık aranacak bir posta kutusu olmamasıdır. eBulma, posta kutusu sonrası geçişi yalnızca hedef kiracıda (posta kutusunun bulunduğu yerde) yapılabilir. Geçiş sonrasında kaynak posta kutusunun bir kopyasının kaynak kiracıda kalıcı olması gerekiyorsa, kaynaktaki yönetici verilerine karşı gelecekteki eBulma işlemleri için içeriği alternatif bir posta kutusu geçiş öncesi geçişe kopyalayabilir.
+
+### <a name="at-which-point-will-the-destination-mailuser-be-converted-to-a-destination-mailbox-and-the-source-mailbox-converted-to-a-source-mailuser"></a>Hedef MailUser hangi noktada hedef posta kutusuna, kaynak posta kutusu ise bir kaynak MailUser'a dönüştürülecek?
+
+Bu dönüştürmeler geçiş işlemi sırasında otomatik olarak gerçekleşir. El ile adım atılması gerekmez.
+
+### <a name="at-which-step-should-i-assign-the-exchange-online-license-to-destination-mailusers"></a>Hedef MailUsers'a Exchange Online lisansını hangi adımda atamalıyım?
+
+Geçiş tamamlanmadan önce bu yapılabilir, ancak _ExchangeGuid_ özniteliğini damgalamadan önce lisans atamamalısınız veya MailUser nesnesinin posta kutusuna dönüştürülmesi başarısız olur ve bunun yerine yeni bir posta kutusu oluşturulur. Bu riski azaltmak için geçiş tamamlanana kadar beklemek ve 30 günlük yetkisiz kullanım süresi boyunca lisans atamak en iyisidir.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 

@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 0968717e-b61f-4b06-987c-6c1464541782
 description: Microsoft Bookings'de çalışanların çalışma saatlerini ve uygunluk durumunu ayarlayın.
-ms.openlocfilehash: 19b5a186c66659777a0dbe3444c0e43c4142ff36
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 1cd395b377d9d9b0a20ef1d01956a27c559afb42
+ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637262"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66185071"
 ---
 # <a name="employee-working-hours-in-microsoft-bookings"></a>Microsoft Bookings’de çalışanların çalışma saatleri
 
@@ -30,9 +30,9 @@ Bir çalışanın çalışma saatlerini ayarlamak için bu videoyu izleyin veya 
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWuXUq]
 
-## <a name="customize-employee-working-hours"></a>Çalışan çalışma saatlerini özelleştirme
+## <a name="steps"></a>Adımlar
 
-1. Microsoft 365'da uygulama başlatıcıyı ve ardından **Bookings'ı** seçin.
+1. Microsoft 365'da uygulama başlatıcıyı ve ardından **Bookings'i** seçin.
 
 1. Takviminizi seçin.
 
@@ -42,7 +42,7 @@ Bir çalışanın çalışma saatlerini ayarlamak için bu videoyu izleyin veya 
 
 1. Her gün için başlangıç ve bitiş saatlerini seçmek için açılan menüleri kullanın. Süreler 15 dakikalık artışlarla kullanılabilir.
 
-   ![Bookings personelin çalışma saatleri ekranının görüntüsü.](../media/bookings-staff-hours.png)
+   ![Bookings personeli çalışma saatleri ekranının görüntüsü.](../media/bookings-staff-hours.png)
 
 1. Başlangıç ve bitiş zamanı seçicileri eklemek için seçin **+** .
 
@@ -54,7 +54,7 @@ Bir çalışan için bir gün izin zamanladığınızda, bu çalışan rezervasy
 
 1. Çalışma saatleri ekranında, çalışanın kapalı olacağı günün yanındaki **x** işaretini seçin.
 
-   ![Fareyle x düğmesinin üzerinde Bookings personelin çalışma saatleri ekranının görüntüsü.](../media/bookings-staff-time-off.png)
+   ![Fare üzerinde x düğmesi bulunan Bookings personeli çalışma saatleri ekranının görüntüsü.](../media/bookings-staff-time-off.png)
 
 1. Daha önce izinli olarak işaretlenmiş bir gün zamanlamak istiyorsanız, zamanlamak istediğiniz günün yanındaki işareti seçin **+** .
 
