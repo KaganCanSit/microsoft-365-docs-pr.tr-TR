@@ -21,16 +21,16 @@ ms.custom:
 search.appverid: MET150
 description: Ödeme hesapları ve hesap ayarlarını, faturaları, ödeme yöntemlerini ve satın almaları yönetmek için nasıl kullanıldıkları hakkında bilgi edinin.
 ms.date: 05/24/2022
-ms.openlocfilehash: 0c1dd2048cbe38ecca162f361f3f0bdbc6c3861f
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+ms.openlocfilehash: 4630ee028a298d3c901a0e66cde41df58bebece2
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65670068"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66493629"
 ---
-# <a name="understand-billing-accounts"></a>Ödeme hesaplarını anlama
+# <a name="understand-your-microsoft-billing-accounts"></a>Microsoft ödeme hesaplarınızı anlama
 
-Microsoft ürünlerini denemek veya satın almak için kaydolduğunuz zaman bir ödeme hesabı oluşturulur. Hesap ayarlarınızı, faturalarınızı, ödeme yöntemlerinizi ve satın alma işlemlerinizi yönetmek için ödeme hesabınızı kullanırsınız. Birden çok ödeme hesabına erişebilirsiniz. Örneğin, doğrudan Microsoft 365 kaydolmuş veya kuruluşunuzun Kurumsal Anlaşma, Microsoft Ürün & Hizmet Sözleşmesi veya Microsoft Müşteri Sözleşmesi erişiminiz vardır. Bu senaryoların her biri için ayrı bir ödeme hesabınız olur.
+Microsoft ürünlerini denemek veya satın almak için kaydolduğunuz zaman bir ödeme hesabı oluşturulur. Hesap ayarlarınızı, faturalarınızı, ödeme yöntemlerinizi ve satın alma işlemlerinizi yönetmek için ödeme hesabınızı kullanırsınız. Birden çok ödeme hesabına erişebilirsiniz. Örneğin, doğrudan Microsoft 365'e kaydolmuş veya kuruluşunuzun Kurumsal Anlaşma, Microsoft Ürün & Hizmet Sözleşmesi veya Microsoft Müşteri Sözleşmesi erişiminiz vardır. Bu senaryoların her biri için ayrı bir ödeme hesabınız olur.
 
 <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> şu anda aşağıdaki ödeme hesabı türünü destekler:
 
@@ -77,7 +77,7 @@ Roller ve izinler aracılığıyla <a href="https://go.microsoft.com/fwlink/p/?l
 
 > [!Note]
 > - Ödeme hesabı rolleri yalnızca ödeme hesapları için geçerlidir ve diğer Microsoft 365 yönetim merkezi senaryoları için geçerli değildir.
-> - Microsoft 365 kaydolma içinde oluşturulan ödeme hesapları için yeni Genel, Faturalama ve Genel Okuyucu Yöneticilerine otomatik olarak farklı erişim düzeyleri verilir. Bu erişimi **Faturalama** > **Hesapları** sayfasından, bu kullanıcıları sayfanın alt kısmındaki rol ataması bölümünden açıkça kaldırarak yönetebilirsiniz.
+> - Microsoft 365 kaydolma içinde oluşturulan faturalama hesapları için yeni Genel, Faturalama ve Genel Okuyucu Yöneticilerine otomatik olarak farklı erişim düzeyleri verilir. Bu erişimi **Faturalama** > **Hesapları** sayfasından, bu kullanıcıları sayfanın alt kısmındaki rol ataması bölümünden açıkça kaldırarak yönetebilirsiniz.
 
 ## <a name="related-content"></a>İlgili içerik
 

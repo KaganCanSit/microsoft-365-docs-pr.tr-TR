@@ -4,9 +4,9 @@ f1.keywords:
 - NOCSH
 ms.author: v-kcirillo
 author: cirilk
-manager: scotv
+manager: dansimp
 ms.audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
 ms.collection:
@@ -22,12 +22,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Microsoft 365 için gizlilik ve onay bildirimiyle oturum açma sayfanızı özelleştirin.
-ms.openlocfilehash: 34aff0437b08bc5cb34064b5b7ed474e9b2cf094
-ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
+ms.openlocfilehash: f715841e9a19d04c270449a9aa5d641df34efb0a
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66129019"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66493651"
 ---
 # <a name="customize-your-sign-in-page-with-a-privacy-and-consent-notice"></a>Gizlilik ve onay bildirimiyle oturum açma sayfanızı özelleştirme
 

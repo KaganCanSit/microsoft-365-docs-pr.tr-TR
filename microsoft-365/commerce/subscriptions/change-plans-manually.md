@@ -1,5 +1,5 @@
 ---
-title: İş planlarının Microsoft 365 el ile değiştirme
+title: İş için Microsoft 365 planlarını el ile değiştirme
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -20,14 +20,14 @@ search.appverid: MET150
 description: Yeni bir abonelik satın alarak ve her iki aboneliğin de listelenmiş ve etkin olduğundan emin olarak abonelikleri el ile değiştirin.
 ROBOTS: NOINDEX
 ms.date: 03/17/2021
-ms.openlocfilehash: d7969821cceb0864ac2ee20674e7aa67d8a12e39
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: 5e2d9e3da47c8d9c86e3e0b6d3d0b648c6016509
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66101608"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66493563"
 ---
-# <a name="change-plans-manually"></a>Planları el ile değiştirme
+# <a name="manually-change-microsoft-plans"></a>Microsoft planlarını el ile değiştirme
 
 ## <a name="step-1-decide-how-to-change-plans"></a>1. Adım: Planları nasıl değiştireceğini belirleme
 
@@ -50,7 +50,7 @@ El ile yapılan bir değişikliğe devam etmek için bu [konudaki 2. Adım: Yeni
 
 VEYA
 
-**Yeni bir abonelik ve lisans satın alın:** Yeni [abonelik satın almak için İş aboneliği için başka bir Microsoft 365 satın alma](../try-or-buy-microsoft-365.md) bölümündeki adımları izleyin.
+**Yeni bir abonelik ve lisans satın alın:** Yeni [bir abonelik satın almak için İş için başka bir Microsoft 365 aboneliği satın alma](../try-or-buy-microsoft-365.md) bölümündeki adımları izleyin.
 
 Kullanıcıların şu anda içinde olduğu kuruluş için bir abonelik satın aldığınızdan emin olun. Örneğin, taşımak istediğiniz kullanıcıların e-posta adreslerini denetleyin. E-posta adresleri contoso.com içeriyorsa \@, contoso.com için yeni bir abonelik satın almalısınız.
 Taşımak istediğiniz her kullanıcı için bir lisans ekleyin.
