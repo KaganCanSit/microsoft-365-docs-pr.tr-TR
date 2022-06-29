@@ -21,16 +21,16 @@ ms.custom:
 - AdminTemplateSet
 description: İş için Microsoft 365 aboneliğiniz için eklentileri satın almayı ve yönetmeyi öğrenin.
 ms.date: 04/02/2021
-ms.openlocfilehash: 28c155eaa10a578d10126c563945859e6931f180
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: 4fbb4cc9277c4f4a6ddc3c780388d0ebd8d492ad
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66101656"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66492092"
 ---
-# <a name="buy-or-manage-add-ons"></a>Eklentileri satın alma veya yönetme
+# <a name="buy-or-manage-add-ons-for-microsoft-365-business-plans"></a>Microsoft 365 iş planları için eklentileri satın alma veya yönetme
 
-İş planlarına yönelik birçok Microsoft 365 abonelikleriniz için satın alabileceğiniz eklentiler vardır. Eklentiler, abonelik deneyiminizi geliştirmek için daha fazla özellik sağlar.
+İş için Microsoft 365 planlarının çoğunda abonelikleriniz için satın alabileceğiniz eklentiler vardır. Eklentiler, abonelik deneyiminizi geliştirmek için daha fazla özellik sağlar.
 
 İki tür eklenti vardır:
 

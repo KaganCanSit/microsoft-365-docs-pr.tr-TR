@@ -1,5 +1,5 @@
 ---
-title: Office 365 için Microsoft Defender için eksiksiz Kasa Bağlantılarına genel bakış
+title: Office 365 için Microsoft Defender için Tam Güvenli Bağlantılar'a genel bakış
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -25,17 +25,17 @@ search.appverid:
 - ZPP160
 - ZWD160
 ms.assetid: dd6a1fef-ec4a-4cf4-a25a-bb591c5811e3
-description: Bir kuruluşu kimlik avına ve kötü amaçlı URL kullanan diğer saldırılara karşı korumak için Office 365 için Defender Kasa Bağlantıları koruması hakkında bilgi edinin. Teams Kasa Bağlantıları keşfedin ve Kasa Bağlantıları iletilerinin grafiklerini görün.
+description: Bir kuruluşu kimlik avına ve kötü amaçlı URL kullanan diğer saldırılara karşı korumak için Office 365 için Defender'de Güvenli Bağlantılar koruması hakkında bilgi edinin. Teams Güvenli Bağlantılar'ı keşfedin ve Güvenli Bağlantılar iletilerinin grafiklerini görün.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b1e013c77005c30872fc5355ae0b0e3f7cae67ca
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: b3eb2ee76beb106d26d5b7b65d13c7aa0a0d5c1e
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115817"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487059"
 ---
-# <a name="safe-links-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da bağlantıları Kasa
+# <a name="safe-links-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da Güvenli Bağlantılar
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
@@ -44,77 +44,77 @@ ms.locfileid: "66115817"
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!IMPORTANT]
-> Bu makale, [Office 365 için Microsoft Defender](defender-for-office-365.md) sahip iş müşterilerine yöneliktir. Outlook.com, Microsoft 365 Aile veya Microsoft 365 Bireysel kullanıyorsanız ve Outlook Safelink'ler hakkında bilgi arıyorsanız bkz. [Gelişmiş Outlook.com güvenliği](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
+> Bu makale, [Office 365 için Microsoft Defender](defender-for-office-365.md) sahip iş müşterilerine yöneliktir. Outlook.com, Microsoft 365 Aile veya Microsoft 365 Bireysel kullanıyorsanız ve Outlook'ta Güvenli Bağlantılar hakkında bilgi arıyorsanız bkz. [Gelişmiş Outlook.com güvenliği](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 
-Kasa Bağlantılar[, Office 365 için Defender'de](defender-for-office-365.md) posta akışında gelen e-posta iletilerinin URL taramasını ve yeniden yazılmasını ve e-posta iletilerinde ve diğer konumlardaki URL'lerin ve bağlantıların tıklama zamanında doğrulanmasını sağlayan bir özelliktir. Kasa Bağlantılar taraması, Exchange Online Protection (EOP) içindeki gelen e-posta iletilerinde normal [istenmeyen posta](anti-spam-protection.md) ve [kötü amaçlı yazılımdan koruma](anti-malware-protection.md) iletilerine ek olarak gerçekleşir. Kasa Bağlantıları tarama, kuruluşunuzun kimlik avı ve diğer saldırılarda kullanılan kötü amaçlı bağlantılardan korunmasına yardımcı olabilir.
+Güvenli Bağlantılar[, Office 365 için Defender'de](defender-for-office-365.md) posta akışında gelen e-posta iletilerinin URL taramasını ve yeniden yazılmasını ve e-posta iletilerindeki ve diğer konumlardaki URL'lerin ve bağlantıların tıklama zamanında doğrulanmasını sağlayan bir özelliktir. Güvenli Bağlantılar taraması, Exchange Online Protection (EOP) içindeki gelen [e-posta](anti-spam-protection.md) iletilerinde normal istenmeyen posta önleme ve [kötü amaçlı yazılımdan koruma](anti-malware-protection.md) özelliklerine ek olarak gerçekleşir. Güvenli Bağlantılar taraması, kuruluşunuzun kimlik avı ve diğer saldırılarda kullanılan kötü amaçlı bağlantılardan korunmasına yardımcı olabilir.
 
-Office 365 için Microsoft Defender'da Kasa Bağlantıları ile kötü amaçlı bağlantılara karşı koruma hakkında bu kısa videoyu izleyin.  
+Office 365 için Microsoft Defender'da Güvenli Bağlantılar ile kötü amaçlı bağlantılara karşı koruma hakkında bu kısa videoyu izleyin.  
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGzjb]
 
-Kasa Bağlantıları koruması aşağıdaki konumlarda kullanılabilir:
+Güvenli Bağlantılar koruması aşağıdaki konumlarda kullanılabilir:
 
-- **E-posta iletileri**: Varsayılan Kasa Bağlantıları ilkesi olmasa **da, Yerleşik koruma** önceden ayarlanmış güvenlik ilkesi tüm alıcılara Kasa Bağlantılar koruması sağlar (özel Kasa Bağlantıları ilkelerinde tanımlanmayan kullanıcılar). Daha fazla bilgi için bkz. [EOP'de önceden ayarlanmış güvenlik ilkeleri ve Office 365 için Microsoft Defender](preset-security-policies.md). Ayrıca, belirli kullanıcılara, gruplara veya etki alanlarına uygulanan Kasa Bağlantıları ilkeleri de oluşturabilirsiniz. Yönergeler için bkz. [Office 365 için Microsoft Defender'da Kasa Bağlantıları ilkelerini ayarlama](set-up-safe-links-policies.md).
+- **E-posta iletileri**: Varsayılan Güvenli Bağlantılar ilkesi olmasa **da, yerleşik koruma** önceden ayarlanmış güvenlik ilkesi tüm alıcılara (özel Güvenli Bağlantılar ilkelerinde tanımlanmayan kullanıcılar) Güvenli Bağlantılar koruması sağlar. Daha fazla bilgi için bkz. [EOP'de önceden ayarlanmış güvenlik ilkeleri ve Office 365 için Microsoft Defender](preset-security-policies.md). Ayrıca, belirli kullanıcılar, gruplar veya etki alanları için geçerli olan Güvenli Bağlantılar ilkeleri de oluşturabilirsiniz. Yönergeler için bkz. [Office 365 için Microsoft Defender'de Güvenli Bağlantılar ilkelerini ayarlama](set-up-safe-links-policies.md).
 
-  E-posta iletileri için Kasa Bağlantıları koruması hakkında daha fazla bilgi için, bu makalenin [devamında yer alan Kasa E-posta iletileri için bağlantılar ayarları](#safe-links-settings-for-email-messages) bölümüne bakın.
+  E-posta iletileri için Güvenli Bağlantılar koruması hakkında daha fazla bilgi için, bu makalenin devamında yer alan [e-posta iletileri için Güvenli Bağlantılar ayarları](#safe-links-settings-for-email-messages) bölümüne bakın.
   
   > [!NOTE]
-  > Kasa Bağlantılar posta etkin ortak klasörlerde çalışmaz.
+  > Güvenli Bağlantılar posta etkin ortak klasörlerde çalışmaz.
   >
-  > Kasa Bağlantıları yalnızca HTTP(S) ve FTP biçimlerini destekler.
+  > Güvenli Bağlantılar yalnızca HTTP(S) ve FTP biçimlerini destekler.
 
-- **Microsoft Teams**: Teams konuşmalardaki, grup sohbetlerindeki veya kanallardaki bağlantılar için Kasa Bağlantılar koruması da Kasa Bağlantılar ilkeleri tarafından denetlenmektedir.
+- **Microsoft Teams**: Teams konuşmalarındaki, grup sohbetlerindeki veya kanallardaki bağlantılar için Güvenli Bağlantılar koruması da Güvenli Bağlantılar ilkeleri tarafından denetlenmektedir.
 
-  Teams Kasa Bağlantıları koruması hakkında daha fazla bilgi için, bu makalenin [devamında yer alan Microsoft Teams için bağlantılar ayarları Kasa](#safe-links-settings-for-microsoft-teams) bölümüne bakın.
+  Teams'de Güvenli Bağlantılar koruması hakkında daha fazla bilgi için, bu makalenin devamında yer alan [Microsoft Teams için Güvenli Bağlantılar ayarları](#safe-links-settings-for-microsoft-teams) bölümüne bakın.
 
   > [!NOTE]
-  > Şu anda Microsoft Teams için Kasa Bağlantıları koruması Microsoft 365 GCC High veya Microsoft 365 DoD'da kullanılamaz.
+  > Şu anda Microsoft Teams için Güvenli Bağlantılar koruması Microsoft 365 GCC High veya Microsoft 365 DoD'da kullanılamaz.
 
-- **Office 365 uygulamaları**: Office 365 uygulamaları için Kasa Bağlantıları koruması desteklenen masaüstü, mobil ve web uygulamalarında kullanılabilir. Kasa Bağlantıları ilkelerinin **dışındaki** genel ayarda Office 365 uygulamalar için Kasa Bağlantıları korumasını **yapılandırabilirsiniz**. Yönergeler için bkz[. Office 365 için Microsoft Defender Kasa Bağlantıları ayarları için genel ayarları yapılandırma](configure-global-settings-for-safe-links.md).
+- **Office 365 uygulamaları**: Office 365 uygulamaları için Güvenli Bağlantılar koruması desteklenen masaüstü, mobil ve web uygulamalarında kullanılabilir. Güvenli Bağlantılar ilkelerinin **dışındaki** genel ayarda Office 365 uygulamalar için Güvenli Bağlantılar korumasını **yapılandırabilirsiniz**. Yönergeler için bkz[. Office 365 için Microsoft Defender'da Güvenli Bağlantılar ayarları için genel ayarları yapılandırma](configure-global-settings-for-safe-links.md).
 
-  Office 365 uygulamaları için Kasa Bağlantıları koruması, kullanıcıların etkin Kasa Bağlantıları ilkelerine dahil olup olmamasına bakılmaksızın kuruluştaki Office 365 için Defender lisansına sahip tüm kullanıcılara uygulanır.
+  Office 365 uygulamaları için Güvenli Bağlantılar koruması, kullanıcıların etkin Güvenli Bağlantılar ilkelerine dahil olup olmamasına bakılmaksızın kuruluştaki Office 365 için Defender lisansına sahip tüm kullanıcılara uygulanır.
 
-  Office 365 uygulamalarındaki Kasa Bağlantıları koruması hakkında daha fazla bilgi için, bu makalenin [devamında yer alan Office 365 uygulamalar için bağlantılar ayarları Kasa](#safe-links-settings-for-office-365-apps) bölümüne bakın.
+  Office 365 uygulamalarında Güvenli Bağlantılar koruması hakkında daha fazla bilgi için, bu makalenin devamında [yer alan Office 365 uygulamalar için Güvenli Bağlantılar ayarları](#safe-links-settings-for-office-365-apps) bölümüne bakın.
 
-Bu makale, aşağıdaki Kasa Bağlantıları ayarları türlerinin ayrıntılı açıklamalarını içerir:
+Bu makale, aşağıdaki Güvenli Bağlantılar ayarları türlerinin ayrıntılı açıklamalarını içerir:
 
-- **Kasa Bağlantıları ilkelerinde Ayarlar**: Bu ayarlar yalnızca belirli ilkelere dahil olan kullanıcılar için geçerlidir ve ayarlar ilkeler arasında farklı olabilir. Bu ayarlar şunlardır:
+- **Güvenli Bağlantılar ilkelerindeki ayarlar**: Bu ayarlar yalnızca belirli ilkelere dahil olan kullanıcılar için geçerlidir ve ayarlar ilkeler arasında farklı olabilir. Bu ayarlar şunlardır:
 
-  - [Kasa E-posta iletileri için bağlantılar ayarları](#safe-links-settings-for-email-messages)
-  - [Microsoft Teams için bağlantı ayarlarını Kasa](#safe-links-settings-for-microsoft-teams)
-  - [Kasa Bağlantıları ilkelerindeki "Aşağıdaki URL'leri yeniden yazmayın" listeleri](#do-not-rewrite-the-following-urls-lists-in-safe-links-policies)
+  - [E-posta iletileri için Güvenli Bağlantılar ayarları](#safe-links-settings-for-email-messages)
+  - [Microsoft Teams için Güvenli Bağlantılar ayarları](#safe-links-settings-for-microsoft-teams)
+  - [Güvenli Bağlantılar ilkelerindeki "Aşağıdaki URL'leri yeniden yazmayın" listeleri](#do-not-rewrite-the-following-urls-lists-in-safe-links-policies)
 
-- **Genel Kasa Bağlantıları ayarları**: Bu ayarlar, Kasa Bağlantıları ilkelerinde değil genel olarak yapılandırılır. Bu ayarlar şunlardır:
+- **Genel Güvenli Bağlantılar ayarları**: Bu ayarlar Güvenli Bağlantılar ilkelerinde değil genel olarak yapılandırılır. Bu ayarlar şunlardır:
 
-  - [Office 365 uygulamaları için Kasa Bağlantıları ayarları](#safe-links-settings-for-office-365-apps)
-  - [Kasa Bağlantıları için "Aşağıdaki URL'leri engelle" listesi](#block-the-following-urls-list-for-safe-links)
+  - [Office 365 uygulamaları için Güvenli Bağlantılar ayarları](#safe-links-settings-for-office-365-apps)
+  - [Güvenli Bağlantılar için "Aşağıdaki URL'leri engelle" listesi](#block-the-following-urls-list-for-safe-links)
 
-Aşağıdaki tabloda, Office 365 için Defender içeren Microsoft 365 ve Office 365 kuruluşlarda Kasa Bağlantıları senaryoları açıklanmaktadır (lisans eksikliğinin örneklerde hiçbir zaman sorun oluşturmadığını unutmayın).
+Aşağıdaki tabloda, Office 365 için Defender içeren Microsoft 365 ve Office 365 kuruluşlarında Güvenli Bağlantılar senaryoları açıklanmaktadır (örneklerde lisans eksikliğinin hiçbir zaman sorun oluşturmadığını unutmayın).
 
 |Senaryo|Sonuç|
 |---|---|
-|Jean pazarlama departmanının bir üyesidir. Kasa Kasa Bağlantıları'nın genel ayarlarında Office 365 uygulamalar için Bağlantılar koruması açılır ve pazarlama departmanı üyeleri için geçerli olan bir Kasa Bağlantıları ilkesi vardır. Jean bir e-posta iletisinde PowerPoint sunu açar ve ardından sunudaki bir URL'ye tıklar.|Jean, Kasa Links tarafından korunuyor. <p> Jean bir Kasa Bağlantıları ilkesine dahil edilir ve Office 365 uygulamalar için Kasa Bağlantılar koruması açılır. <p> Office 365 uygulamalarında Kasa Bağlantıları koruması gereksinimleri hakkında daha fazla bilgi için, bu makalenin [devamında yer alan Office 365 uygulamalar için bağlantılar ayarları Kasa](#safe-links-settings-for-office-365-apps) bölümüne bakın.|
-|Chris'in Microsoft 365 E5 kuruluşunda yapılandırılmış Kasa Bağlantıları ilkesi yok. Chris, dış gönderenden, sonunda tıkladığı kötü amaçlı bir web sitesinin URL'sini içeren bir e-posta alır.|Chris, Kasa Bağlantıları tarafından korunmaz. <p> Bir yöneticinin, gelen e-posta iletilerinde Kasa Bağlantıları koruması alabilmesi için en az bir Kasa Bağlantı ilkesi oluşturması gerekir. chris, Kasa Bağlantıları korumasını almak için ilke koşullarına dahil edilmelidir.|
-|Pat'in kuruluşunda hiçbir yönetici Kasa Bağlantıları ilkesi oluşturmamıştır ancak Office 365 uygulamalar için Kasa Bağlantılar koruması açıktır. Pat bir Word belgesi açar ve dosyadaki bir URL'ye tıklar.|Pat, Kasa Bağlantıları tarafından korunmaz. <p> Office 365 uygulamalar için Kasa Bağlantılar koruması genel olarak açık olsa da Pat etkin Kasa Bağlantıları ilkelerine dahil değildir, bu nedenle koruma uygulanamaz.|
-|Lee'nin kuruluşunda, `https://tailspintoys.com` Kasa Bağlantıları için genel ayarlardaki **Aşağıdaki URL'leri engelle** listesinde yapılandırılır. Lee'yi içeren bir Kasa Bağlantıları ilkesi zaten var. Lee, URL'sini `https://tailspintoys.com/aboutus/trythispage`içeren bir e-posta iletisi alır. Lee URL'ye tıklar.|URL Lee için otomatik olarak engellenebilir; listedeki URL girdisine ve Lee'nin kullandığı e-posta istemcisine bağlıdır. Daha fazla bilgi için, bu [makalenin devamında yer alan Kasa Bağlantıları için "Aşağıdaki URL'leri engelle" listesine](#block-the-following-urls-list-for-safe-links) bakın.|
-|Jamie ve Julia contoso.com için çalışıyor. Uzun zaman önce yöneticiler, Hem Jamie hem de Julia için geçerli olan Kasa Bağlantıları ilkelerini yapılandırdı. Jamie, e-postanın kötü amaçlı bir URL içerdiğini bilmeden Julia'ya bir e-posta gönderir.|Julia, kendisine uygulanan Kasa Bağlantıları ilkesi iç alıcılar arasındaki iletilere uygulanacak şekilde **yapılandırılmışsa**, Kasa Bağlantıları tarafından korunur. Daha fazla bilgi için bu makalenin [devamında Kasa E-posta iletileri için bağlantılar ayarları](#safe-links-settings-for-email-messages) bölümüne bakın.|
+|Jean pazarlama departmanının bir üyesidir. Office 365 uygulamaları için Güvenli Bağlantılar koruması, Güvenli Bağlantılar'ın genel ayarlarında açılır ve pazarlama departmanı üyeleri için geçerli olan bir Güvenli Bağlantılar ilkesi vardır. Jean, e-posta iletisinde bir PowerPoint sunusu açar ve ardından sunudaki bir URL'ye tıklar.|Jean, Güvenli Bağlantılar tarafından korunuyor. <p> Jean bir Güvenli Bağlantılar ilkesine dahil edilir ve Office 365 uygulamalar için Güvenli Bağlantılar koruması açılır. <p> Office 365 uygulamalarında Güvenli Bağlantılar koruması gereksinimleri hakkında daha fazla bilgi için, bu makalenin devamında yer alan [Office 365 uygulamalar için Güvenli Bağlantılar ayarları](#safe-links-settings-for-office-365-apps) bölümüne bakın.|
+|Chris'in Microsoft 365 E5 kuruluşunda Yapılandırılmış Güvenli Bağlantılar ilkesi yok. Chris, dış gönderenden, sonunda tıkladığı kötü amaçlı bir web sitesinin URL'sini içeren bir e-posta alır.|Chris, Güvenli Bağlantılar tarafından korunmuyor. <p> Bir yöneticinin gelen e-posta iletilerinde Güvenli Bağlantılar koruması alabilmesi için en az bir Güvenli Bağlantılar ilkesi oluşturması gerekir. Güvenli Bağlantılar korumasını almak için Chris'in ilke koşullarına dahil edilmesi gerekir.|
+|Pat'in kuruluşunda hiçbir yönetici Herhangi bir Güvenli Bağlantı ilkesi oluşturmamıştır, ancak Office 365 uygulamalar için Güvenli Bağlantılar koruması açıktır. Pat bir Word belgesi açar ve dosyadaki bir URL'ye tıklar.|Pat, Güvenli Bağlantılar tarafından korunmaz. <p> Office 365 uygulamaları için Güvenli Bağlantılar koruması genel olarak açık olsa da Pat etkin Güvenli Bağlantılar ilkelerine dahil edilmediğinden koruma uygulanamaz.|
+|Lee'nin kuruluşunda, `https://tailspintoys.com` Güvenli Bağlantılar için genel ayarlardaki **Aşağıdaki URL'leri engelle** listesinde yapılandırılır. Lee'yi içeren bir Güvenli Bağlantılar ilkesi zaten var. Lee, URL'sini `https://tailspintoys.com/aboutus/trythispage`içeren bir e-posta iletisi alır. Lee URL'ye tıklar.|URL Lee için otomatik olarak engellenebilir; listedeki URL girdisine ve Lee'nin kullandığı e-posta istemcisine bağlıdır. Daha fazla bilgi için, bu [makalenin devamında yer alan Güvenli Bağlantılar için "Aşağıdaki URL'leri engelle" listesine](#block-the-following-urls-list-for-safe-links) bakın.|
+|Jamie ve Julia contoso.com için çalışıyor. Uzun zaman önce, yöneticiler Hem Jamie hem de Julia için geçerli olan Güvenli Bağlantılar ilkeleri yapılandırdı. Jamie, e-postanın kötü amaçlı bir URL içerdiğini bilmeden Julia'ya bir e-posta gönderir.|Julia, kendisine uygulanan Güvenli Bağlantılar ilkesi iç alıcılar arasındaki iletilere uygulanacak şekilde **yapılandırılmışsa** Güvenli Bağlantılar tarafından korunur. Daha fazla bilgi için, bu makalenin devamında yer alan [e-posta iletileri için Güvenli Bağlantılar ayarları](#safe-links-settings-for-email-messages) bölümüne bakın.|
 
-## <a name="safe-links-settings-for-email-messages"></a>Kasa E-posta iletileri için bağlantılar ayarları
+## <a name="safe-links-settings-for-email-messages"></a>E-posta iletileri için Güvenli Bağlantılar ayarları
 
-Kasa Bağlantılar, bilinen kötü amaçlı köprüler için gelen e-postayı tarar. Taranan URL'ler, Microsoft standart URL ön eki kullanılarak yeniden yazılır: `https://nam01.safelinks.protection.outlook.com`. Bağlantı yeniden yazıldıktan sonra, kötü amaçlı olabilecek içerik için analiz edilir.
+Güvenli Bağlantılar, bilinen kötü amaçlı köprüler için gelen e-postayı tarar. Taranan URL'ler, Microsoft standart URL ön eki kullanılarak yeniden yazılır: `https://nam01.safelinks.protection.outlook.com`. Bağlantı yeniden yazıldıktan sonra, kötü amaçlı olabilecek içerik için analiz edilir.
 
-Kasa Bağlantılar bir URL'yi yeniden yazdıktan sonra, ileti _el ile_ iletilmiş veya yanıtlanmış olsa bile (hem iç hem de dış alıcılara) URL yeniden yazılır. İletilen veya yanıtlanan iletiye eklenen ek bağlantılar yeniden yazılmaz. Ancak, Gelen Kutusu kuralları veya SMTP iletme tarafından _otomatik_ iletme söz konusu olduğunda, alıcı Kasa Bağlantıları tarafından da _korunmadığı veya_ URL önceki bir iletişimde zaten yeniden yazılmamışsa, url son alıcı için hedeflenen iletide yeniden yazılmaz. Kasa Bağlantıları etkinleştirildiği sürece, URL'ler yeniden yazılsa da yazılmasa da teslim öncesinde de taranır. Sarmalanmamış URL'ler, Masaüstü sürüm 16.0.12513 veya üzeri için Outlook tıklanması sırasında Kasa Bağlantıları için istemci tarafı API çağrısı tarafından da denetlenir.
+Güvenli Bağlantılar bir URL'yi yeniden yazdıktan sonra, ileti _el ile_ iletilmiş veya yanıtlanmış olsa bile URL yeniden yazılır (hem iç hem de dış alıcılara). İletilen veya yanıtlanan iletiye eklenen ek bağlantılar yeniden yazılmaz. Ancak, Gelen Kutusu kuralları veya SMTP iletme tarafından _otomatik_ iletme durumunda, alıcı Güvenli Bağlantılar tarafından _korunmadığı veya_ URL önceki bir iletişimde zaten yeniden yazılmamışsa, URL son alıcı için hedeflenen iletide yeniden yazılmaz. Güvenli Bağlantılar etkinleştirildiği sürece, URL'ler yeniden yazılsa da yazılmasa da teslim öncesinde taranmaya devam eder. Sarmalanmamış URL'ler, Masaüstü için Outlook sürüm 16.0.12513 veya sonraki bir sürüme tıklanması sırasında güvenli bağlantılar için istemci tarafı API çağrısı tarafından da denetlenir.
 
-e-posta iletilerine uygulanan Kasa Bağlantılar ilkelerindeki ayarlar aşağıdaki listede açıklanmıştır:
+E-posta iletilerine uygulanan Güvenli Bağlantılar ilkelerindeki ayarlar aşağıdaki listede açıklanmıştır:
 
-- **Açık: Kasa Bağlantılar, kullanıcılar e-postadaki bağlantılara tıkladığında bilinen, kötü amaçlı bağlantıların listesini denetler: E-posta iletilerinde** bağlantıları taramayı Kasa etkinleştirir veya devre dışı bırakır. Önerilen değer seçilidir (açık) ve aşağıdaki eylemlerle sonuçlanır:
-  - Kasa Bağlantılar taraması, Windows'daki Outlook (C2R) içinde etkinleştirilir.
-  - URL'ler yeniden yazılır ve kullanıcılar iletilerdeki URL'lere tıkladığında Kasa Bağlantıları koruması üzerinden yönlendirilir.
+- **Açık: Güvenli Bağlantılar, kullanıcılar e-postadaki bağlantılara tıkladığında bilinen, kötü amaçlı bağlantıların listesini denetler: E-posta iletilerinde** Güvenli Bağlantılar taramasını etkinleştirir veya devre dışı bırakır. Önerilen değer seçilidir (açık) ve aşağıdaki eylemlerle sonuçlanır:
+  - Windows üzerinde Outlook'ta (C2R) Güvenli Bağlantılar taraması etkinleştirilir.
+  - URL'ler yeniden yazılır ve kullanıcılar iletilerdeki URL'lere tıkladığında Güvenli Bağlantılar koruması üzerinden yönlendirilir.
   - Tıklandığında, URL'ler bilinen kötü amaçlı URL'ler listesinde ve ["Aşağıdaki URL'leri engelle" listesinde](#block-the-following-urls-list-for-safe-links) denetlenir.
   - Geçerli bir saygınlığı olmayan URL'ler arka planda zaman uyumsuz olarak patlatılır.
 
-  Aşağıdaki ayarlar yalnızca e-posta iletilerinde Kasa Bağlantıları tarama açıksa kullanılabilir:
+  Aşağıdaki ayarlar yalnızca e-posta iletilerinde Güvenli Bağlantılar taraması açıksa kullanılabilir:
 
-  - **Kasa Uygulama Kuruluş içinde gönderilen e-posta iletilerine bağlantılar**: aynı Exchange Online kuruluştaki iç gönderenler ve iç alıcılar arasında gönderilen iletilerde Kasa Bağlantıları taramayı etkinleştirir veya devre dışı bırakır. Önerilen değer seçilidir (açık).
+  - **Kuruluş içinde gönderilen e-posta iletilerine Güvenli Bağlantılar uygulama**: Aynı Exchange Online kuruluştaki iç gönderenler ve iç alıcılar arasında gönderilen iletilerde Güvenli Bağlantılar taramasını etkinleştirir veya devre dışı bırakır. Önerilen değer seçilidir (açık).
 
   - **Şüpheli bağlantılar ve dosyalara işaret eden bağlantılar için gerçek zamanlı URL taraması uygulayın: İndirilebilir içeriğe işaret eden** e-posta iletilerindeki bağlantılar da dahil olmak üzere bağlantıların gerçek zamanlı olarak taranmalarını sağlar. Önerilen değer seçilidir (açık).
 
@@ -122,9 +122,9 @@ e-posta iletilerine uygulanan Kasa Bağlantılar ilkelerindeki ayarlar aşağıd
     - Seçili (açık): URL içeren iletiler tarama tamamlanana kadar tutulur. İletiler yalnızca URL'lerin güvenli olduğu onaylandıktan sonra teslim edilir. Bu, önerilen değerdir.
     - Seçili değil (kapalı): URL taraması tamamlanamadıysa iletiyi yine de teslim edin.
 
-  - **URL'leri yeniden yazmayın, yalnızca SafeLinks API'si aracılığıyla denetimler yapın**: Bu ayar etkinleştirilirse, URL sarmalama işlemi gerçekleşmez. Kasa Bağlantıları, URL'yi destekleyen Outlook istemcileri tarafından URL tıklatılırken yalnızca API'ler aracılığıyla çağrılır. Önerilen değer devre dışı bırakıldı.
+  - **URL'leri yeniden yazmayın, yalnızca SafeLinks API'si aracılığıyla denetimler yapın**: Bu ayar etkinleştirilirse, URL sarmalama işlemi gerçekleşmez. Güvenli Bağlantılar, yalnızca URL'yi destekleyen Outlook istemcileri tarafından URL tıklatılırken API'ler aracılığıyla çağrılır. Önerilen değer devre dışı bırakıldı.
 
-- **Kullanıcı tıklamalarını izleme**: E-posta iletilerinde tıklanan URL'ler için bağlantıların tıklandığı verileri Kasa depolamayı etkinleştirir veya devre dışı bırakır. Önerilen değer, bu ayarı seçili bırakmaktır (kullanıcı tıklamalarını izleme).
+- **Kullanıcı tıklamalarını izleme**: E-posta iletilerinde tıklanan URL'ler için Güvenli Bağlantılar tıklama verilerinin depolanmasını etkinleştirir veya devre dışı bırakır. Önerilen değer, bu ayarı seçili bırakmaktır (kullanıcı tıklamalarını izleme).
 
   İç gönderenler ve iç alıcılar arasında gönderilen e-posta iletilerindeki bağlantılar için URL tıklama izlemesi şu anda desteklenmemektedir.
 
@@ -132,7 +132,7 @@ e-posta iletilerine uygulanan Kasa Bağlantılar ilkelerindeki ayarlar aşağıd
 
 - **Bildirim ve uyarı sayfalarında kuruluş markasını görüntüleme**: Bu seçenek, kuruluşunuzun markasını uyarı sayfalarında gösterir. Varsayılan Microsoft uyarı sayfaları genellikle saldırganlar tarafından kullanıldığından, markalama kullanıcıların geçerli uyarıları tanımlamalarına yardımcı olur. Özelleştirilmiş markalama hakkında daha fazla bilgi için bkz. [Kuruluşunuz için Microsoft 365 temasını özelleştirme](../../admin/setup/customize-your-organization-theme.md).
 
-  Kasa Bağlantıları ilkeleri için Standart ve Katı ilke ayarları için önerilen değerler hakkında daha fazla bilgi için bkz[. Bağlantılar ilke ayarları Kasa](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
+  Güvenli Bağlantılar ilkeleri için Standart ve Katı ilke ayarları için önerilen değerler hakkında daha fazla bilgi için bkz. [Güvenli Bağlantılar ilke ayarları](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
 
 - **Alıcı filtreleri**: İlkenin kime uygulanacağını belirleyen alıcı koşullarını ve özel durumlarını belirtmeniz gerekir. Koşullar ve özel durumlar için şu özellikleri kullanabilirsiniz:
   - **Alıcı**
@@ -155,15 +155,15 @@ e-posta iletilerine uygulanan Kasa Bağlantılar ilkelerindeki ayarlar aşağıd
 
   Öncelik sırası ve birden çok ilkenin nasıl değerlendirilip uygulandığı hakkında daha fazla bilgi için bkz [. E-posta korumasının sırası ve önceliği](how-policies-and-protections-are-combined.md).
   
-### <a name="how-safe-links-works-in-email-messages"></a>Kasa Bağlantıları e-posta iletilerinde nasıl çalışır?
+### <a name="how-safe-links-works-in-email-messages"></a>Güvenli Bağlantılar e-posta iletilerinde nasıl çalışır?
 
-Yüksek düzeyde, Kasa Bağlantıları koruması e-posta iletilerindeki URL'lerde şu şekilde çalışır:
+Yüksek düzeyde, Güvenli Bağlantılar koruması e-posta iletilerindeki URL'lerde şu şekilde çalışır:
 
 1. Tüm e-postalar, ileti alıcının posta kutusuna teslim etmeden önce İnternet protokolü (IP) ve zarf filtreleri, imza tabanlı kötü amaçlı yazılım koruması, istenmeyen posta önleme ve kötü amaçlı yazılımdan koruma filtrelerinin bulunduğu EOP'den geçer.
 
 2. Kullanıcı iletiyi posta kutusunda açar ve iletideki bir URL'ye tıklar.
 
-3. Kasa Bağlantılar, web sitesini açmadan önce URL'yi hemen denetler:
+3. Güvenli Bağlantılar, web sitesini açmadan önce URL'yi hemen denetler:
 
    - URL **Aşağıdaki URL'leri engelle** listesinde yer alıyorsa [, engellenen bir URL uyarısı](#blocked-url-warning) açılır.
 
@@ -173,110 +173,113 @@ Yüksek düzeyde, Kasa Bağlantıları koruması e-posta iletilerindeki URL'lerd
 
    - URL'nin güvenli olduğu belirlenirse web sitesi açılır.
 
-## <a name="safe-links-settings-for-microsoft-teams"></a>Microsoft Teams için bağlantı ayarlarını Kasa
+## <a name="safe-links-settings-for-microsoft-teams"></a>Microsoft Teams için Güvenli Bağlantılar ayarları
 
-Kasa Bağlantıları ilkelerinde Microsoft Teams için Kasa Bağlantıları korumasını etkinleştirir veya devre dışı bırakırsınız. Özellikle, **Microsoft Teams içinde bilinmeyen veya kötü amaçlı olabilecek URL'ler için eylemi seçin** ayarını kullanırsınız. Önerilen değer **Açık'tır**.
+Güvenli Bağlantılar ilkelerinde Microsoft Teams için Güvenli Bağlantılar korumasını etkinleştirir veya devre dışı bırakırsınız. Özellikle, **Microsoft Teams'de bilinmeyen veya kötü amaçlı olabilecek URL'ler için eylemi seçin** ayarını kullanırsınız. Önerilen değer **Açık'tır**.
 
 > [!NOTE]
-> Teams için Kasa Bağlantıları korumasını açtığınızda veya kapattığınızda, değişikliğin etkili olması 24 saat kadar sürebilir.
+> Teams için Güvenli Bağlantılar korumasını açtığınızda veya kapattığınızda, değişikliğin geçerli olması 24 saat kadar sürebilir.
 >
-> Şu anda Microsoft Teams için Kasa Bağlantıları koruması Microsoft 365 GCC High veya Microsoft 365 DoD'da kullanılamaz.
+> Şu anda Microsoft Teams için Güvenli Bağlantılar koruması Microsoft 365 GCC High veya Microsoft 365 DoD'da kullanılamaz.
 
-e-posta iletilerindeki bağlantılara uygulanan Kasa Bağlantılar ilkelerindeki aşağıdaki ayarlar, Teams'daki bağlantılar için de geçerlidir:
+E-posta iletilerindeki bağlantılara uygulanan Güvenli Bağlantılar ilkelerindeki aşağıdaki ayarlar Teams'deki bağlantılara da uygulanır:
 
 - **Şüpheli bağlantılar ve dosyalara işaret eden bağlantılar için gerçek zamanlı URL taraması uygulama**
 - **Kullanıcı tıklamalarını izleme**
 - **Kullanıcıların özgün URL'ye tıklamasına izin verme**
 
-Bu ayarlar daha önce [Kasa E-posta iletileri için Bağlantılar ayarlarında](#safe-links-settings-for-email-messages) açıklanmıştır.
+Bu ayarlar daha önce [e-posta iletileri için Güvenli Bağlantılar ayarlarında](#safe-links-settings-for-email-messages) açıklanmıştır.
 
-Microsoft Teams için Kasa Bağlantıları korumasını etkinleştirdikten sonra, Teams'daki URL'ler, korunan kullanıcı bağlantıya tıkladığında (tıklama süresi koruması) bilinen kötü amaçlı bağlantılar listesinde denetlenür. URL'ler yeniden yazılmaz. Bir bağlantının kötü amaçlı olduğu tespit edilirse, kullanıcılar aşağıdaki deneyimlere sahip olur:
+Microsoft Teams için Güvenli Bağlantılar korumasını açtıktan sonra, korumalı kullanıcı bağlantıya tıkladığında (tıklama süresi koruması) Teams'deki URL'ler bilinen kötü amaçlı bağlantıların listesiyle karşılaştırılır. URL'ler yeniden yazılmaz. Bir bağlantının kötü amaçlı olduğu tespit edilirse, kullanıcılar aşağıdaki deneyimlere sahip olur:
 
-- Bağlantı bir Teams konuşmasında, grup sohbetinde veya kanallardan tıklandıysa, aşağıdaki ekran görüntüsünde gösterildiği gibi uyarı sayfası varsayılan web tarayıcısında görünür.
+- Bir Teams konuşmasında, grup sohbetinde veya kanallardan bağlantıya tıklandıysa, aşağıdaki ekran görüntüsünde gösterildiği gibi uyarı sayfası varsayılan web tarayıcısında görünür.
 - Sabitlenmiş bir sekmeden bağlantıya tıklandıysa, uyarı sayfası bu sekmedeki Teams arabiriminde görünür. Bağlantıyı bir web tarayıcısında açma seçeneği güvenlik nedeniyle devre dışı bırakılır.
 - İlkedeki **kullanıcıların özgün URL'ye tıklamasına izin verme** ayarının nasıl yapılandırıldığına bağlı olarak, kullanıcının özgün URL'ye tıklamasına izin verilir veya verilmez (Ekran görüntüsünde **yine de devam edin (önerilmez** ). **Kullanıcıların özgün URL'ye tıklayamamaları için Kullanıcıların özgün URL'ye tıklamasına izin verme** ayarını etkinleştirmenizi öneririz.
 
-Bağlantıyı gönderen kullanıcı, Teams korumasının etkinleştirildiği bir Kasa Bağlantıları ilkesine dahil değilse, kullanıcı bilgisayarında veya cihazında özgün URL'ye tıklayabilirsiniz.
+Bağlantıyı gönderen kullanıcı, Teams korumasının etkinleştirildiği Güvenli Bağlantılar ilkesine dahil değilse, kullanıcı kendi bilgisayarında veya cihazında özgün URL'ye tıklayabilirsiniz.
 
-:::image type="content" source="../../media/tp-safe-links-for-teams-malicious.png" alt-text="Kötü amaçlı bağlantı bildiren Teams sayfası için Kasa Bağlantıları" lightbox="../../media/tp-safe-links-for-teams-malicious.png":::
+:::image type="content" source="../../media/tp-safe-links-for-teams-malicious.png" alt-text="Kötü amaçlı bir bağlantı bildiren Teams için Güvenli Bağlantılar sayfası" lightbox="../../media/tp-safe-links-for-teams-malicious.png":::
 
-Uyarı sayfasında **Geri Dön** düğmesine tıklanması, kullanıcıyı özgün bağlamı veya URL konumuna döndürür. Ancak, özgün bağlantıya yeniden tıklanması Kasa Bağlantıların URL'yi yeniden taramasına neden olur, böylece uyarı sayfası yeniden görünür.
+Uyarı sayfasında **Geri Dön** düğmesine tıklanması, kullanıcıyı özgün bağlamı veya URL konumuna döndürür. Ancak, özgün bağlantıya yeniden tıklanması Güvenli Bağlantılar'ın URL'yi yeniden taramasına neden olur, böylece uyarı sayfası yeniden görünür.
 
-### <a name="how-safe-links-works-in-teams"></a>Kasa Bağlantıları Teams'da nasıl çalışır?
+### <a name="how-safe-links-works-in-teams"></a>Güvenli Bağlantılar Teams'de nasıl çalışır?
 
-Yüksek düzeyde, Microsoft Teams URL'ler için Kasa Bağlantıları koruması şu şekilde çalışır:
+Yüksek düzeyde, Microsoft Teams'deki URL'ler için Güvenli Bağlantılar koruması şu şekilde çalışır:
 
-1. Kullanıcı Teams uygulamasını başlatır.
+1. Bir kullanıcı Teams uygulamasını başlatır.
 
-2. Microsoft 365, kullanıcının kuruluşunun Office 365 için Microsoft Defender içerdiğini ve kullanıcının Microsoft Teams korumasının etkinleştirildiği etkin bir Kasa Bağlantıları ilkesine dahil olduğunu doğrular.
+2. Microsoft 365, kullanıcının kuruluşunun Office 365 için Microsoft Defender içerdiğini ve kullanıcının Microsoft Teams için korumanın etkinleştirildiği etkin bir Güvenli Bağlantılar ilkesine dahil olduğunu doğrular.
 
 3. URL'ler sohbetlerde, grup sohbetlerinde, kanallarda ve sekmelerde kullanıcı için tıklandığında doğrulanır.
 
-## <a name="safe-links-settings-for-office-365-apps"></a>Office 365 uygulamaları için Kasa Bağlantıları ayarları
+## <a name="safe-links-settings-for-office-365-apps"></a>Office 365 uygulamaları için Güvenli Bağlantılar ayarları
 
-Kasa Office 365 uygulamalar için bağlantılar koruması, e-posta iletilerindeki bağlantıları değil Office belgelerdeki bağlantıları denetler (ancak belge açıldıktan sonra e-posta iletilerindeki ekli Office belgelerdeki bağlantıları denetleyebilir).
+Office 365 uygulamaları için Güvenli Bağlantılar koruması, e-posta iletilerindeki bağlantıları değil Office belgelerindeki bağlantıları denetler (ancak belge açıldıktan sonra e-posta iletilerinde ekli Office belgelerindeki bağlantıları denetleyebilir).
 
-Office 365 uygulamaları için Kasa Bağlantıları koruması aşağıdaki istemci gereksinimlerine sahiptir:
+Office 365 uygulamaları için Güvenli Bağlantılar koruması aşağıdaki istemci gereksinimlerine sahiptir:
 
 - Microsoft 365 Uygulamaları veya Microsoft 365 İş Ekstra.
-  - word, Excel ve PowerPoint Windows, Mac veya bir web tarayıcısında geçerli sürümleri.
-  - iOS veya Android cihazlarda uygulamaları Office.
-  - Windows'da Visio.
-  - web tarayıcısında OneNote.
+  - Windows, Mac veya bir web tarayıcısında Word, Excel ve PowerPoint'in geçerli sürümleri.
+  - iOS veya Android cihazlarda Office uygulamaları.
+  - Windows üzerinde Visio.
+  - Web tarayıcısında OneNote.
   - Kaydedilen EML veya MSG dosyalarını açarken Windows için Outlook.
 
 - Office 365 uygulamalar modern kimlik doğrulaması kullanacak şekilde yapılandırılmıştır. Daha fazla bilgi için bkz. [Office 2013, Office 2016 ve Office 2019 istemci uygulamaları için modern kimlik doğrulaması nasıl çalışır](../../enterprise/modern-auth-for-office-2013-and-2016.md)?
 
-- Kullanıcılar iş veya okul hesaplarını kullanarak oturum açmışlardır. Daha fazla bilgi için bkz. [Office oturum açma](https://support.microsoft.com/office/b9582171-fd1f-4284-9846-bdd72bb28426).
+- Kullanıcılar iş veya okul hesaplarını kullanarak oturum açmışlardır. Daha fazla bilgi için bkz. [Office'te oturum açma](https://support.microsoft.com/office/b9582171-fd1f-4284-9846-bdd72bb28426).
 
-Office 365 uygulamalar için Kasa Bağlantıları korumasını Kasa Bağlantılar ilkelerinde değil, Kasa Bağlantıları'nın genel ayarlarında yapılandırabilirsiniz. Koruma, kullanıcıların etkin Kasa Bağlantıları ilkelerine dahil olup olmamasına bakılmaksızın kuruluştaki Office 365 için Defender lisansına sahip tüm kullanıcılara uygulanır.
+Office 365 uygulamalar için Güvenli Bağlantılar korumasını Güvenli Bağlantılar ilkelerinde değil, Güvenli Bağlantılar için genel ayarlarda yapılandırabilirsiniz. Koruma, kullanıcıların etkin Güvenli Bağlantılar ilkelerine dahil edilip edilmediğine bakılmaksızın kuruluştaki Office 365 için Defender lisansına sahip tüm kullanıcılara uygulanır.
 
-Office 365 uygulamalar için aşağıdaki Kasa Bağlantıları ayarları kullanılabilir:
+Office 365 uygulamaları için aşağıdaki Güvenli Bağlantılar ayarları kullanılabilir:
 
-- **Office 365 uygulamaları**: Desteklenen Office 365 uygulamalarında Kasa Bağlantıları taramayı etkinleştirir veya devre dışı bırakır. Varsayılan ve önerilen değer **Açık'tır**.
+- **Office 365 uygulamaları**: Desteklenen Office 365 uygulamalarında Güvenli Bağlantılar taramasını etkinleştirir veya devre dışı bırakır. Varsayılan ve önerilen değer **Açık'tır**.
 
-- **Kullanıcıların Kasa Bağlantıları'na ne zaman tıkladığını izlemeyin**: Word, Kasa Excel, PowerPoint ve Visio masaüstü sürümlerinde tıklanan URL'ler için bağlantılar tıklama verilerinin depolanmasını etkinleştirir veya devre dışı bırakır. Önerilen değer **Kapalı'dır** ve bu da kullanıcı tıklamalarının izlendiği anlamına gelir.
+- **Kullanıcıların Güvenli Bağlantılar'a ne zaman tıkladığını izlemeyin**: Word, Excel, PowerPoint ve Visio masaüstü sürümlerinde tıklanan URL'ler için Güvenli Bağlantılar tıklama verilerinin depolanmasını etkinleştirir veya devre dışı bırakır. Önerilen değer **Kapalı'dır** ve bu da kullanıcı tıklamalarının izlendiği anlamına gelir.
 
-- **Kullanıcıların özgün URL'ye güvenli bağlantılara tıklamasına izin verme**: Kullanıcıların word, Excel, PowerPoint ve Visio masaüstü sürümlerinde [uyarı sayfasından](#warning-pages-from-safe-links) özgün URL'ye tıklamasına izin verir veya engeller. Varsayılan ve önerilen değer **Açık'tır**.
+- **Kullanıcıların özgün URL'ye güvenli bağlantılara tıklamasına izin verme**: Kullanıcıların Word, Excel, PowerPoint ve Visio masaüstü sürümlerinde [uyarı sayfasından](#warning-pages-from-safe-links) özgün URL'ye tıklamasına izin verir veya bunu engeller. Varsayılan ve önerilen değer **Açık'tır**.
 
-Office 365 uygulamalar için Kasa Bağlantıları ayarlarını yapılandırmak için bkz. [Office 365 uygulamalar için Kasa Bağlantıları korumasını yapılandırma](configure-global-settings-for-safe-links.md#configure-safe-links-protection-for-office-365-apps-in-the-microsoft-365-defender-portal).
+Office 365 uygulamalar için Güvenli Bağlantılar ayarlarını yapılandırmak için bkz. [Office 365 uygulamalar için Güvenli Bağlantılar korumasını yapılandırma](configure-global-settings-for-safe-links.md#configure-safe-links-protection-for-office-365-apps-in-the-microsoft-365-defender-portal).
 
-Standart ve Katı ilke ayarları için önerilen değerler hakkında daha fazla bilgi için bkz. [Kasa Bağlantıları için genel ayarlar](recommended-settings-for-eop-and-office365.md#global-settings-for-safe-links).
+Standart ve Katı ilke ayarları için önerilen değerler hakkında daha fazla bilgi için bkz. [Güvenli Bağlantılar için genel ayarlar](recommended-settings-for-eop-and-office365.md#global-settings-for-safe-links).
 
-### <a name="how-safe-links-works-in-office-365-apps"></a>Kasa Bağlantıları Office 365 uygulamalarında nasıl çalışır?
+### <a name="how-safe-links-works-in-office-365-apps"></a>Güvenli Bağlantılar Office 365 uygulamalarında nasıl çalışır?
 
-Yüksek düzeyde, Kasa Bağlantıları koruması Office 365 uygulamalarda URL'ler için nasıl çalışır? Desteklenen Office 365 uygulamaları önceki bölümde açıklanmıştır.
+Güvenli Bağlantılar koruması, Office 365 uygulamalarındaki URL'ler için yüksek düzeyde şu şekilde çalışır. Desteklenen Office 365 uygulamaları önceki bölümde açıklanmıştır.
 
 1. Kullanıcı, Microsoft 365 Uygulamaları veya Microsoft 365 İş Ekstra içeren bir kuruluşta iş veya okul hesabını kullanarak oturum açar.
 
-2. Kullanıcı, desteklenen bir Office uygulaması Office bir belgeyi açar ve bir bağlantıya tıklar.
+2. Kullanıcı açılır ve desteklenen bir Office uygulamasındaki bir Office belgesinin bağlantısına tıklar.
 
-3. Kasa Bağlantılar, hedef web sitesini açmadan önce URL'yi hemen denetler:
+3. Güvenli Bağlantılar, hedef web sitesini açmadan önce URL'yi hemen denetler:
 
-   - URL, Kasa Bağlantıları taramayı (**Aşağıdaki URL'leri engelle** listesi) atlayan listede yer alıyorsa [, engellenen BIR URL uyarı](#blocked-url-warning) sayfası açılır.
+   - URL, Güvenli Bağlantılar taramasını atlayan listeye dahil edilmişse ( **Aşağıdaki URL'leri engelle** listesi) [engellenen bir URL uyarı](#blocked-url-warning) sayfası açılır.
 
    - URL, kötü amaçlı olduğu belirlenen bir web sitesine işaret ederse, [kötü amaçlı bir web sitesi uyarı](#malicious-website-warning) sayfası (veya farklı bir uyarı sayfası) açılır.
 
-   - URL indirilebilir bir dosyaya işaret ederse ve kullanıcıya uygulanan Kasa Bağlantıları ilkesi indirilebilir içeriğe yönelik bağlantıları taramak için yapılandırılmışsa (**Şüpheli bağlantılar ve dosyalara işaret eden bağlantılar için gerçek zamanlı URL taraması uygula**), indirilebilir dosya denetlenir.
+   - URL indirilebilir bir dosyaya işaret ederse ve kullanıcıya uygulanan Güvenli Bağlantılar ilkesi indirilebilir içeriğe yönelik bağlantıları taramak için yapılandırılmışsa (**Şüpheli bağlantılar ve dosyalara işaret eden bağlantılar için gerçek zamanlı URL taraması uygula**), indirilebilir dosya denetlenir.
 
    - URL güvenli olarak kabul edilirse, kullanıcı web sitesine yönlendirilir.
 
-   - Kasa Bağlantıları taraması tamamlanamıyorsa Kasa Bağlantılar koruması tetiklenmez. Office masaüstü istemcilerinde, hedef web sitesine geçmeden önce kullanıcı uyarılır.
+   - Güvenli Bağlantılar taraması tamamlanamıyorsa, Güvenli Bağlantılar koruması tetiklenmez. Office masaüstü istemcilerinde, hedef web sitesine geçmeden önce kullanıcı uyarılır.
 
 > [!NOTE]
-> Kullanıcının Office için Kasa Bağlantıları'nın etkinleştirildiğini doğrulamak her oturumun başında birkaç saniye sürebilir.
+> Kullanıcının Office için Güvenli Bağlantılar'ın etkin olduğunu doğrulamak her oturumun başında birkaç saniye sürebilir.
 
-## <a name="block-the-following-urls-list-for-safe-links"></a>Kasa Bağlantıları için "Aşağıdaki URL'leri engelle" listesi
+## <a name="block-the-following-urls-list-for-safe-links"></a>Güvenli Bağlantılar için "Aşağıdaki URL'leri engelle" listesi
 
-**Aşağıdaki URL'leri engelle** listesi, aşağıdaki konumlarda Kasa Bağlantıları taraması tarafından her zaman engellenen bağlantıları tanımlar:
+> [!NOTE]
+> Artık [Kiracı İzin Ver/Engelle Listesi'nde](allow-block-urls.md#create-block-url-entries-in-the-tenant-allowblock-list) blok URL'si girdilerini yönetebilirsiniz. "Aşağıdaki URL'leri engelle" listesi kullanım dışı bırakılıyor. Kiracı İzin Ver/Engelle Listesindeki URL girdilerini engellemek için "Aşağıdaki URL'leri engelle" listesinden mevcut girdileri geçirmeyi deneyeceğiz. Engellenen URL'yi içeren iletiler karantinaya alınır.
+
+**Aşağıdaki URL'leri engelle** listesi, aşağıdaki konumlarda Güvenli Bağlantılar taraması tarafından her zaman engellenen bağlantıları tanımlar:
 
 - E-posta iletileri.
 - Windows ve Mac'teki Office 365 uygulamalarındaki belgeler.
-- iOS ve Android için Office belgeler.
+- iOS ve Android için Office'teki belgeler.
 
-Etkin Kasa Bağlantıları ilkesindeki bir kullanıcı desteklenen bir uygulamada engellenen bağlantıya tıkladığında [Engellenen URL uyarı](#blocked-url-warning) sayfasına yönlendirilir.
+Etkin bir Güvenli Bağlantılar ilkesindeki bir kullanıcı desteklenen bir uygulamada engellenen bağlantıya tıkladığında [Engellenen URL uyarı](#blocked-url-warning) sayfasına yönlendirilir.
 
-URL'lerin listesini Kasa Bağlantıları için genel ayarlarda yapılandırabilirsiniz. Yönergeler için bkz. ["Aşağıdaki URL'leri engelle" listesini yapılandırma](configure-global-settings-for-safe-links.md#configure-the-block-the-following-urls-list-in-the-microsoft-365-defender-portal).
+Url listesini Güvenli Bağlantılar için genel ayarlarda yapılandırabilirsiniz. Yönergeler için bkz. ["Aşağıdaki URL'leri engelle" listesini yapılandırma](configure-global-settings-for-safe-links.md#configure-the-block-the-following-urls-list-in-the-microsoft-365-defender-portal).
 
 **Notlar**:
 
@@ -301,25 +304,25 @@ Girebileceğiniz değerlerin ve sonuçlarının örnekleri aşağıdaki tabloda 
 |`https://contoso.com/a*`|Bloklar `https://contoso.com/a` ve gibi `https://contoso.com/a/b`ek alt yollar.|
 |`https://toys.contoso.com*`|Bir alt etki alanını (`toys`bu örnekte) engeller ancak diğer etki alanı URL'lerine (veya `https://home.contoso.com`gibi`https://contoso.com`) tıklamalara izin verir.|
 
-## <a name="do-not-rewrite-the-following-urls-lists-in-safe-links-policies"></a>Kasa Bağlantıları ilkelerindeki "Aşağıdaki URL'leri yeniden yazmayın" listeleri
+## <a name="do-not-rewrite-the-following-urls-lists-in-safe-links-policies"></a>Güvenli Bağlantılar ilkelerindeki "Aşağıdaki URL'leri yeniden yazmayın" listeleri
 
 > [!NOTE]
-> Kuruluşunuz Kasa Bağlantıları ilkelerini kullanıyorsa, üçüncü taraf kimlik avı testlerinde desteklenen tek yöntem **aşağıdaki URL'leri yeniden yazma** listeleridir.
+> "Aşağıdaki URL'leri yeniden yazmayın" listesinin amacı, belirtilen URL'lerin Güvenli Bağlantılar sarmalama işlemini atlamaktır. Bu listeyi kullanmak yerine artık [Kiracı İzin Ver/Engelle Listesinde izin ver URL girişleri oluşturabilirsiniz](allow-block-urls.md#create-allow-url-entries).
 
-Her Kasa Bağlantıları ilkesi, Kasa Bağlantıları taraması tarafından yeniden yazılmayan URL'leri belirtmek için kullanabileceğiniz aşağıdaki URL'leri **yeniden yazma** listesini içerir. Başka bir deyişle, liste ilkeye dahil edilen kullanıcıların Kasa Bağlantıları tarafından engellenecek belirtilen URL'lere erişmesine olanak tanır. Farklı Kasa Bağlantıları ilkelerinde farklı listeler yapılandırabilirsiniz. İlke işleme, kullanıcıya ilk (büyük olasılıkla en yüksek öncelikli) ilke uygulandıktan sonra durur. Bu nedenle, birden çok etkin Kasa Bağlantıları ilkesine dahil olan bir kullanıcıya **yalnızca bir Tane Aşağıdaki URL'leri yeniden yazma** listesi uygulanır.
+Her Güvenli Bağlantılar ilkesi, Güvenli Bağlantılar taraması tarafından **yeniden yazılmayan URL'leri belirtmek için kullanabileceğiniz aşağıdaki URL'leri yeniden yazma** listesini içerir. Başka bir deyişle, liste ilkeye dahil edilen kullanıcıların, aksi takdirde Güvenli Bağlantılar tarafından engellenecek belirtilen URL'lere erişmesine izin verir. Farklı Güvenli Bağlantılar ilkelerinde farklı listeler yapılandırabilirsiniz. İlke işleme, kullanıcıya ilk (büyük olasılıkla en yüksek öncelikli) ilke uygulandıktan sonra durur. Bu nedenle, birden çok etkin Güvenli Bağlantı ilkesine dahil edilen bir kullanıcıya **yalnızca bir Tane Aşağıdaki URL'leri yeniden yazma** listesi uygulanır.
 
-Yeni veya mevcut Kasa Bağlantıları ilkelerinde listeye girdi eklemek için bkz. [Kasa Bağlantıları ilkeleri oluşturma](set-up-safe-links-policies.md#use-the-microsoft-365-defender-portal-to-create-safe-links-policies) veya [Kasa Bağlantıları ilkelerini değiştirme](set-up-safe-links-policies.md#use-the-microsoft-365-defender-portal-to-modify-safe-links-policies).
+Yeni veya mevcut Güvenli Bağlantılar ilkelerinde listeye girdi eklemek için bkz. [Güvenli Bağlantılar ilkeleri oluşturma](set-up-safe-links-policies.md#use-the-microsoft-365-defender-portal-to-create-safe-links-policies) veya [Güvenli Bağlantıları Değiştirme ilkeleri](set-up-safe-links-policies.md#use-the-microsoft-365-defender-portal-to-modify-safe-links-policies).
 
 **Notlar**:
 
-- Aşağıdaki istemciler, Kasa Bağlantıları **ilkelerindeki Aşağıdaki URL'leri yeniden yazma** listelerini tanımaz. İlkelere dahil edilen kullanıcıların URL'lere erişmesi, şu istemcilerdeki Kasa Bağlantıları tarama sonuçlarına göre engellenebilir:
+- Aşağıdaki istemciler, Güvenli Bağlantılar ilkelerinde **aşağıdaki URL'leri yeniden yazma** listelerini tanımaz. İlkelere dahil edilen kullanıcıların URL'lere erişmesi, bu istemcilerdeki Güvenli Bağlantılar taramasının sonuçlarına bağlı olarak engellenebilir:
   - Microsoft Teams
-  - Web uygulamalarını Office
+  - Office web uygulamaları
 
-  Her yerde izin verilen URL'lerin gerçekten evrensel listesi için bkz. [Kiracı İzin Verme/Engelleme Listesini Yönetme](tenant-allow-block-list.md). Ancak, oraya eklenen URL'lerin Kasa Bağlantıları ilkesinde yapılması gerektiğinden, bağlantıların yeniden yazılması Kasa dışında tutulmayacaklarını unutmayın.
+  Her yerde izin verilen URL'lerin gerçekten evrensel listesi için bkz. [Kiracı İzin Verme/Engelleme Listesini Yönetme](tenant-allow-block-list.md). Ancak, oraya eklenen URL'lerin Güvenli Bağlantılar ilkesinde yapılması gerektiğinden Güvenli Bağlantılar yeniden yazmanın dışında tutulmayacaklarını unutmayın.
 
 - Kullanıcı deneyimini geliştirmek için sık kullanılan iç URL'leri listeye eklemeyi göz önünde bulundurun. Örneğin, Skype Kurumsal veya SharePoint gibi şirket içi hizmetleriniz varsa, bu URL'leri taramanın dışında tutmak için ekleyebilirsiniz.
-- Kasa Bağlantıları ilkelerinizde **aşağıdaki URL girişlerini yeniden yazmadıysanız** listeleri gözden geçirmeyi ve gerektiğinde joker karakterleri eklemeyi unutmayın. Örneğin, listenizde gibi `https://contoso.com/a` bir girdi vardır ve daha sonra gibi `https://contoso.com/a/b`alt yolları dahil etmeye karar verirsiniz. Yeni bir girdi eklemek yerine, var olan girdiye joker karakter ekleyerek olur `https://contoso.com/a/*`.
+- Güvenli Bağlantılar ilkelerinizde **aşağıdaki URL girişlerini yeniden yazmadıysanız** listeleri gözden geçirmeyi ve gerektiğinde joker karakterleri eklemeyi unutmayın. Örneğin, listenizde gibi `https://contoso.com/a` bir girdi vardır ve daha sonra gibi `https://contoso.com/a/b`alt yolları dahil etmeye karar verirsiniz. Yeni bir girdi eklemek yerine, var olan girdiye joker karakter ekleyerek olur `https://contoso.com/a/*`.
 - URL girişi başına en fazla üç joker karakter (`*`) ekleyebilirsiniz. Joker karakterler açıkça ön ekler veya alt etki alanları içerir. Örneğin, kişilerin belirtilen etki alanındaki alt etki alanları ve yolları ziyaret etmesine izin verdiğinden, girdi `contoso.com` ile aynı `*.contoso.com/*``*.contoso.com/*` değildir.
 - URL, HTTP'den HTTPS'ye otomatik yeniden yönlendirme kullanıyorsa (örneğin, için `https://www.contoso.com`302 yeniden yönlendirmesi `http://www.contoso.com` ) ve listeye aynı URL için hem HTTP hem de HTTPS girdileri girmeye çalışırsanız, ikinci URL girişinin ilk URL girdisinin yerini aldığına dikkat edebilirsiniz. URL'nin HTTP ve HTTPS sürümleri tamamen ayrıysa bu davranış oluşmaz.
 - Hem HTTP hem de HTTPS sürümlerini dışlamak için http:// veya https:// (yani contoso.com) belirtmeyin.
@@ -338,15 +341,15 @@ Girebileceğiniz değerlerin ve sonuçlarının örnekleri aşağıdaki tabloda 
 |`https://contoso.com/a`|gibi alt yollara erişim izni `https://contoso.com/a`vermez `https://contoso.com/a/b`|
 |`https://contoso.com/a/*`|ve gibi alt yollara erişime `https://contoso.com/a` izin verir `https://contoso.com/a/b`|
 
-## <a name="warning-pages-from-safe-links"></a>Kasa Bağlantılarından uyarı sayfaları
+## <a name="warning-pages-from-safe-links"></a>Güvenli Bağlantılar'dan uyarı sayfaları
 
-Bu bölüm, bir URL'ye tıkladığınızda Kasa Bağlantıları koruması tarafından tetiklenen çeşitli uyarı sayfalarının örneklerini içerir.
+Bu bölüm, bir URL'ye tıkladığınızda Güvenli Bağlantılar koruması tarafından tetiklenen çeşitli uyarı sayfalarının örneklerini içerir.
 
 Çeşitli uyarı sayfalarının güncelleştirildiğini unutmayın. Güncelleştirilmiş sayfaları henüz görmüyorsanız, yakında görürsünüz. Güncelleştirilen sayfalar yeni bir renk düzeni, daha ayrıntılı bilgiler ve verilen uyarı ve önerilere rağmen bir siteye devam etme özelliği içerir.
 
 ### <a name="scan-in-progress-notification"></a>Tarama devam ediyor bildirimi
 
-Tıklanan URL, Kasa Bağlantıları tarafından taranıyor. Bağlantıyı yeniden denemeden önce birkaç dakika beklemeniz gerekebilir.
+Tıklanan URL Güvenli Bağlantılar tarafından taranıyor. Bağlantıyı yeniden denemeden önce birkaç dakika beklemeniz gerekebilir.
 
 :::image type="content" source="../../media/ee8dd5ed-6b91-4248-b054-12b719e8d0ed.png" alt-text="Bağlantının tarandığını belirten bildirim" lightbox="../../media/ee8dd5ed-6b91-4248-b054-12b719e8d0ed.png":::
 
@@ -378,7 +381,7 @@ Tıklanan URL, kötü amaçlı olarak tanımlanan bir siteyi gösterir. Siteye d
 
 ### <a name="blocked-url-warning"></a>Engellenen URL uyarısı
 
-Tıklanan URL, kuruluşunuzdaki bir yönetici tarafından el ile engellendi (Kasa Bağlantıları için genel ayarlarda **aşağıdaki URL'leri engelle** listesi). Bağlantı el ile engellendiği için Kasa Bağlantıları tarafından taranmadı.
+Tıklanan URL, kuruluşunuzdaki bir yönetici tarafından el ile engellendi (Güvenli Bağlantılar için genel ayarlarda **aşağıdaki URL'leri engelle** listesi). Bağlantı, el ile engellendiği için Güvenli Bağlantılar tarafından taranmadı.
 
 Bir yöneticinin belirli URL'leri el ile engellemesi için çeşitli nedenler vardır. Sitenin engellenmemesi gerektiğini düşünüyorsanız yöneticinize başvurun.
 

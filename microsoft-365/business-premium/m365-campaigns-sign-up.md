@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 ms.author: v-kcirillo
 author: cirilk
-manager: scotv
+manager: dansimp
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 ms.assetid: 5abfef7b-5957-484a-b06b-a7c55e013e44
 description: Kampanyalar için Microsoft 365'e adım adım kaydolma. Kampanyanızı e-posta, veri ve iletişim için siber güvenlik tehditlerinden koruyun.
-ms.openlocfilehash: b39d01bc6aa1cf138d230e95493d5f9eeb3cc51b
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: 623298b7a9c2feb2fb535e8f4fbffca5baf42fc7
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65893317"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66491205"
 ---
 # <a name="sign-up-for-microsoft-365-for-campaigns"></a>Kampanyalar için Microsoft 365'e kaydolma 
 
@@ -97,7 +97,7 @@ Sonraki adımlara devam etmek istiyorsanız **Kurulumu Başlat'ı** seçin veya 
 
 ## <a name="steps-to-add-microsoft-365-for-campaigns-to-an-existing-subscription"></a>Kampanyalar için Microsoft 365'i mevcut aboneliğe ekleme adımları
 
-İş için Microsoft 365 aboneliğiniz varsa ve var olan microsoft 365 İş Standardı gibi bir aboneliğiniz varsa, kampanyalar için Microsoft 365 teklifini kullanarak lisans ekleyebilirsiniz.
+İş için Microsoft 365 aboneliğiniz varsa ve var olan bir aboneliğiniz varsa (örneğin, Microsoft 365 İş Standart) Kampanyalar için Microsoft 365 teklifini kullanarak lisans ekleyebilirsiniz.
 
 > [!IMPORTANT]
 > Kampanyalar için Microsoft 365 teklifini mevcut bir Microsoft 365 hesabına ekleyemezsiniz.

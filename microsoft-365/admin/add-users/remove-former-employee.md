@@ -15,6 +15,7 @@ ms.collection:
 - Adm_TOC
 - SPO_Content
 ms.custom:
+- adminvideo
 - MSStore_Link
 - TRN_M365B
 - OKR_SMB_Videos
@@ -27,16 +28,16 @@ search.appverid:
 - MET150
 - MOE150
 description: Eski bir çalışanın oturum açmaması, kuruluş verilerinin güvenliğini sağlamaması ve diğer çalışanların e-posta ve OneDrive verilerine erişmesine izin vermemesi için Microsoft 365 erişimini engelleyin.
-ms.openlocfilehash: 3bff5812d1efd6b38f05303de7ec2c078b31cf01
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: d8b32a2489735469ecdd2af3b479b0705d33be13
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436327"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66486230"
 ---
 # <a name="overview-remove-a-former-employee-and-secure-data"></a>Genel bakış: Eski bir çalışanı ve güvenli verileri kaldırma
 
-Sık sık aldığımız bir soru şudur: "Bir çalışan kuruluşumdan ayrıldığında verilerin güvenliğini sağlamak ve erişimi korumak için ne yapmalıyım?" Bu makale serisinde, bu kullanıcıların Microsoft 365 oturum açamamaları için Microsoft 365 erişimi nasıl engelleyebileceğiniz, kuruluş verilerinin güvenliğini sağlamak için atılması gereken adımlar ve diğer çalışanların e-posta ve OneDrive verilerine erişmesine nasıl izin verebileceğiniz açıklanır.
+Sık sık aldığımız bir soru şudur: "Bir çalışan kuruluşumdan ayrıldığında verilerin güvenliğini sağlamak ve erişimi korumak için ne yapmalıyım?" Bu makale serisinde, bu kullanıcıların Microsoft 365'te oturum açamamalarını sağlamak için Microsoft 365'e erişimi nasıl engelleyebileceğiniz, kuruluş verilerinin güvenliğini sağlamak için atılması gereken adımlar ve diğer çalışanların e-posta ve OneDrive verilerine erişmesine nasıl izin verebileceğiniz açıklanır.
 
 > [!TIP]
 > Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
@@ -69,11 +70,11 @@ Bu serideki adımları tamamlamak için bu Microsoft 365 özelliklerini ve özel
 
 |Adım|Neden yapılmalı|
 |---|---|
-|[1. Adım - Eski bir çalışanın oturum açmasını engelleme ve Microsoft 365 hizmetlerine erişimi engelleme](remove-former-employee-step-1.md)|Bu, eski çalışanınızın Microsoft 365 oturum açmasını engeller ve kişinin Microsoft 365 hizmetlerine erişmesini engeller.|
+|[1. Adım - Eski bir çalışanın oturum açmasını engelleme ve Microsoft 365 hizmetlerine erişimi engelleme](remove-former-employee-step-1.md)|Bu, eski çalışanınızın Microsoft 365'te oturum açmasını engeller ve kişinin Microsoft 365 hizmetlerine erişmesini engeller.|
 |[2. Adım - Eski çalışanın posta kutusunun içeriğini kaydetme](remove-former-employee-step-2.md)|Bu, çalışanın işini devralacak olan kişi veya dava varsa yararlıdır.|
 |[3. Adım - Eski bir çalışanın mobil cihazını silme ve engelleme](remove-former-employee-step-3.md)|Telefondan veya tabletten iş verilerinizi kaldırır.|
 |[4. Adım - Eski çalışanın e-postasını başka bir çalışana iletme veya paylaşılan posta kutusuna dönüştürme](remove-former-employee-step-4.md)|Bu işlem, eski çalışanınızın e-posta adresini etkin tutmanızı sağlar. Hala eski çalışanın adresine e-posta gönderen müşterileriniz veya iş ortaklarınız varsa, bu sayede işi devralan kişiye ulaşabilirler.|
-|[5. Adım - Başka bir çalışana OneDrive ve Outlook verilerine erişim verme](remove-former-employee-step-5.md)|Kullanıcının yalnızca lisansını iptal eder ancak hesabını silmezseniz kullanıcının OneDrive'da bulunan içeriğine, 30 gün geçtikten sonra bile erişebilirsiniz. <p> Hesabı silmeden önce OneDrive ve Outlook başka bir kullanıcıya erişim vermeniz gerekir. Bir çalışanın hesabını sildikten sonra, OneDrive ve Outlook içeriği **30** gün boyunca saklanır. Ancak bu 30 gün boyunca kullanıcının hesabını geri yükleyebilir ve içeriğine erişebilirsiniz. Kullanıcının hesabını geri yüklerseniz, OneDrive ve Outlook içeriği 30 gün sonra bile sizin için erişilebilir kalır.| 
+|[5. Adım - Başka bir çalışana OneDrive ve Outlook verilerine erişim verme](remove-former-employee-step-5.md)|Kullanıcının yalnızca lisansını iptal eder ancak hesabını silmezseniz kullanıcının OneDrive'da bulunan içeriğine, 30 gün geçtikten sonra bile erişebilirsiniz. <p> Hesabı silmeden önce, başka bir kullanıcıya OneDrive ve Outlook erişimi vermelisiniz. Bir çalışanın hesabını sildikten sonra, OneDrive ve Outlook'taki içerik **30** gün boyunca saklanır. Ancak bu 30 gün boyunca kullanıcının hesabını geri yükleyebilir ve içeriğine erişebilirsiniz. Kullanıcının hesabını geri yüklerseniz, OneDrive ve Outlook içeriği 30 gün sonra bile sizin için erişilebilir kalır.| 
 |[6. Adım - Eski bir çalışandan Microsoft 365 lisansını kaldırma ve silme](remove-former-employee-step-6.md)|Lisansı kaldırdığınızda, başka birine atayabilirsiniz. Öte yandan, lisansı silebilir ve bu şekilde başka birini işe alana kadar lisans için ödeme yapmazsınız.  <p> Lisansı kaldırdığınızda veya sildiğinizde, kullanıcının eski e-postası, kişileri ve takvimi **30 gün** boyunca korunur, sonrasında kalıcı olarak silinir. Lisansı kaldırır veya siler ancak hesabı silmezseniz, kullanıcının OneDrive'da bulunan içeriğine 30 gün geçtikten sonra bile erişebilirsiniz.  |
 |[7. Adım - Eski çalışanın kullanıcı hesabını silme](remove-former-employee-step-7.md)|Bu işlem hesabı yönetim merkezinizden kaldırır. Ortamı temiz tutmanızı sağlar.|
 
@@ -81,7 +82,7 @@ Bu serideki adımları tamamlamak için bu Microsoft 365 özelliklerini ve özel
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FOfR?autoplay=false]
 
-Bir çalışan şirketten ayrıldığında, bu çalışanı iş için Microsoft 365 kaldırmanız gerekir. Bunu yapmadan önce, şirket dosyalarına erişmelerini engellemeniz, oluşturdukları belgeleri korumanız ve bir kullanıcıyı kaldırmayla ilişkili diğer birkaç yönetici görevini gerçekleştirmeniz gerekir.
+Bir çalışan şirketten ayrıldığında, bu çalışanı İş için Microsoft 365'ten kaldırmanız gerekir. Bunu yapmadan önce, şirket dosyalarına erişmelerini engellemeniz, oluşturdukları belgeleri korumanız ve bir kullanıcıyı kaldırmayla ilişkili diğer birkaç yönetici görevini gerçekleştirmeniz gerekir.
 
 1. Yönetim merkezinde **Kullanıcılar'ı ve** **ardından Etkin kullanıcılar'ı** seçin.
 1. Kaldırmak istediğiniz kullanıcıyı seçin ve ardından **Kullanıcıyı sil'i** seçin.
@@ -96,6 +97,6 @@ Bir kullanıcıyı kaldırdıktan sonra hesabını geri yüklemek için en fazla
 ## <a name="related-content"></a>İlgili içerik
 
 [Kullanıcıyı geri yükleme](restore-user.md) (makale)\
-[Microsoft 365 yeni çalışan ekleme](add-new-employee.md) (makale)\
+[Microsoft 365'e yeni bir çalışan ekleme](add-new-employee.md) (makale)\
 [Kullanıcılara lisans atama](../manage/assign-licenses-to-users.md) (makale)\
 [Kullanıcılardan lisans atamalarını kaldırma](../manage/remove-licenses-from-users.md) (makale)

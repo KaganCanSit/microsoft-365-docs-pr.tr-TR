@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: dansimp
 audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
 ms.collection:
@@ -22,12 +22,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Microsoft 365 İş Ekstra'da yönetici hesaplarınızı ayarlamayı ve korumayı öğrenin.
-ms.openlocfilehash: 1428ee6b447f3f841e7e8e9b77cfd82c2f7a6444
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: e20fa8f408668287065f6aa1e30490fd8e3c2fec
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65320035"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489935"
 ---
 # <a name="protect-your-administrator-accounts-in-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'de yönetici hesaplarınızı koruma
 
@@ -36,11 +36,11 @@ Yönetici hesapları yükseltilmiş ayrıcalıklarla birlikte geldiğinden, bilg
 - Acil durumlar için ek yönetici hesabı ayarlama.
 - Bu hesapları koruma.
 
-Microsoft 365 kaydolup bilgilerinizi girdiğinizde otomatik olarak Genel Yönetici olursunuz (Genel yönetici olarak da adlandırılır). Genel yönetici, kullanıcı hesaplarının ve Microsoft yönetim merkezindeki diğer tüm ayarların ([https://admin.microsoft.com](https://admin.microsoft.com) ) nihai denetimine sahiptir, ancak farklı erişim derecelerine sahip birçok farklı türde yönetici hesabı vardır. Her [yönetici rolü](/office365/admin/add-users/about-admin-roles) türü için farklı erişim düzeyleri hakkında bilgi için yönetici rolleri hakkında bilgi için bkz.
+Microsoft 365'e kaydolup bilgilerinizi girdiğinizde otomatik olarak Genel Yönetici olursunuz (Genel yönetici olarak da adlandırılır). Genel yönetici, kullanıcı hesaplarının ve Microsoft yönetim merkezindeki diğer tüm ayarların ([https://admin.microsoft.com](https://admin.microsoft.com) ) nihai denetimine sahiptir, ancak farklı erişim derecelerine sahip birçok farklı türde yönetici hesabı vardır. Her [yönetici rolü](/office365/admin/add-users/about-admin-roles) türü için farklı erişim düzeyleri hakkında bilgi için yönetici rolleri hakkında bilgi için bkz.
 
 ## <a name="create-additional-admin-accounts"></a>Ek yönetici hesapları oluşturma
 
-Yalnızca yönetim için yönetici hesaplarını kullanın. Yöneticiler, Office uygulamalarının düzenli kullanımı için ayrı bir kullanıcı hesabına sahip olmalı ve yalnızca hesap ve cihazları yönetmek için gerektiğinde ve diğer yönetici işlevleri üzerinde çalışırken yönetim hesaplarını kullanmalıdır. Ayrıca, Microsoft 365 lisansını yönetici hesaplarından kaldırmak da iyi bir fikirdir, böylece bunlar için ödeme yapmak zorunda değilsiniz.
+Yalnızca yönetim için yönetici hesaplarını kullanın. Yöneticiler, Office uygulamalarının düzenli kullanımı için ayrı bir kullanıcı hesabına sahip olmalı ve yalnızca hesapları ve cihazları yönetmek için gerektiğinde ve diğer yönetici işlevleri üzerinde çalışırken yönetim hesaplarını kullanmalıdır. Ayrıca, microsoft 365 lisansını yönetici hesaplarından kaldırmak da iyi bir fikirdir, böylece bu lisanslar için ödeme yapmak zorunda değilsiniz.
 
 Yöneticiye başka bir güvenilir çalışana erişim vermek için en az bir ek Genel yönetici hesabı ayarlamak istersiniz. Kullanıcı yönetimi için ayrı yönetici hesapları da oluşturabilirsiniz (bu role **Kullanıcı yönetimi yöneticisi** adı verilir). Daha fazla bilgi için bkz. [yönetici rolleri hakkında](/office365/admin/add-users/about-admin-roles).
 
@@ -56,7 +56,7 @@ Ek yönetici hesapları oluşturmak için:
 
  1. **Ürün lisansları** bilgilerini girin ve ayarlayın.
 
- 1. **İsteğe bağlı ayarlar** bölümünde, uygunsa Yönetim merkezi erişimi ekleme de dahil olmak üzere kullanıcının rolünü tanımlayın.
+ 1. **İsteğe bağlı ayarlar'da**, uygunsa Yönetici merkezi erişimi ekleme dahil olmak üzere kullanıcının rolünü tanımlayın.
 
     :::image type="content" source="media/m365bp-global-admin.png" alt-text="Yeni kullanıcı rollerini tanımlayın.":::
 

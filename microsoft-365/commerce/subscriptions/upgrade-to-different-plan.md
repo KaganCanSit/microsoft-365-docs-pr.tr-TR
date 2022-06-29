@@ -21,14 +21,14 @@ ms.custom:
 search.appverid: MET150
 description: Planları yükseltmenin en kolay yolu, yönetim merkezindeki Yükseltme sekmesini kullanmaktır. Ancak Yükseltme sekmesi her zaman desteklenmez.
 ms.date: 04/21/2021
-ms.openlocfilehash: 4578730d82fddd5bdd3d0d25dd7fd1e16414808b
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: 557070177fac2e1ae91d3ddb9e2125221c6b4f3f
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66102272"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489156"
 ---
-# <a name="upgrade-to-a-different-plan"></a>Başka bir plana yükseltme
+# <a name="upgrade-to-a-different-microsoft-plan"></a>Farklı bir Microsoft planına yükseltme
 
 İşletmeniz değiştiğinde veya daha fazla özelliğe ihtiyacınız olduğunda planları yükseltebilirsiniz. Bunu yapmanın en kolay yolu, yönetim merkezindeki **Yükselt** sekmesini kullanmaktır. Ancak **Yükseltme** sekmesinin kullanılması her durumda desteklenmez. Bazı durumlarda, planları el ile değiştirebilirsiniz.
 
@@ -36,7 +36,7 @@ ms.locfileid: "66102272"
 
 **Yükseltme** sekmesini kullandığınızda, yeni bir plan satın alma işleminde size yol gösterilir. Yeni planda tüm kullanıcılara otomatik olarak lisans atanır ve eski planınız sizin için iptal edilir.
 
-1. Yönetici merkezinde <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Ürünlerinizi</a> **Faturalama** \> sayfasına gidin.
+1. Yönetim merkezinde **Faturalama** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Ürünleriniz</a> sayfasına gidin.
 2. Yükseltmek istediğiniz aboneliği seçin.
 3. Abonelik ayrıntıları sayfasındaki **Ürün ayrıntıları ve yükseltmeleri'nin** altında **Kuruluşunuz için önerilen yükseltmeleri görüntüle'yi** seçin.
 4. Yükseltmek istediğiniz planı bulun, ardından **Yükselt** düğmesini seçin.
@@ -118,7 +118,7 @@ Hizmet yüksek miktarda planı yükseltme aşamasında olduğundan **Yükseltme*
 
 #### <a name="the-plan-that-you-want-to-upgrade-to-isnt-a-supported-option"></a>Yükseltmek istediğiniz plan desteklenen bir seçenek değil
 
-Planları yükselttiğinizde, yükseltme için kullanabileceğiniz planlar geçerli planınızdaki hizmetlere göre görüntülenir. Yalnızca Exchange Online veya SharePoint Online gibi veriyle ilgili hizmetlere sahip bir plana veya bunların daha yüksek bir sürümüne yükseltebilirsiniz. Bu, yükseltme sırasında kullanıcıların\'bu hizmetlerle ilgili verileri kaybetmemesini sağlar.
+Planları yükselttiğinizde, yükseltme için kullanabileceğiniz planlar geçerli planınızdaki hizmetlere göre görüntülenir. Yalnızca Exchange Online veya SharePoint Online gibi verilerle ilgili hizmetlere sahip bir plana veya bunların daha yüksek bir sürümüne yükseltebilirsiniz. Bu, yükseltme sırasında kullanıcıların\'bu hizmetlerle ilgili verileri kaybetmemesini sağlar.
 
 Planınız planları otomatik olarak yükseltmeye uygun değilse, bunun yerine [planları el ile değiştirebilirsiniz](change-plans-manually.md) . Yardım için [destek de arayabilirsiniz](../../admin/get-help-support.md) .
 
@@ -144,10 +144,10 @@ Bu sorunu çözmek için <a href="https://go.microsoft.com/fwlink/p/?linkid=8420
 
 Eski abonelikteki kullanıcılar otomatik olarak yeni aboneliğe taşınır.
 
-Eski aboneliğiniz birden çok hizmet içeriyorsa ve kullanıcılarınızın hangi hizmetlere atandığını değiştirdiyseniz, bu değişiklikleri daha sonra yeniden oluşturabilmek için planları yükseltmeden önce bunu not almak isteyebilirsiniz. Tüm kullanıcılara, yeni abonelikteki tüm hizmetlere erişim izni verilir. Örneğin, daha önce kullanıcılarınızın 100'ünün tamamı için Microsoft 365 İş Ekstra satın aldıysanız ancak bunların 50'sinden SharePoint Online hizmetinin atamasını kaldırdıysanız, planları yükselttikten sonra bu değişiklik tutulmaz.
+Eski aboneliğiniz birden çok hizmet içeriyorsa ve kullanıcılarınızın hangi hizmetlere atandığını değiştirdiyseniz, bu değişiklikleri daha sonra yeniden oluşturabilmek için planları yükseltmeden önce bunu not almak isteyebilirsiniz. Tüm kullanıcılara, yeni abonelikteki tüm hizmetlere erişim izni verilir. Örneğin, daha önce kullanıcılarınızın 100'ünün tamamı için Microsoft 365 İş Ekstra satın aldıysanız ancak bunların 50'sinden SharePoint Online hizmetinin atamasını kaldırdıysanız, planları yükselttikten sonra bu değişiklik saklanmaz.
 
 Planları yükseltmeden önce birden fazla aboneliğiniz varsa ve kullanıcılara birden fazla aboneliğe lisans atanmışsa, bu atama düzeni yeni abonelikte mümkün olduğunca korunur.
-Yükseltme sırasında Exchange posta kutuları ve SharePoint Çevrimiçi belgeler, listeler ve diğer bilgiler de dahil olmak üzere tüm kullanıcı verileri korunur.
+Yükseltme sırasında Exchange posta kutuları ve SharePoint Online belgeleri, listeleri ve diğer bilgiler de dahil olmak üzere tüm kullanıcı verileri korunur.
   
 ### <a name="billing"></a>Faturalama
 
@@ -165,4 +165,4 @@ Plan yükseltmenizin tamamlanacağı gün, eski aboneliğinizdeki faturalama kap
 ## <a name="related-content"></a>İlgili içerik
 
 [Planları el ile değiştirme](change-plans-manually.md) (makale)\
-[İş planları için Microsoft 365 değiştirmeden önce verileri yedekleme](back-up-data-before-switching-plans.md) (makale)
+[İş için Microsoft 365 planlarını değiştirmeden önce verileri yedekleme](back-up-data-before-switching-plans.md) (makale)

@@ -21,16 +21,16 @@ search.appverid:
 - BCS160
 ms.assetid: 165f46e8-3533-4d76-be57-97f81ebd40f2
 description: Kiracınızın lisanslarındaki özellikleri planlamak, geçirmek ve uygulamak için adım adım araçlar edinin. Çalıştırmanız gereken bir hizmeti veya uygulamayı ayarlamaya yönelik bir kılavuz bulun.
-ms.openlocfilehash: 832c551c9f42082d4c55c8a7902a740ef124012d
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: f1d16517d92e059fc6ca2646fc64ae7ba63ce3a8
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078556"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66491667"
 ---
 # <a name="setup-guides-for-microsoft-365-and-office-365-services"></a>Microsoft 365 ve Office 365 hizmetleri için kurulum kılavuzları
 
-Microsoft 365 ve Office 365 kurulum kılavuzları, kiracınızı, uygulamalarınızı ve hizmetlerinizi planlamak ve dağıtmak için size özel rehberlik ve kaynaklar sağlar. Bu kılavuzlar, [Microsoft 365 FastTrack](https://www.microsoft.com/fasttrack/microsoft-365) ekleme uzmanlarının tek tek etkileşimlerde paylaştığı en iyi yöntemler kullanılarak oluşturulur ve Microsoft 365 yönetim merkezi içindeki tüm yöneticiler tarafından kullanılabilir. Ürün kurulumu, güvenlik özelliklerini etkinleştirme, işbirliği araçlarını dağıtma ve gelişmiş dağıtımları hızlandırmak için betikler sağlama hakkında bilgi verir.
+Microsoft 365 ve Office 365 kurulum kılavuzları, kiracınızı, uygulamalarınızı ve hizmetlerinizi planlamak ve dağıtmak için size özel rehberlik ve kaynaklar sağlar. Bu kılavuzlar[, Microsoft 365 FastTrack](https://www.microsoft.com/fasttrack/microsoft-365) ekleme uzmanlarının tek tek etkileşimlerde paylaştığı en iyi yöntemler kullanılarak oluşturulur ve Microsoft 365 yönetim merkezi içindeki tüm yöneticiler tarafından kullanılabilir. Ürün kurulumu, güvenlik özelliklerini etkinleştirme, işbirliği araçlarını dağıtma ve gelişmiş dağıtımları hızlandırmak için betikler sağlama hakkında bilgi verir.
 
 > [!NOTE]
 > Microsoft 365 kurulum kılavuzlarına erişmek için Genel Okuyucu gibi bir yönetici rolüne sahip olmanız gerekir. Kiracıdaki ayarları değiştirmek için kılavuzları yalnızca Genel Yönetici rolüne sahip yöneticiler kullanabilir.
@@ -53,7 +53,7 @@ Kurulum kılavuzları, Microsoft 365 yönetim merkezi [Kurulum kılavuzu](https:
 
 ### <a name="prepare-your-environment"></a>Ortamınızı hazırlama
 
-[Ortamınızı hazırlama](https://aka.ms/prepareyourenvironment) kılavuzu, kuruluşunuzun ortamını Microsoft 365 ve Office 365 hizmetleri için hazırlamanıza yardımcı olur. Hedefleriniz ne olursa olsun, başarılı bir dağıtım sağlamak için tamamlamanız gereken görevler vardır. Ortamınızı hazırlarken herhangi bir hata olmaması için, etki alanınızı bağlama, kullanıcı ekleme, lisans atama, Exchange Online ile e-posta ayarlama ve Office uygulamaları yükleme veya dağıtma adım adım yönergeler sağlanır.
+[Ortamınızı hazırlama](https://aka.ms/prepareyourenvironment) kılavuzu, kuruluşunuzun ortamını Microsoft 365 ve Office 365 hizmetleri için hazırlamanıza yardımcı olur. Hedefleriniz ne olursa olsun, başarılı bir dağıtım sağlamak için tamamlamanız gereken görevler vardır. Ortamınızı hazırlarken herhangi bir hata olmaması için, etki alanınızı bağlama, kullanıcı ekleme, lisans atama, Exchange Online ile e-posta ayarlama ve Office uygulamalarını yükleme veya dağıtma adım adım yönergeler sağlanır.
 
 ### <a name="email-setup-guide"></a>E-posta kurulum kılavuzu
 
@@ -61,35 +61,39 @@ Kurulum kılavuzları, Microsoft 365 yönetim merkezi [Kurulum kılavuzu](https:
 
 ### <a name="migrate-gmail-contacts-and-calendar-items"></a>Gmail kişilerini ve takvim öğelerini geçirme
 
-Gmail kullanıcılarının posta kutusunu Microsoft 365 geçirdiğinizde e-posta iletileri geçirilir, ancak kişiler ve takvim öğeleri geçirilmez. [Gmail kişileri ve takvim danışmanı](https://aka.ms/gmailcontactscalendar), Outlook.com, Outlook istemcisi veya PowerShell ile içeri ve dışarı aktarma yöntemlerini kullanarak Google kişilerini ve Google takvim öğelerini Microsoft 365 aktarmak için adımlar sağlar.
+Gmail kullanıcılarının posta kutusunu Microsoft 365'e geçirdiğinizde, e-posta iletileri geçirilir, ancak kişiler ve takvim öğeleri geçirilmez. [Gmail kişileri ve takvim danışmanı](https://aka.ms/gmailcontactscalendar), Outlook.com, Outlook istemcisi veya PowerShell ile içeri ve dışarı aktarma yöntemlerini kullanarak Google kişilerini ve Google takvim öğelerini Microsoft 365'e aktarma adımlarını sağlar.
 
-### <a name="microsoft-365-setup-guide"></a>kurulum kılavuzu Microsoft 365
+### <a name="microsoft-365-setup-guide"></a>Microsoft 365 kurulum kılavuzu
 
-[Microsoft 365 kurulum kılavuzu](https://aka.ms/microsoft365setupguide), üretkenlik araçlarını, güvenlik ilkelerini ve cihaz yönetimi özelliklerini ayarlarken size rehberlik sağlar. Kurumsal abonelik için Microsoft 365 İş Ekstra veya Microsoft 365, kuruluşunuzun cihazlarını ayarlamak ve yapılandırmak için bu danışmanı kullanabilirsiniz.
+[Microsoft 365 kurulum kılavuzu](https://aka.ms/microsoft365setupguide), üretkenlik araçlarını, güvenlik ilkelerini ve cihaz yönetimi özelliklerini ayarlarken size rehberlik sağlar. Microsoft 365 İş Ekstra veya Kurumsal için Microsoft 365 aboneliğiyle, kuruluşunuzun cihazlarını ayarlamak ve yapılandırmak için bu danışmanı kullanabilirsiniz.
 
-Bulut hizmetlerinizi etkinleştirmek, cihazları desteklenen en son Windows 10 sürümüne güncelleştirmek ve cihazları tek bir merkezi konumda Azure Active Directory (Azure AD) olarak birleştirmek için rehberlik ve kaynaklara erişim elde edersiniz.
+Bulut hizmetlerinizi etkinleştirmek, cihazları desteklenen en son Windows 10 sürümüne güncelleştirmek ve cihazları Azure Active Directory'ye (Azure AD) tek bir merkezi konumda birleştirmek için rehberlik ve kaynaklara erişim elde edersiniz.
 
 ### <a name="remote-work-setup-guide"></a>Uzaktan çalışma kurulum kılavuzu
 
 [Uzaktan çalışma kurulum kılavuzu](https://aka.ms/remoteworksetup), kuruluşlara kullanıcılarınızın uzaktan başarıyla çalışabilmesi, verilerinizin güvenli olması ve kullanıcıların kimlik bilgilerinin korunması için gereken ipuçlarını ve kaynakları sağlar.
 
-Uzaktan çalışanların cihaz trafiğini hem buluttaki Microsoft 365 kaynaklarına hem de kuruluşunuzun ağına en iyi duruma getirmek için rehberlik alırsınız ve bu da uzaktan erişim VPN altyapınızın üzerindeki baskıyı azaltır.
+Uzaktan çalışanların hem buluttaki Microsoft 365 kaynaklarına hem de kuruluşunuzun ağına yönelik cihaz trafiğini iyileştirmeye yönelik yönergeler alırsınız ve bu da uzaktan erişim VPN altyapınızın üzerindeki baskıyı azaltır.
 
-### <a name="microsoft-edge-setup-guide"></a>kurulum kılavuzunu Microsoft Edge
+### <a name="microsoft-edge-setup-guide"></a>Microsoft Edge kurulum kılavuzu
 
 Microsoft Edge, size birinci sınıf uyumluluk ve performans, hak ettiğiniz güvenlik ve gizlilik ve web'in en iyi özelliklerini sunmak için baştan sona yeniden oluşturuldu.
 
-[Microsoft Edge kurulum kılavuzu](https://aka.ms/edgeadvisoradmin), kuruluşunuzda erişilen sitelerin IE modunu kullanması gerekebileceğini görmek, önemli güvenlik özelliklerini gözden geçirmek ve yapılandırmak, kuruluşunuzun gereksinimlerini karşılamak için gizlilik ilkelerini ve uyumluluk ilkelerini yapılandırmak ve cihazlarınızda web erişimini yönetmek için Enterprise Site Bulma'yı yapılandırmanıza yardımcı olur. Microsoft Edge tek tek cihazlara indirebilirsiniz veya kuruluşunuzdaki birden çok kullanıcıya grup ilkesi, Configuration Manager veya Microsoft Intune ile nasıl dağıtabileceğinizi göstereceğiz.
+[Microsoft Edge kurulum kılavuzu](https://aka.ms/edgeadvisoradmin), kuruluşunuzda erişilen sitelerin IE modunu kullanması, önemli güvenlik özelliklerini gözden geçirmesi ve yapılandırması, kuruluşunuzun gereksinimlerini karşılamak için gizlilik ilkelerini ve uyumluluk ilkelerini yapılandırmanız ve cihazlarınızda web erişimini yönetmeniz gerekebileceğini görmek için Enterprise Site Discovery'yi yapılandırmanıza yardımcı olur. Microsoft Edge'i tek tek cihazlara indirebilirsiniz veya grup ilkesi, Configuration Manager veya Microsoft Intune ile kuruluşunuzdaki birden çok kullanıcıya nasıl dağıtabileceğinizi göstereceğiz.
 
 ### <a name="configure-ie-mode-for-microsoft-edge"></a>Microsoft Edge için IE modunu yapılandırma
 
-Microsoft Edge zaten dağıttıysanız ve yalnızca IE modunu yapılandırmak istiyorsanız, [Microsoft Edge için IE modunu yapılandırma kılavuzu](https://aka.ms/configureiemodeadmin), Enterprise Site Bulma yapılandırmasını otomatikleştirmek için betikler sağlar. Ayrıca kullanıcılarınıza dağıtmak üzere bir Enterprise Modu Site Listesi oluşturmanıza yardımcı olacak bulut tabanlı bir araçtan IE modu önerileri alırsınız.
+Microsoft Edge'i zaten dağıttıysanız ve yalnızca IE modunu yapılandırmak istiyorsanız, [Microsoft Edge için IE modunu yapılandırma kılavuzu](https://aka.ms/configureiemodeadmin) , Kurumsal Site Bulma yapılandırmasını otomatikleştirmek için betikler sağlar. Ayrıca kullanıcılarınıza dağıtılacak bir Kurumsal Mod Site Listesi oluşturmanıza yardımcı olacak bulut tabanlı bir araçtan IE modu önerileri alırsınız.
 
-### <a name="microsoft-search-setup-guide"></a>kurulum kılavuzunu Microsoft Arama
+### <a name="microsoft-search-setup-guide"></a>Microsoft Search kurulum kılavuzu
 
-Microsoft Arama, kuruluşunuzun üzerinde çalıştığı şeyi tamamlamak için gerekenleri bulmasına yardımcı olur. İster kişileri, dosyaları, kuruluş şemalarını, siteleri veya sık sorulan soruların yanıtlarını arıyor olun, kuruluşunuz yanıt almak için iş günü boyunca Microsoft Arama kullanabilir.
+Microsoft Search, kuruluşunuzun üzerinde çalıştığı şeyi tamamlamak için gerekenleri bulmasına yardımcı olur. kişiler, dosyalar, kuruluş grafikleri, siteler veya sık sorulan soruların yanıtlarını arıyor olun, kuruluşunuz yanıt almak için iş günü boyunca Microsoft Search'ü kullanabilir.
 
-[Microsoft Arama kurulum kılavuzu](https://aka.ms/MicrosoftSearchSetup), Microsoft Arama bir grup kullanıcı için pilot olarak kullanmak veya kuruluşunuzdaki herkese dağıtmak isteyip istemediğinizi yapılandırmanıza yardımcı olur. Arama yöneticileri ve Arama düzenleyicileri atayacaksınız ve ardından Bing uzantısını Chrome'a ekleme veya Bing varsayılan arama altyapınız olarak ayarlama gibi yanıtlar ve daha fazla seçenekle kullanıcılarınız için arama deneyimini özelleştireceksiniz.
+[Microsoft Search kurulum kılavuzu](https://aka.ms/MicrosoftSearchSetup), Microsoft Search'ün bir kullanıcı grubuna pilot olarak mı yoksa kuruluşunuzdaki herkese mi dağıtılmasını istediğinizi yapılandırmanıza yardımcı olur. Arama yöneticileri ve Arama düzenleyicileri atayacaksınız ve ardından Bing uzantısını Chrome'a ekleme veya Bing'i varsayılan arama altyapınız olarak ayarlama gibi yanıtlar ve daha fazla seçenekle kullanıcılarınız için arama deneyimini özelleştireceksiniz.
+
+### <a name="block-use-of-internet-explorer-in-your-organization"></a>Kuruluşunuzda Internet Explorer kullanımını engelleme
+
+Windows 10 sürümlerinin çoğu için Internet Explorer 11 için Microsoft desteği yakında sona eriyor. [Kuruluşunuzda Internet Explorer kullanımını engelleme kılavuzu](https://aka.ms/retireinternetexplorer), kullanıcılarınızın Internet Explorer'ı kullanan eski web uygulamalarını çalıştırmaya devam etmesini sağlar. Bu kılavuz, bu kullanıcıları IE moduyla Microsoft Edge'e taşımanıza da yardımcı olur.
 
 ## <a name="guides-for-authentication-and-access"></a>Kimlik doğrulaması ve erişim kılavuzları
 
@@ -99,15 +103,15 @@ Microsoft Arama, kuruluşunuzun üzerinde çalıştığı şeyi tamamlamak için
 
 ### <a name="identity-security-for-teams"></a>Teams için kimlik güvenliği
 
-[Ekipler için Kimlik güvenliği kılavuzu](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/teamsidentity), kullanıcılarınızın güvende olmasını ve **Teams** kullanarak en verimli şekilde zaman geçirmesini sağlamak için atabileceğiniz bazı temel güvenlik adımlarını gerçekleştirmenize yardımcı olur.
+[Ekipler için Kimlik güvenliği kılavuzu](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/teamsidentity), kullanıcılarınızın güvende olduğundan ve **Teams'i** kullanarak en verimli şekilde zaman geçirmesini sağlamak için atabileceğiniz bazı temel güvenlik adımlarını gerçekleştirmenize yardımcı olur.
 
-### <a name="add-or-sync-users-to-microsoft-365"></a>kullanıcıları Microsoft 365 ekleme veya eşitleme
+### <a name="add-or-sync-users-to-microsoft-365"></a>Microsoft 365'e kullanıcı ekleme veya eşitleme
 
-[Bu kılavuz](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/modernonboarding/identitywizard), kullanıcı hesaplarınızı **Microsoft 365** ayarlama sürecini kolaylaştırmaya yardımcı olur. Ortamınıza ve gereksinimlerinize göre kullanıcıları tek tek eklemeyi, şirket içi dizininizi Azure AD bulut eşitleme veya Azure AD Bağlan ile geçirmeyi veya gerektiğinde mevcut eşitleme sorunlarını gidermeyi seçebilirsiniz.
+[Bu kılavuz](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/modernonboarding/identitywizard) , kullanıcı hesaplarınızı **Microsoft 365'te** ayarlama sürecini kolaylaştırmaya yardımcı olur. Ortamınıza ve gereksinimlerinize bağlı olarak, kullanıcıları tek tek eklemeyi, şirket içi dizininizi Azure AD bulut eşitlemesi veya Azure AD Connect ile geçirmeyi veya gerektiğinde mevcut eşitleme sorunlarını gidermeyi seçebilirsiniz.
 
 ### <a name="azure-ad-setup-guide"></a>kurulum kılavuzunu Azure AD
 
-[Azure AD kurulum kılavuzu](https://aka.ms/aadpguidance), kuruluşunuzun güçlü bir güvenlik temeline sahip olduğundan emin olmak için bilgi sağlar. Bu kılavuzda, otomatik eşitlemeler sırasında karma kimliğinizin durumunu izleyebilebilmeniz için yöneticiler için Azure Rol tabanlı erişim denetimi (Azure RBAC), şirket içi dizininiz için Azure AD Bağlan ve Azure AD Bağlan Sistem Durumu gibi ilk özellikleri ayarlayacaksınız.
+[Azure AD kurulum kılavuzu](https://aka.ms/aadpguidance), kuruluşunuzun güçlü bir güvenlik temeline sahip olduğundan emin olmak için bilgi sağlar. Bu kılavuzda yöneticiler için Azure Rol tabanlı erişim denetimi (Azure RBAC), şirket içi dizininiz için Connect Azure AD ve otomatik eşitlemeler sırasında karma kimliğinizin durumunu izleyebilmesi için Connect Health Azure AD gibi ilk özellikleri ayarlayacaksınız.
 
 Ayrıca self servis parola sıfırlamalarını etkinleştirme, koşullu erişim ve isteğe bağlı gelişmiş kimlik koruması ve kullanıcı sağlama otomasyonu da dahil olmak üzere tümleşik üçüncü taraf oturum açma ile ilgili temel bilgileri içerir.
 
@@ -191,57 +195,65 @@ Hassas bilgilerinizin korunduğundan emin olmak için bilgi koruma stratejinize 
 
 ### <a name="microsoft-defender-for-cloud-apps-setup-guide"></a>kurulum kılavuzunu Microsoft Defender for Cloud Apps
 
-[Microsoft Defender for Cloud Apps kurulum kılavuzu](https://aka.ms/cloudappsecuritysetup), Cloud Discovery çözümünüzü ayarlamak için kolay takip eden dağıtım ve yönetim yönergeleri sağlar. Cloud Discovery ile desteklenen güvenlik uygulamalarınızı tümleştirecek ve ardından trafik günlüklerini kullanarak kuruluşunuzun kullandığı bulut uygulamalarını dinamik olarak keşfedecek ve analiz edeceğiz. Ayrıca Bulut için Defender Uygulamaları çözümü aracılığıyla sağlanan yüksek riskli kullanımı tanımlamak için tehdit algılama ilkeleri, erişimi tanımlamak için bilgi koruma ilkeleri ve etkinliği izlemek için gerçek zamanlı oturum denetimleri gibi özellikleri de ayarlayacaksınız. Bu özelliklerle, ortamınız tüm Microsoft ve üçüncü taraf bulut hizmetlerinizde siber tehditleri belirlemek ve bunlarla mücadele etmek için gelişmiş görünürlük, veri taşıma denetimi ve analiz sağlar.
+[Microsoft Defender for Cloud Apps kurulum kılavuzu](https://aka.ms/cloudappsecuritysetup), Cloud Discovery çözümünüzü ayarlamak için kolay takip eden dağıtım ve yönetim yönergeleri sağlar. Cloud Discovery ile desteklenen güvenlik uygulamalarınızı tümleştirecek ve ardından trafik günlüklerini kullanarak kuruluşunuzun kullandığı bulut uygulamalarını dinamik olarak keşfedecek ve analiz edeceğiz. Ayrıca, yüksek riskli kullanımı tanımlamak için tehdit algılama ilkeleri, erişimi tanımlamak için bilgi koruma ilkeleri ve etkinliği izlemek için gerçek zamanlı oturum denetimleri de dahil olmak üzere Cloud Apps için Defender çözümü aracılığıyla kullanılabilen özellikleri ayarlayacaksınız. Bu özelliklerle, ortamınız tüm Microsoft ve üçüncü taraf bulut hizmetlerinizde siber tehditleri belirlemek ve bunlarla mücadele etmek için gelişmiş görünürlük, veri taşıma denetimi ve analiz sağlar.
+
+### <a name="audit-solutions-setup-guide"></a>Çözüm kurulum kılavuzunu denetleme
+
+[Microsoft 365 denetim çözümleri kılavuzu](https://aka.ms/auditsolutionsetup), kuruluşların güvenlik olaylarına, adli araştırmalara ve uyumluluk yükümlülüklerine etkili bir şekilde yanıt vermelerine yardımcı olmak için tümleşik bir çözüm sağlar. Microsoft 365'te denetim çözümlerini kullandığınızda, farklı Microsoft 365 hizmetlerinde gerçekleştirilen etkinlikler için denetim günlüğünde arama yapabilirsiniz.
+
+### <a name="ediscovery-solutions-setup-guide"></a>eBulma çözümleri kurulum kılavuzu
+
+eBulma, yasal davalarda kanıt olarak kullanılabilecek elektronik bilgileri tanımlama ve teslim etme işlemidir. eBulma çözümleri kurulum kılavuzu, Microsoft Purview'da Exchange Online, OneDrive İş, SharePoint Online, Microsoft Teams, Microsoft 365 Grupları ve Yammer topluluklarında içerik aramanıza olanak sağlayan eKeşif araçlarının kullanılmasına yardımcı olabilir.
 
 ## <a name="guides-for-collaboration"></a>İşbirliği kılavuzları
 
 ### <a name="build-your-employee-experience"></a>Çalışan deneyiminizi oluşturma
 
-[Çalışan deneyimi panosuyla](https://aka.ms/EmployeeExperienceDashboard) çalışanlarınızın birlikte çalışma şeklini dönüştürün. Sorunsuz ekip çalışması için Microsoft 365 kullanarak üretken, uyumlu ekipler oluşturun ve çalışanların liderlik ve kuruluşun geri kalanıyla etkileşimde kalmasını sağlayın. Çalışanlarınızın tüm iş etkinliklerinde etkili olmasını sağlayın. Bu kılavuzlar, üretkenliği artırmaya yardımcı olmak için kuruluşunuz genelinde işbirliği oluşturmak için SharePoint, Teams ve Yammer kullanma yönergelerini sağlar.
+[Çalışan deneyimi panosuyla](https://aka.ms/EmployeeExperienceDashboard) çalışanlarınızın birlikte çalışma şeklini dönüştürün. Sorunsuz ekip çalışması için Microsoft 365'i kullanarak üretken, uyumlu ekipler oluşturun ve çalışanların liderlik ve kuruluşun geri kalanıyla etkileşimde kalmasını sağlayın. Çalışanlarınızın tüm iş etkinliklerinde etkili olmasını sağlayın. Bu kılavuzlar, üretkenliği artırmaya yardımcı olmak amacıyla kuruluşunuz genelinde işbirliği oluşturmak için SharePoint, Teams ve Yammer'ın nasıl kullanılacağına ilişkin yönergeler sağlar.
 
 ### <a name="microsoft-365-apps-setup-guide"></a>kurulum kılavuzunu Microsoft 365 Uygulamaları
 
-[Microsoft 365 Uygulamaları kurulum kılavuzu](https://aka.ms/OPPquickstartguide), kullanıcılarınızın cihazlarının Word, Excel, PowerPoint ve OneNote gibi Office ürünlerinin en son sürümünü çalıştırmasını sağlar. Yönetim araçlarıyla kurumsal dağıtımlara kolay kendi kendine yükleme seçenekleri içeren çeşitli dağıtım yöntemleri hakkında rehberlik alacaksınız. Yönergeler ortamınızı değerlendirmenize, özel dağıtım gereksinimlerinizi öğrenmenize ve yüklemenin başarılı olmasını sağlamak için gerekli destek araçlarını uygulamanıza yardımcı olur.
+[Microsoft 365 Uygulamaları kurulum kılavuzu](https://aka.ms/OPPquickstartguide), kullanıcılarınızın cihazlarını Word, Excel, PowerPoint ve OneNote gibi Office ürünlerinin en son sürümünü çalıştırmanıza yardımcı olur. Yönetim araçlarıyla kurumsal dağıtımlara kolay kendi kendine yükleme seçenekleri içeren çeşitli dağıtım yöntemleri hakkında rehberlik alacaksınız. Yönergeler ortamınızı değerlendirmenize, özel dağıtım gereksinimlerinizi öğrenmenize ve yüklemenin başarılı olmasını sağlamak için gerekli destek araçlarını uygulamanıza yardımcı olur.
 
 ### <a name="mobile-apps-setup-guide"></a>Mobil uygulamalar kurulum kılavuzu
 
-[Mobil uygulamalar kurulum kılavuzu](https://aka.ms/officeappguidance), Windows, iOS ve Android mobil cihazlarınıza Office uygulamaları indirme ve yükleme yönergeleri sağlar. Bu kılavuz, telefon ve tablet cihazlarınıza Microsoft 365 ve Office 365 uygulamaları indirip yüklemek için size adım adım bilgiler sağlar.
+[Mobil uygulamalar kurulum kılavuzu](https://aka.ms/officeappguidance), Windows, iOS ve Android mobil cihazlarınıza Office uygulamalarını indirme ve yükleme yönergeleri sağlar. Bu kılavuz, telefon ve tablet cihazlarınıza Microsoft 365 ve Office 365 uygulamalarını indirip yüklemek için size adım adım bilgiler sağlar.
 
-### <a name="microsoft-teams-setup-guide"></a>kurulum kılavuzunu Microsoft Teams
+### <a name="microsoft-teams-setup-guide"></a>Microsoft Teams kurulum kılavuzu
 
-[Microsoft Teams kurulum kılavuzu](https://aka.ms/teamsguidance), kuruluşunuza hem ekip hem de özel iletişim için mesajlaşma, aramalar, sesli veya görüntülü toplantılar aracılığıyla gerçek zamanlı konuşmalar barındıran ekip çalışma alanlarını ayarlama konusunda rehberlik sağlar. Konuk erişimini yapılandırmak, kimlerin ekip oluşturabileceğini ayarlamak ve bir .csv dosyasından ekip üyeleri eklemek için bu kılavuzdaki araçları kullanın. Bunların hepsi powershell oturumu açmaya gerek kalmadan. Ayrıca kuruluşunuzun ağ gereksinimlerini belirlemek ve başarılı bir Teams dağıtımı sağlamak için en iyi yöntemleri de edineceksiniz.
+[Microsoft Teams kurulum kılavuzu](https://aka.ms/teamsguidance), kuruluşunuza hem ekip hem de özel iletişim için mesajlaşma, aramalar, sesli veya görüntülü toplantılar aracılığıyla gerçek zamanlı görüşmelere ev sahipliği eden ekip çalışma alanlarını ayarlama yönergeleri sağlar. Konuk erişimini yapılandırmak, kimlerin ekip oluşturabileceğini ayarlamak ve bir .csv dosyasından ekip üyeleri eklemek için bu kılavuzdaki araçları kullanın. Bunların hepsi powershell oturumu açmaya gerek kalmadan. Ayrıca kuruluşunuzun ağ gereksinimlerini belirlemek ve başarılı bir Teams dağıtımı sağlamak için en iyi yöntemleri de edineceksiniz.
 
-### <a name="teams-phone-setup-guide"></a>kurulum kılavuzu Teams Telefon
+### <a name="teams-phone-setup-guide"></a>Teams Phone kurulum kılavuzu
 
-[Teams Telefon kurulum kılavuzu](https://aka.ms/teamsphonesetupguide), modern arama çözümlerinin kullanımıyla bağlantıda kalmanıza yardımcı olur. Teams için telefon iş yükünü destekleyen bulut tabanlı çağrı denetim sistemiyle temel özellikleri uygulayın. Kullanılabilir genel anahtarlı telefon ağı (PSTN) bağlantı seçeneklerinden özellikleri seçebilir ve dağıtabilirsiniz. Ayrıca otomatik santral, çağrı kuyrukları, Sesli Konferans, arayan kimliği ve canlı etkinlikler gibi diğer özellikler için de yardım bulabilirsiniz.
+[Teams Phone kurulum kılavuzu](https://aka.ms/teamsphonesetupguide), modern arama çözümlerinin kullanımıyla bağlantıda kalmanıza yardımcı olur. Teams için telefon iş yükünü destekleyen bulut tabanlı bir çağrı denetim sistemiyle temel özellikleri uygulayın. Kullanılabilir genel anahtarlı telefon ağı (PSTN) bağlantı seçeneklerinden özellikleri seçebilir ve dağıtabilirsiniz. Ayrıca otomatik santral, arama kuyrukları, Sesli Konferans, arayan kimliği ve canlı etkinlikler gibi diğer özellikler için de yardım bulabilirsiniz.
 
-### <a name="sharepoint-setup-guide"></a>kurulum kılavuzunu SharePoint
+### <a name="sharepoint-setup-guide"></a>SharePoint kurulum kılavuzu
 
-[SharePoint kurulum kılavuzu](https://aka.ms/spoguidance), SharePoint belge depolama ve içerik yönetiminizi ayarlamanıza, siteler oluşturmanıza, dış paylaşımı yapılandırmanıza, verileri geçirmenize ve gelişmiş ayarları yapılandırmanıza ve kuruluşunuzdaki kullanıcı katılımını ve iletişimini artırmanıza yardımcı olur. İçerik paylaşım izin ilkelerinizi yapılandırma adımlarını izleyecek, geçiş eşitleme araçlarınızı seçecek ve SharePoint ortamınız için güvenlik ayarlarını etkinleştireceksiniz.
+[SharePoint kurulum kılavuzu](https://aka.ms/spoguidance), SharePoint belge depolama ve içerik yönetiminizi ayarlamanıza, siteler oluşturmanıza, dış paylaşımı yapılandırmanıza, verileri geçirmenize ve gelişmiş ayarları yapılandırmanıza ve kuruluşunuzdaki kullanıcı etkileşimi ile iletişimini artırmanıza yardımcı olur. İçerik paylaşım izin ilkelerinizi yapılandırma adımlarını izleyecek, geçiş eşitleme araçlarınızı seçecek ve SharePoint ortamınız için güvenlik ayarlarını etkinleştireceksiniz.
 
-### <a name="onedrive-setup-guide"></a>kurulum kılavuzunu OneDrive
+### <a name="onedrive-setup-guide"></a>OneDrive kurulum kılavuzu
 
-OneDrive dosya depolama, paylaşım, işbirliği ve eşitleme özelliklerini kullanmaya başlamak için OneDrive [kurulum kılavuzunu](https://aka.ms/ODfBquickstartguide) kullanın. OneDrive, kullanıcıların Microsoft 365 Uygulamaları dosyalarını eşitleyebileceği, dış paylaşımı yapılandırabileceği, kullanıcı verilerini geçirebileceği ve gelişmiş güvenlik ve cihaz erişim ayarlarını yapılandırabileceği merkezi bir konum sağlar. OneDrive kurulum kılavuzu, OneDrive bir abonelik veya tek başına bir OneDrive planı kullanılarak dağıtılabilir.
+OneDrive dosya depolama, paylaşım, işbirliği ve eşitleme özelliklerini kullanmaya başlamak için OneDrive [kurulum kılavuzunu](https://aka.ms/ODfBquickstartguide) kullanın. OneDrive, kullanıcıların Microsoft 365 Uygulamaları dosyalarını eşitleyebileceği, dış paylaşımı yapılandırabileceği, kullanıcı verilerini geçirebileceği, gelişmiş güvenlik ve cihaz erişim ayarlarını yapılandırabileceği merkezi bir konum sağlar. OneDrive kurulum kılavuzu, OneDrive aboneliği veya tek başına OneDrive planı kullanılarak dağıtılabilir.
 
 ### <a name="yammer-deployment-advisor"></a>Yammer dağıtım danışmanı
 
-Yammer ile kuruluşunuz genelinde Bağlan ve etkileşim kurun. [Yammer dağıtım danışmanı](https://aka.ms/yammerdeploymentguide) etki alanları ekleyerek, yöneticileri tanımlayarak ve Yammer ağlarını birleştirerek Yammer ağınızı hazırlar. Yammer dağıtma ve ardından görünümü özelleştirme, güvenlik ve uyumluluğu yapılandırma ve ayarları iyileştirme yönergelerini alırsınız.
+Yammer ile kuruluşunuz genelinde bağlantı kurun ve etkileşim kurun. [Yammer dağıtım danışmanı](https://aka.ms/yammerdeploymentguide), etki alanları ekleyerek, yöneticileri tanımlayarak ve Yammer ağlarını birleştirerek Yammer ağınızı hazırlar. Yammer'ı dağıtma ve görünümü özelleştirme, güvenlik ve uyumluluğu yapılandırma ve ayarları iyileştirme yönergelerini alırsınız.
 
 ## <a name="advanced-guides"></a>Gelişmiş kılavuzlar
 
 ### <a name="in-place-upgrade-with-configuration-manager"></a>Configuration Manager ile yerinde yükseltme
 
-Windows 7 ve Windows 8.1 cihazları Windows 10 en son sürümüne yükseltirken Configuration Manager [ile Yerinde yükseltme kılavuzunu](https://aka.ms/win10upgradedemo) kullanın. Önkoşulları denetlemek ve yerinde yükseltmeyi otomatik olarak yapılandırmak için sağlanan betiği kullanacaksınız.
+Windows 7 ve Windows 8.1 cihazlarını en son Windows 10 sürümüne yükseltirken Configuration Manager [ile Yerinde yükseltme kılavuzunu](https://aka.ms/win10upgradedemo) kullanın. Önkoşulları denetlemek ve yerinde yükseltmeyi otomatik olarak yapılandırmak için sağlanan betiği kullanacaksınız.
 
-### <a name="deploy-office-to-your-users"></a>kullanıcılarınıza Office dağıtma
+### <a name="deploy-office-to-your-users"></a>Kullanıcılarınıza Office dağıtma
 
-Office Dağıtım Aracı'nı kullanarak yüklemenizi özelleştirme özelliğiyle buluttan Office uygulamaları dağıtın. [Kullanıcılarınıza Office dağıtma kılavuzu](https://aka.ms/proplusodt), gelişmiş ayarlarla özelleştirilmiş bir Office yapılandırması oluşturmanıza yardımcı olur veya önceden oluşturulmuş önerilen yapılandırmayı kullanabilirsiniz. Kullanıcılarınız ister kendi kendine yükleme gerçekleştiriyor ister kullanıcılarınıza tek tek veya toplu olarak dağıtılıyor olsun, bu gelişmiş kılavuz, kullanıcılara kuruluşunuza özel bir Office yüklemesi sağlamak için size adım adım yönergeler sağlar.
+Office Dağıtım Aracı'nı kullanarak yüklemenizi özelleştirme özelliğiyle Office uygulamalarını buluttan dağıtın. [Office'i kullanıcılarınıza dağıtma kılavuzu](https://aka.ms/proplusodt), gelişmiş ayarlarla özelleştirilmiş bir Office yapılandırması oluşturmanıza yardımcı olur veya önceden oluşturulmuş önerilen bir yapılandırmayı kullanabilirsiniz. Kullanıcılarınız ister kendi kendine yükleme gerçekleştiriyor ister kullanıcılarınıza tek tek veya toplu olarak dağıtıyor olun, bu gelişmiş kılavuz, kullanıcılara kuruluşunuza özel bir Office yüklemesi sağlamak için size adım adım yönergeler sağlar.
 
-### <a name="deploy-office-to-remote-users"></a>uzak kullanıcılara Office dağıtma
+### <a name="deploy-office-to-remote-users"></a>Office'i uzak kullanıcılara dağıtma
 
-Artık uzaktan çalışma norm olduğuna göre, kullanıcıların iç ağınıza bağlı değilken veya kendi cihazlarını kullanırken kuruluşunuzun Office ayarlarını alması gerekir.
+Artık uzaktan çalışma normu olduğuna göre, kullanıcıların iç ağınıza bağlı değilken veya kendi cihazlarını kullanırken kuruluşunuzun Office ayarlarını alması gerekir.
 
-Özelleştirilmiş bir Office yüklemesi oluşturmak ve kullanıcılara yapılandırmanızla sorunsuz bir şekilde Office yükleyecek bir PowerShell betiği göndermek için [Uzak kullanıcılara Office dağıtma kılavuzunu](https://aka.ms/officeremoteinstall) kullanın.
+Özelleştirilmiş bir Office yüklemesi oluşturmak ve ardından kullanıcılara Office'i yapılandırmanızla sorunsuz bir şekilde yükleyecek bir PowerShell betiği göndermek için [Uzak kullanıcılara Office dağıtma kılavuzunu](https://aka.ms/officeremoteinstall) kullanın.
 
 ### <a name="deploy-and-update-microsoft-365-apps-with-configuration-manager"></a>Configuration Manager ile Microsoft 365 Uygulamaları dağıtma ve güncelleştirme
 
@@ -253,4 +265,4 @@ Kuruluşunuzun hem Microsoft Intune hem de Microsoft Intune ile birlikte yönetm
 
 ### <a name="school-data-sync-rollover-setup-guide"></a>School Data Sync geçiş kurulum kılavuzu
 
-[SDS Rollover kurulum kılavuzu](https://aka.ms/sdsrolloversetupguide), kuruluşunuzun öğrenci bilgileri verilerini Azure Active Directory ve Office 365 eşitlemesine yardımcı olacak adımlar sağlar. Bu kılavuz, Exchange Online ve SharePoint Online için Office 365 Grupları, Microsoft Teams ve OneNote için sınıf ekipleri ve Intune oluşturarak yaşam döngüsü yönetimi sürecini kolaylaştırır  Eğitim için, üçüncü taraf uygulamalar için liste oluşturma ve çoklu oturum açma tümleştirmesi. Yıl sonu kapanışı, kiracı temizleme ve arşiv, yeni okul yılı hazırlığı ve yeni okul yılı lansmanı gerçekleştireceksiniz. Ardından, kuruluşunuza uygun eşitleme dağıtım yöntemini kullanarak yeni profiller oluşturabilirsiniz.
+[SDS Rollover kurulum kılavuzu](https://aka.ms/sdsrolloversetupguide), kuruluşunuzun öğrenci bilgileri verilerini Azure Active Directory ve Office 365 eşitlemesine yardımcı olacak adımlar sağlar. Bu kılavuz, Exchange Online ve SharePoint Online için Office 365 Grupları, Microsoft Teams ve OneNote için sınıf ekipleri, Eğitim için Intune ve üçüncü taraf uygulamalar için listeleme ve çoklu oturum açma tümleştirmesi oluşturarak yaşam döngüsü yönetimi sürecini kolaylaştırır. Yıl sonu kapanışı, kiracı temizleme ve arşiv, yeni okul yılı hazırlığı ve yeni okul yılı lansmanı gerçekleştireceksiniz. Ardından, kuruluşunuza uygun eşitleme dağıtım yöntemini kullanarak yeni profiller oluşturabilirsiniz.

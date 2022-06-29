@@ -21,14 +21,16 @@ ms.custom:
 search.appverid: MET150
 description: Microsoft 365 yönetim merkezinde Dynamics 365, Intune, Power Platform ve İş için Microsoft 365 deneme veya ücretli aboneliklerinizi nasıl iptal edebileceğinizi öğrenin.
 ms.date: 06/02/2022
-ms.openlocfilehash: ea2a3bf0e77d11733e19b27f19bef378f691fd73
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+ms.openlocfilehash: 962553d620b9cc3477f5eb7c91fa0b822dc5de07
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65873676"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490375"
 ---
-# <a name="cancel-your-business-subscription"></a>İş aboneliğinizi iptal etme
+# <a name="cancel-your-microsoft-subscription"></a>Microsoft aboneliğinizi iptal etme
+
+Aboneliğinizi iptal etmek istiyorsanız, bunu yapmanın en kolay yolu [yinelenen faturalandırmayı kapatmaktır](renew-your-subscription.md). Yinelenen faturalandırmayı kapattığınızda, abonelik döneminin sonunda süresi dolana kadar aboneliğinizi kullanmaya devam edebilirsiniz. Hemen iptal etmek istiyorsanız, bunu yapmak için bu makaledeki bilgileri ve adımları kullanın.
 
 > [!IMPORTANT]
 > - Bu makale yalnızca Dynamics 365, Intune, Power Platform ve İş için Microsoft 365 aboneliklerine yöneliktir. Microsoft 365 Aile veya Bireysel kullanıyorsanız, bkz. [Microsoft 365 aboneliğini iptal etme](https://support.microsoft.com/office/cancel-a-microsoft-365-subscription-46e2634c-c64b-4c65-94b9-2cc9c960e91b?OCID=M365_DocsCancel_Link).

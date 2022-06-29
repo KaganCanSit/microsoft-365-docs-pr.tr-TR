@@ -19,12 +19,12 @@ ms.custom: seo-marvel-apr2020
 ms.reviewer: vippand
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: f2613825e0925e1899268b4682f66b7facc9600d
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 37819c0f5ea458a4f5ee25b3536e3688aabd1882
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015015"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66486917"
 ---
 # <a name="whats-new-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender’daki yenilikler
 
@@ -49,7 +49,19 @@ Diğer Microsoft Defender güvenlik ürünleriyle ilgili yenilikler hakkında da
 
 ## <a name="june-2022"></a>Haziran 2022
 
-- [Office 365 için Microsoft 365 Defender'da karantina deneyiminin İkinci bölümünü basitleştirme](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/simplifying-the-quarantine-experience-part-two/ba-p/3354687): karantina deneyimini basitleştirme bölümü İki ve Office 365 için Microsoft Defender.
+- [Kimlik sahtekarlığına yönetici gönderiminin kullanılmasına izin verilir](allow-block-email-spoof.md#use-admin-submission-in-microsoft-365-defender): Kiracı İzin Ver/Engelle Listesi'ni kullanarak izin verilen sahte gönderen girişleri oluşturun.
+
+- [Kimliğe bürünme, yönetici gönderiminin kullanılmasına izin verir](allow-block-email-spoof.md#create-impersonated-sender-entries): Ekleme özelliği, Microsoft 365 Defender gönderiler sayfasını kullanarak kimliğine bürünülen gönderenlere izin verir.
+
+- [Kullanıcı gönderiminden dönüştürülmüş yönetici gönderimini görüntüleme](admin-submission.md#convert-user-reported-messages-from-the-custom-mailbox-into-an-admin-submission): Özel posta kutusunu, analiz için microsoft'a ileti göndermeden kullanıcı tarafından bildirilen iletileri kesecek şekilde yapılandırın.
+
+- [Kullanıcı ve yönetici gönderimleri için ilişkili uyarıyı görüntüleme](admin-submission.md#view-associated-alert-for-user-and-admin-email-submissions): Kullanıcı tarafından bildirilen her kimlik avı iletisi ve yönetici e-posta gönderimi için ilgili uyarıyı görüntüleyin. 
+
+- [Önceden ayarlanmış ilkeler içinde yapılandırılabilir kimliğe bürünme koruması özel kullanıcıları ve etki alanları ve artırılmış kapsam](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/configurable-impersonation-protection-and-scope-for-preset/ba-p/3294459):
+  - (Seç) Kuruluşun tamamına Önceden Belirlenmiş Katı/Standart ilkeleri uygulayın ve belirli alıcı kullanıcıları, grupları veya etki alanlarını seçme zahmetini ortadan kaldırarak kuruluşunuzun tüm alıcı kullanıcılarının güvenliğini sağlayın. 
+  - Önceden Belirlenmiş Katı/Standart ilkeler içindeki özel kullanıcılar ve özel etki alanları için kimliğe bürünme koruma ayarlarını yapılandırın ve hedeflenen kullanıcılarınızı ve hedeflenen etki alanınızı kimliğe bürünme saldırılarına karşı otomatik olarak koruyun.
+
+- [Office 365 için Microsoft 365 Defender'de karantina deneyimini (ikinci bölüm) basitleştirme](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/simplifying-the-quarantine-experience-part-two/ba-p/3354687): Karantina deneyiminin kullanımını daha da kolaylaştırmak için ek özellikleri vurgular.
 
 ## <a name="april-2022"></a>Nisan 2022
 
@@ -67,7 +79,7 @@ Diğer Microsoft Defender güvenlik ürünleriyle ilgili yenilikler hakkında da
 ## <a name="october-2021"></a>Ekim 2021
 
 - [Gelişmiş Teslim DKIM geliştirmesi](configure-advanced-delivery.md): Üçüncü taraf kimlik avı simülasyon yapılandırmasının bir parçası olarak DKIM etki alanı girişi desteği eklendi.
-- [Varsayılan Olarak Güvenli](secure-by-default.md): Exchange posta akışı kuralları (aktarım kuralları olarak da bilinir) için Varsayılan Olarak Genişletilmiş Güvenli.
+- [Varsayılan Olarak Güvenli](secure-by-default.md): Exchange posta akışı kuralları (taşıma kuralları olarak da bilinir) için Varsayılan Olarak Genişletilmiş Güvenli.
 
 ## <a name="september-2021"></a>Eylül 2021
 
@@ -80,14 +92,14 @@ Diğer Microsoft Defender güvenlik ürünleriyle ilgili yenilikler hakkında da
 
 ## <a name="august-2021"></a>Ağustos 2021
 
-- [Bildirilen iletiler için yönetici incelemesi](admin-review-reported-message.md): Yöneticiler artık bildirilen iletileri gözden geçirdikten sonra son kullanıcılara şablonlu iletiler gönderebilir. Şablonlar, kuruluşunuz için ve yöneticinizin kararına göre özelleştirilebilir.
+- [bildirilen iletiler için gözden Yönetici](admin-review-reported-message.md): Yöneticiler artık bildirilen iletileri gözden geçirdikten sonra son kullanıcılara şablonlu iletiler gönderebilir. Şablonlar, kuruluşunuz için ve yöneticinizin kararına göre özelleştirilebilir.
 - [Ekleme, Kiracı İzin Ver/Engelle Listesinde izin verir](manage-tenant-allows.md): Engellenen ileti yönetici gönderme işleminin bir parçası olarak gönderildiyse, artık Kiracı İzin Ver/Engelle Listesine izin verme girdileri ekleyebilirsiniz. Bloğun yapısına bağlı olarak, gönderilen URL, dosya ve/veya gönderen izin verme izni Kiracı İzin Ver/Engelle Listesine eklenir. Çoğu durumda, sisteme biraz zaman vermek ve garanti edilirse doğal olarak izin vermek için izinler eklenir. Bazı durumlarda Microsoft, izin verme işlemini sizin için yönetir.
 
 ## <a name="july-2021"></a>Temmuz 2021
 
 - [Otomatik araştırmalarda e-posta analizi geliştirmeleri](email-analysis-investigations.md)
 - [Gelişmiş Teslim](configure-advanced-delivery.md): Üçüncü taraf kimlik avı simülasyonlarının kullanıcılara ve filtrelenmemiş iletilerin güvenlik işlemi posta kutularına teslimini yapılandırmaya yönelik yeni bir özellik sunar.
-- [Microsoft Teams için Kasa Bağlantıları](safe-links.md#safe-links-settings-for-microsoft-teams)
+- [Microsoft Teams için Güvenli Bağlantılar](safe-links.md#safe-links-settings-for-microsoft-teams)
 - Şu senaryolar için yeni uyarı ilkeleri: güvenliği aşılmış posta kutuları, Forms kimlik avı, geçersiz kılmalar nedeniyle teslim edilen kötü amaçlı postalar ve ZAP'ı yuvarlama
   - Şüpheli e-posta iletme etkinliği
   - Kullanıcının formları paylaşması ve yanıt toplaması kısıtlandı
@@ -100,15 +112,15 @@ Diğer Microsoft Defender güvenlik ürünleriyle ilgili yenilikler hakkında da
 
 ## <a name="june-2021"></a>Haziran 2021
 
-- Kimlik avı önleme ilkeleri içinde yeni ilk kişi güvenlik ipucu ayarı. Bu güvenlik ipucu, alıcılar bir gönderenden ilk kez e-posta aldığında veya genellikle gönderenden e-posta almadığında gösterilir. Bu ayar ve yapılandırma hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
-  - [İlk kişi güvenlik ipucu](set-up-anti-phishing-policies.md#first-contact-safety-tip)
+- Kimlik avı önleme ilkeleri içinde yeni ilk kişi güvenliği ipucu ayarı. Bu güvenlik ipucu, alıcılar bir gönderenden ilk kez e-posta aldığında veya genellikle bir gönderenden e-posta almadığında gösterilir. Bu ayar ve yapılandırma hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
+  - [İlk temas emniyet ipucu](set-up-anti-phishing-policies.md#first-contact-safety-tip)
   - [EOP'de kimlik avı önleme ilkelerini yapılandırma](configure-anti-phishing-policies-eop.md)
   - [Office 365 için Microsoft Defender'de kimlik avı önleme ilkelerini yapılandırma](configure-mdo-anti-phishing-policies.md)
 
 ## <a name="aprilmay-2021"></a>Nisan/Mayıs 2021
 
 - [E-posta varlık sayfası](mdo-email-entity-page.md): Tehditler, kimlik doğrulaması ve algılamalar, patlama ayrıntıları ve yepyeni bir e-posta önizleme deneyimi hakkında zenginleştirilmiş bilgiler içeren bir e-postanın birleşik 360 derecelik görünümü.
-- [Office 365 Yönetim API'si](/office/office-365-management-api/office-365-management-activity-api-schema#email-message-events): Teslim eylemini, özgün ve en son teslim konumlarını ve güncelleştirilmiş algılama ayrıntılarını eklemek için EmailEvents güncelleştirmeleri (RecordType 28).
+- [Office 365 Yönetim API'si](/office/office-365-management-api/office-365-management-activity-api-schema#email-message-events): Teslim eylemini, özgün ve en son teslim konumlarını ve güncelleştirilmiş algılama ayrıntılarını eklemek için EmailEvents'e (RecordType 28) Güncelleştirmeler.
 - [Office 365 için Defender için Tehdit Analizi](/microsoft-365/security/defender/threat-analytics): Etkin tehdit aktörlerini, popüler teknikleri ve saldırı yüzeylerini ve devam eden kampanyalar konusunda Microsoft araştırmacılarının kapsamlı raporlamalarını görüntüleyin.
 
 ## <a name="februarymarch-2021"></a>Şubat/Mart 2021

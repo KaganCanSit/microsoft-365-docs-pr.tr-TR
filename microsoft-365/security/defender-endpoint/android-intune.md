@@ -1,6 +1,6 @@
 ---
 title: Android’de Uç Nokta için Defender’ı Microsoft Intune ile dağıtın
-description: Microsoft Intune ile Android'da Uç Nokta için Microsoft Defender dağıtmayı açıklar
+description: Microsoft Intune ile Android'de Uç Nokta için Microsoft Defender dağıtmayı açıklar
 keywords: microsoft, defender, Uç Nokta için Microsoft Defender, mde, android, installation, deploy, uninstallation,
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -15,66 +15,66 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 75fa8c4e3dff9ed05716389ec5bed1d5331eefba
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: c743b54e27bc9caa60bb6b4e24191d626ece6fcf
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419044"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490519"
 ---
 # <a name="deploy-microsoft-defender-for-endpoint-on-android-with-microsoft-intune"></a>Android’de Uç Nokta için Defender’ı Microsoft Intune ile dağıtın
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Şunlar için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Uç Nokta için Defender'ı kayıtlı Intune Şirket Portalı cihazlarda Android dağıtmayı öğrenin. Intune cihaz kaydı hakkında daha fazla bilgi için bkz. [Cihazınızı kaydetme](/mem/intune/user-help/enroll-device-android-company-portal).
+Kayıtlı Intune Şirket Portalı cihazlarda Android'de Uç Nokta için Defender'ı dağıtmayı öğrenin. Intune cihaz kaydı hakkında daha fazla bilgi için bkz. [Cihazınızı kaydetme](/mem/intune/user-help/enroll-device-android-company-portal).
 
 > [!NOTE]
 > **Android'de Uç Nokta için Defender artık [Google Play'de](https://play.google.com/store/apps/details?id=com.microsoft.scmx) kullanılabilir**
 >
-> Uç Nokta için Defender uygulamasını Cihaz Yöneticisi ve Android Enterprise kayıt modları arasında dağıtmak için Intune'den Google Play'e bağlanabilirsiniz.
+> Uç Nokta için Defender uygulamasını Cihaz Yöneticisi ve Android Kurumsal kayıt modları arasında dağıtmak için Intune'den Google Play'e bağlanabilirsiniz.
 >
-> Uygulama güncelleştirmeleri Google Play aracılığıyla otomatik olarak gerçekleştirilir.
+> Uygulamaya Güncelleştirmeler Google Play aracılığıyla otomatik olarak gerçekleştirilir.
 
 ## <a name="deploy-on-device-administrator-enrolled-devices"></a>Cihaz Yöneticisi tarafından kaydedilen cihazlarda dağıtma
 
-Uç Nokta için Defender'ı Intune Şirket Portalı - Cihaz Yöneticisi tarafından kaydedilen cihazlarda Android dağıtmayı öğrenin.
+Intune Şirket Portalı - Cihaz Yöneticisi tarafından kaydedilen cihazlarda Android'de Uç Nokta için Defender'ı dağıtmayı öğrenin.
 
 ### <a name="add-as-android-store-app"></a>Android mağazası uygulaması olarak ekle
 
-1. [Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **Uygulamalar** **Android Uygulamalar** \> \> **Ekle Android mağaza uygulaması'na \>** gidin ve **Seç'i** seçin.
+1. [Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **Uygulamalar** \> **Android Uygulamaları** \> **Android mağazası uygulaması ekle'ye \>** gidin ve **Seç'i** seçin.
 
-   :::image type="content" source="images/mda-addandroidstoreapp.png" alt-text="Microsoft Endpoint Manager Yönetim Merkezi portalındaki Android depolama uygulaması ekle bölmesi"  lightbox="images/mda-addandroidstoreapp.png":::
+   :::image type="content" source="images/mda-addandroidstoreapp.png" alt-text="Microsoft Endpoint Manager Yönetici Center portalında Android mağazası uygulama ekle bölmesi"  lightbox="images/mda-addandroidstoreapp.png":::
 
 2. **Uygulama ekle** sayfasında ve *Uygulama Bilgileri* bölümüne şunu girin:
 
    - **Ad**
    - **Açıklama**
-   - **Microsoft olarak Publisher**.
+   - **Microsoft olarak Publisher** .
    - **Olarak uygulama mağazası URL'si** https://play.google.com/store/apps/details?id=com.microsoft.scmx (Uç nokta uygulaması için Defender Google Play Store URL'si)
 
    Diğer alanlar isteğe bağlıdır. **İleri**'yi seçin.
 
-   :::image type="content" source="images/mda-addappinfo.png" alt-text="Microsoft Endpoint Manager Yönetim Merkezi portalında uygulamanın yayımcısını ve URL bilgilerini görüntüleyen Uygulama Ekle sayfası" lightbox="images/mda-addappinfo.png":::
+   :::image type="content" source="images/mda-addappinfo.png" alt-text="Microsoft Endpoint Manager Yönetici Center portalında uygulamanın yayımcısını ve URL bilgilerini görüntüleyen Uygulama Ekle sayfası" lightbox="images/mda-addappinfo.png":::
 
-3. *Atamalar* bölümünde **Gerekli** bölümüne gidin ve **Grup ekle'yi seçin.** Ardından, Android uygulamada Uç Nokta için Defender'ı hedeflemek istediğiniz kullanıcı gruplarını seçebilirsiniz. **Seç'i** ve ardından **İleri'yi** seçin.
+3. *Atamalar* bölümünde **Gerekli** bölümüne gidin ve **Grup ekle'yi seçin.** Ardından, Android uygulamasında Uç Nokta için Defender'ı hedeflemek istediğiniz kullanıcı gruplarını seçebilirsiniz. **Seç'i** ve ardından **İleri'yi** seçin.
 
     > [!NOTE]
     > Seçilen kullanıcı grubu kayıtlı Intune kullanıcıdan oluşmalıdır.
     >
-    > :::image type="content" source="images/363bf30f7d69a94db578e8af0ddd044b.png" alt-text="Microsoft Endpoint Manager Yönetim Merkezi portalındaki Uygulama Ekle sayfasındaki Grup ekle bölmesi" lightbox="images/363bf30f7d69a94db578e8af0ddd044b.png":::
+    > :::image type="content" source="images/363bf30f7d69a94db578e8af0ddd044b.png" alt-text="Microsoft Endpoint Manager Yönetici Center portalındaki Uygulama Ekle sayfasındaki Grup ekle bölmesi" lightbox="images/363bf30f7d69a94db578e8af0ddd044b.png":::
 
 4. **Gözden Geçir+Oluştur** bölümünde, girilen tüm bilgilerin doğru olduğunu doğrulayın ve **Oluştur'u** seçin.
 
     Birkaç dakika içinde Uç Nokta için Defender uygulaması başarıyla oluşturulur ve sayfanın sağ üst köşesinde bir bildirim gösterilir.
 
-    :::image type="content" source="images/86cbe56f88bb6e93e9c63303397fc24f.png" alt-text="Microsoft Endpoint Manager Yönetim Merkezi portalındaki uygulama durumu bölmesi" lightbox="images/86cbe56f88bb6e93e9c63303397fc24f.png":::
+    :::image type="content" source="images/86cbe56f88bb6e93e9c63303397fc24f.png" alt-text="Microsoft Endpoint Manager Yönetici Center portalındaki uygulama durumu bölmesi" lightbox="images/86cbe56f88bb6e93e9c63303397fc24f.png":::
 
 5. Görüntülenen uygulama bilgileri sayfasındaki **İzleyici** bölümünde **Cihaz yükleme durumu'nu** seçerek cihaz yüklemesinin başarıyla tamamlandığını doğrulayın.
 
@@ -82,29 +82,29 @@ Uç Nokta için Defender'ı Intune Şirket Portalı - Cihaz Yöneticisi tarafın
 
 ### <a name="complete-onboarding-and-check-status"></a>Eklemeyi tamamlama ve durumu denetleme
 
-1. Android'da Uç Nokta için Defender cihaza yüklendikten sonra uygulama simgesini görürsünüz.
+1. Android'de Uç Nokta için Defender cihaza yüklendikten sonra uygulama simgesini görürsünüz.
 
    :::image type="content" source="images/7cf9311ad676ec5142002a4d0c2323ca.jpg" alt-text="Arama bölmesinde listelenen Microsoft Defender ATP simgesi" lightbox="images/7cf9311ad676ec5142002a4d0c2323ca.jpg":::
 
-2. Uç Nokta için Microsoft Defender uygulama simgesine dokunun ve uygulamayı ekleme işlemini tamamlamak için ekrandaki yönergeleri izleyin. Ayrıntılar, uç nokta için Defender tarafından Android gereken Android izinlerinin son kullanıcı tarafından kabul edilmesini içerir.
+2. Uç Nokta için Microsoft Defender uygulama simgesine dokunun ve uygulamayı ekleme işlemini tamamlamak için ekrandaki yönergeleri izleyin. Ayrıntılar, Android'de Uç Nokta için Defender tarafından gereken Android izinlerinin son kullanıcı tarafından kabul edilmesini içerir.
 
 3. Ekleme başarılı olursa cihaz, Microsoft 365 Defender portalındaki Cihazlar listesinde gösterilmeye başlar.
 
     :::image type="content" source="images/9fe378a1dce0f143005c3aa53d8c4f51.png" alt-text="Uç Nokta için Microsoft Defender portalındaki bir cihaz"  lightbox="images/9fe378a1dce0f143005c3aa53d8c4f51.png":::
 
-## <a name="deploy-on-android-enterprise-enrolled-devices"></a>Kayıtlı Android Enterprise cihazlarda dağıtma
+## <a name="deploy-on-android-enterprise-enrolled-devices"></a>Android Kurumsal kayıtlı cihazlarda dağıtma
 
-Android'de Uç Nokta için Defender, kayıtlı Android Enterprise cihazları destekler.
+Android'de Uç Nokta için Defender, Android Kurumsal kayıtlı cihazları destekler.
 
 Intune tarafından desteklenen kayıt seçenekleri hakkında daha fazla bilgi için bkz. [Kayıt Seçenekleri](/mem/intune/enrollment/android-enroll).
 
 **Şu anda, şirkete ait tam olarak yönetilen kullanıcı cihaz kayıtları ve iş profiline sahip kişisel cihazlar dağıtım için desteklenmektedir.**
 
-## <a name="add-microsoft-defender-for-endpoint-on-android-as-a-managed-google-play-app"></a>yönetilen google play uygulaması olarak Android Uç Nokta için Microsoft Defender ekleme
+## <a name="add-microsoft-defender-for-endpoint-on-android-as-a-managed-google-play-app"></a>Android'de Yönetilen Google Play uygulaması olarak Uç Nokta için Microsoft Defender ekleme
 
 Yönetilen Google Play'inize Uç Nokta için Microsoft Defender uygulama eklemek için aşağıdaki adımları izleyin.
 
-1. [Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **Uygulamalar** **Android Uygulamalar** \> \> **Ekle'ye** gidin ve **Yönetilen Google Play uygulaması'nı** seçin.
+1. [Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **Uygulamalar** \> **Android Uygulamaları** \> **Ekle'ye** gidin ve **Yönetilen Google Play uygulaması'nı** seçin.
 
     :::image type="content" source="images/579ff59f31f599414cedf63051628b2e.png" alt-text="Microsoft Endpoint Manager yönetim merkezi portalındaki uygulama ekleme bölmesi" lightbox="images/579ff59f31f599414cedf63051628b2e.png":::
 
@@ -121,7 +121,7 @@ Yönetilen Google Play'inize Uç Nokta için Microsoft Defender uygulama eklemek
 
     :::image type="content" source="images/206b3d954f06cc58b3466fb7a0bd9f74.png" alt-text="Microsoft Defender 365 portalındaki izin onay sayfası" lightbox="images/206b3d954f06cc58b3466fb7a0bd9f74.png":::
 
-5. Size Onay ayarları sayfası gösterilir. Sayfa, uç nokta için Defender'ın Android sorabileceği yeni uygulama izinlerini işleme tercihinizi onaylar. Seçenekleri gözden geçirin ve tercih ettiğiniz seçeneği belirleyin. **Bitti'yi** seçin.
+5. Size Onay ayarları sayfası gösterilir. Sayfa, Android'de Uç Nokta için Defender'ın sorabileceği yeni uygulama izinlerini işleme tercihinizi onaylar. Seçenekleri gözden geçirin ve tercih ettiğiniz seçeneği belirleyin. **Bitti'yi** seçin.
 
     Varsayılan olarak, yönetilen Google Play **, uygulama yeni izinler istediğinde Onaylı tut'ı** seçer.
 
@@ -135,9 +135,9 @@ Yönetilen Google Play'inize Uç Nokta için Microsoft Defender uygulama eklemek
 
 7. Eşitleme birkaç dakika içinde tamamlanır.
 
-    :::image type="content" source="images/9fc07ffc150171f169dc6e57fe6f1c74.png" alt-text="Microsoft Defender 365 portalındaki Android uygulamalar sayfasındaki uygulama eşitleme durumu bölmesi"  lightbox="images/9fc07ffc150171f169dc6e57fe6f1c74.png":::
+    :::image type="content" source="images/9fc07ffc150171f169dc6e57fe6f1c74.png" alt-text="Microsoft Defender 365 portalındaki Android uygulamaları sayfasındaki uygulama eşitleme durumu bölmesi"  lightbox="images/9fc07ffc150171f169dc6e57fe6f1c74.png":::
 
-8. Android uygulamalar ekranında **Yenile** düğmesini seçtiğinizde Uç Nokta için Microsoft Defender uygulamalar listesinde görünür olmalıdır.
+8. Android uygulamaları ekranında **Yenile** düğmesini seçtiğinizde Uç Nokta için Microsoft Defender uygulamalar listesinde görünür olmalıdır.
 
     :::image type="content" source="images/fa4ac18a6333335db3775630b8e6b353.png" alt-text="Eşitlenen uygulamayı görüntüleyen sayfa" lightbox="images/fa4ac18a6333335db3775630b8e6b353.png":::
 
@@ -150,7 +150,7 @@ Yönetilen Google Play'inize Uç Nokta için Microsoft Defender uygulama eklemek
     1. **Uygulama yapılandırma ilkesi oluştur** sayfasında aşağıdaki ayrıntıları girin:
 
         - Ad: Uç Nokta için Microsoft Defender.
-        - Platform olarak **Android Enterprise'ı** seçin.
+        - **Platform olarak Android Kurumsal'ı** seçin.
         - **Yalnızca Profil Türü olarak İş Profili'ni** seçin.
         - **Uygulama Seç'e** tıklayın, **Microsoft Defender ATP'yi** seçin, **Tamam'ı** ve ardından **İleri'yi** seçin.
 
@@ -168,7 +168,7 @@ Yönetilen Google Play'inize Uç Nokta için Microsoft Defender uygulama eklemek
 
        :::image type="content" alt-text="Seçili yapılandırma ilkelerinin görüntüsü." source="images/listedconfigurations.png" lightbox="images/listedconfigurations.png":::
 
-    1. **Atamalar** sayfasında, bu uygulama yapılandırma ilkesinin atanacağı kullanıcı grubunu seçin. **Dahil etmek için Grupları seç'e** tıklayın, uygun grubu seçin ve ardından **İleri'yi** seçin. Burada seçilen grup genellikle Uç Nokta için Microsoft Defender Android uygulamayı atayacağınız grupla aynıdır.
+    1. **Atamalar** sayfasında, bu uygulama yapılandırma ilkesinin atanacağı kullanıcı grubunu seçin. **Dahil etmek için Grupları seç'e** tıklayın, uygun grubu seçin ve ardından **İleri'yi** seçin. Burada seçilen grup genellikle Android uygulaması Uç Nokta için Microsoft Defender atayacağınız grupla aynıdır.
 
        :::image type="content" source="images/android-select-group.png" alt-text="Seçili gruplar bölmesi" lightbox="images/android-select-group.png":::
 
@@ -192,9 +192,9 @@ Yönetilen Google Play'inize Uç Nokta için Microsoft Defender uygulama eklemek
 
 ### <a name="auto-setup-of-always-on-vpn"></a>Her Zaman Açık VPN'in Otomatik Kurulumu
 
-Uç Nokta için Defender, Intune aracılığıyla yönetilen cihazlar için Cihaz yapılandırma ilkelerini destekler. Bu özellik, kayıtlı Android Enterprise cihazlarda **Always-on VPN'in otomatik kurulumu** için kullanılabilir, bu nedenle son kullanıcının ekleme sırasında VPN hizmetini ayarlaması gerekmez.
+Uç Nokta için Defender, Intune aracılığıyla yönetilen cihazlar için Cihaz yapılandırma ilkelerini destekler. Bu özellik, Android Kurumsal kayıtlı cihazlarda **Always-on VPN'nin otomatik kurulumu** için kullanılabilir, bu nedenle son kullanıcının ekleme sırasında VPN hizmetini ayarlaması gerekmez.
 
-1. **Cihazlar'da** **Yapılandırma Profilleri** \> **Profil** \> **Platformu** \> Oluştur **Android Enterprise'ı** seçin
+1. **Cihazlar'da** **Yapılandırma Profilleri** \> **Profil** \> **Platformu** \> Oluştur **Android Kurumsal'ı** seçin
 
    Cihaz kayıt türünüz temelinde aşağıdakilerden birinin altında Cihaz **kısıtlamaları'nı** seçin:
    - **Tam Olarak Yönetilen, Ayrılmış ve Corporate-Owned İş Profili**
@@ -204,7 +204,7 @@ Uç Nokta için Defender, Intune aracılığıyla yönetilen cihazlar için Ciha
 
    :::image type="content" source="images/1autosetupofvpn.png" alt-text="İlke bölmesindeki Yapılandırma profilleri menü öğesi" lightbox="images/1autosetupofvpn.png":::
 
-2. **Yapılandırma Ayarlar** Yapılandırma profilini benzersiz olarak tanımlamak için bir **Ad** ve **Açıklama** sağlayın.
+2. **Yapılandırma Ayarları** Yapılandırma profilini benzersiz olarak tanımlamak için bir **Ad** ve **Açıklama** sağlayın.
 
    :::image type="content" source="images/2autosetupofvpn.png" alt-text="Temel bilgiler bölmesindeki cihaz yapılandırma profili Ad ve Açıklama alanları" lightbox="images/2autosetupofvpn.png":::
 
@@ -229,7 +229,7 @@ Uç Nokta için Defender, Intune aracılığıyla yönetilen cihazlar için Ciha
 
 4. **Atama**
 
-   **Atamalar** sayfasında, bu uygulama yapılandırma ilkesinin atanacağı kullanıcı grubunu seçin. Dahil etmek istediğiniz **grupları seçin** ve uygun grubu seçin ve ardından **İleri'yi** seçin. Burada seçilen grup genellikle Uç Nokta için Microsoft Defender Android uygulamayı atayacağınız grupla aynıdır.
+   **Atamalar** sayfasında, bu uygulama yapılandırma ilkesinin atanacağı kullanıcı grubunu seçin. Dahil etmek istediğiniz **grupları seçin** ve uygun grubu seçin ve ardından **İleri'yi** seçin. Burada seçilen grup genellikle Android uygulaması Uç Nokta için Microsoft Defender atayacağınız grupla aynıdır.
 
    :::image type="content" source="images/4autosetupofvpn.png" alt-text="Cihaz kısıtlamalarındaki cihazlar yapılandırma profili Atama bölmesi" lightbox="images/4autosetupofvpn.png":::
 
@@ -240,7 +240,7 @@ Cihaz yapılandırma profili artık seçili kullanıcı grubuna atanır.
 
 ## <a name="check-status-and-complete-onboarding"></a>Durumu denetleme ve ekleme işlemini tamamlama
 
-1. **Cihaz Yükleme Durumu'na** tıklayarak Android'da Uç Nokta için Microsoft Defender yükleme durumunu onaylayın. Cihazın burada görüntülendiğini doğrulayın.
+1. **Cihaz Yükleme Durumu'na** tıklayarak Android'de Uç Nokta için Microsoft Defender yükleme durumunu onaylayın. Cihazın burada görüntülendiğini doğrulayın.
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="images/900c0197aa59f9b7abd762ab2b32e80c.png" alt-text="Cihaz yükleme durumu bölmesi" lightbox="images/900c0197aa59f9b7abd762ab2b32e80c.png":::
@@ -253,16 +253,11 @@ Cihaz yapılandırma profili artık seçili kullanıcı grubuna atanır.
 
     :::image type="content" source="images/MDE_new.png" alt-text="Mobil cihazda bir Uç Nokta için Microsoft Defender uygulamasının th ekranı" lightbox="images/MDE_new.png":::
 
-4. Bu aşamada cihaz, Android uç nokta için Defender'a başarıyla eklenir. Bunu [Microsoft 365 Defender portalında](https://security.microsoft.com) **Cihaz Envanteri** sayfasına giderek doğrulayabilirsiniz.
+4. Bu aşamada cihaz, Android'de Uç Nokta için Defender'a başarıyla eklenir. Bunu [Microsoft 365 Defender portalında](https://security.microsoft.com) **Cihaz Envanteri** sayfasına giderek doğrulayabilirsiniz.
 
     :::image type="content" source="images/9fe378a1dce0f143005c3aa53d8c4f51.png" alt-text="Uç Nokta için Microsoft Defender portalı" lightbox="images/9fe378a1dce0f143005c3aa53d8c4f51.png":::
 
-## <a name="set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode"></a>KCG modunda Android Enterprise Kişisel Profilinde Microsoft Defender'ın ayarlanması
-
-> [!NOTE]
-> Kendi Cihazını Getir (KCG) modundaki Android Enterprise (AE) Kişisel profilinde Microsoft Defender desteği artık genel önizleme aşamasındadır. Aşağıdaki bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünle ilgilidir. Microsoft, burada sağlanan bilgilerle ilgili olarak açık veya zımni hiçbir garanti vermez.
-
-Android kişisel profillerde Microsoft Defender desteğiyle, kullanıcı cihazları iş profilindeki şirket kaynaklarının güvenliğini tehlikeye atabilecek kişisel bir profildeki kimlik avı ve kötü amaçlı yazılım saldırılarına karşı korunabilir.
+## <a name="set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode"></a>KCG modunda Android Kurumsal'da Kişisel Profil'de Microsoft Defender'ı ayarlama
 
 ### <a name="set-up-microsoft-defender-in-personal-profile"></a>Kişisel Profilde Microsoft Defender'ın ayarlanması
 
@@ -273,7 +268,7 @@ Yöneticiler, kişisel profillerde Microsoft Defender desteğini ayarlamak ve ya
     > [!div class="mx-imgBorder"]
     > ![Uygulama yapılandırma ilkesi ekleme resmi.](images/addpolicy.png)
 
-1. Yapılandırma ilkesini benzersiz olarak tanımlamak için **Ad** ve **Açıklama** girin. Platformu **'Android Enterprise'**, Profil türü **'Yalnızca kişisel iş profili'** ve Hedeflenen uygulama'yı **'Microsoft Defender'** olarak seçin.
+1. Yapılandırma ilkesini benzersiz olarak tanımlamak için **Ad** ve **Açıklama** girin. Platformu **'Android Kurumsal'**, Profil türü **'Yalnızca kişisel iş profili'** ve Hedeflenen uygulama'yı **'Microsoft Defender'** olarak seçin.
 
     > [!div class="mx-imgBorder"]
     > ![Adlandırma yapılandırma ilkesinin görüntüsü.](images/selectapp.png)

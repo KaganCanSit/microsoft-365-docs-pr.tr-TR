@@ -1,15 +1,13 @@
 ---
-title: Microsoft 365 İş Ekstra'da düzeltme eylemlerini gözden geçirme
-description: İşlem merkezinde otomatik olarak alınan veya onay bekleyen düzeltmelerin nasıl görüntülendiğini görün
+title: Microsoft 365 İş Ekstra'de düzeltme eylemlerini gözden geçirme
+description: İşlem merkezinde otomatik olarak alınan veya onay bekleyen düzeltmelerin nasıl görüntülendiğini görün.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 02/24/2022
-ms.prod: m365-security
-ms.technology: mdb
+ms.service: o365-administration
 ms.localizationpriority: high
 ms.reviewer: inbadian, shlomiakirav
 f1.keywords: NOCSH
@@ -17,14 +15,14 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 1e5d4e278bc70fdf63c951598bf12f88816a43d0
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: 73790afedc78961562b592d1eb4decd4a8f1b0d4
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65893239"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490409"
 ---
-# <a name="review-remediation-actions-in-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'da düzeltme eylemlerini gözden geçirme
+# <a name="review-remediation-actions-in-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'de düzeltme eylemlerini gözden geçirme
 
 Tamam, bir güvenlik ihlali keşfettiniz ama ne yapacaksınız? Doğasına bağlı.
 
@@ -47,7 +45,7 @@ Karantinaya dosya gönderme, işlemin çalışmasını durdurma veya zamanlanmı
 
 3. Bekleyen eylemleri görüntülemek ve onaylamak (veya reddetmek) için **Beklemede** sekmesini seçin. Bu tür eylemler virüsten koruma/kötü amaçlı yazılımdan koruma, otomatik araştırma, el ile yanıt etkinlikleri veya canlı yanıt oturumlarından kaynaklanabilir.
 
-4. Tamamlanan eylemlerin listesini görüntülemek için **Geçmiş** sekmesini seçin. 
+4. Tamamlanan eylemlerin listesini görüntülemek için **Geçmiş** sekmesini seçin.
 
 ## <a name="types-of-remediation-actions"></a>Düzeltme eylemi türleri
 

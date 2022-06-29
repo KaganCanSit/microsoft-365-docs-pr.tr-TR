@@ -24,14 +24,14 @@ search.appverid:
 - MET150
 - MOE150
 description: Microsoft 365 İş Ekstra işletmenize üretkenlik ve güvenlik konusunda nasıl yardımcı olduğunu öğrenin.
-ms.openlocfilehash: f9501ce8a478af45d8d1b79db1411575636eda36
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 8cfdbdf6f8980a0dbc3a30ca5994714b82571920
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098140"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489891"
 ---
-# <a name="how-microsoft-365-business-premium-helps-your-business"></a>Microsoft 365 İş Ekstra işletmenize nasıl yardımcı olur?
+# <a name="how-microsoft-365-security-recommendations-affect-your-users"></a>Microsoft 365 güvenlik önerileri kullanıcılarınızı nasıl etkiler?
 
 Microsoft 365 İş Ekstra, küçük ve orta ölçekli işletmelere eskisinden daha verimli ve daha güvenli çalışma gücü veren uygun maliyetli bir çözümdür. Bu makalede, Microsoft 365 İş Ekstra işletmenize nasıl yardımcı olabileceği açıklanır ve şu bölümler yer alır:
 
@@ -43,7 +43,7 @@ Microsoft 365 İş Ekstra, küçük ve orta ölçekli işletmelere eskisinden da
 
 ## <a name="video-top-5-benefits-of-microsoft-365-business-premium"></a>Video: Microsoft 365 İş Ekstra en iyi 5 avantajı
 
-Microsoft 365 İş Ekstra işletmenizin daha üretken ve güvenli olmasını nasıl yardımcı olduğunu öğrenmek için aşağıdaki videoyu izleyin: <p>
+Microsoft 365 İş Ekstra işletmenizin daha üretken ve güvenli hale nasıl yardımcı olduğunu görmek için aşağıdaki videoyu izleyin: <p>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Pq0G]
 
@@ -54,8 +54,8 @@ Microsoft 365 İş Ekstra işletmenizin daha üretken ve güvenli olmasını nas
 
 Microsoft 365 İş Ekstra sık kullandığınız Office üretkenlik uygulamalarını, Microsoft Teams gibi işbirliği araçlarını ve kurumsal düzeyde güvenlik, kimlik ve cihaz yönetimi çözümlerini içerir. Microsoft 365 İş Ekstra ile işinizi daha güvenli bir şekilde, cihazlar arasında ve hemen her yerden çalıştırabilirsiniz. Microsoft 365 İş Ekstra şunları içerir:
 
-- Şirketinizin Windows cihazları için **Windows 10 ve 11** Pro yükseltmeleri
-- Bilgisayarlarınıza (Windows ve Mac) ve mobil cihazlarınıza (Windows, iOS ve Android) yükleyebileceğiniz Word, Excel ve PowerPoint gibi **uygulamaları** Office. Ayrıca Windows cihazlarınız için Publisher ve Access'e de sahip olursunuz.
+- Şirketinizin Windows cihazları için **Windows 10 ve 11 Pro** yükseltmeleri
+- Bilgisayarlarınıza (Windows ve Mac) ve mobil cihazlarınıza (Windows, iOS ve Android) yükleyebileceğiniz Word, Excel ve PowerPoint gibi **Office uygulamaları**. Ayrıca Windows cihazlarınız için Publisher ve Access'i de alırsınız.
 - **E-posta, takvimler,** toplantılar ve işbirliği için Microsoft Teams, Outlook ve Exchange
 - İş dosyalarınızı **depolamak ve yönetmek için SharePoint ve OneDrive**
 - Kimlik avı, kötü amaçlı yazılım ve fidye yazılımı koruması gibi **tehditlere karşı gelişmiş** koruma
@@ -83,10 +83,10 @@ Dijital tehditler kılavuzumuzda farklı tehdit türleri ve sizin ve personelini
 
 [:::image type="content" source="media/m365bp-whatuserscandotosecure.png" alt-text="İndirilebilir kılavuzun küçük resmi.":::](https://download.microsoft.com/download/9/1/f/91fa8f24-9953-4f33-9d87-a95624db5e0b/M365BPWhatCanUsersDoToSecure.pdf)
 
-[PDF](https://download.microsoft.com/download/9/1/f/91fa8f24-9953-4f33-9d87-a95624db5e0b/M365BPWhatCanUsersDoToSecure.pdf) |  [PowerPoint](https://download.microsoft.com/download/9/1/f/91fa8f24-9953-4f33-9d87-a95624db5e0b/M365BPWhatCanUsersDoToSecure.pptx)
+[PDF](https://download.microsoft.com/download/9/1/f/91fa8f24-9953-4f33-9d87-a95624db5e0b/M365BPWhatCanUsersDoToSecure.pdf) |  [Powerpoint](https://download.microsoft.com/download/9/1/f/91fa8f24-9953-4f33-9d87-a95624db5e0b/M365BPWhatCanUsersDoToSecure.pptx)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-1. [Kampanyalar için](get-microsoft-365-campaigns.md) [Microsoft 365 İş Ekstra](get-microsoft-365-business-premium.md) veya Microsoft 365 alın.
+1. [Microsoft 365 İş Ekstra](get-microsoft-365-business-premium.md) veya [Kampanyalar için Microsoft 365'i](get-microsoft-365-campaigns.md) edinin.
 
 2. [Kurulum işlemini başlatın](m365bp-setup-overview.md).

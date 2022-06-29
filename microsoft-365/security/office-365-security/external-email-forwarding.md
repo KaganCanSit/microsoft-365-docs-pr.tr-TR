@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 dış e-posta iletmeyi yapılandırma ve denetleme.
+title: Microsoft 365'te dış e-posta iletmeyi yapılandırma ve denetleme.
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -13,19 +13,20 @@ ms.localizationpriority: medium
 ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
+- adminvideo
 description: Bu makale dış e-posta iletme, Otomatik iletme, 5.7.520 Erişim Reddedildi iletileri, dış iletmeyi devre dışı bırakma, 'Yöneticiniz dış iletmeyi devre dışı bırakmış' iletileri ve giden istenmeyen posta önleme ilkesi gibi konuları kapsar.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 672e6af3d2aef76a0c944a05c438061861e20060
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: c10433cd858ebe160ac4a38cfee78b57d39b80df
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971913"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487158"
 ---
-# <a name="control-automatic-external-email-forwarding-in-microsoft-365"></a>Microsoft 365'de otomatik dış e-posta iletmeyi denetleme
+# <a name="control-automatic-external-email-forwarding-in-microsoft-365"></a>Microsoft 365'te otomatik dış e-posta iletmeyi denetleme
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -34,13 +35,13 @@ ms.locfileid: "64971913"
 
 Yönetici olarak, otomatik olarak iletilen iletileri dış alıcılara (kuruluşunuzun dışındaki alıcılar) kısıtlamak veya denetlemek için şirket gereksinimleriniz olabilir. E-posta iletme yararlı olabilir, ancak bilgilerin olası açığa çıkması nedeniyle güvenlik riski de oluşturabilir. Saldırganlar bu bilgileri kuruluşunuza veya iş ortaklarınıza saldırmak için kullanabilir.
 
-Aşağıdaki otomatik iletme türleri Microsoft 365 kullanılabilir:
+Aşağıdaki otomatik iletme türleri Microsoft 365'te kullanılabilir:
 
 - Kullanıcılar, gelen [kutusu kurallarını](https://support.microsoft.com/office/c24f5dea-9465-4df4-ad17-a50704d66c59) iletileri otomatik olarak dış gönderenlere iletecek şekilde yapılandırabilir (kasıtlı olarak veya güvenliği aşılmış bir hesabın sonucu olarak).
 - Yöneticiler, iletileri otomatik olarak dış alıcılara iletmek için [posta kutusu iletmeyi](/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding) ( _SMTP iletme_ olarak da bilinir) yapılandırabilir. Yönetici, iletileri iletmeyi veya iletilen iletilerin kopyalarını posta kutusunda tutmayı seçebilir.
 
 > [!NOTE]
-> Microsoft 365 aracılığıyla şirket içi e-posta sistemlerinden otomatik iletme özelliğine sahip kullanıcılar, gelecek bir güncelleştirmede bulut posta kutularıyla aynı ilke denetimlerine tabi olacaktır. Bu güncelleştirme İleti Merkezi gönderisi aracılığıyla iletilecektir.
+> Şirket içi e-posta sistemlerinden Microsoft 365 aracılığıyla otomatik iletme özelliğine sahip kullanıcılar, gelecek bir güncelleştirmede bulut posta kutularıyla aynı ilke denetimlerine tabi olacak. Bu güncelleştirme İleti Merkezi gönderisi aracılığıyla iletilecektir.
 
 Dış alıcılara otomatik iletmeyi denetlemek için giden istenmeyen posta filtresi ilkelerini kullanabilirsiniz. Üç ayar mevcuttur:
 
@@ -60,7 +61,7 @@ Bu ayarları yapılandırma yönergeleri için bkz. [EOP'de giden istenmeyen pos
 Yönetici olarak, otomatik e-posta iletmeye izin verecek veya bunları engelleyecek başka denetimler yapılandırmış olabilirsiniz. Örneğin:
 
 - [Dış etki alanlarının](/exchange/mail-flow-best-practices/remote-domains/remote-domains) bir kısmına veya tümüne otomatik e-posta iletmeye izin vermek veya bunları engellemek için uzak etki alanları.
-- Otomatik olarak iletilen iletileri algılamak ve dış alıcılara engellemek için [posta akışı kurallarında](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (taşıma kuralları olarak da bilinir) Exchange koşullar ve eylemler.
+- Dış alıcılara otomatik olarak iletilen iletileri algılamak ve engellemek için Exchange [posta akışı kurallarındaki](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) koşullar ve eylemler (aktarım kuralları olarak da bilinir).
 
 Bir ayar dış iletmeye izin verdiğinde, ancak başka bir ayar dış iletmeyi engellediğinde, blok genellikle kazanır. Örnekler aşağıdaki tabloda açıklanmıştır:
 
@@ -74,7 +75,7 @@ Bu davranışı (örneğin), giden istenmeyen posta filtresi ilkelerinde otomati
 
 ## <a name="how-to-find-users-that-are-automatically-forwarding"></a>Otomatik olarak iletilen kullanıcıları bulma
 
-Bulut tabanlı hesaplar için [otomatik olarak iletilen iletiler raporunda](/exchange/monitoring/mail-flow-reports/mfr-auto-forwarded-messages-report) , iletileri dış alıcılara otomatik olarak iletilen kullanıcılar hakkındaki bilgileri görebilirsiniz. şirket içi e-posta sisteminden Microsoft 365 aracılığıyla otomatik olarak iletilen şirket içi kullanıcılar için, bu kullanıcıları izlemek için bir posta akışı kuralı oluşturmanız gerekir. Posta akışı kuralı oluşturma yönergeleri için bkz. [Posta akışı kuralı oluşturmak için EAC'yi kullanma](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#use-the-eac-to-create-a-mail-flow-rule).
+Bulut tabanlı hesaplar için [otomatik olarak iletilen iletiler raporunda](/exchange/monitoring/mail-flow-reports/mfr-auto-forwarded-messages-report) , iletileri dış alıcılara otomatik olarak iletilen kullanıcılar hakkındaki bilgileri görebilirsiniz. Microsoft 365 aracılığıyla şirket içi e-posta sisteminden otomatik olarak iletilen şirket içi kullanıcılar için, bu kullanıcıları izlemek için bir posta akışı kuralı oluşturmanız gerekir. Posta akışı kuralı oluşturma yönergeleri için bkz. [Posta akışı kuralı oluşturmak için EAC'yi kullanma](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#use-the-eac-to-create-a-mail-flow-rule).
 
 Exchange yönetim merkezinde (EAC) posta akışı kuralı oluşturmak için aşağıdaki bilgiler gereklidir:
 

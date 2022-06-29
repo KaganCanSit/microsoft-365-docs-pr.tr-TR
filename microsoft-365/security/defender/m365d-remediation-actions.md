@@ -21,12 +21,12 @@ ms.topic: conceptual
 ms.custom: autoir
 ms.reviewer: evaldm, isco
 ms.technology: m365d
-ms.openlocfilehash: 5605678a1fcc30719d7f838a16452ba527c554b7
-ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
+ms.openlocfilehash: 669d4f3b4e8c2d805f72f9113cea1e9e926f3390
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64847059"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66492381"
 ---
 # <a name="remediation-actions-in-microsoft-365-defender"></a>Microsoft 365 Defender'de düzeltme eylemleri
 
@@ -50,7 +50,7 @@ Aşağıdaki tabloda, şu anda Microsoft 365 Defender'de desteklenen düzeltme e
 
 |Cihaz (uç nokta) düzeltme eylemleri  |E-posta düzeltme eylemleri  |Kullanıcılar (hesaplar)  |
 |:---------|:---------|----------|
-|- Araştırma paketini toplama <br/>- Cihazı yalıt (bu eylem geri alınabilir)<br/>- Çıkarma makinesi <br/>- Sürüm kodu yürütme <br/>- Karantinadan serbest bırakma <br/>- İstek örneği <br/>- Kod yürütmeyi kısıtla (bu eylem geri alınabilir) <br/>- Virüsten koruma taraması çalıştırma <br/>- Durdurma ve karantinaya al      |- URL'yi engelle (tıklama zamanı)<br/>- E-posta iletilerini veya kümelerini geçici silme<br/>- Karantina e-postası<br/>- E-posta eklerini karantinaya alma<br/>- Dış posta iletmeyi kapatma          |- Kullanıcıyı devre dışı bırakma<br />- Kullanıcı parolasını sıfırlama<br />- Kullanıcının güvenliğinin aşıldığını onaylayın          |
+|- Araştırma paketini toplama <br/>- Cihazı yalıt (bu eylem geri alınabilir)<br/>- Çıkarma makinesi <br/>- Sürüm kodu yürütme <br/>- Karantinadan serbest bırakma <br/>- İstek örneği <br/>- Kod yürütmeyi kısıtla (bu eylem geri alınabilir) <br/>- Virüsten koruma taraması çalıştırma <br/>- Durdurma ve karantinaya al <br/>- Ağdan cihazları içerir     |- URL'yi engelle (tıklama zamanı)<br/>- E-posta iletilerini veya kümelerini geçici silme<br/>- Karantina e-postası<br/>- E-posta eklerini karantinaya alma<br/>- Dış posta iletmeyi kapatma          |- Kullanıcıyı devre dışı bırakma<br />- Kullanıcı parolasını sıfırlama<br />- Kullanıcının güvenliğinin aşıldığını onaylayın          |
 
 Onay bekleniyor veya zaten tamamlandı olsun düzeltme eylemleri [İşlem merkezinde](m365d-action-center.md) görüntülenebilir.
 
@@ -85,3 +85,4 @@ Otomatik araştırmalardan sonra kullanılabilecek düzeltme eylemlerine ek olar
 - [İşlem merkezini ziyaret edin](m365d-action-center.md)
 - [Düzeltme eylemlerini görüntüleyin ve yönetin](m365d-autoir-actions.md)
 - [Hatalı pozitif sonuçları veya hatalı negatifleri ele alın](m365d-autoir-report-false-positives-negatives.md)
+- [Ağdaki cihazları içerin](../defender-endpoint\respond-machine-alerts.md#contain-devices-from-the-network)

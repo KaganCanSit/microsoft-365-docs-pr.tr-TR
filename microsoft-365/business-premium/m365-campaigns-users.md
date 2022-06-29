@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 ms.author: v-kcirillo
 author: cirilk
-manager: scotv
+manager: dansimp
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -23,19 +23,19 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Microsoft 365 İş Ekstra'ya yönelik bu güvenlik önerilerinin kullanıcılarınızı nasıl etkilediğini ve verilerinizi nasıl koruyup koruduğu hakkında bilgi edinin.
-ms.openlocfilehash: 30e609a6dc74ef8a0303c93f65eb44a4003d3a99
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+description: Microsoft 365 İş Ekstra için bu güvenlik önerilerinin kullanıcılarınızı nasıl etkilediğini ve verilerinizi nasıl koruyacağınızı öğrenin.
+ms.openlocfilehash: 49d5a4cea525f8245599ded625af6d7a5b355eae
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65893149"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66491105"
 ---
 # <a name="how-these-security-recommendations-affect-your-microsoft-365-users"></a>Bu güvenlik önerileri Microsoft 365 kullanıcılarınızı nasıl etkiler?
 
 Bu çözümdeki Microsoft 365 güvenlik önerileri, bilgisayar korsanlarının ortamınıza erişmesini çok daha zor hale getirir. Bunun dezavantajı, kullanıcılarınızın bu daha güvenli ortamda nasıl çalışılacağının farkında olması gerekir. Biraz daha sabır gerektiğinin farkındayız, ancak kuruluşunuzun korunmasına değer.
 
-![iPhone'lar, Android cihazlar, Mac'ler, Windows 10, paylaşım ve anahtar personel için aşağıdan önemli noktaları toplayan çizim.](../media/M365-democracy-Users_900px.png)
+![iPhone'lar, Android cihazlar, Mac'ler, Windows 10, paylaşım ve önemli personel için aşağıdan önemli noktaları toplayan çizim.](../media/M365-democracy-Users_900px.png)
 
 ## <a name="use-secure-email-practices"></a>Güvenli e-posta uygulamalarını kullanma
 
@@ -43,7 +43,7 @@ Tüm kullanıcılar, e-postalarının güvenli kalmasına yardımcı olmak için
 
 - Kimlik doğrulayıcı uygulamasıyla çok faktörlü kimlik doğrulamasını kullanmak için e-postayı ayarlayın.
 
-- Yasal e-postaları doğrulayın ve gelişmiş kimlik avı korumasından (Office 365 için Defender) güvenlik ipuçları arayın.
+- Geçerli e-postaları doğrulayın ve gelişmiş kimlik avı korumasından (Office 365 için Defender) güvenlik ipuçları arayın.
 
 - Güvenli Bağlantılar ve Güvenli Ekler tarafından doğrulanan yalnızca güvenli bağlantıları ve ekleri açın.
 
@@ -63,7 +63,7 @@ Ortamınıza eklediğiniz tüm kullanıcıların güvenli bir şekilde çalışm
 
 Bunları ayarladıktan sonra, kullanıcılarınızdan bu cihazlardaki posta da dahil olmak üzere kuruluş verilerinize erişirken kimlik doğrulayıcı uygulamasını kullanmaları istenir.
 
-## <a name="keep-byod-macs-and-windows-10-pcs-fresh"></a>KCG Mac'leri ve Windows 10 bilgisayarlarını güncel tutun
+## <a name="keep-byod-macs-and-windows-10-pcs-fresh"></a>KCG Mac'leri ve Windows 10 bilgisayarları güncel tutun
 
 Kullanıcıların birincil iş cihazlarını güncel tutmaları da önemlidir:
 
@@ -71,13 +71,13 @@ Kullanıcıların birincil iş cihazlarını güncel tutmaları da önemlidir:
 
 - Windows güncelleştirmeleri gibi işletim sistemi güncelleştirmelerinden haberdar olun.
 
-[Yönetilmeyen Windows 10 ve Mac cihazlarda](m365bp-protect-pcs-macs.md), kullanıcılar temel güvenlik özelliklerinin etkinleştirildiğinden emin olmakla sorumlulardır.
+[Yönetilmeyen Windows 10 ve Mac cihazlarda](m365bp-protect-pcs-macs.md), kullanıcılar temel güvenlik özelliklerinin etkinleştirildiğinden emin olmakla sorumluluğa sahiptir.
 
-**KCG Windows 10 ve Mac cihazlarda temel güvenlik özelliklerini etkinleştirme**
+### <a name="enable-basic-security-capabilities-on-byod-windows-10-and-mac-devices"></a>KCG Windows 10 ve Mac cihazlarda temel güvenlik özelliklerini etkinleştirme
 
 |**Windows 10**|**Mac**|
 |:-----|:------|
-|BitLocker cihaz korumasını açma<p><p> Windows Defender'ın açık kaldığından emin olun <p>Windows Güvenlik Duvarı'nı açma| Mac diskini şifrelemek için FileVault kullanma <p><p>Güvenilir bir virüsten koruma yazılımı kullanma <p>Güvenlik duvarı korumasını açma|
+|BitLocker cihaz korumasını açma<p><p> Windows Defender açık kaldığından emin olun <p>Windows Güvenlik Duvarı'nı açma| Mac diskini şifrelemek için FileVault kullanma <p><p>Güvenilir bir virüsten koruma yazılımı kullanma <p>Güvenlik duvarı korumasını açma|
 
 Bu öneriler hakkında daha fazla bilgi edinmek için bkz. [Hesabınızı ve cihazlarınızı korsanlara ve kötü amaçlı yazılımlara karşı koruma](https://support.office.com/article/Protect-your-account-and-devices-from-hackers-and-malware-066d6216-a56b-4f90-9af3-b3a1e9a327d6#ID0EAABAAA=Windows_10).
 
@@ -87,4 +87,4 @@ Kullanıcılarınız kuruluş dosyalarınızı Microsoft 365 dışındaki yerler
 
 ## <a name="set-up-managed-windows-10-devices"></a>Yönetilen Windows 10 cihazlarını ayarlama
 
-En önemli personel üyelerinizin yönettiğiniz yeni edinilmiş Windows 10 cihazlarını kullanmasını öneririz. [Size bu cihazları yönetmeyi ve güvenli hale](../business/set-up-windows-devices.md?toc=/microsoft-365/campaigns/toc.json) nasıl sağlayacağınızı göstereceğiz. Bu, korsanların en yüksek değer hedefi olan personel üyelerinin en fazla korumayı almasını sağlar.
+En önemli personel üyelerinizin yönettiğiniz yeni Windows 10 cihazları kullanmasını öneririz. [Size bu cihazları yönetmeyi ve güvenli hale](../business/set-up-windows-devices.md?toc=/microsoft-365/campaigns/toc.json) nasıl sağlayacağınızı göstereceğiz. Bu, korsanların en yüksek değer hedefi olan personel üyelerinin en fazla korumayı almasını sağlar.

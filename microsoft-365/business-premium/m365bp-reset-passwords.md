@@ -4,38 +4,28 @@ f1.keywords:
 - NOCSH
 ms.author: v-kcirillo
 author: cirilk
-manager: scotv
+manager: dansimp
 audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: medium
 ms.collection:
 - M365-subscription-management
 - Adm_O365
 - Adm_TOC
-ms.custom:
-- TopSMBIssues
-- MSStore_Link
-- TRN_M365B
-- OKR_SMB_Videos
-- AdminSurgePortfolio
-- AdminTemplateSet
-- business_assist
-- adminvideo
 search.appverid:
 - BCS160
 - MET150
 - MOE150
 - BEA160
 - GEA150
-ms.assetid: 7a5d073b-7fae-4aa5-8f96-9ecd041aba9c
 description: Microsoft 365 İş Ekstra kullanıcıların parolalarını sıfırlayın.
-ms.openlocfilehash: 0232846c4dcc315e80c3a9ec72c171fddd65f72b
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: a2841c3819011237fcb0dce3af58b4009d537904
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66090680"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489690"
 ---
 # <a name="reset-passwords-in-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra'da parolaları sıfırlama
 
@@ -55,9 +45,9 @@ Kullanıcı yeni bir parola istediğinde, e-posta yoluyla bir parola sıfırlama
 
 ## <a name="admin-initiated-password-reset"></a>Yönetici tarafından başlatılan parola sıfırlama
 
-Bazı durumlarda Yönetici hesaplarda parola sıfırlamayı zorlamak isteyebilir.
+Bir yöneticinin hesaplarda parola sıfırlamayı zorlamak isteyebileceği zamanlar olabilir.
 
-1. Yönetici merkezinde, **Kullanıcılar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Etkin kullanıcılar</a> sayfasına gidin.
+1. Yönetici merkezinde **Kullanıcılar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Etkin kullanıcılar</a> sayfasına gidin.
 
 2. **Etkin kullanıcılar** sayfasında, sıfırlanması gereken kullanıcıyı seçin ve ardından **Parolayı sıfırla'yı** seçin.
 
@@ -67,11 +57,11 @@ Bazı durumlarda Yönetici hesaplarda parola sıfırlamayı zorlamak isteyebilir
 
 ## <a name="let-users-reset-their-own-passwords"></a>Kullanıcıların kendi parolalarını sıfırlamasına izin verme
 
-Kullanıcılarınız için parolaları el ile sıfırlamak zorunda kalmayacak şekilde kuruluşunuz için self servis parola sıfırlamayı ayarlamayı göz önünde bulundurun. İşiniz azalır! Nasıl yapılacağını öğrenmek için bkz. [Kullanıcıların kendi parolalarını sıfırlamasına izin verme](../admin/add-users/let-users-reset-passwords.md).
+Self servis parola sıfırlamayı ayarlamanızı kesinlikle öneririz. Bu şekilde kullanıcılarınız için parolaları el ile sıfırlamanız gerekmez. Nasıl yapılacağını öğrenmek için bkz. [kullanıcıların Office 365 kendi parolalarını sıfırlamasına izin verme](/admin/add-users/let-users-reset-passwords.md).
 
 ## <a name="reset-my-admin-password"></a>Yönetici parolamı sıfırla
 
-Parolanızı unuttuysanız ancak parolanız tarayıcınıza kaydedildiği için Microsoft 365 oturum açabiliyorsanız bu adımları kullanın:
+Parolanızı unuttuysanız ancak örneğin parolanız tarayıcınıza kaydedildiği için Microsoft 365'te oturum açabiliyorsanız bu adımları kullanın:
 
 1. Sağ üst köşedeki Adınızı (simge) > **Hesabım** > **Kişisel Bilgileri'ni** seçin.
 
@@ -83,11 +73,11 @@ Parolanızı unuttuysanız ancak parolanız tarayıcınıza kaydedildiği için 
 
 5. Sihirbazdaki adımları izleyerek parolanızı sıfırlayın. Parolanızı sıfırlarken doğru kişi olduğunuzdan emin olmak için alternatif kişi bilgileriniz kullanılır.
 
-> [!IMPORTANT]
-> Yönetici parolanızı unuttuysanız ve oturum açamıyorsanız:
-> - İşletmenizdeki başka bir genel yöneticiden sizin için parolanızı sıfırlamasını isteyin.
-> - Cep telefonu numarası da dahil olmak üzere alternatif iletişim bilgileri sağladığınıza emin olun.
-> - [Teknik desteğe başvurun](../admin/get-help-support.md).
+Parolanızı unuttuysanız ve oturum açamıyorsanız:
+
+- İşletmenizdeki başka bir genel yöneticiden sizin için parolanızı sıfırlamasını isteyin.
+
+- Cep telefonu numarası da dahil olmak üzere alternatif iletişim bilgileri sağladığınıza emin olun.
 
 ## <a name="reset-all-business-passwords-for-everyone-at-the-same-time"></a>Herkes için tüm iş parolalarını aynı anda sıfırlama
 
@@ -97,7 +87,7 @@ Bu adımlar onlarca kullanıcısı olan işletmelere yöneliktir. Yüzlerce veya
   
 1. Yönetici merkezinde, **Kullanıcılar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Etkin kullanıcılar</a> sayfasına gidin.
 
-2. İşletmenizdeki herkesi seçmek için **Görünen ad'ın** yanındaki seçeneği belirleyin. Sonra kendi seçiminizi kaldırın. Kendi parolanızı, diğer herkesin parolasıyla aynı anda sıfırlayamazsınız.
+2. İşletmenizdeki herkesi seçmek için **Görünen ad'ın** yanındaki seçeneği belirleyin. Ardından, seçiminizi kaldırın. Kendi parolanızı, diğer herkesin parolasıyla aynı anda sıfırlayamazsınız.
 
 3. **Parolayı sıfırla'yı** seçin.
 
@@ -111,15 +101,11 @@ Bu adımlar onlarca kullanıcısı olan işletmelere yöneliktir. Yüzlerce veya
 
 Birden çok hesabın parolalarını sıfırlamak için PowerShell'i kullanın. Eyal Doron'un bu gönderisine göz atın: [PowerShell ile parolaları yönetme](https://go.microsoft.com/fwlink/?linkid=853696).
 
-Genel bakış bilgileri için bkz. [PowerShell ile Microsoft 365 yönetme](../enterprise/manage-microsoft-365-with-microsoft-365-powershell.md).
-  
-## <a name="force-a-password-change-for-all-users-in-your-business"></a>İşletmenizdeki tüm kullanıcılar için parola değiştirmeyi zorunlu tutma
-
-Microsoft MVP'si Vasil Michev'in bu harika blog gönderisine göz atın: [Office 365'te tüm kullanıcılar için parola değiştirmeyi zorunlu tutma](https://go.microsoft.com/fwlink/?linkid=853693).
+Genel bakış bilgileri için bkz. [PowerShell ile Microsoft 365'i yönetme](../enterprise/manage-microsoft-365-with-microsoft-365-powershell.md).
   
 ## <a name="related-content"></a>İlgili içerik
   
 [Kullanıcıların kendi parolalarını](../admin/add-users/let-users-reset-passwords.md)
- sıfırlamasına izin ver İşletmeler 
-[için Microsoft 365 parolaları sıfırlama](../admin/add-users/reset-passwords.md)[Tek bir kullanıcının parolasını hiçbir zaman sona ermeyecek](../admin/add-users/set-password-to-never-expire.md) 
- şekilde ayarlama[Kuruluşunuz için parola süre sonu ilkesini ayarlama](../admin/manage/set-password-expiration-policy.md)
+ sıfırlamasına izin ver İş 
+ [için Microsoft 365'te parolaları sıfırlama](../admin/add-users/reset-passwords.md) [Tek bir kullanıcının parolasını süresi hiç dolmak](../admin/add-users/set-password-to-never-expire.md) 
+ üzere ayarlama [Kuruluşunuz için parola süre sonu ilkesini ayarlama](../admin/manage/set-password-expiration-policy.md)

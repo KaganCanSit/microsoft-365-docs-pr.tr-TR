@@ -17,12 +17,12 @@ ms.custom: seo-marvel-apr2020
 description: Yöneticiler, Microsoft 365 Defender portalında Gönderiler portalını kullanarak şüpheli e-postalar, şüpheli kimlik avı postaları, istenmeyen postalar ve diğer zararlı olabilecek iletileri, URL'leri ve e-posta eklerini yeniden tarama amacıyla Microsoft'a göndermeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: bd56ce39cbb1d48470742f80a8b07747dd52f33a
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: 280b609f39431759216ab4e40cfb5d01752b6514
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66116057"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487707"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Şüpheli istenmeyen postaları, kimlik avı, URL'leri ve dosyaları Microsoft'a göndermek için Gönderimler portalını kullanın
 
@@ -32,7 +32,7 @@ ms.locfileid: "66116057"
 - [Exchange Online Protection](exchange-online-protection-overview.md)
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 
-Exchange Online posta kutusu olan Microsoft 365 kuruluşlarda, yöneticiler Microsoft 365 Defender portalındaki Gönderimler portalını kullanarak e-posta iletilerini, URL'leri ve ekleri tarama için Microsoft'a gönderebilir.
+Exchange Online posta kutularına sahip Microsoft 365 kuruluşlarında, yöneticiler e-posta iletilerini, URL'leri ve ekleri tarama için Microsoft'a göndermek için Microsoft 365 Defender portalındaki Gönderimler portalını kullanabilir.
 
 Analiz için bir e-posta iletisi gönderdiğinizde şunları alırsınız:
 
@@ -46,7 +46,7 @@ Analiz için bir e-posta iletisi gönderdiğinizde şunları alırsınız:
 
 E-posta iletilerini, URL'leri ve ekleri Microsoft'a göndermenin diğer yolları için bkz. [İletileri ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md).
 
-Değerlendirme için Microsoft'a ileti göndermek üzere Office 365 için Microsoft Defender'daki yönetici gönderimlerini kullanmayı öğrenmek için bu kısa videoyu izleyin. 
+Değerlendirme için Microsoft'a ileti göndermek üzere Office 365 için Microsoft Defender'daki yönetici gönderimlerini kullanmayı öğrenmek için bu kısa videoyu izleyin.
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBLPn]
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
@@ -95,8 +95,8 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
 1. **Gönderim türünü seçin** kutusunda, açılan listede **E-posta'nın** seçili olduğunu doğrulayın.
 
 2. **Ağ iletisi kimliğini ekleyin veya e-posta dosyasını karşıya yükleyin** bölümünde aşağıdaki seçeneklerden birini kullanın:
-   - **E-posta ağ iletisi kimliğini ekleyin**: Bu, karantinaya alınan iletilerde **X-MS-Exchange-Organization-Network-Message-Id** üst bilgisinde veya **X-MS-Office365-Filtering-Correlation-Id** üst bilgisinde bulunan bir GUID değeridir.
-   - **E-posta dosyasını (.msg veya .eml) Upload**: **Dosyalara gözat'a** tıklayın. Açılan iletişim kutusunda .eml veya .msg dosyasını bulup seçin ve **aç'a** tıklayın.
+   - **E-posta ağ iletisi kimliğini ekleyin**: Bu, karantinaya alınan iletilerdeki **X-MS-Exchange-Organization-Network-Message-Id** üst bilgisinde veya **X-MS-Office365-Filtering-Correlation-Id** üst bilgisinde bulunan bir GUID değeridir.
+   - **E-posta dosyasını (.msg veya .eml) karşıya yükleyin**: **Dosyalara gözat'a** tıklayın. Açılan iletişim kutusunda .eml veya .msg dosyasını bulup seçin ve **aç'a** tıklayın.
 
 3. **Sorun yaşayan bir alıcı seçin** kutusunda, ilke denetimini çalıştırmak istediğiniz alıcıyı belirtin. İlke denetimi, e-postanın kullanıcı veya kuruluş ilkeleri nedeniyle taramayı atlayıp atlamadığını belirler.
 
@@ -376,11 +376,11 @@ Geçersiz kılma bulunduysa, sonucun birkaç dakika içinde kullanılabilir olma
 > [!NOTE]
 > Kuruluşlar, kullanıcı tarafından bildirilen iletileri yalnızca özel posta kutusuna gönderecek şekilde yapılandırılmışsa, bildirilen iletiler **Kullanıcı tarafından bildirilen iletiler'de** görünür ancak sonuçları her zaman boş olur (çünkü bunlar yeniden taramazlardı).
 
-### <a name="undo-user-submissions"></a>Kullanıcı gönderimlerini geri alma
+## <a name="undo-user-submissions"></a>Kullanıcı gönderimlerini geri alma
 
 Kullanıcı özel posta kutusuna şüpheli bir e-posta gönderdikten sonra, kullanıcı ve yöneticinin gönderimi geri alma seçeneği yoktur. Kullanıcı e-postayı kurtarmak isterse, Silinmiş Öğeler veya Gereksiz E-posta klasörlerinde kurtarma için kullanılabilir.
 
-### <a name="convert-user-reported-messages-from-the-custom-mailbox-into-an-admin-submission"></a>Kullanıcı tarafından bildirilen iletileri özel posta kutusundan yönetici gönderimine dönüştürme
+## <a name="convert-user-reported-messages-from-the-custom-mailbox-into-an-admin-submission"></a>Kullanıcı tarafından bildirilen iletileri özel posta kutusundan yönetici gönderimine dönüştürme
 
 Özel posta kutusunu, iletileri Microsoft'a göndermeden kullanıcı tarafından bildirilen iletileri kesecek şekilde yapılandırdıysanız, analiz için belirli iletileri bulabilir ve Microsoft'a gönderebilirsiniz.
 
@@ -398,3 +398,20 @@ Kullanıcı özel posta kutusuna şüpheli bir e-posta gönderdikten sonra, kull
 İleti Microsoft'a bildirilirse, **Yöneticiye dönüştürülen gönderim** değeri **hayır'dan** **evet'e** dönüşür. İlgili kullanıcı tarafından bildirilen iletinin gönderim açılır öğesi içindeki taşma **menüsünden Dönüştürülmüş yönetici gönderimini görüntüle'ye** tıklayarak doğrudan yönetici gönderimine erişebilirsiniz.
 
 :::image type="content" source="../../media/view-converted-admin-submission.png" alt-text="Kullanıcı tarafından bildirilen bir iletiden oluşturulan yönetici gönderimini görüntüleme seçeneği.":::
+
+## <a name="view-associated-alert-for-user-and-admin-email-submissions"></a>Kullanıcı ve yönetici e-posta gönderimleri için ilişkili uyarıyı görüntüleme
+
+> [!IMPORTANT]
+> Bu bölümdeki bilgiler yalnızca plan 2 veya üzeri Office 365 için Defender için geçerlidir.
+>
+> Şu anda, kullanıcı gönderimleri yalnızca kimlik avı olarak bildirilen iletiler için uyarılar oluşturur.
+
+Bildirilen her kullanıcı için kimlik avı iletisi ve yönetici e-posta gönderimi için ilgili uyarı oluşturulur.
+
+Kullanıcı tarafından bildirilen kimlik avı iletisine karşılık gelen uyarıyı görüntülemek için **, Kullanıcı tarafından bildirilen iletiler** sekmesini seçin ve ardından iletiye çift tıklayarak gönderim açılır öğesini açın. Diğer seçenekler simgesine tıklayın ![.](../../media/m365-cc-sc-more-actions-icon.png) **Diğer seçenekler** ve ardından  **Uyarıyı görüntüle'yi** seçin.
+
+:::image type="content" source="../../media/alert-from-user-submission.png" alt-text="Kullanıcı tarafından bildirilen kimlik avı iletisinden ilgili uyarıyı görüntüleme seçeneği.":::
+
+Yönetici e-posta gönderimlerine karşılık gelen uyarıyı görüntülemek için **E-postalar** sekmesini seçin ve ardından iletiye çift tıklayarak gönderim açılır öğesini açın. **E-posta varlığını aç** seçeneğinde **Uyarıyı görüntüle'yi** seçin.
+
+:::image type="content" source="../../media/alert-from-admin-submission.png" alt-text="Bir yönetici gönderiminden ilgili uyarıyı görüntüleme seçeneği.":::

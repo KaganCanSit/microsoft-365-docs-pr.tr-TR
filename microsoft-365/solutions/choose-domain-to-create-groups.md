@@ -18,12 +18,12 @@ search.appverid:
 ms.assetid: 7cf5655d-e523-4bc3-a93b-3ccebf44a01a
 recommendations: false
 description: PowerShell kullanarak e-posta adresi ilkelerini yapılandırarak Microsoft 365 grupları oluştururken kullanılacak etki alanını seçmeyi öğrenin.
-ms.openlocfilehash: c6eb1bbccf8745c88941f40d6fefeed29aec5620
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: bd9fad340d136fe4cac228f94f1904761cff7071
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012548"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490907"
 ---
 # <a name="choose-the-domain-to-use-when-creating-microsoft-365-groups"></a>Microsoft 365 grupları oluştururken kullanılacak etki alanını seçin
 
@@ -31,7 +31,7 @@ Bazı kuruluşlar, işlerinin farklı bölümlerini birbirinden ayırmak için a
   
 Kuruluşunuzun, işletmenizin varsayılan kabul edilen etki alanı dışındaki etki alanlarında kendi gruplarını oluşturması gerekiyorsa, PowerShell kullanarak e-posta adresi ilkelerini (EAP) yapılandırarak buna izin vekleyebilirsiniz.
 
-PowerShell cmdlet'lerini çalıştırmadan önce, kuruluşunuzla konuşmanıza olanak sağlayacak bir modülü indirin ve yükleyin. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell) göz atın.
+PowerShell cmdlet'lerini çalıştırmadan önce, kuruluşunuzla konuşmanıza olanak sağlayacak bir modülü indirin ve yükleyin. [Exchange Online PowerShell'e bağlanma'ya](/powershell/exchange/connect-to-exchange-online-powershell) göz atın.
 
 ## <a name="example-scenarios"></a>Örnek senaryolar
 
@@ -50,7 +50,7 @@ Aşağıdaki iki senaryoda bunu nasıl başaracağınız açıklanmaktadır.
   
 ### <a name="scenario-1"></a>Senaryo 1
 
-Aşağıdaki örnekte, kuruluşunuzdaki tüm Microsoft 365 gruplarının groups.contoso.com etki alanındaki sağlanması gösterilmektedir.
+Aşağıdaki örnekte, kuruluşunuzdaki tüm Microsoft 365 gruplarının groups.contoso.com etki alanında nasıl sağlandı olduğu gösterilmektedir.
   
 ```
 New-EmailAddressPolicy -Name Groups -IncludeUnifiedGroupRecipients -EnabledEmailAddressTemplates "SMTP:@groups.contoso.com" -Priority 1
@@ -58,7 +58,7 @@ New-EmailAddressPolicy -Name Groups -IncludeUnifiedGroupRecipients -EnabledEmail
 
 ### <a name="scenario-2"></a>Senaryo 2
 
-Grupların hangi alt etki alanlarında Microsoft 365 oluşturulduğunu denetlemek istediğinizi varsayalım. İstiyorsun:
+Microsoft 365 gruplarının hangi alt etki alanlarında oluşturulduğunu denetlemek istediğinizi varsayalım. İstiyorsun:
   
 - students.groups.contoso.com etki alanında öğrenciler ( **Bölümü** **Öğrenciler** olarak ayarlanmış kullanıcılar) tarafından oluşturulan gruplar. Şu komutu kullanın:
     
@@ -77,7 +77,9 @@ Grupların hangi alt etki alanlarında Microsoft 365 oluşturulduğunu denetleme
   ```
   New-EmailAddressPolicy -Name OtherGroups -IncludeUnifiedGroupRecipients -EnabledPrimarySMTPAddressTemplate "SMTP:@groups.contoso.com" -Priority 3
   ```
-
+> [!NOTE]
+> MX kaydı üçüncü taraf istenmeyen posta filtrelemeye işaret ettiğinde bu senaryo çalışmaz.
+ 
 ## <a name="change-email-address-policies"></a>E-posta adresi ilkelerini değiştirme
 
 Mevcut bir EAP'nin öncelik veya e-posta adresi şablonlarını değiştirmek için Set-EmailAddressPolicy cmdlet'ini kullanın.
@@ -101,7 +103,7 @@ EAP'nin değiştirilmesi, önceden sağlanmış olan grupları etkilemez.
   
 ## <a name="hybrid-requirements"></a>Karma gereksinimler
 
-Kuruluşunuz karma bir senaryoda yapılandırılmışsa, kuruluşunuzun Microsoft 365 grupları oluşturma gereksinimlerini karşıladığından emin olmak için [şirket içi Exchange karma ile](/exchange/hybrid-deployment/set-up-microsoft-365-groups) Microsoft 365 grupları yapılandırma konusuna bakın. 
+Kuruluşunuz karma bir senaryoda yapılandırılmışsa, [kuruluşunuzun Microsoft 365 grupları](/exchange/hybrid-deployment/set-up-microsoft-365-groups) oluşturma gereksinimlerini karşıladığından emin olmak için Microsoft 365 gruplarını şirket içi Exchange karmasıyla yapılandırma konusuna bakın. 
   
 ## <a name="additional-info-about-using-email-address-policies-groups"></a>E-posta adresi ilkeleri gruplarını kullanma hakkında ek bilgiler:
 
@@ -125,4 +127,4 @@ Bilmeniz gereken birkaç şey daha vardır:
 
 [İşbirliği idare planınızı oluşturma](collaboration-governance-first.md) (makale)
 
-[Yönetim merkezinde Microsoft 365 grubu oluşturma](../admin/create-groups/create-groups.md) (makale)
+[Yönetim merkezinde bir Microsoft 365 grubu oluşturma](../admin/create-groups/create-groups.md) (makale)

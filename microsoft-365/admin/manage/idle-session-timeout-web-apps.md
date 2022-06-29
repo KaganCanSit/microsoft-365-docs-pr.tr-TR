@@ -10,21 +10,21 @@ ms.topic: article
 ms.service: o365-administration
 ms.localizationpriority: medium
 ms.collection: Adm_TOC
-description: Kullanıcının oturum süresinin ne kadar süreceğini Microsoft 365 zaman aşımına uğramadan önce ayarlayın.
-ms.openlocfilehash: fba4871d88b7398aea955ec4afe1a0c134f52067
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Kullanıcının oturumlarının zaman aşımına uğramadan önce Microsoft 365'te ne kadar süreceğini ayarlayın.
+ms.openlocfilehash: 611541ebc16c3ee8c187b8fc1a5b33661b221897
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094272"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487487"
 ---
-# <a name="idle-session-timeout-for-microsoft-365-public-preview"></a>Microsoft 365 için boşta oturum zaman aşımı (Genel önizleme)
+# <a name="idle-session-timeout-for-microsoft-365"></a>Microsoft 365 için boşta oturum zaman aşımı
 
 <!-- Add metadata: localization, AdminSurgePortfolio, admindeeplinkMAC. remove robots nofollow -->
 
-Kullanıcıların Microsoft 365 web uygulamalarında oturumlarını kapatmadan önce kuruluşunuzda ne kadar süreyle etkin olmadıklarını gösteren bir ilke yapılandırmak için boşta oturum zaman aşımını kullanın. Bu, hassas şirket verilerini korumaya yardımcı olur ve şirket dışı veya paylaşılan cihazlarda çalışan son kullanıcılar için başka bir güvenlik katmanı ekler.
+Microsoft 365 web uygulamalarının oturumunun kapatılmadan önce kuruluşunuzda etkin olmayan kullanıcılarla ilgili bir ilke yapılandırmak için boşta oturum zaman aşımını kullanın. Bu, hassas şirket verilerini korumaya yardımcı olur ve şirket dışı veya paylaşılan cihazlarda çalışan son kullanıcılar için başka bir güvenlik katmanı ekler.
 
-Bir kullanıcı ayarladığınız boşta kalma zaman aşımı oturumuna ulaştığında, oturumun kapatılacağını belirten bir bildirim alır. Oturum açmaları için seçim yapmak zorundalar, aksi durumda tüm Microsoft 365 web uygulamalarında otomatik olarak oturumları kapatılacaktır.
+Bir kullanıcı ayarladığınız boşta kalma zaman aşımı oturumuna ulaştığında, oturumun kapatılacağını belirten bir bildirim alır. Oturumunun açık kalmasını seçmek zorundalar, aksi durumda tüm Microsoft 365 web uygulamalarında otomatik olarak oturumları kapatılacaktır.
 
 > [!IMPORTANT]
 > Boşta oturum zaman aşımı Microsoft 365 masaüstü ve mobil uygulamalarınızı etkilemez.
@@ -33,14 +33,14 @@ Bir kullanıcı ayarladığınız boşta kalma zaman aşımı oturumuna ulaştı
 
 Microsoft 365 veya Office 365 genel yönetici değilseniz **Güvenlik & gizlilik** sekmesini görmezsiniz.
 
-1. Microsoft 365 yönetim merkezi **Kuruluş Ayarlar** [Güvenlik &](https://go.microsoft.com/fwlink/p/?linkid=2072756) **->** gizlilik sekmesinde **Boşta oturum zaman aşımı'nı** seçin.  
+1. Microsoft 365 yönetim merkezi **Kuruluş Ayarları** **->**[Güvenlik & gizlilik](https://go.microsoft.com/fwlink/p/?linkid=2072756) sekmesini ve **Boşta oturum zaman aşımı'nı** seçin.  
 
 2. **Boşta Oturum Zaman Aşımı'nda** açmak için iki durumlu düğmeyi seçin. Varsayılan bir ayar seçebilir veya kendi özel zamanınızı seçebilirsiniz. Kuruluşunuzda boşta oturum açma işlemi birkaç dakika sürer.
 
 > [!NOTE]
-> [Outlook web uygulaması](https://support.microsoft.com/topic/description-of-the-activity-based-authentication-timeout-for-owa-in-office-365-0c101e1b-020e-69c1-a0b0-26532d60c0a4) için boşta oturum zaman aşımı ilkeleri ayarladıysanız ve [Çevrimiçi SharePoint, Microsoft 365 yönetim merkezi](/sharepoint/sign-out-inactive-users) boşta oturum zaman aşımını açtığınızda Outlook web uygulaması ve SharePoint ayarları geçersiz kılınır.
+> [Outlook web uygulaması](https://support.microsoft.com/topic/description-of-the-activity-based-authentication-timeout-for-owa-in-office-365-0c101e1b-020e-69c1-a0b0-26532d60c0a4) ve [SharePoint Online](/sharepoint/sign-out-inactive-users) için boşta oturum zaman aşımı ilkeleri ayarladıysanız, Microsoft 365 yönetim merkezi boşta oturum zaman aşımını açtığınızda Outlook web uygulaması ve SharePoint ayarları geçersiz kılınır.
 
-Boşta oturum zaman aşımı, Microsoft 365'daki birçok güvenlik önlemi arasında yer alır. Microsoft 365'daki diğer güvenlik görevleri hakkında bilgi edinmek için bkz[. Microsoft 365'daki en önemli güvenlik görevleri](../../security/top-security-tasks-for-remote-work.md).  
+Boşta oturum zaman aşımı, Microsoft 365'teki birçok güvenlik önlemi arasında yer alır. Microsoft 365'teki diğer güvenlik görevleri hakkında bilgi edinmek için bkz. [Microsoft 365'teki en önemli güvenlik görevleri](../../security/top-security-tasks-for-remote-work.md).  
 
 ## <a name="what-users-will-see"></a>Kullanıcıların görecekleri
 
@@ -60,30 +60,30 @@ Bir kullanıcı seçtiğiniz süre boyunca Microsoft 365 web uygulamalarında et
 
     - Office.com ve diğer başlangıç sayfaları
 
-    - Web'de Office (Word, Excel, PowerPoint)
+    - Web üzerinde Office (Word, Excel, PowerPoint)
 
     - Microsoft 365 Yönetici Merkezi
 
 - Etkinlik, web uygulaması bağlamında gerçekleşen istemci tarafı kullanıcı etkileşimlerini ifade eder. Örneğin, fare tıklamaları ve klavye basmaları.  
 
-- Boşta oturum zaman aşımı tarayıcı başına oturum temelinde çalışır. Kullanıcının Microsoft Edge üzerindeki etkinliği, Google Chrome gibi diğer tarayıcılardaki etkinliklerinden farklı olarak değerlendirilir. Kullanıcılar, bu tarayıcı oturumunda hesaplarına karşılık gelen tüm sekmelerde oturumu kapatılır.
+- Boşta oturum zaman aşımı tarayıcı başına oturum temelinde çalışır. Kullanıcının Microsoft Edge'deki etkinliği, Google Chrome gibi diğer tarayıcılardaki etkinliklerinden farklı olarak değerlendirilir. Kullanıcılar, bu tarayıcı oturumunda hesaplarına karşılık gelen tüm sekmelerde oturumu kapatılır.
 
-- Boşta oturum zaman aşımını açtıktan sonra, bu durum tüm kuruluşunuz için geçerlidir ve kapsamı belirli kullanıcılar, kuruluş birimleri veya gruplara eklenemez. SharePoint ve Exchange Online erişmek için farklı kullanıcılar ve gruplar için [Azure AD Koşullu Erişim](/azure/active-directory/conditional-access/) ilkelerini kullanın.
+- Boşta oturum zaman aşımını açtıktan sonra, bu durum tüm kuruluşunuz için geçerlidir ve kapsamı belirli kullanıcılar, kuruluş birimleri veya gruplara eklenemez. SharePoint'e ve Exchange Online erişmek için farklı kullanıcılar ve gruplar için Azure AD [Koşullu Erişim](/azure/active-directory/conditional-access/) ilkelerini kullanın.
 
-- Yapılandırılan süre boyunca kullanıcıların tüm Microsoft 365 web uygulaması sekmelerinde devre dışı olması gerekir. Kullanıcı başka bir sekmede etkin değilken (OWA gibi) bir sekmede etkinse (SPO gibi), etkin olarak kabul edilir ve oturumu kapatılmaz.  
+- Kullanıcıların yapılandırılan süre boyunca tüm Microsoft 365 web uygulaması sekmelerinde etkin olmamalıdır. Kullanıcı başka bir sekmede etkin değilken (OWA gibi) bir sekmede etkinse (SPO gibi), etkin olarak kabul edilir ve oturumu kapatılmaz.  
 
 - Bu durumlarda kullanıcıların oturumları kapatılamaz.
-    - Cihaza katılmış hesaptan web uygulamasında çoklu oturum açma (SSO) alıyorsa veya oturum açma sırasında **oturum açık kalsın'ı** seçtiyse. Kuruluşunuzda bu seçeneği gizleme hakkında daha fazla bilgi için bkz. [Kuruluşunuzun oturum açma sayfasına marka ekleme](/azure/active-directory/fundamentals/customize-branding).
-    - Yönetilen bir cihazdaysa (uyumlu veya bir etki alanına katılmış) ve Microsoft Edge veya Google Chrome gibi desteklenen bir tarayıcı kullanıyorsa ([Windows Hesapları uzantısıyla](https://chrome.google.com/webstore/detail/windows-accounts/ppnbnpeolgkicgegkbkbjmhlideopiji)). Bu özelliğin yönetilen bir cihazda tetiklenmemesi için uygun bir Azure AD Premium P1 veya P2 aboneliği ve belirli bir Koşullu Erişim ilkesi gerekir. Diğer ayrıntılar için aşağıya bakın.
+    - Cihaza katılmış hesaptan web uygulamasında çoklu oturum açma (SSO) alıyorsa veya oturum açma sırasında **Oturum açık kalsın'ı** seçtiyse. Kuruluşunuzda bu seçeneği gizleme hakkında daha fazla bilgi için bkz. [Kuruluşunuzun oturum açma sayfasına marka ekleme](/azure/active-directory/fundamentals/customize-branding).
+    - Yönetilen bir cihazdaysa (uyumlu veya bir etki alanına katılmış bir cihaz) ve Microsoft Edge veya Google Chrome gibi desteklenen bir tarayıcı kullanıyorsa ( [Windows Hesapları uzantısıyla](https://chrome.google.com/webstore/detail/windows-accounts/ppnbnpeolgkicgegkbkbjmhlideopiji)). Bu özelliğin yönetilen bir cihazda tetiklenmemesi için uygun bir Azure AD Premium P1 veya P2 aboneliği ve belirli bir Koşullu Erişim ilkesi gerekir. Diğer ayrıntılar için aşağıya bakın.
 
 > [!IMPORTANT]
-> Boşta oturum zaman aşımı, 21Vianet veya Microsoft 365 Almanya tarafından sağlanan Microsoft 365 için kullanılamaz.
+> Boşta oturum zaman aşımı, 21Vianet veya Microsoft 365 Germany tarafından sağlanan Microsoft 365 için kullanılamaz.
 
 ## <a name="idle-session-timeout-on-unmanaged-devices"></a>Yönetilmeyen cihazlarda boşta oturum zaman aşımı  
 
-Boşta oturum zaman aşımının yönetilmeyen cihazlarda tetiklenebilmek için Azure AD yönetim merkezine bir Koşullu Erişim ilkesi eklemeniz gerekir.
+Yönetilmeyen cihazlarda tetiklenen boşta oturum zaman aşımı için, Azure AD yönetim merkezine bir Koşullu Erişim ilkesi eklemeniz gerekir.
 
-1. **Koşullu Erişim |** Azure AD yönetim merkezinin İlkeler sayfasında **Yeni ilke'yi** seçin ve ilke için bir ad girin.
+1. **Koşullu Erişim | Azure AD yönetim merkezinin İlkeler** sayfası, **Yeni ilke'yi** seçin ve ilke için bir ad girin.
 
 2. **Kullanıcılar veya iş yükü kimlikleri'ne** ve ardından **Tüm kullanıcılar'a** tıklayın.
 
@@ -99,11 +99,11 @@ Boşta oturum zaman aşımının yönetilmeyen cihazlarda tetiklenebilmek için 
 
 ### <a name="are-there-any-browsers-or-browser-scenarios-in-which-idle-session-timeout-feature-doesnt-work"></a>Boşta oturum zaman aşımı özelliğinin çalışmadığı tarayıcılar veya tarayıcı senaryoları var mı?  
 
-Tarayıcıda üçüncü taraf tanımlama bilgileri devre dışı bırakıldığında boşta oturum zaman aşımı desteklenmez. Kullanıcılar hiçbir oturum kapatma istemi görmez. İzleme önleme ayarını Microsoft Edge için [Dengeli (Varsayılan)](/microsoft-edge/web-platform/tracking-prevention) ve diğer tarayıcılarınızda etkinleştirilmiş üçüncü taraf tanımlama bilgileri olarak tutmanızı öneririz. Microsoft 365 uygulamaları ve hizmetleri 17 Ağustos 2021'den bu yana Internet Explorer 11'i desteklemeyi durdurdu.
+Tarayıcıda üçüncü taraf tanımlama bilgileri devre dışı bırakıldığında boşta oturum zaman aşımı desteklenmez. Kullanıcılar hiçbir oturum kapatma istemi görmez. İzleme önleme ayarını Microsoft Edge için [Dengeli (Varsayılan)](/microsoft-edge/web-platform/tracking-prevention) ve diğer tarayıcılarınızda etkinleştirilmiş üçüncü taraf tanımlama bilgileri olarak tutmanızı öneririz. Microsoft 365 uygulamaları ve hizmetleri, 17 Ağustos 2021'den bu yana Internet Explorer 11'i desteklemeyi durdurdu.
 
-### <a name="how-should-i-prepare-if-my-organization-is-already-using-existing-outlook-web-app-and-sharepoint-online-idle-timeout-policies"></a>Kuruluşum zaten mevcut Outlook web uygulamasını kullanıyorsa ve Çevrimiçi boşta kalma zaman aşımı ilkelerini SharePoint nasıl hazırlanmalıyım?  
+### <a name="how-should-i-prepare-if-my-organization-is-already-using-existing-outlook-web-app-and-sharepoint-online-idle-timeout-policies"></a>Kuruluşum zaten mevcut Outlook web uygulamasını ve SharePoint Online boşta kalma zaman aşımı ilkelerini kullanıyorsa nasıl hazırlanmalıyım?  
 
-Zaten mevcut Outlook web uygulamasını kullanıyorsanız ve Çevrimiçi boşta kalma zaman aşımı ilkelerini SharePoint, boşta oturum zaman aşımı özelliğini etkinleştirmeye devam edebilirsiniz. Boşta kalma zaman aşımı ilkesini açtığınızda, mevcut Outlook web uygulaması ve çevrimiçi ilkeleri SharePoint önceliklidir. Yakın gelecekte mevcut Outlook web uygulamasını ve SharePoint Online ilkelerini kullanımdan kaldırmayı planlıyoruz. Kuruluşunuzu daha iyi hazırlamak için boşta oturum zaman aşımını açmanızı öneririz.
+Zaten mevcut Outlook web uygulamasını ve SharePoint Online boşta kalma zaman aşımı ilkelerini kullanıyorsanız boşta oturum zaman aşımı özelliğini açabilirsiniz. Boşta kalma zaman aşımı ilkesini açtığınızda, bu ilke mevcut Outlook web uygulaması ve SharePoint Online ilkelerine göre önceliklidir. Yakın gelecekte mevcut Outlook web uygulamasını ve SharePoint Online ilkelerini kullanımdan kaldırmayı planlıyoruz. Kuruluşunuzu daha iyi hazırlamak için boşta oturum zaman aşımını açmanızı öneririz.
 
 ### <a name="what-happens-if-i-am-inactive-on-an-included-microsoft-365-web-app-but-active-on-a-microsoft-web-app-or-saas-web-app-that-doesnt-have-idle-session-timeout-turned-on"></a>Dahil edilen bir Microsoft 365 web uygulamasında etkin değilsem ancak boşta oturum zaman aşımı açık olmayan bir Microsoft web uygulamasında veya SaaS web uygulamasında etkinsem ne olur?  
 
@@ -117,7 +117,7 @@ Aşağıdaki Microsoft 365 web uygulamaları desteklenir.
 
 - Office.com ve diğer başlangıç sayfaları
 
-- Web'de Office (Word, Excel, PowerPoint)
+- Web üzerinde Office (Word, Excel, PowerPoint)
 
 - Microsoft 365 Yönetici Merkezi
 

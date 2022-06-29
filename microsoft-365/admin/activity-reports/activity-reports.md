@@ -14,6 +14,7 @@ ms.collection:
 - Adm_O365
 - Adm_TOC
 ms.custom:
+- adminvideo
 - AdminSurgePortfolio
 - AdminTemplateSet
 search.appverid:
@@ -22,16 +23,16 @@ search.appverid:
 - GEA150
 ms.assetid: 0d6dfb17-8582-4172-a9a9-aed798150263
 description: Kuruluşunuzdaki kişilerin Microsoft 365 hizmetlerini nasıl kullandığını gösteren düzenli bir rapor alın ve daha fazla içgörü için her grafikte detaya gidin.
-ms.openlocfilehash: 9dbd1ef7044db3a27c93cfe7e2acd09aaa32cd14
-ms.sourcegitcommit: f302de988d98628922eea1f509a3f639634ddc64
+ms.openlocfilehash: 481f7abf0015994ab211f55feedabc4aa615dbca
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66151172"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66486324"
 ---
-# <a name="microsoft-365-reports-in-the-admin-center"></a>Yönetim merkezinde raporları Microsoft 365
+# <a name="microsoft-365-reports-in-the-admin-center"></a>Yönetim merkezinde Microsoft 365 Raporları
 
-İşletmenizdeki kişilerin Microsoft 365 hizmetlerini nasıl kullandığını kolayca görebilirsiniz. Örneğin, kimin bir hizmeti çok fazla kullandığını ve kotalara ulaştığını veya kimlerin Microsoft 365 lisansına ihtiyaç duymayabileceğini belirleyebilirsiniz. Kalıcı lisans modeli raporlara dahil edilmeyecektir.
+İşletmenizdeki kişilerin Microsoft 365 hizmetlerini nasıl kullandığını kolayca görebilirsiniz. Örneğin, kimin bir hizmeti çok fazla kullandığını ve kotalara ulaştığını veya kimlerin Microsoft 365 lisansına ihtiyacı olmadığını belirleyebilirsiniz. Kalıcı lisans modeli raporlara dahil edilmeyecektir.
 
 Son 7 gün, son 30 gün, son 90 gün ve son 180 güne yönelik raporlar sağlanır. Tüm raporlama dönemlerine ilişkin veriler hemen hazır olmaz. Raporlar 48 saat içinde sunulur.
 
@@ -53,7 +54,7 @@ Son 7 gün, son 30 gün, son 90 gün ve son 180 güne yönelik raporlar sağlan�
 
 ::: moniker-end
 
-2. Rapor ayrıntı sayfasını görmek için bir hizmetin (e-posta veya OneDrive gibi) bir bakışta etkinlik kartındaki **Daha fazlasını görüntüle** düğmesine tıklayın. Bu sayfada, sekmelerde hizmet için farklı raporlar sağlanır.
+2. Rapor ayrıntıları sayfasını görmek için bir hizmetin (e-posta veya OneDrive gibi) bir bakışta etkinlik kartındaki **Daha fazlasını görüntüle** düğmesine tıklayın. Bu sayfada, sekmelerde hizmet için farklı raporlar sağlanır.
 
    :::image type="content" alt-text="Kullanım panosu." source="../../media/4c0f966d-9d2b-4a6f-a106-a6e2b9a2de07.png" lightbox="../../media/4c0f966d-9d2b-4a6f-a106-a6e2b9a2de07.png":::
 
@@ -93,7 +94,7 @@ Aboneliğinize bağlı olarak, tüm ortamlardaki kullanılabilir raporlar aşağ
 |[Posta kutusu kullanımı](mailbox-usage.md)|Evet|Evet|Evet|Evet|Evet|
 |[Office etkinleştirmeleri](microsoft-office-activations-ww.md)|Evet|Evet|Evet|Evet|Evet|
 |[Etkin Kullanıcılar](active-users-ww.md)|Evet|Evet|Evet|Evet|Evet|
-|[grupları Microsoft 365](office-365-groups-ww.md)|Evet|Evet|Evet|Evet|Evet|
+|[Microsoft 365 grupları](office-365-groups-ww.md)|Evet|Evet|Evet|Evet|Evet|
 |[Microsoft 365 Uygulamaları kullanımı](microsoft365-apps-usage-ww.md)|Evet|Evet|<sup>Hayır 1</sup>|<sup>Hayır 1</sup>|Evet
 |[OneDrive İş kullanıcı etkinliği](onedrive-for-business-activity-ww.md)|Evet|Evet|Evet|Evet|Evet|
 |[OneDrive İş kullanımı](onedrive-for-business-usage-ww.md)|Evet|Evet|Evet|Evet|Evet|
@@ -101,7 +102,7 @@ Aboneliğinize bağlı olarak, tüm ortamlardaki kullanılabilir raporlar aşağ
 |[SharePoint etkinliği](sharepoint-activity-ww.md)|Evet|Evet|Evet|Evet|Evet|
 |[Microsoft Teams kullanıcı etkinliği](microsoft-teams-user-activity-preview.md)|Evet|Evet|Evet|Evet|Yok<sup>2</sup>|
 |[ Microsoft Teams cihaz kullanımı](microsoft-teams-device-usage-preview.md)|Evet|Evet|Evet|Evet|Yok<sup>2</sup>|
-|[kullanım etkinliğini Microsoft Teams](microsoft-teams-usage-activity.md)|Evet|Evet|Evet|Evet|Yok<sup>2</sup>|
+|[Microsoft Teams kullanım etkinliği](microsoft-teams-usage-activity.md)|Evet|Evet|Evet|Evet|Yok<sup>2</sup>|
 |[Yammer etkinliği](yammer-activity-report-ww.md)|Evet|Evet|Yok<sup>2</sup>|Yok<sup>2</sup>|Yok<sup>2</sup>|
 |[Yammer cihaz kullanımı](yammer-device-usage-report-ww.md)|Evet|Evet|Yok<sup>2</sup>|Yok<sup>2</sup>|Yok<sup>2</sup>|
 |[Yammer grupları etkinliği raporu](yammer-groups-activity-report-ww.md)|Evet|Evet|Yok<sup>2</sup>|Yok<sup>2</sup>|Yok<sup>2</sup>|
@@ -113,9 +114,9 @@ Aboneliğinize bağlı olarak, tüm ortamlardaki kullanılabilir raporlar aşağ
 |[Skype Kurumsal Çevrimiçi Sürüm eşler arası etkinlik](/SkypeForBusiness/skype-for-business-online-reporting/peer-to-peer-activity-report)|Evet|Evet|<sup>Hayır 1</sup>|<sup>Hayır 1</sup>|Evet|
 |[Viva Öğrenme etkinliği](viva-learning-activity.md)|Evet|Yok|Yok|Yok|Yok|
 |[Viva Analizler etkinliği](viva-insights-activity.md)|Evet|Evet|Yok|Yok|Yok|
-|[Project etkinliği](project-activity.md)|Evet|Evet|Yok|Yok|Yok|
+|[Proje etkinliği](project-activity.md)|Evet|Evet|Yok|Yok|Yok|
 
-Yok<sup>1</sup>: Rapor gelecekte yayımlanmayı planlıyor. <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=" target="_blank">Microsoft 365 Yol Haritası</a> yayından önce güncelleştirilecektir.
+Yok<sup>1</sup>: Rapor gelecekte yayımlanmayı planlıyor. <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=" target="_blank">Microsoft 365 Yol Haritası</a>, sürümden önce güncelleştirilecektir.
 Yok<sup>2</sup>: Hizmet ortamda kullanılamaz, bu nedenle raporu serbest bırakma planı yoktur.
 
 ## <a name="how-to-view-licensing-information"></a>Lisans bilgilerini görüntüleme
@@ -146,13 +147,23 @@ Raporlar, kuruluşunuzun kullanım verileri hakkında bilgi sağlar. Varsayılan
 
 Genel yöneticiler, kiracıları için bu değişikliği geri alabilir ve kuruluşlarının gizlilik uygulamaları izin verirse tanımlanabilir kullanıcı bilgilerini gösterebilir. Bu, aşağıdaki adımları izleyerek Microsoft 365 yönetim merkezi elde edilebilir:
 
-1. Yönetim merkezinde **Ayarlar** **Kuruluş Ayarlar** \> \> **Hizmetleri** sayfasına gidin.
+1. Yönetim merkezinde **Ayarlar** \> **Kuruluş Ayarları** \> **Hizmetleri** sayfasına gidin.
 
 2. **Raporlar**'ı seçin.
 
 3. Deyiminin işaretini kaldırın **Tüm raporlarda gizli kullanıcı, grup ve site adlarını görüntüleyin** ve değişikliklerinizi kaydedin.
 
-Bu değişikliklerin rapor panosundaki raporlarına yansıması birkaç dakika sürer. Bu ayar[, Microsoft](/graph/api/resources/report) Graph ve Power BI'daki [Microsoft 365](/microsoft-365/admin/usage-analytics/usage-analytics) kullanım [raporları ile Microsoft Teams Yönetici merkezindeki kullanım raporları](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference) için de geçerlidir. Tanımlanabilir kullanıcı bilgilerini göstermek, Microsoft Purview uyumluluk portalı denetim günlüğünde günlüğe kaydedilen bir olaydır.
+23 Haziran 2022'de bir API, genel yöneticilerin Microsoft 365 yönetim merkezi ziyaret etmeye gerek kalmadan bu ayarı değiştirmesi için tüm ortamlarda aşamalı olarak kullanıma sunulacaktır. API ayrıntıları aşağıda verilmiştir:  
+
+URL şu şekildedir: https://graph.microsoft.com/beta/admin/reportSettings 
+
+Bu API için iki yöntem onaylandı:
+
+:::image type="content" source="../../media/api-show-details.png" alt-text="API Yöntemleri.":::
+
+Rapor yalnızca bir Gizlilik Ayarı özelliği içerir. Graph API hakkında daha fazla bilgi için bkz. [Microsoft Graph API kullanma](/graph/use-the-api). Genel yöneticiler Yazılım Geliştirme Seti'ni (SDK) kullanabilir veya ağ yeteneği olan herhangi bir program dilini kullanarak API'yi doğrudan çağırabilir. [Graph Explorer'ı](/graph/graph-explorer/graph-explorer-overview) kullanmanızı öneririz.
+
+Bu değişikliklerin rapor panosundaki raporlarına yansıması birkaç dakika sürer. Bu ayar, Microsoft [Graph](/graph/api/resources/report) ve [Power BI'daki](/microsoft-365/admin/usage-analytics/usage-analytics) Microsoft 365 kullanım raporları ve [Microsoft Teams Yönetici merkezindeki kullanım raporları](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference) için de geçerlidir. Tanımlanabilir kullanıcı bilgilerini göstermek, Microsoft Purview uyumluluk portalı denetim günlüğünde günlüğe kaydedilen bir olaydır.
 
 ## <a name="what-happens-to-usage-data-when-a-user-account-is-closed"></a>Kullanıcı hesabı kapatıldığında kullanım verilerine ne olur?
 

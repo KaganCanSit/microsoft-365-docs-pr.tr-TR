@@ -1,5 +1,5 @@
 ---
-title: Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Access Control, çıkarılabilir depolama medyası
+title: Uç Nokta için Microsoft Defender Aygıt Denetimi Çıkarılabilir Depolama birimi Access Control, çıkarılabilir depolama medyası
 description: Uç Nokta için Microsoft Defender hakkında kılavuz
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -14,25 +14,25 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: mde
-ms.date: 06/20/2022
-ms.openlocfilehash: 78eb4f9cb65fb5eec54747a256abf290a43deb2f
-ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
+ms.date: 06/24/2022
+ms.openlocfilehash: d9ff97aa50a03c1a75f073328a250a9acc3faf54
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66185469"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490763"
 ---
-# <a name="microsoft-defender-for-endpoint-device-control-removable-storage-access-control"></a>Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Access Control
+# <a name="microsoft-defender-for-endpoint-device-control-removable-storage-access-control"></a>Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama birimi Access Control
 
 **Şunlar için geçerlidir:**
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 > [!NOTE]
-> Bu ürünün grup ilkesi yönetimi ve Intune OMA-URI/Özel İlke yönetimi artık genel kullanıma sunuldu (4.18.2106): [Teknik Community blogu: Çıkarılabilir depolama alanınızı ve yazıcınızı Uç Nokta için Microsoft Defender ile koruma](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/protect-your-removable-storage-and-printers-with-microsoft/ba-p/2324806).
+> Bu ürünün grup ilkesi yönetimi ve Intune OMA-URI/Özel İlke yönetimi genel kullanıma sunuldu (4.18.2106): [Teknik Topluluk blogu: Çıkarılabilir depolama alanınızı ve yazıcınızı Uç Nokta için Microsoft Defender ile koruma](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/protect-your-removable-storage-and-printers-with-microsoft/ba-p/2324806).
 
-## <a name="device-control-removable-storage-access-control-overview"></a>Cihaz Denetimi Çıkarılabilir Depolama Access Control Genel Bakış
+## <a name="device-control-removable-storage-access-control-overview"></a>Cihaz Denetimi Çıkarılabilir Depolama birimi Access Control Genel Bakış
 
-Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Access Control özelliği, dışlamayla veya dışlamadan çıkarılabilir depolama birimine okuma, yazma veya yürütme erişimini denetlemenize, izin vermenizi veya engellemenizi sağlar.
+Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Birimi Access Control özelliği, dışlamayla veya dışlamadan çıkarılabilir depolama birimine okuma, yazma veya yürütme erişimini denetlemenizi, izin vermenizi veya engellemenizi sağlar.
 
 |Ayrıcalık|Izni|
 |---|---|
@@ -43,30 +43,32 @@ Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Acce
 |Kullanıcı Tabanlı Destek|Evet|
 |Makine Tabanlı Destek|Evet|
 
-Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Access Control özelliği size aşağıdaki özellikleri sağlar:
+Uç Nokta için Microsoft Defender Cihaz Denetimi Çıkarılabilir Depolama Birimi Access Control özelliği size aşağıdaki özellikleri sağlar:
 
 |Yeteneği|Açıklama|Intune aracılığıyla dağıtma|grup ilkesi aracılığıyla dağıtma|
 |---|---|---|---|
-|Çıkarılabilir Medya Grubu Oluşturma|Yeniden kullanılabilir çıkarılabilir medya grubu oluşturmanıza olanak tanır|Intune [OMA-URI kullanarak Çıkarılabilir Depolama Access Control Dağıtma](#deploying-removable-storage-access-control-by-using-intune-oma-uri) bölümündeki 4. ve 6. adım| Grup ilkesi [kullanarak Çıkarılabilir Depolama Access Control Dağıtma](#deploying-removable-storage-access-control-by-using-group-policy) bölümündeki 4. ve 6. adım|
-|İlke Oluşturma|Her çıkarılabilir medya grubunu zorunlu kılmak için ilke oluşturmanıza olanak tanır|Intune [OMA-URI kullanarak Çıkarılabilir Depolama Access Control Dağıtma](#deploying-removable-storage-access-control-by-using-intune-oma-uri) bölümündeki 5. ve 7. adım| Grup ilkesi [kullanarak Çıkarılabilir Depolama Access Control Dağıtma](#deploying-removable-storage-access-control-by-using-group-policy) bölümündeki 5. ve 7. adımlar|
-|Varsayılan Zorlama|İlke yoksa çıkarılabilir medyaya varsayılan erişimi (Reddet veya İzin Ver) ayarlamanıza izin verir|Intune [OMA-URI kullanarak Çıkarılabilir Depolama Access Control Dağıtma](#deploying-removable-storage-access-control-by-using-intune-oma-uri) bölümündeki 2. adım | Grup ilkesi [kullanarak Çıkarılabilir Depolama Access Control Dağıtma](#deploying-removable-storage-access-control-by-using-group-policy) bölümündeki 2. adım|
-|Çıkarılabilir Depolama Access Control Etkinleştirme veya Devre Dışı Bırakma|Devre dışı bırak'ı ayarlarsanız, bu makinede Çıkarılabilir Depolama Access Control ilkesini devre dışı bırakır| Intune [OMA-URI kullanarak Çıkarılabilir Depolama Access Control Dağıtma](#deploying-removable-storage-access-control-by-using-intune-oma-uri) bölümündeki 1. adım| Grup ilkesi [kullanarak Çıkarılabilir Depolama Access Control Dağıtma](#deploying-removable-storage-access-control-by-using-group-policy) bölümündeki 1. adım|
-|Dosya bilgilerini yakalama|Yazma erişimi gerçekleştiğinde dosya bilgilerini yakalamak için ilke oluşturmanıza olanak tanır|  | Grup ilkesi [kullanarak Çıkarılabilir Depolama Access Control Dağıtma](#deploying-removable-storage-access-control-by-using-group-policy) bölümündeki 10. adım |
+|Çıkarılabilir Medya Grubu Oluşturma|Yeniden kullanılabilir çıkarılabilir medya grubu oluşturmanıza olanak tanır|Intune [OMA-URI kullanarak Çıkarılabilir Depolama Birimi Access Control Dağıtma](#deploying-removable-storage-access-control-by-using-intune-oma-uri) bölümündeki 4. ve 6. adım| Grup ilkesi [kullanarak Çıkarılabilir Depolama Birimi Dağıtma bölümünde](#deploying-removable-storage-access-control-by-using-group-policy) 4. ve 6. adım Access Control|
+|İlke Oluşturma|Her çıkarılabilir medya grubunu zorunlu kılmak için ilke oluşturmanıza olanak tanır|Intune [OMA-URI kullanarak Çıkarılabilir Depolama Birimi Access Control Dağıtma](#deploying-removable-storage-access-control-by-using-intune-oma-uri) bölümündeki 5. ve 7. adım| Grup ilkesi [kullanarak Çıkarılabilir Depolama Birimi dağıtma Access Control](#deploying-removable-storage-access-control-by-using-group-policy) bölümündeki 5. ve 7. adımlar|
+|Varsayılan Zorlama|İlke yoksa çıkarılabilir medyaya varsayılan erişimi (Reddet veya İzin Ver) ayarlamanıza izin verir|Intune [OMA-URI kullanarak Çıkarılabilir Depolama Birimi Access Control Dağıtma](#deploying-removable-storage-access-control-by-using-intune-oma-uri) bölümündeki 2. adım | Grup ilkesi [kullanarak Çıkarılabilir Depolama Birimi dağıtma Access Control](#deploying-removable-storage-access-control-by-using-group-policy) bölümündeki 2. adım|
+|Çıkarılabilir Depolama birimi Access Control etkinleştirme veya devre dışı bırakma|Devre Dışı Bırak'ı ayarlarsanız, bu makinede Çıkarılabilir Depolama Birimi Access Control ilkesini devre dışı bırakır| Intune [OMA-URI kullanarak Çıkarılabilir Depolama Birimi Access Control Dağıtma](#deploying-removable-storage-access-control-by-using-intune-oma-uri) bölümündeki 1. adım| Grup ilkesi [kullanarak Çıkarılabilir Depolama Birimi dağıtma Access Control](#deploying-removable-storage-access-control-by-using-group-policy) bölümündeki 1. adım|
+|Dosya bilgilerini yakalama|Yazma erişimi gerçekleştiğinde dosya bilgilerini yakalamak için ilke oluşturmanıza olanak tanır|  | Grup ilkesi [kullanarak Çıkarılabilir Depolama Birimi Access Control Dağıtma](#deploying-removable-storage-access-control-by-using-group-policy) bölümündeki 10. adım |
 
 ### <a name="prepare-your-endpoints"></a>Uç noktalarınızı hazırlama
 
-Kötü amaçlı yazılımdan koruma istemcisi sürümü **4.18.2103.3 veya** üzeri olan Windows 10 ve Windows 11 cihazlarda Çıkarılabilir Depolama Access Control dağıtın.
+Kötü amaçlı yazılımdan koruma istemcisi sürümü **4.18.2103.3 veya** üzeri olan Windows 10 ve Windows 11 cihazlarda Çıkarılabilir Depolama Birimi Access Control dağıtın.
 
-- **4.18.2104 veya üzeri**: SerialNumberId, VID_PID, dosya yolu tabanlı GPO desteği, ComputerSid ekleme
+- **4.18.2104 veya üzeri**: , , `VID_PID`dosya yolu tabanlı GPO desteği ve `SerialNumberId``ComputerSid`
 
-- **4.18.2105 veya üzeri**: HardwareId/DeviceId/InstancePathId/FriendlyNameId/SerialNumberId için joker karakter desteği ekleme, belirli makinedeki belirli bir kullanıcının birleşimi, kaldırılabilir SSD (SanDisk Extreme SSD)/USB Bağlı SCSI (UAS) desteği
+- **4.18.2105 veya üzeri**: için `HardwareId/DeviceId/InstancePathId/FriendlyNameId/SerialNumberId`joker karakter desteği ekleyin, belirli makinedeki belirli kullanıcının birleşimi, kaldırılabilir SSD (SanDisk Extreme SSD)/USB Bağlı SCSI (UAS) desteği
 
-- **4.18.2107 veya üzeri**: Windows Taşınabilir Cihaz (WPD) desteği ekleyin (tabletler gibi mobil cihazlar için); [AccountName'i gelişmiş avlanmaya](device-control-removable-storage-access-control.md#view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint) ekleyin
+- **4.18.2107 veya üzeri**: Windows Taşınabilir Cihaz (WPD) desteği ekleme (tabletler gibi mobil cihazlar için); [gelişmiş avlanmaya](device-control-removable-storage-access-control.md#view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint) ekleme `AccountName`
+
+- **4.18.2205 veya üzeri**: Varsayılan zorlamayı **Yazıcı** olarak genişletin. **Bunu Reddet** olarak ayarlarsanız, Yazıcı da engellenir, bu nedenle yalnızca depolama alanını yönetmek istiyorsanız Yazıcı'ya izin vermek için özel bir ilke oluşturduğunuzdan emin olun.
 
 :::image type="content" source="images/powershell.png" alt-text="PowerShell arabirimi" lightbox="images/powershell.png":::
 
 > [!NOTE]
-> Windows Güvenliği durumundan bağımsız olarak Çıkarılabilir Depolama Access Control çalıştırabildiğiniz için Windows Güvenliği bileşenlerin hiçbirinin etkin olmaması gerekir.
+> Windows Güvenliği durumundan bağımsız olarak Çıkarılabilir Depolama Birimi Access Control çalıştırabildiğiniz için Windows Güvenliği bileşenlerin hiçbirinin etkin olmaması gerekir.
 
 ## <a name="device-control-removable-storage-access-control-policies"></a>Cihaz Denetimi Çıkarılabilir Depolama Access Control İlkeleri
 
@@ -75,7 +77,7 @@ Kötü amaçlı yazılımdan koruma istemcisi sürümü **4.18.2103.3 veya** üz
 > [!NOTE]
 > XML açıklama gösterimini `<!-- COMMENT -->` kullanan açıklamalar Kural ve Grup XML dosyalarında kullanılabilir, ancak XML dosyasının ilk satırının değil ilk XML etiketinin içinde olmalıdır.
 
-### <a name="removable-storage-group"></a>Çıkarılabilir Depolama Grubu
+### <a name="removable-storage-group"></a>Çıkarılabilir Depolama Birimi Grubu
 
 |Özellik Adı|Açıklama|Seçenekler|
 |---|---|---|
@@ -106,7 +108,7 @@ Erişim denetimi ilkesini oluşturmak için aşağıdaki özellikleri kullanabil
 
 1. Grup oluşturma
 
-    1. Grup 1: Herhangi bir çıkarılabilir depolama birimi ve CD/DVD. Çıkarılabilir depolama birimi ve CD/DVD örneği: Grup **9b28fae8-72f7-4267-a1a5-685f747a7146** [örnekteki Tüm Çıkarılabilir Depolama ve CD-DVD Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) dosyası.
+    1. Grup 1: Herhangi bir çıkarılabilir depolama birimi ve CD/DVD. Çıkarılabilir depolama birimine ve CD/DVD'ye örnek olarak: Grup **9b28fae8-72f7-4267-a1a5-685f747a7146** tüm [Çıkarılabilir Depolama Birimleri ve CD-DVD Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) dosyası.
 
     2. Grup 2: Cihaz özelliklerine göre onaylı USB'ler. Bu kullanım örneğine örnek: Örnek [Onaylı USB'ler Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) dosyasında Örnek Kimliği - Grup **65fa649a-a111-4912-9294-fb6337a25038**.
 
@@ -123,7 +125,7 @@ Erişim denetimi ilkesini oluşturmak için aşağıdaki özellikleri kullanabil
 
 1. Grup oluşturma
 
-    1. Grup 1: Herhangi bir çıkarılabilir depolama birimi ve CD/DVD. Bu kullanım örneğine örnek olarak: Grup **9b28fae8-72f7-4267-a1a5-685f747a7146** [örnekteki Tüm Çıkarılabilir Depolama ve CD-DVD Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) dosyası.
+    1. Grup 1: Herhangi bir çıkarılabilir depolama birimi ve CD/DVD. Bu kullanım örneğine örnek olarak: Grup **9b28fae8-72f7-4267-a1a5-685f747a7146** [örnekteki Herhangi bir Çıkarılabilir Depolama Birimi ve CD-DVD Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) dosyası.
 
     2. Grup 2: Örnek [Onaylanmamış USB'ler Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) dosyasındaki Cihaz özelliklerine göre onaylanmamış USB'ler, örneğin Satıcı Kimliği / Ürün Kimliği, Kolay Ad - Grup **65fa649a-a111-4912-9294-fb6337a25038**.
 
@@ -138,11 +140,11 @@ Erişim denetimi ilkesini oluşturmak için aşağıdaki özellikleri kullanabil
 
 ## <a name="deploying-and-managing-removable-storage-access-control-by-using-intune-oma-uri"></a>Intune OMA-URI kullanarak Çıkarılabilir Depolama Access Control dağıtma ve yönetme
 
-Çıkarılabilir Depolama Access Control özelliği, kullanıcıya veya cihaza ya da her ikisine de OMA-URI kullanarak ilke uygulamanızı sağlar.
+Çıkarılabilir Depolama Birimi Access Control özelliği, kullanıcıya veya cihaza ya da her ikisine de OMA-URI kullanarak ilke uygulamanızı sağlar.
 
 ### <a name="licensing-requirements"></a>Lisans gereksinimleri
 
-Çıkarılabilir Depolama Access Control kullanmaya başlamadan önce [Microsoft 365 aboneliğinizi](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=2) onaylamanız gerekir. Çıkarılabilir Depolama Access Control erişmek ve kullanmak için Microsoft 365 E3 veya Microsoft 365 E5 sahip olmanız gerekir.
+Çıkarılabilir Depolama birimi Access Control kullanmaya başlamadan önce [Microsoft 365 aboneliğinizi](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=2) onaylamanız gerekir. Çıkarılabilir Depolama birimi Access Control erişmek ve kullanmak için Microsoft 365 E3 veya Microsoft 365 E5 sahip olmanız gerekir.
 
 ### <a name="permission"></a>Izni
 
@@ -152,17 +154,15 @@ Intune'da ilke dağıtımı için hesabın cihaz yapılandırma profillerini olu
 - Cihaz Yapılandırma profilleri için Raporları Oluşturma/Düzenleme/Güncelleştirme/Okuma/Silme/Görüntüleme izinlerinin açık olduğu özel rol
 - Genel yönetici
 
-### <a name="deploying-removable-storage-access-control-by-using-intune-oma-uri"></a>Intune OMA-URI kullanarak Çıkarılabilir Depolama Access Control dağıtma
+### <a name="deploying-removable-storage-access-control-by-using-intune-oma-uri"></a>Intune OMA-URI kullanarak Çıkarılabilir Depolama birimi Access Control dağıtma
 
-Microsoft Endpoint Manager yönetim merkezine (<https://endpoint.microsoft.com/>) **> Cihazlar > Profil oluşturma > Platform: Windows 10 ve üzeri, Profil türü: Şablonlar > Özel'e** gidin
+Microsoft Endpoint Manager yönetim merkezine (<https://endpoint.microsoft.com/>) **> Cihazlar'a gidin > Platform: Windows 10 ve üzeri profil oluşturma >, Profil türü: Şablonlar > Özel**
 
-1. Çıkarılabilir Depolama Access Control (RSAC) etkinleştirme veya devre dışı bırakma:
-
-   Çıkarılabilir Depolama Access Control aşağıdaki gibi etkinleştirebilirsiniz:
+1. Cihaz denetimini aşağıdaki gibi etkinleştirin veya devre dışı bırakın:
 
    - **Özel > Yapılandırma ayarları'nın** altında **Ekle'ye** tıklayın.
    - **Satır Ekle** bölmesine şunu girin:
-     - **RSAC'yi Etkinleştir** olarak **adlandır**
+     - **Cihaz Denetimini Etkinleştir** olarak **adlandır**
      - **OMA-URI** olarak `./Vendor/MSFT/Defender/Configuration/DeviceControlEnabled`
      - **Tamsayı** Olarak **Veri Türü**
      - **1** olarak **değer**
@@ -172,13 +172,13 @@ Microsoft Endpoint Manager yönetim merkezine (<https://endpoint.microsoft.com/>
 
      - **Kaydet**'e tıklayın.
 
-   :::image type="content" source="images/enable-rsac.png" alt-text="Çıkarılabilir Depolama Access Control ilkesini etkinleştirme işleminin ekran görüntüsü" lightbox="images/enable-rsac.png":::
+   :::image type="content" source="images/enable-rsac.png" alt-text="Çıkarılabilir Depolama Birimi Access Control ilkesini etkinleştirme işleminin ekran görüntüsü" lightbox="images/enable-rsac.png":::
 
 2. Varsayılan Zorlamayı Ayarla:
 
-   İlke yoksa çıkarılabilir medyaya varsayılan erişimi (Reddet veya İzin Ver) ayarlayabilirsiniz.
+   Tüm Cihaz Denetimi özellikleri (, `CdRomDevices`, , `PrinterDevices``WpdDevices`) için varsayılan erişimi (`RemovableMediaDevices`Reddet veya İzin Ver) ayarlayabilirsiniz.
 
-   Örneğin, RemovableMediaDevices için Reddet veya İzin Ver ilkeniz vardır, ancak CdRomDevices veya WpdDevices için herhangi bir ilkeniz yoktur. Bu ilke aracılığıyla Varsayılan Reddetme'yi ayarlarsınız, ardından CdRomDevices veya WpdDevices'e Okuma/Yazma/Yürütme erişimi engellenir.
+   Örneğin, için `RemovableMediaDevices`**bir Reddet** veya **İzin Ver** ilkeniz vardır, ancak veya `WpdDevices`için `CdRomDevices` bir ilkeniz yoktur. Bu ilke aracılığıyla **Varsayılan Reddetme'yi** ayarlayabilirsiniz, ardından Okuma/Yazma/Yürütme erişimi `CdRomDevices` engellenir veya `WpdDevices` engellenir. Yalnızca depolama alanını yönetmek istiyorsanız yazıcınız için **bir İzin Ver** ilkesi oluşturduğunuzdan emin olun; aksi takdirde, bu varsayılan zorlama yazıcılara da uygulanır.
 
    - **Satır Ekle** bölmesine şunu girin:
      - **Varsayılan Reddetme** Olarak **Adlandır**
@@ -195,7 +195,7 @@ Microsoft Endpoint Manager yönetim merkezine (<https://endpoint.microsoft.com/>
 
 3. Varsayılan Reddetmeyi Denetle:
 
-   Varsayılan Reddetme için Denetim ilkesini aşağıdaki gibi oluşturabilirsiniz:
+   Varsayılan Reddetme için aşağıdaki gibi bir Denetim ilkesi oluşturabilirsiniz:
 
    - **Satır Ekle** bölmesine şunu girin:
      - **Varsayılan ReddetmeYi Denetle** Olarak **Adlandır**
@@ -208,32 +208,32 @@ Microsoft Endpoint Manager yönetim merkezine (<https://endpoint.microsoft.com/>
 
        XML dosya yolu: <https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Audit%20Default%20Deny.xml>
 
-       Varsayılan Reddetme için Denetim ilkesi oluşturmak için aşağıdaki XML verilerini kullanın:
+       Varsayılan Reddetme için Denetim ilkenizi oluşturmak için aşağıdaki XML verilerini kullanın:
 
        :::image type="content" source="images/audit-default-deny-xml-file-1.png" alt-text="Varsayılan reddetme xml dosyasını denetle ekran görüntüsü":::
 
 4. ReadOnly - Grup:
 
-   ReadOnly erişimi ile aşağıdaki gibi çıkarılabilir depolama grubu oluşturabilirsiniz:
+   ReadOnly erişimi ile aşağıdaki gibi çıkarılabilir bir depolama grubu oluşturabilirsiniz:
 
    - **Satır Ekle** bölmesine şunu girin:
      - **Herhangi Bir Çıkarılabilir Depolama Grubu** Olarak **Adlandır**
      - **OMA-URI** olarak `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b9b28fae8-72f7-4267-a1a5-685f747a7146%7d/GroupData`
 
-       :::image type="content" source="images/any-removable-storage-group.png" alt-text="Çıkarılabilir Depolama Grubu oluşturma işleminin ekran görüntüsü" lightbox="images/any-removable-storage-group.png":::
+       :::image type="content" source="images/any-removable-storage-group.png" alt-text="Çıkarılabilir Depolama Birimi Grubu oluşturma işleminin ekran görüntüsü" lightbox="images/any-removable-storage-group.png":::
 
      - **Dize Olarak Veri Türü** **(XML dosyası)**
-       - **Herhangi Bir Çıkarılabilir Depolama ve CD-DVD ve WPD Group.xml** dosyası olarak **Özel XML**
+       - **Herhangi Bir Çıkarılabilir Depolama Birimi ve CD-DVD ve WPD Group.xml** dosyası olarak **Özel XML**
 
          XML dosya yolu: <https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Any%20Removable%20Storage%20and%20CD-DVD%20and%20WPD%20Group.xml>
 
-         ReadOnly erişimiyle 'Herhangi bir Çıkarılabilir Depolama ve CD-DVD ve WPD Grubu' oluşturmak için aşağıdaki XML verilerini kullanın:
+         ReadOnly erişimiyle 'Herhangi bir Çıkarılabilir Depolama Birimi ve CD-DVD ve WPD Grubu' oluşturmak için aşağıdaki XML verilerini kullanın:
 
          :::image type="content" source="images/read-only-group-xml-file.png" alt-text="Salt okunur grup xml dosyasının ekran görüntüsü":::
 
 5. ReadOnly - İlke:
 
-   ReadOnly ilkesi oluşturabilir ve okuma etkinliğine aşağıdaki gibi izin vermek için ReadOnly çıkarılabilir depolama grubuna uygulayabilirsiniz:
+   ReadOnly ilkesi oluşturabilir ve okuma etkinliğine izin vermek için bunu ReadOnly çıkarılabilir depolama grubuna aşağıdaki gibi uygulayabilirsiniz:
 
    - **Satır Ekle** bölmesine şunu girin:
      - **Okuma Etkinliğine İzin Ver** Olarak **Adlandır**
@@ -250,7 +250,7 @@ Microsoft Endpoint Manager yönetim merkezine (<https://endpoint.microsoft.com/>
 
        :::image type="content" source="images/read-only-policy-xml-file.png" alt-text="Salt okunur ilke xml dosyasının ekran görüntüsü":::
 
-6. İzin Verilen Medyalar için Grup Oluştur: İzin verilen medyalar grubunu aşağıdaki gibi oluşturabilirsiniz:
+6. İzin Verilen Medya için Grup Oluşturma: İzin verilen medya grubunuzu aşağıdaki gibi oluşturabilirsiniz:
    - **Satır Ekle** bölmesine şunu girin:
      - **Onaylı USBs Grubu** Olarak **Adlandır**
      - **OMA-URI** olarak `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b65fa649a-a111-4912-9294-fb6337a25038%7d/GroupData`
@@ -266,7 +266,7 @@ Microsoft Endpoint Manager yönetim merkezine (<https://endpoint.microsoft.com/>
 
        :::image type="content" source="images/create-group-allowed-medias-xml-file.png" alt-text="İzin verilen medias xml dosyası için grup oluşturma işleminin ekran görüntüsü":::
 
-7. Onaylanan USB Grubuna izin vermek için İlke Oluştur: Onaylanan USB grubuna aşağıdaki gibi izin vermek için ilke oluşturabilirsiniz:
+7. Onaylanan USB Grubuna izin vermek için bir ilke oluşturun: Onaylanan USB grubuna aşağıdaki gibi izin vermek için bir ilke oluşturabilirsiniz:
    - **Satır Ekle** bölmesine şunu girin:
      - **Erişime izin ver ve Dosya bilgilerini denetle** olarak **adlandır**
      - **OMA-URI** olarak `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7bb2061588-029e-427d-8404-6dfec096a571%7d/RuleData`
@@ -292,30 +292,32 @@ Microsoft Endpoint Manager yönetim merkezine (<https://endpoint.microsoft.com/>
 
 Bu özellik Microsoft Endpoint Manager yönetim merkezinde (<https://endpoint.microsoft.com/>) kullanılabilir. **Endpoint Security** > **Attack Surface Azaltma** > **Oluşturma İlkesi'ne** gidin. **Profil: Cihaz Denetimi** ile **Platform: Windows 10 ve üzerini** seçin.
 
-## <a name="deploying-and-managing-removable-storage-access-control-by-using-group-policy"></a>Çıkarılabilir Depolama Access Control grup ilkesi kullanarak dağıtma ve yönetme
+## <a name="deploying-and-managing-removable-storage-access-control-by-using-group-policy"></a>Grup ilkesi kullanarak Çıkarılabilir Depolama Access Control dağıtma ve yönetme
 
-Çıkarılabilir Depolama Access Control özelliği, kullanıcıya veya cihaza ya da her ikisine de grup ilkesi kullanarak ilke uygulamanızı sağlar.
+Çıkarılabilir Depolama Birimi Access Control özelliği, kullanıcıya veya cihaza ya da her ikisine de grup ilkesi kullanarak bir ilke uygulamanızı sağlar.
 
 ### <a name="licensing"></a>Lisanslama
 
-Çıkarılabilir Depolama Access Control kullanmaya başlamadan önce [Microsoft 365 aboneliğinizi](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=2) onaylamanız gerekir. Çıkarılabilir Depolama Access Control erişmek ve kullanmak için Microsoft 365 E3 veya Microsoft 365 E5 sahip olmanız gerekir.
+Çıkarılabilir Depolama birimi Access Control kullanmaya başlamadan önce [Microsoft 365 aboneliğinizi](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=2) onaylamanız gerekir. Çıkarılabilir Depolama birimi Access Control erişmek ve kullanmak için Microsoft 365 E3 veya Microsoft 365 E5 sahip olmanız gerekir.
 
-### <a name="deploying-removable-storage-access-control-by-using-group-policy"></a>grup ilkesi kullanarak Çıkarılabilir Depolama Access Control dağıtma
+### <a name="deploying-removable-storage-access-control-by-using-group-policy"></a>grup ilkesi kullanarak Çıkarılabilir Depolama Birimi Access Control dağıtma
 
-1. Çıkarılabilir Depolama Access Control Etkinleştirme veya Devre Dışı Bırakma:
+1. Çıkarılabilir Depolama birimi Access Control etkinleştirme veya devre dışı bırakma:
 
-   Çıkarılabilir Depolama Access Control (RSAC) aşağıdaki gibi etkinleştirebilirsiniz:
+   Cihaz denetimini aşağıdaki gibi etkinleştirebilirsiniz:
 
-   - **Bilgisayar Yapılandırması > Yönetim Şablonları > Windows Bileşenler > Microsoft Defender Virüsten Koruma > Özellikleri > Cihaz Denetimi'ne** gidin
+   - **Microsoft Defender Virüsten Koruma > Özellikleri > Cihaz Denetimi > Windows Bileşenleri > Bilgisayar Yapılandırması > Yönetim Şablonları'na** gidin
    - **Cihaz Denetimi** penceresinde **Etkin'i** seçin.
 
    :::image type="content" source="images/enable-rsac-gp.png" alt-text="grup ilkesi kullanarak RSAC'yi etkinleştirme işleminin ekran görüntüsü " lightbox="images/enable-rsac-gp.png":::
 
 2. Varsayılan Zorlamayı Ayarla:
 
-   Aşağıdaki gibi bir ilke yoksa, çıkarılabilir medyaya varsayılan erişimi (Reddet veya İzin Ver) ayarlayabilirsiniz:
+   Tüm Cihaz Denetimi özellikleri (RemovableMediaDevices, CdRomDevices, WpdDevices, PrinterDevices) için varsayılan erişimi (Reddet veya İzin Ver) ayarlayabilirsiniz.
 
-   - **Bilgisayar Yapılandırması > Yönetim Şablonları > Windows Bileşenler > Microsoft Defender Virüsten Koruma > Özellikleri > Cihaz Denetimi'ne gidin > Cihaz Denetimi Varsayılan Zorlaması'nı seçin**
+   Örneğin, RemovableMediaDevices için Reddet veya İzin Ver ilkeniz vardır, ancak CdRomDevices veya WpdDevices için herhangi bir ilkeniz yoktur. Bu ilke aracılığıyla Varsayılan Reddetme'yi ayarlarsınız, ardından CdRomDevices veya WpdDevices'e Okuma/Yazma/Yürütme erişimi engellenir. Yalnızca depolamayı yönetmek istiyorsanız, Yazıcı için İzin Ver ilkesi oluşturduğunuzdan emin olun; aksi takdirde, bu Varsayılan Zorlama Yazıcı'ya da uygulanır.
+
+   - **Windows Bileşenleri > Microsoft Defender Virüsten Koruma > Özellikleri > Cihaz Denetimi > Bilgisayar Yapılandırması > Yönetim Şablonları'na gidin > Cihaz Denetimi Varsayılan Zorlama**'>
 
    - **Cihaz Denetimi Varsayılan Zorlamayı Seç** penceresinde **Varsayılan Reddet'i** seçin:
 
@@ -361,7 +363,7 @@ Bu özellik Microsoft Endpoint Manager yönetim merkezinde (<https://endpoint.mi
 
    Cihaz denetim ilkesi gruplarını tek bir XML dosyasında aşağıdaki gibi birleştirebilirsiniz:
 
-   - **Cihaz Denetimi Cihaz denetimi** \> **ilke gruplarını tanımlama** Microsoft Defender Virüsten Koruma **Bilgisayar Yapılandırması** \> **Yönetim Şablonları** \> **Windows** \> **Bileşenler'e** \> gidin.
+   - **Bilgisayar Yapılandırması** \> **Yönetim Şablonları** \> **Windows Bileşenleri** \> **Microsoft Defender Virüsten Koruma** \> **Cihaz Denetimi** \> **Cihaz denetimi ilke gruplarını tanımlama'ya** gidin.
 
     :::image type="content" source="images/define-device-control-policy-grps-gp.png" alt-text="Cihaz denetimi ilke gruplarını tanımlama ekran görüntüsü" lightbox="images/define-device-control-policy-grps-gp.png":::
 
@@ -377,7 +379,7 @@ Bu özellik Microsoft Endpoint Manager yönetim merkezinde (<https://endpoint.mi
 
    Cihaz denetim ilkesi kurallarını tek bir XML dosyasında aşağıdaki gibi birleştirebilirsiniz:
 
-   - **Cihaz denetimi ilkesi kurallarını tanımlama > Bilgisayar Yapılandırması > Yönetim Şablonları > Windows Bileşenleri > Microsoft Defender Virüsten Koruma > Cihaz Denetimi'ne** gidin
+   - **Microsoft Defender Virüsten Koruma > Cihaz Denetimi > Cihaz denetimi ilke kurallarını tanımlama > Windows Bileşenleri > Bilgisayar Yapılandırması > Yönetim Şablonları'na** gidin
 
      :::image type="content" source="images/define-device-cntrl-policy-rules-gp.png" alt-text="Cihaz denetimi ilkesi kurallarını tanımlama ekran görüntüsü" lightbox="images/define-device-cntrl-policy-rules-gp.png":::
 
@@ -393,17 +395,17 @@ Bu özellik Microsoft Endpoint Manager yönetim merkezinde (<https://endpoint.mi
 
     Yazma erişimi gerçekleştiğinde dosyanın bir kopyasına (kanıt) sahip olmak istiyorsanız, sistemin kopyayı kaydedebileceği konumu ayarlamanız gerekir.
 
-    - **Cihaz Denetimi kanıt verilerinin uzak konumunu tanımlama > Bilgisayar Yapılandırması > Yönetim Şablonları > Windows Bileşenler > Microsoft Defender Virüsten Koruma > Cihaz Denetimi'ne** gidin.
+    - **Microsoft Defender Virüsten Koruma > Cihaz Denetimi > Cihaz Denetimi kanıt verilerini uzak konumu tanımlama > Windows Bileşenleri > Bilgisayar Yapılandırması > Yönetim Şablonları'na** gidin.
 
     - **Cihaz Denetimi kanıt verilerini uzak konumu tanımla** penceresinde **Etkin'i** seçin ve yerel veya ağ paylaşımı klasör yolunu girin.
 
       :::image type="content" source="images/evidence-data-remote-location-gp.png" alt-text="Cihaz Denetimi kanıt verilerini uzak konumu tanımlama ekran görüntüsü" lightbox="images/evidence-data-remote-location-gp.png":::
 
-## <a name="view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint"></a>Cihaz Denetimi Çıkarılabilir Depolama Access Control verilerini Uç Nokta için Microsoft Defender'da görüntüleme
+## <a name="view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint"></a>Cihaz Denetimi Çıkarılabilir Depolama Birimi Access Control verilerini Uç Nokta için Microsoft Defender
 
-[Microsoft 365 Defender portalı](https://security.microsoft.com/advanced-hunting), Cihaz Denetimi Çıkarılabilir Depolama Access Control tarafından tetiklenen olayları gösterir. Microsoft 365 güvenliğine erişmek için aşağıdaki aboneliğe sahip olmanız gerekir:
+[Microsoft 365 Defender portalı](https://security.microsoft.com/advanced-hunting), Cihaz Denetimi Çıkarılabilir Depolama Birimi Access Control tarafından tetiklenen olayları gösterir. Microsoft 365 güvenliğine erişmek için aşağıdaki aboneliğe sahip olmanız gerekir:
 
-- E5 raporlama için Microsoft 365
+- E5 için Microsoft 365 raporlama
 
 ```kusto
 //RemovableStoragePolicyTriggered: event triggered by Disk level enforcement
@@ -457,7 +459,7 @@ GUID'yi çevrimiçi açık kaynak veya PowerShell aracılığıyla oluşturabili
 
 ### <a name="what-are-the-removable-storage-media-and-policy-limitations"></a>Çıkarılabilir depolama ortamı ve ilke sınırlamaları nelerdir?
 
-Microsoft Endpoint Manager yönetim merkezinden (Intune) veya Microsoft Graph API aracılığıyla arka uç çağrısı OMA-URI (OKUNACAK GET veya GÜNCELLEŞTIRILECEK PATCH) aracılığıyla yapılır ve bu nedenle sınırlama, Microsoft'taki XML dosyaları için resmi olarak 350.000 karakter olan OMA-URI özel yapılandırma profiliyle aynıdır.
+Microsoft Endpoint Manager yönetim merkezinden (Intune) veya Microsoft Graph API aracılığıyla arka uç çağrısı OMA-URI (OKUNACAK GET veya GÜNCELLEME YAMASı) aracılığıyla yapılır ve bu nedenle sınırlama, Microsoft'taki XML dosyaları için resmi olarak 350.000 karakter olan OMA-URI özel yapılandırma profiliyle aynıdır.
 
 Örneğin, kullanıcı SID'sinde belirli kullanıcıları "İzin Ver"/"Denetime izin verildi" olarak iki giriş bloğuna ve sonunda "Reddet" tümüne iki giriş bloğuna ihtiyacınız varsa, 2.276 kullanıcıyı yönetebilirsiniz.
 

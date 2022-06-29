@@ -1,7 +1,7 @@
 ---
 title: Android’de Uç Nokta için Microsoft Defender’ı yapılandırın
-description: Android'de Uç Nokta için Microsoft Defender'ın nasıl yapılandırıldığı açıklanır
-keywords: microsoft, defender, Uç Nokta için Microsoft Defender, mde, android, yapılandırma
+description: Android'de Uç Nokta için Microsoft Defender yapılandırmayı açıklar
+keywords: microsoft, defender, Uç Nokta için Microsoft Defender, mde, android, configuration
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 1f4ebaadd22a14eb2a9b24194c43fb35a5382adf
-ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
+ms.openlocfilehash: 1ffaaf3984afdb6e5d87210fc23e7463d41b7ee4
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65923254"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66493263"
 ---
 # <a name="configure-defender-for-endpoint-on-android-features"></a>Android özelliklerinde Uç Nokta için Defender’ı yapılandırın
 
@@ -33,7 +33,7 @@ ms.locfileid: "65923254"
 
 ## <a name="conditional-access-with-defender-for-endpoint-on-android"></a>Android'de Uç Nokta için Defender ile Koşullu Erişim
 
-Android'de Uç Nokta için Microsoft Defender'ın yanı sıra Microsoft Intune ve Azure Active Directory, cihaz risk düzeylerine göre Cihaz uyumluluğu ve Koşullu Erişim ilkelerinin zorunlu tutmasını sağlar. Uç Nokta için Defender, Intune aracılığıyla bu özellikten yararlanmak için dağıtabileceğiniz bir Mobil Tehdit Savunması (MTD) çözümüdür.
+Microsoft Intune ve Azure Active Directory ile birlikte Android'de Uç Nokta için Microsoft Defender, cihaz risk düzeylerine göre Cihaz uyumluluğu ve Koşullu Erişim ilkelerinin zorunlu tutmasını sağlar. Uç Nokta için Defender, Intune aracılığıyla bu özellikten yararlanmak için dağıtabileceğiniz bir Mobile Threat Defense (MTD) çözümüdür.
 
 Android ve Koşullu Erişim'de Uç Nokta için Defender'ı ayarlama hakkında daha fazla bilgi için bkz. [Uç Nokta için Defender ve Intune](/mem/intune/protect/advanced-threat-protection).
 
@@ -45,7 +45,7 @@ Android ve Koşullu Erişim'de Uç Nokta için Defender'ı ayarlama hakkında da
 Android'de Uç Nokta için Defender, yöneticilerin Android cihazlarını destekleyecek şekilde özel göstergeler yapılandırmasına da olanak tanır. Özel göstergeleri yapılandırma hakkında daha fazla bilgi için bkz. [Göstergeleri yönetme](manage-indicators.md).
 
 ## <a name="configure-web-protection"></a>Web korumasını yapılandırma
-Android'de Uç Nokta için Defender, BT Yöneticilerinin web koruması özelliğini yapılandırmalarına olanak tanır. Bu özellik Microsoft Endpoint Manager Yönetim merkezinde kullanılabilir.
+Android'de Uç Nokta için Defender, BT Yöneticilerinin web koruması özelliğini yapılandırmalarına olanak tanır. Bu özellik Microsoft Endpoint Manager Yönetici merkezinde kullanılabilir.
 
 > [!NOTE]
 > Android'de Uç Nokta için Defender, Web Koruması özelliğini sağlamak için bir VPN kullanır. Bu normal bir VPN değildir ve cihazın dışına trafiği almayan yerel/kendi kendini döngüye alan bir VPN'dir.
@@ -55,25 +55,25 @@ Android'de Uç Nokta için Defender, BT Yöneticilerinin web koruması özelliğ
 >[!NOTE]
 >Uç Nokta için Microsoft Defender'da Ağ Koruması artık genel önizleme aşamasındadır. Aşağıdaki bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünle ilgilidir. Microsoft, burada sağlanan bilgilerle ilgili olarak açık veya zımni hiçbir garanti vermez.
 
-Bu özellik, Wi-Fi ağları için birincil saldırı vektörleri olan Wi-Fi ilgili tehditlere ve sahte sertifikalara karşı koruma sağlar. Yöneticiler, Microsoft Endpoint Manager Yönetim merkezinde kök Sertifika Yetkilisi (CA) ve özel kök CA sertifikalarını listeleyebilir ve uç noktalarla güven kurabilir. Kullanıcıya güvenli ağlara bağlanmak için kılavuzlu bir deneyim sağlar ve ayrıca ilgili bir tehdit algılandığında bu kullanıcılara bildirir. 
+Bu özellik, Wi-Fi ağları için birincil saldırı vektörleri olan Wi-Fi ilgili tehditlere ve sahte sertifikalara karşı koruma sağlar. Yöneticiler, Microsoft Endpoint Manager Yönetici merkezinde kök Sertifika Yetkilisi (CA) ve özel kök CA sertifikalarını listeleyebilir ve uç noktalarla güven oluşturabilir. Kullanıcıya güvenli ağlara bağlanmak için kılavuzlu bir deneyim sağlar ve ayrıca ilgili bir tehdit algılandığında bu kullanıcılara bildirir. 
 
-Özelliği Microsoft Endpoint Manager Yönetim merkezinden yapılandırma ve güvenilen sertifikalar ekleme gibi esneklik sunmak için çeşitli yönetici denetimleri içerir. Yöneticiler, Android cihazlardan Uç Nokta için Defender tarafından gönderilen verileri yapılandırmak için [gizlilik denetimlerini](android-configure.md) de etkinleştirebilir.
+Özelliği Microsoft Endpoint Manager Yönetici merkezinden yapılandırma ve güvenilen sertifikalar ekleme gibi esneklik sunmak için çeşitli yönetici denetimleri içerir. Yöneticiler, Android cihazlardan Uç Nokta için Defender tarafından gönderilen verileri yapılandırmak için [gizlilik denetimlerini](/microsoft-365/security/defender-endpoint/android-configure#privacy-controls) de etkinleştirebilir.
 
 Uç nokta için Microsoft Defender'da ağ koruması varsayılan olarak etkindir. Yöneticiler **, Android cihazlarda Ağ korumasını yapılandırmak** için aşağıdaki adımları kullanabilir.
 
-1. Microsoft Endpoint Manager Yöneticisi'nde Uygulamalar > Uygulama yapılandırma ilkeleri'ne gidin. Yeni bir Uygulama yapılandırma ilkesi oluşturun.
+1. Microsoft Endpoint Manager Yönetici'da Uygulamalar > Uygulama yapılandırma ilkeleri'ne gidin. Yeni bir Uygulama yapılandırma ilkesi oluşturun.
     > [!div class="mx-imgBorder"]
-    > ![İlke oluşturma resmi.](images/create-policy.png)
+    > ![İlke oluşturma resmi.](images/android-mem.png)
 1. İlkeyi benzersiz olarak tanımlamak için bir ad ve açıklama sağlayın. Platform olarak **'Android Enterprise'ı** ve profil türü olarak **'Yalnızca kişisel iş profili'ni** ve Hedeflenen uygulama olarak **'Microsoft Defender'ı** seçin.
     > [!div class="mx-imgBorder"]
     > ![İlke ayrıntılarının görüntüsü.](images/appconfigdetails.png)
-1. Ayarlar sayfasında **'Yapılandırma tasarımcısını kullan'ı** seçin ve anahtar olarak **'Microsoft Defender'da Ağ Korumasını Etkinleştir'i** ve bölünebilir Ağ Koruması'na **değeri '0'** olarak ekleyin. (Ağ koruması varsayılan olarak etkindir)
+1. Ayarlar sayfasında **'Yapılandırma tasarımcısını kullan'ı seçin ve Ağ Koruması'nı** devre dışı bırakmak için anahtar olarak **'Microsoft Defender'da Ağ Korumasını Etkinleştir'i** ve **'0'** olarak değeri ekleyin. (Ağ koruması varsayılan olarak etkindir)
     > [!div class="mx-imgBorder"]
     > ![Ağ koruma ilkesini etkinleştirme seçeneğinin görüntüsü](images/selectnp.png)
     
     > [!div class="mx-imgBorder"]
     > ![Yapılandırma ilkesi ekleme görüntüsü.](images/npvalue.png)
-1. Kuruluşunuzda özel olabilecek kök CA'lar kullanılıyorsa, Defender'ın bunları sahte sertifika olarak algılamaması için Intune (MDM çözümü) ile kullanıcının cihazları arasında açık güven oluşturulması gerekir.  
+1. Kuruluşunuzda özel olabilecek kök CA'lar kullanılıyorsa, defender'ın bunları sahte sertifika olarak algılamaması için Intune (MDM çözümü) ile kullanıcının cihazları arasında açık güven oluşturulması gerekir.  
 
     Kök CA'lar için güven oluşturmak için anahtar olarak **'Ağ Koruması için Güvenilen CA sertifika listesi (Önizleme)'** kullanın ve değer olarak **'sertifika parmak izlerinin virgülle ayrılmış listesini'** ekleyin.
     > [!div class="mx-imgBorder"]
@@ -92,7 +92,7 @@ Uç nokta için Microsoft Defender'da ağ koruması varsayılan olarak etkindir.
 ## <a name="privacy-controls"></a>Gizlilik Denetimleri
 
 > [!IMPORTANT]
-> Android'de Uç Nokta için Microsoft Defender Gizlilik Denetimleri önizleme aşamasındadır. Aşağıdaki bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünle ilgilidir. Microsoft, burada sağlanan bilgilerle ilgili olarak açık veya zımni hiçbir garanti vermez.
+> Android'de Uç Nokta için Microsoft Defender için Gizlilik Denetimleri önizleme aşamasındadır. Aşağıdaki bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünle ilgilidir. Microsoft, burada sağlanan bilgilerle ilgili olarak açık veya zımni hiçbir garanti vermez.
 
 Android cihazlardan Uç Nokta için Defender tarafından gönderilen verileri yapılandırmak için aşağıdaki gizlilik denetimleri kullanılabilir:
 
@@ -100,19 +100,20 @@ Android cihazlardan Uç Nokta için Defender tarafından gönderilen verileri ya
 |--------------------|-------------|
 |Kötü amaçlı yazılım raporu |Yöneticiler kötü amaçlı yazılım raporu için gizlilik denetimi ayarlayabilir - Gizlilik etkinleştirilirse, Uç Nokta için Defender kötü amaçlı yazılım uyarı raporunun bir parçası olarak kötü amaçlı yazılım uygulama adını ve diğer uygulama ayrıntılarını göndermez |
 |Kimlik avı raporu |Yöneticiler kimlik avı raporu için gizlilik denetimi ayarlayabilir - Gizlilik etkinleştirilirse, Uç Nokta için Defender, kimlik avı uyarısı raporunun bir parçası olarak güvenli olmayan web sitesinin etki alanı adını ve ayrıntılarını göndermez |
-|Uygulamaların güvenlik açığı değerlendirmesi (yalnızca Android) |Varsayılan olarak yalnızca iş profilinde yüklü uygulamalar hakkındaki bilgiler güvenlik açığı değerlendirmesi için gönderilir. Yöneticiler kişisel uygulamaları dahil etmek için gizliliği devre dışı bırakabilir|
+|Uygulamaların güvenlik açığı değerlendirmesi (yalnızca Android) |Varsayılan olarak yalnızca iş profilinde yüklü uygulamalar hakkında bilgiler güvenlik açığı değerlendirmesi için gönderilir. Yöneticiler kişisel uygulamaları dahil etmek için gizliliği devre dışı bırakabilir|
+|Ağ Koruması (önizleme)| Yöneticiler ağ korumasında gizliliği etkinleştirebilir veya devre dışı bırakabilir - Etkinleştirilirse, Defender ağ ayrıntılarını göndermez.|
 
 ## <a name="configure-vulnerability-assessment-of-apps-for-byod-devices"></a>KCG cihazları için uygulamaların güvenlik açığı değerlendirmesini yapılandırma
 
-Android'de Uç Nokta için Microsoft Defender'ın 1.0.3425.0303 sürümünden, eklenen mobil cihazlarda yüklü işletim sistemi ve uygulamaların güvenlik açığı değerlendirmelerini çalıştırabilirsiniz.
+Android'de Uç Nokta için Microsoft Defender 1.0.3425.0303 sürümünden, eklenen mobil cihazlarda yüklü işletim sistemi ve uygulamaların güvenlik açığı değerlendirmelerini çalıştırabilirsiniz.
 
 > [!NOTE]
-> Güvenlik açığı değerlendirmesi, Uç Nokta için [Microsoft Defender'da Microsoft Defender Güvenlik Açığı Yönetimi'nin](../defender-vulnerability-management/defender-vulnerability-management.md) bir parçasıdır. 
+> Güvenlik açığı değerlendirmesi, [Uç Nokta için Microsoft Defender'daki Microsoft Defender Güvenlik Açığı Yönetimi](../defender-vulnerability-management/defender-vulnerability-management.md) bir parçasıdır. 
 
 **Kişisel cihazlardan (KCG) gelen uygulamalarla ilgili gizlilikle ilgili notlar:**
 
 - İş profili olan Android Kurumsal için yalnızca iş profilinde yüklü uygulamalar desteklenir.
-- Diğer KCG modları için varsayılan olarak uygulamaların güvenlik açığı değerlendirmesi **etkinleştirilmez** . Ancak, cihaz yönetici modundayken, yöneticiler cihazda yüklü uygulamaların listesini almak için Microsoft Endpoint Manager aracılığıyla bu özelliği açıkça etkinleştirebilir. Daha fazla bilgi için aşağıdaki ayrıntılara bakın.
+- Diğer KCG modları için varsayılan olarak uygulamaların güvenlik açığı değerlendirmesi **etkinleştirilmez** . Ancak, cihaz yönetici modundayken, yöneticiler cihazda yüklü uygulamaların listesini almak için bu özelliği Microsoft Endpoint Manager aracılığıyla açıkça etkinleştirebilir. Daha fazla bilgi için aşağıdaki ayrıntılara bakın.
 
 ### <a name="configure-privacy-for-device-administrator-mode"></a>Cihaz yöneticisi modu için gizliliği yapılandırma
 
@@ -141,7 +142,7 @@ Hedeflenen kullanıcılar için **cihaz yöneticisi** modundaki **cihazlardan uy
 
 Uç Nokta için Defender, iş profilindeki uygulamaların güvenlik açığı değerlendirmesini destekler. Ancak, bu özelliği hedeflenen kullanıcılar için kapatmak istiyorsanız aşağıdaki adımları kullanabilirsiniz:
 
-1. [Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **Uygulamalar Uygulama** > **yapılandırma ilkeleri** > **Yönetilen cihazlar** **ekle'ye** >  gidin.
+1. [Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **Uygulamalar** > **Uygulama yapılandırma ilkeleri** > **Yönetilen cihazlar** **ekle'ye** >  gidin.
 2. İlkeye bir ad verin; **Android Kurumsal> platform**; profil türünü seçin.
 3. Hedef uygulama olarak **Uç Nokta için Microsoft Defender'ı** seçin.
 4. Ayarlar sayfasında **Yapılandırma tasarımcısını kullan'ı** seçin ve anahtar ve değer türü olarak **DefenderTVMPrivacyMode** değerini **Tamsayı** olarak ekleyin
@@ -181,7 +182,7 @@ Bu gizlilik denetiminin kullanılması cihaz uyumluluk denetimini veya koşullu 
 
 İş profilinde hedeflenen kullanıcılar için gizliliği açmak için aşağıdaki adımları kullanın:
 
-1. [Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **Uygulamalar Uygulama** > **yapılandırma ilkeleri** > **Yönetilen cihazlar** **ekle'ye** >  gidin.
+1. [Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **Uygulamalar** > **Uygulama yapılandırma ilkeleri** > **Yönetilen cihazlar** **ekle'ye** >  gidin.
 2. İlkeye Bir ad verin( **Platform > Android Kurumsal**), profil türünü seçin.
 3. Hedef uygulama olarak **Uç Nokta için Microsoft Defender'ı** seçin.
 4. Ayarlar sayfasında **Yapılandırma tasarımcısını kullan'ı** seçin ve anahtar ve değer türü Olarak **DefenderExcludeURLInReport** değerini **Tamsayı** olarak ekleyin.
@@ -220,7 +221,7 @@ Bu gizlilik denetiminin kullanılması cihaz uyumluluk denetimini veya koşullu 
 
 İş profilinde hedeflenen kullanıcılar için gizliliği açmak için aşağıdaki adımları kullanın:
 
-1. [Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **Uygulamalar Uygulama** > **yapılandırma ilkeleri** > **Yönetilen cihazlar** **ekle'ye** >  gidin.
+1. [Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) **Uygulamalar** > **Uygulama yapılandırma ilkeleri** > **Yönetilen cihazlar** **ekle'ye** >  gidin.
 2. İlkeye Bir ad verin( **Platform > Android Kurumsal**), profil türünü seçin.
 3. Hedef uygulama olarak **Uç Nokta için Microsoft Defender'ı** seçin.
 4. Ayarlar sayfasında **Yapılandırma tasarımcısını kullan'ı** seçin ve anahtar ve değer türü olarak **DefenderExcludeAppInReport** değerini **Tamsayı** olarak ekleyin

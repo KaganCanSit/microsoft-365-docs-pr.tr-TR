@@ -2,11 +2,11 @@
 title: İşbirliği için Microsoft Teams kullanma
 f1.keywords:
 - NOCSH
-ms.author: samanro
-author: samanro
+ms.author: deniseb
+author: denisebmsft
 manager: dansimp
 ms.audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
 ms.collection:
@@ -23,12 +23,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Küçük işletmenizin veya kampanyanızın işbirliği yapabilmesi için Microsoft Teams'de neden ve nasıl ekip oluşturacağınızı öğrenin.
-ms.openlocfilehash: a996430d884e50d36c636c8682d862317775f63a
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: 046a888c0df95bc404bafcddb041e015131e6503
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65892570"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489658"
 ---
 # <a name="use-microsoft-teams-for-collaboration"></a>İşbirliği için Microsoft Teams kullanma
 
@@ -70,7 +70,7 @@ Bir ekip oluşturduğunuzda, başka neler oluşturulur:
 
 - Ekip dosyalarını depolamak için [bir SharePoint Online](/MicrosoftTeams/sharepoint-onedrive-interact) sitesi ve belge kitaplığı
 
-- [Exchange Online](/MicrosoftTeams/exchange-teams-interact) paylaşılan posta kutusu ve takvimi
+- [paylaşılan Exchange Online](/MicrosoftTeams/exchange-teams-interact) posta kutusu ve takvim
 
 - OneNote not defteri
 
@@ -106,7 +106,7 @@ Microsoft Teams teknik [belgelerinde Microsoft Teams](/microsoftteams/microsoft-
 
 ## <a name="admin-settings"></a>Yönetici ayarları
 
-> [!Note]
+> [!NOTE]
 > Kuruluş genelinde bir ekip oluşturmak için yönetici olmanız gerekir. Daha fazla bilgi için bkz. [Microsoft 365'te Yönetici nedir?](https://support.office.com/article/what-is-an-admin-e123627e-4892-4461-b9aa-1b6d57a5cfa4?ui=en-US&rs=en-US&ad=US).
 
 ## <a name="next-objective"></a>Sonraki hedef

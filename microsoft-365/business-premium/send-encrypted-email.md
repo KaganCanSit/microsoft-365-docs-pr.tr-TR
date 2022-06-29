@@ -5,7 +5,6 @@ f1.keywords:
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 03/08/2022
 ms.audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -26,14 +25,14 @@ search.appverid:
 - MET150
 ms.assetid: 496e690b-b75d-4ff5-bf34-cc32905d0364
 description: Outlook kullanarak şifrelenmiş e-posta göndermeyi öğrenin.
-ms.openlocfilehash: b9b2251114831bfe0b6364dc4327bd0c21da55e2
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: e4a25cc59d0d92c1905507b1e5db1253f120849c
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65316842"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489568"
 ---
-# <a name="encrypt-or-label-sensitive-email"></a>Hassas e-postayı şifreleme veya etiketleme
+# <a name="encrypt-or-label-your-sensitive-email-in-microsoft-365"></a>Microsoft 365'te hassas e-postanızı şifreleme veya etiketleme
 
 Verileriniz ve bilgileriniz önemlidir ve genellikle gizlidir. Buradaki amaç, e-posta alıcılarının bilgileri en yüksek hassasiyetle ele almaları için herkesin duyarlılık etiketlerini kullanmasını sağlayarak bu hassas bilgilerin korunmasına yardımcı olmaktır.
 
@@ -49,11 +48,11 @@ Kişiler gizli veya hassas bilgiler içeren e-posta göndermeden önce şunları
 
 ## <a name="set-it-up"></a>Ayarlayın
 
-Önceden tanımlanmış bir kurala uymayan bir iletiyi şifrelemek istiyorsanız veya yöneticiniz herhangi bir kural ayarlamadıysa, iletiyi göndermeden önce çeşitli farklı şifreleme kuralları uygulayabilirsiniz. Outlook 2013 veya 2016'dan veya Mac için Outlook 2016 şifrelenmiş ileti göndermek için **Seçenekler > İzinler'i** seçin ve ardından ihtiyacınız olan koruma seçeneğini belirleyin. Ayrıca Web üzerinde Outlook'de **Koru** düğmesini seçerek de şifreli bir ileti gönderebilirsiniz. Daha fazla bilgi için bkz. [Bilgisayar için Outlook şifrelenmiş iletileri gönderme, görüntüleme ve yanıtlama](https://support.microsoft.com/en-us/office/send-view-and-reply-to-encrypted-messages-in-outlook-for-pc-eaa43495-9bbb-4fca-922a-df90dee51980).
+Önceden tanımlanmış bir kurala uymayan bir iletiyi şifrelemek istiyorsanız veya yöneticiniz herhangi bir kural ayarlamadıysa, iletiyi göndermeden önce çeşitli farklı şifreleme kuralları uygulayabilirsiniz. Outlook 2013 veya 2016'dan şifrelenmiş ileti göndermek veya Mac için Outlook 2016 için **Seçenekler > İzinler'i** ve ardından ihtiyacınız olan koruma seçeneğini belirleyin. Ayrıca Web üzerinde Outlook'de **Koru** düğmesini seçerek de şifreli bir ileti gönderebilirsiniz. Daha fazla bilgi için bkz. [Bilgisayar için Outlook'ta şifrelenmiş iletileri gönderme, görüntüleme ve yanıtlama](https://support.microsoft.com/en-us/office/send-view-and-reply-to-encrypted-messages-in-outlook-for-pc-eaa43495-9bbb-4fca-922a-df90dee51980).
 
 ## <a name="admin-settings"></a>Yönetici ayarları
 
-E-posta şifrelemeyi ayarlama hakkında her şeyi [Microsoft 365'de e-posta şifrelemesi](../compliance/email-encryption.md) bölümünden öğrenebilirsiniz.
+E-posta şifrelemesini ayarlama hakkında her şeyi [Microsoft 365'te e-posta şifrelemesi](../compliance/email-encryption.md) bölümünden öğrenebilirsiniz.
 
 ### <a name="automatically-encrypt-email-messages"></a>E-posta iletilerini otomatik olarak şifreleme
 
@@ -63,7 +62,7 @@ E-posta iletilerini Microsoft Purview İleti Şifrelemesi ile şifrelemek için 
 
 1. Web tarayıcısında, genel yönetici izinleri verilmiş bir iş veya okul hesabı kullanarak oturum açın.
 2. Yönetici kutucuğunu seçin.
-3. Yönetim merkezinde Yönetim **merkezleri'ni > Exchange** seçin.
+3. Yönetici merkezinde **Exchange > Yönetici merkezleri'ni** seçin.
 
 Daha fazla bilgi için bkz. [E-posta iletilerini şifrelemek için posta akışı kuralları tanımlama](../compliance/define-mail-flow-rules-to-encrypt-email.md).
 

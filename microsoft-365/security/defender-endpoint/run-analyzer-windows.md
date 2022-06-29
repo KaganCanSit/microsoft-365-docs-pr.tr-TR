@@ -1,6 +1,6 @@
 ---
 title: İstemci çözümleyicisini Windows’da çalıştırın
-description: Windows'da Pertahanan Microsoft untuk Titik Akhir İstemci Çözümleyicisi'ni çalıştırmayı öğrenin.
+description: Windows'da Uç Nokta için Microsoft Defender İstemci Çözümleyicisi'ni çalıştırmayı öğrenin.
 keywords: istemci çözümleyicisi, sorun giderme algılayıcısı, çözümleyici, mdeanalyzer, windows
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -18,12 +18,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 5ac27241297b9943f1559653777b8e1668fe7f89
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 51eaa6ddcaf50a48ccbd8ffc000a79049c1d9842
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783039"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489480"
 ---
 # <a name="run-the-client-analyzer-on-windows"></a>İstemci çözümleyicisini Windows’da çalıştırın
 
@@ -53,9 +53,9 @@ ms.locfileid: "64783039"
 Yukarıdakilere ek olarak, [canlı yanıt kullanarak çözümleyici destek günlüklerini toplama](troubleshoot-collect-support-log.md) seçeneği de vardır..
 
 > [!NOTE]
-> Windows 10/11, Windows Server 2019/2022 veya modern [birleşik çözüm](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) yüklü Windows Server 2012R2/2016'da istemci çözümleyici betiği, bulut hizmeti URL'lerine bağlantı testlerini çalıştırmak için adlı `MDEClientAnalyzer.exe` yürütülebilir bir dosyaya çağrır.
+> modern [birleştirilmiş çözümün](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) yüklü olduğu Windows 10/11, Windows Server 2019/2022 veya Windows Server 2012R2/2016'da istemci çözümleyicisi betiği, bulut hizmeti URL'lerine bağlantı testlerini çalıştırmak için adlı `MDEClientAnalyzer.exe` yürütülebilir bir dosyayı çağırır.
 >
-> Windows 8.1, Windows Server 2016 veya ekleme için Microsoft Monitoring Agent (MMA) kullanılan önceki işletim sistemi sürümlerinde, istemci çözümleyicisi betiği Komut ve Denetim (CnC) URL'leri için bağlantı testlerini çalıştırmak için adlı `MDEClientAnalyzerPreviousVersion.exe` yürütülebilir bir dosyaya çağrı yaparken Siber Veri kanalı URL'leri için Microsoft Monitoring Agent bağlantı aracı`TestCloudConnection.exe`.
+> Windows 8.1, Windows Server 2016 veya ekleme için Microsoft Monitoring Agent'ın (MMA) kullanıldığı herhangi bir işletim sistemi sürümünde istemci çözümleyicisi betiği, Komut ve Denetim (CnC) URL'leri için bağlantı testleri çalıştırmak üzere adlı `MDEClientAnalyzerPreviousVersion.exe` yürütülebilir bir dosyaya çağrı yaparken, Siber Veri kanalı URL'leri için Microsoft Monitoring Agent bağlantı aracına `TestCloudConnection.exe` da çağrıda bulunur.
 
 
 Çözümleyiciye dahil edilen tüm PowerShell betikleri ve modülleri Microsoft tarafından imzalandı.
@@ -75,7 +75,7 @@ MDEClientAnalyzer.ps1 değiştirildikten sonra örnek içerik:
 
 
 
-## <a name="result-package-contents-on-windows"></a>Windows'da sonuç paketi içeriği
+## <a name="result-package-contents-on-windows"></a>Windows'ta sonuç paketi içeriği
 
 > [!NOTE]
 > Yakalanan dosyaların tam olarak değişmesi, aşağıdakiler gibi faktörlere bağlı olarak değişebilir:
@@ -94,11 +94,11 @@ Paketlenmemiş MDEClientAnalyzerResult.zip dosyası varsayılan olarak aşağıd
 - SystemInfoLogs \[Klasörü\]
   - AddRemovePrograms.csv
 
-    Açıklama: Kayıt defterinden toplanan x64 işletim sistemi yazılımındaki x86 yüklü yazılımların listesi.
+    Açıklama: Kayıt defterinden toplanan x64 işletim sistemindeki x64 yüklü yazılımların listesi.
 
   - AddRemoveProgramsWOW64.csv
 
-    Açıklama: Kayıt defterinden toplanan x64 işletim sistemi yazılımındaki x86 yüklü yazılımların listesi.
+    Açıklama: Kayıt defterinden toplanan x64 işletim sistemindeki x86 yüklü yazılımların listesi.
 
     - CertValidate.log
 
@@ -106,7 +106,7 @@ Paketlenmemiş MDEClientAnalyzerResult.zip dosyası varsayılan olarak aşağıd
 
     - dsregcmd.txt
 
-      Açıklama: [dsregcmd](/azure/active-directory/devices/troubleshoot-device-dsregcmd) çalıştırılan çıktı. Bu, makinenin Azure AD durumuyla ilgili ayrıntıları sağlar.
+      Açıklama: [dsregcmd](/azure/active-directory/devices/troubleshoot-device-dsregcmd) çalıştırılan çıktı. Bu, makinenin Azure AD durumu hakkında ayrıntılar sağlar.
 
     - IFEO.txt
 

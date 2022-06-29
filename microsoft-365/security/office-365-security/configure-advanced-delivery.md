@@ -17,12 +17,12 @@ ms.custom: ''
 description: Yöneticiler, desteklenen belirli senaryolarda (üçüncü taraf kimlik avı simülasyonları ve güvenlik işlemleri (SecOps) posta kutularına teslim edilen iletiler) filtrelenmemesi gereken iletileri belirlemek için Exchange Online Protection (EOP) içinde gelişmiş teslim ilkesini kullanmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d9176f73c94df6413e3b79053318f5547788d773
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 109d711623d2a0355851414af3ef0cb1beadf6af
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66011596"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490453"
 ---
 # <a name="configure-the-delivery-of-third-party-phishing-simulations-to-users-and-unfiltered-messages-to-secops-mailboxes"></a>Üçüncü taraf kimlik avı simülasyonlarının kullanıcılara ve filtrelenmemiş iletilerin SecOps posta kutularına teslimini yapılandırma
 
@@ -38,35 +38,35 @@ ms.locfileid: "66011596"
 - **Üçüncü taraf kimlik avı simülasyonları: Sanal saldırılar**, kuruluşunuzu gerçek bir saldırı etkilemeden önce savunmasız kullanıcıları belirlemenize yardımcı olabilir.
 - **Güvenlik işlemleri (SecOps) posta kutuları**: Güvenlik ekipleri tarafından filtrelenmemiş iletileri (hem iyi hem de kötü) toplamak ve çözümlemek için kullanılan ayrılmış posta kutuları.
 
-_Bu belirli senaryolardaki_ gelen iletilerin filtrelenmesini önlemek için Microsoft 365 gelişmiş _teslim ilkesini_ kullanırsınız.<sup>\*</sup> Gelişmiş teslim ilkesi, bu senaryolardaki iletilerin aşağıdaki sonuçları elde etmesini sağlar:
+_Bu belirli senaryolardaki_ gelen iletilerin filtrelenmesini önlemek için Microsoft 365'teki _gelişmiş teslim ilkesini_ kullanırsınız.<sup>\*</sup> Gelişmiş teslim ilkesi, bu senaryolardaki iletilerin aşağıdaki sonuçları elde etmesini sağlar:
 
 - EOP ve Office 365 için Microsoft Defender filtreler bu iletilerde hiçbir işlem gerçekleştirmez.<sup>\*</sup>
 - İstenmeyen posta ve kimlik avı için [sıfır saatlik Temizleme (ZAP)](zero-hour-auto-purge.md) bu iletilerde hiçbir işlem gerçekleştirmez.<sup>\*\*</sup>
 - [Bu senaryolar için varsayılan sistem uyarıları](/microsoft-365/compliance/alert-policies#default-alert-policies) tetiklenmez.
 - [Office 365 için Defender'da AIR ve kümeleme](office-365-air.md) bu iletileri yoksayar.
 - Özellikle üçüncü taraf kimlik avı simülasyonları için:
-  - [Yönetici gönderimleri](admin-submission.md) , iletinin bir kimlik avı simülasyonu kampanyasının parçası olduğunu ve gerçek bir tehdit olmadığını belirten otomatik bir yanıt oluşturur. Uyarılar ve AIR tetiklenmez. Yönetici gönderimleri deneyimi, bu iletileri sanal bir tehdit olarak gösterir.
+  - [Yönetici gönderimleri](admin-submission.md), iletinin bir kimlik avı simülasyonu kampanyasının parçası olduğunu ve gerçek bir tehdit olmadığını belirten otomatik bir yanıt oluşturur. Uyarılar ve AIR tetiklenmez. Yönetici gönderimleri deneyimi, bu iletileri sanal bir tehdit olarak gösterir.
   - Kullanıcı [Rapor İletisi veya Rapor Kimlik Avı eklentilerini](enable-the-report-message-add-in.md) kullanarak bir kimlik avı simülasyonu iletisi bildirdiğinde sistem uyarı, araştırma veya olay oluşturmaz. Bağlantılar veya dosyalar patlamaz, ancak ileti **Gönderimler** sayfasının **Kullanıcı tarafından bildirilen iletiler** sekmesinde de gösterilir.
-  - [Office 365 için Defender'daki Kasa Bağlantıları](safe-links.md), tıklama sırasında bu iletilerde özel olarak tanımlanan URL'leri engellemez veya patlamaz. URL'ler sarmalanmaya devam eder, ancak engellenmez.
-  - [Kasa Office 365 için Defender'deki Ekler](safe-attachments.md) bu iletilerdeki ekleri patlamaz.
+  - [Office 365 için Defender'daki Güvenli Bağlantılar](safe-links.md), tıklama sırasında bu iletilerde özel olarak tanımlanan URL'leri engellemez veya patlamaz. URL'ler sarmalanmaya devam eder, ancak engellenmez.
+  - [Office 365 için Defender'deki Güvenli Ekler](safe-attachments.md) bu iletilerdeki ekleri patlamaz.
 
 <sup>\*</sup> Kötü amaçlı yazılım filtrelemeyi atlayamazsınız.
 
 <sup>\*\*</sup> Kötü amaçlı yazılım için ZAP'ın kapalı olduğu SecOps posta kutusu için bir kötü amaçlı yazılımdan koruma ilkesi oluşturarak kötü amaçlı yazılım için ZAP'ı atlayabilirsiniz. Yönergeler için bkz [. EOP'de kötü amaçlı yazılımdan koruma ilkelerini yapılandırma](configure-anti-malware-policies.md).
 
-Gelişmiş teslim ilkesi tarafından tanımlanan iletiler güvenlik tehditleri olmadığından, iletiler sistem geçersiz kılmalarıyla işaretlenir. Yönetici deneyimleri, **kimlik avı simülasyon** sistemi geçersiz kılma veya **SecOps posta kutusu** sistemi geçersiz kılma nedeniyle bu iletileri gösterir. Yöneticiler aşağıdaki deneyimlerde bu sistem geçersiz kılmalarını filtreleyebilir ve analiz edebilir:
+Gelişmiş teslim ilkesi tarafından tanımlanan iletiler güvenlik tehditleri olmadığından, iletiler sistem geçersiz kılmalarıyla işaretlenir. Yönetici deneyimler, **kimlik avı simülasyon** sistemi geçersiz kılma veya **SecOps posta kutusu** sistemi geçersiz kılma nedeniyle bu iletileri gösterir. Yöneticiler aşağıdaki deneyimlerde bu sistem geçersiz kılmalarını filtreleyebilir ve analiz edebilir:
 
-- [Office 365 için Defender plan 2'de Tehdit Gezgini/Gerçek zamanlı algılamalar](threat-explorer.md): Yönetici **, Sistem geçersiz kılma kaynağını** filtreleyebilir ve **Kimlik Avı simülasyonu** veya **SecOps Posta Kutusu'ni** seçebilir.
-- [Tehdit Gezgini'ndeki E-posta varlığı Sayfası/Gerçek zamanlı algılamalar](mdo-email-entity-page.md): Yönetici, **Geçersiz Kılmalar** bölümündeki **Kiracı geçersiz kılma** altında **SecOps posta kutusu** veya **Kimlik Avı simülasyonu** tarafından kuruluş ilkesi tarafından izin verilen bir iletiyi görüntüleyebilir.
+- [Office 365 için Defender plan 2'deki Tehdit Gezgini/Gerçek zamanlı algılamalar](threat-explorer.md): Yönetici **Sistem geçersiz kılma kaynağında** filtreleyebilir ve **Kimlik Avı simülasyonu** veya **SecOps Posta Kutusu'nda** seçim yapabilir.
+- [Tehdit Gezgini'ndeki E-posta varlığı Sayfası/Gerçek zamanlı algılamalar](mdo-email-entity-page.md): Yönetici, **Geçersiz Kılmalar** bölümündeki **Kiracı geçersiz kılma** altında **SecOps posta kutusu** veya **Kimlik Avı benzetimi** tarafından kuruluş ilkesi tarafından izin verilen bir iletiyi görüntüleyebilir.
 - [Tehdit koruması durum raporu](view-email-security-reports.md#threat-protection-status-report): Yönetici, açılan menüde **Sistem geçersiz kılmaya göre verileri görüntüleyebilir** ve kimlik avı simülasyon sistemi geçersiz kılma nedeniyle izin verilen iletileri görmeyi seçebilir. SecOps posta kutusu geçersiz kılma işleminin izin verdiği iletileri görmek için, **nedene göre grafik dökümü açılan menüsünde teslim konumuna göre** **grafik dökümünü** seçebilirsiniz.
 - [Uç Nokta için Microsoft Defender gelişmiş avcılık](../defender-endpoint/advanced-hunting-overview.md): Kimlik avı simülasyonu ve SecOps posta kutusu sistemi geçersiz kılmaları, EmailEvents'teki OrgLevelPolicy içinde seçenekler olarak gösterilir.
-- [Kampanya Görünümleri](campaigns.md): Yönetici **, Sistem geçersiz kılma kaynağını** filtreleyebilir ve **Kimlik Avı benzetimi** veya **SecOps Posta Kutusu'nı** seçebilir.
+- [Kampanya Görünümleri](campaigns.md): Yönetici **Sistem geçersiz kılma kaynağında** filtreleyebilir ve **Kimlik Avı benzetimi** veya **SecOps Posta Kutusu'nı** seçebilir.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
 - Microsoft 365 Defender portalını adresinde <https://security.microsoft.com>açarsınız. Doğrudan **Gelişmiş teslim** sayfasına gitmek için dosyasını açın <https://security.microsoft.com/advanceddelivery>.
 
-- Güvenlik & Uyumluluk PowerShell'e bağlanmak için bkz. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+- Güvenlik & Uyumluluğu PowerShell'e bağlanmak için bkz. [Güvenlik & Uyumluluk PowerShell'e bağlanma](/powershell/exchange/connect-to-scc-powershell).
 
 - Bu makaledeki yordamları gerçekleştirmeden önce size izinler atanmalıdır:
   - Gelişmiş teslim ilkesinde yapılandırılmış ayarları oluşturmak, değiştirmek veya kaldırmak için, **Microsoft 365 Defender portalında** **Güvenlik Yöneticisi** rol grubunun üyesi ve **Exchange Online** **Kuruluş Yönetimi** rol grubunun üyesi olmanız gerekir.
@@ -75,7 +75,7 @@ Gelişmiş teslim ilkesi tarafından tanımlanan iletiler güvenlik tehditleri o
   Daha fazla bilgi için bkz[. Microsoft 365 Defender portalındaki İzinler](permissions-microsoft-365-security-center.md) ve [Exchange Online'deki İzinler](/exchange/permissions-exo/permissions-exo).
 
   > [!NOTE]
-  > Kullanıcıları ilgili Azure Active Directory rolüne eklemek, kullanıcılara Microsoft 365 Defender portalında gerekli izinleri _ve_ Microsoft 365'deki diğer özellikler için izinleri verir. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
+  > Kullanıcıları ilgili Azure Active Directory rolüne eklemek, kullanıcılara Microsoft 365 Defender portalında gerekli izinleri _ve_ Microsoft 365'teki diğer özellikler için izinleri verir. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
 
 ## <a name="use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy"></a>Gelişmiş teslim ilkesinde SecOps posta kutularını yapılandırmak için Microsoft 365 Defender portalını kullanma
 
@@ -110,7 +110,7 @@ Yapılandırdığınız SecOps posta kutusu girişleri **SecOps posta kutusu** s
    - **Etki alanı**: Bu ayarı genişletin ve kutuya tıklayıp bir değer girip Enter tuşuna basarak veya kutunun altında görüntülenen değeri seçerek en az bir e-posta adresi etki alanı (örneğin, contoso.com) girin. Bu adımı gerektiği kadar tekrarlayın. En fazla 20 giriş ekleyebilirsiniz.
 
      > [!NOTE]
-     > İletinin `5321.MailFrom` SMTP iletiminde kullanılan adresten ( **POSTA GÖNDEREN** adresi, P1 göndereni veya zarf göndereni olarak da bilinir) **etki alanını veya** kimlik avı simülasyonu satıcınız tarafından belirtilen Etki Alanı Anahtarları Tanımlanan Posta (DKIM) etki alanını kullanın. 
+     > İletinin `5321.MailFrom` SMTP iletiminde kullanılan adresten ( **POSTA GÖNDEREN** adresi, P1 göndereni veya zarf göndereni olarak da bilinir) **etki alanını veya** kimlik avı simülasyonu satıcınız tarafından belirtilen Etki Alanı Anahtarları Tanımlanan Posta (DKIM) etki alanını kullanın.
 
    - **IP gönderme**: Bu ayarı genişletin ve kutuya tıklayıp bir değer girip Enter tuşuna basarak veya kutunun altında görüntülenen değeri seçerek en az bir geçerli IPv4 adresi girin. Bu adımı gerektiği kadar tekrarlayın. En fazla 10 giriş ekleyebilirsiniz. Geçerli değerler şunlardır:
      - Tek IP: Örneğin, 192.168.1.1.
@@ -121,13 +121,13 @@ Yapılandırdığınız SecOps posta kutusu girişleri **SecOps posta kutusu** s
    Mevcut bir değeri kaldırmak için Kaldır'a tıklayın ![Kaldır simgesi.](../../media/m365-cc-sc-remove-selection-icon.png) öğesini seçin.
 
    > [!NOTE]
-   > Gelişmiş Teslim'de üçüncü taraf kimlik avı benzetimi yapılandırmak için aşağıdaki bilgileri hazırlamanız gerekir:
-   > 
+   > Gelişmiş Teslim'de üçüncü taraf kimlik avı benzetimi yapılandırmak için aşağıdaki bilgileri sağlamanız gerekir:
+   >
    > - Aşağıdaki kaynaklardan en az bir **Etki Alanı** :
    >   - Adres `5321.MailFrom` (POSTA KIMDEN adresi, P1 gönderen veya zarf gönderen olarak da bilinir).
    >   - DKIM etki alanı.
    > - En az bir **Ip Gönderiliyor**.
-   > 
+   >
    > simülasyon iletilerindeki **URL'lerin** engellenmediğinden emin olmak için isteğe bağlı olarak Simülasyon URL'leri ekleyebilirsiniz.
    > Her alan için en fazla 10 giriş belirtebilirsiniz.
    > En az bir **Etki Alanı** ve bir **Gönderme IP'sinde** eşleşme olması gerekir, ancak değerler arasındaki ilişki korunmaz.
@@ -142,9 +142,9 @@ Yapılandırdığınız üçüncü taraf kimlik avı benzetimi girişleri **, Ki
 
 Gelişmiş teslim ilkesinin size yardımcı olabileceği iki senaryoya ek olarak, filtrelemeyi atlamanızı gerektirebilecek başka senaryolar da vardır:
 
-- **Üçüncü taraf filtreleri**: Etki alanınızın MX kaydı Office 365 işaret *etmiyorsa* (iletiler önce başka bir yere yönlendirilir), [varsayılan olarak güvenli](secure-by-default.md) *kullanılamaz*. Koruma eklemek isterseniz Bağlayıcılar için Gelişmiş Filtreleme'yi ( *atlama listesi* olarak da bilinir) etkinleştirmeniz gerekir. Daha fazla bilgi için bkz. [Exchange Online ile üçüncü taraf bulut hizmeti kullanarak posta akışını yönetme](/exchange/mail-flow-best-practices/manage-mail-flow-using-third-party-cloud). Bağlayıcılar için Gelişmiş Filtreleme istemiyorsanız, üçüncü taraf filtreleme tarafından zaten değerlendirilmiş iletiler için Microsoft filtrelemesini atlamak için posta akışı kurallarını (aktarım kuralları olarak da bilinir) kullanın. Daha fazla bilgi için bkz. [İletilerde SCL'yi ayarlamak için posta akışı kurallarını kullanma](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
+- **Üçüncü taraf filtreleri**: Etki alanınızın MX kaydı Office 365 işaret _etmiyorsa_ (iletiler önce başka bir yere yönlendirilir), [varsayılan olarak güvenli](secure-by-default.md) _kullanılamaz_. Koruma eklemek isterseniz Bağlayıcılar için Gelişmiş Filtreleme'yi ( _atlama listesi_ olarak da bilinir) etkinleştirmeniz gerekir. Daha fazla bilgi için bkz. [Exchange Online ile üçüncü taraf bulut hizmeti kullanarak posta akışını yönetme](/exchange/mail-flow-best-practices/manage-mail-flow-using-third-party-cloud). Bağlayıcılar için Gelişmiş Filtreleme istemiyorsanız, üçüncü taraf filtreleme tarafından zaten değerlendirilmiş iletiler için Microsoft filtrelemesini atlamak için posta akışı kurallarını (aktarım kuralları olarak da bilinir) kullanın. Daha fazla bilgi için bkz. [İletilerde SCL'yi ayarlamak için posta akışı kurallarını kullanma](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
 
-- **Gözden geçirilmekte olan hatalı pozitifler**: Microsoft tarafından [yönetici gönderimleri](admin-submission.md) aracılığıyla analiz edilmeye devam eden belirli iletilere geçici olarak izin vererek hatalı olarak Microsoft'a kötü olarak işaretlenen bilinen iyi iletileri (hatalı pozitifler) bildirmek isteyebilirsiniz. Tüm geçersiz kılmalarda olduğu gibi, bu izinlerin de geçici olması **_kesinlikle önerilir_** .
+- **Gözden geçirilmekte olan hatalı pozitifler**: Microsoft tarafından [yönetici gönderimleri](admin-submission.md) aracılığıyla analiz edilmeye devam eden belirli iletilere geçici olarak izin vererek hatalı olarak Microsoft'a kötü olarak işaretlenen bilinen iyi iletileri (hatalı pozitifler) bildirmek isteyebilirsiniz. Tüm geçersiz kılmalarda olduğu gibi, bu izinlerin de geçici olması _**kesinlikle önerilir**_ .
 
 ## <a name="security--compliance-powershell-procedures-for-secops-mailboxes-in-the-advanced-delivery-policy"></a>Gelişmiş teslim ilkesinde SecOps posta kutuları için güvenlik & Uyumluluk PowerShell yordamları
 

@@ -13,12 +13,12 @@ metadata:
   ms.author: samanro
   ms.date: 06/08/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 5f5f4ae07c65912f336cc9038c5c958018a52e02
-  ms.sourcegitcommit: e6443eb3a4c826792806873428c0c17b59f4fde5
+  ms.openlocfilehash: d853086e40898c3f74e653793295e921c062659e
+  ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 06/04/2022
-  ms.locfileid: "65889289"
+  ms.lasthandoff: 06/29/2022
+  ms.locfileid: "66491623"
 highlightedContent:
   items:
   - title: Hibrit çalışma için altyapınızı ayarlayın
@@ -260,8 +260,8 @@ additionalContent:
   - title: İlgili rehber ve kaynaklar
     items:
     - title: Geliştiriciler
-      summary: Microsoft 365 Geliştirici Merkezi'nde geliştiriciler için öğreticiler, referanslar ve diğer kaynaklar bulun.
-      url: https://developer.microsoft.com/microsoft-365
+      summary: Microsoft 365 ve Teams için işbirliğine dayalı uygulamalar oluşturmanıza veya genişletmenize yardımcı olacak belgeleri ve kaynakları bulun.
+      url: /microsoft-365/developer/?view=o365-worldwide
     - title: Son kullanıcılar
       summary: support.microsoft.com sayfasında Microsoft 365 kullanıcıları için eğitim, nasıl yapılır ve yardım içeriği bulun.
       url: https://support.microsoft.com/microsoft-365

@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 8a6022161b3c5c52fafd6cc17e5bdea50abc9b7e
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 491d51b30b45fb99cba9924f947c9566305c2fbc
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419252"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490973"
 ---
 # <a name="create-a-custom-gradual-rollout-process-for-microsoft-defender-updates"></a>Microsoft Defender güncelleştirmeleri için özel aşamalı dağıtım işlemi oluşturma
 
@@ -31,7 +31,7 @@ ms.locfileid: "65419252"
 
 **Şunlar için geçerlidir:**
 
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
@@ -39,7 +39,7 @@ ms.locfileid: "65419252"
 - Windows
 
 > [!NOTE]
-> Bu işlev için Microsoft Defender Virüsten Koruma sürüm 4.18.2106.X veya üzeri gerekir.
+> Bu işlev için Microsoft Defender Virüsten Koruma 4.18.2106.X veya daha yeni bir sürüm gerekir.
 
 Defender güncelleştirmeleri için kendi özel aşamalı dağıtım işleminizi oluşturmak için grup ilkesi, Microsoft Endpoint Manager ve PowerShell'i kullanabilirsiniz.
 
@@ -51,10 +51,10 @@ Aşağıdaki tabloda, güncelleştirme kanallarını yapılandırmaya yönelik k
 
 |Başlık ayarlama|Açıklama|Konum|
 |---|---|---|
-|Aşamalı Microsoft Defender aylık platform güncelleştirme dağıtım kanalını seçin|Aylık aşamalı dağıtım sırasında cihazların Microsoft Defender platform güncelleştirmelerini ne zaman alacağını belirtmek için bu ilkeyi etkinleştirin. <p> Beta Kanalı: Bu kanala ayarlanan cihazlar yeni güncelleştirmeleri ilk alan olacak. Sorunları tanımlama ve Microsoft'a raporlamaya katılmak için Beta Kanalı'na tıklayın. Windows Insider Programı cihazlar varsayılan olarak bu kanala abonedir. Yalnızca (el ile) test ortamlarında ve sınırlı sayıda cihazda kullanım için. <p> Geçerli Kanal (Önizleme): Bu kanala ayarlanan cihazlara, aylık aşamalı sürüm döngüsü boyunca en erken güncelleştirmeler sunulacaktır. Ön üretim/doğrulama ortamları için önerilir. <p> Geçerli Kanal (Aşamalı): Aylık aşamalı sürüm döngüsünden sonra cihazlara güncelleştirmeler sunulacaktır. Üretim popülasyonunuzun küçük, temsili bir bölümüne (%10) başvurmanız önerilir. <p> Geçerli Kanal (Geniş): Cihazlara yalnızca aşamalı sürüm döngüsü tamamlandıktan sonra güncelleştirmeler sunulacaktır. Üretim popülasyonunuzda (~%10-100) geniş bir cihaz kümesine uygulanması önerilir. <p> Kritik- Zaman Gecikmesi: Cihazlara 48 saatlik gecikmeli güncelleştirmeler sunulacaktır. Yalnızca kritik ortamlar için önerilir. <p>Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız, cihaz aşamalı sürüm döngüsü sırasında otomatik olarak güncel kalır. Çoğu cihaz için uygundur.|Windows Components\Microsoft Defender Virüsten Koruma|
-|Aşamalı Microsoft Defender aylık altyapı güncelleştirme dağıtım kanalını seçin|Aylık aşamalı dağıtım sırasında cihazların Microsoft Defender altyapısı güncelleştirmelerini ne zaman alacağını belirtmek için bu ilkeyi etkinleştirin. <p> Beta Kanalı: Bu kanala ayarlanan cihazlar yeni güncelleştirmeleri ilk alan olacak. Sorunları tanımlama ve Microsoft'a raporlamaya katılmak için Beta Kanalı'na tıklayın. Windows Insider Programı cihazlar varsayılan olarak bu kanala abonedir. Yalnızca (el ile) test ortamlarında ve sınırlı sayıda cihazda kullanım için. <p> Geçerli Kanal (Önizleme): Bu kanala ayarlanan cihazlara, aylık aşamalı sürüm döngüsü boyunca en erken güncelleştirmeler sunulacaktır. Ön üretim/doğrulama ortamları için önerilir. <p> Geçerli Kanal (Aşamalı): Aylık aşamalı sürüm döngüsünden sonra cihazlara güncelleştirmeler sunulacaktır. Üretim popülasyonunuzun küçük, temsili bir bölümüne (%10) başvurmanız önerilir. <p> Geçerli Kanal (Geniş): Cihazlara yalnızca aşamalı sürüm döngüsü tamamlandıktan sonra güncelleştirmeler sunulacaktır. Üretim popülasyonunuzda (~%10-100) geniş bir cihaz kümesine uygulanması önerilir. <p> Kritik- Zaman Gecikmesi: Cihazlara 48 saatlik gecikmeli güncelleştirmeler sunulacaktır. Yalnızca kritik ortamlar için önerilir.<p> Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız, cihaz aşamalı sürüm döngüsü sırasında otomatik olarak güncel kalır. Çoğu cihaz için uygundur.|Windows Components\Microsoft Defender Virüsten Koruma|
-|Aşamalı Microsoft Defender günlük güvenlik bilgileri güncelleştirmeleri dağıtım kanalını seçin|Günlük aşamalı dağıtım sırasında cihazların Microsoft Defender güvenlik bilgileri güncelleştirmelerini ne zaman alacağını belirtmek için bu ilkeyi etkinleştirin. <p> Geçerli Kanal (Aşamalı): Cihazlara sürüm döngüsünden sonra güncelleştirmeler sunulacaktır. Üretim popülasyonunun küçük, temsili bir bölümüne (%~10) uygulanması önerilir. <p> Geçerli Kanal (Geniş): Cihazlara yalnızca aşamalı sürüm döngüsü tamamlandıktan sonra güncelleştirmeler sunulacaktır. Üretim popülasyonunuzda (~%10-100) geniş bir cihaz kümesine uygulanması önerilir. <p>  Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız, cihaz günlük yayın döngüsü sırasında otomatik olarak güncel kalır. Çoğu cihaz için uygundur.|Windows Components\Microsoft Defender Virüsten Koruma|
-|Microsoft Defender güncelleştirmelerinin aşamalı dağıtımını devre dışı bırakma|Defender güncelleştirmelerinin aşamalı dağıtımını devre dışı bırakmak için bu ilkeyi etkinleştirin. <p> Geçerli Kanal (Geniş): Bu kanala ayarlanan cihazlar, aşamalı sürüm döngüsü boyunca en son güncelleştirmeler sunulacaktır. Yalnızca sınırlı güncelleştirmeler alan veri merkezi makineleri için en iyi yöntemdir. <p> Not: Bu ayar hem aylık hem de günlük Defender güncelleştirmeleri için geçerlidir ve platform ve altyapı güncelleştirmeleri için önceden yapılandırılmış kanal seçimlerini geçersiz kılar. <p> Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız, platform ve altyapı güncelleştirmeleri için belirli kanallarda aksi belirtilmedikçe cihaz Geçerli Kanal'da (Varsayılan) kalır. Aşamalı yayın döngüsü sırasında otomatik olarak güncel kalın. Çoğu cihaz için uygundur.|Windows Components\Microsoft Defender Virüsten Koruma|
+|Aşamalı Microsoft Defender aylık platform güncelleştirme dağıtım kanalını seçin|Aylık aşamalı dağıtım sırasında cihazların Microsoft Defender platform güncelleştirmelerini ne zaman alacağını belirtmek için bu ilkeyi etkinleştirin. <p> Beta Kanalı: Bu kanala ayarlanan cihazlar yeni güncelleştirmeleri ilk alan olacak. Sorunları tanımlama ve Microsoft'a raporlamaya katılmak için Beta Kanalı'na tıklayın. Windows Insider Programı cihazlar varsayılan olarak bu kanala abonedir. Yalnızca (el ile) test ortamlarında ve sınırlı sayıda cihazda kullanım için. <p> Geçerli Kanal (Önizleme): Bu kanala ayarlanan cihazlara, aylık aşamalı sürüm döngüsü boyunca en erken güncelleştirmeler sunulacaktır. Ön üretim/doğrulama ortamları için önerilir. <p> Geçerli Kanal (Aşamalı): Aylık aşamalı sürüm döngüsünden sonra cihazlara güncelleştirmeler sunulacaktır. Üretim popülasyonunuzun küçük, temsili bir bölümüne (%10) başvurmanız önerilir. <p> Geçerli Kanal (Geniş): Cihazlara yalnızca aşamalı sürüm döngüsü tamamlandıktan sonra güncelleştirmeler sunulacaktır. Üretim popülasyonunuzda (~%10-100) geniş bir cihaz kümesine uygulanması önerilir. <p> Kritik- Zaman Gecikmesi: Cihazlara 48 saatlik gecikmeli güncelleştirmeler sunulacaktır. Yalnızca kritik ortamlar için önerilir. <p>Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız, cihaz aşamalı sürüm döngüsü sırasında otomatik olarak güncel kalır. Çoğu cihaz için uygundur.|Windows Bileşenleri\Microsoft Defender Virüsten Koruma|
+|Aşamalı Microsoft Defender aylık altyapı güncelleştirme dağıtım kanalını seçin|Aylık aşamalı dağıtım sırasında cihazların Microsoft Defender altyapısı güncelleştirmelerini ne zaman alacağını belirtmek için bu ilkeyi etkinleştirin. <p> Beta Kanalı: Bu kanala ayarlanan cihazlar yeni güncelleştirmeleri ilk alan olacak. Sorunları tanımlama ve Microsoft'a raporlamaya katılmak için Beta Kanalı'na tıklayın. Windows Insider Programı cihazlar varsayılan olarak bu kanala abonedir. Yalnızca (el ile) test ortamlarında ve sınırlı sayıda cihazda kullanım için. <p> Geçerli Kanal (Önizleme): Bu kanala ayarlanan cihazlara, aylık aşamalı sürüm döngüsü boyunca en erken güncelleştirmeler sunulacaktır. Ön üretim/doğrulama ortamları için önerilir. <p> Geçerli Kanal (Aşamalı): Aylık aşamalı sürüm döngüsünden sonra cihazlara güncelleştirmeler sunulacaktır. Üretim popülasyonunuzun küçük, temsili bir bölümüne (%10) başvurmanız önerilir. <p> Geçerli Kanal (Geniş): Cihazlara yalnızca aşamalı sürüm döngüsü tamamlandıktan sonra güncelleştirmeler sunulacaktır. Üretim popülasyonunuzda (~%10-100) geniş bir cihaz kümesine uygulanması önerilir. <p> Kritik- Zaman Gecikmesi: Cihazlara 48 saatlik gecikmeli güncelleştirmeler sunulacaktır. Yalnızca kritik ortamlar için önerilir.<p> Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız, cihaz aşamalı sürüm döngüsü sırasında otomatik olarak güncel kalır. Çoğu cihaz için uygundur.|Windows Bileşenleri\Microsoft Defender Virüsten Koruma|
+|Aşamalı Microsoft Defender günlük güvenlik bilgileri güncelleştirmeleri dağıtım kanalını seçin|Günlük aşamalı dağıtım sırasında cihazların Microsoft Defender güvenlik bilgileri güncelleştirmelerini ne zaman alacağını belirtmek için bu ilkeyi etkinleştirin. <p> Geçerli Kanal (Aşamalı): Cihazlara sürüm döngüsünden sonra güncelleştirmeler sunulacaktır. Üretim popülasyonunun küçük, temsili bir bölümüne (%~10) uygulanması önerilir. <p> Geçerli Kanal (Geniş): Cihazlara yalnızca aşamalı sürüm döngüsü tamamlandıktan sonra güncelleştirmeler sunulacaktır. Üretim popülasyonunuzda (~%10-100) geniş bir cihaz kümesine uygulanması önerilir. <p>  Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız, cihaz günlük yayın döngüsü sırasında otomatik olarak güncel kalır. Çoğu cihaz için uygundur.|Windows Bileşenleri\Microsoft Defender Virüsten Koruma|
+|Microsoft Defender güncelleştirmelerinin aşamalı dağıtımını devre dışı bırakma|Defender güncelleştirmelerinin aşamalı dağıtımını devre dışı bırakmak için bu ilkeyi etkinleştirin. <p> Geçerli Kanal (Geniş): Bu kanala ayarlanan cihazlar, aşamalı sürüm döngüsü boyunca en son güncelleştirmeler sunulacaktır. Yalnızca sınırlı güncelleştirmeler alan veri merkezi makineleri için en iyi yöntemdir. <p> Not: Bu ayar hem aylık hem de günlük Defender güncelleştirmeleri için geçerlidir ve platform ve altyapı güncelleştirmeleri için önceden yapılandırılmış kanal seçimlerini geçersiz kılar. <p> Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız, platform ve altyapı güncelleştirmeleri için belirli kanallarda aksi belirtilmedikçe cihaz Geçerli Kanal'da (Varsayılan) kalır. Aşamalı yayın döngüsü sırasında otomatik olarak güncel kalın. Çoğu cihaz için uygundur.|Windows Bileşenleri\Microsoft Defender Virüsten Koruma|
 |
 
 ## <a name="group-policy"></a>Grup İlkesi
@@ -62,7 +62,7 @@ Aşağıdaki tabloda, güncelleştirme kanallarını yapılandırmaya yönelik k
 > [!NOTE]
 > Güncelleştirilmiş bir Defender ADMX şablonu, Windows 10 21H2 sürümüyle birlikte yayımlanacaktır. Yerelleştirilmemiş bir sürüm adresinden https://github.com/microsoft/defender-updatecontrolsindirilebilir.
 
-uç noktalarınızdaki [Microsoft Defender Virüsten Koruma](/windows/win32/srvnodes/group-policy?redirectedfrom=MSDN) yapılandırmak ve yönetmek için grup ilkesi kullanabilirsiniz.
+Uç noktalarınızda Microsoft Defender Virüsten Koruma'nın yapılandırılması ve yönetilmesi için [grup ilkesi](/windows/win32/srvnodes/group-policy?redirectedfrom=MSDN) kullanabilirsiniz.
 
 Genel olarak, Microsoft Defender Virüsten Koruma grup ilkesi ayarlarını yapılandırmak veya değiştirmek için aşağıdaki yordamı kullanabilirsiniz:
 
@@ -72,7 +72,7 @@ Genel olarak, Microsoft Defender Virüsten Koruma grup ilkesi ayarlarını yapı
 
 3. **Yönetim şablonları'nı** tıklatın.
 
-4. > Microsoft Defender Virüsten Koruma **bileşenleri Windows** için ağacı genişletin.
+4. **Microsoft Defender Virüsten Koruma > ağacı Windows bileşenlerine** genişletin.
 
 5. Yapılandırmak istediğiniz ayarı içeren bölümü (bu konudaki tabloda **Konum** olarak adlandırılır) genişletin, açmak için ayara çift tıklayın ve yapılandırma değişiklikleri yapın.
 
@@ -96,7 +96,7 @@ Aşağıdaki parametreleri kullanın:
 Set-MpPreference
 -PlatformUpdatesChannel Beta|Preview|Staged|Broad|Delayed|NotConfigured
 -EngineUpdatesChannel Beta|Preview|Staged|Broad|Delayed|NotConfigured
--DisableGradualRelease True|False
+-DisableGradualRelease 1|0
 -SignaturesUpdatesChannel Staged|Broad|NotConfigured
 ```
 
@@ -107,7 +107,7 @@ Platform güncelleştirmelerini Beta Kanalından gelecek şekilde yapılandırma
 Parametreler ve bunları yapılandırma hakkında daha fazla bilgi için bkz. [Set-MpPreference (Microsoft Defender Virüsten Koruma)|Microsoft Docs](/powershell/module/defender/set-mppreference).
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> Diğer platformlar için Antivirüs ile ilgili bilgi arıyorsanız bkz:
 > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
 > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

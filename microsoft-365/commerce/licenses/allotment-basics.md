@@ -19,14 +19,14 @@ ms.custom:
 search.appverid: MET150
 description: Yeni ayrılanlar özelliği hakkında bilgi edinin.
 ms.date: 05/12/2022
-ms.openlocfilehash: 60c2fdcd451f5926cbda84d8e5236176314bd3f5
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 2ab253bd122fb4f8ec83c38cb623217ec6ae3815
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65636096"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489123"
 ---
-# <a name="allotment-basics"></a>Ayrılan temel bilgiler
+# <a name="microsoft-365-license-allotment-basics"></a>Microsoft 365 lisans ayrılan temel bilgileri
 
 Lisans ayrılanları, lisans sınırlarını ve lisans atamasının temsilci yönetimini yalnızca seçtiğiniz ürünlere ve lisans sınırlarına ayarlamanıza olanak sağlar.
 
@@ -40,13 +40,13 @@ Grup tabanlı lisanslama için [lisanslama](/azure/active-directory/fundamentals
 
 Ayrılanları kullanıcılara sağlanan herhangi bir ürünle kullanabilirsiniz:
 
-- paketleri ve tek başına ürünleri Office
+- Office paketleri ve tek başına ürünler
 - Enterprise ve Mobility ürünleri
 - Dynamics 365 ürünleri
 
 Aşağıdaki ürünler, ayrılanlarla kullanılamaz:
 
-- uygulamaları Microsoft Store
+- Microsoft Store uygulamaları
 - Kalıcı yazılım veya lisans söz konusu değilse kullanıcıya doğrudan atanan yazılım.
 - Azure kaynakları
 

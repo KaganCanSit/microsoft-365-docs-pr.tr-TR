@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: ac43b62c16cd3e1394cec7a1a75e69bf613757ef
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: d9824a738468f14ebfc7cd7bdc3c612c21a0e43c
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934345"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66493119"
 ---
 # <a name="configure-advanced-features-in-defender-for-endpoint"></a>Uç Nokta için Defender'da gelişmiş özellikleri yapılandırma
 
@@ -30,13 +30,13 @@ ms.locfileid: "64934345"
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-advancedfeats-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-advancedfeats-abovefoldlink)
 
 Kullandığınız Microsoft güvenlik ürünlerine bağlı olarak, Uç Nokta için Defender'ı ile tümleştirmeniz için bazı gelişmiş özellikler kullanılabilir.
 
 ## <a name="enable-advanced-features"></a>Gelişmiş özellikleri etkinleştirme
 
-1. Gezinti bölmesinde **Uç Noktalar** \> **Gelişmiş** **özellikleri'ni Ayarlar** \> seçin.
+1. Gezinti bölmesinde **Ayarlar** \> **Uç Noktaları** \> **Gelişmiş özellikler'i** seçin.
 2. Yapılandırmak istediğiniz gelişmiş özelliği seçin ve ayarı **Açık** ve **Kapalı** arasında değiştirin.
 3. **Tercihleri kaydet'e** tıklayın.
 
@@ -78,7 +78,7 @@ Bu yapılandırma, yerel SOC işlemlerinin uyarı bağıntılarını yalnızca e
 > [!NOTE]
 > Bu ayarın değiştirilmesi yalnızca gelecekteki uyarı bağıntılarını etkiler.
 
-## <a name="enable-edr-in-block-mode"></a>Blok modunda EDR etkinleştirme
+## <a name="enable-edr-in-block-mode"></a>Blok modunda EDR'yi etkinleştirme
 
 Blok modunda uç nokta algılama ve yanıt (EDR), Microsoft Defender Virüsten Koruma pasif modda çalışırken bile kötü amaçlı yapıtlara karşı koruma sağlar. Blok modundaki EDR açıldığında, bir cihazda algılanan kötü amaçlı yapıtları veya davranışları engeller. Blok modundaki EDR, ihlal sonrasında algılanan kötü amaçlı yapıtları düzeltmek için arka planda çalışır.
 
@@ -98,14 +98,14 @@ Windows 10, sürüm 1809 üzerinde veya sonrasında oluşturulan kiracılar içi
 
 Engelleme yalnızca kuruluşunuz şu gereksinimleri karşılıyorsa kullanılabilir:
 
-- Etkin kötü amaçlı yazılımdan koruma çözümü olarak Microsoft Defender Virüsten Koruma kullanır ve
+- Etkin kötü amaçlı yazılımdan koruma çözümü olarak Microsoft Defender Virüsten Koruma'yı kullanır ve
 - Bulut tabanlı koruma özelliği etkinleştirildi
 
 Bu özellik ağınızdaki kötü amaçlı olabilecek dosyaları engellemenizi sağlar. Bir dosyanın engellenmesi, dosyanın kuruluşunuzdaki cihazlarda okunmasını, yazılmasını veya yürütülmesini engeller.
 
 Dosyalara **izin ver veya dosyaları engelle** seçeneğini açmak için:
 
-1. Gezinti bölmesinde Uç **Noktalar** \> **Genel** \> **Gelişmiş özellikler** \> **dosyaya izin ver veya dosyayı** **engelle'yi Ayarlar** \> seçin.
+1. Gezinti bölmesinde **Ayarlar** \> **Uç Noktaları** \> **Genel** \> **Gelişmiş özellikler** \> **dosyaya izin ver veya dosyayı engelle'yi** seçin.
 
 1. Ayarı **Açık** ve **Kapalı arasında değiştirin**.
  
@@ -129,9 +129,9 @@ Daha fazla bilgi için bkz. [Göstergeleri yönetme](manage-indicators.md).
 ## <a name="tamper-protection"></a>Kurcalama koruması
 Bazı siber saldırılar sırasında kötü aktörler, makinelerinizde virüsten koruma gibi güvenlik özelliklerini devre dışı bırakmaya çalışır. Kötü aktörler verilerinize daha kolay erişim elde etmek, kötü amaçlı yazılım yüklemek veya verilerinizi, kimliğinizi ve cihazlarınızı başka bir şekilde kullanmak için güvenlik özelliklerinizi devre dışı bırakmak ister.
 
-Kurcalama koruması temelde Microsoft Defender Virüsten Koruma kilitler ve güvenlik ayarlarınızın uygulamalar ve yöntemler aracılığıyla değiştirilmesini engeller.
+Kurcalama koruması temelde Microsoft Defender Virüsten Koruma'nın kilitlenmesini sağlar ve güvenlik ayarlarınızın uygulamalar ve yöntemler aracılığıyla değiştirilmesini önler.
 
-Kuruluşunuz Microsoft Defender Virüsten Koruma kullanıyorsa ve Bulut tabanlı koruma etkinleştirildiyse bu özellik kullanılabilir. Daha fazla bilgi için bkz. [Bulut tabanlı koruma aracılığıyla Microsoft Defender Virüsten Koruma yeni nesil teknolojileri kullanma](cloud-protection-microsoft-defender-antivirus.md).
+Kuruluşunuz Microsoft Defender Virüsten Koruma kullanıyorsa ve Bulut tabanlı koruma etkinleştirildiyse bu özellik kullanılabilir. Daha fazla bilgi için bkz. [Bulut tabanlı koruma aracılığıyla Microsoft Defender Virüsten Koruma'da yeni nesil teknolojileri kullanma](cloud-protection-microsoft-defender-antivirus.md).
 
 Güvenlik çözümünüzde ve temel özelliklerinde istenmeyen değişiklikleri önlemek için kurcalama korumasını açık tutun.
 
@@ -150,7 +150,7 @@ Daha fazla bilgi için bkz [. Kullanıcı hesabını araştırma](investigate-us
 Skype Kurumsal tümleştirmesini etkinleştirmek, kullanıcılarla Skype Kurumsal, e-posta veya telefon kullanarak iletişim kurmanızı sağlar. Bu etkinleştirme, kullanıcıyla iletişim kurmanız ve riskleri azaltmanız gerektiğinde kullanışlı olabilir.
 
 > [!NOTE]
-> Bir cihaz ağdan yalıtılırken, Outlook ve Skype iletişimlerini etkinleştirmeyi seçebileceğiniz bir açılır pencere vardır ve bu da ağ bağlantısı kesildiği sırada kullanıcıyla iletişim kurmasına olanak tanır. Bu ayar, cihazlar yalıtım modundayken Skype ve Outlook iletişim için geçerlidir.
+> Bir cihaz ağdan yalıtılırken, outlook ve Skype iletişimlerini etkinleştirmeyi seçebileceğiniz bir açılır pencere vardır ve bu da kullanıcıyla ağ bağlantısı kesilirken iletişim kurmasına olanak tanır. Bu ayar, cihazlar yalıtım modundayken Skype ve Outlook iletişimi için geçerlidir.
 
 ## <a name="microsoft-defender-for-identity-integration"></a>Kimlik için Microsoft Defender tümleştirmesi
 
@@ -179,7 +179,7 @@ Office 365 Tehdit Bilgileri'nde bağlamsal cihaz tümleştirmesi almak için Gü
 
 ## <a name="microsoft-defender-for-cloud-apps"></a>Bulut Uygulamaları için Microsoft Defender
 
-Bu ayarın etkinleştirilmesi, bulut uygulaması kullanımına daha ayrıntılı görünürlük sağlamak için Uç Nokta için Defender sinyallerini Microsoft Defender for Cloud Apps iletir. İletilen veriler, Bulut için Defender Uygulamaları verilerinizle aynı konumda depolanır ve işlenir.
+Bu ayarın etkinleştirilmesi, bulut uygulaması kullanımına daha ayrıntılı görünürlük sağlamak için Uç Nokta için Defender sinyallerini Microsoft Defender for Cloud Apps iletir. İletilen veriler, Cloud Apps için Defender verilerinizle aynı konumda depolanır ve işlenir.
 
 > [!NOTE]
 > Bu özellik[, Windows 10](https://www.microsoft.com/cloud-platform/enterprise-mobility-security), sürüm 1709 (KB4493441 ile İs Derlemesi 16299.1085), Windows 10, sürüm 1803 ([KB4493464](https://support.microsoft.com/help/4493441) ile İs Derlemesi 17134.704), Windows 10, sürüm 1809 çalıştıran cihazlarda Enterprise Mobility + Security için bir E5 lisansı ile kullanılabilir [](https://support.microsoft.com/help/4493464)  ([KB4489899](https://support.microsoft.com/help/4489899) ile İs Derlemesi 17763.379), sonraki Windows 10 sürümleri veya Windows 11.
@@ -200,11 +200,15 @@ Her iki portaldaki tümleştirme adımlarını tamamladıktan sonra cihaz ayrın
 
 İstenmeyen içerik içeren web sitelerine erişimi engelleyin ve tüm etki alanlarındaki web etkinliğini izleyin. Engellemek istediğiniz web içeriği kategorilerini belirtmek için bir [web içeriği filtreleme ilkesi](https://security.microsoft.com/preferences2/web_content_filtering_policy) oluşturun. [Uç Nokta için Microsoft Defender güvenlik temelini](https://devicemanagement.microsoft.com/#blade/Microsoft_Intune_Workflows/SecurityBaselineSummaryMenu/overview/templateType/2) dağıtırken blok modunda ağ korumasına sahip olduğunuzdan emin olun.
 
-## <a name="share-endpoint-alerts-with-microsoft-purview-compliance-portal"></a>Microsoft Purview uyumluluk portalı ile uç nokta uyarılarını paylaşma
+## <a name="share-endpoint-alerts-with-microsoft-purview-compliance-portal"></a>Uç nokta uyarılarını Microsoft Purview uyumluluk portalı ile paylaşma
 
-Uç nokta güvenlik uyarılarını ve öncelik durumlarını Microsoft Purview uyumluluk portalına ileterek iç risk yönetimi ilkelerini uyarılarla geliştirmenize ve iç riskleri zarara neden olmadan önce düzeltmenize olanak sağlar. İletilen veriler işlenir ve Office 365 verilerinizle aynı konumda depolanır.
+Uç nokta güvenlik uyarılarını ve önceliklendirme durumlarını Microsoft Purview uyumluluk portalı iletir; böylece iç risk yönetimi ilkelerini uyarılarla geliştirebilir ve zarara neden olmadan önce iç riskleri düzeltebilirsiniz. İletilen veriler işlenir ve Office 365 verilerinizle aynı konumda depolanır.
 
 Insider risk yönetimi ayarlarında [Güvenlik ilkesi ihlal göstergeleri](/microsoft-365/compliance/insider-risk-management-settings#indicators) yapılandırıldıktan sonra, Uç Nokta için Defender uyarıları ilgili kullanıcılar için iç risk yönetimiyle paylaşılır.
+
+## <a name="authenticated-telemetry"></a>Kimliği doğrulanmış telemetri
+
+Telemetrinin panonuzda kimlik sahtekarlığına uğramasını önlemek için Kimliği doğrulanmış telemetriyi **açabilirsiniz** .
 
 ## <a name="microsoft-intune-connection"></a>Microsoft Intune bağlantısı
 
@@ -216,7 +220,7 @@ Uç Nokta için Defender, [cihaz risk tabanlı koşullu erişimi etkinleştirmek
 Bu özellik yalnızca aşağıdaki önkoşullara ihtiyacınız varsa kullanılabilir:
 
 - Enterprise Mobility + Security E3 ve Windows E5 (veya Microsoft 365 Kurumsal E5) için lisanslı kiracı
-- [Azure AD'ye katılmış](/azure/active-directory/devices/concept-azure-ad-join/) Intune yönetilen Windows cihazlarıyla etkin bir Microsoft Intune ortamı.
+- Intune yönetilen Windows cihazları Azure AD [katılmış etkin bir Microsoft Intune](/azure/active-directory/devices/concept-azure-ad-join/) ortamı.
 
 ### <a name="conditional-access-policy"></a>Koşullu Erişim ilkesi
 

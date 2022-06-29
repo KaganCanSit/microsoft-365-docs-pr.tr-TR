@@ -18,12 +18,12 @@ ms.custom:
 - intro-get-started
 search.appverid: MET150
 description: Yönetilen Hizmet Sağlayıcıları (MSP) için Microsoft 365 Lighthouse kaydolmayı öğrenin.
-ms.openlocfilehash: 5596005ff9a3db4e5a873a32f87b2677cdc8efaa
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 19acad120e6796369e5de511b13ad37c4d9e4623
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66007140"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489105"
 ---
 # <a name="sign-up-for-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse için kaydolun
 
@@ -39,15 +39,11 @@ Bu makalede, Microsoft 365 Lighthouse kaydolma yönergeleri sağlanır. Microsof
 
 1. konumundaki Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> gidin ve iş ortağı kiracı kimlik bilgilerinizi kullanarak oturum açın. 
 
-1. **Faturalama** > **Satın Alma Hizmetleri****Diğer Hizmetler'e** >  gidin.
+2. **Faturalama** > **Satın Alma Hizmetleri** > **Microsoft 365 Hizmetleri'ne** gidin.
+   
+3. **Microsoft 365 Lighthouse** altında **Ayrıntılar'ı** seçin. 
 
-    Microsoft 365 Lighthouse hizmetler listesinde yoksa **Diğer tüm hizmet ürünlerini gör'e** tıklayın.
-
-    Hizmetleri satın alma hata sayfasıyla karşılaşırsanız, sayfanın alt kısmındaki **Ürünleri görüntüle'yi** seçin.
-
-1. **Microsoft 365 Lighthouse** altında **Ayrıntılar'ı** seçin. 
-
-1. **Satın Al'ı** seçin.
+4. **Satın Al'ı** seçin.
 
     > [!NOTE]
     > Lighthouse yalnızca iş ortağı kiracısı için bir lisans gerektirir. İş ortağı için kullanıcı başına ek lisans gerekmez ve hiçbir müşteri kiracısında Lighthouse lisansı gerekmez. 

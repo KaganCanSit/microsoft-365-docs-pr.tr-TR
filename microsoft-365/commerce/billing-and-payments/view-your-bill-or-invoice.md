@@ -25,32 +25,32 @@ ms.custom:
 - adminvideo
 description: Microsoft 365 yönetim merkezinde faturanızı veya fatura ekstrenizi bulun. Ayrıca, faturanızı kaydedebilir ve faturanızın bir kopyasını yazdırabilirsiniz.
 ms.date: 01/25/2022
-ms.openlocfilehash: 02905b1e31dc295d8b5d79bc150a0c93823c9dd7
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: b82b3c6472abad250c65900208fbdc5e2603e2f6
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63316373"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66491747"
 ---
-# <a name="view-your-bill-or-invoice"></a>Fatura ekstrenizi veya faturanızı görüntüleme
+# <a name="view-your-microsoft-365-for-business-subscription-bill-or-invoice"></a>İş için Microsoft 365 abonelik faturanızı veya faturanızı görüntüleme
 
-Bu makale, iş için abonelik Microsoft 365 kişiler için hazırlanmıştır.
+Bu makale, iş için Microsoft 365 aboneliği olan kişilere yöneliktir.
   
-Faturanız üzerinde gördüğünüz ücretleri yorumlamak için yardıma ihtiyacınız varsa ayrıntılı yol gösterirken bkz[](understand-your-invoice2.md). Faturanızı veya faturanızı anlama.
+Faturanızda gördüğünüz ücretleri yorumlama konusunda yardıma ihtiyacınız varsa ayrıntılı bir kılavuz için bkz. [Faturanızı veya faturanızı anlama](understand-your-invoice2.md) .
   
 **Faturanızda sorun mu yaşıyorsunuz?** [İş ürünleri için desteğe başvurma](../../admin/get-help-support.md).
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Bu makalede açıklanan adımları takip etmek için Genel veya Faturalama yöneticisi olun.
+Bu makalede açıklanan adımları yerine getirmek için Genel yönetici veya Fatura yöneticisi olmalısınız.
   
-## <a name="watch-view-download-or-print-your-bill"></a>İzle: Faturanızı görüntüleme, indirme veya yazdırma
+## <a name="watch-view-download-or-print-your-bill"></a>İzleyin: Faturanızı görüntüleme, indirme veya yazdırma
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FGmo?autoplay=false]
 
-1. Faturalar Microsoft 365 yönetim merkezi gezinti **bölmesinde** Faturalar'ı seçin ve sonra da Faturalar <a href="https://go.microsoft.com/fwlink/p/?linkid=2102895" target="_blank">**sekmesini** seçin</a>.
-1. Görüntülemek için bir fatura seçin. Fatura görmüyorsanız açılan listeden Filtreleme tarihi **: Son 6** ay'ı seçin.
-1. Fatura ayrıntılarını görüntülemek için, **faturanın** sağ üst köşesindeki PDF Olarak İndir'i seçin.
+1. Microsoft 365 yönetim merkezi sol gezinti bölmesinde **Faturalama'yı** ve ardından <a href="https://go.microsoft.com/fwlink/p/?linkid=2102895" target="_blank">**Faturalar** sekmesini</a> seçin.
+1. Görüntülemek için bir fatura seçin. Fatura görmüyorsanız, açılan **listeden Filtre ölçütü: Son 6 ay'ı** seçin.
+1. Fatura ayrıntılarını görüntülemek için, faturanın sağ üst köşesindeki **PDF'yi İndir'i** seçin.
 
 ## <a name="view-a-bill-or-invoice"></a>Fatura ekstresi veya fatura görüntüleme
 
@@ -66,51 +66,51 @@ Bu makalede açıklanan adımları takip etmek için Genel veya Faturalama yöne
 
 ::: moniker-end
 
-2. Faturalar **sekmesindeki** açılan listeden bir tarih aralığı seçin ve görüntülemek istediğiniz siparişi seçin.
-3. Özet sayfasında, faturadaki tüm öğeler için öğeleri, miktarı, fiyatı, indirimi ve toplamı görebilirsiniz.
+2. **Faturalar** sekmesinde, açılan listeden bir tarih aralığı seçin ve ardından görüntülemek istediğiniz siparişi seçin.
+3. Özet sayfasında, faturadaki tüm maddelerin maddelerini, miktarını, fiyatını, indirimini ve toplamını görebilirsiniz.
 4. Faturanın PDF kopyasını yazdırmak veya kaydetmek için **PDF indir** seçeneğine tıklayın.
 
-Fatura bildiriminizin kopyasını e-posta olarak almak için bkz. [Fatura bildirimlerini ve fatura eklerini yönetme](manage-billing-notifications.md).
+Fatura ekstrenizin bir kopyasını e-postayla almak istiyorsanız bkz. [Faturalama bildirimlerini ve fatura eklerini yönetme](manage-billing-notifications.md).
 
 ::: moniker range="o365-21vianet"
 
-## <a name="request-a-fapiao"></a>Fapiao isteği
+## <a name="request-a-fapiao"></a>Fapiao isteme
 
-Fapiao isteğinizi, ödemenizi yaklaşık üç (3) gün sonra [Fapiao](https://go.microsoft.com/fwlink/p/?linkid=837465) yönetim sistemimize göndersiniz.
+Fapiao isteğinizi ödemenizden yaklaşık üç (3) gün sonra [Fapiao yönetim sistemimize](https://go.microsoft.com/fwlink/p/?linkid=837465) gönderebilirsiniz.
 
-1. Yönetim <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">merkezinde Faturalar</a> ve **ödemeler &** > gidin.<a href="https://go.microsoft.com/fwlink/p/?linkid=2127421" target="_blank"></a>
-2. İstediğiniz faturayı bulun ve **Fapiaos Al'ı seçin**.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">Yönetim merkezinde</a> **Faturalama** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2127421" target="_blank">**Faturaları & ödemeler**</a> sayfasına gidin.
+2. İstediğiniz faturayı bulun ve **Ardından Fapiaos Al'ı** seçin.
 
 > [!NOTE]
 >
-> Fapiao yönetim sistemine erişmek için [kayıtlı bir hesaba ihtiyacınız var](https://go.microsoft.com/fwlink/p/?linkid=837465). Henüz hesap ayarlamadısanız, [bkz. 21Vianet tarafından işletilen Office 365 Fapiao için uygulama](../../admin/services-in-china/apply-for-a-fapiao.md).
+> [Fapiao yönetim sistemine](https://go.microsoft.com/fwlink/p/?linkid=837465) erişmek için kayıtlı bir hesaba ihtiyacınız vardır. Henüz hesap ayarlamadıysanız bkz. [21Vianet tarafından sağlanan Office 365 için Fapiao'ya başvurma](../../admin/services-in-china/apply-for-a-fapiao.md).
 
 ::: moniker-end
 
 > [!NOTE]
 >
-> Microsoft 365 hizmetleri ödeme bilgisi sağlamaz.
-> Kredi kartı ödemelerini yapmak için lütfen ödemenize uygun olarak faturayı ve kredi kartı fatura faturasını kullanın.
+> Microsoft 365 hizmetleri ödeme makbuzu sağlamaz.
+> Kredi kartıyla yapılan ödemeler için lütfen faturayı ve kredi kartı fatura ekstresini kullanarak ödemenizi eşleştirin.
 
-## <a name="run-the-unknown-charge-diagnostic"></a>Bilinmeyen Ücret Tanılama'yı çalıştırma
+## <a name="run-the-unknown-charge-diagnostic"></a>Bilinmeyen Ücret Tanılamasını Çalıştırma
 
-Genel Microsoft 365 yöneticisi olarak, microsoft'tan gelen banka veya kredi kartı hesaplarında görünen beklenmedik ücretleri araştıracak şekilde Microsoft 365 yönetim merkezi içinde çalışan bir tanılama aracı kullanabilirsiniz.
+Microsoft 365 Genel yöneticisi olarak, banka veya kredi kartı ekstrenizde görünen Beklenmeyen Microsoft ücretlerini araştırmak için Microsoft 365 yönetim merkezi içinde çalışan bir tanılama aracı kullanabilirsiniz.
 
 > [!NOTE]
-> Bilinmeyen Ücret Tanılama aracı yalnızca Microsoft.com, Eğitim ve Kar amacı gütmeyen Microsoft 365 Kurumsal satın almış olan müşteriler tarafından kullanılabilir.
+> Bilinmeyen Ücret Tanılaması yalnızca Microsoft 365 Kurumsal, Eğitim ve Kar Amacı Gütmeyen Kuruluş dahil olmak üzere ürünlerini ve hizmetlerini Microsoft.com satın alan müşteriler tarafından kullanılabilir.
 
-Testlere **göre tanılama** aracını açmak için aşağıdaki Testleri Çalıştır bağlantısını Microsoft 365 yönetim merkezi.
+Tanılama aracını Microsoft 365 yönetim merkezi açmak için aşağıdaki **Testleri Çalıştır** bağlantısını seçin.
 
 >[!div class="nextstepaction"]
->[Çalıştırma Testleri: Bilinmeyen Ücret](https://aka.ms/PillarUnknownCharge)
+>[Testleri Çalıştırma: Bilinmeyen Ücret](https://aka.ms/PillarUnknownCharge)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bir bakiyeniz varsa ve bunu ödemek için, bunu çevrimiçi olarak da yapmaya devam edin. Nasıl olduğunu öğrenmek için bkz. [Aboneliğinizin ödemesi](pay-for-your-subscription.md).
+Bir bakiyeniz varsa ve bunu ödemek istiyorsanız, bunu çevrimiçi yapabilirsiniz. Nasıl yapılacağını öğrenmek için bkz. [Aboneliğiniz için ödeme](pay-for-your-subscription.md).
 
 ## <a name="related-content"></a>İlgili içerik
 
 [Fatura, kredi kartı veya banka hesabıyla ödeme](pay-for-your-subscription.md) (makale) \
 [Ödeme yöntemlerini yönetme](manage-payment-methods.md) (makale) \
-[Meksika'daki Microsoft 365 için fatura bilgileri](mexico-billing-info.md) (makale) \
-[Minecraft: Education Edition seçenekleri hakkında bilgi](/education/windows/school-get-minecraft) (makale)
+[Meksika'da işletmeler için Microsoft 365 faturalama bilgileri](mexico-billing-info.md) (makale) \
+[Minecraft: Education Edition ödeme seçenekleri](/education/windows/school-get-minecraft) (makale)

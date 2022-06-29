@@ -15,6 +15,7 @@ ms.collection:
 - Adm_O365
 - Adm_TOC
 ms.custom:
+- adminvideo
 - TopSMBIssues
 - SaRA
 - MSStore_Link
@@ -27,13 +28,13 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 6383f56d-3d09-4dcb-9b41-b5f5a5efd611
-description: DNS ana bilgisayarınızda bir DNS kaydı ekleyerek etki alanınızı Microsoft 365 yönetim merkezinde Microsoft 365'e eklemek için kurulum sihirbazını kullanın.
-ms.openlocfilehash: ad4654bce8781607a77272dafeb3eb9135c85765
-ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
+description: DNS ana bilgisayarınızda bir DNS kaydı ekleyerek etki alanınızı Microsoft 365 yönetim merkezi Microsoft 365'e eklemek için kurulum sihirbazını kullanın.
+ms.openlocfilehash: 64b82aab051af2c9d5444042f27009b4e02f1ad8
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65922941"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66492048"
 ---
 # <a name="add-a-domain-to-microsoft-365"></a>Microsoft 365'e etki alanı ekleme
 
@@ -52,7 +53,7 @@ Etki alanlarını eklemek, değiştirmek veya kaldırmak için, bir [işletme ve
 
 Şirketinizin farklı amaçlar için birden çok etki alanı adına ihtiyacı olabilir. Örneğin, müşteriler zaten kullandığından ve iletişimleri size ulaşamadığından, şirketinizin adının farklı bir yazımını eklemek isteyebilirsiniz.
 
-1. Microsoft 365 yönetim merkezinde <a href="https://go.microsoft.com/fwlink/p/?linkid=2171997" target="_blank">**Kurulum'u**</a> seçin.
+1. Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2171997" target="_blank">**Kurulum'u**</a> seçin.
 1. **Özel etki alanınızı ayarlayın'ın altında**,**Etki alanı ekle'yi** **Yönet'i** >  >  seçin.
 1. Eklemek istediğiniz yeni etki alanı adını girin ve **İleri'yi** seçin.
 1. Etki alanı kayıt şirketinizde oturum açın ve **İleri'yi** seçin.
@@ -159,18 +160,20 @@ Her Microsoft 365 kuruluşunda en fazla beş onmicrosoft.com etki alanı olabili
 
 onmicrosoft.com etki alanı eklemek için:
 
-1. Microsoft 365 yönetim merkezinde **Ayarlar'ı** ve ardından **Etki Alanları'nı** seçin.
-2. varsayılan onmicrosoft.com etki alanınızı seçin.
+1. Microsoft 365 yönetim merkezi **Ayarlar'ı** ve ardından **Etki Alanları'nı** seçin.
+
+2. Mevcut bir *.onmicrosoft.com* etki alanını seçin.
 
     ![Etki alanları sayfası.](../../media/onmicrosoft-domains.png)
   
-3. Etki alanı özellikleri sayfasının **Bu etki alanı hakkında** bölümünde **Onmicrosoft etki alanı ekle'yi** seçin.
 
-    ![Bu etki alanları sayfası hakkında.](../../media/add-onmicrosoft-domain-link.png)
+3. **Genel Bakış** sekmesinde **onmicrosoft.com etki alanı ekle'yi** seçin.
 
-4. **Onmicrosoft etki alanı ekle** sayfasında, **Etki alanı adı** kutusuna yeni onmicrosoft.com etki alanınızın adını yazın. 
+    ![Etki alanı özelliklerinin ekran görüntüsü.](../../media/add-onmicrosoft-domain-link.png)
 
-    ![Onmicrosoft etki alanı ekle sayfasının ekran görüntüsü.](../../media/add-an-onmicrosoftcom-domain-page.png)
+4. **Onmicrosoft etki alanı ekle** sayfasındaki **Etki alanı adı** kutusuna yeni onmicrosoft.com etki alanınızın adını girin. 
+
+    ![Onmicrosoft etki alanı ekle'nin ekran görüntüsü.](../../media/add-an-onmicrosoftcom-domain-page.png)
 
     > [!NOTE]
     > Girdiğiniz etki alanı adının yazım ve doğruluğunu doğruladığınızdan emin olun. Beş onmicrosoft.com etki alanıyla sınırlısınız ve şu anda oluşturulduktan sonra silinemezler.     

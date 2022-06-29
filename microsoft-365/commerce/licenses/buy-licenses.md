@@ -23,14 +23,14 @@ ms.custom:
 search.appverid: MET150
 description: İş için Microsoft 365 aboneliğiniz için daha fazla lisans satın almak veya lisans sayısını azaltmak için bu adımları kullanın.
 ms.date: 06/06/2022
-ms.openlocfilehash: bbeff9310a652a768c92ba3640e84607b8628619
-ms.sourcegitcommit: 23fd850272f39c4202e2320e56d11fb6707b3e2e
+ms.openlocfilehash: ad7f0b15218043757c1e0692603e74760e2c10ef
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65925098"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489680"
 ---
-# <a name="buy-or-remove-licenses"></a>Lisans satın alma veya kaldırma
+# <a name="buy-or-remove-microsoft-365-licenses-for-a-subscription"></a>Abonelik için Microsoft 365 lisanslarını satın alma veya kaldırma
 
 Aşağıdaki adımları kullanarak daha fazla lisans satın alabilir veya aboneliklerinizin lisans sayısını azaltabilirsiniz.
 

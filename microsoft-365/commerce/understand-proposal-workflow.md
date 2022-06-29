@@ -20,14 +20,14 @@ search.appverid: MET150
 description: Microsoft ürün ve hizmetlerini satın almanıza yardımcı olacak teklifler hakkında bilgi edinin.
 ROBOTS: NOINDEX
 ms.date: 04/28/2022
-ms.openlocfilehash: 8dc80bfaadcbee236f282796dcdb37f59360ebe4
-ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
+ms.openlocfilehash: e54b68b5090287d7a61e9dea70726b7ec9e83c72
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2022
-ms.locfileid: "65144871"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485989"
 ---
-# <a name="understand-the-proposal-workflow"></a>Teklif iş akışını anlama
+# <a name="understand-the-microsoft-proposal-workflow"></a>Microsoft teklif iş akışını anlama
 
 Teklif, kuruluşunuzun Microsoft ürün ve hizmetlerini satın alması için Microsoft tarafından sunulan resmi bir tekliftir. Teklifinizin belirli ürünlerini, hizmetlerini ve koşullarını belirlemek için doğrudan bir Microsoft temsilcisiyle birlikte çalışırsınız.
 
@@ -59,7 +59,7 @@ Bir sözleşmeyi başarıyla imzalamak veya ürün ve hizmet satın almak için 
 
 ### <a name="assign-roles-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezi rol atama
 
-1. Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2084771" target="_blank">FaturalamaBilling</a>  >  hesapları sayfasına gidin.
+1. Microsoft 365 yönetim merkezi **Faturalama** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2084771" target="_blank">hesapları</a> sayfasına gidin.
 2. **Faturalama hesapları** sayfasındaki **Ödeme hesabı rolleri** bölümünde **Rol ata'yı** seçin.
 3. **Rol ata** bölmesinde, rol atamak istediğiniz kişinin adını arayın.
 4. Kişinin sahip olmasını istediğiniz rol adının kutusunu seçin ve ardından **Ata'yı** seçin.
@@ -76,7 +76,7 @@ Bir sözleşmeyi başarıyla imzalamak veya ürün ve hizmet satın almak için 
 Bu yeni bir ödeme hesabıysa ve kimse sözleşmeyi kabul etmediyse, aşağıdakiler koşuluyla otomatik olarak ödeme hesabı sahibi olursunuz:
 
 - Teklifte adı geçen kişi **mi yoksa**
-- Kuruluşunuz için [zaten Azure Active Directory genel yönetici](/azure/active-directory/roles/permissions-reference#global-administrator) misiniz?
+- Kuruluşunuz için zaten [bir Azure Active Directory genel yöneticisi](/azure/active-directory/roles/permissions-reference#global-administrator) misiniz?
 
 ## <a name="what-is-the-overall-workflow"></a>Genel iş akışı nedir?
 

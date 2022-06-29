@@ -1,8 +1,8 @@
 ---
 title: Project Server 2007 destek sonu yol haritası
-ms.author: efrene
-author: efrene
-manager: scotv
+ms.author: deniseb
+author: denisebmsft
+manager: dansimp
 ms.date: 1/31/2018
 audience: ITPro
 ms.topic: conceptual
@@ -19,12 +19,12 @@ search.appverid:
 - PJW120
 ms.assetid: d379018f-72b7-4284-b40a-6c23c8ae38fe
 description: 10 Ekim 2017'de Project Server 2007, Project Portfolio Server ve Project 2007 desteği sona erdi. Yükseltmenizi şimdi planlamak için bu makaleyi kullanın.
-ms.openlocfilehash: 3abceb4eb9d26cf8d9b5394265ba84cf7dc714ba
-ms.sourcegitcommit: 61bdfa84f2d6ce0b61ba5df39dcde58df6b3b59d
+ms.openlocfilehash: c072daf811ec8e175c830aaa95b2163c80fa2b6f
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2022
-ms.locfileid: "65941140"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487326"
 ---
 # <a name="project-server-2007-end-of-support-roadmap"></a>Project Server 2007 destek sonu yol haritası
 
@@ -59,11 +59,11 @@ Project Server 2007 yüklemeniz bu tarihten sonra çalışmaya devam edecektir. 
 
 Project Server 2007 kullanıyorsanız geçiş seçeneklerinizi incelemeniz gerekir; bunlar şunlardır:
   
-- Project Online'a geçiş
+- Project Online geçiş
     
 - Project Server'ın daha yeni bir şirket içi sürümüne geçiş (tercihen Project Server 2016)
     
-|**Neden Project Online'a geçmeyi tercih ederim?**|**Neden Project Server 2016'ya geçmeyi tercih ederim?**|
+|**Neden Project Online'ye geçmeyi tercih ederim?**|**Neden Project Server 2016'a geçmeyi tercih ederim?**|
 |:-----|:-----|
 | Mobil kullanıcılarım var.  <br/> <br/>Geçiş maliyetleri önemli bir sorundur (donanım, yazılım, saatler ve uygulama çabası). <br/><br/>  Geçiş sonrasında ortamımı koruma maliyetleri önemli bir sorundur (örneğin, otomatik güncelleştirmeler, garantili çalışma süresi vb.).  <br/> | İş kuralları, işletmemi bulutta çalıştırmamı kısıtlar.<br/><br/>  Ortamımdaki güncelleştirmeleri denetlemem gerekiyor.  |
    
@@ -74,19 +74,19 @@ Project Server 2007 kullanıyorsanız geçiş seçeneklerinizi incelemeniz gerek
 
 Project Server 2007'den geçiş yapmayı planlarken aşağıdakileri göz önünde bulundurun:
   
-- **Microsoft İş Ortağından yardım alma** - Project Server 2007'den yükseltme zor olabilir ve çok fazla hazırlık ve planlama gerektirir. Project Server 2007'yi ilk olarak ayarlayan kişi siz değilseniz bu özellikle zor olabilir. Neyse ki, Ister Project Server 2016'ya ister Project Online'a geçirmeyi planlayın, size yardımcı olabilecek Microsoft İş Ortakları vardır. Microsoft İş Ortağı Merkezi'nden geçiş işleminize yardımcı olması için [bir Microsoft İş Ortağı](https://go.microsoft.com/fwlink/p/?linkid=841249) arayın. Project'te uzmanlığı olan tüm Microsoft İş Ortaklarının listesini görüntülemek için  *Altın Proje ve Portföy Yönetimi* terimini arayın. 
+- **Microsoft İş Ortağından yardım alma** - Project Server 2007'den yükseltme zor olabilir ve çok fazla hazırlık ve planlama gerektirir. Project Server 2007'yi ilk olarak ayarlayan kişi siz değilseniz bu özellikle zor olabilir. Neyse ki, ister Project Server 2016 ister Project Online geçiş yapmayı planlayın, size yardımcı olabilecek Microsoft İş Ortakları vardır. Microsoft İş Ortağı Merkezi'nden geçiş işleminize yardımcı olması için [bir Microsoft İş Ortağı](https://go.microsoft.com/fwlink/p/?linkid=841249) arayın. Project'te uzmanlığı olan tüm Microsoft İş Ortaklarının listesini görüntülemek için  *Altın Proje ve Portföy Yönetimi* terimini arayın. 
     
-- **Özelleştirmelerinizi planlama** - Project Server 2007 ortamınızda yaptığınız özelleştirmelerin çoğu, Project Server 2016 veya Project Online'a geçiş yaptığınızda çalışmayabilir. Sürümler arasında Project Server mimarisinde önemli farklılıklar vardır. Desteklenen gerekli işletim sistemleri, veritabanı sunucuları ve istemci web tarayıcıları da farklılık gösterir. Yeni ortam için özelleştirmelerinizi test etme veya yeniden derlemeyi planlayın. Planlama, her özelleştirmenin hala gerekli olup olmadığını düşünmek için iyi bir fırsat sağlar. Daha fazla bilgi için bkz. [SharePoint 2013'e yükseltme sırasında geçerli özelleştirmeler için plan oluşturma](/SharePoint/upgrade-and-update/create-a-communication-plan-for-the-upgrade-to-sharepoint-2013). 
+- **Özelleştirmelerinizi planlama** - Project Server 2007 ortamınızda yaptığınız özelleştirmelerin çoğu, Project Server 2016 veya Project Online geçirdiğinizde çalışmayabilir. Sürümler arasında Project Server mimarisinde önemli farklılıklar vardır. Desteklenen gerekli işletim sistemleri, veritabanı sunucuları ve istemci web tarayıcıları da farklılık gösterir. Yeni ortam için özelleştirmelerinizi test etme veya yeniden derlemeyi planlayın. Planlama, her özelleştirmenin hala gerekli olup olmadığını düşünmek için iyi bir fırsat sağlar. Daha fazla bilgi için bkz. [SharePoint 2013'e yükseltme sırasında geçerli özelleştirmeler için plan oluşturma](/SharePoint/upgrade-and-update/create-a-communication-plan-for-the-upgrade-to-sharepoint-2013). 
     
-- **Zaman ve sabır** - Yükseltme planlaması, yürütme ve test, özellikle Project Server 2016'ya yükseltirseniz zaman ve çaba gerektirir. Örneğin, Project Server 2007'den Project Server 2016'ya geçiş yapıyorsanız, önce Project Server 2010'a geçmeniz, verilerinizi denetlemeniz ve ardından birbirini izleyen her sürüme geçiş yaparken aynı şeyi yapmanız gerekir. Ne kadar süreceğine ve maliyetine yönelik tahminler almak için bir Microsoft İş Ortağına danışın.
+- **Zaman ve sabır** - Yükseltme planlaması, yürütme ve test, özellikle de Project Server 2016 yükseltirseniz zaman ve çaba gerektirir. Örneğin, Project Server 2007'den Project Server 2016'ye geçiş yapıyorsanız, önce Project Server 2010'a geçmeniz, verilerinizi denetlemeniz ve ardından birbirini izleyen her sürüme geçiş yaparken aynı şeyi yapmanız gerekir. Ne kadar süreceğine ve maliyetine yönelik tahminler almak için bir Microsoft İş Ortağına danışın.
     
-## <a name="migrate-to-project-online"></a>Project Online'a geçiş
+## <a name="migrate-to-project-online"></a>Project Online geçiş
 
-Project Server 2007'den Project Online'a geçiş yapmayı seçerseniz, proje planı verilerinizi el ile geçirmek için aşağıdakileri yapabilirsiniz:
+Project Server 2007'den Project Online geçiş yapmayı seçerseniz, proje planı verilerinizi el ile geçirmek için aşağıdakileri yapabilirsiniz:
   
 1. Project Server 2003'ten .mpp biçimine proje planlarınızı kaydedin.
     
-2. Project Professional 2013, Project Professional 2016 veya Project Online Masaüstü İstemcisi'nde, her .mpp dosyasını açın ve ardından kaydedip Project Online'da yayımlayın.
+2. Project Professional 2013'te Project Professional 2016 veya Project Online Masaüstü İstemcisi'nde her bir .mpp dosyasını açın ve sonra kaydedip Project Online'da yayımlayın.
     
 Microsoft Project Web App (PWA) yapılandırmanızı Project Online'da el ile oluşturabilirsiniz. Örneğin, gerekli özel alanları veya kurumsal takvimleri yeniden oluşturun. Microsoft İş Ortakları da bu işlemde yardımcı olabilir.
   
@@ -94,31 +94,31 @@ Microsoft Project Web App (PWA) yapılandırmanızı Project Online'da el ile ol
   
 |**Kaynak**|**Açıklama**|
 |:-----|:-----|
-|[Project Online ile çalışmaya başlama](https://support.office.com/article/e3e5f64f-ada5-4f9d-a578-130b2d4e5f11) <br/> |Project Online'ı ayarlama ve kullanma <br/> |
-|[Project Online Hizmet Açıklamaları](/office365/servicedescriptions/project-online-service-description/project-online-service-description) <br/> |Kullanabileceğiniz farklı Project Online planları hakkında bilgi <br/> |
+|[Project Online ile çalışmaya başlama](https://support.office.com/article/e3e5f64f-ada5-4f9d-a578-130b2d4e5f11) <br/> |Project Online ayarlama ve kullanma <br/> |
+|[hizmet açıklamalarını Project Online](/office365/servicedescriptions/project-online-service-description/project-online-service-description) <br/> |Kullanabileceğiniz farklı Project Online planları hakkında bilgi <br/> |
    
 ## <a name="migrate-to-a-newer-on-premises-version-of-project-server"></a>Project Server'ın daha yeni bir şirket içi sürümüne geçiş
 
-Project Online'a geçiş yaparak en iyi değeri ve kullanıcı deneyimini elde ettiğinize kesinlikle inanıyoruz. Ancak bazı kuruluşların proje verilerini şirket içi ortamda tutması gerektiğini de anlıyoruz. Proje verilerinizi şirket içinde tutmayı seçerseniz, Project Server 2007 ortamınızı Project Server 2010, Project Server 2013 veya Project Server 2016'ya geçirebilirsiniz.
+Project Online geçiş yaparak en iyi değeri ve kullanıcı deneyimini elde ettiğinize kesinlikle inanıyoruz. Ancak bazı kuruluşların proje verilerini şirket içi ortamda tutması gerektiğini de anlıyoruz. Proje verilerinizi şirket içinde tutmayı seçerseniz, Project Server 2007 ortamınızı Project Server 2010, Project Server 2013 veya Project Server 2016 geçirebilirsiniz.
   
-Project Online'a geçiremiyorsanız, Project Server 2016'ya geçmenizi öneririz. Project Server 2016, Project Server'ın önceki sürümlerinin tüm özelliklerini içerir. Bazı özellikler yalnızca Project Online'da kullanılabilse de, Project Online ile sağlanan deneyimle en yakından eşleşir.
+Project Online geçiremiyorsanız, Project Server 2016'a geçmenizi öneririz. Project Server 2016, Project Server'ın önceki sürümlerinin tüm özelliklerini içerir. Bazı özellikler yalnızca Project Online'da kullanılabilse de, Project Online deneyimiyle en yakından eşleşir.
   
 Her geçiş sonrasında verilerinizin başarıyla geçirildiğini denetlemeniz gerekir.
   
 > [!NOTE]
 >
   
-### <a name="how-do-i-migrate-to-project-server-2016"></a>Project Server 2016'ya nasıl geçiş yapabilirim?
+### <a name="how-do-i-migrate-to-project-server-2016"></a>Project Server 2016'a geçiş Nasıl yaparım??
 
-Project Server 2007 ile Project Server 2016 arasındaki mimari farklılıklar doğrudan geçiş yolunu engeller. Bu nedenle, Project Server 2007 verilerinizi Project Server 2016'ya ulaşana kadar Project Server'ın birbirini izleyen her sürümüne geçirmeniz gerekir.
+Project Server 2007 ile Project Server 2016 arasındaki mimari farklılıklar doğrudan geçiş yolunu engeller. Bu nedenle, Project Server 2016 ulaşana kadar Project Server 2007 verilerinizi Project Server'ın birbirini izleyen her sürümüne geçirmeniz gerekir.
   
-Project Server 2016'da şu adımları izleyin:
+Project Server 2016 için şu adımları izleyin:
   
 1. Project Server 2007'den Project Server 2010'a geçiş.
     
 2. Project Serve 2010'dan Project Server 2013'e geçiş yapın.
     
-3. Project Server 2013'ten Project Server 2016'ya geçiş.
+3. Project Server 2013'ten Project Server 2016 geçiş.
     
 Her geçiş sonrasında verilerinizin başarıyla geçirildiğini doğrulayın.
   
@@ -133,7 +133,7 @@ Project Server 2007'den Project Server 2010'a yükseltmek için yapmanız gereke
 |[Project Server 2010 yükseltmeye genel bakış](/previous-versions/office/project-server-2010/ee662496(v=office.14)) <br/> |Project Server 2007'den Project Server 2010'a yükseltmek için yapmanız gerekenlerin üst düzey görünümü <br/> |
 |[Project Server 2010'a Yükseltmeyi Planlama](/previous-versions/office/project-server-2010/ff603505(v=office.14)) <br/> |Sistem Gereksinimleri de dahil olmak üzere Project Server 2007'den Project Server 2010'a yükseltme yaparken dikkat edilmesi gereken planlama konuları  <br/> |
    
-#### <a name="how-do-i-upgrade"></a>Nasıl yükseltebilirim?
+#### <a name="how-do-i-upgrade"></a>Yükseltme Nasıl yaparım??
 
 Ayrıntılar için bkz. [Project Server 2010'a yükseltme](/previous-versions/office/project-server-2010/gg502590(v=office.14)). Ancak yükseltmek için kullanabileceğiniz iki farklı yöntem olduğunu anlamak önemlidir:
   
@@ -188,34 +188,34 @@ Ek kaynaklar:
     
 - [8 Kolay Adımda Harika Veritabanı Birleştirme, Project Server 2010-2013 Geçişi](https://go.microsoft.com/fwlink/p/?linkid=841271)
     
-### <a name="step-3-migrate-to-project-server-2016"></a>3. Adım: Project Server 2016'ya geçiş
+### <a name="step-3-migrate-to-project-server-2016"></a>3. Adım: Project Server 2016 geçiş
 
-Verilerinizin başarıyla geçirildiğini doğruladıktan sonra, sonraki adım Project Server 2016'ya geçiş yapmaktır.
+Verilerinizin başarıyla geçirildiğini doğruladıktan sonra, sonraki adım Project Server 2016 geçirmektir.
   
-Project Server 2013'ten Project Server 2016'ya yükseltmek için yapmanız gerekenlerin kapsamlı bir açıklaması için bkz. [Project Server 2016'ya yükseltme](/project/upgrading-to-project-server-2016).
+Project Server 2013'ten Project Server 2016'ye yükseltmek için yapmanız gerekenlerin kapsamlı bir açıklaması için bkz. [Project Server 2016 yükseltme](/project/upgrading-to-project-server-2016).
   
 Önemli kaynaklar:
   
 |**Kaynak**|**Açıklama**|
 |:-----|:-----|
-|[Project Server 2016 yükseltme işlemine genel bakış](/previous-versions/office/project-server-2010/ee662104(v=office.14)) <br/> |Project Server 2013'ten Project Server 2016'ya yükseltmek için yapmanız gerekenlere genel bakış <br/> |
-|[Project Server 2016'ya yükseltmeyi planlama](/project/plan-for-upgrade-to-project-server-2016) <br/> |Project Server 2013'ten Project Server 2016'ya yükseltecek planlama konuları <br/> |
+|[Project Server 2016 yükseltme işlemine genel bakış](/previous-versions/office/project-server-2010/ee662104(v=office.14)) <br/> |Project Server 2013'ten Project Server 2016 yükseltmek için yapmanız gerekenlere genel bakış <br/> |
+|[Project Server 2016 yükseltmeyi planlama](/project/plan-for-upgrade-to-project-server-2016) <br/> |Project Server 2013'ten Project Server 2016 yükseltmeyle ilgili planlama konuları <br/> |
    
 #### <a name="things-to-know-about-upgrading-to-this-version"></a>Bu sürüme yükseltme hakkında bilinmesi gerekenler
 
-[Project Server 2016 yükseltmesi hakkında bilmeniz gerekenler](/project/plan-for-upgrade-to-project-server-2016) , bu sürüm için yükseltme için aşağıdaki bazı önemli değişiklikleri bildirir:
+[Project Server 2016 yükseltmesi hakkında bilmeniz gerekenler](/project/plan-for-upgrade-to-project-server-2016), bu sürüm için yükseltmeyle ilgili bazı önemli değişiklikleri bildirir ve bunlar şunlardır:
   
-- Project Server 2013 verilerinizi geçirebileceğiniz Project Server 2016 ortamınızı oluşturduğunuzda, Project Server 2016 yükleme dosyaları SharePoint Server 2016'ya eklenir. Daha fazla bilgi için bkz. [Project Server 2016'yı dağıtma](/project/deploy-project-server-2016).
+- Project Server 2013 verilerinizi geçirebileceğiniz Project Server 2016 ortamınızı oluşturduğunuzda, Project Server 2016 yükleme dosyaları SharePoint Server 2016'ya eklenir. Daha fazla bilgi için bkz[. Project Server 2016 dağıtma](/project/deploy-project-server-2016).
     
-- Project Server 2016'da kaynak planları kullanım dışıdır. Project Server 2013 kaynak planlarınız Project Server 2016'da ve Project Online'da Resource Engagements'a geçirilecek. Daha fazla bilgi için bkz [. Genel Bakış: Kaynak görevlendirmeleri](https://support.office.com/article/73eefb5a-81fe-42bf-980e-9532b1bdc870) . 
+- Kaynak planları Project Server 2016 kullanım dışıdır. Project Server 2013 kaynak planlarınız Project Server 2016 ve Project Online kaynak görevlendirmelerine geçirilecek. Daha fazla bilgi için bkz [. Genel Bakış: Kaynak görevlendirmeleri](https://support.office.com/article/73eefb5a-81fe-42bf-980e-9532b1bdc870) . 
     
 ## <a name="migrate-from-portfolio-server-2007"></a>Portfolio Server 2007'den geçiş
 
-Project Portfolio Server 2007, portföy stratejisi, öncelik belirleme ve iyileştirme için Project Server 2007 ile birlikte kullanılmıştır. Bu sürümden sonra Project Portfolio Server'ın ek sürümleri oluşturulmadı. Ancak portföy yönetimi özellikleri Project Server 2016 ve Project Online'ın Premium sürümünde kullanılabilir. Ancak Project Portfolio Server 2007'den alınan veriler de bu verilere geçirilemiyor. İş etmenleri gibi verilerin yeniden oluşturulması gerekir.
+Project Portfolio Server 2007, portföy stratejisi, öncelik belirleme ve iyileştirme için Project Server 2007 ile birlikte kullanılmıştır. Bu sürümden sonra Project Portfolio Server'ın ek sürümleri oluşturulmadı. Ancak portföy yönetimi özellikleri Project Server 2016 ve Project Online Premium sürümünde kullanılabilir. Ancak Project Portfolio Server 2007'den alınan veriler de bu verilere geçirilemiyor. İş etmenleri gibi verilerin yeniden oluşturulması gerekir.
   
 Diğer kaynaklar:
   
-- [Project Online Hizmet Açıklamaları:](/office365/servicedescriptions/project-online-service-description/project-online-service-description) Project Server 2016 ve Project Online Premium'a dahil edilen portföy yönetimi özelliklerine bakın.
+- [Project Online Hizmet Açıklamaları:](/office365/servicedescriptions/project-online-service-description/project-online-service-description) Project Server 2016 ve Project Online Ekstra dahil edilen portföy yönetimi özelliklerine bakın.
     
 - [Microsoft Office Project Portfolio Server 2007 geçiş kılavuzu.](https://go.microsoft.com/fwlink/p/?linkid=841279)
     

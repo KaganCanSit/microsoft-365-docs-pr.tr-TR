@@ -17,12 +17,12 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: 44f2697f5d56e05a7edfb624d09fd8117034fc8f
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: 593eb801505275210862d9b776c6e2dca290ef89
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078371"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66493031"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Saldırı yüzeyi azaltma kuralları başvurusu
 
@@ -52,13 +52,13 @@ Aşağıdaki tabloda, şu anda genel kullanıma sunulan kurallar için desteklen
 
 > [!NOTE]
 >
-> Aksi belirtilmedikçe, en düşük Windows&nbsp; 10 derlemesi sürüm 1709 (RS3, derleme 16299) veya üzeridir; en düşük Windows&nbsp; Server derlemesi sürüm 1809 veya üzeridir.
+> Aksi belirtilmedikçe, en düşük Windows&nbsp;10 derlemesi sürüm 1709 (RS3, derleme 16299) veya üstüdür; en düşük Windows&nbsp;Server derlemesi 1809 veya üzeridir.
 >
-> Windows&nbsp; Server&nbsp;2012&nbsp;R2 ve Windows&nbsp; Server&nbsp;2016'daki saldırı yüzeyi azaltma kuralları, modern birleşik çözüm paketi kullanılarak eklenen cihazlar için kullanılabilir. Daha fazla bilgi için bkz. [Windows Server 2012 R2 ve 2016 Önizlemesi için modern birleşik çözümde yeni işlevler](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
+> Windows Server 2012&nbsp;R2 ve Windows&nbsp;&nbsp;Server&nbsp;&nbsp;2016'daki saldırı yüzeyi azaltma kuralları, modern birleşik çözüm paketi kullanılarak eklenen cihazlar için kullanılabilir. Daha fazla bilgi için bkz. [Windows Server 2012 R2 ve 2016 Önizlemesi için modern birleşik çözümde yeni işlevler](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
 
-| Kural adı| &nbsp;Windows 11 <br>ve<br> &nbsp;Windows 10 | &nbsp;Windows Server <br> 2022 <br>ve<br>  &nbsp;Windows Server <br> 2019 | Windows Server | &nbsp;Windows Server <br> 2016 <sup>[[1, 2](#fn1)]<sup></sup> | &nbsp;Windows Server <br> 2012&nbsp;R2 <sup>[[1, 2](#fn1)]<sup></sup> |
+| Kural adı| Windows&nbsp;11 <br>ve<br> Windows&nbsp;10 | Windows&nbsp;Server <br> 2022 <br>ve<br>  Windows&nbsp;Server <br> 2019 | Windows Server | Windows&nbsp;Server <br> 2016 <sup>[[1, 2](#fn1)]<sup></sup> | Windows&nbsp;Server <br> 2012&nbsp;R2 <sup>[[1, 2](#fn1)]<sup></sup> |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| [Güvenlik açığı bulunan imzalı sürücülerin kötüye kullanılması engellendi](#block-abuse-of-exploited-vulnerable-signed-drivers) | E | E | E <br> sürüm 1803 (Altı Aylık Enterprise Kanalı) veya üzeri | E | E |
+| [Güvenlik açığı bulunan imzalı sürücülerin kötüye kullanılması engellendi](#block-abuse-of-exploited-vulnerable-signed-drivers) | E | E | E <br> sürüm 1803 (Altı Aylık Kurumsal Kanal) veya üzeri | E | E |
 | [Adobe Reader'ın alt işlemler oluşturmalarını engelleme](#block-adobe-reader-from-creating-child-processes) | E <br> sürüm 1809 veya üzeri <sup>[[3](#fn1)]<sup></sup> | E | E | E | E |
 | [Tüm Office uygulamalarının alt işlemler oluşturmalarını engelleme](#block-all-office-applications-from-creating-child-processes) | E | E | E | E | E |
 | [Windows yerel güvenlik yetkilisi alt sisteminden (lsass.exe) kimlik bilgilerinin çalınmalarını engelleme](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) | E <br> sürüm 1803 veya üzeri <sup>[[3](#fn1)]<sup></sup> | E | E | E | E |
@@ -72,14 +72,14 @@ Aşağıdaki tabloda, şu anda genel kullanıma sunulan kurallar için desteklen
 | [WMI olay aboneliği aracılığıyla kalıcılığı engelleme](#block-persistence-through-wmi-event-subscription) <br> \*_Dosya ve klasör dışlamaları desteklenmiyor._ | E <br> sürüm 1903 (derleme 18362) veya üzeri <sup>[[3](#fn1)]<sup></sup> | E | E <br> sürüm 1903 (derleme 18362) veya üzeri | N | N |
 | [PSExec ve WMI komutlarından kaynaklanan işlem oluşturma işlemlerini engelleme](#block-process-creations-originating-from-psexec-and-wmi-commands) | E <br> sürüm 1803 veya üzeri <sup>[[3](#fn1)]<sup></sup> | E | E | E | E |
 | [USB'den çalıştırılan güvenilmeyen ve imzalanmamış işlemleri engelleme](#block-untrusted-and-unsigned-processes-that-run-from-usb) | E | E | E | E | E |
-| [Office makrolardan Win32 API çağrılarını engelleme](#block-win32-api-calls-from-office-macros) | E | E | E | N | N |
+| [Office makrolarından Win32 API çağrılarını engelleme](#block-win32-api-calls-from-office-macros) | E | E | E | N | N |
 | [Fidye yazılımına karşı gelişmiş koruma kullanma](#use-advanced-protection-against-ransomware) | E <br> sürüm 1803 veya üzeri <sup>[[3](#fn1)]<sup></sup> | E | E | E | E |
 
 (<a id="fn1">1</a>) Windows Server 2012 ve 2016 için modern birleşik çözümü ifade eder. Daha fazla bilgi için bkz. [Uç Nokta için Defender hizmetine Windows Sunucuları ekleme](configure-server-endpoints.md).
 
-(<a id="fn1">2</a>) Windows&nbsp; Server 2016 ve Windows&nbsp; Server 2012&nbsp;R2 için gereken en düşük Microsoft Endpoint Configuration Manager sürümü 2111 sürümüdür.
+(<a id="fn1">2</a>) Windows&nbsp;Server 2016 ve Windows&nbsp;Server 2012&nbsp;R2 için, Microsoft Endpoint Configuration Manager için gereken en düşük sürüm 2111'dir.
 
-(<a id="fn1">3</a>) Sürüm ve derleme numarası yalnızca Windows&nbsp; 10 için geçerlidir.
+(<a id="fn1">3</a>) Sürüm ve derleme numarası yalnızca Windows&nbsp;10 için geçerlidir.
 
 ## <a name="supported-configuration-management-systems"></a>Desteklenen yapılandırma yönetim sistemleri
 
@@ -101,7 +101,7 @@ Bu tabloda başvurulan yapılandırma yönetim sistemi sürümleri hakkındaki b
 |[WMI olay aboneliği aracılığıyla kalıcılığı engelleme](#block-persistence-through-wmi-event-subscription) |  |  |  |E   | E  |
 |[PSExec ve WMI komutlarından kaynaklanan işlem oluşturma işlemlerini engelleme](#block-process-creations-originating-from-psexec-and-wmi-commands) | E |   |   |  E | E  |
 |[USB'den çalıştırılan güvenilmeyen ve imzalanmamış işlemleri engelleme](#block-untrusted-and-unsigned-processes-that-run-from-usb) | E |   |E <br><br> CB 1802  | E  | E  |
-|[Office makrolardan Win32 API çağrılarını engelleme](#block-win32-api-calls-from-office-macros) | E |   | E <br><br> CB 1710  | E  |  E |
+|[Office makrolarından Win32 API çağrılarını engelleme](#block-win32-api-calls-from-office-macros) | E |   | E <br><br> CB 1710  | E  |  E |
 |[Fidye yazılımına karşı gelişmiş koruma kullanma](#use-advanced-protection-against-ransomware) | E |   | E <br><br> CB 1802 | E  | E  |
 
   (<a id="fn1">1</a>) Herhangi bir kuralın GUID'sini kullanarak saldırı yüzeyi azaltma kurallarını kural temelinde yapılandırabilirsiniz.
@@ -120,7 +120,7 @@ Blok modundaki tüm kurallar için bildirim bildirimleri oluşturulur. Diğer mo
 - Birleşimleri olan \<ASR Rule, Rule State\> ASR kuralları, uyarıları (bildirim bildirimleri) yalnızca yüksek bulut bloğu düzeyindeki cihazlar için Uç Nokta için Microsoft Defender ortaya koyabilmek için kullanılır. Yüksek bulut bloğu düzeyinde olmayan cihazlar herhangi bir <ASR Kuralı, Kural Durumu> birleşimleri için uyarı oluşturmaz
 - EDR uyarıları belirtilen durumlarda ASR kuralları için oluşturulur, ancak yalnızca yüksek bulut bloğu düzeyindeki cihazlar için oluşturulur.
 
-| Kural adı: | Kural durumu: | EDR'de uyarı oluştursun mu? <br> (Evet&nbsp;\|&nbsp;Hayır) | Bildirim oluştursun mu? <br> (Evet&nbsp;\|&nbsp;Hayır) |
+| Kural adı: | Kural durumu: | EDR'de uyarılar oluşturulsun mu? <br> (Evet&nbsp;\|&nbsp;Hayır) | Bildirim oluştursun mu? <br> (Evet&nbsp;\|&nbsp;Hayır) |
 |---|:---:|:---:|:---:|
 |   |   |  _Yalnızca yüksek bulut blok düzeyindeki cihazlar için_ | _Yalnızca Blok modunda_ |
 |[Güvenlik açığı bulunan imzalı sürücülerin kötüye kullanılması engellendi](#block-abuse-of-exploited-vulnerable-signed-drivers) |   | N  | E |
@@ -137,7 +137,7 @@ Blok modundaki tüm kurallar için bildirim bildirimleri oluşturulur. Diğer mo
 |[WMI olay aboneliği aracılığıyla kalıcılığı engelleme](#block-persistence-through-wmi-event-subscription) |  Denetim&nbsp;\|&nbsp;Bloğu | Y \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir  | N \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir |
 |[PSExec ve WMI komutlarından kaynaklanan işlem oluşturma işlemlerini engelleme](#block-process-creations-originating-from-psexec-and-wmi-commands) |   | N | E |
 |[USB'den çalıştırılan güvenilmeyen ve imzalanmamış işlemleri engelleme](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Denetim&nbsp;\|&nbsp;Bloğu | Y \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir  | N \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir |
-|[Office makrolardan Win32 API çağrılarını engelleme](#block-win32-api-calls-from-office-macros) |   | N | E |
+|[Office makrolarından Win32 API çağrılarını engelleme](#block-win32-api-calls-from-office-macros) |   | N | E |
 |[Fidye yazılımına karşı gelişmiş koruma kullanma](#use-advanced-protection-against-ransomware) | Denetim&nbsp;\|&nbsp;Bloğu | Y \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir  | N \| Y <br> Yüksek bulut blok düzeyinde cihaz gerektirir |
   
 ## <a name="asr-rule-to-guid-matrix"></a>ASR kuralı-GUID matrisi
@@ -158,7 +158,7 @@ Blok modundaki tüm kurallar için bildirim bildirimleri oluşturulur. Diğer mo
 | WMI olay aboneliği aracılığıyla kalıcılığı engelleme <br>* Dosya ve klasör dışlamaları desteklenmiyor. | e6db77e5-3df2-4cf1-b95a-636979351e5b |
 | PSExec ve WMI komutlarından kaynaklanan işlem oluşturma işlemlerini engelleme | d1e49aac-8f56-4280-b9ba-993a6d77406c |
 | USB'den çalıştırılan güvenilmeyen ve imzalanmamış işlemleri engelleme | b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4 |
-| Office makrolardan Win32 API çağrılarını engelleme | 92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b |
+| Office makrolarından Win32 API çağrılarını engelleme | 92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b |
 | Fidye yazılımına karşı gelişmiş koruma kullanma | c1db55ab-c21a-4637-bb3f-a12568109d35 |
 
 ## <a name="asr-rule-modes"></a>ASR kural modları
@@ -233,9 +233,9 @@ Bağımlılıklar: MDAV
 
 ### <a name="block-all-office-applications-from-creating-child-processes"></a>Tüm Office uygulamalarının alt işlemler oluşturmalarını engelleme
 
-Bu kural, Office uygulamaların alt işlemler oluşturmalarını engeller. Office uygulamalar Word, Excel, PowerPoint, OneNote ve Access'i içerir.
+Bu kural, Office uygulamalarının alt işlemler oluşturmalarını engeller. Office uygulamaları Word, Excel, PowerPoint, OneNote ve Access'i içerir.
 
-Kötü amaçlı alt işlemler oluşturmak yaygın bir kötü amaçlı yazılım stratejisidir. Vektör olarak Office kötüye kullanan kötü amaçlı yazılımlar genellikle VBA makroları çalıştırır ve daha fazla yük indirmek ve çalıştırmaya çalışmak için kodu kötüye kullanır. Ancak bazı meşru iş kolu uygulamaları da zararsız amaçlarla alt süreçler oluşturabilir; örneğin, bir komut istemi oluşturma veya powershell kullanarak kayıt defteri ayarlarını yapılandırma.
+Kötü amaçlı alt işlemler oluşturmak yaygın bir kötü amaçlı yazılım stratejisidir. Vektör olarak Office'i kötüye kullanan kötü amaçlı yazılımlar genellikle VBA makroları çalıştırır ve daha fazla yük indirip çalıştırmaya çalışmak için koddan yararlanılır. Ancak bazı meşru iş kolu uygulamaları da zararsız amaçlarla alt süreçler oluşturabilir; örneğin, bir komut istemi oluşturma veya powershell kullanarak kayıt defteri ayarlarını yapılandırma.
 
 Intune adı:`Office apps launching child processes`
 
@@ -254,13 +254,13 @@ Bağımlılıklar: MDAV
 
 Bu kural, Yerel Güvenlik Yetkilisi Alt Sistem Hizmeti'ni (LSASS) kilitleyerek kimlik bilgilerinin çalınmasını önlemeye yardımcı olur.
 
-LSASS, Windows bilgisayarda oturum açan kullanıcıların kimliğini doğrular. Windows'deki Microsoft Defender Credential Guard normalde LSASS'den kimlik bilgilerini ayıklama girişimlerini engeller. Bazı kuruluşlar, özel akıllı kart sürücüleri veya Yerel Güvenlik Yetkilisi'ne (LSA) yüklenen diğer programlarla ilgili uyumluluk sorunları nedeniyle Credential Guard'ı tüm bilgisayarlarında etkinleştiremiyor. Bu gibi durumlarda saldırganlar, Cleartext parolalarını ve LSASS'den NTLM karmalarını kazımak için Mimikatz gibi araçları kullanabilir.
+LSASS, Windows bilgisayarında oturum açan kullanıcıların kimliğini doğrular. Windows'da Microsoft Defender Credential Guard normalde LSASS'den kimlik bilgilerini ayıklama girişimlerini engeller. Bazı kuruluşlar, özel akıllı kart sürücüleri veya Yerel Güvenlik Yetkilisi'ne (LSA) yüklenen diğer programlarla ilgili uyumluluk sorunları nedeniyle Credential Guard'ı tüm bilgisayarlarında etkinleştiremiyor. Bu gibi durumlarda saldırganlar, Cleartext parolalarını ve LSASS'den NTLM karmalarını kazımak için Mimikatz gibi araçları kullanabilir.
 
 > [!NOTE]
 > Bazı uygulamalarda kod, çalışan tüm işlemleri numaralandırır ve bunları kapsamlı izinlerle açmaya çalışır. Bu kural, uygulamanın işlem açma eylemini reddeder ve ayrıntıları güvenlik olay günlüğüne kaydeder. Bu kural çok fazla gürültü oluşturabilir. LSASS'yi numaralandıran ancak işlevsellikte gerçek bir etkisi olmayan bir uygulamanız varsa, bunu dışlama listesine eklemeniz gerekmez. Bu olay günlüğü girdisi tek başına kötü amaçlı bir tehdit anlamına gelmez.
   
 > [!IMPORTANT]
-> Saldırı Yüzeyi Azaltma (ASR) kuralının varsayılan durumu "kimlik bilgilerinin Windows yerel güvenlik yetkilisi alt sisteminden (lsass.exe)" çalınması **Yapılandırılmadı** olarak, varsayılan mod ise **Engelle** olarak ayarlanır. Diğer tüm ASR kuralları varsayılan durumunda kalır: **Yapılandırılmadı**. Son kullanıcı bildirimlerini azaltmak için kurala ek filtreleme mantığı zaten eklenmiştir. Müşteriler kuralı **Denetim**, **Uyarı** veya **Devre Dışı** modları olarak yapılandırabilir ve bu da varsayılan modu geçersiz kılar. Kuralın varsayılan modda yapılandırılması veya Engelleme modunu el ile etkinleştirmeniz fark etmeksizin, bu kuralın işlevselliği aynıdır.
+> Saldırı Yüzeyi Azaltma (ASR) kuralının "Windows yerel güvenlik yetkilisi alt sisteminden (lsass.exe) kimlik bilgilerinin çalınması engellenir" varsayılan durumu **Yapılandırılmadı** **olarak, varsayılan** mod ise **Engelle** olarak ayarlanır. Diğer tüm ASR kuralları varsayılan durumunda kalır: **Yapılandırılmadı**. Son kullanıcı bildirimlerini azaltmak için kurala ek filtreleme mantığı zaten eklenmiştir. Müşteriler kuralı **Denetim**, **Uyarı** veya **Devre Dışı** modları olarak yapılandırabilir ve bu da varsayılan modu geçersiz kılar. Kuralın varsayılan modda yapılandırılması veya Engelleme modunu el ile etkinleştirmeniz fark etmeksizin, bu kuralın işlevselliği aynıdır.
 
 Intune adı:`Flag credential stealing from the Windows local security authority subsystem`
 
@@ -277,10 +277,10 @@ Bağımlılıklar: MDAV
 
 ### <a name="block-executable-content-from-email-client-and-webmail"></a>E-posta istemcisinden ve web postasından yürütülebilir içeriği engelleme
 
-Bu kural, aşağıdaki dosya türlerinin Microsoft Outlook uygulamasında veya Outlook.com'da ve diğer popüler web posta sağlayıcılarında açılan e-postadan başlatılmasını engeller:
+Bu kural, aşağıdaki dosya türlerinin Microsoft Outlook uygulamasında açılan e-postadan veya Outlook.com ve diğer popüler web postası sağlayıcılarından başlatılmasını engeller:
 
 - Yürütülebilir dosyalar (.exe, .dll veya .scr gibi)
-- Betik dosyaları (PowerShell .ps, Visual Basic .vbs veya JavaScript .js dosyası gibi)
+- Betik dosyaları (PowerShell .ps1, Visual Basic .vbs veya JavaScript .js dosyası gibi)
 
 Intune adı:`Execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail client) (no exceptions)`
 
@@ -372,9 +372,9 @@ Bağımlılıklar: MDAV, AMSI
 
 ### <a name="block-office-applications-from-creating-executable-content"></a>Office uygulamalarının yürütülebilir içerik oluşturmalarını engelleme
 
-Bu kural, kötü amaçlı kodun diske yazılmasını engelleyerek Word, Excel ve PowerPoint gibi Office uygulamaların kötü amaçlı yürütülebilir içerik oluşturmasını engeller.
+Bu kural, Word, Excel ve PowerPoint gibi Office uygulamalarının, kötü amaçlı kodun diske yazılmasını engelleyerek kötü amaçlı olabilecek yürütülebilir içerik oluşturmasını engeller.
 
-Vektör olarak Office kötüye kullanan kötü amaçlı yazılımlar, Office ayrılmaya ve kötü amaçlı bileşenleri diske kaydetmeye çalışabilir. Bu kötü amaçlı bileşenler bilgisayarın yeniden başlatılmasından ve sistemde kalıcı hale getirir. Bu nedenle, bu kural ortak bir kalıcılık tekniğine karşı savunur.
+Vektör olarak Office'i kötüye kullanan kötü amaçlı yazılımlar, Office'in dışına çıkıp kötü amaçlı bileşenleri diske kaydetmeye çalışabilir. Bu kötü amaçlı bileşenler bilgisayarın yeniden başlatılmasından ve sistemde kalıcı hale getirir. Bu nedenle, bu kural ortak bir kalıcılık tekniğine karşı savunur.
 
 Intune adı:`Office apps/macros creating executable content`
 
@@ -391,9 +391,9 @@ Bağımlılıklar: MDAV, RPC
 
 ### <a name="block-office-applications-from-injecting-code-into-other-processes"></a>Office uygulamalarının diğer işlemlere kod eklemesini engelleme
 
-Bu kural, Office uygulamalardan diğer işlemlere kod ekleme girişimlerini engeller.
+Bu kural, Office uygulamalarından diğer işlemlere kod ekleme girişimlerini engeller.
 
-Saldırganlar, kötü amaçlı kodu kod ekleme yoluyla diğer işlemlere geçirmek için Office uygulamaları kullanmayı deneyerek kodun temiz bir işlem olarak maskelemesini sağlayabilir.
+Saldırganlar, kötü amaçlı kodu kod ekleme yoluyla diğer işlemlere geçirmek için Office uygulamalarını kullanmayı deneyerek kodun temiz bir işlem olarak gizlenmesini sağlayabilir.
 
 Kod ekleme kullanmanın bilinen meşru iş amaçları yoktur.
 
@@ -414,12 +414,12 @@ Bağımlılıklar: MDAV
 
 ### <a name="block-office-communication-application-from-creating-child-processes"></a>Office iletişim uygulamasının alt işlemler oluşturmalarını engelleme
 
-Bu kural, Outlook alt işlemler oluşturmasını engellerken, geçerli Outlook işlevlerine izin verir.
+Bu kural, Outlook'un alt işlemler oluşturmasını engellerken, geçerli Outlook işlevlerine de izin verir.
 
-Bu kural sosyal mühendislik saldırılarına karşı koruma sağlar ve kodun Outlook güvenlik açıklarını kötüye kullanmasını önler. Ayrıca Outlook kurallarına karşı koruma sağlar ve bir kullanıcının kimlik bilgileri tehlikeye atıldığında saldırganların kullanabileceği [açıklardan yararlanma](https://blogs.technet.microsoft.com/office365security/defending-against-rules-and-forms-injection/) biçimleri oluşturur.
+Bu kural sosyal mühendislik saldırılarına karşı koruma sağlar ve Kodun Outlook'taki güvenlik açıklarını kötüye kullanmasını önler. Ayrıca, bir kullanıcının kimlik bilgileri tehlikeye atıldığında saldırganların kullanabileceği [Outlook kurallarına ve biçim açıklarına](https://blogs.technet.microsoft.com/office365security/defending-against-rules-and-forms-injection/) karşı koruma sağlar.
 
 > [!NOTE]
-> Bu kural, Outlook'da DLP ilkesi ipuçlarını ve Araç İpuçlarını engeller. Bu kural yalnızca Outlook ve Outlook.com için geçerlidir.
+> Bu kural, Outlook'ta DLP ilkesi ipuçlarını ve Araç İpuçlarını engeller. Bu kural yalnızca Outlook ve Outlook.com için geçerlidir.
 
 Intune adı:`Process creation from Office communication products (beta)`
 
@@ -461,7 +461,7 @@ Bağımlılıklar: MDAV, RPC
 Bu kural [, PsExec](/sysinternals/downloads/psexec) ve [WMI](/windows/win32/wmisdk/about-wmi) aracılığıyla oluşturulan işlemlerin çalışmasını engeller. Hem PsExec hem de WMI uzaktan kod yürütebilir. PsExec ve WMI'nin komut ve denetim amacıyla işlevselliğini kötüye kullanma veya kuruluşun ağına bulaşma riski vardır.
 
 > [!WARNING]
-> Bu kuralı yalnızca cihazlarınızı [Intune](/intune) veya başka bir MDM çözümüyle yönetiyorsanız kullanın. Bu kural[, Configuration Manager](/configmgr) istemcisinin düzgün çalışması için kullandığı WMI komutlarını engellediğinden, bu kural Microsoft Endpoint Configuration Manager aracılığıyla yönetimle uyumsuzdur.
+> Bu kuralı yalnızca cihazlarınızı [Intune](/intune) veya başka bir MDM çözümüyle yönetiyorsanız kullanın. Bu kural, Configuration Manager istemcisinin düzgün çalışması için kullandığı WMI komutlarını engellediğinden, bu kural [Microsoft Endpoint](/configmgr) Configuration Manager aracılığıyla yönetimle uyumsuzdur.
 
 Intune adı:`Process creation from PSExec and WMI commands`
 
@@ -496,7 +496,7 @@ Gelişmiş tehdit avcılığı eylem türü:
 
 Bağımlılıklar: MDAV
 
-### <a name="block-win32-api-calls-from-office-macros"></a>Office makrolardan Win32 API çağrılarını engelleme
+### <a name="block-win32-api-calls-from-office-macros"></a>Office makrolarından Win32 API çağrılarını engelleme
 
 Bu kural VBA makrolarının Win32 API'lerini çağırmasını engeller.
 
@@ -505,7 +505,7 @@ Office VBA, Win32 API çağrılarını etkinleştirir. Kötü amaçlı yazılım
 Desteklenen işletim sistemleri:
 
 - [Windows 10, sürüm 1709](/windows/whats-new/whats-new-windows-10-version-1709)
-- [Windows Sunucusu, sürüm 1809](/windows-server/get-started/whats-new-in-windows-server-1809)
+- [Windows Server, sürüm 1809](/windows-server/get-started/whats-new-in-windows-server-1809)
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
 - [Configuration Manager CB 1710](/configmgr/core/servers/manage/updates)
 

@@ -17,12 +17,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 282834b0c582690ff53c8361440bce21fc2d4d0b
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: 9cc85dc768696169c8da164975278a661c755f94
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65679286"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66492435"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender’daki yenilikler
 
@@ -56,18 +56,21 @@ Diğer Microsoft Defender güvenlik ürünleriyle ilgili yenilikler hakkında da
 
 Diğer işletim sistemleriyle ilgili Uç Nokta için Microsoft Defender hakkında daha fazla bilgi için:
 
-- [macOS'da Uç Nokta için Defender'daki yenilikler](mac-whatsnew.md)
-- [iOS'de Uç Nokta için Defender'daki yenilikler](ios-whatsnew.md)
+- [macOS'ta Uç Nokta için Defender'daki yenilikler](mac-whatsnew.md)
+- [iOS'ta Uç Nokta için Defender'daki yenilikler](ios-whatsnew.md)
 - [Linux'ta Uç Nokta için Defender'daki yenilikler](linux-whatsnew.md)
 
+## <a name="june-2022"></a>Haziran 2022
+- [Sunucular için Defender Plan 2 artık MDE birleşik çözümüyle tümleşiyor](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defender-for-servers-plan-2-now-integrates-with-mde-unified/ba-p/3527534)<br>Artık tek bir düğme kullanarak Windows Server 2012 R2 ve 2016 için modern, birleşik çözümü Sunucular için Defender Plan 2 kapsamındaki sunuculara dağıtmaya başlayabilirsiniz.
+
 ## <a name="may-2022"></a>Mayıs 2022
-- [macOS için kurcalama koruması (önizleme)](tamperprotection-macos.md)<br>Kurcalama koruması, macOS Uç Nokta için Microsoft Defender yetkisiz olarak kaldırılmasını önlemeye yardımcı olur.
+- [macOS için kurcalama koruması (önizleme)](tamperprotection-macos.md)<br>Kurcalama koruması, macOS'ta Uç Nokta için Microsoft Defender yetkisiz olarak kaldırılmasını önlemeye yardımcı olur.
 
 - [Etki alanı denetleyicisi cihazları ekleme - Değerlendirme laboratuvarı geliştirmesi (önizleme)](evaluation-lab.md#add-a-domain-controller-preview)<br>Birden çok cihazda yanal hareket ve çok aşamalı saldırılar gibi karmaşık senaryoları çalıştırmak için bir etki alanı denetleyicisi ekleyin.
 
 ## <a name="april-2022"></a>Nisan 2022
 - [Windows Server 2012 R2 ve Windows Server 2016) için ekleme ve özellik eşlikleri güncelleştirildi](configure-server-endpoints.md)<br/> Yeni birleşik çözüm paketi genel kullanıma sunuldu ve bağımlılıkları ve yükleme adımlarını kaldırarak sunucuları eklemeyi kolaylaştırıyor. Ayrıca, bu birleşik çözüm paketi birçok yeni özellik geliştirmesi ile birlikte gelir.
-- Tunnel ile tümleştirme. iOS Uç Nokta için Microsoft Defender artık tek bir uygulamada güvenliği ve bağlantıyı etkinleştirmek için vpn ağ geçidi çözümü Microsoft Tunnel ile tümleştirilebilir. Bu özellik daha önce yalnızca Android kullanılabilirdi. [Daha fazla bilgi edinin](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/what-s-new-in-microsoft-endpoint-manager-2204-april-edition/ba-p/3297995)
+- Tunnel ile tümleştirme. iOS'ta Uç Nokta için Microsoft Defender artık tek bir uygulamada güvenliği ve bağlantıyı etkinleştirmek için bir VPN ağ geçidi çözümü olan Microsoft Tunnel ile tümleştirilebilir. Bu özellik daha önce yalnızca Android'de kullanılabilirdi. [Daha fazla bilgi edinin](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/what-s-new-in-microsoft-endpoint-manager-2204-april-edition/ba-p/3297995)
 
 ## <a name="january-2022"></a>Ocak 2022
 
@@ -77,7 +80,7 @@ Diğer işletim sistemleriyle ilgili Uç Nokta için Microsoft Defender hakkınd
 
 ## <a name="december-2021"></a>Aralık 2021
 
-- Tehdit ve güvenlik açığı yönetimi, uygulamalardaki ve bileşenlerdeki Log4j güvenlik açıklarını belirlemeye yardımcı olabilir. [Daha fazla bilgi edinin](https://www.microsoft.com/security/blog/2021/12/11/guidance-for-preventing-detecting-and-hunting-for-cve-2021-44228-log4j-2-exploitation/#TVM).
+- Tehdit ve güvenlik açığı yönetimi, uygulamalardaki ve bileşenlerdeki Log4j güvenlik açıklarını tanımlamaya yardımcı olabilir. [Daha fazla bilgi edinin](https://www.microsoft.com/security/blog/2021/12/11/guidance-for-preventing-detecting-and-hunting-for-cve-2021-44228-log4j-2-exploitation/#TVM).
 
 - IoT cihazlarını bulma (önizleme): [Cihaz bulma](device-discovery.md) özelliği artık şirket ağınıza bağlı yönetilmeyen IoT cihazlarını bulmanıza yardımcı olabilir. Bu, ioT envanterinizin yanı sıra DIĞER BT cihazlarınızın (iş istasyonları, sunucular ve mobil) tek bir birleşik görünümünü sağlar.
 
@@ -85,7 +88,7 @@ Diğer işletim sistemleriyle ilgili Uç Nokta için Microsoft Defender hakkınd
 
 ## <a name="november-2021"></a>Kasım 2021
 
-- [Güvenlik yapılandırma yönetimi](security-config-management.md) <br/> Microsoft Intune veya Microsoft Endpoint Configuration Manager Microsoft Endpoint Manager tarafından yönetilmeyen cihazların microsoft defender için güvenlik yapılandırmalarını doğrudan Endpoint Manager.
+- [Güvenlik yapılandırma yönetimi](security-config-management.md) <br/> Microsoft Intune veya Microsoft Endpoint Configuration Manager microsoft Endpoint Manager tarafından yönetilmeyen cihazların microsoft defender güvenlik yapılandırmalarını doğrudan Endpoint Manager alma özelliği.
 
 - Platformlar arası destek geliştirmeleri.
 
@@ -128,13 +131,13 @@ Diğer işletim sistemleriyle ilgili Uç Nokta için Microsoft Defender hakkınd
 
 - [Mobil Uygulama yönetimi desteği](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Bu geliştirme, mobil uygulamaları yönetmek için Intune kullanılırken bir kuruluşun yönetilen uygulama içindeki verilerinin Uç Nokta için Microsoft Defender korunmasını sağlar. Mobil uygulama yönetimi hakkında daha fazla bilgi için [bu belgelere bakın](/mem/intune/apps/mam-faq).
 
-- [VPN tümleştirmesi Microsoft Tunnel](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Microsoft Tunnel VPN özellikleri artık Android için Uç Nokta için Microsoft Defender uygulamasıyla tümleştirilmiştir. Bu birleştirme, kuruluşların tek bir güvenlik uygulamasıyla basitleştirilmiş bir son kullanıcı deneyimi sunabilmesini sağlar. Bu sayede hem mobil tehdit savunması hem de mobil cihazlarından şirket içi kaynaklara erişim olanağı sunarken, güvenlik ve BT ekipleri de tanıdıkları yönetici deneyimlerini sürdürebiliyor.
+- [Microsoft Tunnel VPN tümleştirmesi](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Microsoft Tunnel VPN özellikleri artık Android için Uç Nokta için Microsoft Defender uygulamasıyla tümleştirilmiştir. Bu birleştirme, kuruluşların tek bir güvenlik uygulamasıyla basitleştirilmiş bir son kullanıcı deneyimi sunabilmesini sağlar. Bu sayede hem mobil tehdit savunması hem de mobil cihazlarından şirket içi kaynaklara erişim olanağı sunarken, güvenlik ve BT ekipleri de tanıdıkları yönetici deneyimlerini sürdürebiliyor.
 
-- [iOS'de jailbreak algılama](/microsoft-365/security/defender-endpoint/ios-configure-features#conditional-access-with-defender-for-endpoint-on-ios) <br> iOS'da Uç Nokta için Microsoft Defender jailbreak algılama özelliği genel kullanıma sunuldu. Bu, zaten var olan kimlik avı korumasına eklenir.  Daha fazla bilgi için bkz. [Cihaz risk sinyallerine göre Koşullu Erişim İlkesi'ni ayarlama](/microsoft-365/security/defender-endpoint/ios-configure-features).
+- [iOS'ta jailbreak algılama](/microsoft-365/security/defender-endpoint/ios-configure-features#conditional-access-with-defender-for-endpoint-on-ios) <br> iOS'ta Uç Nokta için Microsoft Defender jailbreak algılama özelliği genel kullanıma sunuldu. Bu, zaten var olan kimlik avı korumasına eklenir.  Daha fazla bilgi için bkz. [Cihaz risk sinyallerine göre Koşullu Erişim İlkesi'ni ayarlama](/microsoft-365/security/defender-endpoint/ios-configure-features).
 
 
 ## <a name="march-2021"></a>Mart 2021
-- [Microsoft 365 Defender portalını kullanarak kurcalama korumasını yönetme](prevent-changes-to-security-settings-with-tamper-protection.md#manage-tamper-protection-for-your-organization-using-the-microsoft-365-defender-portal) <br> Windows 10, Windows Server 2016, Windows Server 2019 ve Windows Server 2022'de *kiracı ekleme* adlı bir yöntem kullanarak kurcalama koruma ayarlarını yönetebilirsiniz.
+- [Microsoft 365 Defender portalını kullanarak kurcalama korumasını yönetme](prevent-changes-to-security-settings-with-tamper-protection.md#manage-tamper-protection-for-your-organization-using-the-microsoft-365-defender-portal) <br> *kiracı ekleme* adlı bir yöntemi kullanarak Windows 10, Windows Server 2016, Windows Server 2019 ve Windows Server 2022'de kurcalama koruma ayarlarını yönetebilirsiniz.
 
 
 ## <a name="january-2021"></a>Ocak 2021

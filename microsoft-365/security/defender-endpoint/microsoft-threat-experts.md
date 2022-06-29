@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: b81daa25618fd971f5f29e2672673e8dcd2e35bc
-ms.sourcegitcommit: b0b1be67de8f40b199bb9b51eb3568e59377e93a
+ms.openlocfilehash: 38e0145d1df971d651aab0be02c08e46ea70fe70
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2022
-ms.locfileid: "66159456"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490332"
 ---
 # <a name="microsoft-threat-experts"></a>Microsoft Tehdit Uzmanları
 
@@ -46,11 +46,11 @@ Microsoft Tehdit Uzmanları güvenlik operasyon merkezlerine (SOC) uzman düzeyi
 
 > [!NOTE]
 > Yönetilen tehdit avcılığı hizmetine başvurmadan önce Microsoft Teknik Hizmet sağlayıcınız ve hesap ekibinizle uygunluk gereksinimlerini tartışın.
-> Tehdit Uzmanları şu anda ABD Kamu bulutları için Microsoft 365 kullanılamıyor.
+> Tehdit Uzmanları şu anda ABD Kamu bulutları için Microsoft 365'te kullanılamaz.
 
 Uç Nokta için Microsoft Defender müşterisiyseniz, ortamınızdaki en kritik tehditleri hızla yanıtlamanıza yardımcı olan özel içgörüler ve analizler elde etmek için **Microsoft Tehdit Uzmanları - Hedefli Saldırı Bildirimleri'ne** başvurmanız gerekir.
 
-Microsoft Tehdit Uzmanları - Hedefli Saldırı Bildirimleri avantajlarına kaydolmak için uygulanacak **Ayarlar** \> **Uç Noktalar** \> **Genel** \> **Gelişmiş özellikler** \> **Microsoft Tehdit Uzmanları - Hedefli Saldırı Bildirimleri'ne** gidin. Kabul edildikten sonra, Hedefli Saldırı Bildirimleri'nin avantajlarından yararlanırsınız.
+Microsoft Tehdit Uzmanları - Hedefli Saldırı Bildirimleri avantajlarına kaydolmak için, uygulanacak **Ayarlar** \> **Uç Noktaları** \> **Genel** \> **Gelişmiş özellikler** \> **Microsoft Tehdit Uzmanları - Hedefli Saldırı Bildirimleri'ne** gidin. Kabul edildikten sonra, Hedefli Saldırı Bildirimleri'nin avantajlarından yararlanırsınız.
 
 kuruluşunuzun karşılaştığı ilgili algılamalar ve saldırganlar hakkında tehdit uzmanlarımıza danışmak üzere **Microsoft Tehdit Uzmanları - İsteğe Bağlı Uzmanlar'a** abone olmak için hesap ekibinize veya Microsoft temsilcinize başvurun.
 
@@ -67,7 +67,7 @@ Microsoft Tehdit Uzmanları - Hedefli saldırı bildirimi, ağınıza yönelik i
 
 ## <a name="microsoft-threat-experts---experts-on-demand"></a>Microsoft Tehdit Uzmanları - İsteğe Bağlı Uzmanlar
 
-Müşteriler, zamanında ve doğru yanıt için doğrudan Microsoft 365 Defender içinden güvenlik uzmanlarımızla etkileşime geçebilir. Uzmanlar, uyarı sorgularından, risk altındaki cihazlardan, şüpheli ağ bağlantısının kök nedenlerinden devam eden gelişmiş kalıcı tehdit kampanyalarıyla ilgili ek tehdit bilgilerine kadar kuruluşunuzu etkileyen karmaşık tehditleri daha iyi anlamak için gereken içgörüleri sağlar. Bu özellik ile şunları yapabilirsiniz:
+Müşteriler, yanıtlarını almak için doğrudan Microsoft 365 Defender portalından güvenlik uzmanlarımızla etkileşime geçebilir. Uzmanlar, uyarı sorgularından, risk altındaki cihazlardan, şüpheli ağ bağlantısının kök nedenlerinden devam eden gelişmiş kalıcı tehdit kampanyalarıyla ilgili ek tehdit bilgilerine kadar kuruluşunuzu etkileyen karmaşık tehditleri daha iyi anlamak için gereken içgörüleri sağlar. Bu özellik ile şunları yapabilirsiniz:
 
 - Olayın kök nedeni veya kapsamı da dahil olmak üzere uyarılarla ilgili ek açıklama alın
 - Şüpheli cihaz davranışına ve gelişmiş bir saldırganla karşılaşılması durumunda sonraki adımlara açıklık kazandırma

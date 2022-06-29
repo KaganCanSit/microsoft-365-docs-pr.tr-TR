@@ -1,8 +1,8 @@
 ---
 title: Microsoft Tehdit Uzmanları özelliklerini yapılandırın ve yönetin
 ms.reviewer: ''
-description: Günlük güvenlik işlemlerinizi ve güvenlik yönetimi işlerinizi yapılandırmak, yönetmek ve kullanmak için Microsoft Tehdit Uzmanlarına kaydolma.
-keywords: Microsoft Tehdit Uzmanları tehdit arama hizmeti, MTE, Microsoft tarafından yönetilen arama hizmeti
+description: Günlük güvenlik işlemlerinizde ve güvenlik yönetimi çalışmanızda yapılandırmak, yönetmek ve kullanmak için Microsoft Threats Uzmanlarına kaydolun.
+keywords: Microsoft Tehdit Uzmanları, yönetilen tehdit avcılığı hizmeti, MTE, Microsoft yönetilen tehdit avcılığı hizmeti
 search.product: Windows 10
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -18,158 +18,158 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 152c0c54138841d9159c7230fc043307979e4546
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 7661619ccb60bb55020a8e241c341b11fe45abd1
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64471835"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487355"
 ---
 # <a name="configure-and-manage-microsoft-threat-experts-capabilities"></a>Microsoft Tehdit Uzmanları özelliklerini yapılandırın ve yönetin
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
 > [!NOTE]
-> Microsoft Tehdit Uzmanları - Hedefli Saldırı Bildirimi yönetilen tehdit avı hizmetine başvurmadan önce Microsoft Teknik Servis sağlayıcınız ve hesap ekibi ile uygunluk gereksinimlerini tartışın.
+> Microsoft Tehdit Uzmanları - Hedefli Saldırı Bildirimi yönetilen tehdit avcılığı hizmetine başvurmadan önce Microsoft Teknik Hizmet sağlayıcınız ve hesap ekibinizle uygunluk gereksinimlerini tartışın.
 
-Yalnızca bir laboratuvar ayarlaması için değil, kayıtlı cihazlarla ortamınıza Uç Nokta için Defender'ın dağıtıldığından emin olun.
+Yalnızca laboratuvar kurulumunda değil, kayıtlı cihazlarla ortamınızda Uç Nokta için Defender'ın dağıtıldığından emin olun.
 
-Uç nokta için Defender müşterisiysiniz, en kritik tehditleri belirlemeye yardımcı olmak için **Microsoft Tehdit Uzmanları -** Hedefli Saldırı Bildirimleri'ne başvurarak en kritik tehditleri hızla yanıt verebilirsiniz. **Microsoft Tehdit Uzmanları -** Talep Uzmanlarına abone olmak için hesap ekibinize veya Microsoft temsilcisine başvurarak ilgili algılamalar ve destek uzmanlarımız ile iletişime geçin.
+Uç Nokta için Defender müşterisiyseniz, en kritik tehditleri hızla belirleyebilmeniz için özel içgörüler ve analizler elde etmek için **Microsoft Tehdit Uzmanları - Hedefli Saldırı Bildirimleri'ne** başvurmanız gerekir. İlgili algılamalar ve saldırganlar konusunda tehdit uzmanlarımıza danışmak üzere **Microsoft Tehdit Uzmanları - İsteğe Bağlı Uzmanlar'a** abone olmak için hesap ekibinize veya Microsoft temsilcinize başvurun.
 
-## <a name="apply-for-microsoft-threat-experts---targeted-attack-notifications-service"></a>Uygulama Microsoft Tehdit Uzmanları - Hedefli Saldırı Bildirimleri hizmeti
+## <a name="apply-for-microsoft-threat-experts---targeted-attack-notifications-service"></a>Microsoft Tehdit Uzmanları - Hedefli Saldırı Bildirimleri hizmeti için başvurun
 
-Zaten uç nokta için Defender müşterisiysiniz, Microsoft 365 Defender portalı üzerinden Microsoft 365 Defender.
+Zaten bir Uç Nokta için Defender müşterisiyseniz, Microsoft 365 Defender portalı üzerinden başvurabilirsiniz.
 
-1. Gezinti bölmesinde Genel 'i ve **Ayarlar > Gelişmiş > - > Microsoft Tehdit Uzmanları Saldırı Bildirimleri'ne gidin**.
+1. Gezinti bölmesinden **Ayarlar > Genel > Gelişmiş özellikler > Microsoft Tehdit Uzmanları - Hedefli Saldırı Bildirimleri'ne** gidin.
 
 2. **Uygula**'ya tıklayın.
 
    :::image type="content" source="images/mte-collaboratewithmte.png" alt-text="Microsoft Tehdit Uzmanları ayarları" lightbox="images/mte-collaboratewithmte.png":::
 
-3. Microsoft'un size uygulamanıza geri dönesin için, adını ve e-posta adresinizi girin.
+3. Microsoft'un uygulamanızda size geri dönebilmesi için adınızı ve e-posta adresinizi girin.
 
    :::image type="content" source="images/mte-apply.png" alt-text="Microsoft Tehdit Uzmanları uygulama sayfasındaki Ad alanı" lightbox="images/mte-apply.png":::
 
-4. Gizlilik [bildirimini okuyun](https://privacy.microsoft.com/privacystatement) ve **bitirinca** Gönder'e tıklayın. Başvurunız onaylandıktan sonra bir hoş geldiniz e-postası alırsınız.
+4. [Gizlilik bildirimini](https://privacy.microsoft.com/privacystatement) okuyun ve işiniz bittiğinde **Gönder'e** tıklayın. Uygulamanız onaylandıktan sonra bir karşılama e-postası alacaksınız.
 
-   :::image type="content" source="images/mte-applicationconfirmation.png" alt-text="Microsoft Tehdit Uzmanları uygulaması onay iletisi" lightbox="images/mte-applicationconfirmation.png":::
+   :::image type="content" source="images/mte-applicationconfirmation.png" alt-text="Microsoft Tehdit Uzmanları uygulama onay iletisi" lightbox="images/mte-applicationconfirmation.png":::
 
-Kabul edilirken bir hoş geldiniz e-postası alırsınız ve **Uygula düğmesinin** "açık" olan bir geçiş düğmesine değiştir değiştirmesini alırsınız. Kendinizi Hedefli Saldırı Bildirimleri hizmetten almak istemeniz durumunda, iki durumlu düğmeyi "kapalı" kaydırın ve sayfanın altındaki Kaydetme tercihleri'ne tıklayın.
+Kabul edildiğinde bir karşılama e-postası alırsınız ve **Uygula** düğmesinin "açık" bir geçiş olarak değiştiğini görürsünüz. Kendinizi Hedefli Saldırı Bildirimleri hizmetinden çıkarmak istiyorsanız, iki durumlu düğmeyi "kapalı" kaydırın ve sayfanın altındaki **Tercihleri kaydet'e** tıklayın.
 
-## <a name="where-youll-see-the-targeted-attack-notifications-from-microsoft-threat-experts"></a>Buradan, hedefli saldırı bildirimlerini göreceğiniz Microsoft Tehdit Uzmanları
+## <a name="where-youll-see-the-targeted-attack-notifications-from-microsoft-threat-experts"></a>Microsoft Tehdit Uzmanları hedeflenen saldırı bildirimlerini göreceğiniz yer
 
-Hedefli saldırı bildirimini şu Microsoft Tehdit Uzmanları üzerinden alırsınız:
+Microsoft Tehdit Uzmanları hedefli saldırı bildirimini aşağıdaki ortam üzerinden alabilirsiniz:
 
-- Uç Nokta portalının **Olayları için** Defender sayfası
-- Uç nokta portalının Uyarılar panosu **için** Defender
-- OData uyarı [API'si](/windows/security/threat-protection/microsoft-defender-atp/get-alerts) ve [REST API'si](/windows/security/threat-protection/microsoft-defender-atp/pull-alerts-using-rest-api)
-- [Gelişmiş avda DeviceAlertEvents](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-devicealertevents-table) tablosu
+- Uç Nokta için Defender portalının **Olaylar** sayfası
+- Uç Nokta için Defender **portalının Uyarılar** panosu
+- OData uyarı [API'si](/windows/security/threat-protection/microsoft-defender-atp/get-alerts) ve [REST API](/windows/security/threat-protection/microsoft-defender-atp/pull-alerts-using-rest-api)
+- Gelişmiş avcılıkta [DeviceAlertEvents](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-devicealertevents-table) tablosu
 - E-postanızı yapılandırmayı seçerseniz
 
-Hedefli saldırı bildirimlerini e-posta aracılığıyla almak için bir e-posta bildirim kuralı oluşturun.
+Hedeflenen saldırı bildirimlerini e-postayla almak için bir e-posta bildirim kuralı oluşturun.
 
 ### <a name="create-an-email-notification-rule"></a>E-posta bildirim kuralı oluşturma
 
-Bildirim alıcıları için e-posta bildirimleri göndermek için kurallar oluşturabilirsiniz. Ayrıntılar  [için bkz. E-posta](configure-email-notifications.md) bildirimi oluşturmak, düzenlemek, silmek veya sorunlarını gidermek için uyarı bildirimlerini yapılandırma.
+Bildirim alıcıları için e-posta bildirimleri göndermek için kurallar oluşturabilirsiniz. Ayrıntılar için bkz. E-posta bildirimi oluşturmak, düzenlemek, silmek veya sorunlarını gidermek için uyarı bildirimlerini  [yapılandırma](configure-email-notifications.md) .
 
-## <a name="view-the-targeted-attack-notification"></a>Hedefli saldırı bildirimini görüntüleme
+## <a name="view-the-targeted-attack-notification"></a>Hedeflenen saldırı bildirimini görüntüleme
 
-Sisteminizi e-posta bildirimi alacak şekilde yapılandırdıktan Microsoft Tehdit Uzmanları e-postanıza hedefli saldırı bildirimi almaya başlarsınız.
+Sisteminizi e-posta bildirimi alacak şekilde yapılandırdıktan sonra e-postanızdaki Microsoft Tehdit Uzmanları hedeflenen saldırı bildirimini almaya başlarsınız.
 
-1. Tehdit uzmanlarıyla etiketlenen panoda ilgili uyarı bağlamına gitmek için e-postada bağlantıya **tıklayın**.
+1. **Tehdit uzmanlarıyla** etiketlenmiş panodaki ilgili uyarı bağlamını görmek için e-postadaki bağlantıya tıklayın.
 
-2. Ayrıntıları görüntülemek için panodan e-postadan size gelen uyarı konusunu seçin.
+2. Panodan, ayrıntıları görüntülemek için e-postadan edindiğiniz uyarı konusunun aynısını seçin.
 
-## <a name="subscribe-to-microsoft-threat-experts---experts-on-demand"></a>Microsoft Tehdit Uzmanları - Talep Üzerine Uzmanlara Abone Olma
+## <a name="subscribe-to-microsoft-threat-experts---experts-on-demand"></a>Microsoft Tehdit Uzmanları Abone Olma - İsteğe Bağlı Uzmanlar
 
-Bu, abonelik hizmeti olarak kullanılabilir. Zaten bir Uç Nokta için Defender müşterisiysiniz, microsoft temsilcinize başvurarak Microsoft Tehdit Uzmanları Uzmanla iletişime geçebilirsiniz.
+Bu, abonelik hizmeti olarak kullanılabilir. Zaten bir Uç Nokta için Defender müşterisiyseniz, Microsoft Tehdit Uzmanları - İsteğe Bağlı Uzmanlar'a abone olması için Microsoft temsilcinizle iletişime geçebilirsiniz.
 
-## <a name="consult-a-microsoft-threat-expert-about-suspicious-cybersecurity-activities-in-your-organization"></a>Bir Microsoft tehdit uzmanına, organizasyonlu şüpheli siber güvenlik etkinlikleri hakkında danışma
+## <a name="consult-a-microsoft-threat-expert-about-suspicious-cybersecurity-activities-in-your-organization"></a>Kuruluşunuzdaki şüpheli siber güvenlik etkinlikleri hakkında bir Microsoft tehdit uzmanına başvurun
 
-Zamanında ve doğru Microsoft Tehdit Uzmanları yanıt için doğrudan web sitesi Microsoft 365 Defender kullanıcı Microsoft 365 Defender iş ortağıyla ortak çalışmanız mümkün. Uzmanlar karmaşık tehditleri, size gelen hedefli saldırı bildirimlerini daha iyi anlamak için içgörüler sağlar veya portal panoda gördüğünüz uyarılar, güvenliği tehlikeye atılmış olabilecek bir cihaz veya tehdit İstihbaratı bağlamı hakkında daha fazla bilgiye ihtiyacınız varsa.
+Yanıt için doğrudan Microsoft 365 Defender portalından etkileşime geçen Microsoft Tehdit Uzmanları ile iş ortaklığı yapabilirsiniz. Uzmanlar karmaşık tehditleri, aldığınız hedefli saldırı bildirimlerini daha iyi anlamak için içgörüler sağlar veya uyarılar, güvenliği aşılmış olabilecek bir cihaz veya portal panonuzda gördüğünüz tehdit bilgileri bağlamı hakkında daha fazla bilgiye ihtiyacınız varsa.
 
 > [!NOTE]
 >
-> - Kuruluşun özelleştirilmiş tehdit zekası verileriyle ilgili uyarı sorguları şu anda desteklenmiyor. Ayrıntılar için güvenlik işlemlerinize veya olay müdahale ekibine danışın.
-> - "Bir tehdit **uzmanına başvur**" sorgus Microsoft 365 Defender için Güvenlik ayarlarını yönetme iznine sahip olmak gerekir.
+> - Kuruluşunuzun özelleştirilmiş tehdit bilgileri verileriyle ilgili uyarı sorguları şu anda desteklenmiyor. Ayrıntılar için güvenlik operasyonlarınıza veya olay yanıt ekibinize başvurun.
+> - "Tehdit uzmanına başvurun" sorgusu gönderebilmek için Microsoft 365 Defender portalında **Güvenlik ayarlarını yönet** iznine sahip olmanız gerekir.
 
-1. Portal sayfasında olay sayfası gibi araştırma yapmak istediğiniz ilgili bilgileri **bulun** . Araştırma isteği göndermeden önce ilgili uyarı veya cihazın sayfasının görüntüde olduğundan emin olun.
+1. Araştırmak istediğiniz ilgili bilgileri (örneğin **Olay** sayfası) içeren portal sayfasına gidin. Araştırma isteği göndermeden önce ilgili uyarı veya cihazın sayfasının görüntülendiğinden emin olun.
 
-2. Sağ üstteki menüde? simgesini seçin. Ardından, Tehdit **uzmanına başvur'ı seçin**.
+2. Sağ üst menüden **?** simgesini seçin. Ardından **Tehdit uzmanına danışın'ı** seçin.
 
-    :::image type="content" source="images/mte-eod-menu.png" alt-text="The Microsoft Tehdit Uzmanları Experts on Demand menu item" lightbox="images/mte-eod-menu.png":::
+    :::image type="content" source="images/mte-eod-menu.png" alt-text="İsteğe Bağlı Microsoft Tehdit Uzmanları Uzmanları menü öğesi" lightbox="images/mte-eod-menu.png":::
 
-    Açılır ekran açılır. Aşağıdaki ekran, bir deneme aboneliği için ne zaman olduğunu gösterir.
+    Açılır ekran açılır. Aşağıdaki ekranda bir deneme aboneliğinde olduğunuzda gösterilir.
 
-    :::image type="content" source="images/mte-eod.png" alt-text="Microsoft Tehdit Uzmanları Uzmanlarını Talep Üzerine Uyar sayfası" lightbox="images/mte-eod.png":::
+    :::image type="content" source="images/mte-eod.png" alt-text="İsteğe Bağlı Microsoft Tehdit Uzmanları Uzmanları sayfası" lightbox="images/mte-eod.png":::
 
-    Tam kullanıcı - Uzman isteğe bağlı Microsoft Tehdit Uzmanları aşağıdaki ekran size gösterilir.
+    Aşağıdaki ekranda tam Microsoft Tehdit Uzmanları - İsteğe Bağlı Uzmanlar aboneliğinde olduğunuz zaman gösterilmektedir.
 
-    :::image type="content" source="images/mte-eod-fullsubscription.png" alt-text="uzman Microsoft Tehdit Uzmanları isteğe bağlı tam abonelik sayfası" lightbox="images/mte-eod-fullsubscription.png":::
+    :::image type="content" source="images/mte-eod-fullsubscription.png" alt-text="İsteğe Bağlı Microsoft Tehdit Uzmanları Uzmanları tam abonelik sayfası" lightbox="images/mte-eod-fullsubscription.png":::
 
-    Sorgulama **konu** alanı, araştırma isteğinize ilişkin ilgili sayfanın bağlantısıyla önceden doldurulur. Örneğin, isteği hazırlarken olay, uyarı veya cihaz ayrıntıları sayfasının bağlantısı.
+    **Sorgulama konusu** alanı, araştırma isteğiniz için ilgili sayfanın bağlantısıyla önceden doldurulur. Örneğin, isteği yaparken bulunduğun olay, uyarı veya cihaz ayrıntıları sayfasının bağlantısı.
 
-3. Sonraki alanda, ilgili kullanıcıya araştırmayı başlatmak için Microsoft Tehdit Uzmanları yeterli bağlamı sağlayacak kadar bilgi girin.
+3. Sonraki alanda, Microsoft Tehdit Uzmanları araştırmayı başlatmak için yeterli bağlamı sağlamak için yeterli bilgi sağlayın.
 
-4. Bu adresle karşılık gelen e-posta adresini Microsoft Tehdit Uzmanları.
+4. Microsoft Tehdit Uzmanları karşılık olarak kullanmak istediğiniz e-posta adresini girin.
 
 > [!NOTE]
-> Microsoft Hizmetleri Merkezi aracılığıyla Talep Üzerine Uzman servis taleplerinizin durumunu izlemek için Müşteri Başarısı Hesap Yöneticinize iletişime geçebilirsiniz.
+> İsteğe Bağlı Uzmanlar servis taleplerinizin durumunu Microsoft Services Hub aracılığıyla izlemek isterseniz Müşteri Başarısı Hesap Yöneticinize ulaşın.
 
-Microsoft Hizmetleri Merkezi'ne hızlı bir genel bakış için bu videoyu izleyin.
+Microsoft Services Hub'a hızlı bir genel bakış için bu videoyu izleyin.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4pk9f]
 
-## <a name="sample-investigation-topics-that-you-can-consult-with-microsoft-threat-experts---experts-on-demand"></a>Uzmanla birlikte başvurabilirsiniz örnek soruşturma Microsoft Tehdit Uzmanları - Talep Üzerine Uzmanlar
+## <a name="sample-investigation-topics-that-you-can-consult-with-microsoft-threat-experts---experts-on-demand"></a>Microsoft Tehdit Uzmanları ile danışabileceğiniz örnek araştırma konuları - İsteğe Bağlı Uzmanlar
 
 ### <a name="alert-information"></a>Uyarı bilgileri
 
-- Karadan canlı ikili için yeni bir uyarı türü görüyoruz: [UyarıKimlik]. Bu uyarı hakkında bize daha fazla bilgi ve nasıl daha fazla araştırmamız olduğunu söyler misiniz?
-- Kötü amaçlı PowerShell betiklerini yürütmeye çalışarak farklı uyarılar oluşturan iki benzer saldırı gözlemlediriz. Bunlardan biri "Suspicious PowerShell komut satırı", diğeri "O365 tarafından sağlanan göstergeye göre kötü amaçlı bir dosya algılandı" olur. Fark nedir?
-- Bugün yüksek profilli bir kullanıcının cihazında olağandışı sayıda başarısız oturum açma için tek uyarı almak istiyorum. Bu oturum açma girişimleriyle ilgili başka kanıt bulamıyorum. Uç Nokta için Defender bu denemeleri nasıl görebilir? Hangi tür oturumlar izleniyor?
-- Bu uyarıyla ilgili daha fazla bağlam veya öngörüler verebilirsiniz: "Sistem yardımcı programı tarafından şüpheli davranış gözlemlendi".
+- Arazi dışında yaşayan bir ikili dosya için yeni bir uyarı türü görüyoruz: [AlertID]. Bu uyarı hakkında bize daha fazla bilgi verebilir misiniz ve nasıl daha fazla araştırma yapabiliriz?
+- Kötü amaçlı PowerShell betiklerini yürütmeye çalışan ancak farklı uyarılar oluşturan iki benzer saldırı gözlemledik. Biri "Şüpheli PowerShell komut satırı" diğeri ise "O365 tarafından sağlanan göstergeye göre kötü amaçlı bir dosya algılandı". Ne fark var?
+- Bugün yüksek profilli bir kullanıcının cihazından olağan dışı sayıda başarısız oturum açma için tek bir uyarı alıyorum. Bu oturum açma girişimleriyle ilgili başka kanıt bulamıyorum. Uç Nokta için Defender bu girişimleri nasıl görebilir? Ne tür oturum açma işlemleri izleniyor?
+- Bu uyarı hakkında daha fazla bağlam veya içgörü verebilir misiniz: "Sistem yardımcı programı tarafından şüpheli davranış gözlemlendi".
 
-### <a name="possible-machine-compromise"></a>Olası makine güvenliği
+### <a name="possible-machine-compromise"></a>Olası makine güvenliğinin aşılmasına neden olabilir
 
-- "Bilinmeyen süreç gözlemlendi?" sorusunu neden gördüğünüze yanıt vermede yardımcı olabilir misiniz? Bu ileti veya uyarı birçok cihazda sık sık görülür. Bu ileti veya uyarının kötü amaçlı etkinliklerle ilgili olup olmadığını netleştirmek için yapılan tüm girdiler bizim için çok teşekkür ederiz.
-- [ay] içinde aynı sistem üzerinde önceki [kötü amaçlı yazılım adı] kötü amaçlı yazılım algılamaya benzer davranışlara sahip [tarih] üzerinde aşağıdaki sistem üzerinde olası ödünleri doğrulamaya yardımcı olabilir misiniz?
+- Neden "Bilinmeyen işlem gözlemlendi?" sorusunu yanıtlamamıza yardımcı olabilir misiniz? Bu ileti veya uyarı birçok cihazda sık görülür. Bu iletinin veya uyarının kötü amaçlı etkinliklerle ilgili olup olmadığını netleştirmek için her türlü girişi takdir ediyoruz.
+- [date] tarihinde [date] tarihinde aynı sistemdeki önceki [kötü amaçlı yazılım adı] kötü amaçlı yazılım algılamasıyla benzer davranışlarla [month] içinde aşağıdaki sistemde olası bir güvenliğin aşılmış olduğunu doğrulamaya yardımcı olabilir misiniz?
 
-### <a name="threat-intelligence-details"></a>Tehdit İstihbaratı ayrıntıları
+### <a name="threat-intelligence-details"></a>Tehdit bilgileri ayrıntıları
 
-- Kullanıcıya kötü amaçlı bir Word belgesi teslim edilen bir kimlik avı e-postası algıladık. Kötü amaçlı Word belgesi, [kötü amaçlı yazılım] kötü amaçlı yazılım için uç nokta uyarıları için birden çok Defender'ı tetikleyen bir dizi şüpheli olaya neden oldu. Bu kötü amaçlı yazılım hakkında herhangi bir bilginiz var mı? Evet ise, bana bağlantı gönderebilir misiniz?
-- Yakın zamanda sektörüm için hedef alan bir tehditle ilgili bir [örneğin, Twitter veya blog] gönderisi gördüm. Uç nokta için Defender'ın bu tehditlere karşı hangi korumayı sağladığını anlamama yardımcı olabilir misiniz?
+- Kullanıcıya kötü amaçlı bir Word belgesi teslim eden bir kimlik avı e-postası algılandı. Kötü amaçlı Word belgesi, [kötü amaçlı yazılım adı] kötü amaçlı yazılım için birden çok Uç Nokta için Defender uyarısını tetikleyen bir dizi şüpheli olaya neden oldu. Bu kötü amaçlı yazılım hakkında herhangi bir bilginiz var mı? Evet ise, bana bir bağlantı gönderebilir misiniz?
+- Kısa süre önce sektörümü hedefleyen bir tehditle ilgili bir [sosyal medya başvurusu, örneğin Twitter veya blog] gönderisi gördüm. Uç Nokta için Defender'ın bu tehdit aktörü karşısında sağladığı korumayı anlamama yardımcı olabilir misiniz?
 
-### <a name="microsoft-threat-experts-alert-communications"></a>Microsoft Tehdit Uzmanları iletişimleri
+### <a name="microsoft-threat-experts-alert-communications"></a>Microsoft Tehdit Uzmanları uyarı iletişimleri
 
-- Olay müdahale ekibiniz, bize gelen hedefli saldırı bildirimini bizim için ele alı edebilir mi?
-- Bu hedefli saldırı bildirimini Microsoft Tehdit Uzmanları. Kendi olay müdahale ekibimiz yok. Şimdi ne yapabiliriz ve olayı nasıl içerebiliriz?
-- Bir iş için hedefli saldırı bildirimi Microsoft Tehdit Uzmanları. Olay müdahale ekibimize hangi verileri veriyebilirsiniz?
+- Olay yanıtı ekibiniz aldığımız hedeflenen saldırı bildirimini ele almamıza yardımcı olabilir mi?
+- Bu hedefli saldırı bildirimini Microsoft Tehdit Uzmanları aldım. Kendi olay müdahale ekibimiz yok. Şimdi ne yapabiliriz ve olayı nasıl kapsayabiliriz?
+- Microsoft Tehdit Uzmanları hedefli bir saldırı bildirimi aldım. Olay yanıtı ekibimize geçirebileceğimiz hangi verileri bize sağlayabilirsiniz?
 
   > [!NOTE]
-  > Microsoft Tehdit Uzmanları bir olay yanıt hizmeti değil, yönetilen bir siber güvenlik arama hizmetidir. Ancak, bir olay yanıtı gerektiren sorunları ele alan kendi olay müdahale ekibiyle etkileşime girişebilirsiniz. Kendi olay müdahale ekibiniz yoksa ve Microsoft'un yardımını istediysiniz, CSS Siber Güvenlik Olayı Yanıt Ekibi'nden (CIRT) etkileşim s belirttiysiniz. Sorgulamanıza yardımcı olmak için bir bilet açabilirler.
+  > Microsoft Tehdit Uzmanları, olay yanıtı hizmeti değil yönetilen bir siber güvenlik avcılığı hizmetidir. Ancak, olay yanıtı gerektiren sorunları gidermek için kendi olay yanıt ekibinizle etkileşim kurabilirsiniz. Kendi olay yanıt ekibiniz yoksa ve Microsoft'un yardımını istiyorsanız CSS Siber Güvenlik Olayı Yanıt Ekibi (CIRT) ile etkileşime geçebilirsiniz. Sorgunuzu ele almak için bir bilet açabilirler.
 
 ## <a name="scenario"></a>Senaryo
 
-### <a name="receive-a-progress-report-about-your-managed-hunting-inquiry"></a>Yönetilen av sorgunuz hakkında bir ilerleme raporu alma
+### <a name="receive-a-progress-report-about-your-managed-hunting-inquiry"></a>Yönetilen tehdit avcılığı sorgunuz hakkında bir ilerleme raporu alma
 
-Yanıt Microsoft Tehdit Uzmanları sorguya göre değişir. Aşağıdaki kategorilerden araştırma durumunu iletecek şekilde, iki  gün içinde bir tehdit uzmanı sorgusuna başvurarak ilerleme durumunu size e-postayla iletirler:
+Microsoft Tehdit Uzmanları yanıtı sorgunuza göre değişir. Araştırma durumunu aşağıdaki kategorilerden iletmek için iki gün içinde **tehdit uzmanına başvurun** sorgunuz hakkında size bir ilerleme raporu e-posta ile gönderilir:
 
-- Soruşturmaya devam etmek için daha fazla bilgi gereklidir
+- Araştırmaya devam etmek için daha fazla bilgi gerekiyor
 - Teknik bağlamı belirlemek için bir dosya veya birkaç dosya örneği gerekir
-- İnceleme için daha fazla zaman gerekiyor
-- İlk bilgiler araştırmayı sonuçlandıracak kadar yeterli değildi
+- Araştırma daha fazla zaman gerektirir
+- İlk bilgiler soruşturmayı sonuçlandırmak için yeterliydi
 
-Araştırmanın hareketli ilerlemesi için hızlı bir şekilde yanıt vermek çok önemlidir.
+Araştırmayı devam ettirmek için hızlı bir şekilde yanıt vermek çok önemlidir.
 
 ## <a name="related-topic"></a>İlgili konu
 
-- [Microsoft Tehdit Uzmanları genel bakış](microsoft-threat-experts.md)
-- [Microsoft Tehdit Uzmanları'de Microsoft 365 Genel Bakış](/microsoft-365/security/mtp/microsoft-threat-experts)
+- [Microsoft Tehdit Uzmanlarına genel bakış](microsoft-threat-experts.md)
+- [Microsoft 365'te Microsoft Tehdit Uzmanları Genel Bakış](/microsoft-365/security/mtp/microsoft-threat-experts)

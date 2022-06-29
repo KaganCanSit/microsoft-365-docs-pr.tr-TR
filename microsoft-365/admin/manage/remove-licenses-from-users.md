@@ -22,13 +22,13 @@ ms.custom:
 - AdminTemplateSet
 search.appverid: MET150
 description: Ürün lisanslarının atamasını kaldırmak için kullandığınız yöntem, lisansları belirli kullanıcılardan mı yoksa belirli bir üründen mi kaldırdığınıza bağlıdır.
-ms.date: 04/22/2022
-ms.openlocfilehash: 23fc9ea04f45cdeb50acb0ec2d62d584974d6499
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.date: 06/23/2022
+ms.openlocfilehash: 87e62b8c39e5ba0a8f61caeea3560438a716881d
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66043252"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66486186"
 ---
 # <a name="unassign-microsoft-365-licenses-from-users"></a>Kullanıcılardan Microsoft 365 lisanslarının atamasını kaldırma
 
@@ -48,7 +48,9 @@ Kullanıcılardan lisans atamalarını **Etkin kullanıcılar** sayfasından vey
 
 ## <a name="use-the-licenses-page-to-unassign-licenses"></a>Lisans atamalarını silmek için Lisanslar sayfasını kullanma
 
-**Lisans atamalarını silmek için Lisanslar** sayfasını kullandığınızda, belirli bir ürünün lisanslarını en fazla 20 kullanıcının atamasını kaldırmış olursunuz.
+**Lisanslar** sayfası, aynı anda en fazla 20 kullanıcı için lisans atamanızı veya atamasını kaldırmanızı sağlar. Sayfa, sahip olduğunuz ürünleri, her ürün için kullanılabilir lisans sayısını ve kullanılabilir toplam lisansların dışında atanan lisans sayısını gösterir. Lisans sayısı, aynı ürün adına ait tüm aboneliklerin toplam lisans toplamıdır.
+
+Örneğin, Microsoft 365 İş Ekstra için 5 lisansı olan bir aboneliğiniz ve aynı ürün için 8 lisansı olan başka bir aboneliğiniz olabilir. **Lisanslar** sayfasında, tüm abonelikleriniz genelinde Microsoft 365 İş Ekstra için toplam 13 lisansınız olduğu gösterilir. Bu, aynı ürün için olsalar bile sahip olduğunuz her abonelik için bir satır görüntüleyen **Ürünleriniz** sayfasında gördüklerinizden farklıdır.
 
 ::: moniker range="o365-worldwide"
 
@@ -62,13 +64,13 @@ Kullanıcılardan lisans atamalarını **Etkin kullanıcılar** sayfasından vey
 
 ::: moniker-end
 
-2. Lisans atamasını silmek istediğiniz ürünü seçin.
+1. Bir ürün seçin.
 
-3. Lisans atamalarını silmek istediğiniz kullanıcıları seçin.
+2. Lisans atamalarını silmek istediğiniz kullanıcıların onay kutularını seçin.
 
-4. **Lisansların atamasını kaldır'ı** seçin.
+3. **Lisansların atamasını kaldır'ı** seçin.
 
-5. **Lisansların Atamasını Kaldır** kutusunda Atamayı **Kaldır'ı** seçin.
+4. **Lisansların Atamasını Kaldır** kutusunda Atamayı **Kaldır'ı** seçin.
 
 ## <a name="use-the-active-users-page-to-unassign-licenses"></a>Lisans atamalarını silmek için Etkin kullanıcılar sayfasını kullanma
 
@@ -120,10 +122,10 @@ Lisansları kaldırmak için **Etkin kullanıcılar** sayfasını kullandığın
 
 - Kullanıcıdan lisans kaldırıldığında, bu hesapla ilişkili Exchange Online veriler 30 gün boyunca tutulur. 30 günlük yetkisiz kullanım süresinden sonra veriler silinir ve kurtarılamaz. Ancak, bekletme ilkesine bağlanır ve bekletme etiketleriyle eşleşen içerik bulma için korunur.
 - OneDrive İş kaydedilen dosyalar, kullanıcı Microsoft 365 yönetim merkezi silinmediği veya Active Directory eşitlemesi aracılığıyla kaldırılmadığı sürece silinmez. Daha fazla bilgi için bkz. [OneDrive saklama ve silme](/onedrive/retention-and-deletion).
-- Lisans kaldırıldığında, kullanıcının posta kutusu artık İçerik Arama veya eBulma (Premium) gibi bir eBulma aracı kullanılarak aranamaz. Daha fazla bilgi için, [Microsoft 365'de İçerik Arama'da](../../compliance/content-search.md) "Bağlantısı kesilmiş veya lisanslı olmayan posta kutularını arama" bölümüne bakın.
-- Office 365 Kurumsal E3 gibi bir Enterprise aboneliğiniz varsa, Exchange Online etkin olmayan posta kutularını kullanarak silinen bir kullanıcı hesabının [posta kutusu](../../compliance/inactive-mailboxes-in-office-365.md) verilerini korumanıza olanak tanır. Daha fazla bilgi için bkz. [Exchange Online'da etkin olmayan posta kutuları oluşturma ve yönetme](../../compliance/create-and-manage-inactive-mailboxes.md).
+- Lisans kaldırıldığında, kullanıcının posta kutusu artık İçerik Arama veya eBulma (Premium) gibi bir eBulma aracı kullanılarak aranamaz. Daha fazla bilgi için [Microsoft 365'te İçerik Arama'daki](../../compliance/content-search.md) "Bağlantısı kesilmiş veya lisanslı olmayan posta kutularını arama" bölümüne bakın.
+- Office 365 Kurumsal E3 gibi bir Kurumsal aboneliğiniz varsa, Exchange Online etkin olmayan posta kutularını kullanarak silinen bir kullanıcı hesabının [posta kutusu](../../compliance/inactive-mailboxes-in-office-365.md) verilerini korumanıza olanak tanır. Daha fazla bilgi için bkz. [Exchange Online'da etkin olmayan posta kutuları oluşturma ve yönetme](../../compliance/create-and-manage-inactive-mailboxes.md).
 - Lisansı kaldırıldıktan sonra kullanıcının Microsoft 365 verilerine erişimini engellemeyi ve daha sonra verilere erişmeyi öğrenmek için bkz. [Eski çalışanı kaldırma](../add-users/remove-former-employee.md).
-- Kullanıcının lisansını kaldırırsanız ve hala Office uygulamaları yüklüyse, Office uygulamaları [kullandıklarında Office Lisanssız Ürün ve etkinleştirme hataları](https://support.microsoft.com/office/0d23d3c0-c19c-4b2f-9845-5344fedc4380) görür.
+- Bir kullanıcının lisansını kaldırırsanız ve office uygulamaları hala yüklüyse, Office uygulamalarını kullanırken [Office'te Lisanssız Ürün ve etkinleştirme hataları](https://support.microsoft.com/office/0d23d3c0-c19c-4b2f-9845-5344fedc4380) görür.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

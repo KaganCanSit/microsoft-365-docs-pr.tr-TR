@@ -1,5 +1,5 @@
 ---
-title: Fiyatı düşürmek için promosyon kodunuzu kullanma
+title: Fiyatı düşürmek için promosyon kodunuzu kullanın
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -18,31 +18,31 @@ ms.custom:
 - AdminSurgePortfolio
 - okr_SMB
 search.appverid: MET150
-description: Fiyatı düşürmek için Microsoft 365 aboneliğinize promosyon kodu uygulama ve hata durumunda promosyon kodu sorunlarını giderme hakkında bilgi alın.
+description: Fiyatı düşürmek için Microsoft 365 aboneliğinize promosyon kodu uygulamayı ve bir hata durumunda promosyon kodu sorunlarını gidermeyi öğrenin.
 ms.date: 03/17/2021
-ms.openlocfilehash: 08a5df42de5c230ef7f0945e40c13262e0ae2bb7
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: bff75666fc27895c3d4bdf08477aec677ccd927d
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63325411"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489421"
 ---
-# <a name="use-your-promo-code-to-reduce-price"></a>Fiyatı düşürmek için promosyon kodunuzu kullanma
+# <a name="use-your-microsoft-365-for-business-promo-code-to-reduce-the-price"></a>Fiyatı düşürmek için İş için Microsoft 365 promosyon kodunuzu kullanın
 
-Abonelik satın aldığınız zaman, promosyon kodu kullanarak fiyatı düşürebilirsiniz. Aboneliğinize promosyon kodu uygulama hakkında bilgi edinmek, Promosyon kodu koşullarını öğrenmek ve Promosyon kodlarıyla ilgili sorunları [](#promo-code-terms)gidermek için bu [makaleyi okuyun](#troubleshooting-promo-codes).
+Abonelik satın aldığınızda, fiyatı düşürmek için promosyon kodunu kullanabilirsiniz. Aboneliğinize promosyon kodu uygulamayı, Promosyon [kodu terimleri](#promo-code-terms) hakkında bilgi edinmek ve [Promosyon kodlarıyla ilgili sorunları gidermeyi](#troubleshooting-promo-codes) öğrenmek için bu makaleyi okuyun.
   
 ## <a name="apply-a-promo-code-to-your-subscription"></a>Aboneliğinize promosyon kodu uygulama
 
-1. Yeni bir abonelik satın alarak veya mevcut bir aboneliğe hizmet ekleyerek satın almayla başlarsınız.
-2. Çıkışta Promosyon veya indirim **kodu var mı? seçeneğine** tıklayın ve kutuya kodunuzu girin.
-3. Promosyon **kodunu uygula'ya tıklayın**. Başarıyla uygulandığını onaylamanız gerekir. Farklı bir ileti görürseniz, nedenini anlamak için [Promosyon kodlarıyla ilgili sorunları giderme](#troubleshooting-promo-codes) konusuna bakın.
-4. Çıkış yapmaya devam. Sipariş onayı sayfasında, tutara indirim kodunuzu da ekli olarak görebilirsiniz.
+1. Yeni bir abonelik satın alarak veya mevcut aboneliğe hizmet ekleyerek satın alma işleminizi başlatın.
+2. Kullanıma aldığınızda Promosyon **veya indirim kodunuz mu var?** öğesini seçin ve ardından kodunuzu kutuya girin.
+3. **Promosyon kodunu uygula'yı** seçin. Başarıyla uygulandığını onaylamanız gerekir. Farklı bir ileti görürseniz, nedenini anlamak için [Promosyon kodlarıyla ilgili sorunları giderme](#troubleshooting-promo-codes) konusuna bakın.
+4. Kullanıma devam edin. Sipariş onayı sayfasında indirim kodunuzun tutara dahil olduğunu görürsünüz.
 
-Satın alma işleminizi tamamlandıktan sonra, promosyon kodunuz tarafından oluşturulan indirimi faturanıza bakabilirsiniz. Daha fazla bilgi edinmek [için bkz.](billing-and-payments/view-your-bill-or-invoice.md)
+Satın alma işleminizi tamamladıktan sonra, promosyon kodunuz tarafından oluşturulan indirimi faturanızda görebilirsiniz. Daha fazla bilgi [için bkz](billing-and-payments/view-your-bill-or-invoice.md).
   
 ## <a name="promo-code-terms"></a>Promosyon kodu koşulları
 
-Aşağıdaki yönergeler, iş abonelikleri için Microsoft 365 kodları için geçerlidir.
+İş için Microsoft 365 aboneliklerine yönelik promosyon kodları için aşağıdaki yönergeler geçerlidir.
   
 - **Abonelik başına promosyon kodu sayısı** Aynı siparişte birden fazla aboneliğin promosyon kodunu kullanabilirsiniz, ancak aynı abonelik için birden fazla promosyon kodu kullanamazsınız.
 - **İndirim süresi** Siparişinize uygulandıktan sonra, promosyon kodu indirimi aboneliğinizin süresi boyunca geçerli olur. Aboneliğinizin süresi aydan aya ise, promosyon kodu indirimi kodu girdiğiniz fatura ayının sonuna kadar geçerlidir. Aboneliğinizin süresi yıllık ise (aylık ödeniyor olsa bile), promosyon kodu indirimi kodu girdiğiniz fatura yılının sonuna kadar geçerlidir.
@@ -60,6 +60,6 @@ Promosyon kodunuzu girdikten sonra bir hata iletisi alırsanız, bunun birkaç n
   
 ## <a name="related-content"></a>İlgili içerik
 
-[Ücretsiz deneme aboneliğinden abonelik satın alma](./try-or-buy-microsoft-365.md) (makale)\  
-[Başka bir abonelik satın alma](./try-or-buy-microsoft-365.md) (makale)\  
+[Ücretsiz denemenizden abonelik satın alın](./try-or-buy-microsoft-365.md) (makale)\  
+[Başka bir abonelik satın alın](./try-or-buy-microsoft-365.md) (makale)\  
 [Eklenti satın alma veya düzenleme](buy-or-edit-an-add-on.md) (makale)

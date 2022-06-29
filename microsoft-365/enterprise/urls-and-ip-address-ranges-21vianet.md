@@ -3,7 +3,7 @@ title: 21Vianet tarafından sağlanan Office 365 için URL'ler ve IP adresi aral
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 04/28/2022
+ms.date: 06/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -21,22 +21,22 @@ f1.keywords:
 - NOCSH
 description: Bu makalede, Çin'de 21Vianet tarafından çalıştırıldığında Office 365 için URL'ler ve IP adresi aralıkları listelenir.
 hideEdit: true
-ms.openlocfilehash: 4c91505c0a83408e435879e718901d949e5eba26
-ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
+ms.openlocfilehash: e99a89e511faef069f0856e046ea1898e896b3c1
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65217530"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489913"
 ---
 # <a name="urls-and-ip-address-ranges-for-office-365-operated-by-21vianet"></a>21Vianet tarafından sağlanan Office 365 için URL'ler ve IP adresi aralıkları
 
- *Şunlar için geçerlidir: 21Vianet tarafından sağlanan Office 365 - Küçük İşletme Yöneticisi, Office 365 21Vianet tarafından sağlanan - Yönetici*
+ *Şunlar için geçerlidir: 21Vianet tarafından sağlanan Office 365 - Küçük İşletme Yönetici, 21Vianet tarafından sağlanan Office 365 - Yönetici*
 
 **Özet**: Aşağıdaki uç noktalar (FQDN'ler, bağlantı noktaları, URL'ler, IPv4 ve IPv6 ön ekleri) 21 Vianet tarafından sağlanan Office 365 için geçerlidir ve yalnızca bu planları kullanan kuruluşlara üretkenlik hizmetleri sunmak üzere tasarlanmıştır.
   
- **Office 365 uç noktaları:** [Dünya çapında (GCC dahil)](urls-and-ip-address-ranges.md)  |  *21 Vianet* |  [Office 365 ABD Kamu DoD](microsoft-365-u-s-government-dod-endpoints.md) |  [Office 365 ABD Kamu GCC High](microsoft-365-u-s-government-gcc-high-endpoints.md) tarafından sağlanan Office 365 |
+ **Office 365 uç noktaları:** *21 Vianet* |  [Office 365 ABD Kamu DoD](microsoft-365-u-s-government-dod-endpoints.md) |  Office 365 ABD [Kamu GCC High](microsoft-365-u-s-government-gcc-high-endpoints.md) tarafından sağlanan [dünya çapında (GCC dahil)](urls-and-ip-address-ranges.md)  |  Office 365 |
   
-**Son güncelleştirme:** 28.04.2021 - ![RSS.](../media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [Günlük aboneliğini değiştir](https://endpoints.office.com/version/China?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)
+**Son güncelleştirme:** 06.01.2022 - ![RSS.](../media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [Günlük aboneliğini değiştir](https://endpoints.office.com/version/China?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)
 
 **İndirin:** tüm gerekli ve isteğe bağlı hedeflerin [JSON olarak biçimlendirilmiş](https://endpoints.office.com/endpoints/China?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) bir listesi.
 
@@ -44,7 +44,7 @@ Bu verileri kullanarak ağ bağlantısını yönetmeye yönelik önerilerimizi a
 
 Aşağıdaki uç nokta verileri, kullanıcının makinesinden Office 365 bağlantı gereksinimlerini listeler. Microsoft'tan bir müşteri ağına giden ve bazen karma veya gelen ağ bağlantıları olarak adlandırılan ağ bağlantılarını içermez.
 
-Uç noktalar dört hizmet alanında gruplandırılır. İlk üç hizmet alanı, bağlantı için bağımsız olarak seçilebilir. Dördüncü hizmet alanı ortak bir bağımlılıktır (Ortak ve Office Microsoft 365 olarak adlandırılır) ve her zaman ağ bağlantısı olmalıdır.
+Uç noktalar dört hizmet alanında gruplandırılır. İlk üç hizmet alanı, bağlantı için bağımsız olarak seçilebilir. Dördüncü hizmet alanı ortak bir bağımlılıktır (Microsoft 365 Ortak ve Office olarak adlandırılır) ve her zaman ağ bağlantısı olmalıdır.
 
 Gösterilen veri sütunları şunlardır:
 

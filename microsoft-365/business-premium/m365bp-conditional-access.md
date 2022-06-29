@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: dansimp
 audience: Admin
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
 ms.collection:
@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Güvenlik varsayılanlarının, Microsoft 365 İş Ekstra için önceden yapılandırılmış güvenlik ayarları sağlayarak kuruluşunuzun kimlikle ilgili saldırılara karşı korunmasına nasıl yardımcı olabileceğini öğrenin.
-ms.openlocfilehash: c1a63efc29154768a7d54d31f51c25a3c84fa30a
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 24f4cbc8feda3689a3a6f7ee49a876cd205939f3
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417852"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489178"
 ---
 # <a name="security-defaults-and-multi-factor-authentication"></a>Güvenlik varsayılanları ve çok faktörlü kimlik doğrulaması
 
@@ -54,7 +54,7 @@ Güvenlik varsayılanları, şirketinizin kullanıcı hesaplarını baştan koru
 - MFA yapabilen eski kimlik doğrulama istemcilerinden kimlik doğrulamasını devre dışı bırakma.
 - Her oturum açtıklarında fazladan kimlik doğrulaması gerektirerek yöneticileri koruma.
 
-MFA, şirketinizin güvenliğini sağlamanın önemli bir ilk adımıdır ve güvenlik varsayılanları MFA'nın uygulanmasını kolaylaştırır. Aboneliğiniz 22 Ekim 2019 veya sonrasında oluşturulduysa, güvenlik varsayılanları sizin için otomatik olarak etkinleştirilmiş olabilir, onaylamak için&mdash; ayarlarınızı denetlemeniz gerekir.
+MFA, şirketinizin güvenliğini sağlamanın önemli bir ilk adımıdır ve güvenlik varsayılanları MFA'nın uygulanmasını kolaylaştırır. Aboneliğiniz 22 Ekim 2019 veya sonrasında oluşturulduysa, güvenlik varsayılanları sizin için otomatik olarak etkinleştirilmiş olabilir, onaylamak için&mdash;ayarlarınızı denetlemeniz gerekir.
 
 > [!TIP]
 > Güvenlik varsayılanları ve uyguladıkları ilkeler hakkında daha fazla bilgi için bkz. [Güvenlik varsayılanları nedir?](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults)
@@ -63,9 +63,9 @@ MFA, şirketinizin güvenliğini sağlamanın önemli bir ilk adımıdır ve gü
 
 1. güvenlik yöneticisi, Koşullu Erişim yöneticisi veya Genel yönetici kimlik bilgileriyle <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> oturum açın.
 
-2. Sol bölmede **Tümünü Göster'i** seçin ve ardından **Yönetim merkezleri'nin** altında **Azure Active Directory'ı** seçin.
+2. Sol bölmede **Tümünü Göster'i** seçin ve **ardından Yönetici merkezleri** altında **Azure Active Directory'yi** seçin.
 
-3. **Azure Active Directory yönetim merkezinin** sol bölmesinde **Azure Active Directory'ı** seçin.
+3. **Azure Active Directory yönetim merkezinin sol bölmesinde Azure Active Directory'yi** seçin.
 
 4. Panonun sol menüsündeki **Yönet** bölümünde **Özellikler'i** seçin.
 

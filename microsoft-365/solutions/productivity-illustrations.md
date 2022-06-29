@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365 üretkenlik çizimleri
-description: Bu mimari diyagramlarıyla Microsoft 365 ve Microsoft Teams üretkenlik çözümleri uygulamayı öğrenin.
+description: Bu mimari diyagramlarıyla Microsoft 365 ve Microsoft Teams üretkenlik çözümlerini uygulamayı öğrenin.
 ms.author: samanro
 author: samanro
 manager: bcarter
@@ -13,23 +13,23 @@ ms.collection:
 - M365-security-compliance
 ms.custom: ''
 f1.keywords: NOCSH
-ms.openlocfilehash: 08a85610d7790924e5e702f9d0a4133f391c4bde
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+ms.openlocfilehash: a0b9688cf184a3b35c4780d4fdaf979fca193380
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65669286"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487636"
 ---
 # <a name="microsoft-365-productivity-illustrations"></a>Microsoft 365 üretkenlik çizimleri
 
-Microsoft 365 kurumsal çözüm serisi, özellikle de özelliklerin Teams mimari diyagramları da dahil olmak üzere teknolojiler arasında geçiş yaptığı durumlarda Microsoft 365 özellikleri uygulamaya yönelik rehberlik sağlar.
+Microsoft 365 kurumsal çözüm serisi, özellikle teams mimari diyagramları dahil olmak üzere özelliklerin teknolojiler arasında geçiş yaptığı durumlarda Microsoft 365 özelliklerini uygulamaya yönelik rehberlik sağlar.
 
-## <a name="microsoft-teams-and-related-productivity-services-in-microsoft-365-for-it-architects"></a>BT mimarları için Microsoft 365'da Microsoft Teams ve ilgili üretkenlik hizmetleri
-Microsoft 365'daki üretkenlik hizmetlerinin mantıksal mimarisi, Microsoft Teams ile önderlik eder.
+## <a name="microsoft-teams-and-related-productivity-services-in-microsoft-365-for-it-architects"></a>BT mimarları için Microsoft 365'te Microsoft Teams ve ilgili üretkenlik hizmetleri
+Microsoft Teams ile önde gelen Microsoft 365'teki üretkenlik hizmetlerinin mantıksal mimarisi.
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![mantıksal mimari posteri Teams.](../downloads/msft-teams-logical-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-teams-logical-architecture.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-teams-logical-architecture.pdf) \| [Visio](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-teams-logical-architecture.vsdx)  <br>Ocak 2021'de güncelleştirildi   |Microsoft, veri idaresi, güvenlik ve uyumluluk özellikleriyle işbirliği deneyimleri sağlamak için birlikte çalışan bir üretkenlik hizmetleri paketi sağlar. <br/> <br/>Bu çizim serisi, Microsoft Teams ile önde gelen kurumsal mimarlar için üretkenlik hizmetlerinin mantıksal mimarisine yönelik bir görünüm sağlar.|
+|[![Teams mantıksal mimari posteri.](../downloads/msft-teams-logical-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-teams-logical-architecture.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-teams-logical-architecture.pdf) \| [Visio](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-teams-logical-architecture.vsdx)  <br>Ocak 2021'de güncelleştirildi   |Microsoft, veri idaresi, güvenlik ve uyumluluk özellikleriyle işbirliği deneyimleri sağlamak için birlikte çalışan bir üretkenlik hizmetleri paketi sağlar. <br/> <br/>Bu çizim serisi, Microsoft Teams ile önde gelen kurumsal mimarlar için üretkenlik hizmetlerinin mantıksal mimarisine yönelik bir görünüm sağlar.|
 
 ## <a name="corporate-communications-with-microsoft-365--a-contoso-case-study"></a>Microsoft 365 ile kurumsal iletişimler — Contoso örnek olay incelemesi
 Çalışan katılımı, herhangi bir kuruluşta çalışma alanı memnuniyeti, elde tutma ve üretkenlik açısından önemli bir katkıda bulunur. Microsoft 365 genelinde, hedef kitlenizle iletişim kurmanın ve etkileşim kurmanın birden çok yolu vardır. 
@@ -40,7 +40,7 @@ Hangi yöntemin (veya yöntem bileşimlerinin) ve bunların ne zaman kullanılac
 |:-----|:-----|
 |[![Contoso kurumsal iletişim senaryosu posteri.](../media/solutions-architecture-center/contoso-corporate-communication-thumb.png)](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) <br/> [PDF](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) \| [Visio](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.vsdx)  <br>Ocak 2022'de güncelleştirildi   |Bu posterde Contoso'nun popüler iletişim senaryolarında çalışanları nasıl bilgilendirip etkileşimde tuttuğu gösterilmektedir. Contoso, yeni bir teklif de dahil olmak üzere çeşitli Microsoft 365 uygulamaları Viva Bağlantılar kullanır.<br/><br/>**İlgili çözüm kılavuzları** <br/> <ul><li>[Kurumsal iletişimler: Rehberlik, yöntemler ve ürünler](/sharepoint/corporate-communications-overview)|
 
-## <a name="groups-in-microsoft-365-for-it-architects"></a>BT Mimarları için Microsoft 365 grupları
+## <a name="groups-in-microsoft-365-for-it-architects"></a>BT Mimarları için Microsoft 365'teki gruplar
 Bu çizim, BT mimarlarına Microsoft 365 Grupları hakkında bilgi içerir. Kuruluşunuzda işbirliği için Microsoft 365 Grupları ve ekipleri yapılandırma ve yönetme hakkında bilgi edinmek için bkz. [Microsoft 365 ile güvenli işbirliği ayarlama](/microsoft-365/solutions/setup-secure-collaboration-with-teams) ve [İşbirliği idaresi nedir?](/microsoft-365/solutions/collaboration-governance-overview).
 
 | Öğe | Açıklama |
@@ -49,11 +49,11 @@ Bu çizim, BT mimarlarına Microsoft 365 Grupları hakkında bilgi içerir. Kuru
 
 ## <a name="migrate-to-microsoft-365"></a>Microsoft 365'e geçiş
 
-Microsoft, geçiş sırasında içeriğinizin korunmasını ve güvenliğinin sağlanmasını vurgulayarak şirket içi ağ dosya paylaşımlarınızı ve SharePoint Sunucu sitelerinizi Microsoft 365 geçirmek için araçlar sağlar. Bu çizim kümesi, içeriğinizi SharePoint, Teams ve OneDrive taşımak için kullanılabilecek çeşitli yöntemleri ve verilerinizin süreç boyunca nasıl aktığını gösterir.
+Microsoft, geçiş sırasında içeriğinizin korunmasını ve güvenliğinin sağlanmasını vurgulayarak şirket içi ağ dosya paylaşımlarınızı ve SharePoint Server sitelerinizi Microsoft 365'e geçirmek için araçlar sağlar. Bu çizim kümesi, içeriğinizi SharePoint, Teams ve OneDrive'a taşımak için kullanılabilecek çeşitli yöntemleri ve verilerinizin süreç boyunca nasıl aktığını gösterir.
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Model posteri: Microsoft 365 geçiş.](../media/solutions-architecture-center/msft-migration-thumb.png)](https://download.microsoft.com/download/0/5/b/05b7fb7c-1557-4ebb-9036-c5fc3a4cd94c/m365-migration-posters-mm-spmt.pdf) <p> [PDF](https://download.microsoft.com/download/0/5/b/05b7fb7c-1557-4ebb-9036-c5fc3a4cd94c/m365-migration-posters-mm-spmt.pdf)\|[Visio](https://download.microsoft.com/download/0/5/b/05b7fb7c-1557-4ebb-9036-c5fc3a4cd94c/m-365-migration-posters-mm-spmt.vsdx) <p> Mart 2021 güncelleştirildi |Içerir: <ul><li> Dosya paylaşımı geçişi</li><li>sunucu geçişi SharePoint</li></ul> <p> Daha fazla bilgi için bkz[. İçeriğinizi Microsoft 365 geçirme](/sharepointmigration/migrate-to-sharepoint-online).|
+|[![Model posteri: Microsoft 365'e geçiş.](../media/solutions-architecture-center/msft-migration-thumb.png)](https://download.microsoft.com/download/0/5/b/05b7fb7c-1557-4ebb-9036-c5fc3a4cd94c/m365-migration-posters-mm-spmt.pdf) <p> [PDF](https://download.microsoft.com/download/0/5/b/05b7fb7c-1557-4ebb-9036-c5fc3a4cd94c/m365-migration-posters-mm-spmt.pdf)\|[Visio](https://download.microsoft.com/download/0/5/b/05b7fb7c-1557-4ebb-9036-c5fc3a4cd94c/m-365-migration-posters-mm-spmt.vsdx) <p> Mart 2021 güncelleştirildi |Içerir: <ul><li> Dosya paylaşımı geçişi</li><li>SharePoint Server geçişi</li></ul> <p> Daha fazla bilgi için bkz. [İçeriğinizi Microsoft 365'e geçirme](/sharepointmigration/migrate-to-sharepoint-online).|
 
 ## <a name="microsoft-365-information-protection-and-compliance-capabilities"></a>Microsoft 365 bilgi koruma ve uyumluluk özellikleri
 
@@ -64,7 +64,7 @@ Bu çizim kümesi, bu özelliklerin yaygın mevzuat gereksinimlerini karşılama
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Model posteri: bilgi koruma ve uyumluluk özelliklerini Microsoft 365.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> İngilizce: [pdf](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| olarak [indirme Visio olarak indirme](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Japonca: [pdf](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf)\| olarak [indirme Visio olarak indirme](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)   <br/> Kasım 2020'de güncelleştirildi|Içerir: <ul><li>  Bilgi koruma ve veri kaybı önleme</li><li>Bekletme ilkeleri ve bekletme etiketleri </li><li>Bilgi engelleri</li><li>İletişim uyumluluğu</li><li>Insider riski</li><li>Üçüncü taraf veri alımı</li>|
+|[![Model posteri: Microsoft 365 bilgi koruma ve uyumluluk özellikleri.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> İngilizce: [PDF](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)  \| olarak [indirme Visio olarak indirme](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx) <br/> Japonca: [PDF](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf)  \| olarak [indirme Visio olarak indirme](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx) <br/> Kasım 2020'de güncelleştirildi|Içerir: <ul><li>  Bilgi koruma ve veri kaybı önleme</li><li>Bekletme ilkeleri ve bekletme etiketleri </li><li>Bilgi engelleri</li><li>İletişim uyumluluğu</li><li>Insider riski</li><li>Üçüncü taraf veri alımı</li>|
 
 
 ## <a name="security-and-information-protection-for-multi-region-organizations"></a>Çok Bölgeli Kuruluşlar için Güvenlik ve Information Protection
@@ -72,7 +72,7 @@ Tek bir Microsoft 365 kiracısı olan çok bölgeli kuruluşlar için güvenlik 
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Çok bölgeli bilgi grafiği.](../media/solutions-architecture-center/multi-region-single-tenant-security-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.pdf) \| [Visio](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.vsdx)<br>Mart 2020 güncelleştirildi |Genel kuruluşunuz için tek bir Microsoft 365 kiracı kullanmak birçok nedenden dolayı en iyi seçim ve deneyimdir. Ancak, birçok mimar farklı bölgelerdeki güvenlik ve bilgi koruma hedeflerini nasıl karşılayabilecekleriyle mücadele eder. Bu konu kümesi öneriler sağlar. |
+|[![Çok bölgeli bilgi grafiği.](../media/solutions-architecture-center/multi-region-single-tenant-security-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.pdf) \| [Visio](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.vsdx)<br>Mart 2020 güncelleştirildi |Genel kuruluşunuz için tek bir Microsoft 365 kiracısı kullanmak birçok nedenden dolayı en iyi seçim ve deneyimdir. Ancak, birçok mimar farklı bölgelerdeki güvenlik ve bilgi koruma hedeflerini nasıl karşılayabilecekleriyle mücadele eder. Bu konu kümesi öneriler sağlar. |
 
 <!--
 ## Security Guidance for Political Campaigns, Nonprofits, and Other Agile Organizations
@@ -92,7 +92,7 @@ Ortamınıza bağlı olarak, bazı araçlar belirli mimariler için daha uygundu
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Uç Nokta için Microsoft Defender dağıtım stratejisi için başparmak görüntüsü.](../media/solutions-architecture-center/mde-deployment-strategy.png)](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)<br/> [PDF](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)\| [Visio](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx)   <br>Eylül 2021'de güncelleştirildi| Mimari malzeme, dağıtımınızı aşağıdaki mimariler için planlamanıza yardımcı olur: <ul><li> Bulutta yerel </li><li> Ortak yönetim </li><li> Şirket içi</li><li>Değerlendirme ve yerel ekleme</li> |
+|[![Uç Nokta için Microsoft Defender dağıtım stratejisi için başparmak görüntüsü.](../media/solutions-architecture-center/mde-deployment-strategy.png)](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)<br/> [PDF](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)  \| [Visio](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx) <br>Eylül 2021'de güncelleştirildi| Mimari malzeme, dağıtımınızı aşağıdaki mimariler için planlamanıza yardımcı olur: <ul><li> Bulutta yerel </li><li> Ortak yönetim </li><li> Şirket içi</li><li>Değerlendirme ve yerel ekleme</li> |
 <!--
 
 <a name="BKMK_O365IDP"></a>
@@ -107,21 +107,22 @@ Recommended Zero Trust capabilities for protecting identities and devices that a
 --> 
 <a name="BKMK_ediscovery"></a>
 
-## <a name="ediscovery-premium-architecture-in-microsoft-365"></a>Microsoft 365'de eBulma (Premium) mimarisi
+## <a name="ediscovery-premium-architecture-in-microsoft-365"></a>Microsoft 365'te eBulma (Premium) mimarisi
 
 Microsoft 365 Multi-Geo ortamları da dahil olmak üzere eBulma (Premium) uçtan uca iş akışı ve veri akışı.
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Model posteri: Microsoft 365'de eBulma (Premium) Mimarisi.](../media/solutions-architecture-center/ediscovery-poster-thumb.png)](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png) <br/> [Resim](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png) \| olarak görüntüle [PDF](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.pdf)\| olarak indirme [Visio olarak indirme](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.vsdx)   <br/> Ekim 2020 güncelleştirildi|Içerir: <ul><li>  Tek bir ortamda uçtan uca iş akışı</li><li>Microsoft 365 Multi-Geo ortamında uçtan uca iş akışı </li><li>EDRM iş akışını destekleyen uçtan uca veri akışı</li> |
+|[![Model posteri: Microsoft 365'te eKeşif (Premium) Mimarisi.](../media/solutions-architecture-center/ediscovery-poster-thumb.png)](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png) <br/> [Resim](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png) \| olarak görüntüle [PDF](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.pdf)  \| olarak indirme [Visio olarak indirme](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.vsdx) <br/> Ekim 2020 güncelleştirildi|Içerir: <ul><li>  Tek bir ortamda uçtan uca iş akışı</li><li>Microsoft 365 Multi-Geo ortamında uçtan uca iş akışı </li><li>EDRM iş akışını destekleyen uçtan uca veri akışı</li> |
 
 ## <a name="microsoft-telephony-solutions"></a>Microsoft Telefon Çözümleri
 
-Microsoft bulutunda Teams yolculuğunuza başlarken Microsoft çeşitli seçenekleri destekler. Bu poster, kuruluşunuzdaki kullanıcılar için hangi Microsoft telefon çözümünün (bulutta Telefon Sistemi veya şirket içi Kurumsal Ses) doğru olduğuna ve kuruluşunuzun Genel Anahtarlı Telefon Ağına (PSTN) nasıl bağlanabileceğine karar vermenize yardımcı olur.
+Bu poster, kuruluşunuzdaki kullanıcılar için hangi Microsoft telefon çözümünün doğru olduğuna karar vermenize yardımcı olur. Microsoft'un Microsoft Teams ile Microsoft 365'te arama denetimini ve Özel Dal Değişimi (PBX) özelliklerini etkinleştirmeye yönelik teknolojisi olan Telefon Sistemi açıklanır. Posterde Telefon Sistemi'ni Genel Anahtarlı Telefon Ağına (PSTN) bağlama seçenekleri de açıklanır.  
+
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Microsoft Telefon Çözümleri posteri.](../media/solutions-architecture-center/microsoft-telephony-solutions-thumb.png)](https://download.microsoft.com/download/4/3/5/435cd4e9-ca56-4fd1-acb6-d1fda7952320/microsoft-voice-solutions.pdf) <br/> [PDF](https://download.microsoft.com/download/4/3/5/435cd4e9-ca56-4fd1-acb6-d1fda7952320/microsoft-voice-solutions.pdf) \| [Visio](https://download.microsoft.com/download/7/5/c/75c13012-e20c-48bd-a6dd-ea49d1a3420d/microsoft-voice-solutions.vsdx) <br/>Mart 2021 güncelleştirildi | Daha fazla bilgi için bkz. [Teams ses çözümünüzü planlama](/microsoftteams/cloud-voice-landing-page).|
+|[![Microsoft Telefon Çözümleri posteri.](../media/solutions-architecture-center/microsoft-voice-solutions-thumb.png)](https://download.microsoft.com/download/4/3/5/435cd4e9-ca56-4fd1-acb6-d1fda7952320/microsoft-voice-solutions.pdf) <br/> [PDF](https://download.microsoft.com/download/4/3/5/435cd4e9-ca56-4fd1-acb6-d1fda7952320/microsoft-voice-solutions.pdf) \| [Visio](https://download.microsoft.com/download/7/5/c/75c13012-e20c-48bd-a6dd-ea49d1a3420d/microsoft-voice-solutions.vsdx) <br/>Haziran 2022'de güncelleştirildi | Daha fazla bilgi için bkz. [Teams ses çözümünüzü planlama](/microsoftteams/cloud-voice-landing-page).|
 
 
 ## <a name="set-up-your-infrastructure-for-hybrid-work"></a>Hibrit çalışma için altyapınızı ayarlayın
@@ -134,12 +135,12 @@ Haziran 2021'de güncelleştirildi
 
 Daha fazla bilgi için bu posterin makalesine bakın: [Microsoft 365 ile karma çalışma için altyapınızı ayarlama](empower-people-to-work-remotely.md).
 
-## <a name="microsoft-teams-with-security-isolation"></a>Güvenlik yalıtımıyla Microsoft Teams
+## <a name="microsoft-teams-with-security-isolation"></a>Güvenlik yalıtımına sahip Microsoft Teams
 
-Microsoft 365 ile, Microsoft Teams'da özel bir ekip yapılandırabilir ve dosyaları şifrelemek için SharePoint site güvenlik ayarlarını ve benzersiz bir duyarlılık etiketini kullanarak yalnızca ekip üyelerinin şifresini çözebilmesini sağlayabilirsiniz.
+Microsoft 365 ile Microsoft Teams'de özel bir ekip yapılandırabilir ve dosyaları şifrelemek için SharePoint site güvenlik ayarlarını ve benzersiz bir duyarlılık etiketini kullanarak yalnızca ekip üyelerinin şifresini çözebilmesini sağlayabilirsiniz.
 
-[![güvenlik yalıtım posteri ile Microsoft Teams.](../media/secure-teams-security-isolation/team-security-isolation-poster.png)](../downloads/team-security-isolation-poster.pdf) <br/>
-[PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/team-security-isolation-poster.pdf) |  [PowerPoint](https://download.microsoft.com/download/8/0/5/8057fc16-c044-40b6-a652-7ed555ba2895/team-security-isolation-poster.pptx) <br>
+[![Güvenlik yalıtım posteri içeren Microsoft Teams.](../media/secure-teams-security-isolation/team-security-isolation-poster.png)](../downloads/team-security-isolation-poster.pdf) <br/>
+[PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/team-security-isolation-poster.pdf) |  [Powerpoint](https://download.microsoft.com/download/8/0/5/8057fc16-c044-40b6-a652-7ed555ba2895/team-security-isolation-poster.pptx) <br>
 Ağustos 2020 güncelleştirildi
 
 Daha fazla bilgi için bu posterin makalesine bakın: [Ekibi güvenlik yalıtımıyla yapılandırma](secure-teams-security-isolation.md).

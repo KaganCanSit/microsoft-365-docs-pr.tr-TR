@@ -18,85 +18,85 @@ ms.custom:
 - AdminSurgePortfolio
 - admindeeplinkMAC
 search.appverid: MET150
-description: Microsoft sertifikalı çözüm sağlayıcıları (iş ortakları) ile birlikte çalışarak, kuruluş veya okulunuz için ürün ve hizmetleri satın almayı ve yönetmeyi öğrenin.
+description: Kuruluşunuz veya okulunuz için ürün ve hizmet satın almak ve yönetmek için Microsoft sertifikalı çözüm sağlayıcılarıyla (iş ortakları) çalışmayı öğrenin.
 ms.date: 02/04/2022
-ms.openlocfilehash: c07267989e8df7203cced6c3a21ffd9aa667347f
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 313cea4bef92da66bb5c95f3cf9ccd0f9a1d6f32
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63328981"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490729"
 ---
-# <a name="manage-partner-relationships"></a>İş ortağı ilişkilerini yönetme
+# <a name="manage-microsoft-certified-solution-provider-partner-relationships"></a>Microsoft sertifikalı çözüm sağlayıcısı iş ortağı ilişkilerini yönetme
 
-Microsoft sertifikalı çözüm sağlayıcıları (iş ortakları) ile birlikte çalışarak, kurum veya okulunuz için ürün ve hizmet satın alma ve yönetme. Ayarlamalar için birkaç adım söz konusudır.
+Kuruluşunuz veya okulunuz için ürün ve hizmetleri satın almak ve yönetmek için Microsoft sertifikalı çözüm sağlayıcılarıyla (iş ortakları) çalışabilirsiniz. Ayarlamaya yönelik birkaç adım vardır.
 
-1. Yöneticiler formu kullanarak bir iş ortağını bulabilir ve bu iş ortağıyla iletişime geçebilirsiniz <a href="https://www.microsoft.com/solution-providers/home" target="_blank">https://www.microsoft.com/solution-providers/home</a>.
-2. İş ortakları, iş ortağı ilişkisi kurmak için müşterilere bir e-posta isteği gönderir.
-3. Müşteriler daveti iş Microsoft 365 yönetim merkezi sonra iş ortağıyla çalışmaya başlar.
+1. Yöneticiler konumundaki <a href="https://www.microsoft.com/solution-providers/home" target="_blank">https://www.microsoft.com/solution-providers/home</a>formu kullanarak bir iş ortağı bulur ve iş ortağıyla iletişim kurar.
+2. İş ortakları, müşterilere iş ortağı ilişkisi kurmaları için bir e-posta isteği gönderir.
+3. Müşteriler daveti Microsoft 365 yönetim merkezi kabul edip iş ortağıyla çalışmaya başlar.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Bu adımları yapmak için Genel veya Faturalama yöneticisi olun. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../admin/add-users/about-admin-roles.md).
+Bu adımları gerçekleştirmek için Genel yönetici veya Faturalama yöneticisi olmanız gerekir. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../admin/add-users/about-admin-roles.md).
 
-## <a name="what-can-a-partner-do-for-my-organization-or-school"></a>Kuruluşum veya okulum için iş ortağı ne yapabilirim?
+## <a name="what-can-a-partner-do-for-my-organization-or-school"></a>Bir iş ortağı kuruluşum veya okulum için ne yapabilir?
 
-bir iş ortağının birlikte çalışması için birkaç yol vardır. Belirtilen iş ihtiyaçlarına bağlı olarak, size istek gönderirken bu türlerden birini seçerler.
+Bir iş ortağının sizinle birlikte çalışabilmesi için kullanabileceğiniz çeşitli yollar vardır. Belirtilen iş gereksinimlerinize bağlı olarak, sizinle çalışmak üzere istek gönderdiklerinde bu türlerden birini seçerler.
 
 | İş ortağı türü | Açıklama |
 | ------ | ------------------- |
-| Ayrıntılı yönetici temsilcisi | Organizasyon veya okulunuz için ürün ve hizmetleri yöneten, ancak aynı zamanda kuruluşta neler yapmalarına erişimi sınırlı olan Microsoft 365 yönetim merkezi. Ayrıntılı temsilcili yönetici ayrıcalıkları (GDAP), iş ortaklarının genel yönetici iznine sahip olmadan yönetim merkezinde görevleri tamamlamasını sağlar. İş ortaklarına GDAP vererek, onlara en az izin veren rollere sahip olduğundan emin olur ve riski organizasyonla sınırlandırmış olursınız. |
-| Bayi | Microsoft ürünlerini organizasyonunıza veya okulunuza satan iş ortakları. |
-| Yönetici temsilcisi | Organizasyonunız veya okulunuz için ürün ve hizmetleri yöneten iş ortakları. Genel Azure Active Directory (AD) içinde, iş ortağı kiracınız için Bir Genel Yöneticidir. Bu rol kullanıcı hesapları oluşturma, lisansları atama ve yönetme ve parola sıfırlama gibi hizmetleri yönetmelerine olanak sağlar. |
-| Bayi & yönetici temsilcisi | Microsoft ürünleri ve hizmetlerini, organizasyon veya okulunuz için satan ve yöneten iş ortakları. |
-| Partner | İş ortağınıza kiracınıza bir kullanıcı hesabı sağlarsınız ve onlar sizin Microsoft hizmetleri başka kullanıcılarla çalışır. |
-| Danışman | İş ortakları parolaları sıfırlar ve sizin için destek olaylarını işler. |
-| Microsoft Ürün & Hizmet Sözleşmesi (MPSA) iş ortağı | MPSA programı aracılığıyla birden çok iş ortağıyla çalıştınız, bu iş ortaklarının birbirlerinin yaptığı satın almaları görmelerine izin veabilirsiniz. |
-| İş ortağı (LOB) iş ortağı | İş ortakları, organizasyonunıza veya okulunuza özel LOB uygulamalarını geliştirebilir, gönderebilir ve yönetebilir. |
+| Ayrıntılı yönetici temsilcisi | Kuruluşunuz veya okulunuz için ürün ve hizmetleri yöneten ancak Microsoft 365 yönetim merkezi yapabileceklerine sınırlı erişimi olan iş ortakları. Ayrıntılı yönetici ayrıcalıkları (GDAP), iş ortaklarının genel yönetici iznine sahip olmadan yönetim merkezindeki görevleri tamamlamasına olanak sağlar. İş ortaklarına GDAP vererek en az izin veren rollere sahip olduklarından emin olur ve riski kuruluşunuzla sınırlandırabilirsiniz. |
+| Bayi | Microsoft ürünlerini kuruluşunuza veya okulunuza satan iş ortakları. |
+| Yönetici temsilcisi | Kuruluşunuz veya okulunuz için ürün ve hizmetleri yöneten iş ortakları. Azure Active Directory'de (AD), iş ortağı kiracınızın Genel Yöneticisidir. Bu rol, kullanıcı hesabı oluşturma, lisans atama ve yönetme ve parola sıfırlama gibi hizmetleri yönetmelerine olanak tanır. |
+| Kurumsal bayi & yönetici temsilcisi | Microsoft ürünlerini ve hizmetlerini kuruluşunuza veya okulunuza satan ve yöneten iş ortakları. |
+| Partner | İş ortağınıza kiracınızda bir kullanıcı hesabı verirsiniz ve bunlar sizin adınıza diğer Microsoft hizmetleriyle çalışır. |
+| Danışman | İş ortakları parolaları sıfırlayabilir ve sizin için destek olaylarını işleyebilir. |
+| Microsoft Ürünleri & Hizmet Sözleşmesi (MPSA) iş ortağı | MPSA programı aracılığıyla birden fazla iş ortağıyla çalıştıysanız, onların birbirleri tarafından yapılan satın almaları görmelerini sağlayabilirsiniz. |
+| İş kolu (LOB) iş ortağı | İş ortakları kuruluşunuz veya okulunuz için özel LOB uygulamaları geliştirebilir, gönderebilir ve yönetebilir. |
 
 ## <a name="find-a-partner"></a>İş ortağı bulma
 
 1. <a href="https://www.microsoft.com/en-us/solution-providers/home" target="_blank">https://www.microsoft.com/en-us/solution-providers/home</a> adımına gidin.
-2. Konum bilginizi girin, kuruluş boyutunu seçin, ihtiyacınız olan hizmet türü için anahtar sözcükler ekleyin ve ardından Git'i **seçin**.
-3. Bir veya daha fazla iş ortağını seçin, ardından Seçilen **sağlayıcılarla bağlantı kur'a seçin**.
-4. İşle ilgili ihtiyaçlarını açıklamak için formu doldurun ve sonra Gönder'i **seçin**.
+2. Konumunuzu girin, kuruluşunuzun boyutunu seçin, ihtiyacınız olan hizmet türü için anahtar sözcükler ekleyin ve **ardından Git'i** seçin.
+3. Bir veya daha fazla iş ortağı seçin ve ardından **Seçili sağlayıcılara başvurun'u** seçin.
+4. İş gereksinimlerinizi açıklamak için formu doldurun ve **Gönder'i** seçin.
 
-İş ortağınız size bu kişiler hakkında daha fazla bilgi edinmek için bir şans verir. Bu iş ortağıyla çalışmaya karar verirsiniz, iş ortağı ilişkisi kurmanız için size bir e-posta daveti gönderirler.
+İş ortağı sizinle iletişim kurar ve bunlar hakkında daha fazla bilgi edinme fırsatı verir. Onlarla çalışmaya karar verirseniz, size iş ortağı ilişkisi kurmanız için bir e-posta daveti gönderirler.
 
-## <a name="review-and-accept-a-partner-relationship-and-microsoft-customer-agreement"></a>İş ortağı ilişkisini ve Microsoft Müşteri Sözleşmesi'ne ilişkini gözden geçirme ve kabul etme
+## <a name="review-and-accept-a-partner-relationship-and-microsoft-customer-agreement"></a>İş ortağı ilişkisini gözden geçirme ve kabul etme ve Microsoft Müşteri Sözleşmesi
 
-Bir iş ortağı bulup birlikte çalışmaya karar verdikten sonra size bir e-posta daveti gönderirler.
+Bir iş ortağı bulup onlarla çalışmaya karar verdikten sonra, size bir e-posta daveti gönderirler.
 
-1. E-postada, sayfaya gitmek için bağlantıyı <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a>.
-2. Sözleşmeyi **kabul et & iş ortağı yetkilendir** sayfasında **, Microsoft** Müşteri Sözleşmesi bağlantısını seçin ve belgeyi okuyun.
-3. Sözleşmeyi okuduğu kabul etmek için kutuyu işaretleyin.
-4. Kabul **Et'i & Yetkilendir'i seçin**.
-5. Üzerinde çalışmakta olduğunuz iş ortaklarının listesi görüntülenir. Ayrıntıları görmek için herhangi bir iş ortağını seçin.
+1. E-postada<a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">, Microsoft 365 yönetim merkezi</a> gitmek için bağlantıyı seçin.
+2. **sözleşmeyi kabul & iş ortağı yetkilendirme** sayfasında **, Microsoft Müşteri Sözleşmesi** bağlantısını seçin ve belgeyi okuyun.
+3. Sözleşmeyi okuduğunu onaylamak için kutuyu işaretleyin.
+4. **Yetkilendirme & Kabul Et'i** seçin.
+5. Üzerinde çalıştığınız iş ortaklarının listesi görüntülenir. Ayrıntıları görmek için herhangi bir iş ortağı seçin.
 
-## <a name="review-and-accept-a-microsoft-customer-agreement"></a>Microsoft Müşteri Sözleşmesi'ne yönelik inceleme ve kabul etme
+## <a name="review-and-accept-a-microsoft-customer-agreement"></a>Microsoft Müşteri Sözleşmesi gözden geçirme ve kabul etme
 
-Zaten bir iş ortağınız varsa ancak henüz bir Microsoft Müşteri Sözleşmesi imzalamadıysanız, satın alma işlemleri yapmaları veya aboneliklerinizi sizin adına yönetmeleri için önce sözleşmeyi kabul gerekir.
+Zaten bir iş ortağınız varsa ancak henüz bir Microsoft Müşteri Sözleşmesi imzalamadıysanız, sizin yerinize satın alma işlemi yapabilmeleri veya aboneliklerinizi yönetebilmeleri için önce sözleşmeyi kabul etmeniz gerekir.
 
-1. İş ortağından e-posta alırsanız sözleşmeyi kabul et sayfasına Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/?linkid=2116573" target="_blank">bağlantısını seçin.</a>
-2. Microsoft Müşteri Sözleşmesi **bağlantısını seçin ve** belgeyi okuyun.
-3. Sözleşmeyi okuduğu kabul etmek için kutuyu işaretleyin.
-4. Kabul **Et'i seçin**.
-5. Üzerinde çalışmakta olduğunuz iş ortaklarının listesi görüntülenir. Ayrıntıları görmek için herhangi bir iş ortağını seçin.
+1. İş ortağınızdan bir e-posta alırsanız Microsoft 365 yönetim merkezi gitmek için bağlantıyı seçin veya <a href="https://go.microsoft.com/fwlink/?linkid=2116573" target="_blank">Sözleşmeyi kabul et</a> sayfasına gidin.
+2. **Microsoft Müşteri Sözleşmesi** bağlantısını seçin ve belgeyi okuyun.
+3. Sözleşmeyi okuduğunu onaylamak için kutuyu işaretleyin.
+4. **Kabul Et'i** seçin.
+5. Üzerinde çalıştığınız iş ortaklarının listesi görüntülenir. Ayrıntıları görmek için herhangi bir iş ortağı seçin.
 
-## <a name="remove-partner-admin-roles"></a>İş ortağı yöneticisi rollerini kaldırma
+## <a name="remove-partner-admin-roles"></a>İş ortağı yönetici rollerini kaldırma
 
-İş ortağının isteğine bağlı olarak, daveti kabul ettiyseniz bu iş ortağına Genel ve Yardım masası yönetici rolleri vermeyi kabul edersiniz. Bu yönetici rollerini bir iş ortağına verseniz, onlara Otomatik olarak Azure AD'de yönetici temsilcisi ayrıcalıkları verirsiniz. Daha fazla bilgi için bkz. [Azure AD'de yönetici ayrıcalıkları temsili.](/partner-center/customers_revoke_admin_privileges#delegated-admin-privileges-in-azure-ad)
+İş ortağı tarafından yapılan isteğe bağlı olarak, daveti kabul ettiğinizde, onlara Genel ve Yardım Masası yönetici rolleri vermeyi kabul etmiş olursunuz. Bu yönetici rollerini bir iş ortağına verdiğinizde, Azure AD'de onlara otomatik olarak temsilci yönetici ayrıcalıkları verirsiniz. Daha fazla bilgi için bkz. [Azure AD yönetici ayrıcalıkları](/partner-center/customers_revoke_admin_privileges#delegated-admin-privileges-in-azure-ad) temsilcisi.
 
-Yeni ayrıntılı temsilcili yönetim ayrıcalıkları (GDAP) özelliği iş ortaklarına müşterilerinin iş yüklerine daha ayrıntılı ve zaman bağlı erişim sağlar. Bu, iş ortaklarının müşterilerinin güvenlik kaygılarını daha iyi karşılayabilecekleri anlamına gelir. Ayrıca iş ortakları, geçerli iş ortağı erişimi düzeyleriyle sorun olan ve ortaklara yalnızca en az ayrıcalıklı erişimi sağlamak için yasal düzenleme gereksinimleri olan müşterilere daha fazla hizmet de sağlar. GDAP ile, iş ortaklarına kendi isteklerinde belirtilen rolleri vermeyi kabul edersiniz. Bu roller özelleştirilebilir, bu nedenle bazı izinler sizin onaylanmazsa iş ortağınız ile tartışabilirsiniz.
+Yeni ayrıntılı yönetici ayrıcalıkları (GDAP) özelliği, iş ortaklarına müşterilerinin iş yüklerine daha ayrıntılı ve zamana bağlı erişim sağlar. Bu, iş ortaklarının müşterilerinin güvenlik endişelerini daha iyi giderebileceği anlamına gelir. İş ortakları, geçerli iş ortağı erişim düzeylerinden rahatsız olan ve iş ortaklarına yalnızca en az ayrıcalıklı erişim sağlamak için yasal gereksinimlere sahip olan müşterilere daha fazla hizmet sunabilir. GDAP ile iş ortaklarına isteklerinde belirtilen rolleri vermeyi kabul edersiniz. Bu roller özelleştirilebilir olduğundan, belirli izinler sizin tarafınızdan onaylanmadıysa iş ortağınızla görüşebilirsiniz.
 
-yönetici rollerini iş ortağına vermek istemiyorsanız daveti kabul etmek yerine iptal edin.
+İş ortağına yönetici rolleri vermek istemiyorsanız daveti kabul etmek yerine iptal edin.
 
-Bir iş ortağının yönetici rollerini istediğiniz zaman kaldırabilirsiniz. Yönetici rollerinin kaldırılması iş ortağı ilişkisini kaldırmaz. Bayi gibi farklı kapasitede çalışabilirsiniz. Artık bir iş ortağıyla çalışmak istemiyorsanız, ilişkiyi sona erdirim için iş ortağınıza ulaşın.
+İstediğiniz zaman iş ortağından yönetici rollerini kaldırabilirsiniz. Yönetici rollerinin kaldırılması iş ortağı ilişkisini kaldırmaz. Bu kişiler sizinle bayi gibi farklı bir kapasitede çalışmaya devam edebilir. Artık bir iş ortağıyla çalışmak istemediğinize karar verirseniz ilişkiyi sonlandırmak için iş ortağınızla iletişime geçin.
 
-1. Yönetim merkezinde Ayarlar  > <a href="https://go.microsoft.com/fwlink/p/?linkid=2074649" target="_blank">Partner ilişkileri sayfasına</a> gidin.
-2. İş **ortağı ilişkileri** sayfasında, kaldırmak istediğiniz iş ortağının adını içeren satırı seçin.
+1. Yönetim merkezinde **Ayarlar** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2074649" target="_blank">İş Ortağı ilişkileri</a> sayfasına gidin.
+2. **İş ortağı ilişkileri** sayfasında, kaldırmak istediğiniz iş ortağının adını içeren satırı seçin.
 3. İş ortağının adını içeren satırı seçin.
-4. İş ortağı sayfasında Rolleri **kaldır'ı seçin**.
-5. Rolleri kaldır **? iletişim kutusunda** Evet'i **seçin**.
+4. İş ortağı sayfasında **Rolleri kaldır'ı** seçin.
+5. **Rolleri kaldırılsın mı?** iletişim kutusunda **Evet'i** seçin.
 
-Rolleri kaldır seçeneğini **görmüyorsanız İş** Ortağı [Merkezi'ne ulaşın](https://partner.microsoft.com/support).
+**Rolleri kaldır** seçeneğini görmüyorsanız [İş Ortağı Merkezi'ne](https://partner.microsoft.com/support) başvurun.

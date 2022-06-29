@@ -25,13 +25,13 @@ ms.custom:
 - AdminTemplateSet
 search.appverid: MET150
 description: Belirli kullanıcılara ürün lisansları atamak veya belirli bir ürüne kullanıcı lisansları atamak isteyip istemediğinize bağlı olarak lisans atayın.
-ms.date: 04/22/2022
-ms.openlocfilehash: 5402a3f2b1f1e702b0d8f3e8b021206c9131710d
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.date: 06/23/2022
+ms.openlocfilehash: ecca89deaadd55182875e8d3a5d8d74e2aec17eb
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65465832"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487531"
 ---
 # <a name="assign-microsoft-365-licenses-to-users"></a>Kullanıcılara Microsoft 365 lisansları atama
 
@@ -50,14 +50,16 @@ ms.locfileid: "65465832"
 ## <a name="before-you-begin"></a>Başlamadan önce
 
 - Lisansları atamak için Genel, Lisans veya Kullanıcı yöneticisi olmanız gerekir. Daha fazla bilgi için bkz. [Microsoft 365 yönetici rolleri hakkında](../add-users/about-admin-roles.md).
-- [PowerShell ile kullanıcı hesaplarına Microsoft 365 lisans atayabilirsiniz](../../enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell.md).
+- [PowerShell ile kullanıcı hesaplarına Microsoft 365 lisansları atayabilirsiniz](../../enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell.md).
 - Grup tabanlı lisanslama kullanmak için bkz. [Azure Active Directory'de kullanıcılara grup üyeliğine göre lisans atama](/azure/active-directory/users-groups-roles/licensing-groups-assign)
 - Sway gibi bazı hizmetler, kullanıcılara otomatik olarak atanır ve tek tek atanması gerekmez.
 
 
 ## <a name="use-the-licenses-page-to-assign-licenses-to-users"></a>Kullanıcılara lisans atamak için Lisanslar sayfasını kullanma
 
-Lisansları atamak için **Lisanslar** sayfasını kullandığınızda, belirli bir ürünün lisanslarını en fazla 20 kullanıcıya atarsınız. **Lisanslar** sayfasında, abonelikleriniz olan tüm ürünlerin listesini görürsünüz. Ayrıca her ürün için toplam lisans sayısını, kaç lisansın atandığı ve kaç tane kullanılabilir olduğunu da görürsünüz.
+**Lisanslar** sayfası, aynı anda en fazla 20 kullanıcı için lisans atamanızı veya atamasını kaldırmanızı sağlar. Sayfa, sahip olduğunuz ürünleri, her ürün için kullanılabilir lisans sayısını ve kullanılabilir toplam lisansların dışında atanan lisans sayısını gösterir. Lisans sayısı, aynı ürün adına ait tüm aboneliklerin toplam lisans toplamıdır.
+
+Örneğin, Microsoft 365 İş Ekstra için 5 lisansı olan bir aboneliğiniz ve aynı ürün için 8 lisansı olan başka bir aboneliğiniz olabilir. **Lisanslar** sayfasında, tüm abonelikleriniz genelinde Microsoft 365 İş Ekstra için toplam 13 lisansınız olduğu gösterilir. Bu, aynı ürün için olsalar bile sahip olduğunuz her abonelik için bir satır görüntüleyen **Ürünleriniz** sayfasında gördüklerinizden farklıdır.
 
 ::: moniker range="o365-worldwide"
 
@@ -79,9 +81,9 @@ Lisansları atamak için **Lisanslar** sayfasını kullandığınızda, belirli 
 
 4. Belirli öğelere erişim atamak veya kaldırmak için **Uygulamaları ve hizmetleri aç veya kapat'ı** seçin.
 
-6. İşiniz bittiğinde **Ata'yı** ve ardından **Kapat'ı** seçin.
+6. İşiniz bittiğinde **Ata'yı** seçin ve sağ bölmeyi kapatın.
 
-Bir çakışma varsa, bir ileti görüntülenir, sorunun ne olduğunu size söyler ve nasıl düzelteceğinizi söyler. Örneğin, çakışan hizmetler içeren lisansları seçtiyseniz, hata iletisinde her lisansa dahil edilen hizmetleri gözden geçirmeniz ve yeniden denemeniz gerekir.
+Çakışma varsa sorunun ne olduğunu ve nasıl düzeltileceğini bildiren bir ileti görürsünüz. Örneğin, çakışan hizmetler içeren lisansları seçtiyseniz, hata iletisinde her lisansa dahil edilen hizmetleri gözden geçirmeniz ve yeniden denemeniz gerekir.
 
 ## <a name="change-the-apps-and-services-a-user-has-access-to"></a>Kullanıcının erişimi olan uygulamaları ve hizmetleri değiştirme
 
@@ -134,7 +136,7 @@ Lisans atamak için **Etkin kullanıcılar** sayfasını kullandığınızda, ü
     Herkes için yeterli lisansınız yoksa ek lisans satın almanız gerekebilir.
 
 > [!NOTE]
-> Çok sayıda kullanıcı için lisans atamak istiyorsanız, [Azure Active Directory'de Kullanıcılara grup üyeliğine göre lisans atama'yı](/azure/active-directory/enterprise-users/licensing-groups-assign) kullanın
+> Çok sayıda kullanıcı için lisans atamak istiyorsanız [Azure Active Directory'de kullanıcılara grup üyeliğine göre lisans atama'yı](/azure/active-directory/enterprise-users/licensing-groups-assign) kullanın
 
 ### <a name="assign-licenses-to-one-user"></a>Bir kullanıcıya lisans atama
 
@@ -158,7 +160,7 @@ Lisans atamak için **Etkin kullanıcılar** sayfasını kullandığınızda, ü
 
 ## <a name="assign-a-license-to-a-guest-user"></a>Konuk kullanıcıya lisans atama
 
-Konuk kullanıcıları Azure Active Directory yönetim merkezinde kuruluşunuzla işbirliği yapmaya davet edebilirsiniz. Konuk kullanıcılar hakkında bilgi edinmek için bkz. [Azure Active Directory B2B'de konuk kullanıcı erişimi nedir?](/azure/active-directory/external-identities/what-is-b2b). Konuk kullanıcılarınız yoksa bkz[. Hızlı Başlangıç: Azure portal dizininize konuk kullanıcı ekleme](/azure/active-directory/external-identities/b2b-quickstart-add-guest-users-portal).
+Azure Active Directory yönetim merkezinde konuk kullanıcıları kuruluşunuzla işbirliği yapmaya davet edebilirsiniz. Konuk kullanıcılar hakkında bilgi edinmek için bkz. [Azure Active Directory B2B'de konuk kullanıcı erişimi nedir?](/azure/active-directory/external-identities/what-is-b2b). Konuk kullanıcılarınız yoksa bkz[. Hızlı Başlangıç: Azure portal dizininize konuk kullanıcı ekleme](/azure/active-directory/external-identities/b2b-quickstart-add-guest-users-portal).
 
 > [!IMPORTANT]
 > Bu adımları gerçekleştirmek için Genel yönetici olmanız gerekir.
@@ -187,7 +189,7 @@ Konuk kullanıcıları Azure Active Directory yönetim merkezinde kuruluşunuzla
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Kullanıcılarınızın henüz Office uygulamaları yüklü değilse, [pc veya Mac'te Microsoft 365 veya Office 2019'u indirip yükleme ve](https://support.microsoft.com/office/4414eaaf-0478-48be-9c42-23adc4716658) [mobil cihazda Office uygulamaları ve e-postayı ayarlama](https://support.microsoft.com/office/7dabb6cb-0046-40b6-81fe-767e0b1f014f) gibi ayarlamaları için [Çalışan hızlı başlangıç kılavuzunu](../setup/employee-quick-setup.md) kullanıcılarınızla paylaşabilirsiniz.
+Kullanıcılarınız henüz Office uygulamalarını yüklemediyse, [Microsoft 365 veya Office 2019'u PC veya Mac'e indirip yükleme ve](https://support.microsoft.com/office/4414eaaf-0478-48be-9c42-23adc4716658) [mobil cihazda Office uygulamalarını ve e-postalarını ayarlama](https://support.microsoft.com/office/7dabb6cb-0046-40b6-81fe-767e0b1f014f) gibi ayarları yapmak için [Çalışan hızlı başlangıç kılavuzunu](../setup/employee-quick-setup.md) kullanıcılarınızla paylaşabilirsiniz.
 
 ## <a name="related-content"></a>İlgili içerik
 

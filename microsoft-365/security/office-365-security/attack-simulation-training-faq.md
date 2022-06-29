@@ -18,12 +18,12 @@ ms.custom:
 description: Yöneticiler, Microsoft 365 E5 Office 365 için Microsoft Defender veya Plan 2 kuruluşlarında saldırı simülasyonu ve eğitimiyle ilgili dağıtım konuları ve sık sorulan sorular hakkında bilgi edinebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 4145dcd073ec97c43ac64eecdbd25c48612a9b83
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 50f82d975e9dc4f534f9223b85fd9e841a3ad725
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65649031"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490497"
 ---
 # <a name="attack-simulation-training-deployment-considerations-and-faq"></a>Saldırı simülasyonu eğitimi dağıtımıyla ilgili dikkat edilmesi gerekenler ve SSS
 
@@ -34,23 +34,23 @@ ms.locfileid: "65649031"
 
 Saldırı simülasyonu eğitimi, Microsoft 365 E5 veya Office 365 için Microsoft Defender Plan 2 kuruluşlarının gerçek dünya, silah dışı kimlik avı yükleri tarafından desteklenen kimlik avı simülasyonlarının oluşturulmasına ve yönetilmesine izin vererek sosyal mühendislik riskini ölçmesine ve yönetmesine olanak tanır. Terranova güvenliğiyle ortaklaşa sunulan hiper hedefli eğitim, bilginin geliştirilmesine ve çalışan davranışının değiştirilmesine yardımcı olur.
 
-Saldırı simülasyonu eğitimine başlama hakkında daha fazla bilgi için bkz. [Saldırı simülasyonu eğitimini kullanma Kullanmaya başlayın](attack-simulation-training-get-started.md).
+Saldırı simülasyonu eğitimine başlama hakkında daha fazla bilgi için bkz. [Saldırı simülasyonu eğitimini kullanmaya başlama](attack-simulation-training-get-started.md).
 
 Simülasyon oluşturma ve zamanlama deneyiminin tamamı serbest akışlı ve sorunsuz olacak şekilde tasarlanmış olsa da, simülasyonların kurumsal ölçekte çalıştırılması genellikle planlama gerektirir. Bu makale, müşterilerimiz simülasyonları kendi ortamlarında çalıştırırken gördüğümüz belirli zorlukların giderilmesine yardımcı olur.
 
 ## <a name="issues-with-end-user-experiences"></a>Son kullanıcı deneyimleriyle ilgili sorunlar
 
-### <a name="phishing-simulation-urls-blocked-by-google-safe-browsing"></a>Google Kasa Gözatma tarafından engellenen kimlik avı simülasyonu URL'leri
+### <a name="phishing-simulation-urls-blocked-by-google-safe-browsing"></a>Google Güvenli Gözatma tarafından engellenen kimlik avı simülasyonu URL'leri
 
-URL saygınlığı hizmeti, Saldırı simülasyonu eğitimi tarafından güvenli olmayan url'ler olarak kullanılan bir veya daha fazla URL'yi tanımlayabilir. Google Chrome'da Google Kasa Gözatma, **yanıltıcı bir site ileri** iletisiyle sanal kimlik avı URL'lerinden bazılarını engeller. Simülasyon URL'lerimize her zaman izin vermek için birçok URL saygınlığı satıcısıyla çalışsak da, her zaman tam kapsamlı bir kapsamımız yoktur.
+URL saygınlığı hizmeti, Saldırı simülasyonu eğitimi tarafından güvenli olmayan url'ler olarak kullanılan bir veya daha fazla URL'yi tanımlayabilir. Google Chrome'da Google Güvenli Gözatma, **yanıltıcı bir site ileri** iletisiyle sanal kimlik avı URL'lerinden bazılarını engeller. Simülasyon URL'lerimize her zaman izin vermek için birçok URL saygınlığı satıcısıyla çalışsak da, her zaman tam kapsamlı bir kapsamımız yoktur.
 
 :::image type="content" source="../../media/attack-sim-training-faq-chrome-deceptive-site-message.png" alt-text="Google Chrome'da yanıltıcı site ileri uyarısı" lightbox="../../media/attack-sim-training-faq-chrome-deceptive-site-message.png":::
 
-Bu sorunun Microsoft Edge etkilemediğini unutmayın.
+Bu sorunun Microsoft Edge'i etkilemediğini unutmayın.
 
-Planlama aşamasının bir parçası olarak, URL'yi bir kimlik avı kampanyasında kullanmadan önce desteklenen web tarayıcılarınızda URL'nin kullanılabilirliğini denetlemeyi unutmayın. URL'ler Google Kasa Gözatma tarafından engelleniyorsa, URL'lere erişime izin vermek için Google'ın [bu yönergelerini izleyin](https://support.google.com/chrome/a/answer/7532419).
+Planlama aşamasının bir parçası olarak, URL'yi bir kimlik avı kampanyasında kullanmadan önce desteklenen web tarayıcılarınızda URL'nin kullanılabilirliğini denetlemeyi unutmayın. URL'ler Google Güvenli Gözatma tarafından engelleniyorsa, URL'lere erişime izin vermek için Google'ın [bu yönergelerini izleyin](https://support.google.com/chrome/a/answer/7532419) .
 
-Şu anda Saldırı simülasyonu eğitimi tarafından kullanılan URL'lerin listesi için Saldırı [simülasyonu eğitimini kullanarak Kullanmaya başlayın](attack-simulation-training-get-started.md) bakın.
+Şu anda [Saldırı simülasyonu eğitimi](attack-simulation-training-get-started.md) tarafından kullanılan URL'lerin listesi için Bkz. Saldırı simülasyonu eğitimini kullanmaya başlama.
 
 ### <a name="phishing-simulation-and-admin-urls-blocked-by-network-proxy-solutions-and-filter-drivers"></a>Ağ ara sunucusu çözümleri ve filtre sürücüleri tarafından engellenen kimlik avı simülasyonu ve yönetici URL'leri
 
@@ -62,7 +62,7 @@ Hem kimlik avı simülasyonu URL'leri hem de yönetici URL'leri, ara güvenlik c
 
 Bu katmanda birkaç müşterinin engellendiğini gördük ancak bu gerçekleşir. Sorunlarla karşılaşırsanız, güvenlik cihazlarınız veya filtreleriniz tarafından taramayı atlamak için aşağıdaki URL'leri gerektiği gibi yapılandırmayı göz önünde bulundurun:
 
-- [Saldırı simülasyonu eğitimi kullanılarak Kullanmaya başlayın'da](attack-simulation-training-get-started.md) açıklandığı gibi sanal kimlik avı URL'leri.
+- [Saldırı simülasyonu eğitimi kullanmaya başlama](attack-simulation-training-get-started.md) bölümünde açıklandığı gibi kimlik avı simülasyonu URL'leri.
 - <https://security.microsoft.com/attacksimulator>
 - <https://security.microsoft.com/attacksimulationreport>
 - <https://security.microsoft.com/trainingassignments>
@@ -73,7 +73,7 @@ Simülasyon e-posta iletilerini gerçekten alan kullanıcı sayısının simüla
 
 - Geçersiz alıcı e-posta adresleri.
 - Konuk kullanıcılar.
-- artık Azure Active Directory (Azure AD) etkin olmayan kullanıcılar.
+- Azure Active Directory'de (Azure AD) artık etkin olmayan kullanıcılar.
 
 Simülasyonlara yalnızca geçerli, geçerli posta kutusu olan konuk olmayan kullanıcılar dahil edilecek. Kullanıcıları hedeflemek için dağıtım grupları veya posta etkin güvenlik grupları kullanıyorsanız, dağıtım grubu üyelerini görüntülemek ve doğrulamak için [Exchange Online PowerShell'de](/powershell/exchange/connect-to-exchange-online-powershell) [Get-DistributionGroupMember](/powershell/module/exchange/get-distributiongroupmember) cmdlet'ini kullanabilirsiniz.
 
@@ -127,12 +127,18 @@ Saldırı simülatörü eğitimindeki simülasyon raporları, kullanıcı etkinl
 - Kimlik bilgilerini veren kullanıcılar.
 - İletiyi kimlik avı olarak bildiren kullanıcılar.
 
-Kullanıcıların kimlik avı olarak bildirdiği iletiler Saldırı simülasyonu eğitim simülasyonu raporlarında yakalanmazsa, bildirilen iletilerin Microsoft'a teslimini engelleyen bir Exchange posta akışı kuralı (aktarım kuralı olarak da bilinir) olabilir. Posta akışı kurallarının aşağıdaki e-posta adreslerine teslimi engellemediğini doğrulayın:
+Kullanıcıların kimlik avı olarak bildirdiği iletiler Saldırı benzetimi eğitim simülasyonu raporlarında yakalanmazsa, bildirilen iletilerin Microsoft'a teslimini engelleyen bir Exchange posta akışı kuralı (aktarım kuralı olarak da bilinir) olabilir. Posta akışı kurallarının aşağıdaki e-posta adreslerine teslimi engellemediğini doğrulayın:
 
 - junk@office365.microsoft.com
 - abuse@messaging.microsoft.com
 - phish@office365.microsoft.com
-- değil\_ junk@office365.microsoft.com
+- junk@office365.microsoft.com değil\_
+
+### <a name="users-are-assigned-training-after-they-report-a-simulated-message"></a>Kullanıcılara simülasyon iletisi raporladıktan sonra eğitim atanır
+
+Kullanıcılara kimlik avı simülasyonu iletisi bildirdikten sonra eğitim atanırsa, kuruluşunuzun **kullanıcı gönderim ilkenizde** yapılandırılmış özel bir **posta kutusu** olup olmadığını denetleyin. Özel posta kutusu yapılandırılırken, özel **posta kutusu** [önkoşullarına](user-submission.md) göre bu posta kutusunun Güvenli Bağlantılar ve Güvenli Ekler ilkelerinin dışında tutulması gerekir.
+
+Kuruluşunuzda yapılandırılmış özel bir **posta kutusu** varsa ve gerekli dışlamaları ayarlamadıysa, bu iletiler patlatılarak eğitim atamalarına neden olabilir.
 
 ## <a name="other-frequently-asked-questions"></a>Sık sorulan diğer sorular
 
@@ -163,7 +169,7 @@ Bunun yanı sıra, özel yük yazma deneyimini kullanarak istediğiniz dilde ken
 
 ### <a name="q-how-can-i-switch-to-other-languages-for-my-admin-portal-and-training-experience"></a>S: Yönetici portalım ve eğitim deneyimim için diğer dillere nasıl geçiş yapabilirim?
 
-Y: Microsoft 365 veya Office 365 dil yapılandırması her kullanıcı hesabı için özel ve merkezidir. Dil ayarınızı değiştirme yönergeleri için bkz. [İş için Microsoft 365'da görüntüleme dilinizi ve saat diliminizi değiştirme](https://support.microsoft.com/office/6f238bff-5252-441e-b32b-655d5d85d15b).
+Y: Microsoft 365 veya Office 365 dil yapılandırması her kullanıcı hesabı için özel ve merkezidir. Dil ayarınızı değiştirme yönergeleri için bkz. [İş için Microsoft 365'te görüntüleme dilinizi ve saat diliminizi değiştirme](https://support.microsoft.com/office/6f238bff-5252-441e-b32b-655d5d85d15b).
 
 Yapılandırma değişikliğinin tüm hizmetler arasında eşitlenmesi 30 dakika kadar sürebilir.
 
@@ -188,3 +194,8 @@ Y: Bölge algılamalı teslim, iletinin ne zaman teslim edileceğini belirlemek 
 Aynı gün saat 09:00'da simülasyon iletisi UserB'ye gönderilir. Bölgeye duyarlı teslimde, 09:00 Pasifik saati Doğu saatiyle 23:00 olduğundan ileti aynı gün UserA'ya gönderilmez. Bunun yerine, ileti bir sonraki gün Doğu saatiyle 09:00'da UserA'ya gönderilir.
 
 Bu nedenle, bölgeye duyarlı teslimin etkinleştirildiği bir kampanyanın ilk çalıştırmasında simülasyon iletisinin yalnızca belirli bir saat dilimindeki kullanıcılara gönderildiği görünebilir. Ancak, zaman geçtikçe ve daha fazla kullanıcı kapsama girdikçe, hedeflenen kullanıcılar artar.
+
+
+### <a name="q-does-microsoft-collect-or-store-any-information-that-users-enter-at-the-credential-harvest-sign-in-page-used-in-the-credential-harvest-simulation-technique"></a>S: Microsoft, kullanıcıların Kimlik Bilgisi Toplama benzetimi tekniğinde kullanılan Kimlik Bilgisi Toplama oturum açma sayfasında girdiği bilgileri toplar veya depolar mı?
+
+C: Hayır. Kimlik bilgisi toplama oturum açma sayfasına girilen tüm bilgiler sessizce atılır. Güvenliği aşma olayını yakalamak için yalnızca 'tıklama' kaydedilir. Microsoft, kullanıcıların bu adımda girdiği ayrıntıları toplamaz, günlüğe kaydetmez veya depolamaz.

@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: fc2686b9ef6a30c9c81d7633ce8a59a0454d622d
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: 022c5854c955ed9b0faef16455be1af3a81b0997
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65838964"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487299"
 ---
 # <a name="export-assessment-methods-and-properties-per-device"></a>Cihaz başına değerlendirme yöntemlerini ve özelliklerini dışarı aktarma
 
@@ -166,7 +166,8 @@ rbacGroupId|Dize|Rol tabanlı erişim denetimi (RBAC) grup kimliği.
 RecommendationReference|Dize|Bu yazılımla ilgili öneri kimliğine başvuru.
 RecommendedSecurityUpdate|Dize|Güvenlik açığını gidermek için yazılım satıcısı tarafından sağlanan güvenlik güncelleştirmesinin adı veya açıklaması.
 RecommendedSecurityUpdateId|Dize|İlgili kılavuz veya bilgi bankası (KB) makaleleri için geçerli güvenlik güncelleştirmelerinin veya tanımlayıcının tanımlayıcısı.
-Kayıt Defteri Yolları Dizisi\[dizesi\]|Ürünün cihaza yüklendiğine dair kayıt defteri kanıtı.
+Kayıt Defteri Yolları|Dizi[dize]|Ürünün cihaza yüklendiğine dair kayıt defteri kanıtı.
+SecurityUpdateAvailable|Boole|Yazılım için bir güvenlik güncelleştirmesi olup olmadığını gösterir.
 SoftwareName|Dize|Yazılım ürününün adı.
 SoftwareVendor|Dize|Yazılım satıcısının adı.
 SoftwareVersion|Dize|Yazılım ürününün sürüm numarası.

@@ -2,11 +2,11 @@
 title: Kampanyanız veya işletmeniz için güvenlik korumasını artırma
 f1.keywords:
 - NOCSH
-ms.author: samanro
-author: samanro
+ms.author: deniseb
+author: denisebmsft
 manager: dansimp
 ms.audience: Admin
-ms.topic: conceptual
+ms.topic: overview
 ms.service: o365-administration
 ms.localizationpriority: high
 ms.collection:
@@ -24,15 +24,14 @@ search.appverid:
 - MET150
 - MOE150
 description: Microsoft 365 ile güvenliğinizi artırarak kampanyanızı veya işinizi korumayı öğrenin.
-ms.openlocfilehash: 7579101d89ae013eea14a1677c6d1fdcd62f3d91
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 9a4c331c65bc30b1277709d247a043a0ca0fe71a
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099883"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66491282"
 ---
 # <a name="bump-up-security-protection-for-your-campaign-or-business"></a>Kampanyanız veya işletmeniz için güvenlik korumasını artırma
-
 
 ## <a name="overview"></a>Genel bakış 
 

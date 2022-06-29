@@ -19,12 +19,12 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
-ms.openlocfilehash: 2cd146cfb0fe9b6af10f562bbf6eb00bc5bf9a3d
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: 8cacce248561acc0e51fb40c6b5f48b33f6d2de7
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078403"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487212"
 ---
 # <a name="microsoft-defender-for-cloud-apps-in-microsoft-365-defender-preview"></a>Microsoft 365 Defender'de Microsoft Defender for Cloud Apps (Önizleme)
 
@@ -38,7 +38,7 @@ ms.locfileid: "66078403"
 Microsoft Defender for Cloud Apps artık Microsoft 365 Defender bir parçasıdır. Microsoft 365 Defender portalı, güvenlik yöneticilerinin güvenlik görevlerini tek bir konumda gerçekleştirmesine olanak tanır. Bu, iş akışlarını basitleştirir ve diğer Microsoft 365 Defender hizmetlerinin işlevselliğini ekler. Microsoft 365 Defender Microsoft kimlikleriniz, verileriniz, cihazlarınız, uygulamalarınız ve altyapınız genelinde güvenliği izlemeye ve yönetmeye ev sahipliği yapacaktır.
 
 SOC analistleri bulut uygulamaları da dahil olmak üzere tüm Microsoft 365 Defender iş yüklerini önceliklendirme, araştırma ve avlayabilme olanağına sahiptir.
-Bulut için Defender Uygulamalar uyarıları Microsoft 365 Defender olay kuyruğunda ve uyarı kuyruğunda görünmeye devam eder, ancak artık Microsoft 365 Defender portalında bulunan uyarı sayfalarının içindeki ilgili içerik, her uyarı türüne uygun uyarlamalarla birleşik bir biçimde görünür.
+Cloud Apps için Defender uyarıları Microsoft 365 Defender'ın olay kuyruğunda ve uyarılar kuyruğunda görünmeye devam edecektir, ancak artık Microsoft 365 Defender portalında bulunan uyarı sayfalarının içindeki ilgili içerik, her uyarı türüne uygun uyarlamalarla birleşik bir biçimde görünür.
 
 Microsoft 365 Defender bir <https://security.microsoft.com>göz atın.
 
@@ -49,7 +49,7 @@ Avantajlar hakkında daha fazla bilgi edinin: [Microsoft 365 Defender genel bak�
 Aşağıdaki resimde ve tabloda Microsoft Defender for Cloud Apps ile Microsoft 365 Defender arasındaki gezinti değişiklikleri listelenmiştir.
 
 > [!NOTE]
-> Bazı sayfalar henüz geçirilmemiş ve Bulut için Defender Uygulamaları portalından erişilmelidir.
+> Bazı sayfalar henüz geçirilmemiş ve Bulut Uygulamaları için Defender portalından erişilmelidir.
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="../../media/defender-cloud-apps-m365-defender.png" alt-text="Microsoft 365 Defender portalındaki yeni konumlar" lightbox="../../media/defender-cloud-apps-m365-defender.png":::
@@ -65,29 +65,29 @@ Aşağıdaki resimde ve tabloda Microsoft Defender for Cloud Apps ile Microsoft 
 | Bulut uygulaması kataloğu |  Bulut uygulamaları -> Bulut uygulaması kataloğu |
 | Cloud Discovery anlık görüntü raporu oluşturma | Cloud Discovery sayfasındaki Eylemler'in altında |
 | Etkinlik günlüğü | Bulut uygulamaları -> Etkinlik günlüğü |
-| Dosyalar | Bulut için Defender Uygulamaları portalında kalan |
+| Dosyalar | Cloud Apps için Defender portalında kalan |
 | Kullanıcılar ve hesaplar | Varlıklar -> Kimlikleri |
-| Güvenlik yapılandırması | Bulut için Defender Uygulamaları portalında kalan |
+| Güvenlik yapılandırması | Cloud Apps için Defender portalında kalan |
 | Kimlik güvenliği duruşu | [Kimlik için Microsoft Defender kimlik güvenliği duruş değerlendirmeleri](/defender-for-identity/isp-overview) |
 | OAuth uygulamaları | Bulut uygulamaları -> OAuth uygulamaları |
-| Bağlı uygulamalar | Bulut için Defender Uygulamaları portalında kalan |
+| Bağlı uygulamalar | Cloud Apps için Defender portalında kalan |
 
 > [!NOTE]
-> Microsoft 365 Defender portalındaki yeni Bulut için Defender Uygulamaları deneyimi, Bulut için Defender [Uygulamalarında yerleşik yönetici rollerinde](/defender-cloud-apps/manage-admins#built-in-admin-roles-in-defender-for-cloud-apps) tanımlanan roller dışında yönetici [erişimini yönetme](/defender-cloud-apps/manage-admins) bölümünde ayrıntılı olarak belirtilen tüm kullanıcılar tarafından kullanılabilir.
+> Microsoft 365 Defender portalındaki yeni Bulut Uygulamaları için Defender deneyimi şu anda, Cloud [Apps için Defender'daki yerleşik yönetici rollerinde](/defender-cloud-apps/manage-admins#built-in-admin-roles-in-defender-for-cloud-apps) tanımlandığı gibi **Uygulama/Örnek yöneticisi**, **Kullanıcı grubu yöneticisi**, **Cloud Discovery genel yöneticisi** ve **Cloud Discovery rapor yöneticisi** dışında Yönetici [erişimini yönetme](/defender-cloud-apps/manage-admins) bölümünde ayrıntılı olarak belirtilen tüm kullanıcılar için kullanılabilir.
 
 ## <a name="whats-changed"></a>Değişenler
 
-Bulut için Defender Uygulamaları ve Microsoft 365 Defender tümleştirmesiyle birlikte gelen değişiklikler hakkında bilgi edinin.
+Cloud Apps için Defender ve Microsoft 365 Defender tümleştirmesiyle birlikte gelen değişiklikler hakkında bilgi edinin.
 
 ### <a name="global-search"></a>Genel arama
 
-Microsoft 365 Defender'da genel arama (sayfanın üst kısmındaki arama çubuğunu kullanarak) artık ek bir aranabilir varlık içerir: Bulut için Defender Uygulamalar'da bağlı uygulamaları aramanıza olanak tanır.
+Microsoft 365 Defender'da genel arama (sayfanın üst kısmındaki arama çubuğunu kullanarak) artık ek bir aranabilir varlık içerir: Cloud Apps için Defender'da bağlı uygulamaları aramanıza olanak tanır.
 
 :::image type="content" source="../../media/global-search-apps.png" alt-text="Bağlı uygulamaları arayın.":::
 
 ### <a name="assets-and-identities"></a>Varlıklar ve kimlikler
 
-Microsoft 365 Defender deneyiminin tamamına yayılan ayrılmış **Varlıklar** bölümünün oluşturulması kapsamında, Bulut için Defender Uygulamalarının **Kullanıcılar ve Hesaplar** bölümü **Kimlikler** bölümü olarak yeniden adlandırılır. İşlevlerde değişiklik beklenmiyor.
+Microsoft 365 Defender deneyiminin tamamına yayılan ayrılmış **varlıklar** bölümünün oluşturulması kapsamında, Bulut Uygulamaları için Defender'ın **Kullanıcılar ve Hesaplar** bölümü **Kimlikler** bölümü olarak yeniden adlandırılır. İşlevlerde değişiklik beklenmiyor.
 
 ## <a name="related-information"></a>İlgili bilgiler
 

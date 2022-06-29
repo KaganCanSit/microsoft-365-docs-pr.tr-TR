@@ -18,16 +18,16 @@ ms.custom:
 - MACBillingLicensesRequests
 - AdminSurgePortfolio
 search.appverid: MET150
-description: İşletmeler için Microsoft 365 aboneliğiniz için kullanıcılardan gelen lisans isteklerini gözden geçirmeyi ve onaylamayı veya reddetmeyi öğrenin.
+description: İş için Microsoft 365 aboneliğiniz için kullanıcılardan gelen lisans isteklerini gözden geçirmeyi ve onaylamayı veya reddetmeyi öğrenin.
 ms.date: 04/22/2022
-ms.openlocfilehash: dfe8410ce894e19489664396866917e4c5bb3dd4
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: b4259c4c04284e47193d827a6a10214669a5c991
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66044257"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66491017"
 ---
-# <a name="manage-license-requests"></a>Lisans isteklerini yönetme
+# <a name="manage-self-service-license-requests"></a>Self servis lisans isteklerini yönetme
 
 > [!NOTE]
 > Bu makaledeki bilgiler yalnızca self servis satın alınan ürünler için geçerlidir. Daha fazla bilgi için bkz. [Self servis satın alma hakkında SSS](../subscriptions/self-service-purchase-faq.yml).

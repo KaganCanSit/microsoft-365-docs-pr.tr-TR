@@ -21,14 +21,14 @@ ms.custom:
 search.appverid: MET150
 description: Hesabınızı Microsoft ile kapattığınızda lisanslar, kullanıcılar ve kullanıcı verileri dahil olmak üzere hesabınızla ilgili tüm bilgiler silinir.
 ms.date: 04/02/2021
-ms.openlocfilehash: c036a4cda929d58265a088b15a43772caacb0b94
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: a14dd1153d8030dd953c58404902a891aeefdaf9
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66102470"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66491769"
 ---
-# <a name="close-your-account"></a>Hesabınızı kapatma
+# <a name="close-your-microsoft-account"></a>Microsoft hesabınızı kapatma
 
 Microsoft’la hesabınızı kapattığınızda hesabınızla ilişkili tüm bilgiler silinir. Bu bilgiler aboneliklerden, lisanslardan, ödeme yöntemlerinden, kullanıcılardan ve kullanıcı verilerinden oluşur.
 
@@ -48,7 +48,7 @@ Kullanıcıları silmek için bkz [. Kullanıcı yönetimi yöneticisi: Bir veya
 
 Kullanıcıları toplu olarak silmek için [Remove-MsolUser](/powershell/module/msonline/remove-msoluser) PowerShell cmdlet'ini de kullanabilirsiniz.
 
-Kuruluşunuz Microsoft Azure Active Directory (Azure AD) ile eşitlenen Active Directory kullanıyorsa, bunun yerine kullanıcı hesabını Active Directory'den silin. Yönergeler için bkz. [Azure Active Directory'da kullanıcıları toplu silme](/azure/active-directory/users-groups-roles/users-bulk-delete).
+Kuruluşunuz Microsoft Azure Active Directory (Azure AD) ile eşitlenen Active Directory kullanıyorsa, bunun yerine kullanıcı hesabını Active Directory'den silin. Yönergeler için bkz. [Azure Active Directory'de kullanıcıları toplu silme](/azure/active-directory/users-groups-roles/users-bulk-delete).
 
 ## <a name="step-2-cancel-all-active-subscriptions"></a>2. Adım: Tüm etkin abonelikleri iptal etme
 
@@ -80,7 +80,7 @@ Kuruluşunuz Microsoft Azure Active Directory (Azure AD) ile eşitlenen Active D
 [PowerShell'i birden çok kullanıcı için çok faktörlü kimlik doğrulamasını devre dışı bırakmak için de kullanabilirsiniz](/azure/active-directory/authentication/howto-mfa-userstates#change-state-using-powershell).
 
 
-## <a name="step-5-delete-the-directory-in-azure-active-directory"></a>5. Adım: Azure Active Directory dizinini silme
+## <a name="step-5-delete-the-directory-in-azure-active-directory"></a>5. Adım: Azure Active Directory'de dizini silme
 
 1. Genel yönetici hesabıyla <a href="https://aad.portal.azure.com/" target="_blank">Azure AD yönetim merkezinde</a> oturum açın.
 2. **Azure Active Directory**’yi seçin.

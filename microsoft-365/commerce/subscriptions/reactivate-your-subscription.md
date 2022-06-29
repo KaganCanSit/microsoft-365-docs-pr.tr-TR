@@ -22,14 +22,14 @@ ms.custom:
 search.appverid: MET150
 description: Yöneticiler süresi dolduğunda, devre dışı bırakıldığında veya iptal edildiğinde ya da abonelik döneminin ortasında iptal ettiyseniz aboneliği yeniden etkinleştirebilir.
 ms.date: 04/07/2021
-ms.openlocfilehash: 7cb93854f4da8e3568eef058009652cdb6b32b96
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: 1f0d38a3b0b09a581d4ed31a6d9abb9d8f8ea467
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66101492"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489458"
 ---
-# <a name="reactivate-your-subscription"></a>Aboneliğinizi yeniden etkinleştirme
+# <a name="reactivate-your-microsoft-subscription"></a>Microsoft aboneliğinizi yeniden etkinleştirme
 
 Aboneliğinizin süresi dolduysa, Microsoft tarafından devre dışı bırakıldıysa veya abonelik döneminin ortasında iptal ettiyseniz aboneliğinizi yönetim merkezinde yeniden etkinleştirebilirsiniz.
   
@@ -61,5 +61,5 @@ Aboneliği yeniden etkinleştirmek için Genel yönetici veya Faturalama yöneti
 ## <a name="related-content"></a>İlgili içerik
 
 [İş için Microsoft 365 aboneliğini deneyin veya satın alın](../try-or-buy-microsoft-365.md) (makale)\
-[İş için Microsoft 365 yenileme](renew-your-subscription.md) (makale)\
+[İş için Microsoft 365'i yenileme](renew-your-subscription.md) (makale)\
 [Aboneliğinizi iptal etme](cancel-your-subscription.md) (makale)

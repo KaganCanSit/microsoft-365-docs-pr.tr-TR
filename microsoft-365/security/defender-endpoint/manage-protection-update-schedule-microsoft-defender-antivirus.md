@@ -16,12 +16,12 @@ ms.reviewer: pahuijbr
 manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 5ffa9d623b89bc19c7c3ec8817f2df6bc174384b
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 35f9329756fde82a6ac0762d30041a3d30cd2c8b
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419846"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66492479"
 ---
 # <a name="manage-the-schedule-for-when-protection-updates-should-be-downloaded-and-applied"></a>Koruma güncelleştirmelerinin indirilme ve kullanılma zamanlamasını yönetin
 
@@ -29,14 +29,14 @@ ms.locfileid: "65419846"
 > Mart 2022 Microsoft Defender altyapı güncelleştirmesini (**1.1.19100.5**) uygulayan müşteriler yüksek kaynak kullanımıyla (CPU ve/veya bellek) karşılaşmış olabilir. Microsoft, önceki sürümde sunulan hataları gideren bir güncelleştirme (**1.1.19200.5**) yayımladı. Müşterilerin Virüsten Koruma Altyapısı'nın bu yeni altyapı derlemesine (**1.1.19200.5**) güncelleştirmeleri önerilir. Performans sorunlarının tamamen düzeltildiğinden emin olmak için, güncelleştirme uygulandıktan sonra makinelerin yeniden başlatılması önerilir. Daha fazla bilgi için bkz. [Aylık platform ve altyapı sürümleri](manage-updates-baselines-microsoft-defender-antivirus.md#monthly-platform-and-engine-versions).
 
 **Şunlar için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
 **Platform**
 - Windows
 
-Microsoft Defender Virüsten Koruma güncelleştirmeleri ne zaman arayıp indirmesi gerektiğini belirlemenizi sağlar.
+Microsoft Defender Virüsten Koruma, güncelleştirmeleri ne zaman arayıp indirmesi gerektiğini belirlemenizi sağlar.
 
 Uç noktalarınız için güncelleştirmeleri şu şekilde zamanlayabilirsiniz:
 
@@ -48,15 +48,15 @@ Ayrıca, her uç noktanın koruma güncelleştirmelerini denetleyebileceği ve i
 
 ## <a name="use-configuration-manager-to-schedule-protection-updates"></a>Koruma güncelleştirmelerini zamanlamak için Configuration Manager kullanma
 
-1. Microsoft Endpoint Manager konsolunuzda, değiştirmek istediğiniz kötü amaçlı yazılımdan koruma ilkesini açın (soldaki gezinti bölmesinde **Varlıklar ve Uyumluluk'a** tıklayın, sonra ağacı **Genel Bakış** \> **Endpoint Protection** \> **Kötü Amaçlı Yazılımdan Koruma İlkeleri**) olarak genişletin
+1. Microsoft Endpoint Manager konsolunuzda, değiştirmek istediğiniz kötü amaçlı yazılımdan koruma ilkesini açın (soldaki gezinti bölmesinde **Varlıklar ve Uyumluluk'a** tıklayın, sonra ağacı **Genel Bakış** \> **Endpoint Protection** \> **Kötü Amaçlı Yazılımdan Koruma İlkeleri** olarak genişletin)
 
 2. **Güvenlik bilgileri güncelleştirmeleri** bölümüne gidin.
 
 3. Güncelleştirmeleri belirli bir zamanda denetlemek ve indirmek için:
-      1. **Belirli bir aralıkta Endpoint Protection güvenlik bilgileri güncelleştirmelerini denetle...** değerini **0** olarak ayarlayın.
-      2. **Endpoint Protection güvenlik bilgileri güncelleştirmelerini her gün denetle'yi güncelleştirmelerin** denetlenmesi gereken zamana ayarlayın.
+      1. **Endpoint Protection güvenlik bilgileri güncelleştirmelerini belirli bir aralıkta denetle...** değerini **0** olarak ayarlayın.
+      2. **Endpoint Protection güvenlik bilgileri güncelleştirmelerini günlük olarak güncelleştirmelerin** denetlenmesi gereken zamana ayarlayın.
       3
-4. Güncelleştirmeleri sürekli aralıklarla denetlemek ve indirmek **için, Endpoint Protection güvenlik bilgileri güncelleştirmelerini belirli bir aralıkta denetle...** değerini güncelleştirmeler arasında gerçekleşmesi gereken saat sayısına ayarlayın.
+4. Güncelleştirmeleri sürekli aralıklarla denetlemek ve indirmek **için Endpoint Protection güvenlik bilgileri güncelleştirmelerini belirli bir aralıkta denetle...** değerini güncelleştirmeler arasında gerçekleşmesi gereken saat sayısına ayarlayın.
 
 5. [Güncelleştirilmiş ilkeyi her zamanki gibi dağıtın](/sccm/protect/deploy-use/endpoint-antimalware-policies#deploy-an-antimalware-policy-to-client-computers).
 
@@ -72,11 +72,13 @@ Bu ayarların etkinleştirilmesi bu varsayılanı geçersiz kılar.
 
 3. **İlkeler'e** ve ardından **Yönetim şablonları'nı** tıklatın.
 
-4. **İmza Yönetim Bilgileri Güncelleştirmeleri** **Microsoft Defender Virüsten Koruma bileşenleri** \> **Windows** \> için ağacı genişletin ve aşağıdaki ayarları yapılandırın:
+4. İmza **Güncelleştirmeler Windows Defender Virüsten Koruma** \> ağacı **Windows bileşenlerine** \> **genişletin ve aşağıdaki** ayarları yapılandırın:
 
     1. **Güvenlik bilgileri güncelleştirmelerini denetlemek için Haftanın gününü belirtin ayarına** çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. Güncelleştirmeleri denetlemek için haftanın gününü girin. **Tamam**'a tıklayın.
-    2. **Güvenlik bilgileri güncelleştirmelerini denetlemek için aralığı belirtin ayarına** çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. Güncelleştirmeler arasındaki saat sayısını girin. **Tamam**'a tıklayın.
-    3. **Güvenlik bilgileri güncelleştirmelerinin denetlenme zamanını belirtin ayarına** çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. Güncelleştirmelerin denetlenmesi gereken zamanı girin. Zaman, uç noktanın yerel saatini temel alır. **Tamam**'a tıklayın.
+
+    2. **Tanım güncelleştirmelerini denetlemek için aralığı belirtin ayarına** çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. Güncelleştirmeler arasındaki saat sayısını girin. **Tamam**'a tıklayın.
+
+    3. **Tanım güncelleştirmelerinin denetlenme zamanını belirtin ayarına** çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. Güncelleştirmelerin denetlenmesi gereken zamanı girin. Zaman, uç noktanın yerel saatini temel alır. **Tamam**'a tıklayın.
 
 ## <a name="use-powershell-cmdlets-to-schedule-protection-updates"></a>Koruma güncelleştirmelerini zamanlamak için PowerShell cmdlet'lerini kullanma
 
@@ -88,7 +90,7 @@ Set-MpPreference -SignatureScheduleTime
 Set-MpPreference -SignatureUpdateInterval
 ```
 
-[PowerShell'i Microsoft Defender Virüsten Koruma](use-powershell-cmdlets-microsoft-defender-antivirus.md) ile kullanma hakkında daha fazla bilgi için bkz. Microsoft Defender Virüsten Koruma yapılandırmak ve çalıştırmak için PowerShell [cmdlet'lerini kullanma ve Defender Virüsten Koruma cmdlet'leri](/powershell/module/defender/).
+[PowerShell'i Microsoft Defender Virüsten Koruma ile](use-powershell-cmdlets-microsoft-defender-antivirus.md) kullanma hakkında daha fazla bilgi için bkz. Microsoft Defender [Virüsten Koruma ve Defender Virüsten Koruma cmdlet'lerini](/powershell/module/defender/) yapılandırmak ve çalıştırmak için PowerShell cmdlet'lerini kullanma.
 
 ## <a name="use-windows-management-instruction-wmi-to-schedule-protection-updates"></a>Koruma güncelleştirmelerini zamanlamak için Windows Yönetim Yönergesi'ni (WMI) kullanma
 
@@ -105,20 +107,20 @@ Daha fazla bilgi ve izin verilen parametreler için aşağıdakilere bakın:
 - [WMIv2 API'lerini Windows Defender](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> Diğer platformlar için Antivirüs ile ilgili bilgi arıyorsanız bkz:
 > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
 > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
-> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)
 
 ## <a name="related-articles"></a>İlgili makaleler
 
-- [Microsoft Defender Virüsten Koruma dağıtma](deploy-manage-report-microsoft-defender-antivirus.md)
+- [Microsoft Defender Virüsten Koruma'yi dağıtma](deploy-manage-report-microsoft-defender-antivirus.md)
 - [Microsoft Defender Virüsten Koruma güncelleştirmelerini yönetme ve temelleri uygulama](manage-updates-baselines-microsoft-defender-antivirus.md)
 - [Güncel olmayan uç noktalar için güncelleştirmeleri yönetme](manage-outdated-endpoints-microsoft-defender-antivirus.md)
 - [Olay tabanlı zorunlu güncelleştirmeleri yönetin](manage-event-based-updates-microsoft-defender-antivirus.md)
 - [Mobil cihaz ve sanal makine (VM) güncelleştirmelerini yönetin](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)
-- [Windows 10'da Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-in-windows-10.md)
+- [Windows 10 ve 11'de Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-in-windows-10.md)

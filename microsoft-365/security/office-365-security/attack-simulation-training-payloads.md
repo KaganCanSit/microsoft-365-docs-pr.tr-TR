@@ -1,5 +1,5 @@
 ---
-title: Saldırı simülasyonu eğitimi için yükleri
+title: Saldırı simülasyonu eğitimindeki yükleri
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -13,14 +13,14 @@ ms.collection:
 ms.custom: ''
 description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'de Saldırı simülasyonu eğitimi için yük oluşturmayı ve yönetmeyi öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: a21e3e72e435e9aaa53fb5fab825be6c490017fe
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: 38e9e60c50a7bc0dec4e8f9f75845fdc34e4b237
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65840243"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487234"
 ---
-# <a name="payloads-for-attack-simulation-training-in-defender-for-office-365"></a>Office 365 için Defender'de Saldırı simülasyonu eğitimi için yükleri
+# <a name="payloads-in-attack-simulation-training-in-defender-for-office-365"></a>Office 365 için Defender'de Saldırı simülasyonu eğitimi yükleri
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
@@ -42,7 +42,7 @@ Her yük için aşağıdaki bilgiler gösterilir:
 - **Dil**: Yük birden çok çeviri içeriyorsa, ilk iki dil doğrudan gösterilir. Kalan dilleri görmek için, sayısal simgenin üzerine gelin (örneğin, **+10**).
 - **Kaynak**: Yerleşik yükler için değer **Genel'dir**. Özel yükler için değer **Kiracı'dır**.
 - **Başlatılan simülasyonlar**: Yükü kullanan başlatılan simülasyonların sayısı.
-- **Risk altındaki oran (%)**: Yerleşik yükler için bu değer, diğer tüm Microsoft 365 kuruluşlarda aynı yük türünü kullanan Saldırı simülasyonu eğitim simülasyonları için tahmin edilen ortalama risk oranıdır.
+- **Risk altındaki oran (%)**: Yerleşik yüklerde bu değer, diğer tüm Microsoft 365 kuruluşlarında aynı yük türünü kullanan Saldırı simülasyonu eğitim simülasyonları için tahmin edilen ortalama risk oranıdır.
 - **Oluşturan**: Yerleşik yüklerde değer **Microsoft'tur**. Özel yükler için değer, yükü oluşturan kullanıcının UPN değeridir.
 - **Son değiştirme**
 - **Teknik**: Mevcut [sosyal mühendislik tekniklerinden](attack-simulation-training.md#select-a-social-engineering-technique) biri:
@@ -178,7 +178,7 @@ Listeden bir yük seçtiğinizde, aşağıdaki bilgilerle birlikte bir ayrıntı
      - <https://www.windocyte.com>
 
      > [!NOTE]
-     > URL saygınlığı hizmeti, bu URL'lerden birini veya daha fazlasını güvenli olmayan olarak tanımlayabilir. Url'yi simülasyonda kullanmadan önce desteklenen web tarayıcılarınızda URL'nin kullanılabilirliğini denetleyin. Daha fazla bilgi için bkz[. Google Kasa Gözatma tarafından engellenen kimlik avı benzetimi URL'leri](attack-simulation-training-faq.md#phishing-simulation-urls-blocked-by-google-safe-browsing).
+     > URL saygınlığı hizmeti, bu URL'lerden birini veya daha fazlasını güvenli olmayan olarak tanımlayabilir. Url'yi simülasyonda kullanmadan önce desteklenen web tarayıcılarınızda URL'nin kullanılabilirliğini denetleyin. Daha fazla bilgi için bkz [. Google Güvenli Gözatma tarafından engellenen kimlik avı benzetimi URL'leri](attack-simulation-training-faq.md#phishing-simulation-urls-blocked-by-google-safe-browsing).
 
    - **Ek içeriği** bölümü: Bu bölüm yalnızca **Tekniği seç** sayfasında **Ekte bağla seçeneğini** belirlediğinizde kullanılabilir.
 
@@ -190,9 +190,9 @@ Listeden bir yük seçtiğinizde, aşağıdaki bilgilerle birlikte bir ayrıntı
 
      - **Etiket ekleme**
   
-     - **Tema**: Hesap **Etkinleştirme**, **Hesap Doğrulama**, **Faturalama**, **Posta Temizleme**, **Alınan Belge**, **Gider**, **Faks**, **Finans Raporu**, **Gelen İletiler**, **Fatura**, **Alınan Öğe**, **Oturum Açma Uyarısı**, **Alınan Posta**, **Diğer**, **Parola**, **Ödeme**, **Bordro**, **Kişiselleştirilmiş Teklif**, **Karantina** , **Uzaktan Çalışma**, **İletiyi Gözden Geçirme**, **Güvenlik Güncelleştirmesi**, **Hizmet Askıya Alındı**, **İmza Gerekli**, **Posta Kutusunu Yükseltme Depolama**, **Posta kutusunu doğrulama** veya **Sesli mesaj**.
+     - **Tema**: Hesap **Etkinleştirme**, **Hesap Doğrulama**, **Faturalama**, **Posta Temizleme**, **Alınan Belge**, **Gider**, **Faks**, **Finans Raporu**, **Gelen İletiler**, **Fatura**, **Alınan Öğe**, **Oturum Açma Uyarısı**, **Alınan Posta**, **Diğer**, **Parola**, **Ödeme**, **Bordro**, **Kişiselleştirilmiş Teklif**, **Karantina** , **Uzaktan Çalışma**, **İletiyi Gözden Geçirme**, **Güvenlik Güncelleştirmesi**, **Hizmet Askıya Alındı**, **İmza Gerekli**, **Posta Kutusu Depolama alanını Yükseltme**, **Posta kutusunu doğrulama** veya **Sesli mesaj**.
   
-     - **Marka**: Kullanılabilir değerler şunlardır: **American Express**, **Capital One**, **DHL**, **DocuSign**, **Dropbox**, **Facebook**, **First American**, **Microsoft**, **Netflix**, **Scotiabank**, **SendGrid**, **Stewart Title**, **Tesco**, **Wells Fargo**, **Syrinx Cloud** veya **Diğer**.
+     - **Marka**: Mevcut değerler şunlardır: **American Express**, **Capital One**, **DHL**, **DocuSign**, **Dropbox**, **Facebook**, **First American**, **Microsoft**, **Netflix**, **Scotiabank**, **SendGrid**, **Stewart Title**, **Tesco**, **Wells Fargo**, **Syrinx Cloud** veya **Other**.
   
      - **Endüstri**: Mevcut değerler şunlardır: **Bankacılık**, **İş hizmetleri**, **Tüketici hizmetleri**, **Eğitim**, **Enerji**, **İnşaat**, **Danışmanlık**, **Finansal hizmetler**, **Kamu**, **Konaklama**, **Sigorta**, **Yasal**, **Kurye hizmetleri**, **BT**, **Sağlık**, **Üretim**, **Perakende**, **Telekom**, **Emlak** veya **Diğer**.
 

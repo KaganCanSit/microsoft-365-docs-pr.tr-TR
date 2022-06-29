@@ -18,12 +18,12 @@ ms.custom: ''
 description: Yöneticiler, kullanıcılar tarafından bildirilen istenmeyen posta ve kimlik avı e-postalarını toplamak için posta kutusunu yapılandırmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: f09054a4ee57ce7105a7b2daffc65be5b91dc8f6
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: 9b6586bb781daadb5b19756c9dac6893567f311d
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65839678"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489823"
 ---
 # <a name="user-reported-message-settings"></a>Kullanıcı tarafından bildirilen ileti ayarları
 
@@ -34,7 +34,7 @@ ms.locfileid: "65839678"
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Exchange Online posta kutuları olan Microsoft 365 kuruluşlarda, kullanıcıların kötü amaçlı veya kötü amaçlı olarak bildirdiği iletileri almak için bir posta kutusu belirtebilirsiniz. Kullanıcılar çeşitli raporlama seçeneklerini kullanarak iletileri raporladığında, iletileri kesmek (yalnızca özel posta kutusuna göndermek) veya iletilerin kopyalarını almak (özel posta kutusuna ve Microsoft'a göndermek) için bu posta kutusunu kullanabilirsiniz. Bu özellik aşağıdaki ileti raporlama seçenekleriyle çalışır:
+Exchange Online posta kutularına sahip Microsoft 365 kuruluşlarında, kullanıcıların kötü amaçlı olarak bildirdiği veya kötü amaçlı olmadığı iletileri almak için bir posta kutusu belirtebilirsiniz. Kullanıcılar çeşitli raporlama seçeneklerini kullanarak iletileri raporladığında, iletileri kesmek (yalnızca özel posta kutusuna göndermek) veya iletilerin kopyalarını almak (özel posta kutusuna ve Microsoft'a göndermek) için bu posta kutusunu kullanabilirsiniz. Bu özellik aşağıdaki ileti raporlama seçenekleriyle çalışır:
 
 - [Rapor İletisi eklentisi](enable-the-report-message-add-in.md)
 - [Rapor Kimlik Avı eklentisi](enable-the-report-phish-add-in.md)
@@ -55,9 +55,9 @@ Kullanıcı tarafından bildirilen iletilerin özel posta kutunuza gitmesi için
 
 Office 365 için Microsoft Defender varsa, gelişmiş filtrelememizin iletileri bildiren kullanıcıları etkilememesi için aşağıdaki ayarları da yapılandırmanız gerekir:
 
-- Kasa Bağlantılar taramasının kapalı olduğu özel posta kutusu için [bir Kasa Bağlantıları ilkesi oluşturun](set-up-safe-links-policies.md) (**İletilerde bilinmeyen kötü amaçlı olabilecek URL'ler için eylemi seçin** kapalı \> **).**
+- Güvenli Bağlantılar taramasının kapalı olduğu özel posta kutusu için [güvenli bağlantılar ilkesi oluşturun](set-up-safe-links-policies.md) (**İletilerde bilinmeyen kötü amaçlı olabilecek URL'ler için eylemi seçin** kapalı).\> 
 
-- Kasa Ekler taramasının kapalı olduğu özel posta kutusu için [bir Kasa Ekler ilkesi oluşturun](set-up-safe-attachments-policies.md) (**Ekler bilinmeyen kötü amaçlı yazılım yanıtı** bölümü \> **Kapalı** Kasa).
+- Güvenli Ekler taramasının kapalı olduğu özel posta kutusu için [Güvenli Ekler ilkesi oluşturun](set-up-safe-attachments-policies.md) (**Güvenli Ekler bilinmeyen kötü amaçlı yazılım yanıtı** bölümü \> **Kapalı**).
 
 Posta kutunuzu tüm geçerli önkoşulları karşıladığını doğruladıktan sonra, kullanıcı gönderimleri posta kutusunu yapılandırmak için bu makaledeki yordamları kullanabilirsiniz.
 
@@ -84,7 +84,7 @@ Posta kutunuzu tüm geçerli önkoşulları karşıladığını doğruladıktan 
 
 2. **Kullanıcı gönderimleri** sayfasında, gördükleriniz **Microsoft Outlook Rapor İletisi düğme** ayarının **Kapalı** mı yoksa **Açık** mı olduğuna göre belirlenir:
 
-   - **Microsoft Outlook Rapor İletisi düğmesi** \> **Açık**![.](../../media/scc-toggle-on.png): Web üzerinde Outlook'da Rapor İletisi eklentisini, Rapor Kimlik Avı eklentisini veya yerleşik raporlamayı kullanıyorsanız bu seçeneği belirleyin ve ardından aşağıdaki ayarları yapılandırın:
+   - **Microsoft Outlook Rapor İletisi düğmesi** \> **-Inı** ![ Açık.](../../media/scc-toggle-on.png): Web üzerinde Outlook Rapor İletisi eklentisini, Rapor Kimlik Avı eklentisini veya yerleşik raporlamayı kullanıyorsanız bu seçeneği belirleyin ve ardından aşağıdaki ayarları yapılandırın:
      - **Bildirilen iletileri gönder**: Aşağıdaki seçeneklerden birini belirleyin:
        - **Microsoft**: Kullanıcı gönderileri posta kutusu kullanılmaz (bildirilen tüm iletiler Microsoft'a gider).
        - **Microsoft ve kuruluşumun posta kutusu**: Görüntülenen kutuya mevcut bir Exchange Online posta kutusunun e-posta adresini girin. Dağıtım gruplarına izin verilmez. Kullanıcı gönderimleri analiz için hem Microsoft'a hem de yöneticinizin veya güvenlik operasyonları ekibinizin analiz edeceği özel posta kutusuna gider.
@@ -94,6 +94,8 @@ Posta kutunuzu tüm geçerli önkoşulları karşıladığını doğruladıktan 
           > ABD Kamu kuruluşları (GCC, GCC High ve DoD) yalnızca **Kuruluşumun posta kutusunu** yapılandırabilir. Diğer iki seçenek devre dışı bırakılır.
           >
           > Kuruluşlar, kullanıcı tarafından bildirilen iletileri yalnızca özel posta kutusuna gönderecek şekilde yapılandırılmışsa, bildirilen iletiler **Kullanıcı tarafından bildirilen iletiler'de** görünür ancak sonuçları her zaman boş olur (çünkü bunlar yeniden taramazlardı).
+          >
+          > [Saldırı simülasyonu eğitimini](attack-simulation-training-get-started.md) veya üçüncü taraf bir ürünü kullanarak kimlik avı simülasyonları yapıyorsanız[, bu posta kutusunu SecOps posta kutusu olarak yapılandırmanız](configure-advanced-delivery.md) gerekir. Bunu yapmazsanız, raporlama iletileri kimlik avı simülasyonu ürününde eğitim atamalarını tetikleyebilir.
 
        **Bildirilen iletileri gönderme** için seçtiğiniz değerden bağımsız olarak aşağıdaki ayarlar kullanılabilir:
 
@@ -106,7 +108,7 @@ Posta kutunuzu tüm geçerli önkoşulları karşıladığını doğruladıktan 
           > [!CAUTION]
           > Web üzerinde Outlook posta kutusu ilkelerini kullanarak [Web üzerinde Outlook'de gereksiz e-posta raporlamayı devre dışı bırakmış](report-junk-email-and-phishing-scams-in-outlook-on-the-web-eop.md#disable-or-enable-junk-email-reporting-in-outlook-on-the-web) ancak iletileri Microsoft'a bildirmek için önceki ayarlardan herhangi birini yapılandırdıysanız, kullanıcılar iletileri Web üzerinde Outlook  Rapor İletisi eklentisini veya Rapor Kimlik Avı eklentisini kullanarak.
 
-     Son kullanıcıların karantina portalından hatalı pozitif iletileri bildirmesine izin vermek için **Microsoft Outlook Rapor İletisi düğme** ayarını ![](../../media/scc-toggle-on.png) **Açık** bırakın.
+     Son kullanıcıların karantina portalından hatalı pozitif iletiler bildirmesine izin vermek için **Microsoft Outlook Rapor İletisi düğme** ayarını ![](../../media/scc-toggle-on.png) **Açık** bırakın.
 
      - **Kullanıcı raporlama deneyimi bölümü**
        - **Raporlamadan önce** sekmesi: **Başlık** ve **İleti gövdesi** kutularına, rapor iletisi eklentisini veya Rapor Kimlik Avı eklentisini kullanarak bir iletiyi bildirmeden önce kullanıcıların gördüğü açıklayıcı metni girin. Gönderme türünü (gereksiz, gereksiz değil, kimlik avı vb.) dahil etmek için %type% değişkenini kullanabilirsiniz.
@@ -117,7 +119,7 @@ Posta kutunuzu tüm geçerli önkoşulları karşıladığını doğruladıktan 
 
           > E-postanız analiz için Olduğu gibi Microsoft'a gönderilir. Bazı e-postalar kişisel veya hassas bilgiler içerebilir.
 
-   - **Microsoft Outlook Rapor İletisi düğmesi** \> **Kapalı** ![Geçiş Kapalı.](../../media/scc-toggle-off.png): Rapor İletisi eklentisi, Rapor Kimlik Avı eklentisi veya Web üzerinde Outlook yerleşik raporlama yerine üçüncü taraf raporlama araçlarını kullanıyorsanız bu seçeneği belirleyin ve ardından aşağıdaki ayarları yapılandırın:
+   - **Microsoft Outlook Rapor İletisi düğmesi** \> **Kapalı** ![ Kapalı konuma getirin.](../../media/scc-toggle-off.png): Rapor İletisi eklentisi, Rapor Kimlik Avı eklentisi veya Web üzerinde Outlook yerleşik raporlama yerine üçüncü taraf raporlama araçlarını kullanıyorsanız bu seçeneği belirleyin ve ardından aşağıdaki ayarları yapılandırın:
      - **Kullanıcı tarafından bildirilen gönderimleri almak için Bu özel posta kutusunu kullan'ı** seçin. Görüntülenen kutuya, e-posta alabilen mevcut bir Exchange Online posta kutusunun e-posta adresini girin.
 
    - **Rapor iletisini karantinaya al düğmesi**: Son kullanıcıların karantinadan gelen iletileri bildirmesine izin vermek istiyorsanız bu özelliği etkinleştirin.
@@ -126,7 +128,7 @@ Posta kutunuzu tüm geçerli önkoşulları karşıladığını doğruladıktan 
 
 ## <a name="third-party-reporting-tools"></a>Üçüncü taraf raporlama araçları
 
-Bildirilen iletileri özel posta kutusuna göndermek için üçüncü taraf ileti raporlama araçlarını yapılandırabilirsiniz. Bunu yapmak için **Microsoft Outlook Rapor İletisi düğmesini** **Kapalı** olarak ve **Kuruluşum'un posta kutusunu** istediğiniz Office 365 posta kutusuna ayarlarsınız.
+Bildirilen iletileri özel posta kutusuna göndermek için üçüncü taraf ileti raporlama araçlarını yapılandırabilirsiniz. Bunu yapmak için **Microsoft Outlook Rapor İletisi düğmesi** ayarını **Kapalı** ve **Kuruluşum'un posta kutusunu** istediğiniz Office 365 posta kutusuna ayarlarsınız.
 
 Tek gereksinim, özgün iletinin olarak eklenmesidir. EML veya . Özel posta kutusuna gönderilen iletideki MSG eki (sıkıştırılmaz) (özgün iletiyi özel posta kutusuna iletmeyin). 
 
