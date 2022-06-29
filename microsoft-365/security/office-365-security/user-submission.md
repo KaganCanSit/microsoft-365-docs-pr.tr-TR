@@ -18,12 +18,12 @@ ms.custom: ''
 description: Yöneticiler, kullanıcılar tarafından bildirilen istenmeyen posta ve kimlik avı e-postalarını toplamak için posta kutusunu yapılandırmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 9b6586bb781daadb5b19756c9dac6893567f311d
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 5f2881076679f64633afc1ddcac6a9de7df64acb
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/29/2022
-ms.locfileid: "66489823"
+ms.locfileid: "66530608"
 ---
 # <a name="user-reported-message-settings"></a>Kullanıcı tarafından bildirilen ileti ayarları
 
@@ -48,12 +48,16 @@ Kullanıcı tarafından bildirilen iletileri doğrudan Microsoft yerine özel bi
 ## <a name="custom-mailbox-prerequisites"></a>Özel posta kutusu önkoşulları
 
 Kullanıcı tarafından bildirilen iletilerin özel posta kutunuza gitmesi için gerekli önkoşulları yapılandırmak için aşağıdaki makaleleri kullanın:
-
+ 
 - [Gelişmiş teslim ilkesinde özel posta kutusunu SecOps posta kutusu olarak tanımlama](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy)
 
-- [Kötü amaçlı yazılım](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies) için sıfır saatlik otomatik temizlemenin (ZAP) kapalı olduğu özel posta kutusu için kötü amaçlı yazılımdan koruma ilkesi oluşturun (**Koruma ayarları** bölümünde \> **Kötü amaçlı yazılım için sıfır saatlik otomatik temizlemeyi etkinleştirme** seçili değildir).
+- Özel posta kutusu için [kötü amaçlı yazılımdan koruma ilkesi oluşturma](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies)
+    - kötü amaçlı yazılım için sıfır saatlik otomatik temizleme (ZAP) kapalıdır (**Koruma ayarları** bölümü \> **Kötü amaçlı yazılım için sıfır saatlik otomatik temizlemeyi etkinleştir** seçeneği seçilmez). 
+    - ortak ek filtresi seçeneği kapalıdır (**Koruma ayarları** bölümü \> **Ortak ekler filtresini etkinleştir** seçili değildir). 
 
 Office 365 için Microsoft Defender varsa, gelişmiş filtrelememizin iletileri bildiren kullanıcıları etkilememesi için aşağıdaki ayarları da yapılandırmanız gerekir:
+
+- [Özel posta kutusunun önceden ayarlanmış güvenlik ilkelerinin bir parçası olmadığından emin olun](preset-security-policies.md#use-the-microsoft-365-defender-portal-to-modify-the-assignments-of-standard-and-strict-preset-security-policies)
 
 - Güvenli Bağlantılar taramasının kapalı olduğu özel posta kutusu için [güvenli bağlantılar ilkesi oluşturun](set-up-safe-links-policies.md) (**İletilerde bilinmeyen kötü amaçlı olabilecek URL'ler için eylemi seçin** kapalı).\> 
 

@@ -19,12 +19,12 @@ ms.custom: seo-marvel-apr2020
 ms.reviewer: vippand
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 37819c0f5ea458a4f5ee25b3536e3688aabd1882
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 82b23047b8013f9916168d46b5b595b326f6d1e5
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/29/2022
-ms.locfileid: "66486917"
+ms.locfileid: "66530542"
 ---
 # <a name="whats-new-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender’daki yenilikler
 
@@ -67,6 +67,7 @@ Diğer Microsoft Defender güvenlik ürünleriyle ilgili yenilikler hakkında da
 
 - [Microsoft 365 Defender Gelişmiş Avcılık'ta URLClickEvents tablosuna](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/introducing-the-urlclickevents-table-in-advanced-hunting-with/ba-p/3295096) giriş: Office 365 için Microsoft Defender ile gelişmiş avcılıkta UrlClickEvents tablosuna giriş.
 - [El ile e-posta düzeltme iyileştirmeleri](/microsoft-365/security/office-365-security/remediate-malicious-email-delivered-office-365): Yeni eylem odaklı bir araştırma kullanarak Office 365 için Microsoft Defender gerçekleştirilen el ile e-posta temizleme eylemlerini Microsoft 365 Defender (M365D) birleşik İşlem Merkezi'ne getirme.
+- [Office 365 için Microsoft Defender'da öncelik hesapları için farklı](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/introducing-differentiated-protection-for-priority-accounts-in/ba-p/3283838) koruma tanıtımı: Öncelik hesapları için farklılaştırılmış korumanın genel kullanılabilirliğine giriş. 
  
 ## <a name="march-2022"></a>Mart 2022
 

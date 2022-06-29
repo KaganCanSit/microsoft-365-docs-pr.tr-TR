@@ -1,6 +1,6 @@
 ---
-title: Mobil Cihaz Yönetimi araçlarını kullanarak Windows cihazlarını ekleyin
-description: Uç Nokta için Defender hizmetine eklenmeleri için yapılandırma paketini cihazlara dağıtmak için Mobile Cihaz Yönetimi araçlarını kullanın.
+title: Intune kullanarak Windows cihazlarını Uç Nokta için Defender'a ekleme
+description: Uç Nokta için Defender hizmetine eklenmeleri için yapılandırma paketini cihazlara dağıtmak için Microsoft Intune kullanın.
 keywords: mdm kullanarak cihazları ekleme, cihaz yönetimi, Uç Nokta için Microsoft Defender cihazları ekleme, mdm
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -15,14 +15,14 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 3e81470cb02742eb94e62118f77f1ae0e8c62f90
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: 90c6ec688b19f328f89e2bcabe70b7955086e8da
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599691"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66531066"
 ---
-# <a name="onboard-windows-devices-using-mobile-device-management-tools"></a>Mobil Cihaz Yönetimi araçlarını kullanarak Windows cihazlarını ekleyin
+# <a name="onboard-windows-devices-to-defender-for-endpoint-using-intune"></a>Intune kullanarak Windows cihazlarını Uç Nokta için Defender'a ekleme 
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
@@ -35,18 +35,17 @@ ms.locfileid: "65599691"
 
 Windows 10 cihazları yapılandırmak için mobil cihaz yönetimi (MDM) çözümlerini kullanabilirsiniz. Uç Nokta için Defender, cihazları yönetmeye yönelik ilkeler oluşturmak için OMA-URIs sağlayarak MDM'leri destekler.
 
-
 Uç Nokta için Defender CSP'yi kullanma hakkında daha fazla bilgi için bkz. [WindowsAdvancedThreatProtection CSP](https://msdn.microsoft.com/library/windows/hardware/mt723296(v=vs.85).aspx) ve [WindowsAdvancedThreatProtection DDF dosyası](https://msdn.microsoft.com/library/windows/hardware/mt723297(v=vs.85).aspx).
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Microsoft Intune kullanıyorsanız cihaz MDM'sini kaydetmiş olmanız gerekir. Aksi takdirde, ayarlar başarıyla uygulanmaz.
+Cihazların Mobil Cihaz Yönetimi (MDM) çözümünüz olarak Intune ile kaydedilmesi gerekir.
 
 MDM'yi Microsoft Intune ile etkinleştirme hakkında daha fazla bilgi için bkz[. Cihaz kaydı (Microsoft Intune)](/mem/intune/enrollment/device-enrollment).
 
 ## <a name="onboard-devices-using-microsoft-intune"></a>Microsoft Intune kullanarak cihazları ekleme
 
-Uç Nokta için Defender'ı dağıtmayla ilgili çeşitli yolları görmek için [PDF](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf) veya [Visio](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx) göz atın.
+Uç Nokta için Defender'ı dağıtma ile ilgili çeşitli yolları görmek için [PDF](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf) veya [Visio'ya](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx) göz atın.
 
 [Intune](/mem/intune/protect/advanced-threat-protection-configure#enable-microsoft-defender-for-endpoint-in-intune) yönergelerini izleyin.
 
@@ -57,15 +56,14 @@ Uç Nokta için Defender CSP'yi kullanma hakkında daha fazla bilgi için bkz. [
 >
 > - **Eklenen cihazlar için Sistem Durumu** ilkesi salt okunur özellikleri kullanır ve düzeltilemiyor.
 > - Tanılama veri raporlama sıklığı yapılandırması yalnızca Windows 10 sürüm 1703'te bulunan cihazlar için kullanılabilir.
+> - Uç Nokta için Defender'a eklendiğinde cihaz, Microsoft 365 uyumluluğunun da bir parçası olan [Veri Kaybı Önleme'ye (DLP)](../../compliance/endpoint-dlp-learn-about.md) eklenir.
 
-
-Uç Nokta için Microsoft Defender dağıtma işleminin çeşitli yollarını [görmek için](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx) [PDF](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf) veya Visio göz atın.
 
 ## <a name="run-a-detection-test-to-verify-onboarding"></a>Ekleme işlemini doğrulamak için algılama testi çalıştırma
 Cihazı ekledikten sonra, bir cihazın hizmete düzgün şekilde eklendiğini doğrulamak için bir algılama testi çalıştırmayı seçebilirsiniz. Daha fazla bilgi için bkz. [Yeni eklenen Uç Nokta için Microsoft Defender cihazında algılama testi çalıştırma](run-detection-test.md).
 
 
-## <a name="offboard-and-monitor-devices-using-mobile-device-management-tools"></a>Mobil Cihaz Yönetimi araçlarını kullanarak cihazları çıkarma ve izleme
+## <a name="offboard-devices-using-mobile-device-management-tools"></a>Mobil Cihaz Yönetimi araçlarını kullanarak cihazları çıkarma
 
 Güvenlik nedeniyle, cihazları kullanıma almak için kullanılan paketin süresi, indirildiği tarihten 30 gün sonra dolar. Bir cihaza gönderilen süresi dolan çıkarma paketleri reddedilir. Bir çıkarma paketini indirirken paketlerin son kullanma tarihi size bildirilir ve paket adına da eklenir.
 
@@ -74,7 +72,7 @@ Güvenlik nedeniyle, cihazları kullanıma almak için kullanılan paketin süre
 
 1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalından</a> çıkarma paketini alın:
 
-   1. Gezinti bölmesinde **Uç Noktalar** \> **Cihaz yönetimi** \> **Çıkarma'yı Ayarlar** \> seçin.
+   1. Gezinti bölmesinde **Ayarlar** \> **Uç Noktaları** \> **Cihaz yönetimi** \> **Çıkarma'yı** seçin.
 
    1. İşletim sistemi olarak Windows 10 veya Windows 11 seçin.
 

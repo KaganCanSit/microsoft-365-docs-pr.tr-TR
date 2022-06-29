@@ -15,12 +15,13 @@ search.appverid:
 - MOE150
 - MET150
 description: Office 365 için Microsoft Defender çözümleri deneme playbook'u.
-ms.openlocfilehash: a1adcf15bd051478e874b990a5e6b12f19d3b0c6
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.custom: trial-playbook
+ms.openlocfilehash: 6f4bd69e1797398dbe7e091a61fcc7a25d474121
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65648359"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66531132"
 ---
 # <a name="trial-playbook-microsoft-defender-for-office-365"></a>Deneme playbook'u: Office 365 için Microsoft Defender
 
@@ -44,11 +45,11 @@ Denemeyi başlattıktan ve kurulum işlemini tamamladıktan sonra değişiklikle
 
 Ortamınızda [Önceden Ayarlanmış güvenlik ilkelerini](preset-security-policies.md) otomatik olarak yapılandırdık. Bu ilkeler, çoğu kullanıcı için uygun bir temel koruma profilini temsil eder. Standart koruma şunları içerir:
 
-- Kasa Bağlantılar, Kasa Ekler ve kimlik avı önleme ilkeleri, deneme kurulum işlemi sırasında seçmiş olabileceğiniz tüm kiracı veya kullanıcı alt kümesi kapsamındadır.
-- Kasa SharePoint, OneDrive ve Microsoft Teams için Ekler koruması.
-- Kasa Desteklenen Office 365 uygulamaları için bağlantılar koruması.
+- Güvenli Bağlantılar, Güvenli Ekler ve kimlik avı önleme ilkeleri, deneme kurulum işlemi sırasında seçmiş olabileceğiniz tüm kiracı veya kullanıcı alt kümesi kapsamındadır.
+- SharePoint, OneDrive ve Microsoft Teams için Güvenli Ekler koruması.
+- Desteklenen Office 365 uygulamaları için Güvenli Bağlantılar koruması.
 
-Daha fazla bilgi edinmek için bu videoyu izleyin: [Office 365 için Microsoft Defender - YouTube'da Kasa Bağlantıları ile kötü amaçlı bağlantılara karşı koruma](https://www.youtube.com/watch?v=vhIJ1Veq36Y&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=9).
+Daha fazla bilgi edinmek için bu videoyu izleyin: [Office 365 için Microsoft Defender - YouTube'da Güvenli Bağlantılar ile kötü amaçlı bağlantılara karşı koruma](https://www.youtube.com/watch?v=vhIJ1Veq36Y&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=9).
 
 ### <a name="enable-users-to-report-suspicious-content"></a>Kullanıcıların şüpheli içeriği bildirmesini sağlama
 

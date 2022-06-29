@@ -20,16 +20,16 @@ ms.custom:
 - seo-marvel-may2020
 - seo-marvel-jun2020
 description: Genellikle kayıt yönetimi çözümünün bir parçası olarak, tanımladığınız bir olaya göre bekletme süresini başlatmak için bir bekletme etiketi yapılandırabilirsiniz.
-ms.openlocfilehash: 65a3c2088974398abb6ddbeb205cfb66541629e2
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 380a95a6b4d6fa6585d0912b675d65032cd8258b
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285116"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66530870"
 ---
 # <a name="start-retention-when-an-event-occurs"></a>Bir olay meydana geldiğinde saklamayı başlatma
 
->*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -52,7 +52,7 @@ Olay tabanlı saklama genellikle kayıt yönetimi sürecinin bir parçası olara
 - Olaylara dayalı bekletme etiketleri genellikle saklama süresinin sonunda bir değerlendirme gözden geçirmesi tetikler, böylece kayıt yöneticisi içeriği el ile gözden geçirebilir ve atabilir. Daha fazla bilgi için bkz. [İçeriğin konumu](disposition.md).
     
 
-Bir olayı temel alan bekletme etiketi, Microsoft 365'daki tüm bekletme etiketleriyle aynı özelliklere sahiptir. Daha fazla bilgi için bkz. [Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin](retention.md).
+Bir olayı temel alan bekletme etiketi, Microsoft 365'teki tüm bekletme etiketleriyle aynı özelliklere sahiptir. Daha fazla bilgi için bkz. [Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin](retention.md).
 
 ## <a name="understanding-the-relationship-between-event-types-labels-events-and-asset-ids"></a>Olay türleri, etiketler, olaylar ve varlık kimlikleri arasındaki ilişkiyi anlama
 
@@ -64,13 +64,13 @@ Olay tabanlı saklamayı başarıyla kullanmak için diyagramlarda gösterildiğ
   
 1. Farklı içerik türleri için bekletme etiketleri oluşturur ve bunları bir olay türüyle ilişkilendirirsiniz. Örneğin, ürün dosyalarının ve kayıtlarının farklı türleri için bekletme etiketleri Ürün Ömrü adlı bir olay türüyle ilişkilendirilir çünkü bu kayıtlar, ürünün kullanım ömrü sonuna ulaştığından itibaren 10 yıl boyunca saklanmalıdır.
     
-2. Kullanıcılar (genellikle kayıt yöneticileri) bu bekletme etiketlerini içeriğe uygular ve (SharePoint ve OneDrive belgeler için) her öğe için bir varlık kimliği girin. Bu örnekte varlık kimliği, kuruluş tarafından kullanılan bir ürün adı veya koddur. Ardından, her ürünün kayıtlarına bir bekletme etiketi atanır ve her kaydın varlık kimliği içeren bir özelliği vardır. Diyagram, bir **kuruluştaki tüm ürün kayıtlarının tüm içeriğini** temsil eder ve her öğe, kaydı olan ürünün varlık kimliğini taşır. 
+2. Kullanıcılar (genellikle kayıt yöneticileri) bu bekletme etiketlerini içeriğe uygular ve (SharePoint ve OneDrive'daki belgeler için) her öğe için bir varlık kimliği girer. Bu örnekte varlık kimliği, kuruluş tarafından kullanılan bir ürün adı veya koddur. Ardından, her ürünün kayıtlarına bir bekletme etiketi atanır ve her kaydın varlık kimliği içeren bir özelliği vardır. Diyagram, bir **kuruluştaki tüm ürün kayıtlarının tüm içeriğini** temsil eder ve her öğe, kaydı olan ürünün varlık kimliğini taşır. 
     
 3. Ürün Ömrü olay türüdür; belirli bir ürünün ömrünün sonuna ulaşması bir olaydır. Bu olay türünde bir olay gerçekleştiğinde (bu durumda, bir ürün kullanım ömrünün sonuna ulaştığında) şunları belirten bir olay oluşturursunuz:
     
    - Varlık kimliği (SharePoint ve OneDrive belgeleri için)
     
-   - Anahtar sözcükler (Exchange öğeler için). Bu örnekte kuruluş, ürün kayıtlarını içeren iletilerde bir ürün kodu kullandığından, Exchange öğelerin anahtar sözcüğü işlevsel olarak SharePoint ve OneDrive belgeleri için varlık kimliğiyle aynıdır.
+   - Anahtar sözcükler (Exchange öğeleri için). Bu örnekte kuruluş, ürün kayıtlarını içeren iletilerde bir ürün kodu kullandığından, Exchange öğeleri için anahtar sözcük SharePoint ve OneDrive belgelerinin varlık kimliğiyle işlevsel olarak aynıdır.
     
    - Olayın gerçekleştiği tarih. Bu tarih, bekletme döneminin başlangıcı olarak kullanılır. Bu tarih geçerli, geçmiş veya gelecekteki bir tarih olabilir.
 
@@ -87,7 +87,7 @@ Olay temelli saklama için üst düzey iş akışı:
 ![Olay temelli saklamayı ayarlamaya yönelik iş akışı diyagramı.](../media/event-based-retention-process.png)
   
 > [!TIP]
-> Bekletme etiketlerini otomatik olarak uygulamak ve olay temelli saklamayı uygulamak için SharePoint'da yönetilen özellikleri kullanma hakkında ayrıntılı bir senaryo için bkz. SharePoint [depolanan belgelerin yaşam döngüsünü yönetmek için bekletme etiketlerini kullanma](auto-apply-retention-labels-scenario.md).
+> Bekletme etiketlerini otomatik olarak uygulamak ve olay temelli [bekletme uygulamak için SharePoint'te](auto-apply-retention-labels-scenario.md) yönetilen özellikleri kullanma hakkında ayrıntılı bir senaryo için bkz. SharePoint'te depolanan belgelerin yaşam döngüsünü yönetmek için bekletme etiketlerini kullanma.
 
 ### <a name="step-1-create-a-label-whose-retention-period-is-based-on-an-event"></a>1. Adım: Bekletme süresi bir olayı temel alan bir etiket oluşturma
 
@@ -97,7 +97,7 @@ Bekletme etiketinizi oluşturmak ve yapılandırmak için Kayıt yönetimi için
 
 Olay türü, bekletme etiketiyle ilişkilendirmek istediğiniz bir olayın genel açıklamasıdır.
 
-Varsayılan olay türleri daha kolay tanımlanabilmesi için açılan listede adından **sonra (olay türü)** içerir ve Olay türlerini yönet > **Kayıt** **yönetimiEvents** >  **sekmesinden olay türünü görebilir ve oluşturabilirsiniz**.
+Varsayılan olay türleri, daha kolay tanımlanabilmesi için açılan listede adından sonra **(olay türü)** içerir ve Olay **türlerini yönet** > **Kayıt yönetimi** > **Olayları** sekmesinden olay türünü görebilir ve oluşturabilirsiniz.
 
 Olay tabanlı saklama, şu saklama ayarlarını gerektirir:
   
@@ -131,7 +131,7 @@ Herhangi bir bekletme etiketinde olduğu gibi, içeriğe el ile veya otomatik ol
   
 - İçeriği yalnızca belirli bir ürün için saklamak için kullanabileceğiniz ürün kodları.
     
-- yalnızca belirli bir proje için içeriği korumak için kullanabileceğiniz kodları Project.
+- İçeriği yalnızca belirli bir proje için saklamak için kullanabileceğiniz proje kodları.
     
 - İçeriği yalnızca belirli bir kişiye saklamak için kullanabileceğiniz çalışan kimlikleri.
     
@@ -141,7 +141,7 @@ Varlık Kimliği, SharePoint ve OneDrive'da kullanılabilen başka bir belge öz
   
 ### <a name="step-5-create-an-event"></a>5. Adım: Olay oluşturma
 
-Bu olay türünün belirli bir örneği gerçekleştiğinde (örneğin, bir ürün kullanım ömrünün sonuna ulaştığında), Microsoft Purview uyumluluk portalındaki **Kayıtlar** **yönetimiEvents** >  sayfasına gidin ve bir olay oluşturmak için **+ Oluştur'u** seçin. Olayı burada oluşturarak tetiklersiniz.
+Bu olay türünün belirli bir örneği gerçekleştiğinde (örneğin, bir ürün kullanım ömrünün sonuna ulaştığında), Microsoft Purview uyumluluk portalı **Kayıt yönetimi** > **Olayları** sayfasına gidin ve **+ Oluştur'u** seçerek bir olay oluşturun. Olayı burada oluşturarak tetiklersiniz.
 
 ![Olay tabanlı bekletme etiketleri için bekletme başlangıcını tetikleyen bir olay oluşturun.](../media/create-event-records-management.png)
 
@@ -157,9 +157,9 @@ Alternatif olarak, farklı olay türlerine sahip birden çok bekletme etiketi i�
 
 ### <a name="step-7-enter-keywords-or-query-for-exchange-asset-id-for-sharepoint-and-onedrive"></a>7. Adım: Exchange için anahtar sözcükleri veya sorguyu, SharePoint ve OneDrive için varlık kimliğini girin
 
-Şimdi içeriğin kapsamını daraltacaksınız. Exchange içerik için bunu anahtar sözcükler veya sorgu belirterek yaparsınız. SharePoint ve OneDrive içeriği için varlık kimliklerini belirterek bunu yaparsınız.
+Şimdi içeriğin kapsamını daraltacaksınız. Exchange içeriği için bunu anahtar sözcükler veya sorgu belirterek yaparsınız. SharePoint ve OneDrive içeriği için varlık kimliklerini belirterek bunu yaparsınız.
 
-Exchange öğeler için anahtar sözcükler veya Anahtar Sözcük Sorgu Dili (KQL) kullanan bir sorgu kullanın. Sorgu söz dizimi hakkında daha fazla bilgi için bkz[. Anahtar Sözcük Sorgu Dili (KQL) söz dizimi başvurusu](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference). Exchange için kullanabileceğiniz aranabilir özellikler hakkında daha fazla bilgi için bkz[. İçerik Arama için anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md).
+Exchange öğeleri için anahtar sözcükler veya Anahtar Sözcük Sorgu Dili (KQL) kullanan bir sorgu kullanın. Sorgu söz dizimi hakkında daha fazla bilgi için bkz [. Anahtar Sözcük Sorgu Dili (KQL) söz dizimi başvurusu](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference). Exchange için kullanabileceğiniz aranabilir özellikler hakkında daha fazla bilgi için bkz [. İçerik Arama için anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md).
 
 Varlık kimlikleri için bekletme yalnızca belirtilen *özellik:değer* çifti olan içerikte zorlanır. Örneğin, Varlık Kimliği özelliğini kullanıyorsanız, aşağıdaki resimde gösterilen varlık kimlikleri kutusuna girin `ComplianceAssetID:<value>` .
 
@@ -202,15 +202,22 @@ Daha fazla bilgi için bkz [. İçerik Arama için anahtar sözcük sorguları v
 - [New-ComplianceRetentionEvent](/powershell/module/exchange/new-complianceretentionevent)
     
 
+Bekletme etiketleri ve ilkeleri oluşturmaya yönelik diğer cmdlet'leri tanımlamaya yardımcı olmak için bkz. [Bekletme ilkeleri ve bekletme etiketleri için PowerShell cmdlet'leri](retention-cmdlets.md).
+
 ## <a name="automate-events-by-using-a-rest-api"></a>REST API kullanarak olayları otomatikleştirme
 
 Bekletme süresinin başlangıcını tetikleyen olayları otomatik olarak oluşturmak için REST API kullanabilirsiniz.
 
-REST API, hizmetin kaynaklarına oluşturma/alma/güncelleştirme/silme erişimi sağlayan HTTP işlemleri kümelerini (yöntemler) destekleyen bir hizmet uç noktasıdır. Daha fazla bilgi için bkz. [REST API isteğinin/yanıtının bileşenleri](/rest/api/gettingstarted/#components-of-a-rest-api-requestresponse). Microsoft 365 REST API kullanılarak post ve GET yöntemleri kullanılarak olaylar oluşturulabilir ve alınabilir.
+> [!NOTE]
+> Artık önizleme aşamasında kullanıma sunulan [microsoft Graph API kayıt yönetimi için](compliance-extensibility.md#microsoft-graph-api-for-records-management-preview) kullanarak olayı oluşturabilir, ayrıca olay türleri ve bekletme etiketleri oluşturabilirsiniz.
+> 
+> Bu bölümdeki REST API'leri yakında kullanım dışı bırakılacağı ve çalışmayı durduracağı için bu Graph API'lerini denemenizi öneririz.
+
+REST API, hizmetin kaynaklarına oluşturma/alma/güncelleştirme/silme erişimi sağlayan HTTP işlemleri kümelerini (yöntemler) destekleyen bir hizmet uç noktasıdır. Daha fazla bilgi için bkz. [REST API isteğinin/yanıtının bileşenleri](/rest/api/gettingstarted/#components-of-a-rest-api-requestresponse). Microsoft 365 REST API'sini kullanarak post ve GET yöntemleri kullanılarak olaylar oluşturulabilir ve alınabilir.
 
 REST API'yi kullanmak için iki seçenek vardır:
 
-- **Microsoft Power Automate veya bir** olayın otomatik olarak oluşmasını tetikleyen benzer bir uygulamadır. Microsoft Power Automate, diğer sistemlere bağlanmak için bir düzenleyici olduğundan özel bir çözüm yazmanız gerekmez. Daha fazla bilgi için [Power Automate web sitesine bakın](https://flow.microsoft.com/en-us/).
+- **Microsoft Power Automate veya bir** olayın otomatik olarak oluşmasını tetikleyen benzer bir uygulama. Microsoft Power Automate, diğer sistemlere bağlanmak için bir düzenleyici olduğundan özel bir çözüm yazmanız gerekmez. Daha fazla bilgi için [bkz. Power Automate web sitesi](https://flow.microsoft.com/en-us/).
 
 - **Özel bir çözümün parçası olan PowerShell** (sürüm 6 veya üzeri) kullanarak olay oluşturmak için REST API'yi çağırmak için PowerShell veya HTTP istemcisi.
 
@@ -222,9 +229,9 @@ https://ps.compliance.protection.outlook.com/psws/service.svc/ComplianceRetentio
 
 Yanıt kodunu denetleyin. 302 ise, yanıt üst bilgisinin Location özelliğinden yeniden yönlendirilen URL'yi alın ve aşağıdaki yönergeler yerine `https://ps.compliance.protection.outlook.com/psws/service.svc/ComplianceRetentionEvent` bu URL'yi kullanın.
 
-Otomatik olarak oluşturulan olaylar, **Kayıt** **yönetimiEvents** >   > Microsoft Purview uyumluluk portalında görüntülenerek onaylanabilir.
+Otomatik olarak oluşturulan olaylar, Microsoft Purview uyumluluk portalı > **Kayıt yönetimi** >  **Olaylarında** görüntülenerek onaylanabilir.
 
-### <a name="use-microsoft-power-automate-to-create-the-event"></a>Olayı oluşturmak için Microsoft Power Automate kullanma
+### <a name="use-microsoft-power-automate-to-create-the-event"></a>Olayı oluşturmak için Microsoft Power Automate'i kullanma
 
 Microsoft 365 REST API'sini kullanarak olay oluşturan bir akış oluşturun:
 

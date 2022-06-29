@@ -1,5 +1,5 @@
 ---
-title: Microsoft Compliance Manager premium değerlendirmeleri deneme playbook'u
+title: Microsoft Purview Uyumluluk Yöneticisi premium değerlendirmeleri deneme playbook'u
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -14,17 +14,20 @@ ROBOTS: NOINDEX, NOFOLLOW
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Compliance Manager premium değerlendirmeleri deneme playbook'u.
-ms.openlocfilehash: f50060fa5e9f037fbe1301496f18422684c38d3d
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Microsoft Purview Compliance Manager premium değerlendirmeleri deneme playbook'u.
+ms.custom: trial-playbook
+ms.openlocfilehash: 3d41cde8cbf7cb6158573ed158a41dfe42d28dd5
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759865"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66531022"
 ---
-# <a name="trial-playbook-microsoft-compliance-manager-premium-assessments"></a>Deneme playbook'u: Microsoft Compliance Manager premium değerlendirmeleri
+# <a name="trial-playbook-microsoft-purview-compliance-manager-premium-assessments"></a>Deneme playbook'u: Microsoft Purview Compliance Manager premium değerlendirmeleri
 
-Microsoft Compliance Manager premium değerlendirme denemesi playbook'una hoş geldiniz.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Microsoft Purview Compliance Manager premium değerlendirme deneme sürümü playbook'una hoş geldiniz.
 
 Bu playbook, kapsamlı premium değerlendirme şablonlarının (eklenti) nasıl kullanılacağını öğreterek 90 günlük ücretsiz denemenizden en iyi şekilde yararlanmanıza yardımcı olur.
 
@@ -61,7 +64,7 @@ Uyumluluk Yöneticisi, eklenti olarak satın alınabilen 300'in üzerinde mevzua
 
 Deneme lisansları, 90 gün boyunca 25 premium şablon kullanmanıza olanak tanır. 300'den fazla premium şablon listesinden seçim yapabilirsiniz. 25 şablonun tümünü aynı anda seçmeniz gerekmez. Seçildikten sonra, lisanslı şablonlar deneme lisansınızı aldıktan sonraki 4 saat içinde kullanımınıza sunulur.
 
-Premium Değerlendirme Eklentisi denemesini etkinleştirmenin iki yolu vardır: Uyumluluk Yöneticisi panosu veya Microsoft 365 Uyumluluk denemesi aracılığıyla.
+Premium Değerlendirme Eklentisi deneme sürümünü etkinleştirmenin iki yolu vardır: Uyumluluk Yöneticisi panosu veya Microsoft Purview deneme sürümü aracılığıyla.
 
 ### <a name="enable-trial-via-the-compliance-manager-dashboard"></a>Uyumluluk Yöneticisi panosu aracılığıyla denemeyi etkinleştirme
 

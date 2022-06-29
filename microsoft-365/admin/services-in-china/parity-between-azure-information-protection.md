@@ -20,16 +20,16 @@ search.appverid:
 - GEA150
 description: 21Vianet tarafından sağlanan Office 365 için Azure Information Protection (AIP) ve Çin'deki müşteriler için yapılandırma hakkında daha fazla bilgi edinin.
 monikerRange: o365-21vianet
-ms.openlocfilehash: 0f495139a807d4a0eeb3181626717c6d5061fc38
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 80cd8d9b848235fc3486ad1952fa58f9d7d1570d
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935225"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66530178"
 ---
 # <a name="azure-information-protection-support-for-office-365-operated-by-21vianet"></a>21Vianet tarafından sağlanan Office 365 için Azure Information Protection desteği
 
-Bu makale, 21Vianet tarafından sağlanan Office 365 için Azure Information Protection (AIP) desteği ile ticari teklifler arasındaki farkların yanı sıra Çin'deki&mdash; müşteriler için AIP'yi yapılandırmaya yönelik özel yönergelerin yanı sıra AIP şirket içi tarayıcısını yükleme ve içerik tarama işlerini yönetme adımlarını kapsar.
+Bu makale, 21Vianet tarafından sağlanan Office 365 için Azure Information Protection (AIP) desteği ile ticari teklifler arasındaki farkların yanı sıra, AIP şirket içi tarayıcısını yükleme ve içerik tarama işlerini yönetme de dahil olmak üzere Çin'deki&mdash;müşteriler için AIP'yi yapılandırmaya yönelik özel yönergeleri kapsar.
 
 ## <a name="differences-between-aip-for-office-365-operated-by-21vianet-and-commercial-offerings"></a>21Vianet tarafından sağlanan Office 365 için AIP ile ticari teklifler arasındaki farklar
 
@@ -37,7 +37,7 @@ Hedefimiz, 21Vianet tarafından sağlanan Office 365 için AIP teklifimizle tüm
 
 Aşağıdaki liste, 21Vianet tarafından sağlanan Office 365 için AIP ile Ocak 2021 itibarıyla ticari tekliflerimiz arasındaki mevcut boşlukları içerir:
 
-- Active Directory Rights Management Services (AD RMS) şifrelemesi yalnızca Kurumlar için Microsoft 365 Uygulamaları (derleme 11731.10000 veya üzeri) desteklenir. Office Professional Plus AD RMS'i desteklemez.
+- Active Directory Rights Management Services (AD RMS) şifrelemesi yalnızca Kurumlar için Microsoft 365 Uygulamaları (derleme 11731.10000 veya üzeri) içinde desteklenir. Office Professional Plus AD RMS'i desteklemez.
 
 - AD RMS'den AIP'ye geçiş şu anda kullanılamıyor.
   
@@ -45,7 +45,7 @@ Aşağıdaki liste, 21Vianet tarafından sağlanan Office 365 için AIP ile Ocak
   
 - Belgelerin ve e-posta eklerinin ticari buluttaki kullanıcılarla paylaşılması şu anda kullanılamıyor. Buna ticari buluttaki 21Vianet kullanıcısı tarafından sağlanan Office 365, ticari buluttaki 21Vianet kullanıcıları tarafından sağlanan Office 365 olmayan kullanıcılar ve Kişiler için RMS lisansına sahip kullanıcılar dahildir.
   
-- SharePoint (IRM korumalı siteler ve kitaplıklar) bulunan IRM şu anda kullanılamıyor.
+- SharePoint ile IRM (IRM korumalı siteler ve kitaplıklar) şu anda kullanılamıyor.
   
 - AD RMS için Mobil Cihaz Uzantısı şu anda kullanılamıyor.
 
@@ -62,13 +62,13 @@ Aşağıdaki liste, 21Vianet tarafından sağlanan Office 365 için AIP ile Ocak
 AIP'yi Çin'deki müşteriler için yapılandırmak için:
 1. [Kiracı için Rights Management'i etkinleştirin](#step-1-enable-rights-management-for-the-tenant).
 
-1. [Microsoft Purview Information Protection Eşitleme Hizmeti hizmet sorumlusunu ekleyin](#step-2-add-the-microsoft-purview-information-protection-sync-service-service-principal).
+1. [Microsoft Bilgi Koruması Eşitleme Hizmeti hizmet sorumlusunu ekleyin](#step-2-add-the-microsoft-information-protection-sync-service-service-principal).
 
 1. [DNS şifrelemeyi yapılandırma](#step-3-configure-dns-encryption).
 
 1. [AIP birleşik etiketleme istemcisini yükleyin ve yapılandırın](#step-4-install-and-configure-the-aip-unified-labeling-client).
 
-1. [Windows'da AIP uygulamalarını yapılandırın](#step-5-configure-aip-apps-on-windows).
+1. [Windows'ta AIP uygulamalarını yapılandırın](#step-5-configure-aip-apps-on-windows).
 
 1. [AIP şirket içi tarayıcısını yükleyin ve içerik tarama işlerini yönetin](#step-6-install-the-aip-on-premises-scanner-and-manage-content-scan-jobs). 
 
@@ -81,24 +81,24 @@ AIP'yi Çin'deki müşteriler için yapılandırmak için:
     1. PowerShell'i yönetici olarak başlatın.
     2. AIPService modülü yüklü değilse komutunu çalıştırın `Install-Module AipService`.
     3. kullanarak `Import-Module AipService`modülü içeri aktarın.
-    4. kullanarak `Connect-AipService -environmentname azurechinacloud`hizmete Bağlan.
+    4. kullanarak `Connect-AipService -environmentname azurechinacloud`hizmete bağlanın.
     5. komutunu çalıştırın `(Get-AipServiceConfiguration).FunctionalState` ve durumunun olup `Enabled`olmadığını denetleyin.
 
 2. İşlevsel durum ise `Disabled`komutunu çalıştırın `Enable-AipService`.
 
-### <a name="step-2-add-the-microsoft-purview-information-protection-sync-service-service-principal"></a>2. Adım: Microsoft Purview Information Protection Eşitleme Hizmeti hizmet sorumlusunu ekleme
+### <a name="step-2-add-the-microsoft-information-protection-sync-service-service-principal"></a>2. Adım: Microsoft Bilgi Koruması Eşitleme Hizmeti hizmet sorumlusunu ekleme
 
-**Microsoft Purview Information Protection Eşitleme Hizmeti** hizmet sorumlusu varsayılan olarak Azure Çin kiracılarında kullanılamaz ve Azure Information Protection için gereklidir. Azure Az PowerShell modülü aracılığıyla bu hizmet sorumlusunu el ile oluşturun.
+**Microsoft Bilgi Koruması Eşitleme Hizmeti** hizmet sorumlusu varsayılan olarak Azure Çin kiracılarında kullanılamaz ve Azure Information Protection için gereklidir. Azure Az PowerShell modülü aracılığıyla bu hizmet sorumlusunu el ile oluşturun.
 
 1. Azure Az modülü yüklü değilse bu modülü yükleyin veya Azure Az modülünün önceden yüklenmiş olarak geldiği [Azure Cloud Shell](/azure/cloud-shell/overview) gibi bir kaynak kullanın. Daha fazla bilgi için bkz. [Azure Az PowerShell modülünü yükleme](/powershell/azure/install-az-ps).
 
-1. [Bağlan-AzAccount](/powershell/module/az.accounts/Connect-AzAccount) cmdlet'ini ve `azurechinacloud` ortam adını kullanarak hizmete Bağlan:
+1. [Connect-AzAccount](/powershell/module/az.accounts/Connect-AzAccount) cmdlet'ini ve ortam adını kullanarak hizmete bağlanın`azurechinacloud`:
 
     ```powershell
     Connect-azaccount -environmentname azurechinacloud
     ```
 
-1. [New-AzADServicePrincipal](/powershell/module/az.resources/new-azadserviceprincipal) cmdlet'ini ve `870c4f2e-85b6-4d43-bdda-6ed9a579b725` **Microsoft Purview Information Protection Eşitleme Hizmeti** için uygulama kimliğini kullanarak Microsoft Purview Information Protection Eşitleme Hizmeti hizmet sorumlusunu el ile oluşturun:
+1. [New-AzADServicePrincipal](/powershell/module/az.resources/new-azadserviceprincipal) cmdlet'ini ve `870c4f2e-85b6-4d43-bdda-6ed9a579b725` **Microsoft Purview Bilgi Koruması Eşitleme** Hizmeti için uygulama kimliğini kullanarak Microsoft Bilgi Koruması Eşitleme Hizmeti sorumlusunu el ile oluşturun:
 
     ```powershell 
     New-AzADServicePrincipal -ApplicationId 870c4f2e-85b6-4d43-bdda-6ed9a579b725
@@ -108,7 +108,7 @@ AIP'yi Çin'deki müşteriler için yapılandırmak için:
 
 ### <a name="step-3-configure-dns-encryption"></a>3. Adım: DNS şifrelemeyi yapılandırma
 
-Şifrelemenin doğru çalışması için Office istemci uygulamalarının hizmetin Çin örneğine bağlanması ve oradan önyükleme yapması gerekir. İstemci uygulamalarını doğru hizmet örneğine yeniden yönlendirmek için kiracı yöneticisinin Azure RMS URL'si hakkında bilgi içeren bir DNS SRV kaydı yapılandırması gerekir. DNS SRV kaydı olmadan istemci uygulaması varsayılan olarak genel bulut örneğine bağlanmayı dener ve başarısız olur.
+Şifrelemenin düzgün çalışması için Office istemci uygulamalarının hizmetin Çin örneğine bağlanması ve oradan önyükleme yapması gerekir. İstemci uygulamalarını doğru hizmet örneğine yeniden yönlendirmek için kiracı yöneticisinin Azure RMS URL'si hakkında bilgi içeren bir DNS SRV kaydı yapılandırması gerekir. DNS SRV kaydı olmadan istemci uygulaması varsayılan olarak genel bulut örneğine bağlanmayı dener ve başarısız olur.
 
 Ayrıca, kullanıcıların kullanıcı adı (örneğin, ) yerine `onmschina` kiracıya ait etki alanını (örneğin, `joe@contoso.cn`) temel alan bir kullanıcı adıyla `joe@contoso.onmschina.cn`oturum açacağı varsayımı da vardır. Dns'in doğru hizmet örneğine yeniden yönlendirmesi için kullanıcı adından etki alanı adı kullanılır.
 
@@ -118,7 +118,7 @@ Ayrıca, kullanıcıların kullanıcı adı (örneğin, ) yerine `onmschina` kir
 
     1. PowerShell'i yönetici olarak başlatın.
     2. AIPService modülü yüklü değilse komutunu çalıştırın `Install-Module AipService`.
-    3. kullanarak `Connect-AipService -environmentname azurechinacloud`hizmete Bağlan.
+    3. kullanarak `Connect-AipService -environmentname azurechinacloud`hizmete bağlanın.
     4. RMS kimliğini almak için komutunu çalıştırın `(Get-AipServiceConfiguration).RightsManagementServiceId` .
 
 2. DNS sağlayıcınızda oturum açın, etki alanının DNS ayarlarına gidin ve yeni bir SRV kaydı ekleyin.
@@ -159,7 +159,7 @@ Daha fazla bilgi için bkz.:
 - [AIP kullanıcı kılavuzu](/azure/information-protection/rms-client/clientv2-user-guide)
 - [Microsoft 365 duyarlılık etiketleri hakkında bilgi edinin](../../compliance/sensitivity-labels.md)
 
-### <a name="step-5-configure-aip-apps-on-windows"></a>5. Adım: Windows'da AIP uygulamalarını yapılandırma
+### <a name="step-5-configure-aip-apps-on-windows"></a>5. Adım: Windows'ta AIP uygulamalarını yapılandırma
 
 Windows üzerindeki AIP uygulamaları, Azure Çin için doğru bağımsız buluta işaret etmek için aşağıdaki kayıt defteri anahtarına ihtiyaç duyar:
 
@@ -181,7 +181,7 @@ Daha fazla bilgi için bkz. [Azure Information Protection birleşik etiketleme t
 
 **Tarayıcınızı yüklemek ve yapılandırmak için**:
 
-1. Tarayıcıyı çalıştıracak Windows Sunucusu bilgisayarında oturum açın. Yerel yönetici haklarına sahip ve SQL Server ana veritabanına yazma izinleri olan bir hesap kullanın.
+1. Tarayıcıyı çalıştıracak Windows Server bilgisayarında oturum açın. Yerel yönetici haklarına sahip ve SQL Server ana veritabanına yazma izinleri olan bir hesap kullanın.
 
 1. PowerShell kapalı olarak başlayın. AIP istemcisini ve tarayıcısını daha önce yüklediyseniz, **AIPScanner** hizmetinin durdurulduğunu doğrulayın.
 
@@ -197,7 +197,7 @@ Daha fazla bilgi için bkz. [Azure Information Protection birleşik etiketleme t
     > Birden çok tarayıcı düğümlerini aynı kümeyle ilişkilendirmek için [Install-AIPScanner](/powershell/module/azureinformationprotection/install-aipscanner) komutunda aynı küme adını kullanabilirsiniz. Birden çok tarayıcı düğümü için aynı kümeyi kullanmak, taramalarınızı gerçekleştirmek için birden çok tarayıcının birlikte çalışmasını sağlar.
     > 
 
-1. **Yönetim** **AraçlarıHizmetleri'ni** >  kullanarak hizmetin yüklendiğini doğrulayın.
+1. **Hizmetin artık Yönetimsel Araçlar** > **Hizmetleri'ni** kullanarak yüklendiğini doğrulayın.
 
     Yüklü hizmet **Azure Information Protection Tarayıcısı** olarak adlandırılır ve oluşturduğunuz tarayıcı hizmet hesabı kullanılarak çalıştırılacak şekilde yapılandırılır.
 
@@ -206,10 +206,10 @@ Daha fazla bilgi için bkz. [Azure Information Protection birleşik etiketleme t
     1. Azure portal açın ve kimlik doğrulaması için bir erişim belirteci belirtmek üzere bir Azure AD uygulaması oluşturun. Daha fazla bilgi için bkz. [Azure Information Protection için dosyaları etkileşimli olmayan şekilde etiketleme](/azure/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
     
         > [!TIP]
-        > [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) komutu için Azure AD uygulamaları oluştururken ve yapılandırırken, **API izinlerini isteme** bölmesi **Kuruluşumun kullandığı API'leri** **Microsoft API'leri** sekmesi yerine sekme olarak gösterir. **Kuruluşumun kullandığı API'leri** ve ardından **Azure Rights Management Services'ı** seçin. 
+        > [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) komutu için Azure AD uygulamaları oluştururken ve yapılandırırken, **API izinleri isteme** bölmesi **kuruluşumun Microsoft API'leri** sekmesi yerine kullandığı **API'leri** gösterir. **Kuruluşumun kullandığı API'leri** seçerek **Azure Rights Management Services'ı** seçin. 
         >
 
-    1. Windows Sunucusu bilgisayarından, tarayıcı hizmeti hesabınıza yükleme için **yerel olarak oturum açma** hakkı verildiyse, bu hesapla oturum açın ve bir PowerShell oturumu başlatın. 
+    1. Windows Server bilgisayarından, tarayıcı hizmeti hesabınıza yükleme için **yerel olarak oturum açma** hakkı verildiyse, bu hesapla oturum açın ve bir PowerShell oturumu başlatın. 
     
         Tarayıcı hizmeti hesabınıza yükleme için **yerel olarak oturum açma** hakkı verilemiyorsa, [Dosyaları Azure Information Protection için etkileşimli olmayan şekilde etiketleme](/azure/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) bölümünde açıklandığı gibi [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) ile *OnBehalfOf* parametresini kullanın.
 
@@ -227,7 +227,7 @@ Daha fazla bilgi için bkz. [Azure Information Protection birleşik etiketleme t
       Acquired application access token on behalf of CONTOSO\scanner.
       ```
 
-    Tarayıcının artık Azure AD'de kimlik doğrulaması yapmak için bir belirteci vardır. Bu belirteç, Azure AD'de **Web uygulaması /API** istemci gizli dizisi yapılandırmanıza göre bir yıl, iki yıl veya hiçbir zaman geçerlidir. Belirtecin süresi dolduğunda bu yordamı yinelemeniz gerekir.
+    Tarayıcının artık Azure AD kimlik doğrulaması için bir belirteci vardır. Bu belirteç, **Azure AD'de Web uygulaması /API** istemci gizli dizisi yapılandırmanıza göre bir yıl, iki yıl veya hiçbir zaman geçerlidir. Belirtecin süresi dolduğunda bu yordamı yinelemeniz gerekir.
 
 1. Tarayıcıyı çevrimdışı modda çalışacak şekilde ayarlamak için [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) cmdlet'ini çalıştırın. Çalıştırmak:
 
@@ -263,7 +263,7 @@ Daha fazla bilgi için bkz. [Azure Information Protection birleşik etiketleme t
     Eklediğiniz deponun türüne bağlı olarak aşağıdaki söz dizimlerinden birini kullanın:
 
     - Ağ paylaşımı için kullanın `\\Server\Folder`.
-    - SharePoint kitaplığı için kullanın`http://sharepoint.contoso.com/Shared%20Documents/Folder`.
+    - SharePoint kitaplığı için kullanın `http://sharepoint.contoso.com/Shared%20Documents/Folder`.
     - Yerel yol için: `C:\Folder`
     - UNC yolu için: `\\Server\Folder`
 

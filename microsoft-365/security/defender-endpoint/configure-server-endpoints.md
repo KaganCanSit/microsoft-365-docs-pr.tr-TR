@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 18ca82c4bbcb765eec419cd5b7477df8abbd8515
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 4c21d0bdf8a96347e60b79d998c0b8c64fd507a1
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/29/2022
-ms.locfileid: "66490680"
+ms.locfileid: "66531110"
 ---
 # <a name="onboard-windows-servers-to-the-microsoft-defender-for-endpoint-service"></a>Windows sunucularını Uç Nokta için Microsoft Defender hizmetine ekleme
 
@@ -146,6 +146,16 @@ Geçi -ci çözüm:
 3. Sertifikayı Yerel Bilgisayar güvenilen "Ara Sertifika Yetkilileri" deposuna aktarın.
 PowerShell komutunu kullanabilirsiniz: Import-Certificate -FilePath .\InterCA.cer -CertStoreLocation Cert:\LocalMachine\Ca
 
+## <a name="integration-with-microsoft-defender-for-cloud"></a>Bulut için Microsoft Defender ile tümleştirme
+
+Uç Nokta için Microsoft Defender, Bulut için Microsoft Defender ile sorunsuz bir şekilde tümleşir. Sunucuları otomatik olarak ekleyebilir, Bulut için Microsoft Defender tarafından izlenen sunucuların Uç Nokta için Defender'da görünmesini sağlayabilir ve Bulut için Microsoft Defender müşterisi olarak ayrıntılı araştırma yapabilirsiniz. 
+
+Daha fazla bilgi için bkz. [Bulut için Microsoft Defender ile tümleştirme](azure-server-integration.md). Bulut için Microsoft Defender aracılığıyla eklenen sunucuların ilk yapılandırmaları Defender Virüsten Koruma'yı [pasif modda](/defender-endpoint/microsoft-defender-antivirus-compatibility#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions) çalıştıracak şekilde ayarlanır.
+
+> [!NOTE]
+> - Sunucular için Microsoft Defender ile Uç Nokta için Microsoft Defender arasındaki tümleştirme Windows Server 2022, [Windows Server 2019 ve Windows Sanal Masaüstü'nü (WVD)](/azure/security-center/release-notes#microsoft-defender-for-endpoint-integration-with-azure-defender-now-supports-windows-server-2019-and-windows-10-virtual-desktop-wvd-in-preview) destekleyecek şekilde genişletildi.
+> - Bu tümleştirmeyi kullanan sunucu uç noktası izlemesi, Office 365 GCC müşterileri için devre dışı bırakıldı.
+
 ## <a name="windows-server-2012-r2-and-windows-server-2016"></a>R2 ve Windows Server 2016 Windows Server 2012
 
 ### <a name="prerequisites"></a>Önkoşullar
@@ -166,7 +176,7 @@ Yükleyici paketi, aşağıdaki bileşenlerin bir güncelleştirme aracılığı
 
 #### <a name="prerequisites-for-running-with-third-party-security-solutions"></a>Üçüncü taraf güvenlik çözümleriyle çalışmak için önkoşullar
 
-Üçüncü taraf kötü amaçlı yazılımdan koruma çözümü kullanmayı planlıyorsanız, Microsoft Defender Virüsten Koruma'yı pasif modda çalıştırmanız gerekir. Yükleme ve ekleme işlemi sırasında pasif moda ayarlamayı unutmayın.
+Üçüncü taraf kötü amaçlı yazılımdan koruma çözümü kullanmak istiyorsanız Microsoft Defender Virüsten Koruma'yı pasif modda çalıştırmanız gerekir. Yükleme ve ekleme işlemi sırasında pasif moda ayarlamayı unutmayın.
 
 > [!NOTE]
 > McAfee Endpoint Security (ENS) veya VirusScan Enterprise (VSE) bulunan sunuculara Uç Nokta için Microsoft Defender yüklüyorsanız, Microsoft Defender Virüsten Koruma'nın kaldırılmadığından veya devre dışı bırakılmadığından emin olmak için McAfee platformunun sürümünün güncelleştirilmesi gerekebilir. Gereken sürüm numaraları dahil olmak üzere daha fazla bilgi için [McAfee Bilgi Merkezi makalesine bakın](https://kc.mcafee.com/corporate/index?page=content&id=KB88214).
@@ -193,7 +203,7 @@ Portaldan hem **yükleme** hem de **ekleme** paketlerini indirmeniz gerekir.
    > [!NOTE]
    > Windows Server 2012R2'de, Microsoft Defender Virüsten Koruma yükleme paketi tarafından yüklenir ve pasif moda ayarlamadığınız sürece etkin olur. Windows Server 2016'da, Microsoft Defender Virüsten Koruma'nın önce bir özellik olarak yüklenmesi (bkz. [MDE'ye geçme](/microsoft-365/security/defender-endpoint/switch-to-mde-phase-2#re-enable-microsoft-defender-antivirus-on-windows-server-2016)) ve yüklemeye devam etmeden önce tamamen güncelleştirilmiş olması gerekir.
    >
-   > Microsoft dışı bir kötü amaçlı yazılımdan koruma çözümü çalıştırıyorsanız, yüklemeden önce Microsoft Defender Virüsten Koruma için dışlamalar eklediğinizden emin olun ([Defender İşlemleri sekmesindeki Microsoft Defender İşlemleri listesinden](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)).  Defender Virüsten Koruma dışlama listesine Microsoft dışı güvenlik çözümleri eklenmesi de önerilir.
+   > Microsoft dışı bir kötü amaçlı yazılımdan koruma çözümü çalıştırıyorsanız, yüklemeden önce Microsoft Defender Virüsten Koruma ([Defender İşlemleri sekmesindeki Microsoft Defender İşlemleri listesinden](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)) için dışlamalar eklediğinizden emin olun.  Defender Virüsten Koruma dışlama listesine Microsoft dışı güvenlik çözümleri eklenmesi de önerilir.
 
 **Yükleme paketi**, Uç Nokta için Microsoft Defender aracısını yükleyen bir MSI dosyası içerir.
 
@@ -374,7 +384,7 @@ R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019 ve Windows Se
 
 - [grup ilkesi kullanarak cihazları çıkarma](configure-endpoints-gp.md#offboard-devices-using-group-policy)
 - [Configuration Manager kullanarak cihazları çıkarma](configure-endpoints-sccm.md#offboard-devices-using-configuration-manager)
-- [Mobil Cihaz Yönetimi araçlarını kullanarak cihazları çıkarma ve izleme](configure-endpoints-mdm.md#offboard-and-monitor-devices-using-mobile-device-management-tools)
+- [Mobil Cihaz Yönetimi araçlarını kullanarak cihazları çıkarma](configure-endpoints-mdm.md#offboard-devices-using-mobile-device-management-tools)
 - [Yerel betik kullanarak cihazları çıkarma](configure-endpoints-script.md#offboard-devices-using-a-local-script)
 
 Çıkarma sonrasında, Windows Server 2012 R2 ve Windows Server 2016'da birleşik çözüm paketini kaldırmaya devam edebilirsiniz.

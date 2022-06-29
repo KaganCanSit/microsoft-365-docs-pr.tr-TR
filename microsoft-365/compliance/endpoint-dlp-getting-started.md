@@ -20,18 +20,18 @@ search.appverid:
 - MET150
 ms.custom: admindeeplinkCOMPLIANCE
 description: Dosya etkinliklerini izlemek ve bu dosyalar için uç noktalara koruyucu eylemler uygulamak için Uç nokta veri kaybı önlemeyi ayarlayın.
-ms.openlocfilehash: 097ad2ab08d31482413285d3b3d82e6b43255281
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 1b22fbd10c78c638a9cc68acf939a22d5c140549
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952764"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66531034"
 ---
 # <a name="get-started-with-endpoint-data-loss-prevention"></a>Uç noktada veri kaybı önlemeyi kullanmaya başlama
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Uç nokta veri kaybı önleme (Endpoint DLP), Microsoft 365 hizmetlerindeki hassas öğeleri bulmak ve korumak için kullanabileceğiniz Microsoft Purview Veri Kaybı Önleme (DLP) özellik paketinin bir parçasıdır. Microsoft'un tüm DLP teklifleri hakkında daha fazla bilgi için bkz. [Veri kaybını önleme hakkında bilgi edinin](dlp-learn-about-dlp.md). Uç Nokta DLP hakkında daha fazla bilgi edinmek için bkz [. Uç nokta veri kaybını önleme hakkında bilgi edinin](endpoint-dlp-learn-about.md)
+Uç nokta veri kaybını önleme (Endpoint DLP), Microsoft 365 hizmetlerindeki hassas öğeleri bulmak ve korumak için kullanabileceğiniz Microsoft Purview Veri Kaybı Önleme (DLP) özellik paketinin bir parçasıdır. Microsoft'un tüm DLP teklifleri hakkında daha fazla bilgi için bkz. [Veri kaybını önleme hakkında bilgi edinin](dlp-learn-about-dlp.md). Uç Nokta DLP hakkında daha fazla bilgi edinmek için bkz [. Uç nokta veri kaybını önleme hakkında bilgi edinin](endpoint-dlp-learn-about.md)
 
 Microsoft Endpoint DLP, Catalina 10.15 ve üzerini çalıştıran eklenen [Windows 10 ve Windows 11](device-onboarding-overview.md) ve [eklenen macOS cihazlarını](device-onboarding-macos-overview.md) izlemenizi sağlar. Bir cihaz eklendikten sonra, DLP hassas öğelerin ne zaman kullanıldığını ve paylaşılacağını algılar. Bu, bunların düzgün kullanıldığından ve korunduğundan emin olmak ve onları tehlikeye atabilecek riskli davranışları önlemeye yardımcı olmak için ihtiyacınız olan görünürlüğü ve denetimi sağlar.
 
@@ -48,7 +48,7 @@ Uç Nokta DLP'sini kullanmaya başlamadan önce [Microsoft 365 aboneliğinizi](h
 - Microsoft 365 E5 bilgi koruma ve idare
 - Microsoft 365 A5 bilgi koruma ve idare
 
-Tam lisanslama ayrıntıları için bkz. [bilgi koruması için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business)
+Tam lisanslama ayrıntıları için bkz. [Bilgi koruması için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business)
 
 ### <a name="configure-proxy-on-the-windows-10-or-windows-11-device"></a>Windows 10 veya Windows 11 cihazında ara sunucuyu yapılandırma
 
@@ -56,17 +56,17 @@ Windows 10 veya Windows 11 cihazları ekliıyorsanız cihazın bulut DLP hizmeti
 
 ## <a name="windows-10-and-windows-11-onboarding-procedures"></a>ekleme yordamlarını Windows 10 ve Windows 11
 
-Windows cihazları eklemeye genel bir giriş için bkz:
+Windows cihazlarını eklemeye genel bir giriş için bkz:
 
 - [Windows 10 ve Windows 11 cihazlarını Microsoft Purview'a eklemeye genel bakış](device-onboarding-overview.md#onboard-windows-10-and-windows-11-devices-into-microsoft-365-overview)
 
-Windows cihazları eklemeye yönelik belirli yönergeler için bkz:
+Windows cihazlarını ekleme konusunda belirli yönergeler için bkz:
 
 Konu | Açıklama
 :---|:---
 [grup ilkesi kullanarak Windows 10 veya 11 cihazı ekleme](device-onboarding-gp.md) | Yapılandırma paketini cihazlara dağıtmak için grup ilkesi kullanın.
-[Microsoft Endpoint Configuration Manager kullanarak Windows 10 veya 11 cihaz ekleme](device-onboarding-sccm.md) | Yapılandırma paketini cihazlara dağıtmak için Microsoft Endpoint Configuration Manager (geçerli dal) sürüm 1606 veya Microsoft Endpoint Configuration Manager (geçerli dal) sürüm 1602 veya önceki bir sürümü kullanabilirsiniz.
-[Mobil Cihaz Yönetimi araçlarını kullanarak Windows 10 veya 11 cihazı ekleme](device-onboarding-mdm.md) | Yapılandırma paketini cihaza dağıtmak için Mobil Cihaz Yönetimi araçlarını veya Microsoft Intune kullanın.
+[Microsoft Endpoint Configuration Manager kullanarak Windows 10 veya 11 cihazı ekleme](device-onboarding-sccm.md) | Yapılandırma paketini cihazlara dağıtmak için Microsoft Endpoint Configuration Manager (geçerli dal) sürüm 1606 veya Microsoft Endpoint Configuration Manager (geçerli dal) sürüm 1602 veya önceki bir sürümü kullanabilirsiniz.
+[Microsoft Intune kullanarak Windows 10 veya 11 cihaz ekleme](device-onboarding-mdm.md) | Yapılandırma paketini cihaza dağıtmak için Microsoft Intune kullanın.
 [Yerel betik kullanarak Windows 10 veya 11 cihaz ekleme](device-onboarding-script.md) | Yapılandırma paketini uç noktalara dağıtmak için yerel betiği kullanmayı öğrenin.
 [Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarının katılımı](device-onboarding-vdi.md) | VDI cihazlarını yapılandırmak için yapılandırma paketini kullanmayı öğrenin.
 
@@ -81,8 +81,8 @@ macOS cihazlarını ekleme konusunda belirli yönergeler için bkz:
 Konu | Açıklama
 :---|:---
 |[Intune kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-intune.md)|Intune aracılığıyla yönetilen macOS cihazları için
-|[Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak macOS cihazlarını Uyumluluk çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-intune-mde.md) |Intune aracılığıyla yönetilen ve bunlara Uç Nokta için Microsoft Defender (MDE) dağıtılmış macOS cihazları için
-|[JAMF Pro) kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-jamfpro.md) | JAMF Pro aracılığıyla yönetilen macOS cihazları için
+|[macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması](device-onboarding-offboarding-macos-intune-mde.md) |Intune aracılığıyla yönetilen ve bunlara Uç Nokta için Microsoft Defender (MDE) dağıtılmış macOS cihazları için
+|[JAMF Pro kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma)](device-onboarding-offboarding-macos-jamfpro.md) | JAMF Pro aracılığıyla yönetilen macOS cihazları için
 |[Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak macOS cihazlarını Uyumluluk çözümlerine ekleme ve çıkarma)](device-onboarding-offboarding-macos-jamfpro-mde.md)|JAMF Pro aracılığıyla yönetilen ve bunlara Uç Nokta için Microsoft Defender (MDE) dağıtılmış macOS cihazları için
 
 Bir cihaz eklendikten sonra cihaz listesinde görünür olmalı ve denetim etkinliğini Etkinlik gezginine raporlamaya başlamalıdır.

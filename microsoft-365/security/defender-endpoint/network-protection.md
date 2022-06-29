@@ -19,12 +19,12 @@ ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 2aee32adca1799fca84932991dc128a6a3f64ca7
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 61541cf74640035845ac04889834d12ea6730ad8
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/29/2022
-ms.locfileid: "66492457"
+ms.locfileid: "66530341"
 ---
 # <a name="protect-your-network"></a>Ağınızı koruyun
 
@@ -38,6 +38,8 @@ ms.locfileid: "66492457"
 
 **Platform**
 - Windows
+- macOS
+- Linux
 
 Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
@@ -52,7 +54,7 @@ Ağ korumasının cihazlarınızın saldırı yüzeyini kimlik avı dolandırıc
 
 ## <a name="requirements-for-network-protection"></a>Ağ koruması gereksinimleri
 
-Ağ koruması için Windows 10 veya 11 (Pro veya Enterprise) ya da Windows Server sürüm 1803 veya üzeri ve Microsoft Defender Virüsten Koruma gerçek zamanlı koruma gerekir.
+Ağ koruması Windows 10 veya 11 (Pro veya Enterprise), Windows Server sürüm 1803 veya üzeri, macOS sürüm 11 veya üzeri ya da Defender Desteklenen Linux sürümleri ve Microsoft Defender Virüsten Koruma gerçek zamanlı koruma gerektirir.
 
 | Windows sürümü | Microsoft Defender Virüsten Koruma |
 |:---|:---|
