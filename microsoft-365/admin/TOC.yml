@@ -14,7 +14,7 @@
         - name: İş için Microsoft 365 kurulumunuzu planlama
           href: setup/plan-your-setup.md
         - name: Microsoft 365 İş Ekstra'ya kaydolma
-          href: ../business-premium/index.md
+          href: ../business-premium/get-microsoft-365-business-premium.md
         - name: Microsoft 365 İş Standart'a kaydolma
           items:
             - name: Microsoft 365 İş Standart'a kaydolma
@@ -50,7 +50,7 @@
         - name: Office uygulamalarını yükleme
           href: setup/install-applications.md
         - name: Windows cihazlarını ayarlama
-          href: /microsoft-365/business-premium/m365bp-set-up-windows-devices.md
+          href: /microsoft-365/business-premium/m365bp-set-up-windows-devices
         - name: Mobil cihazları ayarlama
           href: setup/set-up-mobile-devices.md
         - name: İş için Microsoft 365 e-postası için Outlook'u ayarlama (video)
@@ -346,8 +346,6 @@
           href: manage/idle-session-timeout-web-apps.md
         - name: Office 2013 için Modern Kimlik Doğrulamasını Etkinleştirme
           href: security-and-compliance/enable-modern-authentication.md
-        - name: Microsoft Defender Virüsten Koruma tarafından algılanan tehditler
-          href: /microsoft-365/business-premium/m365bp-review-threats-take-action
         - name: GDPR uyumluluğu kılavuzu
           href: security-and-compliance/gdpr-compliance.md
     - name: Cihazları ve uygulama verilerini yönetme
