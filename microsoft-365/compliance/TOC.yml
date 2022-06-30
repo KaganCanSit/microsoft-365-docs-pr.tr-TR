@@ -297,7 +297,7 @@
         - name: Genel bakış
           href: privileged-access-management-solution-overview.md
         - name: Ayrıcalıklı erişim yönetimi hakkında daha fazla bilgi edinme
-          href: privileged-access-management-overview.md
+          href: privileged-access-management.md
         - name: Ayrıcalıklı erişim yönetimini kullanmaya başlama
           href: privileged-access-management-configuration.md
     - name: Kullanıcı ve cihaz erişimini koruma
@@ -601,6 +601,8 @@
               href: retention-policies-exchange.md
         - name: Saklama ve silme için ortak ayarlar
           href: retention-settings.md
+        - name: Saklama ve silme için PowerShell cmdlet'leri
+          href: retention-cmdlets.md
         - name: Saklama ve silme sınırları
           href: retention-limits.md
     - name: Veri yaşam döngüsü yönetimi

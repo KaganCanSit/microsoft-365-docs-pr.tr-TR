@@ -68,6 +68,8 @@
       href: m365-lighthouse-threat-management-page-overview.md
     - name: Microsoft Defender Virüsten Koruma ile tehditleri azaltma
       href: m365-lighthouse-mitigate-threats.md
+    - name: Cihaz Güvenliği sayfasına genel bakış
+      href: m365-lighthouse-device-security-overview.md
 - name: Yardım ve destek alma
   items:
     - name: Yardım ve destek alma

@@ -13,6 +13,8 @@
           href: compare-mdb-m365-plans.md
         - name: Microsoft 365 Lighthouse ile tümleştirme
           href: mdb-lighthouse-integration.md
+        - name: İş ortakları için kaynaklar
+          href: mdb-partners.md
     - name: Kullanmaya başlayın
       items:
         - name: İş için Defender'ı edinin

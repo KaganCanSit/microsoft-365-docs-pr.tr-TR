@@ -208,8 +208,12 @@
               href: attack-simulation-training-simulation-automations.md
             - name: Saldırı simülasyonu eğitiminde yük otomasyonları
               href: attack-simulation-training-payload-automations.md
+            - name: Saldırı simülasyonu eğitimi için özel yükler oluşturma
+              href: attack-simulation-training-payloads.md
             - name: Saldırı simülasyonu eğitimi için son kullanıcı bildirimleri
               href: attack-simulation-training-end-user-notifications.md
+            - name: Saldırı simülasyonu eğitimindeki oturum açma sayfaları
+              href: attack-simulation-training-login-pages.md
             - name: Saldırı simülasyonu eğitiminde içgörüler ve raporlama
               href: attack-simulation-training-insights.md
             - name: Saldırı simülasyonu eğitimi dağıtımıyla ilgili dikkat edilmesi gerekenler ve SSS

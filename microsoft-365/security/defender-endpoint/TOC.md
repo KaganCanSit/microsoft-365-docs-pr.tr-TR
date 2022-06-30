@@ -44,32 +44,31 @@
 #### [ WMI, MPCmdRun.exe veya PowerShell kullanın](manage-mde-post-migration-other-tools.md)
 #### [Sunucu geçişi senaryoları](server-migration.md)
 
-## [Cihazları yapılandırın ve ekleyin]()
+## [Cihazları ekleyin ve yapılandırın]()
 ### [Cihazları ekleyin ve Uç Nokta için Microsoft Defender işlevlerini yapılandırın](onboard-configure.md)
-
-
-### [Windows ve Windows Sunucusu üzerinde Uç Nokta için Microsoft Defender]()
-#### [Windows uç noktaları için katılım araçları ve yöntemleri](configure-endpoints.md)
-#### [Windows Sunucularını ve Windows cihazlarını ekleyin ]()
-
-##### [Windows'un önceki sürümlerini ekleyin](onboard-downlevel.md)
-
-##### [Windows Sunucularını ve Windows cihazlarını ekleyin ]()
-###### [Windows Server 2012 R2, 2016, Yarı Yıllık Kanal, 2019 ve 2022'yi ekleyin](configure-server-endpoints.md)
-###### [Windows araçlarını yerel betik kullanarak ekleyin](configure-endpoints-script.md)
-###### [Windows araçlarını Grup İlkesi kullanarak ekleyin](configure-endpoints-gp.md)
-###### [Microsoft Endpoint Configuration Manager kullanarak Windows cihazlarını ekleyin](configure-endpoints-sccm.md)
-###### [Mobil Cihaz Yönetimi araçlarını kullanarak Windows cihazlarını ekleyin](configure-endpoints-mdm.md)
-###### [Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarının katılımı](configure-endpoints-vdi.md)
-###### [Sanal Windows masaüstüne çok oturumlu Windows 10 cihazlarını ekleyin](onboard-windows-multi-session-device.md)
-
-#### [Bulut için Microsoft Defender ile tümleştirme](azure-server-integration.md)
-
+### [Windows İstemcisi'ni ekleyin](onboard-windows-client.md)
+#### [Intune kullanarak Windows İstemcisi'ni ekleyin](configure-endpoints-mdm.md)
+#### [Microsoft Endpoint Configuration Manager kullanarak Windows İstemcisi'ni ekleyin](configure-endpoints-sccm.md)
+#### [Grup İlkesi kullanarak Windows İstemcisi'ni ekleyin](configure-endpoints-gp.md)
+#### [Yerel betik kullanarak Windows İstemcisi'ni ekleyin](configure-endpoints-script.md)
+#### [Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarının katılımı](configure-endpoints-vdi.md)
+#### [Sanal Windows masaüstüne çok oturumlu Windows 10 cihazlarını ekleyin](onboard-windows-multi-session-device.md)
 #### [İnternet erişimi olmayan cihazları ekleyin](onboard-offline-machines.md)
-#### [Yeni eklenen bir cihazda algılama testi çalıştırın](run-detection-test.md)
-#### [Cihazlarda simülasyon saldırılar çalıştırın](attack-simulations.md)
-#### [Ara sunucu ve internet bağlantısı ayarlarını yapılandırın](configure-proxy-internet.md)
-#### [Katılım veya çıkarma bildirim kuralı oluşturun](onboarding-notification.md)
+#### [Windows'un önceki sürümlerini ekleyin](onboard-downlevel.md)
+
+
+
+### [Windows Server'ı ekleyin](onboard-windows-server.md)
+#### [Windows Server 2012 R2, 2016, Yarı Yıllık Kanal, 2019 ve 2022'yi ekleyin](configure-server-endpoints.md)
+#### [Configuration Manager kullanarak Windows Server'ı ekleyin](configure-endpoints-sccm.md)
+#### [Grup İlkesi kullanarak Windows Server araçlarını ekleyin](configure-endpoints-gp.md)
+#### [Yerel betik kullanarak Windows Server'ı ekleyin](configure-endpoints-script.md)
+#### [Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarının katılımı](configure-endpoints-vdi.md)
+
+
+
+
+
 
 ### [Diğer işletim sistemlerinde Uç Nokta için Microsoft Defender]()
 #### [Windows dışı diğer cihazları ekleyin](configure-endpoints-non-windows.md)
@@ -175,6 +174,14 @@
 ###### [SSS ve Sorun Giderme](ios-troubleshoot.md)
 
 ###### [Gizlilik](ios-privacy.md)
+
+
+
+### [Bulut için Microsoft Defender ile tümleştirme](azure-server-integration.md)
+### [Yeni eklenen bir cihazda algılama testi çalıştırın](run-detection-test.md)
+### [Cihazlarda simülasyon saldırılar çalıştırın](attack-simulations.md)
+### [Ara sunucu ve internet bağlantısı ayarlarını yapılandırın](configure-proxy-internet.md)
+### [Katılım veya çıkarma bildirim kuralı oluşturun](onboarding-notification.md)
 
 ### [Uç Nokta için Microsoft Defender yapılandırma ayarlarını farklı bir Microsoft Endpoint Manager cihazı ile yönetin](security-config-management.md)
 
@@ -326,6 +333,7 @@
 #### [Microsoft Defender Virüsten Koruma dışlamaları](configure-exclusions-microsoft-defender-antivirus.md)
 ##### [Dosya uzantısına ve klasör konumuna bağlı dışlamalar](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
 ##### [İşlemler tarafından açılan dosyalar için dışlamalar](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+##### [Bağlamsal dosya ve klasör dışlamaları](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md)
 ##### [Windows sunucusu için dışlamalar](configure-server-exclusions-microsoft-defender-antivirus.md)
 ##### [Kaçınılması gereken yaygın hatalar](common-exclusion-mistakes-microsoft-defender-antivirus.md)
 
