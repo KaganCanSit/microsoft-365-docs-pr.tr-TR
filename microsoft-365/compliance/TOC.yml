@@ -1073,7 +1073,7 @@
           href: compliance-manager-alert-policies.md
         - name: Uyumluluk puanınızı hesaplama
           href: compliance-score-calculation.md
-        - name: Uyumluluk Yapılandırma Çözümleyici aracı
+        - name: Microsoft Purview için Yapılandırma Çözümleyicisi
           href: compliance-manager-mcca.md
         - name: Sık sorulan sorular (SSS)
           href: compliance-manager-faq.yml

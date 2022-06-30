@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 764d1c84212e240332449a1a107042a83be01b32
-ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
+ms.openlocfilehash: 912254e5827815f796560bc6979856f4545b0ae9
+ms.sourcegitcommit: 4c7b34fc46be8f5faf33139c6c7b6efaf43def27
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/30/2022
-ms.locfileid: "66554362"
+ms.locfileid: "66556822"
 ---
 # <a name="communication-compliance-policies"></a>İletişim uyumluluk ilkeleri
 
@@ -119,7 +119,7 @@ Bir ilkeyi kopyalamak için kullanıcıların *İletişim Uyumluluğu* veya *İl
 
 ## <a name="policy-activity-detection"></a>İlke etkinliği algılama
 
-İletişimler, ilkelerin oluşturulduğu saatte bir taranır. Örneğin, saat 11:00'de uygunsuz bir içerik ilkesi oluşturursanız ilke, ilkenin oluşturulduğu saatte bir iletişim uyumluluk sinyallerini toplar. İlkeyi düzenlemek bu kez değişmez. İlkenin son tarama tarihini ve saatini görüntülemek için İlke sayfasındaki Son ilke tarama sütununa gidin. Yeni bir ilke oluşturduktan sonra, ilk ilke tarama tarihini ve saatini görüntülemek bir saat kadar sürebilir. Son taramanın tarihi ve saati yerel sisteminizin saat dilimine dönüştürülür.
+İletişimler, ilkelerin oluşturulduğu saatte bir taranır. Örneğin, saat 11:00'de uygunsuz bir içerik ilkesi oluşturursanız ilke, ilkenin oluşturulduğu saatte bir iletişim uyumluluk sinyallerini toplar. İlkeyi düzenlemek bu kez değişmez. İlkenin son tarama tarihini ve saatini görüntülemek için İlke **sayfasındaki** *Son ilke tarama* sütununa gidin. Yeni bir ilke oluşturduktan sonra, ilk ilke tarama tarihini ve saatini görüntülemek bir saat kadar sürebilir. Son taramanın tarihi ve saati yerel sisteminizin saat dilimine dönüştürülür.
 
 Aşağıdaki tabloda desteklenen içerik türleri için algılama süresi özetlenmektedir:
 
@@ -138,7 +138,7 @@ Aşağıdaki tabloda desteklenen içerik türleri için algılama süresi özetl
 
 31 Temmuz 2022'ye kadar oluşturulan mevcut ilkeler için iletileri algılamak ve bu ilkelerle eşleşen uyarıları gözden geçirmek 24 saat kadar sürebilir. Bu ilkelerin gecikme süresini azaltmak için [mevcut ilkeyi kopyalayın](/microsoft-365/compliance/communication-compliance-policies#copy-a-policy) ve kopyadan yeni bir ilke oluşturun. Eski ilkeden herhangi bir veri saklamanız gerekmiyorsa, bu veriler duraklatılabilir veya silinebilir.
 
-Daha eski bir ilkeyi tanımlamak için İlke sayfasındaki Son ilke tarama sütununu gözden geçirin. Eski ilkeler tarama için tam bir tarih görüntülerken, 31 Temmuz 2022'de oluşturulan ilkeler tarama için 1 saat önce görüntülenir. Gecikme süresini azaltmaya yönelik bir diğer seçenek de mevcut ilkelerinizin otomatik olarak yeni algılama ölçütlerine geçirilmesi için 31 Aralık 2022'ye kadar beklemektir.
+Daha eski bir ilkeyi tanımlamak için İlke **sayfasındaki** *Son ilke tarama* sütununu gözden geçirin. Eski ilkeler tarama için tam bir tarih görüntülerken, 31 Temmuz 2022'de oluşturulan ilkeler tarama için *1 saat önce* görüntülenir. Gecikme süresini azaltmaya yönelik bir diğer seçenek de mevcut ilkelerinizin otomatik olarak yeni algılama ölçütlerine geçirilmesi için 31 Aralık 2022'ye kadar beklemektir.
 
 ## <a name="storage-limit-notification-preview"></a>Depolama sınırı bildirimi (önizleme)
 

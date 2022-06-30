@@ -16,16 +16,16 @@ search.appverid:
 - MET150
 description: Erişimi ve kullanımı kısıtlayarak verilerinizi koruyan şifreleme için duyarlılık etiketlerini yapılandırın.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 0b1db15a9ac896bdcc871177ece532aa01d4bc38
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 23d59cada628b37942d7c97f8fb517eaf6f1e66a
+ms.sourcegitcommit: 4c7b34fc46be8f5faf33139c6c7b6efaf43def27
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014332"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66556888"
 ---
 # <a name="restrict-access-to-content-by-using-sensitivity-labels-to-apply-encryption"></a>Şifreleme uygulamak için hassasiyet etiketleri kullanarak içeriğe erişimi kısıtlama
 
->*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -40,18 +40,21 @@ Bir belge veya e-posta şifrelendiğinde içeriğe erişim kısıtlanır ve böy
 
 - Yalnızca etiketin şifreleme ayarları tarafından yetkilendirilmiş kullanıcılar tarafından şifresi çözülebilir.
 - Dosyanın adı yeniden adlandırılmış olsa bile kuruluşunuzun içinde veya dışında nerede olursa olsun şifrelenmiş olarak kalır.
-- Hem bekleme durumunda (örneğin, bir OneDrive hesabında) hem de aktarım sırasında (örneğin, İnternet'ten geçen e-posta) şifrelenir.
+- Hem bekleme durumunda (örneğin, oneDrive hesabında) hem de aktarım sırasında (örneğin, İnternet'ten geçen e-posta) şifrelenir.
 
 Son olarak, bir yönetici olarak, şifreleme uygulamak için bir duyarlılık etiketi yapılandırdığınızda şunları seçebilirsiniz:
 
 - **İzinleri şimdi atayın**, böylece hangi kullanıcıların bu etikete sahip içerik için hangi izinleri tam olarak aldığını belirleyebilirsiniz.
 - Etiketi içeriğe uygulayan **kullanıcıların izin atamasına izin verin**. Bu şekilde, kuruluşunuzdaki kişilere işbirliği yapmak ve işlerini yapmak için ihtiyaç duyabilecekleri esneklik sağlayabilirsiniz.
 
-Şifreleme ayarları, Microsoft Purview uyumluluk portalında [duyarlılık etiketi oluşturduğunuzda](create-sensitivity-labels.md) kullanılabilir.
+Şifreleme ayarları, Microsoft Purview uyumluluk portalı [bir duyarlılık etiketi oluşturduğunuzda](create-sensitivity-labels.md) kullanılabilir.
+
+> [!NOTE]
+> Artık önizleme aşamasında kullanıma sunulan Outlook'taki duyarlılık etiketi, Azure Rights Management hizmetinden şifreleme ve izinler yerine S/MIME koruması uygulayabilir. Daha fazla bilgi için bkz [. Outlook'ta S/MIME koruması uygulamak için etiket yapılandırma](sensitivity-labels-office-apps.md#configure-a-label-to-apply-smime-protection-in-outlook).
 
 ## <a name="understand-how-the-encryption-works"></a>Şifrelemenin nasıl çalıştığını anlama
 
-Şifreleme, Azure Information Protection Azure Rights Management hizmetini (Azure RMS) kullanır. Bu koruma çözümü şifreleme, kimlik ve yetkilendirme ilkelerini kullanır. Daha fazla bilgi edinmek için [Azure Information Protection](/azure/information-protection/what-is-azure-rms) belgelerinden Azure Rights Management nedir? konusuna bakın. 
+Şifreleme, Azure Information Protection Azure Rights Management hizmetini (Azure RMS) kullanır. Bu koruma çözümü şifreleme, kimlik ve yetkilendirme ilkelerini kullanır. Daha fazla bilgi edinmek için Azure Information Protection belgelerinden Azure [Rights Management nedir?](/azure/information-protection/what-is-azure-rms) konusuna bakın. 
 
 Bu şifreleme çözümünü kullandığınızda **süper kullanıcı** özelliği, yetkili kişilerin ve hizmetlerin kuruluşunuz için şifrelenmiş verileri her zaman okuyup inceleyebilmesini sağlar. Gerekirse şifreleme kaldırılabilir veya değiştirilebilir. Daha fazla bilgi için bkz[. Azure Information Protection ve bulma hizmetleri veya veri kurtarma için süper kullanıcıları yapılandırma](/azure/information-protection/configure-super-users).
 
@@ -61,19 +64,19 @@ Bu şifreleme çözümünü kullandığınızda **süper kullanıcı** özelliğ
 
 - Azure Information Protection korumasını etkinleştirme
     
-    Duyarlılık etiketlerinin şifreleme uygulaması için, kiracınız için Azure Information Protection'den koruma hizmetinin (Azure Rights Management) etkinleştirilmesi gerekir. Daha yeni kiracılarda bu varsayılan ayardır, ancak hizmeti el ile etkinleştirmeniz gerekebilir. Daha fazla bilgi için bkz. [Azure Information Protection'den koruma hizmetini etkinleştirme](/azure/information-protection/activate-service).
+    Duyarlılık etiketlerinin şifreleme uygulaması için Azure Information Protection'den koruma hizmetinin (Azure Rights Management) kiracınız için etkinleştirilmesi gerekir. Daha yeni kiracılarda bu varsayılan ayardır, ancak hizmeti el ile etkinleştirmeniz gerekebilir. Daha fazla bilgi için bkz. [Azure Information Protection'den koruma hizmetini etkinleştirme](/azure/information-protection/activate-service).
 
 - Ağ gereksinimlerini denetleme
     
     Ağ cihazlarınızda güvenlik duvarları gibi bazı değişiklikler yapmanız gerekebilir. Ayrıntılar için Azure Information Protection belgelerindeki [Güvenlik duvarları ve ağ altyapısı](/azure/information-protection/requirements#firewalls-and-network-infrastructure) bölümüne bakın.
 
-- Azure Information Protection için Exchange yapılandırma
+- Azure Information Protection için Exchange'i yapılandırma
     
-    kullanıcıların e-postalarını şifrelemek için Outlook etiket uygulayabilmesi için Exchange Azure Information Protection için yapılandırılması gerekmez. Ancak Exchange Azure Information Protection için yapılandırılana kadar Azure Rights Management korumasını Exchange ile kullanma işlevinin tamamını elde etmezsiniz.
+    Kullanıcıların e-postalarını şifrelemek için Outlook'ta etiket uygulayabilmesi için Exchange'in Azure Information Protection için yapılandırılması gerekmez. Ancak, Exchange Azure Information Protection için yapılandırılana kadar, Exchange ile Azure Rights Management korumasını kullanma işlevinin tamamını elde etmezsiniz.
     
     Örneğin, kullanıcılar cep telefonlarında veya Web üzerinde Outlook ile şifrelenmiş e-postaları görüntüleyemez, şifrelenmiş e-postalar arama için dizine eklenemez ve Rights Management koruması için Exchange Online DLP'yi yapılandıramazsınız. 
     
-    Exchange bu ek senaryoları destekleyeediğinden emin olmak için:
+    Exchange'in bu ek senaryoları destekleyebilmesini sağlamak için:
     
     - Exchange Online için [Exchange Online: IRM Yapılandırması](/azure/information-protection/configure-office365#exchangeonline-irm-configuration) yönergelerine bakın.
     - Şirket içi Exchange için [RMS bağlayıcısını dağıtmanız ve Exchange sunucularınızı yapılandırmanız](/azure/information-protection/deploy-rms-connector) gerekir.
@@ -106,7 +109,7 @@ Bu şifreleme çözümünü kullandığınızda **süper kullanıcı** özelliğ
 
 Ancak içerik zaten şifrelenmiş olabilir. Örneğin, başka bir kullanıcı uygulamış olabilir:
 
-- Bir etiket tarafından istendiğinde kullanıcı tanımlı izinleri, Azure Information Protection istemcisinin özel izinlerini ve bir Office uygulaması içinden **Kısıtlı Erişim** belge korumasını içeren kendi izinleri.
+- Bir etiket tarafından istendiğinde kullanıcı tanımlı izinleri, Azure Information Protection istemcisinin özel izinlerini ve Bir Office uygulamasının içinden **Kısıtlı Erişim** belge korumasını içeren kendi izinleri.
 - İçeriği bir etiketten bağımsız olarak şifreleyen bir Azure Rights Management koruma şablonu. Bu kategori, hak korumasını kullanarak şifreleme uygulayan posta akışı kurallarını içerir.
 - Yönetici tarafından atanan izinlerle şifreleme uygulayan bir etiket.
 
@@ -125,15 +128,15 @@ Aşağıdaki tabloda, söz konusu içeriğe duyarlılık etiketi uygulandığın
 Yeni etiket şifrelemesinin uygulandığı veya özgün şifrelemenin kaldırıldığı durumlarda, bu durum yalnızca etiketi uygulayan kullanıcının bu eylemi destekleyen bir kullanım hakkı veya rolü varsa gerçekleşir:
 
 - [Kullanım hakkı](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) Dışarı Aktarma veya Tam Denetim.
-- [Rights Management verenin, Rights Management sahibinin](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) veya [süper kullanıcının](/azure/information-protection/configure-super-users) rolü.
+- [Rights Management verenin veya Rights Management sahibinin](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) veya [süper kullanıcının](/azure/information-protection/configure-super-users) rolü.
 
 Kullanıcı bu haklardan veya rollerden birine sahip değilse etiket uygulanamaz ve bu nedenle özgün şifreleme korunur. Kullanıcı şu iletiyi görür: **Duyarlılık etiketinde bu değişikliği yapma izniniz yok. Lütfen içerik sahibine başvurun.**
 
-Örneğin, e-posta iletisine İletme'yi uygulayan kişi, e-postanın Rights Management sahibi olduğundan şifrelemeyi değiştirmek veya kaldırmak için iş parçacığını yeniden etiketleyebilir. Ancak süper kullanıcılar dışında, bu e-postanın alıcıları gerekli kullanım haklarına sahip olmadıklarından e-postayı yeniden etiketleyemez.
+Örneğin, bir e-posta iletisine İletme'yi uygulayan kişi, e-postanın Rights Management sahibi olduğundan şifrelemeyi değiştirmek veya kaldırmak için iş parçacığını yeniden etiketleyebilir. Ancak süper kullanıcılar dışında, bu e-postanın alıcıları gerekli kullanım haklarına sahip olmadıklarından e-postayı yeniden etiketleyemez.
 
 #### <a name="email-attachments-for-encrypted-email-messages"></a>Şifrelenmiş e-posta iletileri için e-posta ekleri
 
-Bir e-posta iletisi herhangi bir yöntemle şifrelendiğinde, e-postaya eklenen şifrelenmemiş Office belgeleri otomatik olarak aynı şifreleme ayarlarını devralır.
+E-posta iletisi herhangi bir yöntemle şifrelendiğinde, e-postaya eklenen şifrelenmemiş Office belgeleri otomatik olarak aynı şifreleme ayarlarını devralır.
 
 Zaten şifrelenmiş olan ve ek olarak eklenen belgeler her zaman özgün şifrelemelerini korur.
 
@@ -158,33 +161,33 @@ Bu etiketin uygulandığı e-postaya veya belgelere kimlerin erişebileceğini d
 
 - **Etiketli içeriğe erişimin süresinin belirli** bir tarihte veya etiket uygulandıktan sonraki belirli bir gün sayısından sonra dolmasına izin verin. Bu süreden sonra kullanıcılar etiketli öğeyi açamayacak. Bir tarih belirtirseniz, geçerli saat diliminizdeki bu tarihte gece yarısı geçerli olur. Bazı e-posta istemcileri, önbelleğe alma mekanizmaları nedeniyle süre sonunu zorunlu kılmayabilir ve son kullanma tarihlerini geçen e-postaları göstermeyebilir.
 
-- Etiket uygulandıktan sonra hiçbir zaman, her zaman veya belirli bir sayıda gün boyunca **çevrimdışı erişime izin verme**. Sahip olduğunuz tüm güvenlik gereksinimlerini, kullanıcıların İnternet bağlantısı olmadığında şifrelenmiş içeriği açabilme özelliğiyle dengelemek için bu ayarı kullanın. Çevrimdışı erişimi hiçbir zaman veya birkaç günle kısıtlarsanız, bu eşiğe ulaşıldığında kullanıcıların yeniden kimlik doğrulaması yapılması ve erişimlerinin günlüğe kaydedilmesi gerekir. Bu işlemin nasıl çalıştığı hakkında daha fazla bilgi için Rights Management [kullanım lisansı](#rights-management-use-license-for-offline-access) hakkında aşağıdaki bölüme bakın.
+- Etiket uygulandıktan sonra hiçbir zaman, her zaman veya belirli bir sayıda gün boyunca **çevrimdışı erişime izin verme**. Sahip olduğunuz tüm güvenlik gereksinimlerini, kullanıcıların İnternet bağlantısı olmadığında şifrelenmiş içeriği açabilme özelliğiyle dengelemek için bu ayarı kullanın. Çevrimdışı erişimi hiçbir zaman veya birkaç günle kısıtlarsanız, bu eşiğe ulaşıldığında kullanıcıların yeniden kimlik doğrulaması yapılması ve erişimlerinin günlüğe kaydedilmesi gerekir. Bu işlemin nasıl çalıştığı hakkında daha fazla bilgi için [Rights Management kullanım lisansı](#rights-management-use-license-for-offline-access) hakkında aşağıdaki bölüme bakın.
 
-Şifrelenmiş içerik için erişim denetimi için Ayarlar:
+Şifrelenmiş içerik için erişim denetimi ayarları:
 
-![Yönetici tanımlı izinler için Ayarlar.](../media/sensitivity-encryption-settings-for-admin-defined-permissions.png)
+![Yönetici tanımlı izinler için ayarlar.](../media/sensitivity-encryption-settings-for-admin-defined-permissions.png)
 
-Süre sonu ve çevrimdışı erişim ayarları için Öneriler:
+Süre sonu ve çevrimdışı erişim ayarları için öneriler:
 
 |Ayar|Önerilen ayar|
 |-------|----------------|-------------------|
 |**İçeriğe kullanıcı erişiminin süresi doluyor**|İçeriğin belirli bir zamana bağlı gereksinimi olmadığı sürece **hiçbir zaman**.|
 |**Çevrimdışı erişime izin ver**|İçeriğin duyarlılığına bağlıdır:<br /><br />- **Yalnızca birkaç gün** =  için **Yetkisiz** kişilerle paylaşılırsa işletmeye zarar verebilecek hassas iş verileri için 7. Bu öneri esneklik ve güvenlik arasında dengeli bir uzlaşma sağlar. Örnek olarak sözleşmeler, güvenlik raporları, tahmin özetleri ve satış hesabı verileri verilebilir.<br /><br />- **Yetkisiz** kişilerle paylaşıldığında işletmeye zarar verecek çok hassas iş verileri için asla. Bu öneri, esnekliğe göre güvenliği önceliklendirir ve bir veya daha fazla kullanıcının belgeye erişimini kaldırırsanız belgeyi açamayacaklarını güvence altına alır. Çalışan ve müşteri bilgileri, parolalar, kaynak kodu ve önceden duyurulan finansal raporlar buna örnek olarak verilebilir. <br /><br />- **Erişimleri** kaldırıldıktan ve daha önce şifrelenmiş içeriği açtıktan sonra, kullanıcıların şifrelenmiş içeriği 30 güne kadar (veya kiracı için yapılandırılmış kullanım lisansı geçerlilik süresi) açmaya devam edip etmediklerinin önemli olmadığı daha az hassas içerik için her zaman.|
 
-Yalnızca izin atamak üzere yapılandırılmış etiketler artık çevrimdışı erişim için farklı değerleri destekler. Kullanıcıların izinleri otomatik olarak atamasına izin veren etiketler kiracının Rights Management lisans geçerlilik süresini kullanır. Örneğin, İletme, Yalnızca Şifreleme için yapılandırılmış etiketler ve kullanıcılardan kendi izinlerini belirtmelerini isteme. Bu ayar için varsayılan değer 30 gündür.
+Yalnızca izin atamak üzere yapılandırılmış etiketler artık çevrimdışı erişim için farklı değerleri destekler. Kullanıcıların izinleri otomatik olarak atamasına izin veren etiketler kiracının Rights Management kullanım lisansı geçerlilik süresini kullanır. Örneğin, İletme, Yalnızca Şifreleme için yapılandırılmış etiketler ve kullanıcılardan kendi izinlerini belirtmelerini isteme. Bu ayar için varsayılan değer 30 gündür.
 
-### <a name="rights-management-use-license-for-offline-access"></a>çevrimdışı erişim için lisans Rights Management kullanma
+### <a name="rights-management-use-license-for-offline-access"></a>Rights Management çevrimdışı erişim için lisans kullanma
 
 > [!NOTE]
 > Şifreleme ayarını çevrimdışı erişime izin verecek şekilde yapılandırabilirsiniz ancak bazı uygulamalar şifrelenmiş içerik için çevrimdışı erişimi desteklemeyebilir. Örneğin, Power BI Desktop etiketli ve şifrelenmiş dosyalar çevrimdışı olduğunuzda [açılmaz.](/power-bi/admin/service-security-sensitivity-label-overview)
 
-Kullanıcı, Azure Rights Management hizmetinden şifrelemeyle korunan bir belgeyi veya e-postayı açtığında, kullanıcıya bu içerik için bir Azure Rights Management kullanım lisansı verilir. Bu kullanım lisansı, kullanıcının belge veya e-posta için kullanım haklarını ve içeriği şifrelemek için kullanılan şifreleme anahtarını içeren bir sertifikadır. Kullanım lisansı, bu ayarlıysa ve kullanım lisansının ne kadar süreyle geçerli olduğunu içeren bir sona erme tarihi de içerir.
+Kullanıcı, Azure Rights Management hizmetinden şifrelemeyle korunan bir belgeyi veya e-postayı açtığında, kullanıcıya söz konusu içerik için bir Azure Rights Management kullanım lisansı verilir. Bu kullanım lisansı, kullanıcının belge veya e-posta için kullanım haklarını ve içeriği şifrelemek için kullanılan şifreleme anahtarını içeren bir sertifikadır. Kullanım lisansı, bu ayarlıysa ve kullanım lisansının ne kadar süreyle geçerli olduğunu içeren bir sona erme tarihi de içerir.
 
 Son kullanma tarihi ayarlanmamışsa, kiracı için varsayılan kullanım lisansı geçerlilik süresi 30 gündür. Kullanım lisansı süresi boyunca, kullanıcı içerik için yeniden kimlik doğrulaması veya yeniden kimlik doğrulaması yapılmaz. Bu işlem, kullanıcının korumalı belgeyi veya e-postayı internet bağlantısı olmadan açmaya devam etmesine olanak tanır. Kullanım lisansı geçerlilik süresi dolduğunda, kullanıcı korumalı belgeye veya e-postaya bir sonraki eriştiğinde, kullanıcının yeniden kimlik doğrulaması ve yeniden yetkilendirmesi gerekir.
 
 Yeniden kimlik doğrulamasına ek olarak, şifreleme ayarları ve kullanıcı grubu üyeliği yeniden değerlendirilir. Başka bir deyişle, şifreleme ayarlarında veya grup üyeliğinde içeriğe son erişimlerinden itibaren değişiklikler varsa, kullanıcılar aynı belge veya e-posta için farklı erişim sonuçlarıyla karşılaşabilir.
 
-Varsayılan 30 günlük ayarı değiştirmeyi öğrenmek için bkz. [lisansı kullanma Rights Management](/azure/information-protection/configure-usage-rights#rights-management-use-license).
+Varsayılan 30 günlük ayarı değiştirmeyi öğrenmek için bkz. [Rights Management kullanım lisansı](/azure/information-protection/configure-usage-rights#rights-management-use-license).
 
 ### <a name="assign-permissions-to-specific-users-or-groups"></a>Belirli kullanıcılara veya gruplara izin atama
 
@@ -206,7 +209,7 @@ Belirli kişilere yalnızca etiketlenmiş içerikle etkileşim kurabilmeleri iç
 
 - Kimliği doğrulanmış kullanıcılar. Seçmeden önce bu ayarın [gereksinimlerini ve sınırlamalarını](#requirements-and-limitations-for-add-any-authenticated-users) anladığınızdan emin olun.
 
-- Azure AD'da belirli bir kullanıcı veya e-posta özellikli güvenlik grubu, dağıtım grubu veya Microsoft 365 grubu. Microsoft 365 grubunun statik veya [dinamik üyeliği](/azure/active-directory/users-groups-roles/groups-create-rule) olabilir. Bu [grup türü Azure AD eşitlenmediğinden, Exchange dinamik dağıtım grubunu](/Exchange/recipients/dynamic-distribution-groups/dynamic-distribution-groups) kullanamazsınız. E-posta etkin olmayan bir güvenlik grubunu da kullanamazsınız.
+- Azure AD'deki belirli bir kullanıcı veya e-posta etkin güvenlik grubu, dağıtım grubu veya Microsoft 365 grubu. Microsoft 365 grubunun statik veya [dinamik üyeliği](/azure/active-directory/users-groups-roles/groups-create-rule) olabilir. Bu grup türü Azure AD eşitlenmediğinden [Exchange'den dinamik dağıtım grubu](/Exchange/recipients/dynamic-distribution-groups/dynamic-distribution-groups) kullanamazsınız. E-posta etkin olmayan bir güvenlik grubunu da kullanamazsınız.
     
     Posta kişilerini içeren grupları kuruluşunuzun dışındaki birden çok kişiye erişim vermek için kullanışlı bir yöntem olarak belirtebilirsiniz ancak şu anda bu yapılandırmayla ilgili bilinen bir sorun vardır. Daha fazla bilgi için bkz [. Gruplardaki posta kişilerinin şifrelenmiş içeriğe aralıklı erişimi vardır](/office365/troubleshoot/sensitivity-labels/mail-contacts-lose-access-encrypted-content).
 
@@ -224,7 +227,7 @@ En iyi uygulama olarak, kullanıcılar yerine grupları kullanın. Bu strateji y
 Bu ayar, etiketin şifrelediği içeriğe kimlerin erişebileceğini kısıtlamaz, içeriği şifrelemeye devam eder ve içeriğin nasıl kullanılabileceğini (izinler) ve erişilebileceğini (süre sonu ve çevrimdışı erişim) kısıtlama seçenekleri sunar. Ancak şifrelenmiş içeriği açan uygulamanın kullanılan kimlik doğrulamasını destekleyebilmesi gerekir. Bu nedenle, Google gibi federasyon sosyal sağlayıcıları ve tek seferlik geçiş kodu kimlik doğrulaması yalnızca e-posta için ve yalnızca Exchange Online kullandığınızda çalışır. Microsoft hesapları Office 365 uygulamaları ve [Azure Information Protection görüntüleyicisi](https://portal.azurerms.com/#/download) ile kullanılabilir.
 
 > [!NOTE]
-> SharePoint ve OneDrive Office [dosyaları için duyarlılık etiketleri etkinleştirildiğinde](sensitivity-labels-sharepoint-onedrive-files.md) bu ayarı SharePoint [ve Azure AD B2B ile OneDrive tümleştirmesi ile](/sharepoint/sharepoint-azureb2b-integration-preview) kullanmayı göz önünde bulundurun.
+> SharePoint ve OneDrive'daki [Office dosyaları için duyarlılık etiketleri etkinleştirildiğinde bu ayarı SharePoint ve OneDrive](sensitivity-labels-sharepoint-onedrive-files.md) [tümleştirmesi ile Azure AD B2B ile](/sharepoint/sharepoint-azureb2b-integration-preview) kullanmayı göz önünde bulundurun.
 
 Kimliği doğrulanmış kullanıcılar ayarı için bazı tipik senaryolar:
 
@@ -251,7 +254,7 @@ Bunu yapmak için kullanıcıları veya grupları ekleyin, izinler atayın ve bu
 
 #### <a name="rights-management-issuer-user-applying-the-sensitivity-label-always-has-full-control"></a>Rights Management veren (duyarlılık etiketini uygulayan kullanıcı) her zaman Tam Denetime sahiptir
 
-Duyarlılık etiketi için şifreleme, Azure Information Protection Azure Rights Management hizmetini kullanır. Kullanıcı şifreleme kullanarak bir belgeyi veya e-postayı korumak için duyarlılık etiketi uyguladığında, bu kullanıcı söz konusu içerik için Rights Management veren olur.
+Duyarlılık etiketi için şifreleme, Azure Information Protection Azure Rights Management hizmetini kullanır. Kullanıcı şifreleme kullanarak bir belgeyi veya e-postayı korumak için duyarlılık etiketi uyguladığında, bu kullanıcı söz konusu içerik için Rights Management vereni olur.
 
 Rights Management verene her zaman belge veya e-posta için Tam Denetim izinleri verilir ve buna ek olarak:
 
@@ -277,26 +280,26 @@ Daha fazla bilgi, önkoşullar ve yapılandırma yönergeleri için bkz. [Çift 
 
 Kullanıcıların içeriğe el ile duyarlılık etiketi uyguladığında izin atamasına izin vermek için aşağıdaki seçenekleri kullanabilirsiniz:
 
-- Outlook'da kullanıcı, seçtiği alıcılar için [İletme](/azure/information-protection/configure-usage-rights#do-not-forward-option-for-emails) seçeneğine veya [Yalnızca şifrele seçeneğine](/azure/information-protection/configure-usage-rights#encrypt-only-option-for-emails) eşdeğer kısıtlamalar seçebilir.
+- Outlook'ta kullanıcı, seçtiği alıcılar için [İletme](/azure/information-protection/configure-usage-rights#do-not-forward-option-for-emails) seçeneğine veya [Yalnızca şifrele seçeneğine](/azure/information-protection/configure-usage-rights#encrypt-only-option-for-emails) eşdeğer kısıtlamalar seçebilir.
     
     İletme seçeneği duyarlılık etiketlerini destekleyen tüm e-posta istemcileri tarafından desteklenir. Ancak Duyarlılık etiketiyle **Yalnızca Şifrele** seçeneğinin uygulanması, Azure Information Protection birleşik etiketleme istemcisi tarafından değil yalnızca yerleşik etiketleme ile desteklenen daha yeni bir sürümdür. Bu özelliği desteklemeyen e-posta istemcileri için etiket görünmez.
     
-    Encrypt-Only seçeneğinin duyarlılık etiketiyle uygulanmasını desteklemek üzere yerleşik etiketleme kullanan Outlook uygulamalarının en düşük sürümlerini denetlemek [için, Outlook için yetenekler tablosunu](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-outlook) ve **Kullanıcıların izin atamasına izin ver: - Yalnızca Şifrele** satırını kullanın.
+    Duyarlılık etiketine sahip Encrypt-Only seçeneğinin uygulanmasını desteklemek üzere yerleşik etiketleme kullanan Outlook uygulamalarının en düşük sürümlerini denetlemek [için, Outlook için yetenekler tablosunu](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-outlook) ve **Kullanıcıların izin atamasına izin ver: - Yalnızca Şifrele** satırını kullanın.
 
-- Word, PowerPoint ve Excel'da bir kullanıcıdan belirli kullanıcılar, gruplar veya kuruluşlar için kendi izinlerini seçmesi istenir.
+- Word, PowerPoint ve Excel'de bir kullanıcıdan belirli kullanıcılar, gruplar veya kuruluşlar için kendi izinlerini seçmesi istenir.
 
     Bu seçenek, Azure Information Protection birleşik etiketleme istemcisi ve yerleşik etiketleme kullanan bazı uygulamalar tarafından desteklenir. Bu özelliği desteklemeyen uygulamalar için etiket kullanıcılar için görünmez veya tutarlılık açısından görünür ancak kullanıcılara açıklama iletisiyle uygulanamaz.
     
-    Yerleşik etiketleme kullanan uygulamaların bu seçeneği desteklediğini denetlemek [için Word, Excel ve PowerPoint için capabilities tablosunu](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-word-excel-and-powerpoint) ve **Kullanıcıların izin atamasına izin ver: - Kullanıcılara sor** satırını kullanın.
+    Yerleşik etiketleme kullanan uygulamaların bu seçeneği desteklediğini denetlemek [için Word, Excel ve PowerPoint için yetenekler tablosunu](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-word-excel-and-powerpoint) ve **Kullanıcıların izin atamasına izin ver: - Kullanıcılara sor** satırını kullanın.
 
 Seçenekler desteklendiğinde, kullanıcıların duyarlılık etiketini ne zaman göreceğini belirlemek için aşağıdaki tabloyu kullanın:
 
-|Ayar |Outlook'de görünen etiket|Word, Excel PowerPoint'de görünen etiket|
+|Ayar |Outlook'ta görünen etiket|Word, Excel, PowerPoint'te görünen etiket|
 |:-----|:-----|:-----|:-----|
-|**Outlook'da İletme veya Encrypt-Only seçeneğiyle kısıtlamaları zorunlu kılın**|Evet |Hayır |
-|**Word'de, PowerPoint ve Excel, kullanıcılardan izinleri belirtmelerini iste**|Hayır |Evet|
+|**Outlook'ta, İletme veya Encrypt-Only seçeneğiyle kısıtlamaları zorunlu kılın**|Evet |Hayır |
+|**Word, PowerPoint ve Excel'de kullanıcılardan izinleri belirtmelerini iste**|Hayır |Evet|
 
-Her iki ayar da seçildiğinde etiket hem Outlook hem de Word, Excel ve PowerPoint görünür.
+Her iki ayar da seçildiğinde etiket hem Outlook'ta hem de Word, Excel ve PowerPoint'te görünür.
 
 Kullanıcıların içeriğe izin atamasına olanak tanıyan bir duyarlılık etiketi, kullanıcılar tarafından içeriğe el ile uygulanmalıdır; otomatik olarak uygulanamaz veya önerilen etiket olarak kullanılamaz.
 
@@ -306,9 +309,9 @@ Kullanıcı tarafından atanan izinleri yapılandırma:
 
 ### <a name="outlook-restrictions"></a>Outlook kısıtlamaları
 
-Outlook'da, kullanıcı bir iletiye izin atamasına izin veren bir duyarlılık etiketi uyguladığında **İletme seçeneğini** veya **Yalnızca Şifrele'yi** seçebilirsiniz. Kullanıcı, iletinin üst kısmında içeriğin korunduğunu gösteren etiket adını ve açıklamasını görür. Word, PowerPoint ve Excel([sonraki bölüme](#word-powerpoint-and-excel-permissions) bakın) aksine, kullanıcılardan belirli izinleri seçmeleri istenmez.
+Outlook'ta, kullanıcı bir iletiye izin atamasına izin veren bir duyarlılık etiketi uyguladığında **İletme seçeneğini** veya **Yalnızca Şifrele'yi** seçebilirsiniz. Kullanıcı, iletinin üst kısmında içeriğin korunduğunu gösteren etiket adını ve açıklamasını görür. Word, PowerPoint ve Excel'in aksine ( [sonraki bölüme](#word-powerpoint-and-excel-permissions) bakın), kullanıcılardan belirli izinleri seçmeleri istenmez.
 
-![Outlook'da iletiye uygulanan duyarlılık etiketi.](../media/sensitivity-label-outlook-protection-applied.png)
+![Outlook'ta iletiye uygulanan duyarlılık etiketi.](../media/sensitivity-label-outlook-protection-applied.png)
 
 Bu seçeneklerden herhangi biri bir e-postaya uygulandığında, e-posta şifrelenir ve alıcıların kimliğinin doğrulanması gerekir. Ardından alıcıların kullanım hakları otomatik olarak kısıtlanır:
 
@@ -320,23 +323,23 @@ Bu seçeneklerden herhangi biri bir e-postaya uygulandığında, e-posta şifrel
     
     Bu seçeneğin nasıl çalıştığı hakkında daha fazla bilgi için bkz. [E-postalar için yalnızca şifreleme seçeneği](/azure/information-protection/configure-usage-rights#encrypt-only-option-for-emails).
 
-E-postaya eklenen şifrelenmemiş Office belgeleri otomatik olarak aynı kısıtlamaları devralır. İletme için, bu belgelere uygulanan kullanım hakları İçeriği Düzenle, Düzenle; Kaydet; Görüntüle, Aç, Oku; ve Makrolara İzin Ver'i seçin. Kullanıcı bir ek için farklı kullanım hakları istiyorsa veya ek bu devralınan korumayı destekleyen Office bir belge değilse, kullanıcının dosyayı e-postaya eklemeden önce şifrelemesi gerekir.
+E-postaya eklenen şifrelenmemiş Office belgeleri otomatik olarak aynı kısıtlamaları devralır. İletme için, bu belgelere uygulanan kullanım hakları İçeriği Düzenle, Düzenle; Kaydet; Görüntüle, Aç, Oku; ve Makrolara İzin Ver'i seçin. Kullanıcı bir ek için farklı kullanım hakları istiyorsa veya ek bu devralınan korumayı destekleyen bir Office belgesi değilse, kullanıcının dosyayı e-postaya eklemeden önce şifrelemesi gerekir.
 
 ### <a name="word-powerpoint-and-excel-permissions"></a>Word, PowerPoint ve Excel izinleri
 
-Word' de, PowerPoint ve Excel, bir kullanıcı belgeye izin atamasına izin veren bir duyarlılık etiketi uyguladığında, kullanıcıdan kullanıcı seçimini ve şifreleme izinlerini belirtmesi istenir.
+Word, PowerPoint ve Excel'de, bir kullanıcı belgeye izin atamasına olanak tanıyan bir duyarlılık etiketi uyguladığında, kullanıcıdan kullanıcıdan kullanıcı seçimini ve şifreleme izinlerini belirtmesi istenir.
 
 Örneğin, [birlikte yazma etkinleştirilmediği](sensitivity-labels-coauthoring.md) sürece Azure Information Protection birleşik etiketleme istemcisiyle kullanıcılar şunları yapabilir:
 
 - Görüntüleyici (Yalnızca Görüntüleme izni atayan) veya Co-Author (Görünüm, Düzenleme, Kopyalama ve Yazdırma izinleri atayan) gibi bir izin düzeyi seçin.
 - Kullanıcıları, grupları veya kuruluşları seçin. Bu, kuruluşunuzun içindeki veya dışındaki kişileri içerebilir.
-- Seçilen kullanıcıların içeriğe erişemeyecekleri bir süre sonu tarihi ayarlayın. Daha fazla bilgi [için, çevrimdışı erişim için lisans kullanma Rights Management](#rights-management-use-license-for-offline-access) yukarıdaki bölüme bakın.
+- Seçilen kullanıcıların içeriğe erişemeyecekleri bir süre sonu tarihi ayarlayın. Daha fazla bilgi için, yukarıdaki [Rights Management çevrimdışı erişim için lisans kullanma](#rights-management-use-license-for-offline-access) bölümüne bakın.
 
 ![Kullanıcının özel izinlerle koruma seçenekleri.](../media/sensitivity-aip-custom-permissions-dialog.png)
 
 Yerleşik etiketleme ve [birlikte yazma etkinleştirildiğinde](sensitivity-labels-coauthoring.md) Azure Information Protection birleşik etiketleme istemcisi için, kullanıcılar aşağıdaki seçenekleri seçmiş gibi aynı iletişim kutusunu görür:
 
-- Windows: **Dosya** sekmesi > **Bilgileri** > **Koru Belgeyi** >  Koru **Kısıtlı Erişimi** >  Kısıtla
+- Windows: **Dosya** sekmesi > **Bilgi** > **Koruma Belge** >  Erişimi **Kısıtlanmış Erişimi** >  **Kısıtla**
 
 - macOS: **Gözden Geçir** sekmesi > **Koruma** > **İzinleri** > **Kısıtlı Erişim**
 
@@ -357,9 +360,9 @@ Kullanıcılarınız **, Gmail** e-posta adresini To kutusuna yazar.  Ardından 
 
 1. **Şifreleme** sayfasında: **İzinleri şimdi ata veya kullanıcıların karar vermesine izin ver?** için **Kullanıcıların etiketi uygularken izin atamasına izin ver'i** seçin.
 
-2. Onay kutusunu seçin: **Outlook,İletme seçeneğine eşdeğer kısıtlamaları zorunlu kılın**.
+2. Onay kutusunu seçin: **Outlook'ta İletme seçeneğine eşdeğer kısıtlamaları zorunlu kılın**.
 
-3. Seçiliyse, onay kutusunu temizleyin: **Word'de, PowerPoint ve Excel, kullanıcılardan izinleri belirtmelerini iste**.
+3. Seçiliyse, onay kutusunu temizleyin: **Word, PowerPoint ve Excel'de, kullanıcılardan izinleri belirtmelerini iste**.
 
 4. **İleri'yi** seçin ve yapılandırmayı tamamlayın.
 
@@ -435,35 +438,35 @@ Bu yapılandırmayı yalnızca korumalı belgeyi veya e-postayı kimlerin açabi
 
 En hassas belgelerinizi ve e-postalarınızı şifrelemek, bu verilere yalnızca yetkili kişilerin erişebilmesini sağlamaya yardımcı olur. Ancak dikkat edilmesi gereken bazı noktalar vardır:
 
-- Kuruluşunuz SharePoint [ve OneDrive Office dosyaları için duyarlılık etiketlerini etkinleştirmediyse](sensitivity-labels-sharepoint-onedrive-files.md):
+- Kuruluşunuz [SharePoint ve OneDrive'daki Office dosyaları için duyarlılık etiketlerini etkinleştirmediyse](sensitivity-labels-sharepoint-onedrive-files.md):
 
   - Arama, eBulma ve Delve şifrelenmiş dosyalar için çalışmaz.
   - DLP ilkeleri, bu şifrelenmiş dosyaların meta verileri (bekletme etiketi bilgileri dahil) için çalışır, ancak bu dosyaların içeriği (dosyalar içindeki kredi kartı numaraları gibi) için çalışmaz.
-  - Kullanıcılar Web üzerinde Office kullanarak şifrelenmiş dosyaları açamaz. SharePoint ve OneDrive Office dosyaları için duyarlılık etiketleri etkinleştirildiğinde, kullanıcılar şifrelenmiş dosyaları açmak için Web üzerinde Office kullanabilir ve şirket içi anahtarla ("kendi anahtarını tut" veya HYOK olarak bilinir) uygulanan şifrelemeyi içeren bazı [sınırlamalar](sensitivity-labels-sharepoint-onedrive-files.md#limitations), [çift anahtarlı şifreleme](#double-key-encryption) ve duyarlılık etiketinden bağımsız olarak uygulanan şifreleme.
+  - Kullanıcılar Web üzerinde Office kullanarak şifrelenmiş dosyaları açamaz. SharePoint ve OneDrive'daki Office dosyaları için duyarlılık etiketleri etkinleştirildiğinde, kullanıcılar Web üzerinde Office kullanarak şifrelenmiş dosyaları açabilir ve şirket içi anahtarla ("kendi anahtarını tut" veya HYOK olarak bilinir) uygulanan şifreleme, [çift anahtar şifrelemesi](#double-key-encryption) ve duyarlılık etiketinden bağımsız olarak uygulanmış şifreleme gibi bazı [sınırlamalar](sensitivity-labels-sharepoint-onedrive-files.md#limitations) içerir.
 
 - Şifrelenmiş belgeleri kuruluşunuzun dışındaki kişilerle paylaşıyorsanız konuk hesapları oluşturmanız ve Koşullu Erişim ilkelerini değiştirmeniz gerekebilir. Daha fazla bilgi için bkz. [Şifrelenmiş belgeleri dış kullanıcılarla paylaşma](sensitivity-labels-office-apps.md#support-for-external-users-and-labeled-content).
 
-- Yetkili kullanıcılar şifrelenmiş belgeleri Office uygulamalarında açtıklarında, uygulamalarının üst kısmındaki sarı ileti çubuğunda etiket adını ve açıklamasını görürler. Şifreleme izinleri kuruluşunuzun dışındaki kişilere yayıldığında, belge açıldığında bu ileti çubuğunda görünür olacak etiket adlarını ve açıklamalarını dikkatle gözden geçirin.
+- Yetkili kullanıcılar şifrelenmiş belgeleri Office uygulamalarında açtıklarında, etiket adını ve açıklamasını uygulamalarının üst kısmındaki sarı ileti çubuğunda görürler. Şifreleme izinleri kuruluşunuzun dışındaki kişilere yayıldığında, belge açıldığında bu ileti çubuğunda görünür olacak etiket adlarını ve açıklamalarını dikkatle gözden geçirin.
 
-- Birden çok kullanıcının şifrelenmiş bir dosyayı aynı anda düzenlemesi için hepsinin Web için Office kullanıyor olması veya [duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirmiş](sensitivity-labels-coauthoring.md) olmanız ve tüm kullanıcıların [bu özelliği destekleyen Office uygulamaları](sensitivity-labels-coauthoring.md#prerequisites) olması gerekir. Böyle bir durum söz konusu değilse ve dosya zaten açıksa:
+- Birden çok kullanıcının şifrelenmiş bir dosyayı aynı anda düzenlemesi için, hepsinin Web için Office kullanıyor olması gerekir veya [duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirdiniz](sensitivity-labels-coauthoring.md) ve tüm kullanıcıların [bu özelliği destekleyen Office uygulamaları](sensitivity-labels-coauthoring.md#prerequisites) vardır. Böyle bir durum söz konusu değilse ve dosya zaten açıksa:
     
-  - Office uygulamalarında (Windows, Mac, Android ve iOS), kullanıcılar dosyayı kullanıma alan kişinin adını içeren Bir **Kullanımda Dosya** iletisi görür. Daha sonra salt okunur bir kopya görüntüleyebilir veya dosyanın bir kopyasını kaydedip düzenleyebilir ve dosya kullanılabilir olduğunda bildirim alabilirler.
+  - Office uygulamalarında (Windows, Mac, Android ve iOS) kullanıcılar, dosyayı kullanıma alan kişinin adını içeren **Bir Kullanımda Dosya** iletisi görür. Daha sonra salt okunur bir kopya görüntüleyebilir veya dosyanın bir kopyasını kaydedip düzenleyebilir ve dosya kullanılabilir olduğunda bildirim alabilirler.
   - Web için Office'da kullanıcılar belgeyi diğer kişilerle düzenleyemediklerine ilişkin bir hata iletisi görür. Daha sonra **Okuma Görünümünde Aç'ı** seçebilirler.
 
-- [Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirmediyseniz](sensitivity-labels-coauthoring.md), Office uygulamalarındaki [Otomatik Kaydet](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) işlevi şifrelenmiş dosyalar için devre dışı bırakılır. Kullanıcılar, Otomatik Kaydetme'nin açılabilmesi için dosyanın kaldırılması gereken kısıtlı izinlere sahip olduğunu belirten bir ileti görür.
+- [Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirmediyseniz](sensitivity-labels-coauthoring.md), Office uygulamalarında [Otomatik Kaydet](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) işlevi şifrelenmiş dosyalar için devre dışı bırakılır. Kullanıcılar, Otomatik Kaydetme'nin açılabilmesi için dosyanın kaldırılması gereken kısıtlı izinlere sahip olduğunu belirten bir ileti görür.
 
-- Windows için Office, kullanıcılar İnternet'e bağlı olmadığında şifreleme uygulayan etiketleri destekler. Ancak diğer platformlarda (macOS, iOS, Android) kullanıcıların bu etiketleri Office uygulamalara uygulamak için çevrimiçi olmaları gerekir. Bu etiketlerin Dosya Gezgini ve PowerShell'de uygulanabilmesi için Azure Information Protection birleşik etiketleme istemcisinin de çevrimiçi olması gerekir. Şifrelenmiş içeriği açmak için kullanıcıların çevrimiçi olması gerekmez. Çevrimdışı erişim hakkında daha fazla bilgi [için çevrimdışı erişim için lisans kullanma Rights Management ](#rights-management-use-license-for-offline-access) bölümüne bakın.
+- Windows için Office, kullanıcılar İnternet'e bağlı olmadığında şifreleme uygulayan etiketleri destekler. Ancak diğer platformlarda (macOS, iOS, Android) kullanıcıların office uygulamalarında bu etiketleri uygulamak için çevrimiçi olmaları gerekir. Bu etiketlerin Dosya Gezgini ve PowerShell'de uygulanabilmesi için Azure Information Protection birleşik etiketleme istemcisinin de çevrimiçi olması gerekir. Şifrelenmiş içeriği açmak için kullanıcıların çevrimiçi olması gerekmez. Çevrimdışı erişim hakkında daha fazla bilgi [için, Çevrimdışı erişim için Rights Management kullanım lisansı ](#rights-management-use-license-for-offline-access) bölümüne bakın.
 
 - Şifrelenmiş dosyaların Office uygulamalarında (Windows, Mac, Android ve iOS) açılması daha uzun sürebilir.
 
-- Belge SharePoint kullanıma alındığında bir Office uygulaması kullanılarak şifreleme uygulayan bir etiket eklenirse ve kullanıcı kullanıma almayı atarsa, belge etiketli ve şifrelenmiş olarak kalır.[](https://support.microsoft.com/office/check-out-check-in-or-discard-changes-to-files-in-a-library-7e2c12a9-a874-4393-9511-1378a700f6de)
+- Belge [SharePoint'te kullanıma](https://support.microsoft.com/office/check-out-check-in-or-discard-changes-to-files-in-a-library-7e2c12a9-a874-4393-9511-1378a700f6de) alınmış durumdayken bir Office uygulaması kullanılarak şifreleme uygulayan bir etiket eklenirse ve kullanıcı kullanıma almayı atarsa, belge etiketli ve şifrelenmiş olarak kalır.
 
-- [Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirmediğiniz](sensitivity-labels-coauthoring.md) sürece, şifrelenmiş dosyalar için aşağıdaki eylemler Office uygulamalarından (Windows, Mac, Android ve iOS) desteklenmez ve kullanıcılar bir sorun oluştuğuna ilişkin bir hata iletisi görür. Ancak SharePoint işlevselliği alternatif olarak kullanılabilir:
+- [Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirmediğiniz](sensitivity-labels-coauthoring.md) sürece, şifrelenmiş dosyalar için aşağıdaki eylemler Office uygulamalarından (Windows, Mac, Android ve iOS) desteklenmez ve kullanıcılar bir sorun oluştuğuna ilişkin bir hata iletisi görür. Ancak, Alternatif olarak SharePoint işlevselliği kullanılabilir:
 
   - Önceki sürümlerin kopyalarını görüntüleyin, geri yükleyin ve kaydedin. Alternatif olarak, kullanıcılar bir [liste veya kitaplık için sürüm oluşturmayı etkinleştirip yapılandırdığınızda](https://support.office.com/article/enable-and-configure-versioning-for-a-list-or-library-1555d642-23ee-446a-990a-bcab618c7a37) Web üzerinde Office kullanarak bu eylemleri gerçekleştirebilir.
-  - Dosyaların adını veya konumunu değiştirin. Alternatif olarak, kullanıcılar SharePoint [belge kitaplığındaki bir dosyayı, klasörü veya bağlantıyı yeniden adlandırabilir](https://support.microsoft.com/office/rename-a-file-folder-or-link-in-a-document-library-bc493c1a-921f-4bc1-a7f6-985ce11bb185).
+  - Dosyaların adını veya konumunu değiştirin. Alternatif olarak, kullanıcılar [SharePoint'teki belge kitaplığındaki bir dosyayı, klasörü veya bağlantıyı yeniden adlandırabilir](https://support.microsoft.com/office/rename-a-file-folder-or-link-in-a-document-library-bc493c1a-921f-4bc1-a7f6-985ce11bb185) .
 
-Duyarlılık etiketiyle şifrelenen dosyalar için en iyi işbirliği deneyimi [için, SharePoint, OneDrive ve Web için Office Office dosyaları için duyarlılık etiketlerini](sensitivity-labels-sharepoint-onedrive-files.md) kullanmanızı öneririz.
+Duyarlılık etiketiyle şifrelenen dosyalar için en iyi işbirliği deneyimi [için SharePoint ve OneDrive ve Web için Office Office dosyaları için duyarlılık etiketlerini](sensitivity-labels-sharepoint-onedrive-files.md) kullanmanızı öneririz.
 
 
 
