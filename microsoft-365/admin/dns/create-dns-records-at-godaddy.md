@@ -1,5 +1,5 @@
 ---
-title: GoDaddy'deki DNS kayıtlarınızı Microsoft 365 Bağlan
+title: GoDaddy'deki DNS kayıtlarınızı Microsoft 365'e bağlama
 f1.keywords:
 - CSH
 ms.author: efrene
@@ -9,7 +9,6 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 ms.localizationpriority: medium
-ROBOTS: NOINDEX, NOFOLLOW
 ms.collection:
 - M365-subscription-management
 - Adm_O365
@@ -22,15 +21,15 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: f40a9185-b6d5-4a80-bb31-aa3bb0cab48a
-description: Microsoft için GoDaddy'de etki alanınızı doğrulamayı ve e-posta, Skype for Business Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
-ms.openlocfilehash: 6cf110b55c76ce6c857f13dcd5b0075b309b654f
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Microsoft için GoDaddy'de etki alanınızı doğrulamayı ve e-posta, Skype Kurumsal Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
+ms.openlocfilehash: 150c97d8764247757e233934c5b2d8a3ea9f5b6c
+ms.sourcegitcommit: 8cd230e243eba452b27f725d66152becb6aff49b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780357"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66563219"
 ---
-# <a name="connect-your-dns-records-at-godaddy-to-microsoft-365"></a>GoDaddy'deki DNS kayıtlarınızı Microsoft 365 Bağlan
+# <a name="connect-your-dns-records-at-godaddy-to-microsoft-365"></a>GoDaddy'deki DNS kayıtlarınızı Microsoft 365'e bağlama
 
  **Aradığınızı bulamazsanız, [Etki Alanları SSS sayfasını denetleyin](../setup/domains-faq.yml)**.
 
@@ -40,17 +39,17 @@ DNS barındırma sağlayıcınız GoDaddy ise, bu makalede verilen adımları iz
 
 Etki alanınız için DNS kayıtlarını ayarlamak için iki seçeneğiniz vardır:
 
-- [**Etki Alanı Bağlan'ni kullanma**](#use-domain-connect-to-verify-and-set-up-your-domain) Etki alanınızı başka bir e-posta hizmeti sağlayıcısıyla ayarlamadıysanız, etki alanı Bağlan adımlarını kullanarak yeni etki alanınızı otomatik olarak doğrulayın ve Microsoft 365 ile kullanılacak şekilde ayarlayın.
+- [**Domain Connect'i kullanma**](#use-domain-connect-to-verify-and-set-up-your-domain) Etki alanınızı başka bir e-posta hizmeti sağlayıcısıyla ayarlamadıysanız, yeni etki alanınızı otomatik olarak doğrulamak ve Microsoft 365 ile kullanmak üzere ayarlamak için Domain Connect adımlarını kullanın.
 
    VEYA
 
 - [**El ile uygulanan adımları kullanma**](#create-dns-records-with-manual-setup) Aşağıdaki el ile uygulanan adımları kullanarak etki alanınızı doğrulayın ve etki alanı kayıt şirketinize ne zaman ve hangi kayıtların ekleneceğini seçin. Bu, yeni MX (posta) kayıtlarını( örneğin, uygun zamanda) ayarlamanıza olanak tanır.
 
-## <a name="use-domain-connect-to-verify-and-set-up-your-domain"></a>Etki alanınızı doğrulamak ve ayarlamak için Etki Alanı Bağlan kullanma
+## <a name="use-domain-connect-to-verify-and-set-up-your-domain"></a>Etki alanınızı doğrulamak ve ayarlamak için Domain Connect'i kullanma
 
-GoDaddy etki alanınızı Microsoft 365 ile otomatik olarak doğrulamak ve ayarlamak için şu adımları izleyin:
+Microsoft 365 ile GoDaddy etki alanınızı otomatik olarak doğrulamak ve ayarlamak için şu adımları izleyin:
 
-1. Microsoft 365 yönetim merkezi **Ayarlar** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Etki alanları'nı**</a> seçin ve ayarlamak istediğiniz etki alanını seçin.
+1. Microsoft 365 yönetim merkezi **Ayarlar** > <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Etki Alanları'nı**</a> seçin ve ayarlamak istediğiniz etki alanını seçin.
 
 1. Üç noktayı (diğer eylemler) seçin > **Kurulumu başlat'ı** seçin.
 
@@ -62,11 +61,11 @@ GoDaddy etki alanınızı Microsoft 365 ile otomatik olarak doğrulamak ve ayarl
 
 1. GoDaddy oturum açma sayfasında hesabınızda oturum açın ve **Yetki ver'i** seçin.
 
-   Bu, Microsoft 365 için etki alanı kurulumunuzu tamamlar.
+   Bu işlem, Microsoft 365 için etki alanı kurulumunuzu tamamlar.
 
 ## <a name="create-dns-records-with-manual-setup"></a>El ile kurulum ile DNS kayıtları oluşturma
 
-GoDaddy'de bu kayıtları ekledikten sonra, etki alanınız Microsoft hizmetleri ile çalışacak şekilde ayarlanır.
+GoDaddy'de bu kayıtları ekledikten sonra, etki alanınız Microsoft hizmetleriyle çalışacak şekilde ayarlanır.
 
 > [!NOTE]
 > Genellikle, DNS değişikliklerinin etkili olması yaklaşık 15 dakika sürer. Bununla birlikte, yaptığınız değişikliğin İnternet'in DNS sistemi genelinde güncelleştirilmesi bazen daha uzun sürebilir. DNS kayıtlarını ekledikten sonra posta akışı sorunlarıyla veya başka sorunlarla karşılaşırsanız, [Etki alanı adınızı veya DNS kayıtlarınızı değiştirdikten sonra sorunları giderme](../get-help-with-domains/find-and-fix-issues.md) konusuna bakın.
@@ -110,7 +109,7 @@ Etki alanınızı Microsoft ile kullanmadan önce, etki alanına sahip olduğunu
 
 Artık kaydı etki alanı kayıt şirketinizin sitesine eklediğinize göre, Microsoft'a geri dönüp kaydı istemeniz gerekir. Microsoft doğru TXT kaydını bulduğunda etki alanınız doğrulanır.
   
-Microsoft 365 kaydı doğrulamak için:
+Microsoft 365'te kaydı doğrulamak için:
   
 1. Yönetim merkezinde **Ayarlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Etki Alanları'na**</a> gidin.
 
@@ -118,7 +117,7 @@ Microsoft 365 kaydı doğrulamak için:
 
    :::image type="content" source="../../media/dns-IONOS/IONOS-DomainConnects-2.png" alt-text="Kurulumu başlat'ı seçin.":::
 
-1. **Devam'ı** seçin.
+1. **Devam**'ı seçin.
   
 1. **Etki alanını doğrula** sayfasında **Doğrula'yı** seçin.
 
@@ -220,9 +219,9 @@ Microsoft 365 kaydı doğrulamak için:
 
 6. **Kaydet**'i seçin.
 
-## <a name="advanced-option-skype-for-business"></a>Gelişmiş seçenek: Skype for Business
+## <a name="advanced-option-skype-for-business"></a>Gelişmiş seçenek: Skype Kurumsal
 
-Yalnızca kuruluşunuz Microsoft Teams ek olarak sohbet, konferans aramaları ve görüntülü aramalar gibi çevrimiçi iletişim hizmetleri için Skype for Business kullanıyorsa bu seçeneği belirleyin. Skype 4 kayıt gerekir: Kullanıcıdan kullanıcıya iletişim için 2 SRV kaydı ve oturum açıp kullanıcıları hizmete bağlamak için 2 CNAME kaydı.
+Bu seçeneği yalnızca kuruluşunuz Microsoft Teams'in yanı sıra sohbet, konferans aramaları ve görüntülü aramalar gibi çevrimiçi iletişim hizmetleri için Skype Kurumsal kullanıyorsa belirtin. Skype için 4 kayıt gerekir: Kullanıcıdan kullanıcıya iletişim için 2 SRV kaydı ve oturum açmak ve kullanıcıları hizmete bağlamak için 2 CNAME kaydı.
 
 ### <a name="add-the-two-required-srv-records"></a>Gerekli iki SRV kaydını ekleme
 
@@ -262,7 +261,7 @@ Yalnızca kuruluşunuz Microsoft Teams ek olarak sohbet, konferans aramaları ve
 > [!NOTE]
 > Genellikle, DNS değişikliklerinin etkili olması yaklaşık 15 dakika sürer. Bununla birlikte, yaptığınız değişikliğin İnternet'in DNS sistemi genelinde güncelleştirilmesi bazen daha uzun sürebilir. DNS kayıtlarını ekledikten sonra posta akışı sorunlarıyla veya başka sorunlarla karşılaşırsanız, [Etki alanı adınızı veya DNS kayıtlarınızı değiştirdikten sonra sorunları giderme](../get-help-with-domains/find-and-fix-issues.md) konusuna bakın.
 
-### <a name="add-the-two-required-cname-records-for-skype-for-business"></a>Skype for Business için gereken iki CNAME kaydını ekleme
+### <a name="add-the-two-required-cname-records-for-skype-for-business"></a>Skype Kurumsal için gereken iki CNAME kaydını ekleme
   
 1. Başlamak için [bu bağlantıyı](https://account.godaddy.com/products/?go_redirect=disabled) kullanarak GoDaddy'deki etki alanları sayfanıza gidin.
 

@@ -1,5 +1,5 @@
 ---
-title: dns kayıtlarınızı web.com Microsoft 365 Bağlan
+title: web.com'deki DNS kayıtlarınızı Microsoft 365'e bağlama
 f1.keywords:
 - CSH
 ms.author: efrene
@@ -9,7 +9,6 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 ms.localizationpriority: medium
-ROBOTS: NOINDEX, NOFOLLOW
 ms.collection:
 - M365-subscription-management
 - Adm_O365
@@ -21,21 +20,21 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 84acd4fc-6eec-4d00-8bed-568f036ae2af
-description: Microsoft için web.com'da etki alanınızı doğrulamayı ve e-posta, Skype for Business Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
-ms.openlocfilehash: 621364bdc0b2e9a2868084f0cb0b8eb8ef61c5b0
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Microsoft için web.com'da etki alanınızı doğrulamayı ve e-posta, Skype Kurumsal Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
+ms.openlocfilehash: d247ee24c107318289dfbca0ee741d5a04725d25
+ms.sourcegitcommit: 8cd230e243eba452b27f725d66152becb6aff49b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780323"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66563241"
 ---
-# <a name="connect-your-dns-records-at-webcom-to-microsoft-365"></a>dns kayıtlarınızı web.com Microsoft 365 Bağlan
+# <a name="connect-your-dns-records-at-webcom-to-microsoft-365"></a>web.com'deki DNS kayıtlarınızı Microsoft 365'e bağlama
 
  Aradığınızı bulamazsanız, **[Etki Alanları SSS sayfasını inceleyin](../setup/domains-faq.yml)**.
 
-DNS barındırma sağlayıcınız web.com ise, etki alanınızı doğrulamak ve e-posta, Skype for Business Çevrimiçi vb. için DNS kayıtlarını ayarlamak için bu makaledeki adımları izleyin.
+DNS barındırma sağlayıcınız web.com ise, etki alanınızı doğrulamak ve e-posta, Skype Kurumsal Online vb. için DNS kayıtlarını ayarlamak için bu makaledeki adımları izleyin.
 
-Bu kayıtları web.com ekledikten sonra, etki alanınız Microsoft hizmetleri ile çalışacak şekilde ayarlanır.
+Bu kayıtları web.com ekledikten sonra, etki alanınız Microsoft hizmetleriyle çalışacak şekilde ayarlanır.
 
 > [!NOTE]
 > Genellikle, DNS değişikliklerinin etkili olması yaklaşık 15 dakika sürer. Bununla birlikte, yaptığınız değişikliğin İnternet'in DNS sistemi genelinde güncelleştirilmesi bazen daha uzun sürebilir. DNS kayıtlarını ekledikten sonra posta akışı sorunlarıyla veya başka sorunlarla karşılaşırsanız, [Etki alanı adınızı veya DNS kayıtlarınızı değiştirdikten sonra sorunları giderme](../get-help-with-domains/find-and-fix-issues.md) konusuna bakın.
@@ -101,7 +100,7 @@ Etki alanınızı Microsoft ile kullanmadan önce, etki alanına sahip olduğunu
 
     |Anlamına gelir|TXT değeri|TTL|
     |---|---|:----|
-    |@|MS=*msXXXXXXXXX* <br/> **Not:** Bu bir örnektir. Burada, tablodan belirli **Hedef veya İşaret Edilen Adres** değerinizi kullanın. [Bunu nasıl bulabilirim?](../get-help-with-domains/information-for-dns-records.md)|1 Saat|
+    |@|MS=ms *XXXXXXXX* <br/> **Not:** Bu bir örnektir. Burada, tablodan belirli **Hedef veya İşaret Edilen Adres** değerinizi kullanın. [Bunu nasıl bulabilirim?](../get-help-with-domains/information-for-dns-records.md)|1 Saat|
 
 1. **EKLE'yi** seçin.
 
@@ -109,7 +108,7 @@ Etki alanınızı Microsoft ile kullanmadan önce, etki alanına sahip olduğunu
 
 Artık kaydı etki alanı kayıt şirketinizin sitesine eklediğinize göre, Microsoft'a geri dönüp kaydı istemeniz gerekir. Microsoft doğru TXT kaydını bulduğunda etki alanınız doğrulanır.
 
-Microsoft 365 kaydı doğrulamak için:
+Microsoft 365'te kaydı doğrulamak için:
 
 1. Yönetim merkezinde **Ayarlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Etki Alanları'na**</a> gidin.
 
@@ -117,7 +116,7 @@ Microsoft 365 kaydı doğrulamak için:
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-DomainConnects-2.png" alt-text="Kurulumu başlat'ı seçin.":::
 
-1. **Devam'ı** seçin.
+1. **Devam**'ı seçin.
 
 1. **Etki alanını doğrula** sayfasında **Doğrula'yı** seçin.
 
@@ -229,9 +228,9 @@ Microsoft 365 kaydı doğrulamak için:
 
 1. **EKLE'yi** seçin.
 
-## <a name="advanced-option-skype-for-business"></a>Gelişmiş seçenek: Skype for Business
+## <a name="advanced-option-skype-for-business"></a>Gelişmiş seçenek: Skype Kurumsal
 
-Yalnızca kuruluşunuz Microsoft Teams ek olarak sohbet, konferans aramaları ve görüntülü aramalar gibi çevrimiçi iletişim hizmetleri için Skype for Business kullanıyorsa bu seçeneği belirleyin. Skype 4 kayıt gerekir: Kullanıcıdan kullanıcıya iletişim için 2 SRV kaydı ve oturum açıp kullanıcıları hizmete bağlamak için 2 CNAME kaydı.
+Bu seçeneği yalnızca kuruluşunuz Microsoft Teams'in yanı sıra sohbet, konferans aramaları ve görüntülü aramalar gibi çevrimiçi iletişim hizmetleri için Skype Kurumsal kullanıyorsa belirtin. Skype için 4 kayıt gerekir: Kullanıcıdan kullanıcıya iletişim için 2 SRV kaydı ve oturum açmak ve kullanıcıları hizmete bağlamak için 2 CNAME kaydı.
 
 ### <a name="add-the-two-required-srv-records"></a>Gerekli iki SRV kaydını ekleme
 
@@ -273,7 +272,7 @@ Yalnızca kuruluşunuz Microsoft Teams ek olarak sohbet, konferans aramaları ve
 > [!NOTE]
 > Genellikle, DNS değişikliklerinin etkili olması yaklaşık 15 dakika sürer. Bununla birlikte, yaptığınız değişikliğin İnternet'in DNS sistemi genelinde güncelleştirilmesi bazen daha uzun sürebilir. DNS kayıtlarını ekledikten sonra posta akışıyla veya diğer sorunlarla karşılaşıyorsanız, bkz. [Etki alanınızı veya DNS kayıtlarınızı ekledikten sonra sorunları bulma ve düzeltme](../get-help-with-domains/find-and-fix-issues.md).
 
-### <a name="add-the-two-required-cname-records-for-skype-for-business"></a>Skype for Business için gereken iki CNAME kaydını ekleme
+### <a name="add-the-two-required-cname-records-for-skype-for-business"></a>Skype Kurumsal için gereken iki CNAME kaydını ekleme
 
 1. Başlamak için [bu bağlantıyı](https://checkout.web.com/manage-it/index.jsp) kullanarak web.com'deki etki alanları sayfanıza gidin. Önce oturum açın.
 

@@ -1,5 +1,5 @@
 ---
-title: Cloudflare'daki DNS kayıtlarınızı Microsoft 365 Bağlan
+title: Cloudflare'daki DNS kayıtlarınızı Microsoft 365'e bağlama
 f1.keywords:
 - CSH
 ms.author: efrene
@@ -9,7 +9,6 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 ms.localizationpriority: medium
-ROBOTS: NOINDEX, NOFOLLOW
 ms.collection:
 - M365-subscription-management
 - Adm_O365
@@ -21,31 +20,31 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 84acd4fc-6eec-4d00-8bed-568f036ae2af
-description: Microsoft için Cloudflare'da etki alanınızı doğrulamayı ve e-posta, Skype for Business Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
-ms.openlocfilehash: 164a681cccac3385d2ca963ac58706c8e743bc1e
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Microsoft için Cloudflare'da etki alanınızı doğrulamayı ve e-posta, Skype Kurumsal Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
+ms.openlocfilehash: 50dbee0ab2ca587ee628a40fdc9c032ec9c8820d
+ms.sourcegitcommit: 8cd230e243eba452b27f725d66152becb6aff49b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780379"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66563329"
 ---
-# <a name="connect-your-dns-records-at-cloudflare-to-microsoft-365"></a>Cloudflare'daki DNS kayıtlarınızı Microsoft 365 Bağlan
+# <a name="connect-your-dns-records-at-cloudflare-to-microsoft-365"></a>Cloudflare'daki DNS kayıtlarınızı Microsoft 365'e bağlama
 
  Aradığınızı bulamazsanız, **[Etki Alanları SSS sayfasını inceleyin](../setup/domains-faq.yml)**.
 
-DNS barındırma sağlayıcınız Cloudflare ise, etki alanınızı doğrulamak ve e-posta, Skype for Business Online vb. için DNS kayıtlarını ayarlamak için bu makaledeki adımları izleyin.
+DNS barındırma sağlayıcınız Cloudflare ise, etki alanınızı doğrulamak ve e-posta, Skype Kurumsal Online vb. için DNS kayıtlarını ayarlamak için bu makaledeki adımları izleyin.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
 Etki alanınız için DNS kayıtlarını ayarlamak için iki seçeneğiniz vardır:
 
-- [**Etki Alanı Bağlan'ni kullanma**](#use-domain-connect-to-verify-and-set-up-your-domain) Etki alanınızı başka bir e-posta hizmeti sağlayıcısıyla ayarlamadıysanız, etki alanı Bağlan adımlarını kullanarak yeni etki alanınızı otomatik olarak doğrulayın ve Microsoft 365 ile kullanılacak şekilde ayarlayın.
+- [**Domain Connect'i kullanma**](#use-domain-connect-to-verify-and-set-up-your-domain) Etki alanınızı başka bir e-posta hizmeti sağlayıcısıyla ayarlamadıysanız, yeni etki alanınızı otomatik olarak doğrulamak ve Microsoft 365 ile kullanmak üzere ayarlamak için Domain Connect adımlarını kullanın.
 
     VEYA
 
 - [**El ile uygulanan adımları kullanma**](#create-dns-records-with-manual-setup) Aşağıdaki el ile uygulanan adımları kullanarak etki alanınızı doğrulayın ve etki alanı kayıt şirketinize ne zaman ve hangi kayıtların ekleneceğini seçin. Bu, yeni MX (posta) kayıtlarını( örneğin, uygun zamanda) ayarlamanıza olanak tanır.
 
-## <a name="use-domain-connect-to-verify-and-set-up-your-domain"></a>Etki alanınızı doğrulamak ve ayarlamak için Etki Alanı Bağlan kullanma
+## <a name="use-domain-connect-to-verify-and-set-up-your-domain"></a>Etki alanınızı doğrulamak ve ayarlamak için Domain Connect'i kullanma
 
 Cloudflare etki alanınızı Microsoft 365 ile otomatik olarak doğrulamak ve ayarlamak için şu adımları izleyin:
 
@@ -61,7 +60,7 @@ Cloudflare etki alanınızı Microsoft 365 ile otomatik olarak doğrulamak ve ay
 
 1. Cloudflare oturum açma sayfasında hesabınızda oturum açın ve **Yetkilendir'i** seçin.
 
-    Bu, Microsoft 365 için etki alanı kurulumunuzu tamamlar.
+    Bu işlem, Microsoft 365 için etki alanı kurulumunuzu tamamlar.
 
 ## <a name="create-dns-records-with-manual-setup"></a>El ile kurulum ile DNS kayıtları oluşturma
 
@@ -77,7 +76,7 @@ Bu kayıtları Cloudflare'a ekledikten sonra, etki alanınız Microsoft 365 hizm
 
 Cloudflare'a kaydolduğunda, Cloudflare Kurulum işlemini kullanarak bir etki alanı eklediniz.
 
-Eklediğiniz etki alanı Cloudflare veya ayrı bir etki alanı kayıt şirketi tarafından satın alındı. Microsoft 365'da etki alanınız için DNS kayıtlarını doğrulamak ve oluşturmak için öncelikle etki alanı kayıt şirketinizdeki ad sunucularını Cloudflare ad sunucularını kullanacak şekilde değiştirmeniz gerekir.
+Eklediğiniz etki alanı Cloudflare veya ayrı bir etki alanı kayıt şirketi tarafından satın alındı. Microsoft 365'te etki alanınız için DNS kayıtlarını doğrulamak ve oluşturmak için öncelikle etki alanı kayıt şirketinizdeki ad sunucularını Cloudflare ad sunucularını kullanacak şekilde değiştirmeniz gerekir.
 
 Etki alanı kayıt şirketinizin web sitesinde etki alanınızın ad sunucularını kendiniz değiştirmek için şu adımları izleyin.
 
@@ -123,7 +122,7 @@ Etki alanınızı Microsoft ile kullanmadan önce, etki alanına sahip olduğunu
 
     |Tür|Name|TTL|İçerik|
     |---|---|---|:----|
-    |TXT|@|30 dakika|MS=*msXXXXXXXXX* <br/> **Not:** Bu bir örnektir. Burada, tablodan belirli **Hedef veya İşaret Edilen Adres** değerinizi kullanın. [Bunu nasıl bulabilirim?](../get-help-with-domains/information-for-dns-records.md)|
+    |TXT|@|30 dakika|MS=ms *XXXXXXXX* <br/> **Not:** Bu bir örnektir. Burada, tablodan belirli **Hedef veya İşaret Edilen Adres** değerinizi kullanın. [Bunu nasıl bulabilirim?](../get-help-with-domains/information-for-dns-records.md)|
 
 1. **Kaydet**'i seçin.
 
@@ -133,7 +132,7 @@ Etki alanınızı Microsoft ile kullanmadan önce, etki alanına sahip olduğunu
 
 Artık kaydı etki alanı kayıt şirketinizin sitesine eklediğinize göre, Microsoft'a geri dönüp kaydı arayacaksınız. Microsoft doğru TXT kaydını bulduğunda etki alanınız doğrulanır.
 
-Microsoft 365 kaydı doğrulamak için:
+Microsoft 365'te kaydı doğrulamak için:
 
 1. Yönetim merkezinde **Ayarlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Etki Alanları'na**</a> gidin.
 
@@ -141,7 +140,7 @@ Microsoft 365 kaydı doğrulamak için:
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-DomainConnects-2.png" alt-text="Kurulumu başlat'ı seçin.":::
 
-1. **Devam'ı** seçin.
+1. **Devam**'ı seçin.
 
 1. **Etki alanını doğrula** sayfasında **Doğrula'yı** seçin.
 
@@ -168,7 +167,7 @@ Microsoft 365 kaydı doğrulamak için:
 
    |Tür|Name|Posta sunucusu|TTL|Öncelik|
    |---|---|---|---|---|
-   |MX|@|*\<domain-key\>*.mail.protection.outlook.com <br/> **Not:** *\<domain-key\>* Microsoft 365 hesabınızdan alın. [Bunu nasıl bulabilirim?](../get-help-with-domains/information-for-dns-records.md)|30 dakika|1 <br/> Öncelik hakkında daha fazla bilgi için bkz. [MX önceliği nedir?](../setup/domains-faq.yml) <br/>|
+   |MX|@|*\<domain-key\>*.mail.protection.outlook.com <br/> **Not:** Microsoft 365 hesabınızdan alın *\<domain-key\>* . [Bunu nasıl bulabilirim?](../get-help-with-domains/information-for-dns-records.md)|30 dakika|1 <br/> Öncelik hakkında daha fazla bilgi için bkz. [MX önceliği nedir?](../setup/domains-faq.yml) <br/>|
 
 1. **Kaydet**'i seçin.
 
@@ -209,7 +208,7 @@ Microsoft 365 kaydı doğrulamak için:
 ### <a name="add-a-txt-record-for-spf-to-help-prevent-email-spam"></a>SPF'nin gereksiz e-postaları önlemesine yardımcı olmak için TXT kaydı ekleme
 
 > [!IMPORTANT]
-> Bir etki alanına yönelik SPF için birden fazla TXT kaydına sahip olamazsınız. Etki alanınızda birden fazla SPF kaydı varsa bu durum, e-posta hatalarının yanı sıra teslimat ve istenmeyen posta sınıflandırma sorunlarına neden olabilir. Etki alanınız için zaten bir SPF kaydınız varsa, Microsoft 365 için yeni bir tane oluşturmayın. Bunun yerine, her iki değer kümesini de içeren *tek* bir SPF kaydına sahip olmak için gerekli Microsoft 365 değerlerini geçerli kayda ekleyin.
+> Bir etki alanına yönelik SPF için birden fazla TXT kaydına sahip olamazsınız. Etki alanınızda birden fazla SPF kaydı varsa bu durum, e-posta hatalarının yanı sıra teslimat ve istenmeyen posta sınıflandırma sorunlarına neden olabilir. Etki alanınız için zaten bir SPF kaydınız varsa, Microsoft 365 için yeni bir tane oluşturmayın. Bunun yerine, gerekli Microsoft 365 değerlerini geçerli kayda ekleyerek her iki değer kümesini de içeren *tek* bir SPF kaydına sahip olmanız gerekir.
 
 1. Başlamak için [bu bağlantıyı](https://www.cloudflare.com/a/login) kullanarak Cloudflare'daki etki alanları sayfanıza gidin. Önce oturum açmanız istenir.
 
@@ -235,14 +234,14 @@ Microsoft 365 kaydı doğrulamak için:
 
    :::image type="content" source="../../media/dns-cloudflare/cloudflare-domains-TXT-save.png" alt-text="Kaydet'i seçin.":::
 
-## <a name="advanced-option-skype-for-business"></a>Gelişmiş seçenek: Skype for Business
+## <a name="advanced-option-skype-for-business"></a>Gelişmiş seçenek: Skype Kurumsal
 
-Yalnızca kuruluşunuz Microsoft Teams ek olarak sohbet, konferans aramaları ve görüntülü aramalar gibi çevrimiçi iletişim hizmetleri için Skype for Business kullanıyorsa bu seçeneği belirleyin. Skype 4 kayıt gerekir: Kullanıcıdan kullanıcıya iletişim için 2 SRV kaydı ve oturum açıp kullanıcıları hizmete bağlamak için 2 CNAME kaydı.
+Bu seçeneği yalnızca kuruluşunuz Microsoft Teams'in yanı sıra sohbet, konferans aramaları ve görüntülü aramalar gibi çevrimiçi iletişim hizmetleri için Skype Kurumsal kullanıyorsa belirtin. Skype için 4 kayıt gerekir: Kullanıcıdan kullanıcıya iletişim için 2 SRV kaydı ve oturum açmak ve kullanıcıları hizmete bağlamak için 2 CNAME kaydı.
 
 ### <a name="add-the-two-required-srv-records"></a>Gerekli iki SRV kaydını ekleme
 
 > [!IMPORTANT]
-> Bu işlevselliğin kullanılabilir hale getirilmesinden Cloudflare'ın sorumlu olduğunu unutmayın. Aşağıdaki adımlar ile geçerli Cloudflare GUI (Grafik Kullanıcı Arabirimi) arasında tutarsızlıklar görüyorsanız [Cloudflare Community](https://community.cloudflare.com/) kullanın.
+> Bu işlevselliğin kullanılabilir hale getirilmesinden Cloudflare'ın sorumlu olduğunu unutmayın. Aşağıdaki adımlar ile geçerli Cloudflare GUI (Grafik Kullanıcı Arabirimi) arasında tutarsızlıklar görüyorsanız [Cloudflare Topluluğu'na](https://community.cloudflare.com/) başvurun.
 
 1. Başlamak için [bu bağlantıyı](https://www.cloudflare.com/a/login) kullanarak Cloudflare'daki etki alanları sayfanıza gidin. Önce oturum açmanız istenir.
 
@@ -274,7 +273,7 @@ Yalnızca kuruluşunuz Microsoft Teams ek olarak sohbet, konferans aramaları ve
 > [!NOTE]
 > Genellikle, DNS değişikliklerinin etkili olması yaklaşık 15 dakika sürer. Bununla birlikte, yaptığınız değişikliğin İnternet'in DNS sistemi genelinde güncelleştirilmesi bazen daha uzun sürebilir. DNS kayıtlarını ekledikten sonra posta akışı sorunlarıyla veya başka sorunlarla karşılaşırsanız, [Etki alanı adınızı veya DNS kayıtlarınızı değiştirdikten sonra sorunları giderme](../get-help-with-domains/find-and-fix-issues.md) konusuna bakın.
 
-### <a name="add-the-two-required-cname-records-for-skype-for-business"></a>Skype for Business için gereken iki CNAME kaydını ekleme
+### <a name="add-the-two-required-cname-records-for-skype-for-business"></a>Skype Kurumsal için gereken iki CNAME kaydını ekleme
 
 1. Başlamak için [bu bağlantıyı](https://www.cloudflare.com/a/login) kullanarak Cloudflare'daki etki alanları sayfanıza gidin. Önce oturum açmanız istenir.
 

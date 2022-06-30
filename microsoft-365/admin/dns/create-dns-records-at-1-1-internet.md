@@ -1,5 +1,5 @@
 ---
-title: DNS kayıtlarınızı IONOS'ta 1&1 ile Microsoft 365 Bağlan
+title: IONOS'ta 1&1'e kadar DNS kayıtlarınızı Microsoft 365'e bağlama
 f1.keywords:
 - CSH
 ms.author: efrene
@@ -9,7 +9,6 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 ms.localizationpriority: medium
-ROBOTS: NOINDEX, NOFOLLOW
 ms.collection:
 - M365-subscription-management
 - Adm_O365
@@ -21,37 +20,37 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 5762c3ca-1de2-4999-bfe5-4c5e25a8957e
-description: Microsoft için 1&1 IONOS adresinden etki alanınızı doğrulamayı ve e-posta, Skype for Business Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
-ms.openlocfilehash: 8afdfed0998a262b1df4c95a63e9086e4f71e5b6
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Microsoft için 1&1 IONOS'ta etki alanınızı doğrulamayı ve e-posta, Skype Kurumsal Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
+ms.openlocfilehash: b9d7474fe0c442670be961a5436558ea168626dc
+ms.sourcegitcommit: 8cd230e243eba452b27f725d66152becb6aff49b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780687"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66563439"
 ---
-# <a name="connect-your-dns-records-at-ionos-by-11-to-microsoft-365"></a>DNS kayıtlarınızı IONOS'ta 1&1 ile Microsoft 365 Bağlan
+# <a name="connect-your-dns-records-at-ionos-by-11-to-microsoft-365"></a>IONOS'ta 1&1'e kadar DNS kayıtlarınızı Microsoft 365'e bağlama
 
  Aradığınızı bulamazsanız, **[Etki Alanları SSS sayfasını inceleyin](../setup/domains-faq.yml)**.
 
-DNS barındırma sağlayıcınız 1&1 olan IONOS ise, etki alanınızı doğrulamak ve e-posta, Skype for Business Online vb. için DNS kayıtlarını ayarlamak için bu makaledeki adımları izleyin.
+DNS barındırma sağlayıcınız 1&1 olan IONOS ise, etki alanınızı doğrulamak ve e-posta, Skype Kurumsal Çevrimiçi vb. için DNS kayıtlarını ayarlamak için bu makaledeki adımları izleyin.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
 Etki alanınız için DNS kayıtlarını ayarlamak için iki seçeneğiniz vardır:
 
-- [**Etki Alanı Bağlan'ni kullanma**](#use-domain-connect-to-verify-and-set-up-your-domain) Etki alanınızı başka bir e-posta hizmeti sağlayıcısıyla ayarlamadıysanız, etki alanı Bağlan adımlarını kullanarak yeni etki alanınızı otomatik olarak doğrulayın ve Microsoft 365 ile kullanılacak şekilde ayarlayın.
+- [**Domain Connect'i kullanma**](#use-domain-connect-to-verify-and-set-up-your-domain) Etki alanınızı başka bir e-posta hizmeti sağlayıcısıyla ayarlamadıysanız, yeni etki alanınızı otomatik olarak doğrulamak ve Microsoft 365 ile kullanmak üzere ayarlamak için Domain Connect adımlarını kullanın.
 
     VEYA
 
 - [**El ile uygulanan adımları kullanma**](#create-dns-records-with-manual-setup) Aşağıdaki el ile uygulanan adımları kullanarak etki alanınızı doğrulayın ve etki alanı kayıt şirketinize ne zaman ve hangi kayıtların ekleneceğini seçin. Bu, yeni MX (posta) kayıtlarını( örneğin, uygun zamanda) ayarlamanıza olanak tanır.
 
-## <a name="use-domain-connect-to-verify-and-set-up-your-domain"></a>Etki alanınızı doğrulamak ve ayarlamak için Etki Alanı Bağlan kullanma
+## <a name="use-domain-connect-to-verify-and-set-up-your-domain"></a>Etki alanınızı doğrulamak ve ayarlamak için Domain Connect'i kullanma
 
-IONOS'unuzu Microsoft 365 ile 1&1 etki alanına göre otomatik olarak doğrulamak ve ayarlamak için şu adımları izleyin:
+Microsoft 365 ile IONOS'unuzu 1&1 etki alanına göre otomatik olarak doğrulamak ve ayarlamak için şu adımları izleyin:
 
-1. Microsoft 365 yönetim merkezi **Ayarlar** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Etki alanları'nı**</a> seçin ve ayarlamak istediğiniz etki alanını seçin.
+1. Microsoft 365 yönetim merkezi **Ayarlar** > <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Etki Alanları'nı**</a> seçin ve ayarlamak istediğiniz etki alanını seçin.
 
-    :::image type="content" source="../../media/dns-IONOS/IONOS-DomainConnects-1.png" alt-text="Microsoft 365'de etki alanınızı seçin.":::
+    :::image type="content" source="../../media/dns-IONOS/IONOS-DomainConnects-1.png" alt-text="Microsoft 365'te etki alanınızı seçin.":::
 
 1. Üç noktayı (diğer eylemler) seçin > **Kurulumu başlat'ı** seçin.
 
@@ -63,17 +62,17 @@ IONOS'unuzu Microsoft 365 ile 1&1 etki alanına göre otomatik olarak doğrulama
 
 1. IONOS by 1&1 oturum açma sayfasında hesabınızda oturum açın ve **Bağlan** ve **İzin Ver'i** seçin.
 
-    :::image type="content" source="../../media/dns-IONOS/IONOS-DomainConnects-3.png" alt-text="Bağlan ve ardından İzin Ver'i seçin.":::
+    :::image type="content" source="../../media/dns-IONOS/IONOS-DomainConnects-3.png" alt-text="Bağlan'ı ve ardından İzin Ver'i seçin.":::
 
-    Bu, Microsoft 365 için etki alanı kurulumunuzu tamamlar.
+    Bu işlem, Microsoft 365 için etki alanı kurulumunuzu tamamlar.
 
 ## <a name="create-dns-records-with-manual-setup"></a>El ile kurulum ile DNS kayıtları oluşturma
 
-IONOS'ta 1&1'e kadar bu kayıtları ekledikten sonra, etki alanınız Microsoft hizmetleri ile çalışacak şekilde ayarlanır.
+IONOS'ta 1&1'e kadar bu kayıtları ekledikten sonra, etki alanınız Microsoft hizmetleriyle çalışacak şekilde ayarlanır.
 
 > [!CAUTION]
 > IONOS'un 1&1'e kadar bir etki alanının hem MX kaydına hem de en üst düzey Autodiscover CNAME kaydına sahip olmasına izin vermediğini unutmayın. Bu, Microsoft için Exchange Online yapılandırma yöntemlerinizi sınırlar. Geçici bir çözüm vardır, ancak **yalnızca** IONOS'ta 1&1'e kadar alt etki alanları oluşturma deneyimine sahipseniz kullanmanızı öneririz.
-> Bu [hizmet sınırlamasına](../setup/domains-faq.yml) rağmen IONOS'ta kendi Microsoft DNS kayıtlarınızı 1&1'e kadar yönetmeyi seçerseniz, bu makaledeki adımları izleyerek etki alanınızı doğrulayın ve e-posta, Skype for Business Online vb. için DNS kayıtlarını ayarlayın.
+> Bu [hizmet sınırlamasına](../setup/domains-faq.yml) rağmen IONOS'ta 1&1'e kadar kendi Microsoft DNS kayıtlarınızı yönetmeyi seçerseniz, bu makaledeki adımları izleyerek etki alanınızı doğrulayın ve e-posta, Skype Kurumsal Online vb. için DNS kayıtlarını ayarlayın.
 
 > [!NOTE]
 > Genellikle, DNS değişikliklerinin etkili olması yaklaşık 15 dakika sürer. Bununla birlikte, yaptığınız değişikliğin İnternet'in DNS sistemi genelinde güncelleştirilmesi bazen daha uzun sürebilir. DNS kayıtlarını ekledikten sonra posta akışıyla veya diğer sorunlarla karşılaşıyorsanız, bkz. [Etki alanınızı veya DNS kayıtlarınızı ekledikten sonra sorunları bulma ve düzeltme](../get-help-with-domains/find-and-fix-issues.md).
@@ -115,9 +114,9 @@ Etki alanınızı Microsoft ile kullanmadan önce, etki alanına sahip olduğunu
 
     Yeni oluşturduğunuz kaydın İnternet genelinde güncelleştirilebilmesi için devam etmeden önce birkaç dakika bekleyin.
 
-Artık kaydı etki alanı kayıt şirketinizin sitesine eklediğinize göre, Microsoft 365 geri dönüp kaydı aramak için Microsoft 365 istemeniz gerekir. Microsoft doğru TXT kaydını bulduğunda etki alanınız doğrulanır.
+Artık kaydı etki alanı kayıt şirketinizin sitesine eklediğinize göre, Microsoft 365'e geri dönüp Microsoft 365'in kaydı aramasını isteyebilirsiniz. Microsoft doğru TXT kaydını bulduğunda etki alanınız doğrulanır.
 
-Microsoft 365 kaydı doğrulamak için:
+Microsoft 365'te kaydı doğrulamak için:
 
 1. Yönetim merkezinde **Ayarlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Etki Alanları'na**</a> gidin.
 
@@ -125,7 +124,7 @@ Microsoft 365 kaydı doğrulamak için:
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-DomainConnects-2.png" alt-text="Kurulumu başlat'ı seçin.":::
 
-1. **Devam'ı** seçin.
+1. **Devam**'ı seçin.
 
 1. **Etki alanını doğrula** sayfasında **Doğrula'yı** seçin.
 
@@ -219,7 +218,7 @@ Microsoft 365 kaydı doğrulamak için:
 ## <a name="add-a-txt-record-for-spf-to-help-prevent-email-spam"></a>SPF'nin gereksiz e-postaları önlemesine yardımcı olmak için TXT kaydı ekleme
 
 > [!IMPORTANT]
-> Bir etki alanına yönelik SPF için birden fazla TXT kaydına sahip olamazsınız. Etki alanınızda birden fazla SPF kaydı varsa bu durum, e-posta hatalarının yanı sıra teslimat ve istenmeyen posta sınıflandırma sorunlarına neden olabilir. Etki alanınız için zaten bir SPF kaydınız varsa, Microsoft için yeni bir tane oluşturmayın. Bunun yerine, her iki değer kümesini içeren  *tek*  bir SPF kaydına sahip olmak için gerekli Microsoft değerlerini geçerli kayda ekleyin. Örneklere mi ihtiyacınız var? [Microsoft için bu Dış Etki Alanı Adı Sistemi kayıtlarına](../../enterprise/external-domain-name-system-records.md) göz atın. SPF kaydınızı doğrulamak için [buSPF doğrulama araçlarından](../setup/domains-faq.yml) birini kullanabilirsiniz.
+> Bir etki alanına yönelik SPF için birden fazla TXT kaydına sahip olamazsınız. Etki alanınızda birden fazla SPF kaydı varsa bu durum, e-posta hatalarının yanı sıra teslimat ve istenmeyen posta sınıflandırma sorunlarına neden olabilir. Etki alanınız için zaten bir SPF kaydınız varsa, Microsoft için yeni bir tane oluşturmayın. Bunun yerine, her iki değer kümesini içeren  *tek*  bir SPF kaydına sahip olmak için gerekli Microsoft değerlerini geçerli kayda ekleyin. Örneklere mi ihtiyacınız var? [Microsoft için bu Dış Etki Alanı Adı Sistemi kayıtlarına](../../enterprise/external-domain-name-system-records.md) göz atın. SPF kaydınızı doğrulamak için bu[SPF doğrulama araçlarından](../setup/domains-faq.yml) birini kullanabilirsiniz.
 
 > [!NOTE]
 > 1und1.de kaydoldıysanız [burada oturum açın](https://go.microsoft.com/fwlink/?linkid=859152).
@@ -252,9 +251,9 @@ Microsoft 365 kaydı doğrulamak için:
 
    :::image type="content" source="../../media/dns-IONOS/IONOS-domains-SPFTXT-Save.png" alt-text="Kaydet'i seçin.":::
 
-## <a name="advanced-option-skype-for-business"></a>Gelişmiş seçenek: Skype for Business
+## <a name="advanced-option-skype-for-business"></a>Gelişmiş seçenek: Skype Kurumsal
 
-Yalnızca kuruluşunuz Microsoft Teams ek olarak sohbet, konferans aramaları ve görüntülü aramalar gibi çevrimiçi iletişim hizmetleri için Skype for Business kullanıyorsa bu seçeneği belirleyin. Skype 4 kayıt gerekir: Kullanıcıdan kullanıcıya iletişim için 2 SRV kaydı ve oturum açıp kullanıcıları hizmete bağlamak için 2 CNAME kaydı.
+Bu seçeneği yalnızca kuruluşunuz Microsoft Teams'in yanı sıra sohbet, konferans aramaları ve görüntülü aramalar gibi çevrimiçi iletişim hizmetleri için Skype Kurumsal kullanıyorsa belirtin. Skype için 4 kayıt gerekir: Kullanıcıdan kullanıcıya iletişim için 2 SRV kaydı ve oturum açmak ve kullanıcıları hizmete bağlamak için 2 CNAME kaydı.
 
 ### <a name="add-two-additional-cname-records"></a>İki ek CNAME kaydı ekleme
 
