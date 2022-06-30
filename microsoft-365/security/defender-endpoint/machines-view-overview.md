@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 78cb81b1a0da9f0d1965dab7c209067a4e8d02e6
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+ms.openlocfilehash: 81ff80776d3b12e4ec90d6d2c2473389686ae9c9
+ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65874184"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66554477"
 ---
 # <a name="device-inventory"></a>Cihaz envanteri
 
@@ -64,7 +64,7 @@ Uyarı listesini sınırlamak ve daha odaklanmış bir görünüm elde etmek iç
 
 Uç Nokta için Microsoft Defender ekleme işlemi sırasında, MDE'ye eklenen cihazlar, algılayıcı verilerini raporlamaya başladığında aşamalı olarak cihaz envanterine doldurulur. Bundan sonra, cihaz envanteri, cihaz bulma işlemi aracılığıyla ağınızda bulunan cihazlar tarafından doldurulur. Cihaz envanterinde cihazları listeleyen üç sekme vardır:
 
-- **Bilgisayarlar ve Mobil**: Enterprise uç noktaları (iş istasyonları, sunucular ve mobil cihazlar)
+- **Bilgisayarlar ve Mobil**: Kurumsal uç noktalar (iş istasyonları, sunucular ve mobil cihazlar)
 - **Ağ cihazları**: Yönlendiriciler ve anahtarlar gibi cihazlar
 - **IoT cihazları**: Yazıcılar ve kameralar gibi cihazlar
 
@@ -124,7 +124,7 @@ Filtrele | Açıklama
 **Ekleme durumu** </br> | Ekleme durumu, cihazın şu anda Uç Nokta için Microsoft Defender eklenip eklenmediğini gösterir. Aşağıdaki durumlara göre filtreleyebilirsiniz: </br> - **Eklenen**: Uç nokta Uç Nokta için Microsoft Defender eklenir.  </br> - **Eklenebilir**: Uç nokta ağdaki desteklenen bir cihaz olarak bulundu, ancak şu anda eklenmemiş. Microsoft bu cihazları eklemenizi kesinlikle önerir. </br> - **Desteklenmeyen**: Uç nokta ağda bulundu, ancak Uç Nokta için Microsoft Defender tarafından desteklenmiyor. </br> - **Yetersiz bilgi**: Sistem cihazın desteklenebilirliğini belirleyemedi.</br></br> (_Yalnızca bilgisayarlar ve mobil_ cihazlar)
 **Virüsten koruma durumu** </br> | Virüsten koruma durumunun devre dışı, güncelleştirilmemiş veya bilinmiyor olmasına göre görünümü filtreleyin.</br></br> (_Yalnızca bilgisayarlar ve mobil_ cihazlar)
 **Grup** </br> | Listeyi araştırmak istediğiniz gruba göre filtreleyin. </br></br> (_Yalnızca bilgisayarlar ve mobil_ cihazlar)
-**Tarafından yönetilir** </br> | Tarafından yönetilir, cihazın nasıl yönetildiğini gösterir. Filtre ölçütü:</br>- Uç Nokta için Microsoft Defender </br> - Mobil cihaz yönetimi (MDM) </br>- Bilinmiyor: Bunun nedeni eski bir Windows sürümünün çalıştırılması, SCCM'nin yerinde olması veya başka bir üçüncü taraf MDM'sinin olması olabilir.</br></br> (_Yalnızca bilgisayarlar ve mobil_ cihazlar)
+**Tarafından yönetilir** </br> | Tarafından yönetilir, cihazın nasıl yönetildiğini gösterir. Filtre ölçütü:</br> - Uç Nokta için Microsoft Defender</br> - Kiracı ekleme yoluyla Microsoft Configuration Manager ile ortak yönetim de dahil olmak üzere Microsoft Endpoint Manager (MEM)</br>- Microsoft Configuration manager (ConfigMgr)</br> - Bilinmiyor: Bunun nedeni eski bir Windows sürümünün, GPO yönetiminin veya başka bir üçüncü taraf MDM'nin çalıştırılması olabilir.</br></br> (_Yalnızca bilgisayarlar ve mobil_ cihazlar) 
 **Cihaz Türü** </br> | Araştırmak istediğiniz cihaz türüne göre filtreleyin.</br></br> (_Yalnızca IoT cihazları_)
 
 ## <a name="use-columns-to-customize-the-device-inventory-views"></a>Cihaz envanter görünümlerini özelleştirmek için sütunları kullanma

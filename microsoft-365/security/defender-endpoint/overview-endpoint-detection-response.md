@@ -1,8 +1,8 @@
 ---
-title: uç noktada algılama ve yanıtlama özelliklerine genel bakış
+title: Uç nokta algılama ve yanıt özelliklerine genel bakış
 ms.reviewer: ''
-description: Uç Nokta için Microsoft Defender'daki uç noktada algılama ve yanıtlama özellikleri hakkında bilgi edinin
-keywords: Uç Nokta için Microsoft Defender, uç noktada algılama ve yanıtlama, yanıt, algılama, siber güvenlik, koruma
+description: Uç Nokta için Microsoft Defender'deki uç nokta algılama ve yanıt özellikleri hakkında bilgi edinin
+keywords: Uç Nokta için Microsoft Defender, uç nokta algılama ve yanıt, yanıt, algılama, siber güvenlik, koruma
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,24 +15,27 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 78f05c9e366d2f8b4d5b4d7697961f0d702581f8
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 757064e8867cda8676fd0cf20a662ff04d130e9c
+ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438538"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66554521"
 ---
-# <a name="overview-of-endpoint-detection-and-response"></a>uç noktada algılama ve yanıtlama genel bakış
+# <a name="overview-of-endpoint-detection-and-response"></a>Uç nokta algılama ve yanıta genel bakış
 
 **Şunlar için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Planları 1 ve 2](defender-endpoint-plan-1-2.md)
+- [Uç Nokta için Microsoft Defender Plan 1 ve 2](defender-endpoint-plan-1-2.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Uç Nokta için Defender uç noktada algılama ve yanıtlama özellikleri, neredeyse gerçek zamanlı ve eyleme dönüştürülebilir gelişmiş saldırı algılamaları sağlar. Güvenlik analistleri uyarıların önceliklerini etkili bir şekilde belirleyebilir, ihlal kapsamının tamamını görebilir ve tehditleri düzeltmek için yanıt eylemleri gerçekleştirebilir.
+Uç Nokta için Defender'daki uç nokta algılama ve yanıt özellikleri, neredeyse gerçek zamanlı ve eyleme dönüştürülebilir gelişmiş saldırı algılamaları sağlar. Güvenlik analistleri uyarıların önceliklerini etkili bir şekilde belirleyebilir, ihlal kapsamının tamamını görebilir ve tehditleri düzeltmek için yanıt eylemleri gerçekleştirebilir.
 
 Bir tehdit algılandığında, analistin araştırması için sistemde uyarılar oluşturulur. Aynı saldırı tekniklerine sahip veya aynı saldırgana atfedilen uyarılar _olay_ adı verilen bir varlıkta toplanır. Uyarıları bu şekilde toplama, analistlerin tehditleri topluca araştırmasını ve yanıtlamasını kolaylaştırır.
+
+> [!NOTE]
+> Uç Nokta için Defender algılama, belirli bir uç noktada gerçekleşen her işlemi veya etkinliği kaydeden bir denetim veya günlüğe kaydetme çözümü olarak tasarlanmamıştır. Algılayıcımızın dahili bir azaltma mekanizması vardır, bu nedenle aynı olayların tekrarlanma oranının yüksek olması günlükleri sular altında tutmaz.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4o1j5]
 

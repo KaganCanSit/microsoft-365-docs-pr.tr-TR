@@ -1,6 +1,6 @@
 ---
-title: Uç Nokta için Microsoft Defender Windows önceki sürümlerini ekleme
-description: algılayıcı verilerini Uç Nokta için Microsoft Defender algılayıcıya gönderebilmeleri için Windows cihazlarının önceki sürümlerini ekleme desteği
+title: windows'un önceki sürümlerini Uç Nokta için Microsoft Defender ekleme
+description: Algılayıcı verilerini Uç Nokta için Microsoft Defender algılayıcıya gönderebilmeleri için Windows cihazlarının önceki sürümlerini ekleme desteği
 keywords: onboard, windows, 7, 81, oms, sp1, enterprise, pro, down level
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 8ca88340ae90889c0e45c5905863373d930949b2
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+ms.openlocfilehash: c330d3c8210ea0c83605a2b5e9f9f43d1c930442
+ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65872972"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66554433"
 ---
 # <a name="onboard-previous-versions-of-windows"></a>Windows'un önceki sürümlerini ekleyin
 
@@ -44,12 +44,12 @@ Uç Nokta için Defender desteği alt düzey işletim sistemlerini içerecek şe
 Uç Nokta için Defender'a alt düzey Windows istemci uç noktalarını eklemek için şunları yapmanız gerekir:
 
 - [System Center Endpoint Protection istemcilerini yapılandırma ve güncelleştirme](#configure-and-update-system-center-endpoint-protection-clients)
-- [Algılayıcı verilerini raporlamak için Microsoft Monitoring Agent (MMA) yükleme ve yapılandırma](#install-and-configure-microsoft-monitoring-agent-mma)
+- [Algılayıcı verilerini raporlamak için Microsoft Monitoring Agent'ı (MMA) yükleme ve yapılandırma](#install-and-configure-microsoft-monitoring-agent-mma)
 
-Windows Server 2008 R2 SP1 için [Bulut için Microsoft Defender ekleme](#onboard-windows-servers-through-microsoft-defender-for-cloud) seçeneğiniz vardır.
+Windows Server 2008 R2 SP1 [için Bulut için Microsoft Defender aracılığıyla ekleme](#onboard-windows-servers-through-microsoft-defender-for-cloud) seçeneğiniz vardır.
 
 > [!NOTE]
-> Microsoft Monitoring Agent aracılığıyla bir Windows sunucusu eklemek için düğüm başına Uç Nokta için Defender tek başına sunucu lisansı gereklidir (Seçenek 1). Alternatif olarak, Bulut için Microsoft Defender aracılığıyla bir Windows sunucusu eklemek için düğüm başına sunucular için Microsoft Defender lisansı gerekir (Seçenek 2), bkz. [Bulut için Microsoft Defender'de kullanılabilen desteklenen özellikler](/azure/defender-for-cloud/supported-machines-endpoint-solutions-clouds-servers).
+> Microsoft Monitoring Agent (Seçenek 1) aracılığıyla bir Windows sunucusu eklemek için düğüm başına Uç Nokta için Defender tek başına sunucu lisansı gereklidir. Alternatif olarak, Bulut için Microsoft Defender (Seçenek 2) aracılığıyla bir Windows sunucusu eklemek için düğüm başına sunucular için Microsoft Defender lisansı gerekir. Bkz. [Bulut için Microsoft Defender'da kullanılabilen desteklenen özellikler](/azure/defender-for-cloud/supported-machines-endpoint-solutions-clouds-servers).
 
 > [!TIP]
 > Cihazı ekledikten sonra, hizmete düzgün şekilde eklendiğini doğrulamak için bir algılama testi çalıştırmayı seçebilirsiniz. Daha fazla bilgi için bkz. [Yeni eklenen Uç Nokta için Defender uç noktasında algılama testi çalıştırma](run-detection-test.md).
@@ -65,9 +65,9 @@ Bu tümleştirmeyi etkinleştirmek için aşağıdaki adımlar gereklidir:
 
 - [Endpoint Protection istemcileri için Ocak 2017 kötü amaçlı yazılımdan koruma platformu güncelleştirmesini](https://support.microsoft.com/help/3209361/january-2017-anti-malware-platform-update-for-endpoint-protection-clie) yükleme
 - **SCEP** istemcisi Bulut Koruma Hizmeti üyeliğini Gelişmiş ayarına yapılandırma
-- Ağınızı Microsoft Defender Virüsten Koruma buluta bağlantılara izin verecek şekilde yapılandırın. Daha fazla bilgi için bkz[. Microsoft Defender Virüsten Koruma ağ bağlantılarını yapılandırma ve doğrulama](/microsoft-365/security/defender-endpoint/configure-network-connections-microsoft-defender-antivirus)
+- Ağınızı Microsoft Defender Virüsten Koruma bulutu bağlantılarına izin verecek şekilde yapılandırın. Daha fazla bilgi için bkz. [Microsoft Defender Virüsten Koruma ağ bağlantılarını yapılandırma ve doğrulama](/microsoft-365/security/defender-endpoint/configure-network-connections-microsoft-defender-antivirus)
 
-## <a name="install-and-configure-microsoft-monitoring-agent-mma"></a>Microsoft Monitoring Agent (MMA) yükleme ve yapılandırma
+## <a name="install-and-configure-microsoft-monitoring-agent-mma"></a>Microsoft Monitoring Agent'ı (MMA) yükleme ve yapılandırma
 
 ### <a name="before-you-begin"></a>Başlamadan önce
 
@@ -93,7 +93,7 @@ En düşük sistem gereksinimlerini doğrulamak için aşağıdaki ayrıntılar�
 
 ### <a name="installation-steps"></a>Yükleme adımları
 
-1. Aracı kurulum dosyasını indirin: [Windows 64 bit aracı](https://go.microsoft.com/fwlink/?LinkId=828603) veya [Windows 32 bit aracı](https://go.microsoft.com/fwlink/?LinkId=828604).
+1. Aracı kurulum dosyasını indirin: [Windows 64 bit aracısı](https://go.microsoft.com/fwlink/?LinkId=828603) veya [Windows 32 bit aracısı](https://go.microsoft.com/fwlink/?LinkId=828604).
 
     >[!NOTE]
     >[MMA aracısı tarafından SHA-1 desteğinin kullanımdan kaldırılması nedeniyle MMA aracısının](/azure/azure-monitor/agents/agent-windows#sha-2-code-signing-support-requirement) 10.20.18029 veya daha yeni bir sürümü olması gerekir.
@@ -107,7 +107,7 @@ En düşük sistem gereksinimlerini doğrulamak için aşağıdaki ayrıntılar�
 3. Çalışma Alanı Kimliği ve Çalışma Alanı anahtarını kullanarak aracıyı yüklemek için aşağıdaki yükleme yöntemlerinden birini seçin:
     - [Kurulumu kullanarak aracıyı el ile yükleyin](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-setup-wizard).
 
-      **Aracı Kurulum Seçenekleri** sayfasında **aracıyı Azure Log Analytics'e (OMS) Bağlan'ı** seçin
+      **Aracı Kurulum Seçenekleri** sayfasında **Aracıyı Azure Log Analytics'e (OMS) bağlama'yı** seçin
 
     - [Aracıyı komut satırını kullanarak yükleyin](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-command-line).
     - [Aracıyı bir betik kullanarak yapılandırın](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-dsc-in-azure-automation).
@@ -124,27 +124,27 @@ Sunucularınızın Uç Nokta için Defender ile iletişim kurmak için ara sunuc
 
 - [MMA'yi ara sunucu kullanacak şekilde yapılandırma](/azure/azure-monitor/platform/agent-windows#install-agent-using-setup-wizard)
 
-- [Windows tüm bağlantılar için ara sunucu kullanacak şekilde yapılandırma](configure-proxy-internet.md)
+- [Windows'ı tüm bağlantılar için ara sunucu kullanacak şekilde yapılandırma](configure-proxy-internet.md)
 
 Bir ara sunucu veya güvenlik duvarı kullanılıyorsa, sunucuların tüm Uç Nokta için Microsoft Defender hizmet URL'lerine doğrudan ve SSL kesme olmadan erişebildiğinden emin olun. Daha fazla bilgi için bkz [. Uç Nokta için Defender hizmet URL'lerine erişimi etkinleştirme](configure-proxy-internet.md#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server). SSL kesme özelliğinin kullanılması, sistemin Uç Nokta için Defender hizmetiyle iletişim kurmasını engeller.
 
-Tamamlandıktan sonra, bir saat içinde portalda eklenen Windows sunucuları görmeniz gerekir.
+Tamamlandıktan sonra, bir saat içinde portalda eklenen Windows sunucularını görmeniz gerekir.
 
-## <a name="onboard-windows-servers-through-microsoft-defender-for-cloud"></a>Bulut için Microsoft Defender aracılığıyla Windows sunucuları ekleme
+## <a name="onboard-windows-servers-through-microsoft-defender-for-cloud"></a>Bulut için Microsoft Defender aracılığıyla Windows sunucularını ekleme
 
-1. Microsoft 365 Defender gezinti bölmesinde **Ayarlar** >  **Cihaz yönetimi** > **Ekleme'yi** seçin.
+1. Microsoft 365 Defender gezinti bölmesinde **Ayarlar** > **Cihaz yönetimi** > **Ekleme'yi** seçin.
 
 2. İşletim sistemi olarak **Windows Server 2008 R2 SP1'i** seçin.
 
-3. **Bulut için Microsoft Defender'de Sunucuları Ekle'ye** tıklayın.
+3. **Bulut için Microsoft Defender'da Sunucuları Ekle'ye** tıklayın.
 
-4. [Bulut için Microsoft Defender ile Uç Nokta için Microsoft Defender'daki](/azure/security-center/security-center-wdatp) ekleme yönergelerini izleyin ve Azure ARC kullanıyorsanız, [Uç Nokta için Microsoft Defender etkinleştirme başlığı altında yer alan ekleme yönergelerini izleyin tümleştirmesi](/azure/security-center/security-center-wdatp#enabling-the-microsoft-defender-for-endpoint-integration).
+4. [Bulut için Microsoft Defender ile Uç Nokta için Microsoft Defender](/azure/security-center/security-center-wdatp) ve Azure ARC kullanıyorsanız [Uç Nokta için Microsoft Defender tümleştirmesini etkinleştirme başlığı altında](/azure/security-center/security-center-wdatp#enabling-the-microsoft-defender-for-endpoint-integration) yer alan ekleme yönergelerini izleyin.
 
 Ekleme adımlarını tamamladıktan sonra, [System Center Endpoint Protection istemcilerini yapılandırmanız ve güncelleştirmeniz](#configure-and-update-system-center-endpoint-protection-clients) gerekir.
 
 > [!NOTE]
 >
-> - Sunucuların beklendiği gibi çalışması için Microsoft Defender aracılığıyla ekleme için, sunucunun Microsoft Monitoring Agent (MMA) ayarları içinde yapılandırılmış uygun bir çalışma alanı ve anahtara sahip olması gerekir.
+> - Sunucuların beklendiği gibi çalışması için Microsoft Defender aracılığıyla ekleme için, sunucunun Microsoft Monitoring Agent (MMA) ayarlarında yapılandırılmış uygun bir çalışma alanı ve anahtarı olmalıdır.
 > - Yapılandırıldıktan sonra makineye uygun bulut yönetim paketi dağıtılır ve algılayıcı işlemi (MsSenseS.exe) dağıtılır ve başlatılır.
 > - Sunucu bir OMS Ağ Geçidi sunucusunu ara sunucu olarak kullanacak şekilde yapılandırılmışsa da bu gereklidir.
 
@@ -161,9 +161,9 @@ Microsoft Defender AV ve Uç Nokta için Microsoft Defender çalıştığını d
 
    ```sc.exe query Windefend```
 
-    Sonuç 'Belirtilen hizmet yüklü bir hizmet olarak yok' ise Microsoft Defender AV'yi yüklemeniz gerekir. Daha fazla bilgi için bkz. [Windows 10'da Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-windows.md).
+    Sonuç 'Belirtilen hizmet yüklü bir hizmet olarak yok' ise Microsoft Defender AV'yi yüklemeniz gerekir. Daha fazla bilgi için bkz. [Windows 10'de Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-windows.md).
 
-    Windows sunucularınızdaki Microsoft Defender Virüsten Koruma yapılandırmak ve yönetmek için grup ilkesi kullanma hakkında bilgi için bkz. [Yapılandırmak ve yönetmek için grup ilkesi ayarlarını kullanma Microsoft Defender Virüsten Koruma](use-group-policy-microsoft-defender-antivirus.md).
+    Windows sunucularınızda Microsoft Defender Virüsten Koruma'yı yapılandırmak ve yönetmek için grup ilkesi kullanma hakkında bilgi için bkz. [Microsoft Defender Virüsten Koruma'yı yapılandırmak ve yönetmek için grup ilkesi ayarlarını kullanma](use-group-policy-microsoft-defender-antivirus.md).
 
 
 2. Uç Nokta için Microsoft Defender çalıştığını doğrulamak için aşağıdaki komutu çalıştırın:
@@ -183,7 +183,7 @@ Sunucunun Uç Nokta hizmeti için Defender'a rapor ettiğini doğrulamak için [
 
 ### <a name="using-group-policy"></a>grup ilkesi kullanma
 
-**1. Adım: Uç noktanız için karşılık gelen udpat'ı indirin.**
+**1. Adım: Uç noktanız için ilgili güncelleştirmeyi indirin.**
 
 1. c:\windows\sysvol\domain\scripts konumuna gidin (Etki alanı denetleyicilerinden birinde değişiklik denetimi gerekebilir.)
 1. MMA adlı bir klasör oluşturun.
@@ -214,22 +214,20 @@ Aşağıdaki komut bir örnektir. Aşağıdaki değerleri değiştirin:
 
 
 ```dos
-@echo off 
-cd "C:"
-IF EXIST "C:\Program Files\Microsoft Monitoring Agent\Agent\MonitoringHost.exe" ( 
-exit
-) ELSE (
+@echo off  
+cd "C:" 
+IF EXIST "C:\Program Files\Microsoft Monitoring Agent\Agent\MonitoringHost.exe" (  
+exit 
+) ELSE ( 
+ 
+wusa.exe C:\Windows\MMA\Windows6.1-KB3080149-x64.msu /quiet /norestart 
+wusa.exe C:\Windows\MMA\Windows6.1-KB4074598-x64.msu /quiet /norestart 
+wusa.exe C:\Windows\MMA\Windows6.1-KB3154518-x64.msu /quiet /norestart 
+wusa.exe C:\Windows\MMA\Windows8.1-KB3080149-x64.msu /quiet /norestart 
+"c:\windows\MMA\MMASetup-AMD64.exe" /c /t:"C:\Windows\MMA"
+c:\windows\MMA\setup.exe /qn NOAPM=1 ADD_OPINSIGHTS_WORKSPACE=1 OPINSIGHTS_WORKSPACE_ID="<your workspace ID>" OPINSIGHTS_WORKSPACE_KEY="<your workspace key>" AcceptEndUserLicenseAgreement=1
 
-wusa.exe C:\Windows\MMA\Windows6.1-KB3080149-x64.msu /quiet /norestart
-wusa.exe C:\Windows\MMA\Windows6.1-KB4074598-x64.msu /quiet /norestart
-wusa.exe C:\Windows\MMA\Windows6.1-KB3154518-x64.msu /quiet /norestart
-wusa.exe C:\Windows\MMA\Windows8.1-KB3080149-x64.msu /quiet /norestart
-"c:\windows\MMA\MMASetup-AMD64.exe" /c /t: "C:\Windows\MMA"c:\windows\MMA\ setup.exe /qn NOAPM=1 ADD_OPINSIGHTS_WORKSPACE=1
-OPINSIGHTS_WORKSPACE_ID="<your workspace ID>"
-OPINSIGHTS_WORKSPACE_KEY="<your workspace key>" AcceptEndUserLicenseAgreement=1
-)
-
-)
+) 
 ```
 
 
@@ -258,7 +256,7 @@ Dosyaları ETKİALANI\NETLOGON\MMA\dosyaadı'ndan C:\windows\MMA\dosyaadı konum
 
 :::image type="content" source="images/targeteditor.png" alt-text="Hedef düzenleyici" lightbox="images/targeteditor.png":::
 
-Windows Server 2008 R2 için aşağıdakiler gerekir (ve yalnızca aşağı kopyalanır):
+Windows Server 2008 R2 için aşağıdakilere ihtiyacınız vardır (ve yalnızca aşağı kopyalanır):
 - Windows6.1-KB3080149-x64.msu
 - Windows6.1-KB3154518-x64.msu
 - Windows6.1-KB4075598-x64.msu
@@ -285,7 +283,7 @@ Betik bir çıkış yöntemine sahip olduğundan ve MMA yüklüyse yeniden çal�
 
 :::image type="content" source="images/tasksch.png" alt-text="Görev zamanlayıcı" lightbox="images/tasksch.png":::
 
-Özellikle Server 2008 R2 civarında sunucu ekleme belgelerinde belirtildiği gibi lütfen aşağıya bakın: Windows Server 2008 R2 SP1 için aşağıdaki gereksinimleri karşıladığınızdan emin olun:
+Özellikle Server 2008 R2 çevresindeki Sunucu ekleme belgelerinde belirtildiği gibi lütfen aşağıya bakın: Windows Server 2008 R2 SP1 için aşağıdaki gereksinimleri karşıladığınızdan emin olun:
 
 - [Şubat 2018 aylık güncelleştirme paketini](https://support.microsoft.com/help/4074598/windows-7-update-kb4074598) yükleme
 - [.NET framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) (veya üzeri) veya [KB3154518](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the-net-framework) yükleme
@@ -305,7 +303,7 @@ Hizmetten Windows uç noktalarını çıkarmak için iki seçeneğiniz vardır:
 
 ### <a name="uninstall-the-mma-agent"></a>MMA aracısını kaldırma
 
-Windows uç noktasını çıkarmak için MMA aracısını kaldırabilir veya Uç Nokta için Defender çalışma alanınıza raporlamadan ayırabilirsiniz. Aracı kullanıma eklendikten sonra uç nokta artık uç nokta için Defender'a algılayıcı verileri göndermez.
+Windows uç noktasını kullanıma almak için MMA aracısını kaldırabilir veya Uç Nokta için Defender çalışma alanınıza raporlamadan ayırabilirsiniz. Aracı kullanıma eklendikten sonra uç nokta artık uç nokta için Defender'a algılayıcı verileri göndermez.
 Daha fazla bilgi için bkz. [Aracıyı devre dışı bırakmak için](/azure/log-analytics/log-analytics-windows-agents#to-disable-an-agent).
 
 ### <a name="remove-the-defender-for-endpoint-workspace-configuration"></a>Uç Nokta için Defender çalışma alanı yapılandırmasını kaldırma
@@ -327,7 +325,7 @@ Aşağıdaki yöntemlerden birini kullanabilirsiniz:
 
 1. Çalışma Alanı Kimliğinizi alın:
 
-   1. Gezinti bölmesinde **Ayarlar** >  **Onboarding'i** seçin.
+   1. Gezinti bölmesinde **Ayarlar** > **Ekleme'yi** seçin.
 
    1. İlgili işletim sistemini seçin ve Çalışma Alanı Kimliğinizi alın.
 

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Uyumluluk Yöneticisi hızlı başlangıç kılavuzu
+title: Microsoft Purview Uyumluluk Yöneticisi hızlı başlangıç kılavuzu
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,58 +17,60 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: Anlama, ayarlama ve Uyumluluk Yöneticisi'ni kullanma yolculuğunuz boyunca size yardımcı olacak Uyumluluk Yöneticisi hızlı başlangıç kılavuzunu kullanın.
-ms.openlocfilehash: 636f34145626a54c10c613c1b914837c3f697c25
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Uyumluluk Yöneticisi'ni anlama, ayarlama ve kullanma yolculuğunuzda size yardımcı olması için Uyumluluk Yöneticisi hızlı başlangıç kılavuzunu kullanın.
+ms.openlocfilehash: a4699e48c76aa041e0bc8ef3e35308ffb5f0e79c
+ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63317759"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66554191"
 ---
 # <a name="compliance-manager-quickstart"></a>Uyumluluk Yöneticisi hızlı başlangıç
 
-**Bu makalede:** Microsoft Uyumluluk Yöneticisi'ni kullanarak kuruluş yasal düzenlemelere, ilkelere ve standartlara uygunluğunu yönetme yolculuğunuz boyunca size yardımcı olacak bu hızlı başlangıç kılavuzunu kullanın.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-İlk ziyaretniz üzerine Uyumluluk Yöneticisi akıllı ve işlemli veriler sağlar. Uyumluluk Yöneticisi'nin hazıryken uyumluluğunızı ölçeklendirmeye yardımcı olan gelişmiş özellikleri de vardır. Kullanılabilir değerlendirmeler lisans sözleşmenize bağlıdır; [daha fazla bilgi.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
+**Bu makalede:** Kuruluşunuzun düzenlemelere, ilkelere ve standartlara uyumluluğunu yönetmek üzere Microsoft Purview Uyumluluk Yöneticisi'ni kullanma yolculuğunuzda size yardımcı olması için bu hızlı başlangıç kılavuzunu kullanın.
 
-İster uyumluluk yöneticisine ilk kez gelirsiniz ister gelişmiş özelliklerden bazılarını kullanmaya hazır olun, bu kılavuz yolculuğunuz boyunca size destek olabilir.
+Uyumluluk Yöneticisi ilk ziyaretinizde akıllı ve eyleme dönüştürülebilir veriler sağlar. Uyumluluk Yöneticisi, hazır olduğunuzda uyumluluğunuzu ölçeklendirmeye yönelik gelişmiş özelliklere de sahiptir. Kullanılabilir değerlendirmeler lisans sözleşmenize bağlıdır; [daha fazla bilgi edinin](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
-## <a name="first-visit-get-to-know-compliance-manager"></a>İlk ziyaret: Uyumluluk Yöneticisi'ni ziyaret edin
+Uyumluluk Yöneticisi'ne ilk kez geliyor olun veya gelişmiş özelliklerden bazılarını kullanmaya hazır olun, bu kılavuz yolculuğunuz boyunca size destek olabilir.
 
-Uyumluluk Yöneticisi, <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">aşağıdaki Microsoft 365 uyumluluk merkezi.</a> Uyumluluk Yöneticisi'ni kullanmaya başlamadan önce, [kuruluşun genel yöneticisinin kullanıcı izinlerini](compliance-manager-setup.md#set-user-permissions-and-assign-roles) ayarlaması ve rol ataması gerekir.
+## <a name="first-visit-get-to-know-compliance-manager"></a>İlk ziyaret: Uyumluluk Yöneticisi'ne alışma
 
-Uyumluluk Yöneticisi'ni ilk ziyaret edinde, organizasyonunız için bir uyumluluk puanına bakabilirsiniz. Uyumluluk Yöneticisi zaten geçerli veri koruma Microsoft 365 ortamınızı değerlendiriyor. Uyumluluk Yöneticisi'ni tanımaya başlamanın en iyi yolu, size neler gösterdiğini, bunun kilit öğelerini ve panoyu nasıl özelleştirebileceğinizi anlamaktır.
+Uyumluluk Yöneticisi <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> bulunur. Uyumluluk Yöneticisi'ni kullanmaya başlamadan önce kuruluşunuzun genel [yöneticisinin kullanıcı izinlerini ayarlaması ve roller ataması](compliance-manager-setup.md#set-user-permissions-and-assign-roles) gerekir.
 
-Uyumluluk [Yöneticisi genel bakış sayfamız](compliance-manager.md) , Uyumluluk Yöneticisi'nin ne olduğunu ve nasıl çalıştığını kapsamlı bir şekilde gözden geçirmek için ilk durakdır. Aşağıdaki bağlantıları kullanarak belgelerimizin önemli bölümlerine de geçebilirsiniz:
+Uyumluluk Yöneticisi'ni ilk ziyaretinizde kuruluşunuz için bir uyumluluk puanı görürsünüz. Uyumluluk Yöneticisi zaten geçerli Microsoft 365 ortamınızı veri koruma temeli ile değerlendiriyor. Uyumluluk Yöneticisi'ni tanımaya başlamanın en iyi yolu size ne gösterdiğini, temel öğelerini ve panonuzu nasıl özelleştirebileceğinizi anlamaktır.
+
+[Uyumluluk Yöneticisi'ne genel bakış sayfamız](compliance-manager.md), Uyumluluk Yöneticisi'nin ne olduğu ve nasıl çalıştığına ilişkin kapsamlı bir inceleme için en iyi ilk duraktır. Aşağıdaki bağlantıları kullanarak belgelerimizin önemli bölümlerine doğrudan geçmek de isteyebilirsiniz:
 
 - [Uyumluluk puanınızı anlama](compliance-manager.md#understanding-your-compliance-score)
-- [Önemli öğelere genel bakış: denetimler, değerlendirmeler, şablonlar ve geliştirme eylemleri](compliance-manager.md#key-elements-controls-assessments-templates-improvement-actions)
-- [Uyumluluk Yöneticisi panosunun ne olduğunu anlama](compliance-manager-setup.md#understand-the-compliance-manager-dashboard)
-- [Pano görünüme filtre uygulama](compliance-manager-setup.md#filtering-your-dashboard-view)
-- [Geliştirme eylemleri hakkında bilgi](compliance-manager-setup.md#improvement-actions-page)
+- [Önemli öğelere genel bakış: denetimler, değerlendirmeler, şablonlar ve iyileştirme eylemleri](compliance-manager.md#key-elements-controls-assessments-templates-improvement-actions)
+- [Uyumluluk Yöneticisi panosunu anlama](compliance-manager-setup.md#understand-the-compliance-manager-dashboard)
+- [Pano görünümünüzü filtreleme](compliance-manager-setup.md#filtering-your-dashboard-view)
+- [İyileştirme eylemleri hakkında bilgi edinin](compliance-manager-setup.md#improvement-actions-page)
 - [Değerlendirmeleri anlama](compliance-manager.md#assessments)
-- [Microsoft Uyumluluk Yapılandırma Yöneticisi'ni kullanarak ortamınızı hızlı bir şekilde tarama](compliance-manager-mcca.md)
+- [Microsoft Purview için Yapılandırma Çözümleyicisi'ni kullanarak ortamınızda hızlı bir tarama yapın](compliance-manager-mcca.md)
 
-## <a name="ramping-up-configure-compliance-manager-to-manage-your-compliance-activities"></a>Ramping: configure Compliance Manager to manage your compliance activities
+## <a name="ramping-up-configure-compliance-manager-to-manage-your-compliance-activities"></a>Yükseltme: Uyumluluk Yöneticisi'ne uyumluluk etkinliklerinizi yönetecek şekilde yapılandırma
 
-Temel bilgileri biliyorktan sonra, şimdi kuruluş  ihtiyaçlarını karşılayacak ayarlamalar zamanı geldi. Değerlendirmelerle çalışmaya başlayabilir, denetimleri uygulamaya ve uyumluluk puanınızı geliştirmeye yardımcı olacak iyileştirme eylemleri gerçekleştirabilirsiniz. Bu aşamada tüm etkinliklerin nasıl yerine geç olduğunu bilmek, kuruluş kuruluşlarının endüstri ve bölgeniz genelindeki yasal düzenlemelere uyumluluğunu göstermelerine yardımcı olabilir. Aşağıda yer alan bağlantıları ziyaret edin:
+Temel bilgiler hakkında bilgi sahibi olduktan sonra, kuruluşunuzun gereksinimlerini karşılayacak şeyleri ayarlamanın zamanı geldi. Denetimler uygulamak ve uyumluluk puanınızı geliştirmek için değerlendirmelerle çalışmaya ve iyileştirme eylemleri gerçekleştirmeye başlayabilirsiniz. Bu aşamada tüm etkinliklerin nasıl gerçekleştirilebileceğini bilmek, kuruluşunuzun sektörünüz ve bölgeniz genelindeki düzenlemelere uyum sağlamasına ve uyumluluk göstermesine yardımcı olabilir. Aşağıda yer alan bağlantıları ziyaret edin:
 
-- [İlk değerlendirmenizi oluşturmak ve yönetmek için önceden yerleşik bir değerlendirme seçin](compliance-manager-assessments.md)
-- [Değerlendirme oluşturmak için şablonların nasıl kullanıla olduğunu anlama](compliance-manager-templates.md)
-- [Değerlendirmelerizdeki denetimleri tamamlamak için geliştirme eylemleri üzerinde uygulama ve test çalışmaları gerçekleştirme](compliance-manager-improvement-actions.md)
-- [Farklı eylemlerin uyumluluk puanınızı nasıl etkileyeni daha iyi anlıyoruz](compliance-score-calculation.md)
+- [İlk değerlendirmenizi oluşturmak ve yönetmek için önceden oluşturulmuş bir değerlendirme seçin](compliance-manager-assessments.md)
+- [Değerlendirme oluşturmak için şablonların nasıl kullanılacağını anlama](compliance-manager-templates.md)
+- [Değerlendirmelerinizdeki denetimleri tamamlamak için iyileştirme eylemleri üzerinde uygulama ve test çalışmaları gerçekleştirme](compliance-manager-improvement-actions.md)
+- [Farklı eylemlerin uyumluluk puanınızı nasıl etkilediğini daha iyi anlama](compliance-score-calculation.md)
 
-## <a name="scaling-up-use-advanced-functionality-to-meet-your-custom-needs"></a>Ölçeklendirme: Özel ihtiyaçları karşılamak için gelişmiş işlevselliği kullanma
+## <a name="scaling-up-use-advanced-functionality-to-meet-your-custom-needs"></a>Ölçeği artırma: Özel gereksinimlerinizi karşılamak için gelişmiş işlevleri kullanın
 
-Uyumluluk Yöneticisi'nde değerlendirmeleri rahat yöneterek, bir Uyumluluk Yöneticisi değerlendirmesini kendi eylemleriniz ve denetimleriniz ile değiştirmek için şablonlarla çalışabilirsiniz. Ayrıca kendi özel değerlendirmenizi de oluşturabilirsiniz. Özel değerlendirmeler şunların için yararlıdır:
+Uyumluluk Yöneticisi'nde değerlendirmeleri rahatça yönetebildiğinizde, kendi eylemleriniz ve denetimlerinizle Bir Uyumluluk Yöneticisi değerlendirmesini değiştirmek için şablonlarla çalışabilirsiniz. Kendi özel değerlendirmenizi de oluşturabilirsiniz. Özel değerlendirmeler şunlar için yararlıdır:
 
-- Üçüncü taraf uygulamaları ve Microsoft 365, şirket içi uygulamalar ve diğer varlıklar gibi üçüncü taraf ürünleri için uyumluluğu yönetme.
+- Üçüncü taraf uygulamalar ve hizmetler, şirket içi uygulamalar ve diğer varlıklar gibi Microsoft 365 dışı ürünler için uyumluluğu yönetme.
 - Kendi özel veya işletmeye özgü uyumluluk denetimlerinizi yönetme.
 
-Geliştirme eylemlerinin hepsi veya bir alt kümesi için otomatik sınama da oluşturabilirsiniz. Uyumluluk Yöneticisi'nde daha gelişmiş işlevleri anlamak için aşağıdaki bağlantıları ziyaret edin:
+İyileştirme eylemlerinin tümünün veya bir alt kümesinin otomatik testini de ayarlayabilirsiniz. Uyumluluk Yöneticisi'ndeki daha gelişmiş işlevleri anlamak için aşağıdaki bağlantıları ziyaret edin:
 
-- [Kendi denetimlerinizi ve geliştirme eylemlerinizi ekleyerek Uyumluluk Yöneticisi şablonunu genişletme](compliance-manager-templates-extend.md)
-- [Kendi özel şablonlarınızı oluşturma](compliance-manager-templates-create.md)
-- [Denetimleri ve eylemleri eklemek veya kaldırmak için var olan şablonu değiştirme](compliance-manager-templates-modify.md)
-- [Geliştirme eylemlerinin otomatik testlerini ayarlama](compliance-manager-setup.md#set-up-automated-testing)
+- [Kendi denetimlerinizi ve iyileştirme eylemlerinizi ekleyerek Uyumluluk Yöneticisi şablonunu genişletme](compliance-manager-templates-extend.md)
+- [Kendi özel şablonunuzu oluşturma](compliance-manager-templates-create.md)
+- [Denetimleri ve eylemleri eklemek veya kaldırmak için mevcut şablonu değiştirme](compliance-manager-templates-modify.md)
+- [İyileştirme eylemlerinin otomatik testini ayarlama](compliance-manager-setup.md#set-up-automated-testing)
 - [Geliştirme eylemlerini başka bir kullanıcıya yeniden atama](compliance-manager-setup.md#reassign-improvement-actions-to-another-user)

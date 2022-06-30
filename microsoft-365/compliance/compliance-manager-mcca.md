@@ -1,5 +1,5 @@
 ---
-title: Uyumluluk Yöneticisi için Microsoft Uyumluluk Yapılandırma Çözümleyicisi
+title: Microsoft Purview için Yapılandırma Çözümleyicisi
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -16,70 +16,75 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Purview Uyumluluk Yöneticisi ile hızla çalışmaya başlamak için Microsoft Uyumluluk Yapılandırma Çözümleyicisi'ni kullanmayı öğrenin.
-ms.openlocfilehash: a973412c2d40993b47343273675cee3922b57cdf
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Microsoft Purview Uyumluluk Yöneticisi ile hızlı bir şekilde çalışmaya başlamak için Microsoft Purview için Yapılandırma Çözümleyicisi'ni nasıl kullanacağınızı öğrenin.
+ms.openlocfilehash: 5d9d786ba88792ac827252ea7ff257d1f80fa70b
+ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012824"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66554499"
 ---
-# <a name="microsoft-compliance-configuration-analyzer-for-compliance-manager-preview"></a>Uyumluluk Yöneticisi için Microsoft Uyumluluk Yapılandırma Çözümleyicisi (önizleme)
+# <a name="configuration-analyzer-for-microsoft-purview-camp"></a>Microsoft Purview için Yapılandırma Çözümleyicisi (CAMP)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-**Bu makalede:** Microsoft Uyumluluk Yöneticisi'ni hızlı bir şekilde kullanmaya başlamak için Microsoft Uyumluluk Yapılandırma Çözümleyicisi aracını yüklemeyi ve çalıştırmayı öğrenin.
+**Bu makalede:** Microsoft Uyumluluk Yöneticisi'ni hızlı bir şekilde kullanmaya başlamak için Microsoft Purview (CAMP) için Configuration Analyzer aracını yüklemeyi ve çalıştırmayı öğrenin.
 
-## <a name="microsoft-compliance-configuration-analyzer-mcca-preview-overview"></a>Microsoft Uyumluluk Yapılandırma Çözümleyicisi'ne (MCCA) (önizleme) genel bakış
+## <a name="compliance-configuration-analyzer-camp-overview"></a>Uyumluluk Yapılandırma Çözümleyicisi'ne (CAMP) genel bakış
 
-Microsoft Uyumluluk Yapılandırma Çözümleyicisi (MCCA), [Microsoft Purview Uyumluluk Yöneticisi'ni](compliance-manager.md) kullanmaya başlamanıza yardımcı olabilecek bir önizleme aracıdır. MCCA, kuruluşunuzun geçerli yapılandırmalarını getiren ve bunları önerilen Microsoft 365 en iyi yöntemlerle doğrulayan PowerShell tabanlı bir yardımcı programdır. Bu en iyi yöntemler, veri koruma ve veri idaresi için temel düzenlemeleri ve standartları içeren bir dizi denetimi temel alır.
+Microsoft Purview için Yapılandırma Çözümleyicisi (CAMP), [Microsoft Purview Uyumluluk Yöneticisi'ni](compliance-manager.md) kullanmaya başlamanıza yardımcı olabilecek bir araçtır. CAMP, kuruluşunuzun geçerli yapılandırmalarını getiren ve bunları Microsoft 365 tarafından önerilen en iyi yöntemlerle doğrulayan PowerShell tabanlı bir yardımcı programdır. Bu en iyi yöntemler, veri koruma ve veri idaresi için temel düzenlemeleri ve standartları içeren bir dizi denetimi temel alır.
 
-MCCA, Uyumluluk Yöneticisi'ndeki hangi iyileştirme eylemlerinin geçerli Microsoft 365 ortamınıza uygulandığını hızla görmenize yardımcı olabilir. MCCA tarafından tanımlanan her eylem, Uyumluluk Yöneticisi'ne doğrudan bağlantılar ve düzeltici eylem gerçekleştirmeye başlamak için geçerli çözümle birlikte size uygulama önerileri sunar.
+CAMP, Uyumluluk Yöneticisi'ndeki hangi iyileştirme eylemlerinin geçerli Microsoft 365 ortamınız için geçerli olduğunu hızla görmenize yardımcı olabilir. CAMP tarafından tanımlanan her eylem, Uyumluluk Yöneticisi'ne doğrudan bağlantılar ve düzeltici işlem yapmaya başlamak için geçerli çözümle birlikte uygulama önerileri sunar.
 
-MCCA'nın anlaşılması için ek bir kaynak, [GitHub'de BENIOKU yönergelerini](https://github.com/OfficeDev/MCCA#overview) ziyaret etmenizdir. Bu sayfa önkoşullar hakkında ayrıntılı bilgi sağlar ve tam yükleme yönergeleri sağlar. Bu sayfaya erişmek için bir GitHub hesabına ihtiyacınız yoktur.
+Önkoşullar ve tam yükleme yönergeleri de dahil olmak üzere CAMP hakkında daha fazla ayrıntı için [GitHub'da BENIOKU yönergelerini](https://github.com/OfficeDev/CAMP#overview) ziyaret edin. Bu sayfaya erişmek için GitHub hesabına ihtiyacınız yoktur.
 
-**Kullanılabilirlik**: MCCA, Office 365 ve Microsoft 365 lisansları olan tüm kuruluşlar ve ABD Kamu Community (GCC) Orta, GCC Yüksek ve Savunma Bakanlığı (DoD) müşterileri tarafından kullanılabilir.
+#### <a name="availability"></a>Kullanılabilirlik
+CAMP, Office 365 ve Microsoft 365 lisanslarına sahip tüm kuruluşlar ve US Government Community (GCC) Moderate, GCC High ve Department of Defense (DoD) müşterileri tarafından kullanılabilir.
 
-## <a name="install-mcca-and-run-a-report"></a>MCCA'yi yükleme ve rapor çalıştırma
+#### <a name="roles"></a>Rolleri
 
-Windows PowerShell kullanarak MCCA aracını yükleyebilirsiniz. Aracı indirip yükledikten sonra, raporları çalıştırmak için bu adımları yinelemeniz gerekmez. MCCA'yı her açtığınızda sizden oturum açma kimlik bilgilerinizi ister ve yeni, güncelleştirilmiş bir rapor oluşturur.
+CAMP'e erişmek ve bunları kullanmak ve raporlardaki bilgilere erişmek için belirli kullanıcı rolleri gereklidir. [GitHub'da CAMP önkoşul bilgilerini](https://github.com/OfficeDev/CAMP#pre-requisites) ziyaret edin.
+
+## <a name="install-camp-and-run-a-report"></a>CAMP'i yükleme ve rapor çalıştırma
+
+WINDOWS POWERSHELL kullanarak CAMP aracını yükleyebilirsiniz. Aracı indirip yükledikten sonra, raporları çalıştırmak için bu adımları yinelemeniz gerekmez. CAMP'i her açtığınızda oturum açmanızı ister ve yeni, güncelleştirilmiş bir rapor oluşturur.
 
 ### <a name="step-1-install-the-exchange-online-powershell-v2-module"></a>1. Adım: Exchange Online PowerShell V2 modülünü yükleme
 
 Başlamak için PowerShell galerisinde bulunan Exchange Online PowerShell modülüne (v2.0.3 veya üzeri) ihtiyacınız olacaktır. Yükleme yönergeleri için bkz. [EXO V2 modülünü yükleme ve koruma](/powershell/exchange/exchange-online-powershell-v2#install-and-maintain-the-exo-v2-module).
 
-### <a name="step-2-install-mcca"></a>2. Adım: MCCA'yi yükleme
+### <a name="step-2-install-camp"></a>2. Adım: CAMP'i yükleme
 
-MCCA'yı yüklemek için powershell'i yönetici modunda kullanarak başlayın. Aşağıdaki adımları izleyin:
+CAMP'i yüklemek için powershell'i yönetici modunda kullanarak başlayın. Aşağıdaki adımları izleyin:
 
-1. **Windows Başlangıç** düğmesini seçin.
+1. Windows **Başlangıç** düğmesini seçin.
 1. **PowerShell** yazın, **Windows PowerShell** sağ tıklayın ve Yönetici **olarak çalıştır'ı** seçin.
 1. Komut istemine şunu yazın:
 
     ```powershell
-    Install-Module -Name MCCAPreview
+    Install-Module -Name CAMP
     ```
 
 ### <a name="step-3-run-a-report"></a>3. Adım: Rapor çalıştırma
 
-MCCA'yı yükledikten sonra, MCCA'yı çalıştırabilir ve bir rapor oluşturabilirsiniz. Bir raporu çalıştırmak için:
+CAMP'i yükledikten sonra CAMP'i çalıştırabilir ve bir rapor oluşturabilirsiniz. Bir raporu çalıştırmak için:
 
 1. PowerShell'i açma
 2. Cmdlet'ini çalıştırın:
 
     ```powershell
-    Get-MCCAReport
+    Get-CAMPReport
     ```
 
-    GCC Yüksek müşterisiyseniz, raporu çalıştırmak için ek bir giriş parametresi sağlamanız gerekir:
+    GCC High müşterisiyseniz raporu çalıştırmak için ek bir giriş parametresi sağlamanız gerekir:
 
     ```powershell
-    Get-MCCAReport -ExchangeEnvironmentName O365USGovGCCHigh
+    Get-CAMPReport -ExchangeEnvironmentName O365USGovGCCHigh
     ```
 
-3. MCCA çalıştırıldıktan sonra ilk sürüm denetimi yapar ve kimlik bilgilerini ister. Kullanıcı adını girin isteminde, Microsoft 365 hesabı e-posta adresinizle oturum açın ([rapor oluşturmaya uygun rolleri görüntüleyin](#role-based-reporting)). Ardından parola istemine parolanızı girin.
+3. CAMP çalıştırıldıktan sonra ilk sürüm denetimi yapar ve kimlik bilgilerini ister. Kullanıcı adını girin isteminde Microsoft 365 hesabı e-posta adresinizle oturum açın ([rapor oluşturmaya uygun rolleri görüntüleyin](https://github.com/OfficeDev/CAMP#pre-requisites)). Ardından parola istemine parolanızı girin.
 
-Ardından raporunuzun oluşturulması yaklaşık 2-5 dakika sürer. İşlem tamamlandığında bir tarayıcı penceresi açılır ve HTML raporunuzu görüntüler. Aracı her çalıştırdığınızda kimlik bilgilerinizi ister ve yeni bir rapor oluşturur. Bu rapor C: \ Users \ *username* \ AppData \ Local \ Microsoft \ MCCA dizininde yerel olarak depolanır.
+Ardından raporunuzun oluşturulması yaklaşık 2-5 dakika sürer. İşlem tamamlandığında bir tarayıcı penceresi açılır ve HTML raporunuzu görüntüler. Aracı her çalıştırdığınızda kimlik bilgilerinizi ister ve yeni bir rapor oluşturur. Bu rapor C: \ Users \ *username* \ AppData \ Local \ Microsoft \ CAMP dizininde yerel olarak depolanır.
 
 Daha önce oluşturulan raporlara bu dizinden erişebilirsiniz.
 
@@ -89,7 +94,7 @@ Raporunuz, oluşturulduğu tarih ve saate göre verileri yansıtır. En üstteki
 
 ### <a name="geolocation-based-reporting"></a>Coğrafi konum tabanlı raporlama
 
-**Not** bölümünde raporunuzun kiracınızın coğrafi konumuna göre özelleştirildiğini gösterir. Araçta listelenen Öneriler ülkenize veya bölgenize özgü olacaktır.
+**Not** bölümünde raporunuzun kiracınızın coğrafi konumuna göre özelleştirildiğini gösterir. Araçta listelenen öneriler ülkenize veya bölgenize özgü olacaktır.
 
 Coğrafi konum seçiminiz, bu coğrafi konumla ilgili hassas bilgi türlerini (SCT) değerlendirmek ve ülkenize veya bölgenize uygun bir rapor oluşturmak için kullanılır. Kiracınızdaki verilere göre coğrafi konumları seçin.
 
@@ -101,7 +106,7 @@ Raporu belirli bir konuma göre çalıştırmak için şu yönergeleri izleyin:
 2. Belirli bir bölgeyi belirtmek için, aşağıdaki tablodan ülkeye veya bölgeye karşılık gelen sayıları kullanarak bir cmdlet çalıştıracaksınız. Birden çok sayıyı virgülle ayırarak girin. Örneğin, aşağıdaki cmdlet Asia-Pacific ve Japonya için özelleştirilmiş bir rapor çalıştırır:
 
     ```powershell
-    Get-MCCAReport -Geo @(1,7)
+    Get-CAMPReport -Geo @(1,7)
     ```
 
   | Giriş |  Ülke veya Bölge |
@@ -122,31 +127,19 @@ Raporu belirli bir konuma göre çalıştırmak için şu yönergeleri izleyin:
   | 14 | Birleşik Krallık |
 
   > [!NOTE]
-  > Rapor her zaman SWIFT kodu, kredi kartı numarası gibi MCCA tarafından desteklenen uluslararası hassas bilgi türlerini içerecektir.
+  > Rapor her zaman SWIFT kodu, kredi kartı numarası gibi CAMP tarafından desteklenen uluslararası hassas bilgi türlerini içerecektir.
 
 ### <a name="role-based-reporting"></a>Rol tabanlı raporlama
 
-Raporunuz da rolünüz temelinde özelleştirilir.
-
-Aşağıdaki tabloda, hangi rollerin raporun hangi bölümlerine erişimi olduğu gösterilmektedir. Kuruluşunuzdaki diğer roller (aşağıdaki tabloda listelenmeyen) aracı çalıştıramayabilir veya aracı çalıştırabilir ve son rapordaki bilgilere sınırlı erişime sahip olabilir.
-
-![MCCA - roller.](../media/compliance-manager-mcca-roles.png "MCCA rolleri")
-
-Özel durum:
-
-1. Kullanıcılar , "Exchange Online için IRM kullanma" bölümünden farklı olarak IP için rapor oluşturamaz.
-2. Kullanıcılar , "Exchange Online için IRM kullanma" bölümünden farklı olarak IP için rapor oluşturabilir.
-3. Kullanıcılar , "O365'te İletişim Uyumluluğunu Etkinleştirme" bölümünden farklı olarak IP için rapor oluşturabilir.
-4. Kullanıcılar , "Office 365'da Denetimi Etkinleştir" bölümünden farklı olarak IP için rapor oluşturamaz.
-5. Kullanıcılar , "Office 365'da Denetimi Etkinleştirme" bölümünden farklı olarak IP için rapor oluşturabilir.
+Raporunuz da rolünüz temelinde özelleştirilir. [GitHub'da CAMP önkoşul bilgileri](https://github.com/OfficeDev/CAMP#pre-requisites), hangi rollerin raporun hangi bölümlerine erişimi olduğunu özetler. Kuruluşunuzdaki diğer roller aracı çalıştıramayabilir veya aracı çalıştırabilir ve son rapordaki bilgilere sınırlı erişime sahip olabilir.
 
 ### <a name="solutions-summary-section"></a>Çözüm Özeti bölümü
 
 Raporun **Çözüm Özeti** bölümünde, uyumluluk duruşunuzu geliştirmeye yardımcı olmak için kuruluşunuzun Uyumluluk Yöneticisi'nde gerçekleştirebileceği iyileştirme eylemlerine genel bir bakış sunulur.
 
-![MCCA - çözüm özeti.](../media/compliance-manager-mcca-solutions.png "MCCA Çözümleri Özet ekranı")
+![MCCA - çözüm özeti.](../media/compliance-manager-mcca-solutions.png "CAMP Çözümleri Özet ekranı")
 
-MCCA, geçerli yapılandırmalarınızı Uyumluluk Yöneticisi'nde önerilen iyileştirme eylemlerine göre değerlendirir. MCCA aracı tarafından dikkat edilmesi gerektiği belirlenen tüm iyileştirme eylemleri bu bölümde listelenecektir.
+CAMP, geçerli yapılandırmalarınızı Uyumluluk Yöneticisi'nde önerilen iyileştirme eylemlerine göre değerlendirir. CAMP aracı tarafından dikkat edilmesi gerektiği belirlenen tüm iyileştirme eylemleri bu bölümde listelenecektir.
 
 Her Microsoft çözümünün yanında, Compliance Manager'daki iyileştirme eylemlerine karşılık gelen öğe sayısını gösteren renk kodlu kutular bulunur. Eylemler üç durum durumuna ayrılır:
 
@@ -158,9 +151,9 @@ Her Microsoft çözümünün yanında, Compliance Manager'daki iyileştirme eyle
 
 #### <a name="items-with-the-improvement-status"></a>İyileştirme durumuna sahip öğeler
 
-İyileştirme eyleminin sağındaki **İyileştirme** etiketinin yanındaki açılan listeyi seçin. Geçerli ayarlarınız ve önerilen iyileştirme eylemleri hakkında hızlı bir özet ve ayrıntılar görürsünüz. Özet, Uyumluluk Yöneticisi'ne doğrudan bağlantılar, Microsoft Purview uyumluluk portalındaki geçerli çözüm ve ilgili belgeleri içerir.
+İyileştirme eyleminin sağındaki **İyileştirme** etiketinin yanındaki açılan listeyi seçin. Geçerli ayarlarınız ve önerilen iyileştirme eylemleri hakkında hızlı bir özet ve ayrıntılar görürsünüz. Özet, Uyumluluk Yöneticisi'ne doğrudan bağlantılar, Microsoft Purview uyumluluk portalı ilgili çözüm ve ilgili belgeleri içerir.
 
-Uyumluluk Yöneticisi bağlantısına tıkladığınızda, bu çözüm içinde henüz uygulamadığınız tüm iyileştirme eylemlerinin filtrelenmiş bir görünümüne yönlendirilirsiniz. Buradan [, uyumluluk puanınızı](compliance-score-calculation.md) artırmak için ulaşabileceğiniz puan sayısını, bunların geçerli olduğu değerlendirmeleri ve geçerli düzenlemeleri ve sertifikaları görebilirsiniz.
+Uyumluluk Yöneticisi bağlantısını seçtiğinizde, bu çözümdeki henüz uygulamadığınız tüm iyileştirme eylemlerinin filtrelenmiş bir görünümüne yönlendirilirsiniz. Buradan [, uyumluluk puanınızı](compliance-score-calculation.md) artırmak için ulaşabileceğiniz puan sayısını, bunların geçerli olduğu değerlendirmeleri ve geçerli düzenlemeleri ve sertifikaları görebilirsiniz.
 
 DLP için, önerilenlere göre önceden oluşturulmuş bir PowerShell betiği sağlayan bir **Düzeltme Betiği** düğmesi vardır. Doğrudan PowerShell konsolunuza kopyalayıp yapıştırabilirsiniz. Test modunda bir DLP ilkesi oluşturur
 
@@ -170,6 +163,6 @@ DLP için, önerilenlere göre önceden oluşturulmuş bir PowerShell betiği sa
 
 ## <a name="resources"></a>Kaynaklar
 
-MCCA'yı yükleme, ayarlama ve kullanma hakkında daha ayrıntılı bilgi için [GitHub (GitHub hesabı gerekmez) hakkındaki BENİOKU yönergelerine](https://github.com/OfficeDev/MCCA#overview) bakın.
+CAMP'ı yükleme, ayarlama ve kullanma hakkında daha ayrıntılı bilgi için [GitHub'da README yönergelerine bakın (GitHub](https://github.com/OfficeDev/CAMP#overview) hesabı gerekmez).
 
 Windows PowerShell hakkında daha fazla bilgi [için Bkz. PowerShell belgelerini kullanma](/powershell/scripting/how-to-use-docs). Ayrıca bkz[. Başlangıç Windows PowerShell](/powershell/scripting/windows-powershell/starting-windows-powershell).

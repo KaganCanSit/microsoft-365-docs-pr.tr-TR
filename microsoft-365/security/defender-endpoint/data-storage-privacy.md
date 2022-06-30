@@ -1,7 +1,7 @@
 ---
-title: Uç nokta veri depolaması ve gizliliği için Microsoft Defender
-description: Uç nokta için Microsoft Defender'ın gizlilik ve toplayan verileri nasıl işlemesi hakkında bilgi edinebilirsiniz.
-keywords: Uç Nokta için Microsoft Defender, veri depolama ve gizlilik, depolama, gizlilik, lisans, coğrafi konum, veri bekletme, veriler
+title: veri depolama ve gizliliği Uç Nokta için Microsoft Defender
+description: Uç Nokta için Microsoft Defender'ın topladığı gizlilik ve verileri nasıl işlediği hakkında bilgi edinin.
+keywords: Uç Nokta için Microsoft Defender, veri depolama ve gizlilik, depolama, gizlilik, lisanslama, coğrafi konum, veri saklama, veriler
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,101 +14,101 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 7e6e530406b4211c62d315f26b8f956cf6bf1bde
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: d1d8ad0a16129e909476891291c0b2c0f0d54956
+ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998157"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66554157"
 ---
-# <a name="microsoft-defender-for-endpoint-data-storage-and-privacy"></a>Uç nokta veri depolaması ve gizliliği için Microsoft Defender
+# <a name="microsoft-defender-for-endpoint-data-storage-and-privacy"></a>veri depolama ve gizliliği Uç Nokta için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
-Bu bölüm, Uç Nokta için Defender'da gizlilik ve veri işlemeyle ilgili en sık sorulan soruların yanıtlarını içerir.
+Bu bölümde, Uç Nokta için Defender için gizlilik ve veri işlemeyle ilgili en sık sorulan sorulardan bazıları ele alınıyor.
 
 > [!NOTE]
-> Bu belgede, Uç Nokta için Defender ile ilgili veri depolaması ve gizlilik ayrıntıları açıkları. Uç nokta için Defender ile ve Microsoft Defender Virüsten Koruma ve Windows gibi diğer ürün ve hizmetlerle ilgili daha fazla bilgi Windows [bkz. Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=827576). Daha fazla [bilgi Windows gizlilik SSS](https://go.microsoft.com/fwlink/?linkid=827577) bölümüne bakın.
+> Bu belgede, Uç Nokta için Defender ile ilgili veri depolama ve gizlilik ayrıntıları açıklanmaktadır. Uç Nokta için Defender ve Microsoft Defender Virüsten Koruma ve Windows gibi diğer ürün ve hizmetlerle ilgili daha fazla bilgi için bkz. [Microsoft Gizlilik Bildirimi](https://go.microsoft.com/fwlink/?linkid=827576). Daha fazla bilgi için bkz. [Windows gizlilik hakkında SSS](https://go.microsoft.com/fwlink/?linkid=827577) .
 
-## <a name="what-data-does-microsoft-defender-for-endpoint-collect"></a>Uç nokta için Microsoft Defender hangi verileri toplar?
+## <a name="what-data-does-microsoft-defender-for-endpoint-collect"></a>Uç Nokta için Microsoft Defender hangi verileri toplar?
 
-Uç Nokta için Microsoft Defender, yapılandırılmış cihazlarınız üzerinde yönetim, izleme ve raporlama amacıyla hizmete özel olarak ayrılmış ve ayrılmış bir kiracıda bilgi toplar ve depolar.
+Uç Nokta için Microsoft Defender, yapılandırılmış cihazlarınızdan yönetim, izleme ve raporlama amacıyla hizmete özel ayrılmış ve ayrılmış bir kiracıda bilgileri toplar ve depolar.
 
-Toplanan bilgiler arasında dosya verileri (dosya adları, boyutlar ve karmalar gibi), süreç verileri (çalışan süreçler, karmalar), kayıt defteri verileri, ağ bağlantısı verileri (ana bilgisayar KIMLIKleri ve bağlantı noktaları) ve cihaz ayrıntıları (cihaz tanımlayıcıları, adlar ve işletim sistemi sürümü gibi) yer alır.
+Toplanan bilgiler dosya verilerini (dosya adları, boyutlar ve karmalar gibi), işlem verilerini (çalışan işlemler, karmalar), kayıt defteri verilerini, ağ bağlantı verilerini (konak IP'leri ve bağlantı noktaları) ve cihaz ayrıntılarını (cihaz tanımlayıcıları, adlar ve işletim sistemi sürümü gibi) içerir.
 
-Microsoft bu verileri Microsoft'ta Microsoft Azure, Microsoft gizlilik uygulamaları ve Microsoft Güven Merkezi ilkelerine [göre korur](https://go.microsoft.com/fwlink/?linkid=827578).
+Microsoft bu verileri Microsoft Azure'da güvenli bir şekilde depolar ve Microsoft gizlilik uygulamalarına ve [Microsoft Güven Merkezi ilkelerine](https://go.microsoft.com/fwlink/?linkid=827578) uygun olarak saklar.
 
-Bu veriler, Uç Nokta için Defender'ın şunları şunları sağlar:
+Bu veriler Uç Nokta için Defender'ın şunları etkinleştirmesini sağlar:
 
-- Kuruluşta saldırı göstergelerini (IOA) önceden belirleme
+- Kuruluşunuzdaki saldırı göstergelerini (GÇA' lar) proaktif olarak belirleme
 - Olası bir saldırı algılanırsa uyarı oluşturma
-- Güvenlik işlemlerinizi, ağdan gelen tehdit işaretleriyle ilgili cihazlar, dosyalar ve URL'ler için bir görünüm sağlayarak, ağ üzerinde güvenlik tehditlerini araştırmanıza ve incelemenize olanak tanır.
+- Ağınızdan gelen tehdit sinyalleriyle ilgili cihazlara, dosyalara ve URL'lere yönelik bir görünümle güvenlik işlemlerinizi sağlayın ve ağ üzerindeki güvenlik tehditlerinin varlığını araştırmanıza ve keşfetmenize olanak tanıyın.
 
 Microsoft, verilerinizi reklam için kullanmaz.
 
 ## <a name="data-protection-and-encryption"></a>Veri koruma ve şifreleme
 
-Uç nokta için Defender hizmeti, veri altyapısını temel alan resim veri koruma teknolojilerinin Microsoft Azure kullanır.
+Uç Nokta için Defender hizmeti, Microsoft Azure altyapısını temel alan son teknoloji veri koruma teknolojilerini kullanır.
 
-Hizmetimizin ilgilenmesi gereken veri korumasıyla ilgili çeşitli yönler vardır. Şifreleme en kritik öneme sahip olan şifrelemedir ve beklemede veri şifreleme, uçuşlarda şifreleme ve Anahtar Kasa ile anahtar yönetimi içerir. Uç nokta hizmeti için Defender tarafından kullanılan diğer teknolojiler hakkında daha fazla bilgi için bkz. [Azure şifrelemeye genel bakış](/azure/security/security-azure-encryption-overview).
+Hizmetimizin ilgilendiği veri korumayla ilgili çeşitli yönleri vardır. Şifreleme en kritiklerden biridir ve bekleyen veri şifrelemesi, aktarım sırasında şifreleme ve Key Vault ile anahtar yönetimini içerir. Uç Nokta için Defender hizmeti tarafından kullanılan diğer teknolojiler hakkında daha fazla bilgi için bkz. [Azure şifrelemesine genel bakış](/azure/security/security-azure-encryption-overview).
 
-Tüm senaryolarda, veriler en düşük 256 bit [AES şifrelemesi kullanılarak](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) şifrelenir.
+Tüm senaryolarda veriler en az 256 bit [AES şifrelemesi](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) kullanılarak şifrelenir.
 
 ## <a name="data-storage-location"></a>Veri depolama konumu
 
-Defender for Endpoint, Microsoft Azure Ya da Amerika Birleşik Devletleri'nde ya da Avrupa Birliği'nde veri merkezlerinde çalışır. Hizmet tarafından toplanan müşteri verileri şu konumlarda depolanabilir: (a) sağlama sırasında tanımlandığı şekilde kiracının coğrafi konumu veya (b) Uç Nokta için Defender bu tür verileri işlemede başka bir Microsoft çevrimiçi hizmeti kullanıyorsa, bu diğer çevrimiçi hizmetin veri depolama kurallarına göre tanımlanan coğrafi konumdur.
+Uç Nokta için Defender, Avrupa Birliği, Birleşik Krallık veya Birleşik Devletler Microsoft Azure veri merkezlerinde çalışır. Hizmet tarafından toplanan müşteri verileri şu konumda depolanabilir: (a) sağlama sırasında tanımlanan kiracının coğrafi konumu veya (b) Uç Nokta için Defender bu tür verileri işlemek için başka bir Microsoft çevrimiçi hizmeti kullanıyorsa, coğrafi konum, söz konusu diğer çevrimiçi hizmetin veri depolama kuralları tarafından tanımlandığı şekilde.
 
-Takma adla kayıtlı müşteri verileri, AMERIKA Birleşik Devletleri'nde merkezi depolama ve işleme sistemlerinde de depolanıyor olabilir.
+Takma adla kullanılan müşteri verileri, Birleşik Devletler merkezi depolama ve işleme sistemlerinde de depolanabilir.
 
-Yapılandırıldığında, verilerinizin depolandığı konumu değiştiremezsiniz. Bu, verilerinizin bulunduğu coğrafi konumları etkin bir şekilde seçerek uyumluluk riskini en aza indirmenin kolay bir yolunu sağlar.
+Yapılandırıldıktan sonra, verilerinizin depolandığı konumu değiştiremezsiniz. Bu, verilerinizin bulunacağı coğrafi konumları etkin bir şekilde seçerek uyumluluk riskini en aza indirmek için kullanışlı bir yol sağlar.
 
 ## <a name="is-my-data-isolated-from-other-customer-data"></a>Verilerim diğer müşteri verilerinden yalıtılmış mı?
 
-Evet, verileriniz müşteri tanımlayıcısına dayalı olarak access kimlik doğrulaması ve mantıksal ayrım yoluyla yalıtılmış olur. Her müşteri yalnızca kendi kuruluşundan toplanan verilere ve Microsoft'un sağladığı genel verilere erişim iznine sahip olabilir.
+Evet, verileriniz erişim kimlik doğrulaması ve müşteri tanımlayıcısı temelinde mantıksal ayrım yoluyla yalıtılır. Her müşteri yalnızca kendi kuruluşundan toplanan verilere ve Microsoft'un sağladığı genel verilere erişebilir.
 
-## <a name="how-does-microsoft-prevent-malicious-insider-activities-and-abuse-of-high-privilege-roles"></a>Microsoft kötü amaçlı Insider etkinliklerini ve yüksek ayrıcalık rollerinin kötüye kullanımı nasıl önler?
+## <a name="how-does-microsoft-prevent-malicious-insider-activities-and-abuse-of-high-privilege-roles"></a>Microsoft kötü amaçlı insider etkinliklerini ve yüksek ayrıcalıklı rollerin kötüye kullanılmasını nasıl önler?
 
-Microsoft geliştiricilerin ve yöneticilerine, tasarım tarafından, hizmeti çalıştırmak ve geliştirecek şekilde atanan görevleri yerine etmek için yeterli ayrıcalıklar verilmiştir. Microsoft, yetkisiz geliştirici ve/veya yönetim etkinliklerine karşı korunmasına yardımcı olmak için aşağıdaki mekanizmalar dahil olmak üzere, koruma, güvenlik ve reaktif denetim bileşimlerini dağıtıyor:
+Microsoft geliştiricileri ve yöneticilerine, tasarımı gereği, hizmeti çalıştırmak ve geliştirmek için kendilerine atanan görevleri yerine getirmek için yeterli ayrıcalıklar verilmiştir. Microsoft, yetkisiz geliştirici ve/veya yönetim etkinliğine karşı korunmaya yardımcı olmak için aşağıdaki mekanizmalar da dahil olmak üzere önleyici, dedektif ve reaktif denetimlerin kombinasyonlarını dağıtır:
 
 - Hassas verilere sıkı erişim denetimi
-- Kötü amaçlı etkinlik algılamadan bağımsız olarak algılamayı büyük ölçüde geliştiren denetim birleşimleri
-- İzleme, günlüğe kaydetme ve raporlamanın birden çok düzeyi
+- Kötü amaçlı etkinliklerin bağımsız olarak algılanmasında büyük ölçüde geliştiren denetimlerin birleşimleri
+- Birden çok izleme, günlüğe kaydetme ve raporlama düzeyi
 
-Buna ek olarak, Microsoft bazı işlem personeli için arka planda doğrulama denetimleri sağlar ve arka plan doğrulaması düzeyine göre uygulamalara, sistemlere ve ağ altyapısına erişimi sınırlar. İşlem personeli, bir müşterinin hesabına veya görevleri sırasında ilgili bilgilere erişmeleri gerektiğinde resmi bir süreci takip eder.
+Buna ek olarak, Microsoft belirli operasyon personeli için arka plan doğrulama denetimleri gerçekleştirir ve arka plan doğrulama düzeyiyle orantılı olarak uygulamalara, sistemlere ve ağ altyapısına erişimi sınırlar. Operasyon personeli, görevlerinin performansında müşterinin hesabına veya ilgili bilgilerine erişmeleri gerektiğinde resmi bir süreci izler.
 
-Microsoft Azure Kamu veri merkezlerinde dağıtılan hizmetlere erişim, yalnızca FedRAMP, NIST 800.171 (DIB), ITAR, IRS 1075, DoD L4 ve CJIS gibi resmi düzenlemelere ve gerekliliklere tabi verilerin işletmesi için onaylanmış işletme personeline verilmektedir.
+Microsoft Azure Kamu veri merkezlerinde dağıtılan hizmetlere yönelik verilere erişim yalnızca FedRAMP, NIST 800.171 (DIB), ITAR, IRS 1075, DoD L4 ve CJIS gibi belirli kamu düzenlemelerine ve gereksinimlerine tabi olan verileri işlemek üzere denetlenen ve onaylanan işletim personeline verilir.
 
 ## <a name="is-data-shared-with-other-customers"></a>Veriler diğer müşterilerle paylaşılıyor mu?
 
-Hayır. Müşteri verileri diğer müşterilerden yalıtılır ve paylaşılmaz. Bununla birlikte, Microsoft'un işlemesi sonucunda elde edilen ve müşteriye özgü veriler içermeen verilere yönelik içgörüler diğer müşterilerle paylaşılır. Her müşteri yalnızca kendi kuruluşundan toplanan verilere ve Microsoft'un sağladığı genel verilere erişim iznine sahip olabilir.
+Hayır. Müşteri verileri diğer müşterilerden yalıtılır ve paylaşılmaz. Ancak, Microsoft'un işlemesinden kaynaklanan ve müşteriye özgü veriler içermeyen veriler hakkında içgörüler diğer müşterilerle paylaşılabilir. Her müşteri yalnızca kendi kuruluşundan toplanan verilere ve Microsoft'un sağladığı genel verilere erişebilir.
 
-## <a name="how-long-will-microsoft-store-my-data-what-is-microsofts-data-retention-policy"></a>Microsoft verilerimi ne kadar süre depolar? Microsoft'un veri bekletme ilkesi nedir?
+## <a name="how-long-will-microsoft-store-my-data-what-is-microsofts-data-retention-policy"></a>Microsoft verilerimi ne kadar süreyle depolayacak? Microsoft'un veri saklama ilkesi nedir?
 
-### <a name="at-service-onboarding"></a>Hizmet eklemede
+### <a name="at-service-onboarding"></a>Hizmette ekleme
 
-Varsayılan olarak, veriler 180 gün süreyle korunur; bununla birlikte, verileriniz için veri bekletme ilkesi belirtebilirsiniz. Bu, uç nokta için Window Defender'ın verilerinizi ne kadar süreyle depola durumuna belirleyecek. Şirketinizin mevzuat uyumluluğu  ihtiyaçlarını karşılamak için bir ay ile altı ay arasında bir seçim esnekliği vardır.
+Varsayılan olarak, veriler 180 gün boyunca tutulur; ancak, verileriniz için veri saklama ilkesini belirtebilirsiniz. Bu, Uç Nokta için Microsoft Defender verilerinizi ne kadar süreyle depolayacaklarını belirler. Şirketinizin mevzuat uyumluluğu gereksinimlerini karşılamak için bir ila altı ay arasında seçim esnekliği vardır.
 
-### <a name="at-contract-termination-or-expiration"></a>Sözleşme fesih veya son kullanma tarihi
+### <a name="at-contract-termination-or-expiration"></a>Sözleşme sonlandırılma veya süre sonu
 
-Lisansınız yetkisiz kullanım süresi veya askıya alınmış modundayken verileriniz tutulur ve verileriniz size kullanılabilir. Bu dönemin sonunda, bu veriler, sözleşmenin sona ermesi veya sona ermesi ile en geç 180 gün içinde kurtarılamaz hale gelecek şekilde Microsoft sistemleri tarafından silinir.
+Lisans yetkisiz kullanım süresi veya askıya alınma modu altındayken verileriniz korunur ve sizin kullanımınıza sunulur. Bu sürenin sonunda bu veriler, sözleşmenin sona ermesinden veya sona ermesinden en fazla 180 gün sonra kurtarılamaz hale getirmek için Microsoft'un sistemlerinden silinecektir.
 
-### <a name="advanced-hunting-data"></a>Gelişmiş Av verileri
+### <a name="advanced-hunting-data"></a>Gelişmiş Tehdit Avcılığı verileri
 
-Gelişmiş av, 30 günlük ham verileri keşfetmenizi sağlayan sorgu tabanlı bir tehdit arama aracıdır.
+Gelişmiş avcılık, 30 güne kadar ham verileri keşfetmenizi sağlayan sorgu tabanlı bir tehdit avcılığı aracıdır.
 
-## <a name="can-microsoft-help-us-maintain-regulatory-compliance"></a>Microsoft yasal düzenlemelere uyumu korumamıza yardımcı olabilir mi?
+## <a name="can-microsoft-help-us-maintain-regulatory-compliance"></a>Microsoft mevzuat uyumluluğunu korumamıza yardımcı olabilir mi?
 
-Microsoft, müşterilerin Uç Nokta hizmetleri için Defender'ı kendi yasal ve mevzuat gereksinimlerine göre değerlendirmelerine yardımcı olmak için, denetim raporları ve uyumluluk paketleri gibi Microsoft'un güvenlik ve uyumluluk programları hakkında ayrıntılı bilgi sağlar. Endpoint için Defender; ISO, SOC, FedRAMP High ve PCI gibi bir dizi sertifika elde etti ve ulusal, bölgesel ve sektöre özgü ek sertifikaları takipmaya devam ediyor.
+Microsoft, müşterilerin Uç Nokta için Defender hizmetlerini kendi yasal ve mevzuat gereksinimlerine göre değerlendirmesine yardımcı olmak için müşterilere denetim raporları ve uyumluluk paketleri de dahil olmak üzere Microsoft'un güvenlik ve uyumluluk programları hakkında ayrıntılı bilgi sağlar. Uç Nokta için Defender ISO, SOC, FedRAMP High ve PCI gibi bir dizi sertifika elde etmiş ve ulusal, bölgesel ve sektöre özgü ek sertifikaları takip etmeye devam ediyor.
 
-Microsoft müşterilere uyumlu ve bağımsız olarak doğrulanmış hizmetler sağlayarak, müşterilerin çalıştır çalıştıracakları altyapı ve uygulamalara uyumluluk eldelerini kolaylaştırır.
+Microsoft, müşterilere uyumlu, bağımsız olarak doğrulanmış hizmetler sunarak müşterilerin çalıştırdıkları altyapı ve uygulamalar için uyumluluk elde etmelerini kolaylaştırır.
 
-Uç nokta sertifika raporları için Defender hakkında daha fazla bilgi için bkz. [Microsoft Güven Merkezi](https://servicetrust.microsoft.com/). 
+Uç Nokta için Defender sertifika raporları hakkında daha fazla bilgi için bkz. [Microsoft Güven Merkezi](https://servicetrust.microsoft.com/). 
 
-> Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-datastorage-belowfoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-datastorage-belowfoldlink)

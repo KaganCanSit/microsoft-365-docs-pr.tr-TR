@@ -1,5 +1,5 @@
 ---
-title: En son Office 365 için Microsoft Defender hakkında
+title: Office 365 için Microsoft Defender deneme sürümü hakkında
 f1.keywords: ''
 ms.author: chrisda
 author: chrisda
@@ -18,158 +18,160 @@ ms.collection:
 ms.custom:
 - seo-marvel-apr2020
 ROBOTS: NOINDEX, NOFOLLOW
-description: Yöneticiler, yeni sürümün deneme modu hakkında bilgi Office 365 için Microsoft Defender
-ms.openlocfilehash: f1bb280502908143171cbc7b08df7080d0040df2
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+description: Yöneticiler Office 365 için Microsoft Defender deneme modu hakkında bilgi edinebilir
+ms.openlocfilehash: 086ea200b6f8519c487622d02ba2d2fc8347f68a
+ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64477115"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66554213"
 ---
-# <a name="about-the-microsoft-defender-for-office-365-trial"></a>En son Office 365 için Microsoft Defender hakkında
+# <a name="about-the-microsoft-defender-for-office-365-trial"></a>Office 365 için Microsoft Defender deneme sürümü hakkında
 
 > [!IMPORTANT]
-> Kullanmaya başlayın kullanımı kolay Deneme çalışma kitabımız [ile hızlı bir şekilde Office 365 için Microsoft Defender](trial-playbook-defender-for-office-365.md). Bu çalışma kitabı, çalışma kitabıyla organizasyonlarınızı nasıl korumanız olduğunu göstererek ücretsiz denemenizi en iyi şekilde Office 365 için Microsoft Defender.
+> [Office 365 için Microsoft Defender için kullanımı kolay Deneme playbook'umuz](trial-playbook-defender-for-office-365.md) ile hızlı bir şekilde çalışmaya başlayın. Bu playbook, Office 365 için Microsoft Defender ile kuruluşunuzu nasıl koruyacağınızı göstererek ücretsiz denemenizden en iyi şekilde yararlanabilirsiniz.
 
-Office 365 için Microsoft Defender, e-posta iletileri, bağlantılar (URL'ler) ve işbirliği araçları tarafından tehditlere karşı organizasyonlarınızı korur. Office 365 için Defender şunları içerir:
+Office 365 için Microsoft Defender, kuruluşunuzu e-posta iletileri, bağlantılar (URL'ler) ve işbirliği araçları tarafından ortaya konan kötü amaçlı tehditlere karşı korur. Office 365 için Defender şunları içerir:
 
-- **Tehdit koruması ilkeleri**: Organizasyonunız için uygun koruma düzeyini ayarlamak üzere tehdit koruması ilkelerini tanımlayın.
-- **Raporlar**: Kuruluş performansını izlemek için Office 365 için Defender raporları görüntüleniyor.
-- **Tehdit soruşturması ve yanıt özellikleri**: Tehditleri araştırmak, anlamak, benzetmek ve engellemek için önde gelen araçları kullanın.
-- **Otomatik araştırma ve yanıt özellikleri**: Zaman ve çabadan tasarruf etmek için araştırma ve tehditleri azaltmaya yönelik çabalar gerekir.
+- **Tehdit koruma ilkeleri**: Kuruluşunuz için uygun koruma düzeyini ayarlamak için tehdit koruma ilkeleri tanımlayın.
+- **Raporlar**: Kuruluşunuzdaki Office 365 için Defender performansını izlemek için gerçek zamanlı raporları görüntüleyin.
+- **Tehdit araştırma ve yanıt özellikleri: Tehditleri** araştırmak, anlamak, benzetimini yapmak ve önlemek için önde gelen araçları kullanın.
+- **Otomatik araştırma ve yanıt özellikleri: Tehditleri** araştırmak ve azaltmak için zaman ve çabadan tasarruf edin.
 
-Ücretsiz Office 365 için Microsoft Defender deneme, plan 2'nin özelliklerini yalnızca birkaç tıklamayla ücretsiz Office 365 için Defender bir deneme yoludır. Bu üst düzey özellikler aşağıdaki tabloda açıklanmıştır:
+Office 365 için Microsoft Defender deneme sürümü, Office 365 için Defender Plan 2'nin özelliklerini yalnızca birkaç tıklamayla ücretsiz olarak denemenin kolay bir yoludur. Bu üst düzey özellikler aşağıdaki tabloda açıklanmıştır:
 
 |Özellik|Açıklama|
 |---|---|
-|[Kimlik avı önleme ilkelerde özel kullanım ayarları](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)|Kullanıcı kimliğe bürünme koruması, etki alanı kimliğe bürünme koruması, posta kutusu zekası ve gelişmiş kimlik avı eşiklerini alın.|
-|[Kasa Ekleri Kaydetme](safe-attachments.md)|Yeni ve kötü amaçlı yazılımdan korunmak için denetimli bir detonation ortamında e-posta eklerini ve diğer dosyaları denetleme.|
-|[Güvenli Bağlantılar](safe-links.md)|İlk incelemeyi geçmeyecek olan URL'lerin iyi hale getirildiklerinden emin olmak için tıklayma süresi denetimlerini gerçekleştirin.|
-|[Tehdit İzleyicileri](threat-trackers.md)<sup>\*</sup>|Organizasyon etkileyen siber güvenlik sorunlarını tanımlamak için bilgilendirici widget'ları ve görünümleri kullanın.|
-|[Tehdit Gezgini](threat-explorer.md)<sup>\*</sup>|E-postanıza yönelik tehditlerle ilgili gerçek zamanlı bilgilere Office 365 alın.|
-|[Otomatik araştırma ve yanıt (AIR)](office-365-air.md)<sup>\*</sup>|Uyarılar tetiklendiğinde tehdit nesnelerini otomatik olarak bulun ve düzeltmek.|
-|[Saldırı benzetimi eğitimi](attack-simulation-training.md)<sup>\*</sup>|Kullanıcılarınızı kimlik avı saldırılarını tanımları ve uygun bir şekilde yanıt vermeleri için eğitin.|
-|[Kampanya Görünümleri](campaigns.md)<sup>\*</sup>|Büyük ölçekli kötü amaçlı e-posta etkinliğini araştırın ve yanıt verin.|
-|[Özellik özelliklerini Office 365 için Defender raporlar](view-reports-for-mdo.md)|Tehdit koruması durumu, URL tehdit koruması, posta gecikme süresi ve daha fazlasını içeren raporları görüntüye ekleyin.|
-|[Öncelik hesabı koruması](/microsoft-365/admin/setup/priority-accounts)<sup>\*</sup>|Öncelik hesabı olarak tanım kullanıcılarınız uyarılarda, raporlarda ve araştırmalarda etiketlenir ve böylece dikkatleri üzerinde dururlar. Ayrıca, Filtrelerde Öncelik etiketini de kullanabilirsiniz.|
+|[Kimlik avı önleme ilkelerindeki özel ayarlar](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)|Kullanıcı kimliğe bürünme koruması, etki alanı kimliğe bürünme koruması, posta kutusu zekası ve gelişmiş kimlik avı eşikleri alın.|
+|[Güvenli Ekleri Kaydetme](safe-attachments.md)|Yeni ve kaçınıcı kötü amaçlı yazılımları yakalamak için denetimli bir patlama ortamında e-posta eklerini ve diğer dosyaları inceleyin.|
+|[Güvenli Bağlantılar](safe-links.md)|İlk incelemeden geçmiş olabilecek URL'lerin silahlanmadığından emin olmak için tıklama zamanı denetimleri gerçekleştirin.|
+|[Tehdit İzleyicileri](threat-trackers.md)<sup>\*</sup>|Kuruluşunuzu etkileyebilecek siber güvenlik sorunlarını belirlemek için bilgilendirici pencere öğelerini ve görünümleri kullanın.|
+|[Tehdit Gezgini](threat-explorer.md)<sup>\*</sup>|Office 365 e-postanızdaki tehditler hakkında neredeyse gerçek zamanlı bilgilerle avlayın.|
+|[Otomatik araştırma ve yanıt (AIR)](office-365-air.md)<sup>\*</sup>|Uyarılar tetiklendiğinde tehdit nesnelerini otomatik olarak bulun ve düzeltin.|
+|[Saldırı simülasyonu eğitimi](attack-simulation-training.md)<sup>\*</sup>|Kullanıcılarınızı kimlik avı saldırılarını tanımlayacak ve uygun şekilde yanıt verecek şekilde eğitin.|
+|[Kampanya Görünümleri](campaigns.md)<sup>\*</sup>|Büyük ölçekli kötü amaçlı e-posta etkinliğini araştırın ve yanıtlayın.|
+|[Office 365 için Defender özellikleri kullanan raporlar](view-reports-for-mdo.md)|Tehdit koruması durumu, URL tehdit koruması, posta gecikme süresi ve daha fazlası dahil olmak üzere raporları görüntüleyin.|
+|[Öncelik hesabı koruması](/microsoft-365/admin/setup/priority-accounts)<sup>\*</sup>|Öncelik hesapları olarak tanımladığınız kullanıcılar dikkat çekmeleri için uyarılarda, raporlarda ve araştırmalarda etiketlenir. Filtrelerde Öncelik etiketini de kullanabilirsiniz.|
 
-<sup>\*</sup>Bu özellik Plan 2 Office 365 için Defender'ye özeldir.
+<sup>\*</sup>Bu özellik, Office 365 için Defender Plan 2'ye özeldir.
 
-## <a name="set-up-a-defender-for-office-365-trial"></a>Office 365 için Defender ayarlama
+## <a name="set-up-a-defender-for-office-365-trial"></a>Office 365 için Defender deneme sürümü ayarlama
 
-Deneme sürümü, kuruluşların bilgisayar özelliklerini kolayca ayarlamasını ve Office 365 için Defender olanak sağlar. Kurulum sırasında, Office 365 için Defender'e özel ilkeler (özellikle [de Kasa](safe-attachments.md) E-posta iletileri için ekler, [e-posta](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) iletileri ve [Microsoft Teams için Kasa](safe-links.md) Bağlantıları ve kimlik avı önleme ilkelerinde kimliğe bürünme koruması) önceden ayarlanmış güvenlik için Standart şablonu kullanılarak uygulanır [ ilkelerine tabidir](preset-security-policies.md).
+Deneme, kuruluşların Office 365 için Defender özelliklerini kolayca ayarlamasına ve yapılandırmasına olanak tanır. Kurulum sırasında, Office 365 için Defender özel ilkeler (özellikle, [e-posta iletileri için Güvenli Ekler](safe-attachments.md), [e-posta iletileri ve Microsoft Teams için Güvenli Bağlantılar ve](safe-links.md) [kimlik avı önleme ilkelerinde kimliğe bürünme koruması](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)) [önceden ayarlanmış güvenlik ilkeleri](preset-security-policies.md) için Standart şablon kullanılarak uygulanır.
 
-Varsayılan olarak, bu ilkeler kuruluş kapsamındaki tüm kullanıcılara yöneliktir, ancak deneme sürümü sırasında veya sonrasında, ilke atamayı belirli kullanıcılarla değiştirebilirsiniz.
+Varsayılan olarak, bu ilkelerin kapsamı kuruluştaki tüm kullanıcılara yöneliktir, ancak denemenin kurulumu sırasında veya sonrasında ilke atamasını belirli kullanıcılarla değiştirebilirsiniz.
 
 > [!NOTE]
-> Mevcut istenmeyen posta önleme ilkeleriniz, istenmeyen posta önleme ilkelerde yüksek  güveni olan istenmeyen posta kararlarını almak için İletiyi Gereksiz E-posta klasörüne taşı eylemiyle yapılandırılmış olabilir. Önceden tanımlı güvenlik ilkeleri için Standart şablonu, yüksek güven  istenmeyen posta için Karantina iletisi eylemini kullanır ve önceden ayarlanmış güvenlik ilkeleri her zaman özel istenmeyen posta önleme ilkeleri veya varsayılan istenmeyen posta önleme ilkesi önce uygulanır. Varsayılan, Standart ve Katı ayarları hakkında daha fazla bilgi için bkz. EOP ve Güvenlik için [önerilen Office 365 için Microsoft Defender.](recommended-settings-for-eop-and-office365.md)
+> Mevcut istenmeyen posta önleme ilkeleriniz, istenmeyen posta önleme ilkelerinde yüksek güvenilirlikli istenmeyen posta kararı için **iletiyi Gereksiz E-posta klasörüne taşı** eylemiyle yapılandırılmış olabilir. Önceden ayarlanmış güvenlik ilkeleri için Standart şablon, yüksek güvenilirlikli istenmeyen postalar için **Karantina iletisi eylemini** kullanır ve önceden ayarlanmış güvenlik ilkeleri her zaman özel istenmeyen posta önleme ilkeleri veya varsayılan istenmeyen posta önleme ilkesinden önce uygulanır. Varsayılan, Standart ve Katı ayarlar hakkında daha fazla bilgi için bkz. [EOP ve Office 365 için Microsoft Defender güvenliği için önerilen ayarlar](recommended-settings-for-eop-and-office365.md).
 
-Diğer iş yükleri de koruma için kullanılabilir (örneğin, [Kasa SharePoint, OneDrive, Microsoft Teams ve Kasa](mdo-for-spo-odb-and-teams.md) Uygulamaları için [Office 365 Ekleri](safe-links.md#safe-links-settings-for-office-365-apps).
+Diğer iş yükleri de koruma için kullanılabilir (örneğin, [SharePoint, OneDrive ve Microsoft Teams için Güvenli Ekler](mdo-for-spo-odb-and-teams.md) ve [desteklenen Office 365 uygulamaları için Güvenli Bağlantılar](safe-links.md#safe-links-settings-for-office-365-apps)).
 
-Deneme sürümünün kurulumu sırasında Plan 2'ye özel Office 365 için Defender yanıt işlevselliği (örneğin, [AIR](office-365-air.md) ve [Threat Explorer](threat-explorer.md) tüm kuruluş için de ayarlanır). İlkenin tanınması gerekmez.
+Deneme sürümünün kurulumu sırasında, Office 365 için Defender Plan 2'ye özel yanıt işlevselliği (örneğin, [AIR](office-365-air.md) ve [Tehdit Gezgini](threat-explorer.md) de kuruluşun tamamı için ayarlanır. İlke kapsamını belirlemeye gerek yoktur.
 
 ## <a name="licensing"></a>Lisanslama
 
-Deneme kurulumu kapsamında, Office 365 için Defender lisansı kuruluşa otomatik olarak uygulanır. Lisanslar ilk 90 gün boyunca ücretsizdir.
+Deneme kurulumu kapsamında Office 365 için Defender lisansları kuruluşa otomatik olarak uygulanır. Lisanslar ilk 90 gün boyunca ücretsizdir.
 
-Deneme için lisans kartı aşağıdaki bilgileri gösterir:
+Deneme sürümü için lisans kartı aşağıdaki bilgileri gösterir:
 
-:::image type="content" source="../../media/mdo-trial-licensing-card.png" alt-text="Office 365 için Microsoft Defender denemesinde Lisans kartı" lightbox="../../media/mdo-trial-licensing-card.png":::
+:::image type="content" source="../../media/mdo-trial-licensing-card.png" alt-text="Office 365 için Microsoft Defender deneme sürümünde lisans kartı" lightbox="../../media/mdo-trial-licensing-card.png":::
 
 - **Kullanım türü** bölümü:
-  - **Deneme**: Office 365 için Defender kullanabileceğiniz deneme sürümü lisanslarının sayısıdır.
+  - **Deneme**: Kullanabileceğiniz deneme Office 365 için Defender lisanslarının sayısı.
 
     > [!NOTE]
-    > Diğer konumlarda, kullanılabilir deneme lisansı sayınız için 300 değerinin 300 olduğunu da görebilirler. Bu değer yanlıştır (kuruluşta tam 300 kullanıcı olmadığı sürece). Sizin için kullanılabilir deneme lisansı sayısı, rastgele 300 değerine değil, organizasyon büyüklüğüne karşılık gelen lisans sayısıdır.
+    > Diğer konumlarda, kullanılabilir deneme lisanslarınızın sayısı için 300 değerini görebilirsiniz. Bu değer yanlıştır (kuruluşunuzun tam olarak 300 kullanıcısı olmadığı sürece). Kullanabileceğiniz deneme lisansı sayısı, rastgele 300 değerine değil kuruluşunuzun boyutuna karşılık gelir.
 
-  - **Ücretli**: Lisanslarda ücretli Office 365 için Defender (varsa)
+  - **Ücretli**: Ücretli Office 365 için Defender lisanslarının sayısı (varsa).
 
-- **Kullanım** bölümü: Kullanıcılarınızı kaç kullanıcınız Office 365 için Defender kapsamında?
-  - **Yalnızca & algılama**: Aşağıdaki senaryolara dahil olan toplam kullanıcı sayısı:
-    - Deneme süresi boyunca, ilkelerin kapsamını belirli kullanıcılar için belirttiniz.
-    - Kapsamları belirli kullanıcılara göre olan özel güvenlik açıkları vardır.
-  - **Tam koruma**: Plan 2 özellikleri (AIR, Threat Explorer, Saldırı benzetim eğitimi Office 365 için Defender gibi) tarafından korunan toplam kullanıcı sayısı.
+- **Kullanım** bölümü: Kullanıcılarınızın kaçı Office 365 için Defender ilkeleri kapsamındadır.
+  - **Yalnızca algılama & yanıtı**: Aşağıdaki senaryolara dahil edilen toplam kullanıcı sayısı:
+    - Deneme süresince ilkelerin kapsamını belirli kullanıcılara belirttiniz.
+    - Kapsamı belirli kullanıcılara göre belirlenmiş özel ilkeleriniz vardır.
+  - **Tam koruma**: Office 365 için Defender Plan 2 özellikleri (AIR, Tehdit Gezgini, Saldırı simülasyonu eğitimi vb.) tarafından korunan toplam kullanıcı sayısı.
+
+Fiyatlandırma bilgileri için bkz. [Office 365 için Microsoft Defender](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-office-365).
 
 ## <a name="permissions"></a>İzinler
 
-Denemeyi başlatmak veya sona erdir olmak için, Genel Yönetici veya Güvenlik Yöneticisi  **rollerinin** bir üyesi Azure Active Directory. Ayrıntılar için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
+Denemeyi başlatmak veya sonlandırmak için Azure Active Directory'de **Genel Yönetici** veya **Güvenlik Yöneticisi** rollerinin üyesi olmanız gerekir. Ayrıntılar için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
 
 ## <a name="additional-information"></a>Ek bilgiler
 
-Denemeyi başladıktan sonra, değişikliklerin ve güncelleştirmelerin kullanılabilir olması 2 saat kadar sürebilir. Ayrıca yöneticilerin değişiklikleri görmek için oturum açması ve yeniden oturum açması gerekir.
+Deneme sürümünü başlattıktan sonra değişikliklerin ve güncelleştirmelerin kullanılabilir olması 2 saat kadar sürebilir. Ayrıca yöneticilerin değişiklikleri görmek için oturumu kapatıp yeniden oturum açması gerekir.
 
 ## <a name="availability"></a>Kullanılabilirlik
 
-Office 365 için Defender denemesi, belirli ölçütlere uyan ve mevcut Office 365 için Defender Plan 2 lisansları (aboneliklerine dahil veya bir eklenti olarak) olmayan müşterilere aşamalı olarak sunulmaktadır.
+Office 365 için Defender deneme sürümü, belirli ölçütleri karşılayan ve mevcut Office 365 için Defender Plan 2 lisansları olmayan (aboneliklerine veya eklenti olarak dahil) mevcut müşterilere aşamalı olarak sunulur.
 
 ## <a name="terms-and-conditions"></a>Hüküm ve koşullar
 
-Daha fazla bilgi için deneme [Office 365 için Microsoft Defender Koşulları'& bakın](defender-for-office-365-trial-terms-and-conditions.md).
+Daha fazla bilgi için bkz[. Office 365 için Microsoft Defender Deneme Koşulları & Koşulları](defender-for-office-365-trial-terms-and-conditions.md).
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
-### <a name="q-how-do-i-extend-the-trial"></a>S: Nasıl yaparım? uzatmak mı?
+### <a name="q-how-do-i-extend-the-trial"></a>S: Deneme süresini uzatmak Nasıl yaparım??
 
-A: Bkz. [Deneme sürenizi uzatma](/microsoft-365/commerce/try-or-buy-microsoft-365#extend-your-trial).
+Y: Bkz. [Deneme sürenizi uzatma](/microsoft-365/commerce/try-or-buy-microsoft-365#extend-your-trial).
 
-### <a name="q-what-happens-to-my-data-after-the-trial-expires"></a>S: Deneme süresi sona erdikten sonra verilerime ne olur?
+### <a name="q-what-happens-to-my-data-after-the-trial-expires"></a>S: Deneme süresi dolduktan sonra verilerime ne olur?
 
-A: Deneme süreniz sona erdikten sonra, 30 gün boyunca deneme verilerinize (daha önce sahip olmadığınız Office 365 için Defender özelliklerden gelen veriler) erişebilirsiniz. Bu 30 günlük sürenin ardından, yeni deneme sürümüyle Office 365 için Defender ilkeler ve veriler silinir.
+Y: Deneme süreniz dolduktan sonra, deneme verilerinize (daha önce sahip olmadığınız Office 365 için Defender özelliklerden gelen veriler) 30 gün boyunca erişebilirsiniz. Bu 30 günlük süreden sonra, Office 365 için Defender deneme sürümüyle ilişkili tüm ilkeler ve veriler silinir.
 
-### <a name="q-how-many-times-can-i-use-the-defender-for-office-365-trial-in-my-organization"></a>S: Kuruluşumda Office 365 için Defender kez kullanabilirim?
+### <a name="q-how-many-times-can-i-use-the-defender-for-office-365-trial-in-my-organization"></a>S: Kuruluşumda Office 365 için Defender deneme sürümünü kaç kez kullanabilirim?
 
-A: En fazla 2 kez. İlk denemenizin süresi dolsa, son kullanma tarihinden sonra en az 30 gün beklemeniz gerekir. Daha sonra tekrar deneme Office 365 için Defender gerekir. İkinci denemeden sonra, başka bir deneme sürümüne kaydolayamaz.
+Y: En fazla 2 kez. İlk deneme süreniz dolarsa, Office 365 için Defender deneme sürümüne yeniden kaydolmak için son kullanma tarihinden sonra en az 30 gün beklemeniz gerekir. İkinci denemenizden sonra başka bir deneme sürümüne kaydolamazsınız.
 
-## <a name="learn-more-about-defender-for-office-365"></a>Daha fazla bilgi Office 365 için Defender
+## <a name="learn-more-about-defender-for-office-365"></a>Office 365 için Defender hakkında daha fazla bilgi edinin
 
-Office 365 için Defender kapsamlı bir özellik sunarak kuruluşların güvenliğini sağlamalarına yardımcı olur.
+Office 365 için Defender, kuruluşların kapsamlı bir yetenekler sunarak kuruluşlarının güvenliğini sağlamalarına yardımcı olur.
 
-Ayrıca bu etkileşimli kılavuzda, Office 365 için Defender daha fazla [bilgi edinabilirsiniz](https://aka.ms/MS365D.InteractiveGuide).
+Ayrıca bu [etkileşimli kılavuzda](https://aka.ms/MS365D.InteractiveGuide) Office 365 için Defender hakkında daha fazla bilgi edinebilirsiniz.
 
-:::image type="content" source="../../media/microsoft-defender-for-office-365.png" alt-text="The Office 365 için Microsoft Defender conceptual diagram" lightbox="../../media/microsoft-defender-for-office-365.png":::
+:::image type="content" source="../../media/microsoft-defender-for-office-365.png" alt-text="Office 365 için Microsoft Defender kavramsal diyagramı" lightbox="../../media/microsoft-defender-for-office-365.png":::
 
-### <a name="prevention"></a>Engelleme
+### <a name="prevention"></a>Önleme
 
-Güçlü bir filtreleme yığını iş e-posta güvenliği, kimlik bilgisi kimlik avı, fidye yazılımı ve gelişmiş kötü amaçlı yazılım gibi çok çeşitli hacim tabanlı ve hedefli saldırılar engeller.
+Sağlam bir filtreleme yığını, iş e-posta güvenliğinin aşılması, kimlik bilgisi kimlik avı, fidye yazılımı ve gelişmiş kötü amaçlı yazılım gibi çok çeşitli birim tabanlı ve hedefli saldırıları önler.
 
-- [Kimlik avı önleme ilkeleri: Kimlik avı için özel Office 365 için Defender](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
-- [Kasa Ekleri Kaydetme](safe-attachments.md)
+- [Kimlik avı önleme ilkeleri: Office 365 için Defender'de özel kullanım ayarları](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
+- [Güvenli Ekleri Kaydetme](safe-attachments.md)
 - [Güvenli Bağlantılar](safe-links.md)
 
 ### <a name="detection"></a>Algılama
 
-Endüstri lideri AI kötü amaçlı ve şüpheli içerikleri algılar ve korumadan korunma için tasarlanmış kampanyaları tanımlamak için saldırı düzenlerini yakınlar.
+Sektör lideri yapay zeka kötü amaçlı ve şüpheli içerikleri algılar ve korumayı azaltmak için tasarlanmış kampanyaları belirlemek için saldırı düzenlerini ilişkilendirir.
 
 - [Office 365 için Microsoft Defender'da Saldırı Kampanyası Görünümleri](campaigns.md)
 
-### <a name="investigation-and-hunting"></a>Araştırma ve av
+### <a name="investigation-and-hunting"></a>Araştırma ve avcılık
 
-Güçlü deneyimler, tüm kullanıcılar genelindeki saldırıları izlemek için gelişmiş koruma özellikleriyle tehditleri belirlemeye, önceliklerini belirlemeye ve araştırmaya yardımcı Office 365.
+Güçlü deneyimler, Office 365 genelinde saldırıları izlemek için gelişmiş tehdit avcılığı özellikleriyle tehditleri belirlemeye, önceliklendirmeye ve araştırmaya yardımcı olur.
 
 - [Tehdit Gezgini ve Gerçek zamanlı algılamalar](threat-explorer.md)
-- [Office 365 için Defender'da gerçek zamanlı Office 365 için Defender](view-reports-for-mdo.md)
-- [Tehdit İzleyicileri - Yeni ve Dikkat çekici](threat-trackers.md)
-- Microsoft 365 Defender [ile tümleştirme](../defender/microsoft-365-defender.md)
+- [Office 365 için Defender'da gerçek zamanlı raporlar](view-reports-for-mdo.md)
+- [Tehdit İzleyicileri - Yeni ve Dikkat Çekici](threat-trackers.md)
+- [Microsoft 365 Defender](../defender/microsoft-365-defender.md) ile tümleştirme
 
 ### <a name="response-and-remediation"></a>Yanıt ve düzeltme
 
-Kapsamlı olay müdahalesi ve otomasyon özellikleri, güvenlik ekibinin verimliliği ve verimliliğini artırır.
+Kapsamlı olay yanıtı ve otomasyon özellikleri, güvenlik ekibinizin etkinliğini ve verimliliğini artırır.
 
-- [Web'de otomatik araştırma ve yanıt (AIR) Office 365 için Microsoft Defender](office-365-air.md)
+- [Office 365 için Microsoft Defender'de otomatik araştırma ve yanıt (AIR)](office-365-air.md)
 
 ### <a name="awareness-and-training"></a>Farkındalık ve eğitim
 
-Zengin benzetim ve eğitim özellikleriyle birlikte istemci uygulamaları içindeki tümleşik deneyimler kullanıcı farkındalığını geliştirmektedir.
+İstemci uygulamalarındaki tümleşik deneyimlerle birlikte zengin simülasyon ve eğitim özellikleri, kullanıcı farkındalığı oluşturur.
 
-- [Kullanmaya başlayın benzetimi eğitimlerini kullanma](attack-simulation-training-get-started.md)
+- [Saldırı simülasyonu eğitimini kullanmaya başlama](attack-simulation-training-get-started.md)
 
-### <a name="security-posture"></a>Güvenlik mezrası
+### <a name="security-posture"></a>Güvenlik duruşu
 
-Önerilen şablonlar ve yapılandırma içgörüleri müşterilerin güvenli bir şekilde alımalarını ve güvende kalmalarını sağlar.
+Önerilen şablonlar ve yapılandırma içgörüleri, müşterilerin güvenliğini sağlamalarına ve güvende kalmalarına yardımcı olur.
 
 - [EOP ve Office 365 için Microsoft Defender'da önceden ayarlanmış güvenlik ilkeleri](preset-security-policies.md)
-- [EOP ve veritabanı koruma ilkeleri için yapılandırma çözümleyicisi Office 365 için Microsoft Defender](configuration-analyzer-for-security-policies.md).
+- [EOP ve Office 365 için Microsoft Defender koruma ilkeleri için yapılandırma çözümleyicisi](configuration-analyzer-for-security-policies.md).
 
-## <a name="give-feedback"></a>Geri bildirim gönderin
+## <a name="give-feedback"></a>Geri bildirimde bulunmak
 
-Geri bildiriminiz, ortamınızı gelişmiş saldırılardan koruma konusunda daha iyi bir şekilde çalışmamıza yardımcı olur. Deneyimlerinizi ve ürün özelliklerinizi ve deneme sonuçlarınızı paylaşın.
+Geri bildiriminiz, ortamınızı gelişmiş saldırılara karşı koruma konusunda daha iyi olmamıza yardımcı olur. Ürün özellikleri ve deneme sonuçlarıyla ilgili deneyiminizi ve izlenimlerinizi paylaşın.

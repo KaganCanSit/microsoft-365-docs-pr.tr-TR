@@ -16,14 +16,14 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: a4dd7193bed1a22e3b88e6bc9201f5a15ddcd9eb
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: fc5944be9fd209898b53203533f568ae7ccec70e
+ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66090464"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66554543"
 ---
-# <a name="run-the-client-analyzer-on-macos-and-linux"></a>İstemci çözümleyicisini macOS ve Linux'ta çalıştırma
+# <a name="run-the-client-analyzer-on-macos-and-linux"></a>macOS ve Linux üzerinde istemci çözümleyicisini çalıştırma
 
 
 **Şunlar için geçerlidir:**
@@ -34,7 +34,7 @@ ms.locfileid: "66090464"
 1. [XMDE İstemci Çözümleyicisi](https://aka.ms/XMDEClientAnalyzer) aracını araştırmanız gereken macOS veya Linux makinesine indirin.
 
    > [!NOTE]
-   > Yukarıdaki bağlantıdan indirilen geçerli 'XMDEClientAnalyzer.zip' SHA256 karması: 'AFD674A149F139E80F1AE90E36814DAAC08AAD9E8B0DA20CB1D3FA33B9D0D1AD'.
+   > Yukarıdaki bağlantıdan indirilen geçerli 'XMDEClientAnalyzer.zip' SHA256 karması: '94DBD785249C10F37D7BE9C1E881AA096CF3A9F30E829DBBFD42683717BC5DA8'.
 
 2. Makinedeki XMDEClientAnalyzer.zip içeriğini ayıklayın.
 
@@ -101,7 +101,7 @@ Ek söz dizimi yardımı:
 
 - mde_diagnostic.zip
 
-  Açıklama: her [iki macOS](/windows/security/threat-protection/microsoft-defender-atp/mac-resources#collecting-diagnostic-information) *mdatp tanılama oluşturma* çalıştırılırken oluşturulan tanılama çıktısı aynı
+  Açıklama: [macOS'ta](/windows/security/threat-protection/microsoft-defender-atp/mac-resources#collecting-diagnostic-information) *mdatp tanılama oluşturma* çalıştırılırken oluşturulan tanılama çıktısı aynı
 
   veya
 

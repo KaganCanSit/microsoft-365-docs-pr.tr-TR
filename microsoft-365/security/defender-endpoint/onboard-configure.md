@@ -16,12 +16,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: d218e09c8cc300552bcc9f230c1d375d33a5feb6
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: 309baa41f217cbac9a865317084f284b3d22961b
+ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66530564"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66554235"
 ---
 # <a name="onboard-devices-and-configure-microsoft-defender-for-endpoint-capabilities"></a>Cihazları ekleyin ve Uç Nokta için Microsoft Defender işlevlerini yapılandırın
 
@@ -62,8 +62,8 @@ Aşağıdaki tabloda, eklemeniz gereken uç noktayı temel alan kullanılabilir 
 | **Windows İstemcisi**  |     [Mobil Cihaz Yönetimi / Microsoft Intune](configure-endpoints-mdm.md) <br> [Grup İlkesi](configure-endpoints-gp.md) <br> [Yerel betik (en fazla 10 cihaz)](configure-endpoints-script.md) <br>[VDI betikleri](configure-endpoints-vdi.md) <br> [Bulut için Microsoft Defender ile tümleştirme](configure-server-endpoints.md#integration-with-microsoft-defender-for-cloud)  |
 | **Windows Server:**  | [Microsoft Uç Noktası Yapılandırma Yöneticisi](configure-endpoints-sccm.md) <br>  [Grup İlkesi](configure-endpoints-gp.md) <br>  [VDI betikleri](configure-endpoints-vdi.md) <br> [Bulut için Microsoft Defender ile tümleştirme](configure-server-endpoints.md#integration-with-microsoft-defender-for-cloud)  |
 | **macOS**    | [Yerel betikler](mac-install-manually.md) <br> [Microsoft Endpoint Manager](mac-install-with-intune.md) <br> [JAMF Pro](mac-install-with-jamf.md) <br> [Mobil Cihaz Yönetimi](mac-install-with-other-mdm.md) |
-| **Linux Server** | [Yerel betik](linux-install-manually.md) <br> [Kukla](linux-install-with-puppet.md) <br> [Ansible](linux-install-with-ansible.md)|
-| **iOS**      | [Microsoft Endpoint Manager](ios-install.md)               |
+| **Linux Server** | [Yerel betik](linux-install-manually.md) <br> [Kukla](linux-install-with-puppet.md) <br> [Ansible](linux-install-with-ansible.md) <br> [Bulut için Microsoft Defender ile tümleştirme](configure-server-endpoints.md#integration-with-microsoft-defender-for-cloud)     |
+| **iOS**      | [Microsoft Endpoint Manager](ios-install.md)           |
 | **Android**  | [Microsoft Endpoint Manager](android-intune.md)            | 
 
 
