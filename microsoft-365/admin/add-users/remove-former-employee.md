@@ -28,14 +28,16 @@ search.appverid:
 - MET150
 - MOE150
 description: Eski bir çalışanın oturum açmaması, kuruluş verilerinin güvenliğini sağlamaması ve diğer çalışanların e-posta ve OneDrive verilerine erişmesine izin vermemesi için Microsoft 365 erişimini engelleyin.
-ms.openlocfilehash: d8b32a2489735469ecdd2af3b479b0705d33be13
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 12c1656ba0826e9d4d2472427642914cdcc7b2e6
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66486230"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601728"
 ---
 # <a name="overview-remove-a-former-employee-and-secure-data"></a>Genel bakış: Eski bir çalışanı ve güvenli verileri kaldırma
+
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
 
 Sık sık aldığımız bir soru şudur: "Bir çalışan kuruluşumdan ayrıldığında verilerin güvenliğini sağlamak ve erişimi korumak için ne yapmalıyım?" Bu makale serisinde, bu kullanıcıların Microsoft 365'te oturum açamamalarını sağlamak için Microsoft 365'e erişimi nasıl engelleyebileceğiniz, kuruluş verilerinin güvenliğini sağlamak için atılması gereken adımlar ve diğer çalışanların e-posta ve OneDrive verilerine erişmesine nasıl izin verebileceğiniz açıklanır.
 
@@ -78,7 +80,9 @@ Bu serideki adımları tamamlamak için bu Microsoft 365 özelliklerini ve özel
 |[6. Adım - Eski bir çalışandan Microsoft 365 lisansını kaldırma ve silme](remove-former-employee-step-6.md)|Lisansı kaldırdığınızda, başka birine atayabilirsiniz. Öte yandan, lisansı silebilir ve bu şekilde başka birini işe alana kadar lisans için ödeme yapmazsınız.  <p> Lisansı kaldırdığınızda veya sildiğinizde, kullanıcının eski e-postası, kişileri ve takvimi **30 gün** boyunca korunur, sonrasında kalıcı olarak silinir. Lisansı kaldırır veya siler ancak hesabı silmezseniz, kullanıcının OneDrive'da bulunan içeriğine 30 gün geçtikten sonra bile erişebilirsiniz.  |
 |[7. Adım - Eski çalışanın kullanıcı hesabını silme](remove-former-employee-step-7.md)|Bu işlem hesabı yönetim merkezinizden kaldırır. Ortamı temiz tutmanızı sağlar.|
 
- ## <a name="watch-delete-a-user"></a>İzleyin: Kullanıcıyı silme
+## <a name="watch-delete-a-user"></a>İzleyin: Kullanıcıyı silme
+
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2198203) bu videoya ve diğer videolara göz atın.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FOfR?autoplay=false]
 

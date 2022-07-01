@@ -1,5 +1,5 @@
 ---
-title: Bağlan'e Microsoft 365
+title: Etki alanınızı Microsoft 365'e bağlayın
 f1.keywords:
 - NOCSH
 ms.author: twerner
@@ -21,38 +21,42 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Etki alanınızı başka bir etki alanına Microsoft 365.
-ms.openlocfilehash: d54b3bbf00dd0cf37006924e2884f2861c345d3e
-ms.sourcegitcommit: 559df2c86a7822463ce0597140537bab260c746a
+description: Etki alanınızı Microsoft 365'e bağlamayı öğrenin.
+ms.openlocfilehash: 2b02687e8d62a40272ffa5dad8ccabec4fbde368
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "63015269"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603894"
 ---
-# <a name="connect-your-domain-to-microsoft-365-for-business"></a>Bağlan işletmeler için Microsoft 365'e ekleme
+# <a name="connect-your-domain-to-microsoft-365-for-business"></a>Etki alanınızı İş için Microsoft 365'e bağlama
+
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
+
+## <a name="watch-connect-your-domain-to-microsoft-365"></a>izleyin: Etki alanınızı Microsoft 365'e bağlama
+
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2198216) bu videoya ve diğer videolara göz atın.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4LFpy?autoplay=false]
 
-E-posta verilerinizi Google Workspace Microsoft 365 te ayar kullandıktan ve taşıdıktan sonra, etki alanınızı Başka bir Microsoft 365. 
+Microsoft 365'i ayarladıktan ve e-posta verilerinizi Google Workspace'ten taşıdıktan sonra, etki alanınızı Microsoft 365'e bağlayabilirsiniz. 
 
-İlk olarak var olan DNS kayıtlarını Google'dan silmeniz gerekir, ardından google e-postanıza yeni DNS Microsoft 365.
+İlk olarak Mevcut DNS kayıtlarını Google'dan silmeniz gerekir ve ardından Microsoft 365'ten yeni DNS kayıtları ekleyebiliriz.
 
-## <a name="try-it"></a>Deneyin!
+1. [admin.google.com'da](https://admin.google.com) Google Workspace yönetici konsolunuzda oturum açın.
+1. Sol gezinti bölmesinde **Etki Alanları**, **Etki alanlarını yönet**, **Ayrıntıları görüntüle**, **Etki alanını yönet** ve **ARDıNDAN DNS'yi** seçin.
+1. Ekranı aşağı kaydırarak **Sentetik kayıtlar'a** gidin, **Google Workspace'i** açın, **Sil'i** ve sonra yeniden **Sil'i** seçin.
+1. Ekranı aşağı kaydırarak **Özel kaynak kayıtları'na** gelin ve daha önce Microsoft 365 için oluşturmuş olabileceğiniz kayıtlar da dahil olmak üzere görüntülenen mevcut DNS kayıtlarını silin.
+1. [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) gidin.
+1. Sol gezinti bölmesinde Tüm  > **Ayarlar** > <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Etki Alanlarını**</a> **Göster'i** seçin.
+1. Ardından varsayılan etki alanınızı seçin.
+1. **Kuruluma devam et'i** ve ardından etki alanınızı bağlamak için **Devam'ı** seçin.
+1. Google'a kopyalanması gereken DNS kayıtlarını görüntülemek için aşağı kaydırın.
+1. **MX Kayıtları'nı** açın ve **İşaret edilen adres veya değer'in** altında kaydı kopyalayın.
+1. Google'a dönün ve **Özel kaynak kayıtları** bölümünde kayıt türü açılan listesini açın ve **MX'i** seçin.
+1. **Veri** alanına kopyaladığınız kaydı yapıştırın.
+1. Ardından **Ekle'yi** seçin.
+1. CNAME ve TXT kayıtları için işlemi yineleyin ve Google DNS yönetim sayfasına değerleri ekleyin.
+1. Microsoft 365 yönetim merkezi dönün ve **Devam'ı** seçin.
 
-1. Admin.google.com'da Google Workspace yönetici [konsolunuzun admin.google.com](https://admin.google.com).
-1. Sol **gezintide** Etki **Alanları,** Etki **alanlarını yönet**, Ayrıntıları görüntüle, **Etki alanını** yönet ve **ardından DNS'i** seçin.
-1. Yapay **kayıtlar'a kadar aşağı kaydırın**, **Google Workspace'i açın**, Sil'i **ve** sonra **tekrar Sil'i** seçin.
-1. Ekranı aşağı **kaydırarak Özel kaynak kayıtlarına** ilerleyin ve daha önce bu kayıtlar için oluşturdunız tüm MEVCUT DNS kayıtlarını Microsoft 365.
-1. En [son Microsoft 365 yönetim merkezi.](https://admin.microsoft.com)
-1. Sol gezintide, Show all **Ayarlar** >  >  <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Domains'i seçin**</a>.
-1. Ardından varsayılan etki alanını seçin.
-1. **Kuruluma devam edin'i** seçin ve ardından etki alanınıza bağlanmak için Devam'ı **seçin**.
-1. Google'a kopya olması gereken DNS kayıtlarını görmek için ekranı aşağı kaydırın.
-1. **MX Kayıtlarını açın** ve Şu **adrese veya değere puanları altında** kaydı kopyalayın.
-1. Google'a geri dönerek Özel **kaynak kayıtları bölümünde** kayıt türü açılan listesinden **MX'i seçin**.
-1. Veri **alanına** , kopyalanan kaydı yapıştırın.
-1. Ardından **Ekle'yi seçin**.
-1. CNAME ve TXT kayıtlarıyla ilgili işlemi yineler ve Google DNS yönetimi sayfasında değerleri ekler.
-1. Diğer seçeneklere geri Microsoft 365 yönetim merkezi Devam'ı **seçin**.
-
-    Etki alanı kurulumunuz tamamlanmıştır.
+    Etki alanı kurulumunuz tamamlandı.

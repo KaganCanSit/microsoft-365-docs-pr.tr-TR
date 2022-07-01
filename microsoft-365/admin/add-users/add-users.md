@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365'de kullanıcı ekleme ve lisans atama
+title: Microsoft 365'te kullanıcı ekleme ve lisans atama
 f1.keywords:
 - NOCSH
 ms.author: cmcatee
@@ -21,18 +21,20 @@ ms.custom:
 - business_assist
 search.appverid:
 - MET150
-description: Microsoft 365 lisanslara, oturum açma kimlik bilgilerine ve Microsoft 365 posta kutularına sahip olabilmeleri için her ekip üyesine bir kullanıcı hesabı vermeyi öğrenin.
+description: Microsoft 365 lisanslarına, oturum açma kimlik bilgilerine ve Microsoft 365 posta kutularına sahip olabilmeleri için her ekip üyesine bir kullanıcı hesabı vermeyi öğrenin.
 ms.date: 07/01/2020
-ms.openlocfilehash: 8ebc4b99840f9987d115539d0039efa1950499d3
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: b9662263711bb08063a9c2ff9f70767bb3ea7ce4
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65466822"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602004"
 ---
 # <a name="add-users-and-assign-licenses-at-the-same-time"></a>Aynı anda kullanıcı ekleme ve lisans atama
 
-Ekibinizdeki kişilerin oturum açabilmesi ve [iş için Microsoft 365](https://www.microsoft.com/microsoft-365/business) erişebilmesi için önce bir kullanıcı hesabına ihtiyacı vardır. Kullanıcı hesaplarını eklemenin en kolay yolu, <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">bunları Microsoft 365 yönetim merkezi</a> birer birer eklemektir. Bu adımı gerçekleştirdikten sonra, kullanıcılarınızın Microsoft 365 lisansları, oturum açma kimlik bilgileri ve Microsoft 365 posta kutuları vardır.
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
+
+Ekibinizdeki kişilerin oturum açıp [Microsoft 365 İş'e](https://www.microsoft.com/microsoft-365/business) erişebilmeleri için önce bir kullanıcı hesabına ihtiyacı vardır. Kullanıcı hesaplarını eklemenin en kolay yolu, <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">bunları Microsoft 365 yönetim merkezi</a> birer birer eklemektir. Bu adımı gerçekleştirdikten sonra, kullanıcılarınızın Microsoft 365 lisansları, oturum açma kimlik bilgileri ve Microsoft 365 posta kutuları vardır.
 
 > [!TIP]
 > Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
@@ -43,6 +45,8 @@ Kullanıcı eklemek ve lisans atamak için genel yönetici, lisans veya kullanı
 
 ## <a name="watch-add-users-in-the-dashboard-view"></a>İzleyin: Pano görünümüne kullanıcı ekleme
 
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2198205) bu videoya ve diğer videolara göz atın.
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FOfN?autoplay=false]
 
 > [!NOTE]
@@ -50,7 +54,7 @@ Kullanıcı eklemek ve lisans atamak için genel yönetici, lisans veya kullanı
 
 ## <a name="add-users-one-at-a-time-in-the-dashboard-view"></a>Pano görünümünde kullanıcıları birer birer ekleme
 
-:::image type="content" source="../../media/classic-admin-center.png" alt-text="Ekran görüntüsü: Yönetim merkezi pano görünümü":::
+:::image type="content" source="../../media/classic-admin-center.png" alt-text="Ekran görüntüsü: Yönetici orta pano görünümü":::
 
 ::: moniker range="o365-worldwide"
 
@@ -64,7 +68,7 @@ Kullanıcı eklemek ve lisans atamak için genel yönetici, lisans veya kullanı
 
 ::: moniker-end 
 
-2. **KullanıcılarEtkin** >  **kullanıcılar'a** gidin ve **Kullanıcı ekle'yi** seçin.
+2. **Etkin Kullanıcılar'a** >  gidin ve **Kullanıcı ekle'yi** seçin.
 3. **Temel bilgileri ayarla** bölmesinde, temel kullanıcı bilgilerini doldurun ve **İleri'yi** seçin.
     - **Adı** Ad ve soyadını, görünen adı ve kullanıcı adını girin.
     - **Etki alanı** Kullanıcı hesabının etki alanını seçin. Örneğin, kullanıcının kullanıcı adı Jakob ve etki alanı contoso.com ise jakob@contoso.com kullanarak oturum açar.
@@ -104,17 +108,17 @@ Aynı anda birden çok kullanıcı eklemek için aşağıdaki yöntemlerden herh
 
 - **Kişileri toplu olarak eklemek için bir elektronik tablo kullanın.** Bkz. [Aynı anda birkaç kullanıcı ekleme](../../enterprise/add-several-users-at-the-same-time.md).
 - **Hesap eklemeyi ve lisans atamayı otomatikleştirin.** Bkz. [Microsoft 365 PowerShell ile kullanıcı hesapları oluşturma](../../enterprise/create-user-accounts-with-microsoft-365-powershell.md). Windows PowerShell cmdlet'lerini kullanmayı zaten biliyorsanız bu yöntemi seçin.
-- **ActiveDirectory mi kullanıyorsunuz?** [Microsoft 365 için dizin eşitlemesini ayarlayın](../../enterprise/set-up-directory-synchronization.md). Microsoft 365 Active Directory kullanıcı hesaplarını (ve diğer Active Directory nesnelerini) çoğaltmak için Azure AD Bağlan aracını kullanın. Eşitleme yalnızca kullanıcı hesaplarını ekler. E-posta ve diğer Office uygulamalarını kullanabilmeleri için eşitlenen kullanıcılara lisans atamanız gerekir.
-- **Exchange'den mi geçiş yapıyorsun?** Bkz. [Birden çok e-posta hesabını Office 365 geçirmenin yolları](/Exchange/mailbox-migration/mailbox-migration). Tam geçiş, aşamalı veya karma bir Exchange yöntemi kullanarak birden çok posta kutusunu Microsoft 365 geçirdiğinizde, geçişin bir parçası olarak kullanıcıları otomatik olarak eklersiniz. Geçiş yalnızca kullanıcı hesaplarını ekler. E-posta ve diğer Office uygulamalarını kullanabilmeleri için önce kullanıcılara lisans atamanız gerekir. Kullanıcıya lisans atamazsanız, 30 günlük yetkisiz kullanım süresinden sonra posta kutusu devre dışı bırakılır. Microsoft 365 yönetim merkezi [kullanıcılara lisans atamayı](../manage/assign-licenses-to-users.md) öğrenin.
+- **ActiveDirectory mi kullanıyorsunuz?** [Microsoft 365 için dizin eşitlemesini ayarlayın](../../enterprise/set-up-directory-synchronization.md). Microsoft 365'te Active Directory kullanıcı hesaplarını (ve diğer Active Directory nesnelerini) çoğaltmak için Azure AD Connect aracını kullanın. Eşitleme yalnızca kullanıcı hesaplarını ekler. Eşitlenen kullanıcılara e-posta ve diğer Office uygulamalarını kullanabilmeleri için önce lisans atamanız gerekir.
+- **Exchange'den mi geçiş yapıyorsun?** Bkz. [Birden çok e-posta hesabını Office 365 geçirmenin yolları](/Exchange/mailbox-migration/mailbox-migration). Tam geçiş, aşamalı veya karma exchange yöntemi kullanarak birden çok posta kutusunu Microsoft 365'e geçirdiğinizde, geçiş kapsamında kullanıcıları otomatik olarak eklersiniz. Geçiş yalnızca kullanıcı hesaplarını ekler. E-posta ve diğer Office uygulamalarını kullanabilmeleri için önce kullanıcılara lisans atamanız gerekir. Kullanıcıya lisans atamazsanız, 30 günlük yetkisiz kullanım süresinden sonra posta kutusu devre dışı bırakılır. Microsoft 365 yönetim merkezi [kullanıcılara lisans atamayı](../manage/assign-licenses-to-users.md) öğrenin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Kullanıcı ekledikten sonra Microsoft'tan bir e-posta bildirimi alırsınız. E-posta, Microsoft 365 oturum açabilmesi için kişinin kullanıcı kimliğini ve parolasını içerir. Yeni parolaları bildirirken kullandığınız işlemi uygulayın. [PC veya Mac'e Office uygulamaları indirip yükleme ve](https://support.microsoft.com/office/4414eaaf-0478-48be-9c42-23adc4716658) [mobil cihazda Office uygulamaları ve e-postayı ayarlama](https://support.microsoft.com/office/7dabb6cb-0046-40b6-81fe-767e0b1f014f) gibi ayarlamalar yapmak için [Çalışan hızlı başlangıç kılavuzunu](../setup/employee-quick-setup.md) yeni kullanıcılarınızla paylaşın.
+Kullanıcı ekledikten sonra Microsoft'tan bir e-posta bildirimi alırsınız. E-posta, Microsoft 365'te oturum açabilmesi için kişinin kullanıcı kimliğini ve parolasını içerir. Yeni parolaları bildirirken kullandığınız işlemi uygulayın. [Pc veya Mac'e Office uygulamalarını indirme ve yükleme ve](https://support.microsoft.com/office/4414eaaf-0478-48be-9c42-23adc4716658) [mobil cihazda Office uygulamalarını ve e-postayı ayarlama](https://support.microsoft.com/office/7dabb6cb-0046-40b6-81fe-767e0b1f014f) gibi ayarları yapmak için [Çalışan hızlı başlangıç kılavuzunu](../setup/employee-quick-setup.md) yeni kullanıcılarınızla paylaşın.
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Microsoft 365 yeni çalışan ekleme](add-new-employee.md) (makale)\
-[Microsoft 365 için aynı anda birkaç kullanıcı ekleme](../../enterprise/add-several-users-at-the-same-time.md) (makale)\
-[Microsoft 365'da bir kullanıcıyı geri yükleme](restore-user.md) (makale)\
+[Microsoft 365'e yeni bir çalışan ekleme](add-new-employee.md) (makale)\
+[Microsoft 365'e aynı anda birkaç kullanıcı ekleme](../../enterprise/add-several-users-at-the-same-time.md) (makale)\
+[Microsoft 365'te bir kullanıcıyı geri yükleme](restore-user.md) (makale)\
 [Kullanıcılara lisans atama](../manage/assign-licenses-to-users.md) (makale)\
 [Kuruluşunuzdan kullanıcı silme](delete-a-user.md) (makale)

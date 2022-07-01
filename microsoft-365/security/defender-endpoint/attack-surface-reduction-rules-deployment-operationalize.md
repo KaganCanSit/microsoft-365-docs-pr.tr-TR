@@ -17,15 +17,14 @@ ms.custom: asr
 ms.technology: mde
 ms.topic: article
 ms.collection:
-- m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 2c666a8b31308fb3cfb18a9a35211e49d886eab0
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 708d929376c029ba5ce448c93fd6c455a78ebec8
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705395"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602888"
 ---
 # <a name="operationalize-attack-surface-reduction-asr-rules"></a>Saldırı yüzeyini azaltma (ASR) kurallarını kullanıma hazır hale getirme
 
@@ -46,7 +45,7 @@ Raporların tutarlı ve düzenli olarak gözden geçirilmesi, ASR kuralları da�
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="images/asr-defender365-advanced-hunting2.png" alt-text="Microsoft 365 Defender portalındaki Gelişmiş Avcılık sayfası" lightbox="images/asr-defender365-advanced-hunting2.png":::
 
-Gelişmiş avcılık, Microsoft Defender ATP Uç Nokta Algılama ve Yanıtı'nın (EDR) tüm makinelerinizden topladığı 30 güne kadar yakalanan (ham) verileri keşfetmenizi sağlayan sorgu tabanlı (Kusto Sorgu Dili) bir tehdit avcılığı aracıdır. Gelişmiş avcılık sayesinde, ilginç göstergeleri ve varlıkları bulmak için olayları proaktif olarak inceleyebilirsiniz. Verilere esnek erişim, hem bilinen hem de olası tehditler için kısıtlanmamış avlanmayı kolaylaştırır.
+Gelişmiş avcılık, Microsoft Defender ATP Uç Nokta Algılama ve Yanıtı'nın (EDR) tüm makinelerinizden topladığı 30 güne kadar yakalanan (ham) verileri keşfetmenize olanak tanıyan sorgu tabanlı (Kusto Sorgu Dili) bir tehdit avcılığı aracıdır. Gelişmiş avcılık sayesinde, ilginç göstergeleri ve varlıkları bulmak için olayları proaktif olarak inceleyebilirsiniz. Verilere esnek erişim, hem bilinen hem de olası tehditler için kısıtlanmamış avlanmayı kolaylaştırır.
 
 Gelişmiş avcılık sayesinde ASR kural bilgilerini ayıklamak, raporlar oluşturmak ve belirli bir ASR kural denetimi veya engelleme olayının bağlamı hakkında ayrıntılı bilgi almak mümkündür.
 
@@ -83,10 +82,10 @@ Avlanma seçenekleri hakkında daha fazla bilgi için bkz. [Saldırı yüzeyini 
 
 [Saldırı yüzeyini azaltma (ASR) kuralları dağıtımına genel bakış](attack-surface-reduction-rules-deployment.md)
 
-[Saldırı yüzeyi azaltma (ASR) kuralları dağıtım planı](attack-surface-reduction-rules-deployment-plan.md)
+[Saldırı yüzeyini azaltma (ASR) kuralları dağıtım planı](attack-surface-reduction-rules-deployment-plan.md)
 
-[Test saldırı yüzeyi azaltma (ASR) kuralları](attack-surface-reduction-rules-deployment-test.md)
+[Saldırı yüzeyini azaltma (ASR) kuralları testi](attack-surface-reduction-rules-deployment-test.md)
 
-[Saldırı yüzeyi azaltma (ASR) kurallarını etkinleştirme](attack-surface-reduction-rules-deployment-implement.md)
+[Saldırı yüzeyini azaltma (ASR) kurallarını etkinleştirme](attack-surface-reduction-rules-deployment-implement.md)
 
-[Saldırı yüzeyi azaltma (ASR) kuralları başvurusu](attack-surface-reduction-rules-reference.md)
+[Saldırı yüzeyini azaltma (ASR) kuralları başvurusu](attack-surface-reduction-rules-reference.md)

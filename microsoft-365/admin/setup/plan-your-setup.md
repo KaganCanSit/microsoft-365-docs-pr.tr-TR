@@ -23,20 +23,24 @@ search.appverid:
 - MOE150
 ms.assetid: eb926624-018b-4486-bf11-5fba6ee4d645
 description: İş için Microsoft 365'e geçiş yapma gereksinimleri ve dikkat edilmesi gerekenler hakkında bilgi edinin.
-ms.openlocfilehash: 29b72079d877e8a7974b2e31b5b2dc65341da912
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 356d4cc1f696c871badcdceeb392c74b510cb49c
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66490851"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601168"
 ---
 # <a name="plan-your-setup-of-microsoft-365-for-business"></a>İş için Microsoft 365 kurulumunuzu planlama
+
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
 
 Bu makale, iş için Microsoft 365 planına abone olan kişilere yöneliktir.
   
 Kuruluşunuzu Microsoft 365'e taşımadan önce karşılamanız gereken gereksinimler, elinizde olması gereken bilgiler ve vermeniz gereken kararlar vardır.
 
 ## <a name="overview-of-microsoft-365-for-business-setup"></a>İş için Microsoft 365 kurulumuna genel bakış
+
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2197910) bu videoya ve diğer videolara göz atın.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Vjso?autoplay=false]
 

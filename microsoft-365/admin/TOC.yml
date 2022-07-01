@@ -4,7 +4,7 @@
     - name: En iyi 20 yönetici yardımı makalesi
       href: top-m365-admin-articles.yml
     - name: Yönetici eğitimi video kitaplığı
-      href: admin-video-library.yml
+      href: 'https://go.microsoft.com/fwlink/?linkid=2197659'
     - name: Kullanmaya başlayın
       items:
         - name: Kaydolma

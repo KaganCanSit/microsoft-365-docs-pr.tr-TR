@@ -18,12 +18,12 @@ ms.custom: ''
 description: Yöneticiler, kullanıcılar tarafından bildirilen istenmeyen posta ve kimlik avı e-postalarını toplamak için posta kutusunu yapılandırmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5f2881076679f64633afc1ddcac6a9de7df64acb
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: 64ce66e10e7f6f549479b6f8a838c5db220d36dd
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66530608"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602458"
 ---
 # <a name="user-reported-message-settings"></a>Kullanıcı tarafından bildirilen ileti ayarları
 
@@ -48,16 +48,16 @@ Kullanıcı tarafından bildirilen iletileri doğrudan Microsoft yerine özel bi
 ## <a name="custom-mailbox-prerequisites"></a>Özel posta kutusu önkoşulları
 
 Kullanıcı tarafından bildirilen iletilerin özel posta kutunuza gitmesi için gerekli önkoşulları yapılandırmak için aşağıdaki makaleleri kullanın:
- 
-- [Gelişmiş teslim ilkesinde özel posta kutusunu SecOps posta kutusu olarak tanımlama](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy)
+
+- [Özel posta kutusunu SecOps posta kutusu olarak tanımlama](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy)
 
 - Özel posta kutusu için [kötü amaçlı yazılımdan koruma ilkesi oluşturma](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies)
-    - kötü amaçlı yazılım için sıfır saatlik otomatik temizleme (ZAP) kapalıdır (**Koruma ayarları** bölümü \> **Kötü amaçlı yazılım için sıfır saatlik otomatik temizlemeyi etkinleştir** seçeneği seçilmez). 
-    - ortak ek filtresi seçeneği kapalıdır (**Koruma ayarları** bölümü \> **Ortak ekler filtresini etkinleştir** seçili değildir). 
+  - Kötü amaçlı yazılım için sıfır saatlik otomatik temizleme (ZAP) kapalıdır (**Koruma ayarları** bölümü \> **Kötü amaçlı yazılım için sıfır saatlik otomatik temizlemeyi etkinleştir** seçeneği seçilmez).
+  - Ortak ek filtresi seçeneği kapalıdır (**Koruma ayarları** bölümü \> **Ortak ekler filtresini etkinleştir** seçili değildir).
 
 Office 365 için Microsoft Defender varsa, gelişmiş filtrelememizin iletileri bildiren kullanıcıları etkilememesi için aşağıdaki ayarları da yapılandırmanız gerekir:
 
-- [Özel posta kutusunun önceden ayarlanmış güvenlik ilkelerinin bir parçası olmadığından emin olun](preset-security-policies.md#use-the-microsoft-365-defender-portal-to-modify-the-assignments-of-standard-and-strict-preset-security-policies)
+- Özel posta kutusunun [önceden ayarlanmış güvenlik ilkelerinin](preset-security-policies.md#use-the-microsoft-365-defender-portal-to-modify-the-assignments-of-standard-and-strict-preset-security-policies) bir parçası olmadığından emin olun
 
 - Güvenli Bağlantılar taramasının kapalı olduğu özel posta kutusu için [güvenli bağlantılar ilkesi oluşturun](set-up-safe-links-policies.md) (**İletilerde bilinmeyen kötü amaçlı olabilecek URL'ler için eylemi seçin** kapalı).\> 
 
@@ -134,7 +134,7 @@ Posta kutunuzu tüm geçerli önkoşulları karşıladığını doğruladıktan 
 
 Bildirilen iletileri özel posta kutusuna göndermek için üçüncü taraf ileti raporlama araçlarını yapılandırabilirsiniz. Bunu yapmak için **Microsoft Outlook Rapor İletisi düğmesi** ayarını **Kapalı** ve **Kuruluşum'un posta kutusunu** istediğiniz Office 365 posta kutusuna ayarlarsınız.
 
-Tek gereksinim, özgün iletinin olarak eklenmesidir. EML veya . Özel posta kutusuna gönderilen iletideki MSG eki (sıkıştırılmaz) (özgün iletiyi özel posta kutusuna iletmeyin). 
+Tek gereksinim, özgün iletinin olarak eklenmesidir. EML veya . Özel posta kutusuna gönderilen iletideki MSG eki (sıkıştırılmaz) (özgün iletiyi özel posta kutusuna iletmeyin).
 
  > [!NOTE]
  > E-postada birden çok e-posta eki varsa gönderim atılır. Yalnızca bir e-posta eki olan e-postaları destekliyoruz.

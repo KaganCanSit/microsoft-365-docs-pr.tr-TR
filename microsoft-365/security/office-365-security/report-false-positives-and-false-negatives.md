@@ -10,19 +10,19 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
-description: Rapor İletisi özelliğini kullanarak Outlook hatalı pozitifleri ve hatalı negatifleri bildirmeyi öğrenin.
+description: Rapor İletisi özelliğini kullanarak Outlook'ta hatalı pozitif ve hatalı negatifleri bildirmeyi öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 762f16916e03940f4d0f95c48f13751d3cbd63c7
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 60f9a9eff9694752630170991b7a800f52a2952d
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65416982"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602148"
 ---
 # <a name="report-false-positives-and-false-negatives-in-outlook"></a>Outlook'ta yanlış pozitifleri ve yanlış negatifleri bildirme
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -32,7 +32,7 @@ ms.locfileid: "65416982"
 > [!NOTE]
 > Exchange Online posta kutuları olan bir Microsoft 365 kuruluşunda yöneticiyseniz, Microsoft 365 Defender portalındaki **Gönderimler** sayfasını kullanmanızı öneririz. Daha fazla bilgi için bkz [. Şüpheli istenmeyen postaları, kimlik avı, URL'leri ve dosyaları Microsoft'a göndermek için Gönderimler portalını kullanma](admin-submission.md).
 
-Karma modern kimlik doğrulaması kullanan Exchange Online veya şirket içi posta kutularındaki posta kutularına sahip Microsoft 365 kuruluşlarda, hatalı pozitifler (engellenmiş veya gereksiz klasöre gönderilmiş iyi e-postalar) ve hatalı negatifler (gelen kutusuna teslim edilen istenmeyen e-posta veya kimlik avı) Exchange Online Protection (EOP) adresine gönderebilirsiniz.
+Karma modern kimlik doğrulaması kullanarak Exchange Online veya şirket içi posta kutularında posta kutuları olan Microsoft 365 kuruluşlarında, hatalı pozitifler (engellenmiş veya gereksiz klasöre gönderilmiş iyi e-postalar) ve hatalı negatifler (gelen kutusuna teslim edilen istenmeyen e-posta veya kimlik avı) Exchange Online Protection (EOP) adresine gönderebilirsiniz.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
@@ -40,7 +40,7 @@ Karma modern kimlik doğrulaması kullanan Exchange Online veya şirket içi pos
 
 - Rapor İletisi eklentisi ve Rapor Kimlik Avı eklentisi tüm platformlarda (Web üzerinde Outlook, iOS, Android ve Masaüstü) Outlook için çalışır.
 
-- Exchange Online posta kutuları olan bir kuruluşta yöneticiyseniz Microsoft 365 Defender portalındaki Gönderimler portalını kullanın. Daha fazla bilgi için bkz. [Şüpheli istenmeyen postaları, kimlik avı, URL'leri ve dosyaları Microsoft'a göndermek için Yönetici Gönderimi'ni kullanma](admin-submission.md).
+- Exchange Online posta kutuları olan bir kuruluşta yöneticiyseniz Microsoft 365 Defender portalındaki Gönderimler portalını kullanın. Daha fazla bilgi için bkz. [Microsoft'a şüpheli istenmeyen posta, kimlik avı, URL'ler ve dosyalar göndermek için Yönetici Gönderimini kullanma](admin-submission.md).
 
 - İletileri doğrudan Microsoft'a, belirttiğiniz bir posta kutusuna veya her ikisine birden gönderecek şekilde yapılandırabilirsiniz. Daha fazla bilgi için bkz. [Kullanıcı gönderim ilkeleri](user-submission.md).
 
@@ -50,18 +50,6 @@ Karma modern kimlik doğrulaması kullanan Exchange Online veya şirket içi pos
 
 bir iletinin içeriğini belirlemek için kullanıcı gönderimlerini kolayca araştırmak ve uygun düzeltme eylemini uygulayarak gönderime yanıt vermek için Office 365 için Microsoft Defender nasıl kullanabileceğinizi öğrenmek için bu kısa videoyu izleyin. 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBHof]
-
-### <a name="turn-off-the-built-in-reporting-experience"></a>Yerleşik raporlama deneyimini kapatma
-
-[Kullanıcı gönderim ilkesini](./user-submission.md) kullanamadığı için Outlook'da yerleşik raporlama deneyimini önermeyiz. Bunun yerine Rapor İletisi eklentisini veya Rapor Kimlik Avı eklentisini kullanmanızı öneririz.
-
-Bu cmdlet'i çalıştırabilmeniz için önce size izinler atanmalıdır. Kuruluşunuzdaki herhangi bir cmdlet'i veya parametreyi çalıştırmak için gereken izinleri bulmak için bkz. [herhangi bir Exchange cmdlet'ini çalıştırmak için gereken izinleri bulma](/powershell/exchange/find-exchange-cmdlet-permissions).
-
-Web üzerinde Outlook'da yerleşik raporlama deneyimini devre dışı bırakmak için aşağıdaki PowerShell komutunu çalıştırın:
-
-```powershell
-Set-OwaMailboxPolicy -Identity OwaMailboxPolicy-Default -ReportJunkEmailEnabled $false
-```
 
 ## <a name="use-the-report-message-feature"></a>Rapor İletisi özelliğini kullanma
 

@@ -1,5 +1,5 @@
 ---
-title: Dosyalarınızı OneDrive taşıma
+title: Dosyalarınızı OneDrive'a taşıma
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -19,31 +19,33 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Dosyalarınızı OneDrive taşımayı öğrenin.
-ms.openlocfilehash: 04f8dabcba720e904d9dad7ff0e4c07403265909
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+description: Dosyalarınızı OneDrive'a nasıl taşıyacağınızı öğrenin.
+ms.openlocfilehash: 589bfc5649cfea9090d8933b31b73184439d8f6a
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65469370"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603846"
 ---
 # <a name="move-files-to-onedrive-for-business"></a>Dosyaları OneDrive İş'e taşıma
 
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
+
 ## <a name="watch-move-your-files-to-onedrive-for-business"></a>İzleyin: Dosyalarınızı OneDrive İş taşıma
+
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2198202) bu videoya ve diğer videolara göz atın.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/d74b083c-1f44-43ea-8a14-2e1fc600b341?autoplay=false]
 
 Microsoft 365 İş Ekstra kaydoldıktan sonra, var olan iş dosyalarınızı OneDrive İş kopyalamak&#39;. OneDrive, erişimi denetlemek istediğiniz kişisel iş dosyalarını veya hassas iş dosyalarını depolamak için iyi bir yerdir.
 
-## <a name="try-it"></a>Deneyin!
-
-1. Windows **Başlangıç** düğmesini seçin.
-2. OneDrive arayın ve seçin.
+1. Windows'tan  **Başlangıç** düğmesini seçin.
+2. OneDrive'ı arayın ve seçin.
 3. İş e-posta adresinizi girin.
 4. **Oturum aç'ı** ve ardından **İleri'yi** seçin.
-5. Kısa öğreticiyi gözden geçirin ve **ardından OneDrive klasörümü aç'ı** seçin. OneDrive kişisel sürümünü de kullanıyorsanız,&#39;burada görürsünüz.
+5. Kısa öğreticiyi gözden geçirin ve  **ardından OneDrive klasörümü aç'ı** seçin. OneDrive'ın kişisel sürümünü de kullanıyorsanız,&#39;burada görürsünüz.
 6. Dosya Gezgini'da kopyalamak istediğiniz dosyalara gidin.
-7. Dosyaları seçin ve ardından sürükleyip OneDrive klasörünüze bırakın. Dosyalarınızın yanındaki mavi dairesel oklar, bulutla yeniden eşitleme&#39;anlamına gelir. Eşitlemeyi&#39;, yeşil onay işaretleri görüntülenir.
+7. Dosyaları seçip OneDrive klasörünüzde sürükleyip bırakın. Dosyalarınızın yanındaki mavi dairesel oklar, bulutla yeniden eşitleme&#39;anlamına gelir. Eşitlemeyi&#39;, yeşil onay işaretleri görüntülenir.
 
 OneDrive dosyalarınız üzerinde yerel olarak çalışmaya ek olarak, bunlara web tarayıcınızdan erişebilirsiniz:
 

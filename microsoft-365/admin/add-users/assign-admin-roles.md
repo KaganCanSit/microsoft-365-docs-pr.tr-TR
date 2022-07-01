@@ -29,14 +29,16 @@ search.appverid:
 - GEA150
 ms.assetid: eac4d046-1afd-4f1a-85fc-8219c79e1504
 description: Yönetici merkezinde belirli görevleri gerçekleştirebilmeleri için işletmenizdeki bir kullanıcıya veya birden çok kullanıcıya yönetici rolleri atamayı öğrenin.
-ms.openlocfilehash: 663a5fb60fa815eab079f4ab96e53e8b168105b7
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 62a860fd90104e475763494f84ca1b4546774757
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65437030"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601531"
 ---
 # <a name="assign-admin-roles-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezi yönetici rolleri atama
+
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
 
 Microsoft iş aboneliğinizi satın alan kişi sizseniz genel yönetici olursunuz. Bu, aboneliklerinizdeki ürünler üzerinde sınırsız denetime sahip olduğunuz ve çoğu veriye erişebileceğiniz anlamına gelir.
 
@@ -46,17 +48,19 @@ Yeni kullanıcılar eklediğinizde, onlara bir yönetici rolü atamazsanız, bu 
 
 ## <a name="watch-add-an-admin"></a>İzleyin: Yönetici ekleme
 
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2198030) bu videoya ve diğer videolara göz atın.
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FOfO] 
 
-1. Microsoft 365 business'a kaydolduğunda otomatik olarak genel yönetici olursunuz. İşletmeyi yönetmeye yardımcı olmak için diğer kişileri de yönetici yapabilirsiniz. 
-1. Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**KullanıcılarEtkin**</a> >  kullanıcılar'ı seçin.
+1. Microsoft 365 İş'e kaydolduğunda otomatik olarak genel yönetici olursunuz. İşletmeyi yönetmeye yardımcı olmak için diğer kişileri de yönetici yapabilirsiniz. 
+1. Microsoft 365 yönetim merkezi **Kullanıcılar** > <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**Etkin kullanıcılar'ı**</a> seçin.
 1. Yönetici yapmak istediğiniz kullanıcıyı seçin ve ardından **Rolleri yönet'i** seçin.
 
 Bu videoyu faydalı bulduysanız, [küçük işletmelere ve Microsoft 365’i ilk kez kullananlara yönelik eğitim serisinin tamamına göz atın](../../business-video/index.yml).
 
 ## <a name="assign-admin-roles"></a>Yönetici rollerini atama 
 
-Kullanıcıları bir role 2 farklı yolla atayabilirsiniz:
+Kullanıcıları bir role iki farklı yolla atayabilirsiniz:
 
 - Kullanıcıya rol atamak için kullanıcının ayrıntılarına ve **Rolleri yönet'e** gidebilirsiniz.
 - İsterseniz **Roller'e** gidip rolü seçip birden çok kullanıcı ekleyebilirsiniz.
@@ -65,7 +69,7 @@ Kullanıcıları bir role 2 farklı yolla atayabilirsiniz:
 
 1. Yönetim merkezinde <a href="https://go.microsoft.com/fwlink/p/?linkid=2097861" target="_blank">**Rol atamaları'na**</a> gidin. Kuruluşunuzda kullanılabilen yönetici rollerini görüntülemek için **Azure AD** veya **Intune** sekmelerini seçin.
 2. Kullanıcıyı atamak istediğiniz yönetici rolünü seçin.
-3. **Atanan** **yöneticilerEkle'yi** >  seçin.
+3. **Atanan yöneticiler Ekle'yi** >  seçin.
 4. Kullanıcının **görünen adını** veya **kullanıcı adını** yazın ve ardından öneri listesinden kullanıcıyı seçin.
 5. İşiniz bitene kadar birden çok kullanıcı ekleyin.
 6. **Kaydet'i** seçtiğinizde kullanıcı atanan yöneticiler listesine eklenir.

@@ -1,6 +1,6 @@
 ---
-title: Adım 4. Mimariyi gözden geçirmek de dahil olmak üzere Uç nokta için Microsoft Defender'ı genel bakış değerlendirme
-description: Deneme laboratuvarı veya pilot Microsoft 365 Defender için ayarlama adımları. Güvenlik çözümünün, kuruluşta cihazları, kimlikleri, verileri ve uygulamaları korumak üzere nasıl tasarlanarak tasarlanarak tasarlan olduğunu test edin ve deneyim edin.
+title: Adım 4. Mimariyi gözden geçirme de dahil olmak üzere Uç Nokta için Microsoft Defender genel bakışı değerlendirin
+description: Microsoft 365 Defender deneme laboratuvarı veya pilot ortam için ayarlama adımları. Güvenlik çözümünün kuruluşunuzdaki cihazları, kimliği, verileri ve uygulamaları korumak için nasıl tasarlandığını test edin ve deneyimleyin.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -19,35 +19,34 @@ ms.collection:
 - M365-security-compliance
 - m365solution-scenario
 - m365solution-evalutatemtp
-- m365solution-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 05dbf222762837f2916a76cc5b183a99cd981101
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+ms.openlocfilehash: e9a0c8939ccc5d8007ef1c0318fed45b35c6d36a
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63755108"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601256"
 ---
-# <a name="step-4-evaluate-microsoft-defender-for-endpoint-overview"></a>Adım 4. Uç nokta için Microsoft Defender'ı değerlendirmeye genel bakış
+# <a name="step-4-evaluate-microsoft-defender-for-endpoint-overview"></a>Adım 4. değerlendirme Uç Nokta için Microsoft Defender genel bakış
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
 - Microsoft 365 Defender
 
 
-Bu makalede, Uç Nokta için Microsoft Defender'ı etkinleştirme ve pilot uygulama işlemi ana hatlarıyla açıklanmıştır. Bu işleme başlamadan önce, değerlendirme sürecini gözden geçirmeyi Microsoft 365 Defender değerlendirme ortamını [oluşturduğunuzdan Microsoft 365 Defender gerekir](eval-create-eval-environment.md).[](eval-overview.md) 
+Bu makalede, Uç Nokta için Microsoft Defender etkinleştirme ve pilot uygulama süreci özetlenmiştir. Bu işleme başlamadan önce, [Microsoft 365 Defender değerlendirmeye](eval-overview.md) yönelik genel süreci gözden [geçirdiğinizden ve Microsoft 365 Defender değerlendirme ortamını oluşturduğunuzdan](eval-create-eval-environment.md) emin olun. 
 <br>
 
-Uç Nokta için Microsoft Defender'ı etkinleştirmek ve pilot olarak kullanmak için aşağıdaki adımları kullanın.
+Uç Nokta için Microsoft Defender etkinleştirmek ve pilot uygulamak için aşağıdaki adımları kullanın.
 
 :::image type="content" source="../../media/defender/m365-defender-endpoint-eval-steps.png" alt-text="Microsoft Defender değerlendirme ortamına Uç Nokta için Microsoft Defender ekleme adımları" lightbox="../../media/defender/m365-defender-endpoint-eval-steps.png":::
 
 
-Aşağıdaki tabloda, çizimde yer alan adımlar açık gösterilmiştir.
+Aşağıdaki tabloda çizimdeki adımlar açıklanmaktadır.
 
  |Adım   |Açıklama
 |---------|---------|
-| [1. Adım. Mimari gereksinimlerini ve temel kavramları gözden geçirin](eval-defender-endpoint-architecture.md)    | Uç nokta mimarisi için Defender'ı ve size kullanılabilir özellikleri anlıyoruz.       |
-|[2. Adım. Değerlendirme ortamını etkinleştirme](eval-defender-endpoint-enable-eval.md)     |   Değerlendirme ortamını ayarlama adımlarını izleyin.      |
-|[3. Adım. Pilot ayarlama ](eval-defender-endpoint-pilot.md)    |    Pilot grubunızı doğrulayın, benzetimler çalıştırın ve önemli özelliklerle panoları yakından takip edin. |
+| [1. Adım. Mimari gereksinimlerini ve temel kavramları gözden geçirme](eval-defender-endpoint-architecture.md)    | Uç Nokta için Defender mimarisini ve kullanabileceğiniz özellikleri anlayın.       |
+|[2. Adım. Değerlendirme ortamını etkinleştirme](eval-defender-endpoint-enable-eval.md)     |   Değerlendirme ortamını ayarlamak için adımları izleyin.      |
+|[3. Adım. Pilotu ayarlama ](eval-defender-endpoint-pilot.md)    |    Pilot grubunuzu doğrulayın, simülasyonları çalıştırın ve temel özelliklerle panoları tanıyın. |

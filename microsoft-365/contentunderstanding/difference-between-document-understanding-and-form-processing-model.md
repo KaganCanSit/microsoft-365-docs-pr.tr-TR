@@ -1,5 +1,5 @@
 ---
-title: Belge anlama ve form işleme modelleri arasındaki farklar
+title: Microsoft SharePoint Syntex'da özel modeller arasındaki farklar
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -13,14 +13,14 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Belge anlama modeli ile form işleme modeli arasındaki temel farklar hakkında bilgi edinin.
-ms.openlocfilehash: 49e3e2a0d63303b1c5cbdbfd941ba8aaa40594a7
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 31f70983b90e758516f92081217010bb6a64acd4
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66491713"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603802"
 ---
-# <a name="differences-between-document-understanding-and-form-processing-models"></a>Belge anlama ve form işleme modelleri arasındaki farklar 
+# <a name="differences-between-custom-models-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da özel modeller arasındaki farklar 
 
 Microsoft SharePoint Syntex'da içerik anlama, SharePoint belge kitaplıklarına yüklenen belgeleri tanımlamanıza ve sınıflandırmanıza ve ardından her dosyadan ilgili bilgileri ayıklamanıza olanak tanır. Örneğin, dosyalar bir SharePoint belge kitaplığına yüklendiğinden, *Satın Alma Siparişleri* olarak tanımlanan tüm dosyalar bu şekilde sınıflandırılır ve sonra özel belge kitaplığı görünümünde görüntülenir. Ayrıca, her dosyadan belirli bilgileri (po *numarası* ve *toplam* gibi) çekebilir ve belge kitaplığı görünümünüzde bir sütun olarak görüntüleyebilirsiniz. 
 
@@ -78,7 +78,7 @@ Form işlemenin ne zaman kullanılacağını ve belge anlamanın ne zaman kullan
 | Model oluşturma | SharePoint belge kitaplığından sorunsuz erişimle yapay zeka oluşturucusunda oluşturulan model.| SharePoint'te içerik merkezi olan yeni bir sitede oluşturulan model. |
 | Sınıflandırma türü| Ayarlanabilir sınıflandırıcı, sisteme hangi verilerin ayıklanacağı konusunda ipuçları vermek için kullanılır.| Hangi verilerin ayıklanması için belge konumu atamak için makine öğretimi kullanan isteğe bağlı ayıklayıcılarla eğitilebilir sınıflandırıcı.|
 | Konum | Tek bir belge kitaplığı için eğitildi.| Birden çok kitaplık için uygulanabilir.|
-| Desteklenen dosya türleri| PDF, JPG, PNG biçiminde, toplam 50 MB ve 500 sayfada eğitin.| Negatif örnekler de dahil olmak üzere 5-10 PDF, Office veya e-posta dosyaları üzerinde eğitin.<br>Office dosyaları 64.000 karakterle kesilir. OCR ile taranan dosyalar 20 sayfayla sınırlıdır. Belge anlama modelleri aşağıdaki dosya türlerini destekler doc, docx, eml, heic, heif, htm, html, jpeg, jpg, markdown, md, msg, pdf, png, ppt, pptx, rtf, tif, tiff, txt, xls ve xlsx.|
+| Desteklenen dosya türleri| PDF, JPG, PNG biçiminde, toplam 50 MB ve 500 sayfada eğitin.| Negatif örnekler de dahil olmak üzere 5-10 PDF, Office veya e-posta dosyaları üzerinde eğitin.<br>Office dosyaları 64.000 karakterle kesilir. OCR ile taranan dosyalar 20 sayfayla sınırlıdır. [Desteklenen dosya türlerine](document-understanding-overview.md#supported-file-types) bakın.|
 | Yönetilen Meta Verilerle Tümleştirme | Hayır | Evet, yapılandırılmış yönetilen meta veri alanına başvuran varlık ayıklayıcısı eğiterek.|
 | Microsoft Purview Bilgi Koruması ile uyumluluk özelliği tümleştirmesi | Yayımlanan bekletme etiketlerini ayarlayın.<br>Duyarlılık etiketlerini ayarlama geliyor. | Yayımlanan bekletme etiketlerini ayarlayın.<br>Yayımlanan duyarlılık etiketlerini ayarlayın. |
 | Desteklenen bölgeler| Form işleme, Power Platform'a dayanır. Power Platform ve AI Builder için genel kullanılabilirlik hakkında bilgi için bkz. [Power Platform kullanılabilirliği](https://dynamics.microsoft.com/geographic-availability/). | Tüm bölgelerde kullanılabilir.|

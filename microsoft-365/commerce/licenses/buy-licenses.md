@@ -23,14 +23,16 @@ ms.custom:
 search.appverid: MET150
 description: İş için Microsoft 365 aboneliğiniz için daha fazla lisans satın almak veya lisans sayısını azaltmak için bu adımları kullanın.
 ms.date: 06/06/2022
-ms.openlocfilehash: ad7f0b15218043757c1e0692603e74760e2c10ef
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 530a1058b9f6676d6a674041ef8fe69d6cfe77e7
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66489680"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602380"
 ---
 # <a name="buy-or-remove-microsoft-365-licenses-for-a-subscription"></a>Abonelik için Microsoft 365 lisanslarını satın alma veya kaldırma
+
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
 
 Aşağıdaki adımları kullanarak daha fazla lisans satın alabilir veya aboneliklerinizin lisans sayısını azaltabilirsiniz.
 
@@ -44,6 +46,8 @@ Aşağıdaki adımları kullanarak daha fazla lisans satın alabilir veya abonel
 - İş için Microsoft 365 veya Office 365 Kurumsal planınızı üçüncü taraf bir iş ortağı aracılığıyla satın aldıysanız, bu iş ortağı aracılığıyla ek lisans satın almanız gerekir.
 
 ## <a name="watch-buy-new-licenses"></a>İzleyin: Yeni lisans satın alma
+
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2198206) bu videoya ve diğer videolara göz atın.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4KWvE]
 

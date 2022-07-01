@@ -17,15 +17,14 @@ ms.custom: asr
 ms.technology: mde
 ms.topic: article
 ms.collection:
-- m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 18654dfb1ae6ae10596889fb4491604a37b8ffe8
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 10ae1829f632492afdfd515d080b6be7c335b898
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017441"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601212"
 ---
 # <a name="attack-surface-reduction-asr-rules-deployment-overview"></a>Saldırı yüzeyini azaltma (ASR) kuralları dağıtımına genel bakış
 
@@ -58,9 +57,9 @@ ASR kuralları, Uç Nokta için Microsoft Defender içindeki saldırı yüzeyi a
 
 | Çok biçimli tehditler | Yanal hareket & kimlik bilgisi hırsızlığı | Üretkenlik uygulamaları kuralları |  E-posta kuralları | Betik kuralları | Çeşitli kurallar |
 |:---|:---|:---|:---|:---|:---|
-| Bir yaygınlık (1000 makine), yaş (24 saat) veya güvenilir liste ölçütlerini karşılamadığı sürece yürütülebilir dosyaların çalışmasını engelleyin | PSExec ve WMI komutlarından kaynaklanan işlem oluşturma işlemlerini engelleme | Office uygulamaların yürütülebilir içerik oluşturmalarını engelleme | E-posta istemcisinden ve web postasından yürütülebilir içeriği engelleme | Karartılmış JS/VBS/PS/makro kodunu engelleme | Güvenlik açığı bulunan imzalı sürücülerin <sup>kötüye kullanımı engellendi [[1](#fn1)]<sup></sup>  |
-| USB'den çalıştırılan güvenilmeyen ve imzalanmamış işlemleri engelleme | Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgilerinin çalınmalarını engelle (lsass.exe)<sup>[[2](#fn1)]<sup></sup>   | Office uygulamalarının alt işlemler oluşturmalarını engelleme |  Yalnızca Office iletişim uygulamalarının alt işlemler oluşturmalarını engelleyin | JS/VBS'nin indirilen yürütülebilir içeriği başlatmasını engelleme | |
-| Fidye yazılımına karşı gelişmiş koruma kullanma | WMI olay aboneliği aracılığıyla kalıcılığı engelleme | Office uygulamaların diğer işlemlere kod eklemesini engelleme | Office iletişim uygulamalarının alt işlemler oluşturmalarını engelleme | | |
+| Bir yaygınlık (1000 makine), yaş (24 saat) veya güvenilir liste ölçütlerini karşılamadığı sürece yürütülebilir dosyaların çalışmasını engelleyin | PSExec ve WMI komutlarından kaynaklanan işlem oluşturma işlemlerini engelleme | Office uygulamalarının yürütülebilir içerik oluşturmalarını engelleme | E-posta istemcisinden ve web postasından yürütülebilir içeriği engelleme | Karartılmış JS/VBS/PS/makro kodunu engelleme | Güvenlik açığı bulunan imzalı sürücülerin <sup>kötüye kullanımı engellendi [[1](#fn1)]<sup></sup>  |
+| USB'den çalıştırılan güvenilmeyen ve imzalanmamış işlemleri engelleme | Windows yerel güvenlik yetkilisi alt sisteminden (lsass.exe)<sup>[[2](#fn1)] kimlik bilgilerini çalmayı engelle<sup></sup>   | Office uygulamalarının alt işlemler oluşturmalarını engelleme |  Yalnızca Office iletişim uygulamalarının alt işlemler oluşturmalarını engelle | JS/VBS'nin indirilen yürütülebilir içeriği başlatmasını engelleme | |
+| Fidye yazılımına karşı gelişmiş koruma kullanma | WMI olay aboneliği aracılığıyla kalıcılığı engelleme | Office uygulamalarının diğer işlemlere kod eklemesini engelleme | Office iletişim uygulamalarının alt işlemler oluşturmalarını engelleme | | |
 | | | Adobe Reader'ın alt işlemler oluşturmalarını engelleme | | | |
 
 (<a id="fn1">1</a>) _Güvenlik açığı bulunan imzalı sürücülerin kötüye kullanımı engelleniyor_ , şu anda MEM Uç Noktası güvenliğinde kullanılamıyor. Bu kuralı [MEM OMA-URI](enable-attack-surface-reduction.md#mem) kullanarak yapılandırabilirsiniz.
@@ -101,17 +100,17 @@ Bkz. [Bulut tabanlı koruma ve Microsoft Defender Virüsten Koruma](cloud-protec
 ### <a name="cloud-protection-maps-must-be-enabled"></a>Bulut Koruması (MAPS) etkinleştirilmelidir
 
 Microsoft Defender Virüsten Koruma, Microsoft bulut hizmetleriyle sorunsuz çalışır. Microsoft Gelişmiş Koruma Hizmeti (MAPS) olarak da adlandırılan bu bulut koruma hizmetleri, standart gerçek zamanlı korumayı geliştirir ve muhtemelen en iyi virüsten koruma savunmasını sağlar. Bulut koruması, kötü amaçlı yazılım ihlallerini ve ASR kurallarının kritik bir bileşenini önleme açısından kritik öneme sahiptir.
-[Microsoft Defender Virüsten Koruma'de bulut tabanlı korumayı açın](enable-cloud-protection-microsoft-defender-antivirus.md).
+[Microsoft Defender Virüsten Koruma'da bulut tabanlı korumayı açın](enable-cloud-protection-microsoft-defender-antivirus.md).
 
 ### <a name="microsoft-defender-antivirus-components-must-be-current-versions"></a>Microsoft Defender Virüsten Koruma bileşenleri geçerli sürümler olmalıdır
 
-Aşağıdaki Microsoft Defender Virüsten Koruma bileşen sürümleri, şu anda en çok kullanılabilen sürümden en eski iki sürümden daha eski olmamalıdır:
+Aşağıdaki Microsoft Defender Virüsten Koruma bileşen sürümleri, en çok kullanılabilir sürümden en eski iki sürümden daha eski olmamalıdır:
 
-- **Microsoft Defender Virüsten Koruma Platform güncelleştirme sürümü** - Microsoft Defender Virüsten Koruma platform aylık olarak güncelleştirilir.
+- **Microsoft Defender Virüsten Koruma Platformu güncelleştirme sürümü**  - Microsoft Defender Virüsten Koruma platformu aylık olarak güncelleştirilir.
 - **Microsoft Defender Virüsten Koruma altyapısı sürümü** - Microsoft Defender Virüsten Koruma altyapısı aylık olarak güncelleştirilir.
 - **Microsoft Defender Virüsten Koruma güvenlik bilgileri** - Microsoft, en son tehditleri ele almak ve algılama mantığını iyileştirmek için Microsoft Defender güvenlik zekasını (tanım ve imza olarak da bilinir) sürekli olarak güncelleştirir.
 
-Microsoft Defender Virüsten Koruma sürümleri güncel tutmak ASR kurallarının hatalı pozitif sonuçları azaltmaya yardımcı olur ve Microsoft Defender Virüsten Koruma algılama özelliklerini geliştirir. Geçerli sürümler ve farklı Microsoft Defender Virüsten Koruma bileşenlerini güncelleştirme hakkında daha fazla bilgi için [Microsoft Defender Virüsten Koruma platform desteğini](manage-updates-baselines-microsoft-defender-antivirus.md) ziyaret edin.
+Microsoft Defender Virüsten Koruma sürümlerini güncel tutmak ASR kurallarının hatalı pozitif sonuçları azaltmaya yardımcı olur ve Microsoft Defender Virüsten Koruma algılama özelliklerini geliştirir. Geçerli sürümler ve farklı Microsoft Defender Virüsten Koruma bileşenlerini güncelleştirme hakkında daha fazla bilgi için [Microsoft Defender Virüsten Koruma platformu desteği](manage-updates-baselines-microsoft-defender-antivirus.md) sayfasını ziyaret edin.
 
 ### <a name="caveat"></a>Uyarı
 
@@ -167,11 +166,11 @@ Microsoft Defender Virüsten Koruma sürümleri güncel tutmak ASR kurallarını
 
 [Bulut tabanlı koruma ve Microsoft Defender Virüsten Koruma](cloud-protection-microsoft-defender-antivirus.md)
 
-[Microsoft Defender Virüsten Koruma'de bulut tabanlı korumayı açma](enable-cloud-protection-microsoft-defender-antivirus.md)
+[Microsoft Defender Virüsten Koruma'da bulut tabanlı korumayı açma](enable-cloud-protection-microsoft-defender-antivirus.md)
 
 [Uzantı, ad veya konuma göre dışlamaları yapılandırma ve doğrulama](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
 
-[Microsoft Defender Virüsten Koruma platform desteği](manage-updates-baselines-microsoft-defender-antivirus.md)
+[Microsoft Defender Virüsten Koruma platformu desteği](manage-updates-baselines-microsoft-defender-antivirus.md)
 
 [Microsoft 365 Uygulamaları yönetim merkezinde envantere genel bakış](/deployoffice/admincenter/inventory)
 
@@ -183,7 +182,7 @@ Microsoft Defender Virüsten Koruma sürümleri güncel tutmak ASR kurallarını
 
 ### <a name="management-sites"></a>Yönetim siteleri
 
-[yönetim merkezini Microsoft Endpoint Manager](https://endpoint.microsoft.com/#home)
+[Microsoft Endpoint Manager yönetim merkezi](https://endpoint.microsoft.com/#home)
 
 [Saldırı yüzeyini azaltma](https://security.microsoft.com/asr?viewid=detections)
 

@@ -27,14 +27,14 @@ metadata:
   - GEA150
   ms.assetid: 1272bad0-4bd4-4796-8005-67d6fb3afc5a
   description: SSS bölümünde sorularınızın yanıtlarını bularak etki alanları (onmicrosoft etki alanı ve aktarım etki alanı) hakkında daha fazla bilgi edinin.
-  ms.openlocfilehash: 1aad7ddab71528cd153a30e7c7e3d1c1073b700b
-  ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+  ms.openlocfilehash: e9cf6952abacfe73fcd171a15ee7edf1f19823f6
+  ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 06/29/2022
-  ms.locfileid: "66492545"
+  ms.lasthandoff: 07/01/2022
+  ms.locfileid: "66603450"
 title: Etki alanları SSS
-summary: "\n\nBu makale, Microsoft 365'teki etki alanları hakkında sık sorulan soruların yanıtlarını içerir.\n\nSorunuzun yanıtını bulamazsanız bir yorum bırakarak bizi bilgilendirin; biz de sorunuzu listeye ekleyelim.\n"
+summary: "\n\nBu makale, Microsoft 365'teki etki alanları hakkında sık sorulan soruların yanıtlarını içerir.\n\nYouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.\n\nSorunuzun yanıtını bulamazsanız bir yorum bırakarak bizi bilgilendirin; biz de sorunuzu listeye ekleyelim.\n"
 sections:
 - name: Yok sayıldı
   questions:

@@ -29,16 +29,18 @@ search.appverid:
 - MOE150
 ms.assetid: 6383f56d-3d09-4dcb-9b41-b5f5a5efd611
 description: DNS ana bilgisayarınızda bir DNS kaydı ekleyerek etki alanınızı Microsoft 365 yönetim merkezi Microsoft 365'e eklemek için kurulum sihirbazını kullanın.
-ms.openlocfilehash: 64b82aab051af2c9d5444042f27009b4e02f1ad8
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: be72f10727a5d4ed168740d80eb04078584137d9
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66492048"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602910"
 ---
 # <a name="add-a-domain-to-microsoft-365"></a>Microsoft 365'e etki alanı ekleme
 
- Aradığınızı bulamazsanız, **[Etki Alanları SSS sayfasını inceleyin](domains-faq.yml)**. 
+ Aradığınızı bulamazsanız, **[Etki Alanları SSS sayfasını inceleyin](domains-faq.yml)**.
+
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
   
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -48,6 +50,8 @@ Etki alanlarını eklemek, değiştirmek veya kaldırmak için, bir [işletme ve
 > Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
 
 ## <a name="watch-add-a-domain"></a>İzleyin: Etki alanı ekleme
+
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2198213) bu videoya ve diğer videolara göz atın.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4dN8c?autoplay=false]
 

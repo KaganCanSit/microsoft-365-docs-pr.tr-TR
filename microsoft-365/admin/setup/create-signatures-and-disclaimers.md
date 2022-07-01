@@ -1,5 +1,5 @@
 ---
-title: Kuruluş genelinde imzalar ve yasal uyarı oluşturma
+title: Kuruluş genelinde imzalar ve sorumluluk reddi oluşturma
 f1.keywords:
 - NOCSH
 ms.author: twerner
@@ -26,71 +26,75 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 2d75860f-c527-4352-a7f6-73eba54c0c72
-description: Kuruluşuna gelen veya kuruluşundan gönderilen tüm e-posta iletilerine ilişkin yasal sorumluluklar veya açıklama açıklamaları da içinde olmak üzere, e-posta imzalarını yönetin.
-ms.openlocfilehash: d2e8b93825b98724bfd2698d95b93289dee30e00
-ms.sourcegitcommit: 6dcc3b039e0f0b9bae17c386f14ed2b577b453a6
+description: Kuruluşunuza giren veya kuruluşunuzdan ayrılan tüm e-posta iletileri için yasal uyarılar veya açıklama bildirimleri de dahil olmak üzere e-posta imzalarını yönetin.
+ms.openlocfilehash: 47e6a862441b5c2725a48cae20669541b8a69f87
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63019010"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602822"
 ---
-# <a name="create-organization-wide-signatures-and-disclaimers"></a>Kuruluş genelinde imzalar ve yasal uyarı oluşturma
+# <a name="create-organization-wide-signatures-and-disclaimers"></a>Kuruluş genelinde imzalar ve sorumluluk reddi oluşturma
 
- E-posta imzalarını, kuruluşa giren veya kuruluşdan gönderilen e-posta iletilerine bir e-posta imzası, yasal uyarı veya açıklama bildirimi ekleyerek yönetebilirsiniz. Aşağıda gösterildiği gibi tüm gelen ve giden iletilere uygulanacak şekilde ayarlayabilirsiniz. Dilerseniz belirli sözcükler veya metin örüntüleri içeren iletiler gibi belirli iletilere de uygulayabilirsiniz.
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
 
-## <a name="watch-create-a-company-wide-email-signature"></a>İzle: Şirket genelinde bir e-posta imzası oluşturma
+ Kuruluşunuza giren veya ayrılan e-posta iletilerine e-posta imzası, yasal uyarı veya açıklama bildirimi ekleyerek e-posta imzalarını yönetebilirsiniz. Aşağıda gösterildiği gibi tüm gelen ve giden iletilere uygulanacak şekilde ayarlayabilirsiniz. Dilerseniz belirli sözcükler veya metin örüntüleri içeren iletiler gibi belirli iletilere de uygulayabilirsiniz.
+
+## <a name="watch-create-a-company-wide-email-signature"></a>İzleyin: Şirket genelinde e-posta imzası oluşturma
   
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2198031) bu videoya ve diğer videolara göz atın.
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1IEWf] 
 
-1. Arama <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> **Seç'i Exchange**.
-1. Posta **akışı'ı seçin**.
-1. Ekle **+ öğesini** ve ardından Yasal **uyarı uygula'yı seçin**.
-1. Yeni **kural sayfasında** , adımları tamamlayın. 
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> **Exchange'i** seçin.
+1. **Posta akışı'ı** seçin.
+1. **Ekle + öğesini** ve ardından **Sorumluluk reddi uygula'yı** seçin.
+1. **Yeni kural** sayfasında adımları tamamlayın. 
 
 Bu videoyu faydalı bulduysanız, [küçük işletmelere ve Microsoft 365’i ilk kez kullananlara yönelik eğitim serisinin tamamına göz atın](../../business-video/index.yml).
 
 ## <a name="create-a-signature-that-applies-to-all-messages"></a>Tüm iletilere uygulanan bir imza oluşturma
 
 > [!TIP]
-> Kuruluş genelindeki imzalar, neleri dahil olursa olsun, "uyarı" olarak adlandırılan bir imzadır. Örneğin, bunlar yalnızca bir imza ya da istediğiniz adres, yasal uyarı veya diğer bilgileri içerebilir.
+> Kuruluş genelindeki imzalar, ne içerdiklerine bakılmaksızın "sorumluluk reddi" olarak adlandırılır. Örneğin, bunlar yalnızca bir imza olabileceği gibi, adresinizi, yasal bildiriminizi veya istediğiniz diğer bilgileri de içerebilir.
     
 ::: moniker range="o365-worldwide"
 
-yönetim merkezine gidin <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a>.
+Şuradan yönetim merkezine gidin: <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a>.
 
 ::: moniker-end
 
 ::: moniker range="o365-21vianet"
 
-yönetim merkezine gidin <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">https://portal.partner.microsoftonline.cn/adminportal</a>.
+Şuradan yönetim merkezine gidin: <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">https://portal.partner.microsoftonline.cn/adminportal</a>.
 
 ::: moniker-end
 
-1. Uygulama başlatıcı Uygulama başlatıcı ![simgesini seçin ve](../../media/7502f4ec-3c9a-435d-a7b4-b9cda85189a7.png) sonra da Yönetici'yi **seçin**.
+1. Uygulama başlatıcı uygulama başlatıcı ![simgesini](../../media/7502f4ec-3c9a-435d-a7b4-b9cda85189a7.png) seçin ve **ardından Yönetici'ı** seçin.
    
-    Aradığınız uygulamayı bulamıyor musunuz? Size uygun uygulamaların alfabetik **sıralanmış listesini** görmek için uygulama başlatıcıdan Tüm uygulamalar'ı seçin. Buradan belirli bir uygulama için arama yapabilirsiniz. 
+    Aradığınız uygulamayı bulamıyor musunuz? Kullanabileceğiniz uygulamaların alfabetik listesini görmek için uygulama başlatıcıdan **Tüm** uygulamalar'ı seçin. Buradan belirli bir uygulama için arama yapabilirsiniz. 
     
-2. Yönetim **merkezleri'ni** ve sonra Yönetim **Merkezleri'ni Exchange**.
+2. **Yönetici merkezleri'ni** ve ardından **Exchange'i** seçin.
     
-3. Posta akışı'nın altında Kurallar'ı **seçin**.
+3. Posta akışı'nın altında **Kurallar'ı** seçin.
     
-4. (Ekle **+** ) simgesini seçin ve Bildirim **uygula'yı seçin**.
+4. **+** (Ekle) simgesini ve **ardından Sorumluluk reddi uygula'yı** seçin.
     
 5. Kurala bir ad verin.
     
-6. Bu **kuralı uygula'nın altında** **[Tüm iletilere uygula] öğesini seçin**.
+6. **Bu kuralı uygula'nın** altında **[Tüm iletilere uygula]** öğesini seçin.
     
     > [!TIP]
-    > [daha fazla bilgi edinin](/Exchange/policy-and-compliance/mail-flow-rules/signatures#Scoping). (Bu kapsam makalesi genel Exchange Server, ancak bu makale bu makalenin Microsoft 365.) 
+    > [daha fazla bilgi edinin](/Exchange/policy-and-compliance/mail-flow-rules/signatures#Scoping). (Bu kapsam belirleme makalesi Exchange Server içindir, ancak Microsoft 365 için de geçerlidir.) 
   
 7. Şunları gerçekleştir'in altında **Bildirimi ekle**'yi seçili olarak bırakın. 
     
-8.  Metin **girin'i** seçin ve uyarınızı yazın. 
+8.  **Metin girin'i** seçin ve yasal uyarınızı yazın. 
     
     > [!TIP]
-    > [daha fazla bilgi edinin](/Exchange/policy-and-compliance/mail-flow-rules/signatures#FormatDisclaimer). (Bu biçimlendirme makalesi tüm Exchange Server, ancak bu makale diğer Microsoft 365.) 
+    > [daha fazla bilgi edinin](/Exchange/policy-and-compliance/mail-flow-rules/signatures#FormatDisclaimer). (Bu biçimlendirme makalesi Exchange Server içindir, ancak Microsoft 365 için de geçerlidir.) 
 
-9. Birini **seç'i** belirleyin ve **son** seçenek olarak Kaydır'ı seçin. Ardından **Tamam**'ı seçin. Bu seçenek, bildirimin bir şifreleme veya diğer bir posta ayarı nedeniyle eklenememesi durumunda bir ileti zarfının içinde kaydırılacağı anlamına gelir.
+9. **Birini seçin'i** ve ardından Geri dönüş olarak **kaydır** seçeneğini belirleyin. Ardından **Tamam**'ı seçin. Bu seçenek, bildirimin bir şifreleme veya diğer bir posta ayarı nedeniyle eklenememesi durumunda bir ileti zarfının içinde kaydırılacağı anlamına gelir.
     
 10. **Bu kuralı önem düzeyi ile denetle**'yi seçili bırakın. Ardından ileti kaydında kullanılmak üzere **Düşük**, **Orta** veya **Yüksek**'i seçin. 
     
@@ -102,25 +106,25 @@ yönetim merkezine gidin <a href="https://go.microsoft.com/fwlink/p/?linkid=8506
     
 ## <a name="limitations-of-organization-wide-signatures"></a>Kuruluş genelindeki imzaların sınırlamaları
 
-Birden çok tabloda e-posta imzalarını yönetmeyle ilgili şunları Microsoft 365:
+Microsoft 365'te e-posta imzalarını yönetirken aşağıdakileri yapamazsınız:
   
-- İmzayı doğrudan en son e-posta yanıtının altına ekleme veya iletme
+- İmzayı doğrudan en son e-posta yanıtının altına ekleyin veya iletin
     
-- Kullanıcıların Gönderilmiş Öğeler klasörlarında sunucu tarafı e-posta imzalarını görüntüleme
+- Sunucu tarafı e-posta imzalarını kullanıcıların Gönderilmiş Öğeler klasörlerinde görüntüleme
     
-- E-posta imzalarının içine resim ekleme
+- E-posta imzalarına resim ekleme
     
-- Güncelleştirilemedi değişkenleri içeren atlama çizgileri (örneğin, değer bir kullanıcı için sağlenmediğinden)
+- Güncelleştirilemeyen değişkenler içeren satırları atlayın (örneğin, değer bir kullanıcı için sağlanamadığından)
     
-E-posta imzalarını yönetmek üzere bu ve diğer özellikleri elde etmek için bir üçüncü taraf aracı kullanın. Lütfen e-posta imza yazılımı için **İnternet'de arama yapma**. Bu sağlayıcılardan birkaçı Microsoft Gold İş Ortaklarıdır ve bunların yazılımları bu özellikleri sağlar. 
+E-posta imzalarını yönetmeye yönelik bu ve diğer özellikleri elde etmek için bir üçüncü taraf aracı kullanın. Lütfen **e-posta imza yazılımı** için internet araması yapın. Bu sağlayıcılardan bazıları Microsoft Gold İş Ortaklarıdır ve yazılımları bu özellikleri sağlar. 
   
 ## <a name="more-resources"></a>Diğer kaynaklar
 
-PowerShell'i kullanma hakkında bilgi için bkz. PowerShell'de kuruluş genelinde ileti uyarılarını, imzaları[, alt bilgileri veya Exchange Online](/exchange/security-and-compliance/mail-flow-rules/disclaimers-signatures-footers-or-headers).
+PowerShell'i kullanma hakkında daha fazla bilgi için bkz[. Exchange Online'da kuruluş genelinde ileti reddi, imza, alt bilgi veya üst bilgi](/exchange/security-and-compliance/mail-flow-rules/disclaimers-signatures-footers-or-headers).
 
 ## <a name="related-content"></a>İlgili içerik
 
-[E-postayı ve kişileri Microsoft 365](migrate-email-and-contacts-admin.md) (video)\
+[E-postayı ve kişileri Microsoft 365'e geçirme](migrate-email-and-contacts-admin.md) (video)\
 [Kullanıcı e-posta ayarları](../email/office-365-user-email-settings.md) (makale)\
-[İlke genel Microsoft 365 yönetim merkezi](İlk Microsoft 365 yönetim merkezi](.. /admin-overview/admin-center-overview.md) (video)
+[Microsoft 365 yönetim merkezi genel bakış](Microsoft 365 yönetim merkezi genel bakış](.. /admin-overview/admin-center-overview.md) (video)
 

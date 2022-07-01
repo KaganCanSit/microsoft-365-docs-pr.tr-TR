@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 2036f0b1e749250d42066fc5ea742c550a2f756e
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 4c83db02acea02b076b84f8b180e4d9ff8460a80
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664116"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603329"
 ---
 # <a name="get-expert-training-on-advanced-hunting"></a>Gelişmiş avcılık konusunda uzman eğitimi alma
 
@@ -40,10 +40,10 @@ Yeni güvenlik analistleri ve deneyimli tehdit avcıları için bir web yayını
 
 | Başlık | Açıklama | İzle | Sorgu |
 |---|---|---|---|
-| Bölüm 1: KQL temelleri | Bu bölüm, Microsoft 365 Defender'da gelişmiş avcılık ile ilgili temel bilgileri kapsar. Kullanılabilir gelişmiş tehdit avcılığı verileri ve temel KQL söz dizimi ve işleçleri hakkında bilgi edinin. | [YouTube](https://youtu.be/0D9TkGjeJwM?t=351) (54:14) | [Metin dosyası](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/blob/master/Webcasts/TrackingTheAdversary/Episode%201%20-%20KQL%20Fundamentals.txt) |
-| Bölüm 2: Katılmalar | Gelişmiş tehdit avcılığı ve tabloların nasıl bir araya getirilip birleştirilip birleştirnmeye ilişkin bilgiler hakkında bilgi edinmeye devam edin. , , `outer`, ve birleşimleri hakkında `inner`bilgi edinin ve `semi` varsayılan Kusto `innerunique` birleştirmenin nüanslarını anlayın`unique`. | [YouTube](https://youtu.be/LMrO6K5TWOU?t=297) (53:33) | [Metin dosyası](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/blob/master/Webcasts/TrackingTheAdversary/Episode%202%20-%20Joins.txt) |
+| Bölüm 1: KQL ile ilgili temel bilgiler | Bu bölüm, Microsoft 365 Defender'da gelişmiş avcılık ile ilgili temel bilgileri kapsar. Kullanılabilir gelişmiş tehdit avcılığı verileri ve temel KQL söz dizimi ve işleçleri hakkında bilgi edinin. | [YouTube](https://youtu.be/0D9TkGjeJwM?t=351) (54:14) | [Metin dosyası](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/blob/master/Webcasts/TrackingTheAdversary/Episode%201%20-%20KQL%20Fundamentals.txt) |
+| Bölüm 2: Katılmalar | Gelişmiş tehdit avcılığı ve tabloların nasıl bir araya getirilip birleştirilip birleştirnmeye ilişkin bilgiler hakkında bilgi edinmeye devam edin. , , `outer`, ve birleşimleri hakkında `inner`bilgi edinin ve `semi` varsayılan Kusto `innerunique` birleşiminin nüanslarını anlayın`unique`. | [YouTube](https://youtu.be/LMrO6K5TWOU?t=297) (53:33) | [Metin dosyası](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/blob/master/Webcasts/TrackingTheAdversary/Episode%202%20-%20Joins.txt) |
 | Bölüm 3: Verileri özetleme, özetleme ve görselleştirme | Verileri filtrelemeyi, işlemeyi ve birleştirmeyi öğrendiğinize göre artık verileri özetlemenin, ölçmenin, özetlemenin ve görselleştirmenin zamanı geldi. Bu bölümde, şemada `summarize` ek tablolar tanıtılırken işleç ve çeşitli hesaplamalar ele alınmaktadır. Ayrıca veri kümelerini içgörü ayıklamanıza yardımcı olabilecek grafiklere dönüştürmeyi de öğreneceksiniz. | [YouTube](https://youtu.be/UKnk9U1NH6Y?t=296) (48:52) | [Metin dosyası](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/blob/master/Webcasts/TrackingTheAdversary/Episode%203%20-%20Summarizing%2C%20Pivoting%2C%20and%20Joining.txt) |
-| Bölüm 4: Hadi avlayalım! Olay izlemeye KQL uygulama | Bu bölümde bazı saldırgan etkinliklerini izlemeyi öğreneceksiniz. Saldırıyı izlemek için gelişmiş Kusto ve gelişmiş avcılık anlayışımızı kullanırız. Siber güvenliğin ABC'leri ve bunların olay yanıtına nasıl uygulanacağı da dahil olmak üzere alanda kullanılan gerçek püf noktalarını öğrenin. | [YouTube](https://youtu.be/2EUxOc_LNd8?t=291) (59:36) | [Metin dosyası](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/blob/master/Webcasts/TrackingTheAdversary/Episode%204%20-%20Lets%20Hunt.txt)
+| Bölüm 4: Hadi avlayalım! Olay izlemeye KQL uygulama | Bu bölümde bazı saldırgan etkinliklerini izlemeyi öğreneceksiniz. Bir saldırıyı izlemek için Kusto ve gelişmiş avcılık anlayışımızı kullanıyoruz. Siber güvenliğin ABC'leri ve bunların olay yanıtına nasıl uygulanacağı da dahil olmak üzere alanda kullanılan gerçek püf noktalarını öğrenin. | [YouTube](https://youtu.be/2EUxOc_LNd8?t=291) (59:36) | [Metin dosyası](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/blob/master/Webcasts/TrackingTheAdversary/Episode%204%20-%20Lets%20Hunt.txt)
 
 *L33TSP3AK ile daha fazla uzman eğitimi alın: Microsoft 365 Defender'da gelişmiş avcılık* kullanarak güvenlik araştırmaları yapma konusunda teknik bilgilerini ve pratik becerilerini genişletmek isteyen analistlere yönelik bir web yayını serisi olan Microsoft 365 Defender'de gelişmiş avcılık.
 
@@ -55,7 +55,7 @@ Yeni güvenlik analistleri ve deneyimli tehdit avcıları için bir web yayını
 
 ## <a name="how-to-use-the-csl-file"></a>CSL dosyasını kullanma
 
-Bir bölüme başlamadan önce, [GitHub ilgili metin dosyasına](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/tree/master/Webcasts) erişin ve içeriğini gelişmiş tehdit avcılığı sorgu düzenleyicisine kopyalayın. Bir bölümü izlerken, konuşmacıyı takip etmek ve sorguları çalıştırmak için kopyalanan içeriği kullanabilirsiniz.
+Bölüme başlamadan önce [GitHub'daki ilgili metin dosyasına](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/tree/master/Webcasts) erişin ve içeriğini gelişmiş tehdit avcılığı sorgu düzenleyicisine kopyalayın. Bir bölümü izlerken, konuşmacıyı takip etmek ve sorguları çalıştırmak için kopyalanan içeriği kullanabilirsiniz.
 
 Sorguları içeren bir metin dosyasından aşağıdaki alıntı, ile `//`açıklama olarak işaretlenmiş kapsamlı bir kılavuz kümesi gösterir.
 
@@ -89,6 +89,14 @@ CloudAppEvents
 | take 100
 | sort by Timestamp desc
 ```
+
+
+## <a name="other-resources"></a>Diğer kaynaklar
+
+| Başlık | Açıklama | İzle |
+|---|---|---|
+|KQL'de tabloları birleştirme | Anlamlı sonuçlar oluşturmada tabloları birleştirmenin gücünü öğrenin. | [YouTube](https://www.youtube.com/watch?v=8qZx7Pp5XgM) (4:17) |
+| KQL'de tabloları iyileştirme | Sorgularınızı iyileştirerek karmaşık sorgular çalıştırırken zaman aşımlarından kaçınmayı öğrenin. | [YouTube](https://www.youtube.com/watch?v=ceYvRuPp5D8) (5:38)  | 
 
 ## <a name="related-topics"></a>İlgili konular
 

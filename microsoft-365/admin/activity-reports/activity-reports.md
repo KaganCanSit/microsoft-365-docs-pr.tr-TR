@@ -23,20 +23,24 @@ search.appverid:
 - GEA150
 ms.assetid: 0d6dfb17-8582-4172-a9a9-aed798150263
 description: Kuruluşunuzdaki kişilerin Microsoft 365 hizmetlerini nasıl kullandığını gösteren düzenli bir rapor alın ve daha fazla içgörü için her grafikte detaya gidin.
-ms.openlocfilehash: 481f7abf0015994ab211f55feedabc4aa615dbca
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 05bee2950cb50b0b5a21ef67e9f73cec5e78b07a
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66486324"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601618"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center"></a>Yönetim merkezinde Microsoft 365 Raporları
 
-İşletmenizdeki kişilerin Microsoft 365 hizmetlerini nasıl kullandığını kolayca görebilirsiniz. Örneğin, kimin bir hizmeti çok fazla kullandığını ve kotalara ulaştığını veya kimlerin Microsoft 365 lisansına ihtiyacı olmadığını belirleyebilirsiniz. Kalıcı lisans modeli raporlara dahil edilmeyecektir.
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
 
+İşletmenizdeki kişilerin Microsoft 365 hizmetlerini nasıl kullandığını kolayca görebilirsiniz. Örneğin, kimin bir hizmeti çok fazla kullandığını ve kotalara ulaştığını veya kimlerin Microsoft 365 lisansına ihtiyacı olmadığını belirleyebilirsiniz. Kalıcı lisans modeli raporlara dahil edilmeyecektir. 
+  
 Son 7 gün, son 30 gün, son 90 gün ve son 180 güne yönelik raporlar sağlanır. Tüm raporlama dönemlerine ilişkin veriler hemen hazır olmaz. Raporlar 48 saat içinde sunulur.
 
 ## <a name="watch-act-on-a-usage-report-in-office-365"></a>İzleme: Office 365'de kullanım raporu üzerinde işlem yapma
+  
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2198103) bu videoya ve diğer videolara göz atın.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4VjrX?autoplay=false]
 

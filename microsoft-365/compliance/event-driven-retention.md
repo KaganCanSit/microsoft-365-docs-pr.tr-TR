@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-may2020
 - seo-marvel-jun2020
 description: Genellikle kayıt yönetimi çözümünün bir parçası olarak, tanımladığınız bir olaya göre bekletme süresini başlatmak için bir bekletme etiketi yapılandırabilirsiniz.
-ms.openlocfilehash: 380a95a6b4d6fa6585d0912b675d65032cd8258b
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: 753188e187bd3a80cd83c10d41b373b1507a1e24
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66530870"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603218"
 ---
 # <a name="start-retention-when-an-event-occurs"></a>Bir olay meydana geldiğinde saklamayı başlatma
 
@@ -44,13 +44,12 @@ Olay tabanlı saklamayı kullanma örnekleri:
 - **Ürün ömrü** Kuruluşunuzun teknik belirtimler gibi içerikler için ürünlerin son üretim tarihiyle ilgili saklama gereksinimleri olabilir. Bu durumda, son üretim tarihi saklama süresini tetikleyen olaydır. 
     
 Olay tabanlı saklama genellikle kayıt yönetimi sürecinin bir parçası olarak kullanılır. Bu, şu anlama gelir:
-  
+
 - Olaylara dayalı bekletme etiketleri de genellikle öğeleri kayıt yönetimi çözümünün bir parçası olarak bir kayıt olarak işaretler. Daha fazla bilgi için bkz. [Kayıt yönetimi hakkında bilgi edinin](records-management.md).
 
-- Kayıt olarak bildirilen ancak olay tetikleyicisi henüz gerçekleşmemiş bir belge, bir olay belgenin saklama süresini tetikleyene kadar süresiz olarak korunur (kayıtlar kalıcı olarak silinemez).
-    
+- Kayıt olarak bildirilen ancak olay tetikleyicisi henüz gerçekleşmemiş bir belge süresiz olarak korunur. Bir olay, belgenin saklama süresini tetikleyene kadar ve süresi dolana kadar kayıtlar kalıcı olarak silinemez.
+
 - Olaylara dayalı bekletme etiketleri genellikle saklama süresinin sonunda bir değerlendirme gözden geçirmesi tetikler, böylece kayıt yöneticisi içeriği el ile gözden geçirebilir ve atabilir. Daha fazla bilgi için bkz. [İçeriğin konumu](disposition.md).
-    
 
 Bir olayı temel alan bekletme etiketi, Microsoft 365'teki tüm bekletme etiketleriyle aynı özelliklere sahiptir. Daha fazla bilgi için bkz. [Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin](retention.md).
 
@@ -64,7 +63,7 @@ Olay tabanlı saklamayı başarıyla kullanmak için diyagramlarda gösterildiğ
   
 1. Farklı içerik türleri için bekletme etiketleri oluşturur ve bunları bir olay türüyle ilişkilendirirsiniz. Örneğin, ürün dosyalarının ve kayıtlarının farklı türleri için bekletme etiketleri Ürün Ömrü adlı bir olay türüyle ilişkilendirilir çünkü bu kayıtlar, ürünün kullanım ömrü sonuna ulaştığından itibaren 10 yıl boyunca saklanmalıdır.
     
-2. Kullanıcılar (genellikle kayıt yöneticileri) bu bekletme etiketlerini içeriğe uygular ve (SharePoint ve OneDrive'daki belgeler için) her öğe için bir varlık kimliği girer. Bu örnekte varlık kimliği, kuruluş tarafından kullanılan bir ürün adı veya koddur. Ardından, her ürünün kayıtlarına bir bekletme etiketi atanır ve her kaydın varlık kimliği içeren bir özelliği vardır. Diyagram, bir **kuruluştaki tüm ürün kayıtlarının tüm içeriğini** temsil eder ve her öğe, kaydı olan ürünün varlık kimliğini taşır. 
+2. Genellikle kayıt yöneticileri olan kullanıcılar bu bekletme etiketlerini içeriğe uygular ve (SharePoint ve OneDrive'daki belgeler için) her öğe için bir varlık kimliği girer. Bu örnekte varlık kimliği, kuruluş tarafından kullanılan bir ürün adı veya koddur. Ardından, her ürünün kayıtlarına bir bekletme etiketi atanır ve her kaydın varlık kimliği içeren bir özelliği vardır. Diyagram, bir **kuruluştaki tüm ürün kayıtlarının tüm içeriğini** temsil eder ve her öğe, kaydı olan ürünün varlık kimliğini taşır. 
     
 3. Ürün Ömrü olay türüdür; belirli bir ürünün ömrünün sonuna ulaşması bir olaydır. Bu olay türünde bir olay gerçekleştiğinde (bu durumda, bir ürün kullanım ömrünün sonuna ulaştığında) şunları belirten bir olay oluşturursunuz:
     
@@ -76,7 +75,7 @@ Olay tabanlı saklamayı başarıyla kullanmak için diyagramlarda gösterildiğ
 
 4. Bir olay oluşturduktan sonra, bu olay tarihi, bu olay türünde bir bekletme etiketi olan ve belirtilen varlık kimliğini veya anahtar sözcüğü içeren tüm içerikle eşitlenir. Tüm bekletme etiketleri gibi bu eşitleme de yedi güne kadar sürebilir. Önceki diyagramda, kırmızı daire içine alınmış tüm öğelerin bekletme süreleri bu olay tarafından tetiklenir. Başka bir deyişle, bu ürün kullanım ömrü dolduğunda, bu olay söz konusu ürünün kayıtları için saklama süresini tetikler.
 
-Bir olay için varlık kimliği veya anahtar sözcükler belirtmezseniz, bu olay türündeki bir bekletme etiketine sahip **tüm içeriğin** saklama süresinin olay tarafından tetikleneceğini anlamanız önemlidir. Bu, önceki diyagramda tüm içeriğin korunmaya başlayacağı anlamına gelir. Amacınız bu olmayabilir.
+Bir olay için varlık kimliği veya anahtar sözcükler belirtmezseniz, bu olay türündeki bir bekletme etiketine sahip **tüm içeriğin** saklama süresinin olay tarafından tetikleneceğini anlamanız önemlidir. Bu, önceki diyagramda tüm içeriğin korunmaya başlayacağı anlamına gelir. Bu sonucun hedeflediğiniz sonuç olma olasılığı düşüktür.
 
 Son olarak, her bekletme etiketinin kendi bekletme ayarları olduğunu unutmayın. Bu örnekte, hepsi 10 yıl belirtir, ancak bir olayın her etiketin farklı bir bekletme süresine sahip olduğu bekletme etiketlerini tetikleyebilmiştir.
   
@@ -91,9 +90,13 @@ Olay temelli saklama için üst düzey iş akışı:
 
 ### <a name="step-1-create-a-label-whose-retention-period-is-based-on-an-event"></a>1. Adım: Bekletme süresi bir olayı temel alan bir etiket oluşturma
 
-Bekletme etiketinizi oluşturmak ve yapılandırmak için Kayıt yönetimi için [bekletme etiketleri oluşturma](file-plan-manager.md#create-retention-labels) veya [Veri yaşam döngüsü yönetimi için bekletme etiketleri oluşturma yönergelerine](create-retention-labels-data-lifecycle-management.md) bakın. Ancak olay tabanlı saklamaya özel olarak, bekletme etiketini oluştururken **bekletme ayarlarını tanımla** sayfasında, **Bekletme süresini temel alarak başlat'tan** sonra, açılan listeden varsayılan olay türlerinden birini seçin veya **Yeni olay türü oluştur'u seçerek kendi olay türünüzü** oluşturun:
+Bekletme etiketinizi oluşturmak ve yapılandırmak için Kayıt yönetimi için [bekletme etiketleri oluşturma](file-plan-manager.md#create-retention-labels) yönergelerine bakın. Ancak olay tabanlı saklamaya özgü:
 
-![Bekletme etiketi için yeni bir olay türü oluşturun.](../media/SPRetention6.png)
+- Bekletme etiketini oluştururken **Etiket ayarlarını tanımla** sayfasında **Öğeleri sonsuza kadar veya belirli bir süre boyunca tut'u** seçtiğinizden emin olun. Sonra:
+    
+    **Dönemi tanımla** sayfasında, dönemi ayarladıktan sonra, dönem **ne zaman başlasın?** için açılan listeden varsayılan olay türlerinden birini seçin. Veya Yeni olay türü oluştur'u seçerek kendi **olay türünüzü** oluşturun ve yapılandırma istemlerini izleyin:
+    
+    ![Bekletme etiketi için yeni bir olay türü oluşturun.](../media/SPRetention6.png)
 
 Olay türü, bekletme etiketiyle ilişkilendirmek istediğiniz bir olayın genel açıklamasıdır.
 
@@ -105,18 +108,18 @@ Olay tabanlı saklama, şu saklama ayarlarını gerektirir:
     
 - İçeriği otomatik olarak silin veya saklama süresinin sonunda bir değerlendirme gözden geçirmesi tetikler.
   
-Olay tabanlı saklama genellikle kayıt olarak bildirilen içerik için kullanılır, bu nedenle içeriği kayıt olarak işaretleyen seçeneği de belirlemeniz gerekip gerekmediğini denetlemek için [uygun bir zamandır](records-management.md#records).
+Olay tabanlı saklama genellikle kayıt olarak bildirilen içerik için kullanılır, bu nedenle şimdi içeriği kayıt olarak işaretleyen seçeneği de belirlemeniz gerekip gerekmediğini denetlemek için [iyi bir zaman](records-management.md#records).
 
 Yeni bir olay türü oluşturmak yerine mevcut bir olay türünü kullanıyorsanız, 3. adıma atlayın.
 
 > [!NOTE]
-> Bir olay türü seçtikten ve bekletme etiketini kaydettikten sonra, olay türü değiştirilemez.
+> Bir olay türü seçtikten ve bekletme etiketini kaydettikten sonra olay türü değiştirilemez.
 
 ### <a name="step-2-create-a-new-event-type-for-your-label"></a>2. Adım: Etiketiniz için yeni bir olay türü oluşturma
 
 Bekletme ayarları için **Yeni olay türü oluştur'u seçtiyseniz, olay türünüz** için bir ad ve açıklama girin. Ardından **İleri**, Gönder ve **Bitti'yi** seçin. 
 
-**Bekletme ayarlarını tanımla** sayfasına geri dönün ve **Bekletme süresini şunu temel alarak başlatın** için açılan listeyi kullanarak oluşturduğunuz olay türünü seçin.
+**Dönemi tanımla** sayfasına dönün; **Dönem ne zaman başlamalıdır?** için, oluşturduğunuz olay türünü seçmek için açılan listeyi kullanın.
 
   
 ### <a name="step-3-publish-or-auto-apply-the-event-based-retention-labels"></a>3. Adım: Olay tabanlı bekletme etiketlerini yayımlama veya otomatik uygulama
@@ -145,7 +148,7 @@ Bu olay türünün belirli bir örneği gerçekleştiğinde (örneğin, bir ür�
 
 ![Olay tabanlı bekletme etiketleri için bekletme başlangıcını tetikleyen bir olay oluşturun.](../media/create-event-records-management.png)
 
-Kiracı başına bir milyona kadar olay desteklenir.
+Kiracı başına en fazla 1.000.000 olay desteklenir.
 
 ### <a name="step-6-choose-the-same-event-type-used-by-the-label-in-step-2"></a>6. Adım: 2. adımda etiket tarafından kullanılan olay türünü seçin
 
@@ -163,7 +166,7 @@ Exchange öğeleri için anahtar sözcükler veya Anahtar Sözcük Sorgu Dili (K
 
 Varlık kimlikleri için bekletme yalnızca belirtilen *özellik:değer* çifti olan içerikte zorlanır. Örneğin, Varlık Kimliği özelliğini kullanıyorsanız, aşağıdaki resimde gösterilen varlık kimlikleri kutusuna girin `ComplianceAssetID:<value>` .
 
-Varlık kimliği girilmemişse, bu olay türü etiketlerine sahip tüm içeriklere aynı saklama tarihi uygulanır.
+Varlık kimliği girmezse, bu olay türü etiketlerine sahip tüm içeriklere aynı saklama tarihi uygulanır.
 
 Kuruluşunuz bu olay türüyle ilgili belgelere başka özellikler ve kimlikler uygulamış olabilir. Örneğin, belirli bir ürünün kayıtlarını algılamanız gerekiyorsa, kimlik özel ürün kimliğinizle "XYZ" değerinin birleşimi olabilir. Bu durumda, aşağıdaki resimde gösterilen varlık kimlikleri kutusuna girersiniz `ProductID:XYZ` .
 
@@ -177,7 +180,7 @@ Bir olayın silinmesi, zaten etiketlenmiş içerik için geçerli olan bekletme 
 
 ## <a name="use-content-search-to-find-all-content-with-a-specific-label-or-asset-id"></a>Belirli bir etikete veya varlık kimliğine sahip tüm içeriği bulmak için İçerik Arama'yı kullanma
 
-saklama etiketleri içeriğe atandıktan sonra, belirli bir bekletme etiketiyle sınıflandırılan veya belirli bir varlık kimliğini içeren tüm içeriği bulmak için içerik aramasını kullanabilirsiniz:
+saklama etiketleri içeriğe atandıktan sonra, belirli bir bekletme etiketine sahip veya belirli bir varlık kimliği içeren tüm içeriği bulmak için içerik aramasını kullanabilirsiniz:
   
 - Belirli bir bekletme etiketine sahip tüm içeriği bulmak için **Bekletme etiketi** koşulunu seçin ve ardından etiket adının tamamını veya bir kısmını girin ve joker karakter kullanın. 
     

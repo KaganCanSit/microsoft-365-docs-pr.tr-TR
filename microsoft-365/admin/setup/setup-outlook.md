@@ -1,5 +1,5 @@
 ---
-title: E-posta Outlook e-postayı ayarlama
+title: E-posta için Outlook'u ayarlama
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -19,27 +19,31 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: E-postanız için e Outlook ayarlamayı Microsoft 365 öğrenin.
-ms.openlocfilehash: aa098383371737e9f792acdc0478500cfff9fea0
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+description: Microsoft 365 e-postanız için Outlook'u ayarlamayı öğrenin.
+ms.openlocfilehash: c7b1aa8890e3824e085bf2a8bc170f8f34010c88
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62996123"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602800"
 ---
-# <a name="set-up-outlook-for-microsoft-365-for-business-email"></a>İş e-Microsoft 365 için Outlook e-postası ayarlama 
+# <a name="set-up-outlook-for-microsoft-365-for-business-email"></a>İş e-postası için Microsoft 365 için Outlook ayarlama 
+
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
+
+## <a name="watch-set-up-outlook-for-email"></a>İzleyin: E-posta için Outlook'u ayarlama
+
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2198010) bu videoya ve diğer videolara göz atın.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/9fe86884-8a83-42cc-bca9-61a12e6dad31?autoplay=false]
 
-## <a name="try-it"></a>Deneyin!
+Office uygulamalarını yükledikten sonra, Outlook'u e-posta, takvim ve kişileri kullanmaya başlayacak şekilde ayarlamak&#39;. Nasıl yapıldığını&#39;.
 
-Office uygulamalarını yükledikten sonra,&#39;, Outlook ve kişileri kullanmaya başlamak için e-postayı ayarlamak istemeniz gerekir. Şu&#39;:
+1. Başlat menüsünü açın. Outlook'u arayın ve seçin.
+2. Microsoft 365 e-posta adresinizi girin ve  **Bağlan'ı** seçin.
+3. Önceki veya kişisel e-posta adresiniz gibi kullanmak istediğiniz tüm ek e-posta adreslerini girin. **İleri'yi** seçin.
+4. İstenirse bir parola girin ve  **Oturum aç'ı** seçin.
+5. Tüm hesaplarınız eklendikten sonra, Outlook Mobile'ı ayarlamak isteyip istemediğinizi seçin veya daha sonraya kadar bekleyin.
+6. **Bitti'yi** seçin. Outlook'un e-postanızı ve diğer verilerinizi indirmesi birkaç dakika sürebilir.
 
-1. Dosyayı Başlat menüsü. Arama Outlook ve seçin.
-2. E-Microsoft 365 adresinizi girin ve **Tamam'ı Bağlan**.
-3. Kullanmak istediğiniz diğer e-posta adreslerini, örneğin önceki veya kişisel e-posta adresinizi girin. **Sonraki'yi seçin**.
-4. İstendiğinde bir parola girin ve Oturum  **açın'ı seçin**.
-5. Tüm hesaplarınız eklendikten sonra, mobil cihazlarda ayarlama yapmak mı Outlook yoksa daha sonraya kadar mı bekleyeceğinizi seçin.
-6. **Bitti'yi seçin**. E-postanızı ve diğer Outlook indirmek birkaç dakika sürebilir.
-
-Artık, ekledik hesapların e-postalarını görüntüebilirsiniz. Takviminizi, kişilerinizi ve görevlerinizi de görüntüebilirsiniz.
+Artık eklediğiniz hesapların e-postasını görüntüleyebilirsiniz. Takviminizi, kişilerinizi ve görevlerinizi de görüntüleyebilirsiniz.

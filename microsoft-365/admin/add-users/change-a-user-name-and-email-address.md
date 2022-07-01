@@ -26,25 +26,29 @@ search.appverid:
 - MOE150
 ms.assetid: fb5ac074-e203-4e1f-9843-b9d1a3e03297
 description: Microsoft 365 genel yöneticisinin, adı değiştiğinde kullanıcının e-posta adresini ve görünen adını nasıl değiştirebileceğini öğrenin.
-ms.openlocfilehash: f48cbf3428988ce50b9f8913dd4f6c4e47858b2d
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 420a25df1383bccd4fe93b2ea79d0eeb6f91d982
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65466734"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601124"
 ---
 # <a name="change-a-user-name-and-email-address"></a>Kullanıcı adı ve e-posta adresi değiştirme
+
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
 
 Örneğin, evlenirse ve soyadı değişirse, birinin e-posta adresini ve görünen adını değiştirmeniz gerekebilir.
 
 > [!TIP]
-> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken işe alımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
+> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
 
 ## <a name="watch-change-a-users-name-or-email-address"></a>İzleyin: Kullanıcının adını veya e-posta adresini değiştirme
 
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2198016) bu videoya ve diğer videolara göz atın.
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1SJuc]
 
-1. Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**KullanıcılarEtkin**</a> >  kullanıcılar'ı seçin.
+1. Microsoft 365 yönetim merkezi **Kullanıcılar** > <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**Etkin kullanıcılar'ı**</a> seçin.
 1. Etkin kullanıcılar listesinden kullanıcıyı seçin.
 1. **Kişi bilgilerini yönet'i** seçin.
 1. Görünen adı değiştirin ve **Değişiklikleri kaydet'i** seçin.
@@ -71,7 +75,7 @@ Bu adımları tamamlamak için [genel yönetici](about-admin-roles.md) olmanız 
 
 1. Kullanıcının adını seçin ve **hesap sekmesinde** **Kullanıcı adını yönet'i** seçin.
 
-1. İlk kutuya yeni e-posta adresinin ilk bölümünü yazın. Microsoft 365 kendi etki alanınızı eklediyseniz, açılan listeyi kullanarak yeni e-posta diğer adının etki alanını seçin. [Etki alanı eklemeyi öğrenin](../setup/add-domain.md).
+1. İlk kutuya yeni e-posta adresinin ilk bölümünü yazın. Microsoft 365'e kendi etki alanınızı eklediyseniz, açılan listeyi kullanarak yeni e-posta diğer adının etki alanını seçin. [Etki alanı eklemeyi öğrenin](../setup/add-domain.md).
 
 1. **Değişiklikleri kaydet'i** seçin.
 
@@ -97,7 +101,7 @@ Bu adımları tamamlamak için [genel yönetici](about-admin-roles.md) olmanız 
 3. Bu kişinin birincil e-posta adresi olarak ayarlamak istediğiniz e-posta adresi için **Birincil Olarak Ayarla'yı** seçin.
 
    > [!IMPORTANT]
-   > GoDaddy'den veya yönetim konsolu sağlayan başka bir İş Ortağı hizmetinden Microsoft 365 satın aldıysanız Birincil Olarak Ayarla seçeneğini görmezsiniz. Bunun yerine birincil diğer adı ayarlamak için GoDaddy'nin / iş ortağının yönetim konsolunda oturum açın.
+   > Microsoft 365'i GoDaddy'den veya yönetim konsolu sağlayan başka bir İş Ortağı hizmetinden satın aldıysanız Birincil Olarak Ayarla seçeneğini görmezsiniz. Bunun yerine birincil diğer adı ayarlamak için GoDaddy'nin / iş ortağının yönetim konsolunda oturum açın.
    >
    > Ayrıca, bu seçeneği yalnızca genel yöneticiyseniz görürsünüz. Seçeneğini görmüyorsanız, kullanıcının adını ve birincil e-posta adresini değiştirme izniniz yoktur.
 
@@ -107,11 +111,11 @@ Bu adımları tamamlamak için [genel yönetici](about-admin-roles.md) olmanız 
 
    - Bu değişiklik biraz zaman alabilir.
 
-   - Yeni kullanıcı adları. Microsoft 365 oturum açmak için buna ihtiyaçları olacak.
+   - Yeni kullanıcı adları. Microsoft 365'te oturum açmak için buna ihtiyaçları olacaktır.
 
    - Skype Kurumsal Online kullanıyorlarsa, düzenlediği Skype Kurumsal Çevrimiçi toplantılarını yeniden zamanlamalı ve dış kişilerine kişi bilgilerini güncelleştirmelerini söylemelidir.
 
-   - OneDrive kullanıyorlarsa, bu konumun URL'si değişmiştir. OneDrive OneNote not defterleri varsa, bunları OneNote kapatıp yeniden açmaları gerekebilir. OneDrive dosyaları paylaştıysa, dosyaların bağlantıları çalışmayabilir ve kullanıcı yeniden paylaşabilir.
+   - OneDrive kullanıyorlarsa, bu konumun URL'si değişmiştir. OneDrive'larında OneNote not defterleri varsa, bunları OneNote'ta kapatıp yeniden açmaları gerekebilir. OneDrive'larından dosya paylaştıysa, dosyaların bağlantıları çalışmayabilir ve kullanıcı yeniden paylaşabilir.
 
    - Parolaları da değiştiyse, mobil cihazlarında yeni parolayı girmeleri istenir, aksi takdirde eşitlenmez.
 
@@ -135,7 +139,7 @@ Bu adımları tamamlamak için [genel yönetici](about-admin-roles.md) olmanız 
 
    "**Üzgünüz, kullanıcı düzenlenemedi. Kullanıcı bilgilerini gözden geçirin ve yeniden deneyin**, bkz. [Hata iletilerini çözme](#resolve-error-messages).
 
-Bu değişikliğin tüm hizmetlerde geçerli olması 24 saat kadar sürebilir. Değişiklik geçerli olduktan sonra, kişinin güncelleştirilmiş kullanıcı adıyla Outlook, Skype Kurumsal ve SharePoint oturum açması gerekir.
+Bu değişikliğin tüm hizmetlerde geçerli olması 24 saat kadar sürebilir. Değişiklik etkili olduktan sonra, kişinin outlook, Skype Kurumsal ve SharePoint'te güncelleştirilmiş kullanıcı adıyla oturum açması gerekir.
 
 ## <a name="resolve-error-messages"></a>Hata iletilerini çözme
 
@@ -155,11 +159,11 @@ Bazı kişiler kişinin eski e-posta adresine e-posta göndermeye devam edebilir
 
 ## <a name="what-if-the-persons-offline-address-book-wont-sync-with-the-global-address-list"></a>Kullanıcının çevrimdışı adres defteri, Genel Adres Listesi ile eşitlenmezse ne olur?
 
-Exchange Online kullanıyorsa veya hesapları kuruluşunuzun şirket içi Exchange ortamıyla bağlantılıysa, kullanıcı adını ve e-posta adresini değiştirmeye çalıştığınızda şu hatayı görebilirsiniz: "Bu kullanıcı yerel Active Directory'nizle eşitlenmiş. Bazı ayrıntılar yalnızca yerel Active Directory'niz üzerinden düzenlenebilir."
+Exchange Online kullanıyorlarsa veya hesapları kuruluşunuzun şirket içi Exchange ortamıyla bağlantılıysa, kullanıcı adını ve e-posta adresini değiştirmeye çalıştığınızda şu hatayı görebilirsiniz: "Bu kullanıcı yerel Active Directory'nizle eşitlenmiş. Bazı ayrıntılar yalnızca yerel Active Directory'niz üzerinden düzenlenebilir."
 
-Bu hata, Microsoft Çevrimiçi E-posta Yönlendirme Adresi (MOERA) nedeniyle oluşur. MOERA, Active Directory'de kişinin _userPrincipalName_ özniteliğinden oluşturulur ve ilk eşitleme sırasında bulut hesabına otomatik olarak atanır ve oluşturulduktan sonra Microsoft 365 değiştirilemez veya kaldırılamaz. Daha sonra Active Directory'de kullanıcı adını değiştirebilirsiniz, ancak MOERA'yı değiştirmez ve Yeni değiştirilen adı Genel Adres Listesi'nde görüntülerken sorunlarla karşılaşabilirsiniz.
+Bu hata, Microsoft Çevrimiçi E-posta Yönlendirme Adresi (MOERA) nedeniyle oluşur. MOERA, Active Directory'de kişinin  _userPrincipalName_ özniteliğinden oluşturulur ve ilk eşitleme sırasında bulut hesabına otomatik olarak atanır ve oluşturulduktan sonra Microsoft 365'te değiştirilemez veya kaldırılamaz. Daha sonra Active Directory'de kullanıcı adını değiştirebilirsiniz, ancak MOERA'yı değiştirmez ve Yeni değiştirilen adı Genel Adres Listesi'nde görüntülerken sorunlarla karşılaşabilirsiniz.
 
-Bunu düzeltmek için, Microsoft 365 yönetici kimlik bilgilerinizle [PowerShell için Azure Active Directory Modülü'nde](https://go.microsoft.com/fwlink/?LinkId=823193) oturum açın. ve aşağıdaki söz dizimini kullanın:
+Bunu düzeltmek için Microsoft 365 yönetici kimlik bilgilerinizle [PowerShell için Azure Active Directory Modülü'nde](https://go.microsoft.com/fwlink/?LinkId=823193) oturum açın. ve aşağıdaki söz dizimini kullanın:
 
 ```powershell
 Set-MsolUserPrincipalName -UserPrincipalName anne.wallace@contoso.onmicrosoft.com -NewUserPrincipalName anne.jones@contoso.com

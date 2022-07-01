@@ -1,5 +1,5 @@
 ---
-title: Test saldırı yüzeyi azaltma (ASR) kuralları
+title: Saldırı yüzeyini azaltma (ASR) kuralları testi
 description: Saldırı yüzeyi azaltma (ASR) kuralları dağıtımınızı test etmek için rehberlik sağlar.
 keywords: Saldırı yüzeyi azaltma kuralları dağıtımı, ASR dağıtımı, ASR kurallarını etkinleştirme, ASR'yi yapılandırma, konak yetkisiz erişim önleme sistemi, koruma kuralları, açıktan yararlanma önleme kuralları, kötüye kullanıma karşı koruma kuralları, kötüye kullanma kuralları, bulaşma önleme kuralları, Uç Nokta için Microsoft Defender, ASR kurallarını yapılandırma
 search.product: eADQiWindows 10XVcnh
@@ -17,17 +17,16 @@ ms.custom: asr
 ms.technology: mde
 ms.topic: article
 ms.collection:
-- m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: facce2b736cb23cc41625b4b7d5c3f8b0ca5cfae
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 8bfe3e0d36a02831b5673b92217152ce87804d0a
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705285"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601300"
 ---
-# <a name="test-attack-surface-reduction-asr-rules"></a>Test saldırı yüzeyi azaltma (ASR) kuralları
+# <a name="test-attack-surface-reduction-asr-rules"></a>Saldırı yüzeyini azaltma (ASR) kuralları testi
 
 Saldırı yüzeyi azaltma (ASR) kurallarının test edilmesi, kuralların herhangi bir kuralı etkinleştirmeden önce iş kolu işlemlerini engelleyecek olup olmadığını belirlemenize yardımcı olur. Küçük, denetimli bir grupla başlayarak, dağıtımınızı kuruluşunuz genelinde genişletirken olası iş kesintilerini sınırlayabilirsiniz.
 
@@ -45,7 +44,7 @@ Kademe 1 ile saldırı yüzeyi azaltma (ASR) kuralları dağıtımınıza başla
 Özel ASR kurallarını yapılandırmak için Microsoft Endpoint Manager (MEM) Uç Nokta Güvenliği'ni kullanabilirsiniz.
 
 1. [Microsoft Endpoint Manager yönetim merkezini](https://endpoint.microsoft.com/#home) açın.
-2. **Endpoint** **SecurityAyrı** >  yüzey azaltma bölümüne gidin.
+2. **Endpoint Security** > **Attack yüzey azaltma** bölümüne gidin.
 3. **İlke Oluştur'u** seçin.
 4. **Platform'da** **Windows 10 ve üzerini** seçin ve **Profil'de** **Saldırı yüzeyi azaltma kuralları'yı** seçin.
   
@@ -76,7 +75,7 @@ ASR kuralları için yeni saldırı yüzeyi azaltma ilkeniz **Uç nokta güvenli
 
 ## <a name="step-2-understand-the-attack-surface-reduction-rules-reporting-page-in-the-microsoft-365-defender-portal"></a>2. Adım: Microsoft 365 Defender portalındaki Saldırı yüzeyi azaltma kuralları raporlama sayfasını anlama
 
-ASR kuralları raporlama sayfası **Microsoft 365 Defender** **portalReportsAttack** >  >  **yüzey azaltma kurallarında** bulunur. Bu sayfada üç sekme vardır:
+ASR kuralları raporlama sayfası **, Microsoft 365 Defender portal** > **Raporları** > **Saldırı yüzeyi azaltma kuralları** bölümünde bulunur. Bu sayfada üç sekme vardır:
 
 - Algılamalar
 - Yapılandırma
@@ -124,7 +123,7 @@ Saldırı Yüzeyi azaltma kuralları bölmesi, kural başına algılanan olaylar
 > :::image type="content" source="images/asr-defender365-filter.png" alt-text="Kurallar üzerinde Saldırı yüzeyi azaltma kuralları algılamaları filtresi" lightbox="images/asr-defender365-filter.png":::
 
 >[!Note]
->Microsoft Microsoft 365 Security E5 veya A5, Windows E5 veya A5 lisansınız varsa, aşağıdaki bağlantı Microsoft Defender 365 Raporları > [Saldırı yüzeyi azaltmaları](https://security.microsoft.com/asr?viewid=detections) > Algılamalar sekmesini açar.
+>Microsoft Microsoft 365 Güvenlik E5 veya A5, Windows E5 veya A5 lisansınız varsa, aşağıdaki bağlantı Microsoft Defender 365 Raporları > [Saldırı yüzeyi azaltmaları](https://security.microsoft.com/asr?viewid=detections) > Algılamalar sekmesini açar.
 
 ### <a name="configuration-tab"></a>Yapılandırma sekmesi
 
@@ -138,7 +137,7 @@ Yapılandırmalar sekmesinde, ASR kurallarını gözden geçirmek istediğiniz c
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="images/asr-defender365-configurations.settings.png" alt-text="Saldırı yüzeyi azaltma kuralları etkin ve mod" lightbox="images/asr-defender365-configurations.settings.png":::
 
-**Kullanmaya başlayın** bağlantısı, ASR için bir uç nokta koruma ilkesi oluşturabileceğiniz veya değiştirebileceğiniz Microsoft Endpoint Manager yönetim merkezini açar:
+**Başlarken** bağlantısı, ASR için bir uç nokta koruma ilkesi oluşturabileceğiniz veya değiştirebileceğiniz Microsoft Endpoint Manager yönetim merkezini açar:
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="images/asr-defender365-05b-mem1.png" alt-text="Genel Bakış sayfasındaki *Uç nokta güvenlik menü öğesi" lightbox="images/asr-defender365-05b-mem1.png":::
@@ -192,7 +191,7 @@ Denetim modunda eklenen tüm saldırı yüzeyi azaltma kurallarını etkinleşti
 
 Ayarı yapılandırmak ve dağıtmak için grup ilkesi, Intune veya mobil cihaz yönetimi (MDM) yapılandırma hizmeti sağlayıcılarını (CSP' ler) de kullanabilirsiniz. [Ana Saldırı yüzeyi azaltma kuralları](attack-surface-reduction.md) makalesinde daha fazla bilgi edinin.
 
-## <a name="use-windows-event-viewer-review-as-an-alternative-to-the-attack-surface-reduction-rules-reporting-page-in-the-microsoft-365-defender-portal"></a>Windows Olay Görüntüleyicisi Gözden Geçirme'yi Microsoft 365 Defender portalındaki saldırı yüzeyi azaltma kuralları raporlama sayfasına alternatif olarak kullanın
+## <a name="use-windows-event-viewer-review-as-an-alternative-to-the-attack-surface-reduction-rules-reporting-page-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalındaki saldırı yüzeyi azaltma kuralları raporlama sayfasına alternatif olarak Windows Olay Görüntüleyicisi Gözden Geçirme'yi kullanın
 
 Engellenmiş olabilecek uygulamaları gözden geçirmek için Olay Görüntüleyicisi açın ve Microsoft-Windows-Windows Defender/İşletim günlüğünde Olay Kimliği 1121'i filtreleyin. Aşağıdaki tabloda tüm ağ koruma olayları listelenir.
 
@@ -206,10 +205,10 @@ Olay Kimliği | Açıklama
 
 [Saldırı yüzeyini azaltma (ASR) kuralları dağıtımına genel bakış](attack-surface-reduction-rules-deployment.md)
 
-[Saldırı yüzeyi azaltma (ASR) kuralları dağıtım planı](attack-surface-reduction-rules-deployment-plan.md)
+[Saldırı yüzeyini azaltma (ASR) kuralları dağıtım planı](attack-surface-reduction-rules-deployment-plan.md)
 
-[Saldırı yüzeyi azaltma (ASR) kurallarını etkinleştirme](attack-surface-reduction-rules-deployment-implement.md)
+[Saldırı yüzeyini azaltma (ASR) kurallarını etkinleştirme](attack-surface-reduction-rules-deployment-implement.md)
 
 [Saldırı yüzeyini azaltma (ASR) kurallarını kullanıma hazır hale getirme](attack-surface-reduction-rules-deployment-operationalize.md)
 
-[Saldırı yüzeyi azaltma (ASR) kuralları başvurusu](attack-surface-reduction-rules-reference.md)
+[Saldırı yüzeyini azaltma (ASR) kuralları başvurusu](attack-surface-reduction-rules-reference.md)

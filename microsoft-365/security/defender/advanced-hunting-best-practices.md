@@ -18,12 +18,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 505308bec005811e174b90cde9e872532ccacdfe
-ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
+ms.openlocfilehash: c4236edcb2b5ec15b7c66be8f4b74ad0a2bc44c7
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65739493"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603483"
 ---
 # <a name="advanced-hunting-query-best-practices"></a>Gelişmiş tehdit avcılığı sorgusu en iyi yöntemleri
 
@@ -33,7 +33,7 @@ ms.locfileid: "65739493"
 **Şunlar için geçerlidir:**
 - Microsoft 365 Defender
 
-Karmaşık sorgular çalıştırırken sonuçları daha hızlı almak ve zaman aşımlarından kaçınmak için bu önerileri uygulayın. Sorgu performansını geliştirme hakkında daha fazla kılavuz için sorgu [Kusto en iyi yöntemlerini](/azure/kusto/query/best-practices) okuyun.
+Karmaşık sorgular çalıştırırken sonuçları daha hızlı almak ve zaman aşımlarından kaçınmak için bu önerileri uygulayın. Sorgu performansını iyileştirme hakkında daha fazla kılavuz için [Kusto sorgu en iyi yöntemleri](/azure/kusto/query/best-practices) makalesini okuyun.
 
 ## <a name="understand-cpu-resource-quotas"></a>CPU kaynak kotalarını anlama
 Boyutuna bağlı olarak, her kiracının gelişmiş tehdit avcılığı sorguları çalıştırmak için ayrılmış belirli miktarda CPU kaynağına erişimi vardır. Çeşitli kullanım parametreleri hakkında ayrıntılı bilgi için [gelişmiş tehdit avcılığı kotaları ve kullanım parametreleri hakkında bilgi edinin](advanced-hunting-limits.md).
@@ -43,6 +43,8 @@ Sorgunuzu çalıştırdıktan sonra yürütme süresini ve kaynak kullanımını
 :::image type="content" source="../../media/resource-usage.png" alt-text="Microsoft 365 Defender portalındaki **Sonuçlar** sekmesinin altındaki sorgu ayrıntıları" lightbox="../../media/resource-usage.png":::
 
 Düzenli olarak birden çok sorgu çalıştıran müşterilerin tüketimi izlemesi ve kotaların veya kullanım parametrelerinin aşılmasından kaynaklanan kesintiyi en aza indirmek için bu makaledeki iyileştirme kılavuzunu uygulaması gerekir.
+
+[Sorgularınızı iyileştirmenin](https://www.youtube.com/watch?v=ceYvRuPp5D8) en yaygın yollarından bazılarını görmek için KQL sorgularını iyileştirme bölümünü izleyin.  
 
 ## <a name="general-optimization-tips"></a>Genel iyileştirme ipuçları
 
@@ -63,7 +65,9 @@ Düzenli olarak birden çok sorgu çalıştıran müşterilerin tüketimi izleme
 - **Ayrıştırma, ayıklama—** Mümkün olduğunda [ayrıştırma işlecini](/azure/data-explorer/kusto/query/parseoperator) veya [parse_json()](/azure/data-explorer/kusto/query/parsejsonfunction) gibi bir ayrıştırma işlevini kullanın. `matches regex` Her ikisi de normal ifade kullanan dize işlecinden veya [extract() işlevinden](/azure/data-explorer/kusto/query/extractfunction) kaçının. Daha karmaşık senaryolar için normal ifade kullanımını ayırın. [İşlevleri ayrıştırma hakkında daha fazla bilgi edinin](#parse-strings)
 - **Tabloları ifadelere değil filtrele**—Tablo sütununa göre filtre uygulanabiliyorsa hesaplanan sütuna filtre uygulamayın.
 - **Üç karakterli terim yok**— Üç veya daha az karakterle terimleri karşılaştırmaktan veya filtrelemekten kaçının. Bu terimler dizine alınmaz ve bunlar eşleştirildiğinde daha fazla kaynak gerekir.
-- **seçmeli olarak Project**— Yalnızca ihtiyacınız olan sütunları yansıtarak sonuçlarınızın daha kolay anlaşılmasını sağlayın. [Birleştirme](/azure/data-explorer/kusto/query/joinoperator) veya benzer işlemleri çalıştırmadan önce belirli sütunları yansıtmak da performansı artırmaya yardımcı olur.
+- **Seçmeli olarak proje** oluşturma—Yalnızca ihtiyacınız olan sütunları yansıtarak sonuçlarınızın daha kolay anlaşılmasını sağlayın. [Birleştirme](/azure/data-explorer/kusto/query/joinoperator) veya benzer işlemleri çalıştırmadan önce belirli sütunları yansıtmak da performansı artırmaya yardımcı olur.
+
+
 
 ## <a name="optimize-the-join-operator"></a>İşleci iyileştirme `join`
 [Birleştirme işleci](/azure/data-explorer/kusto/query/joinoperator), belirtilen sütunlardaki değerleri eşleştirerek iki tablodaki satırları birleştirir. Bu işleci kullanan sorguları iyileştirmek için bu ipuçlarını uygulayın.
@@ -186,13 +190,13 @@ Düzenli olarak birden çok sorgu çalıştıran müşterilerin tüketimi izleme
     | summarize hint.shufflekey = RecipientEmailAddress count() by Subject, RecipientEmailAddress
     ```
 
-Kusto Sorgu Dili nasıl iyileştirebileceğinizi öğrenmek için bu [kısa videoyu](https://www.youtube.com/watch?v=ceYvRuPp5D8) izleyin.  
+
 
 ## <a name="query-scenarios"></a>Sorgu senaryoları
 
 ### <a name="identify-unique-processes-with-process-ids"></a>İşlem kimlikleriyle benzersiz işlemleri tanımlama
 
-İşlem kimlikleri (PID) Windows geri dönüştürülür ve yeni işlemler için yeniden kullanılır. Kendi başlarına, belirli işlemler için benzersiz tanımlayıcılar olarak görev yapamazlar.
+İşlem kimlikleri (PID) Windows'ta geri dönüştürülür ve yeni işlemler için yeniden kullanılır. Kendi başlarına, belirli işlemler için benzersiz tanımlayıcılar olarak görev yapamazlar.
 
 Belirli bir makinedeki bir işlemin benzersiz tanımlayıcısını almak için işlem oluşturma zamanıyla birlikte işlem kimliğini kullanın. İşlemler etrafında verileri birleştirdiğinizde veya özetlerken, makine tanımlayıcısı (veya veya `DeviceId` `DeviceName`), işlem kimliği ( veya ) ve işlem oluşturma zamanı (`ProcessId``ProcessCreationTime` veya `InitiatingProcessId``InitiatingProcessCreationTime`) için sütunlar ekleyin
 
@@ -273,7 +277,7 @@ Desteklenen tüm ayrıştırma işlevleri hakkında bilgi edinmek için [Kusto d
 >Bu makaledeki bazı tablolar Uç Nokta için Microsoft Defender'de kullanılamayabilir. Daha fazla veri kaynağı kullanarak tehditleri avlamak için [Microsoft 365 Defender açın](m365d-enable.md). Gelişmiş avcılık sorgularını Uç Nokta için Microsoft Defender'den geçirme bölümünde yer alan adımları izleyerek [gelişmiş avcılık iş akışlarınızı Uç Nokta için Microsoft Defender'den Microsoft 365 Defender](advanced-hunting-migrate-from-mde.md) taşıyabilirsiniz.
 
 ## <a name="related-topics"></a>İlgili konular
-- [sorgu dili belgelerini Kusto](/azure/data-explorer/kusto/query/)
+- [Kusto sorgu dili belgeleri](/azure/data-explorer/kusto/query/)
 - [Kotalar ve kullanım parametreleri](advanced-hunting-limits.md)
 - [Gelişmiş tehdit avcılığı hatalarını işleme](advanced-hunting-errors.md)
 - [Gelişmiş avcılığa genel bakış](advanced-hunting-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Saldırı yüzeyi azaltma (ASR) kuralları dağıtım planı
+title: Saldırı yüzeyini azaltma (ASR) kuralları dağıtım planı
 description: Saldırı yüzeyi azaltma (ASR) kuralları dağıtımınızı planlamak için rehberlik sağlar.
 keywords: Saldırı yüzeyi azaltma kuralları dağıtımı, ASR dağıtımı, ASR kurallarını etkinleştirme, ASR'yi yapılandırma, konak yetkisiz erişim önleme sistemi, koruma kuralları, açıktan yararlanma önleme kuralları, kötüye kullanıma karşı koruma kuralları, kötüye kullanma kuralları, bulaşma önleme kuralları, Uç Nokta için Microsoft Defender, ASR kurallarını yapılandırma
 search.product: eADQiWindows 10XVcnh
@@ -17,17 +17,16 @@ ms.custom: asr
 ms.technology: mde
 ms.topic: article
 ms.collection:
-- m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 07388ab8f1aac89991423c07fb442017aafb73e6
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 4e538a4e986ad0636c380ec2ba167249221ac3ec
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705307"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602502"
 ---
-# <a name="plan-attack-surface-reduction-asr-rules-deployment"></a>Saldırı yüzeyi azaltma (ASR) kuralları dağıtım planı
+# <a name="plan-attack-surface-reduction-asr-rules-deployment"></a>Saldırı yüzeyini azaltma (ASR) kuralları dağıtım planı
 
 Saldırı yüzeyi azaltma (ASR) kurallarını test ederken doğru iş birimiyle başlamak önemlidir. Belirli bir iş birimindeki küçük bir grup kişiyle başlamak istersiniz. Belirli bir iş birimi içinde, ASR kuralları hakkında gerçek dünya etkisi sağlayabilecek ve uygulamanızı ayarlamanıza yardımcı olabilecek bazı ASR şampiyonlarını tanımlayabilirsiniz.
 
@@ -44,7 +43,7 @@ ASR kuralları dağıtımınızı dağıtmak için iş birimini nasıl seçeceğ
   - Yazılım
   - Paylaşılan klasörler
   - Betiklerin kullanımı
-  - makroları Office
+  - Office makroları
   - ASR kurallarından etkilenen diğer varlıklar
 
 İş gereksinimlerinize bağlı olarak, yazılımın, paylaşılan klasörlerin, betiklerin, makroların vb. kapsamlı bir örneklemesini almak için birden çok iş birimi dahil etmeye karar vekleyebilirsiniz. Buna karşılık, ilk ASR kuralları dağıtımınızın kapsamını tek bir iş birimiyle sınırlamaya karar verebilir, ardından ASR kuralları dağıtım işleminin tamamını diğer iş birimlerinizle tek tek yinelemeye karar verebilirsiniz.
@@ -77,17 +76,17 @@ Tipik roller ve sorumluluklar şunlardır:
 ## <a name="ring-deployment"></a>Halka dağıtımı
 
 Microsoft, büyük kuruluşlar için ASR kurallarının "halkalar" içinde dağıtılması önerilir. Halkalar, çakışmayan ağaç halkaları gibi dışa doğru yayılan eşmerkezli daireler olarak görsel olarak temsil edilen cihaz gruplarıdır. En içteki halka başarıyla dağıtıldığında, bir sonraki halkayı test aşamasına geçirebilirsiniz. İş birimlerinizin, ASR kuralları şampiyonlarınızın, uygulamalarınızın ve süreçlerinizin kapsamlı bir şekilde değerlendirilmesi halkalarınızı tanımlamak için zorunludur.
-Çoğu durumda kuruluşunuz, Windows güncelleştirmelerinin aşamalı dağıtımları için dağıtım halkaları tasarlayacaktır. ASR kurallarını uygulamak için mevcut halka tasarımınızı kullanabilirsiniz.
+Çoğu durumda, kuruluşunuz Windows güncelleştirmelerinin aşamalı dağıtımları için dağıtım halkaları tasarlayacaktır. ASR kurallarını uygulamak için mevcut halka tasarımınızı kullanabilirsiniz.
 Bkz. [Windows için dağıtım planı oluşturma](/windows/deployment/update/create-deployment-plan)
 
 ## <a name="additional-topics-in-this-deployment-collection"></a>Bu dağıtım koleksiyonundaki ek konular
 
 [Saldırı yüzeyini azaltma (ASR) kuralları dağıtımına genel bakış](attack-surface-reduction-rules-deployment.md)
 
-[Test saldırı yüzeyi azaltma (ASR) kuralları](attack-surface-reduction-rules-deployment-test.md)
+[Saldırı yüzeyini azaltma (ASR) kuralları testi](attack-surface-reduction-rules-deployment-test.md)
 
-[Saldırı yüzeyi azaltma (ASR) kurallarını etkinleştirme](attack-surface-reduction-rules-deployment-implement.md)
+[Saldırı yüzeyini azaltma (ASR) kurallarını etkinleştirme](attack-surface-reduction-rules-deployment-implement.md)
 
 [Saldırı yüzeyini azaltma (ASR) kurallarını kullanıma hazır hale getirme](attack-surface-reduction-rules-deployment-operationalize.md)
 
-[Saldırı yüzeyi azaltma (ASR) kuralları başvurusu](attack-surface-reduction-rules-reference.md)
+[Saldırı yüzeyini azaltma (ASR) kuralları başvurusu](attack-surface-reduction-rules-reference.md)

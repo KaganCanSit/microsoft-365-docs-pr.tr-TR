@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 724e6c0b0e0a9854df6c87977cacbf1e1a69bfbe
-ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
+ms.openlocfilehash: 8c650e639d1a4629ed25bcc3a7f3a8c28df4b8e8
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65740025"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603494"
 ---
 # <a name="learn-the-advanced-hunting-query-language"></a>Gelişmiş tehdit avcılığı sorgu dilini öğrenme
 
@@ -37,9 +37,9 @@ ms.locfileid: "65740025"
 - Microsoft 365 Defender
 - Uç Nokta için Microsoft Defender
 
-Gelişmiş avcılık[, Kusto sorgu dilini](/azure/kusto/query/) temel alır. Kusto işleçlerini ve deyimlerini kullanarak özel bir [şemadaki](advanced-hunting-schema-tables.md) bilgileri bu alan sorgular oluşturabilirsiniz. 
+Gelişmiş avcılık [, Kusto sorgu dilini](/azure/kusto/query/) temel alır. Kusto işleçlerini ve deyimlerini kullanarak özel bir [şemadaki](advanced-hunting-schema-tables.md) bilgileri bu alan sorgular oluşturabilirsiniz. 
 
-Kullanışlı Kusto sorgu dili temel bilgilerini öğrenmek için bu kısa videoyu izleyin.
+Bazı kullanışlı Kusto sorgu dili temel bilgilerini öğrenmek için bu kısa videoyu izleyin.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRwfJ]
  
@@ -133,7 +133,7 @@ Sonuçları görmek için **Sorguyu çalıştır'ı** seçin.
 >[!TIP]
 >Sorgu sonuçlarını grafik olarak görüntüleyebilir ve filtreleri hızla ayarlayabilirsiniz. Yönergeler için [sorgu sonuçlarıyla çalışma hakkında bilgi edinin](advanced-hunting-query-results.md)
 
-Tabloları birleştirmek için Kusto Sorgu Dili nasıl kullanabileceğinizi öğrenmek için bu [kısa videoyu](https://www.youtube.com/watch?v=8qZx7Pp5XgM) izleyin.
+
 
 ## <a name="learn-common-query-operators"></a>Yaygın sorgu işleçlerini öğrenme
 
@@ -143,7 +143,7 @@ Tabloları birleştirmek için Kusto Sorgu Dili nasıl kullanabileceğinizi öğ
 |--|--|
 | `where` | Bir tabloyu koşula uyan satırların alt kümesine göre filtreleyin. |
 | `summarize` | Giriş tablosunun içeriğini toplayan bir tablo oluşturma. |
-| `join` | Her tablodan belirtilen sütunların değerlerini eşleştirerek yeni bir tablo oluşturmak için iki tablonun satırlarını birleştirin. |
+| `join` | Her tablodan belirtilen sütunların değerlerini eşleştirerek yeni bir tablo oluşturmak için iki tablonun satırlarını birleştirin. Nasıl yapılacağını öğrenmek için [KQL'de tabloları birleştirme](https://www.youtube.com/watch?v=8qZx7Pp5XgM) bölümünü izleyin.|
 | `count` | Giriş kaydı kümesindeki kayıt sayısını döndürür. |
 | `top` | Belirtilen sütunlara göre sıralanmış ilk N kayıtlarını döndürür. |
 | `limit` | Belirtilen satır sayısına kadar geri dönün. |
@@ -152,7 +152,7 @@ Tabloları birleştirmek için Kusto Sorgu Dili nasıl kullanabileceğinizi öğ
 | `makeset` |  İfade'nin grupta aldığı ayrı değerler kümesinin dinamik (JSON) dizisini döndürür. |
 | `find` | Bir tablo kümesinde koşulla eşleşen satırları bulun. |
 
-Bu işleçlerin canlı bir örneğini görmek için bunları gelişmiş avcılık **bölümündeki Kullanmaya başlayın** bölümünden çalıştırın.
+Bu işleçlerin canlı bir örneğini görmek için bunları gelişmiş avcılıktaki **Kullanmaya başlama** bölümünden çalıştırın.
 
 ## <a name="understand-data-types"></a>Veri türlerini anlama
 
@@ -171,7 +171,7 @@ Bu veri türleri hakkında daha fazla bilgi edinmek için [Kusto skaler veri tü
 ## <a name="get-help-as-you-write-queries"></a>Sorgu yazarken yardım alma
 
 Sorguları daha hızlı yazmak için aşağıdaki işlevlerden yararlanın:
-- **Otomatik öneri**: Sorgu yazarken gelişmiş tehdit avcılığı IntelliSense öneriler sağlar. 
+- **Otomatik öneri**: Sorgu yazarken gelişmiş avcılık, IntelliSense'ten öneriler sağlar. 
 - **Şema ağacı**; çalışma alanınızın yanında tabloların ve sütunlarının listesini içeren bir şema gösterimidir. Daha fazla bilgi için bir öğenin üzerine gelin. Bir öğeyi sorgu düzenleyicisine eklemek için çift tıklayın.
 - **[Şema başvurusu](advanced-hunting-schema-tables.md#get-schema-information-in-the-security-center)**— tablo ve sütun açıklamalarının yanı sıra desteklenen olay türleri (`ActionType` değerler) ve örnek sorgularla portal içi başvuru
 
@@ -197,16 +197,16 @@ Daha sonra yeni bir tarayıcı sekmesi açmadan farklı sorgular çalıştırabi
 
 ## <a name="use-sample-queries"></a>Örnek sorguları kullanma
 
-**Kullanmaya başlayın** bölümü, yaygın olarak kullanılan işleçleri kullanan birkaç basit sorgu sağlar. Bu sorguları çalıştırmayı ve küçük değişiklikler yapmayı deneyin.
+**Kullanmaya başlama** bölümü, yaygın olarak kullanılan işleçleri kullanan birkaç basit sorgu sağlar. Bu sorguları çalıştırmayı ve küçük değişiklikler yapmayı deneyin.
 
 :::image type="content" source="../../media/get-started-section.png" alt-text="Microsoft 365 Defender portalındaki **Gelişmiş avcılık** sayfasındaki **Başlarken** bölümü" lightbox="../../media/get-started-section.png":::
 
 >[!NOTE]
->Temel sorgu örneklerinin dışında, belirli tehdit avcılığı senaryoları için [paylaşılan sorgulara](advanced-hunting-shared-queries.md) da erişebilirsiniz. Sayfanın sol tarafındaki paylaşılan sorguları veya [GitHub sorgu deposunu](https://aka.ms/hunting-queries) keşfedin.
+>Temel sorgu örneklerinin dışında, belirli tehdit avcılığı senaryoları için [paylaşılan sorgulara](advanced-hunting-shared-queries.md) da erişebilirsiniz. Sayfanın veya [GitHub sorgu deposunun](https://aka.ms/hunting-queries) sol tarafındaki paylaşılan sorguları keşfedin.
 
 ## <a name="access-query-language-documentation"></a>Sorgu dili belgelerine erişme
 
-Kusto sorgu dili ve desteklenen işleçler hakkında daha fazla bilgi için [Kusto sorgu dili belgelerine bakın](/azure/kusto/query/).
+Kusto sorgu dili ve desteklenen işleçler hakkında daha fazla bilgi için [kusto sorgu dili belgelerine bakın](/azure/kusto/query/).
 
 >[!NOTE]
 >Bu makaledeki bazı tablolar Uç Nokta için Microsoft Defender'de kullanılamayabilir. Daha fazla veri kaynağı kullanarak tehditleri avlamak için [Microsoft 365 Defender açın](m365d-enable.md). Gelişmiş avcılık sorgularını Uç Nokta için Microsoft Defender'den geçirme bölümünde yer alan adımları izleyerek [gelişmiş avcılık iş akışlarınızı Uç Nokta için Microsoft Defender'den Microsoft 365 Defender](advanced-hunting-migrate-from-mde.md) taşıyabilirsiniz.

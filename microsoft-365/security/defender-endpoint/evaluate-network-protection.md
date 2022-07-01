@@ -1,7 +1,7 @@
 ---
-title: Ağ korumasını değerlendirme
-description: Ağ korumasının koruma altında olduğu yaygın senaryoları testarak nasıl çalıştığını bakın.
-keywords: Ağ koruması, exploits, kötü amaçlı web sitesi, ip, etki alanı, etki alanları, değerlendirme, test, tanıtım
+title: Ağ korumasını değerlendirin
+description: Koruduğu yaygın senaryoları test ederek ağ korumasının nasıl çalıştığını görün.
+keywords: Ağ koruması, açıklardan yararlanmalar, kötü amaçlı web sitesi, ip, etki alanı, etki alanları, değerlendirme, test, tanıtım
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -14,49 +14,48 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection:
-- m365solution-scenario
 - M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: df79062d1dafcd8d82dfa4ff9b9847ff4fad1775
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 2826c623437760d86aad54e4aa36900bdad68082
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64476147"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603956"
 ---
-# <a name="evaluate-network-protection"></a>Ağ korumasını değerlendirme
+# <a name="evaluate-network-protection"></a>Ağ korumasını değerlendirin
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-[Ağ koruması,](network-protection.md) çalışanların İnternet'de kimlik avı dolandırıcılığı, açıklardan yararlanan ve diğer zararlı içerikleri barındıran tehlikeli etki alanlarına erişmek için herhangi bir uygulamayı kullanmalarını engellemeye yardımcı olur.
+[Ağ koruması](network-protection.md) , çalışanların İnternet'te kimlik avı dolandırıcılığı, açıklardan yararlanma ve diğer kötü amaçlı içeriğe ev sahipliği yapabilen tehlikeli etki alanlarına erişmek için herhangi bir uygulama kullanmasını önlemeye yardımcı olur.
 
-Bu makale, özelliği etkinleştirerek ve size bir test sitesine yönlendirerek ağ korumasını değerlendirmeye yardımcı olur. Bu değerlendirme makalesinde yer alan siteler kötü amaçlı değildir. Bunlar kötü amaçlı olması gereken özel olarak oluşturulmuş web siteleridir. Kullanıcı kötü amaçlı bir siteyi veya etki alanını ziyaret ettiyse, site bu davranışı yineler.
+Bu makale, özelliği etkinleştirerek ve bir test sitesine yönlendirerek ağ korumasını değerlendirmenize yardımcı olur. Bu değerlendirme makalesindeki siteler kötü amaçlı değildir. Bunlar, kötü amaçlıymış gibi davranan özel olarak oluşturulmuş web siteleridir. Site, bir kullanıcı kötü amaçlı bir siteyi veya etki alanını ziyaret ederse gerçekleşecek davranışı yineler.
 
 > [!TIP]
-> Diğer koruma özelliklerinin nasıl olduğunu görmek için Microsoft Defender tanıtım senaryoları web [sitesini demo.wd.microsoft.com'de](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) de ziyaret edebilirsiniz.
+> Diğer koruma özelliklerinin nasıl çalıştığını görmek için [demo.wd.microsoft.com'daki](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) Microsoft Defender tanıtım senaryoları web sitesini de ziyaret edebilirsiniz.
 
 > [!NOTE]
 > demo.wd.microsoft.com'daki Uç Nokta için Defender tanıtım sitesi kullanım dışıdır ve gelecekte kaldırılacaktır.
 
 ## <a name="enable-network-protection-in-audit-mode"></a>Denetim modunda ağ korumasını etkinleştirme
 
-Hangi IP adreslerinin ve etki alanlarının engellenmiş olacağını görmek için denetim modunda ağ korumasını etkinleştirin. Bunun iş hattı uygulamalarını etkilemey olduğundan emin olabilir veya engellemelerin ne sıklıkta oluştuğuna dair fikir edinebilirsiniz.
+Hangi IP adreslerinin ve etki alanlarının engellendiğini görmek için denetim modunda ağ korumasını etkinleştirin. Bunun iş kolu uygulamalarını etkilemediğinden emin olabilir veya blokların ne sıklıkta oluştuğu hakkında fikir edinebilirsiniz.
 
-1. **PowerShell yazın ve** Başlat menüsü sağ tıklayın ve **Windows PowerShell Yönetici olarak** **çalıştır'ı seçin.**
+1. Başlat menüsüne **powershell** yazın, **Windows PowerShell** sağ tıklayın ve **Yönetici olarak çalıştır'ı** seçin
 2. Aşağıdaki cmdlet'i girin:
 
     ```PowerShell
     Set-MpPreference -EnableNetworkProtection AuditMode
     ```
 
-### <a name="visit-a-fake-malicious-domain"></a>Kötü amaçlı (sahte) bir etki alanını ziyaret edin
+### <a name="visit-a-fake-malicious-domain"></a>(Sahte) kötü amaçlı etki alanını ziyaret edin
 
-1. Internet Explorer, Google Chrome veya tercihiniz herhangi bir tarayıcıyı açın.
+1. Internet Explorer, Google Chrome veya istediğiniz başka bir tarayıcıyı açın.
 
 2. [https://smartscreentestratings2.net](https://smartscreentestratings2.net) adımına gidin.
 
@@ -65,23 +64,23 @@ Hangi IP adreslerinin ve etki alanlarının engellenmiş olacağını görmek i�
     :::image type="content" source="images/np-notif.png" alt-text="Bağlantı engelleme bildirimi" lightbox="images/np-notif.png":::
 
 > [!NOTE]
-> Bir site ağ koruması tarafından engellenmiş olsa bile ağ bağlantıları başarılı olabilir. Daha fazla bilgi edinmek için [bkz. Ağ koruması ve TCP üç yol el sıkışması](network-protection.md#network-protection-and-the-tcp-three-way-handshake).
+> Bir site ağ koruması tarafından engellenmiş olsa bile ağ bağlantıları başarılı olabilir. Daha fazla bilgi edinmek için bkz [. Ağ koruması ve TCP üç yönlü el sıkışması](network-protection.md#network-protection-and-the-tcp-three-way-handshake).
 
-## <a name="review-network-protection-events-in-windows-event-viewer"></a>Ağ koruma olaylarını gözden Windows Olay Görüntüleyicisi
+## <a name="review-network-protection-events-in-windows-event-viewer"></a>Windows Olay Görüntüleyicisi'de ağ koruma olaylarını gözden geçirme
 
-Engellenmiş olan uygulamaları gözden geçirmek için Microsoft-Windows-Windows Defender/Operational günlüğünde Olay Görüntüleyicisi Kimliği 1125'i açın ve filtreyi yapın. Aşağıdaki tabloda tüm ağ koruma olayları listele.
+Engellenmiş olabilecek uygulamaları gözden geçirmek için Olay Görüntüleyicisi açın ve Microsoft-Windows-Windows Defender/İşletim günlüğünde Olay Kimliği 1125'i filtreleyin. Aşağıdaki tabloda tüm ağ koruma olayları listelenir.
 
 | Olay Kimliği | Sağla/Kaynak | Açıklama |
 |---|---|---|
-| 5007 | Windows Defender (İşlem) | Ayarların değiştir olduğu olay |
-| 1125 | Windows Defender (İşlem) | Ağ bağlantısı denetlenen olay |
-| 1126 | Windows Defender (İşlem) | Ağ bağlantısı engellenmiş durumdayken olay |
+| 5007 | Windows Defender (Operasyonel) | Ayarlar değiştirildiğinde gerçekleşen olay |
+| 1125 | Windows Defender (Operasyonel) | Ağ bağlantısı denetlendiğinde gerçekleşen olay |
+| 1126 | Windows Defender (Operasyonel) | Ağ bağlantısı engellendiğinde gerçekleşen olay |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ağ koruması](network-protection.md)
 
-- [Ağ koruması ve TCP üç yol el sıkışması](network-protection.md#network-protection-and-the-tcp-three-way-handshake)
+- [Ağ koruması ve TCP üç yönlü el sıkışması](network-protection.md#network-protection-and-the-tcp-three-way-handshake)
 
 - [Ağ korumasını etkinleştirme](enable-network-protection.md)
 

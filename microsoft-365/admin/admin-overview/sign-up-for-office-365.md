@@ -29,20 +29,22 @@ search.appverid:
 ROBOTS: NOINDEX
 description: Office 365 kaydolma işlemine geçmeden önce Office programlarının en son sürümleri hakkında bilmeniz gerekenleri anlayın.
 ms.date: 03/17/2021
-ms.openlocfilehash: 185931ba308ae547355cb21a2935bb6f9097c8b7
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 400c30fd1b6879097afe510f36582c46879c85a5
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65636228"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601190"
 ---
 # <a name="how-to-sign-up---admin-help"></a>Kaydolma - Yönetici Yardımı
 
-Ekibinizin Word, Excel, PowerPoint ve diğer Office programlarının en son sürümlerini kullanmaya başlayabilmesi için İş için Microsoft 365 kaydolun.
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
+
+Ekibinizin Word, Excel, PowerPoint ve diğer Office programlarının en son sürümlerini kullanmaya başlayabilmesi için İş için Microsoft 365'e kaydolun.
 
 ::: moniker range="o365-21vianet"
 
-Çin'deyseniz, 21Vianet tarafından sağlanan Office 365, Çin'deki güvenli, güvenilir ve ölçeklenebilir bulut hizmetleri gereksinimlerini karşılamak için tasarlanmıştır. Bu hizmet, Microsoft'un 21Vianet lisansına sahip olduğu teknolojiyle desteklenir. Microsoft hizmetin kendisini çalıştırmaz. 21Vianet hizmetin teslimini çalıştırır, sağlar ve yönetir. 21Vianet barındırma, yönetilen ağ hizmetleri ve bulut bilişim altyapı hizmetleri sağlayan, Çin'deki en büyük taşıyıcıdan bağımsız İnternet veri merkezi hizmetleri sağlayıcısıdır. 21Vianet, Microsoft teknolojilerini lisanslayarak verilerinizi Çin'de tutarken Microsoft hizmetleri kullanabilmenizi sağlamak için yerel Microsoft veri merkezleri çalıştırır. 21Vianet ayrıca aboneliğinizi ve faturalama hizmetlerinizi ve desteği sağlar.
+Çin'deyseniz, 21Vianet tarafından sağlanan Office 365, Çin'deki güvenli, güvenilir ve ölçeklenebilir bulut hizmetleri gereksinimlerini karşılamak için tasarlanmıştır. Bu hizmet, Microsoft'un 21Vianet lisansına sahip olduğu teknolojiyle desteklenir. Microsoft hizmetin kendisini çalıştırmaz. 21Vianet hizmetin teslimini çalıştırır, sağlar ve yönetir. 21Vianet barındırma, yönetilen ağ hizmetleri ve bulut bilişim altyapı hizmetleri sağlayan, Çin'deki en büyük taşıyıcıdan bağımsız İnternet veri merkezi hizmetleri sağlayıcısıdır. 21Vianet, Microsoft teknolojilerini lisanslayarak verilerinizi Çin'de tutarken Microsoft hizmetlerini kullanabilmenizi sağlamak için yerel Microsoft veri merkezleri çalıştırır. 21Vianet ayrıca aboneliğinizi ve faturalama hizmetlerinizi ve desteği sağlar.
   
 > [!NOTE]
 > Bu hizmetler Çin yasalarına tabidir.
@@ -54,11 +56,14 @@ Kaydolmaya hazır mısınız? [Bir Plan seçin](https://products.office.com/zh-c
 ::: moniker-end
 
 ::: moniker range="o365-worldwide"
+
 ## <a name="choose-a-plan"></a>Plan seçme
 
 Satın almadan önce, kaydolduğunuz plana biraz kafa yorun. Bu, ileride yaşayabileceğiniz sorunları önlemeye yardımcı olacaktır.
 
-## <a name="watch-choose-a-microsoft-365-subscription"></a>İzleyin: Microsoft 365 aboneliği seçme
+## <a name="watch-choose-a-microsoft-365-subscription"></a>izleyin: Microsoft 365 aboneliği seçme
+
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2198032) bu videoya ve diğer videolara göz atın.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/906be77d-ded6-48fb-a25f-da110f787282]
 
@@ -93,7 +98,7 @@ Denemenizi iptal etmeniz gerekmez. Deneme aboneliğini satın almazsanız, denem
   - **E-posta** ve **telefon numarası**, aboneliğiniz hakkında gerektiğinde sizinle bağlantı kurabilmemiz için gereklidir. Örneğin, parolanızı unutursanız bu bilgileri kullanarak size geçici bir parola gönderebiliriz. Ayrıca, fatura bilgilerinizi de belirttiğiniz e-posta adresine göndeririz.
 
     > [!NOTE]
-    > Buraya girdiğiniz e-posta adresi, Microsoft 365 e-posta adresinizden (aşağıda oturum açma adınız) farklıdır. Fatura bilgilerinizi de bu adrese gönderdiğimizden, örneğin iş e-postası almaya uygun bir e-posta adresi kullanmanızı öneririz.
+    > Buraya girdiğiniz e-posta adresi, Microsoft 365 e-posta adresinizden farklıdır (aşağıda oturum açma adınız). Fatura bilgilerinizi de bu adrese gönderdiğimizden, örneğin iş e-postası almaya uygun bir e-posta adresi kullanmanızı öneririz.
   
 - **Oturum açma adı (kullanıcı kimliği):** Bu kullanıcı kimliği, hızlı bir şekilde başlamanız için ilk Microsoft 365 e-posta adresiniz olur.
 

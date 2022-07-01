@@ -23,14 +23,16 @@ search.appverid:
 - MET150
 - MOE150
 description: Ortak görevleri yönetmek için Microsoft 365 yönetim merkezi basitleştirilmiş görünümü veya daha karmaşık ayarlar ve görevler için pano görünümünü kullanın.
-ms.openlocfilehash: 056072e454b0df3e7c4b06ce39735b1db3961b25
-ms.sourcegitcommit: b0b1be67de8f40b199bb9b51eb3568e59377e93a
+ms.openlocfilehash: c5be4c0d8fdcdbde9b8fcf6be90e616a052f2fb8
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2022
-ms.locfileid: "66159564"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601662"
 ---
 # <a name="overview-of-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezine genel bakış
+
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
 
 - [Basitleştirilmiş görünümde yönetim merkezi](#watch-the-admin-center-in-simplified-view)
 - [Pano görünümünde yönetim merkezi](#watch-the-admin-center-in-dashboard-view)
@@ -39,15 +41,17 @@ ms.locfileid: "66159564"
 
 ## <a name="watch-the-admin-center-in-simplified-view"></a>İzleyin: Basitleştirilmiş görünümde yönetim merkezi
 
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2197911) bu videoya ve diğer videolara göz atın.
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWD3sq?autoplay=false]
 
 <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> ile parolaları sıfırlayabilir, faturanızı görüntüleyebilir, kullanıcı ekleyebilir veya kaldırabilir ve çok daha fazlasını tek bir yerde yapabilirsiniz.
 
-İş hesabınızla Office.com'da oturum açın ve uygulama başlatıcısını seçin.
+İş hesabınızla Office.com oturum açın ve uygulama başlatıcısını seçin.
 
 Yönetim merkezine erişim izniniz varsa listede **Yönetici** görürsünüz. Seçin.
 
-Yönetim merkezinin üst kısmında sizin için en üstteki eylemleri gözden geçirin. Yeni hesaplar oluşturma, Teams kullanma, e-postayı ayarlama ve Office uygulamaları yükleme gibi önceden ayarladığınız işlemlere bağlı olarak farklı eylemler görebilirsiniz.
+Yönetim merkezinin üst kısmında sizin için en üstteki eylemleri gözden geçirin. Yeni hesaplar oluşturma, Teams'i kullanma, e-postayı ayarlama ve Office uygulamalarını yükleme gibi önceden ayarladığınız işlemlere bağlı olarak farklı eylemler görebilirsiniz.
 
 **Kuruluşunuz** altında **, Kullanıcılar** sekmesinde uygulamalara ve hizmetlere erişebilen, yeni kullanıcılar ekleyebilen, parolaları sıfırlayan veya üç nokta (daha fazla eylem) menüsünü kullanabilen kişilerin listesi yer alır. Bilgilerini ve ayarlarını görüntülemek veya düzenlemek için bir kişi seçin.
 
@@ -55,7 +59,7 @@ Yönetim merkezinin üst kısmında sizin için en üstteki eylemleri gözden ge
 
 **Abonelikler** sekmesinde daha fazla ürün ekleyin, lisans ekleyin veya lisansları veya ödeme yöntemini değiştirmek için üç nokta (daha fazla eylem) menüsünü kullanın.
 
-**Learn** sekmesinde, yönetim merkezi ve diğer Microsoft 365 özellikleriyle ilgili videolara ve makalelere göz atın. Yönetim merkezinin daha gelişmiş özelliklerini keşfetmek için gezinti menüsünü açın ve daha fazlasını görmek için başlıkları genişletin. Gezinti menüsündeki her şeyi görmek için **Tümünü göster'i** seçin veya aradığınızı hızla bulmak için arama çubuğunu kullanın.
+**Learn** sekmesinde, yönetim merkezi ve diğer Microsoft 365 özellikleri hakkındaki videolara ve makalelere göz atın. Yönetim merkezinin daha gelişmiş özelliklerini keşfetmek için gezinti menüsünü açın ve daha fazlasını görmek için başlıkları genişletin. Gezinti menüsündeki her şeyi görmek için **Tümünü göster'i** seçin veya aradığınızı hızla bulmak için arama çubuğunu kullanın.
 
 Yardıma ihtiyacınız varsa **Yardım & destek'i** seçin. Yardım almak istediğiniz konuyu arayın ve önerilen çözümü görüntüleyin veya destek ekibine başvurmak için mikrofonlu kulaklığı seçin, ardından sorunuzu ve iletişim bilgilerinizi girin.
 
@@ -65,7 +69,7 @@ Yardıma ihtiyacınız varsa **Yardım & destek'i** seçin. Yardım almak istedi
 
 <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a>, işletmenizi bulutta yönettiğiniz yerdir. Kullanıcı ekleme ve kaldırma, lisansları değiştirme ve parolaları sıfırlama gibi görevleri tamamlayabilirsiniz.
 
-Güvenlik veya Cihaz yönetimi gibi uzman çalışma alanları daha ayrıntılı denetim sağlar. Yönetim merkezlerinin birlikte nasıl çalıştığı hakkında daha fazla bilgi için, bu [makaledeki belirli BT rolü türleri ve Güvenlik, Cihaz Yönetimi veya Exchange gibi diğer çalışma alanları hakkında bilgi](#what-about-the-specific-types-of-it-roles-and-other-workspaces-like-security-device-management-or-exchange) edinin.
+Güvenlik veya Cihaz yönetimi gibi uzman çalışma alanları daha ayrıntılı denetim sağlar. Yönetim merkezlerinin birlikte nasıl çalıştığı hakkında daha fazla bilgi için, bu [makaledeki belirli BT rolü türleri ve Güvenlik, Cihaz Yönetimi veya Exchange gibi diğer çalışma alanları hakkında ne yapabilirsiniz?](#what-about-the-specific-types-of-it-roles-and-other-workspaces-like-security-device-management-or-exchange) konusuna bakın.
 
 Microsoft 365 yönetim merkezi ulaşmak için [admin.microsoft.com](https://admin.microsoft.com) gidin veya zaten oturum açtıysanız uygulama başlatıcıyı seçin ve **Yönetici'ı** seçin.
 
@@ -85,9 +89,9 @@ Aboneliğinizle birlikte gelen daha fazla özelliği etkinleştirmek için **Kur
 
 Faturalamayı, parolaları, kullanıcıları ve yöneticileri yönetme hakkında daha fazla bilgi için bu kursun diğer derslerine bakın.
 
-## <a name="who-is-an-admin"></a>yönetici Who?
+## <a name="who-is-an-admin"></a>Yönetici kimdir?
 
-Varsayılan olarak, iş için Microsoft 365 aboneliğine kaydolan ve satın alan kişi yönetici izinleri alır. Bu kişi, kuruluşlarının Microsoft 365 yönetmelerine yardımcı olmak için diğer kişilere yönetici izinleri atayabilir.
+Varsayılan olarak, iş için Microsoft 365 aboneliğine kaydolan ve satın alan kişi yönetici izinlerini alır. Bu kişi, kuruluşlarında Microsoft 365'i yönetmelerine yardımcı olmak için diğer kişilere yönetici izinleri atayabilir.
 
 "**Bu sayfaya erişme veya bu eylemi gerçekleştirme izniniz yok**" iletisini alırsanız yönetici değilsinizdir.
 
@@ -120,8 +124,8 @@ Parolanızı sıfırlamak, hesap silmek veya diğer görevleri tamamlamak için 
 |**Destek**|Var olan hizmet isteklerini görüntüleyin veya yenilerini oluşturun. Daha fazla bilgi için bkz. [İş ürünleri için desteğe başvurun - Yönetici Yardımı](../../business-video/get-help-support.md).|
 |**Ayarlar**|E-posta, siteler ve Office paketi gibi uygulamaların genel ayarlarını yönetin. Parola ilkenizi ve son kullanma tarihini değiştirin. Contoso.com gibi etki alanı adlarını ekleyin ve güncelleştirin. Kuruluş profilinizi ve sürüm tercihlerinizi değiştirin. Ayrıca, iş ortaklarınızın yönetim merkezinize erişip erişemeyeceğini seçin.|
 |**Kurulum**|Mevcut etki alanlarını yönetin, çok faktörlü kimlik doğrulamayı açın ve yönetin, yönetici erişimini yönetin, kullanıcı posta kutularını Office 365’e taşıyın, özellik güncelleştirmelerini yönetin ve kullanıcıların Office uygulamalarını yüklemelerine yardımcı olun.|
-|**Raporlar**|E-posta kullanımı, Office etkinleştirmeler ve daha fazlası hakkında ayrıntılı raporlarla kuruluşunuzun Microsoft 365 nasıl kullandığını bir bakışta görün. Yeni [etkinlik raporlarının](../activity-reports/activity-reports.md) nasıl kullanılacağını öğrenin.|
-|**Hizmet Durumu**|Sistem durumunu bir bakışta görüntüleyin. Ayrıca daha fazla ayrıntıya ve sistem durumu geçmişine de göz atabilirsiniz. Daha fazla bilgi için bkz. [Hizmet durumunu denetleme](../../enterprise/view-service-health.md) ve [Windows yayın durumunu denetleme](/windows/deployment/update/check-release-health). <p>Özelliklerde ve hizmetlerde yakında gerçekleşecek değişiklikleri izlemek için İleti merkezini kullanın. Değişiklik için plan oluşturmanıza ve bu değişikliğin kullanıcıları nasıl etkileyebileceğini anlamanıza yardımcı olacak bilgileri içeren duyuruları burada yayınlıyoruz. [İleti merkezi'nde](../manage/message-center.md) daha fazla ayrıntı alın.|
+|**Raporlar**|E-posta kullanımı, Office etkinleştirmeleri ve daha fazlası hakkında ayrıntılı raporlarla kuruluşunuzun Microsoft 365'i nasıl kullandığını bir bakışta görün. Yeni [etkinlik raporlarının](../activity-reports/activity-reports.md) nasıl kullanılacağını öğrenin.|
+|**Hizmet Durumu**|Sistem durumunu bir bakışta görüntüleyin. Ayrıca daha fazla ayrıntıya ve sistem durumu geçmişine de göz atabilirsiniz. Daha fazla bilgi için bkz. [Hizmet durumunu denetleme](../../enterprise/view-service-health.md) ve [Windows sürüm durumunu denetleme](/windows/deployment/update/check-release-health) . <p>Özelliklerde ve hizmetlerde yakında gerçekleşecek değişiklikleri izlemek için İleti merkezini kullanın. Değişiklik için plan oluşturmanıza ve bu değişikliğin kullanıcıları nasıl etkileyebileceğini anlamanıza yardımcı olacak bilgileri içeren duyuruları burada yayınlıyoruz. [İleti merkezi'nde](../manage/message-center.md) daha fazla ayrıntı alın.|
 |**Yönetim merkezleri**|Exchange, Skype Kurumsal, SharePoint, Yammer ve Azure AD için ayrı yönetim merkezleri açın. Her yönetim merkezi, söz konusu hizmet için sağlanan tüm ayarları içerir.  <p> Örneğin, Exchange yönetim merkezinde e-postayı, takvimleri, dağıtım gruplarını ve diğer öğeleri ayarlar ve yönetirsiniz. SharePoint yönetim merkezinde site koleksiyonlarını, site ayarlarını ve OneDrive İş’i oluşturur ve yönetirsiniz. Skype Kurumsal yönetim merkezinde anlık ileti bildirimlerini, arayarak bağlanılan konferansı ve çevrimiçi iletişim durumunu ayarlarsınız.  <p> [Exchange yönetim merkezi](/exchange/exchange-admin-center) ve [SharePoint Yönetim Merkezi](/sharepoint/sharepoint-online) hakkında daha fazla bilgi edinin. <p> **Not:** Kullanımınıza açık yönetim merkezleri planınıza ve bölgenize bağlıdır.|
 |
 
@@ -139,7 +143,7 @@ Parolanızı sıfırlamak, hesap silmek veya diğer görevleri tamamlamak için 
 
 ## <a name="turn-on-targeted-release"></a>Hedefli sürümü açma
 
-1. [admin.microsoft.com](https://admin.microsoft.com) oturum açın, gezinti bölmesine gidin ve **Ayarlar** >  **Org ayarları** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2067339" target="_blank">**Kuruluş profili** sekmesini</a> seçin.
+1. [admin.microsoft.com](https://admin.microsoft.com) oturum açın, gezinti bölmesine gidin ve **Ayarlar** > **Kuruluş ayarları** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2067339" target="_blank">**Kuruluş profili** sekmesini</a> seçin.
 
 2. **Yayın tercihleri** kartına gidin ve **Düzenle'yi** seçin.
 
@@ -153,15 +157,15 @@ Yönetim merkezindeyken, her sayfanın altındaki **Yardıma mı ihtiyacınız v
 
 Sorularınızın yanıtını burada görmüyor musunuz? Bu sayfanın altındaki **Geri Bildirim** bölümüne gidin ve sorunuzu sorun.
 
-### <a name="which-microsoft-365-plans-are-available-to-trial-or-buy"></a>Hangi Microsoft 365 planları deneme veya satın alma için kullanılabilir?
+### <a name="which-microsoft-365-plans-are-available-to-trial-or-buy"></a>Hangi Microsoft 365 planları deneme veya satın alınabilir?
 
-Microsoft 365, Office 365, Windows 10 ve Enterprise Mobility + Security içeren eksiksiz, akıllı bir çözümdür. Bu çözüm, herkesin yaratıcı olmasını ve birlikte güvenli bir şekilde çalışmasını sağlar. Aşağıdaki Microsoft 365 abonelikleri, hemen denemeniz veya satın almanız için yönetim merkezinde mevcuttur:
+Microsoft 365, Office 365, Windows 10 ve Enterprise Mobility + Security içeren eksiksiz ve akıllı bir çözümdür. Bu çözüm, herkesin yaratıcı olmasını ve birlikte güvenli bir şekilde çalışmasını sağlar. Aşağıdaki Microsoft 365 abonelikleri, hemen denemeniz veya satın almanız için yönetim merkezinde kullanılabilir:
 
 - İş için Microsoft 365
 - Microsoft 365 Kurumsal E3
 - Microsoft 365 Kurumsal E5
 
-Daha fazla bilgi için bkz[. İş için Microsoft 365 aboneliğini deneme veya satın alma](../../commerce/try-or-buy-microsoft-365.md). 
+Daha fazla bilgi için bkz. [İş için Microsoft 365 aboneliğini deneme veya satın alma](../../commerce/try-or-buy-microsoft-365.md). 
 
 ### <a name="i-found-a-bug-or-i-want-to-request-a-feature-enhancement-how-do-i-let-microsoft-know"></a>Bir hata buldum veya özellik geliştirmesi istemek istiyorum. Nasıl yaparım? Microsoft'a bildirin?
 
@@ -171,7 +175,7 @@ Sizden haber almaktan çok isteriz! Hataları bildirme ve geri bildirim paylaşm
 
 ### <a name="what-about-the-specific-types-of-it-roles-and-other-workspaces-like-security-device-management-or-exchange"></a>Belirli BT rolü türleri ve Güvenlik, Cihaz Yönetimi veya Exchange gibi diğer çalışma alanları ne olacak?
 
-<a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a>, Microsoft 365 yöneten tüm ekipler ve roller için ortak giriş noktasıdır. Deneyim, bilgi ve denetimler, her yönetici ve rol için özelleştirilebilir ve uyarlanır. Ayrıca, uzman çalışma alanları derin, ayrıntılı kontrol sağlar. Bu uzman çalışma alanları SharePoint, Teams Skype &amp; , Exchange, Güvenlik, Uyumluluk, Cihaz Yönetimi ve Azure Active Directory içerir. Uzman çalışma alanlarını konumundaki Microsoft 365 yönetim merkezi [https://admin.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2024339)gezinti bölmesinde bulabilirsiniz.
+<a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a>, Microsoft 365'i yöneten tüm ekipler ve roller için ortak giriş noktasıdır. Deneyim, bilgi ve denetimler, her yönetici ve rol için özelleştirilebilir ve uyarlanır. Ayrıca, uzman çalışma alanları derin, ayrıntılı kontrol sağlar. Bu uzman çalışma alanları SharePoint, Teams &amp; Skype, Exchange, Güvenlik, Uyumluluk, Cihaz Yönetimi ve Azure Active Directory'yi içerir. Uzman çalışma alanlarını konumundaki Microsoft 365 yönetim merkezi [https://admin.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2024339)gezinti bölmesinde bulabilirsiniz.
 
 ### <a name="what-language-options-are-available-the-admin-center"></a>Yönetici Merkezi'ni hangi dil seçenekleri kullanabilir?
 

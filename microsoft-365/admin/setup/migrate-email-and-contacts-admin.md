@@ -1,5 +1,5 @@
 ---
-title: E-postayı ve kişileri başka bir Microsoft 365
+title: E-posta ve kişileri Microsoft 365'e geçirme
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -30,83 +30,87 @@ search.appverid:
 - MOL140
 - MOW150
 ms.assetid: a3e3bddb-582e-4133-8670-e61b9f58627e
-description: Gmail veya başka bir e-posta sağlayıcısından kişileri, takvimleri ve e-postaları içeri aktarmayı ve bunları başka bir Microsoft 365.
-ms.openlocfilehash: 7905dd767b29b50466729510ac0e4cff70eb242e
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+description: Gmail'den veya başka bir e-posta sağlayıcısından kişileri, takvimleri ve e-postaları içeri aktarmayı ve microsoft 365'e geçirmeyi öğrenin.
+ms.openlocfilehash: 14f4e1d630c19038f3bf9204d52f62b2f2f18d5d
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63026641"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602988"
 ---
-# <a name="migrate-email-and-contacts-to-microsoft-365"></a>E-postayı ve kişileri başka bir Microsoft 365
+# <a name="migrate-email-and-contacts-to-microsoft-365"></a>E-posta ve kişileri Microsoft 365'e geçirme
 
-E-postayı Gmail'den veya başka bir e-posta sağlayıcısından içeri aktarın veya Microsoft 365.
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
+
+E-postayı Gmail'den veya başka bir e-posta sağlayıcısından Microsoft 365'e aktarma veya geçirme.
   
- **Bu konuda yardım ister misiniz?**  [İş Microsoft 365 destek için Microsoft 365'e başvurun](../../business-video/get-help-support.md). 
+ **Bu konuda yardım ister misiniz?**  [İş için Microsoft 365 desteğine başvurun](../../business-video/get-help-support.md). 
 
 > [!TIP]
-> Bu konudaki adımlarda yardıma ihtiyacınız varsa, [Microsoft küçük işletme uzmanıyla çalışmayı göz önünde bulundurabilirsiniz](https://go.microsoft.com/fwlink/?linkid=2186871). İş Yardımı ile, işe alımtan günlük kullanıma kadar işlerinizi büyüttükçe siz ve çalışanlarınız küçük işletme uzmanlarına 24 saat erişim elde ediyor.
+> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
   
-Bu görev için masaüstünüzde yüklü Outlook sürümüne sahip bir sürüm kullan gerekir. Outlook planlarının çoğuna Microsoft 365 [dahildir](https://go.microsoft.com/fwlink/p/?LinkId=723731).
+Bu görev için masaüstünüzde yüklü bir Outlook sürümü kullanmanız gerekir. Outlook, Microsoft 365 [planlarının](https://go.microsoft.com/fwlink/p/?LinkId=723731) çoğuna dahildir.
   
-## <a name="watch-import-and-redirect-email"></a>İzle: E-postayı içeri aktarma ve yeniden yönlendirme
+## <a name="watch-import-and-redirect-email"></a>İzleyin: E-postayı içeri aktarma ve yeniden yönlendirme
+
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2197916) bu videoya ve diğer videolara göz atın.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/40f7df36-9e24-44e5-8791-e9ed0dd8fd21?autoplay=false]
 
-Microsoft 365'a kaydolduktan sonra, hala eski bir hesaba e-posta gönderebilirsiniz; örneğin, iş için Gmail veya Outlook hesabı kullandınız. Hem yeni hem de eski hesapları kullanmaya devam ediyor veya eski hesaptan yeni hesapta yer alan verileri içeri aktarabilirsiniz.
+Microsoft 365'e kaydoldıktan sonra eski bir hesaba giden e-postanız olabilir; örneğin, iş için gmail veya Outlook hesabı kullandıysanız. Hem yeni hem de eski hesapları kullanmaya devam edebilir veya eski hesaptan verileri yeni hesabınıza aktarabilirsiniz.
 
-## <a name="migrate-gmail-to-microsoft-365"></a>Gmail'i Microsoft 365
+## <a name="migrate-gmail-to-microsoft-365"></a>Gmail'i Microsoft 365'e geçirme
 
-E-posta, kişiler ve takvimi Gmail'den başka bir kullanıcıyla birlikte Outlook geçirmek Microsoft 365:
+E-postayı, kişileri ve takvimi Gmail'den Microsoft 365 ile Outlook'a aktarmak veya geçirmek için şu adımları izleyin:
   
-- [Gmail'i başka bir Outlook](https://support.microsoft.com/office/20fdb8f2-fed8-4b14-baf0-bf04b9c44bf7)
+- [Gmail'i Outlook'a aktarma](https://support.microsoft.com/office/20fdb8f2-fed8-4b14-baf0-bf04b9c44bf7)
     
 - [Kişileri Outlook'a aktarma](https://support.microsoft.com/office/bb796340-b58a-46c1-90c7-b549b8f3c5f8)
     
 - [Google Takvim'i içeri aktarma](https://support.microsoft.com/office/098ed60c-936b-41fb-83d6-7e3786437330)
 
-## <a name="watch-import-calendars"></a>İzle: Takvimleri içeri aktarma
+## <a name="watch-import-calendars"></a>İzleme: Takvimleri içeri aktarma
     
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/c1e45708-9a92-475b-910b-f5aa40614d92?autoplay=false]
   
-## <a name="import-outlook-pst-files-to-microsoft-365-desktop"></a>Pst Outlook içeri aktarma (Microsoft 365)
+## <a name="import-outlook-pst-files-to-microsoft-365-desktop"></a>Outlook pst dosyalarını Microsoft 365'e (masaüstü) aktarma
 
-E-posta, kişiler ve takvimleri Outlook'tan bir .pst dosyasına dışarı aktarın ve sonra bu dosyayı başka bir Outlook'Microsoft 365:
+E-postayı, kişileri ve takvimleri Outlook'tan .pst dosyasına aktarmak ve ardından bu dosyayı Microsoft 365 ile Outlook'a aktarmak için şu adımları izleyin:
   
 1. [E-postayı, kişileri ve takvimi dışarı aktarma](https://support.microsoft.com/office/14252b52-3075-4e9b-be4e-ff9ef1068f91)
     
-2. [Posta, kişiler ve takvimi içeri aktarma](https://support.microsoft.com/office/431a8e9a-f99f-4d5f-ae48-ded54b3440ac)
+2. [Postayı, kişileri ve takvimi içeri aktarma](https://support.microsoft.com/office/431a8e9a-f99f-4d5f-ae48-ded54b3440ac)
     
-Yalnızca kişileri görmek için aşağıdaki adımları izleyin:
+Yalnızca kişileri istiyorsanız şu adımları izleyin:
   
-1. [Kişilerinizi başka bir Outlook](https://support.microsoft.com/office/10f09abd-643c-4495-bb80-543714eca73f)
+1. [Kişileri Outlook'tan dışarı aktarma](https://support.microsoft.com/office/10f09abd-643c-4495-bb80-543714eca73f)
     
 2. [Kişileri Outlook'a aktarma](https://support.microsoft.com/office/bb796340-b58a-46c1-90c7-b549b8f3c5f8)
     
-İşleme başlamak için Dosyayı Aç'ı Outlook Dışarı Aktarmayı **Aç'ı** \> \> **İçeri/Dışarı Aktarma&amp;**.
+İşlemi başlatmak için Outlook'u açın ve **Dosya** \> **Aç &amp; Dışarı Aktarma** **İçeri/Dışarı**\> Aktarma'yı seçin.
   
-![Dosya menüsünde Outlook 2016.](../../media/2f1c39a5-177e-4052-9dd8-90c0d140be2c.png)![dosyada &amp; Dışarı Aktar komutunu Outlook 2016](../../media/eecab6df-c372-45b1-8a8a-2f6d7af0dd68.png)![İçeri/Dışarı Aktarma'daki düğmeyi Outlook 2016](../../media/ed90ae47-20db-4be1-b0c0-826008432c6e.png)
+![Outlook 2016 dosya menüsü.](../../media/2f1c39a5-177e-4052-9dd8-90c0d140be2c.png)![Outlook 2016'de Dışarı Aktar komutunu açma &amp;](../../media/eecab6df-c372-45b1-8a8a-2f6d7af0dd68.png)![Outlook 2016'de İçeri/Dışarı Aktar düğmesi](../../media/ed90ae47-20db-4be1-b0c0-826008432c6e.png)
   
-## <a name="see-other-email-accounts-in-outlook"></a>Diğer e-posta hesaplarını e-posta Outlook
+## <a name="see-other-email-accounts-in-outlook"></a>Outlook'ta diğer e-posta hesaplarını görme
 
-Yalnızca başka bir sağlayıcıdan (Gmail, Yahoo veya Live.com gibi) e-postalarınızı başka bir Outlook? İçeri aktarmaya veya geçirmeye gerek yoktur. Outlook Web App posta kutunuzla aynı Outlook hesaplarınızı erişmek ve o hesaplara gönderilen e-postaları göndermek, almak ve okumak için Microsoft 365'i veya e-postayı ayarlayabilirsiniz.
+Outlook'ta başka bir sağlayıcıdan (Gmail, Yahoo veya Live.com gibi) gelen e-postalarınızı görmek mi istiyorsunuz? İçeri aktarmaya veya geçirmeye gerek yoktur. Diğer hesaplarınıza Microsoft 365 posta kutunuzla aynı yerden erişebilmek ve bu hesaplara gönderilen e-postaları göndermek, almak ve okumak için Outlook veya Outlook Web App ayarlayabilirsiniz.
   
 ### <a name="outlook-desktop"></a>Outlook (masaüstü)
 
-Hesabınıza özel Gmail hesabınız gibi bir hesap Outlook.
+Outlook'a özel Gmail hesabınız gibi bir hesap ekleyin.
   
-- Dosya Outlook ve ardından Dosya Ekle **hesabı'ne** \> **gidin**.
+- Outlook'u açın, ardından **Dosya** \> **Ekle hesabı'na** gidin.
     
-Daha ayrıntılı adımlara mı ihtiyacınız var? Bkz [. Hesap ekleme](https://support.microsoft.com/office/6e27792a-9267-4aa4-8bb6-c84ef146101b).
+Daha ayrıntılı adımlara mı ihtiyacınız var? Bkz. [Hesap ekleme](https://support.microsoft.com/office/6e27792a-9267-4aa4-8bb6-c84ef146101b).
   
-[![Backstage Outlook hesap bilgileri sayfasını gösteren ekran görüntüsü.](../../media/6a7fa106-1077-4351-9fe2-8eb00918b40a.png)](https://support.microsoft.com/office/6e27792a-9267-4aa4-8bb6-c84ef146101b)
+[![Backstage görünümünde Outlook hesap bilgileri sayfasını gösteren ekran görüntüsü.](../../media/6a7fa106-1077-4351-9fe2-8eb00918b40a.png)](https://support.microsoft.com/office/6e27792a-9267-4aa4-8bb6-c84ef146101b)
   
-## <a name="multiple-mailboxes-admins-can-bulk-import-email-contacts-and-calendars-to-microsoft-365"></a>Birden çok posta kutusu: Yöneticiler e-postaları, kişileri ve takvimleri toplu olarak içeri aktararak Microsoft 365
+## <a name="multiple-mailboxes-admins-can-bulk-import-email-contacts-and-calendars-to-microsoft-365"></a>Birden çok posta kutusu: Yöneticiler e-postayı, kişileri ve takvimleri Microsoft 365'e toplu olarak aktarabilir
 
-Kaynak e-posta sisteminize bağlı olarak, çeşitli toplu geçiş yöntemlerinden birini seçebilirsiniz. Size [en uygun yöntemin hangisi olduğuna karar vermek için Birden Microsoft 365](/Exchange/mailbox-migration/mailbox-migration) e-posta hesaplarını başka bir hesaba geçirmenin yolları makalesinde okuyabilirsiniz.
+Kaynak e-posta sisteminize bağlı olarak, çeşitli toplu geçiş yöntemleri arasından seçim yapabilirsiniz. Hangi yöntemin size uygun olduğunu belirlemek [için Birden çok e-posta hesabını Microsoft 365'e geçirmenin yolları](/Exchange/mailbox-migration/mailbox-migration) makalesini okuyun.
 
 ## <a name="related-content"></a>İlgili içerik
 
-[İşletmeler için Microsoft 365 planınızı planlama](plan-your-setup.md) (makale)\
-[Uygulama Office yükleme](install-applications.md) (bağlantı sayfası)\
-[İlke genel Microsoft 365 yönetim merkezi](İlk Microsoft 365 yönetim merkezi](.. /admin-overview/admin-center-overview.md) (video)
+[İş için Microsoft 365 kurulumunuzu planlama](plan-your-setup.md) (makale)\
+[Office uygulamalarını yükleme](install-applications.md) (bağlantı sayfası)\
+[Microsoft 365 yönetim merkezi genel bakış](Microsoft 365 yönetim merkezi genel bakış](.. /admin-overview/admin-center-overview.md) (video)

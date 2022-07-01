@@ -15,20 +15,20 @@ audience: ITPro
 ms.collection:
 - m365-security-compliance
 - m365initiative-defender-endpoint
-- m365solution-scenario
-- m365scenario-fpfn
+- m365solution-overview
+- m365solution-fpfn
 ms.topic: how-to
 ms.date: 12/02/2021
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs, yonghree, jcedola
 ms.custom:
 - FPFN
 - admindeeplinkDEFENDER
-ms.openlocfilehash: 81c41abffc6ec01c127b901ac63b3a5d3b6c5732
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 5cae5a4b305846617130ecdf7c267ffc4ca13037
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418466"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603978"
 ---
 # <a name="address-false-positivesnegatives-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'da yanlış pozitifleri/negatifleri ele alın
 
@@ -206,16 +206,16 @@ Uç Nokta için Microsoft Defender genelinde dışlamaları tanımlamak için a�
 - [Uç Nokta için Microsoft Defender için "izin ver" göstergeleri oluşturma](#indicators-for-microsoft-defender-for-endpoint)
 
 > [!NOTE]
-> Microsoft Defender Virüsten Koruma dışlamalar yalnızca virüsten koruma için geçerlidir, diğer Uç Nokta için Microsoft Defender özellikleri için geçerli değildir. Dosyaları genel olarak dışlamak için Microsoft Defender Virüsten Koruma için dışlamaları ve Uç Nokta için Microsoft Defender [için özel göstergeleri](/microsoft-365/security/defender-endpoint/manage-indicators) kullanın.
+> Microsoft Defender Virüsten Koruma dışlamaları yalnızca virüsten koruma için geçerlidir, diğer Uç Nokta için Microsoft Defender özellikleri için geçerli değildir. Dosyaları geniş kapsamlı bir şekilde dışlamak için Microsoft Defender Virüsten Koruma için dışlamaları ve Uç Nokta için Microsoft Defender [için özel göstergeleri](/microsoft-365/security/defender-endpoint/manage-indicators) kullanın.
 
 Bu bölümdeki yordamlarda dışlamaların ve göstergelerin nasıl tanımlanacağı açıklanmaktadır.
 
-### <a name="exclusions-for-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma için dışlamalar
+### <a name="exclusions-for-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma için Dışlamalar
 
 Genel olarak, Microsoft Defender Virüsten Koruma için dışlamalar tanımlamanız gerekmez. Dışlamaları düzenli olarak tanımladığınızdan ve yalnızca hatalı pozitif sonuçlara neden olan dosyaları, klasörleri, işlemleri ve işlem tarafından açılan dosyaları eklediğinizden emin olun. Ayrıca, tanımlı dışlamalarınızı düzenli olarak gözden geçirmeyi unutmayın. Virüsten koruma dışlamalarınızı tanımlamak veya düzenlemek için [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) kullanmanızı öneririz; ancak [grup ilkesi](/azure/active-directory-domain-services/manage-group-policy) gibi diğer yöntemleri kullanabilirsiniz (bkz. [Uç Nokta için Microsoft Defender yönetme](manage-mde-post-migration.md).
 
 > [!TIP]
-> Virüsten koruma dışlamalarıyla ilgili yardıma mı ihtiyacınız var? Bkz[. Microsoft Defender Virüsten Koruma taramaları için dışlamaları yapılandırma ve doğrulama](configure-exclusions-microsoft-defender-antivirus.md).
+> Virüsten koruma dışlamalarıyla ilgili yardıma mı ihtiyacınız var? Bkz [. Microsoft Defender Virüsten Koruma taramaları için dışlamaları yapılandırma ve doğrulama](configure-exclusions-microsoft-defender-antivirus.md).
 
 #### <a name="use-microsoft-endpoint-manager-to-manage-antivirus-exclusions-for-existing-policies"></a>Virüsten koruma dışlamalarını yönetmek için Microsoft Endpoint Manager kullanma (mevcut ilkeler için)
 
@@ -225,7 +225,7 @@ Genel olarak, Microsoft Defender Virüsten Koruma için dışlamalar tanımlaman
 
 3. **Özellikler'i** seçin ve **Yapılandırma ayarları'nın** yanında **Düzenle'yi** seçin.
 
-4. **Microsoft Defender Virüsten Koruma Dışlamalar'ı** genişletin ve dışlamalarınızı belirtin.
+4. **Microsoft Defender Virüsten Koruma Dışlamaları'nın** kapsamını genişletin ve dışlamalarınızı belirtin.
 
 5. **Gözden Geçir + kaydet'i** ve ardından **Kaydet'i** seçin.
 
@@ -235,9 +235,9 @@ Genel olarak, Microsoft Defender Virüsten Koruma için dışlamalar tanımlaman
 
 2. **Uç nokta güvenliği** \> **Virüsten Koruma** \> **+ İlke Oluştur'u** seçin.
 
-3. Bir platform seçin (**Windows 10 ve üzeri**, **macOS** veya **Windows 10 ve Windows Sunucusu** gibi).
+3. Bir platform seçin (**Windows 10 ve üzeri**, **macOS** veya **Windows 10 ve Windows Server** gibi).
 
-4. **Profil** için **Microsoft Defender Virüsten Koruma dışlamalar'ı** ve ardından **Oluştur'u** seçin.
+4. **Profil** için **Microsoft Defender Virüsten Koruma dışlamaları'nı** ve ardından **Oluştur'u** seçin.
 
 5. Profil için bir ad ve açıklama belirtin ve ardından **İleri'yi** seçin.
 
@@ -253,11 +253,11 @@ Genel olarak, Microsoft Defender Virüsten Koruma için dışlamalar tanımlaman
 
 [Göstergeler](/microsoft-365/security/defender-endpoint/manage-indicators) (özellikle, güvenliği ihlal göstergeleri veya IC'ler), güvenlik operasyonları ekibinizin varlıkların algılanmasını, önlenmesini ve dışlanmasını tanımlamasını sağlar. Örneğin, Uç Nokta için Microsoft Defender'deki taramalardan ve düzeltme eylemlerinden atlanacak belirli dosyaları belirtebilirsiniz. Ya da göstergeler belirli dosyalar, IP adresleri veya URL'ler için uyarı oluşturmak için kullanılabilir.
 
-Varlıkları Uç Nokta için Microsoft Defender için dışlamalar olarak belirtmek için, bu varlıklar için "izin ver" göstergeleri oluşturun. Uç Nokta için Microsoft Defender bu tür "izin ver" göstergeleri [yeni nesil koruma](microsoft-defender-antivirus-in-windows-10.md), [uç noktada algılama ve yanıtlama](overview-endpoint-detection-response.md) ve [otomatik araştırma & düzeltme](/microsoft-365/security/defender-endpoint/automated-investigations) için geçerlidir.
+Varlıkları Uç Nokta için Microsoft Defender için dışlamalar olarak belirtmek için, bu varlıklar için "izin ver" göstergeleri oluşturun. Uç Nokta için Microsoft Defender bu tür "izin ver" göstergeleri [yeni nesil koruma](microsoft-defender-antivirus-in-windows-10.md), [uç nokta algılama ve yanıt ve](overview-endpoint-detection-response.md) [otomatik araştırma & düzeltme](/microsoft-365/security/defender-endpoint/automated-investigations) için geçerlidir.
 
 "İzin ver" göstergeleri şu için oluşturulabilir:
 
-- [Dosyaları](#indicators-for-files)
+- [Dosyalar](#indicators-for-files)
 - [IP adresleri, URL'ler ve etki alanları](#indicators-for-ip-addresses-urls-or-domains)
 - [Uygulama sertifikaları](#indicators-for-application-certificates)
 
@@ -269,9 +269,9 @@ Varlıkları Uç Nokta için Microsoft Defender için dışlamalar olarak belirt
 
 Dosyalar için göstergeler oluşturmadan önce aşağıdaki gereksinimlerin karşılandığından emin olun:
 
-- Microsoft Defender Virüsten Koruma bulut tabanlı koruma etkin olarak yapılandırılır (bkz. [Bulut tabanlı korumayı yönetme](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus))
+- Microsoft Defender Virüsten Koruma, bulut tabanlı koruma etkin olarak yapılandırıldı (bkz. [Bulut tabanlı korumayı yönetme](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus))
 - Kötü amaçlı yazılımdan koruma istemcisi sürümü 4.18.1901.x veya üzeridir
-- Cihazlar Windows 10, sürüm 1703 veya üzeri veya Windows 11 çalıştırıyor; Windows Server 2016 veya Windows Server 2019 veya Windows Server 2022
+- Cihazlar Windows 10, sürüm 1703 veya üzeri veya Windows 11 çalıştırıyor; Windows Server 2016, Windows Server 2019 veya Windows Server 2022
 - [Engelle veya izin ver özelliği açık](/microsoft-365/security/defender-endpoint/advanced-features)
 
 #### <a name="indicators-for-ip-addresses-urls-or-domains"></a>IP adresleri, URL'ler veya etki alanları göstergeleri
@@ -292,9 +292,9 @@ IP adresleri, URL'ler veya etki alanları için göstergeler oluşturmadan önce
 
 Uygulama sertifikaları için göstergeler oluşturmadan önce aşağıdaki gereksinimlerin karşılandığından emin olun:
 
-- Microsoft Defender Virüsten Koruma bulut tabanlı koruma etkin olarak yapılandırılır (bkz. [Bulut tabanlı korumayı yönetme](deploy-manage-report-microsoft-defender-antivirus.md)
+- Microsoft Defender Virüsten Koruma, bulut tabanlı koruma etkin olarak yapılandırıldı (bkz. [Bulut tabanlı korumayı yönetme](deploy-manage-report-microsoft-defender-antivirus.md)
 - Kötü amaçlı yazılımdan koruma istemcisi sürümü 4.18.1901.x veya üzeridir
-- Cihazlar Windows 10, sürüm 1703 veya üzeri veya Windows 11 çalıştırıyor; Windows Server 2016 veya Windows Server 2019 veya Windows Server 2022
+- Cihazlar Windows 10, sürüm 1703 veya üzeri veya Windows 11 çalıştırıyor; Windows Server 2016, Windows Server 2019 veya Windows Server 2022
 - Virüs ve tehdit koruması tanımları güncel
 
 > [!TIP]
@@ -318,7 +318,7 @@ Davranışa göre kötü amaçlı yazılım olarak bir şey algılandıysa ve do
 
 1. adresine ` C:\ProgramData\Microsoft\Windows Defender\Platform\<version>`gidin ve yönetici olarak çalıştırın `MpCmdRun.exe` .
 
-2. yazın `mpcmdrun.exe -GetFiles`ve **Enter tuşuna** basın.
+2. `mpcmdrun.exe -GetFiles` yazın ve ardından **Enter**'a basın.
 
    Çeşitli tanılama günlüklerini içeren bir .cab dosyası oluşturulur. Dosyanın konumu komut isteminin çıkışında belirtilir. Varsayılan olarak, konumu şeklindedir `C:\ProgramData\Microsoft\Microsoft Defender\Support\MpSupportFiles.cab`.
 
@@ -358,7 +358,7 @@ Microsoft Defender Virüsten Koruma için bulut tabanlı koruma düzeyinizi dene
 
 Bulut tabanlı koruma ayarlarınızı düzenlemek veya ayarlamak için [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) kullanmanızı öneririz; ancak [grup ilkesi](/azure/active-directory-domain-services/manage-group-policy) gibi diğer yöntemleri kullanabilirsiniz (bkz. [Uç Nokta için Microsoft Defender yönetme](manage-mde-post-migration.md).
 
-#### <a name="use-microsoft-endpoint-manager-to-review-and-edit-cloud-delivered-protection-settings-for-existing-policies"></a>Bulut tabanlı koruma ayarlarını gözden geçirmek ve düzenlemek için Microsoft Endpoint Manager kullanın (mevcut ilkeler için)
+#### <a name="use-microsoft-endpoint-manager-to-review-and-edit-cloud-delivered-protection-settings-for-existing-policies"></a>Bulut tabanlı koruma ayarlarını gözden geçirmek ve düzenlemek için Microsoft Endpoint Manager kullanma (mevcut ilkeler için)
 
 1. Microsoft Endpoint Manager yönetim merkezine (<https://endpoint.microsoft.com>) gidin ve oturum açın.
 
@@ -370,13 +370,13 @@ Bulut tabanlı koruma ayarlarınızı düzenlemek veya ayarlamak için [Microsof
 
 5. **Gözden Geçir + kaydet'i** ve ardından **Kaydet'i** seçin.
 
-#### <a name="use-microsoft-endpoint-manager-to-set-cloud-delivered-protection-settings-for-a-new-policy"></a>Bulut tabanlı koruma ayarlarını ayarlamak için Microsoft Endpoint Manager kullanın (yeni bir ilke için)
+#### <a name="use-microsoft-endpoint-manager-to-set-cloud-delivered-protection-settings-for-a-new-policy"></a>Bulut tabanlı koruma ayarlarını ayarlamak için Microsoft Endpoint Manager kullanma (yeni bir ilke için)
 
 1. Microsoft Endpoint Manager yönetim merkezine (<https://endpoint.microsoft.com>) gidin ve oturum açın.
 
 2. **Uç nokta güvenliği** \> **Virüsten Koruma** \> **+ İlke oluştur'u** seçin.
 
-3. **Platform** için bir seçenek belirleyin ve **profil için** **Virüsten Koruma'yı** veya **Microsoft Defender Virüsten Koruma'ı** seçin (belirli seçenek **Platform** için ne seçtiğinize bağlıdır.) Ardından **Oluştur'u** seçin.
+3. **Platform** için bir seçenek belirleyin ve **profil için** **Virüsten Koruma'yı** veya **Microsoft Defender Virüsten Koruma'yı** seçin (belirli bir seçenek **Platform** için ne seçtiğinize bağlıdır.) Ardından **Oluştur'u** seçin.
 
 4. **Temel Bilgiler** sekmesinde, ilke için bir ad ve açıklama belirtin. Ardından **İleri'yi** seçin.
 
@@ -398,7 +398,7 @@ Bulut tabanlı koruma ayarlarınızı düzenlemek veya ayarlamak için [Microsof
 > [!TIP]
 > PUA hakkında daha fazla bilgi edinmek için bkz. [İstenmeyebilecek uygulamaları algılama ve engelleme](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).
 
-Kuruluşunuzun kullandığı uygulamalara bağlı olarak, PUA koruma ayarlarınızın bir sonucu olarak hatalı pozitif sonuçlar alıyor olabilirsiniz. Gerekirse, PUA korumasını bir süre denetim modunda çalıştırmayı veya kuruluşunuzdaki cihazların bir alt kümesine PUA koruması uygulamayı göz önünde bulundurun. PUA koruması, Microsoft Edge tarayıcı ve Microsoft Defender Virüsten Koruma için yapılandırılabilir.
+Kuruluşunuzun kullandığı uygulamalara bağlı olarak, PUA koruma ayarlarınızın bir sonucu olarak hatalı pozitif sonuçlar alıyor olabilirsiniz. Gerekirse, PUA korumasını bir süre denetim modunda çalıştırmayı veya kuruluşunuzdaki cihazların bir alt kümesine PUA koruması uygulamayı göz önünde bulundurun. PUA koruması, Microsoft Edge tarayıcısı ve Microsoft Defender Virüsten Koruma için yapılandırılabilir.
 
 PUA koruma ayarlarını düzenlemek veya ayarlamak için [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) kullanmanızı öneririz; ancak [grup ilkesi](/azure/active-directory-domain-services/manage-group-policy) gibi diğer yöntemleri kullanabilirsiniz (bkz. [Uç Nokta için Microsoft Defender yönetme](manage-mde-post-migration.md).
 
@@ -410,7 +410,7 @@ PUA koruma ayarlarını düzenlemek veya ayarlamak için [Microsoft Endpoint Man
 
 3. **Yönet'in** altında **Özellikler'i** seçin ve yapılandırma **ayarları'nın** yanındaki **Düzenle'yi** seçin.
 
-4. **Yapılandırma ayarları** sekmesinde aşağı kaydırın ve **Microsoft Defender Virüsten Koruma** genişletin.
+4. **Yapılandırma ayarları** sekmesinde ekranı aşağı kaydırın ve **Microsoft Defender Virüsten Koruma'yı** genişletin.
 
 5. **İstenmeyebilecek uygulamaları algıla** ayarını **Denetim** olarak ayarlayın. (Bunu kapatabilirsiniz, ancak denetim modunu kullanarak algılamaları görebilirsiniz.)
 
@@ -426,7 +426,7 @@ PUA koruma ayarlarını düzenlemek veya ayarlamak için [Microsoft Endpoint Man
 
 4. **Temel Bilgiler** sekmesinde, ilkeniz için bir ad ve açıklama belirtin. Ardından **İleri'yi** seçin.
 
-5. **Yapılandırma ayarları** sekmesinde aşağı kaydırın ve **Microsoft Defender Virüsten Koruma** genişletin.
+5. **Yapılandırma ayarları** sekmesinde ekranı aşağı kaydırın ve **Microsoft Defender Virüsten Koruma'yı** genişletin.
 
 6. **İstenmeyebilecek uygulamaları algıla'yı** **Denetim** olarak ayarlayın ve **İleri'yi** seçin. (PUA korumasını kapatabilirsiniz, ancak denetim modunu kullanarak algılamaları görebilirsiniz.)
 
@@ -459,7 +459,7 @@ Bu makaledeki tüm adımlarda çalıştıysanız ve hala yardıma ihtiyacınız 
 3. **Destek Yardımcısı** penceresinde sorununuzu açıklayın ve iletinizi gönderin. Buradan bir hizmet isteği açabilirsiniz.
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> Diğer platformlar için Antivirüs ile ilgili bilgi arıyorsanız bkz:
 > - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
 > - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

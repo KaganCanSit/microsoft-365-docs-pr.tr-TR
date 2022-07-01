@@ -28,24 +28,28 @@ search.appverid:
 ms.assetid: 8f0454b2-f51a-4d9c-bcde-2c48e41621c6
 description: Kuruluşunuz için çok faktörlü kimlik doğrulamasını ayarlamayı öğrenin.
 monikerRange: o365-worldwide
-ms.openlocfilehash: 6879a49bf0868081fed6ad8171138ce7001783c4
-ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
+ms.openlocfilehash: 00a92a7755c0200d0ad707e84ceb13fac7c978c9
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65739925"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603901"
 ---
 # <a name="set-up-multifactor-authentication-for-microsoft-365"></a>Microsoft 365 için çok faktörlü kimlik doğrulamasını ayarlama
 
-Çok faktörlü kimlik doğrulaması, sizin ve çalışanlarınızın işletmenizin güvenliğini sağlamanın en kolay yollarından biri Microsoft 365 oturum açmak için birden fazla yol sağlaması gerektiği anlamına gelir. [Çok faktörlü kimlik doğrulaması (MFA) anlayışınıza ve Microsoft 365 desteğine](multi-factor-authentication-microsoft-365.md) bağlı olarak, bunu ayarlamanın ve kuruluşunuza dağıtmanın zamanı geldi. 
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
+
+Çok faktörlü kimlik doğrulaması, sizin ve çalışanlarınızın Microsoft 365'te oturum açmak için birden fazla yol sağlaması gerektiği anlamına gelir ve işinizin güvenliğini sağlamanın en kolay yollarından biridir. [Çok faktörlü kimlik doğrulaması (MFA) anlayışınıza ve Microsoft 365'teki desteğine](multi-factor-authentication-microsoft-365.md) bağlı olarak, bunu ayarlamanın ve kuruluşunuza dağıtmanın zamanı geldi. 
 
 > [!IMPORTANT]
 > Aboneliğinizi veya deneme sürümünüzü 21 Ekim 2019'da satın aldıysanız ve oturum açtığınızda MFA istenirse, aboneliğiniz için [güvenlik varsayılanları](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) otomatik olarak etkinleştirilir.
 
 > [!TIP]
-> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken işe alımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
+> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa[bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
 
 ## <a name="watch-turn-on-multifactor-authentication"></a>İzleyin: Çok faktörlü kimlik doğrulamasını açma
+
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2197909) bu videoya ve diğer videolara göz atın.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE2MuO3?autoplay=false]
 
@@ -58,7 +62,7 @@ ms.locfileid: "65739925"
 
 - MFA'yi yönetmek için Genel yönetici olmanız gerekir. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../add-users/about-admin-roles.md).
 - Eski kullanıcı başına MFA açıksa Kullanıcı [başına eski MFA'yı kapatın](#turn-off-legacy-per-user-mfa).
-- Windows cihazlarda Office 2013 istemcileriniz varsa, [Office 2013 istemcileri için Modern Kimlik Doğrulaması'nı açın](./enable-modern-authentication.md).
+- Windows cihazlarında Office 2013 istemcileriniz varsa, [Office 2013 istemcileri için Modern Kimlik Doğrulaması'nı açın](./enable-modern-authentication.md).
 - Gelişmiş: Active Directory Federasyon Hizmetleri (AD FS) (AD FS) içeren üçüncü taraf dizin hizmetleriniz varsa Azure MFA Sunucusu'nu ayarlayın. Daha fazla bilgi için [bkz. Azure AD Çok Faktörlü Kimlik Doğrulaması ve üçüncü taraf VPN çözümleriyle gelişmiş senaryolar](/azure/active-directory/authentication/howto-mfaserver-nps-vpn).
 
 ### <a name="turn-off-legacy-per-user-mfa"></a>Eski kullanıcı başına MFA'ları kapatma
@@ -78,8 +82,8 @@ Aboneliğiniz yeniyse Güvenlik varsayılanları sizin için zaten otomatik olar
 Azure portal Azure Active Directory (Azure AD) için **Özellikler** bölmesinden güvenlik varsayılanlarını etkinleştirir veya devre dışı bırakırsınız.
 
 1. Genel yönetici kimlik bilgileriyle [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) oturum açın.
-2. Sol gezinti bölmesinde **Tümünü Göster'i** seçin ve **Yönetici merkezlerinin** altında **Azure Active Directory'ı** seçin.
-3. **Azure Active Directory yönetim merkezinde** **Azure Active Directory** \> **Özellikler'i** seçin.
+2. Sol gezinti bölmesinde **Tümünü Göster'i** seçin ve **Yönetici merkezlerin** altında **Azure Active Directory'yi** seçin.
+3. **Azure Active Directory yönetim merkezinde Azure** **Active Directory** \> **Özellikleri'ni** seçin.
 4. Sayfanın alt kısmında **Güvenlik varsayılanlarını yönet**’i seçin.
 5. Güvenlik varsayılanlarını etkinleştirmek için **Evet'i** veya güvenlik varsayılanlarını devre dışı bırakmak için **Hayır'ı** ve ardından **Kaydet'i** seçin.
 
@@ -106,12 +110,10 @@ Azure AD P1 ve P2 hakkında daha fazla bilgi için bkz. [Azure Active Directory 
 
 ### <a name="turn-on-modern-authentication-for-your-organization"></a>Kuruluşunuz için Modern kimlik doğrulamasını açma
 
-Çoğu abonelikte modern kimlik doğrulaması otomatik olarak açılır, ancak aboneliğinizi Ağustos 2017'den önce satın aldıysanız, Outlook gibi Windows istemcilerde çalışmak üzere Çok Faktörlü Kimlik Doğrulaması gibi özellikleri almak için Büyük olasılıkla Modern Kimlik Doğrulaması'nı açmanız gerekir.
+Çoğu abonelikte modern kimlik doğrulaması otomatik olarak açılır, ancak aboneliğinizi Ağustos 2017'den önce satın aldıysanız, Outlook gibi Windows istemcilerinde çalışmak üzere Çok Faktörlü Kimlik Doğrulaması gibi özellikleri almak için Büyük olasılıkla Modern Kimlik Doğrulama'yı açmanız gerekir.
 
-
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> sol gezinti bölmesinde **Kuruluş** **ayarları'nı Ayarlar** \> seçin.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> sol gezinti bölmesinde **Ayarlar** \> **Kuruluş ayarları'nı** seçin.
 2. **Hizmetler** sekmesinde **Modern kimlik doğrulaması'nı** seçin ve **Modern kimlik doğrulaması bölmesinde Modern kimlik** **doğrulamasını etkinleştir'in** seçili olduğundan emin olun. **Değişiklikleri kaydet'i** seçin.
-
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

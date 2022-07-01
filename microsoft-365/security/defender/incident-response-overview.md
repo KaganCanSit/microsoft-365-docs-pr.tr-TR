@@ -18,19 +18,18 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-m365-defender
 - m365solution-incidentresponse
-- m365solution-scenario
 - m365solution-overview
 ms.topic: conceptual
 search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: a4edb82291ff01a4876ad93d688dbbbf19416c05
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: a919e8893fff0486d7a9a3eb89be1822a73ce437
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435379"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603560"
 ---
 # <a name="investigate-and-respond-with-microsoft-365-defender"></a>Microsoft 365 Defender ile araştırma ve yanıtlama
 
@@ -44,7 +43,7 @@ Microsoft 365 Defender için birincil araştırma ve yanıtlama görevleri şunl
 
 ## <a name="incident-response"></a>Olay yanıtı
 
-Microsoft 365 hizmetler ve uygulamalar, şüpheli veya kötü amaçlı bir olay veya etkinlik algıladığında uyarılar oluşturur. Tek tek uyarılar, tamamlanmış veya devam eden bir saldırı hakkında değerli ipuçları sağlar. Ancak saldırılar genellikle cihazlar, kullanıcılar ve posta kutuları gibi farklı varlık türlerine karşı çeşitli teknikler uygular. Sonuç, kiracınızdaki birden çok varlık için birden çok uyarıdır. Bir saldırı hakkında içgörü elde etmek için tek tek uyarıların birlikte pastalanması zor ve zaman alıcı olabileceğinden, Microsoft 365 Defender uyarıları ve ilişkili bilgilerini bir olayda otomatik olarak toplar.
+Microsoft 365 hizmetleri ve uygulamaları, şüpheli veya kötü amaçlı bir olay veya etkinlik algıladığında uyarılar oluşturur. Tek tek uyarılar, tamamlanmış veya devam eden bir saldırı hakkında değerli ipuçları sağlar. Ancak saldırılar genellikle cihazlar, kullanıcılar ve posta kutuları gibi farklı varlık türlerine karşı çeşitli teknikler uygular. Sonuç, kiracınızdaki birden çok varlık için birden çok uyarıdır. Bir saldırı hakkında içgörü elde etmek için tek tek uyarıların birlikte pastalanması zor ve zaman alıcı olabileceğinden, Microsoft 365 Defender uyarıları ve ilişkili bilgilerini bir olayda otomatik olarak toplar.
 
 Sürekli olarak, olay kuyruğundaki analiz ve çözüm için en yüksek öncelikli olayları tanımlamanız ve yanıt için hazırlamanız gerekir. Bu, aşağıdakilerin bir bileşimidir:
 
@@ -91,4 +90,4 @@ Daha fazla bilgi için bkz[. Microsoft 365 Defender'de tehdit analizi](threat-an
 
 Microsoft Tehdit Uzmanları - Hedefli Saldırı Bildirimleri yönetilen bir tehdit avcılığı hizmetidir. Başvurduktan ve kabul edildikten sonra, Microsoft tehdit uzmanlarından hedefli saldırı bildirimleri alırsınız, böylece ortamınıza yönelik kritik tehditleri kaçırmazsınız. Bu bildirimler kuruluşunuzun uç noktalarını, e-postalarını ve kimliklerini korumanıza yardımcı olur. Microsoft Tehdit Uzmanları – İsteğe Bağlı Uzmanlar, kuruluşunuzun karşılaştığı tehditler hakkında uzman tavsiyeleri almanızı sağlar ve kuruluşunuzun karşılaştığı tehditlerle ilgili yardım almak için size ulaşabilirsiniz. Ek abonelik hizmeti olarak kullanılabilir.
 
-Daha fazla bilgi için bkz. [Microsoft 365 genel bakış bölümünde Microsoft Tehdit Uzmanları](/microsoft-365/security/defender/microsoft-threat-experts).
+Daha fazla bilgi için bkz. [Microsoft 365'te Microsoft Tehdit Uzmanları genel bakış](/microsoft-365/security/defender/microsoft-threat-experts).

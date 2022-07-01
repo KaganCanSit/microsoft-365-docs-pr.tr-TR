@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 2f745c0f215f19b0d6e4f9fc06b39ba8234fd170
-ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
+ms.openlocfilehash: aa6255289ddffd7edb9025e36c69a49f4a3b855b
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66554279"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603516"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender'deki yenilikler
 
@@ -46,6 +46,7 @@ Bu makale, Linux'ta Uç Nokta için Microsoft Defender'nin en son sürümlerinde
 
 **Yenilikler**
 
+- v2 tanım güncelleştirmeleri için standart olmayan konumlarda (/var dışında) tanım depolamayı desteklemeye yönelik düzeltme
 - RHEL 6'da kullanılan ürün sensöründe işletim sisteminin kilitlenmesine yol açabilecek bir sorun düzeltildi
 - `mdatp connectivity test` ürünün düzgün çalışması için gereken ek bir URL ile genişletilmiştir. Yeni URL şeklindedir [https://go.microsoft.com/fwlink/?linkid=2144709](https://go.microsoft.com/fwlink/?linkid=2144709).
 - Şimdiye kadar ürün yeniden başlatma işlemleri arasında ürün günlüğü düzeyi kalıcı hale gelmedi. Bu sürümden başlayarak günlük düzeyini kalıcı hale getiren yeni bir komut satırı araç anahtarı vardır. Yeni komut şeklindedir `mdatp log level persist --level <level>`.

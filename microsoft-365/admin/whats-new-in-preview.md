@@ -22,12 +22,12 @@ ms.custom:
 - AdminSurgePortfolio
 - admindeeplinkMAC
 description: Microsoft 365 yönetim merkezi - Bu ay eklenen özellikler hakkında bilgi edinin.
-ms.openlocfilehash: 198832f09f6b219579f128b7104ecf3ae2fa3446
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: fe801e913e227239b53eb7f1166a3f802f4217ce
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65679362"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602590"
 ---
 # <a name="whats-new-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezi'deki yenilikler
 
@@ -48,8 +48,8 @@ Diğer Microsoft bulut hizmetleriyle ilgili yeni şeyleri öğrenmek isterseniz:
 - [Microsoft Purview uyumluluk portalı'deki yenilikler](/Office365/SecurityCompliance/whats-new)
 - [Microsoft 365 Defender'daki yenilikler](../security/mtp/whats-new.md)
 - [SharePoint yönetim merkezindeki yenilikler](/sharepoint/what-s-new-in-admin-center)
-- [güncelleştirmeleri Office](/OfficeUpdates/)
-- [Windows yayın durumunu denetleme](/windows/deployment/update/check-release-health)
+- [Office güncelleştirmeleri](/OfficeUpdates/)
+- [Windows sürüm durumunu denetleme](/windows/deployment/update/check-release-health)
 
 ## <a name="may-2022"></a>Mayıs 2022
 
@@ -81,7 +81,7 @@ Daha fazla bilgi için bkz. [Uzak bağlantı üzerinden bilgisayar sorunlarını
 
 ## <a name="april-2022"></a>Nisan 2022
 
-### <a name="nps-sentiment-insights"></a>NPS Yaklaşım Analizler
+### <a name="nps-sentiment-insights"></a>NPS Yaklaşım İçgörüleri
 
 NPS anket içgörüleri, Microsoft 365 yönetim merkezi yapay zeka temelli bir panodur.
 
@@ -89,7 +89,7 @@ Yönetim merkezinde **Sistem Sağlığı** > **Ürünü geri bildirimi** > **NPS
 
 Bu özellik, sizin gibi yöneticilerin kullanıcılarınızın yanıt verdiği Microsoft NPS anketlerinden türetilen eyleme dönüştürülebilir içgörüler elde etmenize yardımcı olur. [Kuruluşunuz için Microsoft ürünü NPS geri bildirimi ve içgörüleri](manage/manage-feedback-product-insights.md) makalesinde daha fazla bilgi edinin.
 
-Geri bildirimlerinize dayanarak, kullanıcılarınızın Microsoft 365 ürünlerle ilgili neler hissettiğini öğrenebilmeniz için her NPS ayrıntılı geri bildiriminin yaklaşımını tanımlayan yeni bir özellik sunuyoruz. **NPS** ayrıntılı geri bildirimine Pozitif, **Negatif** ve **Diğer** gibi yaklaşım etiketleri atanır.
+Geri bildirimlerinize dayanarak, kullanıcılarınızın Microsoft 365 ürünleriyle ilgili neler hissettiğini öğrenebilmeniz için her NPS ayrıntılı geri bildiriminin yaklaşımını tanımlayan yeni bir özellik sunuyoruz. **NPS** ayrıntılı geri bildirimine Pozitif, **Negatif** ve **Diğer** gibi yaklaşım etiketleri atanır.
 
 :::image type="content" source="../media/product-feedback-nps-verbatims.png" alt-text="Ekran görüntüsü: NPS anket içgörüleri sekmesinde ürün geri bildirim panosu":::
 
@@ -142,7 +142,7 @@ Küçük ve orta ölçekli işletmeler, BT ortamlarını yönetmek için genelli
 
 :::image type="content" source="../media/lighthouse.png" alt-text="Ekran görüntüsü: Microsoft 365 Lighthouse panosu":::
 
-Microsoft 365 Lighthouse yalnızca bir BT iş ortağı hizmetidir ve Bulut Çözümü Sağlayıcısı (CSP) programına kayıtlı olan ve Microsoft 365 İş Ekstra sahip en fazla 1000 lisanslı kullanıcısı olan müşterileri yöneten iş ortakları tarafından kullanılabilir. Microsoft 365 E3 veya İş için Microsoft Defender (önizlemede) abonelikler. Microsoft CSP'ye kayıtlı bir BT İş Ortağıysanız Microsoft 365 Lighthouse kuruluşunuz için hiçbir ücret ödemeden kullanılabilir ve iş ölçeğinize ve büyümenize yardımcı olacak şekilde tasarlanmıştır. Daha fazla bilgi için [Microsoft 365 Lighthouse yardım kitaplığına](../lighthouse/m365-lighthouse-overview.md) göz atın.
+Microsoft 365 Lighthouse yalnızca bir BT iş ortağı hizmetidir ve Bulut Çözümü Sağlayıcısı (CSP) programına kayıtlı olan ve Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Microsoft 365 İş Ekstra sahip en fazla 1000 lisanslı kullanıcısı olan müşterileri yöneten iş ortakları tarafından kullanılabilir İş için Microsoft Defender (önizlemede) abonelikler. Microsoft CSP'ye kayıtlı bir BT İş Ortağıysanız Microsoft 365 Lighthouse kuruluşunuz için hiçbir ücret ödemeden kullanılabilir ve iş ölçeğinize ve büyümenize yardımcı olacak şekilde tasarlanmıştır. Daha fazla bilgi için [Microsoft 365 Lighthouse yardım kitaplığına](../lighthouse/m365-lighthouse-overview.md) göz atın.
 
 Microsoft 365 Lighthouse kullanmaya başlamak için bkz. [Microsoft 365 Lighthouse kaydolma](../lighthouse/m365-lighthouse-sign-up.md). Microsoft 365 Lighthouse, İş için Defender ve Microsoft 365 İş Ekstra hakkında daha fazla bilgi edinmek [için İş Ortağı web semineri serimizde bize katılın](https://aka.ms/M365MDBSeries).
 
@@ -181,7 +181,7 @@ NPS anket içgörü panosunu kullanarak size daha iyi bir deneyim sunmak için:
 
 ### <a name="microsoft-365-admin-center-video-training"></a>Microsoft 365 yönetim merkezi video eğitimi
 
-Microsoft 365 yönetim merkezi video eğitimimizi güncelleştirdik. İşletmeniz için Microsoft 365 ayarlamayı ve yönetmeyi öğrenmek için Yönetici [eğitim video kitaplığı](admin-video-library.yml) sayfasına gidin.
+Microsoft 365 yönetim merkezi video eğitimimizi güncelleştirdik. İşletmeniz için Microsoft 365'i ayarlamayı ve yönetmeyi öğrenmek için [Yönetici eğitim video kitaplığı](https://go.microsoft.com/fwlink/?linkid=2197659) sayfasına gidin.
 
 :::image type="content" source="../media/admin-library-vid-training.png" alt-text="Ekran görüntüsü: Yönetim merkezi video eğitim kitaplığını gösterme":::
 
@@ -199,11 +199,11 @@ Destek hacminiz hakkında görsel içgörüler sağlamak için **Ürüne göre B
 
 **Birim eğilimi** sekmesinin altındaki çizgi grafik, kuruluşunuz için aylar içinde destek vakalarının artması veya azalması durumunda eğilimi vurgular. Her ay oluşturulan destek olaylarının sayısını denetlemek için grafiğin üzerine gelebilirsiniz.
 
-:::image type="content" source="../media/SuppInsight-voltrnd.PNG" alt-text="Ekran görüntüsü: Kuruluşunuzda aylar içinde destek vakalarının artması veya azalması durumunda eğilimi vurgulayan Graph":::
+:::image type="content" source="../media/SuppInsight-voltrnd.PNG" alt-text="Ekran görüntüsü: Kuruluşunuzda aylar içinde destek vakaları artıyorsa veya azalıyorsa eğilimi vurgulayan grafik":::
 
 **Ürüne göre hacim eğilimi** grafiği, her ayın en yüksek destek talebine sahip ilk 3 ürününü gösterir. Tabloda filtrelemeyi etkinleştirdik ve artık sonuçları **Product**, **Severity** ve **Date'e** göre filtreleyebilirsiniz.
 
-:::image type="content" source="../media/SuppInsight-voltrndproduct.PNG" alt-text="Ekran görüntüsü: Graph her ayın en yüksek destek talebine sahip ilk 3 ürününü gösterir":::
+:::image type="content" source="../media/SuppInsight-voltrndproduct.PNG" alt-text="Ekran görüntüsü: Graph, her ayın en yüksek destek talebine sahip ilk 3 ürününü gösterir":::
 
 Ayrıca, biletleriniz hakkında daha fazla içgörü sağlamak için **Hizmet İsteğini Görüntüle** tablosuna **Önem Derecesi** ve **Kapalı Tarih** olmak üzere 2 yeni alan ekledik.
 
@@ -217,7 +217,7 @@ Ayrıca, biletleriniz hakkında daha fazla içgörü sağlamak için **Hizmet İ
 
 Arama işlevine birkaç yeni kategori ekledik.
 
-- Artık genel arama Microsoft 365 yönetici rollerini arayabilir ve herhangi bir sayfadan rol atamalarını hızlı bir şekilde görüntüleyebilir ve yönetebilirsiniz. Örneğin, **Intune yöneticisini** arayın.
+- Artık genel arama'da Microsoft 365 yönetici rollerini arayabilir ve herhangi bir sayfadan rol atamalarını hızlı bir şekilde görüntüleyebilir ve yönetebilirsiniz. Örneğin, **Intune yöneticisini** arayın.
 
 - Artık genel arama aracılığıyla basitleştirilmiş kurulum deneyimlerini bulabilirsiniz. Bu, sizin ve ekibinizin yeni özellikleri kullanmaya hızlı bir şekilde başlamanıza yardımcı olabilir. Örneğin, **parolayı süresi hiç dolmak üzere ayarlama** için arama.
 

@@ -26,18 +26,18 @@ search.appverid:
 - MET150
 ms.assetid: 5abfef7b-5957-484a-b06b-a7c55e013e44
 description: Microsoft 365 İş Ekstra ile küçük veya orta ölçekli işletmeler için siber güvenliği nasıl uygulayacağınızı öğrenin. Siber güvenlik işlevleri ve özellikleri, siber saldırıları ve güvenlik ihlallerini önlemek ve üst düzey siber savunmalarla verileri, cihazları ve bilgileri korumaya yardımcı olmak için iyileştirilmiştir.
-ms.openlocfilehash: 213e96c58c822d0d8b40d2e540582eb6a2719ef8
-ms.sourcegitcommit: 4c7b34fc46be8f5faf33139c6c7b6efaf43def27
+ms.openlocfilehash: 4baa58c4c4b48e761846c8c0ce7982c8e2c4c101
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66556844"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574079"
 ---
 # <a name="microsoft-365-business-premium-mdash-cybersecurity-for-small-business"></a>Microsoft 365 İş Ekstra &mdash; küçük işletmeler için siber güvenlik
 
 İlk olarak, Microsoft 365 İş Ekstra ve onun birinci sınıf üretkenlik araçlarını benimsemekle akıllıca bir seçim yaptığınızı söyleyerek başlayalım. Siber güvenlik göz önünde bulundurularak tasarlanan Microsoft 365 İş Ekstra, verilerinizi, cihazlarınızı ve bilgilerinizi korur. Rastgele bireyler, organize suçlar veya son derece gelişmiş ulus devletler dahil olmak üzere bilgisayar korsanlarına ve siber saldırganlara karşı kuruluşunuzun ilk ve en iyi savunması sizsiniz.
 
-Önünüzdeki görev şu &mdash; Microsoft 365 İş Ekstra'nın kuruluşunuzun geleceğini güvence altına almanıza yardımcı olmasına izin verin! Ortamınızı güçlendirmenize, ekibinizi eğitmenize ve yönetilen cihazları korumanıza yardımcı olacak aşağıdaki görevleri üstlenerek bu göreve yaklaşın. Görevler önem sırasına göre sınıflandırılmıştır ve bunları tamamlamak, bilgisayar korsanlarını engellemenin, fidye yazılımlarına karşı koruma sağlamanın ve kuruluşunuzun geleceğinin en iyi siber güvenlik savunmalarıyla korunmasını sağlamanın en etkili yoludur. Haydi başlayalım.
+Önünüzdeki görev şu &mdash; Microsoft 365 İş Ekstra'nın kuruluşunuzun geleceğini güvence altına almanıza yardımcı olmasına izin verin! Ortamınızı güçlendirmenize, kuruluşunuzun üyelerini eğitmenize ve yönetilen cihazları korumanıza yardımcı olacak aşağıdaki görevleri üstlenerek bu göreve yaklaşın. Görevler, Yöneticinin yaptıkları ve üyelerin yapmaları gerekenler olarak gruplandırılır. Bunları tamamlamak, bilgisayar korsanlarını engellemenin, fidye yazılımlarına karşı koruma sağlamanın ve işletmenizin en iyi siber güvenlik savunmalarıyla korunmasını sağlamanın en etkili yoludur. Haydi başlayalım.
 
 Her bir görev ve Microsoft 365 İş Ekstra güvenliğinin nasıl ayarlanacağı hakkında bilgi edinmek için aşağıdaki sekmelere tıklayın.
 

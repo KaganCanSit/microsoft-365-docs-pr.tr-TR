@@ -1,5 +1,5 @@
 ---
-title: Saldırı yüzeyi azaltma (ASR) kurallarını etkinleştirme
+title: Saldırı yüzeyini azaltma (ASR) kurallarını etkinleştirme
 description: Saldırı yüzeyi azaltma kuralları dağıtımınızı uygulamak için rehberlik sağlar.
 keywords: Saldırı yüzeyi azaltma kuralları dağıtımı, ASR dağıtımı, ASR kurallarını etkinleştirme, ASR'yi yapılandırma, konak yetkisiz erişim önleme sistemi, koruma kuralları, açıktan yararlanma önleme kuralları, kötüye kullanıma karşı koruma kuralları, kötüye kullanma kuralları, bulaşma önleme kuralları, Uç Nokta için Microsoft Defender, ASR kurallarını yapılandırma
 search.product: eADQiWindows 10XVcnh
@@ -17,17 +17,16 @@ ms.custom: asr
 ms.technology: mde
 ms.topic: article
 ms.collection:
-- m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 19e654c979428e25d1365cbab5b6f75b39adbdb3
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: c3c693a46c3c22749a4e8ff2d572cef56bc06d9b
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705526"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603758"
 ---
-# <a name="enable-attack-surface-reduction-asr-rules"></a>Saldırı yüzeyi azaltma (ASR) kurallarını etkinleştirme
+# <a name="enable-attack-surface-reduction-asr-rules"></a>Saldırı yüzeyini azaltma (ASR) kurallarını etkinleştirme
 
 Saldırı yüzeyi azaltma (ASR) kurallarının uygulanması, ilk test halkasını etkin, işlevsel bir duruma taşır.
 
@@ -99,7 +98,7 @@ Her kuralla ilgili ayrıntılar için [saldırı yüzeyi azaltma kuralları baş
 
 2. **grup ilkesi Yönetim Düzenleyicisi'nde** **Bilgisayar yapılandırması'na** gidin ve **Yönetim şablonları'na** tıklayın.
 
-3. **Saldırı yüzeyini azaltma** Microsoft Defender Exploit Guard **Microsoft Defender Virüsten Koruma** \> **bileşenleri** \> **Windows** \> için ağacı genişletin.
+3. Ağacı **Windows bileşenlerine** \> genişletin **Microsoft Defender Virüsten Koruma** \> **Microsoft Defender Exploit Guard** \> **Saldırısı yüzey azaltma**.
 
 4. **Saldırı yüzeyi azaltma Kuralları'ndan dosyaları ve yolları dışla** ayarına çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. **Göster'i** seçin ve **Değer adı** sütununa her dosyayı veya klasörü girin. Her öğe için **Değer** sütununa **0** girin.
 
@@ -108,7 +107,7 @@ Her kuralla ilgili ayrıntılar için [saldırı yüzeyi azaltma kuralları baş
 
 ##### <a name="use-powershell-to-exclude-files-and-folders"></a>Dosyaları ve klasörleri dışlamak için PowerShell kullanma
 
-1. Başlat menüsü **powershell** yazın, **Windows PowerShell** sağ tıklayın ve **Yönetici olarak çalıştır'ı** seçin.
+1. Başlat menüsüne **powershell** yazın, **Windows PowerShell** sağ tıklayın ve **Yönetici olarak çalıştır'ı** seçin.
 
 2. Aşağıdaki cmdlet'i girin:
 
@@ -133,10 +132,10 @@ Bir kuralın tetiklenip bir uygulama veya dosyayı engellemesi için bildirimi �
 
 [Saldırı yüzeyini azaltma (ASR) kuralları dağıtımına genel bakış](attack-surface-reduction-rules-deployment.md)
 
-[Saldırı yüzeyi azaltma (ASR) kuralları dağıtım planı](attack-surface-reduction-rules-deployment-plan.md)
+[Saldırı yüzeyini azaltma (ASR) kuralları dağıtım planı](attack-surface-reduction-rules-deployment-plan.md)
 
-[Test saldırı yüzeyi azaltma (ASR) kuralları](attack-surface-reduction-rules-deployment-test.md)
+[Saldırı yüzeyini azaltma (ASR) kuralları testi](attack-surface-reduction-rules-deployment-test.md)
 
 [Saldırı yüzeyini azaltma (ASR) kurallarını kullanıma hazır hale getirme](attack-surface-reduction-rules-deployment-operationalize.md)
 
-[Saldırı yüzeyi azaltma (ASR) kuralları başvurusu](attack-surface-reduction-rules-reference.md)
+[Saldırı yüzeyini azaltma (ASR) kuralları başvurusu](attack-surface-reduction-rules-reference.md)

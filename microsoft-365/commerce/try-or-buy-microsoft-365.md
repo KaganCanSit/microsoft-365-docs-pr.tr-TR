@@ -23,16 +23,18 @@ ms.custom:
 search.appverid: GEA150
 description: Microsoft 365 İş Standart, Microsoft 365 İş Ekstra veya İş için Microsoft 365 Uygulamaları için 30 günlük ücretsiz deneme sürümüne kaydolun.
 ms.date: 08/07/2020
-ms.openlocfilehash: d7ead35ebef6431a5e207e7114936d9724948755
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: b1a02ef1828e1868b83e16ad9bde16605103f851
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824234"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602546"
 ---
 # <a name="try-or-buy-a-microsoft-365-for-business-subscription"></a>İş için Microsoft 365 aboneliğini deneyin veya satın alın
 
-İş için Microsoft 365, microsoft BT'yi sizin yerinize hallederken kuruluşunuzu bulutta çalıştırmanıza olanak tanıyan bir abonelik hizmetidir. Microsoft cihazları yönetir, gerçek dünya tehditlerine karşı korur ve kuruluşunuza en son iş yazılımlarını sağlar. Microsoft 365 İş Standart, Microsoft 365 İş Ekstra veya İş için Microsoft 365 Uygulamaları için ücretsiz deneme aboneliğine kaydolabilir ve 30 gün boyunca deneyebilirsiniz.
+YouTube'da [Microsoft 365 küçük işletme yardımına](https://go.microsoft.com/fwlink/?linkid=2197659) göz atın.
+
+İş için Microsoft 365, kuruluşunuzu bulutta çalıştırmanıza olanak tanıyan bir abonelik hizmetidir; Microsoft ise BT'yi sizin yerinize halleder. Microsoft cihazları yönetir, gerçek dünya tehditlerine karşı korur ve kuruluşunuza en son iş yazılımlarını sağlar. Microsoft 365 İş Standart, Microsoft 365 İş Ekstra veya İş için Microsoft 365 Uygulamaları için ücretsiz deneme aboneliğine kaydolabilir ve 30 gün boyunca deneyebilirsiniz.
 
 > [!NOTE]
 > Ücretsiz deneme sürümüne kaydolırken kredi kartı kullanmanız gerekir. Ücretsiz deneme sürenizin sonunda deneme aboneliğiniz otomatik olarak ücretli aboneliğe dönüştürülür. Kredi kartınız deneme süresinin sonuna kadar faturalandırılamaz.
@@ -58,7 +60,7 @@ Yeni bir müşteri misiniz ve microsoft hesabınız yok mu? Hesap oluşturmak ve
 1. <a href="https://www.aka.ms/office365signup" target="_blank">Microsoft 365 Ürünleri sitesine</a> gidin.
 2. Microsoft 365 İş Standart **gibi** kaydolmak istediğiniz planı seçin, sayfayı aşağı kaydırın ve **1 ay boyunca ücretsiz deneyin'i** seçin.
 3. Sonraki sayfada hesabınızı ayarlama adımlarını izleyin.
-4. Kaydolma işleminin tamamlanması birkaç dakika sürebilir. Tamamlandıktan\' sonra, aboneliğiniz için kurulum sihirbazını başlatmaya hazır olursunuz. Aboneliğinizi ayarlama hakkında daha fazla bilgi için bkz. [Sonraki adımlar](#next-steps).
+4. Kaydolma işleminin tamamlanması birkaç dakika sürebilir. Tamamlandıktan\'sonra, aboneliğiniz için kurulum sihirbazını başlatmaya hazır olursunuz. Aboneliğinizi ayarlama hakkında daha fazla bilgi için bkz. [Sonraki adımlar](#next-steps).
 
 ## <a name="buy-a-subscription-from-your-free-trial"></a>Ücretsiz deneme sürümünüzden abonelik satın alma
 
@@ -72,11 +74,11 @@ Deneme sürümünüz bitmeden aboneliğinizi satın almak istiyorsanız şu adı
 4. Aboneliğiniz için aylık veya yıllık taahhüt seçin ve ardından **Kullanıma Alma'yı** seçin.
 5. Sonraki sayfada aboneliği doğrulayın ve **Kullanıma Alma'yı** seçin.
 6. Sonraki sayfada **, Satılacak** adres, **Faturalanan** bilgiler ve **Bu sırada bulunan Öğeler'i** doğrulayın. Herhangi bir değişiklik yapmanız gerekiyorsa, ilgili bölümün yanındaki **Değiştir'i** seçin.
-7. \'İşiniz bittiğinde, **Siparişi & sözleşmeyi kabul et'i** seçin.
+7. \'İşiniz bittiğinde, **Siparişi vermek & Sözleşmeyi kabul et'i** seçin.
 
 ## <a name="extend-your-trial"></a>Deneme sürenizi uzatma
 
-satın almadan önce iş için Microsoft 365 özelliklerini denemek için daha fazla zamana mı ihtiyacınız var? Deneme aboneliğinizin süresi 15 gün içinde doluyorsa ve bu süre daha önce uzatılmamışsa, denemenizi 30 gün daha uzatabilirsiniz. Bu işlem yalnızca bir kez yapılabilir.
+Satın almadan önce İş için Microsoft 365'in özelliklerini denemek için daha fazla zamana mı ihtiyacınız var? Deneme aboneliğinizin süresi 15 gün içinde doluyorsa ve bu süre daha önce uzatılmamışsa, denemenizi 30 gün daha uzatabilirsiniz. Bu işlem yalnızca bir kez yapılabilir.
 
 1. Yönetim merkezinde **Faturalama** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Ürünleriniz</a> sayfasına gidin.
 2. **Ürünler** sekmesinde, genişletmek istediğiniz deneme aboneliğini seçin.
@@ -109,6 +111,8 @@ Satın almaya hazır olduğunuzda bkz. [Deneme sürümünüzü satın alma](#buy
 
 ### <a name="watch-move-users-to-a-different-subscription"></a>İzleyin: Kullanıcıları farklı bir aboneliğe taşıma
 
+[YouTube kanalımızda](https://go.microsoft.com/fwlink/?linkid=2198013) bu videoya ve diğer videolara göz atın.
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1SBE2?autoplay=false]
 
 Kullanıcılarınız rolleri değiştirdikçe, geçerli Microsoft 365 İş Ekstra aboneliklerinde bulunmayan özelliklere ihtiyaç duyuyor olabilir. Bu durumda, bu özellikleri içeren yeni bir abonelik ekleyebilir ve bunlara ihtiyacı olan kişilere lisans atayabilirsiniz.
@@ -122,7 +126,7 @@ Kullanıcılarınız rolleri değiştirdikçe, geçerli Microsoft 365 İş Ekstr
 2. **Hizmetleri satın al** sayfasında satın almak istediğiniz planı seçin, **Ayrıntılar'ı** ve ardından **Satın Al'ı** seçin.
 3. İhtiyacınız olan lisans sayısını girin ve her ay veya tüm yıl için ödeme yapmayı seçin. Şu anda lisansı olmayan herkese otomatik olarak lisans atanmasını isteyip istemediğinizi seçin. Ardından **Şimdi kullanıma alma'ya** tıklayın.
 4. Fiyatlandırma bilgilerini gözden geçirin ve **İleri'yi** seçin.
-5. Ödeme bilgilerinizi sağlayın ve sipariş **ver** \> **Yönetici Giriş Sayfasına Git'i** seçin.
+5. Ödeme bilgilerinizi sağlayın ve sipariş **ver** \> **Giriş Yönetici git'i** seçin.
 
 > [!NOTE]
 > Deneme aboneliğinizin süresi dolduktan sonra 90 günlük yetkisiz kullanım süreniz sona ermeden önce kullanıcıları ücretsiz deneme aboneliğinizden yeni aboneliğe taşımanız gerekir. Bunu yaparak verilerinizi, hesaplarınızı ve yapılandırmanızı saklarsınız. Aksi takdirde, bu bilgiler silinir.
@@ -160,5 +164,5 @@ Zaten bir aboneliğiniz varsa ve yeni bir abonelik ekliyorsanız, kullanıcılar
 [Kullanıcıları ekleme ve lisansları aynı anda atama](../admin/add-users/add-users.md) (makale)\
 [Kullanıcılara lisans atama](../admin/manage/assign-licenses-to-users.md) (makale)\
 [Başka bir plana yükseltme](subscriptions/upgrade-to-different-plan.md) (makale)\
-[İş için Microsoft 365 eklenti satın alma veya düzenleme](buy-or-edit-an-add-on.md) (makale)\
+[İş için Microsoft 365 eklentisini satın alma veya düzenleme](buy-or-edit-an-add-on.md) (makale)\
 [Aboneliğiniz için depolama alanı ekleme](add-storage-space.md) (makale)
