@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Duyarlılık etiketi oluşturduğunuzda, dosyalara ve e-postalara otomatik olarak bir etiket atayabilir veya kullanıcılardan önerdiğiniz etiketi seçmelerini isteyebilirsiniz.
-ms.openlocfilehash: 2726a55b05ff27caee3c9739ad9d8604ce1a29d6
-ms.sourcegitcommit: 4c7b34fc46be8f5faf33139c6c7b6efaf43def27
+ms.openlocfilehash: 79c0ac8873ba23604f394340bb030c1412a6212a
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66556927"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574254"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>İçeriğe otomatik olarak bir hassasiyet etiketi uygulama
 
@@ -30,7 +30,7 @@ ms.locfileid: "66556927"
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-> [!TIP]
+> [!NOTE]
 > Veri eşlemesine otomatik olarak duyarlılık etiketi uygulama hakkında bilgi için bkz. [Microsoft Purview Veri Eşlemesi'de etiketleme](/azure/purview/create-sensitivity-label).
 
 Duyarlılık etiketi oluşturduğunuzda, belirttiğiniz koşullarla eşleştiğinde bu etiketi dosyalara ve e-postalara otomatik olarak atayabilirsiniz.
@@ -79,6 +79,12 @@ Microsoft 365'te içeriğe otomatik olarak duyarlılık etiketi uygulamak için 
     - Otomatik etiketleme koşullarınızla eşleşme olduğunda gelen e-posta etiketlenmiştir. Bu etiket [şifreleme](encryption-sensitivity-labels.md) için yapılandırılmışsa, gönderen kuruluşunuzdan geldiğinde bu şifreleme her zaman uygulanır. Varsayılan olarak, gönderen kuruluşunuzun dışındayken bu şifreleme uygulanmaz, ancak **e-posta için Ek ayarlar** yapılandırılarak ve bir Rights Management sahibi belirtilerek uygulanabilir.
     - Etiket şifreleme uyguladığında, gönderen kendi kuruluşunuzdan olduğunda e-postayı gönderen kişi [Rights Management veren ve Rights Management sahibidir](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) . Gönderen kuruluşunuzun dışındayken, ilkeniz tarafından etiketlenen ve şifrelenen gelen e-posta için bir Rights Management sahibi belirtebilirsiniz.
     - Etiket [dinamik işaretler](sensitivity-labels-office-apps.md#dynamic-markings-with-variables) uygulamak üzere yapılandırılmışsa, gelen e-posta için bu yapılandırmanın kuruluşunuz dışındaki kişilerin adlarının görüntülenmesine neden olabileceğini unutmayın.
+
+> [!TIP]
+> Bazı yeni müşteriler için, hem istemci tarafı etiketleme hem de hizmet tarafı etiketleme için varsayılan otomatik etiketleme ayarlarının otomatik yapılandırmasını sunuyoruz. Bu otomatik yapılandırma için uygun olmasanız bile, yapılandırmalarına başvurmak yararlı olabilir. Örneğin, etiketleme dağıtımınızı hızlandırmaya yardımcı olmak için mevcut etiketleri el ile yapılandırabilir ve aynı ayarlarla kendi otomatik etiketleme ilkelerinizi oluşturabilirsiniz.
+> 
+> Daha fazla bilgi için bkz. [Microsoft Purview Bilgi Koruması için varsayılan etiketler ve ilkeler](mip-easy-trials.md).
+
 
 ## <a name="compare-auto-labeling-for-office-apps-with-auto-labeling-policies"></a>Office uygulamaları için otomatik etiketlemeyi otomatik etiketleme ilkeleriyle karşılaştırma
 

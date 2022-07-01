@@ -17,12 +17,12 @@ ms.custom:
 - admindeeplinkCOMPLIANCE
 ms.assetid: f30e2353-0bd6-41ed-8347-eea1fb8d2662
 description: Güvenlik, gizlilik ve uyumluluk uygulamalarına yardımcı olmak için Microsoft Hizmet Güveni Portalı'na erişmeyi ve bu portalı kullanmayı öğrenin.
-ms.openlocfilehash: a87fc67aebb0e37ff0a26a1ee7e2f8a7c7d69cc3
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 486f8fd26ee0b30c3155615e5fcb9b40fa714f75
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66493198"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66573823"
 ---
 # <a name="get-started-with-microsoft-service-trust-portal"></a>Microsoft Hizmet Güveni Portalı'yla çalışmaya başlama
 
@@ -30,7 +30,7 @@ Microsoft Hizmet Güveni Portalı, Microsoft güvenlik, gizlilik ve uyumluluk uy
 
 ## <a name="accessing-the-service-trust-portal"></a>Hizmet Güveni Portalı'na erişme
 
-Hizmet Güveni Portalı, Denetim raporlarını ve Microsoft'un bulut hizmetleriyle ilişkili uyumlulukla ilgili diğer bilgileri yayımlamak için Microsoft'un genel sitesidir. STP kullanıcıları, dış denetçiler tarafından üretilen denetim raporlarını indirebilir ve Microsoft'un bulut hizmetlerini nasıl derlediği ve çalıştırdığı hakkında ayrıntılı bilgi sağlayan Microsoft tarafından yazılan teknik incelemelerden içgörü elde edebilir. Hizmet Güveni Portalı'ndaki bazı kaynaklara erişmek için Microsoft bulut hizmetleri hesabınızla (Azure Active Directory kuruluş hesabı) kimliği doğrulanmış bir kullanıcı olarak oturum açmanız ve Uyumluluk Malzemeleri için Microsoft Gizlilik Sözleşmesi'ni gözden geçirmeniz ve kabul etmeniz gerekir.
+Hizmet Güveni Portalı, Microsoft'un bulut hizmetlerimizi ve buradaki müşteri verilerini koruyan denetim ve işlemleri uygulamasıyla ilgili ayrıntıları içerir. Hizmet Güveni Portalı'ndaki bazı kaynaklara erişmek için Microsoft bulut hizmetleri hesabınızla (Azure Active Directory kuruluş hesabı) kimliği doğrulanmış bir kullanıcı olarak oturum açmanız ve Uyumluluk Malzemeleri için Microsoft Gizlilik Sözleşmesi'ni gözden geçirmeniz ve kabul etmeniz gerekir.
 
 ### <a name="existing-customers"></a>Mevcut müşteriler
 
@@ -67,51 +67,52 @@ Aşağıdaki bölümlerde ana menüdeki her öğe açıklanmaktadır.
 
 **Hizmet Güveni Portalı** bağlantısı giriş sayfasını görüntüler. Giriş sayfasına dönmek için hızlı bir yol sağlar.
 
-### <a name="certifications-standards-regulations-and-industry-resources"></a>Sertifikalar, Standartlar, Düzenlemeler ve Sektör Kaynakları
+### <a name="compliance-manager"></a>Uyumluluk Yöneticisi
 
-Microsoft Bulut hizmetlerinin verilerinizi nasıl güvende tuttuğunu anlayarak mevzuat uyumluluğu hedeflerine ulaşmanızı kolaylaştırma amacıyla çok sayıda güvenlik uygulaması ve tasarım bilgisi sağlar. İçeriği gözden geçirmek için aşağıdaki kutucuklardan birini seçin.
+> [!IMPORTANT]
+> Uyumluluk Yöneticisi, Hizmet Güveni Portalı'ndan <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> taşındı. Tüm müşteri verileri yeni konuma taşındı, böylece Kesintisiz Uyumluluk Yöneticisi'ni kullanmaya devam edebilirsiniz. Kurulum bilgileri ve yeni özellikler hakkında bilgi edinmek için [Uyumluluk Yöneticisi belgelerine bakın](compliance-manager.md) .
 
-- **DoD** - ABD Savunma Bakanlığı için bulut bilişim güvenlik gereksinimleri.
-- **FedRAMP** - Güvenlik, yetkilendirme ve izleme için standart bir yaklaşım sağlayan ABD kamu programı.
-- **Finansal Hizmetler** - FInancial Services için Microsoft Bulutu, verileri yönetmeye yönelik özellikler sağlar.
-- **GDPR** - Microsoft'un GDPR uyumluluk yolculuklarında müşterilerimizin desteklerine nasıl yardımcı olduğu.
-- **GRC Değerlendirmesi** - Denetim ve güvence uzmanlarına ortak bir değerlendirme yordamları kümesi sağlar.
-- **HIPAA** - Kapsanan varlıklar tarafından tutulan kişisel sağlık bilgileri için ABD Gizlilik gereksinimleri.
-- **IRS 1075** - Federal Vergi Bilgilerinin (FTI) gizliliğini korumak için rehberlik sağlayan ABD kamu programı.
-- **ISO** - Belirli bilgi güvenliği ve risk yönetimi gereksinimleriyle uyumluluk.
-- **ITAR** - Savunmanın üretim, satış ve dağıtımını denetleen ABD yönetmeliği.
-- **NIST 800-171 (DFARS)** - Federal Olmayan Sistem ve Kuruluşlarda Denetimli Sınıflandırılmamış Bilgileri korumaya yönelik ABD güvenlik gereksinimleri.
-- **PCI DSS** - Kredi kartı dolandırıcılığı azaltmak için kart sahibi verileriyle ilgili denetimlerin doğrulanması.
-- **SOC Raporları** - Microsoft Hizmetleri'nde güven ve güven oluşturmak için tasarlanmış SOC 1, 2 ve 3 raporları.
+### <a name="trust-documents"></a>Belgelere Güven
 
-Seri onay işareti olan kaynaklar, belgenin birden çok sürümü olduğunu gösterir. Bu sürümler, belgeyi tıklattıktan ve sonraki sayfada "tüm sürümleri görüntüle" seçeneğine tıkladığınızda görüntülenebilir.  
+Microsoft Bulut hizmetlerinin verilerinizi nasıl güvende tuttuğunu anlayarak mevzuat uyumluluğu hedeflerine ulaşmanızı kolaylaştırma amacıyla çok sayıda güvenlik uygulaması ve tasarım bilgisi sağlar. İçeriği gözden geçirmek için **Belgelere Güven** açılır menüsünde aşağıdaki seçeneklerden birini seçin.
 
-Tarihe ve bulut hizmetine göre filtreleme - Kullanılabilir belgeleri görüntülerken **, Tarihler'i** seçip kullanmak istediğiniz aralığı seçerek sonuçları tarih aralığına göre sıralayabilirsiniz.
+- **Denetim Raporları:** Microsoft'un Bulut hizmetleriyle ilgili bağımsız denetim ve değerlendirme raporlarının listesi görüntülenir. Bu raporlar, Microsoft Bulut hizmetlerinin veri koruma standartları ve mevzuat gereksinimleriyle uyumluluğu hakkında bilgi sağlar, örneğin:
+  - Uluslararası Standartlaştırma Kuruluşu (ISO)
+  - Hizmet Kuruluşu Denetimleri (SOC)
+  - Ulusal Standartlar ve Teknoloji Enstitüsü (NIST)
+  - Federal Risk ve Yetkilendirme Yönetimi Programı (FedRAMP)
+  - Genel Veri Koruma Yönetmeliği (GDPR)
+- **Veri Koruması:** Denetlenen denetimler, teknik incelemeler, SSS'ler, sızma testleri, risk değerlendirme araçları ve uyumluluk kılavuzları gibi çok sayıda kaynak içerir.
+- **Azure Güvenlik ve Uyumluluk Şemaları:** Güvenli ve uyumlu bulut tabanlı uygulamalar oluşturmanıza yardımcı olan kaynaklar. Bu alan kamu, finans, sağlık ve perakende dikeyleri için şema rehberliği içerir.
 
-:::image type="content" source="../media/stp-documents-filter-date.png" alt-text="Kullanılabilir belgeleri tarih aralığına göre filtreleyin.":::
+### <a name="industries--regions"></a>Sektörler & Bölgeleri
 
-Belge indirme görünümü - Kullanılabilir belgeleri görüntülerken, sonuçları ilgili **Bulut Hizmetine** göre sıralayabilirsiniz.
+Microsoft Bulut hizmetleri hakkında sektöre ve bölgeye özgü uyumluluk bilgileri sağlar.
 
-:::image type="content" source="../media/stp-documents-filter-service.png" alt-text="Kullanılabilir belgeleri bulut hizmetine göre filtreleyin.":::
+- **Sanayi:** Şu anda, bu sayfa Financial Services sektörü için sektöre özgü bir giriş sayfası sağlar. Bu, uyumluluk teklifleri, SSS ve başarı hikayeleri gibi bilgileri içerir. Gelecekte daha fazla sektöre yönelik kaynaklar kullanıma sunulacaktır, ancak STP'deki **Güven Belgeleri > Veri Koruması** sayfasına giderek daha fazla sektöre yönelik kaynakları bulabilirsiniz.
+- **Bölge:** Microsoft Bulut hizmetlerinin çeşitli ülkelerin yasalarıyla uyumluluğu hakkında yasal görüşler sağlar. Belirli ülkeler Avustralya, Kanada, Çek Cumhuriyeti, Danimarka, Almanya, Polonya, Romanya, İspanya ve Birleşik Krallık'tır.
 
-> [!NOTE]
-> STP'de dosyaların çoğu lisans sözleşmesinin kabul edilmesini gerektirir. Bazı tarayıcı tabanlı PDF görüntüleyicileri Javascript'in çalışmasına izin vermez ve bu da lisans sözleşmesinin görüntülenmesini ve dosyanın açılmasını engeller.
+### <a name="trust-center"></a>Güven Merkezi
+
+Microsoft Bulut'ta güvenlik, uyumluluk ve gizlilik hakkında daha fazla bilgi sağlayan Microsoft [Güven Merkezi](https://www.microsoft.com/trust-center) bağlantıları. Bu, GDPR'nin belirli gereksinimlerini karşılamak için kullanabileceğiniz Microsoft Bulut hizmetlerindeki özellikler hakkında bilgiler, GDPR sorumluluğunuzda ve Microsoft'un GDPR'yi desteklemek için aldığı teknik ve kurumsal önlemleri anlamanıza yardımcı olan belgeleri içerir.
 
 ### <a name="my-library"></a>Kitaplığım
 
 Bu özellik, belgeleri kitaplığım sayfanızda hızla erişebilmeniz için kaydetmenize (veya *sabitlemenize*) olanak tanır. Ayrıca, Kitaplığım'daki belgeler güncelleştirildiğinde Microsoft'un size bir e-posta iletisi göndermesi için bildirimleri ayarlayabilirsiniz. Daha fazla bilgi için bu makaledeki [Kitaplığım](#my-library-1) bölümüne bakın.
 
-### <a name="all-documents"></a>Tüm Belgeler
+### <a name="more"></a>Daha Fazla
 
-Bu bölümde tüm kullanılabilir belgeler görüntülenir. Kitaplığım bölümünüzde kaydedilecek belgeleri seçin. Belgeler Sertifikalar, Standartlar, Düzenlemeler ve Sektör Kaynakları altında gösterilen kategoriler altında sıralanır.
+Yalnızca genel yönetici hesabı tarafından kullanılabilen yönetim işlevlerine erişmek için **Daha fazla > Yönetici'e** gidin. Bu seçenek yalnızca genel yönetici olarak oturum açtığınızda görünür. **Yönetici** açılır menüsünde iki seçenek vardır:
+
+- **Ayarlar:** Bu sayfa, Uyumluluk Yöneticisi (klasik) için kullanıcı rolleri atamanızı sağlar.
+- **Kullanıcı Gizlilik Ayarları:** Bu sayfa, belirli bir kullanıcı için Uyumluluk Yöneticisi'nde (klasik) eylem öğesi atamaları içeren bir raporu dışarı aktarmanızı sağlar. Ayrıca tüm eylem öğelerini farklı bir kullanıcıya yeniden atayabilir ve atanan eylem öğelerini belirtilen kullanıcıdan kaldırabilirsiniz.
 
 ### <a name="search"></a>Arama
 
-Hizmet Güveni Portalı sayfasının sağ üst köşesindeki büyütece tıklayarak kutuyu genişletin, arama terimlerinizi girin ve **Enter tuşuna** basın. **Arama** sayfası görüntülenir ve arama terimi arama kutusunda ve arama sonuçları aşağıda listelenir.
+Varsayılan olarak, arama belge sonuçlarını döndürür. Görüntülenen belge listesini daraltmak için açılan listeleri kullanarak sonuçları filtreleyebilirsiniz. Belge listesini daraltmak için birden çok filtre kullanabilirsiniz. Filtreler belirli bulut hizmetlerini, uyumluluk veya güvenlik uygulamaları kategorilerini, bölgeleri ve endüstrileri içerir. Belgeyi indirmek için belge adı bağlantısına tıklayın.
 
-![Hizmet Güveni Portalı - Filtre uygulanmış belgelerde arama yapın.](../media/86b754e1-c63c-4514-89ac-d014bf334140-2.png)
-
-Varsayılan olarak, arama belge sonuçlarını döndürür. Görüntülenen belge listesini daraltmak için açılan listeleri kullanarak sonuçları filtreleyebilirsiniz. Belge listesini daraltmak için birden çok filtre kullanabilirsiniz. Filtreler belirli bulut hizmetlerini ve bölgeleri içerir. Belgeyi indirmek için belge adı bağlantısına tıklayın.
+> [!NOTE]
+> Hizmet Güveni Portalı raporları ve belgeleri yayımlandıktan en az 12 ay sonra veya belgenin yeni bir sürümü kullanıma sunulana kadar indirilebilir.
 
 ## <a name="my-library"></a>Kitaplığım
 
@@ -120,6 +121,18 @@ Kitaplığım sayfanıza Hizmet Güveni Portalı'nda belge ve kaynak eklemek iç
 Ayrıca bildirimler özelliği, Kitaplığım'ı microsoft kitaplığınıza eklediğiniz bir belgeyi her güncelleştirdiğinde size bir e-posta iletisi gönderilecek şekilde yapılandırmanıza olanak tanır. Bildirimleri ayarlamak için Kitaplığım'a gidin ve **Bildirim Ayarları'na** tıklayın. Bildirimlerin sıklığını seçebilir ve kuruluşunuzda bildirim göndermek için bir e-posta adresi belirtebilirsiniz. E-posta bildirimleri güncelleştirilmiş belgelerin bağlantılarını ve güncelleştirmenin kısa bir açıklamasını içerir.
 
 Ayrıca, bildirimleri açıp açmamanızdan bağımsız olarak Kitaplığım'da son 30 gün içinde güncelleştirilmiş tüm belgeleri tanımlayacağınızı unutmayın. Aracın ipucunda güncelleştirmenin kısa bir açıklaması da görüntülenir.
+
+## <a name="starter-packs"></a>Başlangıç paketleri
+
+Başlangıç paketleri, belirli sektörler için Microsoft Bulut hizmetleri hakkında Microsoft tarafından seçilmiş bir belge kümesidir. Hizmet Güveni Portalı şu anda finansal hizmet kuruluşları için aşağıdaki üç başlangıç paketini sunmaktadır. Bu başlangıç paketleri kuruluşların Microsoft Bulutu'ndaki güvenlik, uyumluluk ve gizliliği değerlendirmesine ve değerlendirmesine yardımcı olur ve yüksek düzeyde düzenlenmiş finansal hizmetler sektöründe Microsoft Bulut hizmetlerinin uygulanmasına yardımcı olmak için rehberlik sağlar.
+
+- **Değerlendirme Başlangıç Paketi:** Finansal hizmetler kuruluşları için Microsoft bulutunun erken değerlendirmesi için kullanın.
+
+- **Değerlendirme Başlangıç Paketi:** Değerlendirmeden sonra, kuruluşunuzun güvenlik, uyumluluk ve gizlilikle ilgili riskleri değerlendirmesine yardımcı olmak için bu başlangıç paketindeki denetim listelerini ve diğer yönergeleri kullanın.
+
+- **Denetim Başlangıç Paketi:** Microsoft Bulut hizmetlerini uygulamanızı kuruluşunuzun risk riskini azaltmaya yardımcı olacak şekilde uygulamanıza yardımcı olmak için denetim denetimlerini ve diğer araçları kullanma yönergeleri için bu başlangıç paketini kullanın.
+
+Bu başlangıç paketlerine erişmek için **Service Trust Portal > Industries & Regions > Industry Solutions > Financial Services'e** gidin. Başlangıç paketindeki belgeleri açabilir veya indirebilir ya da Kitaplığım'a kaydedebilirsiniz.
 
 ## <a name="localization-support"></a>Yerelleştirme desteği
 

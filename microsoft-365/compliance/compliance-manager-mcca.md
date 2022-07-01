@@ -17,18 +17,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Uyumluluk Yöneticisi ile hızlı bir şekilde çalışmaya başlamak için Microsoft Purview için Yapılandırma Çözümleyicisi'ni nasıl kullanacağınızı öğrenin.
-ms.openlocfilehash: 5d9d786ba88792ac827252ea7ff257d1f80fa70b
-ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
+ms.openlocfilehash: d2e5fbc0d928fb5931139a274cf9cce5bdc4d983
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66554499"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66573957"
 ---
 # <a name="configuration-analyzer-for-microsoft-purview-camp"></a>Microsoft Purview için Yapılandırma Çözümleyicisi (CAMP)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-**Bu makalede:** Microsoft Uyumluluk Yöneticisi'ni hızlı bir şekilde kullanmaya başlamak için Microsoft Purview (CAMP) için Configuration Analyzer aracını yüklemeyi ve çalıştırmayı öğrenin.
+**Bu makalede:** Microsoft Purview Uyumluluk Yöneticisi'ni hızlı bir şekilde kullanmaya başlamak için Microsoft Purview (CAMP) için Configuration Analyzer aracını yüklemeyi ve çalıştırmayı öğrenin.
 
 ## <a name="compliance-configuration-analyzer-camp-overview"></a>Uyumluluk Yapılandırma Çözümleyicisi'ne (CAMP) genel bakış
 

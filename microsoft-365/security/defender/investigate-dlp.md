@@ -16,12 +16,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: 6111bf9e2a44d079bfae19d9aa0c34f7b125ff08
-ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
+ms.openlocfilehash: a92e3b206b10b68ecc3ff2f94870a9174185b63b
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66057897"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574310"
 ---
 # <a name="investigate-data-loss-incidents-with-microsoft-365-defender"></a>Microsoft 365 Defender ile veri kaybı olaylarını araştırma
 
@@ -44,7 +44,7 @@ DLP olaylarının yanı sıra olayları ve kanıtları araştırma ve düzeltme 
 
 ## <a name="licensing-requirements"></a>Lisans gereksinimleri
 
-Microsoft 365 Defender portalında Microsoft Purview Veri Kaybı Önleme olaylarını araştırmak için aşağıdaki aboneliklerden birinin lisansına sahip olmanız gerekir: 
+Microsoft 365 Defender portalında Microsoft Purview Veri Kaybı Önleme olayları araştırmak için aşağıdaki aboneliklerden birinin lisansına sahip olmanız gerekir: 
 
 - Microsoft Office 365 E5/A5
 - Microsoft 365 E5/A5
@@ -52,9 +52,12 @@ Microsoft 365 Defender portalında Microsoft Purview Veri Kaybı Önleme olaylar
 - Microsoft 365 E5/A5 Güvenliği
 - Microsoft 365 E5/A5 Information Protection ve İdare
 
+> [!NOTE] 
+> Bu özellik için lisanslı ve uygun olduğunuzda DLP uyarıları otomatik olarak Microsoft 365 Defender akacaktır. Bu özelliği devre dışı bırakmak istiyorsanız bir destek olayı açın. 
+
 ## <a name="dlp-investigation-experience-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında DLP araştırma deneyimi
 
-Başlamadan önce<a href="https://purview.microsoft.com" target="_blank">, Microsoft Purview uyumluluk portalında</a> [tüm DLP ilkeleriniz için uyarıları açın](/microsoft-365/compliance/dlp-configure-view-alerts-policies#alert-configuration-experience).
+Başlamadan önce, <a href="https://purview.microsoft.com" target="_blank">Microsoft Purview uyumluluk portalı</a> [tüm DLP ilkeleriniz için uyarıları açın](/microsoft-365/compliance/dlp-configure-view-alerts-policies#alert-configuration-experience).
 
 1. Microsoft 365 Defender portalına gidin ve sol taraftaki gezinti **menüsünden Olaylar'ı** seçerek olaylar sayfasını açın.
 
@@ -89,7 +92,7 @@ Başlamadan önce<a href="https://purview.microsoft.com" target="_blank">, Micro
 
 Bağıntınızı, algılamanızı ve araştırmanızı diğer veri kaynakları arasında genişletmek ve Sentinel'in yerel SOAR özelliklerini kullanarak otomatik düzenleme akışlarınızı genişletmek için tüm DLP olaylarını Sentinel'e aktarmak için Microsoft Sentinel'deki Microsoft 365 Defender bağlayıcısını kullanabilirsiniz. 
 
-1. DLP olayları ve uyarıları da dahil olmak üzere tüm olayları Sentinel'e aktarmak için Microsoft 365 Defender'dan Microsoft Sentinel'e Bağlan verileri hakkındaki yönergeleri izleyin. Olay bağlayıcısını etkinleştirerek `CloudAppEvents` tüm O365 denetim günlüklerini Sentinel'e çekin.
+1. DLP olayları ve uyarıları da dahil olmak üzere tüm olayları Sentinel'e aktarmak için verileri Microsoft 365 Defender'den Microsoft Sentinel'e bağlama yönergelerini izleyin. Olay bağlayıcısını etkinleştirerek `CloudAppEvents` tüm O365 denetim günlüklerini Sentinel'e çekin.
 
    Yukarıdaki bağlayıcı ayarlandıktan sonra DLP olaylarınızı Sentinel'de görebilmeniz gerekir.
 

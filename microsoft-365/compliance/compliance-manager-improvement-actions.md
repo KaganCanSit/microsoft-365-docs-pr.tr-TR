@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Uyumluluk Yöneticisi'nde iyileştirme eylemleriyle çalışarak denetimleri uygulamayı ve test etmeyi öğrenin. İş, depolama belgeleri ve dışarı aktarma raporları atayın.
-ms.openlocfilehash: 9dca4f3a742b82a2cf119ceb40b04241d1b5177f
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: ed52b6e9b3f6c817430383beebcb57f9c4dcf613
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621780"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574288"
 ---
 # <a name="working-with-improvement-actions-in-compliance-manager"></a>Uyumluluk Yöneticisi'nde iyileştirme eylemleriyle çalışma
 
@@ -67,7 +67,7 @@ Uygun atananı tanımladıktan sonra, işi gerçekleştirmek için yeterli [bir 
 3. **Ata'yı** seçin. Atanan kullanıcı, iyileştirme eyleminin kendisine atandığını açıklayan bir e-posta alır ve iyileştirme eylemine doğrudan bağlantı sağlar.
 
 > [!NOTE]
-> ABD Kamu Community (GCC) Yüksek ve Savunma Bakanlığı (DoD) müşterileri, iyileştirme eylemleri atandığında e-posta almaz.
+> ABD Kamu Topluluğu (GCC) Yüksek ve Savunma Bakanlığı (DoD) müşterileri, iyileştirme eylemleri atandığında e-posta almaz.
 
 Atanan kullanıcı daha sonra önerilen eylemleri gerçekleştirebilir.
 
@@ -156,7 +156,9 @@ Uyumluluk Yöneticisi, iyileştirme eylemlerini test etme seçenekleri sağlar. 
 El ile test için ayarlanan iyileştirme eylemleri, el ile test ettiğiniz ve uyguladığınız eylemlerdir. Gerekli uygulama ve test durumu durumlarını ayarlar ve tüm kanıt dosyalarını **Belgeler** sekmesine yüklersiniz. Bazı eylemlerde, iyileştirme eylemlerini test etme için tek kullanılabilir yöntem budur.
 
 #### <a name="automatic-testing-source"></a>Otomatik test kaynağı
-Bir uygulama eylemi Uyumluluk Yöneticisi tarafından otomatik olarak test edilmeye uygunsa, test kaynağı için **Otomatik** seçeneğini görürsünüz. Uyumluluk Yöneticisi, Microsoft 365 ortamınızda ayarladığınız diğer uyumluluk çözümlerinden gelen sinyallerin yanı sıra Microsoft Güvenli Puan'ın da izlediği tüm tamamlayıcı eylemleri algılar. Test sekmesindeki **Test mantığı** alanı, eylemin uyumluluk puanınıza doğru puan geçirmesi ve puan kazanması için başka bir çözümde ne tür bir ilke veya yapılandırma gerektiğini gösterir.
+Bazı iyileştirme eylemleri, Uyumluluk Yöneticisi tarafından otomatik olarak test edilebilir. Hangi iyileştirme eylemlerinin otomatik olarak test edilebileceği ve test edilemeyecekleri [hakkında ayrıntılı bilgi edinin](compliance-manager-improvement-actions.md#update-testing-source).
+
+Otomatik olarak test edilebilen iyileştirme eylemleri için, test kaynağı için **Otomatik** seçeneğini görürsünüz. Uyumluluk Yöneticisi, Microsoft 365 ortamınızda ayarladığınız diğer uyumluluk çözümlerinden gelen sinyallerin yanı sıra Microsoft Güvenli Puan'ın da izlediği tüm tamamlayıcı eylemleri algılar. Test sekmesindeki **Test mantığı** alanı, eylemin uyumluluk puanınıza doğru puan geçirmesi ve puan kazanması için başka bir çözümde ne tür bir ilke veya yapılandırma gerektiğini gösterir.
 
 Sinyaller bir iyileştirme eyleminin başarıyla uygulandığını gösterdiğinde, ilgili denetim ve değerlendirmelerin puanlarını dikkate alacak şekilde bu eylem için uygun puanları otomatik olarak alırsınız. [Sürekli değerlendirmenin uyumluluk puanınızı nasıl etkilediği](compliance-score-calculation.md#how-compliance-manager-continuously-assesses-controls) hakkında daha fazla bilgi edinin.
 
@@ -250,4 +252,4 @@ Uygulama veya test durumunda değişiklik ya da puan artışı veya düşüş gi
 
 ## <a name="export-a-report"></a>Raporu dışarı aktarma
 
-Tüm iyileştirme eylemlerinizi ve iyileştirme eylemleri sayfasında gösterilen filtre kategorilerini içeren bir Excel çalışma sayfası indirmek için ekranınızın sol üst köşesindeki **Dışarı Aktar'ı** seçin.
+Tüm iyileştirme eylemlerinizi ve iyileştirme eylemleri sayfasında gösterilen filtre kategorilerini içeren bir Excel çalışma sayfasını indirmek için ekranınızın sol üst köşesindeki **Dışarı Aktar'ı** seçin.

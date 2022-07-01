@@ -15,19 +15,19 @@ manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.date: ''
-ms.openlocfilehash: e53cda0ac61bdc546e972d663bf0063b02b21ad3
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: 9e94b164dd5c4863b792acdfdd36756ebd94347a
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363280"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574013"
 ---
 # <a name="turn-on-network-protection"></a>Ağ korumasını açın
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Şunlar için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 - Microsoft Defender Virüsten Koruma
@@ -36,7 +36,7 @@ ms.locfileid: "65363280"
 - Windows
 
 > [!TIP]
-> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 [Ağ koruması](network-protection.md) , çalışanların internet üzerinde kimlik avı dolandırıcılığı, açıklardan yararlanma ve diğer kötü amaçlı içeriğe ev sahipliği yapabilen tehlikeli etki alanlarına erişmek için herhangi bir uygulama kullanmasını önlemeye yardımcı olur. [Ağ korumasını](evaluate-network-protection.md) etkinleştirmeden önce hangi uygulamaların engellendiğini görüntülemek için bir test ortamında ağ korumasını denetleyebilirsiniz.
 
@@ -74,7 +74,7 @@ Aşağıdaki yöntemlerden herhangi birini kullanarak ağ korumasını etkinleş
 
 ### <a name="powershell"></a>PowerShell
 
-1. Başlat menüsü **powershell** yazın, **Windows PowerShell** sağ tıklayın ve **Yönetici olarak çalıştır'ı** seçin.
+1. Başlat menüsüne **powershell** yazın, **Windows PowerShell** sağ tıklayın ve **Yönetici olarak çalıştır'ı** seçin.
 
 2. Aşağıdaki cmdlet'i girin:
 
@@ -99,17 +99,39 @@ Ağ korumasını etkinleştirmeden veya devre dışı bırakmadan veya denetim m
 
 ### <a name="microsoft-endpoint-manager"></a>Microsoft Endpoint Manager
 
+#### <a name="microsoft-defender-for-endpoint-baseline-method"></a>Uç Nokta için Microsoft Defender Temel yöntemi
+
+1. Microsoft Endpoint Manager yönetim merkezinde (https://endpoint.microsoft.com).
+2. **Uç nokta güvenlik güvenlik** > **temelleri** >  **Uç Nokta için Microsoft Defender Temel'e** gidin.
+3. **Profil oluştur'u** seçin, profiliniz için bir ad sağlayın ve **ardından İleri'yi** seçin.
+4. **Yapılandırma ayarları** bölümünde **Saldırı Yüzeyi Azaltma Kuralları'na** gidin > **Ağ korumasını etkinleştir** için **Engelle**, **Etkinleştir veya Denetle'yi** ayarlayın. **İleri**'yi seçin.
+5. Kuruluşunuzun gerektirdiği uygun **Kapsam etiketlerini** ve **Atamaları** seçin.
+7. Tüm bilgileri gözden geçirin ve **oluştur'u** seçin.
+
+#### <a name="antivirus-policy-method"></a>Virüsten koruma ilkesi yöntemi
+1. Microsoft Endpoint Manager yönetim merkezinde (https://endpoint.microsoft.com).
+2. **Uç nokta güvenliği** > **Virüsten Koruma'ya** gidin
+3. **İlke oluştur'u** seçin
+4. **İlke oluştur** açılır penceresinde **Platform** **listesinden Windows 10, Windows 11 ve Windows Server'ı** seçin.
+5. **Profil** **listesinden Microsoft Defender Virüsten Koruma'yı** ve ardından **Oluştur'u** seçin
+6. Profiliniz için bir ad girin ve **İleri'yi** seçin.
+7. **Yapılandırma ayarları** bölümünde **, Ağ Korumasını Etkinleştir** için **Devre Dışı**, **Etkin (blok modu)** veya **Etkin (denetim modu)** seçeneğini belirleyin ve **ardından İleri'yi** seçin.
+8. Kuruluşunuzun gerektirdiği uygun **Atamaları** ve **Kapsam etiketlerini** seçin.
+9. Tüm bilgileri gözden geçirin ve **oluştur'u** seçin.
+
+#### <a name="configuration-profile-method"></a>Yapılandırma profili yöntemi
+
 1. Microsoft Endpoint Manager yönetim merkezinde (https://endpoint.microsoft.com).
 
-2. **CihazlarYapılandırma** >  **profilleriProfil** >  oluştur'a gidin.
+2. **Cihaz** > **Yapılandırma profilleri** > **Profil oluştur'a** gidin.
 
 3. **Profil oluştur** açılır penceresinde **Platform'u** ve ardından **Profil Türü'nü** **Şablon** olarak seçin.
 
 4. **Şablon adında**, şablon listesinden **Uç nokta koruması'nı** seçin ve ardından **Oluştur'u** seçin.
 
-4. **Endpoint** **protectionBasics'e** >  gidin, profiliniz için bir ad sağlayın ve **İleri'yi** seçin.
+4. **Uç nokta koruma** > **temelleri'ne** gidin, profiliniz için bir ad sağlayın ve **İleri'yi** seçin.
 
-5. **Yapılandırma ayarları** bölümünde **Microsoft Defender Exploit Guard** >  **Network filtrelemeSiyaz** >  **korumasıEnable** >  veya **Audit'e** gidin. **İleri**'yi seçin.
+5. **Yapılandırma ayarları** bölümünde **Microsoft Defender Exploit Guard** > **Ağ filtreleme** > **Ağ koruması** > **Etkinleştirme** veya **Denetleme'ye** gidin. **İleri**'yi seçin.
 
 6. Kuruluşunuzun gerektirdiği uygun **Kapsam etiketlerini**, **Atamaları** ve **Uygulanabilirlik kurallarını** seçin. Yöneticiler daha fazla gereksinim ayarlayabilir.
 
@@ -127,15 +149,15 @@ Etki alanına katılmış bilgisayarlarda veya tek başına bir bilgisayarda ağ
 
 2. **grup ilkesi Yönetim Düzenleyicisi'nde** **Bilgisayar yapılandırması'na** gidin ve **Yönetim şablonları'nı** seçin.
 
-3. **Exploit Guard** \> **Ağ koruması** **Windows Defender Microsoft Defender Virüsten Koruma bileşenleri** \> **Windows** \> için ağacı genişletin.
+3. Ağacı **Windows bileşenleri** \> **Microsoft Defender Virüsten Koruma** \> **Windows Defender Exploit Guard** \> **Ağ koruması** olarak genişletin.
 
    > [!NOTE]
-   > Windows'ın eski sürümlerinde, grup ilkesi yolu "Microsoft Defender Virüsten Koruma" yerine "Windows Defender Virüsten Koruma" diyebilir.
+   > Windows'un eski sürümlerinde, grup ilkesi yolu "Microsoft Defender Virüsten Koruma" yerine "Windows Defender Virüsten Koruma" diyebilir.
 
 4. **Kullanıcıların ve uygulamaların tehlikeli web sitelerine erişmesini engelle** ayarına çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. Seçenekler bölümünde aşağıdaki seçeneklerden birini belirtmeniz gerekir:
     - **Engelle** - Kullanıcılar kötü amaçlı IP adreslerine ve etki alanlarına erişemez.
     - **Devre dışı bırak (Varsayılan)** - Ağ koruma özelliği çalışmaz. Kullanıcıların kötü amaçlı etki alanlarına erişimi engellenmez.
-    - **Denetim Modu** - Kullanıcı kötü amaçlı bir IP adresini veya etki alanını ziyaret ederse, olay Windows olay günlüğüne kaydedilir. Ancak, kullanıcının adresi ziyaret etme engellenmez.
+    - **Denetim Modu** - Kullanıcı kötü amaçlı bir IP adresini veya etki alanını ziyaret ederse, windows olay günlüğüne bir olay kaydedilir. Ancak, kullanıcının adresi ziyaret etme engellenmez.
 
    > [!IMPORTANT]
    > Ağ korumasını tam olarak etkinleştirmek için, grup ilkesi seçeneğini **Etkin** olarak ayarlamanız ve ayrıca seçenekler açılan menüsünde **Engelle'yi** seçmeniz gerekir.
@@ -147,7 +169,7 @@ Etki alanına katılmış bilgisayarlarda veya tek başına bir bilgisayarda ağ
 
 1. Configuration Manager konsolunu açın.
 
-2. **Varlıklar ve Uyumluluk** >  **Endpoint Protection Windows Defender** >  **Exploit Guard'a** gidin.
+2. **Varlıklar ve Uyumluluk** > **Endpoint Protection** >  **Windows Defender Exploit Guard'a** gidin.
 
 3. Yeni bir ilke oluşturmak için şeritten **Exploit Guard İlkesi Oluştur'u** seçin.
    - Var olan bir ilkeyi düzenlemek için ilkeyi seçin, ardından şeritten veya sağ tıklama menüsünden **Özellikler'i** seçin. **Ağ Koruması sekmesinden Ağ korumasını yapılandır** seçeneğini düzenleyin.  

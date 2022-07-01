@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Microsoft 365 İş Ekstra işletmenize üretkenlik ve güvenlik konusunda nasıl yardımcı olduğunu öğrenin.
-ms.openlocfilehash: 8cfdbdf6f8980a0dbc3a30ca5994714b82571920
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 851abcfc2e7d6b55c4c6d201132dabafc56a898e
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66489891"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574166"
 ---
 # <a name="how-microsoft-365-security-recommendations-affect-your-users"></a>Microsoft 365 güvenlik önerileri kullanıcılarınızı nasıl etkiler?
 
@@ -67,7 +67,7 @@ Microsoft 365 İş Ekstra sık kullandığınız Office üretkenlik uygulamalar�
 
 ## <a name="resources-to-train-your-users"></a>Kullanıcılarınızı eğitmek için kaynaklar
 
-Bu kitaplıkta sağlanan güvenlik önerileri, siber saldırıların ortamınıza erişmesini çok daha zor hale getirir. Ancak, güvenlik stratejinizin önemli bir parçası, kullanıcıları&mdash; sisteminizi düzenli olarak kullanan şirketinizdeki kişileri eğiterek içerir. Kullanıcılar, ön savunma hattınız olmanıza yardımcı olabilir. Herkesin daha güvenli bir ortamı korurken üretken bir şekilde nasıl çalışılması gerektiğini bilmesi gerekir. 
+Bu görevlerde sağlanan güvenlik önerileri, siber saldırıların ortamınıza erişmesini çok daha zorlaştırır. Ancak, güvenlik stratejinizin önemli bir parçası, kuruluşunuzdaki&mdash;üyeleri, sisteminizi düzenli olarak kullanan şirketinizdeki kişileri eğitmektedir. Kullanıcılar sizin ön savunma hattınız olabilir. Herkesin daha güvenli bir ortamı korurken üretken bir şekilde nasıl çalışılması gerektiğini bilmesi gerekir.
 
 Kuruluşunuzdaki herkesin şunlara yardımcı olması için kaynaklar sağlanır:
 

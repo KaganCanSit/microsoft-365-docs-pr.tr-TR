@@ -1,5 +1,5 @@
 ---
-title: Microsoft Purview Uyumluluk Yöneticisi ile Kullanmaya başlayın
+title: Microsoft Purview Uyumluluk Yöneticisi'yle çalışmaya başlama
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Uyumluluk Yöneticisi kullanıcı izinlerini ve rollerini ayarlayın ve eylemlerin otomatik testini yapılandırın. Kullanıcı geçmişini yönetin ve pano görünümünüzü filtreleyin.
-ms.openlocfilehash: c7920a9eac06128f3cf9bfb54645a83296ca7e53
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 76126f9a13716e3ebf48309f8129de6ede4d11e9
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091037"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574057"
 ---
 # <a name="get-started-with-compliance-manager"></a>Uyumluluk Yöneticisini kullanmaya başlama
 
@@ -31,9 +31,9 @@ ms.locfileid: "65091037"
 
 **Bu makalede:** Bu makale, Uyumluluk Yöneticisi'nin ayarlanmasına yardımcı olur. Uyumluluk Yöneticisi'ne **erişmeyi** , **rolleri ve izinleri ayarlamayı ve** **iyileştirme eylemlerinin otomatik testini yapılandırmayı** öğrenin. **Uyumluluk Yöneticisi panonuzda** ilerleyin ve ana sayfaları anlayın: iyileştirme eylemleri sayfası, çözümler sayfası, değerlendirmeler sayfası ve değerlendirme şablonları sayfası.
 
-## <a name="who-can-access-compliance-manager"></a>Who Uyumluluk Yöneticisi'ne erişebilir
+## <a name="who-can-access-compliance-manager"></a>Uyumluluk Yöneticisi'ne kimler erişebilir?
 
-Uyumluluk Yöneticisi, Office 365 ve Microsoft 365 lisansları olan kuruluşlar ve ABD Government Community Cloud (GCC) Orta, GCC Yüksek ve Savunma Bakanlığı (DoD) müşterileri tarafından kullanılabilir. Değerlendirme kullanılabilirliği ve yönetim özellikleri lisans sözleşmenize bağlıdır.  [Hizmet açıklaması ayrıntılarını görüntüleyin](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-compliance-manager).
+Uyumluluk Yöneticisi, Office 365 ve Microsoft 365 lisanslarına sahip kuruluşlar ve US Government Community Cloud (GCC) Moderate, GCC High ve Savunma Bakanlığı (DoD) müşterileri tarafından kullanılabilir. Değerlendirme kullanılabilirliği ve yönetim özellikleri lisans sözleşmenize bağlıdır.  [Hizmet açıklaması ayrıntılarını görüntüleyin](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-compliance-manager).
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -41,7 +41,7 @@ Kuruluşunuzun Microsoft 365 genel yöneticisi büyük olasılıkla Uyumluluk Y�
 
 ## <a name="sign-in"></a>Oturum açın
 
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalına</a> gidin ve Microsoft 365 genel yönetici hesabınızla **oturum açın**.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> gidin ve Microsoft 365 genel yönetici hesabınızla **oturum açın**.
 2. Sol gezinti bölmesinde **Uyumluluk Yöneticisi'ni** seçin. [Uyumluluk Yöneticisi panonuza](#understand-the-compliance-manager-dashboard) ulaşırsınız.
 
 Uyumluluk Yöneticisi'ne erişmek için doğrudan bağlantı şeklindedir [https://compliance.microsoft.com/compliancemanager](https://compliance.microsoft.com/compliancemanager).
@@ -52,14 +52,14 @@ Uyumluluk Yöneticisi rol tabanlı erişim denetimi (RBAC) izin modeli kullanır
 
 ### <a name="where-to-set-permissions"></a>İzinlerin ayarlanacağı yer
 
-Kuruluşunuz için genel yönetici rolüne sahip olan kişi, Uyumluluk Yöneticisi için kullanıcı izinleri ayarlayabilir. İzinler Microsoft Purview uyumluluk portalında ve Azure Active Directory (Azure AD) içinde ayarlanabilir.
+Kuruluşunuz için genel yönetici rolüne sahip olan kişi, Uyumluluk Yöneticisi için kullanıcı izinleri ayarlayabilir. İzinler hem Microsoft Purview uyumluluk portalı hem de Azure Active Directory'de (Azure AD) ayarlanabilir.
 
 > [!NOTE]
-> US Government Community (GCC) Yüksek ve Savunma Bakanlığı (DoD) ortamlarındaki müşteriler yalnızca Azure AD'de Uyumluluk Yöneticisi için kullanıcı izinleri ve rolleri ayarlayabilir. Azure AD yönergeleri ve rol türü tanımları için aşağıya bakın.
+> ABD Kamu Topluluğu (GCC) Yüksek ve Savunma Bakanlığı (DoD) ortamlarındaki müşteriler, uyumluluk yöneticisi için yalnızca Azure AD kullanıcı izinlerini ve rollerini ayarlayabilir. Azure AD yönergeleri ve rol türü tanımları için aşağıya bakın.
 
-Microsoft Purview uyumluluk portalında izinleri ayarlamak ve roller atamak için aşağıdaki adımları izleyin:
+Microsoft Purview uyumluluk portalı izinleri ayarlamak ve rolleri atamak için aşağıdaki adımları izleyin:
 
-1. Microsoft Purview uyumluluk portalına gidin ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2173597" target="_blank">**İzinler'i**</a> seçin.
+1. Microsoft Purview uyumluluk portalı gidin ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2173597" target="_blank">**İzinler'i**</a> seçin.
 
 2. Uyumluluk portalı açılan listesinde **Roller'i** seçin.
 
@@ -77,17 +77,17 @@ Microsoft Purview uyumluluk portalında izinleri ayarlamak ve roller atamak içi
 
 #### <a name="more-about-azure-ad"></a>Azure AD hakkında daha fazla bilgi
 
-Azure AD'de rol atamak ve izinleri ayarlamak için bkz. [Azure Active Directory sahip kullanıcılara yönetici ve yönetici olmayan roller atama](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal).
+Azure AD rol atamak ve izinleri ayarlamak için bkz. [Azure Active Directory'ye sahip kullanıcılara yönetici ve yönetici olmayan roller atama](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal).
 
-Office 365 veya Microsoft 365 abonelikleri olmayan Azure AD kimliklerine sahip kullanıcılar Microsoft Purview uyumluluk portalında Uyumluluk Yöneticisi'ne erişemez. Uyumluluk Yöneticisi'ne erişim konusunda yardım almak için [cmresearch@microsoft.com](mailto:cmresearch@microsoft.com) başvurun.
+Office 365 veya Microsoft 365 abonelikleri olmayan Azure AD kimlikli kullanıcılar Microsoft Purview uyumluluk portalı Uyumluluk Yöneticisi'ne erişemez. Uyumluluk Yöneticisi'ne erişim konusunda yardım almak için [cmresearch@microsoft.com](mailto:cmresearch@microsoft.com) başvurun.
 
 ### <a name="role-types"></a>Rol türleri
 
-Aşağıdaki tabloda, Uyumluluk Yöneticisi'ndeki her rolün izin verdiği işlevler gösterilmektedir. Tabloda ayrıca her [Azure AD rolünün Uyumluluk Yöneticisi rolleriyle](/azure/active-directory/roles/permissions-reference) nasıl eşlenmiş olduğu da gösterilir. Kullanıcıların Uyumluluk Yöneticisi'ne erişmek için en azından Uyumluluk Yöneticisi okuyucu rolüne veya Azure AD genel okuyucu rolüne sahip olması gerekir.
+Aşağıdaki tabloda, Uyumluluk Yöneticisi'ndeki her rolün izin verdiği işlevler gösterilmektedir. Tabloda ayrıca her [Azure AD rolünün](/azure/active-directory/roles/permissions-reference) Uyumluluk Yöneticisi rolleriyle nasıl eşlenmiş olduğu da gösterilir. Kullanıcıların Uyumluluk Yöneticisi'ne erişmek için en azından Uyumluluk Yöneticisi okuyucu rolüne veya genel okuyucu rolüne Azure AD gerekir.
 
 | Kullanıcı yapabilecekleri: | Uyumluluk Yöneticisi rolü | Azure AD rolü | 
 | :------------- | :-------------: | :------------: |
-| **Verileri okuma ama düzenlememe**| Uyumluluk Yöneticisi Okuyucusu  | Azure AD Genel okuyucusu, Güvenlik okuyucusu |
+| **Verileri okuma ama düzenlememe**| Uyumluluk Yöneticisi Okuyucusu  | Azure AD Genel okuyucu, Güvenlik okuyucusu |
 | **Verileri düzenleme**| Uyumluluk Yöneticisi Katkısı | Uyumluluk Yöneticisi |
 | **Test sonuçlarını düzenleme**| Uyumluluk Yöneticisi Değerlendiricisi | Uyumluluk Yöneticisi |
 | **Değerlendirmeleri, şablon ve kiracı verilerini yönetme**| Uyumluluk Yöneticisi Yönetimi | Uyumluluk Yöneticisi, Uyumluluk Verileri Yöneticisi, Güvenlik Yöneticisi  |
@@ -114,26 +114,34 @@ Deneme sürümünüzü doğrudan Uyumluluk Yöneticisi'nden başlatabilir ve aş
 
 Aşağıdaki [Değerlendirmeler sayfası](#assessments-page) bölümünü ziyaret ederek değerlendirmeleri kullanmaya başlama hakkında daha fazla bilgi edinin.
 
-## <a name="settings-for-automated-testing-and-user-history"></a>Otomatik test ve kullanıcı geçmişi için Ayarlar
+## <a name="settings-for-automated-testing-and-user-history"></a>Otomatik test ve kullanıcı geçmişi ayarları
 
-Microsoft Purview uyumluluk portalındaki Uyumluluk Yöneticisi ayarları, iyileştirme eylemlerinin otomatik testini etkinleştirmenize ve devre dışı bırakmanıza olanak tanır. Bu ayarlar, iyileştirme eylemleriyle ilişkilendirilmiş kullanıcıların verilerini yönetmenize de olanak tanır ve iyileştirme eylemlerini farklı bir kullanıcıya yeniden atayabilirsiniz.  Uyumluluk Yöneticisi ayarlarına yalnızca genel yönetici veya Uyumluluk Yöneticisi Yöneticisi rolüne sahip kişiler erişebilir.
+Microsoft Purview uyumluluk portalı'deki Uyumluluk Yöneticisi ayarları, iyileştirme eylemlerinin otomatik testini etkinleştirmenize ve devre dışı bırakmanıza olanak tanır. Bu ayarlar, iyileştirme eylemleriyle ilişkilendirilmiş kullanıcıların verilerini yönetmenize de olanak tanır ve iyileştirme eylemlerini farklı bir kullanıcıya yeniden atayabilirsiniz.  Uyumluluk Yöneticisi ayarlarına yalnızca genel yönetici veya Uyumluluk Yöneticisi Yöneticisi rolüne sahip kişiler erişebilir.
 
 > [!NOTE]
-> Güvenli Puan bu ortamlarda kullanılamadığından otomatik test özelliği GCC Yüksek ve DoD ortamlarındaki müşteriler tarafından kullanılamaz. GCC Yüksek ve DoD müşterilerinin iyileştirme eylemlerini el ile uygulaması ve test etmeleri gerekir.
+> Otomatikleştirilmiş test özelliği, GCC High ve DoD ortamlarındaki müşteriler tarafından kullanılamaz çünkü Bu ortamlarda Güvenli Puan kullanılamaz. GCC High ve DoD müşterilerinin iyileştirme eylemlerini el ile uygulaması ve test etmeleri gerekir.
 
 ### <a name="set-up-automated-testing"></a>Otomatik testi ayarlama
 
-Uyumluluk Yöneticisi, veri yaşam döngüsü yönetimi, bilgi koruması, Microsoft Purview Veri Kaybı Önleme, iletişim uyumluluğu ve iç risk yönetimi gibi kuruluşunuzun abone olduğu diğer Microsoft Purview çözümlerinden gelen sinyalleri algılar. Her geliştirme eyleminin ayrıntılar sayfasında, **Test** sekmesindeki **Test mantığı** alanı, eylemin uyumluluk puanınıza doğru puan geçirmesi ve puan kazanması için diğer çözümde nelerin gerekli olduğunu gösterir.
+Uyumluluk Yöneticisi, veri yaşam döngüsü yönetimi, bilgi koruması, Microsoft Purview Veri Kaybı Önleme, iletişim uyumluluğu ve insider risk yönetimi dahil olmak üzere kuruluşunuzun abone olabileceği diğer Microsoft Purview çözümlerinden gelen sinyalleri algılar. Uyumluluk Yöneticisi ayrıca [Microsoft Güvenli Puanı](../security/defender/microsoft-secure-score.md) tarafından izlenen tamamlayıcı iyileştirme eylemlerinden gelen sinyalleri de algılar.
 
-Uyumluluk Yöneticisi ayrıca [Microsoft Güvenli Puanı](../security/defender/microsoft-secure-score.md) tarafından da izlenen tamamlayıcı iyileştirme eylemlerinden gelen sinyalleri algılar. Uyumluluk Yöneticisi bu sinyalleri kullanarak sizin için belirli iyileştirme eylemlerini otomatik olarak test edebilir ve bu da uyumluluk etkinliklerinizde verimliliği en üst düzeye çıkarmanıza yardımcı olur. İyileştirme eylemi başarıyla test edildiğinde ve uygulandığında, genel uyumluluk puanınıza alacak olan puan miktarının tamamını alırsınız.
+Uyumluluk Yöneticisi bu sinyalleri kullanarak sizin için belirli iyileştirme eylemlerini otomatik olarak test edebilir ve bu da uyumluluk etkinliklerinizde verimliliği en üst düzeye çıkarmanıza yardımcı olur. İyileştirme eylemi başarıyla test edildiğinde ve uygulandığında, [genel uyumluluk puanınıza alacak](compliance-score-calculation.md#how-compliance-manager-continuously-assesses-controls) olan puan miktarının tamamını alırsınız.
 
-Otomatik test, Uyumluluk Yöneticisi'ne yeni yeni eklenen kuruluşlar için varsayılan olarak açıktır. Microsoft 365 veya Office 365 ilk dağıttığınızda, verilerin tam olarak toplanması ve uyumluluk puanınıza katılması yaklaşık yedi gün sürer. Otomatikleştirilmiş test açıldığında eylemin test tarihi güncelleştirilmez, ancak test durumu güncelleştirilir. Yeni değerlendirmeler oluşturulduğunda puanlar otomatik olarak Microsoft denetim puanlarını ve Güvenli Puan tümleştirmesini içerir.
+**Otomatik test, Uyumluluk Yöneticisi'ne yeni yeni eklenen kuruluşlar için varsayılan olarak açıktır.** Microsoft 365 veya Office 365 ilk dağıttığınızda, verilerin tam olarak toplanması ve uyumluluk puanınıza dahil olması yaklaşık yedi gün sürer. Otomatikleştirilmiş test açıldığında eylemin test tarihi güncelleştirilmez, ancak test durumu güncelleştirilir. Yeni değerlendirmeler oluşturulduğunda puanlar otomatik olarak Microsoft denetim puanlarını ve Güvenli Puan tümleştirmesini içerir. Bu ayarı düzenlemek veya kapatmak için aşağıdaki [Otomatik test ayarlarını yönetme](#manage-automated-testing-settings) bölümüne bakın.
+
+#### <a name="how-to-tell-which-actions-are-tested-automatically"></a>Hangi eylemlerin otomatik olarak test olduğunu nasıl anlarız?
+
+**İyileştirme eylemleri** sayfanızda **Test kaynağı** sütununu bulun. Değer **Otomatik** olarak listeleniyorsa, eylem Uyumluluk Yöneticisi tarafından otomatik olarak test edilir.  Değer **El ile** ise, eylem kuruluşunuz tarafından test edilir. Değer **Parent** ise, eylem bağlı olduğu başka bir eylemin test durumunu devralır. [İyileştirme eylem testi kaynağı](compliance-manager-improvement-actions.md#update-testing-source) hakkındaki ayrıntıları alın.
+
+#### <a name="which-actions-cant-be-tested-automatically"></a>Hangi eylemler otomatik olarak test edilemiyor?
+
+Microsoft 365 kapsamında olmayan şablonlardaki iyileştirme eylemleri şu anda otomatik test için uygun değildir. Örneğin, evrensel şablonlar veya Microsoft Azure veya Microsoft Dynamics için bir şablon otomatik olarak test edilebilecek eylemlere sahip olmaz. [Değerlendirme şablonları](compliance-manager-templates.md) hakkında daha fazla bilgi edinin.
 
 #### <a name="manage-automated-testing-settings"></a>Otomatik test ayarlarını yönetme
 
 Kuruluşunuzun genel yöneticisi, otomatik test ayarlarını istediği zaman değiştirebilir. Yaygın iyileştirme eylemleri için otomatik testi kapatabilir veya tek tek eylemler için etkinleştirebilirsiniz. Otomatik test ayarlarınızı değiştirmek için aşağıdaki yönergeleri izleyin.
 
-1. Microsoft Purview uyumluluk portalında <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar'ı**</a> seçin.
+1. Microsoft Purview uyumluluk portalı <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar'ı**</a> seçin.
 
 2. Ayarlar sayfasında **Uyumluluk Yöneticisi'ni** seçin.
 
@@ -145,11 +153,8 @@ Kuruluşunuzun genel yöneticisi, otomatik test ayarlarını istediği zaman de�
 
 6. Ayarlarınızı kaydetmek için **Kaydet'i** seçin. Ekranınızın üst kısmında seçiminizin kaydedildiğini belirten bir onay iletisi alırsınız. Hata bildirimi alırsanız yeniden deneyin.
 
-**Not:** Tüm eylemler için otomatik güncelleştirmeleri yalnızca genel yönetici açabilir veya kapatabilir. Uyumluluk Yöneticisi Yöneticisi tek tek eylemler için otomatik güncelleştirmeleri açabilir, ancak genel olarak tüm eylemler için etkinleştiremez.
-
-**Daha fazla bilgi edinin**
-- [Sürekli izlemenin uyumluluk puanınıza nasıl katkıda bulunduğu hakkında daha fazla bilgi edinin](compliance-score-calculation.md#how-compliance-manager-continuously-assesses-controls).
-- [İyileştirme eylemi için test kaynağı belirleme hakkında daha fazla bilgi edinin](compliance-manager-improvement-actions.md#update-testing-source).
+> [!NOTE]
+> Tüm eylemler için otomatik güncelleştirmeleri yalnızca genel yönetici açabilir veya kapatabilir. Uyumluluk Yöneticisi Yöneticisi tek tek eylemler için otomatik güncelleştirmeleri açabilir, ancak genel olarak tüm eylemler için etkinleştiremez.
 
 ### <a name="manage-user-history"></a>Kullanıcı geçmişini yönetme
 
@@ -159,7 +164,7 @@ Kullanıcı geçmişi ayarları, tüm iyileştirme eylemlerini bir kullanıcıda
 
 **Kullanıcı geçmişi ayarlarını bulmak için:**
 
-1. Microsoft Purview uyumluluk portalında <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar'ı**</a> seçin.
+1. Microsoft Purview uyumluluk portalı <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar'ı**</a> seçin.
 
 2. Ayarlar sayfasında **Uyumluluk Yöneticisi'ni** seçin.
 
@@ -177,7 +182,7 @@ Rapor, geliştirme eyleminin oluşturma tarihi itibariyle durumunu yansıtır. D
 
 **Bir raporu kullanıcıya göre dışarı aktarmak için aşağıdaki adımları izleyin:**
 
-1. Microsoft Purview uyumluluk portalında <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar'ı**</a> seçin.
+1. Microsoft Purview uyumluluk portalı <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar'ı**</a> seçin.
 
 2. Ayarlar sayfasında **Uyumluluk Yöneticisi'ni** seçin.
 
@@ -195,7 +200,7 @@ Geliştirme eylemlerini bir kullanıcıdan diğerine yeniden atayabilirsiniz. Bi
 
 **Geliştirme eylemlerini başka bir kullanıcıya yeniden atamak için aşağıdaki adımları izleyin:**
 
-1. Microsoft Purview uyumluluk portalında <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar'ı**</a> seçin.
+1. Microsoft Purview uyumluluk portalı <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar'ı**</a> seçin.
 
 2. Ayarlar sayfasında **Uyumluluk Yöneticisi'ni** seçin.
 
@@ -222,7 +227,7 @@ Kullanıcının geçmişi silindiğinde, geliştirme eylemlerinin sahibi olarak 
 
 Kullanıcının geçmişini silmek için aşağıdaki adımları izleyin:
 
-1. Microsoft Purview uyumluluk portalında <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar'ı**</a> seçin.
+1. Microsoft Purview uyumluluk portalı <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar'ı**</a> seçin.
 
 2. Ayarlar sayfasında **Uyumluluk Yöneticisi'ni** seçin.
 
@@ -246,7 +251,7 @@ Uyumluluk Yöneticisi panosu, geçerli uyumluluk duruşunuzun bir bakışta gör
 
 Uyumluluk puanınız en üstte öne çıkıyor. Önemli veri koruma standartlarını ve düzenlemelerini ele alan iyileştirme eylemlerini tamamlamak için ulaşılabilir noktaları temel alan bir yüzde gösterir. [Microsoft'umu yönetilen Microsoft eylemlerinden](compliance-manager-assessments.md#microsoft-actions-tab) alınan puanlar da uyumluluk puanınıza göre sayılır.
 
-Uyumluluk Yöneticisi'ne ilk kez geldiğinizde, ilk puanınız [Microsoft 365 veri koruma temelini](compliance-manager-assessments.md#data-protection-baseline-default-assessment) temel alır. Tüm kuruluşların kullanımına sunulan bu temel değerlendirme, ortak endüstri düzenlemelerini ve standartlarını içeren bir dizi denetimdir. Uyumluluk Yöneticisi mevcut Microsoft 365 çözümlerinizi tarar ve geçerli gizlilik ve güvenlik ayarlarınıza göre size bir ilk değerlendirme sağlar. Kuruluşunuzla ilgili değerlendirmeler eklediğinizde puanınız sizin için daha anlamlı hale gelir.
+Uyumluluk Yöneticisi'ne ilk kez geldiğinizde, ilk puanınız [Microsoft 365 veri koruma temelini temel](compliance-manager-assessments.md#data-protection-baseline-default-assessment) alır. Tüm kuruluşların kullanımına sunulan bu temel değerlendirme, ortak endüstri düzenlemelerini ve standartlarını içeren bir dizi denetimdir. Uyumluluk Yöneticisi mevcut Microsoft 365 çözümlerinizi tarar ve geçerli gizlilik ve güvenlik ayarlarınıza göre size bir ilk değerlendirme sağlar. Kuruluşunuzla ilgili değerlendirmeler eklediğinizde puanınız sizin için daha anlamlı hale gelir.
 
 **Daha fazla bilgi edinin:** [Uyumluluk puanınızın nasıl hesaplanmış olduğunu anlama](compliance-score-calculation.md).
 
@@ -345,7 +350,7 @@ Bu ekrandan işlem yapmanın iki yolu vardır:
 
 1. Hedeflenen çözümünüzün satırındaki **Kalan eylemler** sütununun altında köprülenmiş sayıyı seçin. Bu çözüm için test edilmemiş iyileştirme eylemlerini gösteren iyileştirme eylemleri ekranının filtrelenmiş bir görünümünü görürsünüz.
 
-2. Hedeflenen çözümünüzün satırındaki **Çözümü aç** sütununun altında **Aç'ı** seçin. Çözümü veya konumu, önerilen eylemi gerçekleştirebileceğiniz Microsoft 365 ve Office 365 güvenlik ve uyumluluk merkezlerinde görürsünüz.
+2. Hedeflenen çözümünüzün satırındaki **Çözümü aç** sütununun altında **Aç'ı** seçin. Çözümü veya konumu Microsoft 365'te ve önerilen eylemi gerçekleştirebileceğiniz Office 365 güvenlik ve uyumluluk merkezlerinde görürsünüz.
 
 ## <a name="assessments-page"></a>Değerlendirmeler sayfası
 
@@ -365,7 +370,7 @@ Değerlendirmeler sayfası, her değerlendirmeyle ilgili önemli bilgileri özet
 - **Geliştirme eylemleriniz**: Denetimlerinizin uygulanmasını sağlamak için tamamlanan eylemlerin sayısı
 - **Microsoft eylemleri**: Microsoft denetimlerinin uygulanmasını karşılamak için tamamlanan eylemlerin sayısı
 - **Grup**: Değerlendirmenin ait olduğu grubun adı
-- **Ürün**: Microsoft 365 veya değerlendirme için tanımlanan başka bir ürün gibi ilişkili ürün
+- **Ürün**: Microsoft 365 gibi ilişkili ürün veya değerlendirme için tanımlanan başka bir ürün
 - **Düzenleme**: Değerlendirme için geçerli olan mevzuat standardı, ilke veya yasa
 
 ### <a name="filtering-your-assessments-view"></a>Değerlendirmeler görünümünüzü filtreleme
@@ -388,7 +393,7 @@ Varsayılan olarak, değerlendirmeler sayfasında [Veri Koruma Temeli](complianc
 
 Sayfanın üst kısmındaki **etkinleştirilmiş şablonlar** sayacı, kuruluşunuzun kullanabileceği toplam şablon sayısının dışında kullanılmakta olan etkin değerlendirme şablonlarının sayısını gösterir. Daha fazla bilgi için bkz. [Şablon kullanılabilirliği ve lisanslama](compliance-manager-templates.md#template-availability-and-licensing) .
 
-Şablonun açıklamasını ve sertifikasyon, kapsam ve denetim ayrıntıları hakkında daha fazla bilgi içeren ayrıntılar sayfasını açmak için satırından bir şablon seçin. Bu sayfadan değerlendirme oluşturmak için uygun düğmeleri seçebilir, şablon verilerini Excel dışarı aktarabilir veya şablonu değiştirebilirsiniz.
+Şablonun açıklamasını ve sertifikasyon, kapsam ve denetim ayrıntıları hakkında daha fazla bilgi içeren ayrıntılar sayfasını açmak için satırından bir şablon seçin. Bu sayfadan değerlendirme oluşturmak, şablon verilerini Excel'e aktarmak veya şablonu değiştirmek için uygun düğmeleri seçebilirsiniz.
 
 **Daha fazla bilgi edinin:** [Değerlendirme şablonlarıyla çalışma hakkında bilgi edinin](compliance-manager-templates.md).
 
