@@ -70,6 +70,8 @@
       href: m365-lighthouse-mitigate-threats.md
     - name: Cihaz Güvenliği sayfasına genel bakış
       href: m365-lighthouse-device-security-overview.md
+    - name: Karantinaya alınan iletilere genel bakış
+      href: m365-lighthouse-quarantine-messages-overview.md
 - name: Yardım ve destek alma
   items:
     - name: Yardım ve destek alma

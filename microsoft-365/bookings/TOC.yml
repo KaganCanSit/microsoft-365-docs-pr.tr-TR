@@ -49,3 +49,5 @@
       href: reporting-info.md
     - name: Microsoft Bookings hakkında sık sorulan sorular (SSS)
       href: bookings-faq.yml
+    - name: Benimle Bookings
+      href: bookings-in-outlook.md

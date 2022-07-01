@@ -241,6 +241,28 @@
               href: get-help-with-domains/change-nameservers-at-any-domain-registrar.md
             - name: Herhangi bir DNS ana bilgisayarında DNS kayıtları oluşturma
               href: get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md
+            - name: DNS kayıtlarınızı IONOS'ta 1&1 ile bağlama
+              href: dns/create-dns-records-at-1-1-internet.md
+            - name: DNS kayıtlarınızı 123-reg.co.uk adresinde bağlama
+              href: dns/create-dns-records-at-123-reg-co-uk.md
+            - name: DNS kayıtlarınızı Amazon Web Services'de (AWS) bağlama
+              href: dns/create-dns-records-at-aws.md
+            - name: DNS kayıtlarınızı Cloudflare'da bağlama
+              href: dns/create-dns-records-at-cloudflare.md
+            - name: DNS kayıtlarınızı GoDaddy'de bağlama
+              href: dns/create-dns-records-at-godaddy.md
+            - name: DNS kayıtlarınızı Namecheap'de bağlama
+              href: dns/create-dns-records-at-namecheap.md
+            - name: DNS kayıtlarınızı Network Solutions'da bağlama
+              href: dns/create-dns-records-at-network-solutions.md
+            - name: DNS kayıtlarınızı OVH'de bağlama
+              href: dns/create-dns-records-at-ovh.md
+            - name: DNS kayıtlarınızı web.com'da bağlama
+              href: dns/create-dns-records-at-web-com.md
+            - name: DNS kayıtlarınızı Wix'te bağlama
+              href: dns/create-dns-records-at-wix.md
+            - name: Windows tabanlı DNS kullanarak Microsoft için DNS kayıtları oluşturma
+              href: dns/create-dns-records-using-windows-based-dns.md
         - name: Etki alanı sorunlarını giderme
           href: get-help-with-domains/find-and-fix-issues.md
     - name: Verilerinizi ve hizmetlerinizi yönetme
