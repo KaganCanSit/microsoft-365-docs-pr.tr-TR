@@ -1,7 +1,7 @@
 ---
-title: Otomatik bir incelemenin ayrıntıları ve sonuçları
-description: Bu çalışmalarda sonuçları ve önemli arama sonuçlarını Microsoft 365 Defender
-keywords: otomatik, araştırma, sonuçlar, çözümleme, ayrıntılar, düzeltme, autoair
+title: Otomatik araştırmanın ayrıntıları ve sonuçları
+description: otomatik araştırmanın sonuçlarını ve önemli bulgularını Microsoft 365 Defender
+keywords: otomatik, araştırma, sonuçlar, analiz, ayrıntılar, düzeltme, otomatik hava aracı
 search.appverid: met150
 ms.prod: m365-security
 ms.technology: m365d
@@ -23,29 +23,29 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.openlocfilehash: 5a95980147c66fa8655f5c1b2ebe8adfff9e87c0
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: cc53717feed347019540ffcb8c85687a6c28537f
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64501277"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607487"
 ---
-# <a name="details-and-results-of-an-automated-investigation"></a>Otomatik bir incelemenin ayrıntıları ve sonuçları
+# <a name="details-and-results-of-an-automated-investigation"></a>Otomatik araştırmanın ayrıntıları ve sonuçları
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - Microsoft 365 Defender
 
-Otomatik Microsoft 365 Defender ile[, otomatik bir](m365d-autoir.md) araştırma çalıştırıldığı zaman, bu soruşturmayla ilgili ayrıntılar hem otomatik araştırma işlemi sırasında hem de sonrasında kullanılabilir. Gerekli izinlere [sahipsiniz](m365d-action-center.md#required-permissions-for-action-center-tasks), size güncel durum ve bekleyen eylemleri onaylama olanağı sağlayan bir soruşturma ayrıntıları görünümünde bu ayrıntıları görüntüebilirsiniz. 
+Microsoft 365 Defender ile [otomatik araştırma](m365d-autoir.md) çalıştırıldığında, bu araştırmayla ilgili ayrıntılar hem otomatik araştırma işlemi sırasında hem de sonrasında kullanılabilir. [Gerekli izinlere](m365d-action-center.md#required-permissions-for-action-center-tasks) sahipseniz, bu ayrıntıları size güncel durumu ve bekleyen eylemleri onaylama olanağı sağlayan bir araştırma ayrıntıları görünümünde görüntüleyebilirsiniz. 
 
-## <a name="new-unified-investigation-page"></a>(NEW) Birleşik araştırma sayfası
+## <a name="new-unified-investigation-page"></a>(YENİ) Birleşik araştırma sayfası
 
-Araştırma sayfası yakın zamanda cihazlarınız, e-postanız ve işbirliği içeriğiniz arasında bilgi içerecek şekilde güncelleştirildi. Yeni, birleştirilmiş araştırma sayfası yaygın bir dil tanımlar ve hem iş hem de kaynaklarda otomatik Uç Nokta için Microsoft Defender için [birleşik bir](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) [Office 365 için Microsoft Defender](../office-365-security/defender-for-office-365.md). Birleştirilmiş araştırma sayfasına erişmek için, göreceğin sarı başlıkta bağlantıyı seçin:
+Araştırma sayfası yakın zamanda cihazlarınız, e-postanız ve işbirliği içeriğiniz arasında bilgi içerecek şekilde güncelleştirildi. Yeni, birleşik araştırma sayfası ortak bir dil tanımlar ve [Uç Nokta için Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) ve [Office 365 için Microsoft Defender](../office-365-security/defender-for-office-365.md) genelinde otomatik araştırmalara yönelik birleşik bir deneyim sağlar. Birleşik araştırma sayfasına erişmek için, göreceğiniz sarı başlıktaki bağlantıyı seçin:
 
-- Güvenlik ve Uyumluluk <a href="https://go.microsoft.com/fwlink/p/?linkid=2077143" target="_blank">Merkezi'Office 365 herhangi & sayfası</a>
-- Portalda herhangi bir Microsoft 365 Defender sayfası ([https://security.microsoft.com](https://security.microsoft.com))
-- Portalda herhangi bir olay veya <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender deneyimi</a>
+- <a href="https://go.microsoft.com/fwlink/p/?linkid=2077143" target="_blank">Office 365 Güvenlik & Uyumluluk Merkezi'ndeki herhangi bir</a> araştırma sayfası
+- Microsoft 365 Defender portalındaki herhangi bir araştırma sayfası ([https://security.microsoft.com](https://security.microsoft.com))
+- <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında</a> herhangi bir olay veya İşlem merkezi deneyimi
 
 ## <a name="open-the-investigation-details-view"></a>Araştırma ayrıntıları görünümünü açma
 
@@ -56,65 +56,65 @@ Aşağıdaki yöntemlerden birini kullanarak araştırma ayrıntıları görün�
 
 ### <a name="select-an-item-in-the-action-center"></a>İşlem merkezinde bir öğe seçme
 
-Geliştirilmiş [İşlem Merkezi](m365d-action-center.md) ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)), cihazlarınız arasında düzeltme eylemleri[](m365d-remediation-actions.md), e-posta ve işbirliği & kimlikleri bir araya getirir. Listelenen eylemler, otomatik veya el ile yapılan düzeltme eylemlerini içerir. İşlem merkezinde, onay bekleyen eylemleri ve zaten onaylanmış veya tamamlanmış eylemleri görüntüabilirsiniz. Ayrıca, araştırma sayfası gibi daha fazla ayrıntıya da gezinebilirsiniz.
+Geliştirilmiş [İşlem merkezi](m365d-action-center.md) ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)), cihazlarınız, e-posta & işbirliği içeriği ve kimlikler genelinde [düzeltme eylemlerini](m365d-remediation-actions.md) bir araya getirir. Listelenen eylemler, otomatik olarak veya el ile gerçekleştirilen düzeltme eylemlerini içerir. İşlem merkezinde, onay bekleyen eylemleri ve zaten onaylanmış veya tamamlanmış eylemleri görüntüleyebilirsiniz. Araştırma sayfası gibi daha fazla ayrıntıya da gidebilirsiniz.
 
 > [!TIP]
-> Eylemleri onaylamak, [reddetmek veya](m365d-action-center.md#required-permissions-for-action-center-tasks) geri almak için belirli izinlere sahip olmak gerekir.
+> Eylemleri onaylamak, reddetmek veya geri almak için [belirli izinlere](m365d-action-center.md#required-permissions-for-action-center-tasks) sahip olmanız gerekir.
 
-1. Portala <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender ve</a> oturum açın. 
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalına</a> gidin ve oturum açın. 
 
-2. Gezinti bölmesinde İşlem **merkezi'ni seçin**. 
+2. Gezinti bölmesinde **İşlem merkezi'ni** seçin. 
 
-3. Beklemede **veya Geçmiş** **sekmesinde** bir öğe seçin. Açılır bölmesi açılır.
+3. **Beklemede** veya **Geçmiş** sekmesinde bir öğe seçin. Açılır pencere bölmesi açılır.
 
-4. Uçarak çıkış bölmesinde bilgileri gözden geçirin ve sonra aşağıdaki adımlardan birini uygulayın:
-   - Araştırma **hakkında daha fazla ayrıntı** görüntülemek için Araştırma sayfasını aç'ı seçin.
-   - Bekleyen **bir eylemi** başlatmak için Onayla'ya seçin.
-   - Bekleyen **bir eylemin** askıya alınmasını önlemek için Reddet'i seçin.
-   - Gelişmiş **ava gitmek** için Avına [git'i seçin](advanced-hunting-overview.md).
+4. Açılır pencere bölmesindeki bilgileri gözden geçirin ve aşağıdaki adımlardan birini uygulayın:
+   - Araştırma hakkında daha fazla ayrıntı görüntülemek için **Araştırma sayfasını aç'ı** seçin.
+   - Bekleyen bir eylem başlatmak için **Onayla'yı** seçin.
+   - Bekleyen bir eylemin gerçekleştirilmesini önlemek için **Reddet'i** seçin.
+   - [Gelişmiş avcılığa](advanced-hunting-overview.md) gitmek için **Avlanmaya git'i** seçin.
 
 ### <a name="open-an-investigation-from-an-incident-details-page"></a>Olay ayrıntıları sayfasından araştırma açma
 
-Etkilenen cihazlar, kullanıcı hesapları veya posta kutularıyla ilgili tetiklenen uyarılar da dahil olmak üzere, olayla ilgili ayrıntılı bilgileri görüntülemek için olay ayrıntıları sayfasını kullanın.
+Etkilenen cihazlar, kullanıcı hesapları veya posta kutuları hakkında tetiklenen bilgiler de dahil olmak üzere bir olayla ilgili ayrıntılı bilgileri görüntülemek için olay ayrıntıları sayfasını kullanın.
 
-1. Portala <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender ve</a> oturum açın. 
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalına</a> gidin ve oturum açın. 
 
-2. Gezinti bölmesinde Olaylar ve **uyarılarIncidents****& seçin** > . 
+2. Gezinti bölmesinde **Olaylar & uyarılar** > **Olaylar'ı** seçin. 
 
-3. Listeden bir öğe seçin ve sonra Olay sayfasını **aç'ı seçin**.
+3. Listeden bir öğe seçin ve ardından **Olay sayfasını aç'ı** seçin.
 
-4. Araştırma **sekmesini seçin** ve sonra da listeden bir araştırma seçin. Açılır bölmesi açılır.
+4. **Araştırma sekmesini** ve ardından listeden bir araştırma seçin. Açılır pencere bölmesi açılır.
 
-5. Araştırma **sayfasını aç'ı seçin**. 
+5. **Araştırma sayfasını aç'ı** seçin. 
 
 İşte bir örnek.
 
-:::image type="content" source="../../media/mtp-incidentdetails-tabs.png" alt-text="Microsoft 365 Defender portalında araştırma sayfası" lightbox="../../media/mtp-incidentdetails-tabs.png":::
+:::image type="content" source="../../media/mtp-incidentdetails-tabs.png" alt-text="Microsoft 365 Defender portalındaki araştırma sayfası" lightbox="../../media/mtp-incidentdetails-tabs.png":::
 
-## <a name="investigation-details"></a>İnceleme ayrıntıları
+## <a name="investigation-details"></a>Araştırma ayrıntıları
 
-Bir soruşturmayla ilgili geçmiş, geçerli ve bekleyen etkinlikleri görmek için araştırma ayrıntıları görünümünü kullanın. İşte bir örnek.
+Araştırmayla ilgili geçmiş, geçerli ve bekleyen etkinlikleri görmek için araştırma ayrıntıları görünümünü kullanın. İşte bir örnek.
 
-:::image type="content" source="../../media/mtp-air-investdetails.png" alt-text="Microsoft 365 Defender portalında araştırma ayrıntıları sayfası" lightbox="../../media/mtp-air-investdetails.png":::
+:::image type="content" source="../../media/mtp-air-investdetails.png" alt-text="Microsoft 365 Defender portalındaki araştırma ayrıntıları sayfası" lightbox="../../media/mtp-air-investdetails.png":::
 
-Araştırma ayrıntıları görünümünde, aşağıdaki tabloda açıklanan Araştırma **grafiği, Uyarılar****,** **Cihazlar**, **Kimlikler**, **Anahtar** **bulguları, Varlıklar**, **Günlük** ve Bekleyen eylemler sekmelerinde bilgileri görebilirsiniz.
+Araştırma ayrıntıları görünümünde, aşağıdaki tabloda açıklanan **Araştırma grafı**, Uyarılar, **Cihazlar**, **Kimlikler**, **Anahtar bulguları**, **Varlıklar**, **Günlük** ve **Bekleyen eylemler** sekmeleriyle ilgili bilgileri görebilirsiniz. 
 
 > [!NOTE]
-> Araştırma ayrıntıları sayfasında gördüğünüz belirli sekmeler, aboneliğinizin içeriğine bağlıdır. Örneğin, aboneliğiniz Plan 2'Office 365 için Microsoft Defender eklense bile Posta Kutuları **sekmesini görmeyebilirsiniz**.
+> Araştırma ayrıntıları sayfasında gördüğünüz belirli sekmeler, aboneliğinizin içeriğine bağlıdır. Örneğin, aboneliğiniz Plan 2'Office 365 için Microsoft Defender içermiyorsa **Posta Kutuları** sekmesini görmezsiniz.
 
 | Sekme | Açıklama |
 |:--------|:--------|
-| **İnceleme grafiği** | Araştırmanın görsel bir gösterimini sağlar. Bulunan varlıkları ve listeleri tehditlerle birlikte, uyarılar ve onay bekleyen eylemlerin olup olmadığını gösterir.<br/>Daha fazla ayrıntı görüntülemek için grafikte bir öğe seçin. Örneğin, Kanıt **simgesini seçmek sizi** Kanıt sekmesine alır ve burada  algılanan varlıkları ve bunların kararlarını görebilirsiniz. |
-| **Uyarılar** | Araştırmayla ilişkili uyarıları listeler. Uyarılar, bir kullanıcının cihazı, Office uygulamaları, güvenlik özellikleri ve diğer Microsoft Defender for Cloud Apps tehdit Microsoft 365 Defender gelebilir.|
-| **Cihazlar** | İncelemeye dahil edilen cihazları düzeltme düzeyiyle birlikte listeler. (Düzeltme düzeyleri, cihaz [gruplarının otomasyon düzeyine karşılık geldi](m365d-configure-auto-investigation-response.md#review-or-change-the-automation-level-for-device-groups).) |
-| **Posta Kutuları** |Algılanan tehditlerden etki alan posta kutularını listeler.  |
-| **Kullanıcılar**  | Algılanan tehditlerden etkilenmesi olan kullanıcı hesaplarını listeler. |
-| **Kanıt** | Uyarılar veya soruşturmalar tarafından yükseltilmiş kanıt parçalarını listeler. Kararları (*Kötü Amaçlı*, *Şüpheli*, *Bilinmeyen* veya Tehdit *bulunamadı*) ve düzeltme durumunu içerir. |
-| **Varlıklar** | Her varlık türü (Kötü Amaçlı, Şüpheli veya Tehdit bulunamadı) *dahil olmak üzere**,* çözüme sahip olan her varlık *hakkında ayrıntılar sağlar*.|
-|**Log** | Uyarıyı tetikledikten sonra  alınan tüm soruşturma eylemlerinin kronolojik ve ayrıntılı görünümünü sağlar.|
-| **Bekleyen eylemler geçmişi** | Devam etmek için onay gerektiren öğeleri listeler. Bekleyen eylemleri onaylamak için İşlem merkezi'ne ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) gidin. |
+| **Araştırma grafiği** | Araştırmanın görsel bir gösterimini sağlar. Bulunan tehditlerin yanı sıra uyarıları ve onay bekleyen eylemlerin olup olmadığını gösterir.<br/>Daha fazla ayrıntı görüntülemek için grafikte bir öğe seçebilirsiniz. Örneğin, **Kanıt** simgesini seçtiğinizde, algılanan varlıkları ve bunların kararlarını görebileceğiniz **Kanıt** sekmesine gidebilirsiniz. |
+| **Uyarılar** | Araştırmayla ilişkili uyarıları listeler. Uyarılar, kullanıcının cihazında, Office uygulamalarında, Microsoft Defender for Cloud Apps ve diğer Microsoft 365 Defender özelliklerindeki tehdit koruması özelliklerinden gelebilir. <br> <br> *Desteklenmeyen uyarı türü* görüyorsanız, bunun otomatik araştırma özelliklerinin otomatik araştırma çalıştırmak için bu uyarıyı alamayacağı anlamına geldiğini unutmayın. Ancak [, bu uyarıları el ile araştırabilirsiniz](investigate-incidents.md#alerts).
+| **Aygıtları** | Araştırmada yer alan cihazları ve düzeltme düzeylerini listeler. (Düzeltme düzeyleri [, cihaz grupları için otomasyon düzeyine](m365d-configure-auto-investigation-response.md#review-or-change-the-automation-level-for-device-groups) karşılık gelir.) |
+| **Posta kutu -ları** |Algılanan tehditlerden etkilenen posta kutularını listeler.  |
+| **Kullanıcılar**  | Algılanan tehditlerden etkilenen kullanıcı hesaplarını listeler. |
+| **Kanıt** | Uyarılar veya araştırmalarla ortaya konan kanıt parçalarını listeler. Kararları (*Kötü Amaçlı*, *Şüpheli*, *Bilinmeyen* veya *Tehdit bulunamadı*) ve düzeltme durumunu içerir. |
+| **Varlık** | Her varlık türü (*Kötü Amaçlı*, *Şüpheli* veya *Tehdit bulunamadı*) için bir karar da dahil olmak üzere analiz edilen her varlıkla ilgili ayrıntıları sağlar.|
+|**Günlük** | Uyarı tetiklendikten sonra gerçekleştirilen tüm araştırma eylemlerinin kronolojik, ayrıntılı bir görünümünü sağlar.|
+| **Bekleyen eylemler geçmişi** | Devam etmek için onay gerektiren öğeleri listeler. Bekleyen eylemleri onaylamak için İşlem merkezine ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) gidin. |
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [Düzeltme eylemlerini görüntüleyin ve yönetin](m365d-autoir-actions.md)
-- [Düzeltme eylemleri hakkında daha fazla bilgi](m365d-remediation-actions.md)
+- [Düzeltme eylemleri hakkında daha fazla bilgi edinin](m365d-remediation-actions.md)

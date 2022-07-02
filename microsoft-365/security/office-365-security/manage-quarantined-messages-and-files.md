@@ -16,15 +16,15 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Yöneticiler, Exchange Online Protection(EOP) içindeki tüm kullanıcılar için karantinaya alınan iletileri görüntülemeyi ve yönetmeyi öğrenebilir. Office 365 için Microsoft Defender sahip kuruluşlardaki yöneticiler, karantinaya alınan dosyaları SharePoint Online, OneDrive İş ve Microsoft Teams de yönetebilir.
+description: Yöneticiler, Exchange Online Protection(EOP) içindeki tüm kullanıcılar için karantinaya alınan iletileri görüntülemeyi ve yönetmeyi öğrenebilir. Office 365 için Microsoft Defender sahip kuruluşlardaki yöneticiler, SharePoint Online, OneDrive İş ve Microsoft Teams'de karantinaya alınan dosyaları da yönetebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3bd239231cc49684f8b07fb73f33265c9463bad4
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: 50fa4eb3895fa9ad35e6182c2bcc7d7875bdae3a
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65839809"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607311"
 ---
 # <a name="manage-quarantined-messages-and-files-as-an-admin-in-eop"></a>Karantinaya alınan iletileri ve dosyaları EOP'de yönetici olarak yönetme
 
@@ -35,15 +35,15 @@ ms.locfileid: "65839809"
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Exchange Online posta kutusu olmayan Exchange Online veya tek başına Exchange Online Protection (EOP) kuruluşlarında posta kutuları olan Microsoft 365 kuruluşlarda karantina, potansiyel olarak tehlikeli veya istenmeyen iletileri barındırıyor. Daha fazla bilgi için bkz. [EOP'de karantinaya alınan e-posta iletileri](quarantine-email-messages.md).
+posta kutuları olmayan Exchange Online veya tek başına Exchange Online Protection (EOP) kuruluşlarında posta kutuları Exchange Online olan Microsoft 365 kuruluşlarında karantina, potansiyel olarak tehlikeli veya istenmeyen iletileri barındırıyor. Daha fazla bilgi için bkz. [EOP'de karantinaya alınan e-posta iletileri](quarantine-email-messages.md).
 
 Yöneticiler tüm kullanıcılar için tüm karantinaya alınmış iletileri görüntüleyebilir, yayımlayabilir ve silebilir. Yöneticiler hatalı pozitif sonuçları Microsoft'a da bildirebilir.
 
 Varsayılan olarak, yalnızca yöneticiler kötü amaçlı yazılım, yüksek güvenilirlikli kimlik avı veya posta akışı kuralları (aktarım kuralları olarak da bilinir) nedeniyle karantinaya alınan iletileri yönetebilir. Ancak yöneticiler _, karantinaya_ alınan iletilerin neden karantinaya alındığına (desteklenen özellikler için) bağlı olarak kullanıcıların karantinaya alınan iletilere ne yapmalarına izin verildiğini tanımlamak için karantina ilkelerini kullanabilir. Daha fazla bilgi için bkz [. Karantina ilkeleri](quarantine-policies.md).
 
-Office 365 için Microsoft Defender sahip kuruluşlardaki yöneticiler SharePoint[, OneDrive ve Microsoft Teams için Kasa Ekleri](mdo-for-spo-odb-and-teams.md) tarafından karantinaya alınan dosyaları da yönetebilir.
+Office 365 için Microsoft Defender sahip kuruluşlardaki yöneticiler[, SharePoint, OneDrive ve Microsoft Teams için Güvenli Ekler](mdo-for-spo-odb-and-teams.md) tarafından karantinaya alınan dosyaları da yönetebilir.
 
-Karantinaya alınan iletileri Microsoft 365 Defender portalında veya PowerShell'de (Exchange Online Exchange Online'da posta kutuları olan Microsoft 365 kuruluşlar için PowerShell'de; tek başına EOP PowerShell'de ve olmayan kuruluşlar için tek başına EOP PowerShell'de görüntüleyip yönetirsiniz Exchange Online posta kutuları).
+Karantinaya alınan iletileri Microsoft 365 Defender portalında veya PowerShell'de (Exchange Online posta kutuları olan Microsoft 365 kuruluşları için PowerShell'i Exchange Online; Exchange Online posta kutusu olmayan kuruluşlar için tek başına EOP PowerShell) görüntüleyip yönetirsiniz.
 
 Karantinaya alınan iletileri yönetici olarak yönetmeyi öğrenmek için bu kısa videoyu izleyin. 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGGPF]
@@ -52,7 +52,7 @@ Karantinaya alınan iletileri yönetici olarak yönetmeyi öğrenmek için bu k�
 
 - Microsoft 365 Defender portalını açmak için adresine <https://security.microsoft.com>gidin. Doğrudan **Karantina** sayfasına gitmek için kullanın <https://security.microsoft.com/quarantine>.
 
-- Exchange Online PowerShell'e bağlanmak için bkz. [PowerShell'Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell). Tek başına EOP PowerShell'e bağlanmak için bkz. [PowerShell'i Exchange Online Protection için Bağlan](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- Exchange Online PowerShell'e bağlanmak için bkz[. Exchange Online PowerShell'e bağlanma](/powershell/exchange/connect-to-exchange-online-powershell). Tek başına EOP PowerShell'e bağlanmak için bkz. [Exchange Online Protection PowerShell'e bağlanma](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
 - Bu makaledeki yordamları gerçekleştirebilmeniz için **önce Exchange Online'de** izinlerin atanmış olması gerekir:
   - Tüm kullanıcılar için karantinaya alınan iletilerde işlem yapmak için **Kuruluş Yönetimi**, **Güvenlik Yöneticisi** veya **Karantina Yöneticisi**<sup>\*</sup> rol gruplarının üyesi olmanız gerekir. Microsoft'a ileti göndermek için **Güvenlik Yöneticisi** rol grubunun üyesi olmanız gerekir.
@@ -62,7 +62,7 @@ Karantinaya alınan iletileri yönetici olarak yönetmeyi öğrenmek için bu k�
 
   **Notlar**:
 
-  - kullanıcıları Microsoft 365 yönetim merkezi karşılık gelen Azure Active Directory rolüne eklemek, kullanıcılara Microsoft 365'deki diğer özellikler için gerekli izinleri _ve_ izinleri verir. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
+  - kullanıcıları Microsoft 365 yönetim merkezi ilgili Azure Active Directory rolüne eklemek, kullanıcılara Microsoft 365'teki diğer özellikler için gerekli izinleri _ve_ izinleri verir. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
   - [Exchange Online'daki](/Exchange/permissions-exo/permissions-exo#role-groups) **Yalnızca Görüntüleme Kuruluş Yönetimi** rol grubu da özelliğe salt okunur erişim sağlar.
   - <sup>\*</sup>Microsoft 365 Defender [portalındaki](permissions-microsoft-365-security-center.md#email--collaboration-roles-in-the-microsoft-365-defender-portal) **E-posta & işbirliği** rollerindeki **Karantina Yöneticisi** rol grubunun üyelerinin de Exchange Online PowerShell'de karantina yordamları gerçekleştirmek için **Exchange Online'da Hijyen Yönetimi** rol grubunun üyesi olması [](/Exchange/permissions-exo/permissions-exo#role-groups) gerekir.
 
@@ -113,7 +113,7 @@ Karantinaya alınan iletileri yönetici olarak yönetmeyi öğrenmek için bu k�
      - **Aktarım kuralı** (posta akışı kuralı)
      - **Toplu**
      - **Spam**
-     - **Kötü amaçlı yazılım**: EOP'de kötü amaçlı yazılımdan koruma ilkeleri veya Office 365 için Defender ekleri ilkelerini Kasa. **İlke Türü** değeri hangi özelliğin kullanıldığını gösterir.
+     - **Kötü amaçlı yazılım**: EOP'deki kötü amaçlı yazılımdan koruma ilkeleri veya Office 365 için Defender'daki Güvenli Ekler ilkeleri. **İlke Türü** değeri hangi özelliğin kullanıldığını gösterir.
      - **Kimlik avı**: İstenmeyen posta filtresinin kararı **,** iletiyi (kimlik [sahtekarlığı ayarları](set-up-anti-phishing-policies.md#spoof-settings) veya [kimliğe bürünme koruması](kimlik avı önleme ilkelerini ayarlama) karantinaya alan Kimlik Avı veya kimlik avı korumasıdır.
      - **Yüksek güvenilirlikli kimlik avı**
    - **Alıcı**: **Tüm kullanıcılar** veya **Yalnızca ben**. Son kullanıcılar yalnızca kendilerine gönderilen karantinaya alınmış iletileri yönetebilir.
@@ -125,7 +125,7 @@ Karantinaya alınan iletileri yönetici olarak yönetmeyi öğrenmek için bu k�
      - **Yayım -lanan**
    - **İlke Türü**: İletileri ilke türüne göre filtreleyin:
      - **Kötü amaçlı yazılımdan koruma ilkesi**
-     - **Kasa Ekler ilkesi**
+     - **Güvenli Ekler ilkesi**
      - **Kimlik avı önleme ilkesi**
      - **İstenmeyen posta önleme ilkesi**
      - **Aktarım kuralı** (posta akışı kuralı)
@@ -137,6 +137,9 @@ Karantinaya alınan iletileri yönetici olarak yönetmeyi öğrenmek için bu k�
    - Konu. İletinin tüm konusunu kullanın. Arama büyük/küçük harfe duyarlı değildir.
 
    Arama ölçütlerini girdikten sonra sonuçları filtrelemek için ENTER tuşuna basın.
+
+   > [!NOTE]
+   > Ana **Karantina** sayfasındaki **Arama** kutusu yalnızca geçerli görünümde karantinaya alınan öğeleri arar, karantinanın tamamını aramaz. Karantinaya alınan tüm öğeleri aramak için **Filtre'yi** ve sonuçta elde edilen **Filtreler** açılır öğesini kullanın. 
 
 Karantinaya alınmış belirli bir iletiyi buldukktan sonra, iletinin ayrıntılarını görüntülemek ve bu ileti üzerinde işlem yapmak için iletiyi seçin (örneğin, iletiyi görüntüleme, yayınlama, indirme veya silme).
 
@@ -219,7 +222,7 @@ Diğer eylemler simgesine tıkladıktan ![sonra aşağıdaki eylemler kullanıla
   - **Gönderme türünü seçin**: **E-posta** (varsayılan), **URL** veya **Dosya**.
   - **Ağ iletisi kimliğini ekleyin veya e-posta dosyasını karşıya yükleyin**: Aşağıdaki seçeneklerden birini seçin:
     - **E-posta ağ ileti kimliğini ekleyin** (varsayılan olarak, kutuda karşılık gelen değer bulunur)
-    - **E-posta dosyasını (.msg veya eml) Upload**: Göndermek üzere .msg veya .eml ileti dosyasını bulmak ve seçmek için **Dosyalara gözat'a** tıklayın.
+    - **E-posta dosyasını (.msg veya eml) karşıya yükleyin**: Göndermek üzere .msg veya .eml ileti dosyasını bulmak ve seçmek için **Dosyalara gözat'a** tıklayın.
   - **Sorun yaşayan bir alıcı seçin**: İletiye uygulanan ilkeleri analiz etmek için iletinin bir (tercih edilen) veya daha fazla özgün alıcısını seçin.
   - **Microsoft'a göndermek için bir neden seçin**: Aşağıdaki seçeneklerden birini belirleyin:
     - **Engellenmemesi gerekir (hatalı pozitif)** (varsayılan): Aşağıdaki seçenekler kullanılabilir:
@@ -280,7 +283,7 @@ Diğer eylemler simgesine tıkladıktan ![sonra aşağıdaki eylemler kullanıla
 > [!NOTE]
 > Bu bölümdeki karantinaya alınan dosyalara yönelik yordamlar yalnızca Plan 1 veya Plan 2 abonelerine Office 365 için Microsoft Defender kullanılabilir.
 
-Office 365 için Defender olan kuruluşlarda yöneticiler, SharePoint, OneDrive ve Microsoft Teams için Kasa Ekleri tarafından karantinaya alınan dosyaları yönetebilir. Bu dosyalar için korumayı etkinleştirmek için bkz[. SharePoint, OneDrive ve Microsoft Teams için Kasa Eklerini açma](turn-on-mdo-for-spo-odb-and-teams.md).
+Office 365 için Defender olan kuruluşlarda yöneticiler SharePoint, OneDrive ve Microsoft Teams için Güvenli Ekler tarafından karantinaya alınan dosyaları yönetebilir. Bu dosyalar için korumayı etkinleştirmek için bkz. [SharePoint, OneDrive ve Microsoft Teams için Güvenli Ekler'i açma](turn-on-mdo-for-spo-odb-and-teams.md).
 
 ### <a name="view-quarantined-files"></a>Karantinaya alınan dosyaları görüntüleme
 
@@ -318,7 +321,7 @@ Listeden karantinaya alınmış bir dosya seçtiğinizde, açılan ayrıntılar 
 :::image type="content" source="../../media/quarantine-file-details-flyout.png" alt-text="Karantinaya alınan bir dosyanın ayrıntılar açılır öğesi" lightbox="../../media/quarantine-file-details-flyout.png":::
 
 - **Dosya Adı**
-- **Dosya URL'si**: Dosyanın konumunu tanımlayan URL (örneğin, SharePoint Online).
+- **Dosya URL'si**: Dosyanın konumunu tanımlayan URL (örneğin, SharePoint Online'da).
 - **Üzerinde kötü amaçlı içerik algılandı** Dosyanın karantinaya alındığı tarih/saat.
 - **Süre sonu**: Dosyanın karantinadan silineceği tarih.
 - **Algılanan:**
@@ -371,7 +374,7 @@ Karantinadaki iletileri ve dosyaları görüntülemek ve yönetmek için kulland
 - [Delete-QuarantineMessage](/powershell/module/exchange/delete-quarantinemessage)
 - [Export-QuarantineMessage](/powershell/module/exchange/export-quarantinemessage)
 - [Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage)
-- [Preview-QuarantineMessage](/powershell/module/exchange/preview-quarantinemessage): Bu cmdlet'in yalnızca iletiler için olduğunu, SharePoint, OneDrive ve Microsoft Teams için Kasa Eklerindeki karantinaya alınmış dosyalara yönelik olmadığını unutmayın.
+- [Preview-QuarantineMessage](/powershell/module/exchange/preview-quarantinemessage): Bu cmdlet'in yalnızca iletiler için olduğunu, SharePoint, OneDrive ve Microsoft Teams için Güvenli Ekler'den karantinaya alınmış dosyalara yönelik olmadığını unutmayın.
 - [Release-QuarantineMessage](/powershell/module/exchange/release-quarantinemessage)
 
 ## <a name="for-more-information"></a>Daha fazla bilgi için

@@ -1,6 +1,6 @@
 ---
-title: Uç nokta için Microsoft Defender'a geçiş kılavuzları
-description: Hızlı olmayan bir çözümden Uç nokta için Microsoft Defender'a Microsoft 365 Defender geçiş yapmayı öğrenin
+title: Uç Nokta için Microsoft Defender taşımak için geçiş ve kurulum kılavuzları
+description: Microsoft 365 Defender olmayan bir çözümden Uç Nokta için Microsoft Defender geçiş yapmayı öğrenin
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
@@ -10,48 +10,47 @@ ms.prod: m365-security
 ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
-- m365solution-scenario
 ms.custom: migrationguides
 ms.reviewer: chriggs, depicker, yongrhee
 f1.keywords: NOCSH
-ms.date: 11/29/2021
+ms.date: 07/01/2022
 ms.technology: mde
-ms.openlocfilehash: 31e9a4497ec4d31ab5623b543d4865b627832f1c
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+ms.openlocfilehash: d13d5bf8f33d022824e24e8b1fc879f0826d82da
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63010187"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607641"
 ---
-# <a name="make-the-switch-to-microsoft-defender-for-endpoint"></a>Uç nokta için Microsoft Defender'a geçme
+# <a name="move-to-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender taşı
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-## <a name="migration-guides"></a>Geçiş kılavuzları
+## <a name="migration-and-setup-guides"></a>Geçiş ve kurulum kılavuzları
 
-Uç nokta için Defender'a taşınmayı düşünüyorsanız, size yardımcı olacak yol göstericimiz var. Aşağıdaki tabloda senaryoları gözden geçirin. Sizin durumunu en iyi temsil eden senaryoyu seçin ve önerilen kılavuza bakın.
+Uç Nokta için Defender'a geçmeyi düşünüyorsanız size yardımcı olacak yönergelerimiz vardır. Aşağıdaki tabloda senaryoları gözden geçirin. Durumunuzu en iyi temsil eden senaryoyu seçin ve önerilen kılavuza bakın.
 
-<br/><br/>
-
-|Senaryo|Kılavuz|
+|Senaryo|Rehberlik|
 |---|---|
-|Henüz bir uç nokta koruma çözümünüz yok ve Uç Nokta için Defender hakkında daha fazla bilgi almak istiyor olun. Bunu ortamınıza yuvarlamadan önce Uç Nokta için Defender'ın nasıl çalıştığını görmek istiyor olun.|[Uç nokta değerlendirme laboratuvarı için Microsoft Defender](evaluation-lab.md)|
-|Uç Nokta için Defender'a zaten sahip ve her şeyi ayarlamak ve yapılandırmak için biraz yardım almak istiyor olun.|[Uç nokta dağıtım kılavuzu için Microsoft Defender](deployment-phases.md)|
-|Microsoft olmayan bir uç nokta koruma çözümünden, uç nokta korumasını da içeren Uç Nokta için Defender'a geçmeyi Microsoft Defender Virüsten Koruma. Geçiş sürecine ve geçişin nasıl yapılana genel bir bakış elde etmek istiyor siniz.|[Uç nokta için Microsoft Defender'a geçme](switch-to-mde-overview.md)|
-|Uç Nokta için Defender'ı zaten geçişli veya yerleşik olarak bulundun. Güvenlik ayarlarınızı yönetme, daha fazla özellik yapılandırma veya güvenlik ilkelerinizi ayarlama gibi sonraki adımlarda biraz yardım almak istiyor olun.|[Geçiş sonrası, Uç Nokta için Microsoft Defender'ı yönetme](manage-mde-post-migration.md)|
+|Henüz bir uç nokta koruma çözümünüz yok ve Uç Nokta için Defender hakkında daha fazla bilgi edinmek istiyorsunuz. Uç Nokta için Defender'ın ortamınızda kullanıma sunulmadan önce nasıl çalıştığını görmek istiyorsunuz.|[Uç Nokta için Microsoft Defender değerlendirme laboratuvarı](evaluation-lab.md)|
+|Uç Nokta için Defender zaten var ve her şeyi ayarlama ve yapılandırma konusunda yardım almak istiyorsunuz.|[Uç Nokta için Microsoft Defender dağıtım kılavuzu](deployment-phases.md)|
+|Microsoft dışı bir uç nokta koruma çözümünden Microsoft Defender Virüsten Koruma'yı içeren Uç Nokta için Defender'a geçmeyi planlıyorsunuz. Geçiş işlemine ve geçişi nasıl yapacağınıza genel bir bakış elde etmek istiyorsunuz.|[Uç Nokta için Microsoft Defender geçişini yapma](switch-to-mde-overview.md)|
+|Uç Nokta için Defender'a zaten geçiş veya ekleme işlemi yaptınız. Güvenlik ayarlarınızı yönetme, daha fazla özellik yapılandırma veya güvenlik ilkelerinizde ince ayarlama gibi sonraki adımlarla ilgili yardım almak istiyorsunuz.|[geçiş sonrası Uç Nokta için Microsoft Defender yönetme](manage-mde-post-migration.md)|
 
 
-## <a name="do-you-have-feedback-for-us"></a>Bizim için geri bildiriminiz mi var?
+## <a name="do-you-have-feedback-for-us"></a>Bizim için geri bildiriminiz var mı?
 
-Ne düşünüyor olurken bize haber verme! Sayfanın alt kısmında geri bildiriminizi gönderin. Geliştirmeye ve geçiş kılavuzumuza eklemeye devam ettiyken geri bildirimlerinizi dikkate a edeceğiz.
+Düşüncelerinizi bize bildirin! Sayfanın en altında geri bildiriminizi gönderin. İyileştirmeye ve geçiş kılavuzumuza eklemeye devam ettikçe geri bildirimlerinizi dikkate alacağız.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender)
 - [Uç Nokta için Microsoft Defender](/windows/security/threat-protection)
 - [Office 365 için Microsoft Defender](/microsoft-365/security/office-365-security/office-365-atp)
-- [Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender)
+- [Microsoft 365 Business Premium](../../business-premium/index.md)
+- [İş için Microsoft Defender](../defender-business/mdb-overview.md)

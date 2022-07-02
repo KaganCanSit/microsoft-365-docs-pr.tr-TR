@@ -17,16 +17,16 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Kullanıcılar, karantinaya alınan iletileri, kendilerine teslim edilmesi gereken Exchange Online Protection'da (EOP) görüntülemeyi ve yönetmeyi öğrenebilir.
+description: Kullanıcılar, kendilerine teslim edilmesi gereken Exchange Online Protection (EOP) içinde karantinaya alınan iletileri görüntülemeyi ve yönetmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
 adobe-target: true
-ms.openlocfilehash: 3a0faf45e6c9c756490be5ae3ab69b99f3a71cb0
-ms.sourcegitcommit: 61bdfa84f2d6ce0b61ba5df39dcde58df6b3b59d
+ms.openlocfilehash: 845e72f2cf3eeb97d7d5f90224967a4fe5068cf1
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2022
-ms.locfileid: "65941008"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607685"
 ---
 # <a name="find-and-release-quarantined-messages-as-a-user-in-eop"></a>Karantinaya alınan iletileri EOP'de kullanıcı olarak bulma ve bırakma
 
@@ -37,7 +37,7 @@ ms.locfileid: "65941008"
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Exchange Online'da posta kutuları olan Microsoft 365 kuruluşlarında veya Exchange Online posta kutuları olmayan tek başına Exchange Online Protection (EOP) kuruluşlarında karantina, potansiyel olarak tehlikeli veya istenmeyen iletileri barındırmaktadır. Daha fazla bilgi için bkz. [EOP'de karantinaya alma](quarantine-email-messages.md).
+posta kutuları olmayan Exchange Online veya tek başına Exchange Online Protection (EOP) kuruluşlarında posta kutuları Exchange Online olan Microsoft 365 kuruluşlarında karantina, potansiyel olarak tehlikeli veya istenmeyen iletileri barındırıyor. Daha fazla bilgi için bkz. [EOP'de karantinaya alma](quarantine-email-messages.md).
 
 Normal bir kullanıcı (yönetici değil) olarak, karantinaya alınmış bir iletinin alıcısı olarak kullanabileceğiniz **varsayılan** özellikler aşağıdaki tabloda açıklanmıştır:
 
@@ -51,8 +51,8 @@ Normal bir kullanıcı (yönetici değil) olarak, karantinaya alınmış bir ile
 |Yüksek güvenilirlikli kimlik avı||||
 |**Kimlik avından koruma ilkeleri**||||
 |EOP'de kimlik sahtekarlığına karşı koruma|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
-|Office 365 için Defender'da kimliğine bürünülen kullanıcı koruması|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
-|Office 365 için Defender'da kimliğine bürünülen etki alanı koruması|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
+|Office 365 için Defender'de kimliğine bürünülen kullanıcı koruması|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
+|Office 365 için Defender'de kimliğine bürünülen etki alanı koruması|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
 |Office 365 için Defender'da posta kutusu zekası koruması|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
 |**Kötü amaçlı yazılımdan koruma ilkeleri**||||
 |Kötü amaçlı yazılım olarak karantinaya alınan ekleri içeren e-posta iletileri.||||
@@ -64,7 +64,7 @@ Normal bir kullanıcı (yönetici değil) olarak, karantinaya alınmış bir ile
 
 _Karantina ilkeleri_ , kullanıcıların [, iletinin desteklenen özelliklerde](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features) neden karantinaya alındığına bağlı olarak karantinaya alınan iletilere ne yapmalarına izin verildiğini tanımlar. Varsayılan karantina ilkeleri, önceki tabloda açıklandığı gibi geçmiş özellikleri zorunlu kılmaktadır. Yöneticiler, desteklenen özelliklerdeki kullanıcılar için daha az kısıtlayıcı veya daha kısıtlayıcı özellikler tanımlayan özel karantina ilkeleri oluşturabilir ve uygulayabilir. Daha fazla bilgi için bkz [. Karantina ilkeleri](quarantine-policies.md).
 
-Karantinaya alınan iletilerinizi Microsoft 365 Defender portalında veya (yönetici bunu ayarladıysa) karantina ilkelerinden gelen karantina bildirimlerini görüntüleyip yönetirsiniz.
+Karantinaya alınan iletilerinizi Microsoft 365 Defender portalında veya (yönetici bunu ayarladıysa) karantina ilkelerinden karantina bildirimlerini görüntüleyip yönetirsiniz.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
@@ -137,7 +137,11 @@ Karantinaya alınan iletilerinizi Microsoft 365 Defender portalında veya (yöne
 
    Arama ölçütlerini girdikten sonra sonuçları filtrelemek için ENTER tuşuna basın.
 
+   > [!NOTE]
+   > Ana **Karantina** sayfasındaki **Arama** kutusu yalnızca geçerli görünümde karantinaya alınan öğeleri arar, karantinanın tamamını aramaz. Karantinaya alınan tüm öğeleri aramak için **Filtre'yi** ve sonuçta elde edilen **Filtreler** açılır öğesini kullanın.
+
 Karantinaya alınmış belirli bir iletiyi buldukktan sonra, iletinin ayrıntılarını görüntülemek ve bu ileti üzerinde işlem yapmak için iletiyi seçin (örneğin, iletiyi görüntüleme, yayınlama, indirme veya silme).
+
 
 ### <a name="view-quarantined-message-details"></a>Karantinaya alınan ileti ayrıntılarını görüntüleme
 

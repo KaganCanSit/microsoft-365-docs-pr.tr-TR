@@ -28,12 +28,12 @@ search.appverid:
 ROBOTS: NO INDEX, NO FOLLOW
 ms.assetid: 21e5551f-fa35-4f13-9418-f80d668b6a2b
 description: herhangi bir Windows cihazının iş veya okul hesabında oturum açtıktan sonra alacağı varsayılan cihaz ilkesinin ayarlarını yapılandırma hakkında bilgi edinin.
-ms.openlocfilehash: 5ac09788d609752d12a6ae6efadfa8739c5a4f9a
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: a9fd78ef37aed3663572b7049ae150e85916e41b
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65893093"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607421"
 ---
 # <a name="secure-windows-devices"></a>Windows cihazlarının güvenliğini sağlama
 
@@ -41,25 +41,18 @@ Buradaki amaç, Windows 10 veya 11 için varsayılan cihaz ilkesinin parçası o
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Microsoft 365 İş Ekstra kullanıcıları için Windows cihazları ayarlamadan önce, tüm Windows cihazlarının Windows 10 Pro, sürüm 1703 (Creators Update) veya Windows 11 Pro çalıştırdığından emin olun.
+windows cihazlarını Microsoft 365 İş Ekstra kullanıcılar için ayarlamadan önce tüm Windows cihazlarının Windows 10 Pro çalıştığından emin olun.
 
-Windows 10 Pro (veya Windows 11 Pro), Windows 10 Pro ve Windows 11 Pro'yı tamamlayan ve Microsoft 365 İş Ekstra'nın merkezi yönetim ve güvenlik denetimlerini etkinleştiren bir dizi bulut hizmeti ve cihaz yönetimi özelliği olan Windows 10 Business'ı dağıtmak için önkoşuldur.
+Windows 10 Pro, Windows 10 Pro ve Windows 11 Pro tamamlayan ve merkezi yönetim ve güvenlik denetimlerini etkinleştiren bir dizi bulut hizmeti ve cihaz yönetimi özelliği olan Windows 10 Business dağıtımı için önkoşuldur Microsoft 365 İş Ekstra.
 
 [Microsoft 365 İş Ekstra gereksinimleri hakkında daha fazla bilgi edinin](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium?activetab=pivot:techspecstab).
 
-## <a name="windows-10-pro-and-windows-11-pro"></a>Windows 10 Pro ve Windows 11 Pro
+## <a name="windows-10-pro"></a>Windows 10 Pro
 
-Windows 7 Pro, Windows 8 Pro veya Windows 8.1 Pro gibi Windows'un önceki sürümlerini çalıştıran Windows cihazlarınız varsa, Microsoft 365 İş Ekstra aboneliğiniz bu cihazları Windows 10 Pro veya Windows 11 Pro'ya yükseltmenizi sağlar.
+Windows 7 Pro, Windows 8 Pro veya Windows 8.1 Pro gibi Windows'un önceki sürümlerini çalıştıran Windows cihazlarınız varsa, Microsoft 365 İş Ekstra aboneliğiniz bu cihazları Windows 10 Pro veya Windows 11 Pro.
   
-Windows cihazlarını yükseltme hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
+Windows cihazlarını yükseltme hakkında daha fazla bilgi için bkz[. Windows cihazlarını Windows 10 Pro yükseltme](m365bp-upgrade-windows-10-pro.md).
 
-- [Windows Home'ı Windows 10 veya Windows 11 Pro'ya yükseltme](https://support.microsoft.com/windows/upgrade-windows-home-to-windows-pro-ef34d520-e73f-3198-c525-d1a218cc2818)
-- [Windows 10 Pro'ya yükseltme](https://support.microsoft.com/windows/upgrade-to-windows-10-pro-71ecc746-0f81-a4c0-bd4b-0db8559e0796)
-
-<!---
-Could not find the Win11 equivalent upgrade link.
----> 
-  
 ## <a name="secure-your-windows-10-and-11-devices"></a>Windows 10 ve 11 cihazlarınızın güvenliğini sağlama
 
 Varsayılan olarak tüm ayarlar **Açık** durumdadır. Aşağıdaki ayarlar kullanılabilir:<br/><br/>

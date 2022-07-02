@@ -16,12 +16,12 @@ ms.custom: ''
 description: Yöneticiler, Exchange Online Protection (EOP) ve Office 365 için Microsoft Defender koruma özellikleri arasında Standart ve Katı ilke ayarlarının nasıl uygulanacağını öğrenebilir
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: eb9eb8c3f45b0047922be854972d1f96123342cb
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: ffce562fbcbdf8ca9d6c19265166400163be7acf
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115531"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607663"
 ---
 # <a name="preset-security-policies-in-eop-and-microsoft-defender-for-office-365"></a>EOP ve Office 365 için Microsoft Defender'da önceden ayarlanmış güvenlik ilkeleri
 
@@ -75,7 +75,7 @@ Profil, koruma düzeyini belirler. Aşağıdaki profiller kullanılabilir:
   >
   > Benzer şekilde, ilkenin özel durumu olarak aynı alıcı filtresini kullanırsanız, ilke _romain@contoso.com yalnızca_ Yöneticiler gruplarının da üyesiyse uygulanmaz. Grubun üyesi değilse, ilke hala onun için geçerlidir.
 
-- **Yerleşik koruma** (yalnızca Office 365 için Defender): Yalnızca Kasa Bağlantıları ve Kasa Ekleri korumasını etkinleştiren bir profil. Bu profil, hiçbir zaman varsayılan ilkeleri olmayan Kasa Bağlantıları ve Kasa Ekleri için varsayılan ilkeler sağlar.
+- **Yerleşik koruma** (yalnızca Office 365 için Defender): Yalnızca Güvenli Bağlantılar ve Güvenli Ekler korumasını etkinleştiren bir profil. Bu profil, hiçbir zaman varsayılan ilkeleri olmayan Güvenli Bağlantılar ve Güvenli Ekler için varsayılan ilkeler sağlar.
 
   **Yerleşik koruma** için, tüm Office 365 için Defender müşteriler için önceden ayarlanmış güvenlik ilkesi varsayılan olarak açıktır. Bunu önermesek de, korumanın belirli kullanıcılara uygulanmaması için **Kullanıcılar**, **Gruplar** ve **Etki Alanları** temelinde özel durumlar da yapılandırabilirsiniz.
 
@@ -85,22 +85,22 @@ Profil, koruma düzeyini belirler. Aşağıdaki profiller kullanılabilir:
 
 Önceden ayarlanmış güvenlik ilkeleri, EOP ve Office 365 için Microsoft Defender'deki çeşitli koruma özelliklerine karşılık gelen ilkeleri kullanır. Bu ilkeler, kullanıcılara **Standart koruma** veya **Katı koruma** önayarlı güvenlik ilkeleri _atandıktan sonra_ oluşturulur. Bu ilkelerdeki ayarları değiştiremezsiniz.
 
-- **Exchange Online Protection (EOP) ilkeleri**: Bu, Exchange Online posta kutularına sahip Microsoft 365 kuruluşları ve Exchange Online posta kutusu olmayan tek başına EOP kuruluşlarını içerir:
+- **Exchange Online Protection (EOP) ilkeleri**: Bu ilkeler, Exchange Online posta kutularına ve Exchange Online posta kutusu olmayan tek başına EOP kuruluşlarına sahip tüm Microsoft 365 kuruluşlarında bulunur:
 
   - **Standart Önceden Ayarlanmış Güvenlik İlkesi** ve **Katı Önceden Ayarlanmış Güvenlik İlkesi** adlı [istenmeyen posta önleme ilkeleri](configure-your-spam-filter-policies.md).
   - **Standart Önceden Ayarlanmış Güvenlik İlkesi** ve **Katı Ön Ayarlı Güvenlik İlkesi** adlı [kötü amaçlı yazılımdan koruma ilkeleri](configure-anti-malware-policies.md).
-  - **Standart Önceden Ayarlanmış Güvenlik İlkesi** ve **Katı Ön Ayarlı Güvenlik İlkesi** (kimlik sahtekarlığı ayarları) adlı [EOP Kimlik Avı önleme ilkeleri](set-up-anti-phishing-policies.md#spoof-settings).
+  - **Standart Önceden Ayarlanmış Güvenlik İlkesi ve Katı Ön Ayarlı Güvenlik İlkesi** (kimlik sahtekarlığı ayarları)  adlı [kimlik avı önleme ilkeleri](set-up-anti-phishing-policies.md#spoof-settings) (kimlik sahtekarlığı koruması).
 
   > [!NOTE]
   > Giden istenmeyen posta ilkeleri önceden ayarlanmış güvenlik ilkelerinin bir parçası değildir. Varsayılan giden istenmeyen posta ilkesi, önceden ayarlanmış güvenlik ilkelerinin üyelerini otomatik olarak korur. Alternatif olarak, önceden ayarlanmış güvenlik ilkelerinin üyeleri için korumayı özelleştirmek için özel giden istenmeyen posta ilkeleri oluşturabilirsiniz. Daha fazla bilgi için bkz. [EOP'de giden istenmeyen posta filtrelemeyi yapılandırma](configure-the-outbound-spam-policy.md).
 
-- **Office 365 için Microsoft Defender ilkeleri**: Bu, Microsoft 365 E5 veya Office 365 için Defender eklenti abonelikleri olan kuruluşları içerir:
+- **Office 365 için Microsoft Defender ilkeleri**: Bu ilkeler, Microsoft 365 E5 veya Office 365 için Defender eklenti abonelikleri olan kuruluşlarda bulunur:
   - standart **önayar güvenlik ilkesi** ve **katı önceden ayarlanmış güvenlik** ilkesi adlı Office 365 için Defender kimlik avı önleme ilkeleri, şunlardır:
     - EOP kimlik avı önleme ilkelerinde kullanılabilen kimlik sahtekarlığı [ayarlarının](set-up-anti-phishing-policies.md#spoof-settings) aynısı.
     - [Kimliğe bürünme ayarları](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
     - [Gelişmiş kimlik avı eşikleri](set-up-anti-phishing-policies.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
-  - [Kasa](set-up-safe-links-policies.md) **Standart Önceden Ayarlanmış Güvenlik İlkesi**, **Katı Önceden Ayarlanmış Güvenlik İlkesi** ve **Yerleşik Koruma İlkesi** adlı bağlantılar ilkeleri.
-  - Kasa **Standart Önceden Ayarlanmış Güvenlik İlkesi, Katı Önceden Ayarlanmış Güvenlik İlkesi** ve **Yerleşik Koruma İlkesi** adlı [Ekler ilkeleri](set-up-safe-attachments-policies.md).
+  - **Standart Önceden Ayarlanmış Güvenlik İlkesi**, **Katı Önceden Ayarlanmış Güvenlik İlkesi** ve **Yerleşik Koruma İlkesi** adlı [Güvenli Bağlantılar ilkeleri](set-up-safe-links-policies.md).
+  - **Standart Önceden Ayarlanmış Güvenlik İlkesi**, **Katı Önceden Ayarlanmış Güvenlik İlkesi** ve **Yerleşik Koruma İlkesi** adlı [Güvenli Ekler ilkeleri](set-up-safe-attachments-policies.md).
 
 EOP korumalarını Office 365 için Defender korumalardan farklı kullanıcılara uygulayabilir veya aynı alıcılara EOP ve Office 365 için Defender uygulayabilirsiniz.
 
@@ -122,13 +122,13 @@ Kullanıcıya birden çok ilke uygulandığında, aşağıdaki sıra en yüksek 
 1. **Katı koruma** önceden ayarlanmış güvenlik ilkesi
 2. **Standart koruma** önceden ayarlanmış güvenlik ilkesi
 3. Özel güvenlik ilkeleri
-4. **Yerleşik koruma** önceden ayarlanmış güvenlik ilkesi ve varsayılan güvenlik ilkeleri
+4. Güvenli Bağlantılar ve Güvenli Ekler için **yerleşik koruma** önceden ayarlanmış güvenlik ilkesi ve kötü amaçlı yazılımdan koruma, istenmeyen posta önleme ve kimlik avı önleme için varsayılan ilkeler.
 
-Başka bir deyişle, **Katı koruma** ilkesinin ayarları Standart **koruma** ilkesinin ayarlarını geçersiz kılar. Bu, özel bir ilkedeki ayarları geçersiz kılar ve bu da **Yerleşik koruma** ön ayarı güvenlik ilkesindeki (Kasa Bağlantılar ve Kasa Ekler) ve varsayılan ilkeden (istenmeyen posta önleme, kötü amaçlı yazılımdan koruma ve kimlik avı önleme) ayarları geçersiz kılar.
+Başka bir deyişle, **Katı koruma** ilkesinin ayarları Standart **koruma** ilkesinin ayarlarını geçersiz kılar. Bu ilke, **yerleşik koruma** ön ayarı güvenlik ilkesinden (Güvenli Bağlantılar ve Güvenli Ekler) ve varsayılan ilkeden (istenmeyen posta, kötü amaçlı yazılımdan koruma ve kimlik avı önleme) ayarları geçersiz kılar.
 
 Örneğin, **Standart korumada** bir güvenlik ayarı varsa ve yönetici bir kullanıcı için **Standart korumayı** etkinleştirmişse, bu ayar için özel ilkede veya varsayılan ilkede (aynı kullanıcı için) yapılandırılan ayar yerine **Standart koruma** ayarı uygulanır. Belirli gereksinimleri karşılamak için kuruluşunuzdaki diğer kullanıcılara özel bir ilke uygularken yalnızca **Standart** veya **Katı koruma** ilkesini uygulamak istediğiniz kuruluşunuzun bir bölümüne sahip olabileceğini unutmayın.
 
-**Yerleşik koruma**, mevcut Kasa Bağlantıları veya Kasa Ekleri ilkelerindeki alıcıları etkilemez. **Standart koruma**, **Katı koruma** veya özel Kasa Bağlantıları veya Kasa Ekler ilkelerini zaten yapılandırdıysanız, bu ilkeler _her zaman_ **Yerleşik korumadan** _önce_ uygulanır, bu nedenle bu önceden ayarlanmış veya özel ilkelerde zaten tanımlanmış olan alıcıları etkilemez.
+**Yerleşik koruma** , mevcut Güvenli Bağlantılar veya Güvenli Ekler ilkelerindeki alıcıları etkilemez. **Standart koruma**, **Katı koruma** veya özel Güvenli Bağlantılar veya Güvenli Ekler ilkelerini zaten yapılandırdıysanız, bu ilkeler _her zaman_ **Yerleşik korumadan** _önce_ uygulanır, bu nedenle bu önceden ayarlanmış veya özel ilkelerde zaten tanımlanmış olan alıcıları etkilemez.
 
 ## <a name="assign-preset-security-policies-to-users"></a>Kullanıcılara önceden ayarlanmış güvenlik ilkeleri atama
 
@@ -136,7 +136,7 @@ Başka bir deyişle, **Katı koruma** ilkesinin ayarları Standart **koruma** il
 
 - Microsoft 365 Defender portalını adresinde <https://security.microsoft.com>açarsınız. **Önceden ayarlanmış güvenlik ilkeleri** sayfasına doğrudan gitmek için kullanın<https://security.microsoft.com/presetSecurityPolicies>.
 
-- Exchange Online PowerShell'e bağlanmak için bkz. [PowerShell'Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+- Exchange Online PowerShell'e bağlanmak için bkz[. Exchange Online PowerShell'e bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Bu makaledeki yordamları gerçekleştirebilmeniz için **önce Exchange Online'de** izinlerin atanmış olması gerekir:
   - Önceden ayarlanmış güvenlik ilkelerini yapılandırmak için **Kuruluş Yönetimi** veya **Güvenlik Yöneticisi** rol gruplarının üyesi olmanız gerekir.
@@ -144,7 +144,7 @@ Başka bir deyişle, **Katı koruma** ilkesinin ayarları Standart **koruma** il
 
   Daha fazla bilgi için bkz. [Exchange Online'de İzinler](/exchange/permissions-exo/permissions-exo).
 
-  **Not**: kullanıcıları Microsoft 365 yönetim merkezi karşılık gelen Azure Active Directory rolüne eklemek, kullanıcılara Microsoft 365'daki diğer özellikler için gerekli izinleri _ve_ izinleri verir. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
+  **Not**: kullanıcıları Microsoft 365 yönetim merkezi ilgili Azure Active Directory rolüne eklemek, kullanıcılara Microsoft 365'teki diğer özellikler için gerekli izinleri _ve_ izinleri verir. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
 
 ### <a name="use-the-microsoft-365-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users"></a>Kullanıcılara Standart ve Katı önceden ayarlanmış güvenlik ilkeleri atamak için Microsoft 365 Defender portalını kullanın
 
@@ -165,7 +165,7 @@ Başka bir deyişle, **Katı koruma** ilkesinin ayarları Standart **koruma** il
 
      Kullanıcılar veya gruplar için çoğu tanımlayıcıyı (ad, görünen ad, diğer ad, e-posta adresi, hesap adı vb.) kullanabilirsiniz, ancak sonuçlarda ilgili görünen ad gösterilir. Kullanıcılar için, tüm kullanılabilir değerleri görmek için tek başına bir yıldız işareti (\*) girin.
 
-   - **Hiçbiri**
+   - **Yok**
 
    - **Bu alıcıları dışla**: İlkenin geçerli olduğu iç alıcılara özel durumlar eklemek için (alıcı özel durumları), bu seçeneği belirleyin ve özel durumları yapılandırın. Ayarlar ve davranış, koşullara tam olarak benzer.
 
@@ -230,7 +230,7 @@ Mevcut koşulları ve özel durumları korurken **Standart koruma** veya **Katı
 
 ### <a name="use-the-microsoft-365-defender-portal-to-modify-the-assignments-of-the-built-in-protection-preset-security-policy"></a>Yerleşik koruma önceden ayarlanmış güvenlik ilkesinin atamalarını değiştirmek için Microsoft 365 Defender portalını kullanın
 
-**Yerleşik koruma** önayarlı güvenlik ilkesinin tüm alıcılara atandığını ve **Standart koruma** veya **Katı** koruma önayarlı güvenlik ilkeleri ya da özel Kasa Bağlantıları veya Kasa Ekleri ilkelerinde tanımlanan alıcıları etkilemediği unutmayın.
+**Yerleşik koruma** önayarlı güvenlik ilkesinin tüm alıcılara atandığını ve **Standart koruma** veya **Katı** koruma önayarlı güvenlik ilkeleri ya da özel Güvenli Bağlantılar veya Güvenli Ekler ilkelerinde tanımlanan alıcıları etkilemediği unutmayın.
 
 Bu nedenle, **genellikle Yerleşik koruma** önayarlı güvenlik ilkesi için özel durumlar önermeyiz.
 
@@ -238,7 +238,7 @@ Bu nedenle, **genellikle Yerleşik koruma** önayarlı güvenlik ilkesi için ö
 
 2. **Önceden ayarlanmış güvenlik ilkeleri** sayfasında **Yerleşik koruma** bölümünde **Dışlama ekle (önerilmez)** seçeneğini belirleyin.
 
-3. Görüntülenen **Yerleşik korumanın dışında bırak** açılır penceresinde, yerleşik Kasa Bağlantıları ve Kasa Ekler korumasının dışında tutulan iç alıcıları tanımlayın:
+3. Görüntülenen **Yerleşik korumanın dışında bırak** açılır penceresinde, yerleşik Güvenli Bağlantılar ve Güvenli Ekler korumasının dışında tutulan iç alıcıları tanımlayın:
    - **Kullanıcılar**
    - **Gruplar**
    - **Etki alanları**

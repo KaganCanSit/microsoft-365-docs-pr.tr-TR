@@ -1,6 +1,6 @@
 ---
-title: Azure Sanal Masaüstü'nde çok oturumlu Windows cihazları ekleme
-description: Azure Sanal Masaüstü'nde çok oturumlu cihazlar Windows ekleme hakkında bu makalede daha fazla bilgi edinin
+title: Azure Sanal Masaüstü'ne Windows cihazları ekleme
+description: Azure Sanal Masaüstü'nde Windows cihazlarını Uç Nokta için Defender'a ekleme hakkında bilgi edinin
 keywords: Azure Sanal Masaüstü, AVD, microsoft defender, uç nokta, ekleme
 ms.prod: w10
 ms.mktglfcycl: manage
@@ -15,26 +15,27 @@ ms.custom: nextgen
 ms.reviewer: ''
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 7a093a3b50d7153c71eecb9707ff8ab0dbef0d20
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 91a9cc3e7a9fdc38a05deaf04f2124819f41d1ae
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66013298"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607443"
 ---
-# <a name="onboard-windows-multi-session-devices-in-azure-virtual-desktop"></a>Azure Sanal Masaüstü'nde çok oturumlu Windows cihazları ekleme
+# <a name="onboard-windows-devices-in-azure-virtual-desktop"></a>Azure Sanal Masaüstü'ne Windows cihazları ekleme
 
 Okunmasının 6 dakikası
 
 **Şunlar için geçerlidir:**
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- Azure Sanal Masaüstü(AVD) üzerinde çalışan çok oturumlu Windows
+- Azure Sanal Masaüstü'de (AVD) çalışan Windows çoklu oturumu
+- [Çoklu Oturum Windows 10 Enterprise](/microsoft-365/security/defender-endpoint/azure-server-integration)
 
 Uç Nokta için Microsoft Defender hem VDI hem de Azure Sanal Masaüstü oturumlarını izlemeyi destekler. Kuruluşunuzun gereksinimlerine bağlı olarak, çalışanlarınızın yönetilmeyen bir cihazdan, uzak konumdan veya benzer bir senaryodan şirket verilerine ve uygulamalarına erişmesine yardımcı olmak için VDI veya Azure Sanal Masaüstü oturumları uygulamanız gerekebilir. Uç Nokta için Microsoft Defender ile bu sanal makineleri anormal etkinlik için izleyebilirsiniz.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Kalıcı olmayan VDI ile ilgili dikkat edilmesi gerekenler](/microsoft-365/security/defender-endpoint/configure-endpoints-vdi#onboard-non-persistent-virtual-desktop-infrastructure-vdi-devices-1) hakkında bilgi sahibi olun. [Azure Sanal Masaüstü](/azure/virtual-desktop/overview) kalıcılık dışı seçenekler sağlamasa da, yeni konaklar sağlamak ve makineleri yeniden dağıtmak için kullanılabilecek altın Windows görüntüsü kullanmanın yollarını sağlar. Bu, ortamdaki volatiliteyi artırır ve böylece Uç Nokta için Microsoft Defender portalında oluşturulan ve tutulan girişleri etkileyerek güvenlik analistlerinizin görünürlüğünü azaltabilir.
+[Kalıcı olmayan VDI ile ilgili dikkat edilmesi gerekenler](/microsoft-365/security/defender-endpoint/configure-endpoints-vdi#onboard-non-persistent-virtual-desktop-infrastructure-vdi-devices-1) hakkında bilgi sahibi olun. [Azure Sanal Masaüstü](/azure/virtual-desktop/overview) kalıcı olmayan seçenekler sağlamasa da, yeni konaklar sağlamak ve makineleri yeniden dağıtmak için kullanılabilecek altın renkli bir Windows görüntüsü kullanmanın yollarını sağlar. Bu, ortamdaki volatiliteyi artırır ve böylece Uç Nokta için Microsoft Defender portalında oluşturulan ve tutulan girişleri etkileyerek güvenlik analistlerinizin görünürlüğünü azaltabilir.
 
 > [!NOTE]
 > Seçtiğiniz ekleme yöntemine bağlı olarak cihazlar Uç Nokta için Microsoft Defender portalda şu şekilde görünebilir:
@@ -55,7 +56,7 @@ AVD konak makinesini eklemenin birkaç yolu vardır:
 
 - Başlatma sırasında betiği altın görüntüde (veya paylaşılan bir konumdan) çalıştırın.
 - Betiği çalıştırmak için bir yönetim aracı kullanın.
-- [Bulut için Microsoft Defender ile Tümleştirme aracılığıyla](azure-server-integration.md)
+- [Bulut için Microsoft Defender ile tümleştirme aracılığıyla](azure-server-integration.md)
 
 #### <a name="scenario-1-using-local-group-policy"></a>*Senaryo 1: Yerel grup ilkesini kullanma*
 
@@ -73,7 +74,7 @@ Bu senaryo merkezi olarak bulunan bir betik kullanır ve bunu etki alanı tabanl
 
 1. VDI yapılandırma paketini .zip dosyasını açın (WindowsDefenderATPOnboardingPackage.zip)
 
-    1. Microsoft 365 Defender portalı  gezinti bölmesinde **uç noktaları** \> ekleme **(Cihaz Yönetimi** altında) **Ayarlar**\> seçin.
+    1. Microsoft 365 Defender portalı gezinti bölmesinde **Ayarlar** \> **Uç Noktaları** \> **Ekleme** 'yi seçin (**Cihaz Yönetimi** altında).
     1. İşletim sistemi olarak Windows 10 veya Windows 11 seçin.
     1. **Dağıtım yöntemi** alanında, kalıcı olmayan uç noktalar için VDI ekleme betikleri'ni seçin.
     1. **Paketi indir'e** tıklayın ve .zip dosyasını kaydedin.
@@ -104,12 +105,12 @@ Bu senaryo merkezi olarak bulunan bir betik kullanır ve bunu etki alanı tabanl
 
 #### <a name="scenario-3-onboarding-using-management-tools"></a>*Senaryo 3: Yönetim araçlarını kullanarak ekleme*
 
-Makinelerinizi bir yönetim aracı kullanarak yönetmeyi planlıyorsanız, cihazları Microsoft Endpoint Configuration Manager ile ekleyebilirsiniz.
+Makinelerinizi bir yönetim aracı kullanarak yönetmeyi planlıyorsanız, Microsoft Endpoint Configuration Manager ile cihazları ekleyebilirsiniz.
 
-Daha fazla bilgi için bkz. [Configuration Manager kullanarak Windows cihazları ekleme](configure-endpoints-sccm.md).
+Daha fazla bilgi için bkz. [Configuration Manager kullanarak Windows cihazlarını ekleme](configure-endpoints-sccm.md).
 
 > [!WARNING]
-> [Saldırı yüzeyi azaltma kuralları başvurusu](attack-surface-reduction-rules-reference.md) kullanmayı planlıyorsanız, "[PSExec ve WMI komutlarından kaynaklanan işlem oluşturmalarını engelle](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)" kuralının kullanılmaması gerektiğini unutmayın çünkü bu kural Microsoft Endpoint Configuration Manager aracılığıyla yönetimle uyumsuzdur. Kural, Configuration Manager istemcisinin düzgün çalışması için kullandığı WMI komutlarını engeller.
+> [Saldırı yüzeyi azaltma kuralları başvurusu](attack-surface-reduction-rules-reference.md) kullanmayı planlıyorsanız, "[PSExec ve WMI komutlarından kaynaklanan işlem oluşturmalarını engelle](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)" kuralının kullanılmaması gerektiğini unutmayın, çünkü bu kural Microsoft Endpoint Configuration Manager aracılığıyla yönetimle uyumsuzdur. Kural, Configuration Manager istemcisinin düzgün çalışması için kullandığı WMI komutlarını engeller.
 
 > [!TIP]
 > Cihazı ekledikten sonra, cihazın hizmete düzgün şekilde eklendiğini doğrulamak için bir algılama testi çalıştırmayı seçebilirsiniz. Daha fazla bilgi için bkz. [Yeni eklenen Uç Nokta için Microsoft Defender cihazında algılama testi çalıştırma](run-detection-test.md).
@@ -154,7 +155,7 @@ Ayrıca, FSlogix kullanıcı profillerini kullanıyorsanız, aşağıdaki dosyal
 
 #### <a name="licensing-requirements"></a>Lisans gereksinimleri
 
-Lisanslamayla ilgili not: Gereksinimlerinize bağlı olarak çok oturumlu Windows Enterprise kullanırken, tüm kullanıcıların Uç Nokta için Microsoft Defender (kullanıcı başına), Windows Enterprise E5 üzerinden lisansa sahip olmasını seçebilirsiniz Microsoft 365  Güvenlik veya Microsoft 365 E5 ya da VM'nin Bulut için Microsoft Defender aracılığıyla lisansa sahip olması.
+Lisanslamayla ilgili not: Windows Enterprise çoklu oturumunu kullanırken, gereksinimlerinize bağlı olarak tüm kullanıcıların Uç Nokta için Microsoft Defender (kullanıcı başına), Windows Enterprise E5, Microsoft 365 Güvenliği veya Microsoft 365 E5 aracılığıyla lisanslanması ya da VM'nin Bulut için Microsoft Defender aracılığıyla lisanslanması seçeneğini belirleyebilirsiniz.
 Uç Nokta için Microsoft Defender için lisanslama gereksinimleri şu konumda bulunabilir: [Lisans gereksinimleri](minimum-requirements.md#licensing-requirements).
 
 ### <a name="known-issues-and-limitations"></a>Bilinen sorunlar ve sınırlamalar

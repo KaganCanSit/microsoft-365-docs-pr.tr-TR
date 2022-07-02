@@ -16,14 +16,14 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
 ms.topic: article
-ms.date: 11/29/2021
+ms.date: 07/01/2022
 ms.reviewer: chventou
-ms.openlocfilehash: e83306f4af82d8a24745ca5af3d146bb50c41ee7
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: b253fe7dad271684f5c0e927ec162ea4e993df29
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66603406"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607399"
 ---
 # <a name="manage-microsoft-defender-for-endpoint-with-configuration-manager"></a>Configuration Manager ile Uç Nokta için Microsoft Defender yönetme
 
@@ -34,15 +34,12 @@ ms.locfileid: "66603406"
 
 > Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-
 Microsoft Intune [(](/mem/intune/fundamentals/what-is-intune)Intune) ve [Microsoft Endpoint Configuration Manager](/mem) (Configuration Manager) içeren [Microsoft Endpoint Manager](/mem/configmgr/core/understand/introduction) kullanmanızı öneririz ), kuruluşunuzun cihazlar için tehdit koruma özelliklerini (uç noktalar olarak da adlandırılır) yönetmeye yöneliktir.
 
 - [Endpoint Manager hakkında daha fazla bilgi edinin](/mem/endpoint-manager-overview)
 - [Configuration Manager ve Intune ile Windows 10 ve Windows 11 cihazlarda Uç Nokta için Microsoft Defender birlikte yönetme](manage-mde-post-migration-intune.md)
 
 ## <a name="configure-microsoft-defender-for-endpoint-with-configuration-manager"></a>Configuration Manager ile Uç Nokta için Microsoft Defender yapılandırma
-
-<br/><br/>
 
 |Görev|Daha fazla bilgi edinmek için kaynaklar|
 |---|---|

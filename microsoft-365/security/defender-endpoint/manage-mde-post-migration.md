@@ -1,5 +1,5 @@
 ---
-title: Geçiş sonrası Uç Nokta için Microsoft Defender yönetme
+title: İlk kurulum veya geçiş sonrasında Uç Nokta için Microsoft Defender yönetme
 description: artık Uç Nokta için Microsoft Defender geçiş yaptığınıza göre, sonraki adımınız tehdit koruması özelliklerinizi yönetmektir
 keywords: geçiş sonrası, yönetme, işlemler, bakım, kullanım, Uç Nokta için Microsoft Defender, edr
 ms.prod: m365-security
@@ -15,16 +15,16 @@ audience: ITPro
 ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
-ms.date: 11/29/2021
+ms.date: 07/01/2022
 ms.reviewer: chventou
-ms.openlocfilehash: 0103fea7a569b7462e455541e574fee58c719d24
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: d00de67b52f521042d5595320346f875f8c89c9e
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66601102"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607575"
 ---
-# <a name="manage-microsoft-defender-for-endpoint-post-migration"></a>geçiş sonrası Uç Nokta için Microsoft Defender yönetme
+# <a name="manage-microsoft-defender-for-endpoint-after-initial-setup-or-migration"></a>İlk kurulum veya geçiş sonrasında Uç Nokta için Microsoft Defender yönetme
 
 **Şunlar için geçerlidir:**
 - [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/?linkid=2154037)
@@ -33,11 +33,9 @@ ms.locfileid: "66601102"
 
 > Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Önceki uç nokta koruma ve virüsten koruma çözümünüzden Uç Nokta için Microsoft Defender'a geçtikten sonra, sonraki adımınız özelliklerinizi ve yeteneklerinizi yönetmektir. Kuruluşunuzun cihazlarını [](/mem/endpoint-manager-overview)ve güvenlik ayarlarını yönetmek için [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) ve [Microsoft Endpoint Configuration Manager içeren Microsoft Endpoint Manager](/mem/configmgr/core/understand/introduction) kullanmanızı öneririz. Ancak[, Azure Active Directory Domain Services'daki grup ilkesi Nesneleri](/azure/active-directory-domain-services/manage-group-policy) gibi diğer araçları/yöntemleri kullanabilirsiniz.
+Uç Nokta için Microsoft Defender ayarlayıp yapılandırdıktan sonra, sonraki adımınız özelliklerinizi ve yeteneklerinizi yönetmektir. Kuruluşunuzun cihazlarını [](/mem/endpoint-manager-overview)ve güvenlik ayarlarını yönetmek için [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) ve [Microsoft Endpoint Configuration Manager içeren Microsoft Endpoint Manager](/mem/configmgr/core/understand/introduction) kullanmanızı öneririz. Ancak[, Azure Active Directory Domain Services'daki grup ilkesi Nesneleri](/azure/active-directory-domain-services/manage-group-policy) gibi diğer araçları/yöntemleri kullanabilirsiniz.
 
 Aşağıdaki tabloda, daha fazla bilgi edinmek için kullanabileceğiniz çeşitli araçlar/yöntemler ve bağlantılar listelemektedir.
-
-<br/><br/>
 
 |Araç/Yöntem|Açıklama|
 |---|---|

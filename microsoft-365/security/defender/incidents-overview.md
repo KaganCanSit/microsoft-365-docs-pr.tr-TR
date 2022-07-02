@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 70f75fd5986a5d837e33b3caf0b7cb23239ddce5
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: c8fd4be82e9ff778db136db314faa6c100240856
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731602"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607509"
 ---
 # <a name="incident-response-with-microsoft-365-defender"></a>Microsoft 365 Defender ile olay yanıtı
 
@@ -40,7 +40,7 @@ ms.locfileid: "64731602"
 
 Microsoft 365 Defender'deki bir olay, bir saldırının hikayesini oluşturan bağıntılı uyarıların ve ilişkili verilerin bir koleksiyonudur.
 
-Microsoft 365 hizmetler ve uygulamalar, şüpheli veya kötü amaçlı bir olay veya etkinlik algıladığında uyarılar oluşturur. Tek tek uyarılar, tamamlanmış veya devam eden bir saldırı hakkında değerli ipuçları sağlar. Ancak saldırılar genellikle cihazlar, kullanıcılar ve posta kutuları gibi farklı varlık türlerine karşı çeşitli teknikler uygular. Sonuç, kiracınızdaki birden çok varlık için birden çok uyarıdır.
+Microsoft 365 hizmetleri ve uygulamaları, şüpheli veya kötü amaçlı bir olay veya etkinlik algıladığında uyarılar oluşturur. Tek tek uyarılar, tamamlanmış veya devam eden bir saldırı hakkında değerli ipuçları sağlar. Ancak saldırılar genellikle cihazlar, kullanıcılar ve posta kutuları gibi farklı varlık türlerine karşı çeşitli teknikler uygular. Sonuç, kiracınızdaki birden çok varlık için birden çok uyarıdır.
 
 Bir saldırı hakkında içgörü elde etmek için tek tek uyarıların birlikte pastalanması zor ve zaman alıcı olabileceğinden, Microsoft 365 Defender uyarıları ve ilişkili bilgilerini bir olayda otomatik olarak toplar.
 
@@ -106,9 +106,12 @@ Bir olayla verileri arasındaki ilişki ve Microsoft 365 Defender portalındaki 
 
 :::image type="content" source="../../media/incidents-overview/incidents-security-center.png" alt-text="Bir olayın ve verilerinin Microsoft 365 Defender portalındaki bir olayın sekmeleriyle ilişkisi." lightbox="../../media/incidents-overview/incidents-security-center.png":::
 
+> [!NOTE]
+> *Desteklenmeyen uyarı türü* uyarı durumu görüyorsanız, bu otomatik araştırma özelliklerinin otomatik araştırma çalıştırmak için bu uyarıyı alamayacağı anlamına gelir. Ancak [, bu uyarıları el ile araştırabilirsiniz](investigate-incidents.md#alerts).
+
 ## <a name="example-incident-response-workflow-for-microsoft-365-defender"></a>Microsoft 365 Defender için örnek olay yanıtı iş akışı
 
-aşağıda, Microsoft 365 Defender portalıyla Microsoft 365 olayları yanıtlamaya yönelik örnek bir iş akışı verilmiştir.
+Microsoft 365'teki olaylara Microsoft 365 Defender portalıyla yanıt vermek için örnek bir iş akışı aşağıda verilmiştir.
 
 :::image type="content" source="../../media/incidents-overview/incidents-example-workflow.png" alt-text="Microsoft 365 Defender portalı için olay yanıtı iş akışı örneği." lightbox="../../media/incidents-overview/incidents-example-workflow.png":::
 
@@ -121,7 +124,7 @@ Kendi olay yanıtı iş akışınız için şu adımları göz önünde bulundur
 
 1. Her olay için bir [saldırı ve uyarı araştırması ve analizi](investigate-incidents.md) başlatın:
 
-   1. Kapsamını ve önem derecesini ve **Özet** ve **Graph** (Önizleme) sekmelerinden hangi varlıkların etkilendiğini anlamak için olayın özetini görüntüleyin.
+   1. Kapsamını ve önem derecesini ve **Özet** ve **Grafik** (Önizleme) sekmelerinden hangi varlıkların etkilendiğini anlamak için olayın özetini görüntüleyin.
 
    1. Uyarılar sekmesiyle bunların kaynağını, kapsamını ve önem derecesini anlamak için **uyarıları** analiz etmeye başlayın.
 
@@ -201,7 +204,7 @@ Benzer şekilde, kuruluşunuz rol tabanlı erişim denetimi (RBAC) kullanıyorsa
 
 Yeni bir kural oluşturmak ve e-posta bildirim ayarlarını özelleştirmek için bu adımları izleyin.
 
-1. Gezinti bölmesinde **Olay e-posta bildirimleri Ayarlar > Microsoft 365 Defender >** seçin.
+1. Gezinti bölmesinde **Ayarlar > Microsoft 365 Defender > Olay e-posta bildirimleri'ni** seçin.
 2. **Öğe ekle'yi** seçin.
 3. **Temel Bilgiler** sayfasında kural adını ve açıklamayı yazın ve **İleri'yi** seçin.
 4. **Bildirim ayarları** sayfasında şunları yapılandırın:
@@ -209,7 +212,7 @@ Yeni bir kural oluşturmak ve e-posta bildirim ayarlarını özelleştirmek içi
     - **Cihaz grubu kapsamı** - Tüm cihaz gruplarını belirtebilir veya kiracınızdaki cihaz grupları listesinden seçim yapabilirsiniz.
     - **Olay başına yalnızca ilk geçtiğinde bildir** - Yalnızca diğer seçimlerinizle eşleşen ilk uyarıda bildirim almak isteyip istemediğinizi seçin. Daha sonraki güncelleştirmeler veya olayla ilgili uyarılar ek bildirim göndermez.
     - **E-postaya kuruluş adını ekle - Kuruluşunuzun adının e-posta** bildiriminde görünmesini isteyip istemediğinizi seçin.
-    - **Kiracıya özgü portal bağlantısını ekle** - Belirli bir Microsoft 365 kiracıya erişim için e-posta bildiriminde kiracı kimliğine sahip bir bağlantı eklemek isteyip istemediğinizi seçin.
+    - **Kiracıya özgü portal bağlantısını ekle** - Belirli bir Microsoft 365 kiracısına erişim için e-posta bildiriminde kiracı kimliğine sahip bir bağlantı eklemek isteyip istemediğinizi seçin.
 
     :::image type="content" source="../../media/get-incident-notifications/incidents-ss-email-notification-settings.png" alt-text="Microsoft 365 Defender portalında olay e-posta bildirimleri için Bildirim ayarları sayfası." lightbox="../../media/get-incident-notifications/incidents-ss-email-notification-settings.png":::
 
@@ -242,7 +245,7 @@ Güvenlik analizi ve olay yanıtıyla ilgili deneyim düzeyiniz için bu tabloyu
 | Düzey | Adımlar |
 |:-------|:-----|
 | **Yeni** | <ol><li> Örnek bir saldırıyla Microsoft 365 Defender portalında tipik bir analiz, düzeltme ve olay sonrası gözden geçirme sürecinin kılavuzlu turuna ulaşmak için [İlk olay yönergelerinize yanıt verme kılavuzuna](first-incident-overview.md) bakın. </li><li> Önem derecesine ve diğer faktörlere göre [hangi olayların önceliklendirilmesi](incident-queue.md) gerektiğini görün. </li><li> [Olay](manage-incidents.md) yönetimi iş akışınıza göre etiketleri ve açıklamaları yeniden adlandırmayı, atamayı, sınıflandırmayı ve eklemeyi içeren olayları yönetin.</li></ol> |
-| **Deneyimli** | <ol><li> Microsoft 365 Defender portalının **Olaylar** sayfasından olay kuyruğuyla Kullanmaya başlayın. Buradan: </li> <ul><li> Önem derecesine ve diğer faktörlere göre [hangi olayların önceliklendirilmesi](incident-queue.md) gerektiğini görün. </li><li> [Olay](manage-incidents.md) yönetimi iş akışınıza göre etiketleri ve açıklamaları yeniden adlandırmayı, atamayı, sınıflandırmayı ve eklemeyi içeren olayları yönetin. </li><li> Olaylarla [ilgili incelemeler](investigate-incidents.md) yapın. </li></ul> </li><li> Tehdit analizi ile yeni ortaya çıkan tehditleri izleyin ve yanıt [verin](threat-analytics.md). </li><li>  [Gelişmiş tehdit avcılığı](advanced-hunting-overview.md) ile tehditleri proaktif olarak avlar. </li><li> Kimlik avı, parola spreyi ve uygulama onayı verme saldırıları hakkında ayrıntılı yönergeler için bu [olay yanıtı playbook'larına](/security/compass/incident-response-playbooks) bakın. </li></ol> |
+| **Deneyimli** | <ol><li> Microsoft 365 Defender portalının **Olaylar** sayfasından olay kuyruğuyla çalışmaya başlayın. Buradan: </li> <ul><li> Önem derecesine ve diğer faktörlere göre [hangi olayların önceliklendirilmesi](incident-queue.md) gerektiğini görün. </li><li> [Olay](manage-incidents.md) yönetimi iş akışınıza göre etiketleri ve açıklamaları yeniden adlandırmayı, atamayı, sınıflandırmayı ve eklemeyi içeren olayları yönetin. </li><li> Olaylarla [ilgili incelemeler](investigate-incidents.md) yapın. </li></ul> </li><li> Tehdit analizi ile yeni ortaya çıkan tehditleri izleyin ve yanıt [verin](threat-analytics.md). </li><li>  [Gelişmiş tehdit avcılığı](advanced-hunting-overview.md) ile tehditleri proaktif olarak avlar. </li><li> Kimlik avı, parola spreyi ve uygulama onayı verme saldırıları hakkında ayrıntılı yönergeler için bu [olay yanıtı playbook'larına](/security/compass/incident-response-playbooks) bakın. </li></ol> |
 
 ### <a name="security-team-role"></a>Güvenlik ekibi rolü
 
@@ -250,7 +253,7 @@ Güvenlik ekibi rolünüz temelinde bu tabloyu izleyin.
 
 | Rol | Adımlar |
 |---|---|
-| Olay yanıtlayıcısı (Katman 1) | Microsoft 365 Defender portalının **Olaylar** sayfasından olay kuyruğuyla Kullanmaya başlayın. Buradan: <ul><li> Önem derecesine ve diğer faktörlere göre [hangi olayların önceliklendirilmesi](incident-queue.md) gerektiğini görün. </li><li> [Olay](manage-incidents.md) yönetimi iş akışınıza göre etiketleri ve açıklamaları yeniden adlandırmayı, atamayı, sınıflandırmayı ve eklemeyi içeren olayları yönetin. </li></ul> |
+| Olay yanıtlayıcısı (Katman 1) | Microsoft 365 Defender portalının **Olaylar** sayfasından olay kuyruğuyla çalışmaya başlayın. Buradan: <ul><li> Önem derecesine ve diğer faktörlere göre [hangi olayların önceliklendirilmesi](incident-queue.md) gerektiğini görün. </li><li> [Olay](manage-incidents.md) yönetimi iş akışınıza göre etiketleri ve açıklamaları yeniden adlandırmayı, atamayı, sınıflandırmayı ve eklemeyi içeren olayları yönetin. </li></ul> |
 | Güvenlik araştırmacısı veya analisti (Katman 2) | <ol><li> Microsoft 365 Defender portalının Olaylar sayfasından **olaylarla** ilgili [araştırma](investigate-incidents.md) yapın. </li><li> Kimlik avı, parola spreyi ve uygulama onayı verme saldırıları hakkında ayrıntılı yönergeler için bu [olay yanıtı playbook'larına](/security/compass/incident-response-playbooks) bakın. </li></ol> |
 | Gelişmiş güvenlik analisti veya tehdit avcısı (Katman 3) | <ol><li>Microsoft 365 Defender portalının Olaylar sayfasından **olaylarla** ilgili [araştırma](investigate-incidents.md) yapın. </li><li> Tehdit analizi ile yeni ortaya çıkan tehditleri izleyin ve yanıt [verin](threat-analytics.md). </li><li> [Gelişmiş tehdit avcılığı](advanced-hunting-overview.md) ile tehditleri proaktif olarak avlar. </li><li> Kimlik avı, parola spreyi ve uygulama onayı verme saldırıları hakkında ayrıntılı yönergeler için bu [olay yanıtı playbook'larına](/security/compass/incident-response-playbooks) bakın. |
 | SOC yöneticisi | [Microsoft 365 Defender Güvenlik İşlemleri Merkezinizle (SOC) tümleştirmeyi](integrate-microsoft-365-defender-secops.md) öğrenin. |
