@@ -2,12 +2,12 @@
   href: index.md
 - name: Özel modeller
   items:
+    - name: Özel modeller arasındaki farklar
+      href: difference-between-document-understanding-and-form-processing-model.md
     - name: Belge anlama
       items:
         - name: Genel bakış
           href: document-understanding-overview.md
-        - name: Modeller arasındaki farklar
-          href: difference-between-document-understanding-and-form-processing-model.md
         - name: Örnek modeli içeri aktar
           href: learn-about-document-understanding-models-through-the-sample-model.md
         - name: İçerik merkezi oluştur
@@ -46,8 +46,6 @@
       items:
         - name: Genel bakış
           href: form-processing-overview.md
-        - name: Modeller arasındaki farklar
-          href: difference-between-document-understanding-and-form-processing-model.md
         - name: Form işleme modeli oluştur
           href: create-a-form-processing-model.md
         - name: Bekletme etiketi uygula
