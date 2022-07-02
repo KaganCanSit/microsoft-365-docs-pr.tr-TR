@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'deki Saldırı benzetimi eğitimini kullanarak kimlik avı saldırılarının simülasyonunu yapmayı ve kullanıcılarını kimlik avı önleme konusunda eğitmeyi öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: 8f6ef692885277368c7ca1c194116a4455f52b31
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: c1489c2653adbfa05958ca61240a97d837a9dc93
+ms.sourcegitcommit: 03543c27c33427ac7f11af4c04fff35a181a2524
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65839765"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66609401"
 ---
 # <a name="simulate-a-phishing-attack-with-attack-simulation-training-in-defender-for-office-365"></a>Office 365 için Defender'de Saldırı simülasyonu eğitimi ile kimlik avı saldırısı simülasyonu
 
@@ -28,7 +28,7 @@ ms.locfileid: "65839765"
 
 Office 365 için Microsoft Defender Plan 2 veya Microsoft 365 E5'da saldırı simülasyonu eğitimi, kuruluşunuzda zararsız siber saldırı simülasyonları çalıştırmanıza olanak tanır. Bu simülasyonlar güvenlik ilkelerinizi ve uygulamalarınızı test eder, ayrıca çalışanlarınızı farkındalıklarını artırmaları ve saldırılara karşı duyarlılıklarını azaltmaları için eğitebilir. Bu makalede, Saldırı simülasyonu eğitimini kullanarak sanal kimlik avı saldırısı oluşturma konusunda size yol gösterir.
 
-Saldırı simülasyonu eğitimi hakkında başlangıç bilgileri için bkz. [Saldırı simülasyonu eğitimini kullanarak Kullanmaya başlayın](attack-simulation-training-get-started.md).
+Saldırı simülasyonu eğitimi hakkında başlangıç bilgileri için bkz. [Saldırı simülasyonu eğitimini kullanmaya başlama](attack-simulation-training-get-started.md).
 
 Kimlik avı simülasyonu saldırısı başlatmak için aşağıdaki adımları uygulayın:
 
@@ -70,11 +70,15 @@ Açıklamadaki **Ayrıntıları görüntüle** bağlantısına tıklarsanız, te
 
 İşiniz bittiğinde **İleri'ye** tıklayın.
 
-## <a name="select-a-payload"></a>Yük seçin
+## <a name="select-a-payload-and-login-page"></a>Bir yük ve oturum açma sayfası seçin
 
-**Yükü seçin** sayfasında, listeden mevcut bir yükü seçmeniz veya yeni bir yük oluşturmanız gerekir.
+**Yükü ve oturum açma bilgilerini seçin** sayfasında, listeden mevcut bir yükü seçmeniz veya yeni bir yük oluşturmanız gerekir.
 
-Aşağıdaki ayrıntılar, seçmenize yardımcı olacak yük listesinde görüntülenir:
+Ayrıca yükte kullanılan oturum açma sayfasını görüntüleyebilir, kullanılacak farklı bir oturum açma sayfası seçebilir veya kullanmak üzere yeni bir oturum açma sayfası oluşturabilirsiniz.
+
+### <a name="payload"></a>Yükü
+
+Her yük için aşağıdaki ayrıntılar gösterilir:
 
 - **Yük adı**
 - **Dil**: Yük içeriğinin dili. Microsoft'un yük kataloğu (genel), filtrelenebilen 10'undan fazla dilde yük sağlar.
@@ -86,17 +90,12 @@ Aşağıdaki ayrıntılar, seçmenize yardımcı olacak yük listesinde görünt
 
 **Filtre'ye** tıklarsanız aşağıdaki filtreler kullanılabilir:
 
-- **Kaynak**: Yükün kuruluşunuzda mı oluşturulduğunu yoksa Microsoft'un önceden var olan yük kataloğunun bir parçası mı olduğunu gösterir. Geçerli değerler şunlardır:
-  - **Genel** (yerleşik)
-  - **Kiracı** (özel)
-  - **Tüm**
-
 - **Karmaşıklık**: Yükteki olası bir saldırıyı (yazım hataları, aciliyet vb.) gösteren gösterge sayısına göre hesaplanır. Daha fazla göstergenin saldırı olarak tanımlanması daha kolaydır ve daha düşük karmaşıklığı gösterir. Kullanılabilir değerler şunlardır:
-  - **Düşük**
-  - **Orta**
   - **Yüksek**
+  - **Orta**
+  - **Düşük**
 
-- **Dil**: Kullanılabilir değerler şunlardır: **Çince (Basitleştirilmiş)**, **Çince (Geleneksel)**, **İngilizce**, **Fransızca**, **Almanca**, **İtalyanca**, **Japonca**, **Korece**, **Portekizce**, **Rusça**, **İspanyolca** ve **Felemenkçe**.
+- **Dil**: Kullanılabilir değerler şunlardır: **İngilizce**, **İspanyolca**, **Almanca**, **Japonca**, **Fransızca**, **Portekizce**, **Felemenkçe**, **İtalyanca**, **İsveççe**, **Çince (Basitleştirilmiş)**, **Norveççe Bokmål**, **Lehçe**, **Rusça**, **Fince**, **Korece**, **Türkçe**, **Macarca**, **İbranice**, **Tayca**, **Arapça**, **Vietnamca**, **Slovakça**, **Yunanca**, **Endonezya dili**, **Rumence**, **Slovence**, **Hırvat**, **Katalanca** veya **Diğer**.
 
 - **Etiket ekleme**
 
@@ -112,20 +111,55 @@ Aşağıdaki ayrıntılar, seçmenize yardımcı olacak yük listesinde görünt
 
 Filtreleri yapılandırmayı bitirdiğinizde **Uygula**, **İptal veya** **Filtreleri temizle'ye** tıklayın.
 
-:::image type="content" source="../../media/attack-sim-training-simulations-select-payload.png" alt-text="Microsoft 365 Defender portalındaki Saldırı benzetimi eğitimi'ndeki Yük seçin sayfası" lightbox="../../media/attack-sim-training-simulations-select-payload.png":::
-
-Listeden bir yük seçerseniz, yükle ilgili ayrıntılar açılır pencerede gösterilir:
-
-- **Genel Bakış** sekmesi, yükle ilgili bir örnek ve diğer ayrıntıları içerir.
-- **Başlatılan Simülasyonlar** sekmesi **Benzetimi adı**, **Tıklama oranı**, **Risk altındaki hız** ve **Eylem'i** içerir.
-
-:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details.png" alt-text="Microsoft 365 Defender portalındaki Saldırı simülasyonu eğitiminde Yük ayrıntıları açılır öğesi" lightbox="../../media/attack-sim-training-simulations-select-payload-details.png":::
-
-Listeden ada tıklayarak bir yük seçerseniz, Test ![yükü gönder simgesi.](../../media/m365-cc-sc-create-icon.png) Ana sayfada yük e-postasının bir kopyasını inceleme için kendinize (şu anda oturum açmış olan kullanıcı) gönderebileceğiniz **bir test** düğmesi görüntülenir.
+Onay kutusunu seçerek listeden bir yük seçerseniz, ![Test yükü gönder simgesi.](../../media/m365-cc-sc-create-icon.png) Ana sayfada yük e-postasının bir kopyasını inceleme için kendinize (şu anda oturum açmış olan kullanıcı) gönderebileceğiniz **bir test** düğmesi görüntülenir.
 
 Kendi yükünüzü oluşturmak için Yük oluştur simgesine tıklayın ![.](../../media/m365-cc-sc-create-icon.png) **Yük oluşturma**. Daha fazla bilgi için bkz [. Saldırı benzetimi eğitimi için özel yük oluşturma](attack-simulation-training-payloads.md#create-payloads).
 
-İşiniz bittiğinde **İleri'ye** tıklayın.
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload.png" alt-text="Microsoft 365 Defender portalındaki Saldırı benzetimi eğitimi'ndeki Yük seçin sayfası" lightbox="../../media/attack-sim-training-simulations-select-payload.png":::
+
+Listeden onay kutusunun dışındaki herhangi bir yere tıklayarak bir yük seçerseniz, yükle ilgili ayrıntılar açılır pencerede gösterilir:
+
+- **Yük** sekmesi bir örnek ve yükle ilgili diğer ayrıntıları içerir.
+- **Oturum açma sayfası** sekmesi sonraki bölümde açıklanmıştır.
+- **Başlatılan Simülasyonlar** sekmesi **Benzetimi adı**, **Tıklama oranı**, **Risk altındaki hız** ve **Eylem'i** içerir.
+
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details-payload-tab.png" alt-text="Microsoft 365 Defender portalındaki Saldırı simülasyonu eğitiminde yük ayrıntıları açılır öğesindeki Yük sekmesi" lightbox="../../media/attack-sim-training-simulations-select-payload-details-payload-tab.png":::
+
+### <a name="login-page"></a>Oturum açma sayfası
+
+Ayrıntılar açılır penceresini açmak için, satırda onay kutusu dışında herhangi bir yere tıklayarak yükü listeden seçin.
+
+Yük ayrıntıları açılır öğesindeki **Oturum açma sayfası** sekmesi, yük için seçili olan oturum açma sayfasını gösterir.
+
+Oturum açma sayfasının tamamını görüntülemek için, iki sayfalı oturum açma sayfaları için sayfanın altındaki **Sayfa 1** ve **Sayfa 2** bağlantılarını kullanın.
+
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details-login-page-tab.png" alt-text="Microsoft 365 Defender portalındaki Saldırı simülasyonu eğitimi bölümünde yük ayrıntıları açılır öğesindeki oturum açma sayfası sekmesi" lightbox="../../media/attack-sim-training-simulations-select-payload-details-login-page-tab.png":::
+
+Yükte kullanılan oturum açma sayfasını değiştirmek için Oturum açma sayfasını değiştir simgesine tıklayın ![.](../../media/m365-cc-sc-edit-icon.png) **Oturum açma sayfasını değiştirin**.
+
+Görüntülenen **Oturum açma bilgilerini seçin sayfasında** , her oturum açma sayfası için aşağıdaki bilgiler gösterilir:
+
+- **Ad**
+- **Dil**
+- **Kaynak**: Yerleşik oturum açma sayfaları için değer **Genel'dir**. Özel oturum açma sayfaları için değer **Kiracı'dır**.
+- **Durum**: **Hazır** veya **Taslak**.
+- **Oluşturan**: Yerleşik oturum açma sayfaları için değer **Microsoft'tur**. Özel oturum açma sayfaları için değer, oturum açma sayfasını oluşturan kullanıcının UPN değeridir.
+- **Son değiştirme**
+- **Eylemler**: Önizleme simgesine tıklayın ![.](../../media/m365-cc-sc-eye-icon.png) Oturum açma sayfasının önizlemesini görüntülemek için **önizleme**.
+
+Listede oturum açma sayfası bulmak için Ara simgesini kullanın ![.](../../media/m365-cc-sc-search-icon.png) Oturum açma sayfasının adını bulmak için **arama** kutusu.
+
+Filtre simgesine tıklayın ![.](../../media/m365-cc-sc-filter-icon.png) Oturum açma sayfalarını **Kaynağa** veya Dile göre filtrelemek için **filtreleyin**.
+
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-select-login-page.png" alt-text="Microsoft 365 Defender portalındaki Saldırı simülasyonu eğitimi bölümünde yük ayrıntıları açılır öğesindeki Oturum açma sayfası sekmesindeki Oturum açma bilgilerini seçin sayfası" lightbox="../../media/attack-sim-training-simulations-select-payload-select-login-page.png":::
+
+Yeni oturum açma sayfası oluşturmak için [Yeni oluştur simgesine tıklayın.](../../media/m365-cc-sc-create-icon.png) Son kullanıcı oturum açma sayfası oluşturma sihirbazını başlatmak için **yeni oluşturun**. Adımlar **, Saldırı benzetimi eğitimi** \> **Sanal içerik kitaplığı** sekmesindeki **Oturum açma sayfalarıyla** aynıdır. Yönergeler için bkz. [Oturum açma sayfaları oluşturma](attack-simulation-training-login-pages.md#create-login-pages).
+
+**Oturum açma seç sayfasına** geri dönün, oluşturduğunuz yeni oturum açma sayfasının seçili olduğunu doğrulayın ve **kaydet'e** tıklayın.
+
+Yük ayrıntıları açılır menüsüne geri dönüp [Kapat simgesine tıklayın.](../../media/m365-cc-sc-close-icon.png) **Kapat'ı seçin**.
+
+**Yük seçin ve oturum açın sayfasında** işiniz bittiğinde **İleri'ye** tıklayın.
 
 ## <a name="target-users"></a>Hedef kullanıcılar
 
@@ -300,7 +334,7 @@ Microsoft tarafından seçilmiş giriş sayfaları 12 dilde kullanılabilir: Çi
 
 - **Microsoft varsayılan bildirimi (önerilen)**: Sayfada aşağıdaki ek ayarlar kullanılabilir:
 
-  - **Varsayılan dili seçin**: Kullanılabilir değerler şunlardır: **Çince (Basitleştirilmiş)**, **Çince (Geleneksel)**, **İngilizce**, **Fransızca**, **Almanca**, **İtalyanca**, **Japonca**, **Korece**, **Portekizce**, **Rusça**, **İspanyolca** ve **Felemenkçe**.
+  - **Varsayılan dili seçin**: Kullanılabilir değerler şunlardır: **İngilizce**, **İspanyolca**, **Almanca**, **Japonca**, **Fransızca**, **Portekizce**, **Felemenkçe**, **İtalyanca**, **İsveççe**, **Çince (Basitleştirilmiş)**, **Norveççe Bokmål**, **Lehçe**, **Rusça**, **Fince**, **Korece**, **Türkçe**, **Macarca**, **İbranice**, **Tayca**, **Arapça**, **Vietnamca**, **Slovakça**, **Yunan**, **Endonezya**, **Rumence**, **Slovence**, **Hırvat**, **Katalanca** veya **Diğer**.
 
   - Varsayılan olarak, aşağıdaki bildirimler dahil edilir:
     - **Microsoft pozitif takviye bildirimi**

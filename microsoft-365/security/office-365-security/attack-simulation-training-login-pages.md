@@ -12,12 +12,12 @@ ms.collection:
 - m365initiative-defender-office365
 description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'de kimlik avı saldırıları simülasyonu için oturum açma sayfaları oluşturmayı ve yönetmeyi öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: 5457cc54e7f02f6111db6165a1461a308104c832
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 5ecbdddfff4d528c1af8e20cf4d3831d3250eacc
+ms.sourcegitcommit: 03543c27c33427ac7f11af4c04fff35a181a2524
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66494060"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66609292"
 ---
 # <a name="login-pages-in-attack-simulation-training"></a>Saldırı simülasyonu eğitimindeki oturum açma sayfaları
 
@@ -29,7 +29,7 @@ Kullanılabilir oturum açma sayfalarını görmek için adresinden Microsoft 36
 
 **Oturum açma sayfalarında** iki sekme vardır:
 
-- **Genel oturum açma sayfaları**: Yerleşik, değiştirilemeyen oturum açma sayfalarını içerir. 12 dilde yerelleştirilmiş dört yerleşik oturum açma sayfası vardır:
+- **Genel oturum açma sayfaları**: Yerleşik, değiştirilemeyen oturum açma sayfalarını içerir. 12'nin üzerine dilde yerelleştirilmiş dört yerleşik oturum açma sayfası vardır:
   - **GitHub oturum açma sayfası**
   - **LinkedIn oturum açma sayfası**
   - **Microsoft oturum açma sayfası**
@@ -56,7 +56,7 @@ Listeden bir oturum açma sayfası seçtiğinizde, aşağıdaki bilgilerle birli
 
 - ![Düzenle simgesi.](../../media/m365-cc-sc-edit-icon.png) **Düzenleme** yalnızca **Kiracı oturum açma sayfaları sekmesindeki özel oturum açma sayfalarında** kullanılabilir.
 - ![Varsayılan simge olarak işaretle.](../../media/m365-cc-sc-set-as-default-icon.png) Bu oturum açma sayfasını **Kimlik bilgisi toplama** veya Ek [yüklerinde](attack-simulation-training-payloads.md) veya [yük otomasyonlarında](attack-simulation-training-payload-automations.md) **bağla'da** varsayılan seçim yapmak için **varsayılan olarak işaretleyin**. Oturum açma sayfası zaten varsayılansa, ![Varsayılan olarak işaretle simgesi.](../../media/m365-cc-sc-set-as-default-icon.png) **Varsayılan olarak işaretle** seçeneği kullanılamaz.
-- **Önizleme** sekmesi: Kullanıcıların göreceği oturum açma sayfasını görüntüleyin. **Sayfa 1** ve **Sayfa 2** bağlantıları, özel iki sayfalı oturum açma sayfaları için sayfanın en altında yer alır.
+- **Önizleme** sekmesi: Kullanıcıların göreceği oturum açma sayfasını görüntüleyin. **Sayfa 1** ve **Sayfa 2** bağlantıları, iki sayfalı oturum açma sayfaları için sayfanın alt kısmında yer alır.
 - **Ayrıntılar** sekmesi: Oturum açma sayfasıyla ilgili ayrıntıları görüntüleyin:
   - **Açıklama**
   - **Durum**: **Hazır** veya **Taslak**.
@@ -73,10 +73,7 @@ Aşağıdaki konumlarda özel oturum açma sayfaları oluşturabilirsiniz:
    Yeni oluştur simgesine tıklayın ![.](../../media/m365-cc-sc-create-icon.png) Son kullanıcı oturum açma sayfası oluşturma sihirbazını başlatmak için **yeni oluşturun**.
 
    > [!NOTE]
-   > Yeni ![oluştur simgesi.](../../media/m365-cc-sc-create-icon.png) **Yeni oluştur** , yük ve yük otomasyonu oluşturma sırasında da kullanılabilir. Daha fazla bilgi için, aşağıdaki konulara bakın:
-   >
-   > - [Office 365 için Defender'de Saldırı benzetimi eğitimi için özel yük oluşturma](attack-simulation-training-payloads.md#create-payloads)
-   > - [Saldırı benzetimi eğitimi için yük otomasyonları oluşturma](attack-simulation-training-payload-automations.md#create-payload-automations)
+   > Yeni ![oluştur simgesi.](../../media/m365-cc-sc-create-icon.png) **Yeni oluştur** , simülasyon oluşturmanın yük seçimi adımı sırasında da kullanılabilir. Daha fazla bilgi için bkz. [Office 365 için Defender'de Saldırı benzetimi eğitimi ile kimlik avı saldırısı simülasyonu](attack-simulation-training.md) yapma.
    >
    > Oluşturma sihirbazı sırasında herhangi bir noktada Kaydet **ve kapat'a** tıklayarak ilerlemenizi kaydedebilir ve oturum açma sayfasını daha sonra yapılandırmaya devam edebilirsiniz. **Oturum** açma **sayfalarında Kiracı oturum açma sayfaları** sekmesinde oturum açma sayfasını seçip Düzenle simgesine tıklayarak ![kaldığınız yerden devam edebilirsiniz.](../../media/m365-cc-sc-edit-icon.png) **Düzenle'yi seçin**. Kısmen tamamlanmış oturum açma sayfasında **Durum** değeri **Taslak** olacaktır.
 
@@ -88,7 +85,7 @@ Aşağıdaki konumlarda özel oturum açma sayfaları oluşturabilirsiniz:
 
 3. **Oturum açmayı yapılandır sayfasında** aşağıdaki ayarları yapılandırın:
 
-   - **Dil seçin**
+   - **Bir dil seçin**: Kullanılabilir değerler şunlardır: **Çince (Basitleştirilmiş)**, **Çince (Geleneksel)**, **İngilizce**, **Fransızca**, **Almanca**, **İtalyanca**, **Japonca**, **Korece**, **Portekizce**, **Rusça**, **İspanyolca** ve **Felemenkçe**.
 
    - **Bunu varsayılan oturum açma sayfası yap**: Bu seçeneği belirlerseniz, oturum açma sayfası **Kimlik bilgisi toplama** veya Ek [yüklerinde](attack-simulation-training-payloads.md) veya [yük otomasyonlarında](attack-simulation-training-payload-automations.md) **bağlantı sağlama'da** varsayılan seçim olacaktır.
 

@@ -12,12 +12,12 @@ ms.collection:
 - m365initiative-defender-office365
 description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'de belirtilen koşullar karşılandığında başlatılan belirli teknikleri ve yükleri içeren otomatik simülasyonlar oluşturmayı öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: 32730dfa36b0140bda246137b4cf6706b3472da7
-ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
+ms.openlocfilehash: 1efc6faaae0040e37aafac4faa0a10228d76e766
+ms.sourcegitcommit: 03543c27c33427ac7f11af4c04fff35a181a2524
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65739681"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66609424"
 ---
 # <a name="simulation-automations-for-attack-simulation-training"></a>Saldırı simülasyonu eğitimi için simülasyon otomasyonları
 
@@ -25,7 +25,7 @@ ms.locfileid: "65739681"
 
 [Office 365 için Microsoft Defender plan 2](defender-for-office-365.md) **için geçerlidir**
 
-Saldırı simülasyonu eğitimi hakkında başlangıç bilgileri için bkz. [Saldırı simülasyonu eğitimini kullanarak Kullanmaya başlayın](attack-simulation-training-get-started.md).
+Saldırı simülasyonu eğitimi hakkında başlangıç bilgileri için bkz. [Saldırı simülasyonu eğitimini kullanmaya başlama](attack-simulation-training-get-started.md).
 
 Simülasyon otomasyonu oluşturmak için aşağıdaki adımları uygulayın:
 
@@ -67,7 +67,13 @@ Açıklamadaki **Ayrıntıları görüntüle** bağlantısına tıklarsanız, te
 
 İşiniz bittiğinde **İleri'ye** tıklayın.
 
-## <a name="select-payloads"></a>Yükleri seçme
+## <a name="select-a-payload-and-login-page"></a>Bir yük ve oturum açma sayfası seçin
+
+**Yükü ve oturum açma bilgilerini seçin** sayfasında, listeden mevcut bir yükü seçmeniz veya yeni bir yük oluşturmanız gerekir.
+
+Ayrıca yükte kullanılan oturum açma sayfasını görüntüleyebilir, kullanılacak farklı bir oturum açma sayfası seçebilir veya kullanmak üzere yeni bir oturum açma sayfası oluşturabilirsiniz.
+
+### <a name="payload"></a>Yükü
 
 **Yükleri seçin** sayfasında aşağıdaki seçeneklerden birini belirleyin:
 
@@ -76,11 +82,11 @@ Açıklamadaki **Ayrıntıları görüntüle** bağlantısına tıklarsanız, te
 
 **Rastgele Seç'i** seçerseniz, bu sayfada yapılandırabileceğiniz bir şey yoktur, bu nedenle devam etmek için **İleri'ye** tıklayın.
 
-**El ile seç'i** seçerseniz, listeden bir veya daha fazla yük seçmeniz gerekir. Seçmenize yardımcı olması için aşağıdaki ayrıntılar görüntülenir:
+**El ile seç'i** seçerseniz, listeden bir veya daha fazla yük seçmeniz gerekir. Her yük için aşağıdaki ayrıntılar gösterilir:
 
 - **Yük adı**
 - **Teknik**: Önceki sayfada seçtiğiniz teknik başına en az bir yük seçmeniz gerekir.
-- **Dil**: Yük içeriğinin dili. Microsoft'un yük kataloğu (genel), filtrelenebilen 10'undan fazla dilde yük sağlar.
+- **Dil**: Kullanılabilir değerler şunlardır: **İngilizce**, **İspanyolca**, **Almanca**, **Japonca**, **Fransızca**, **Portekizce**, **Felemenkçe**, **İtalyanca**, **İsveççe**, **Çince (Basitleştirilmiş)**, **Norveççe Bokmål**, **Lehçe**, **Rusça**, **Fince**, **Korece**, **Türkçe**, **Macarca**, **İbranice**, **Tayca**, **Arapça**, **Vietnamca**, **Slovakça**, **Yunanca**, **Endonezya dili**, **Rumence**, **Slovence**, **Hırvat**, **Katalanca** veya **Diğer**.
 - **Tıklama oranı**: Bu yüke kaç kişinin tıklamış olduğu.
 - **Tahmin edilen risk oranı**: Microsoft 365 genelinde yükün geçmiş verileri, bu yük tarafından tehlikeye atılacak kişilerin yüzdesini tahmin eder.
 - **Başlatılan simülasyonlar** , bu yükün diğer simülasyonlarda kaç kez kullanıldığını sayar.
@@ -89,17 +95,13 @@ Açıklamadaki **Ayrıntıları görüntüle** bağlantısına tıklarsanız, te
 
 **Filtre'ye** tıklarsanız aşağıdaki filtreler kullanılabilir:
 
-- **Kaynak**: Yükün kuruluşunuzda mı oluşturulduğunu yoksa Microsoft'un önceden var olan yük kataloğunun bir parçası mı olduğunu gösterir. Geçerli değerler şunlardır:
-  - **Genel** (yerleşik)
-  - **Kiracı** (özel)
-  - **Tüm**
-
 - **Karmaşıklık**: Yükteki olası bir saldırıyı (yazım hataları, aciliyet vb.) gösteren gösterge sayısına göre hesaplanır. Daha fazla göstergenin saldırı olarak tanımlanması daha kolaydır ve daha düşük karmaşıklığı gösterir. Kullanılabilir değerler şunlardır:
-  - **Düşük**
-  - **Orta**
-  - **Yüksek**
 
-- **Dil**: Kullanılabilir değerler şunlardır: **İngilizce**, **İspanyolca**, **Almanca**, **Japonca**, **Fransızca**, **Portekizce**, **Felemenkçe**, **İtalyanca**, **İsveççe**, **Çince (Basitleştirilmiş)**, **Norveççe Bokmål**, **Lehçe**, **Rusça**, **Fince**, **Korece**, **Türkçe**, **Macarca**, **İbranice**, **Tayca**, **Arapça**, **Vietnamca**, **Slovakça**, **Yunanca**, **Endonezya dili**, **Rumence**, **Slovence**, **Hırvat**, **Katalanca** ve **Diğer**.
+  - **Yüksek**
+  - **Orta**
+  - **Düşük**
+
+- **Dil**
 
 - **Etiket ekleme**
 
@@ -115,14 +117,49 @@ Açıklamadaki **Ayrıntıları görüntüle** bağlantısına tıklarsanız, te
 
 Filtreleri yapılandırmayı bitirdiğinizde **Uygula**, **İptal veya** **Filtreleri temizle'ye** tıklayın.
 
-Listeden ada tıklayarak bir yük seçerseniz yükle ilgili ayrıntılar açılır pencerede gösterilir:
+Listeden onay kutusunun dışındaki herhangi bir yere tıklayarak bir yük seçerseniz, yükle ilgili ayrıntılar açılır pencerede gösterilir:
 
-- **Genel Bakış** sekmesi, yükle ilgili bir örnek ve diğer ayrıntıları içerir.
+- **Yük** sekmesi bir örnek ve yükle ilgili diğer ayrıntıları içerir.
+- **Oturum açma sayfası** sekmesi sonraki bölümde açıklanmıştır.
 - **Başlatılan Simülasyonlar** sekmesi **Benzetimi adı**, **Tıklama oranı**, **Risk altındaki hız** ve **Eylem'i** içerir.
 
-:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details.png" alt-text="Microsoft 365 Defender portalındaki Saldırı simülasyonu eğitiminde Yük ayrıntıları açılır öğesi" lightbox="../../media/attack-sim-training-simulations-select-payload-details.png":::
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details-payload-tab.png" alt-text="Microsoft 365 Defender portalındaki Saldırı simülasyonu eğitiminde yük ayrıntıları açılır öğesindeki Yük sekmesi" lightbox="../../media/attack-sim-training-simulations-select-payload-details-payload-tab.png":::
 
-İşiniz bittiğinde **İleri'ye** tıklayın.
+### <a name="login-page"></a>Oturum açma sayfası
+
+Ayrıntılar açılır penceresini açmak için, satırda onay kutusu dışında herhangi bir yere tıklayarak yükü listeden seçin.
+
+Yük ayrıntıları açılır öğesindeki **Oturum açma sayfası** sekmesi, yük için seçili olan oturum açma sayfasını gösterir.
+
+Oturum açma sayfasının tamamını görüntülemek için, iki sayfalı oturum açma sayfaları için sayfanın altındaki **Sayfa 1** ve **Sayfa 2** bağlantılarını kullanın.
+
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details-login-page-tab.png" alt-text="Microsoft 365 Defender portalındaki Saldırı simülasyonu eğitimi bölümünde yük ayrıntıları açılır öğesindeki oturum açma sayfası sekmesi" lightbox="../../media/attack-sim-training-simulations-select-payload-details-login-page-tab.png":::
+
+Yükte kullanılan oturum açma sayfasını değiştirmek için Oturum açma sayfasını değiştir simgesine tıklayın ![.](../../media/m365-cc-sc-edit-icon.png) **Oturum açma sayfasını değiştirin**.
+
+Görüntülenen **Oturum açma bilgilerini seçin sayfasında** , her oturum açma sayfası için aşağıdaki bilgiler gösterilir:
+
+- **Ad**
+- **Dil**
+- **Kaynak**: Yerleşik oturum açma sayfaları için değer **Genel'dir**. Özel oturum açma sayfaları için değer **Kiracı'dır**.
+- **Durum**: **Hazır** veya **Taslak**.
+- **Oluşturan**: Yerleşik oturum açma sayfaları için değer **Microsoft'tur**. Özel oturum açma sayfaları için değer, oturum açma sayfasını oluşturan kullanıcının UPN değeridir.
+- **Son değiştirme**
+- **Eylemler**: Önizleme simgesine tıklayın ![.](../../media/m365-cc-sc-eye-icon.png) Oturum açma sayfasının önizlemesini görüntülemek için **önizleme**.
+
+Listede oturum açma sayfası bulmak için Ara simgesini kullanın ![.](../../media/m365-cc-sc-search-icon.png) Oturum açma sayfasının adını bulmak için **arama** kutusu.
+
+Filtre simgesine tıklayın ![.](../../media/m365-cc-sc-filter-icon.png) Oturum açma sayfalarını **Kaynağa** veya Dile göre filtrelemek için **filtreleyin**.
+
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-select-login-page.png" alt-text="Microsoft 365 Defender portalındaki Saldırı simülasyonu eğitimi bölümünde yük ayrıntıları açılır öğesindeki Oturum açma sayfası sekmesindeki Oturum açma bilgilerini seçin sayfası" lightbox="../../media/attack-sim-training-simulations-select-payload-select-login-page.png":::
+
+Yeni oturum açma sayfası oluşturmak için [Yeni oluştur simgesine tıklayın.](../../media/m365-cc-sc-create-icon.png) Son kullanıcı oturum açma sayfası oluşturma sihirbazını başlatmak için **yeni oluşturun**. Adımlar **, Saldırı benzetimi eğitimi** \> **Sanal içerik kitaplığı** sekmesindeki **Oturum açma sayfalarıyla** aynıdır. Yönergeler için bkz. [Oturum açma sayfaları oluşturma](attack-simulation-training-login-pages.md#create-login-pages).
+
+**Oturum açma seç sayfasına** geri dönün, oluşturduğunuz yeni oturum açma sayfasının seçili olduğunu doğrulayın ve **kaydet'e** tıklayın.
+
+Yük ayrıntıları açılır menüsüne geri dönüp [Kapat simgesine tıklayın.](../../media/m365-cc-sc-close-icon.png) **Kapat'ı seçin**.
+
+**Yük seçin ve oturum açın sayfasında** işiniz bittiğinde **İleri'ye** tıklayın.
 
 ## <a name="target-users"></a>Hedef kullanıcılar
 
@@ -170,7 +207,7 @@ Listeden ada tıklayarak bir yük seçerseniz yükle ilgili ayrıntılar açıl�
 
 - **Eğitim içeriği tercihini seçin**: Aşağıdaki seçeneklerden birini belirleyin:
   - **Microsoft eğitim deneyimi**: Bu, yapılandırmak için aşağıdaki ilişkili seçenekleri içeren varsayılan değerdir:
-    - Aşağıdaki seçeneklerden birini belirleyin:
+    - Aşağıdaki seçeneklerden birini seçin:
       - **Benim için eğitim ata**: Bu varsayılan ve önerilen değerdir. Kullanıcının önceki simülasyon ve eğitim sonuçlarına göre eğitim atarız ve sihirbazın sonraki adımlarında seçimleri gözden geçirebilirsiniz.
       - **Eğitim kurslarını ve modülleri kendim seçin**: Bu değeri seçerseniz, sihirbazın bir sonraki adımında önerilen içeriğin yanı sıra tüm kullanılabilir kursları ve modülleri görmeye devam edebilirsiniz.
     - **Son tarih**: Aşağıdaki değerlerden birini seçin:
@@ -235,11 +272,11 @@ Gösterilen bir eğitimi kullanmak istemiyorsanız Sil simgesine tıklayın ![.]
 
 **Giriş sayfası sayfasında**, simülasyonda yükü açan kullanıcının alındığı web sayfasını yapılandırabilirsiniz.
 
-- **Giriş sayfası tercihini seçin**: Kullanılabilir değerler, aşağıdaki tabloda açıklandığı gibi [Yükleri seçin](#select-payloads) sayfasındaki önceki seçimlerinize bağlıdır:
+- **Giriş sayfası tercihini seçin**: Kullanılabilir değerler, aşağıdaki tabloda açıklandığı gibi [Yük seçin ve oturum açma sayfası sayfasındaki önceki yük](#select-a-payload-and-login-page) seçimlerinize bağlıdır:
 
-  |Yük seç sayfasında seçim|Giriş sayfası seçme tercihi için kullanılabilir değerler|
+  |Yük seçimi|Giriş sayfası seçme tercihi için kullanılabilir değerler|
   |---|---|
-  |El ile|Microsoft varsayılan giriş sayfasını kullanma <p> Kendi giriş sayfanızı oluşturma <p> Özel URL kullanma <p> **Not**: Daha önce [Sosyal mühendislik tekniklerini seçin](#select-one-or-more-social-engineering-techniques) sayfasında **Kötü amaçlı yazılım eki** veya **Kötü amaçlı yazılım bağlantısı'nı** seçtiyseniz **Özel URL kullan** değeri kullanılamaz.|
+  |El ile|Microsoft varsayılan giriş sayfasını kullanma <br><br> Kendi giriş sayfanızı oluşturma <p> Özel URL kullanma <p> **Not**: Daha önce [Sosyal mühendislik tekniklerini seçin](#select-one-or-more-social-engineering-techniques) sayfasında **Kötü amaçlı yazılım eki** veya **Kötü amaçlı yazılım bağlantısı'nı** seçtiyseniz **Özel URL kullan** değeri kullanılamaz.|
   |Rastgele hale|Microsoft varsayılan giriş sayfasını kullanma|
 
   Kullanılabilir **Giriş sayfası tercih** değerlerini seçin ve ilişkili ayarları aşağıdaki listede açıklanmıştır:
@@ -480,7 +517,7 @@ Kullanmak istediğiniz bildirimi seçin ve **İleri'ye** tıklayın.
 - **Otomasyon içindeki simülasyonlar arasında benzersiz yükleri kullanın**: Varsayılan olarak, bu ayar seçilmez.
 - **Hedef yinelenen suçlular**: Varsayılan olarak bu ayar seçili değildir. Bunu seçerseniz, görüntülenen aşağıdaki ayarı yapılandırın:
   - **Bu otomasyonda bir kullanıcının hedeflenebileceği maksimum sayı**: 1 ile 10 arasına bir değer girin.
-- **Outlook web uygulamasından kullanıcının geçerli saat dilimi ayarına göre simülasyon e-postası gönderin**: Varsayılan olarak, bu ayar seçilmez.
+- **Outlook web uygulamasından kullanıcının geçerli saat dilimi ayarına göre simülasyon e-postası gönder**: Varsayılan olarak, bu ayar seçili değildir.
 - **Toplanan sürücüye göre teknik ara verilerini görüntüleme sayfası**: Bu ayar yalnızca **[Sosyal mühendislik tekniklerini seçin](#select-one-or-more-social-engineering-techniques)** sayfasında **Drive-by URL'sini** seçtiyseniz kullanılabilir. Varsayılan olarak, ayar açıktır (![Simgeyi aç/kapat).](../../media/scc-toggle-on.png)).
 
 ## <a name="review-simulation-automation"></a>Simülasyon otomasyonlarını gözden geçirme
