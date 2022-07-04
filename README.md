@@ -17,7 +17,7 @@ Microsoft Docs kullanıcı deneyimlerini daha da kolaylaştırmak için GitHub i
 
 ## <a name="learn-how-to-contribute">Microsoft Docs İçeriklerine Katkıda Bulunmak</a>
 
-İlgilenen herkes Microsoft Docs içeriklerine katkıda bulunabilir ve gelişmesine yardımcı olabilir. Bu işlemi kolay ve hızlı bir şekilde yapabilmeniz için yazılı olarak bulunan içeriklerin Markdown dosyalarını Github üzerinde düzenleyebilir ve onaylanması için çekme isteği (PR) aracılığıyla sunabilirsiniz. Yapmış olduğunuz katkı onaylanması durumunda katkıda bulunan olarak [buradaki adres](https://github.com/MicrosoftDocs/microsoft-365-docs/graphs/contributors) üzerinde ve katkı sağladığınız makalenin katkıda bulunanlar kısmında listelenirsiniz: 
+İlgilenen herkes Microsoft Docs içeriklerine katkıda bulunabilir ve gelişmesine yardımcı olabilir. Bu işlemi kolay ve hızlı bir şekilde yapabilmeniz için yazılı olarak bulunan içeriklerin Markdown dosyalarını Github üzerinde düzenleyebilir ve onaylanması için çekme isteği (PR) aracılığıyla sunabilirsiniz. Yapmış olduğunuz katkı onaylanması durumunda katkıda bulunan olarak [buradaki adres](https://github.com/MicrosoftDocs/microsoft-365-docs/graphs/contributors) üzerinde ve katkı sağladığınız makalenin katkıda bulunanlar kısmında listelenirsiniz. 
 
 Bu bizim içinde çok değerli ve şimdiden ayırdığınız zaman, emek için teşekkür ederiz.
 
@@ -36,37 +36,38 @@ Yazım hatası, içerik düzenlenmesi gibi güncelleştirmeler yapan katkıda bu
 
 > Not: Eğer var olan makale içeriğinin üzerinde "kalem" ikonu bulunmuyor ise içerik genel katkılara açık olmayabilir.
 
-3. Ardından ulaşmış olduğunuz Markdown dosyasının sağ üstüne yer alan menü üzerinden bu dosyayı düzenle kalem **simgesine tıklamanız** gerekir.
+3. Ardından ulaşmış olduğunuz Markdown dosyasının sağ üstüne yer alan menü üzerinden **bu dosyayı düzenle kalem simgesine tıklamanız** gerekir.
 
       ![Belge üzerinde Düzenle github.com.](/microsoft-365/media/github_readme_files/pencil_icon_github.JPG)
 
-4. Bu işlemin ardından dosyada değişiklik yapabileceğiniz satır numaralı bir düzenleme sayfası açılır. Dosya GitHub Markdown dili kullanılarak yazılır ve düzenlenebilir. Markdown'ı kullanma hakkında yardım için bkz. [Markdown'da Ustalık Sahibi Olmak](https://guides.github.com/features/mastering-markdown/). Değişikliklerinizi **ilerlerken** görüntülemek ve içeriğin görünümüne dair fikir sahibi olabilmek için "Değişiklikleri Önizleme (Preview)" sekmesini seçebilirsiniz.
+4. Bu işlemin ardından dosyada değişiklik yapabileceğiniz satır numaralı bir düzenleme sayfası açılır. Dosya GitHub Markdown dili kullanılarak yazılabilir ve düzenlenebilir. Markdown'ı kullanma hakkında yardım için bkz. [Markdown'da Ustalık Sahibi Olmak](https://guides.github.com/features/mastering-markdown/). Değişikliklerinizi **ilerlerken** görüntülemek ve içeriğin görünümüne dair fikir sahibi olabilmek için **Değişiklikleri Önizleme (Preview)** sekmesini seçebilirsiniz.
       
       ![Düzenleme Kısmı](/microsoft-365/media/github_readme_files/numeric_area.JPG)
       ![Önizleme Kısmı](/microsoft-365/media/github_readme_files/prewiev_area.JPG)
 
-5. Değişiklik yapmayı bitirdikten sonra, sayfanın **en altındaki** "Dosya Değişikliğini Öner (Propose Changes)" bölümüne gidin:
+5. Değişiklik yapmayı bitirdikten sonra, sayfanın **en altındaki** "**Dosya Değişikliğini Öner (Propose Changes)**" bölümüne gidin:
 
    - Kısa bir başlık gereklidir. Varsayılan olarak başlık dosyanın adıdır, ancak bunu değiştirebilirsiniz. Bizler yapmış olduğunuz kısa değişikliği açıklayan bir isim olmasını öneririz. Örneğin "resimler_güncellendi" gibi.
-   - İsteğe bağlı olarak kısmında ise, güncelleştirmiş olduğunuz kısımları ne için güncellediğinizden ve hangi noktalarda değişiklikler yaptığınızdan bahsedebilir. Bizlerin değerlendirmesi için kolaylık ve hız sağlayabilirsiniz.
+   - İsteğe bağlı olarak kısmında ise, güncelleştirmiş olduğunuz kısımları ne için güncellediğinizden ve hangi noktalarda değişiklikler yaptığınızdan bahsedebilir. Burada yapmış olduğunuz açıklamalar bizlere değerlendirme için kolaylık ve hız sağlayacaktır.
+  
    
    ![Dosya  Değişiklikleri Öner](microsoft-365/media/github_readme_files/purpose_1.JPG)
 
-   Hazırsanız, yeşil "Dosya Değişikliğini Öner( Propose Changes)" **düğmesine** tıklayın.
+   Hazırsanız, yeşil **Dosya Değişikliğini Öner (Propose Changes)** düğmesine tıklayın.
 
    ![Purpose Changes Butonu.](microsoft-365/media/github_readme_files/purpose_2_button.JPG)
    
 
-6. Görüntülenen karşılaştırma değişiklikleri sayfasında ,  **yeşil çekme isteği (PR) oluştur düğmesine** tıklayın.
+6. Görüntülenen karşılaştırma değişiklikleri sayfasında **yeşil çekme isteği (PR) oluştur düğmesine** tıklayın.
 
    ![Çekme İsteği Oluşturma](microsoft-365/media/github_readme_files/purpose_3_button.JPG)
 
 
-> Son birkaç adımda ne göreceğinizi, verim bilgisinde izinlerinizi belirler. Özel ayrıcalıkları olmayan kişiler, dosya **değişikliği öner bölümünü ve** sonraki onay sayfalarını açıklandığı gibi görebilirler. Kendi çekme isteklerini oluşturma ve onaylama izinleri olan kişiler (Yönetici, Geliştirici), yeni bir dal oluşturmak için ek seçenekler ve daha az onay sayfası oluşturmak için ek seçeneklerle benzer değişiklikler yapın bölümünü görebilirler.
+> Son birkaç adımda ne göreceğinizi, proje kapsamında sahip olduğunuz izinleriniz belirler. Özel ayrıcalıkları olmayan kişiler, dosya **değişikliği öner bölümünü ve sonraki onay sayfalarını** açıklandığı gibi görebilirler. Kendi çekme isteklerini oluşturma ve onaylama izinleri olan kişiler (Yönetici, Geliştirici), yeni bir dal oluşturmak için ek seçenekler ve daha az onay sayfası oluşturmak için ek seçeneklerle benzer değişiklikler yapın bölümünü görebilirler.
 
-   Burada önemli olan şu şekildedir: Yönergeleri dikkalti bir biçimde takip edin!
+   Burada önemli olan şu şekildedir: Yönergeleri dikkatli bir biçimde takip edin! Github sizlere bu konuda yardımcı olacaktır.
 
-7. Çekme İsteğiniz(Pull Request) detaylı bir şekilde gözden geçirilmesinin ardından sizlere yeniden isteğiniz üzerinden dönüş yapılacak veya onaylanırsa içerik güncellenecektir.
+7. Çekme İsteğinizin (Pull Request) detaylı bir şekilde gözden geçirilmesinin ardından sizlere yeniden isteğiniz üzerinden dönüş yapılacak veya onaylanırsa içerik güncellenecektir.
 
 
 ## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft Açık Kaynak Kullanım Şartları
@@ -77,7 +78,7 @@ Bu projede [Microsoft Açık Kaynak Kullanım Şartları](https://opensource.mic
 
 Bu proje katılımları ve önerileri karşılar. Çoğu katkı için, gerekli olduğu ve aslında gerekli olduğunu beyan edilen Katılımcı Lisans Sözleşmesi'ne (CLA) onaylamanızı gerektirir ve gerçekten de katkınızı kullanma haklarınızı bize sağlarsınız. Ayrıntılar için ziyaret edin <https://cla.microsoft.com>.
 
-Bir çekme isteği gönderdiğinizde, bir CLA-bot, PR'yi uygun şekilde süslemeniz (ör. etiket, açıklama) gerekip gerek olmadığını otomatik olarak belirler. Robot tarafından sağlanan yönergeleri takip edin. Bu durum onay almanıza büyük katkı sağlayacak ve sürece hızlandıracaktır.
+**Bir çekme isteği gönderdiğinizde, bir CLA-bot, PR'yi uygun şekilde süslemeniz (ör. etiket, açıklama) gerekip gerek olmadığını otomatik olarak belirler.** Robot tarafından sağlanan yönergeleri takip edin. Bu durum onay almanıza büyük katkı sağlayacak ve sürece hızlandıracaktır.
 
 ### <a name="legal-notices"></a>Yasal Bildirimler
 
@@ -87,6 +88,6 @@ Microsoft, Windows, Microsoft Azure ve/veya diğer Microsoft ürün ve hizmetler
 
 Bu projenin lisansları size Microsoft adlarını, logolarını veya ticari markalarını kullanma hakları vermekle aynı değildir. Microsoft'un genel ticari marka yönergeleri burada bulunabilir <https://go.microsoft.com/fwlink/?LinkID=254653>.
 
-Gizlilik bilgilerine <https://privacy.microsoft.com/>
+Gizlilik bilgilerine <https://privacy.microsoft.com/> adresi aracılığıyla ulaşabilirsiniz.
 
-Microsoft ve tüm katkıda bulunanlar, ima, etopla ya da başka herhangi bir şekilde ilgili telif hakkı, patent veya ticari marka kapsamında diğer tüm hakları rezerve ediyor.
+Microsoft ve tüm katkıda bulunanlar, ima ya da başka herhangi bir şekilde ilgili telif hakkı, patent veya ticari marka kapsamında diğer tüm hakları rezerve eder.
