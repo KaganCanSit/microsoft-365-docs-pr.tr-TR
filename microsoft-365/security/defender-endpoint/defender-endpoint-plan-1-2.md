@@ -17,12 +17,12 @@ f1.keywords: NOCSH
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: f55cfa3a9c32c6392f1c7d263f8e866ff4084e1e
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: e1cf2647ac8308d30b82e69cbb288fde330fdc5a
+ms.sourcegitcommit: 0c87abc17fbfe8aa43d61510101acdad0d491cd2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66490023"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66612205"
 ---
 # <a name="compare-microsoft-defender-for-endpoint-plans"></a>Uç Nokta için Microsoft Defender planlarını karşılaştırma
 
@@ -65,10 +65,11 @@ Ancak, **destek birimine başvurabilir ve kiracı deneyiminiz için geçersiz k�
 
 ## <a name="start-a-trial"></a>Deneme sürümü başlatma
 
-- Uç Nokta Için Defender Plan 1'i denemek için adresini ziyaret edin [https://aka.ms/mdep1trial](https://aka.ms/mdep1trial).
-- Uç Nokta Için Defender Plan 2'yi denemek için adresini ziyaret edin [https://aka.ms/MDEp2OpenTrial](https://aka.ms/MDEp2OpenTrial).
-- Microsoft Defender Güvenlik Açığı Yönetimi eklentisini denemek için adresini ziyaret edin[https://aka.ms/AddonPreviewTrial](https://aka.ms/AddonPreviewTrial). 
+- Uç Nokta için Defender Planı'nı denemek [için Uç Nokta için Defender deneme sürümüne kaydolma sayfasına](https://go.microsoft.com/fwlink/p/?LinkID=2168109) gidin.
+- Uç Nokta Planı 2 için Defender Microsoft Defender Güvenlik Açığı Yönetimi eklentisini denemek için adresini ziyaret edin[https://aka.ms/AddonPreviewTrial](https://aka.ms/AddonPreviewTrial). 
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
+- [Microsoft Security'yi kullanmaya başlama (deneme teklifleri)](https://www.microsoft.com/security/business/get-started/start-free-trial)
 
 - [İş için Microsoft Defender](../defender-business/mdb-overview.md) (küçük ve orta ölçekli işletmeler için uç nokta koruması)
