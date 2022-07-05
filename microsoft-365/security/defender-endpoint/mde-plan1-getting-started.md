@@ -1,6 +1,6 @@
 ---
-title: Uç Nokta için Microsoft Defender Plan 1 ile Kullanmaya başlayın
-description: Uç Nokta Için Defender Plan 1'i kullanarak Kullanmaya başlayın. Bulut için Defender kullanmayı, uyarıları ve cihazları yönetmeyi ve raporları görüntülemeyi öğrenin.
+title: Uç Nokta için Microsoft Defender Plan 1'i kullanmaya başlama
+description: Uç Nokta için Defender Plan 1'i kullanmaya başlayın. Bulut için Defender'ı kullanmayı, uyarıları ve cihazları yönetmeyi ve raporları görüntülemeyi öğrenin.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
@@ -17,17 +17,17 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
 ms.custom: intro-get-started
-ms.openlocfilehash: d332cbf32f5423fb16abb158f9a30a18c2391a22
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 3926282bce47af2abee905f5c95844a8a78c6d33
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64939355"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617118"
 ---
-# <a name="get-started-with-microsoft-defender-for-endpoint-plan-1"></a>Uç Nokta için Microsoft Defender Plan 1 ile Kullanmaya başlayın
+# <a name="get-started-with-microsoft-defender-for-endpoint-plan-1"></a>Uç Nokta için Microsoft Defender Plan 1'i kullanmaya başlama
 
 **Şunlar için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com)) algılanan tehditler hakkındaki bilgileri görüntülemenizi, uyarılarınızı ve olaylarınızı yönetmenizi, algılanan tehditler üzerinde gerekli eylemleri gerçekleştirmenizi ve cihazları yönetmenizi sağlar. Microsoft 365 Defender portalı, Uç Nokta için Defender Plan 1 ile elde ettiğiniz tehdit koruma özellikleriyle etkileşime geçebileceğiniz yerdir. Aşağıdaki bölümlerde nasıl kullanmaya başlandığı açıklanmaktadır:
 
@@ -69,7 +69,7 @@ Ekranın sol tarafındaki gezinti çubuğu olaylar, uyarılar, İşlem merkezi, 
 | **Olaylar & uyarıları** >  **Uyarı** | **Uyarılar** listesine (**Uyarılar kuyruğu** olarak da adlandırılır) gider. Şüpheli veya kötü amaçlı bir dosya, işlem veya davranış algılandığında uyarılar tetiklenir. Varsayılan olarak, **Uyarılar** listesi son 30 güne ilişkin verileri görüntüler ve en son uyarı ilk sırada listelenir. <br/><br/> Daha fazla bilgi için bkz. [Uyarılar](alerts-queue.md). |
 | **İşlem merkezi** | düzeltme ve el ile yanıt eylemlerini izleyen İşlem merkezine gider. İşlem merkezi aşağıdaki gibi etkinlikleri izler: <br/>- Microsoft Defender Virüsten Koruma kötü amaçlı bir dosyayla karşılaşır ve ardından bu dosyayı engeller/kaldırır. <br/>- Güvenlik ekibiniz bir cihazı yalıtıyor.<br/>- Uç Nokta için Defender bir dosyayı algılar ve karantinaya alır. <br/><br/> Daha fazla bilgi için bkz [. İşlem merkezi](auto-investigation-action-center.md). |
 | **Güvenlik puanı** | İyileştirme eylemlerinin ve ölçümlerinin listesiyle birlikte kuruluşunuzun güvenlik duruşunun bir gösterimini görüntüler. <br/><br/> Daha fazla bilgi için bkz. [Microsoft Güvenli Puanı](../defender/microsoft-secure-score.md). |
-| **Learning hub'ı** | Microsoft 365 güvenlik özellikleri hakkında daha fazla bilgi edinmek için erişebileceğiniz öğrenme yollarının listesine gider.  |
+| **Öğrenme merkezi** | Microsoft 365 güvenlik özellikleri hakkında daha fazla bilgi edinmek için erişebileceğiniz öğrenme yollarının listesine gider.  |
 | **Bitiş noktası** >  **Arama** | Belirli cihazları cihaz adına göre arayabileceğiniz bir sayfaya gider. Sonuç listesinde, risk düzeyi ve sistem durumu gibi ayrıntıları bir bakışta görebilirsiniz. |
 |  **Bitiş noktası** >  **Cihaz envanteri** | Uç Nokta için Defender'a eklenen cihazlar listenize gider. Cihazlar hakkında maruz kalma ve risk düzeyleri gibi bilgiler sağlar. <br/><br/> Daha fazla bilgi için bkz [. Cihaz envanteri](machines-view-overview.md). |
 |  **Bitiş noktası** >  **Yapılandırma & temelleri** | **Güvenlik temellerini** ve **Yapılandırma yönetimini** gösterecek şekilde genişletir. |
@@ -79,8 +79,8 @@ Ekranın sol tarafındaki gezinti çubuğu olaylar, uyarılar, İşlem merkezi, 
 | **Hizmet Durumu** | **Hizmet durumu** ve **İleti merkezi** bağlantılarını içerir.  |
 | **Sağlık** >  **Hizmet durumu** | Microsoft 365 yönetim merkezi Hizmet durumu sayfasına gider. Bu sayfa, kuruluşunuzun aboneliklerinde kullanılabilen tüm hizmetler genelinde sistem durumunu görüntülemenizi sağlar.   |
 | **Sağlık** >  **İleti merkezi** | Microsoft 365 yönetim merkezi İleti merkezine gider. İleti merkezi planlı değişiklikler hakkında bilgi sağlar. Her ileti, gelenleri, kullanıcıları nasıl etkileyebileceğini ve değişikliklerin nasıl yönetileceğini açıklar. |  
-| **İzinler & rolleri** | Microsoft 365 Defender portalını kullanmak için izinler vermenizi sağlar. İzinler Azure Active Directory 'deki (Azure AD) roller aracılığıyla verilir. Bir rol seçtiğinizde açılır pencere bölmesi görüntülenir. Açılır öğe, rol grubuna üye ekleyebileceğiniz veya kaldırabileceğiniz Bir Azure AD bağlantısı içerir. <br/><br/> Daha fazla bilgi edinmek için bkz. [Rol tabanlı erişim denetimini kullanarak portal erişimini yönetme](rbac.md).  |
-| **Ayarlar** | Microsoft 365 Defender portalınız (**Güvenlik merkezi** olarak listelenir) ve Uç Nokta için Defender (Uç Nokta olarak listelenir) için genel **ayarlara** gider. <br/><br/> Daha fazla bilgi için bkz. [Ayarlar](../defender/microsoft-365-defender.md#the-microsoft-365-defender-portal). |
+| **İzinler & rolleri** | Microsoft 365 Defender portalını kullanmak için izinler vermenizi sağlar. İzinler Azure Active Directory'deki (Azure AD) roller aracılığıyla verilir. Bir rol seçtiğinizde açılır pencere bölmesi görüntülenir. Açılır öğe, bir rol grubuna üye ekleyebileceğiniz veya kaldırabileceğiniz Azure AD bağlantısını içerir. <br/><br/> Daha fazla bilgi edinmek için bkz. [Rol tabanlı erişim denetimini kullanarak portal erişimini yönetme](rbac.md).  |
+| **Ayarlar** | Microsoft 365 Defender portalınız (**Güvenlik merkezi** olarak listelenir) ve Uç Nokta için Defender (Uç Nokta olarak listelenir) için genel **ayarlara** gider. <br/><br/> Daha fazla bilgi için bkz. [Ayarlar](../defender/microsoft-365-defender-portal.md). |
 | **Diğer kaynaklar** | Azure Active Directory ve Microsoft Purview uyumluluk portalı gibi daha fazla portalın ve merkezin listesini görüntüler. <br/><br/> Daha fazla bilgi için bkz. [Microsoft güvenlik portalları ve yönetim merkezleri](../defender/portals.md). |
 
 > [!TIP]

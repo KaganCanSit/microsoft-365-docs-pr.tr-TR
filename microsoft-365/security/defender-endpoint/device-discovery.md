@@ -20,18 +20,19 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 68503556a1d2f3330e47fe601a303363a3f28896
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 2e4939eb21a62c99ecf6572060213c87c2c01176
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65623231"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617314"
 ---
 # <a name="device-discovery-overview"></a>Cihaz keşfine genel bakış
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Şunlar için geçerlidir:**
+
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
@@ -39,7 +40,7 @@ Ortamınızı korumak için ağınızdaki cihazların envanterinin alınması ge
 
 Uç Nokta için Microsoft Defender, şirket ağınıza bağlı yönetilmeyen cihazları ek gereçlere veya hantal işlem değişikliklerine gerek kalmadan bulmanıza yardımcı olan bir cihaz bulma özelliği sağlar. Cihaz bulma, ağınızdaki yerleşik uç noktaları kullanarak yönetilmeyen cihazları bulmak için ağınızda toplar, yoklar veya tarar. Cihaz bulma özelliği şunları keşfetmenize olanak tanır:
 
-- henüz Uç Nokta için Microsoft Defender eklenmemiş uç noktaları (iş istasyonları, sunucular ve mobil cihazlar) Enterprise
+- Henüz Uç Nokta için Microsoft Defender eklenmemiş kurumsal uç noktalar (iş istasyonları, sunucular ve mobil cihazlar)
 - Yönlendiriciler ve anahtarlar gibi ağ cihazları
 - Yazıcılar ve kameralar gibi IoT cihazları
 
@@ -107,7 +108,7 @@ Ot/IOT varlık envanterinizi bulmak, tanımlamak ve güvenliğini sağlamak içi
 
 ## <a name="vulnerability-assessment-on-discovered-devices"></a>Bulunan cihazlarda güvenlik açığı değerlendirmesi
 
-Cihazlarınızdaki güvenlik açıkları ve riskler ve ağdaki diğer keşfedilen yönetilmeyen cihazlar, "Güvenlik Öneriler" altındaki geçerli TVM akışlarının bir parçasıdır ve portaldaki varlık sayfalarında gösterilir.
+Cihazlarınızdaki güvenlik açıkları ve riskler ve ağda bulunan diğer yönetilmeyen cihazlar, "Güvenlik Önerileri" altındaki geçerli TVM akışlarının bir parçasıdır ve portaldaki varlık sayfalarında gösterilir.
 Yönetilmeyen ve yönetilen cihazlarla ilgili SSH güvenlik açıklarını bulmak için "SSH" ile ilgili güvenlik önerilerini arayın.
 
 :::image type="content" source="images/1156c82ffadd356ce329d1cf551e806c.png" alt-text="Güvenlik önerileri panosu" lightbox="images/1156c82ffadd356ce329d1cf551e806c.png":::

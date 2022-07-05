@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: 9087b2c04f8bc88e23f5b901d29d1067bdd9877e
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 9acc7cd4147f2fdf29b82ecb2d211ef30ea4e6dc
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64825134"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617052"
 ---
 # <a name="whats-new-in-microsoft-secure-score"></a>Microsoft Güvenli Puan'daki yenilikler
 
@@ -34,7 +34,7 @@ ms.locfileid: "64825134"
 
 Microsoft Güvenli Puan'ı güvenlik duruşunuzun daha iyi bir temsilcisi yapmak için bazı değişiklikler yaptık. Planlı değişiklikler hakkında bilgi edinmek için bkz. [Microsoft Güvenli Puanı'nda neler geliyor?](microsoft-secure-score-whats-coming.md)
 
-Microsoft Güvenli Puanı'na [Microsoft 365 Defender portalından](microsoft-365-defender.md#the-microsoft-365-defender-portal) ulaşabilirsinizhttps://security.microsoft.com/securescore.
+Microsoft Güvenli Puanı'na [Microsoft 365 Defender portalından](microsoft-365-defender-portal.md) ulaşabilirsinizhttps://security.microsoft.com/securescore.
 
 ## <a name="april-2022"></a>Nisan 2022
 
@@ -42,14 +42,14 @@ Microsoft Güvenli Puanı'na [Microsoft 365 Defender portalından](microsoft-365
 
 ## <a name="december-2021"></a>Aralık 2021
 
-- Kasa Ekler'i blok modunda açma
+- Blok modunda Güvenli Ekler'i açma
 - Exchange Online takvim ayrıntılarının dış kullanıcılarla paylaşılmasını engelleme
-- Office istemcileri için Kasa Belgeleri açma
+- Office istemcileri için Güvenli Belgeler'i açma
 - Kötü amaçlı yazılımdan koruma ilkeleri için yaygın ekler filtre ayarını açma
 - İstenmeyen posta önleme ilkeleri için gönderen etki alanlarına izin verilmediğinden emin olun
-- E-posta iletileri için Kasa Bağlantıları ilkeleri oluşturma
+- E-posta iletileri için Güvenli Bağlantılar ilkeleri oluşturma
 - Kötü amaçlı yazılımlar için sıfır saatlik otomatik temizleme ilkeleri oluşturma
-- SharePoint, OneDrive ve Microsoft Teams Office 365 için Microsoft Defender açma
+- SharePoint, OneDrive ve Microsoft Teams'de Office 365 için Microsoft Defender açma
 - Kimlik avı iletileri için sıfır saatlik otomatik temizleme ilkeleri oluşturma
 - İstenmeyen posta iletileri için sıfır saatlik otomatik temizleme ilkeleri oluşturma
 - Güvenlik açığı bulunan imzalı sürücülerin kötüye kullanılması engellendi

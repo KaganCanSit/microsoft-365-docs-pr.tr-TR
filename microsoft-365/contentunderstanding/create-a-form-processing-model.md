@@ -14,12 +14,12 @@ ms.collection:
 ms.custom: admindeeplinkSPO
 ms.localizationpriority: medium
 description: SharePoint Syntex'de form işleme modeli oluşturmayı öğrenin.
-ms.openlocfilehash: bf0a15894e7b9bbc4905a0372d557e1880650e84
-ms.sourcegitcommit: 2d870e06e87b10d9e8ec7a7a8381353bc3bc59c7
+ms.openlocfilehash: b44dc34b2b57c75f5fefea074cd74fa0b686bcaa
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65349827"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617226"
 ---
 # <a name="create-a-form-processing-model-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'de form işleme modeli oluşturma
 
@@ -29,7 +29,7 @@ ms.locfileid: "65349827"
 
 </br>
 
-Microsoft Power Apps'daki bir özellik olan [AI Builder'ı](/ai-builder/overview) kullanma SharePoint Syntex kullanıcılar doğrudan bir SharePoint belge kitaplığından [form işleme modeli](form-processing-overview.md) oluşturabilir. 
+Microsoft Power Apps'teki bir özellik olan [AI Builder'ı](/ai-builder/overview) kullanma SharePoint Syntex kullanıcılar doğrudan bir SharePoint belge kitaplığından [form işleme modeli](form-processing-overview.md) oluşturabilir. 
 
 Form işleme modeli oluşturmak aşağıdaki adımları içerir:
 
@@ -41,7 +41,7 @@ Form işleme modeli oluşturmak aşağıdaki adımları içerir:
 
 ## <a name="requirements"></a>Gereksinimler
 
-Form işleme modelini yalnızca etkin olduğu SharePoint belge kitaplıklarında oluşturabilirsiniz. Form işleme etkinleştirildiyse, belge kitaplığınızda **AutomateAI** >  **Builder** >  **Form işlemek için model oluştur** menüsünü görebilirsiniz. Belge kitaplığınızda işlemenin etkinleştirilmesi gerekiyorsa, SharePoint yöneticinize başvurmanız gerekir.
+Yalnızca etkin olduğu SharePoint belge kitaplıklarında form işleme modeli oluşturabilirsiniz. Form işleme etkinleştirildiyse, belge kitaplığınızdaki **Formları işlemek için AI Builder'ı** >  **Otomatik hale** > **getir Model oluştur** menüsünü görebilirsiniz. Belge kitaplığınızda işlemenin etkinleştirilmesi gerekiyorsa SharePoint yöneticinize başvurmanız gerekir.
 
 ![AI Builder modelini gösteren ekran görüntüsü.](../media/content-understanding/create-ai-builder-model2.png)
 
@@ -57,7 +57,7 @@ Form işleme modeli oluşturmanın ilk adımı modeli adlandırmak, yeni içerik
 
     ![Formları işlemek için model oluşturma panelini gösteren ekran görüntüsü.](../media/content-understanding/new-form-model2.png) 
 
-3. Artık SharePoint belge kitaplığındaki benzer bir düzeni (faturalar veya vergi belgeleri gibi) paylaşan yapılandırılmış dosya *koleksiyonundan* bilgileri otomatik olarak ayıklayabilir ve kaydedebilirsiniz. Bu, tek bir modelde birkaç model oluşturmanıza ve belirli tablo öğesi bilgilerini ayıklamanıza olanak tanır.
+3. Artık, SharePoint belge kitaplığındaki faturalar veya vergi belgeleri gibi benzer bir düzeni paylaşan yapılandırılmış dosyalar *koleksiyonundan* bilgileri otomatik olarak ayıklayabilir ve kaydedebilirsiniz. Bu, tek bir modelde birkaç model oluşturmanıza ve belirli tablo öğesi bilgilerini ayıklamanıza olanak tanır.
 
    Koleksiyon adı, modelin uygulandığı belge kitaplığındaki ayrılmış bir sütuna kaydedilir ve bu da aynı model tarafından işlenen farklı dosya düzenlerini ayırt etmenizi sağlar.
 
@@ -110,7 +110,7 @@ Modele ayıklamak istediğiniz alanları ve tablo verilerini anlamasını öğre
 
 ## <a name="step-4-train-and-publish-your-model"></a>4. Adım: Modelinizi eğitin ve yayımlayın
 
-1. Modelinizi oluşturup eğitdikten sonra yayımlamaya ve SharePoint'de kullanmaya hazır olursunuz. Ayrıntılı adımlar için bkz. [Form işleme modelinizi eğitin ve yayımlayın](/ai-builder/form-processing-train). 
+1. Modelinizi oluşturup eğittikkten sonra yayımlamaya ve SharePoint'te kullanmaya hazır olursunuz. Ayrıntılı adımlar için bkz. [Form işleme modelinizi eğitin ve yayımlayın](/ai-builder/form-processing-train). 
 
 2. Model yayımlandıktan sonra **Modeli kullan'ı** ve ardından **Akış oluştur'u** seçin. Bu, SharePoint belge kitaplığınızda çalıştırabilen ve modelde tanımlanan alanları ayıklayan bir Power Automate akışı oluşturur.
 
@@ -118,7 +118,7 @@ Modele ayıklamak istediğiniz alanları ve tablo verilerini anlamasını öğre
  
 3. Tamamlandığında şu iletiyi görürsünüz: *Akışınız başarıyla oluşturuldu*.
 
-4. Belge kitaplığının modelinizle güncelleştirildiğini görmek için **SharePoint git** düğmesini seçin.
+4. Belge kitaplığının modelinizle güncelleştirildiğini görmek için **SharePoint'e Git** düğmesini seçin.
 
 ## <a name="step-5-use-your-model"></a>5. Adım: Modelinizi kullanma
 
@@ -130,7 +130,7 @@ Modele ayıklamak istediğiniz alanları ve tablo verilerini anlamasını öğre
 
     ![Bilgi düğmesi.](../media/content-understanding/info-button.png)  
 
-3. Dosyaları belge kitaplığınıza Upload. Modelin içerik türü olarak tanımlamış olduğu tüm dosyalar, görünümünüzdeki dosyaları listeler ve ayıklanan verileri sütunlarda görüntüler.
+3. Dosyaları belge kitaplığınıza yükleyin. Modelin içerik türü olarak tanımlamış olduğu tüm dosyalar, görünümünüzdeki dosyaları listeler ve ayıklanan verileri sütunlarda görüntüler.
 
     ![Yapılır.](../media/content-understanding/doc-lib-done.png) 
 
@@ -141,11 +141,11 @@ Modele ayıklamak istediğiniz alanları ve tablo verilerini anlamasını öğre
 
 Bir form işleme modelinin uygulandığı kitaplıkta seçili bir dosyayı veya dosya toplu işlemini işlemek için iki akış kullanılabilir.
 
-- **Form işleme modeline sahip bir görüntüden veya PDF dosyasından bilgi ayıklama — Form işleme modeli** çalıştırarak seçili görüntüden veya PDF dosyasından metin ayıklamak için kullanın. Tek seferde tek bir seçili dosyayı destekler ve yalnızca PDF dosyalarını ve görüntü dosyalarını (PNG, JPG ve JPEG) destekler. Akışı çalıştırmak için bir dosya seçin ve ardından **AutomateExtract** >  info öğesini seçin.
+- **Form işleme modeline sahip bir görüntüden veya PDF dosyasından bilgi ayıklama — Form işleme modeli** çalıştırarak seçili görüntüden veya PDF dosyasından metin ayıklamak için kullanın. Tek seferde tek bir seçili dosyayı destekler ve yalnızca PDF dosyalarını ve görüntü dosyalarını (PNG, JPG ve JPEG) destekler. Akışı çalıştırmak için bir dosya seçin ve ardından **Bilgileri ayıklamayı** **otomatikleştir'i** >  seçin.
 
     ![Bilgileri ayıkla seçeneğinin vurgulandığı Otomatikleştir menüsünü gösteren ekran görüntüsü.](../media/content-understanding/automate-extract-info.png)  
 
-- **Form işleme modeline sahip dosyalardan bilgi ayıklama** — Bir grup dosyadan bilgi okumak ve ayıklamak için form işleme modelleriyle kullanın. Aynı anda en fazla 5.000 SharePoint dosya işler. Bu akışı çalıştırdığınızda ayarlayabileceğiniz bazı parametreler vardır. Şunları yapabilirsiniz:
+- **Form işleme modeline sahip dosyalardan bilgi ayıklama** — Bir grup dosyadan bilgi okumak ve ayıklamak için form işleme modelleriyle kullanın. Aynı anda en fazla 5.000 SharePoint dosyasını işler. Bu akışı çalıştırdığınızda ayarlayabileceğiniz bazı parametreler vardır. Şunları yapabilirsiniz:
 
     - Önceden işlenen dosyaların dahil edilip edilmeyeceğini seçin (varsayılan ayar, önceden işlenen dosyaları dahil etmek değildir).
     - İşlenmek üzere dosya sayısını seçin (varsayılan değer 100 dosyadır).
@@ -153,16 +153,19 @@ Bir form işleme modelinin uygulandığı kitaplıkta seçili bir dosyayı veya 
     - Düzenin nasıl sıralanmasını istediğinizi belirtin (artan veya azalan düzen).
 
     ![Parametre seçeneklerinin vurgulandığı Akışı çalıştır panelini gösteren ekran görüntüsü.](../media/content-understanding/run-flow-panel.png)  
+    
+> [!NOTE]
+> **Form işleme modeli akışına sahip bir görüntüden veya PDF dosyasından bilgi ayıkla**, bir form işleme modeliyle ilişkilendirilmiş bir kitaplık için otomatik olarak kullanılabilir. **Form işleme modeline sahip dosyalardan bilgi ayıkla** akışı, gerekirse kitaplığa eklenmesi gereken bir şablondur.
 
 ### <a name="classification-date-field"></a>Sınıflandırma Tarihi alanı
 
 Belge kitaplığına bir SharePoint Syntex form işleme modeli (veya belge anlama modeli) uygulandığında, **Sınıflandırma Tarihi** alanı kitaplık şemasına eklenir. Varsayılan olarak, bu alan boş olur. Ancak, belgeler bir model tarafından işlendiğinde ve sınıflandırıldığında, bu alan tamamlanma tarih-saat damgasıyla güncelleştirilir. 
 
-Model **Sınıflandırma Tarihi** ile damgalandığında, kullanıcılara SharePoint belge kitaplığındaki bir model tarafından yeni bir dosyanın işlendiğini ve sınıflandırıldığını bildirmek için SharePoint Syntex **dosya akışını işledikten sonra e-posta gönder'i** kullanabilirsiniz.
+Model **Sınıflandırma Tarihi** ile damgalandığında, Kullanıcılara SharePoint belge kitaplığındaki bir model tarafından yeni bir dosyanın işlendiğini ve sınıflandırıldığını bildirmek için **SharePoint Syntex dosya akışını işledikten sonra e-posta gönder'i** kullanabilirsiniz.
 
 Akışı çalıştırmak için:
 
-1. Bir dosya seçin ve ardından **Tümleştir** >  **Power Automate** >  **Akış oluştur'u** seçin.
+1. Bir dosya seçin ve ardından **Power Automate'i tümleştir** >  >  **Akış oluştur'u** seçin.
 
 2. **Akış oluştur** panelinde, **SharePoint Syntex bir dosyayı işledikten sonra e-posta gönder'i** seçin.
 

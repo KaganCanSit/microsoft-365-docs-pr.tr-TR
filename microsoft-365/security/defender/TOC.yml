@@ -4,8 +4,10 @@
   items:
     - name: Genel bakış
       items:
-        - name: Microsoft 365 Defender
+        - name: Microsoft 365 Defender nedir
           href: microsoft-365-defender.md
+        - name: Microsoft 365 Defender portalı
+          href: microsoft-365-defender-portal.md
         - name: Microsoft 365 Defender'daki yenilikler
           href: whats-new.md
         - name: Microsoft 365 Defender hizmetleri

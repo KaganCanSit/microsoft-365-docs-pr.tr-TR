@@ -17,12 +17,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: ed3d06e1719b51d0914c89e6283c8b53c2ab0812
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: 4f2ab696b728244e495ec04933b83eaafeeb3db0
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66530526"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617026"
 ---
 # <a name="whats-new-in-microsoft-365-defender"></a>Microsoft 365 Defender'daki yenilikler
 
@@ -134,7 +134,7 @@ Ayrıca, ürün güncelleştirmelerini ve önemli bildirimleri [ileti merkezi](h
 
 - Microsoft 365 Defender
 
-  Geliştirilmiş [Microsoft 365 Defender](https://security.microsoft.com) portalı artık kullanılabilir. Bu yeni deneyim, Uç Nokta için Defender, Office 365 için Defender, Kimlik için Defender ve daha fazlasını tek bir portalda bir araya getirir. Burası, güvenlik denetimlerinizi yönetmek için yeni bir evdir. [Yeni olanları öğrenin](./microsoft-365-defender.md#the-microsoft-365-defender-portal).
+  Geliştirilmiş [Microsoft 365 Defender](https://security.microsoft.com) portalı artık kullanılabilir. Bu yeni deneyim, Uç Nokta için Defender, Office 365 için Defender, Kimlik için Defender ve daha fazlasını tek bir portalda bir araya getirir. Burası, güvenlik denetimlerinizi yönetmek için yeni bir evdir. [Yeni olanları öğrenin](microsoft-365-defender-portal.md).
 
 - [Microsoft 365 Defender tehdit analizi raporu](threat-analytics.md)
 

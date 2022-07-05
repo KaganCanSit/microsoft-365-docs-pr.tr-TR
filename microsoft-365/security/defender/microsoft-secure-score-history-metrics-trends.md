@@ -21,18 +21,18 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: 03a7a070d574ec18a12c3e70d5cef20d2161490b
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 3604f163ddf8a14098d366f48aca2918b09f1e9e
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64663764"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617064"
 ---
 # <a name="track-your-microsoft-secure-score-history-and-meet-goals"></a>Microsoft Güvenli Puan geçmişinizi izleme ve hedefleri karşılama
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-[Microsoft Güvenli Puan](microsoft-secure-score.md) , bir kuruluşun güvenlik duruşunun ölçümüdür ve daha yüksek bir sayı daha fazla geliştirme eylemi gerçekleştirildiğini gösterir. [Microsoft 365 Defender portalında](microsoft-365-defender.md#the-microsoft-365-defender-portal) bulunabilirhttps://security.microsoft.com/securescore.
+[Microsoft Güvenli Puan](microsoft-secure-score.md) , bir kuruluşun güvenlik duruşunun ölçümüdür ve daha yüksek bir sayı daha fazla geliştirme eylemi gerçekleştirildiğini gösterir. [Microsoft 365 Defender portalında](microsoft-365-defender-portal.md) bulunabilirhttps://security.microsoft.com/securescore.
 
 ## <a name="gain-insights-into-activity-that-has-affected-your-score"></a>Puanınızı etkileyen etkinlikle ilgili içgörüler elde edin
 

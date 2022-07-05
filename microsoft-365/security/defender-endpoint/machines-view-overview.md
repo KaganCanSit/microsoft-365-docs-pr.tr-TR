@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 81ff80776d3b12e4ec90d6d2c2473389686ae9c9
-ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
+ms.openlocfilehash: 232f27b9edb23e932d49cf33e026d22abfbe72dd
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66554477"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617336"
 ---
 # <a name="device-inventory"></a>Cihaz envanteri
 
@@ -83,6 +83,11 @@ Bulunan cihazlara ve zaten Uç Nokta için Microsoft Defender eklenen cihazlara 
 **Ağ cihazları** ve **IoT cihazları** sekmelerinden satıcı, model ve cihaz türü gibi bilgileri de görürsünüz:
 
 ![Ağ cihazları listesinin görüntüsü.](images/device-inventory-networkdevices.png)
+
+> [!NOTE]
+> [IoT için Microsoft Defender](/azure/defender-for-iot/organizations/) ve [Corelight](https://corelight.com/integrations/iot-security) ile cihaz bulma tümleştirmeleri, ot/IOT varlık envanterinizin tamamını bulmanıza, tanımlamanıza ve güvenliğini sağlamaya yardımcı olmak için kullanılabilir. Bu tümleştirmelerle bulunan **cihazlar IoT cihazları** sekmesinde görünür. Daha fazla bilgi için bkz [. Cihaz bulma tümleştirmeleri](device-discovery.md#device-discovery-integrations).
+>
+> IoT için Defender yapılandırıldığında, cihazları orada da görüntüleyebilirsiniz. Bkz. [Kuruluşlar için cihaz envanteri ile IoT cihazlarınızı yönetme](/azure/defender-for-iot/organizations/how-to-manage-device-inventory-for-organizations).
 
 Her cihaz envanteri sekmesinin en üstünde, toplam cihaz sayısını, henüz eklenmemiş cihaz sayısını ve kuruluşunuz için daha yüksek risk olarak tanımlanan cihaz sayısını görebilirsiniz. Güvenlik duruşu geliştirmeleri için cihazların önceliklerini belirlemenize yardımcı olması için bu bilgileri kullanabilirsiniz.
 
