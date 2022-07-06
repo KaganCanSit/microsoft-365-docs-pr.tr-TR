@@ -17,18 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Bir değerlendirme gözden geçirmesi kullandığınızda veya kayıt olarak işaretlenen öğeler yapılandırdığınız ayarlara göre otomatik olarak silinirken içerik elden çıkarma işlemini izleyin ve yönetin.
-ms.openlocfilehash: 34ac1a9d3b62cd0806318582f7baef76947d7670
-ms.sourcegitcommit: 37111bc0c5a6cc4690f7144a019bbff11d44858f
+ms.openlocfilehash: d72cc68bb093c3b49c7f79847916c5cbc5fe5a2d
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65463274"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630113"
 ---
 # <a name="disposition-of-content"></a>İçeriğin konumu
 
->*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+>*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 Microsoft Purview uyumluluk portalı **Kayıt Yönetimi'ndeki** **Ayrıştırma** sayfasını kullanarak değerlendirme gözden geçirmelerini yönetin ve saklama döneminin sonunda otomatik olarak silinen [kayıtların](records-management.md#records) meta verilerini görüntüleyin.
 
@@ -51,9 +49,9 @@ Ayrıca:
 
 - Değerlendirme işlemi sırasında öğelerin içeriğini görüntülemek için, kullanıcıları **İçerik Gezgini İçerik Görüntüleyicisi** rol grubuna ekleyin. Kullanıcılar bu rol grubundan izinlere sahip değilse, değerlendirme gözden geçirmesini tamamlamak için yine de bir değerlendirme gözden geçirme eylemi seçebilirler, ancak bunu Microsoft Purview uyumluluk portalı mini önizleme bölmesinden öğenin içeriğini görüntüleyemeden yapmalıdır.
 
-- Varsayılan olarak, **Disposition** sayfasına erişen her kişi yalnızca gözden geçirmek üzere atanan öğeleri görür. Kayıt yönetimi yöneticisinin tüm kullanıcılara atanan tüm öğeleri ve edat için yapılandırılmış tüm bekletme etiketlerini görebilmesi için gözden geçirme: **Kayıt yönetimi ayarlarıEşit'e** >  **gidip** yönetici hesaplarını içeren posta özellikli bir güvenlik grubu seçin ve etkinleştirin.
+- Varsayılan olarak, **Disposition** sayfasına erişen her kişi yalnızca gözden geçirmek üzere atanan öğeleri görür. Kayıt yönetimi yöneticisinin tüm kullanıcılara atanan tüm öğeleri ve edat için yapılandırılmış tüm bekletme etiketlerini görmesi için gözden geçirme: Yönetici hesaplarını içeren posta özellikli bir güvenlik grubunu seçmek ve etkinleştirmek için **Kayıt yönetimi ayarları** > **Disposition'a** gidin.
     
-    posta etkin olmayan Microsoft 365 grupları ve güvenlik grupları bu özelliği desteklemez ve seçmek için listede görüntülenmez. Posta özellikli yeni bir güvenlik grubu oluşturmanız gerekiyorsa, yeni grubu oluşturmak için <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> bağlantısını kullanın. 
+    Posta etkin olmayan Microsoft 365 grupları ve güvenlik grupları bu özelliği desteklemez ve seçmek için listede görüntülenmez. Posta özellikli yeni bir güvenlik grubu oluşturmanız gerekiyorsa, yeni grubu oluşturmak için <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> bağlantısını kullanın. 
     
     > [!IMPORTANT]
     > Grubu etkinleştirdikten sonra Microsoft Purview uyumluluk portalı değiştiremezsiniz. PowerShell kullanarak farklı bir grubu etkinleştirme hakkında bilgi için sonraki bölüme bakın.
@@ -88,7 +86,7 @@ Bekletme süresinin sonunda bir değerlendirme gözden geçirmesi tetiklendiğin
 
 Gözden geçirenlerin aldığı bildirim e-postasını, farklı dillerde yönergeler de dahil olmak üzere özelleştirebilirsiniz. Çok dilli destek için çevirileri kendiniz belirtmeniz gerekir ve bu özel metin yerel ayarlarına bakılmadan tüm gözden geçirenlere görüntülenir.
 
-Kullanıcılar, öğenin saklama süresinin sonunda etiket başına bir ilk e-posta bildirimi alır ve bunların atandığı tüm değerlendirmelerin haftada bir etiket başına anımsatıcısı olur. İçeriği gözden geçirmek ve eyleme geçmek için bildirim ve anımsatıcı e-postalarındaki bağlantıya tıklayarak doğrudan Microsoft Purview uyumluluk portalı **Kayıtlar yönetimiDisposition** >  sayfasına gidebilirler. Alternatif olarak, gözden geçirenler Microsoft Purview uyumluluk portalı bu **Değerlendirme** sayfasına gidebilir. Sonra:
+Kullanıcılar, öğenin saklama süresinin sonunda etiket başına bir ilk e-posta bildirimi alır ve bunların atandığı tüm değerlendirmelerin haftada bir etiket başına anımsatıcısı olur. İçeriği gözden geçirmek ve eyleme geçmek için bildirim ve anımsatıcı e-postalarındaki bağlantıya tıklayarak doğrudan Microsoft Purview uyumluluk portalı **Kayıt yönetimiNin** > **Değerlendirme** sayfasına gidebilirler. Alternatif olarak, gözden geçirenler Microsoft Purview uyumluluk portalı bu **Değerlendirme** sayfasına gidebilir. Sonra:
 
 - Gözden geçirenler yalnızca kendilerine atanan değerlendirme gözden geçirmelerini görürken, kayıt yöneticisi için seçilen güvenlik grubuna eklenen yöneticiler tüm değerlendirme gözden geçirmelerini görür.
 
@@ -98,7 +96,7 @@ Kullanıcılar, öğenin saklama süresinin sonunda etiket başına bir ilk e-po
    - Dizine alınan özellikleri, bulunduğu yeri, onu kimin, ne zaman ve en son kimin değiştirdiği ve ne zaman görüntüleyeceğinize ilişkin **ayrıntılar**.
    - Herhangi bir değerlendirme gözden geçirme eylemlerinin geçmişini ve varsa gözden geçiren açıklamalarını gösteren **geçmiş**.
 
-Bir değerlendirme, Exchange posta kutularına, SharePoint sitelere ve OneDrive hesaplarına içerik içerebilir. Bu konumlarda bir değerlendirme gözden geçirmesi bekleyen içerik kalıcı olarak silinir, ancak değerlendirmenin son aşaması için gözden geçiren içeriği kalıcı olarak silmeyi seçtikten sonra silinir.
+Bir değerlendirme, Exchange posta kutularına, SharePoint sitelerine ve OneDrive hesaplarına içerik içerebilir. Bu konumlarda bir değerlendirme gözden geçirmesi bekleyen içerik kalıcı olarak silinir, ancak değerlendirmenin son aşaması için gözden geçiren içeriği kalıcı olarak silmeyi seçtikten sonra silinir.
 
 > [!NOTE]
 > Bir posta kutusu, değerlendirme incelemelerini desteklemek için en az 10 MB veriye sahip olmalıdır.
@@ -132,7 +130,7 @@ Bekletme etiketi için **bekletme süresinden sonra ne olacağını seçin** say
 
 **+ Aşama ekle'yi** seçin ve aşamanızı tanımlama amacıyla adlandırınız. Ardından bu aşama için gözden geçirenleri belirtin.
 
-Gözden geçirenler için en fazla 10 bireysel kullanıcı veya posta etkin güvenlik grubu belirtin. Microsoft 365 grupları ([eski adıyla Office 365 grupları](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)) bu seçenek için desteklenmez.
+Gözden geçirenler için en fazla 10 bireysel kullanıcı veya posta etkin güvenlik grubu belirtin. Bu seçenek için Microsoft 365 [grupları (eski adıyla Office 365 grupları](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)) desteklenmez.
 
 Saklama süresinin sonunda bir öğeyi gözden geçirmek için birden fazla kişiye ihtiyacınız varsa **, Başka bir aşama ekle'yi** seçin ve yapılandırma işlemini ihtiyacınız olan aşama sayısı için en fazla beş aşama olacak şekilde yineleyin. 
 
@@ -189,7 +187,7 @@ Gösterilen örnekte görebileceğiniz gibi desteklenen eylemler şunlardır:
   
 - **Elden çıkarmayı onayla**:
     - Bu eylem, bir değerlendirme gözden geçirmesinin geçici aşaması için seçildiğinde (birden çok aşama yapılandırdıysanız): Öğe bir sonraki değerlendirme aşamasına geçer.
-    - Bu eylem, değerlendirme gözden geçirmesinin son aşaması için seçildiğinde veya yalnızca bir değerlendirme aşaması varsa: Öğe kalıcı silme için uygun olarak işaretlenir ve bu süreölçer işi 7 gün içinde gerçekleştirilen eylemlerdir. Öğenin kalıcı olarak silinecek tam zamanlaması iş yüküne bağlıdır. Daha fazla bilgi için bkz[. SharePoint ve OneDrive için bekletme nasıl çalışır](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive) ve [Exchange için bekletme nasıl çalışır](retention-policies-exchange.md#how-retention-works-for-exchange)?
+    - Bu eylem, değerlendirme gözden geçirmesinin son aşaması için seçildiğinde veya yalnızca bir değerlendirme aşaması varsa: Öğe kalıcı silme için uygun olarak işaretlenir ve bu süreölçer işi 7 gün içinde gerçekleştirilen eylemlerdir. Öğenin kalıcı olarak silinecek tam zamanlaması iş yüküne bağlıdır. Daha fazla bilgi için bkz [. SharePoint ve OneDrive için bekletme nasıl çalışır](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive) ve [Exchange için bekletme nasıl çalışır](retention-policies-exchange.md#how-retention-works-for-exchange)?
 
 - **Yeniden etiketleme**:
     - Bu eylem seçildiğinde, öğe özgün etiket için değerlendirme gözden geçirme işleminden çıkar. Daha sonra öğe, yeni seçilen bekletme etiketinin bekletme ayarlarına tabidir.
@@ -228,4 +226,4 @@ Kayıt veya mevzuat kaydı olarak işaretlenmiş silinmiş öğelerin denetimi i
 
 Bekleyen eğilimler için zaman aralığı son kullanma tarihine göre belirlenir. Atılan öğeler için zaman aralığı silme tarihine göre belirlenir.
   
-Öğelerle ilgili bilgileri her iki görünümde de .csv dosyası olarak dışarı aktarabilir ve Excel kullanarak sıralayabilir ve yönetebilirsiniz.
+Öğelerle ilgili bilgileri her iki görünümde de excel kullanarak sıralayıp yönetebileceğiniz .csv dosyası olarak dışarı aktarabilirsiniz.

@@ -19,16 +19,14 @@ ms.collection:
 recommendations: false
 description: DLP ilkesi bileşeni ve yapılandırma başvurusu
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: b62289cfe4d18b4c6e2e79bb9a308f8b88978451
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 0d49cb1287453cb815bf1fe1ea01b6312c26d879
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015802"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626589"
 ---
 # <a name="data-loss-prevention-policy-reference"></a>Veri Kaybı Önleme ilkesi başvurusu
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview Veri Kaybı Önleme (DLP) ilkelerinin yapılandırılması gereken birçok bileşen vardır. Etkili bir ilke oluşturmak için, her bileşenin amacını ve yapılandırmasının ilkenin davranışını nasıl değiştirdiğini anlamanız gerekir. Bu makale, DLP ilkesinin ayrıntılı anatomisini sağlar.
 
@@ -105,18 +103,18 @@ DLP ilkesi, birden çok konumda hassas bilgiler içeren öğeleri bulabilir ve k
 
 |Konum  |Kapsamı dahil et/hariç tut  |Veri durumu  |Ek önkoşullar |
 |---------|---------|---------|---------|
-|Çevrimiçi e-posta Exchange |dağıtım grubu | hareket halindeki veriler| Hayır |
-|Çevrimiçi siteleri SharePoint   |Site       | bekleyen veriler </br> kullanımdaki veriler | Hayır|
+|Çevrimiçi exchange e-postası |dağıtım grubu | hareket halindeki veriler| Hayır |
+|SharePoint online siteleri   |Site       | bekleyen veriler </br> kullanımdaki veriler | Hayır|
 |hesapları OneDrive İş| hesap veya dağıtım grubu |bekleyen veriler </br> kullanımdaki veriler|Hayır|
-|Sohbet ve kanal iletilerini Teams     | hesap veya dağıtım grubu |hareket halindeki veriler </br> kullanımdaki veriler |  Hayır       |
+|Teams sohbeti ve kanal iletileri     | hesap veya dağıtım grubu |hareket halindeki veriler </br> kullanımdaki veriler |  Hayır       |
 |Bulut Uygulamaları için Microsoft Defender   | bulut uygulaması örneği       |bekleyen veriler         | - [Microsoft dışı bulut uygulamaları için veri kaybı önleme ilkelerini kullanma](dlp-use-policies-non-microsoft-cloud-apps.md#use-data-loss-prevention-policies-for-non-microsoft-cloud-apps)        |
-|Aygıtları  |kullanıcı veya grup         |bekleyen veriler </br>  kullanımdaki veriler </br>  hareket halindeki veriler         |- [Uç nokta veri kaybını önleme hakkında bilgi edinin](endpoint-dlp-learn-about.md) </br>- [Uç nokta veri kaybı önleme ile Kullanmaya başlayın](endpoint-dlp-getting-started.md) </br>- [Information Protection için cihaz ara sunucusu ve internet bağlantısı ayarlarını yapılandırma](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection) |
-|Şirket içi depolar (dosya paylaşımları ve SharePoint)    |Depo         | bekleyen veriler         | - [Şirket içi veri kaybı önleme tarayıcısı hakkında bilgi edinin](dlp-on-premises-scanner-learn.md) </br> - [Şirket içi tarayıcıda veri kaybı önleme ile Kullanmaya başlayın](dlp-on-premises-scanner-get-started.md#get-started-with-the-data-loss-prevention-on-premises-scanner)         |
+|Aygıtları  |kullanıcı veya grup         |bekleyen veriler </br>  kullanımdaki veriler </br>  hareket halindeki veriler         |- [Uç nokta veri kaybını önleme hakkında bilgi edinin](endpoint-dlp-learn-about.md) </br>- [Uç nokta veri kaybı önlemeyi kullanmaya başlama](endpoint-dlp-getting-started.md) </br>- [Information Protection için cihaz ara sunucusu ve internet bağlantısı ayarlarını yapılandırma](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection) |
+|Şirket içi depolar (dosya paylaşımları ve SharePoint)    |Depo         | bekleyen veriler         | - [Şirket içi veri kaybı önleme tarayıcısı hakkında bilgi edinin](dlp-on-premises-scanner-learn.md) </br> - [Şirket içi veri kaybı önleme tarayıcısını kullanmaya başlama](dlp-on-premises-scanner-get-started.md#get-started-with-the-data-loss-prevention-on-premises-scanner)         |
 |PowerBI| Çalışma alanları | kullanımdaki veriler | Hayır|
 
-Exchange belirli dağıtım gruplarını dahil etmeyi seçerseniz, DLP ilkesinin kapsamı yalnızca bu grubun üyeleriyle tamamlanır. Benzer şekilde bir dağıtım grubunu dışlamak, bu dağıtım grubunun tüm üyelerini ilke değerlendirmesinin dışında tutar. İlkenin kapsamını dağıtım listelerinin, dinamik dağıtım gruplarının ve güvenlik gruplarının üyelerine göre belirleyebilirsiniz. DLP ilkesi bu tür 50'den fazla ekleme ve dışlama içeremez.
+Exchange'e belirli dağıtım gruplarını dahil etmeyi seçerseniz, DLP ilkesinin kapsamı yalnızca bu grubun üyeleriyle tamamlanır. Benzer şekilde bir dağıtım grubunu dışlamak, bu dağıtım grubunun tüm üyelerini ilke değerlendirmesinin dışında tutar. İlkenin kapsamını dağıtım listelerinin, dinamik dağıtım gruplarının ve güvenlik gruplarının üyelerine göre belirleyebilirsiniz. DLP ilkesi bu tür 50'den fazla ekleme ve dışlama içeremez.
 
-Belirli SharePoint siteleri veya OneDrive hesaplarını dahil etmeyi veya hariç tutmayı seçerseniz, DLP ilkesi bu tür 100'den fazla ekleme ve dışlama içeremez. Bu sınır mevcut olsa da, kuruluş genelinde bir ilke veya tüm konumlar için geçerli olan bir ilke uygulayarak bu sınırı aşabilirsiniz.
+Belirli SharePoint sitelerini veya OneDrive hesaplarını dahil etmeyi veya hariç tutmayı seçerseniz, DLP ilkesi bu tür 100'den fazla ekleme ve dışlama içeremez. Bu sınır mevcut olsa da, kuruluş genelinde bir ilke veya tüm konumlar için geçerli olan bir ilke uygulayarak bu sınırı aşabilirsiniz.
 
 Belirli OneDrive hesaplarını veya gruplarını dahil etmeyi veya hariç tutmayı seçerseniz, DLP ilkesi 100'den fazla kullanıcı hesabı veya dahil etme veya dışlama olarak 50 grup içeremez.
 
@@ -125,14 +123,14 @@ Belirli OneDrive hesaplarını veya gruplarını dahil etmeyi veya hariç tutmay
 DLP ilkeleri hassas öğeleri hassas bilgi türüyle (SIT) veya duyarlılık etiketiyle veya bekletme etiketiyle eşleştirerek algılar. Her konum, hassas içerik tanımlamanın farklı yöntemlerini destekler. İlkedeki konumları birleştirdiğinizde içeriğin nasıl tanımlandığı, tek bir konumla tanımlanma biçiminden farklı olabilir. 
 
 > [!IMPORTANT]
-> İlke için birden çok konum seçtiğinizde, içerik tanımı kategorisi için "hayır" değeri "evet" değerinden önceliklidir. Örneğin, yalnızca SharePoint siteleri seçtiğinizde, ilke hassas öğelerin bir veya daha fazla SIT tarafından, duyarlılık etiketiyle veya bekletme etiketiyle algılanmasını destekler. Ancak, SharePoint siteleri seçip sohbet ***ve*** kanal iletileri konumlarını Teams, ilke yalnızca SIT ile hassas öğelerin algılanması için destek sağlar.
+> İlke için birden çok konum seçtiğinizde, içerik tanımı kategorisi için "hayır" değeri "evet" değerinden önceliklidir. Örneğin, yalnızca SharePoint sitelerini seçtiğinizde, ilke hassas öğelerin bir veya daha fazla SIT ile, duyarlılık etiketiyle veya bekletme etiketiyle algılanmasını destekler. Ancak, SharePoint sitelerini ***ve*** Teams sohbet ve kanal iletileri konumlarını seçtiğinizde, ilke yalnızca SIT ile hassas öğelerin algılanması desteğine sahip olur.
 
 |Konum| İçerik SIT ile tanımlanabilir| İçerik tanımlanabilir duyarlılık etiketi| İçerik bekletme etiketiyle tanımlanabilir|
 |---------|---------|---------|---------|
-|Çevrimiçi e-posta Exchange|Evet| Evet| Hayır|
-|Çevrimiçi siteleri SharePoint| Evet| Evet| Evet|
+|Çevrimiçi exchange e-postası|Evet| Evet| Hayır|
+|SharePoint online siteleri| Evet| Evet| Evet|
 |hesapları OneDrive İş| Evet| Evet| Evet|
-|Sohbet ve Kanal iletilerini Teams | Evet| Hayır| Hayır|
+|Teams Sohbet ve Kanal iletileri | Evet| Hayır| Hayır|
 |Aygıtları |Evet | Evet|  Hayır|
 |Bulut Uygulamaları için Microsoft Defender | Evet| Evet| Evet|
 |Şirket içi depolar| Evet| Evet| Hayır|
@@ -167,7 +165,7 @@ Kurallar, DLP ilkelerinin iş mantığıdır. Şunlardan oluşur:
 
 #### <a name="hosted-service-workloads"></a>Barındırılan hizmet iş yükleri
 
-Exchange Online, çevrimiçi ve OneDrive İş SharePoint gibi barındırılan hizmet iş yükleri için her kurala oluşturulduğu sırada bir öncelik atanır. Bu, ilk oluşturulan kuralın ilk önceliğe sahip olduğu, ikinci oluşturulan kuralın ikinci önceliğe sahip olduğu vb. anlamına gelir. 
+Exchange Online, SharePoint Online ve OneDrive İş gibi barındırılan hizmet iş yükleri için her kurala oluşturulduğu sırada bir öncelik atanır. Bu, ilk oluşturulan kuralın ilk önceliğe sahip olduğu, ikinci oluşturulan kuralın ikinci önceliğe sahip olduğu vb. anlamına gelir. 
   
 ![Öncelik sırasına göre kurallar](../media/dlp-rules-in-priority-order.png)
 
@@ -182,7 +180,7 @@ Kurallar 1, 2 ve 4 değerlendirilir ancak uygulanmaz. Bu örnekte, tüm kurallar
 
 Belirli bir koruma gereksinimini karşılamak için bir kural kullanabilir ve ardından belirli bir düzenlemeye uymak için gereken tüm kurallar gibi ortak koruma gereksinimlerini gruplandırmak için bir DLP ilkesi kullanabilirsiniz.
   
-Örneğin, Sağlık Sigortası Taşınabilirlik ve Sorumluluk Yasası'na (HIPAA) tabi bilgilerin varlığını algılamanıza yardımcı olan bir DLP ilkeniz olabilir. Bu DLP ilkesi, kuruluşunuzun dışındaki kişilerle paylaşılan bu hassas bilgileri içeren herhangi bir belgeyi (koşullar) bulup belgeye erişimi engelleyerek ve bir bildirim göndererek tüm SharePoint Çevrimiçi sitelerde ve tüm OneDrive İş sitelerinde (nerede) HIPAA verilerinin (ne olduğu) korunmasına yardımcı olabilir. Bu gereksinimler tek tek kurallar olarak depolanır ve yönetimi ve raporlamayı basitleştirmek için bir DLP ilkesi olarak gruplandırılır.
+Örneğin, Sağlık Sigortası Taşınabilirlik ve Sorumluluk Yasası'na (HIPAA) tabi bilgilerin varlığını algılamanıza yardımcı olan bir DLP ilkeniz olabilir. Bu DLP ilkesi, kuruluşunuzun dışındaki kişilerle paylaşılan bu hassas bilgileri içeren herhangi bir belgeyi (koşullar) bulup belgeye erişimi engelleyip bir bildirim (eylemler) göndererek tüm SharePoint Online sitelerinde ve tüm OneDrive İş sitelerinde (nerede) HIPAA verilerinin (ne olduğu) korunmasına yardımcı olabilir. Bu gereksinimler tek tek kurallar olarak depolanır ve yönetimi ve raporlamayı basitleştirmek için bir DLP ilkesi olarak gruplandırılır.
   
 ![Diyagram, DLP ilkesinin konumlar ve kurallar içerdiğini gösterir](../media/c006860c-2d00-42cb-aaa4-5b5638d139f7.png)
 
@@ -210,7 +208,7 @@ Diğer tüm kurallar değerlendirilir ancak eylemleri uygulanmaz. Denetim günl�
 Koşullar kapsayıcıdır ve kuralın ne aramasını istediğinizi ve bu öğelerin kullanıldığı bağlamı tanımladığınız yerdir. Kurala &#8212;, *buna* benzeyen ve *bu şekilde kullanılan* bir öğe bulduğunuzda &#8212; bir eşleşme olduğunu ve ilkedeki eylemlerin geri kalanının bu öğe üzerinde gerçekleştirilmesi gerektiğini söyler. Farklı risk düzeylerine farklı eylemler atamak için koşulları kullanabilirsiniz. Örneğin, şirket içinde paylaşılan hassas içerik daha düşük riskli olabilir ve kuruluş dışındaki kişilerle paylaşılan hassas içerikten daha az eylem gerektirebilir.
 
 > [!NOTE]
-> Bir konak kuruluşun Active Directory'sinde veya Azure Active Directory kiracısında konuk olmayan hesapları olan kullanıcılar, kuruluşun içindeki kişiler olarak kabul edilir. 
+> Konak kuruluşun Active Directory veya Azure Active Directory kiracısında konuk olmayan hesapları olan kullanıcılar, kuruluşun içindeki kişiler olarak kabul edilir. 
 
 #### <a name="content-contains"></a>İçerik içeriği
 
@@ -233,10 +231,10 @@ SID'ler, gerekirse değiştirebileceğiniz önceden tanımlanmış bir [**güven
 
 Kullanılabilir bağlam seçenekleri, seçtiğiniz konuma bağlı olarak değişir. Birden çok konum seçerseniz, yalnızca konumların ortak olduğu koşullar kullanılabilir.
 
-##### <a name="conditions-exchange-supports"></a>Exchange tarafından desteklenen koşullar
+##### <a name="conditions-exchange-supports"></a>Exchange'in desteklediği koşullar
 
 - İçerik içeriği
-- İçerik Microsoft 365
+- İçerik Microsoft 365'ten paylaşılır
 - İçerik şu kaynaktan alınır:
 - Gönderen IP adresi
 - Gönderen ilke ipucunu geçersiz kıldı mı?
@@ -275,10 +273,10 @@ Kullanılabilir bağlam seçenekleri, seçtiğiniz konuma bağlı olarak değiş
 - İleti türü:
 - İletinin önemi
 
-##### <a name="conditions-sharepoint-supports"></a>SharePoint destekleyen koşullar
+##### <a name="conditions-sharepoint-supports"></a>SharePoint'in desteklediği koşullar
  
 - İçerik içeriği
-- İçerik Microsoft 365
+- İçerik Microsoft 365'ten paylaşılır
 - Oluşturan belge
 - Üyesi tarafından oluşturulan belge
 - Belge adı sözcükler veya tümcecikler içeriyor
@@ -287,10 +285,10 @@ Kullanılabilir bağlam seçenekleri, seçtiğiniz konuma bağlı olarak değiş
 - Belge özelliği şudur:
 - Dosya uzantısı
 
-##### <a name="conditions-onedrive-accounts-supports"></a>Hesapların desteklediği koşullar OneDrive
+##### <a name="conditions-onedrive-accounts-supports"></a>OneDrive hesaplarının desteklediği koşullar
 
 - İçerik içeriği
-- İçerik Microsoft 365
+- İçerik Microsoft 365'ten paylaşılır
 - Oluşturan belge
 - Üyesi tarafından oluşturulan belge
 - Belge adı sözcükler veya tümcecikler içeriyor
@@ -299,10 +297,10 @@ Kullanılabilir bağlam seçenekleri, seçtiğiniz konuma bağlı olarak değiş
 - Belge özelliği şudur:
 - Dosya uzantısı
 
-##### <a name="conditions-teams-chat-and-channel-messages-supports"></a>Sohbet ve kanal iletilerinin desteklediği koşullar Teams
+##### <a name="conditions-teams-chat-and-channel-messages-supports"></a>Teams sohbet ve kanal iletilerinin desteklediği koşullar
 
 - İçerik içeriği
-- İçerik Microsoft 365
+- İçerik Microsoft 365'ten paylaşılır
 - Gönderen 
 - Gönderen etki alanı 
 - Alıcı etki alanı 
@@ -316,7 +314,7 @@ Kullanılabilir bağlam seçenekleri, seçtiğiniz konuma bağlı olarak değiş
 ##### <a name="conditions-microsoft-defender-for-cloud-apps-supports"></a>Microsoft Defender for Cloud Apps desteklediği koşullar
 
 - İçerik içeriği
-- İçerik Microsoft 365
+- İçerik Microsoft 365'ten paylaşılır
 
 ##### <a name="conditions-on-premises-repositories-supports"></a>Şirket içi depoların desteklediği koşullar
 
@@ -368,21 +366,21 @@ Tüm konumlar kapsayıcı koşulu desteklediği gibi:
 
 ### <a name="actions"></a>Eylem 
 
-Kapsayıcı ***koşullar** _ ve özel _*_durum_*_ filtreleri aracılığıyla bunu yapan tüm öğelere, kuralda tanımlanan _*_tüm eylemler_*_ uygulanır. Eylemi desteklemek için gerekli seçenekleri yapılandırmanız gerekir. Örneğin, _ *Erişimi kısıtla veya Microsoft 365 konumlarındaki içeriği şifrele** eylemiyle Exchange seçerseniz şu seçenekler arasından seçim yapmanız gerekir:
+Kapsayıcı ***koşullar** _ ve özel _*_durum_*_ filtreleri aracılığıyla bunu yapan tüm öğelere, kuralda tanımlanan _*_tüm eylemler_*_ uygulanır. Eylemi desteklemek için gerekli seçenekleri yapılandırmanız gerekir. Örneğin, _ *Erişimi kısıtla veya Microsoft 365 konumlarındaki içeriği şifrele* eylemiyle Exchange'i* seçerseniz şu seçenekler arasından seçim yapmanız gerekir:
 
 - Kullanıcıların paylaşılan SharePoint, OneDrive ve Teams içeriğine erişmesini engelleme
     - Herkesi engelleyin. Yalnızca içerik sahibi, son değiştirici ve site yöneticisinin erişimi devam eder
     - Yalnızca kuruluşunuzun dışındaki kişileri engelleyin. Kuruluşunuz içindeki kullanıcıların erişimi devam eder.
-- E-posta iletilerini şifreleme (yalnızca Exchange içeriği için geçerlidir)
+- E-posta iletilerini şifreleme (yalnızca Exchange'deki içerik için geçerlidir)
 
 Bir kuralda kullanılabilen eylemler, seçilen konumlara bağlıdır. İlkenin uygulanacağı tek bir konum seçerseniz, kullanılabilir eylemler aşağıda listelenmiştir.
 
 > [!IMPORTANT]
-> SharePoint Çevrimiçi ve OneDrive İş konumları için, belgenin tüm dış kullanıcılar için paylaşılıp paylaşılmadığına bakılmaksızın, hassas bilgiler algılandığında belgeler proaktif olarak engellenir ve iç kullanıcılar belgeye erişmeye devam eder.
+> SharePoint Online ve OneDrive İş konumları için belgeler, belgenin tüm dış kullanıcılar için paylaşılıp paylaşılmadığına bakılmaksızın hassas bilgiler algılandığında proaktif olarak engellenir ve iç kullanıcılar belgeye erişmeye devam eder.
 
-#### <a name="exchange-location-actions"></a>konum eylemlerini Exchange
+#### <a name="exchange-location-actions"></a>Exchange konumu eylemleri
 
-- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
+- Microsoft 365 konumlarındaki içeriğe erişimi kısıtlama veya içeriği şifreleme
 - Üst bilgileri ayarlama
 - Üst bilgiyi kaldır
 - İletiyi belirli kullanıcılara yeniden yönlendirme
@@ -397,27 +395,27 @@ Bir kuralda kullanılabilen eylemler, seçilen konumlara bağlıdır. İlkenin u
 - E-posta Konusunu Değiştir
 - HTML Bildirimi Ekle
 
-#### <a name="sharepoint-sites-location-actions"></a>Sitelerin konum eylemlerini SharePoint
+#### <a name="sharepoint-sites-location-actions"></a>SharePoint siteleri konum eylemleri
 
-- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
+- Microsoft 365 konumlarındaki içeriğe erişimi kısıtlama veya içeriği şifreleme
 
-#### <a name="onedrive-account-location-actions"></a>hesap konumu eylemlerini OneDrive
+#### <a name="onedrive-account-location-actions"></a>OneDrive hesap konumu eylemleri
 
-- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
+- Microsoft 365 konumlarındaki içeriğe erişimi kısıtlama veya içeriği şifreleme
 
-#### <a name="teams-chat-and-channel-messages-actions"></a>Sohbet ve Kanal İletileri eylemlerini Teams
+#### <a name="teams-chat-and-channel-messages-actions"></a>Teams Sohbet ve Kanal İletileri eylemleri
 
-- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
+- Microsoft 365 konumlarındaki içeriğe erişimi kısıtlama veya içeriği şifreleme
 
 #### <a name="devices-actions"></a>Cihaz eylemleri
 
-- Windows cihazlarda etkinlikleri denetleme veya kısıtlama
+- Windows cihazlarında etkinlikleri denetleme veya kısıtlama
 
 Bu ayarları kullanmak için **, DLP ayarlarında** ve bunları kullanmak istediğiniz ilkede seçenekleri yapılandırmanız gerekir. Daha fazla bilgi için bkz [. Kısıtlı uygulamalar ve uygulama grupları](dlp-configure-endpoint-settings.md#restricted-apps-and-app-groups) .
 
 Cihazların konumu birçok alt etkinlik (koşul) ve eylem sağlar. Daha fazla bilgi edinmek için bkz [. İzleyebileceğiniz ve üzerinde işlem yapabileceğiniz uç nokta etkinlikleri](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on).
 
-**Windows cihazlardaki etkinlikleri denetle veya kısıtla'yı** seçtiğinizde, kullanıcı etkinliklerini hizmet etki alanına veya tarayıcıya göre kısıtlayabilir ve DLP'nin gerçekleştirdiği eylemlerin kapsamını belirleyebilirsiniz:
+**Windows cihazlarında etkinlikleri denetle veya kısıtla'yı** seçtiğinizde, kullanıcı etkinliklerini hizmet etki alanına veya tarayıcıya göre kısıtlayabilir ve DLP'nin gerçekleştirilir eylemlerin kapsamını belirleyebilirsiniz:
 
 - Tüm uygulamalar
 - Tanımladığınız kısıtlı uygulamaların listesine göre
@@ -457,7 +455,7 @@ Daha fazla bilgi için bkz [. Kısıtlı uygulamalar ve uygulama grupları](dlp-
 
 #### <a name="microsoft-defender-for-cloud-apps-actions"></a>eylemleri Microsoft Defender for Cloud Apps
 
-- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
+- Microsoft 365 konumlarındaki içeriğe erişimi kısıtlama veya içeriği şifreleme
 - Üçüncü Taraf Uygulamalarını Kısıtlama
 
 #### <a name="on-premises-repositories-actions"></a>Şirket içi depo eylemleri
@@ -471,9 +469,9 @@ Daha fazla bilgi için bkz [. Kısıtlı uygulamalar ve uygulama grupları](dlp-
 
 #### <a name="actions-available-when-you-combine-locations"></a>Konumları birleştirdiğinizde kullanılabilen eylemler
 
-İlkenin uygulanacağı Exchange ve başka bir tek konumu seçerseniz,
+İlkenin uygulanacağı Exchange'i ve başka bir tek konumu seçerseniz,
 
-- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
+- Microsoft 365 konumlarındaki içeriğe erişimi kısıtlama veya içeriği şifreleme
 
 ve
 
@@ -481,9 +479,9 @@ ve
 
 eylemler kullanılabilir olacaktır.
 
-İlkenin uygulanacağı iki veya daha fazla Exchange olmayan konum seçerseniz,
+İlkenin uygulanacağı iki veya daha fazla Exchange dışı konum seçerseniz,
 
-- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
+- Microsoft 365 konumlarındaki içeriğe erişimi kısıtlama veya içeriği şifreleme
 
 VE
 
@@ -491,15 +489,15 @@ VE
 
 eylemler kullanılabilir olacaktır.
 
-Örneğin, konum olarak Exchange ve Cihazlar'ı seçerseniz şu eylemler kullanılabilir:
+Örneğin, Konum olarak Exchange ve Cihazlar'ı seçerseniz şu eylemler kullanılabilir:
 
-- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
-- Windows cihazlarda etkinlikleri denetleme veya kısıtlama
+- Microsoft 365 konumlarındaki içeriğe erişimi kısıtlama veya içeriği şifreleme
+- Windows cihazlarında etkinlikleri denetleme veya kısıtlama
 
 Cihazlar'ı ve Microsoft Defender for Cloud Apps seçerseniz şu eylemler kullanılabilir:
 
-- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
-- Windows cihazlarda etkinlikleri denetleme veya kısıtlama
+- Microsoft 365 konumlarındaki içeriğe erişimi kısıtlama veya içeriği şifreleme
+- Windows cihazlarında etkinlikleri denetleme veya kısıtlama
 - Üçüncü Taraf Uygulamalarını Kısıtlama
 
 Bir eylemin etkili olup olmayacağı, ilke modunu nasıl yapılandırdığınıza bağlıdır. **İlk** olarak test et seçeneğini belirleyerek ilke ipucunu göstererek veya göstermeden ilkeyi test modunda çalıştırmayı seçebilirsiniz. İlkeyi oluşturulduktan bir saat sonra hemen **aç seçeneğini** belirleyerek çalıştırmayı seçebilir veya yalnızca kaydetmeyi ve daha sonra geri dönmek için **Kapalı tut** seçeneğini belirleyebilirsiniz. 
@@ -529,6 +527,24 @@ Kullanıcı, bir kuralın koşullarını ve özel durumlarını karşılayan bir
 > - Bildirim e-postaları korumasız gönderilir.
 > - E-posta bildirimleri yalnızca Microsoft 365 hizmetleri için desteklenir.
 
+#### <a name="email-notifications-support-by-selected-location"></a>Seçili konuma göre e-posta bildirimleri desteği
+
+|Seçili konum  |Desteklenen e-posta bildirimleri  |
+|---------|---------|
+|Aygıtları     |- Desteklenmez         |
+|Exchange + Cihazlar     |- Exchange için desteklenir </br>- Cihazlar için desteklenmez  |
+|Exchange    |- Desteklenir        |
+|SharePoint + Cihazlar  |- SharePoint için desteklenir </br>- Cihazlar için desteklenmez         |
+|SharePoint    |- Desteklenir |
+|Exchange + SharePoint    |- Exchange için desteklenir </br>- SharePoint için desteklenir  |
+|Cihazlar + SharePoint + Exchange    |- Cihazlar için desteklenmez </br>- SharePoint için desteklenir </br> Exchange için desteklenir |
+|Teams    |- Desteklenmez |
+|OneDrive İş   |- Desteklenir         |
+|OneDrive İş + Cihazlar     |- OneDrive İş için desteklenir </br>- Cihazlar için desteklenmez         |
+|Power-BI|- Desteklenmez|
+|Bulut Uygulamaları için Microsoft Defender|- Desteklenmez|
+|Şirket içi depolar|- Desteklenmez|
+
 Ayrıca kişilere [ilkeyi geçersiz kılma](#user-overrides) seçeneği de verebilirsiniz; böylece geçerli bir iş ihtiyaçları varsa veya ilke yanlış pozitif algılarsa engellenmez.
 
 Kullanıcı bildirimleri ve ilke ipuçları yapılandırma seçenekleri, seçtiğiniz izleme konumlarına bağlı olarak değişir. Şunu seçtiyseniz:
@@ -536,8 +552,11 @@ Kullanıcı bildirimleri ve ilke ipuçları yapılandırma seçenekleri, seçti�
 - Exchange
 - SharePoint
 - OneDrive
-- sohbeti ve kanalı Teams
+- Teams Sohbeti ve Kanalı
 - Bulut Uygulamaları için Defender
+
+
+
 
 
 Çeşitli Microsoft uygulamaları için kullanıcı bildirimlerini etkinleştirebilir/devre dışı bırakabilirsiniz, bkz. [Veri Kaybı Önleme ilkesi ipuçları başvurusu](dlp-policy-tips-reference.md#data-loss-prevention-policy-tips-reference)
@@ -548,9 +567,9 @@ Kullanıcı bildirimleri ve ilke ipuçları yapılandırma seçenekleri, seçti�
 
 ve e-posta metnini, konusunu ve ilke ipucu metnini özelleştirin.
 
-![Exchange, SharePoint, OneDrive, Teams Sohbet ve Kanal ile Bulut için Defender Uygulamaları için kullanılabilen kullanıcı bildirimi ve ilke ipucu yapılandırma seçenekleri](../media/dlp-user-notification-non-devices.png)
+![Exchange, SharePoint, OneDrive, Teams Sohbet ve Kanal ile Cloud Apps için Defender için kullanılabilen kullanıcı bildirimi ve ilke ipucu yapılandırma seçenekleri](../media/dlp-user-notification-non-devices.png)
 
-Yalnızca Cihazlar'ı seçtiyseniz sohbet ve kanal Teams Exchange, SharePoint, OneDrive, Teams uygulamaları ve Bulut için Defender uygulamaları için sağlanan tüm seçeneklerin yanı sıra Windows 10 görüntülenen bildirim başlığını ve içeriğini özelleştirme seçeneğine sahip olursunuz Aygıt.
+Yalnızca cihazlar'ı seçtiyseniz Exchange, SharePoint, OneDrive, Teams Sohbet ve Kanal ile Cloud Apps için Defender'da kullanılabilen tüm seçeneklerin yanı sıra Windows 10 cihazda görünen bildirim başlığını ve içeriği özelleştirme seçeneğini de alırsınız.
 
 ![Cihazlar için kullanılabilen kullanıcı bildirimi ve ilke ipucu yapılandırma seçenekleri](../media/dlp-user-notification-devices.png)  
 
@@ -572,7 +591,7 @@ Bu parametreleri kullanarak metnin başlığını ve gövdesini özelleştirebil
 |ağ paylaşımına kopyalama     |*ağ paylaşımına yazma*         |
 |Yazdırma     |*Baskı*         |
 |panodan yapıştırma  |*panodan yapıştırma*         |
-|bluetooth üzerinden kopyalama   |*Bluetooth aracılığıyla aktarma*         |
+|bluetooth üzerinden kopyalama   |*Bluetooth üzerinden aktarma*         |
 |izin verilmeyen bir uygulamayla açma     |*bu uygulamayla açma*         |
 |uzak masaüstüne kopyalama (RDP)     |*uzak masaüstüne aktarma*         |
 |izin verilmeyen bir web sitesine yükleme     |*bu siteye yükleniyor*         |
@@ -618,9 +637,22 @@ Here's what a policy tip looks like in a OneDrive for Business account.
 > The default behavior of a DLP policy, when there is no alert configured, is not to alert or trigger. This applies only to default information types. For custom information types, the system will alert even if there is no action defined in the policy.
 -->
 
+#### <a name="blocking-and-notifications-in-sharepoint-online-and-onedrive-for-business"></a>SharePoint Online ve OneDrive İş'da engelleme ve bildirimler
+
+Bu tabloda, Kapsamı SharePoint Online ve OneDrive İş olan ilkeler için DLP engelleme ve bildirim davranışı gösterilir.
+
+|Koşul -ları  |Eylemler yapılandırması |Kullanıcı Bildirimi yapılandırması|Olay Raporları yapılandırması |Engelleme ve Bildirim davranışı|
+|---------|---------|---------|---------|---------|
+|- **İçerik Microsoft 365'ten paylaşılır** </br>- **kuruluşum dışındaki kişilerle**     |Hiçbir eylem yapılandırılmadı         |- **Kullanıcı bildirimleri** **Açık** olarak ayarlandı </br>- **İlke ipucu seçiliyken Office 365 hizmetindeki kullanıcılara bildirme** </br>- **İçeriği gönderen, paylaşan veya en son değiştiren kullanıcıyı bilgilendirin**         |- **Kural eşleşmesi açık olarak ayarlandığında yöneticilere uyarı gönderme**  </br>- **Bir etkinlik, açık olarak ayarlanan kuralla her eşleştiğinde uyarı gönder**  </br>- **İlke eşleşmesi Açık olarak ayarlandığında sizi bilgilendirmek için e-posta olay raporlarını kullanın**          |- Bildirimler yalnızca bir dosya bir dış kullanıcıyla paylaşıldığında ve bir dış kullanıcı dosyaya eriştiğinde gönderilir.  |
+|- **İçerik Microsoft 365'ten paylaşılır** </br>- **yalnızca kuruluşumdaki kişilerle**        | Hiçbir eylem yapılandırılmadı         |-  **Kullanıcı bildirimleri** **Açık** olarak ayarlandı   </br>- **İlke ipucu seçiliyken Office 365 hizmetindeki kullanıcılara bildirme**  </br>- **İçeriği gönderen, paylaşan veya en son değiştiren kullanıcıyı bilgilendirin**    |  - **Kural eşleşmesi açık olarak ayarlandığında yöneticilere uyarı gönderme**  </br>- **Bir etkinlik kuralla her eşleştiğinde uyarı gönder** seçili durumda </br>- **İlke eşleşmesi Açık olarak ayarlandığında sizi bilgilendirmek için e-posta olay raporlarını kullanın**        |- Bir dosya karşıya yüklendiğinde bildirimler gönderilir |
+|- **İçerik Microsoft 365'ten paylaşılır** </br>- **kuruluşum dışındaki kişilerle**    | - **Microsoft 365 konumlarındaki içeriği kısıtlama veya içeriği şifreleme** seçili </br>- **Kullanıcıların e-posta almasını veya paylaşılan SharePoint, OndeDrive ve Teams dosyalarına erişmesini engelle** seçili </br>- **Yalnızca kuruluşunuz dışındaki kişilerin seçilmesini engelle**          |- **Kullanıcı bildirimleri** **Açık** olarak ayarlandı </br>- **İlke ipucu seçiliyken Office 365 hizmetindeki kullanıcılara bildirme** </br>- **İçeriği gönderen, paylaşan veya en son değiştiren kullanıcıyı bilgilendirin**  |  - **Kural eşleşmesi açık olarak ayarlandığında yöneticilere uyarı gönderme**  </br>- **Bir etkinlik kuralla her eşleştiğinde uyarı gönder** seçili durumda </br>- **İlke eşleşmesi Açık olarak ayarlandığında sizi bilgilendirmek için e-posta olay raporlarını kullanın**              | - Karşıya yüklenir yüklenmez hassas bir dosyaya erişim engellenir </br>- İçerik Microsoft 365'ten kuruluşum dışındaki kişilerle paylaşıldığında gönderilen bildirimler         |
+|- **İçerik Microsoft 365'ten paylaşılır** </br>- **kuruluşum dışındaki kişilerle** |  - **Microsoft 365 konumlarındaki içeriği kısıtlama veya içeriği şifreleme** seçili </br>- **Kullanıcıların e-posta almasını veya paylaşılan SharePoint, OndeDrive ve Teams dosyalarına erişmesini engelle** seçili </br>- **Herkesin** seçilmesini engelle        | - **Kullanıcı bildirimleri** **Açık** olarak ayarlandı </br>- **İlke ipucu seçiliyken Office 365 hizmetindeki kullanıcılara bildirme** </br>- **İçeriği gönderen, paylaşan veya en son değiştiren kullanıcıyı bilgilendirin**         | - **Kural eşleşmesi açık olarak ayarlandığında yöneticilere uyarı gönderme**  </br>- **Bir etkinlik kuralla her eşleştiğinde uyarı gönder** seçili durumda </br>- **İlke eşleşmesi Açık olarak ayarlandığında sizi bilgilendirmek için e-posta olay raporlarını kullanın**         |Bir dosya bir dış kullanıcıyla paylaşıldığında ve bir dış kullanıcı bu dosyaya eriştiğinde bildirimler gönderilir.         |
+|- **İçerik Microsoft 365'ten paylaşılır** </br>- **kuruluşum dışındaki kişilerle**     |- **Microsoft 365 konumlarındaki içeriği kısıtlama veya içeriği şifreleme** seçili </br>- **Yalnızca "Bağlantıya sahip herkes" seçeneğiyle içeriğe erişim izni verilen kişileri engelle** seçeneği belirlenir.         |  - **Kullanıcı bildirimleri** **Açık** olarak ayarlandı </br>- **Office 365 hizmetindeki kullanıcılara bir ilke ipucu** seçildiğini bildirin.  </br>- **İçeriği gönderen, paylaşan veya en son değiştiren kullanıcıyı bilgilendirin**     |- **Kural eşleşmesi açık olarak ayarlandığında yöneticilere uyarı gönderme**    </br>- **Bir etkinlik kuralla her eşleştiğinde uyarı gönder** seçili durumda </br>- **İlke eşleşmesi Açık olarak ayarlandığında sizi bilgilendirmek için e-posta olay raporlarını kullanın**        |Bir dosya karşıya yüklenir yüklenmez bildirimler gönderilir         |
+
+
 ### <a name="user-overrides"></a>Kullanıcı geçersiz kılmaları
 
-**Kullanıcı geçersiz kılmalarının** amacı, DLP ilkesinin çalışmalarına devam edebilmeleri için kullanıcılara Exchange, SharePoint, OneDrive veya Teams hassas öğeler üzerinde eylemleri engelleme gerekçeleriyle atlamaları için bir yol vermektir. Kullanıcı geçersiz kılmaları yalnızca **Office 365 hizmetlerindeki kullanıcılara bir ilke ipucuyla bildir** seçeneği etkinleştirildiğinde etkinleştirilir, bu nedenle kullanıcı geçersiz kılmaları Bildirimler ve İlke ipuçlarıyla el ele gider. 
+**Kullanıcı geçersiz kılmalarının** amacı, kullanıcılara, çalışmalarına devam edebilmeleri için Exchange, SharePoint, OneDrive veya Teams'deki hassas öğeler üzerinde eylemleri engelleyen gerekçeyle, DLP ilkesini atlayacak bir yol sunmaktır. Kullanıcı geçersiz kılmaları yalnızca **Office 365 hizmetlerindeki kullanıcılara bir ilke ipucuyla bildir** seçeneği etkinleştirildiğinde etkinleştirilir, bu nedenle kullanıcı geçersiz kılmaları Bildirimler ve İlke ipuçlarıyla el ele gider. 
 
 ![DLP ilkesi için kullanıcı geçersiz kılma seçenekleri](../media/dlp-user-overrides.png)
 
@@ -657,7 +689,7 @@ Bir etkinlik bir kuralla her eşleştiğinde uyarılar gönderilebilir. Bu uyar�
 
 ![bir kural her eşleştiğinde veya zaman içinde daha az rapora toplendiğinde uyarı gönderme](../media/dlp-incident-reports-aggregation.png)
 
-DLP, e-postayı Çevrimiçi veya OneDrive İş öğeler SharePoint farklı tarar. SharePoint Online ve OneDrive İş'da DLP, mevcut öğelerin yanı sıra yeni öğeleri de tarar ve bir eşleşme bulunduğunda bir olay raporu oluşturur. Exchange Online'da DLP yalnızca yeni e-posta iletilerini tarar ve ilke eşleşmesi varsa bir rapor oluşturur. DLP, posta kutusunda veya arşivde depolanan önceden var olan e-posta öğelerini ***taramaz veya eşleştirmez*** .
+DLP, e-postayı SharePoint Online'dan veya OneDrive İş öğeden farklı tarar. SharePoint Online'da ve OneDrive İş, DLP hem mevcut öğeleri hem de yeni öğeleri tarar ve bir eşleşme bulunduğunda bir olay raporu oluşturur. Exchange Online'da DLP yalnızca yeni e-posta iletilerini tarar ve ilke eşleşmesi varsa bir rapor oluşturur. DLP, posta kutusunda veya arşivde depolanan önceden var olan e-posta öğelerini ***taramaz veya eşleştirmez*** .
 
 ### <a name="additional-options"></a>Ek seçenekler
 

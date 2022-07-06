@@ -9,33 +9,31 @@ ms.service: O365-seccomp
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
-description: Microsoft Purview uyumluluk portalı hakkında, içeriği, nasıl edinebileceğiniz ve sonraki adımlarınız da dahil olmak üzere bilgi edinin.
+description: ne içerdiği, nasıl edinebileceğiniz ve sonraki adımlarınız dahil olmak üzere Microsoft Purview uyumluluk portalı hakkında bilgi edinin.
 ms.collection: M365-security-compliance
 ms.custom:
 - admindeeplinkCOMPLIANCE
 - intro-overview
-ms.openlocfilehash: 504c5426ccbf2322cc7803fda1b5f396a5cf935c
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 45bca9fa0cfe3867d97065be3cb84440dc6bc014
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64970791"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66642492"
 ---
 # <a name="microsoft-purview-compliance-portal"></a>Microsoft Purview uyumluluk portalı
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Kuruluşunuzun uyumluluk duruşuyla ilgileniyorsanız <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalına</a> bayılacaksınız. Microsoft Purview uyumluluk portalı, kuruluşunuzun uyumluluk gereksinimlerine yönetmek için ihtiyacınız olan verilere ve araçlara kolay erişim sağlar.
+Kuruluşunuzun uyumluluk duruşuyla ilgileniyorsanız<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">, Microsoft Purview uyumluluk portalı</a> seveceksiniz. Microsoft Purview uyumluluk portalı, kuruluşunuzun uyumluluk gereksinimlerine yönetmek için ihtiyacınız olan verilere ve araçlara kolay erişim sağlar.
 
 Uyumluluk portalı, [nasıl erişilir](#how-do-i-access-the-compliance-portal) ve [sonraki adımlarınız](#next-steps) hakkında bilgi edinmek için bu makaleyi okuyun.
 
-[![Microsoft Purview uyumluluk portalı giriş sayfası.](../media/m365-compliance-center-home.png)](https://compliance.microsoft.com)
+[![giriş sayfasını Microsoft Purview uyumluluk portalı.](../media/m365-compliance-center-home.png)](https://compliance.microsoft.com)
 
 ## <a name="welcome-to-microsoft-purview"></a>Microsoft Purview'a hoş geldiniz
 
 Uyumluluk portalına ilk kez gittiğiniz zaman aşağıdaki karşılama iletisiyle karşılaşırsınız:
 
-![Microsoft Purview uyumluluk portalı tanıtımı.](../media/m365-compliance-center-welcome-steps.png)
+![Microsoft Purview uyumluluk portalı giriş.](../media/m365-compliance-center-welcome-steps.png)
 
 Hoş geldiniz başlığı, sonraki adımlarla birlikte nasıl kullanmaya başlandığını gösteren bazı işaretçiler ve bize geri bildirim göndermeniz için bir davet sunar.
 
@@ -55,9 +53,9 @@ Buradan şunları yapabilirsiniz:
 
 - **En etkin uyarıların** özetini içeren ve Önem Derecesi, Durum, Kategori gibi daha ayrıntılı bilgileri görüntüleyebileceğiniz bir bağlantı içeren Etkin [uyarılar](alert-policies.md) kartını gözden geçirin.
 
-    ![Etkin uyarılar kartı Microsoft Purview uyumluluk portalı.](../media/m365-compliance-center-active-alerts-card.png)
+    ![Etkin uyarı kartı Microsoft Purview uyumluluk portalı.](../media/m365-compliance-center-active-alerts-card.png)
 
-Kart **ekle** özelliğini ayrıca kuruluşunuzun bulut uygulaması uyumluluğunu gösteren kart ve paylaşılan dosyaları olan kullanıcılar hakkında verileri gösteren başka bir kart eklemek için [Bulut için Defender Uygulamaları'na](/cloud-app-security/) veya verileri keşfedebileceğiniz diğer araçlara bağlantılar da ekleyebilirsiniz.
+Ayrıca **Kart ekle** özelliğini kullanarak kuruluşunuzun bulut uygulaması uyumluluğunu gösteren kart ve paylaşılan dosyaları olan kullanıcılarla ilgili verileri gösteren başka bir kart ve [Bulut için Defender Uygulamaları'na](/cloud-app-security/) veya verileri keşfedebileceğiniz diğer araçlara bağlantılar da ekleyebilirsiniz.
 
 ![Ek uyumluluk merkezi kartı ayrıntıları.](../media/m365-compliance-center-additional-cards.png)
 
@@ -71,7 +69,7 @@ Giriş sayfasındaki kartlardaki bağlantılara ek olarak, ekranın sol tarafın
 
 |Gezinti|Açıklamalar|
 |---|---|
-|![Microsoft Purview uyumluluk portalında gezinti.](../media/m365-compliance-center-leftnav.png)|Uyumluluk portalı ana sayfasına dönmek için **Giriş'i** seçin. <p> Uyumluluk puanınızı denetlemek ve kuruluşunuz için [uyumluluğu yönetmeye](compliance-manager.md) başlamak için **Uyumluluk Yöneticisi'ni** ziyaret edin. <p> [Eğitilebilir sınıflandırıcılara](classifier-learn-about.md), [Hassas bilgi türü varlık tanımlarına](sensitive-information-type-entity-definitions.md), içeriğe ve [etkinlik](data-classification-activity-explorer.md) gezginlerine erişmek için **Veri sınıflandırması** bölümünü seçin. <p> Bağlayıcıları Microsoft 365 aboneliğinizdeki verileri içeri aktaracak ve arşivecek şekilde yapılandırmak için **Veri** [bağlayıcıları'nı](archiving-third-party-data.md) seçin. <p> **Uyarıları** görüntülemek ve çözümlemek için [Uyarılar'a](alert-policies.md) gidin <p>[Etiket kullanımı ve saklama](sensitivity-labels.md), [DLP ilkesi eşleşmeleri ve geçersiz kılmaları](view-the-dlp-reports.md), [paylaşılan dosyalar](/cloud-app-security/file-filters), [kullanımda olan üçüncü taraf uygulamalar](/cloud-app-security/discovered-apps) ve daha fazlası hakkındaki verileri görüntülemek için **Raporlar** sayfasını ziyaret edin. <p> Verileri **idare etmek,** cihazları yönetmek ve uyarı almak için İlkeler'e gidin [](../security/office-365-security/alerts.md). [DLP](dlp-learn-about-dlp.md) ve [bekletme](retention.md) ilkelerinize de erişebilirsiniz. <p> İçeriği görüntülemek ve görevleri tamamlamak için kuruluşunuzda kimlerin uyumluluk portalına erişimi olduğunu yönetmek için **İzinler'i** seçin. <p> Kuruluşunuzun uyumluluk çözümlerine erişmek için **Çözümler** bölümündeki bağlantıları kullanın. Şunlar dahildir: <p> [Katalog](microsoft-365-solution-catalog.md) <br> Kuruluşunuzda kullanılabilen akıllı uyumluluk ve risk yönetimi çözümlerini keşfedin, öğrenin ve kullanmaya başlayın. <p> [Denetim](search-the-audit-log-in-security-and-compliance.md) <br> Yaygın destek ve uyumluluk sorunlarını araştırmak için Denetim günlüğünü kullanın. <p> [İçerik arama](search-for-content.md) <br> Exchange posta kutularında e-postayı, SharePoint sitelerdeki ve OneDrive konumlardaki belgeleri ve Microsoft Teams ve Skype Kurumsal anlık ileti konuşmalarını hızla bulmak için İçerik arama özelliğini kullanın. <p> [İletişim uyumluluğu](communication-compliance.md) <br> Uygunsuz iletileri otomatik olarak yakalayarak, olası ilke ihlallerini araştırarak ve düzeltme adımları uygulayarak iletişim risklerini en aza indirin. <p> [Microsoft Purview Veri Kaybı Önleme hakkında bilgi edinin](dlp-learn-about-dlp.md) <br> Kuruluşunuzda, bulutta ve cihazlarda kullanılan ve paylaşılan hassas içeriği algılayın ve yanlışlıkla veri kaybını önlemeye yardımcı olur. <p> [Veri sahibi istekleri](/compliance/regulatory/gdpr-manage-gdpr-data-subject-requests-with-the-dsr-case-tool) <br> Genel Veri Koruma Yönetmeliği (GDPR) için veri sahibi isteklerine yanıt vermenize yardımcı olmak için kullanıcının kişisel verilerini bulun ve dışarı aktarın. <p> [Ediscovery](overview-ediscovery-20.md) <br> Kuruluşunuzun iç ve dış araştırmalarına yanıt veren içeriği korumak, toplamak, gözden geçirmek, analiz etmek ve dışarı aktarmak için çekirdek ve eBulma 'yı (Premium) kullanmak için bu bölümü genişletin. <p> [Veri yaşam döngüsü yönetimi](manage-data-governance.md) <br> İhtiyaç duyduklarınızı koruyabilmeniz ve silmeniz için iş açısından kritik verileri içeri aktarmak, depolamak ve sınıflandırmak için özellikleri kullanarak hassas verilerin yaşam döngüsünü yönetin. <p> [Bilgi koruması](information-protection.md) <br> Kuruluşunuz genelindeki yaşam döngüsü boyunca hassas ve iş açısından kritik verileri keşfedin, sınıflandırın ve koruyun. <p> [İçeriden risk yönetimi](insider-risk-management.md) <br> Şirket içindeki riskleri ve tehditleri hızla belirlemenize, araştırmanıza ve harekete geçmenize yardımcı olmak için kuruluşunuz genelindeki riskli etkinlikleri algılayın. <p> [Kayıt yönetimi](records-management.md) <br> İşletme, yasal veya mevzuat kaydı tutma gereksinimleri için yüksek değerli öğelerin elde tutulmasını ve silinmesini yönetin.|
+|![Microsoft Purview uyumluluk portalı gezinti.](../media/m365-compliance-center-leftnav.png)|Uyumluluk portalı ana sayfasına dönmek için **Giriş'i** seçin. <p> Uyumluluk puanınızı denetlemek ve kuruluşunuz için [uyumluluğu yönetmeye](compliance-manager.md) başlamak için **Uyumluluk Yöneticisi'ni** ziyaret edin. <p> [Eğitilebilir sınıflandırıcılara](classifier-learn-about.md), [Hassas bilgi türü varlık tanımlarına](sensitive-information-type-entity-definitions.md), içeriğe ve [etkinlik](data-classification-activity-explorer.md) gezginlerine erişmek için **Veri sınıflandırması** bölümünü seçin. <p> Bağlayıcıları Microsoft 365 aboneliğinizdeki verileri içeri aktaracak ve [arşivleecek şekilde yapılandırmak](archiving-third-party-data.md) için **Veri bağlayıcıları'nı** seçin. <p> **Uyarıları** görüntülemek ve çözümlemek için [Uyarılar'a](alert-policies.md) gidin <p>[Etiket kullanımı ve saklama](sensitivity-labels.md), [DLP ilkesi eşleşmeleri ve geçersiz kılmaları](view-the-dlp-reports.md), [paylaşılan dosyalar](/cloud-app-security/file-filters), [kullanımda olan üçüncü taraf uygulamalar](/cloud-app-security/discovered-apps) ve daha fazlası hakkındaki verileri görüntülemek için **Raporlar** sayfasını ziyaret edin. <p> Verileri **idare etmek,** cihazları yönetmek ve uyarı almak için İlkeler'e gidin [](../security/office-365-security/alerts.md). [DLP](dlp-learn-about-dlp.md) ve [bekletme](retention.md) ilkelerinize de erişebilirsiniz. <p> İçeriği görüntülemek ve görevleri tamamlamak için kuruluşunuzda kimlerin uyumluluk portalına erişimi olduğunu yönetmek için **İzinler'i** seçin. <p> Kuruluşunuzun uyumluluk çözümlerine erişmek için **Çözümler** bölümündeki bağlantıları kullanın. Şunlar dahildir: <p> [Katalog](microsoft-365-solution-catalog.md) <br> Kuruluşunuzda kullanılabilen akıllı uyumluluk ve risk yönetimi çözümlerini keşfedin, öğrenin ve kullanmaya başlayın. <p> [Denetim](search-the-audit-log-in-security-and-compliance.md) <br> Yaygın destek ve uyumluluk sorunlarını araştırmak için Denetim günlüğünü kullanın. <p> [İçerik arama](search-for-content.md) <br> Exchange posta kutularında e-postaları, SharePoint sitelerindeki ve OneDrive konumlarındaki belgeleri ve Microsoft Teams ile Skype Kurumsal'da anlık ileti konuşmalarını hızla bulmak için İçerik arama özelliğini kullanın. <p> [İletişim uyumluluğu](communication-compliance.md) <br> Uygunsuz iletileri otomatik olarak yakalayarak, olası ilke ihlallerini araştırarak ve düzeltme adımları uygulayarak iletişim risklerini en aza indirin. <p> [Microsoft Purview Veri Kaybı Önleme hakkında bilgi edinin](dlp-learn-about-dlp.md) <br> Kuruluşunuzda, bulutta ve cihazlarda kullanılan ve paylaşılan hassas içeriği algılayın ve yanlışlıkla veri kaybını önlemeye yardımcı olur. <p> [Veri sahibi istekleri](/compliance/regulatory/gdpr-manage-gdpr-data-subject-requests-with-the-dsr-case-tool) <br> Genel Veri Koruma Yönetmeliği (GDPR) için veri sahibi isteklerine yanıt vermenize yardımcı olmak için kullanıcının kişisel verilerini bulun ve dışarı aktarın. <p> [Ediscovery](overview-ediscovery-20.md) <br> Kuruluşunuzun iç ve dış araştırmalarına yanıt veren içeriği korumak, toplamak, gözden geçirmek, analiz etmek ve dışarı aktarmak için çekirdek ve eBulma 'yı (Premium) kullanmak için bu bölümü genişletin. <p> [Veri yaşam döngüsü yönetimi](manage-data-governance.md) <br> İhtiyaç duyduklarınızı koruyabilmeniz ve silmeniz için iş açısından kritik verileri içeri aktarmak, depolamak ve sınıflandırmak için özellikleri kullanarak hassas verilerin yaşam döngüsünü yönetin. <p> [Bilgi koruması](information-protection.md) <br> Kuruluşunuz genelindeki yaşam döngüsü boyunca hassas ve iş açısından kritik verileri keşfedin, sınıflandırın ve koruyun. <p> [İçeriden risk yönetimi](insider-risk-management.md) <br> Şirket içindeki riskleri ve tehditleri hızla belirlemenize, araştırmanıza ve harekete geçmenize yardımcı olmak için kuruluşunuz genelindeki riskli etkinlikleri algılayın. <p> [Kayıt yönetimi](records-management.md) <br> İşletme, yasal veya mevzuat kaydı tutma gereksinimleri için yüksek değerli öğelerin elde tutulmasını ve silinmesini yönetin.|
 |
 
 ## <a name="how-do-i-access-the-compliance-portal"></a>Uyumluluk portalına erişmek Nasıl yaparım??
@@ -86,7 +84,7 @@ Uyumluluk portalına erişmek için genel yönetici, uyumluluk yöneticisi veya 
 
 - **Kuruluşunuzun veri kaybı önleme ilkelerini gözden geçirin** ve gerekli değişiklikleri yapın. Hakkında daha fazla bilgi edinmek için bkz. [Veri kaybını önleme hakkında bilgi edinin](dlp-learn-about-dlp.md).
 
-- **Microsoft Defender for Cloud Apps tanıyıp ayarlayın**. Bkz[. Hızlı Başlangıç: Microsoft Defender for Cloud Apps ile Kullanmaya başlayın](/cloud-app-security/getting-started-with-cloud-app-security).
+- **Microsoft Defender for Cloud Apps tanıyıp ayarlayın**. Bkz[. Hızlı Başlangıç: Microsoft Defender for Cloud Apps kullanmaya başlama](/cloud-app-security/getting-started-with-cloud-app-security).
 
 - Kurumsal kullanım kuralları **ilke ihlallerini hızla belirlemek ve düzeltmek için iletişim uyumluluk ilkeleri hakkında bilgi edinin ve oluşturun**. Bkz. [İletişim uyumluluğu hakkında bilgi edinin](communication-compliance.md).
 

@@ -1,5 +1,5 @@
 ---
-title: eBulmada tahmine dayalı kodlama (Premium) - Hızlı başlangıç
+title: eBulma'da tahmine dayalı kodlama (Premium) - Hızlı başlangıç
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -13,19 +13,17 @@ ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: M365-security-compliance
-description: eBulma (Premium) içinde tahmine dayalı kodlama modülünü kullanmaya başlamayı öğrenin. Bu makale, araştırmanıza en uygun bir inceleme kümesindeki içeriği tanımlamak için tahmine dayalı kodlamayı kullanma işleminde size yol gösterir.
-ms.openlocfilehash: ac8e31540fbe817b83b5fd0bdae2fadea7040b1a
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: eKeşif (Premium) içinde tahmine dayalı kodlama modülünü kullanmaya başlamayı öğrenin. Bu makale, araştırmanıza en uygun bir inceleme kümesindeki içeriği tanımlamak için tahmine dayalı kodlamayı kullanma işleminde size yol gösterir.
+ms.openlocfilehash: ddf1762545765424891108f50cceea17999f0920
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100803"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625093"
 ---
 # <a name="quick-start-predictive-coding-in-ediscovery-premium-preview"></a>Hızlı başlangıç: eBulmada tahmine dayalı kodlama (Premium) (önizleme)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Bu makalede, Microsoft Purview eKeşif'te (Premium) tahmine dayalı kodlamayı kullanmak için hızlı bir başlangıç sunun. Tahmine dayalı kodlama modülü, araştırmanızla ilgili olmayan büyük hacimli olay içeriğini iptal etmenize yardımcı olmak için akıllı, makine öğrenmesi özelliklerini kullanır. Bu, gözden geçirme için en ilgili öğeleri önceliklendirmenize yardımcı olan kendi tahmine dayalı kodlama modellerinizi oluşturup eğiterek gerçekleştirilir.
+Bu makalede, Microsoft Purview eKeşif (Premium) içinde tahmine dayalı kodlamayı kullanmaya yönelik hızlı bir başlangıç sunun. Tahmine dayalı kodlama modülü, araştırmanızla ilgili olmayan büyük hacimli olay içeriğini iptal etmenize yardımcı olmak için akıllı, makine öğrenmesi özelliklerini kullanır. Bu, gözden geçirme için en ilgili öğeleri önceliklendirmenize yardımcı olan kendi tahmine dayalı kodlama modellerinizi oluşturup eğiterek gerçekleştirilir.
 
 Tahmine dayalı kodlama işlemine hızlı bir genel bakış aşağıda verilmiştir:
 
@@ -33,15 +31,15 @@ Tahmine dayalı kodlama işlemine hızlı bir genel bakış aşağıda verilmiş
 
 Başlamak için, ilgili veya ilgili olmayan 50 öğeyi etiketleyerek bir model oluşturursunuz. Sistem daha sonra bu eğitimi kullanarak inceleme kümesindeki her öğeye tahmin puanlarını uygular. Bu, öğeleri tahmin puanına göre filtrelemenize olanak tanır ve bu sayede önce en ilgili (veya ilgili olmayan) öğeleri gözden geçirebilirsiniz. Modelleri daha yüksek doğruluk ve geri çağırma oranlarıyla eğitmek istiyorsanız, model sabit olana kadar sonraki eğitim turlarında öğeleri etiketlemeye devam edebilirsiniz. Model kararlı hale getirildikten sonra, gözden geçirecek öğelerin önceliklerini ayarlamak için son tahmin filtresini uygulayabilirsiniz.
 
-Tahmine dayalı kodlamaya ayrıntılı bir genel bakış için bkz. [eBulmada tahmine dayalı kodlama hakkında bilgi edinme (Premium)](predictive-coding-overview.md).
+Tahmine dayalı kodlamaya ayrıntılı bir genel bakış için bkz. [eKeşifte (Premium) tahmine dayalı kodlama hakkında bilgi edinin](predictive-coding-overview.md).
 
 ## <a name="step-1-create-a-new-predictive-coding-model"></a>1. Adım: Yeni bir tahmine dayalı kodlama modeli oluşturma
 
 İlk adım, gözden geçirme kümesinde yeni bir tahmine dayalı kodlama modeli oluşturmaktır
 
-1. Microsoft Purview uyumluluk portalında bir eBulma (Premium) servis talebi açın ve ardından **Kümeleri gözden geçir** sekmesini seçin.
+1. Microsoft Purview uyumluluk portalı bir eBulma (Premium) servis talebi açın ve ardından **Kümeleri gözden geçir** sekmesini seçin.
 
-2. Bir gözden geçirme kümesi açın ve **ardından Analytics** >  **Tahmine dayalı kodlamayı yönet (önizleme)'** ye tıklayın.
+2. Bir gözden geçirme kümesi açın ve ardından **Analiz** > **Tahmine dayalı kodlamayı yönet (önizleme)** seçeneğine tıklayın.
 
    ![Tahmine dayalı kodlama sayfasına gitmek için gözden geçirme kümesindeki Çözümle açılan menüsüne tıklayın.](..\media\ManagePredictiveCoding.png)
 
@@ -59,7 +57,7 @@ Daha ayrıntılı yönergeler için bkz. [Tahmine dayalı kodlama modeli oluştu
 
 Modeli oluşturduktan sonra, sonraki adım öğeleri ilgili veya uygun olmayan olarak etiketleyerek ilk eğitim turunu tamamlamaktır.
 
-1. Gözden geçirme kümesini açın ve ardından **Analytics** >  **Tahmine dayalı kodlamayı yönet (önizleme)** seçeneğine tıklayın.
+1. Gözden geçirme kümesini açın ve analiz **Tahmine dayalı kodlamayı yönet (önizleme)** **seçeneğine** tıklayın > .
 
 2. **Tahmine dayalı kodlama modelleri (önizleme)** sayfasında eğitmek istediğiniz modeli seçin.
 

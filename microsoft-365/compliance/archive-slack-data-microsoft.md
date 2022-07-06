@@ -1,5 +1,5 @@
 ---
-title: Microsoft tarafından sağlanan veri bağlayıcısını kullanarak Slack eKeşif verilerini Microsoft 365 arşivle
+title: Microsoft tarafından sağlanan veri bağlayıcısını kullanarak Slack eKeşif verilerini Microsoft 365'e arşivle
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -12,28 +12,26 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Microsoft tarafından sağlanan Slack eKeşif veri bağlayıcısını ayarlamayı ve kullanarak anlık ileti verilerini içeri aktarmayı ve arşivlemeyi öğrenin.
-ms.openlocfilehash: 65d7b666390c132995882ca4e8d027064482df13
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 138a93449b4b2a9ce7b57b4c240f2e42c553d818
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65320694"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631491"
 ---
 # <a name="set-up-a-connector-to-archive-slack-ediscovery-data-preview"></a>Slack eKeşif verilerini arşivleme (önizleme) için bağlayıcı ayarlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft tarafından sağlanan Slack eKeşif veri bağlayıcısı, kuruluşunuzun Slack çalışma alanlarından Microsoft 365 anlık ileti verilerini (iletiler, ekler, bağlantılar ve düzeltmeler gibi) içeri aktarmanıza ve arşivlenize yardımcı olur. Veri bağlayıcısı Slack API'sinden verileri çeker, e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır. Slack verileri içeri aktarıldıktan sonra, Slack içeriğine Dava tutma, Microsoft Purview eBulma (Premium), İletişim uyumluluğu ve bekletme ayarları gibi uyumluluk çözümleri uygulayabilirsiniz. Microsoft 365'de verileri içeri aktarmak ve arşivlemek için Slack eKeşif veri bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+Microsoft tarafından sağlanan Slack eKeşif veri bağlayıcısı, kuruluşunuzun Slack çalışma alanlarından Microsoft 365'e anlık ileti verilerini (iletiler, ekler, bağlantılar ve düzeltmeler gibi) içeri aktarmanıza ve arşivlenize yardımcı olur. Veri bağlayıcısı Slack API'sinden verileri çeker, e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'teki kullanıcı posta kutularına aktarır. Slack verileri içeri aktarıldıktan sonra, Slack içeriğine Dava tutma, Microsoft Purview eKeşif (Premium), İletişim uyumluluğu ve bekletme ayarları gibi uyumluluk çözümleri uygulayabilirsiniz. Microsoft 365'te verileri içeri aktarmak ve arşivlerken Slack eKeşif veri bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-slack-ediscovery-data"></a>Slack eKeşif verilerini arşivleme işlemine genel bakış
 
-Aşağıdaki genel bakış, Slack verilerini Microsoft 365'da arşivlerken Microsoft veri bağlayıcısı kullanma işlemini açıklar.
+Aşağıdaki genel bakış, Microsoft 365'te Slack verilerini arşivleyemek için Bir Microsoft veri bağlayıcısı kullanma işlemini açıklar.
 
 ![Slack eBulma arşivleme iş akışı.](../media/SlackMSFTConnectorWorkflow.png)
 
 1. Kuruluşunuz Slack çalışma alanını ayarlamak ve yapılandırmak için Slack ile birlikte çalışır.
 
-2. Veri bağlayıcısı ayarlandıktan sonra, kuruluşunuzun Slack çalışma alanlarından gelen iletiler Microsoft 365'daki kullanıcı posta kutularına kopyalanır. Veri bağlayıcısı ayrıca bir sohbet iletisinin içeriğini e-posta iletisi biçimine dönüştürür.
+2. Veri bağlayıcısı ayarlandıktan sonra, kuruluşunuzun Slack çalışma alanlarından gelen iletiler Microsoft 365'teki kullanıcı posta kutularına kopyalanır. Veri bağlayıcısı ayrıca bir sohbet iletisinin içeriğini e-posta iletisi biçimine dönüştürür.
 
 3. Bağlayıcı, dönüştürülen sohbet iletilerini belirli kullanıcıların posta kutularına aktarır. Kullanıcı posta kutularında Gelen Kutusu klasöründe **Slack eKeşif** adlı bir alt klasör oluşturulur ve sohbet iletisi öğeleri bu klasöre aktarılır.
 
@@ -77,7 +75,7 @@ Aşağıdaki genel bakış, Slack verilerini Microsoft 365'da arşivlerken Micro
 
 5. Uygulamanın kuruluşunuzu yönetmesine izin vermek için **İzin Ver'e** tıklayın.
 
-   **İzin Ver'e** tıkladıktan sonra Slack sayfası kapatılır ve Bağlayıcı sihirbazında **Slack eKeşif kullanıcılarını Microsoft 365 kullanıcılarla eşle** sayfası görüntülenir.
+   **İzin Ver'e** tıkladıktan sonra Slack sayfası kapatılır ve bağlayıcı sihirbazındaki **Slack eKeşif kullanıcılarını Microsoft 365 kullanıcıları ile eşle** sayfası görüntülenir.
 
 ## <a name="step-3-specify-the-users-to-import-data-for"></a>3. Adım: Verileri içeri aktaracak kullanıcıları belirtin
 
@@ -91,9 +89,9 @@ Slack eBulma verilerini içeri aktarmak istediğiniz kullanıcıları belirtmek 
 
 1. Slack kullanıcılarını Microsoft 365 posta kutularına eşlemek için aşağıdaki seçeneklerden birini veya her ikisini yapılandırın.
 
-   - **Otomatik kullanıcı eşlemesi**. Slack kullanıcı adlarını Microsoft 365 posta kutularına otomatik olarak eşlemek için bu seçeneği belirleyin. Bağlayıcı, her Slack iletisinin veya öğesinin içerdiği *Email* özelliğinin değerini kullanarak yapar. Bu özellik, iletinin her katılımcısının e-posta adresiyle doldurulur. Bağlayıcı e-posta adreslerini ilgili Microsoft 365 kullanıcılarla ilişkilendirebiliyorsa, öğe bu kullanıcıların Microsoft 365 posta kutusuna aktarılır. Bu seçeneği kullanmak için Slack kuruluşunuz için SSO'nun yapılandırılmış olması gerekir.
+   - **Otomatik kullanıcı eşlemesi**. Slack kullanıcı adlarını Microsoft 365 posta kutularına otomatik olarak eşlemek için bu seçeneği belirleyin. Bağlayıcı, her Slack iletisinin veya öğesinin içerdiği *Email* özelliğinin değerini kullanarak yapar. Bu özellik, iletinin her katılımcısının e-posta adresiyle doldurulur. Bağlayıcı e-posta adreslerini ilgili Microsoft 365 kullanıcılarıyla ilişkilendirebiliyorsa, öğe bu kullanıcıların Microsoft 365 posta kutusuna aktarılır. Bu seçeneği kullanmak için Slack kuruluşunuz için SSO'nun yapılandırılmış olması gerekir.
 
-   - **Özel kullanıcı eşlemesi**. Ayrıca, otomatik kullanıcı eşlemesi yerine (veya buna ek olarak) özel kullanıcı eşlemesi kullanma seçeneğiniz de vardır. Bu seçenekle, kullanıcıların Slack üye kimliğini Microsoft 365 e-posta adreslerine eşleyen bir CSV dosyası oluşturup karşıya yüklemeniz gerekir. Bunu yapmak için **CSV eşleme şablonunu indir'e** tıklayın, CSV dosyasını Slack üye kimliğiyle doldurun ve kuruluşunuzdaki tüm kullanıcılar için e-posta adresini Microsoft 365, ardından CSV dosyasını seçip sihirbaza yükleyin. CSV dosyasındaki sütun başlıklarını değiştirmediğinizden emin olun. AŞAĞıDA CSV eşleme dosyasının bir örneği verilmişti:
+   - **Özel kullanıcı eşlemesi**. Ayrıca, otomatik kullanıcı eşlemesi yerine (veya buna ek olarak) özel kullanıcı eşlemesi kullanma seçeneğiniz de vardır. Bu seçenekle, kullanıcıların Slack üye kimliğini Microsoft 365 e-posta adreslerine eşleyen bir CSV dosyası oluşturup karşıya yüklemeniz gerekir. Bunu yapmak için **CSV eşleme şablonunu indir'e** tıklayın, CSV dosyasını kuruluşunuzdaki tüm kullanıcılar için Slack üye kimliği ve Microsoft 365 e-posta adresiyle doldurun, ardından CSV dosyasını seçip sihirbaza yükleyin. CSV dosyasındaki sütun başlıklarını değiştirmediğinizden emin olun. AŞAĞıDA CSV eşleme dosyasının bir örneği verilmişti:
 
      |**ExternalUserId**  | **O365UserMailbox**   |
      |:-------------------|:-----------------------|
@@ -105,11 +103,11 @@ Slack eBulma verilerini içeri aktarmak istediğiniz kullanıcıları belirtmek 
    > [!TIP]
    > Kullanıcılar için üye kimlikleri,... Kullanıcının profilindeki Diğer düğmesi ve ardından **Üye kimliğini kopyala'yı** seçin. Alternatif olarak, Slack ekibinin tüm üyelerine ait kimlikleri almak için Slack [users.list API yöntemini](https://api.slack.com/methods/users.list) kullanabilirsiniz.
 
-   Otomatik kullanıcı eşlemesini etkinleştirir ve özel bir eşleme dosyası sağlarsanız bağlayıcı, Slack kullanıcısını bir Microsoft 365 posta kutusuna eşlemek için önce özel eşleme dosyasına bakar. Bağlayıcı Slack kullanıcısına karşılık gelen geçerli bir Microsoft 365 kullanıcısı bulamazsa, bağlayıcı Slack öğesinin *Email* özelliğini kullanır. Bağlayıcı, özel eşleme dosyasında veya ileti öğesinin *Email* özelliğinde geçerli bir Microsoft 365 kullanıcısı bulamazsa, öğe içeri aktarılamaz.
+   Otomatik kullanıcı eşlemesini etkinleştirir ve özel bir eşleme dosyası sağlarsanız, bağlayıcı önce Slack kullanıcısını bir Microsoft 365 posta kutusuna eşlemek için özel eşleme dosyasına bakar. Bağlayıcı Slack kullanıcısına karşılık gelen geçerli bir Microsoft 365 kullanıcısı bulamazsa, bağlayıcı Slack öğesinin *Email* özelliğini kullanır. Bağlayıcı, özel eşleme dosyasında veya ileti öğesinin *Email* özelliğinde geçerli bir Microsoft 365 kullanıcısı bulamazsa, öğe içeri aktarılamaz.
 
 2. **İçeri aktaracak veri türlerini seçin** sihirbazı sayfasında, içeri aktarmak istediğiniz Slack veri türlerini seçin. Tüm kanallardan iletileri içeri aktarmak istiyorsanız tüm seçenekleri belirleyin. Aksi takdirde, yalnızca içeri aktarmak istediğiniz veri türlerini seçin.
 
-     Slack iletilerine ek olarak, Microsoft 365 içeri aktarılacak diğer Slack içeriği türlerini de belirtebilirsiniz. 
+     Slack iletilerine ek olarak, Microsoft 365'e aktarılacak diğer Slack içeriği türlerini de belirtebilirsiniz. 
 
 3. İçeri aktaracak veri türlerini yapılandırdıktan sonra **İleri'ye** tıklayın, bağlayıcı ayarlarını gözden geçirin ve **son'a** tıklayarak bağlayıcıyı oluşturun.
 

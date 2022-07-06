@@ -1,6 +1,6 @@
 ---
 title: Bilgi engelleri
-description: Microsoft Purview'de bilgi engellerini yapılandırmayı öğrenin.
+description: Microsoft Purview'da bilgi engellerini yapılandırmayı öğrenin.
 keywords: Microsoft 365, Microsoft Purview, uyumluluk, bilgi engelleri
 ms.localizationpriority: medium
 ms.service: O365-seccomp
@@ -16,20 +16,18 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 - m365solution-scenario
-ms.openlocfilehash: aaba1c642d4615d3eb5163736450f3f8f3c27062
-ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
+ms.openlocfilehash: 21ad4f0cc6614bed3c579a8025d83200446fec18
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65396189"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627249"
 ---
 # <a name="information-barriers"></a>Bilgi engelleri
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 Microsoft 365, gruplar ve kuruluşlar arasında iletişim ve işbirliği sağlar ve gerektiğinde belirli kullanıcı grupları arasındaki iletişimi ve işbirliğini kısıtlama yollarını destekler. Bu durum, kuruluşunuzda çıkar çakışmasını önlemek için iki grup arasındaki iletişimi ve işbirliğini kısıtlamak istediğiniz durumları veya senaryoları içerebilir. Bu durum, iç bilgileri korumak için kuruluşunuz içindeki belirli kişiler arasındaki iletişimi ve işbirliğini kısıtlamanız gereken durumları da içerebilir.
 
-Microsoft Purview Bilgi Engelleri (IB), Microsoft Teams, SharePoint Online ve OneDrive İş desteklenir. Uyumluluk yöneticisi veya IB yöneticisi, Microsoft Teams kullanıcı grupları arasındaki iletişimlere izin veren veya bunları engelleyen ilkeler tanımlayabilir. IB ilkeleri aşağıdaki gibi durumlarda kullanılabilir:
+Microsoft Purview Bilgi Engelleri (IB), Microsoft Teams, SharePoint Online ve OneDrive İş desteklenir. Uyumluluk yöneticisi veya IB yöneticisi, Microsoft Teams'de kullanıcı grupları arasındaki iletişimlere izin veren veya bunları engelleyen ilkeler tanımlayabilir. IB ilkeleri aşağıdaki gibi durumlarda kullanılabilir:
 
 - Günlük tüccar grubundaki kullanıcı pazarlama ekibiyle iletişim kurmamalı veya dosya paylaşmamalıdır
 - Gizli şirket bilgileri üzerinde çalışan finans personeli, kuruluş içindeki belirli gruplarla iletişim kurmamalı veya dosya paylaşmamalıdır

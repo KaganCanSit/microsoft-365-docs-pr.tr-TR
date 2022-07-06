@@ -15,23 +15,21 @@ ms.collection:
 search.appverid:
 - MET150
 description: Microsoft Purview veri kaybı önleme ilkelerini ve araçlarını kullanarak hassas bilgilerinizi korumayı öğrenin ve DLP yaşam döngüsünde bir tura katılın.
-ms.openlocfilehash: 1d05eb2ae7b7071a79448596832eb6594ab680ef
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+ms.openlocfilehash: 2bcc82f0609f617219d626f8180e7f4c9df51060
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65669704"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641920"
 ---
 # <a name="learn-about-data-loss-prevention"></a>Veri kaybı önleme hakkında daha fazla bilgi edinme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 Kuruluşların denetimi altında finansal veriler, özel veriler, kredi kartı numaraları, sağlık kayıtları veya sosyal güvenlik numaraları gibi hassas bilgiler bulunur. Bu hassas verilerin korunmasına ve riskin azaltılmasına yardımcı olmak için, kullanıcılarının bunları sahip olmaması gereken kişilerle uygunsuz bir şekilde paylaşmasını önlemek için bir yönteme ihtiyaçları vardır. Bu uygulamaya veri kaybı önleme (DLP) adı verilir.
 
-Microsoft Purview'da, DLP ilkelerini tanımlayıp uygulayarak veri kaybı önlemeyi uygularsınız. DLP ilkesiyle hassas öğeleri tanımlayabilir, izleyebilir ve otomatik olarak koruyabilirsiniz:
+Microsoft Purview'da, DLP ilkelerini tanımlayıp uygulayarak veri kaybı önleme uygularsınız. DLP ilkesiyle hassas öğeleri tanımlayabilir, izleyebilir ve otomatik olarak koruyabilirsiniz:
 
-- Teams, Exchange, SharePoint ve OneDrive gibi hizmetleri Microsoft 365
-- Word, Excel ve PowerPoint gibi uygulamaları Office
+- Teams, Exchange, SharePoint ve OneDrive gibi Microsoft 365 hizmetleri
+- Word, Excel ve PowerPoint gibi Office uygulamaları
 - Windows 10, Windows 11 ve macOS (Catalina 10.15 ve üzeri) uç noktaları
 - Microsoft dışı bulut uygulamaları
 - şirket içi dosya paylaşımları ve şirket içi SharePoint.
@@ -40,7 +38,7 @@ DLP, hassas öğeleri yalnızca basit bir metin taramasıyla değil, derin içer
 
 ## <a name="dlp-is-part-of-the-larger-microsoft-purview-offering"></a>DLP, daha büyük Microsoft Purview teklifinin bir parçasıdır
 
-DLP, hassas öğelerinizi yaşadıkları veya seyahat ettikleri her yerde korumaya yardımcı olmak için kullanacağınız Microsoft Purview araçlardan yalnızca biridir. Microsoft Purview araçları kümesindeki diğer araçları, birbirleriyle nasıl ilişki kurduklarını ve birlikte daha iyi çalıştıklarını anlamanız gerekir.  Bilgi koruma işlemi hakkında daha fazla bilgi edinmek için [araçlara Microsoft Purview](protect-information.md).
+DLP, hassas öğelerinizi yaşadıkları veya seyahat ettikleri her yerde korumaya yardımcı olmak için kullanacağınız Microsoft Purview araçlarından yalnızca biridir. Microsoft Purview araçları kümesindeki diğer araçları, bunların nasıl birbiriyle ilişkilendirildiklerini ve birlikte nasıl daha iyi çalıştıklarını anlamanız gerekir.  Bilgi koruma işlemi hakkında daha fazla bilgi edinmek için [bkz. Microsoft Purview araçları](protect-information.md) .
 
 ## <a name="protective-actions-of-dlp-policies"></a>DLP ilkelerinin koruyucu eylemleri
 
@@ -50,7 +48,7 @@ DLP ilkeleri, kullanıcıların bekleyen hassas öğelere, aktarım sırasındak
 - paylaşımı engelleyin ve bir ilke ipucu aracılığıyla kullanıcının engellemeyi geçersiz kılıp kullanıcıların gerekçesini yakalamasına izin verin
 - geçersiz kılma seçeneği olmadan paylaşımı engelleme
 - bekleyen veriler için hassas öğeler kilitlenebilir ve güvenli bir karantina konumuna taşınabilir
-- Teams sohbet için hassas bilgiler görüntülenmez
+- Teams sohbeti için hassas bilgiler görüntülenmez
 
 Tüm DLP izlenen etkinlikleri varsayılan olarak [Microsoft 365 Denetim günlüğüne](search-the-audit-log-in-security-and-compliance.md) kaydedilir ve [Etkinlik gezginine](data-classification-activity-explorer.md) yönlendirilir. Kullanıcı bir DLP ilkesinin ölçütlerini karşılayan bir eylem gerçekleştirdiğinde ve uyarıları yapılandırdığınızda [DLP, DLP uyarı yönetimi panosunda uyarılar](dlp-configure-view-alerts-policies.md) sağlar.
 
@@ -71,7 +69,7 @@ DLP izleme ve koruma, kullanıcıların her gün kullandığı uygulamalarda yer
 
 **DLP için teknoloji planlaması**
 
-Teknoloji olarak DLP'nin bekleyen verilerinizi, kullanımdaki verileri ve Microsoft 365 hizmetleri, Windows 10, Windows 11 ve macOS (Catalina 10.15 ve üzeri) cihazları, şirket içi dosya paylaşımları ve şirket içi SharePoint genelinde hareket halindeki verileri izleyip koruyabileceğini unutmayın. Farklı konumlar, izlemek ve korumak istediğiniz veri türü ve ilke eşleşmesi gerçekleştiğinde gerçekleştirilecek eylemler için planlama etkileri vardır.
+Teknoloji olarak DLP'nin bekleyen verilerinizi, kullanımdaki verileri ve Microsoft 365 hizmetleri, Windows 10, Windows 11 ve macOS (Catalina 10.15 ve üzeri) cihazları, şirket içi dosya paylaşımları ve şirket içi SharePoint'te hareket halindeki verileri izleyip koruyabileceğini unutmayın. Farklı konumlar, izlemek ve korumak istediğiniz veri türü ve ilke eşleşmesi gerçekleştiğinde gerçekleştirilecek eylemler için planlama etkileri vardır.
 
 **DLP için iş süreçleri planlaması**
 
@@ -88,15 +86,15 @@ Başarılı bir DLP uygulaması, kullanıcılarınızın iyi planlanmış ve aya
 Bekleyen verilere, kullanımdaki verilere ve konumlardaki hareket halindeki verilere DLP ilkeleri uygulayabilirsiniz, örneğin:
 
 - e-postayı Exchange Online
-- çevrimiçi siteleri SharePoint
-- hesapları OneDrive
-- Sohbet ve kanal iletilerini Teams
-- Microsoft Cloud App Security
+- SharePoint Online siteleri
+- OneDrive hesapları
+- Teams sohbeti ve kanal iletileri
+- Bulut Uygulamaları için Microsoft Defender
 - Windows 10, Windows 11 ve macOS (Catalina 10.15 ve üzeri) cihazlar
 - Şirket içi depolar
 - PowerBI siteleri
 
-Her birinin farklı önkoşulları vardır. Çevrimiçi Exchange gibi bazı konumlardaki hassas öğeler, yalnızca kendileri için geçerli olan bir ilke yapılandırılarak DLP şemsiyesi altına getirilebilir. Şirket içi dosya depoları gibi diğerleri için Azure Information Protection (AIP) tarayıcısının dağıtımı gerekir. Ortamınızı hazırlamanız, taslak ilkeleri kodlamanız ve engelleme eylemlerini etkinleştirmeden önce bunları kapsamlı bir şekilde test etmeniz gerekir.
+Her birinin farklı önkoşulları vardır. Exchange Online gibi bazı konumlardaki hassas öğeler, yalnızca kendileri için geçerli olan bir ilke yapılandırılarak DLP şemsiyesi altına getirilebilir. Şirket içi dosya depoları gibi diğerleri için Azure Information Protection (AIP) tarayıcısının dağıtımı gerekir. Ortamınızı hazırlamanız, taslak ilkeleri kodlamanız ve engelleme eylemlerini etkinleştirmeden önce bunları kapsamlı bir şekilde test etmeniz gerekir.
 
 ### <a name="deploy-your-policies-in-production"></a>İlkelerinizi üretim ortamında dağıtma
 
@@ -145,10 +143,10 @@ DLP ilkelerinizi oluşturma ve yapılandırma konusunda esnekliğe sahipsiniz. �
 
 Konum | include/exclude by|
 |---------|---------|
-|e-postayı Exchange| dağıtım grupları|
-|siteleri SharePoint |Site |
-|hesapları OneDrive |hesaplar veya dağıtım grupları |
-|Sohbet ve kanal iletilerini Teams |hesap veya dağıtım grubu |
+|Exchange e-postası| dağıtım grupları|
+|SharePoint siteleri |Site |
+|OneDrive hesapları |hesaplar veya dağıtım grupları |
+|Teams sohbeti ve kanal iletileri |hesap veya dağıtım grubu |
 |Windows 10, Windows 11 ve macOS (Catalina 10.15 ve üzeri) cihazlar |kullanıcı veya grup |
 |Microsoft Cloud App Security |Örnek |
 |Şirket içi depolar| depo dosyası yolu|
@@ -162,9 +160,9 @@ Konum | include/exclude by|
 4. **İlke koşulları karşılandığında yapılması gereken eylemi seçin** - Eylemler, etkinliğin gerçekleştiği konuma bağlıdır.  Bazı örnekler şunlardır:
 
 - SharePoint/Exchange/OneDrive: Kuruluş formunuzun dışındaki kişilerin içeriğe erişmesini engelleyin. Kullanıcıya bir ipucu gösterin ve DLP ilkesi tarafından yasaklanan bir eylemde bulunduğunu belirten bir e-posta bildirimi gönderin.
-- sohbet ve kanal Teams: Hassas bilgilerin sohbette veya kanalda paylaşılmasını engelleyin
+- Teams Sohbeti ve Kanal: Hassas bilgilerin sohbette veya kanalda paylaşılmasını engelleyin
 - Windows 10, Windows 11 ve macOS (Catalina 10.15 ve üzeri) Cihazlar: Hassas bir öğeyi kaldırılabilir bir USB cihazına kopyalamayı denetleme veya kısıtlama
-- Office Uygulamaları: Kullanıcıya riskli bir davranış sergilediğini bildiren ve engelleme veya engellemeye rağmen geçersiz kılmaya izin veren bir açılır pencere gösterin.
+- Office Uygulamaları: Kullanıcıya riskli bir davranış sergilediğini bildiren ve geçersiz kılmaya izin veren bir açılır pencere gösterin.
 - Şirket içi dosya paylaşımları: Dosyayı depolandığı konumdan karantina klasörüne taşıma
 
 > [!NOTE]
@@ -176,17 +174,17 @@ All DLP policies are created and maintained in the Microsoft Purview center. See
 
 Uyumluluk Merkezi'nde bir DLP ilkesi oluşturduktan sonra, bu ilke merkezi bir ilke deposunda depolanır ve ardından aşağıdakiler gibi çeşitli içerik kaynaklarıyla eşitlenir:
 
-- Exchange Online ve oradan Web üzerinde Outlook ve Outlook.
+- Exchange Online ve oradan Web üzerinde Outlook ve Outlook'a.
 - siteleri OneDrive İş.
-- çevrimiçi siteleri SharePoint.
-- masaüstü programlarını (Excel, PowerPoint ve Word) Office.
-- kanalları ve sohbet iletilerini Microsoft Teams.
+- SharePoint Online siteleri.
+- Office masaüstü programları (Excel, PowerPoint ve Word).
+- Microsoft Teams kanalları ve sohbet iletileri.
 
 İlke doğru konumlara eşitlendikten sonra içeriği değerlendirmeye ve eylemleri zorlamaya başlar.
 
 ## <a name="viewing-policy-application-results"></a>İlke uygulaması sonuçlarını görüntüleme
 
-DLP, izleme, ilke eşleşmeleri ve eylemleri ile kullanıcı etkinliklerinden Microsoft Purview çok miktarda bilgi bildirir. İlkelerinizi ayarlamak ve hassas öğeler üzerinde gerçekleştirilen eylemleri önceliklendirmek için bu bilgileri kullanmanız ve üzerinde işlem yapmanız gerekir. Telemetri önce [Microsoft Purview uyumluluk portalı Denetim Günlüklerine](search-the-audit-log-in-security-and-compliance.md#search-the-audit-log-in-the-compliance-portal) gider, işlenir ve farklı raporlama araçlarına gider. Her raporlama aracının farklı bir amacı vardır.
+DLP, Microsoft Purview'da izleme, ilke eşleşmeleri ve eylemleri ile kullanıcı etkinliklerine kadar çok miktarda bilgi bildirir. İlkelerinizi ayarlamak ve hassas öğeler üzerinde gerçekleştirilen eylemleri önceliklendirmek için bu bilgileri kullanmanız ve üzerinde işlem yapmanız gerekir. Telemetri önce [Microsoft Purview uyumluluk portalı Denetim Günlüklerine](search-the-audit-log-in-security-and-compliance.md#search-the-audit-log-in-the-compliance-portal) gider, işlenir ve farklı raporlama araçlarına gider. Her raporlama aracının farklı bir amacı vardır.
 
 ### <a name="dlp-alerts-dashboard"></a>DLP Uyarıları Panosu
 
@@ -214,7 +212,7 @@ DLP sayfasındaki Etkinlik gezgini sekmesinde *, Etkinlik filtresi DLPRuleMatch*
 
 ![DLPRuleMatch kapsamlı etkinlik gezgininin ekran görüntüsü.](../media/dlp-activity-explorer.png)
 
-Daha fazla bilgi için bkz. [Etkinlik gezginiyle Kullanmaya başlayın](data-classification-activity-explorer.md)
+Daha fazla bilgi için bkz. [Etkinlik gezginini kullanmaya başlama](data-classification-activity-explorer.md)
 
 Microsoft Purview DLP hakkında daha fazla bilgi edinmek için bkz:
 
@@ -224,7 +222,7 @@ Microsoft Purview DLP hakkında daha fazla bilgi edinmek için bkz:
 - [Microsoft Uyumluluk Uzantısı hakkında daha fazla bilgi edinme](dlp-chrome-learn-about.md)
 - [Veri kaybı önleme Uyarılar panosu hakkında daha fazla bilgi edinme](dlp-alerts-dashboard-learn.md)
 
-Veri gizliliği düzenlemelerine uymak için veri kaybı önlemeyi kullanmayı öğrenmek için bkz. [Microsoft Purview (aka.ms/m365dataprivacy) ile veri gizliliği düzenlemeleri için bilgi koruması dağıtma](../solutions/information-protection-deploy.md).
+Veri gizliliği düzenlemelerine uymak için veri kaybı önlemeyi kullanmayı öğrenmek için bkz. [Microsoft Purview (aka.ms/m365dataprivacy) ile veri gizliliği düzenlemeleri için bilgi koruması dağıtma](../solutions/information-protection-deploy.md)  .
 
 ## <a name="licensing-and-subscriptions"></a>Lisanslama ve Abonelikler
 

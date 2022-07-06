@@ -17,32 +17,30 @@ ms.assetid: 6057daa8-6372-4e77-a636-7ea599a76128
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-description: Microsoft 365'da bir Exchange Online posta kutusuna yerleştirilebilen farklı saklama türlerini tanımlamayı öğrenin.
-ms.openlocfilehash: f38376fe3d7517b877239a9bb6add5fbf9952d59
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Microsoft 365'te bir Exchange Online posta kutusuna yerleştirilebilen farklı saklama türlerini tanımlamayı öğrenin.
+ms.openlocfilehash: d7a174d267897f37fa113a51e138ec68def65b8a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017908"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638311"
 ---
 # <a name="how-to-identify-the-type-of-hold-placed-on-an-exchange-online-mailbox"></a>Exchange Online posta kutusuna yerleştirilmiş saklama türünü tanımlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Bu makalede, Microsoft 365'te Exchange Online posta kutularına yerleştirilmiş ayrı tutmaların nasıl belirlendiği açıklanır.
 
-Bu makalede, Microsoft 365 Exchange Online posta kutularına yerleştirilmiş ayrı tutmaların nasıl belirlendiği açıklanır.
-
-Microsoft 365, kuruluşunuzun posta kutusu içeriğinin kalıcı olarak silinmesini engelleyebilecek çeşitli yollar sunar. Bu, kuruluşunuzun uyumluluk düzenlemelerini karşılamak için veya yasal ve diğer araştırma türleri sırasında içeriği saklamasına olanak tanır. Office 365 bekletme özelliklerinin (*ayrı tutma* olarak da adlandırılır) listesi aşağıda verilmiştir:
+Microsoft 365, kuruluşunuzun posta kutusu içeriğinin kalıcı olarak silinmesini önleyebileceği çeşitli yollar sunar. Bu, kuruluşunuzun uyumluluk düzenlemelerini karşılamak için veya yasal ve diğer araştırma türleri sırasında içeriği saklamasına olanak tanır. Office 365 bekletme özelliklerinin (*ayrı tutma* olarak da adlandırılır) listesi aşağıda verilmiştir:
 
 - **[Dava Tutma](create-a-litigation-hold.md):** Exchange Online kullanıcı posta kutularına uygulanan ayrı tutmalar.
 
-- **[eBulma ayrı tutma](create-ediscovery-holds.md):** Güvenlik ve uyumluluk merkezindeki bir Microsoft Purview eKeşif (Standart) olayıyla ilişkili ayrı tutmalar. eBulma tutmaları, kullanıcı posta kutularına ve Microsoft 365 Grupları ve Microsoft Teams için ilgili posta kutusuna uygulanabilir.
+- **[eBulma ayrı tutma](create-ediscovery-holds.md):** Güvenlik ve uyumluluk merkezindeki bir Microsoft Purview eKeşif (Standart) servis talebiyle ilişkili tutmalar. eBulma tutmaları, kullanıcı posta kutularına ve Microsoft 365 Grupları ve Microsoft Teams için ilgili posta kutusuna uygulanabilir.
 
-- **[Yerinde Saklama](/Exchange/security-and-compliance/create-or-remove-in-place-holds):** Exchange Online'daki Exchange <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">yönetim merkezindeki</a> In-Place eBulma & Tutma aracı kullanılarak kullanıcı posta kutularına uygulanan ayrı tutmalar. 
+- **[Yerinde Saklama](/Exchange/security-and-compliance/create-or-remove-in-place-holds):** Exchange Online'deki <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezindeki</a> In-Place eBulma & Ayrı Tutma aracı kullanılarak kullanıcı posta kutularına uygulanan ayrı tutmalar. 
 
    > [!NOTE]
    > In-Place Ayrı Tutmalar kullanımdan kaldırıldı ve artık In-Place Ayrı Tutmalar oluşturamıyor veya bunları posta kutularına uygulayamıyabilirsiniz. Ancak, In-Place Tutmalar kuruluşunuzdaki posta kutularına uygulanmaya devam edebilir. Bu nedenle bu makalede yer alır. Daha fazla bilgi için bkz [. Eski eBulma araçlarının kullanımdan kaldırılması](legacy-ediscovery-retirement.md#in-place-ediscovery-and-in-place-holds-in-the-exchange-admin-center).
 
-- **[Microsoft 365 bekletme ilkeleri](retention.md):** Exchange Online ve Microsoft 365 Grupları ve Microsoft Teams için ilgili posta kutusunda bulunan kullanıcı posta kutularındaki içeriği saklamak (veya saklamak ve silmek) için yapılandırılabilir. Kullanıcı posta kutularında depolanan Skype Kurumsal Konuşmalarını korumak için bir bekletme ilkesi de oluşturabilirsiniz.
+- **[Microsoft 365 bekletme ilkeleri](retention.md):** Exchange Online ve Microsoft 365 Grupları ve Microsoft Teams için ilgili posta kutusunda bulunan kullanıcı posta kutularındaki içeriği saklayacak (veya saklayacak ve silecek) şekilde yapılandırılabilir. Kullanıcı posta kutularında depolanan Skype Kurumsal Konuşmalarını korumak için bir bekletme ilkesi de oluşturabilirsiniz.
 
   Posta kutularına atanabilecek iki tür Microsoft 365 bekletme ilkesi vardır.
 
@@ -50,7 +48,7 @@ Microsoft 365, kuruluşunuzun posta kutusu içeriğinin kalıcı olarak silinmes
 
     - **Kuruluş genelinde saklama ilkeleri:** Bunlar, kuruluşunuzdaki tüm içerik konumlarına atanan ilkelerdir. Kuruluş genelinde saklama ilkeleri hakkında bilgi almak için PowerShell Exchange Online de **Get-OrganizationConfig** cmdlet'ini kullanırsınız. Bu saklama ilkesi türü hakkında daha fazla bilgi için bekletme ilkesi belgelerindeki [Konumların tamamı için geçerli olan](retention-settings.md#a-policy-that-applies-to-entire-locations) ilke bölümüne bakın.
 
-- **[Microsoft 365 bekletme etiketleri](retention.md):** Kullanıcı, posta kutusundaki *herhangi* bir klasöre veya öğeye Microsoft 365 bekletme etiketi (içeriği saklamak veya saklamak ve silmek için yapılandırılmış bir etiket) uygularsa, posta kutusu Dava Tutma'ya yerleştirilmiş veya bir Microsoft 365 bekletme ilkesine atanmış gibi bir saklama işlemi posta kutusuna yerleştirilir. Daha fazla bilgi için, bu makaledeki Bir [klasöre veya öğeye bekletme etiketi uygulandığından, beklemedeki posta kutularını tanımlama](#identifying-mailboxes-on-hold-because-a-retention-label-has-been-applied-to-a-folder-or-item) bölümüne bakın.
+- **[Microsoft 365 bekletme etiketleri](retention.md):** Kullanıcı, posta kutusundaki *herhangi* bir klasöre veya öğeye Microsoft 365 bekletme etiketi (içeriği saklamak veya saklamak ve silmek için yapılandırılmış bir etiket) uygularsa, posta kutusuna, posta kutusu Dava Tutma'ya yerleştirilmiş veya microsoft 365 saklama ilkesine atanmış gibi bir saklama yerleştirilir. Daha fazla bilgi için, bu makaledeki Bir [klasöre veya öğeye bekletme etiketi uygulandığından, beklemedeki posta kutularını tanımlama](#identifying-mailboxes-on-hold-because-a-retention-label-has-been-applied-to-a-folder-or-item) bölümüne bakın.
 
 Ayrı tutmadaki posta kutularını yönetmek için, saklama süresini değiştirme, saklamayı geçici veya kalıcı olarak kaldırma ya da bir posta kutusunu Microsoft 365 bekletme ilkesinden dışlama gibi görevleri gerçekleştirebilmeniz için posta kutusuna yerleştirilen ayrı tutma türünü tanımlamanız gerekebilir. Bu gibi durumlarda ilk adım, posta kutusuna yerleştirilen saklama türünü belirlemektir. Tek bir posta kutusuna birden çok ayrı tutma (ve farklı ayrı tutma türleri) yerleştirilebildiği için, ayrı tutmayı kaldırmak veya değiştirmek istiyorsanız posta kutusuna yerleştirilen tüm ayrı tutmaları tanımlamanız gerekir.
 
@@ -58,11 +56,11 @@ Ayrı tutmadaki posta kutularını yönetmek için, saklama süresini değiştir
 
 Exchange Online PowerShell'de aşağıdaki iki cmdlet'i çalıştırarak posta kutusuna yerleştirilen tutmaların GUID değerini alabilirsiniz. BIR GUID aldıktan sonra, 2. Adım'da belirli bir ayrı tutmayı tanımlamak için bunu kullanırsınız. Bir Dava Tutma guid tarafından tanımlanmaz. Dava Tutmaları bir posta kutusu için etkin veya devre dışıdır.
 
-- **Get-Mailbox:** Bu cmdlet'i, bir posta kutusu için Dava Tutma'nın etkinleştirilip etkinleştirilmediğini belirlemek ve eBulma tutmaları, In-Place Tutmalar ve özel olarak bir posta kutusuna atanmış Microsoft 365 bekletme ilkelerini almak için kullanın. Bu cmdlet'in çıkışı, bir posta kutusunun kuruluş genelinde saklama ilkesinden açıkça dışlanmış olup olmadığını da gösterir.
+- **Get-Mailbox:** Bu cmdlet'i, bir posta kutusu için Dava Tutma'nın etkinleştirilip etkinleştirilmediğini belirlemek ve özellikle bir posta kutusuna atanmış eBulma tutmaları, In-Place Tutmalar ve Microsoft 365 bekletme ilkeleri için GUID'leri almak için kullanın. Bu cmdlet'in çıkışı, bir posta kutusunun kuruluş genelinde saklama ilkesinden açıkça dışlanmış olup olmadığını da gösterir.
 
 - **Get-OrganizationConfig:** Kuruluş genelinde saklama ilkelerine yönelik GUID'leri almak için bu cmdlet'i kullanın.
 
-Exchange Online PowerShell'e bağlanmak için bkz. [PowerShell'Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+Exchange Online PowerShell'e bağlanmak için bkz[. Exchange Online PowerShell'e bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
 
 ### <a name="get-mailbox"></a>Get-Mailbox
 
@@ -83,10 +81,10 @@ Aşağıdaki tabloda **, Get-Mailbox** *cmdlet'ini çalıştırdığınızda InP
 | eBulma ayrı tutma                                                    | `UniH7d895d48-7e23-4a8d-8346-533c3beac15d`                                                     | *InPlaceHolds özelliği*, güvenlik ve uyumluluk merkezindeki bir eBulma olayıyla ilişkili tüm ayrı tutmaların GUID'sini içerir. BUNUN bir eBulma ayrılığı olduğunu anlayabilirsiniz çünkü GUID ön ekiyle `UniH` başlar (Birleştirilmiş Ayrı Tutmayı belirtir).                                                                                   |
 | In-Place Tutma                                                      | `c0ba3ce811b6432a8751430937152491` <br/> veya <br/> `cld9c0a984ca74b457fbe4504bf7d3e00de`        | *InPlaceHolds* özelliği, posta kutusuna yerleştirilen In-Place Tutmanın GUID'sini içerir. GUID bir ön ek ile başlamadığından veya ön ek ile `cld` başladığından bunun bir In-Place Ayrı Tutma olduğunu anlayabilirsiniz.                                                                                                               |
 | Posta kutusuna özel olarak uygulanan Microsoft 365 bekletme ilkesi | `mbxcdbbb86ce60342489bff371876e7f224:1` <br/> veya <br/> `skp127d7cf1076947929bf136b7a2a8c36f:3` | InPlaceHolds özelliği, posta kutusuna uygulanan belirli bir konum saklama ilkesinin GUID'lerini içerir. GUID veya `skp` ön eki ile `mbx` başladığından bekletme ilkelerini tanımlayabilirsiniz. Ön ek, `skp` bekletme ilkesinin kullanıcının posta kutusunda Skype Kurumsal konuşmalara uygulandığını gösterir. |
-| Kuruluş genelindeki Microsoft 365 saklama ilkesinden dışlanır  | `-mbxe9b52bf7ab3b46a286308ecb29624696`                                                         | Bir posta kutusu kuruluş genelinde Microsoft 365 bekletme ilkesi dışında bırakılırsa, posta kutusunun dışlandığı bekletme ilkesinin GUID'i InPlaceHolds özelliğinde görüntülenir ve ön ek tarafından `-mbx` tanımlanır.                                                                                                     |
+| Kuruluş genelinde microsoft 365 saklama ilkesinin dışında bırakıldı  | `-mbxe9b52bf7ab3b46a286308ecb29624696`                                                         | Bir posta kutusu kuruluş genelinde microsoft 365 bekletme ilkesi dışında bırakılırsa, posta kutusunun dışlandığı bekletme ilkesinin GUID'i InPlaceHolds özelliğinde görüntülenir ve ön ek ile `-mbx` tanımlanır.                                                                                                     |
 
 ### <a name="get-organizationconfig"></a>Get-OrganizationConfig
-**Get-Mailbox** cmdlet'ini çalıştırdığınızda *InPlaceHolds* özelliği boşsa, posta kutusuna bir veya daha fazla kuruluş genelinde Microsoft 365 bekletme ilkesi uygulanmış olabilir. Exchange Online [PowerShell'de](/powershell/exchange/connect-to-exchange-online-powershell) aşağıdaki komutu çalıştırarak kuruluş genelindeki Microsoft 365 bekletme ilkelerine yönelik GUID'lerin listesini alın.
+**Get-Mailbox** cmdlet'ini çalıştırdığınızda *InPlaceHolds* özelliği boşsa, posta kutusuna kuruluş genelinde bir veya daha fazla Microsoft 365 bekletme ilkesi uygulanmış olabilir. Exchange Online [PowerShell'de](/powershell/exchange/connect-to-exchange-online-powershell) aşağıdaki komutu çalıştırarak kuruluş genelindeki Microsoft 365 saklama ilkelerine yönelik GUID'lerin listesini alın.
 
 ```powershell
 Get-OrganizationConfig | FL InPlaceHolds
@@ -99,10 +97,10 @@ Aşağıdaki tabloda, **Get-OrganizationConfig** cmdlet'ini çalıştırdığın
 
 | Ayrı tutma türü                                                                                                | Örnek değer                           | Açıklama                                                                                                                                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Exchange posta kutularına, Exchange ortak klasörlere ve Teams sohbetlerine uygulanan Microsoft 365 bekletme ilkeleri | `mbx7cfb30345d454ac0a989ab3041051209:2` | Exchange posta kutularına, ortak klasörlere Exchange ve Microsoft Teams 1xN sohbetlerine uygulanan kuruluş genelinde bekletme ilkeleri, ön ekle `mbx` başlayan GUID'ler tarafından tanımlanır. Not 1xN sohbetleri, tek tek sohbet katılımcılarının posta kutusunda depolanır.  |
-| Microsoft 365 Grupları ve Teams kanal iletilerine uygulanan Microsoft 365 bekletme ilkesi                | `grp1a0a132ee8944501a4bb6a452ec31171:3` | Microsoft Teams'daki Microsoft 365 gruplarına ve kanal iletilerine uygulanan kuruluş genelinde saklama ilkeleri, ön ekle `grp` başlayan GUID'ler tarafından tanımlanır. Not kanalı iletileri, Bir Microsoft Ekibi ile ilişkili grup posta kutusunda depolanır. |
+| Exchange posta kutularına, Exchange ortak klasörlerine ve Teams sohbetlerine uygulanan Microsoft 365 bekletme ilkeleri | `mbx7cfb30345d454ac0a989ab3041051209:2` | Microsoft Teams'de Exchange posta kutularına, Exchange ortak klasörlerine ve 1xN sohbetlerine uygulanan kuruluş genelinde bekletme ilkeleri, ön ekle `mbx` başlayan GUID'ler tarafından tanımlanır. Not 1xN sohbetleri, tek tek sohbet katılımcılarının posta kutusunda depolanır.  |
+| Microsoft 365 Grupları ve Teams kanal iletilerine uygulanan Microsoft 365 bekletme ilkesi                | `grp1a0a132ee8944501a4bb6a452ec31171:3` | Microsoft Teams'de Microsoft 365 gruplarına ve kanal iletilerine uygulanan kuruluş genelinde saklama ilkeleri, ön ekle `grp` başlayan GUID'ler tarafından tanımlanır. Not kanalı iletileri, Bir Microsoft Ekibi ile ilişkili grup posta kutusunda depolanır. |
 
-Microsoft Teams uygulanan bekletme ilkeleri hakkında daha fazla bilgi için bkz. [Microsoft Teams için bekletme ilkeleri hakkında bilgi edinin](retention-policies-teams.md).
+Microsoft Teams'e uygulanan bekletme ilkeleri hakkında daha fazla bilgi için bkz. [Microsoft Teams için bekletme ilkeleri hakkında bilgi edinin](retention-policies-teams.md).
 
 ### <a name="understanding-the-format-of-the-inplaceholds-value-for-retention-policies"></a>Bekletme ilkeleri için InPlaceHolds değerinin biçimini anlama
 
@@ -132,7 +130,7 @@ Bir posta kutusuna uygulanan ayrı tutmanın GUID'sini aldıktan sonra, sonraki 
 
 Posta kutusuna uygulanan bir eBulma ayrı tutmasını belirlemek için Güvenlik & Uyumluluk PowerShell'de aşağıdaki komutları çalıştırın. 1. Adımda tanımladığınız eBulma ayrılığı için GUID'yi (UniH ön eki dahil değil) kullanın. 
 
-Güvenlik & Uyumluluk PowerShell'e bağlanmak için bkz. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+Güvenlik & Uyumluluğu PowerShell'e bağlanmak için bkz. [Güvenlik & Uyumluluk PowerShell'e bağlanma](/powershell/exchange/connect-to-scc-powershell).
 
 İlk komut, ayrı tutma hakkında bilgi içeren bir değişken oluşturur. Bu değişken diğer komutlarda kullanılır. İkinci komut, ayrı tutmanın ilişkili olduğu eBulma olayının adını görüntüler. Üçüncü komut, ayrı tutmanın adını ve ayrı tutmanın geçerli olduğu posta kutularının listesini görüntüler.
 
@@ -163,7 +161,7 @@ In-Place Tutma guid'i ön ek ile `cld` başlıyorsa, önceki komutu çalıştır
 
 ### <a name="microsoft-365-retention-policies"></a>Microsoft 365 bekletme ilkeleri
 
-[Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) ve posta kutusuna uygulanan Microsoft 365 bekletme ilkesini (kuruluş genelinde veya belirli bir konum) tanımlamak için aşağıdaki komutu çalıştırın. 1. Adımda tanımladığınız GUID'yi (mbx, skp, grp ön eki veya eylem soneki dahil değil) kullanın.
+[Güvenlik & Uyumluluğu PowerShell'e bağlanın](/powershell/exchange/connect-to-scc-powershell) ve posta kutusuna uygulanan Microsoft 365 bekletme ilkesini (kuruluş genelinde veya belirli bir konum) tanımlamak için aşağıdaki komutu çalıştırın. 1. Adımda tanımladığınız GUID'yi (mbx, skp, grp ön eki veya eylem soneki dahil değil) kullanın.
 
 ```powershell
 Get-RetentionCompliancePolicy <hold GUID without prefix or suffix> -DistributionDetail  | FL Name,*Location
@@ -171,14 +169,14 @@ Get-RetentionCompliancePolicy <hold GUID without prefix or suffix> -Distribution
 
 ## <a name="identifying-mailboxes-on-hold-because-a-retention-label-has-been-applied-to-a-folder-or-item"></a>Bir klasöre veya öğeye bekletme etiketi uygulandığından, beklemedeki posta kutularını tanımlama
 
-Kullanıcı, posta kutularındaki herhangi bir klasöre veya öğeye içerik *saklamak* veya *saklamak ve silmek* için yapılandırılmış bir bekletme etiketi uyguladığında *ComplianceTagHoldApplied* posta kutusu özelliği **True** olarak ayarlanır. Bu durumda posta kutusu, Microsoft 365 saklama ilkesine atanması veya Bazı uyarılar ile Dava Tutma'ya yerleştirilmesi gibi bir beklemeye alındığında olduğu gibi benzer şekilde değerlendirilir. *ComplianceTagHoldApplied* özelliği **True** olarak ayarlandığında aşağıdaki işlemler gerçekleşir:
+Kullanıcı, posta kutularındaki herhangi bir klasöre veya öğeye içerik *saklamak* veya *saklamak ve silmek* için yapılandırılmış bir bekletme etiketi uyguladığında *ComplianceTagHoldApplied* posta kutusu özelliği **True** olarak ayarlanır. Böyle bir durumda, posta kutusu bir Microsoft 365 saklama ilkesine atandığında veya Bazı uyarılar ile Dava Tutma'ya yerleştirildiğinde olduğu gibi beklemeye alındığında olduğu gibi değerlendirilir. *ComplianceTagHoldApplied* özelliği **True** olarak ayarlandığında aşağıdaki işlemler gerçekleşir:
 
 - Posta kutusu veya kullanıcının Microsoft 365 hesabı silinirse, posta kutusu [etkin olmayan bir posta kutusuna](inactive-mailboxes-in-office-365.md) dönüşür.
 - Posta kutusunu devre dışı bırakamazsınız (birincil posta kutusu veya etkinse arşiv posta kutusu).
 - Posta kutusundan silinmiş öğeler etiketlenip etiketlenmediklerine bağlı olarak iki yoldan birini izler:
     - **Etiketsiz öğeler** , posta kutusuna hiçbir ayrı tutma uygulanmadığında silinmiş öğelerin izlediği yolu izler.  Bu öğelerin kalıcı olarak silinmesi için gereken süre, [silinen öğe saklama](/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder#deleted-item-retention) yapılandırmasına ve posta kutusu için [tek öğe kurtarmanın](/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder#single-item-recovery) etkinleştirilip etkinleştirilmediğine göre belirlenir.
-    - **Etiketlenen öğeler** [kurtarılabilir öğeler klasöründe](/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder#recoverable-items-folder), Microsoft 365 bekletme ilkesi uygulandığında olduğu gibi, tek tek öğe düzeyinde korunur.  Birden çok öğenin içeriği farklı aralıklarla *saklayacak* veya *saklayacak ve silecek* şekilde yapılandırılmış farklı etiketleri varsa, her öğe uygulanan etiketin yapılandırmasına göre korunur.
-- Microsoft 365 saklama ilkeleri, eBulma saklamaları veya dava tutma gibi diğer tutmalar, etiketlenmiş öğelerin [saklama ilkelerine](retention.md#the-principles-of-retention-or-what-takes-precedence) göre ne kadar süreyle tutulabileceğini uzatabilir.
+    - **Etiketlenen öğeler** [kurtarılabilir öğeler klasöründe](/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder#recoverable-items-folder) , Microsoft 365 bekletme ilkesi uygulandığında olduğu gibi, ancak tek tek öğe düzeyinde korunur.  Birden çok öğenin içeriği farklı aralıklarla *saklayacak* veya *saklayacak ve silecek* şekilde yapılandırılmış farklı etiketleri varsa, her öğe uygulanan etiketin yapılandırmasına göre korunur.
+- Microsoft 365 saklama ilkeleri, eBulma saklama veya dava tutma gibi diğer tutmalar, etiketlenmiş öğelerin [saklama ilkelerine](retention.md#the-principles-of-retention-or-what-takes-precedence) göre ne kadar süreyle tutulabileceğini uzatabilir.
 
 Tek bir posta kutusunun *ComplianceTagHoldApplied* özelliğinin değerini görüntülemek için [PowerShell Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell) de aşağıdaki komutu çalıştırın:
 
@@ -194,9 +192,9 @@ Bir posta kutusundan herhangi bir tür ayrı tutma kaldırıldıktan sonra *bir 
 
 - **DelayHoldApplied:** Bu özellik, kullanıcının posta kutusunda depolanan e-postayla ilgili içerik (Outlook ve Web üzerinde Outlook kullanan kişiler tarafından oluşturulur) için geçerlidir.
 
-- **DelayReleaseHoldApplied:** Bu özellik, kullanıcının posta kutusunda depolanan bulut tabanlı içerik (Microsoft Teams, Microsoft Forms ve Microsoft Yammer gibi Outlook olmayan uygulamalar tarafından oluşturulur) için geçerlidir. Microsoft uygulaması tarafından oluşturulan bulut verileri genellikle kullanıcının posta kutusunda gizli bir klasörde depolanır.
+- **DelayReleaseHoldApplied:** Bu özellik, kullanıcının posta kutusunda depolanan bulut tabanlı içerik (Microsoft Teams, Microsoft Forms ve Microsoft Yammer gibi Outlook dışı uygulamalar tarafından oluşturulur) için geçerlidir. Microsoft uygulaması tarafından oluşturulan bulut verileri genellikle kullanıcının posta kutusunda gizli bir klasörde depolanır.
 
-Posta kutusuna bir gecikmeli saklama yerleştirildiğinde (önceki özelliklerden biri **True** olarak ayarlandığında), posta kutusu, dava ayrı tutmadaymış gibi, sınırsız bir saklama süresi boyunca beklemede olarak kabul edilir. 30 gün sonra gecikme saklama süresi dolar ve Microsoft 365 gecikme saklamayı kaldırmayı otomatik olarak dener (DelayHoldApplied veya DelayReleaseHoldApplied özelliğini **False** olarak ayarlayarak) böylece bekletme kaldırılır. Bu özelliklerden biri **False** olarak ayarlandıktan sonra, posta kutusu Yönetilen Klasör Yardımcısı tarafından bir sonraki işlendiğinde, kaldırılmak üzere işaretlenmiş ilgili öğeler temizlenir.
+Posta kutusuna bir gecikmeli saklama yerleştirildiğinde (önceki özelliklerden biri **True** olarak ayarlandığında), posta kutusu, dava ayrı tutmadaymış gibi, sınırsız bir saklama süresi boyunca beklemede olarak kabul edilir. 30 gün sonra gecikme saklama süresi dolar ve Microsoft 365, bekletmenin kaldırılması için gecikme saklamayı (DelayHoldApplied veya DelayReleaseHoldApplied özelliğini **False** olarak ayarlayarak) otomatik olarak kaldırmaya çalışır. Bu özelliklerden biri **False** olarak ayarlandıktan sonra, posta kutusu Yönetilen Klasör Yardımcısı tarafından bir sonraki işlendiğinde, kaldırılmak üzere işaretlenmiş ilgili öğeler temizlenir.
 
 Posta kutusunun DelayHoldApplied ve DelayReleaseHoldApplied özelliklerinin değerlerini görüntülemek için [PowerShell'Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell) aşağıdaki komutu çalıştırın.
 
@@ -231,7 +229,7 @@ Set-Mailbox <DN or Exchange GUID> -InactiveMailbox -RemoveDelayReleaseHoldApplie
 ```
 
 > [!TIP]
-> Önceki komutta etkin olmayan bir posta kutusu belirtmenin en iyi yolu, Ayırt Edici Adı veya Exchange GUID değerini kullanmaktır. Bu değerlerden birinin kullanılması yanlışlıkla yanlış posta kutusunun belirtilmesini önlemeye yardımcı olur. 
+> Önceki komutta etkin olmayan bir posta kutusu belirtmenin en iyi yolu, Ayırt Edici Ad veya Exchange GUID değerini kullanmaktır. Bu değerlerden birinin kullanılması yanlışlıkla yanlış posta kutusunun belirtilmesini önlemeye yardımcı olur. 
 
 Gecikmeli tutmaları yönetmek için bu parametreleri kullanma hakkında daha fazla bilgi için bkz. [Set-Mailbox](/powershell/module/exchange/set-mailbox).
 
@@ -239,7 +237,7 @@ Gecikmeli beklemede bir posta kutusunu yönetirken aşağıdaki şeyleri göz ö
 
 - DelayHoldApplied veya DelayReleaseHoldApplied özelliği **True** olarak ayarlanırsa ve bir posta kutusu (veya ilgili kullanıcı hesabı) silinirse, posta kutusu etkin olmayan bir posta kutusuna dönüşür. Bunun nedeni, bir özelliğin **True** olarak ayarlanması durumunda posta kutusunun beklemede olarak kabul edilmesi ve beklemedeki bir posta kutusunun silinmesinin etkin olmayan bir posta kutusuna neden olmasıdır. Posta kutusunu silmek ve devre dışı posta kutusu yapmak için her iki özelliği de **False** olarak ayarlamanız gerekir.
 
-- Daha önce belirtildiği gibi, DelayHoldApplied veya DelayReleaseHoldApplied özelliği **True** olarak ayarlandıysa, posta kutusu sınırsız ayrı tutma süresi boyunca ayrı tutulmuş olarak kabul edilir. Ancak bu, posta kutusundaki *tüm* içeriğin korunduğu anlamına gelmez. Her özelliğe ayarlanan değere bağlıdır. Örneğin, her iki özelliğin de posta kutusundan ayrı tutmalar kaldırıldığı için **True** olarak ayarlandığını düşünelim. Ardından yalnızca Outlook olmayan bulut verilerine uygulanan gecikme bekletmesini kaldırırsınız (*RemoveDelayReleaseHoldApplied* parametresini kullanarak). Yönetilen Klasör Yardımcısı posta kutusunu bir sonraki işlediğinde, kaldırılmak üzere işaretlenmiş Outlook olmayan öğeler temizlenir. DelayHoldApplied özelliği hala **True** olarak ayarlandığından, kaldırılmak üzere işaretlenmiş Outlook öğeler temizlenmez. Bunun tersi de doğru olacaktır: DelayHoldApplied **değeri False** ve DelayReleaseHoldApplied değeri **True** olarak ayarlanırsa, yalnızca kaldırılmak üzere işaretlenmiş Outlook öğeler temizlenir.
+- Daha önce belirtildiği gibi, DelayHoldApplied veya DelayReleaseHoldApplied özelliği **True** olarak ayarlandıysa, posta kutusu sınırsız ayrı tutma süresi boyunca ayrı tutulmuş olarak kabul edilir. Ancak bu, posta kutusundaki *tüm* içeriğin korunduğu anlamına gelmez. Her özelliğe ayarlanan değere bağlıdır. Örneğin, her iki özelliğin de posta kutusundan ayrı tutmalar kaldırıldığı için **True** olarak ayarlandığını düşünelim. Ardından yalnızca Outlook dışı bulut verilerine uygulanan gecikme bekletmesini kaldırırsınız ( *RemoveDelayReleaseHoldApplied* parametresini kullanarak). Yönetilen Klasör Yardımcısı posta kutusunu bir sonraki işlediğinde, kaldırılmak üzere işaretlenen Outlook dışı öğeler temizlenir. DelayHoldApplied özelliği hala **True** olarak ayarlandığından, kaldırılmak üzere işaretlenmiş tüm Outlook öğeleri temizlenmez. Tam tersi de doğru olacaktır: DelayHoldApplied **değeri False** ve DelayReleaseHoldApplied değeri **True** olarak ayarlanırsa, yalnızca kaldırılmak üzere işaretlenmiş Outlook öğeleri temizlenir.
 
 ## <a name="how-to-confirm-that-an-organization-wide-retention-policy-is-applied-to-a-mailbox"></a>Kuruluş genelinde saklama ilkesinin posta kutusuna uygulandığını onaylama
 
@@ -283,16 +281,16 @@ Tanılama günlüğünde listelenen önceki değerlerin her birini anlamanıza y
 | **Ed**  | Saklama ilkesinin devre dışı bırakıldığı tarih olan Bitiş tarihini gösterir. MinValue, ilkenin posta kutusuna hala atandığı anlamına gelir. |
 | **Sakladı** | Bekletme ilkesinin GUID'sini gösterir. Bu değer, posta kutusuna atanan açık veya kuruluş genelinde saklama ilkeleri için topladığınız GUID'lerle ilişkilendirilecektir.|
 | **Lsd** | Saklama ilkesinin posta kutusuna atandığı tarih olan Son başlangıç tarihini gösterir.|
-| **Osd** | Bekletme ilkesiyle ilgili bilgileri ilk kaydeden tarih olan Özgün başlangıç tarihini Exchange gösterir. |
+| **Osd** | Exchange'in bekletme ilkesiyle ilgili bilgileri ilk kaydettiği tarih olan Özgün başlangıç tarihini gösterir. |
 |||
 
 Bir saklama ilkesi artık bir posta kutusuna uygulanmadığında, içeriğin temizlenmesini önlemek için kullanıcıya geçici bir gecikmeli saklama uygularız. Komutu çalıştırarak `Set-Mailbox -RemoveDelayHoldApplied` gecikmeli saklama devre dışı bırakılabilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bir posta kutusuna uygulanan ayrı tutmaları belirledikten sonra saklama süresini değiştirme, saklamayı geçici veya kalıcı olarak kaldırma ya da etkin olmayan bir posta kutusunu Microsoft 365 bekletme ilkesinden dışlama gibi görevleri gerçekleştirebilirsiniz. Ayrı tutmalarla ilgili görevleri gerçekleştirme hakkında daha fazla bilgi için aşağıdaki konulardan birine bakın:
+Bir posta kutusuna uygulanan ayrı tutmaları belirledikten sonra, saklama süresini değiştirme, saklamayı geçici veya kalıcı olarak kaldırma ya da etkin olmayan bir posta kutusunu Microsoft 365 bekletme ilkesinden dışlama gibi görevleri gerçekleştirebilirsiniz. Ayrı tutmalarla ilgili görevleri gerçekleştirme hakkında daha fazla bilgi için aşağıdaki konulardan birine bakın:
 
-- Güvenlik & [Uyumluluk PowerShell'de](/powershell/exchange/connect-to-scc-powershell) [Set-RetentionCompliancePolicy -Identity \<Policy Name> -AddExchangeLocationException \<user mailbox>](/powershell/module/exchange/set-retentioncompliancepolicy) komutunu çalıştırarak bir posta kutusunu kuruluş genelindeki Microsoft 365 bekletme ilkesinin dışında tutun. Bu komut yalnızca *ExchangeLocation* özelliğinin değerinin eşit `All`olduğu bekletme ilkeleri için kullanılabilir.
+- Güvenlik [& Uyumluluk PowerShell'de](/powershell/exchange/connect-to-scc-powershell) [Set-RetentionCompliancePolicy -Identity \<Policy Name> -AddExchangeLocationException \<user mailbox>](/powershell/module/exchange/set-retentioncompliancepolicy) komutunu çalıştırarak bir posta kutusunu kuruluş genelinde microsoft 365 bekletme ilkesinin dışında tutun. Bu komut yalnızca *ExchangeLocation* özelliğinin değerinin eşit `All`olduğu bekletme ilkeleri için kullanılabilir.
 
 - [Etkin olmayan posta kutusunun bekletme süresini değiştirme](change-the-hold-duration-for-an-inactive-mailbox.md)
 

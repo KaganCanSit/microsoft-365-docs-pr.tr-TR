@@ -14,28 +14,26 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-description: Yöneticiler, çalışan verilerini kuruluşlarının insan kaynakları (İk) sisteminden Microsoft 365 aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, kuruluşunuz için iç tehdit oluşturabilecek belirli kullanıcıların etkinliklerini algılamanıza yardımcı olmak için şirket içi risk yönetimi ilkelerinde İk verilerini kullanmanıza olanak tanır.
-ms.openlocfilehash: cfde990b002d05962b3b7489f1adc9f5122af7c5
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+description: Yöneticiler, çalışan verilerini kuruluşlarının insan kaynakları (İk) sisteminden Microsoft 365'e aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, kuruluşunuz için iç tehdit oluşturabilecek belirli kullanıcıların etkinliklerini algılamanıza yardımcı olmak için şirket içi risk yönetimi ilkelerinde İk verilerini kullanmanıza olanak tanır.
+ms.openlocfilehash: 6dd788b1e10648a1102294eb641188416e455c20
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078578"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629629"
 ---
 # <a name="set-up-a-connector-to-import-hr-data"></a>İk verilerini içeri aktarmak için bağlayıcı ayarlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 kullanıcının istifası veya kullanıcının iş düzeyindeki bir değişiklik gibi olaylarla ilgili insan kaynakları (İk) verilerini içeri aktarmak için Microsoft Purview uyumluluk portalı bir veri bağlayıcısı ayarlayabilirsiniz. daha sonra İk verileri, kuruluşunuzdaki kullanıcılar tarafından olası kötü amaçlı etkinlikleri veya veri hırsızlığını tanımlamanıza yardımcı olabilecek risk göstergeleri oluşturmak için [insider risk yönetimi çözümü](insider-risk-management.md) tarafından kullanılabilir.
 
-Insider risk yönetimi ilkelerinin risk göstergeleri oluşturmak için kullanabileceği İk verileri için bağlayıcı ayarlamak, İk verilerini içeren bir CSV dosyası oluşturmak, kimlik doğrulaması için kullanılan Azure Active Directory'de bir uygulama oluşturmak, uyumluluk portalında İk veri bağlayıcısı oluşturmak ve ardından İK verilerini CSV dosyalarına alan bir betiğin (zamanlanmış olarak) Microsoft bulutunda kullanılabilir olması için çalıştırılmasından oluşur  öğesini insider risk yönetimi çözümüne ekleyin.
+Insider risk yönetimi ilkelerinin risk göstergeleri oluşturmak için kullanabileceği İk verileri için bağlayıcı ayarlamak, İk verilerini içeren bir CSV dosyası oluşturmak, kimlik doğrulaması için kullanılan Azure Active Directory'de bir uygulama oluşturmak, uyumluluk portalında bir İk veri bağlayıcısı oluşturmak ve ardından CSV dosyalarındaki İk verilerini kullanılabilir hale getirmek için csv dosyalarına alan bir betik (zamanlanmış olarak) çalıştırmaktır öğesini insider risk yönetimi çözümüne ekleyin.
 
 > [!IMPORTANT]
 > İk bağlayıcısının yeni bir sürümü artık genel önizleme için kullanılabilir. Yeni bir İk bağlayıcısı oluşturmak veya iç risk yönetimine yönelik sağlık ilkesi [senaryosuna yönelik yeni çalışan profili senaryosuna](#csv-file-for-employee-profile-data-preview) yönelik verileri içeri aktarmak için uyumluluk portalındaki **Veri bağlayıcıları** sayfasına gidin, **Bağlayıcılar** sekmesini seçin ve ardından kurulumu başlatmak için **İk > bağlayıcı ekle (önizleme)** seçeneğine tıklayın. Mevcut İk bağlayıcıları herhangi bir kesinti olmadan çalışmaya devam edecektir.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- Microsoft 365 hangi İk senaryolarının ve verilerinin içeri aktarılacağını belirleyin. Bu, kaç CSV dosyası ve İk bağlayıcısı oluşturmanız gerektiğini ve CSV dosyalarının nasıl oluşturulup yapılandırılacağını belirlemenize yardımcı olur. İçeri aktardığınız İk verileri, uygulamak istediğiniz insider risk yönetimi ilkeleri tarafından belirlenir. Daha fazla bilgi için bkz. 1. Adım.
+- Hangi İk senaryolarının ve verilerin Microsoft 365'e aktarılacağını belirleyin. Bu, kaç CSV dosyası ve İk bağlayıcısı oluşturmanız gerektiğini ve CSV dosyalarının nasıl oluşturulup yapılandırılacağını belirlemenize yardımcı olur. İçeri aktardığınız İk verileri, uygulamak istediğiniz insider risk yönetimi ilkeleri tarafından belirlenir. Daha fazla bilgi için bkz. 1. Adım.
 
 - Kuruluşunuzun İk sisteminden (ve düzenli olarak) verilerin nasıl alınacağını veya dışarı aktarıldığını belirleyin ve 1. Adımda oluşturduğunuz CSV dosyalarına ekleyin. 4. Adımda çalıştırdığınız betik, CSV dosyalarındaki İk verilerini Microsoft buluta yükler.
 
@@ -43,11 +41,11 @@ Insider risk yönetimi ilkelerinin risk göstergeleri oluşturmak için kullanab
 
 - 4. Adımda çalıştırdığınız örnek betik, İk verilerinizi Microsoft buluta yükleyerek insider risk yönetimi çözümü tarafından kullanılabilmesini sağlar. Bu örnek betik, herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betik, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiğin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
 
-- Bu bağlayıcı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir. GCC bir ortamda İk bağlayıcısı ayarlamaya yönelik adım adım yönergeler için bkz. [US Government'da İk verilerini içeri aktarmak için bağlayıcı ayarlama](import-hr-data-US-government.md).
+- Bu bağlayıcı, Microsoft 365 US Government bulutundaki GCC ortamlarında kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerini Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolamayı, iletmeyi ve işlemeyi içerebilir ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir. GCC ortamında İk bağlayıcısı ayarlamaya yönelik adım adım yönergeler için bkz. [US Government'da İk verilerini içeri aktarmak için bağlayıcı ayarlama](import-hr-data-US-government.md).
 
 ## <a name="step-1-prepare-a-csv-file-with-your-hr-data"></a>1. Adım: İk verilerinizle csv dosyası hazırlama
 
-İlk adım, bağlayıcının Microsoft 365 içeri aktaracağı İk verilerini içeren bir CSV dosyası oluşturmaktır. Bu veriler, insider risk çözümü tarafından olası risk göstergelerini oluşturmak için kullanılacaktır. Aşağıdaki İk senaryolarına ilişkin veriler Microsoft 365 aktarılabilir:
+İlk adım, bağlayıcının Microsoft 365'e aktaracağı İk verilerini içeren bir CSV dosyası oluşturmaktır. Bu veriler, insider risk çözümü tarafından olası risk göstergelerini oluşturmak için kullanılacaktır. Aşağıdaki İk senaryolarına ilişkin veriler Microsoft 365'e aktarılabilir:
 
 - Çalışan istifası. Kuruluşunuzdan ayrılan çalışanlar hakkında bilgi.
 
@@ -82,7 +80,7 @@ Her İk senaryosu için, bir veya daha fazla CSV dosyasında ilgili İk verileri
 Gerekli İk verileriyle CSV dosyasını oluşturduktan sonra, 4. Adımda betiği çalıştırdığınız yerel bilgisayarda depolayın. Ayrıca CSV dosyasının her zaman en güncel bilgileri içerdiğinden emin olmak için bir güncelleştirme stratejisi uygulamanız gerekir. Böylece betiği çalıştırdığınızda en güncel İk verileri Microsoft buluta yüklenir ve insider risk yönetimi çözümü tarafından erişilebilir.
 
 > [!IMPORTANT]
-> Aşağıdaki bölümlerde açıklanan sütun adları gerekli parametreler değildir, yalnızca örneklerdir. CSV dosyalarınızda herhangi bir sütun adını kullanabilirsiniz. Ancak, BIR CSV dosyasında kullandığınız sütun adları, 3. Adımda İk bağlayıcısını oluştururken veri türüyle *eşlenmelidir* . Ayrıca, aşağıdaki bölümlerde yer alan örnek CSV dosyalarının Not Defteri görünümünde görüntülendiğini unutmayın. CSV dosyalarını Microsoft Excel görüntülemek ve düzenlemek çok daha kolaydır.
+> Aşağıdaki bölümlerde açıklanan sütun adları gerekli parametreler değildir, yalnızca örneklerdir. CSV dosyalarınızda herhangi bir sütun adını kullanabilirsiniz. Ancak, BIR CSV dosyasında kullandığınız sütun adları, 3. Adımda İk bağlayıcısını oluştururken veri türüyle *eşlenmelidir* . Ayrıca, aşağıdaki bölümlerde yer alan örnek CSV dosyalarının Not Defteri görünümünde görüntülendiğini unutmayın. Csv dosyalarını Microsoft Excel'de görüntülemek ve düzenlemek çok daha kolaydır.
 
 Aşağıdaki bölümlerde her İk senaryosu için gerekli CSV verileri açıklanmaktadır.
 
@@ -246,7 +244,7 @@ Kuruluşunuzun İk sistemlerine ve İk verilerini CSV dosyasına nasıl aktaraca
 
 ## <a name="step-2-create-an-app-in-azure-active-directory"></a>2. Adım: Azure Active Directory'de uygulama oluşturma
 
-Sonraki adım, Azure Active Directory'de (Azure AD) yeni bir uygulama oluşturup kaydetmektir. Uygulama, 3. Adımda oluşturduğunuz İk bağlayıcısına karşılık gelir. Bu uygulamanın oluşturulması, Azure AD çalıştığında ve kuruluşunuza erişmeye çalıştığında İk bağlayıcısının kimliğini doğrulamasını sağlar. Bu uygulama, İk verilerinizi Microsoft buluta yüklemek için 4. Adımda çalıştırdığınız betiğin kimliğini doğrulamak için de kullanılır. Bu Azure AD uygulamasını oluştururken aşağıdaki bilgileri kaydettiğinizden emin olun. Bu değerler 3. Adım ve 4. Adım'da kullanılır.
+Sonraki adım, Azure Active Directory'de (Azure AD) yeni bir uygulama oluşturmak ve kaydetmektir. Uygulama, 3. Adımda oluşturduğunuz İk bağlayıcısına karşılık gelir. Bu uygulamanın oluşturulması, Azure AD çalıştığında ve kuruluşunuza erişmeye çalıştığında İk bağlayıcısının kimliğini doğrulamasını sağlar. Bu uygulama, İk verilerinizi Microsoft buluta yüklemek için 4. Adımda çalıştırdığınız betiğin kimliğini doğrulamak için de kullanılır. Bu Azure AD uygulamasını oluştururken aşağıdaki bilgileri kaydettiğinizden emin olun. Bu değerler 3. Adım ve 4. Adım'da kullanılır.
 
 - Azure AD uygulama kimliği (*uygulama kimliği* veya *istemci kimliği* olarak da adlandırılır)
 
@@ -280,7 +278,7 @@ Bu adımı tamamladıktan sonra bağlayıcıyı oluştururken oluşturulan iş k
 
 6. Dosya eşleme yöntemi sayfasında, gerekirse bir dosya türü seçin ve ardından aşağıdaki seçeneklerden birini belirleyin ve **İleri'ye** tıklayın.
 
-   - **Örnek bir dosya Upload**. Bu seçeneği seçerseniz, 1. Adımda hazırladığınız CSV dosyasını karşıya yüklemek için **örnek dosya Upload** tıklayın. Bu seçenek, csv dosyanızdaki sütun adlarını daha önce seçtiğiniz İk senaryolarının veri türleriyle eşlemek üzere açılan listeden hızla seçmenize olanak tanır.
+   - **Örnek bir dosyayı karşıya yükleyin**. Bu seçeneği seçerseniz, 1. Adımda hazırladığınız CSV dosyasını karşıya yüklemek için **Örnek dosyayı karşıya yükle'ye** tıklayın. Bu seçenek, csv dosyanızdaki sütun adlarını daha önce seçtiğiniz İk senaryolarının veri türleriyle eşlemek üzere açılan listeden hızla seçmenize olanak tanır.
 
    VEYA
 
@@ -316,9 +314,9 @@ Henüz yapmadıysanız **, Azure Uygulaması Kimliği** ve **Bağlayıcı iş ki
 
 ## <a name="step-4-run-the-sample-script-to-upload-your-hr-data"></a>4. Adım: İk verilerinizi karşıya yüklemek için örnek betiği çalıştırın
 
-İk bağlayıcısını ayarlamanın son adımı, CSV dosyasındaki (1. Adımda oluşturduğunuz) İk verilerini Microsoft buluta yükleyecek örnek bir betik çalıştırmaktır. Özellikle betik, verileri İk bağlayıcısına yükler. Betiği çalıştırdıktan sonra, 3. Adımda oluşturduğunuz İk bağlayıcısı İk verilerini insider risk yönetimi çözümü gibi diğer uyumluluk araçları tarafından erişilebilen Microsoft 365 kuruluşunuza aktarır. Betiği çalıştırdıktan sonra, en güncel çalışan sonlandırma verilerinin Microsoft buluta yüklenmesi için günlük olarak otomatik olarak çalıştırılacak bir görev zamanlamayı göz önünde bulundurun. Bkz. [Betiği otomatik olarak çalışacak şekilde zamanlama](#optional-step-6-schedule-the-script-to-run-automatically).
+İk bağlayıcısını ayarlamanın son adımı, CSV dosyasındaki (1. Adımda oluşturduğunuz) İk verilerini Microsoft buluta yükleyecek örnek bir betik çalıştırmaktır. Özellikle betik, verileri İk bağlayıcısına yükler. Betiği çalıştırdıktan sonra, 3. Adımda oluşturduğunuz İk bağlayıcısı İk verilerini Microsoft 365 kuruluşunuza aktarır ve burada Insider risk yönetimi çözümü gibi diğer uyumluluk araçları tarafından erişilebilir. Betiği çalıştırdıktan sonra, en güncel çalışan sonlandırma verilerinin Microsoft buluta yüklenmesi için günlük olarak otomatik olarak çalıştırılacak bir görev zamanlamayı göz önünde bulundurun. Bkz. [Betiği otomatik olarak çalışacak şekilde zamanlama](#optional-step-6-schedule-the-script-to-run-automatically).
 
-1. Örnek betikle GitHub sitesine erişmek için önceki adımda açık bıraktığınız pencereye gidin. Alternatif olarak, yer işaretli siteyi açın veya kopyaladığınız URL'yi kullanın. Betike [buradan](https://github.com/microsoft/m365-compliance-connector-sample-scripts/blob/main/sample_script.ps1) da erişebilirsiniz.
+1. GitHub sitesine örnek betikle erişmek için önceki adımda açık bıraktığınız pencereye gidin. Alternatif olarak, yer işaretli siteyi açın veya kopyaladığınız URL'yi kullanın. Betike [buradan](https://github.com/microsoft/m365-compliance-connector-sample-scripts/blob/main/sample_script.ps1) da erişebilirsiniz.
 
 2. Betiği metin görünümünde görüntülemek için **Ham** düğmesine tıklayın.
 
@@ -340,7 +338,7 @@ Henüz yapmadıysanız **, Azure Uygulaması Kimliği** ve **Bağlayıcı iş ki
 
    | Parametre | Açıklama |
    |:-----|:-----|:-----|
-   |`tenantId`|Bu, 2. Adımda aldığınız Microsoft 365 kuruluşunuzun kimliğidir. Ayrıca, Azure AD yönetim merkezindeki **Genel Bakış** dikey penceresinde kuruluşunuzun kiracı kimliğini de alabilirsiniz. Bu, kuruluşunuzu tanımlamak için kullanılır.|
+   |`tenantId`|Bu, 2. Adımda edindiğiniz Microsoft 365 kuruluşunuzun kimliğidir. Ayrıca, Azure AD yönetim merkezindeki **Genel Bakış** dikey penceresinde kuruluşunuzun kiracı kimliğini de alabilirsiniz. Bu, kuruluşunuzu tanımlamak için kullanılır.|
    |`appId` |Bu, 2. Adımda Azure AD oluşturduğunuz uygulamanın Azure AD uygulama kimliğidir. Bu, Azure AD tarafından betik Microsoft 365 kuruluşunuza erişmeye çalıştığında kimlik doğrulaması için kullanılır. | 
    |`appSecret`|Bu, 2. Adımda Azure AD oluşturduğunuz uygulamanın Azure AD uygulama gizli dizisidir. Bu, kimlik doğrulaması için de kullanılır.|
    |`jobId`|Bu, 3. Adımda oluşturduğunuz İk bağlayıcısının iş kimliğidir. Bu, Microsoft buluta yüklenen İk verilerini İk bağlayıcısıyla ilişkilendirmek için kullanılır.|
@@ -353,7 +351,7 @@ Henüz yapmadıysanız **, Azure Uygulaması Kimliği** ve **Bağlayıcı iş ki
     .\HRConnector.ps1 -tenantId d5723623-11cf-4e2e-b5a5-01d1506273g9 -appId 29ee526e-f9a7-4e98-a682-67f41bfd643e -appSecret MNubVGbcQDkGCnn -jobId b8be4a7d-e338-43eb-a69e-c513cd458eba -filePath 'C:\Users\contosoadmin\Desktop\Data\employee_termination_data.csv'
     ```
 
-   Karşıya yükleme başarılı olursa, betik **Upload Başarılı** iletisini görüntüler.
+   Karşıya yükleme başarılı olursa, betik **Karşıya Yükleme Başarılı** iletisini görüntüler.
 
    > [!NOTE]
    > Yürütme ilkeleri nedeniyle önceki komutu çalıştırırken sorun yaşıyorsanız, yürütme ilkelerini ayarlama hakkında yönergeler için [Bkz. Yürütme İlkeleri Hakkında](/powershell/module/microsoft.powershell.core/about/about_execution_policies) ve [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy) .
@@ -380,7 +378,7 @@ Henüz yapmadıysanız **, Azure Uygulaması Kimliği** ve **Bağlayıcı iş ki
 
 Kuruluşunuzdaki en son İk verilerinin insider risk yönetimi çözümü gibi araçlar tarafından kullanılabildiğinden emin olmak için, betiği günde bir kez gibi yinelenen bir şekilde otomatik olarak çalışacak şekilde zamanlamanızı öneririz. Bu, kuruluşunuzdan ayrılan çalışanlar hakkında en son bilgileri içermesi için CSV dosyasındaki İk verilerini benzer (aynı değilse) bir zamanlamayla güncelleştirmenizi de gerektirir. Amaç, İk bağlayıcısının bunu insider risk yönetimi çözümüne sunabilmesi için en güncel İk verilerini karşıya yüklemektir.
 
-Betiği her gün otomatik olarak çalıştırmak için Windows'da Görev Zamanlayıcı uygulamasını kullanabilirsiniz.
+Betiği her gün otomatik olarak çalıştırmak için Windows'ta Görev Zamanlayıcı uygulamasını kullanabilirsiniz.
 
 1. Yerel bilgisayarınızda, Windows **Başlat** düğmesine tıklayın ve görev **zamanlayıcı** yazın.
 
@@ -398,7 +396,7 @@ Betiği her gün otomatik olarak çalıştırmak için Windows'da Görev Zamanla
 
 6. **Tetikleyiciler** sekmesini seçin, **Yeni'ye** tıklayın ve aşağıdaki işlemleri yapın:
 
-   1. **Ayarlar** altında **Günlük** seçeneğini belirleyin ve ardından betiği ilk kez çalıştırmak için bir tarih ve saat seçin. Betik her gün belirtilen saatte çalıştırılır.
+   1. **Ayarlar'ın** altında **Günlük** seçeneğini belirleyin ve ardından betiği ilk kez çalıştırmak için bir tarih ve saat seçin. Betik her gün belirtilen saatte çalıştırılır.
 
    1. **Gelişmiş ayarlar'ın** altında **Etkin** onay kutusunun seçili olduğundan emin olun.
 

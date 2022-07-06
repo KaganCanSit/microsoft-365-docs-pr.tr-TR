@@ -14,16 +14,14 @@ ms.collection:
 search.appverid:
 - MET150
 description: Microsoft Intune kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma hakkında bilgi edinin
-ms.openlocfilehash: 99a407b2b0c8d6a506cd138078b3f35cf9e5a232
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: e5cc3ff25895f3eb7557566eb8a38722a1aee35f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952984"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632365"
 ---
 # <a name="onboard-and-offboard-macos-devices-into-microsoft-purview-solutions-using-intune"></a>Intune kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 macOS cihazlarını Microsoft Purview çözümlerine eklemek için Intune kullanabilirsiniz.
 
@@ -142,7 +140,7 @@ tam disk erişimi     |[fulldisk.mobileconfig](https://github.com/microsoft/mdat
 ```
 -->
 
-2. **Microsoft Endpoint Manager** **centerDevicesConfiguration** >  >  **profillerini** açın.
+2. **Microsoft Endpoint Manager merkezi** > **Cihazlar** > **Yapılandırma profillerini** açın.
 
 1. Seç: **Profil oluştur** 
 
@@ -170,13 +168,13 @@ tam disk erişimi     |[fulldisk.mobileconfig](https://github.com/microsoft/mdat
         1. Virüsten koruma altyapısını `passive mode` = `true` veya `false`ayarlayın. Yalnızca DLP dağıtıyorsanız kullanın `true`. DLP ve Uç Nokta için Microsoft Defender (MDE) dağıtırken bir değer kullanın `false` veya atayın.
     1. **netfilter.mobileconfig**
  
-1. **DevicesConfiguration** >  **profillerini** açın, oluşturduğunuz profilleri orada görmeniz gerekir.
+1. **Cihaz** > **Yapılandırma profillerini** açın, oluşturduğunuz profilleri orada görmeniz gerekir.
 
 1. **Yapılandırma profilleri** sayfasında, az önce oluşturduğunuz profili seçin, bu örnekte *ErişilebilirlikformacOS* ve cihaz listesini ve yapılandırma profilinin dağıtım durumunu görmek için **Cihaz durumu'nu** seçin.
 
 ### <a name="get-the-device-onboarding-package"></a>Cihaz ekleme paketini alma
 
-1. **Uyumluluk merkezinde** **Ayarlar** >  **Cihaz Ekleme'yi** açın ve **Ekleme'yi** seçin.
+1. **Uyumluluk merkezinde** **Ayarlar** > **Cihaz Ekleme'yi** açın ve **Ekleme'yi** seçin.
  
 1. **Ekleme işlemini başlatmak için İşletim sistemini seçin** için **macOS'u** seçin.
  
@@ -186,7 +184,7 @@ tam disk erişimi     |[fulldisk.mobileconfig](https://github.com/microsoft/mdat
 
 ### <a name="deploy-the-onboarding-package"></a>Ekleme paketini dağıtma
 
-1. **Microsoft Endpoint Manager** **centerDevicesConfiguration** >  >  **profillerini** açın.
+1. **Microsoft Endpoint Manager merkezi** > **Cihazlar** > **Yapılandırma profillerini** açın.
 
 1. Seçin: **Profil oluştur**. 
 
@@ -236,7 +234,7 @@ tam disk erişimi     |[fulldisk.mobileconfig](https://github.com/microsoft/mdat
 
 ### <a name="get-the-installation-package"></a>Yükleme paketini alma
 
-1. **Uyumluluk merkezinde** **Ayarlar** >  **Cihaz Ekleme'yi** açın ve **Ekleme'yi** seçin.
+1. **Uyumluluk merkezinde** **Ayarlar** > **Cihaz Ekleme'yi** açın ve **Ekleme'yi** seçin.
  
 1. **Ekleme işlemini başlatmak için işletim sistemini seçin** **için macOS'u** seçin
  
@@ -257,7 +255,7 @@ tam disk erişimi     |[fulldisk.mobileconfig](https://github.com/microsoft/mdat
 > [!NOTE]
 > Kullanıma alma, cihazın portala algılayıcı verileri göndermeyi durdurmasına neden olur, ancak sahip olduğu uyarılara başvuru dahil olmak üzere cihazdaki veriler altı aya kadar saklanır.
 
-2. **Microsoft Endpoint Manager merkezinde** **DevicesConfiguration** >  profillerini açın, oluşturduğunuz profilleri orada görmeniz gerekir.
+2. **Microsoft Endpoint Manager merkezinde** **Cihazlar** > **Yapılandırma profillerini** açın, oluşturduğunuz profilleri orada görmeniz gerekir.
 
 1. **Yapılandırma profilleri** sayfasında *wdav.pkg.intunemac* profilini seçin.
 

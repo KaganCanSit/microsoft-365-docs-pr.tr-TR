@@ -12,18 +12,16 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Müşteri Anahtarını ayarlamayı öğrenin.
-ms.openlocfilehash: 93cf56ba30f333697ccb1ef6f4064918e73d4fcf
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: d285d19eb00afdaea6c5c591caf32a9b4a482987
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66042450"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66642206"
 ---
 # <a name="set-up-customer-key"></a>Müşteri Anahtarını Ayarlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Müşteri Anahtarı ile kuruluşunuzun şifreleme anahtarlarını denetler ve ardından Microsoft 365 Microsoft'un veri merkezlerinde bekleyen verilerinizi şifrelemek için bunları kullanacak şekilde yapılandırabilirsiniz. Başka bir deyişle Müşteri Anahtarı, müşterilerin anahtarlarıyla kendilerine ait bir şifreleme katmanı eklemesine olanak tanır.
+Müşteri Anahtarı ile kuruluşunuzun şifreleme anahtarlarını denetler ve ardından Microsoft 365'i Microsoft'un veri merkezlerinde bekleyen verilerinizi şifrelemek için bunları kullanacak şekilde yapılandırabilirsiniz. Başka bir deyişle Müşteri Anahtarı, müşterilerin anahtarlarıyla kendilerine ait bir şifreleme katmanı eklemesine olanak tanır.
 
 Müşteri Anahtarını kullanmadan önce Azure'ın kurulumunu yapma. Bu makalede, gerekli Azure kaynaklarını oluşturmak ve yapılandırmak için izlemeniz gereken adımlar açıklanır ve ardından Müşteri Anahtarını ayarlama adımları sağlanır. Azure'ı ayarladıktan sonra, kuruluşunuzdaki çeşitli Microsoft 365 iş yüklerinde verileri şifrelemek için hangi ilkeyi ve dolayısıyla hangi anahtarların atandığını belirlersiniz. Müşteri Anahtarı hakkında daha fazla bilgi edinmek veya genel bir genel bakış için bkz. [Microsoft Purview Müşteri Anahtarı ile hizmet şifrelemesi](customer-key-overview.md).
   
@@ -88,7 +86,7 @@ Bu görevleri Azure Key Vault'da tamamlayın. Müşteri Anahtarı ile kullandı�
   
 ### <a name="create-two-new-azure-subscriptions"></a>İki yeni Azure aboneliği oluşturma
 
-Müşteri Anahtarı için iki Azure aboneliği gerekir. En iyi uygulama olarak Microsoft, Müşteri Anahtarı ile kullanmak üzere yeni Azure abonelikleri oluşturmanızı önerir. Azure Key Vault anahtarları yalnızca aynı Azure Active Directory (Microsoft Azure Active Directory) kiracıdaki uygulamalar için yetkilendirilebilir. Yeni abonelikleri, DEP'lerin atanacağı kuruluşunuzda kullanılan Azure AD kiracısını kullanarak oluşturmanız gerekir. Örneğin, kuruluşunuzda genel yönetici ayrıcalıklarına sahip iş veya okul hesabınızı kullanma. Ayrıntılı adımlar için bkz. [Azure'a kuruluş olarak kaydolma](/azure/active-directory/fundamentals/sign-up-organization).
+Müşteri Anahtarı için iki Azure aboneliği gerekir. En iyi uygulama olarak Microsoft, Müşteri Anahtarı ile kullanmak üzere yeni Azure abonelikleri oluşturmanızı önerir. Azure Key Vault anahtarları yalnızca aynı Azure Active Directory (Microsoft Azure Active Directory) kiracısında bulunan uygulamalar için yetkilendirilebilir. Yeni abonelikleri, DEP'lerin atanacağı kuruluşunuzda kullanılan Azure AD kiracısını kullanarak oluşturmanız gerekir. Örneğin, kuruluşunuzda genel yönetici ayrıcalıklarına sahip iş veya okul hesabınızı kullanma. Ayrıntılı adımlar için bkz. [Azure'a kuruluş olarak kaydolma](/azure/active-directory/fundamentals/sign-up-organization).
   
 > [!IMPORTANT]
 > Müşteri Anahtarı, her veri şifreleme ilkesi (DEP) için iki anahtar gerektirir. Bunu başarmak için iki Azure aboneliği oluşturmanız gerekir. En iyi uygulama olarak Microsoft, kuruluşunuzun ayrı üyelerinin her abonelikte bir anahtar yapılandırmanızı önerir. Bu Azure aboneliklerini yalnızca Office 365 şifreleme anahtarlarını yönetmek için kullanmanız gerekir. Bu, operatörlerinizden birinin sorumlu oldukları anahtarları yanlışlıkla, kasıtlı olarak veya kötü amaçlı olarak silmesi veya başka bir şekilde yanlış yönetmesi durumunda kuruluşunuzu korur.
@@ -111,11 +109,11 @@ Müşteri Anahtarını etkinleştirme teklifi göndermek için şu adımları ta
 
 4. Sizin için geçerli olan teklifin bilgi kartını seçin:
 
-   - **Birden çok Microsoft 365 iş yükü:** **Microsoft 365 teklifi için şifreleme anahtarı yardımı isteme'yi** seçin.
+   - **Birden çok Microsoft 365 iş yükü:** **Microsoft 365 teklifi için şifreleme anahtarı isteme yardımını** seçin.
 
-   - **Exchange Online ve Skype Kurumsal:** **Exchange teklifi için Şifreleme anahtarı yardımı isteme'yi** seçin.
+   - **Exchange Online ve Skype Kurumsal:** **Exchange teklifi için şifreleme anahtarı yardımı isteme'yi** seçin.
 
-   - **Çevrimiçi, OneDrive ve Teams dosyaları SharePoint:** **SharePoint ve OneDrive İş teklifi için şifreleme anahtarı yardımı isteme'yi** seçin.
+   - **SharePoint Online, OneDrive ve Teams dosyaları:** **SharePoint ve OneDrive İş teklifi için şifreleme anahtarı isteme yardımını** seçin.
 
 5. Teklif ayrıntılarını gözden geçirdikten sonra **2. adıma devam et'i** seçin.
 
@@ -123,14 +121,14 @@ Müşteri Anahtarını etkinleştirme teklifi göndermek için şu adımları ta
 
 ### <a name="register-azure-subscriptions-to-use-a-mandatory-retention-period"></a>Zorunlu saklama süresi kullanmak için Azure aboneliklerini kaydetme
 
-Kök şifreleme anahtarlarının geçici veya kalıcı olarak kaybedilmesi hizmet işlemini kesintiye uğratabilir ve hatta yıkıcı olabilir ve veri kaybına neden olabilir. Bu nedenle Müşteri Anahtarı ile kullanılan kaynaklar güçlü koruma gerektirir. Müşteri Anahtarı ile kullanılan tüm Azure kaynakları, varsayılan yapılandırmanın ötesinde koruma mekanizmaları sunar. Azure aboneliklerini *zorunlu saklama süresi* için etiketleyebilir veya kaydedebilirsiniz. Zorunlu saklama süresi, Azure aboneliğinizin hemen ve geri alınamaz iptalini engeller. Azure aboneliklerini zorunlu saklama süresine kaydetmek için gereken adımlar, Microsoft 365 ekibiyle işbirliği gerektirir. Bu işlemin tamamlanması beş iş günü sürer. Daha önce zorunlu saklama süresi bazen "İptal Etmeyin" olarak da adlandırılırdı.
+Kök şifreleme anahtarlarının geçici veya kalıcı olarak kaybedilmesi hizmet işlemini kesintiye uğratabilir ve hatta yıkıcı olabilir ve veri kaybına neden olabilir. Bu nedenle Müşteri Anahtarı ile kullanılan kaynaklar güçlü koruma gerektirir. Müşteri Anahtarı ile kullanılan tüm Azure kaynakları, varsayılan yapılandırmanın ötesinde koruma mekanizmaları sunar. Azure aboneliklerini *zorunlu saklama süresi* için etiketleyebilir veya kaydedebilirsiniz. Zorunlu saklama süresi, Azure aboneliğinizin hemen ve geri alınamaz iptalini engeller. Azure aboneliklerini zorunlu saklama süresine kaydetmek için gereken adımlar, Microsoft 365 ekibiyle işbirliği gerektirir. Daha önce zorunlu saklama süresi bazen "İptal Etmeyin" olarak da adlandırılırdı. Bu işlemin tamamlanması beş iş günü sürer.
   
 > [!IMPORTANT]
 > Microsoft 365 ekibine başvurmadan önce, Müşteri Anahtarı ile kullandığınız **her** Azure aboneliği için aşağıdaki adımları gerçekleştirmeniz gerekir. Başlamadan önce [Azure PowerShell Az](/powershell/azure/new-azureps-module-az) modülünün yüklü olduğundan emin olun.
 
 1. Azure PowerShell ile oturum açın. Yönergeler için bkz. [Azure PowerShell ile oturum açma](/powershell/azure/authenticate-azureps).
 
-2. Aboneliklerinizi zorunlu saklama süresi kullanacak şekilde kaydetmek için Register-AzProviderFeature cmdlet'ini çalıştırın. Her abonelik için bu eylemi tamamlayın.
+2. Aboneliklerinizi zorunlu saklama süresi kullanacak şekilde kaydetmek için Register-AzProviderFeature cmdlet'ini çalıştırın. **Her** abonelik için bu eylemi tamamlayın.
 
    ```powershell
    Set-AzContext -SubscriptionId <SubscriptionId>
@@ -140,19 +138,19 @@ Kök şifreleme anahtarlarının geçici veya kalıcı olarak kaybedilmesi hizme
 ### <a name="contact-the-corresponding-microsoft-alias-to-proceed-with-the-process"></a>İşleme devam etmek için ilgili Microsoft diğer adına başvurun
 
 >[!NOTE]
-> İlgili Microsoft diğer adıyla iletişim kurmadan önce M365 Müşteri Anahtarı için FastTrack isteklerinizi tamamladığınızdan emin olun.
+> İlgili Microsoft diğer adıyla iletişim kurmadan önce, M365 Müşteri Anahtarı için FastTrack isteklerinizi tamamladığınızdan emin olun.
 
 - Tek tek Exchange Online posta kutularına DEP atamak üzere Müşteri Anahtarı'nın etkinleştirilmesi için [exock@microsoft.com](mailto:exock@microsoft.com) başvurun.
 
-- Tüm kiracı kullanıcıları için çevrimiçi SharePoint ve OneDrive İş içeriği (Teams dosyaları dahil) şifrelemek üzere DEP'ler atamak üzere Müşteri Anahtarı'nın etkinleştirilmesi için [spock@microsoft.com](mailto:spock@microsoft.com) başvurun.
+- Tüm kiracı kullanıcıları için SharePoint Online ve OneDrive İş içeriği (Teams dosyaları dahil) şifrelemek üzere DEP'ler atamak üzere Müşteri Anahtarı'nın etkinleştirilmesi için [spock@microsoft.com](mailto:spock@microsoft.com) başvurun.
 
-- Tüm kiracı kullanıcıları için birden çok Microsoft 365 iş yükünde (Exchange Online, Teams, Microsoft Purview Information Protection) içeriği şifrelemek üzere DEP'ler atamak üzere Müşteri Anahtarı'nın etkinleştirilmesi için [m365-ck@service.microsoft.com](mailto:m365-ck@service.microsoft.com) başvurun.
+- Tüm kiracı kullanıcıları için birden çok Microsoft 365 iş yükünde (Exchange Online, Teams, Microsoft Purview Bilgi Koruması) içeriği şifrelemek üzere DEP'ler atamak üzere Müşteri Anahtarı'nın etkinleştirilmesi için [m365-ck@service.microsoft.com](mailto:m365-ck@service.microsoft.com) başvurun.
 
 - E-postanıza aşağıdaki bilgileri ekleyin:
 
      **Konu**: Müşteri Anahtarı \<*Your tenant's fully qualified domain name*\>
 
-     **Gövde**: Eklemek istediğiniz Müşteri Anahtarı hizmetlerinin **her** biri için FastTrack İstek Kimliklerini ve abonelik kimliklerini ekleyin. Bu abonelik kimlikleri, her abonelik için zorunlu saklama süresini ve Get-AzProviderFeature çıkışını tamamlamak istediğiniz kimliklerdir.
+     **Gövde**: Eklenmesini istediğiniz Müşteri Anahtarı hizmetlerinin **her** biri için FastTrack İstek Kimliklerini ve abonelik kimliklerini ekleyin. Bu abonelik kimlikleri, her abonelik için zorunlu saklama süresini ve Get-AzProviderFeature çıkışını tamamlamak istediğiniz kimliklerdir.
 
 Bu işlemin tamamlanması için Hizmet Düzeyi Sözleşmesi (SLA), Microsoft'a aboneliklerinizi zorunlu saklama süresi kullanmak üzere kaydettiğinizi bildirdikten (ve doğruladıktan) sonra beş iş günüdür.
 
@@ -161,18 +159,7 @@ Bu işlemin tamamlanması için Hizmet Düzeyi Sözleşmesi (SLA), Microsoft'a a
 Microsoft'tan kaydın tamamlandığını belirten bir bildirim aldıktan sonra, Get-AzProviderFeature komutunu aşağıdaki gibi çalıştırarak kaydınızın durumunu doğrulayın. Doğrulanırsa, Get-AzProviderFeature komutu **Kayıt Durumu** özelliği için **Kayıtlı** değerini döndürür. **Her** abonelik için bu adımı tamamlayın.
 
    ```powershell
-   Set-AzContext -SubscriptionId <SubscriptionId>
    Get-AzProviderFeature -ProviderNamespace Microsoft.Resources -FeatureName mandatoryRetentionPeriodEnabled
-   ```
-
-İşlemi tamamlamak için Register-AzResourceProvider komutunu çalıştırın. **Her** abonelik için bu adımı tamamlayın.
-
-   ```powershell
-   Set-AzContext -SubscriptionId <SubscriptionId>
-   ```
-
-   ```powershell
-   Register-AzResourceProvider -ProviderNamespace Microsoft.KeyVault
    ```
 
 > [!TIP]
@@ -184,12 +171,12 @@ Microsoft'tan kaydın tamamlandığını belirten bir bildirim aldıktan sonra, 
 
 Anahtar kasası oluşturma adımları [Azure Key Vault Kullanmaya Başlama](/azure/key-vault/general/overview) bölümünde belgelenmiştir. Bu, Azure PowerShell yükleme ve başlatma, Azure aboneliğinize bağlanma, kaynak grubu oluşturma ve bu kaynak grubunda anahtar kasası oluşturma konusunda size yol gösterir.
   
-Bir anahtar kasası oluşturduğunuzda bir SKU seçmeniz gerekir: Standart veya Premium. Standart SKU, Azure Key Vault anahtarlarının yazılımla korunmasına olanak tanır; Donanım Güvenlik Modülü (HSM) anahtar koruması yoktur ve Premium SKU, Key Vault anahtarların korunması için HSM'lerin kullanılmasına olanak tanır. Müşteri Anahtarı, SKU kullanan anahtar kasalarını kabul eder, ancak Microsoft yalnızca Premium SKU'yu kullanmanızı kesinlikle önerir. Her iki tür anahtara sahip işlemlerin maliyeti aynıdır, bu nedenle maliyetteki tek fark HSM korumalı anahtarlar için aylık maliyettir. Ayrıntılar için bkz. [Key Vault fiyatlandırması](https://azure.microsoft.com/pricing/details/key-vault/).
+Bir anahtar kasası oluştururken bir SKU seçmeniz gerekir: Standart veya Premium. Standart SKU, Azure Key Vault anahtarlarının yazılımla korunmasına olanak tanır; Donanım Güvenlik Modülü (HSM) anahtar koruması yoktur ve Premium SKU, Key Vault anahtarların korunması için HSM'lerin kullanılmasına olanak tanır. Customer Key, SKU kullanan anahtar kasalarını kabul eder, ancak Microsoft yalnızca Premium SKU kullanmanızı kesinlikle önerir. Her iki tür anahtara sahip işlemlerin maliyeti aynıdır, bu nedenle maliyetteki tek fark HSM korumalı anahtarlar için aylık maliyettir. Ayrıntılar için bkz. [Key Vault fiyatlandırması](https://azure.microsoft.com/pricing/details/key-vault/).
   
 > [!IMPORTANT]
 > Üretim verileri için Premium SKU anahtar kasalarını ve HSM korumalı anahtarları kullanın ve test ve doğrulama amacıyla yalnızca Standart SKU anahtar kasalarını ve anahtarlarını kullanın.
   
-Müşteri Anahtarını kullanacağınız her Microsoft 365 hizmeti için, oluşturduğunuz iki Azure aboneliğinin her birinde bir anahtar kasası oluşturun. Örneğin, Müşteri Anahtarının Exchange Online, SharePoint Online ve çok iş yükü senaryolarında DEP'leri kullanmasını sağlamak için üç çift anahtar kasası oluşturacaksınız.
+Müşteri Anahtarını kullanacağınız her Microsoft 365 hizmeti için, oluşturduğunuz iki Azure aboneliğinin her birinde bir anahtar kasası oluşturun. Örneğin, Müşteri Anahtarının Exchange Online, SharePoint Online ve çok iş yükü senaryolarında DEP'leri kullanmasını sağlamak için üç anahtar kasası çifti oluşturacaksınız.
   
 Kasaları ilişkilendirebileceğiniz DEP'nin amaçlanan kullanımını yansıtan anahtar kasaları için bir adlandırma kuralı kullanın. Adlandırma kuralı önerileri için aşağıdaki En İyi Yöntemler bölümüne bakın.
   
@@ -222,9 +209,9 @@ Uygulamanıza bağlı olarak her anahtar kasası için üç ayrı izin kümesi t
 
 - Azure Key Vault üzerindeki izinleri değiştirebilen **anahtar kasası katkıda bulunanları**. Çalışanlar ayrıldığında veya ekibinize katıldığında bu izinleri değiştirmeniz gerekir. Anahtar kasası yöneticilerinin bir anahtarı silmek veya geri yüklemek için yasal olarak izne ihtiyacı olduğu nadir durumlarda izinleri de değiştirmeniz gerekir. Bu anahtar kasası katkıda bulunanları kümesine anahtar kasanızda **Katkıda Bulunan** rolü verilmesi gerekir. Azure Resource Manager kullanarak bu rolü atayabilirsiniz. Ayrıntılı adımlar için bkz. [Azure abonelik kaynaklarınıza erişimi yönetmek için Role-Based Access Control kullanma](/azure/active-directory/role-based-access-control-configure). Abonelik oluşturan yöneticinin bu erişimi örtük olarak ve katkıda bulunan rolüne diğer yöneticileri atama özelliği vardır.
 
-- Müşteri Anahtarı için kullandığınız her anahtar kasası için **uygulamaları Microsoft 365 izinleri**, wrapKey vermeniz, anahtar kaldırmanız ve ilgili Microsoft 365 Hizmet Sorumlusu için izinler almanız gerekir.
+- Müşteri Anahtarı için kullandığınız her anahtar kasası için **Microsoft 365 uygulamalarına yönelik izinler**, wrapKey, unwrapKey vermeniz ve ilgili Microsoft 365 Hizmet Sorumlusu için izinler almanız gerekir.
 
-  Microsoft 365 Hizmet Sorumlusuna izin vermek için aşağıdaki söz dizimini kullanarak **Set-AzKeyVaultAccessPolicy** cmdlet'ini çalıştırın:
+  Microsoft 365 Hizmet Sorumlusu'na izin vermek için aşağıdaki söz dizimini kullanarak **Set-AzKeyVaultAccessPolicy** cmdlet'ini çalıştırın:
 
    ```powershell
    Set-AzKeyVaultAccessPolicy -VaultName <vault name> -PermissionsToKeys wrapKey,unwrapKey,get -ServicePrincipalName <Office 365 appID>
@@ -234,7 +221,7 @@ Uygulamanıza bağlı olarak her anahtar kasası için üç ayrı izin kümesi t
    - *kasa adı* , oluşturduğunuz anahtar kasasının adıdır.
    - Exchange Online ve Skype Kurumsal için *Office 365 appID* değerini şununla değiştirin:`00000002-0000-0ff1-ce00-000000000000`
    - SharePoint Online, OneDrive İş ve Teams dosyaları için *Office 365 appID* değerini şununla değiştirin:`00000003-0000-0ff1-ce00-000000000000`
-   - Tüm kiracı kullanıcıları için geçerli olan çok iş yükü ilkesi (Exchange, Teams, Microsoft Purview Information Protection) için *Office 365 appID* değerini şununla değiştirin:`c066d759-24ae-40e7-a56f-027002b5d3e4`
+   - Tüm kiracı kullanıcıları için geçerli olan çok iş yükü ilkesi (Exchange, Teams Microsoft Purview Bilgi Koruması) için *Office 365 appID* değerini şununla değiştirin:`c066d759-24ae-40e7-a56f-027002b5d3e4`
 
   Örnek: Exchange Online ve Skype Kurumsal için izinleri ayarlama:
 
@@ -259,7 +246,7 @@ Uygulamanıza bağlı olarak her anahtar kasası için üç ayrı izin kümesi t
 > Eklediğiniz doğru hizmete yönelik izinleri düzeltdiğinizden emin olun. Her hizmetin *Görünen Adı* aşağıda listelenmiştir:  
   >
   > - Exchange Online ve Skype Kurumsal: *Office 365 Exchange Online*
-  > - SharePoint Online, OneDrive ve Teams dosyaları: *Office 365 SharePoint Online*
+  > - SharePoint Online, OneDrive ve Teams dosyaları: *SharePoint Online Office 365*
   > - Birden çok Microsoft 365 iş yükü: *M365DataAtRestEncryption*
   >  
   > Örneğin, aşağıdaki kod parçacığı, izinlerin M365DataAtRestEncryption için yapılandırıldığından emin olmak için bir örnektir. *mmcexchangevault* adlı bir kasaya sahip aşağıdaki cmdlet aşağıdaki alanları görüntüler.
@@ -315,7 +302,7 @@ Anahtarlarınız için son kullanma tarihinin ayarlı olmadığını doğrulamak
 Get-AzKeyVaultKey -VaultName <vault name>
 ```
 
-Müşteri Anahtarı süresi dolmuş bir anahtarı kullanamaz. Süresi dolmuş bir anahtarla denenen işlemler başarısız olur ve hizmet kesintisine neden olabilir. Müşteri Anahtarı ile kullanılan anahtarların son kullanma tarihi olmadığını kesinlikle öneririz. Ayarlandıktan sonra sona erme tarihi kaldırılamaz, ancak farklı bir tarihe değiştirilebilir. Son kullanma tarihi ayarlanmış bir anahtar kullanılması gerekiyorsa, süre sonu değerini 31.12.9999 olarak değiştirin. Son kullanma tarihi 31/12/9999 dışında bir tarihe ayarlanmış anahtarlar Microsoft 365 doğrulamayı geçirmez.
+Müşteri Anahtarı süresi dolmuş bir anahtarı kullanamaz. Süresi dolmuş bir anahtarla denenen işlemler başarısız olur ve hizmet kesintisine neden olabilir. Müşteri Anahtarı ile kullanılan anahtarların son kullanma tarihi olmadığını kesinlikle öneririz. Ayarlandıktan sonra sona erme tarihi kaldırılamaz, ancak farklı bir tarihe değiştirilebilir. Son kullanma tarihi ayarlanmış bir anahtar kullanılması gerekiyorsa, süre sonu değerini 31.12.9999 olarak değiştirin. Son kullanma tarihi 31.12.9999'dan farklı bir tarihe ayarlanmış anahtarlar Microsoft 365 doğrulamasını geçemez.
   
 31.12.9999 dışında bir değere ayarlanmış bir sona erme tarihini değiştirmek için [Update-AzKeyVaultKey](/powershell/module/az.keyvault/update-azkeyvaultkey) cmdlet'ini aşağıdaki gibi çalıştırın:
   

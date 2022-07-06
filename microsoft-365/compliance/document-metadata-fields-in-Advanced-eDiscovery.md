@@ -15,19 +15,17 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Bu makale, Microsoft 365'de Microsoft Purview eKeşif (Premium) örneğinde bir inceleme kümesindeki belgelerin meta veri alanlarını tanımlar.
-ms.openlocfilehash: d0e188d227e3000ba6811204c74cf746b00bc0e2
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Bu makale, Microsoft 365'te Microsoft Purview eKeşif (Premium) durumunda bir inceleme kümesindeki belgelerin meta veri alanlarını tanımlar.
+ms.openlocfilehash: a6fc8479d3ecd2b89c0331220fb7f88f46bda1e4
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097788"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629761"
 ---
 # <a name="document-metadata-fields-in-ediscovery-premium"></a>eBulma'da belge meta veri alanları (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Aşağıdaki tabloda, Microsoft Purview eKeşif'te (Premium) bir servis talebi için bir inceleme kümesindeki belgelerin meta veri alanları listelenir. Tabloda aşağıdaki bilgiler sağlanır:
+Aşağıdaki tabloda, Microsoft Purview eKeşif (Premium) durumunda bir inceleme kümesindeki belgelerin meta veri alanları listelemektedir. Tabloda aşağıdaki bilgiler sağlanır:
 
 - **Alan adı** ve **Görünen alan adı:** Meta veri alanının adı ve seçili belgenin dosya meta verilerini gözden geçirme kümesinde görüntülerken görüntülenen alanın adı. Belgenin dosya meta verileri görüntülenirken bazı meta veri alanları dahil değildir. Bu alanlar yıldız (*) ile vurgulanır.
 
@@ -38,7 +36,7 @@ Aşağıdaki tabloda, Microsoft Purview eKeşif'te (Premium) bir servis talebi i
 - **Açıklama:** Meta veri alanının açıklaması.
 
 > [!NOTE]
-> [Gözden geçirme kümesi aramasında](./review-set-search.md) **Anahtar Sözcükler** alanında Anahtar Sözcük Sorgu Dili (KQL) kullanılır. **Aranabilir alan adı** sütununda listelenen alanlar, sorgu oluşturucusunu kullanmak zorunda kalmadan karmaşık **sorgular** oluşturmak için bir gözden geçirme kümesi aramasında Anahtar Sözcükler alanında kullanılabilir. KQL hakkında daha fazla bilgi için bkz[. Anahtar Sözcük Sorgu Dili söz dizimi başvurusu](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
+> [Gözden geçirme kümesi aramasında](./review-set-search.md) **Anahtar Sözcükler** alanında Anahtar Sözcük Sorgu Dili (KQL) kullanılır. **Aranabilir alan adı** sütununda listelenen alanlar, sorgu oluşturucusunu kullanmak zorunda kalmadan karmaşık **sorgular** oluşturmak için bir gözden geçirme kümesi aramasında Anahtar Sözcükler alanında kullanılabilir. KQL hakkında daha fazla bilgi için bkz [. Anahtar Sözcük Sorgu Dili söz dizimi başvurusu](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
 
 <br>
 
@@ -55,20 +53,20 @@ Aşağıdaki tabloda, Microsoft Purview eKeşif'te (Premium) bir servis talebi i
 |Bileşik Yol|CompoundPath|Compound_path|Öğenin kaynağını açıklayan okunabilir yol.|
 |İçerik*|İçerik||Öğenin ayıklanan metni.|
 |Konuşma Gövdesi|ConversationBody||Öğenin konuşma gövdesi.|
-|Konuşma Kimliği|ConversationId|Conversation_ID|İletideki konuşma kimliği. Teams 1:1 ve grup sohbetleri için, aynı konuşmadaki tüm transkript dosyaları ve bunların aile öğeleri aynı Konuşma Kimliğini paylaşır. Daha fazla bilgi için bkz. [Microsoft Teams içeriği için eBulma (Premium) iş akışı](teams-workflow-in-advanced-ediscovery.md).|
+|Konuşma Kimliği|ConversationId|Conversation_ID|İletideki konuşma kimliği. Teams 1:1 ve grup sohbetleri için, aynı konuşmadaki tüm transkript dosyaları ve bunların aile öğeleri aynı Konuşma Kimliğini paylaşır. Daha fazla bilgi için bkz. [Microsoft Teams'de içerik için eKeşif (Premium) iş akışı](teams-workflow-in-advanced-ediscovery.md).|
 |Konuşma Aile Kimliği|ConversationFamilyID|ConversationFamilyID|Konuşmanın tek tek öğelerini ve konuşmadaki ilgili öğeleri tanımlayan kimlik.|
 |Konuşma Dizini||Conversation_index|İletiden konuşma dizini.|
-|Konuşma Adı||ConversationName|Bu alan içerik türüne bağlıdır.<br>**Teams 1:1 sohbeti:** ilk iletinin ilk 40 karakteri.<br>**Teams 1:N sohbet:** Grup sohbetinin adı; kullanılamıyorsa, ilk iletinin ilk 40 karakteri.<br>**Teams Kanal Gönderisi:** Gönderi başlığı veya duyuru alt başlığı; kullanılamıyorsa, ilk iletinin ilk 40 karakteri.|
+|Konuşma Adı||ConversationName|Bu alan içerik türüne bağlıdır.<br>**Teams 1:1 sohbeti:** ilk iletinin ilk 40 karakteri.<br>**Teams 1:N sohbeti:** Grup sohbetinin adı; yoksa, ilk iletinin ilk 40 karakteri.<br>**Teams Kanal Gönderisi:** Gönderi başlığı veya duyuru alt başlığı; yoksa, ilk iletinin ilk 40 karakteri.|
 |Konuşma Pdf Saati|ConversationPdfTime||Konuşmanın PDF sürümünün oluşturulduğu tarih.|
 |Konuşma Redaksiyon Yazma Zamanı|ConversationRedactionBurnTime||Sohbet için konuşmanın PDF sürümünün oluşturulduğu tarih.|
 |Konuşma Konusu|ConversationTopic||Öğenin konuşma konusu.|
-|Konuşma Türü|ConversationType|ConversationType|Sohbet konuşmasının türü. Değerler şunlardır: <br>**Teams 1:1 ve grup sohbetleri ve tüm Yammer konuşmaları:** Grup<br>**Teams kanalları ve özel kanalları:** Kanal|
+|Konuşma Türü|ConversationType|ConversationType|Sohbet konuşmasının türü. Değerler şunlardır: <br>**Teams 1:1 ve grup sohbetleri ve tüm Yammer konuşmaları:** Grup<br>**Teams kanalları ve özel kanallar:** Kanal|
 |Silinen İletiyi İçerir|ContainsDeletedMessage|ContainsDeletedMessage|Sohbet dökümünün silinmiş bir ileti içerip içermediğini gösterir|
 |Düzenlenen İletiyi İçerir|ContainsEditedMessage|ContainsEditedMessage|Sohbet dökümünün düzenlenmiş bir ileti içerip içermediğini gösterir|
 |Teams Duyuru Başlığı|TeamsAnnouncementTitle|TeamsAnnouncementTitle|[Ekip duyurusundan](https://support.microsoft.com/office/send-an-announcement-to-a-channel-8f244ea6-235a-4dcc-9143-9c5b801b4992) başlık.|
 |||Converted_file_path|Dönüştürülen dışarı aktarma dosyasının yolu. Yalnızca iç Microsoft kullanımı için.|
 |Veli|Veli|Veli|Öğenin ilişkilendirildiği koruyucunun adı.|
-|Tarih|Tarih|Tarih|Tarih, dosya türüne bağlı olarak hesaplanan bir alandır.<p>**E-posta**: Gönderme tarihi<br>**E-posta ekleri**: Belgenin son değiştirilme tarihi; kullanılamıyorsa ebeveynin gönderilme tarihi<br>**Eklenmiş belgeler**: Belgenin son değiştirme tarihi; kullanılamıyorsa, üst öğe son değiştirme tarihi<br>**SPO belgeleri (modern ekler içerir)**: Belgenin son değiştirme tarihi; kullanılamıyorsa, son değiştirme tarihini SharePoint<br>**Office 365 olmayan belgeler**: Son değiştirme tarihi<br>**Toplantılar**: Toplantı başlangıç tarihi<br>**Sesli Mesaj**: Gönderme tarihi<br>**Anlık ileti**: Gönderme tarihi<br>**Teams**: Gönderme tarihi|
+|Tarih|Tarih|Tarih|Tarih, dosya türüne bağlı olarak hesaplanan bir alandır.<p>**E-posta**: Gönderme tarihi<br>**E-posta ekleri**: Belgenin son değiştirilme tarihi; kullanılamıyorsa ebeveynin gönderilme tarihi<br>**Eklenmiş belgeler**: Belgenin son değiştirme tarihi; kullanılamıyorsa, üst öğe son değiştirme tarihi<br>**SPO belgeleri (modern ekler içerir)**: Belgenin son değiştirme tarihi; kullanılamıyorsa, SharePoint son değiştirme tarihi<br>**Office 365 olmayan belgeler**: Son değiştirme tarihi<br>**Toplantılar**: Toplantı başlangıç tarihi<br>**Sesli Mesaj**: Gönderme tarihi<br>**Anlık ileti**: Gönderme tarihi<br>**Teams**: Gönderme tarihi|
 |Belge açıklamaları|DocComments|Doc_comments|Belge meta verilerinden açıklamalar.|
 |Belge şirketi||Doc_company|Belge meta verilerinden şirket.|
 |Belge oluşturulma tarihi|CreatedTime|Doc_date_created|Belge meta verilerinden tarih oluşturma.|
@@ -100,7 +98,7 @@ Aşağıdaki tabloda, Microsoft Purview eKeşif'te (Premium) bir servis talebi i
 |FamilyDuplicateSet*||Family_duplicate_set|Birbirinin tam yinelemesi olan aileler için sayısal tanımlayıcı (aynı içerik ve tüm aynı ekler).|
 |Aile Kimliği|FamilyId|Family_ID|E-posta ve sohbetlerdeki ekleri ve ayıklanan öğeleri üst öğesiyle birlikte gruplandırma. Buna sohbet veya e-posta ile tüm ekler ve ayıklanan öğeler dahildir.|
 |Aile Boyutu||Family_size|Ailedeki belge sayısı.|
-|Dosya sınıfı|FileClass|File_class|SharePoint ve OneDrive içeriği için: **Belge**. <br>Exchange içeriği için: **E-posta** veya **Ek**. <br>Teams veya Yammer içeriği için: **Konuşmalar**.|
+|Dosya sınıfı|FileClass|File_class|SharePoint ve OneDrive'dan içerik için: **Belge**. <br>Exchange içeriği için: **E-posta** veya **Ek**. <br>Teams veya Yammer içeriği için: **Konuşmalar**.|
 |Dosya Kimliği|FileId|File_id|Servis talebi içinde benzersiz belge tanımlayıcısı.|
 |Dosya sistemi oluşturulma tarihi||File_system_date_created|Dosya sisteminden oluşturulma tarihi (yalnızca Office 365 olmayan veriler için geçerlidir).|
 |Dosya sistemi değiştirme tarihi||File_system_date_modified|Dosya sisteminden değiştirme tarihi (yalnızca Office 365 olmayan veriler için geçerlidir).|
@@ -122,13 +120,13 @@ Aşağıdaki tabloda, Microsoft Purview eKeşif'te (Premium) bir servis talebi i
 |Item sınıfı|ItemClass|Item_class|Exchange sunucusu tarafından sağlanan öğe sınıfı; örneğin **, IPM. Not**|
 |Son değiştirme tarihi|LastModifiedDate|Doc_date_modified|Belge meta verilerinden son değiştirme tarihi.|
 |Yük Kimliği|LoadId|Load_ID|Öğenin bir gözden geçirme kümesine eklendiği yük kümesinin kimliği.|
-|Konum|Konum|Konum|Belgelerin kaynaklandığı konum türünü gösteren dize.<p>**İçeri Aktarılan Veriler** - Office 365 olmayan veriler<br>**Teams** - Microsoft Teams<br>**Exchange** - posta kutularını Exchange<br>**SharePoint** - siteleri SharePoint<br>**OneDrive** - hesapları OneDrive|
-|Konum adı|LocationName|Location_name|Öğenin kaynağını tanımlayan dize. Exchange için, bu posta kutusunun SMTP adresi olacaktır; SharePoint ve OneDrive için site koleksiyonunun URL'si.|
+|Konum|Konum|Konum|Belgelerin kaynaklandığı konum türünü gösteren dize.<p>**İçeri Aktarılan Veriler** - Office 365 olmayan veriler<br>**Teams** - Microsoft Teams<br>**Exchange** - Exchange posta kutuları<br>**SharePoint** - SharePoint siteleri<br>**OneDrive** - OneDrive hesapları|
+|Konum adı|LocationName|Location_name|Öğenin kaynağını tanımlayan dize. Exchange için, bu posta kutusunun SMTP adresi olacaktır; site koleksiyonunun URL'si olan SharePoint ve OneDrive için.|
 |||Marked_as_pivot|Bu dosya, neredeyse yinelenen kümedeki özettir.|
 |Temsilci olarak işaretlendi|MarkAsRepresentative||Her yineleme kümesinden bir belge temsilci olarak işaretlenir.|
 |Toplantı Bitiş Tarihi|MeetingEndDate|Meeting_end_date|Toplantılar için toplantı bitiş tarihi.|
 |Toplantı Başlangıç Tarihi|MeetingStartDate|Meeting_start_date|Toplantılar için toplantı başlangıç tarihi.|
-|İleti türü|MessageKind|Message_kind|Aranacak iletinin türü. Olası değerler: **<p>kişiler <br>belgeleri <br>e-posta <br>dışveri <br>faksları <br>anlık <br>günlük toplantıları <br><br>microsoftteams** (Microsoft Teams'da sohbetlerden, toplantılardan ve aramalardan öğeleri döndürür) **<br>not <br>gönderileri <br>rssfeeds <br>görevleri <br>sesli mesaj**|
+|İleti türü|MessageKind|Message_kind|Aranacak iletinin türü. Olası değerler: **<p>kişiler <br>belgeleri <br>e-posta <br>dışveri <br>faksları <br>anlık <br>günlük toplantıları <br><br>microsoftteams** (Microsoft Teams'de sohbetlerden, toplantılardan ve aramalardan öğeleri döndürür) **<br>gönderileri <br>notlar <br>rssfeeds <br>görevleri <br>sesli mesaj**|
 |Modern Ek Üst Kimliği||ModernAttachment_ParentId|Belgenin üst öğesinin sabit kimliği.|
 |Yerel Uzantı|NativeExtension|Native_extension|Öğenin yerel uzantısı.|
 |Yerel dosya adı|NativeFileName|Native_file_name|Öğenin yerel dosya adı.|
@@ -137,11 +135,11 @@ Aşağıdaki tabloda, Microsoft Purview eKeşif'te (Premium) bir servis talebi i
 |ND/ET Sıralama: Ekleri dışlama|NdEtSortExclAttach|ND_ET_sort_excl_attach|E-posta iş parçacığı (ET) kümesinin ve Neredeyse yinelenen (ND) kümesinin birleştirilmişliği. Bu alan, gözden geçirme zamanında verimli sıralama için kullanılır. ND kümelerine **D** , ET kümelerine de **E** ön eki eklenir.|
 |ND/ET Sıralama: Ekleri ekleme|NdEtSortInclAttach|ND_ET_sort_incl_attach|E-posta iş parçacığı (ET) kümesinin ve neredeyse yinelenen (ND) kümesinin birleştirilmesi. Bu alan, gözden geçirme zamanında verimli sıralama için kullanılır. ND kümelerine **D** , ET kümelerine de **E** ön eki eklenir. Et kümesindeki her e-posta öğesinin ardından uygun ekler eklenir.|
 |Yinelenen Kümeye Yakın||ND_set|Özet belgeye benzer öğeler aynı ND_set paylaşır.|
-|O365 yazarları||O365_authors|SharePoint yazar.|
-|O365 oluşturan||O365_created_by|oluşturan SharePoint.|
-|O365 oluşturulma tarihi||O365_date_created|SharePoint'den oluşturulma tarihi.|
+|O365 yazarları||O365_authors|SharePoint'ten yazar.|
+|O365 oluşturan||O365_created_by|Oluşturan: SharePoint.|
+|O365 oluşturulma tarihi||O365_date_created|SharePoint'ten oluşturulma tarihi.|
 |O365ModifiedDate||O365_date_modified|SharePoint veya OneDrive İş toplanan bir belgenin (veya belge sürümünün) değiştirildiği tarih. Bu, SharePoint ve OneDrive kullanıcı deneyimindeki sürüm geçmişinde görüntülenen değiştirme tarihiyle aynıdır.|
-|O365 değiştiren||O365_modified_by|SharePoint veya OneDrive tarafından değiştirildi.|
+|O365 değiştiren||O365_modified_by|Tarafından SharePoint veya OneDrive'dan değiştirildi.|
 |Diğer koruyucular|DedupedCustodians|Deduped_custodians|Tam olarak yinelenen belgelerin koruyucularının listesi (e-posta için, içeriğe göre; belgeler için karmaya dayalı).|
 |Diğer dosya kimlikleri|YinelenenLeri KaldırılanFileId'ler|Deduped_file_IDs|Tam olarak yinelenen belgelerin dosya kimliklerinin listesi (e-posta için, içeriğe göre; belgeler için karmaya dayalı).|
 |Diğer yollar|Yinelenenleri Kaldırcompoundpath|Deduped_compound_path|Tam yineleme olan belgelerin bileşik yollarının listesi (e-posta: içeriğe göre, belgeler: karma temelinde).|
@@ -171,21 +169,21 @@ Aşağıdaki tabloda, Microsoft Purview eKeşif'te (Premium) bir servis talebi i
 |Set Order: Inclusive First|SetOrderInclusivesFirst|Set_order_inclusives_first|Sıralama alanı - e-posta ve ekler: sayaç kronolojik; belgeler: Önce özetleyin, sonra azalan benzerlik puanıyla.|
 |Kimliği Ayarla||Set_ID|Aynı e-posta yazışması (Email_set) içindeki benzer içerik (ND_set) veya e-posta belgeleri aynı Set_ID paylaşır.|
 |SimilarityPercent||Similarity_percent|Belgenin, neredeyse yinelenen kümenin özetine ne kadar benzer olduğunu gösterir.|
-|Yerel dosya boyutu|Boyutu|Native_size|Yerel öğenin bayt sayısı.|
+|Yerel dosya boyutu|Boyut|Native_size|Yerel öğenin bayt sayısı.|
 |Konu|Konu|Email_subject|İletinin konusu.|
 |Konu/Başlık|SubjectTitle||Öğenin konusu veya başlığından oluşan hesaplanan alan.|
 |Etiketler|Etiketler|Etiketler|Bir gözden geçirme kümesine uygulanan etiketler.|
-|Kanal Adı|Kanal|Channelname|Bu, Teams kanal adıdır. Yalnızca Microsoft Teams içerik için geçerlidir.|
-|Ekip Adı|TeamName|TeamName|**Teams:** Takımın adı<br>**Yammer:** Community adı|
+|Kanal Adı|Kanal|Channelname|Bu, Teams kanalının adıdır. Yalnızca Microsoft Teams içeriği için geçerlidir.|
+|Ekip Adı|TeamName|TeamName|**Takım:** Ekibin adı<br>**Yammer:** Topluluk adı|
 |Temalar listesi|Temalar Listesi|Themes_list|Analiz için hesaplanan temalar listesi.|
 |Başlık|Başlık|Doc_title|Belge meta verilerinden başlık. Belge meta verilerinden başlık. Teams ve Yammer içeriği için bu, ConversationName özelliğindeki değerdir.|
 |Hedef|Hedef|Email_to|İleti türleri için To alanı. Biçim **DisplayName\<SmtpAddress>**|
 |E-posta kümesinde benzersiz|UniqueInEmailSet||E-posta kümesinde ekin bir kopyası varsa **False**.|
 |Sürüm Grubu Kimliği||Version_Group_Id|Aynı belgenin farklı sürümlerini gruplandırma.|
-|Sürümnumarası||Version_Number|SharePoint veya OneDrive İş toplanan belgenin sürüm numarası. Bu, SharePoint ve OneDrive kullanıcı deneyimindeki sürüm geçmişinde görüntülenen sürüm numarasıyla aynıdır.|
+|Sürümnumarası||Version_Number|SharePoint veya OneDrive İş toplanan bir belgenin sürüm numarası. Bu, SharePoint ve OneDrive kullanıcı deneyimindeki sürüm geçmişinde görüntülenen sürüm numarasıyla aynıdır.|
 |Düzeltildi|WasRemediated|Was_Remediated|Öğe düzeltildiyse **True**, aksi takdirde **False**.|
 |Sözcük sayısı|WordCount|Word_count|Öğedeki sözcük sayısı.|
 |||||
 
 > [!NOTE]
-> eBulma (Premium) olayı için veri toplarken Office 365 içerik konumlarını ararken aranabilir özellikler hakkında daha fazla bilgi için bkz[. İçerik Arama için anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md).
+> eBulma (Premium) olayı için veri toplarken Office 365 içerik konumlarını ararken aranabilir özellikler hakkında daha fazla bilgi için bkz. [İçerik Arama için anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md).

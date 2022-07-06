@@ -11,18 +11,16 @@ ms.topic: conceptual
 ms.service: O365-seccomp
 ms.localizationpriority: high
 description: Hassas içeriği sınıflandırmak ve korumak için Microsoft Purview Bilgi Koruması için varsayılan etiketler ve ilkeler hakkında bilgi edinin.
-ms.openlocfilehash: a17ba3e87e219d19d8f88f413bf446664aa094a2
-ms.sourcegitcommit: f645e0e9db74b25663cd9ddec7e3824d6ffc57f7
+ms.openlocfilehash: 46718c5f3ecb79cf112012064d0fbf688e21f6d0
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65444190"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629431"
 ---
 # <a name="default-labels-and-policies-to-protect-your-data"></a>Verilerinizi korumak için varsayılan etiketler ve politikalar
 
->*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+>*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 Uygun müşteriler Microsoft Purview Bilgi Koruması için varsayılan etiketleri ve ilkeleri etkinleştirebilir: 
 
@@ -35,9 +33,9 @@ Bu varsayılan yapılandırmalar, Microsoft 365 için Microsoft Purview Bilgi Ko
 
 Uygunluk, [Microsoft Purview için ücretsiz deneme sürümü](compliance-easy-trials.md) olan müşterileri ve zaten bir Microsoft 365 E5 planı olan bazı müşterileri içerir:
 
-- **Yeni müşteriler**: 30 günden daha kısa bir süredir Microsoft Purview aldıysanız, kiracınız listelenen tüm varsayılan yapılandırmaları etkinleştirebilir. Bunları istediğiniz zaman devre dışı bırakabilir, kaldırabilir veya düzenleyebilirsiniz.
+- **Yeni müşteriler**: 30 günden daha kısa bir süredir Microsoft Purview'unuz varsa, kiracınız listelenen tüm varsayılan yapılandırmaları etkinleştirebilir. Bunları istediğiniz zaman devre dışı bırakabilir, kaldırabilir veya düzenleyebilirsiniz.
 
-- **Mevcut müşteriler**: 30 günden uzun süredir Microsoft Purview aldıysanız, henüz eşdeğer bir yapılandırma yapmadıysanız varsayılan yapılandırmaları etkinleştirebilirsiniz:
+- **Mevcut müşteriler**: 30 günden uzun süredir Microsoft Purview'a sahipseniz, henüz eşdeğer bir yapılandırma yapmadıysanız varsayılan yapılandırmaları etkinleştirebilirsiniz:
 
     | Varsayılan yapılandırma| Eşdeğer |
     |:-----|:-----|
@@ -51,7 +49,7 @@ Uygunluk, [Microsoft Purview için ücretsiz deneme sürümü](compliance-easy-t
 
 Önceden yapılandırılmış bu etiketleri ve ilkeleri almak için: 
 
-1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) **ÇözümlerFormasyon** >  **koruması'nı** seçin
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) **Çözüm** > **Bilgileri koruması'nı** seçin
     
     Bu seçeneği hemen görmüyorsanız, önce gezinti **bölmesinden Tümünü göster'i** seçin. 
     
@@ -67,7 +65,7 @@ Uygunluk, [Microsoft Purview için ücretsiz deneme sürümü](compliance-easy-t
     
     ![SharePoint ve OneDrive başlığı için duyarlılık etiketlerini etkinleştirin.](../media/turn-on-mip-labels.png)
     
-    Bu özellik hakkında daha fazla bilgi için bkz[. SharePoint ve OneDrive Office dosyaları için duyarlılık etiketlerini etkinleştirme](sensitivity-labels-sharepoint-onedrive-files.md).
+    Bu özellik hakkında daha fazla bilgi için bkz [. SharePoint ve OneDrive'da Office dosyaları için duyarlılık etiketlerini etkinleştirme](sensitivity-labels-sharepoint-onedrive-files.md).
 
 ## <a name="default-sensitivity-labels"></a>Varsayılan duyarlılık etiketleri
 
@@ -84,10 +82,10 @@ Yayımlanan duyarlılık etiketleriniz olmadığında sizin için aşağıdaki e
 |Gizli|Yetkisiz kişilerle paylaşılırsa işletmenin zarar görmesine neden olabilecek hassas iş verileri. Örnek olarak sözleşmeler, güvenlik raporları, tahmin özetleri ve satış hesabı verileri verilebilir.|**Kapsam**: Dosya, E-posta <br /><br />**İçerik işaretleme**: Hayır<br /><br />**Otomatik etiketleme**: Hayır <br /><br />**Grup ayarları**: Hayır<br /><br />**Site ayarları**: Hayır <br /><br />**Veritabanı sütunları için otomatik etiketleme**: Yok|
 |Gizli <br /> \ Herkes (sınırsız)|Şifrelenmemesi gereken gizli veriler. Bu seçeneği dikkatli ve uygun iş gerekçesiyle kullanın.|Bu etiket [, istemci tarafı otomatik etiketleme](#client-side-auto-labeling) ve [hizmet tarafı otomatik etiketleme](#service-side-auto-labeling) için seçilir.<br /><br /> **Kapsam**: Dosya, E-posta <br /><br />**İçerik işaretleme**: Alt Bilgi: Gizli Olarak Sınıflandırılmış<br /><br />**Otomatik etiketleme**: Kullanıcıların etiketi uygulaması önerilir <br /><br />**Grup ayarları**: Hayır<br /><br />**Site ayarları**: Hayır <br /><br />**Veritabanı sütunları için otomatik etiketleme**: Yok|
 |Gizli <br /> \ Tüm Çalışanlar|Tüm çalışanların tam izinlere sahip olmasını sağlayan koruma gerektiren gizli veriler. Veri sahipleri içeriği izleyebilir ve iptal edebilir.|Bu etiket [, istemci tarafı otomatik etiketleme](#client-side-auto-labeling) ve [hizmet tarafı otomatik etiketleme](#service-side-auto-labeling) için seçilir.<br /><br /> **Kapsam**: Dosya, E-posta <br /><br />**Şifreleme**: Kuruluştaki tüm kullanıcılar ve gruplar: Co-Author<br /><br />**İçerik işaretleme**: Alt Bilgi: Gizli Olarak Sınıflandırılmış<br /><br />**Otomatik etiketleme**: Kullanıcıların etiketi uygulaması önerilir <br /><br />**Grup ayarları**: Hayır<br /><br />**Site ayarları**: Hayır <br /><br />**Veritabanı sütunları için otomatik etiketleme**: Yok |
-|Gizli <br /> \ Güvenilen Kişiler|Kuruluşunuzun içindeki ve dışındaki güvenilir kişilerle paylaşılabilen gizli veriler. Bu kişiler gerektiğinde verileri yeniden paylaşabilir.|**Kapsam**: Dosya, E-posta <br /><br />**Şifreleme**: Kullanıcıların izin atamasına izin verin: <br /> - Outlook için Encrypt-Only <br />- Word, PowerPoint ve Excel'da kullanıcılara sor<br /><br />**İçerik işaretleme**: Alt Bilgi: Gizli Olarak Sınıflandırılmış<br /><br />**Otomatik etiketleme**: Hayır <br /><br />**Grup ayarları**: Hayır<br /><br />**Site ayarları**: Hayır <br /><br />**Veritabanı sütunları için otomatik etiketleme**: Yok|
+|Gizli <br /> \ Güvenilen Kişiler|Kuruluşunuzun içindeki ve dışındaki güvenilir kişilerle paylaşılabilen gizli veriler. Bu kişiler gerektiğinde verileri yeniden paylaşabilir.|**Kapsam**: Dosya, E-posta <br /><br />**Şifreleme**: Kullanıcıların izin atamasına izin verin: <br /> - Outlook için Encrypt-Only <br />- Word, PowerPoint ve Excel'de kullanıcılara sor<br /><br />**İçerik işaretleme**: Alt Bilgi: Gizli Olarak Sınıflandırılmış<br /><br />**Otomatik etiketleme**: Hayır <br /><br />**Grup ayarları**: Hayır<br /><br />**Site ayarları**: Hayır <br /><br />**Veritabanı sütunları için otomatik etiketleme**: Yok|
 |Çok Gizli|Yetkisiz kişilerle paylaşıldığında işletmenin zarar görmesine neden olabilecek çok hassas iş verileri. Çalışan ve müşteri bilgileri, parolalar, kaynak kodu ve önceden duyurulan finansal raporlar buna örnek olarak verilebilir.|**Kapsam**: Dosya, E-posta <br /><br />**İçerik işaretleme**: Filigran: ÇOK GİzLİ<br /><br />**Otomatik etiketleme**: Hayır <br /><br />**Grup ayarları**: Hayır<br /><br />**Site ayarları**: Hayır <br /><br />**Veritabanı sütunları için otomatik etiketleme**: Yok|
 |Çok Gizli <br /> \ Tüm Çalışanlar|Tüm çalışanların bu içeriği görüntülemesine, düzenlemesine ve yanıtlamasına olanak tanıyan son derece gizli veriler. Veri sahipleri içeriği izleyebilir ve iptal edebilir.|**Kapsam**: Dosya, E-posta <br /><br />**Şifreleme**: Kuruluştaki tüm kullanıcılar ve gruplar: Co-Author<br /><br />**İçerik işaretleme**: Alt Bilgi: Çok Gizli Olarak Sınıflandırılmış<br /><br />**Otomatik etiketleme**: Hayır <br /><br />**Grup ayarları**: Hayır<br /><br />**Site ayarları**: Hayır <br /><br />**Veritabanı sütunları için otomatik etiketleme**: Yok|
-|Çok Gizli <br /> \ Belirli Kişiler |Koruma gerektiren ve yalnızca belirttiğiniz kişiler tarafından ve seçtiğiniz izin düzeyiyle görüntülenebilir.|**Kapsam**: Dosya, E-posta <br /><br />**Şifreleme**: Kullanıcıların izin atamasına izin verin: <br />- Outlook İçin İletme <br />- Word, PowerPoint ve Excel'da kullanıcılara sor<br /><br />**İçerik işaretleme**: Alt Bilgi: Çok Gizli Olarak Sınıflandırılmış<br /><br />**Otomatik etiketleme**: Hayır <br /><br />**Grup ayarları**: Hayır<br /><br />**Site ayarları**: Hayır <br /><br />**Veritabanı sütunları için otomatik etiketleme**: Yok|
+|Çok Gizli <br /> \ Belirli Kişiler |Koruma gerektiren ve yalnızca belirttiğiniz kişiler tarafından ve seçtiğiniz izin düzeyiyle görüntülenebilir.|**Kapsam**: Dosya, E-posta <br /><br />**Şifreleme**: Kullanıcıların izin atamasına izin verin: <br />- Outlook için İletme <br />- Word, PowerPoint ve Excel'de kullanıcılara sor<br /><br />**İçerik işaretleme**: Alt Bilgi: Çok Gizli Olarak Sınıflandırılmış<br /><br />**Otomatik etiketleme**: Hayır <br /><br />**Grup ayarları**: Hayır<br /><br />**Site ayarları**: Hayır <br /><br />**Veritabanı sütunları için otomatik etiketleme**: Yok|
 
 > [!NOTE]
 > Etiket adları ve açıklamaları şu yerel ayarlar için otomatik olarak kullanılabilir: ABD İngilizcesi, Basitleştirilmiş Çince ve Geleneksel, Fransızca, Almanca, İtalyanca, Japonca, Korece, Portekizce Brezilya, Rusça ve İspanyolca.
@@ -103,26 +101,26 @@ Bu varsayılan duyarlılık etiketlerini düzenlemeniz gerekiyorsa bkz. [Duyarl�
 Varsayılan duyarlılık etiketi ilkesi, etiketlerin kullanıcıların belge ve e-postalarını duyarlılık etiketleriyle etiketlemeye başlamasını sağlar. Aşağıdaki yapılandırmaya sahiptir:
 
 - Varsayılan etiketleri kiracınızdaki tüm kullanıcılara yayımlama
-- Etiketlenmemiş belgeler ve e-postalar için **GenelTüm** \  **Çalışanlar (sınırsız)** varsayılan etiketi
+- Etiketlenmemiş belgeler ve e-postalar için **Varsayılan Tüm** \ **Çalışanlar (kısıtlamasız)** etiketi
 - Kullanıcılar bir etiketi kaldırmak veya sınıflandırmasını düşürmek için bir gerekçe sağlamalıdır
 
 Bu ilke ayarları ve kullanılabilen diğer ilke ayarları hakkında daha fazla bilgi için bkz [. Etiket ilkelerinin yapabilecekleri](sensitivity-labels.md#what-label-policies-can-do).
 
 Bu varsayılan ilke ayarlarını düzenlemeniz gerekiyorsa bkz. Etiket [ilkesi oluşturarak duyarlılık etiketlerini yayımlama](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy).
 
-Bu etiketleri Windows, macOS, iOS ve Android uygulamalarındaki Office kullandığınızda, kullanıcılar yeni etiketleri dört saat içinde ve tarayıcıyı yenilediğinizde Word, Excel ve Web üzerinde PowerPoint için de bir saat içinde görür. Ancak değişikliklerin tüm uygulama ve hizmetlere çoğaltılması için 24 saate kadar izin vermeniz gerekebilir.
+Bu etiketleri Windows, macOS, iOS ve Android'deki Office uygulamalarında kullandığınızda, kullanıcılar yeni etiketleri dört saat içinde ve tarayıcıyı yenilediğinizde Word, Excel ve Web üzerinde PowerPoint için bir saat içinde görür. Ancak değişikliklerin tüm uygulama ve hizmetlere çoğaltılması için 24 saate kadar izin vermeniz gerekebilir.
 
 ## <a name="client-side-auto-labeling"></a>İstemci tarafı otomatik etiketleme
 
 Varsayılan istemci tarafı otomatik etiketleme yapılandırması, üzerinde çalıştıkları belgelerde veya e-postalarda kredi kartı numaraları algıladığımızda kullanıcıların otomatik olarak duyarlılık etiketi uygulamasını önerir. Bu yapılandırma, otomatik olarak uygulanmak yerine bir öneri olarak, içerikle ilgili vurgulama için iyi bir ilk adımdır ve kullanıcılara belgelerini ve e-postalarını etiketleme uygulamasını tanıtır.
 
-İstemci tarafı otomatik etiketleme yalnızca word, Excel, PowerPoint ve Outlook Office uygulamaları tarafından kullanılan belgeler ve e-postalar için çalışır. 
+İstemci tarafı otomatik etiketleme yalnızca Word, Excel, PowerPoint ve Outlook Office uygulamaları tarafından kullanılan belgeler ve e-postalar için çalışır. 
 
 Varsayılan istemci tarafı otomatik etiketleme aşağıdaki yapılandırmaya sahiptir: 
 
-- Bir belgede veya e-postada 1-9 tane kredi kartı numarası bulunuyorsa, kullanıcının **ConfidentialAnyone**  \  duyarlılık etiketini (sınırsız) uygulamasını öneririz 
+- Bir belgede veya e-postada 1-9 tane kredi kartı numarası bulunuyorsa, kullanıcının **Gizli** \ **Herkes duyarlılık etiketini (sınırsız)** uygulamasını öneririz 
 
-- Bir belgede veya e-postada 10 veya daha fazla kredi kartı numarası örneği bulunuyorsa, kullanıcının **GizliTüm**  \  Çalışanlar duyarlılık etiketini uygulamasını öneririz 
+- Bir belgede veya e-postada 10 veya daha fazla kredi kartı numarası örneği bulunuyorsa, kullanıcının **Gizli** \ **Tüm Çalışanlar** duyarlılık etiketini uygulamasını öneririz 
 
 > [!NOTE]
 > Kendi duyarlılık etiketlerinizin yayımlandığını algıladıysak, otomatik etiketleme için kendi etiketlerinizden birini seçmenizi ve sizin için yapılandırmanızı isteriz.
@@ -131,18 +129,39 @@ Varsayılan istemci tarafı otomatik etiketleme aşağıdaki yapılandırmaya sa
 
 ## <a name="service-side-auto-labeling"></a>Hizmet tarafı otomatik etiketleme 
 
-Hizmet tarafı otomatik etiketleme, bekleyen hassas belgelerin ve aktarım sırasındaki e-postaların etiketlenmesine yardımcı olur. Varsayılan hizmet tarafı otomatik etiketleme ilkesi, tüm SharePoint veya OneDrive sitelerinde depolanan belgeler ve Exchange Online aracılığıyla gönderilen tüm e-postalar için simülasyon modunda bir ilke oluşturur. Simülasyon modunda, ilkeyi etkinleştirene kadar öğeler aslında etiketlenmez. Simülasyon modu, ilke açıldığında hangi öğelerin etiketlendiğini önizlemenize olanak tanır, böylece ilkeyi kiracınıza gerçek etiketleme için dağıtmadan önce etiketleme özelliğine güvenirsiniz. 
+Hizmet tarafı otomatik etiketleme, bekleyen hassas belgelerin ve aktarım sırasındaki e-postaların etiketlenmesine yardımcı olur. Varsayılan hizmet tarafı otomatik etiketleme ilkesi, tüm SharePoint veya OneDrive sitelerinde depolanan belgeler ve Exchange Online aracılığıyla gönderilen tüm e-postalar için simülasyon modunda çalışan ilkeler oluşturur. 
 
-Varsayılan hizmet tarafı otomatik etiketleme aşağıdaki yapılandırmaya sahiptir: 
+Simülasyon modunda, ilke açılana kadar öğeler aslında etiketlenmez. İlkeyi el ile açabilirsiniz veya varsayılan ayarı değiştirmediğiniz sürece, simülasyonun tamamlanmasından sonraki belirli bir gün içinde ilkede değişiklik yapılmazsa ilke sizin için otomatik olarak açılır.
 
-- Bir belgede veya e-postada 1-9 tane kredi kartı numarası bulunuyorsa **, ConfidentialAnyone** \  duyarlılık etiketini **(sınırsız)** uygulayın
+> [!NOTE]
+> Otomatik etiketleme ilkelerinin otomatik olarak etkinleştirilmesi yeni ve yeni otomatik etiketleme ilkeleri için aşamalı olarak kullanıma sunulacaktır. Bu yapılandırmayı hemen veya tüm ilkeler için göremeyebilirsiniz.
 
-- Bir belgede veya e-postada 10 veya daha fazla kredi kartı numarası örneği bulunuyorsa **,** **GizliTüm** \  Çalışanlar duyarlılık etiketini uygulayın 
+Çoğu durumda, düzenlenmemiş bir ilkenin otomatik olarak açılmasından önceki gün sayısı 7'dir. Ancak, 23 Haziran 2022'den itibaren yeni müşterilere özel olarak, ilk gün sayısı 25 ve ilke düzenlendikten sonra 7 olur.
+
+Simülasyon modu, ilke açıldığında hangi öğelerin etiketlendiğini önizlemenize olanak tanır, böylece ilkeyi kiracınıza gerçek etiketleme için dağıtmadan önce etiketleme özelliğine güvenirsiniz. 
+
+Varsayılan hizmet tarafı otomatik etiketleme ilkeleri aşağıdaki yapılandırmaya sahiptir: 
+
+Tüm müşteriler için:
+
+- Bir belgede veya e-postada 1-9 tane kredi kartı numarası bulunuyorsa **, Gizli** \ **Herkes (sınırsız)** duyarlılık etiketini uygulayın
+    
+- Bir belgede veya e-postada 10 veya daha fazla kredi kartı numarası örneği bulunuyorsa **Gizli** \ **Tüm Çalışanlar** duyarlılık etiketini uygulayın 
 
 > [!NOTE]
 > Kendi duyarlılık etiketlerinizin yayımlandığını algıladıysak, otomatik etiketleme ilkeniz için kendi etiketlerinizden birini seçmenizi isteriz.
 
-Simülasyon tamamlandığında sonuçları gözden geçirin ve onlardan memnunsanız ilkeyi açın.
+23 Haziran 2022'den yeni müşteriler ve Microsoft 365 kiracısı ABD bölgesindedir:
+
+- Bir belgede veya e-postada 1-9 ABD kişisel verisi ve tam ad bulunuyorsa **, Gizli** \ **Herkes (sınırsız)** duyarlılık etiketini uygulayın
+
+- Bir belgede veya e-postada bulunan 10 veya daha fazla ABD kişisel veri örneği ve tam ad varsa **, Gizli** \ **Tüm Çalışanlar** duyarlılık etiketini uygulayın 
+
+23 Haziran 2022'den itibaren yeni müşterilerin her ayar için iki otomatik etiketleme ilkesi vardır. İlkelerden biri Exchange konumu, diğeri sharepoint ve onedrive konumları içindir. İlkeler aynı anda oluşturulsa da, SharePoint ve OneDrive için simülasyon hemen açılmaz:
+- Exchange konumu: Otomatik etiketleme ilkesi oluşturulur ve simülasyonu hemen başlatır.
+- SharePoint ve OneDrive konumları: Otomatik etiketleme ilkesi oluşturulur, ancak simülasyonu otomatik olarak başlatmadan önce 25 gün bekler. Bu gecikme, dosyaların oluşturulup bu konumlara kaydedilmesi için size zaman verir. 
+
+Simülasyon tamamlandığında sonuçları gözden geçirin ve memnunsanız ilkeleri açın. Varsayılan olarak, 23 Haziran 2022'den itibaren yavaş bir şekilde kullanıma sunulacak olan ilkeler, belirlenen süre içinde düzenlenmezse otomatik olarak açılır (yeni müşteriler için başlangıçta 25 gün, aksi takdirde 7 gün).
 
 Simülasyon modu hakkında daha fazla bilgi için bkz. [Simülasyon modu hakkında bilgi edinin](apply-sensitivity-label-automatically.md#learn-about-simulation-mode).
 
@@ -160,9 +179,9 @@ DLP ilkesini düzenlemek istiyorsanız bkz. [DLP ilkesi oluşturma, test etme ve
 
 ## <a name="dlp-for-devices"></a>Cihazlar için DLP
 
-Cihazlar için varsayılan DLP ilkesi, Microsoft Purview eklenmiş Windows 10 cihazlarda kredi kartı numaralarının bulunduğunu algılar. Ardından aşağıdaki eylemleri denetler (engellemez): 
+Cihazlar için varsayılan DLP ilkesi, Microsoft Purview'a eklenmiş Windows 10 cihazlarda kredi kartı numaralarının bulunduğunu algılar. Ardından aşağıdaki eylemleri denetler (engellemez): 
 
-- Bulut hizmeti etki alanlarına Upload veya izin verilmeyen tarayıcılar tarafından erişim
+- Bulut hizmeti etki alanlarına yükleme veya izin verilmeyen tarayıcılar tarafından erişim
 
 - Panoya, USB'ye veya ağ paylaşımına kopyalama 
 
@@ -188,4 +207,4 @@ Duyarlılık etiketleri, veri kaybı önleme ve Microsoft Purview Bilgi Korumas�
 
 - [Duyarlılık etiketleri hakkında bilgi edinin](sensitivity-labels.md)
 - [Veri kaybı önleme hakkında daha fazla bilgi edinme](dlp-learn-about-dlp.md)
-- [verilerinizi Microsoft Purview ile koruma](information-protection.md)
+- [Microsoft Purview ile verilerinizi koruma](information-protection.md)

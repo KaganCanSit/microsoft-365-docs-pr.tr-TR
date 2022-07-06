@@ -13,19 +13,17 @@ ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: M365-security-compliance
-description: ''
-ms.openlocfilehash: da8ea6f996735edb91b7191bbcf90df02e134428
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Microsoft Purview eKeşif(Premium) içindeki tahmine dayalı kodlama aracının temel kavramları ve ölçümleri hakkında bilgi edinin.
+ms.openlocfilehash: 59718c033fb297a7ef583611c207794cd7b69b6f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091489"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66640554"
 ---
 # <a name="predictive-coding-reference-preview"></a>Tahmine dayalı kodlama başvurusu (önizleme)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Bu makalede, Microsoft Purview eKeşif'teki (Premium) tahmine dayalı kodlama aracının temel kavramları ve ölçümleri açıklanmaktadır. Makaledeki bölümler alfabetik sırada listelenmiştir.
+Bu makalede, Microsoft Purview eKeşif(Premium) içindeki tahmine dayalı kodlama aracının temel kavramları ve ölçümleri açıklanmaktadır. Makaledeki bölümler alfabetik sırada listelenmiştir.
 
 ## <a name="confidence-level"></a>Güvenilirlik düzeyi
 

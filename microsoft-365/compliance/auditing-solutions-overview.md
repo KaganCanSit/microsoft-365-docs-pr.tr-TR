@@ -19,18 +19,16 @@ search.appverid:
 - MET150
 description: Microsoft 365 kuruluşunuzdaki kullanıcıların ve yöneticilerin etkinliklerini denetlemeyi öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 8ceaea2b888c144fb5c6bc34d9d7788ab595b56b
-ms.sourcegitcommit: 5fe7f2954a89406245416fc1a218cf4bf19abb85
+ms.openlocfilehash: a9b00590c0a1904f0f2a9b786414e9ee303c3572
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65864594"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637493"
 ---
-# <a name="auditing-solutions-in-microsoft-purview"></a>Microsoft Purview'de çözümleri denetleme
+# <a name="auditing-solutions-in-microsoft-purview"></a>Microsoft Purview'da denetim çözümleri
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview denetim çözümleri, kuruluşların güvenlik olaylarına, adli araştırmalara, iç araştırmalara ve uyumluluk yükümlülüklerine etkili bir şekilde yanıt vermelerine yardımcı olmak için tümleşik bir çözüm sağlar. Onlarca Microsoft 365 hizmeti ve çözümünde gerçekleştirilen binlerce kullanıcı ve yönetici işlemi, kuruluşunuzun birleşik denetim günlüğünde yakalanır, kaydedilir ve saklanır. Bu olaylar için denetim kayıtları güvenlik işlemleri, BT yöneticileri, insider risk ekipleri ve kuruluşunuzdaki uyumluluk ve hukuk araştırmacıları tarafından aranabilir. Bu özellik, Microsoft 365 kuruluşunuz genelinde gerçekleştirilen etkinliklere görünürlük sağlar.
+Microsoft Purview denetim çözümleri, kuruluşların güvenlik olaylarına, adli araştırmalara, iç araştırmalara ve uyumluluk yükümlülüklerine etkili bir şekilde yanıt vermelerine yardımcı olmak için tümleşik bir çözüm sağlar. Onlarca Microsoft 365 hizmeti ve çözümünde gerçekleştirilen binlerce kullanıcı ve yönetici işlemi kuruluşunuzun birleşik denetim günlüğünde yakalanır, kaydedilir ve saklanır. Bu olaylar için denetim kayıtları güvenlik işlemleri, BT yöneticileri, insider risk ekipleri ve kuruluşunuzdaki uyumluluk ve hukuk araştırmacıları tarafından aranabilir. Bu özellik, Microsoft 365 kuruluşunuz genelinde gerçekleştirilen etkinliklere görünürlük sağlar.
 
 ## <a name="microsoft-purview-auditing-solutions"></a>Microsoft Purview denetim çözümleri
 
@@ -40,10 +38,10 @@ Microsoft Purview iki denetim çözümü sağlar: Denetim (Standart) ve Denetim 
 
 ### <a name="audit-standard"></a>Denetim (Standart)
 
-Microsoft Purview Denetimi (Standart), denetimli etkinlikleri günlüğe kaydetme ve arama olanağı sağlar ve adli, BT, uyumluluk ve yasal araştırmalarınızı güçlendirir.
+Microsoft Purview Denetim (Standart), denetimli etkinlikleri günlüğe kaydetme ve arama olanağı sağlar ve adli, BT, uyumluluk ve yasal araştırmalarınızı güçlendirir.
 
 - **Varsayılan olarak etkindir**. Uygun aboneliğe sahip tüm kuruluşlar için denetim (Standart) varsayılan olarak açıktır. Bu, denetlenen etkinliklerin kayıtlarının yakalanacağı ve aranabilir olacağı anlamına gelir. Gereken tek kurulum, denetim günlüğü arama aracına (ve ilgili cmdlet'e) erişmek için gerekli izinleri atamak ve kullanıcıya Microsoft Purview Denetim (Premium) özellikleri için doğru lisans atandığından emin olmaktır.
-- **Binlerce aranabilir denetim olayı**. Kuruluşunuzdaki Microsoft 365 hizmetlerinin çoğu gerçekleşen çok çeşitli denetimli etkinlikleri arayabilirsiniz. Arayabileceğiniz etkinliklerin kısmi listesi için bkz [. Denetlenen etkinlikler](search-the-audit-log-in-security-and-compliance.md#audited-activities). Denetlenen etkinlikleri destekleyen hizmetlerin ve özelliklerin listesi için bkz. [Denetim günlüğü kayıt türü](/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
+- **Binlerce aranabilir denetim olayı**. Kuruluşunuzdaki Microsoft 365 hizmetlerinin çoğunda gerçekleşen çok çeşitli denetimli etkinlikleri arayabilirsiniz. Arayabileceğiniz etkinliklerin kısmi listesi için bkz [. Denetlenen etkinlikler](search-the-audit-log-in-security-and-compliance.md#audited-activities). Denetlenen etkinlikleri destekleyen hizmetlerin ve özelliklerin listesi için bkz. [Denetim günlüğü kayıt türü](/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 - **Microsoft Purview uyumluluk portalı denetim arama aracı**. Denetim kayıtlarını aramak için uyumluluk portalındaki Denetim günlüğü arama aracını kullanın. Belirli kullanıcılar tarafından gerçekleştirilen etkinlikler ve tarih aralığıyla gerçekleşen etkinlikler için belirli etkinlikleri arayabilirsiniz. Uyumluluk merkezindeki Denetim arama aracının ekran görüntüsü aşağıdadır.
 
    ![Uyumluluk portalında denetim günlüğü arama aracı.](../media/AuditLogSearchToolMCC.png)
@@ -53,7 +51,7 @@ Microsoft Purview Denetimi (Standart), denetimli etkinlikleri günlüğe kaydetm
   - [Search-UnifiedAuditLog cmdlet başvurusu](/powershell/module/exchange/search-unifiedauditlog)
   - [Denetim günlüğünü aramak için PowerShell betiği kullanma](audit-log-search-script.md)
 
-- **Denetim kayıtlarını CSV dosyasına** aktarın. Uyumluluk portalında Denetim günlüğü arama aracını çalıştırdıktan sonra, arama tarafından döndürülen denetim kayıtlarını csv dosyasına aktarabilirsiniz. Bu, farklı denetim kaydı özelliklerinde sıralama ve filtreleme Microsoft Excel kullanmanıza olanak tanır. AuditData JSON nesnesindeki her özelliği kendi sütununa bölmek için Excel Power Query dönüştürme işlevini de kullanabilirsiniz. Bu, farklı olaylar için benzer verileri etkili bir şekilde görüntülemenizi ve karşılaştırmanızı sağlar. Daha fazla bilgi için bkz. [Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md).
+- **Denetim kayıtlarını CSV dosyasına** aktarın. Uyumluluk portalında Denetim günlüğü arama aracını çalıştırdıktan sonra, arama tarafından döndürülen denetim kayıtlarını csv dosyasına aktarabilirsiniz. Bu, Microsoft Excel sıralama ve filtreleme özelliklerini farklı denetim kaydı özelliklerinde kullanmanıza olanak tanır. Ayrıca, AuditData JSON nesnesindeki her özelliği kendi sütununa bölmek için Excel'i Power Query dönüştürme işlevini de kullanabilirsiniz. Bu, farklı olaylar için benzer verileri etkili bir şekilde görüntülemenizi ve karşılaştırmanızı sağlar. Daha fazla bilgi için bkz. [Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md).
 
 - **Office 365 Yönetim Etkinliği API'sini kullanarak denetim günlüklerine erişim**. Denetim kayıtlarına erişmek ve bunları almak için üçüncü bir yöntem Office 365 Yönetim Etkinliği API'sini kullanmaktır. Bu, kuruluşların denetim verilerini varsayılan 90 günden daha uzun süre saklamalarına ve denetim verilerini bir SIEM çözümüne aktarmalarına olanak tanır. Daha fazla bilgi için bkz. [Office 365 Yönetim Etkinliği API başvurusu](/office/office-365-management-api/office-365-management-activity-api-reference).
 
@@ -67,15 +65,15 @@ Denetim (Premium), denetim günlüğü saklama ilkeleri, denetim kayıtlarının
 
 - **Denetim kayıtlarının daha uzun süre saklanması**. Exchange, SharePoint ve Azure Active Directory denetim kayıtları varsayılan olarak bir yıl boyunca saklanır. Diğer tüm etkinliklerin denetim kayıtları varsayılan olarak 90 gün boyunca tutulur veya daha uzun saklama dönemlerini yapılandırmak için denetim günlüğü saklama ilkelerini kullanabilirsiniz.
 
-- **Yüksek değerli, önemli Denetim (Premium) olayları**. Kritik olaylar için denetim kayıtları, posta öğelerine ne zaman erişildiği, posta öğelerinin ne zaman yanıtlandığı ve iletildiği ya da kullanıcının Exchange Online ve SharePoint Online'da ne zaman ve ne zaman arama yaptığı gibi olaylara görünürlük sağlayarak kuruluşunuzun adli ve uyumluluk araştırmaları gerçekleştirmesine yardımcı olabilir. Bu önemli olaylar olası ihlalleri araştırmanıza ve güvenliğin kapsamını belirlemenize yardımcı olabilir.
+- **Yüksek değerli, kritik Denetim (Premium) olayları**. Kritik olaylar için denetim kayıtları, posta öğelerine ne zaman erişildiği, posta öğelerinin ne zaman yanıtlandığı ve iletildiği ya da kullanıcının Exchange Online ve SharePoint Online'da ne zaman ve ne zaman arama yaptığı gibi olaylara görünürlük sağlayarak kuruluşunuzun adli ve uyumluluk araştırmaları gerçekleştirmesine yardımcı olabilir. Bu önemli olaylar olası ihlalleri araştırmanıza ve güvenliğin kapsamını belirlemenize yardımcı olabilir.
 
-- **Office 365 Yönetim Etkinliği API'sine daha yüksek bant genişliği**. Denetim (Premium), kuruluşlara Office 365 Yönetim Etkinliği API'sini kullanarak denetim günlüklerine erişmek için daha fazla bant genişliği sağlar. Denetim (Standart) veya Denetim (Premium) olan tüm kuruluşlara başlangıçta dakikada 2.000 istek temeli ayrılmış olsa da, bu sınır kuruluşun koltuk sayısına ve lisanslama aboneliklerine bağlı olarak dinamik olarak artar. Bu, Denetim (Premium) olan kuruluşların, Denetim (Standart) olan kuruluşlara göre bant genişliğinin yaklaşık iki katını almasına neden olur.
+- **Office 365 Yönetim Etkinliği API'sine daha yüksek bant genişliği**. Denetim (Premium), kuruluşlara Office 365 Yönetim Etkinliği API'sini kullanarak denetim günlüklerine erişmek için daha fazla bant genişliği sağlar. Denetim (Standart) veya Denetim (Premium) olan tüm kuruluşlara başlangıçta dakikada 2.000 istek temeli ayrılmış olsa da, bu sınır kuruluşun koltuk sayısına ve lisanslama aboneliğine bağlı olarak dinamik olarak artar. Bu, Denetim (Premium) olan kuruluşların, Denetim (Standart) olan kuruluşlara göre bant genişliğinin yaklaşık iki katı kadar yüksek bir bant genişliği almasına neden olur.
 
-Denetim (Premium) özellikleri hakkında daha ayrıntılı bilgi için bkz. [Microsoft 365'de Denetim (Premium).](advanced-audit.md)
+Denetim (Premium) özellikleri hakkında daha ayrıntılı bilgi için bkz. [Microsoft 365'te Denetim (Premium).](advanced-audit.md)
 
 ## <a name="comparison-of-key-capabilities"></a>Önemli özelliklerin karşılaştırması
 
-Aşağıdaki tabloda, Denetim (Standart) ve Denetim (Premium) içindeki temel özellikler karşılaştırılıyor. Tüm Denetim (Standart) işlevleri Denetim 'e (Premium) dahil edilir.
+Aşağıdaki tabloda, Denetim (Standart) ve Denetim (Premium) içindeki temel özellikler karşılaştırılıyor. Tüm Denetim (Standart) işlevleri Denetim 'e (Premium) dahildir.
 
 |Yeteneği|Denetim (Standart)|Denetim (Premium)|
 |:------|:-------------|:-------------|
@@ -84,7 +82,7 @@ Aşağıdaki tabloda, Denetim (Standart) ve Denetim (Premium) içindeki temel ö
 |Uyumluluk portalında arama aracını denetleme|![Desteklenir.](../media/check-mark.png)|![Desteklenir.](../media/check-mark.png)|
 |Search-UnifiedAuditLog cmdlet|![Desteklenir.](../media/check-mark.png)|![Desteklenir.](../media/check-mark.png)|
 |Denetim kayıtlarını CSV dosyasına aktarma|![Desteklenir.](../media/check-mark.png)|![Desteklenir.](../media/check-mark.png)|
-|Office 365 Yönetim Etkinliği <sup>API'si 1</sup> aracılığıyla denetim günlüklerine erişim|![Desteklenir.](../media/check-mark.png)|![Desteklenir.](../media/check-mark.png)</sup>|
+|Office 365 Yönetim Etkinliği <sup>API'si 1</sup> aracılığıyla denetim günlüklerine erişim|![Desteklenir.](../media/check-mark.png)|![Desteklenen.](../media/check-mark.png)</sup>|
 |90 günlük denetim günlüğü saklama|![Desteklenir.](../media/check-mark.png)|![Desteklenir.](../media/check-mark.png)|
 |1 yıllık denetim günlüğü saklama||![Desteklenir.](../media/check-mark.png)|
 |10 yıllık denetim günlüğü saklama <sup>2</sup>||![Destekleniyor](../media/check-mark.png)|
@@ -92,7 +90,7 @@ Aşağıdaki tabloda, Denetim (Standart) ve Denetim (Premium) içindeki temel ö
 |Yüksek değerli, kritik olaylar||![Destekleniyor](../media/check-mark.png)|
 
 > [!NOTE]
-> <sup>1</sup> Denetim (Premium), denetim verilerine daha hızlı erişim sağlayan Office 365 Yönetim Etkinliği API'sine daha yüksek bant genişliği erişimi içerir.<br/><sup>2</sup> Denetim için gerekli lisanslamaya ek olarak (Premium) (sonraki bölümde açıklanmıştır), kullanıcıya denetim kayıtlarını 10 yıl boyunca saklamak için 10 Yıllık Denetim Günlüğü Saklama lisansı atanmış olmalıdır.
+> <sup>1</sup> Denetim (Premium), denetim verilerine daha hızlı erişim sağlayan Office 365 Yönetim Etkinliği API'sine daha yüksek bant genişliği erişimi içerir.<br/><sup>2</sup> Denetim (Premium) için gerekli lisanslamaya ek olarak (sonraki bölümde açıklanmıştır), kullanıcıya denetim kayıtlarını 10 yıl boyunca tutmak için 10 Yıllık Denetim Günlüğü Saklama lisansı atanmış olmalıdır.
 
 ## <a name="licensing-requirements"></a>Lisans gereksinimleri
 
@@ -106,9 +104,9 @@ Aşağıdaki bölümlerde Denetim (Standart) ve Denetim (Premium) için lisansla
 - E3 aboneliğini Microsoft 365 Kurumsal
 - Microsoft 365 Business Premium
 - A3 aboneliğini Microsoft 365 Eğitim
-- kamu G3 aboneliğini Microsoft 365
-- kamu G1 aboneliğini Microsoft 365
-- Ön Hat F1 veya F3 aboneliğini veya F5 Güvenlik eklentisini Microsoft 365
+- Microsoft 365 Kamu G3 aboneliği
+- Microsoft 365 Kamu G1 aboneliği
+- Microsoft 365 Ön Cephe F1 veya F3 aboneliği ya da F5 Güvenlik eklentisi
 - E3 aboneliğini Office 365 Kurumsal
 - E1 aboneliğini Office 365 Kurumsal
 - A1 aboneliğini Office 365 Eğitim
@@ -122,10 +120,10 @@ Aşağıdaki bölümlerde Denetim (Standart) ve Denetim (Premium) için lisansla
 - A5 aboneliğini Microsoft 365 Eğitim
 - A3 aboneliğini + Microsoft 365 A5 Uyumluluğu eklentisini Microsoft 365 Eğitim
 - Microsoft 365 Eğitim A3 aboneliği + Microsoft 365 A5 eKeşif ve Denetim eklentisi
-- kamu G5 aboneliğini Microsoft 365
-- Microsoft 365 Kamu G3 aboneliği + Microsoft 365 G5 Uyumluluğu eklentisi
-- Microsoft 365 Government G3 aboneliği + Microsoft 365 G5 eKeşif ve Denetim eklentisi
-- Ön Hat F5 Uyumluluğunu veya F5 Güvenlik & Uyumluluğu eklentisini Microsoft 365
+- Microsoft 365 Kamu G5 aboneliği
+- Microsoft 365 Kamu G3 aboneliği + Microsoft 365 G5 Uyumluluk eklentisi
+- Microsoft 365 Kamu G3 aboneliği + Microsoft 365 G5 eKeşif ve Denetim eklentisi
+- Microsoft 365 Ön Hat F5 Uyumluluğu veya F5 Güvenlik & Uyumluluğu eklentisi
 - E5 aboneliğini Office 365 Kurumsal
 - A5 aboneliğini Office 365 Eğitim
 
@@ -149,11 +147,11 @@ Daha ayrıntılı yönergeler için bkz. [Denetimi Ayarlama (Standart)](set-up-b
 
 ### <a name="set-up-audit-premium"></a>Denetimi (Premium) Ayarlama
 
-Kuruluşunuzun Denetimi (Premium) destekleyen bir aboneliği varsa, Denetim (Premium) bölümündeki ek özellikleri ayarlamak ve kullanmak için aşağıdaki adımları gerçekleştirin.
+Kuruluşunuzun Denetimi (Premium) destekleyen bir aboneliği varsa, Denetim (Premium) içindeki ek özellikleri ayarlamak ve kullanmak için aşağıdaki adımları gerçekleştirin.
 
 ![Denetimi ayarlamak için iş akışı (Premium).](../media/AdvancedAuditWorkflow.png)
 
-1. Kullanıcılar için Denetimi (Premium) ayarlayın. Bu adım aşağıdaki görevlerden oluşur:
+1. Kullanıcılar için Denetim 'i (Premium) ayarlayın. Bu adım aşağıdaki görevlerden oluşur:
 
    - Kullanıcılara Denetim (Premium) için uygun lisans veya eklenti lisansı atandığını doğrulama.
   
@@ -163,7 +161,7 @@ Kuruluşunuzun Denetimi (Premium) destekleyen bir aboneliği varsa, Denetim (Pre
 
 2. Kullanıcılar Exchange Online ve SharePoint Online'da arama yaparken Denetim (Premium) olaylarının günlüğe kaydedilmesini etkinleştirin.
 
-3. Denetim günlüğü saklama ilkelerini ayarlayın. Bir yıl boyunca Exchange, SharePoint ve Azure AD denetim kayıtlarını saklayan varsayılan ilkeye ek olarak, kuruluşunuzun güvenlik operasyonları, BT ve uyumluluk ekiplerinin gereksinimlerini karşılamak için ek denetim günlüğü saklama ilkeleri oluşturabilirsiniz.
+3. Denetim günlüğü saklama ilkelerini ayarlayın. Exchange, SharePoint ve Azure AD denetim kayıtlarını bir yıl boyunca saklayan varsayılan ilkeye ek olarak, kuruluşunuzun güvenlik işlemlerinin, BT'nin ve uyumluluk ekiplerinin gereksinimlerini karşılamak için ek denetim günlüğü saklama ilkeleri oluşturabilirsiniz.
 
 4. Adli araştırma yaparken kritik Denetim (Premium) olayları ve diğer etkinlikleri arayın. 1. ve 2. adımı tamamladıktan sonra, güvenliği aşılmış hesapların ve diğer güvenlik veya uyumluluk araştırmalarının adli araştırmaları sırasında denetim günlüğünde Denetim (Premium) olayları ve diğer etkinlikler için arama yapabilirsiniz.
 
@@ -182,4 +180,4 @@ To implement Customer Key for auditing, you have to create a multi-workload Data
 
 ## <a name="training"></a>Eğitim
 
-Güvenlik operasyonları ekibinize, BT yöneticilerine ve uyumluluk araştırmacıları ekibinize Denetim (Standart) ve Denetim (Premium) ile ilgili temel bilgiler konusunda eğitim vermek, kuruluşunuzun araştırmalarınıza yardımcı olmak için denetimi daha hızlı kullanmaya başlamasına yardımcı olabilir. Microsoft Purview, kuruluşunuzdaki bu kullanıcıların denetime başlamalarına yardımcı olmak için aşağıdaki kaynağı sağlar: [Microsoft Purview eBulma ve denetim özelliklerini açıklama](/learn/modules/describe-ediscovery-capabilities-of-microsoft-365).
+Güvenlik operasyonları ekibinize, BT yöneticilerine ve uyumluluk araştırmacıları ekibinize Denetim (Standart) ve Denetim (Premium) ile ilgili temel bilgiler konusunda eğitim vermek, kuruluşunuzun araştırmalarınıza yardımcı olmak için denetimi kullanarak daha hızlı bir şekilde çalışmaya başlamasına yardımcı olabilir. Microsoft Purview, kuruluşunuzdaki bu kullanıcıların denetime başlamalarına yardımcı olmak için aşağıdaki kaynağı sağlar: [Microsoft Purview'un eKeşif ve denetim özelliklerini açıklama](/learn/modules/describe-ediscovery-capabilities-of-microsoft-365).

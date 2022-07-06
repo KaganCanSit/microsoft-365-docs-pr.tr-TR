@@ -13,16 +13,14 @@ ms.collection:
 ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
-ms.openlocfilehash: eaaa98233a839f41c008052ab91c5c0f45f8eb13
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: a84b8e712de53b0abae81a05bbe1b2bef3237beb
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014195"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635315"
 ---
 # <a name="manage-information-barriers-policies"></a>Bilgi engeli ilkelerini yönetme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 [Bilgi engelleri (IB) ilkelerini tanımladıktan](information-barriers-policies.md) sonra, [sorun giderme](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting) veya düzenli bakım kapsamında bu ilkelerde veya kullanıcı segmentlerinizde değişiklik yapmanız gerekebilir.
 
@@ -30,7 +28,7 @@ ms.locfileid: "66014195"
 
 |**Eylem**|**Açıklama**|
 |:---------|:--------------|
-| [Kullanıcı hesabı özniteliklerini düzenleme](#edit-user-account-attributes) | segmentleri tanımlamak için kullanılabilecek öznitelikleri Azure Active Directory doldurun. <br> Kullanıcılar olması gereken segmentlere dahil olmadığında, kullanıcıların hangi segmentlerde olduğunu değiştirmek veya farklı öznitelikler kullanarak segmentleri tanımlamak için kullanıcı hesabı özniteliklerini düzenleyin. |
+| [Kullanıcı hesabı özniteliklerini düzenleme](#edit-user-account-attributes) | Azure Active Directory'de segmentleri tanımlamak için kullanılabilecek öznitelikleri doldurun. <br> Kullanıcılar olması gereken segmentlere dahil olmadığında, kullanıcıların hangi segmentlerde olduğunu değiştirmek veya farklı öznitelikler kullanarak segmentleri tanımlamak için kullanıcı hesabı özniteliklerini düzenleyin. |
 | [Segmenti düzenleme](#edit-a-segment) | Segmentin tanımlanma şeklini değiştirmek istediğinizde segmentleri düzenleyin. <br> Örneğin, *başlangıçta Department* kullanarak segmentleri tanımlamış ve şimdi *MemberOf* gibi başka bir öznitelik kullanmak isteyebilirsiniz. |
 | [İlkeyi düzenleme](#edit-a-policy) | İlkenin çalışma şeklini değiştirmek istediğinizde bilgi engelleri ilkesini düzenleyin.<br> Örneğin, iki segment arasındaki iletişimi engellemek yerine yalnızca belirli segmentler arasında iletişimin gerçekleşmesine izin vermek istediğinize karar vekleyebilirsiniz. |
 | [İlkeyi etkin değil durumuna ayarlama](#set-a-policy-to-inactive-status) |bir ilkede değişiklik yapmak istediğinizde veya bir ilkenin etkin olmasını istemediğinizde ilkeyi etkin değil durumuna ayarlayın. |
@@ -265,8 +263,8 @@ Bilgi engeli ilkelerini uygulamaya başladıktan sonra, bu ilkelerin uygulanmas�
 
 - [Bilgi engellerine genel bakış edinin](information-barriers.md)
 - [Bilgi engelleri için ilke tanımlama](information-barriers-policies.md)
-- [Microsoft Teams bilgi engelleri hakkında daha fazla bilgi edinin](/MicrosoftTeams/information-barriers-in-teams)
-- [SharePoint Online'da bilgi engelleri hakkında daha fazla bilgi edinin](/sharepoint/information-barriers)
-- [OneDrive bilgi engelleri hakkında daha fazla bilgi edinin](/onedrive/information-barriers)
+- [Microsoft Teams'de bilgi engelleri hakkında daha fazla bilgi edinin](/MicrosoftTeams/information-barriers-in-teams)
+- [SharePoint Online'daki bilgi engelleri hakkında daha fazla bilgi edinin](/sharepoint/information-barriers)
+- [OneDrive'daki bilgi engelleri hakkında daha fazla bilgi edinin](/onedrive/information-barriers)
 - [IB ilkeleri için öznitelikler](information-barriers-attributes.md)
 - [Sorun giderme bilgileri engelleri](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting)

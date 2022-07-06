@@ -18,21 +18,19 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Microsoft Purview uyumluluk portalından bağımsız olarak komut satırından bekletme etiketleri oluşturmak ve yayımlamak için PowerShell'i kullanmayı öğrenin.
-ms.openlocfilehash: fb39e3dee9f1bd0492c443e4a3c5f5c878808990
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+description: Microsoft Purview uyumluluk portalı bağımsız olarak komut satırından bekletme etiketleri oluşturmak ve yayımlamak için PowerShell'i kullanmayı öğrenin.
+ms.openlocfilehash: c94c2c77ffc948aa55aa7f230e471957fdb2701f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66043513"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626787"
 ---
 # <a name="create-and-publish-retention-labels-by-using-powershell"></a>PowerShell kullanarak bekletme etiketleri oluşturma ve yayımlama
 
->*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft 365'da belgeleri ve e-postaları saklamanıza veya silmenize yardımcı olması için [bekletme etiketlerini](retention.md) kullanmaya karar verdikten sonra, oluşturup yayımlamak için birçok ve muhtemelen yüzlerce bekletme etiketine sahip olduğunuzu fark etmiş olabilirsiniz. Büyük ölçekte bekletme etiketleri oluşturmak için önerilen yöntem, Microsoft Purview uyumluluk portalından [dosya planını](file-plan-manager.md) kullanmaktır. Ancak [PowerShell'i](retention.md#powershell-cmdlets-for-retention-policies-and-retention-labels) de kullanabilirsiniz.
+Microsoft 365'te belgeleri ve e-postaları saklamanıza veya silmenize yardımcı olması için [bekletme etiketlerini](retention.md) kullanmaya karar verdikten sonra, oluşturup yayımlamak için birçok ve muhtemelen yüzlerce bekletme etiketine sahip olduğunuzu fark etmiş olabilirsiniz. Büyük ölçekte bekletme etiketleri oluşturmak için önerilen yöntem, Microsoft Purview uyumluluk portalı [dosya planını](file-plan-manager.md) kullanmaktır. Ancak [PowerShell'i](retention.md#powershell-cmdlets-for-retention-policies-and-retention-labels) de kullanabilirsiniz.
 
 Bekletme etiketlerini toplu olarak oluşturmanıza ve bekletme etiketi ilkelerinde yayımlamanıza yardımcı olması için bu makaledeki bilgileri, şablon dosyalarını ve örnekleri ve betiği kullanın. Ardından bekletme etiketleri [yöneticiler ve kullanıcılar tarafından uygulanabilir](create-apply-retention-labels.md#how-to-apply-published-retention-labels).
 
@@ -40,7 +38,7 @@ Sağlanan yönergeler, otomatik olarak uygulanan bekletme etiketlerini desteklem
 
 Genel bakış:
 
-1. Excel'da bekletme etiketlerinizin listesini ve bekletme etiketi ilkelerinin listesini oluşturun.
+1. Excel'de bekletme etiketlerinizin listesini ve bekletme etiketi ilkelerinin listesini oluşturun.
 
 2. Bu listelerde bekletme etiketleri ve bekletme etiketi ilkeleri oluşturmak için PowerShell'i kullanın.
 
@@ -50,7 +48,7 @@ Bu makalede sağlanan örnek betikler herhangi bir Microsoft standart destek pro
 
 ## <a name="step-1-create-a-csv-file-for-the-retention-labels"></a>1. Adım: Bekletme etiketleri için .csv dosyası oluşturma
 
-1. Bir şablon için aşağıdaki örnek .csv dosyasını ve dört farklı bekletme etiketi için örnek girdileri kopyalayıp Excel yapıştırın.
+1. Bir şablon için aşağıdaki örnek .csv dosyasını ve dört farklı bekletme etiketi için örnek girdileri kopyalayıp Excel'e yapıştırın.
 
 2. Metni sütunlara dönüştürme: **Veri** sekmesi \> Metni **Sınırlandırılmış** \> **Sütunlara** \> **VirgülLe** \> **Genel**
 
@@ -76,7 +74,7 @@ LabelName_t_4,Record label tag - financial,$true,Keep,730,CreationAgeInDays,
 
 ## <a name="step-2-create-a-csv-file-for-the-retention-label-policies"></a>2. Adım: Bekletme etiketi ilkeleri için .csv dosyası oluşturma
 
-1. Bir şablon için aşağıdaki örnek .csv dosyasını ve üç farklı bekletme etiketi ilkesi için örnek girdileri kopyalayıp Excel yapıştırın.
+1. Bir şablon için aşağıdaki örnek .csv dosyasını ve üç farklı bekletme etiketi ilkesi için örnek girdileri kopyalayıp Excel'e yapıştırın.
 
 2. Metni sütunlara dönüştürme: **Veri** sekmesi \> Metni **Sınırlandırılmış** \> **Sütunlara** \> **VirgülLe** \> **Genel**
 
@@ -101,7 +99,7 @@ Publishing Policy Yellow1,"LabelName_t_3, LabelName_t_4",N/A,$false,All,,,,,,,,,
 
 ## <a name="step-3-create-the-powershell-script"></a>3. Adım: PowerShell betiğini oluşturma
 
-1. Aşağıdaki PowerShell betiğini kopyalayıp Not Defteri yapıştırın.
+1. Aşağıdaki PowerShell betiğini kopyalayıp Not Defteri'ne yapıştırın.
 
 2. .ps1dosya adı **uzantısını kullanarak** dosyayı kolayca bulunabilecek bir konuma kaydedin. Örneğin: `<path>CreateRetentionSchedule.ps1`
 
@@ -736,7 +734,7 @@ if ($ResultCSV)
 
 ## <a name="step-4-run-the-powershell-script"></a>4. Adım: PowerShell betiğini çalıştırma
 
-İlk olarak[, Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+İlk olarak [, Güvenlik & Uyumluluk PowerShell'e bağlanın](/powershell/exchange/connect-to-scc-powershell).
 
 Ardından bekletme etiketlerini oluşturan ve yayımlayan betiği çalıştırın:
 

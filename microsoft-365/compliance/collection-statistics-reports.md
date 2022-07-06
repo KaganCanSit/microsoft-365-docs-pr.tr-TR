@@ -15,17 +15,15 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Purview eKeşif'te (Premium) bir gözden geçirme kümesine kaydedilmiş taslak koleksiyonlar ve koleksiyonlar için istatistiklere ve raporlara erişmeyi ve bunları kullanmayı öğrenin.
-ms.openlocfilehash: 54d5fde3ee9d75a0ad592a81d04b860267c16eeb
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Microsoft Purview eKeşif (Premium) içinde bir gözden geçirme kümesine kaydedilmiş taslak koleksiyonlar ve koleksiyonlar için istatistiklere ve raporlara erişmeyi ve bunları kullanmayı öğrenin.
+ms.openlocfilehash: 1f9047a047e5c2c4abd01f0cac39ab6cb97e27da
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092469"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626853"
 ---
-# <a name="collection-statistics-and-reports-in-microsoft-purview-ediscovery-premium"></a>Microsoft Purview eKeşif'te (Premium) toplama istatistikleri ve raporları
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+# <a name="collection-statistics-and-reports-in-microsoft-purview-ediscovery-premium"></a>Microsoft Purview eKeşif'de toplama istatistikleri ve raporları (Premium)
 
 Taslak koleksiyonu oluşturduktan sonra, arama ölçütleriyle eşleşen en çok öğeyi içeren içerik konumları ve arama sorgusu tarafından döndürülen öğe sayısı gibi alınan öğelerle ilgili istatistikleri görüntüleyebilirsiniz. Sonuçların bir alt kümesini de önizleyebilirsiniz.
 
@@ -51,7 +49,7 @@ Bu bölümde, koleksiyon tarafından döndürülen tahmini öğelerin grafik öz
 
 Bu bölümde, koleksiyon arama sorgusu ve arama sorgusunun farklı bölümleriyle eşleşen tahmini öğe sayısıyla ilgili istatistikler görüntülenir. Arama sorgusunun her bileşeniyle eşleşen öğe sayısını analiz etmek için bu istatistikleri kullanabilirsiniz. Bu, koleksiyonun arama ölçütlerini iyileştirmenize ve gerekirse koleksiyonun kapsamını daraltmanıza yardımcı olabilir.
 
-- **Konum türü**: Sorgu istatistiklerinin uygulanabilecek içerik konumu türü. **Exchange** değeri posta kutusu konumunu, **SharePoint** değeri ise site konumunu gösterir.
+- **Konum türü**: Sorgu istatistiklerinin uygulanabilecek içerik konumu türü. **Exchange** değeri bir posta kutusu konumunu gösterir; **SharePoint** değeri site konumunu gösterir.
 
 - **Bölüm**: arama sorgusunun istatistikler için geçerli olan bölümü. **Birincil** , arama sorgusunun tamamını gösterir. **Anahtar sözcük** , satırdaki istatistiklerin belirli bir anahtar sözcük için olduğunu gösterir. Koleksiyondaki arama sorgusu için bir anahtar sözcük listesi kullanırsanız, sorgunun her bileşenine ilişkin istatistikler bu tabloya eklenir.
 
@@ -96,7 +94,7 @@ Bir koleksiyonu bir gözden geçirme kümesine işledikten sonra, kaydedilen ba�
  
    Üst öğe birden çok alt öğe içerebilir. Örneğin, e-posta iletisi ekli bir dosya içeriyorsa veya bir bulut eki varsa üst öğedir. Bu durumda, ekli dosya veya bulut ekinin hedef dosyası bir alt öğe olarak kabul edilir. Bir koleksiyonu işlediğiniz zaman, üst öğeler ve buna karşılık gelen tüm alt öğeler (ekli dosyalar ve bulut ekleri gibi) gözden geçirme kümesine tek tek öğeler veya dosyalar olarak eklenir.
 
-- **Alt öğeler**. Gözden geçirme kümesine eklenen alt öğe sayısı. Gözden geçirme kümesine yalnızca dosya ekleri ve bulut ekleri olan alt öğeler tek tek dosyalar olarak eklenir. E-posta imzaları ve resimler gibi diğer alt öğe türleri bir üst öğeden ayıklanır ve ardından Optik Karakter Tanıma (OCR) tarafından alt öğeden herhangi bir metni ayıklamak için işlenir. Bu tür alt öğelerden ayıklanan metin, gözden geçirme kümesinde görüntüleyebilmeniz için üst öğeye eklenir. eBulma (Premium), gözden geçirme kümesine alt öğeleri ayrı bir dosya olarak eklemeyerek, gözden geçirme kümesindeki potansiyel olarak önemsiz öğe sayısını sınırlayarak gözden geçirme sürecini kolaylaştırmaya yardımcı olur.
+- **Alt öğeler**. Gözden geçirme kümesine eklenen alt öğe sayısı. Gözden geçirme kümesine yalnızca dosya ekleri ve bulut ekleri olan alt öğeler tek tek dosyalar olarak eklenir. E-posta imzaları ve resimler gibi diğer alt öğe türleri bir üst öğeden ayıklanır ve ardından Optik Karakter Tanıma (OCR) tarafından alt öğeden herhangi bir metni ayıklamak için işlenir. Bu tür alt öğelerden ayıklanan metin, gözden geçirme kümesinde görüntüleyebilmeniz için üst öğeye eklenir. eKeşif (Premium), gözden geçirme kümesine alt öğeleri ayrı bir dosya olarak eklemeyerek, gözden geçirme kümesindeki potansiyel olarak önemsiz öğe sayısını sınırlayarak gözden geçirme sürecini kolaylaştırmaya yardımcı olur.
 
 - **Benzersiz öğeler**. Gözden geçirme kümesine eklenen benzersiz öğelerin sayısı. Benzersiz öğeler gözden geçirme kümesine özeldir. İlk koleksiyon yeni bir gözden geçirme kümesine eklendiğinde tüm öğeler benzersizdir çünkü gözden geçirme kümesinde önceki öğeler yoktu.
 
@@ -130,13 +128,13 @@ Bir taslak koleksiyonu çalıştırdığınızda, koleksiyon ölçütlerini kar�
 
 - **Koleksiyon yapılandırma seçenekleri**. Taslak koleksiyonu bir gözden geçirme kümesine işlerken konuşma yazışmalarını, bulut eklerini ve belge sürümlerini dahil etme seçeneğiniz vardır. Gözden geçirme kümesine eklenen bu öğelerden hiçbiri taslak koleksiyonun tahminlerine dahil değildir. Bunlar yalnızca koleksiyonu işlediğiniz zaman tanımlanır ve toplanır. Bu seçeneklerin seçilmesi büyük olasılıkla gözden geçirme kümesine eklenen öğe sayısını artırır. 
 
-    Örneğin, taslak koleksiyon için tahmine SharePoint belgelerin birden çok sürümü dahil değildir. Ancak bir taslak koleksiyonu işlerken tüm belge sürümlerini dahil etme seçeneğini belirlerseniz, gözden geçirme kümesine eklenen öğelerin gerçek sayısı (ve toplam boyutu) artar.
+    Örneğin, taslak koleksiyon için tahmine SharePoint belgelerinin birden çok sürümü dahil değildir. Ancak bir taslak koleksiyonu işlerken tüm belge sürümlerini dahil etme seçeneğini belirlerseniz, gözden geçirme kümesine eklenen öğelerin gerçek sayısı (ve toplam boyutu) artar.
 
     Bu seçenekler hakkında daha fazla bilgi için bkz [. Taslak koleksiyonu gözden geçirme kümesine işleme](commit-draft-collection.md#commit-a-draft-collection-to-a-review-set-in-ediscovery-premium).
 
 Taslak koleksiyondaki tahmini sonuçların gerçek taahhüt edilen sonuçlardan farklı olmasının diğer nedenleri aşağıdadır.
 
-- **Taslak koleksiyonlarda sonuçların tahmini yöntemi**. Taslak koleksiyon tarafından döndürülen arama sonuçlarının tahmini, koleksiyon sorgu ölçütlerini karşılayan öğelerin tahminidir (gerçek sayı değil). E-posta öğelerinin tahminini derlemek için, Exchange veritabanından arama ölçütlerini karşılayan ileti kimliklerinin listesi istenir. Ancak koleksiyonu bir gözden geçirme kümesine işlediğiniz zaman, koleksiyon yeniden çalıştırılır ve gerçek iletiler Exchange veritabanından alınır. Bu nedenle, tahmini öğe sayısı ve gerçek öğe sayısının nasıl belirlendiği nedeniyle farklılıklar ortaya çıkabilir.
+- **Taslak koleksiyonlarda sonuçların tahmini yöntemi**. Taslak koleksiyon tarafından döndürülen arama sonuçlarının tahmini, koleksiyon sorgu ölçütlerini karşılayan öğelerin tahminidir (gerçek sayı değil). E-posta öğelerinin tahminini derlemek için, Exchange veritabanından arama ölçütlerini karşılayan ileti kimliklerinin listesi istenir. Ancak, koleksiyonu bir gözden geçirme kümesine işlediğiniz zaman, koleksiyon yeniden çalıştırılır ve gerçek iletiler Exchange veritabanından alınır. Bu nedenle, tahmini öğe sayısı ve gerçek öğe sayısının nasıl belirlendiği nedeniyle farklılıklar ortaya çıkabilir.
 
 - **Taslak koleksiyonları tahmin etme ve işleme zamanları arasında gerçekleşen değişiklikler**. Bir gözden geçirme kümesine taslak koleksiyon işlediğinizde, arama dizininde arama ölçütlerine uyan en son öğeleri toplamak için arama yeniden çalıştırılır. Taslak koleksiyonun son çalıştırıldığı zaman ile taslak koleksiyonun bir gözden geçirme kümesine kabul edildiği zaman arasında arama ölçütlerini karşılayan ek öğeler oluşturulmuş, gönderilmiş veya silinmiş olabilir. Ayrıca, taslak koleksiyon sonuçları tahmin edildiğinde arama dizininde yer alan öğelerin, koleksiyonu işlemeden önce bir veri kaynağından temizlendikleri için artık orada olmaması da mümkündür. Bu sorunu azaltmanın bir yolu, koleksiyon için bir tarih aralığı belirtmektir. Bir diğer yol da öğelerin korunması ve temizlenememeleri için içerik konumlarına ayrı tutmaktır.
 

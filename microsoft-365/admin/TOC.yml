@@ -374,7 +374,6 @@
       items:
         - name: Cihaz ve uygulama veri koruma yöntemleri
           href: devices/choose-device-security.md
-        - name: Android veya iOS'ta ayarları doğrulama
         - name: Temel Hareketlilik ve Güvenlik
           items:
             - name: Temel Hareketlilik ve Güvenlik'e Genel Bakış

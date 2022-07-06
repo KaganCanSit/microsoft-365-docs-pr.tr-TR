@@ -15,20 +15,18 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Microsoft Purview eKeşif (Premium) durumunda bir gözden geçirme kümesinden belgeleri seçmeyi ve başka bir kümede ayrı ayrı çalışmayı öğrenin.
+description: Bir gözden geçirme kümesinden belgeleri seçmeyi ve bir Microsoft Purview eKeşif (Premium) durumda başka bir kümede ayrı ayrı çalışmayı öğrenin.
 ms.custom:
 - seo-marvel-mar2020
 - seo-marvel-apr2020
-ms.openlocfilehash: 599af9e2060497738076cd702e9e3dd31f5db06d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 4fc1548903ebea3a42d1612c8e9c74be32bbe0ba
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094151"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66640974"
 ---
 # <a name="add-data-to-a-review-set-from-another-review-set"></a>Başka bir gözden geçirme kümesinden bir gözden geçirme kümesine veri ekleme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bazı durumlarda, bir gözden geçirme kümesinden belge seçmek ve başka bir gözden geçirme kümesinde ayrı ayrı çalışmak gerekebilir. Bu, özellikle bir gözden geçirme kümesindeki içeriği dolandırdıysanız ve verilerin alt kümesinde analiz çalıştırmak istiyorsanız kullanışlıdır.
 

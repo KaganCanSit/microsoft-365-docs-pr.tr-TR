@@ -1,5 +1,5 @@
 ---
-title: Şirket Microsoft 365 kaybı önlemeyi kullanma
+title: Şirket içi tarayıcıda veri kaybını önlemeyi kullanma
 f1.keywords:
 - CSH
 ms.author: chrfox
@@ -18,70 +18,70 @@ ms.collection:
 - m365initiative-compliance
 search.appverid:
 - MET150
-description: Yerinde verileri taramak ve şirket içi dosya paylaşımları ile şirket içi dosya paylaşımları ve belge kitaplıkları için koruyucu eylemler uygulamak için şirket içi tarayıcıda Microsoft 365 kaybı önlemeyi SharePoint öğrenin.
-ms.openlocfilehash: d726bfccf7dff2e95e3ccf996544f1db26bf09a2
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bekleyen verileri taramak ve şirket içi dosya paylaşımları ile şirket içi SharePoint klasörleri ve belge kitaplıkları için koruyucu eylemler uygulamak için şirket içi veri kaybı önleme tarayıcısını kullanmayı öğrenin.
+ms.openlocfilehash: ae5ffce9e664ada6e7476bb02b40f4a5c279d441
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988167"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624189"
 ---
-# <a name="use-the-microsoft-365-data-loss-prevention-on-premises-scanner"></a>Şirket Microsoft 365 kaybı önlemeyi kullanma
+# <a name="use-the-data-loss-prevention-on-premises-scanner"></a>Veri kaybı önleme şirket içi tarayıcısını kullanma
 
-DLP şirket içi özelliklerini ve bunların DLP ilkeleriyle nasıl ortaya çıkar olduklarını tanımanıza yardımcı olmak için, takip etmek için bazı senaryoları bir araya getirdik.
+Microsoft Purview Veri Kaybı Önleme şirket içi özellikleri ve bunların DLP ilkelerinde nasıl ortaya çıkaracağınız hakkında bilgi sahibi olmanıza yardımcı olmak için izlemeniz gereken bazı senaryoları bir araya topladık.
 
 > [!IMPORTANT]
-> Bu DLP şirket içi senaryoları, DLP ilkelerini oluşturmaya ve ayarlamaya yönelik resmi yordamlar değildir. Genel durumlarda DLP ilkeleriyle çalışman gerekirken aşağıdaki konulara bakın:
+> Bu DLP şirket içi senaryoları, DLP ilkelerini oluşturmak ve ayarlamak için resmi prosedürler değildir. Genel durumlarda DLP ilkeleriyle çalışmanız gerektiğinde aşağıdaki konulara bakın:
 >
-> - [Veri kaybını önleme hakkında bilgi](dlp-learn-about-dlp.md)
-> - [Varsayılan DLP ilkesiyle çalışmaya başlama](get-started-with-the-default-dlp-policy.md)
-> - [Şablondan DLP ilkesi oluşturma](create-a-dlp-policy-from-a-template.md)
-> - [DLP ilkesi oluşturma, sınama ve ayarlama](create-test-tune-dlp-policy.md)
+> - [Veri kaybı önleme hakkında daha fazla bilgi edinme](dlp-learn-about-dlp.md)
+> - [Varsayılan DLP ilkesini kullanmaya başlama](get-started-with-the-default-dlp-policy.md)
+> - [Bir şablondan DLP ilkesi oluşturma](create-a-dlp-policy-from-a-template.md)
+> - [Bir DLP ilkesi oluşturma, test etme ve ayarlama](create-test-tune-dlp-policy.md)
 
 ### <a name="scenario-discover-files-matching-dlp-rules"></a>Senaryo: DLP kurallarıyla eşleşen dosyaları bulma
 
-DLP şirket içi tarayıcıdan gelen veriler çeşitli alanlarda yer alıyor
+DLP şirket içi tarayıcısından alınan veriler çeşitli alanlarda ortaya çıkar
 
 #### <a name="activity-explorer"></a>Etkinlik gezgini
 
- Şirket içi için Microsoft DLP, DLP kuralı eşleşmelerini algılar ve Bunları Etkinlik [Gezgini'ne raporlar](https://compliance.microsoft.com/dataclassification?viewid=activitiesexplorer).
+ Şirket içi için Microsoft DLP, DLP kuralı eşleşmelerini algılar ve bunları [Etkinlik Gezgini'ne](https://compliance.microsoft.com/dataclassification?viewid=activitiesexplorer) bildirir.
 
-#### <a name="microsoft-365-audit-log"></a>Microsoft 365 günlüğü
+#### <a name="microsoft-365-audit-log"></a>Microsoft 365 Denetim günlüğü
 
-DLP kuralı eşleşmeleri Denetim günlüğü kullanıcı arabiriminde kullanılabilir. Bkz. [](search-the-audit-log-in-security-and-compliance.md) Denetim günlüğünü uyumluluk merkezinde arama veya [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) PowerShell ile erişilebilir.
+DLP kuralı eşleşmeleri Denetim günlüğü kullanıcı arabiriminde kullanılabilir, bkz[. Microsoft Purview uyumluluk portalı denetim günlüğünde arama](search-the-audit-log-in-security-and-compliance.md) yapma veya [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) PowerShell tarafından erişilebilir.
 
 #### <a name="aip"></a>AIP
 
-Bulma verileri, yerel bir raporda csv biçiminde kullanılabilir ve bu veriler şu altında depolanır:
+Bulma verileri, aşağıdakiler altında depolanan csv biçimindeki bir yerel raporda kullanılabilir:
 
 **%localappdata%\Microsoft\MSIP\Scanner\Reports\DetailedReport_%timestamp%.csv raporu**.
 
- Aşağıdaki sütunları bakın:
+ Aşağıdaki sütunları arayın:
 
 - DLP Modu
 - DLP Durumu
 - DLP Açıklaması
 - DLP Kuralı Adı
 - DLP Eylemleri
-- Sahip
+- Sahibi
 - Geçerli NTFS İzinleri (SDDL)
-- NTFS İzinleri (SDDL) uygulanmış
+- Uygulanan NTFS İzinleri (SDDL)
 - NTFS izin türü
 
-### <a name="scenario-enforce-dlp-rule"></a>Senaryo: DLP kuralını zorunlu kılın
+### <a name="scenario-enforce-dlp-rule"></a>Senaryo: DLP kuralını zorunlu kılma
 
-Taranan dosyalarda DLP kurallarını zorunlu kılınacak şekilde uygulamak için, zorlamanın hem AIP'daki içerik tarama işi hem de DLP'nin ilke düzeyinde etkinleştirilmesi gerekir.
+Taranan dosyalar üzerinde DLP kurallarını zorunlu kılmak istiyorsanız, hem AIP'deki içerik tarama işinde hem de DLP'deki ilke düzeyinde zorlama etkinleştirilmelidir.
 
-#### <a name="configure-dlp-to-enforce-policy-actions"></a>DLP'yi ilke eylemlerini zorunlu olacak şekilde yapılandırma
+#### <a name="configure-dlp-to-enforce-policy-actions"></a>İlke eylemlerini zorunlu kılmak için DLP'yi yapılandırma
 
-1. Veri [kaybı önleme sayfasını](https://compliance.microsoft.com/datalossprevention?viewid=policies) açın ve AIP'de yapılandırmış olduğunuz şirket içi konum depolarını hedef alan DLP ilkesi seçin.
+1. [Veri kaybı önleme sayfasını](https://compliance.microsoft.com/datalossprevention?viewid=policies) açın ve AIP'de yapılandırdığınız şirket içi konum depolarını hedefleyen DLP ilkesini seçin.
 2. İlkeyi düzenleyin.
-3. **İlkeyi test edin veya aç sayfasında** Evet, hemen **aç'ı seçin**.
+3. **İlkeyi test et veya aç** sayfasında **Evet, hemen aç'ı** seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DLP şirket içi tarayıcı hakkında bilgi](dlp-on-premises-scanner-learn.md)
-- [DLP şirket içi tarayıcı ile çalışmaya başlama](dlp-on-premises-scanner-get-started.md)
-- [Veri kaybını önleme hakkında bilgi](dlp-learn-about-dlp.md)
-- [DLP ilkesi oluşturma, sınama ve ayarlama](create-test-tune-dlp-policy.md)
-- [Etkinlik gezgini ile çalışmaya başlama](data-classification-activity-explorer.md)
+- [DLP şirket içi tarayıcısı hakkında bilgi edinin](dlp-on-premises-scanner-learn.md)
+- [DLP şirket içi tarayıcıyı kullanmaya başlama](dlp-on-premises-scanner-get-started.md)
+- [Veri kaybı önleme hakkında daha fazla bilgi edinme](dlp-learn-about-dlp.md)
+- [Bir DLP ilkesi oluşturma, test etme ve ayarlama](create-test-tune-dlp-policy.md)
+- [Etkinlik gezginini kullanmaya başlama](data-classification-activity-explorer.md)

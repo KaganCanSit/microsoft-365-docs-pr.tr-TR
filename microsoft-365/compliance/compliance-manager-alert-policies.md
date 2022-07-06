@@ -1,5 +1,5 @@
 ---
-title: uyumluluk yöneticisi uyarılarını ve uyarı ilkelerini Microsoft Purview
+title: Microsoft Purview Uyumluluk Yöneticisi uyarıları ve uyarı ilkeleri
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,17 +17,15 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: uyumluluk puanınızı etkileyebilecek Microsoft Purview Uyumluluk Yöneticisi'nde etkinlikler için uyarılar oluşturmayı öğrenin.
-ms.openlocfilehash: c69e56c693a2994a93b1faccfe6f69fa317d8390
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+description: Microsoft Purview Uyumluluk Yöneticisi'nde uyumluluk puanınızı etkileyebilecek etkinlikler için uyarılar oluşturmayı öğrenin.
+ms.openlocfilehash: 499d1f005b67b2a9583d7138ce784b2e7ae1c8ad
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65839459"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66642250"
 ---
-# <a name="microsoft-purview-compliance-manager-alerts-and-alert-policies"></a>uyumluluk yöneticisi uyarılarını ve uyarı ilkelerini Microsoft Purview
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+# <a name="microsoft-purview-compliance-manager-alerts-and-alert-policies"></a>Microsoft Purview Uyumluluk Yöneticisi uyarıları ve uyarı ilkeleri
 
 **Bu makalede:** Uyumluluk Yöneticisi'nde belirli etkinlikler için **uyarı ayarlamayı** , uyarıları yönetmeyi ve uyarı koşullarını tanımlamak için **uyarı ilkeleri oluşturmayı** öğrenin.
 
@@ -41,7 +39,7 @@ Tüm uyarılar Uyumluluk Günlüğü'ndeki **Uyarılar** sekmesinde, tüm uyarı
 ## <a name="understanding-the-alerts-and-alert-policies-pages"></a>Uyarılar ve Uyarı ilkeleri sayfalarını anlama
 
 > [!IMPORTANT]
-> Uyumluluk Yöneticisi'ndeki **Uyarılar** ve **Uyarı ilkeleri** sayfalarına erişmek için kullanıcıların Azure Active Directory(AD) içinde **Güvenlik okuyucusu** rolüne sahip olması gerekir. Uyarılar ve uyarı ilkeleriyle çalışmak için ek güvenlik ve Uyumluluk Yöneticisi rolleri gerekir. [Uyarı ilkesi izinleri](#alert-policy-permissions) bölümünde ayrıntıları aşağıda bulabilirsiniz.
+> Uyumluluk Yöneticisi'ndeki **Uyarılar** ve **Uyarı ilkeleri** sayfalarına erişmek için kullanıcıların Azure Active Directory'de (AD) **Güvenlik okuyucusu** rolüne sahip olması gerekir. Uyarılar ve uyarı ilkeleriyle çalışmak için ek güvenlik ve Uyumluluk Yöneticisi rolleri gerekir. [Uyarı ilkesi izinleri](#alert-policy-permissions) bölümünde ayrıntıları aşağıda bulabilirsiniz.
 
 ### <a name="alert-policies-page"></a>Uyarı ilkeleri sayfası
 

@@ -21,22 +21,20 @@ ms.collection:
 ms.assetid: 50bbf89f-7870-4c2a-ae14-42635e0cfc01
 description: Yönetici, kuruluş dışındaki kullanıcılarla paylaşılan kaynakları belirlemek için Microsoft 365 denetim günlüğünde paylaşım denetimini kullanmayı öğrenebilir.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: eea4fa4dd32f6b89d2746d33f0fdfb206f251625
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 1eb780f79d0dc5beaab3afcc52261bf9a4ccc25b
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092237"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625973"
 ---
 # <a name="use-sharing-auditing-in-the-audit-log"></a>Denetim günlüğünde paylaşım denetimini kullanma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Paylaşım, SharePoint Online ve OneDrive İş'da önemli bir etkinliktir ve kuruluşlarda yaygın olarak kullanılır. Yöneticiler, kuruluşlarında paylaşımın nasıl kullanıldığını belirlemek için denetim günlüğündeki paylaşım denetimini kullanabilir. 
+Paylaşım, SharePoint Online ve OneDrive İş'daki önemli bir etkinliktir ve kuruluşlarda yaygın olarak kullanılır. Yöneticiler, kuruluşlarında paylaşımın nasıl kullanıldığını belirlemek için denetim günlüğündeki paylaşım denetimini kullanabilir. 
   
-## <a name="the-sharepoint-sharing-schema"></a>SharePoint Paylaşımı şeması
+## <a name="the-sharepoint-sharing-schema"></a>SharePoint Sharing şeması
 
-Paylaşım olayları (paylaşım ilkesi ve paylaşım bağlantıları ile ilgili olaylar dahil değildir), dosya ve klasörle ilgili olaylardan birincil bir şekilde farklıdır: bir kullanıcı başka bir kullanıcı üzerinde etkisi olan bir eylem gerçekleştiriyor. Örneğin, A Kullanıcısı bir kaynak B Kullanıcısına bir dosyaya erişim verdiğinde. Bu örnekte, A kullanıcısı  *rol alan kullanıcı*  , B kullanıcısı ise  *hedef kullanıcıdır*. SharePoint Dosya şemasında, hareket eden kullanıcının eylemi yalnızca dosyanın kendisini etkiler. A Kullanıcısı bir dosyayı açtığında, **FileAccessed** olayında gereken tek bilgi, eyleme geçen kullanıcıdır. Bu farkı gidermek için, paylaşım olayları hakkında daha fazla bilgi yakalayan *SharePoint Paylaşımı şeması* adlı ayrı bir şema vardır. Bu, yöneticilerin kaynağı kimin paylaştığını ve kaynağın paylaşıldığı kullanıcıyı görünür olmasını sağlar. 
+Paylaşım olayları (paylaşım ilkesi ve paylaşım bağlantıları ile ilgili olaylar dahil değildir), dosya ve klasörle ilgili olaylardan birincil bir şekilde farklıdır: bir kullanıcı başka bir kullanıcı üzerinde etkisi olan bir eylem gerçekleştiriyor. Örneğin, A Kullanıcısı bir kaynak B Kullanıcısına bir dosyaya erişim verdiğinde. Bu örnekte, A kullanıcısı  *rol alan kullanıcı*  , B kullanıcısı ise  *hedef kullanıcıdır*. SharePoint Dosya şemasında, hareket eden kullanıcının eylemi yalnızca dosyanın kendisini etkiler. A Kullanıcısı bir dosyayı açtığında, **FileAccessed** olayında gereken tek bilgi, eyleme geçen kullanıcıdır. Bu farkı gidermek için, paylaşım olayları hakkında daha fazla bilgi yakalayan  *SharePoint Sharing şeması* adlı ayrı bir şema vardır. Bu, yöneticilerin kaynağı kimin paylaştığını ve kaynağın paylaşıldığı kullanıcıyı görünür olmasını sağlar. 
   
 Paylaşım şeması, bir denetim kaydında paylaşım olaylarıyla ilgili iki ek alan sağlar: 
   
@@ -46,11 +44,11 @@ Paylaşım şeması, bir denetim kaydında paylaşım olaylarıyla ilgili iki ek
 
 Bu iki alan, denetim günlüğü şemasındaki Kullanıcı, İşlem ve Tarih gibi diğer özelliklere ek olarak  *, hangi*  kullanıcının  *hangi*  kaynağı  *kim*  ve  *ne zaman* paylaştığı hakkında tam bir hikaye anlatabilir. 
   
-Paylaşım hikayesi için önemli olan başka bir şema özelliği vardır. Denetim günlüğü arama sonuçlarını dışarı aktardığınızda, dışarı aktarılan CSV dosyasındaki **AuditData** sütunu paylaşım olayları hakkındaki bilgileri depolar. Örneğin, bir kullanıcı bir siteyi başka bir kullanıcıyla paylaştığında bu, hedef kullanıcıyı bir SharePoint grubuna ekleyerek gerçekleştirilir. **AuditData** sütunu, yöneticilere bağlam sağlamak için bu bilgileri yakalar. **AuditData** sütunundaki bilgileri ayrıştırma yönergeleri için [2. Adıma](#step-2-use-the-powerquery-editor-to-format-the-exported-audit-log) bakın.
+Paylaşım hikayesi için önemli olan başka bir şema özelliği vardır. Denetim günlüğü arama sonuçlarını dışarı aktardığınızda, dışarı aktarılan CSV dosyasındaki **AuditData** sütunu paylaşım olayları hakkındaki bilgileri depolar. Örneğin, bir kullanıcı bir siteyi başka bir kullanıcıyla paylaştığında, bu, hedef kullanıcıyı bir SharePoint grubuna ekleyerek gerçekleştirilir. **AuditData** sütunu, yöneticilere bağlam sağlamak için bu bilgileri yakalar. **AuditData** sütunundaki bilgileri ayrıştırma yönergeleri için [2. Adıma](#step-2-use-the-powerquery-editor-to-format-the-exported-audit-log) bakın.
 
-## <a name="sharepoint-sharing-events"></a>Olayları paylaşma SharePoint
+## <a name="sharepoint-sharing-events"></a>SharePoint paylaşım olayları
 
-Paylaşım, bir kullanıcı ( *hareket eden* kullanıcı) bir kaynağı başka bir kullanıcıyla ( *hedef* kullanıcı) paylaşmak istediğinde tanımlanır. Bir kaynağı dış kullanıcıyla (kuruluşunuzun dışında olan ve kuruluşunuzun Azure Active Directory konuk hesabı olmayan bir kullanıcı) paylaşmayla ilgili denetim kayıtları, denetim günlüğüne kaydedilen aşağıdaki olaylarla tanımlanır:
+Paylaşım, bir kullanıcı ( *hareket eden* kullanıcı) bir kaynağı başka bir kullanıcıyla ( *hedef* kullanıcı) paylaşmak istediğinde tanımlanır. Bir kaynağı dış kullanıcıyla (kuruluşunuzun dışında olan ve kuruluşunuzun Azure Active Directory'sinde konuk hesabı olmayan bir kullanıcı) paylaşmayla ilgili denetim kayıtları, denetim günlüğüne kaydedilen aşağıdaki olaylarla tanımlanır:
 
 - **SharingInvitationCreated:** Kuruluşunuzdaki bir kullanıcı bir kaynağı (büyük olasılıkla bir site) dış kullanıcıyla paylaşmayı denedi. Bu, hedef kullanıcıya gönderilen bir dış paylaşım davetine neden olur. Bu noktada kaynağa erişim verilmez.
 
@@ -66,9 +64,9 @@ Paylaşım, bir kullanıcı ( *hareket eden* kullanıcı) bir kaynağı başka b
 
 ## <a name="sharing-auditing-work-flow"></a>Denetim iş akışını paylaşma
   
-Kullanıcı (hareket eden kullanıcı) bir kaynağı başka bir kullanıcıyla (hedef kullanıcı) paylaşmak istediğinde, SharePoint (veya OneDrive İş) önce hedef kullanıcının e-posta adresinin kuruluşun dizinindeki bir kullanıcı hesabıyla zaten ilişkili olup olmadığını denetler. Hedef kullanıcı dizindeyse (ve buna karşılık gelen bir konuk kullanıcı hesabı varsa), SharePoint aşağıdakileri yapar:
+Kullanıcı (hareket eden kullanıcı) bir kaynağı başka bir kullanıcıyla (hedef kullanıcı) paylaşmak istediğinde, SharePoint (veya OneDrive İş), önce hedef kullanıcının e-posta adresinin kuruluşun dizinindeki bir kullanıcı hesabıyla zaten ilişkili olup olmadığını denetler. Hedef kullanıcı dizindeyse (ve buna karşılık gelen bir konuk kullanıcı hesabı varsa), SharePoint aşağıdakileri yapar:
   
--  Hedef kullanıcıyı uygun SharePoint grubuna ekleyerek kaynağa erişmek için hedef kullanıcı izinlerini hemen atar ve bir **AddedToGroup** olayını günlüğe kaydeder. 
+-  Hedef kullanıcıyı uygun SharePoint grubuna ekleyerek hedef kullanıcı erişim izinlerini hemen atar ve bir **AddedToGroup** olayını günlüğe kaydeder. 
     
 - Hedef kullanıcının e-posta adresine bir paylaşım bildirimi gönderir.
     
@@ -102,7 +100,7 @@ Yöneticiler için yaygın bir gereksinim, kuruluş dışındaki kullanıcılarl
 
 2. İş veya okul hesabınızı kullanarak oturum açın.
 
-3. Microsoft Purview uyumluluk portalının sol bölmesinde **Denetim'e** tıklayın.
+3. Microsoft Purview uyumluluk portalı sol bölmesinde **Denetim'e** tıklayın.
 
     **Denetim** sayfası görüntülenir.
 
@@ -122,13 +120,13 @@ Yöneticiler için yaygın bir gereksinim, kuruluş dışındaki kullanıcılarl
 
 ### <a name="step-2-use-the-powerquery-editor-to-format-the-exported-audit-log"></a>2. Adım: Dışarı aktarılan denetim günlüğünü biçimlendirmek için PowerQuery Düzenleyicisi'ni kullanma
 
-Sonraki adım, **AuditData** sütunundaki her özelliği (çok özellikli bir JSON nesnesinden oluşan) kendi sütununa bölmek için Excel'daki Power Query Düzenleyicisi JSON dönüştürme özelliğini kullanmaktır. Bu, paylaşımla ilgili kayıtları görüntülemek için sütunları filtrelemenize olanak tanır
+Sonraki adım, Excel'deki Power Query Düzenleyicisi JSON dönüştürme özelliğini kullanarak **AuditData** sütunundaki her özelliği (çok özellikli bir JSON nesnesinden oluşan) kendi sütununa bölmektir. Bu, paylaşımla ilgili kayıtları görüntülemek için sütunları filtrelemenize olanak tanır
 
 Adım adım yönergeler için, denetim günlüğü kayıtlarını dışarı aktarma[, yapılandırma ve görüntüleme](export-view-audit-log-records.md#step-2-format-the-exported-audit-log-using-the-power-query-editor) başlığı altındaki "2. Adım: Power Query Düzenleyicisi kullanarak dışarı aktarılan denetim günlüğünü biçimlendirme" bölümüne bakın.
 
 ### <a name="step-3-filter-the-csv-file-for-resources-shared-with-external-users"></a>3. Adım: Dış kullanıcılarla paylaşılan kaynaklar için CSV dosyasını filtreleme
 
-Sonraki adım, daha önce SharePoint paylaşım olayları bölümünde açıklanan paylaşımla ilgili farklı olaylar için CSV'yi [filtrelemektir](#sharepoint-sharing-events). Alternatif olarak, **TargetUserOrGroupType** sütununu filtreleyerek bu özelliğin değerinin **Guest** olduğu tüm kayıtları görüntüleyebilirsiniz. 
+Sonraki adım, daha önce SharePoint paylaşım olayları bölümünde açıklanan paylaşımla ilgili farklı olaylar için CSV'yi [filtrelemektir](#sharepoint-sharing-events) . Alternatif olarak, **TargetUserOrGroupType** sütununu filtreleyerek bu özelliğin değerinin **Guest** olduğu tüm kayıtları görüntüleyebilirsiniz. 
 
 PowerQuery düzenleyicisini kullanarak CSV dosyasını hazırlamak için önceki adımda yer alan yönergeleri izledikten sonra aşağıdakileri yapın:
     
@@ -146,13 +144,13 @@ PowerQuery düzenleyicisini kullanarak CSV dosyasını hazırlamak için önceki
    
    - **AddedToSecureLink** 
     
-    Excel seçtiğiniz olayların satırlarını görüntüler.
+    Excel, seçtiğiniz olayların satırlarını görüntüler.
     
 4. **TargetUserOrGroupType** adlı sütuna gidin ve seçin. 
     
 5. **Sıralama & Filtre** açılan listesinde tüm seçimleri temizleyin, ardından **TargetUserOrGroupType:Guest'ı** seçin ve **Tamam'a** tıklayın.
     
-    Şimdi Excel, dış kullanıcılar **TargetUserOrGroupType:Guest** değeriyle tanımlandığından, olayları paylaşma ve hedef kullanıcının kuruluşunuzun dışında olduğu satırları görüntüler. 
+    Artık Dış kullanıcılar **TargetUserOrGroupType:Guest** değeriyle tanımlandığından, Excel olayları paylaşma ve hedef kullanıcının kuruluşunuzun dışında olduğu satırları görüntüler. 
   
 > [!TIP]
 > Görüntülenen denetim kayıtları için **ObjectId** sütunu hedef kullanıcıyla paylaşılan kaynağı tanımlar; örneğin  `ObjectId:https:\/\/contoso-my.sharepoint.com\/personal\/sarad_contoso_com\/Documents\/Southwater Proposal.docx`, .

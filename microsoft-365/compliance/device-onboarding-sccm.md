@@ -15,38 +15,38 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 description: Yapılandırma paketini hizmete eklenmeleri için cihazlara dağıtmak için Configuration Manager kullanın.
-ms.openlocfilehash: 2cca9cc073ca08c7fabb19511a4253e4a682057a
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 3bfeadd0008b548b8193333b3509e82831b162c9
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760723"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630025"
 ---
 # <a name="onboard-windows-10-and-windows-11-devices-using-configuration-manager"></a>Configuration Manager kullanarak Windows 10 ve Windows 11 cihazları ekleme
 
 **Şunlar için geçerlidir:**
 
-- [Microsoft 365 Uç nokta veri kaybı önleme (DLP)](./endpoint-dlp-learn-about.md)
-- [İçeriden risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
+- [Uç nokta veri kaybı önleme (DLP)](./endpoint-dlp-learn-about.md)
+- [İçeriden risk yönetimi](insider-risk-management.md)
 
 ### <a name="onboard-devices-using-system-center-configuration-manager"></a>System Center Configuration Manager kullanarak cihazları ekleme
 
-1. [Microsoft Uyumluluk merkezinden](https://compliance.microsoft.com/) yapılandırma paketini .zip dosyasını (*DeviceComplianceOnboardingPackage.zip*) alın.
+1. Microsoft Purview uyumluluk portalı yapılandırma paketi .zip dosyasını ( [DeviceComplianceOnboardingPackage.zip](https://compliance.microsoft.com/) ) alın.
 
-2. Gezinti bölmesinde <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar**</a> >  **Cihaz EklemeOnboarding'i** >  seçin.
+2. Gezinti bölmesinde <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar**</a> > **Cihaz Ekleme****Ekleme'yi** >  seçin.
 
-3. **Dağıtım yöntemi** alanında **Microsoft Endpoint Configuration Manager 2012/2012 R2/1511/1602'yi** seçin.
+3. **Dağıtım yöntemi** alanında **Microsoft Uç Noktası Configuration Manager 2012/2012 R2/1511/1602'yi** seçin.
 
 4. **Paketi indir'i** seçin ve .zip dosyasını kaydedin.
 
 5. .zip dosyasının içeriğini, paketi dağıtacak ağ yöneticileri tarafından erişilebilen paylaşılan, salt okunur bir konuma ayıklayın. *DeviceComplianceOnboardingScript.cmd* adlı bir dosyanız olmalıdır.
 
-6. [System Center 2012 R2 Configuration Manager'deki Paketler ve Programlar makalesindeki](/previous-versions/system-center/system-center-2012-R2/gg699369(v=technet.10)) adımları izleyerek paketi dağıtın.
+6. [System Center 2012 R2'deki Paketler ve Programlar Configuration Manager makalesindeki](/previous-versions/system-center/system-center-2012-R2/gg699369(v=technet.10)) adımları izleyerek paketi dağıtın.
 
 7. Paketin dağıtılacağı önceden tanımlanmış bir cihaz koleksiyonu seçin.
 
 > [!NOTE]
-> Microsoft 365 bilgi koruması, İlk [Çalıştırma Deneyimi (OOBE)](https://answers.microsoft.com/en-us/windows/wiki/windows_10/how-to-complete-the-windows-10-out-of-box/47e3f943-f000-45e3-8c5c-9d85a1a0cf87) aşamasında ekleme işlemini desteklemez. Windows yükleme veya yükseltmeyi çalıştırdıktan sonra kullanıcıların OOBE'i tamamladığınızdan emin olun.
+> Microsoft 365 bilgi koruması, İlk [Çalıştırma Deneyimi (OOBE)](https://answers.microsoft.com/en-us/windows/wiki/windows_10/how-to-complete-the-windows-10-out-of-box/47e3f943-f000-45e3-8c5c-9d85a1a0cf87) aşamasında ekleme işlemini desteklemez. Kullanıcıların Windows yüklemesini veya yükseltmesini çalıştırdıktan sonra OOBE'i tamamladığınızdan emin olun.
 
 > [!TIP]
 > Cihazı ekledikten sonra, bir cihazın hizmete düzgün şekilde eklendiğini doğrulamak için bir algılama testi çalıştırmayı seçebilirsiniz. Daha fazla bilgi için bkz. [Yeni eklenen Uç Nokta için Microsoft Defender cihazında algılama testi çalıştırma](/windows/security/threat-protection/microsoft-defender-atp/run-detection-test).
@@ -77,7 +77,7 @@ Name: "AllowSampleCollection"
 Value: 0 or 1
 ```
 
-Nerede:
+Konum:
 
 Anahtar türü bir D-WORD'dür.
 
@@ -88,7 +88,7 @@ Olası değerler şunlardır:
 
 Kayıt defteri anahtarının mevcut olmaması durumunda varsayılan değer 1'dir.
 
-System Center Configuration Manager Uyumluluğu hakkında daha fazla bilgi için bkz. [System Center 2012 R2 Configuration Manager'da uyumluluk ayarlarına giriş](/previous-versions/system-center/system-center-2012-R2/gg682139(v=technet.10)).
+System Center Configuration Manager Uyumluluğu hakkında daha fazla bilgi için bkz. [System Center 2012 R2 Configuration Manager uyumluluk ayarlarına giriş](/previous-versions/system-center/system-center-2012-R2/gg682139(v=technet.10)).
 
 
 ## <a name="other-recommended-configuration-settings"></a>Önerilen diğer yapılandırma ayarları
@@ -138,25 +138,25 @@ Güvenlik nedeniyle, cihazları kullanıma almak için kullanılan paketin süre
 > [!NOTE]
 > Ekleme ve çıkarma ilkeleri aynı cihazda aynı anda dağıtılmamalıdır, aksi takdirde bu öngörülemeyen çakışmalara neden olur.
 
-### <a name="offboard-devices-using-microsoft-endpoint-configuration-manager-current-branch"></a>Geçerli dalı kullanarak cihazları Microsoft Endpoint Configuration Manager çıkarma
+### <a name="offboard-devices-using-microsoft-endpoint-configuration-manager-current-branch"></a>Microsoft Endpoint Configuration Manager geçerli dalı kullanarak cihazları çıkarma
 
-Geçerli dal Microsoft Endpoint Configuration Manager kullanıyorsanız bkz. [Çıkarma yapılandırma dosyası oluşturma](/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#create-an-offboarding-configuration-file).
+Geçerli dal Configuration Manager Microsoft Endpoint kullanıyorsanız bkz. [Çıkarma yapılandırma dosyası oluşturma](/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#create-an-offboarding-configuration-file).
 
 ### <a name="offboard-devices-using-system-center-2012-r2-configuration-manager"></a>System Center 2012 R2 Configuration Manager kullanarak cihazları çıkarma
 
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi'dan</a> çıkarma paketini alın:
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı'dan</a> çıkarma paketini alın:
 
-2. Gezinti bölmesinde <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar**</a> >   **Cihaz eklemeYeni**>  **ekleme'yi** seçin.
+2. Gezinti bölmesinde <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar**</a> >  **Cihaz ekleme**> **Çıkarma'yı** seçin.
 
 3. İşletim sistemi olarak Windows 10 seçin.
 
-4. **Dağıtım yöntemi** alanında **Microsoft Endpoint Configuration Manager 2012/2012 R2/1511/1602'yi** seçin.
+4. **Dağıtım yöntemi** alanında **Microsoft Uç Noktası Configuration Manager 2012/2012 R2/1511/1602'yi** seçin.
 
 5. **Paketi indir'i** seçin ve .zip dosyasını kaydedin.
 
 6. .zip dosyasının içeriğini, paketi dağıtacak ağ yöneticileri tarafından erişilebilen paylaşılan, salt okunur bir konuma ayıklayın. *DeviceComplianceOffboardingScript_valid_until_YYYY-MM-DD.cmd* adlı bir dosyanız olmalıdır.
 
-7. [System Center 2012 R2 Configuration Manager'deki Paketler ve Programlar makalesindeki](/previous-versions/system-center/system-center-2012-R2/gg699369(v=technet.10)) adımları izleyerek paketi dağıtın.
+7. [System Center 2012 R2'deki Paketler ve Programlar Configuration Manager makalesindeki](/previous-versions/system-center/system-center-2012-R2/gg699369(v=technet.10)) adımları izleyerek paketi dağıtın.
 
 8. Paketin dağıtılacağı önceden tanımlanmış bir cihaz koleksiyonu seçin.
 
@@ -165,7 +165,7 @@ Geçerli dal Microsoft Endpoint Configuration Manager kullanıyorsanız bkz. [Ç
 
 ## <a name="monitor-device-configuration"></a>Cihaz yapılandırmasını izleme
 
-Geçerli Microsoft Endpoint Configuration Manager dal kullanıyorsanız, Configuration Manager konsolundaki yerleşik Uç Nokta için Microsoft Defender panosunu kullanın. Daha fazla bilgi için bkz. [Microsoft Defender Gelişmiş Tehdit Koruması - İzleyici](/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#monitor).
+Geçerli dal Configuration Manager Microsoft Endpoint kullanıyorsanız, Configuration Manager konsolundaki yerleşik Uç Nokta için Microsoft Defender panosunu kullanın. Daha fazla bilgi için bkz. [Microsoft Defender Gelişmiş Tehdit Koruması - İzleyici](/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#monitor).
 
 System Center 2012 R2 Configuration Manager kullanıyorsanız izleme iki bölümden oluşur:
 
@@ -187,7 +187,7 @@ System Center 2012 R2 Configuration Manager kullanıyorsanız izleme iki bölüm
 
     ![Configuration Manager hatasız başarılı dağıtım gösteriyor.](../media/sccm-deployment.png)
 
-### <a name="check-that-the-devices-are-compliant-with-the-microsoft-365-endpoint-data-loss-prevention-service"></a>Cihazların Microsoft 365 Uç Nokta veri kaybı önleme hizmetiyle uyumlu olup olmadığını denetleyin
+### <a name="check-that-the-devices-are-compliant-with-the-endpoint-data-loss-prevention-service"></a>Cihazların Uç nokta veri kaybı önleme hizmetiyle uyumlu olup olmadığını denetleyin
 
 Dağıtımınızı izlemek için System Center 2012 R2 Configuration Manager yapılandırma öğesi için bir uyumluluk kuralı ayarlayabilirsiniz.
 
@@ -204,7 +204,7 @@ Name: "OnboardingState"
 Value: "1"
 ```
 
-Daha fazla bilgi için bkz. [System Center 2012 R2 Configuration Manager'de uyumluluk ayarlarına giriş](/previous-versions/system-center/system-center-2012-R2/gg682139(v=technet.10)).
+Daha fazla bilgi için bkz. [System Center 2012 R2 Configuration Manager uyumluluk ayarlarına giriş](/previous-versions/system-center/system-center-2012-R2/gg682139(v=technet.10)).
 
 ## <a name="related-topics"></a>İlgili konular
 

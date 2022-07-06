@@ -15,26 +15,24 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: EBulma (Premium) Koruyucu Yönetimi aracını kullanarak olayınızın içindeki koruyuculara kolayca erişin ve etkinlikte arama gerçekleştirin.
+description: eKeşif (Premium) Koruyucu Yönetimi aracını kullanarak olayınızdaki koruyucular için etkinliğe kolayca erişip arama gerçekleştirin.
 ms.custom:
 - seo-marvel-mar2020
 - admindeeplinkEXCHANGE
-ms.openlocfilehash: 6f55ad389fe24e87e693e6523c7008713c6bc54b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 3ead391eee7fc35a66a0d9472278ee75878de4df
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096578"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627007"
 ---
 # <a name="view-custodian-audit-activity"></a>Yediemin denetim etkinliğini görüntüleme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Kullanıcının belirli bir belgeyi görüntüleyip görüntülemediğini veya bir öğeyi posta kutusundan temizleyip temizlemediğini bulmanız mı gerekiyor? Microsoft Purview eKeşif (Premium) artık Microsoft Purview uyumluluk portalındaki mevcut denetim günlüğü arama aracıyla tümleştirilmiştir. Bu ekli deneyimi kullanarak, eBulma (Premium) Koruyucu Yönetimi aracını kullanarak, olayınızdaki koruyucular için etkinliğe kolayca erişerek ve etkinlikte arama yaparak araştırmanızı kolaylaştırabilirsiniz.
+Kullanıcının belirli bir belgeyi görüntüleyip görüntülemediğini veya bir öğeyi posta kutusundan temizleyip temizlemediğini bulmanız mı gerekiyor? Microsoft Purview eKeşif (Premium) artık Microsoft Purview uyumluluk portalı mevcut denetim günlüğü arama aracıyla tümleştirilmiştir. Bu ekli deneyimi kullanarak, eBulma (Premium) Koruyucu Yönetimi aracını kullanarak olayınızdaki koruyucular için etkinliğe kolayca erişerek ve etkinlikte arama yaparak araştırmanızı kolaylaştırabilirsiniz.
 
 ## <a name="get-permissions"></a>İzinleri alma
 
-Denetim günlüğünde arama yapmak için Exchange Online'da View-Only Denetim Günlükleri veya Denetim Günlükleri rolüne atanmış olmanız gerekir. Varsayılan olarak, bu roller <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezindeki</a> İzinler sayfasındaki Uyumluluk Yönetimi ve Kuruluş Yönetimi rol gruplarına atanır. Kullanıcıya eBulma (Premium) denetim günlüğünde en düşük ayrıcalık düzeyiyle arama yapabilmesi için, Exchange Online'da özel bir rol grubu oluşturabilir, View-Only Denetim Günlükleri veya Denetim Günlükleri rolünü ekleyebilir ve kullanıcıyı yeni rol grubunun üyesi olarak ekleyebilirsiniz. Daha fazla bilgi için bkz. Exchange Online rol gruplarını yönetme.
+Denetim günlüğünde arama yapmak için Exchange Online'da View-Only Denetim Günlükleri veya Denetim Günlükleri rolüne atanmış olmanız gerekir. Varsayılan olarak, bu roller <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezindeki</a> İzinler sayfasındaki Uyumluluk Yönetimi ve Kuruluş Yönetimi rol gruplarına atanır. Kullanıcıya en düşük ayrıcalık düzeyiyle eBulma (Premium) denetim günlüğünde arama yapma olanağı vermek için, Exchange Online özel bir rol grubu oluşturabilir, View-Only Denetim Günlükleri veya Denetim Günlükleri rolünü ekleyebilir ve kullanıcıyı yeni rol grubunun üyesi olarak ekleyebilirsiniz. Daha fazla bilgi için bkz. Exchange Online rol gruplarını yönetme.
 
 > [!IMPORTANT]
 > Bir kullanıcıya uyumluluk portalındaki İzinler sayfasında Denetim Günlükleri veya Denetim Günlükleri rolünü View-Only atarsanız, denetim günlüğünde arama yapamaz. İzinleri Exchange Online atamanız gerekir. Bunun nedeni, denetim günlüğünde arama yapmak için kullanılan temel cmdlet'in Exchange Online bir cmdlet olmasıdır.
@@ -74,7 +72,7 @@ Sonuçlar, arama tarafından döndürülen her olay hakkında aşağıdaki bilgi
 
 - **Kullanıcı**: Olayı tetikleyen eylemi gerçekleştiren kullanıcı (veya hizmet hesabı).
 
-- **Etkinlik**: Kullanıcı tarafından gerçekleştirilen etkinlik. Bu değer, Etkinlikler açılan listesinde seçtiğiniz etkinliklere karşılık gelir. Exchange yönetici denetim günlüğündeki bir olay için bu sütundaki değer bir Exchange cmdlet'idir.
+- **Etkinlik**: Kullanıcı tarafından gerçekleştirilen etkinlik. Bu değer, Etkinlikler açılan listesinde seçtiğiniz etkinliklere karşılık gelir. Exchange yöneticisi denetim günlüğündeki bir olay için bu sütundaki değer bir Exchange cmdlet'idir.
 
 - **Öğe**: İlgili etkinliğin sonucu olarak oluşturulan veya değiştirilen nesne. Örneğin, görüntülenen veya değiştirilen dosya veya güncelleştirilen kullanıcı hesabı. Tüm etkinliklerin bu sütunda değeri yoktur.
 
@@ -98,7 +96,7 @@ Sonuçları filtrelemek için:
 
 ## <a name="export-the-search-results-to-a-file"></a>Arama sonuçlarını bir dosyaya aktarma
 
-Denetim günlüğü aramasının sonuçlarını yerel bilgisayarınızdaki virgülle ayrılmış değer (CSV) dosyasına aktarabilirsiniz. Bu dosyayı Microsoft Excel açabilir ve tek bir sütunu (çok değerli hücreler içeren) birden çok sütuna bölme, sıralama, filtreleme ve bölme gibi özellikleri kullanabilirsiniz.
+Denetim günlüğü aramasının sonuçlarını yerel bilgisayarınızdaki virgülle ayrılmış değer (CSV) dosyasına aktarabilirsiniz. Bu dosyayı Microsoft Excel'de açabilir ve tek bir sütunu (çok değerli hücreler içeren) birden çok sütuna bölme, sıralama, filtreleme ve bölme gibi özellikleri kullanabilirsiniz.
 
 1. Bir denetim günlüğü araması çalıştırın ve istediğiniz sonuçları elde edene kadar arama ölçütlerini düzeltin.
   

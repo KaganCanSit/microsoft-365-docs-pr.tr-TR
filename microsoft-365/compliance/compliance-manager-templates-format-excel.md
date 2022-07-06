@@ -1,5 +1,5 @@
 ---
-title: Microsoft Uyumluluk Yöneticisi için Excel şablonu verilerini E-posta'da biçimlendirme
+title: Microsoft Purview Uyumluluk Yöneticisi için Excel'de değerlendirme şablonu verilerini biçimlendirme
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,90 +17,90 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Uyumluluk Yöneticisi'nde Excel şablonları için değerlendirme verileriyle nasıl çalışııı anlıyoruz.
-ms.openlocfilehash: 755716e67589b2f002fcaec7458f502ff945c318
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft Purview Uyumluluk Yöneticisi'nde değerlendirme şablonları için Excel verileriyle çalışma hakkında bilgi edinin.
+ms.openlocfilehash: 6c94d79fec8ff59419854c34755a7402f841cfe8
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320585"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631237"
 ---
-# <a name="format-assessment-template-data-in-excel-for-microsoft-compliance-manager"></a>Microsoft Uyumluluk Yöneticisi için Excel şablonu verilerini E-posta'da biçimlendirme
+# <a name="format-assessment-template-data-in-excel-for-microsoft-purview-compliance-manager"></a>Microsoft Purview Uyumluluk Yöneticisi için Excel'de değerlendirme şablonu verilerini biçimlendirme
 
-[](compliance-manager-templates-extend.md) Uyumluluk [](compliance-manager-templates-create.md)[Yöneticisi'nde](compliance-manager-templates-modify.md) değerlendirme şablonlarını oluştururken, değiştirirken veya genişletken, belirli bir biçim Excel şema kullanan elektronik tablolarla birlikte çalışacaksınız. Dosyaların doğru içeri aktar olması için bu belirtimlere karşıt olması gerekir.
+Uyumluluk Yöneticisi'nde değerlendirme şablonları [oluştururken](compliance-manager-templates-create.md), [değiştirirken](compliance-manager-templates-modify.md) veya [genişletirken](compliance-manager-templates-extend.md) , belirli bir biçim ve şema kullanan Excel elektronik tabloları ile çalışırsınız. Dosyaların doğru içeri aktarılması için bu belirtimlere uyulmalıdır.
 
-## <a name="download-example-spreadsheet"></a>Örnek elektronik tablo indirme
+## <a name="download-example-spreadsheet"></a>Örnek elektronik tabloyu indirme
 
-Örnek bir elektronik tablo görüntülemek için [örnek bir dosya indirin](https://go.microsoft.com/fwlink/?linkid=2124865). Kendi dosyanızı oluşturmak için başvuru için bunu kullanabilirsiniz.
+Örnek bir elektronik tabloyu görüntülemek için [örnek bir dosya indirin](https://go.microsoft.com/fwlink/?linkid=2124865). Kendi dosyanızı oluşturmak için başvuru için bunu kullanabilirsiniz.
 
-Var olan bir şablonu değiştirmeyi planlıyorsanız, başlangıç olarak şablonun ayrıntılarını Uyumluluk Yöneticisi'nde görüntüp şablonun ayrıntılarını Excel indirin.
+Mevcut bir şablonu değiştirmeyi planlıyorsanız, şablonun ayrıntılarını Uyumluluk Yöneticisi'nde görüntüleyip Excel dosyasını indirerek başlayın.
 
 ## <a name="spreadsheet-format"></a>Elektronik tablo biçimi
 
-En Excel elektronik tabloda dört sekme vardır ve bu sekmelerden üçü gereklidir:
+Excel elektronik tablosu dört sekme içerir ve bunların üçü gereklidir:
 
 1. [Şablon](#template-tab) (gerekli)
 2. [ControlFamily](#controlfamily-tab) (gerekli)
 3. [Eylemler](#actions-tab) (gerekli)
 4. [Boyutlar](#dimensions-tab) (isteğe bağlı)
 
-Elektronik tablonuzu şablon verileriyle doldururken, elektronik tablonun yukarıda listelenen sırayla sekmeleri de içermesi **gerekir; aksi** takdirde verileriniz şablona başarılı bir şekilde içeri aktarılamayacaktır.
+Elektronik tablonuzu şablon verileriyle doldururken, elektronik tablo **yukarıda listelenen sırayla sekmeleri içermelidir**, aksi takdirde verileriniz şablona başarıyla aktarılamaz.
 
 ### <a name="template-tab"></a>Şablon sekmesi
 
-**Şablon sekmesi** gereklidir. Bu sekmede yer alan bilgiler, şablonla ilgili meta veriler sağlar. Dört gerekli sütun vardır. Sütunların, sayfada aşağıda Excel şekilde tutmaları gerekir. Kendi boyutlarınızı sağlamak için **dört sütundan** sonra kendi sütununu ekleyebilirsiniz. Bunu yapmak için, bunları Boyutlar sekmesine eklemeniz **gerekir** .
+**Şablon** sekmesi gereklidir. Bu sekmedeki bilgiler şablon hakkında meta veriler sağlar. Dört gerekli sütun vardır. Sütunların Excel sayfasındaki sırayı aşağıda listelendiği gibi tutması gerekir. Kendi boyutlarınızı sağlamak için dört sütunun **arkasına** kendi sütununuzu ekleyebilirsiniz. Bunu yaparsanız, bunları **Boyutlar** sekmesine eklediğinizden emin olun.
 
-- **başlık**: Bu, şablon başlığıdır ve benzersiz olmalıdır. Bu şablon, Kendi şablonlarınız veya Uyumluluk Yöneticisi şablonu dahil olmak üzere Uyumluluk Yöneticisi'nde sahip olduğunuz başka bir şablonla ad paylaşamaz.
+- **title**: Bu, şablonunuzun benzersiz olması gereken başlığıdır. Kendi şablonlarınız veya Uyumluluk Yöneticisi şablonunuz da dahil olmak üzere, Bir adı Uyumluluk Yöneticisi'nde sahip olduğunuz başka bir şablonla paylaşamaz.
 
-- **ürün**: Bu gerekli bir boyutdur. Şablonla ilişkilendirilmiş ürünü listele.
+- **ürün**: Bu gerekli bir boyutdur. Şablonla ilişkili ürünü listeleyin.
 
-- **sertifika**: Bu, şablon için kullanmakta olduğunuz düzenlemedir.
+- **sertifikasyon**: Bu, şablon için kullandığınız düzenlemedir.
 
-- **inScopeServices**: Bunlar, ürün içinde bu değerlendirmenin adreslerini (örneğin, ürün olarak Office 365 varsa, Microsoft Teams hizmet kapsamındaki bir hizmet olabilir). Birden çok hizmeti iki noktalı virgülle ayırarak listeabilirsiniz.
+- **inScopeServices**: Bunlar, bu değerlendirmenin çözümlendiği ürün içindeki hizmetlerdir (örneğin, ürün olarak Office 365 listelediyseniz, Microsoft Teams kapsam içi bir hizmet olabilir). İki noktalı virgülle ayrılmış birden çok hizmeti listeleyebilirsiniz.
 
 > [!NOTE]
-> Şablon oluşturmak veya özelleştirmek için **elektronik** tabloyu  içeri aktardıktan sonra, ürün ve sertifika hücrelerine ekleyilen veriler düzenlenemez. Ayrıca, bir grup aynı ürün/sertifika bileşimine sahip iki **değerlendirmeyi içere** değildir. Aynı ürün/sertifika bileşimine sahip birden çok şablonunuz olabilir.
+> Şablon oluşturmak veya özelleştirmek için elektronik tabloyu içeri aktardıktan sonra **ürün** ve **sertifika** hücrelerine eklediğiniz veriler düzenlenemez. Ayrıca, bir grup aynı **ürün/sertifika** birleşimine sahip iki değerlendirme içeremez. Aynı ürün/sertifika bileşimine sahip birden çok şablona sahip olabilirsiniz.
 
 ### <a name="controlfamily-tab"></a>ControlFamily sekmesi
 
-**ControlFamily** sekmesi gereklidir.  Bu sekmede, örnek elektronik tabloda verilen sırayı izlemesi gereken sütunlar:
+**ControlFamily** sekmesi gereklidir.  Örnek elektronik tabloda sağlanan sırayı izlemesi gereken bu sekmedeki gerekli sütunlar şunlardır:
 
-- **denetimAdı**: Bu normalde herhangi bir kimlik türünde olan sertifika, standart veya düzenlemeden gelen denetim adıdır. Denetim adları şablon içinde benzersiz olmalıdır. Elektronik tabloda aynı adı içeren birden çok denetimiz yok.
+- **controlName**: Bu, genellikle bir kimlik türü olan sertifikasyon, standart veya düzenleme denetim adıdır. Denetim adları bir şablon içinde benzersiz olmalıdır. Elektronik tabloda aynı ada sahip birden çok denetime sahip olamazsınız.
 
-- **controlFamily**: Denetim için bir sözcük veya tümcecik sağlamaY çok çeşitli denetimleri tanımlayanFamily. Bir denetimin benzersiz olması gerekir; elektronik tabloda birden çok kez listelenmiş olabilir. Aynı denetimFamily, birbirlerine ilişkinleri olmasına rağmen birden çok şablonda da listelenmiş olabilir. Her denetimFamily en az bir denetimle eşlenmiş olmalı.
+- **controlFamily: ControlFamily** için geniş bir denetim grubunu tanımlayan bir sözcük veya tümcecik sağlayın. ControlFamily'nin benzersiz olması gerekmez; elektronik tabloda birden çok kez listelenebilir. Aynı controlFamily, birbiriyle hiçbir ilişkisi olmasa da birden çok şablonda listelenebilir. Her controlFamily en az bir denetimle eşlenmelidir.
 
-- **controlTitle**: Denetim için bir başlık sağlar. ControlName bir başvuru kodudur, ancak başlık genellikle yasal düzenlemeler içinde görülen zengin bir metin biçimidir.
+- **controlTitle**: Denetim için bir başlık sağlayın. controlName bir başvuru kodu olsa da, başlık genellikle düzenlemelerde görülen zengin bir metin biçimidir.
 
-- **controlDescription**: Denetimle ilgili bir açıklama sağlar.
+- **controlDescription**: Denetimin açıklamasını sağlayın.
 
-- **controlActionTitle**: Bu alan, denetiminizi actionTitle ile listelenmiş bir veya birden çok eylemle ilgilidir. Aralarında boşluk olmayan iki noktalı virgülle ayırarak birden çok eylem  eklersiniz. Listeniz olan her denetim var olan en az bir eylem içermeli ve eylem aynı elektronik tablonun Eylemler  sekmesinde tanımlanmış, farklı bir şablonda yer alıyor veya Microsoft tarafından oluşturulmuş olabilir. Farklı denetimler aynı eyleme başvurur.
+- **controlActionTitle**: Bu alan, denetiminizi actionTitle tarafından listelenen bir veya daha fazla eylemle ilişkilendirmektedir. Aralarında boşluk olmayan iki noktalı virgülle ayırarak birden çok eylem ekleyebilirsiniz. Listelediğiniz her denetim en az bir eylem içermelidir ve eylem aynı elektronik tablonun **Eylemler** sekmesinde tanımlanabilir, farklı bir şablonda yer alabilir veya Microsoft tarafından oluşturulabilir. Farklı denetimler aynı eyleme başvurabilir.
 
 ### <a name="actions-tab"></a>Eylemler sekmesi
 
-**Eylemler sekmesi** gereklidir.  Bu iyileştirme eylemleri, Uyumluluk Yöneticisi'nde bulunan Microsoft'un değil, organizasyon tarafından yönetilen geliştirme eylemlerini ifade eder. Bu sekmenin, örnek elektronik tabloda verilen sırayı izlemesi gereken sütunlar:
+**Eylemler** sekmesi gereklidir.  Uyumluluk Yöneticisi'nde zaten var olan Microsoft'un değil, kuruluşunuz tarafından yönetilen iyileştirme eylemlerini tanımlar. Örnek elektronik tabloda sağlanan sırayı izlemesi gereken bu sekme için gerekli sütunlar şunlardır:
 
-- **actionTitle**: Bu, eyleminizin başlığıdır ve gerekli bir alandır. Sağlayma başlığı benzersiz olmalıdır. **Önemli**: Sahip olduğunuz ve zaten var olan bir eyleme (örneğin, başka bir şablonda) başvurursanız ve sonraki sütunlarda bu öğelerin herhangi birini değiştirirsanız, bu değişiklikler diğer şablonlarda da aynı eyleme yalıtır.
+- **actionTitle**: Bu, eyleminizin başlığıdır ve gerekli bir alandır. Sağladığınız başlık benzersiz olmalıdır. **Önemli**: Zaten var olan bir eyleme başvurursanız (başka bir şablonda olduğu gibi) ve sonraki sütunlardaki öğelerinden herhangi birini değiştirirseniz, bu değişiklikler diğer şablonlarda aynı eyleme yayılır.
 
-- **implementationType**: Bu gerekli alanda, aşağıdaki üç uygulama türü arasında listelenin: 
-  1) **İşlem** - kuruluş sistemlerinin, varlıklarının, verilerin ve personelinin gizliliğini, bütünlüğünü ve kullanılabilirliğini korumak için kişiler ve süreçler tarafından uygulanan eylemler (örnek: güvenlik farkındalığı ve eğitim).      
-  2) **Teknik** - eylemler, kuruluş sistemleri ve verilerin gizliliğini, bütünlüğünü ve kullanılabilirliğini korumak için bilgi sisteminin donanım, yazılım veya üretici yazılımı bileşenlerinde bulunan teknoloji ve mekanizmalar kullanılarak tamamlanır (örneğin: çok faktörlü kimlik doğrulaması).
-  3) **Belgeler** - Kurumsal sistemlerin, varlıkların, verilerin ve personelin gizliliğini, bütünlüğünü ve kullanılabilirliğini korumak için gereken denetimleri belirleyen ve belirleyen belgelenmiş ilkeler ve yordamlar aracılığıyla uygulanan eylemler (örnek: bilgi güvenliği ilkesi).
+- **implementationType**: Bu gerekli alanda, aşağıdaki üç uygulama türünden birini listeleyin: 
+  1) **operasyonel** - Kuruluş sistemlerinin, varlıkların, verilerin ve personelin gizliliğini, bütünlüğünü ve kullanılabilirliğini korumak için kişiler ve süreçler tarafından uygulanan eylemler (örneğin: güvenlik farkındalığı ve eğitimi).      
+  2) **Teknik** - Kuruluş sistemlerinin ve verilerinin gizliliğini, bütünlüğünü ve kullanılabilirliğini korumak için bilgi sisteminin donanım, yazılım veya üretici yazılımı bileşenlerinde yer alan teknoloji ve mekanizmalar kullanılarak gerçekleştirilir (örnek: çok faktörlü kimlik doğrulaması).
+  3) **Belgeler** - Kuruluş sistemlerinin, varlıkların, verilerin ve personelin gizliliğini, bütünlüğünü ve kullanılabilirliğini korumak için gerekli denetimleri oluşturan ve tanımlayan belgelenmiş ilkeler ve yordamlar aracılığıyla uygulanan eylemler (örnek: bilgi güvenliği ilkesi).
 
-- **actionScore**: Bu gerekli alanda, eyleminiz için sayısal bir puan değeri girin. Değer 1 ile 99 arasında bir tam sayı olmalı; 0, null veya boş olamaz. Sayı ne kadar yüksekse, uyumluluk postuzlarınızı geliştirmeye de o kadar büyük bir değer verir. Aşağıdaki resimde Uyumluluk Yöneticisi'nin denetimleri nasıl puanla ilgili olduğu gösterilmiştir:
+- **actionScore**: Bu gerekli alanda, eyleminiz için sayısal bir puan değeri sağlayın. Değer 1 ile 99 arasında bir tamsayı olmalıdır; 0, null veya boş olamaz. Sayı ne kadar yüksek olursa uyumluluk duruşunuzu geliştirmeye yönelik değeri de o kadar artar. Aşağıdaki resimde, Uyumluluk Yöneticisi'nin denetimleri nasıl puanlar:
 
-  ![Uyumluluk Yöneticisi, nokta değerlerini kontrol eder.](../media/compliance-score-action-scoring.png "Uyumluluk Yöneticisi nokta değerlerini kontrol eder")
+  ![Uyumluluk Yöneticisi, nokta değerlerini denetler.](../media/compliance-score-action-scoring.png "Uyumluluk Yöneticisi, nokta değerlerini denetler")
 
-- **actionDescriptionTitle**: Bu, açıklamanın başlığıdır ve gereklidir. Bu açıklama başlığı, birden çok şablonda aynı eylemi uygulama ve her şablonda farklı bir açıklama ortaya çıkar.  Bu alan, açıklamanın hangi şablona başvur yaptığını netleştirmeye yardımcı olur. Çoğu durumda, bu alana oluşturmakta olduğunu şablonun adını koyabilirsiniz.
+- **actionDescriptionTitle**: Bu açıklamanın başlığıdır ve gereklidir. Bu açıklama başlığı, birden çok şablonda aynı eyleme sahip olmanıza ve her şablonda farklı bir açıklama oluşturmanıza olanak tanır.  Bu alan, açıklamanın başvuruda bulunan şablonu netleştirmenize yardımcı olur. Çoğu durumda, oluşturmakta olduğunuz şablonun adını bu alana koyabilirsiniz.
 
-- **actionDescription**: Eylemle ilgili bir açıklama sağlar. Kalın metin ve köprü gibi biçimlendirmeler uygulayabilirsiniz. Bu alan gereklidir.
+- **actionDescription**: Eylemin açıklamasını sağlayın. Kalın metin ve köprüler gibi biçimlendirmeler uygulayabilirsiniz. Bu gerekli bir alandır.
 
-- **boyut-Eylem Amacı**: Bu isteğe bağlı bir alandır. Bunu eklersiniz, üst bilgide "boyut-" ön eki olmalıdır. Buraya dahil edersiniz tüm boyutlar Uyumluluk Yöneticisi'nde filtre olarak kullanılır ve Uyumluluk Yöneticisi'nin geliştirme eylemleri ayrıntıları sayfasında görünür.
+- **boyut-Eylem Amacı**: Bu isteğe bağlı bir alandır. Eklerseniz, üst bilgi "dimension-" ön ekini içermelidir. Buraya eklediğiniz tüm boyutlar Uyumluluk Yöneticisi'nde filtre olarak kullanılır ve Uyumluluk Yöneticisi'nin iyileştirme eylemleri ayrıntıları sayfasında görünür.
 
 ### <a name="dimensions-tab"></a>Boyutlar sekmesi
 
-Boyutlar **sekmesi** isteğe bağlıdır. Öte yandan, başka bir boyuttan bir boyuta başvurursanız, daha önce oluşturduğunuz bir şablonda veya Microsoft şablonunda yoksa burada belirtmeniz gerekir. Bu sekmenin sütunları aşağıda listelenmiştir:
+**Boyutlar** sekmesi isteğe bağlıdır. Ancak başka bir yerde bir boyuta başvuruda bulunursanız, önceden oluşturduğunuz bir şablonda veya Microsoft şablonunda mevcut değilse burada belirtmeniz gerekir. Bu sekmenin sütunları aşağıda listelenmiştir:
 
-- **dimensionKey**: "ürün", "sertifikalar", "eylem amacı" olarak liste
-- **dimensionValue**: örnekler: Office 365, HIPPA, Preventative, 2
+- **dimensionKey**: list as "product", "certifications," "action purpose"
+- **dimensionValue**: örnekler: Office 365, HIPPA, Önleyici, Dedektif
 
-Var olan bir şablonu dışarı aktarsanız, dışarı aktaran elektronik tabloda,  şablonda kullanılan tüm boyutların listen yer alan Boyutlar sekmesi olur.
+Var olan bir şablonu dışarı aktardığınızda, dışarı aktarılan elektronik tabloda şablonda kullanılan tüm boyutların listelendiği **Boyutlar** sekmesi bulunur.

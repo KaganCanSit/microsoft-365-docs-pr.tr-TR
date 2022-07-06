@@ -13,16 +13,15 @@ search.appverid:
 ms.assetid: ''
 ms.collection:
 - M365-security-compliance
-ROBOTS: NOINDEX
 description: Kullanıcılar, izinlerine sahip oldukları paylaşılan posta kutularına gönderilen karantinaya alınmış iletileri görüntülemeyi ve üzerinde işlem yapmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2613d3b8be200db3a9107355a27b0dd79ce537d3
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: a37ed03535bd3f3b48aca81c7bf7adeb3c660b46
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65647342"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629023"
 ---
 # <a name="view-and-release-quarantined-messages-from-shared-mailboxes"></a>Paylaşılan posta kutularından karantinaya alınan iletileri görüntüleme ve bırakma
 
@@ -50,7 +49,9 @@ Artık kullanıcıların paylaşılan posta kutularına gönderilen karantinaya 
 
 - Şu anda Paylaşılan posta kutusuna gönderilen karantinaya alınan iletiler için **Ayrıntılar** açılır penceresinde **Göndereni engelle** düğmesi kullanılamaz.
 
-- Paylaşılan posta kutuları için karantina işlemleriyle ilgili olarak, paylaşılan bir posta kutusuna erişim vermek için iç içe güvenlik grupları kullanıyorsanız, iki düzeyden fazla iç içe grup kullanmanızı öneririz. Örneğin, Grup A, C Grubunun üyesi olan B Grubunun bir üyesidir. Paylaşılan posta kutusuna izin atamak için kullanıcıyı A Grubu'na eklemeyin ve ardından paylaşılan posta kutusuna C Grubu atayın.  
+- Paylaşılan posta kutuları için karantina işlemleriyle ilgili olarak, paylaşılan bir posta kutusuna erişim vermek için iç içe güvenlik grupları kullanıyorsanız, iki düzeyden fazla iç içe grup kullanmanızı öneririz. Örneğin, Grup A, C Grubunun üyesi olan B Grubunun bir üyesidir. Paylaşılan posta kutusuna izin atamak için kullanıcıyı A Grubu'na eklemeyin ve ardından paylaşılan posta kutusuna C Grubu atayın.
+
+- Temmuz 2022 itibarıyla, kullanıcı asıl adlarından (UPN) farklı birincil SMTP adreslerine sahip kullanıcıların paylaşılan posta kutusu için karantinaya alınan iletilere erişebilmesi gerekir.
 
 - [Exchange Online PowerShell'de](/powershell/exchange/connect-to-exchange-online-powershell) paylaşılan posta kutusu için karantinaya alınan iletileri yönetmek için, son kullanıcının iletileri tanımlamak üzere _RecipientAddress_ parametresinin değeri için paylaşılan posta kutusu [e-posta adresiyle Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage) cmdlet'ini kullanması gerekir. Örneğin:
 

@@ -14,16 +14,14 @@ ms.collection:
 search.appverid:
 - MET150
 description: macOS cihazlarını Uyumluluk çözümlerine ekleme hakkında bilgi edinin
-ms.openlocfilehash: 09a35e47a237639a722047b11c24f9b2d09cf51d
-ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
+ms.openlocfilehash: 59ccb78060c7749f5690015dc4bab948a88e5222
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65014990"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630048"
 ---
 # <a name="onboard-macos-devices-into-microsoft-365-overview"></a>macOS cihazlarının Microsoft 365'e katılımına genel bakış
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 MacOS cihazları, Intune veya JAMF Pro kullanılarak Microsoft Purview çözümlerine eklenebilir. Ekleme yordamları, kullandığınız yönetim çözümüne bağlı olarak farklılık gösterir. macOS cihazlarınız zaten Uç Nokta için Microsoft Defender (MDE) içine eklendiyse, daha az adım vardır. Sizin için uygun yordamlara bağlantılar için [sonraki adımlar](#next-steps) bölümüne bakın.
 
@@ -53,7 +51,7 @@ Insider Risk hakkında bilginiz yoksa, şu makaleler hakkında bilgi sahibi olma
 macOS cihazlarınız zaten Intune veya JAMF Pro aracılığıyla yönetilmelidir.
  
 - Intune eklemek için bkz[. Dağıtım kılavuzu: Microsoft Intune'da macOS cihazlarını yönetme](/mem/intune/fundamentals/deployment-guide-platform-macos) ve [Mac'inizi Intune Şirket Portalı ile kaydetme](/mem/intune/user-help/enroll-your-device-in-intune-macos-cp). 
-- JAMF Pro eklemek için bkz. [JAMF Pro yöneticileri kılavuzu](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) ve [JAMF Pro Mac için Yükleme ve Yapılandırma Kılavuzu](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/)
+- JAMF Pro'ya eklemek için bkz. [JAMF Pro yönetici kılavuzu](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) ve [Mac için JAMF Pro Yükleme ve Yapılandırma Kılavuzu](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/)
 <!--- Install the v95+ Edge browser on your macOS devices--> 
 
 ### <a name="supported-browsers"></a>Desteklenen tarayıcılar
@@ -67,7 +65,7 @@ Uç nokta DLP, macOS Catalina 10.15 veya üzeri sürümlerde şu tarayıcıları
 
 ## <a name="licensing-guidance"></a>Lisanslama kılavuzu
 
-[Bkz. bilgi koruması için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business).
+[Bilgi koruması için bkz. Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business).
 
 ## <a name="activities-that-can-be-restricted-on-macos"></a>macOS'ta kısıtlanabilir etkinlikler 
 
@@ -81,13 +79,13 @@ Bir macOS cihazı Microsoft Purview çözümlerine eklendikten sonra, veri kayb�
 
 **Panoya kopyala** – bu eylem uygulandığında, bir uç nokta cihazında panoya kopyalanan korumalı dosyadaki verileri engeller, uyarır veya denetler 
 
-**Buluta Upload**: Bu eylem, genel ayarlardaki izin verilen/izin verilmeyen etki alanları listesine göre korumalı dosyaların bulut hizmetlerine yüklenmesi engellendiğinde veya bunlara izin verildiğinde bunu engeller, uyarır veya denetler. Bu eylem uyaracak veya engelleyecek şekilde ayarlandığında, diğer tarayıcıların (Genel ayarlar altındaki izin verilmeyen tarayıcılar listesinde tanımlanır) dosyaya erişmesi engellenir. 
+**Buluta yükleme** – Bu eylem, genel ayarlardaki izin verilen/izin verilmeyen etki alanları listesine göre korumalı dosyaların bulut hizmetlerine yüklenmesi veya yüklenmesine izin verildiğinde engeller, uyarır veya denetler. Bu eylem uyaracak veya engelleyecek şekilde ayarlandığında, diğer tarayıcıların (Genel ayarlar altındaki izin verilmeyen tarayıcılar listesinde tanımlanır) dosyaya erişmesi engellenir. 
 
 **İzin verilmeyen uygulamalar tarafından erişilir** – bu eylem zorunlu kılındığında, izin verilmeyen uygulamalar listesinde (Genel ayarlarda tanımlandığı gibi) bulunan uygulamaların bir uç nokta cihazındaki korumalı dosyalara erişmesini engeller. Örnek senaryolar 
 
 ## <a name="onboarding-devices-into-device-management"></a>Cihazları cihaz yönetimine ekleme
 
-Cihazdaki hassas öğeleri izleyebilmeniz ve koruyabilmeniz için önce cihaz izlemeyi etkinleştirmeniz ve uç noktalarınızı eklemeniz gerekir. Bu eylemlerin her ikisi de Microsoft Purview uyumluluk portalında gerçekleştirilir.
+Cihazdaki hassas öğeleri izleyebilmeniz ve koruyabilmeniz için önce cihaz izlemeyi etkinleştirmeniz ve uç noktalarınızı eklemeniz gerekir. Bu eylemlerin ikisi de Microsoft Purview uyumluluk portalı yapılır.
 
 Henüz eklenmemiş cihazları eklemek istediğinizde, uygun betiği indirir ve bu cihazlara dağıtırsınız. <!--Follow the [Onboarding devices procedure](endpoint-dlp-getting-started.md#onboarding-devices).-->
 

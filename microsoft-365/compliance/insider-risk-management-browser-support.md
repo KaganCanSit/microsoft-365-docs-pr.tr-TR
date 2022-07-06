@@ -1,7 +1,7 @@
 ---
 title: Insider risk yönetimi tarayıcısı sinyal algılama hakkında bilgi edinin ve yapılandırın
-description: Microsoft 365'de insider risk yönetimi tarayıcısı sinyal algılama hakkında bilgi edinin
-keywords: Microsoft 365, insider risk yönetimi, risk yönetimi, uyumluluk
+description: Microsoft Purview'da insider risk yönetimi tarayıcısı sinyal algılama hakkında bilgi edinin
+keywords: Microsoft 365, Microsoft Purview, insider riski, risk yönetimi, uyumluluk
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -15,23 +15,23 @@ ms.collection:
 - m365-security-compliance
 - m365solution-insiderrisk
 - m365initiative-compliance
-ms.openlocfilehash: e904c4576081cd459ca905a56e3dd6cec5b1af31
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: d70c5a568e1b694229f3c2f1ba11fe9a2be807f6
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64758739"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634191"
 ---
 # <a name="learn-about-and-configure-insider-risk-management-browser-signal-detection"></a>Insider risk yönetimi tarayıcısı sinyal algılama hakkında bilgi edinin ve yapılandırın
 
-Web tarayıcıları genellikle kullanıcılar tarafından bir kuruluştaki hem hassas hem de hassas olmayan dosyalara erişmek için kullanılır. Insider risk yönetimi, kuruluşunuzun [Microsoft Edge](https://www.microsoft.com/edge) ve [Google Chrome](https://www.google.com/chrome) tarayıcılarında görüntülenen tüm yürütülebilir olmayan dosyalar için tarayıcı sızdırma sinyallerini algılamasına ve bu sinyaller üzerinde işlem yapmasına olanak tanır. Bu sinyallerle, analistler ve araştırmacılar bu tarayıcıları kullanırken kapsam içi ilke kullanıcıları tarafından aşağıdaki etkinliklerden herhangi biri gerçekleştirildiğinde hızla harekete geçebilir:
+Web tarayıcıları genellikle kullanıcılar tarafından bir kuruluştaki hem hassas hem de hassas olmayan dosyalara erişmek için kullanılır. Insider risk yönetimi, kuruluşunuzun [Microsoft Edge](https://www.microsoft.com/edge) ve [Google Chrome](https://www.google.com/chrome) tarayıcılarında görüntülenen yürütülebilir olmayan tüm dosyalar için tarayıcı sızdırma sinyallerini algılamasına ve üzerinde işlem yapmasına olanak tanır. Bu sinyallerle, analistler ve araştırmacılar bu tarayıcıları kullanırken kapsam içi ilke kullanıcıları tarafından aşağıdaki etkinliklerden herhangi biri gerçekleştirildiğinde hızla harekete geçebilir:
 
 - Kişisel bulut depolama alanına kopyalanan dosyalar
 - Yerel veya ağ cihazlarına yazdırılan dosyalar
 - Ağ paylaşımına aktarılan veya kopyalanan dosyalar
 - USB cihazlarına kopyalanan dosyalar
 
-Bu olaylara yönelik sinyaller, yerleşik tarayıcı özellikleri ve *Microsoft Uyumluluk Uzantısı* eklentisi kullanılarak Microsoft Edge algılanmıştır. Google Chrome'da müşteriler sinyal algılama için *Microsoft Uyumluluk Uzantısı'nı* kullanır.
+Bu olaylara yönelik sinyaller Microsoft Edge'de yerleşik tarayıcı özellikleri ve *Microsoft Uyumluluk Uzantısı* eklentisi kullanılarak algılanmıştır. Google Chrome'da müşteriler sinyal algılama için *Microsoft Uyumluluk Uzantısı'nı* kullanır.
 
 Aşağıdaki tabloda, her tarayıcı için algılanan etkinlikler ve uzantı desteği özetlenmiştir:
 
@@ -44,11 +44,11 @@ Aşağıdaki tabloda, her tarayıcı için algılanan etkinlikler ve uzantı des
 
 ## <a name="common-requirements"></a>Yaygın gereksinimler
 
-Microsoft Edge eklentisini veya Google Chrome uzantısını yüklemeden önce müşterilerin kapsam içi ilke kullanıcıları için cihazların aşağıdaki gereksinimleri karşıladığından emin olması gerekir:
+Microsoft Edge eklentisini veya Google Chrome uzantısını yüklemeden önce müşterilerin kapsam içi ilke kullanıcılarına yönelik cihazların aşağıdaki gereksinimleri karşıladığından emin olması gerekir:
 
 - Sinyal algılama desteği için en son Windows 10 x64 derlemesi önerilir, en az Windows 10 x64 derleme 1809. Tarayıcı sinyali algılama şu anda Windows olmayan cihazlarda desteklenmiyor.
-- Insider risk yönetimi desteğine sahip geçerli [Microsoft 365 aboneliği](/microsoft-365/compliance/insider-risk-management-configure#subscriptions-and-licensing).
-- Cihazların Microsoft 365 Uyumluluk portalına [eklenmelidir](/microsoft-365/compliance/insider-risk-management-settings#enable-device-indicators-and-onboard-devices).
+- Insider risk yönetimi desteğine sahip mevcut [Microsoft 365 aboneliği](/microsoft-365/compliance/insider-risk-management-configure#subscriptions-and-licensing) .
+- Cihazların Microsoft Purview uyumluluk portalı [eklenmelidir](/microsoft-365/compliance/insider-risk-management-settings#enable-device-indicators-and-onboard-devices).
 
 Belirli tarayıcı yapılandırma gereksinimleri için bu makalenin devamında yer alan Microsoft Edge ve Google Chrome bölümlerine bakın.
 
@@ -76,7 +76,7 @@ Intune kullanarak kuruluşunuz için uzantıyı ve gereksinimleri yapılandırma
 
 Intune kurulum seçeneği için aşağıdaki adımları tamamlayın:
 
-1. Yönetici izinlerini kullanarak [Microsoft Endpoint Manager Yönetim Merkezi'nde](https://endpoint.microsoft.com) oturum açın.
+1. Yönetici izinlerini kullanarak [Microsoft Endpoint Manager Yönetici Merkezi'nde](https://endpoint.microsoft.com) oturum açın.
 2. **Yapılandırma Profilleri'ne** gidin.
 3. **Profil Oluştur'u** seçin.
 4. Platform olarak **Windows 10** seçin.
@@ -97,14 +97,14 @@ grup ilkesi kurulum seçeneği için aşağıdaki adımları tamamlayın:
 
 **1. Adım: En son Microsoft Edge Yönetim Şablonu (.admx) dosyasını içeri aktarın.**
 
-Cihazların Grup İlkeleri kullanılarak yönetilebilir olması ve tüm [Microsoft Edge Yönetim Şablonlarının](https://www.microsoft.com/edge/business/download) grup ilkesi Central Store'a aktarılması gerekir. Daha fazla bilgi için bkz. [Windows'da grup ilkesi Yönetim Şablonları için Merkezi Mağaza'yı oluşturma ve yönetme](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
+Cihazların Grup İlkeleri kullanılarak yönetilebilir olması ve tüm [Microsoft Edge Yönetim Şablonlarının](https://www.microsoft.com/edge/business/download) grup ilkesi Central Store'a aktarılması gerekir. Daha fazla bilgi için bkz. [Windows'ta grup ilkesi Yönetim Şablonları için Merkezi Mağaza'yı oluşturma ve yönetme](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
 
 **2. Adım: *Microsoft Uyumluluk Uzantısı* eklentisini *Yüklemeye Zorla* listesine ekleyin.**
 
 Uzantıyı eklemek için aşağıdaki adımları tamamlayın:
 
 1. **grup ilkesi Yönetim Düzenleyicisi'nde** Kuruluş Biriminize (OU) gidin.
-2. **Aşağıdaki yolu Genişletin Bilgisayar/Kullanıcı yapılandırma** \> **İlkeleri** \> **Yönetim şablonları** \> **Klasik yönetim şablonları** \> **Microsoft Edge** \> **Uzantılar**. Bu yol, kuruluşunuzun yapılandırmasına bağlı olarak değişebilir.
+2. Bilgisayar **/Kullanıcı yapılandırma** \> **İlkeleri** \> **Yönetim şablonları** **Klasik yönetim şablonları** \> \> **Microsoft Edge** \> **Uzantıları** yolunu genişletin. Bu yol, kuruluşunuzun yapılandırmasına bağlı olarak değişebilir.
 3. **Hangi uzantıların sessizce yükleneceğini yapılandır'ı seçin.**
 4. Sağ tıklayın ve **Düzenle'yi** seçin.
 5. **Etkin** radyo düğmesini denetleyin.
@@ -114,7 +114,7 @@ Uzantıyı eklemek için aşağıdaki adımları tamamlayın:
 
 ## <a name="configure-browser-signal-detection-for-google-chrome"></a>Google Chrome için tarayıcı sinyali algılamayı yapılandırma
 
-Google Chrome için Insider risk yönetimi tarayıcısı sinyal algılama desteği *Microsoft Uyumluluk Uzantısı* aracılığıyla etkinleştirilir. Bu uzantı, Chrome'da Endpoint DLP'i de destekler. Uç Nokta DLP desteği hakkında daha fazla bilgi için bkz. [Microsoft Uyumluluk Uzantısı (önizleme) ile Kullanmaya başlayın](/microsoft-365/compliance/dlp-chrome-get-started).
+Google Chrome için Insider risk yönetimi tarayıcısı sinyal algılama desteği *Microsoft Uyumluluk Uzantısı* aracılığıyla etkinleştirilir. Bu uzantı, Chrome'da Endpoint DLP'i de destekler. Uç Nokta DLP desteği hakkında daha fazla bilgi için bkz. [Microsoft Uyumluluk Uzantısını kullanmaya başlama (önizleme)](/microsoft-365/compliance/dlp-chrome-get-started).
 
 ### <a name="google-chrome-browser-requirements"></a>Google Chrome tarayıcı gereksinimleri
 
@@ -157,7 +157,7 @@ Intune kurulum seçeneği için aşağıdaki adımları tamamlayın:
 Get-Item -path "HKLM:\\SOFTWARE\\Microsoft\\Windows Defender\\Miscellaneous Configuration" | New-ItemProperty -Name DlpDisableBrowserCache -Value 0 -Force
 ```
 
-2. [Microsoft Endpoint Manager Yönetim Merkezi'nde](https://endpoint.microsoft.com) oturum açın.
+2. [Microsoft Endpoint Manager Yönetici Merkezi'nde](https://endpoint.microsoft.com) oturum açın.
 3. **Cihaz** \> **Betikleri'ne** gidin ve **Ekle'yi seçin.**
 4. İstendiğinde oluşturulan betiğin konumuna göz atın.
 5. Aşağıdaki ayarları seçin:
@@ -172,7 +172,7 @@ Get-Item -path "HKLM:\\SOFTWARE\\Microsoft\\Windows Defender\\Miscellaneous Conf
 
 Microsoft DLP Chrome uzantısını zorla yüklenen uzantılar listesine eklemeden önce, Intune yönetimi için Chrome Yönetim Şablonu (.admx) dosyasını yüklemeniz gerekir. Adım adım yönergeler için bkz. [chrome tarayıcısını Microsoft Intune ile yönetme](https://support.google.com/chrome/a/answer/9102677?hl=en#zippy=%2Cstep-ingest-the-chrome-admx-file-into-intune). Yönetim Şablonu dosyasını yükledikten sonra aşağıdaki adımları tamamlayın:
 
-1. [Microsoft Endpoint Manager Yönetim Merkezi'nde](https://endpoint.microsoft.com) oturum açın.
+1. [Microsoft Endpoint Manager Yönetici Merkezi'nde](https://endpoint.microsoft.com) oturum açın.
 2. **Yapılandırma Profilleri'ne** gidin.
 3. **Profil Oluştur'u** seçin.
 4. *Platform* olarak **Windows 10'ı** seçin.
@@ -195,7 +195,7 @@ grup ilkesi kurulum seçeneği için aşağıdaki adımları tamamlayın:
 
 **1. Adım: Chrome Yönetim Şablonu dosyasını içeri aktarma**
 
-Cihazlarınız grup ilkesi kullanılarak yönetilebilir olmalıdır ve tüm [Chrome Yönetim Şablonlarının](https://chromeenterprise.google/browser/download/) grup ilkesi Central Store'a aktarılması gerekir. Daha fazla bilgi için bkz. [Windows'da grup ilkesi Yönetim Şablonları için Merkezi Mağaza'yı oluşturma ve yönetme](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
+Cihazlarınız grup ilkesi kullanılarak yönetilebilir olmalıdır ve tüm [Chrome Yönetim Şablonlarının](https://chromeenterprise.google/browser/download/) grup ilkesi Central Store'a aktarılması gerekir. Daha fazla bilgi için bkz. [Windows'ta grup ilkesi Yönetim Şablonları için Merkezi Mağaza'yı oluşturma ve yönetme](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
 
 **2. Adım: PowerShell ile gerekli Kayıt Defteri anahtarını etkinleştirme**
 
@@ -209,7 +209,7 @@ Cihazlarınız grup ilkesi kullanılarak yönetilebilir olmalıdır ve tüm [Chr
 3. Sağ tıklayıp **Bu etki alanında GPO oluştur'u seçin ve buraya bağlayın**. İstendiğinde, bu grup ilkesi Nesnesine (GPO) açıklayıcı bir ad atayın. Örneğin, *DLP Chrome Anında PowerShell Betiği*.
 4. GPO'yı oluşturduktan sonra sağ tıklayın ve **Düzenle'yi** seçin. Bu seçim sizi grup ilkesi Nesnesine götürür.
 5. **Bilgisayar yapılandırması** \> **Tercihler** \> **Denetim masası ayarları** \> **Zamanlanmış görevler'e** gidin.
-6. **Zamanlanmış Görevler'in** altındaki boş alana sağ tıklayın ve **Yeni** \> **Anında Görev 'i (en az Windows 7) seçin.**
+6. **Zamanlanmış Görevler'in** altındaki boş alana sağ tıklayın ve **Yeni** \> **Anında Görev (en az Windows 7)** öğesini seçin.
 7. Görev *Adı* ve *Açıklaması* girin.
 8. Anında görevi çalıştırmak için ilgili hesabı seçin. Örneğin *, NT Yetkilisi*.
 9. **En yüksek ayrıcalıklarla çalıştır'ı** seçin.

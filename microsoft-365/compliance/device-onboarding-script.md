@@ -1,5 +1,5 @@
 ---
-title: Yerel bir Windows 10 kullanarak Windows 10 ve 11 Windows cihaz kullanın
+title: Yerel bir komut dosyası kullanan Windows 10 ve Windows 11 cihazlarının katılımı
 f1.keywords: NOCSH
 ms.author: chrfox
 author: chrfox
@@ -14,106 +14,106 @@ ms.collection:
 ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
-description: Yapılandırma paketini hizmete dahil etmek üzere cihazlara dağıtmak için yerel bir betik kullanın.
-ms.openlocfilehash: 14412e782cffd597786a4d2c322fe2b8fc20e5ca
-ms.sourcegitcommit: 8eca41cd21280ffcb1f50cafce7a934e5544f302
+description: Yapılandırma paketini hizmete eklenmeleri için cihazlara dağıtmak için yerel bir betik kullanın.
+ms.openlocfilehash: 840573794b447162f917fed162bb1f869585286e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "62999581"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634433"
 ---
-# <a name="onboard-windows-10-and-windows-11-devices-using-a-local-script"></a>Yerel bir Windows 10 kullanarak Windows 10 ve 11 Windows cihaz kullanın
+# <a name="onboard-windows-10-and-windows-11-devices-using-a-local-script"></a>Yerel bir komut dosyası kullanan Windows 10 ve Windows 11 cihazlarının katılımı
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Microsoft 365 Uç nokta veri kaybı önleme (DLP)](./endpoint-dlp-learn-about.md)
-- [Insider risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
+- [Uç nokta veri kaybı önleme (DLP)](./endpoint-dlp-learn-about.md)
+- [İçeriden risk yönetimi](insider-risk-management.md)
 
-Ayrıca cihaz eklemeye tek tek cihazları el ile Microsoft 365. Bunu, ağ üzerindeki tüm cihazları eklemeye karardan önce hizmeti test etmek için yapmak iyi bir durum olabilir.
+Ayrıca tek tek cihazları Microsoft 365'e el ile de ekleyebilirsiniz. Ağınızdaki tüm cihazları eklemeyi taahhüt etmeden önce hizmeti test ederken bunu yapmak isteyebilirsiniz.
 
 > [!IMPORTANT]
-> Bu betik, 10 cihaza kadar kullanım için en iyi duruma getirilmiş.
+> Bu betik en fazla 10 cihazda kullanılmak üzere iyileştirilmiştir.
 >
-> Ölçekte dağıtmak için diğer dağıtım [seçeneklerini kullanın](device-onboarding-overview.md). Örneğin, üretimde 10'dan fazla cihaza bir ekleme betiği dağıtabilirsiniz ve bu betiği Grup İlkesi kullanarak [Windows 10](device-onboarding-gp.md) cihazlarında kullanılabilir.
+> Büyük ölçekte dağıtmak için [diğer dağıtım seçeneklerini](device-onboarding-overview.md) kullanın. Örneğin, grup ilkesi [kullanarak ekleme Windows 10 cihazlarda](device-onboarding-gp.md) kullanılabilen betikle üretimdeki 10'dan fazla cihaza ekleme betiği dağıtabilirsiniz.
 
 ## <a name="onboard-devices"></a>Cihazları ekleme
  
-1. Microsoft Uyumluluk Merkezi'.zip yapılandırma *paketiDeviceComplianceOnboardingPackage.zip*) paketini [al](https://compliance.microsoft.com)
+1. Microsoft Purview uyumluluk portalı yapılandırma paketi .zip dosyası (*DeviceComplianceOnboardingPackage.zip*) paketini alma [](https://compliance.microsoft.com)
 
-2. Gezinti bölmesinde,Device <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**ekleme Ayarlar**</a> >  **seçin**.
+2. Gezinti bölmesinde <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar**</a> > **Cihaz ekleme'yi** seçin.
 
-3. Dağıtım yöntemi **alanında Yerel** **Betik'i seçin**.
+3. **Dağıtım yöntemi** alanında **Yerel Betik'i** seçin.
 
-4. Paketi **indir'e** tıklayın ve .zip kaydedin.
+4. **Paketi indir'e** tıklayın ve .zip dosyasını kaydedin.
   
-5. Yapılandırma paketinin içeriğini, eklemek istediğiniz cihazda (örneğin Masaüstü) bir konuma ayıklar. *DeviceOnboardingScript.cmd adlı bir dosyanız olmalıdır*.
+5. Yapılandırma paketinin içeriğini eklemek istediğiniz cihazdaki bir konuma (örneğin, Masaüstü) ayıklayın. *DeviceOnboardingScript.cmd* adlı bir dosyanız olmalıdır.
 
 6. Cihazda yükseltilmiş bir komut satırı istemi açın ve betiği çalıştırın:
 
-7. **Başlat'a gidin** ve **cmd yazın**.
+7. **Başlangıç'a** gidin ve **cmd** yazın.
 
-8. Komut istemi'ne **sağ tıklayın ve** Yönetici olarak **çalıştır'ı seçin**.
+8. **Komut istemi'ne** sağ tıklayın ve **Yönetici olarak çalıştır'ı** seçin.
 
-    ![Window Başlat menüsü Yönetici olarak çalıştır'a işaret ediyor olabilir.](../media/dlp-run-as-admin.png)
+    ![Yönetici olarak çalıştır'a işaret eden Pencere Başlat menüsü.](../media/dlp-run-as-admin.png)
 
-9. Betik dosyasının konumunu yazın. Dosyayı masaüstüne kopyaladıysanız, şöyle yazın: *%userprofile%\Desktop\WindowsDefenderATPOnboardingScript.cmd*
+9. Betik dosyasının konumunu yazın. Dosyayı masaüstüne kopyaladıysanız şunu yazın: *%userprofile%\Desktop\WindowsDefenderATPOnboardingScript.cmd*
 
-10. **Enter tuşuna basın** veya Tamam'a **tıklayın**.
+10. **Enter** tuşuna basın veya **Tamam'a** tıklayın.
 
-Cihazın uyumlu olduğunu el ile nasıl doğru şekilde doğrulayabilirsiniz hakkında bilgi için bkz. [Microsoft Defender Gelişmiş Tehdit Koruması ekleme sorunlarını giderme](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding).
+Cihazın uyumlu olduğunu el ile nasıl doğrulayabileceğiniz ve algılayıcı verilerini doğru şekilde bildirebileceğiniz hakkında bilgi için bkz. [Microsoft Defender Gelişmiş Tehdit Koruması ekleme sorunlarını giderme](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding).
 
-## <a name="offboard-devices-using-a-local-script"></a>Yerel betik kullanan offboard cihazları
+## <a name="offboard-devices-using-a-local-script"></a>Yerel betik kullanarak cihazları çıkarma
 
-Güvenlik nedeniyle, Offboard cihazları için kullanılan paketin süresi, indirildikten 30 gün sonra sona erer. Bir cihaza gönderilen süresi dolmuş offboard paketleri reddedilir. Bir çıkartan kullanım paketi indirirken paketlerin son kullanma tarihi size bildirilecek ve paket adına da bu paket dahil edilecektir.
+Güvenlik nedeniyle, cihazları kullanıma almak için kullanılan paketin süresi, indirildiği tarihten 30 gün sonra dolar. Bir cihaza gönderilen süresi dolan çıkarma paketleri reddedilir. Bir çıkarma paketini indirirken paketlerin son kullanma tarihi size bildirilir ve paket adına da eklenir.
 
 > [!NOTE]
-> Ekleme ve çıkarma ilkeleri aynı cihazda aynı anda dağıtıldığından, öngörülemeyen zararlara neden olur.
+> Ekleme ve çıkarma ilkeleri aynı cihazda aynı anda dağıtılmamalıdır, aksi takdirde bu öngörülemeyen çakışmalara neden olur.
 
-1. Bir panodan çıkar <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">paketine Microsoft 365 uyumluluk merkezi</a>.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı'dan</a> çıkarma paketini alın.
 
-2. Gezinti bölmesinde, <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Panodan**</a> **Ayarlar'ı** >  seçin.
+2. Gezinti bölmesinde <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar**</a> > **Cihaz çıkarma'yı** seçin.
 
-3. Dağıtım yöntemi **alanında Yerel** **Betik'i seçin**.
+3. **Dağıtım yöntemi** alanında **Yerel Betik'i** seçin.
 
-4. Paketi **indir'e** tıklayın ve .zip kaydedin.
+4. **Paketi indir'e** tıklayın ve .zip dosyasını kaydedin.
 
-5. Bu dosyanın içeriğini .zip cihazlar tarafından erişilebilen, paylaşılan, salt okunur bir konuma ayıklar. *DeviceComplianceOffboardingScript_valid_until_YYYY-MM-DD.cmd adlı bir dosyanız olmalıdır*.
+5. .zip dosyasının içeriğini cihazlar tarafından erişilebilen paylaşılan, salt okunur bir konuma ayıklayın. *DeviceComplianceOffboardingScript_valid_until_YYYY-MM-DD.cmd* adlı bir dosyanız olmalıdır.
 
 6. Cihazda yükseltilmiş bir komut satırı istemi açın ve betiği çalıştırın:
 
-7. **Başlat'a gidin** ve **cmd yazın**.
+7. **Başlangıç'a** gidin ve **cmd** yazın.
 
-8. Komut istemi'ne **sağ tıklayın ve** Yönetici olarak **çalıştır'ı seçin**.
+8. **Komut istemi'ne** sağ tıklayın ve **Yönetici olarak çalıştır'ı** seçin.
 
-    ![Window Başlat menüsü Yönetici olarak çalıştır'a işaret ediyor olabilir.](../media/dlp-run-as-admin.png)
+    ![Yönetici olarak çalıştır'a işaret eden Pencere Başlat menüsü.](../media/dlp-run-as-admin.png)
 
-9. Betik dosyasının konumunu yazın. Dosyayı masaüstüne kopyalediysanız, şöyle yazın: *%userprofile%\Desktop\WindowsDefenderATPOffboardingScript_valid_until_YYYY-MM-DD.cmd*
+9. Betik dosyasının konumunu yazın. Dosyayı masaüstüne kopyaladıysanız şunu yazın: *%userprofile%\Desktop\WindowsDefenderATPOffboardingScript_valid_until_YYYY-MM-DD.cmd*
 
-10. **Enter tuşuna basın** veya Tamam'a **tıklayın**.
+10. **Enter** tuşuna basın veya **Tamam'a** tıklayın.
 
 > [!IMPORTANT]
-> Offboard, cihazın algılayıcı verilerinin portala gönderilmesini durdurmaya neden olur.
+> Çıkarma, cihazın portala algılayıcı verileri göndermeyi durdurmasına neden olur.
 
 ## <a name="monitor-device-configuration"></a>Cihaz yapılandırmasını izleme
 
-Betiğin başarıyla tamamlandıktan ve aracının çalıştığını doğrulamak için [Ekleme sorunlarını giderme]((/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding) altında farklı doğrulama adımlarını izleyin.
+Betiğin başarıyla tamamlandığını ve aracının çalıştığını doğrulamak için [Ekleme sorunlarını giderme]((/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding) içindeki farklı doğrulama adımlarını izleyebilirsiniz.
 
 İzleme doğrudan portalda veya farklı dağıtım araçları kullanılarak da yapılabilir.
 
 ### <a name="monitor-devices-using-the-portal"></a>Portalı kullanarak cihazları izleme
 
-1. Uyumluluk [Microsoft 365 gidin](https://compliance.microsoft.com).
+1. [Microsoft Purview uyumluluk portalı'a](https://compliance.microsoft.com) gidin.
 
-2. Diğer **Ayarlar** >  **Device** **eklemeCicileri** >  seçin.
+2. **Ayarlar** > **Cihaz ekleme Cihazları'nı** >  seçin.
 
-1. Ekran'Microsoft 365 uyumluluk merkezi gidin ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar**</a> >  **Device onboardingDevices** >  **öğesini seçin**.
+1. Microsoft Purview uyumluluk portalı gidin ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar**</a> > **Cihaz ekleme Cihazları'nı** >  seçin.
 
-1. Cihazların görüntüde olduğunu doğrulayın.
+1. Cihazların görüntülendiğini doğrulayın.
 
 ## <a name="related-topics"></a>İlgili konular
-- [Grup Windows 10 kullanarak Windows 11 cihazı ekleme ve kullanma](device-onboarding-gp.md)
-- [Microsoft Endpoint Configuration Manager kullanarak Windows 10 cihaz ve 11 Windows cihaz Microsoft Endpoint Configuration Manager](device-onboarding-sccm.md)
-- [Mobil Windows 10 araçları Windows 11 cihaza ekleme ve kullanma](device-onboarding-mdm.md)
-- [Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını ekleme](device-onboarding-vdi.md)
-- [Yeni eklenen Uç nokta cihazı için Microsoft Defender'da bir algılama testi çalıştırma](/windows/security/threat-protection/microsoft-defender-atp/run-detection-test)
-- [Microsoft Defender Gelişmiş Tehdit Koruması'nın ekleme sorunlarını giderme](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)
+- [grup ilkesi kullanarak Windows 10 ve Windows 11 cihazları ekleme](device-onboarding-gp.md)
+- [Microsoft Endpoint Configuration Manager kullanarak Windows 10 ve Windows 11 cihazları ekleme](device-onboarding-sccm.md)
+- [Mobil Cihaz Yönetimi araçlarını kullanan Windows 10 ve Windows 11 cihazlarının katılımı](device-onboarding-mdm.md)
+- [Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarının katılımı](device-onboarding-vdi.md)
+- [Yeni eklenen bir Uç Nokta için Microsoft Defender cihazında algılama testi çalıştırma](/windows/security/threat-protection/microsoft-defender-atp/run-detection-test)
+- [Microsoft Defender Gelişmiş Tehdit Koruması ekleme sorunlarını giderme](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)

@@ -14,16 +14,14 @@ ms.collection:
 search.appverid:
 - MET150
 description: MDE müşterileri için Microsoft Intune kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma hakkında bilgi edinin
-ms.openlocfilehash: c6b374ad3c35ba3441e82412d9897132006d0559
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 3e6947483a4d3320b61211edeb0f9fdc3e31095d
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952852"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623041"
 ---
-# <a name="onboard-and-offboard-macos-devices-into-compliance-solutions-using-intune-for-microsoft-defender-for-endpoint-customers"></a>Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak macOS cihazlarını Uyumluluk çözümlerine ekleme ve çıkarma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+# <a name="onboard-and-offboard-macos-devices-into-compliance-solutions-using-intune-for-microsoft-defender-for-endpoint-customers"></a>macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması
 
 > [!IMPORTANT]
 > macOS cihazlarınıza Uç Nokta için Microsoft Defender (MDE) ***dağıttıysanız*** bu yordamı kullanın
@@ -63,7 +61,7 @@ tam disk erişimi     |[fulldisk.mobileconfig](https://github.com/microsoft/mdat
 
 ### <a name="create-system-configuration-profiles"></a>Sistem yapılandırma profilleri oluşturma
 
-1. **Microsoft Endpoint Manager** **centerDevicesConfiguration** >  >  **profillerini** açın.
+1. **Microsoft Endpoint Manager merkezi** > **Cihazlar** > **Yapılandırma profillerini** açın.
 
 1. Seçin: **Profil oluştur**. 
 
@@ -84,7 +82,7 @@ tam disk erişimi     |[fulldisk.mobileconfig](https://github.com/microsoft/mdat
 
 1. Ayarlarınızı gözden geçirin ve **oluştur'u** seçerek yapılandırmayı dağıtın.
 
-1. **DevicesConfiguration** >  **profillerini** açın, oluşturduğunuz profilleri orada görmeniz gerekir.
+1. **Cihaz** > **Yapılandırma profillerini** açın, oluşturduğunuz profilleri orada görmeniz gerekir.
 
 1. **Yapılandırma profilleri** sayfasında, az önce oluşturduğunuz profili seçin, bu örnekte *ErişilebilirlikformacOS* ve cihaz listesini ve yapılandırma profilinin dağıtım durumunu görmek için **Cihaz durumu'nu** seçin.
 
@@ -109,7 +107,7 @@ tam disk erişimi     |[fulldisk.mobileconfig](https://github.com/microsoft/mdat
 > [!IMPORTANT]
 > Kullanıma alma, cihazın portala algılayıcı verileri göndermeyi durdurmasına neden olur, ancak sahip olduğu uyarılara başvuru da dahil olmak üzere cihazdaki veriler 6 aya kadar saklanır.
 
-1. **Microsoft Endpoint Manager merkezinde** **DevicesConfiguration** >  profillerini açın, oluşturduğunuz profilleri orada görmeniz gerekir.
+1. **Microsoft Endpoint Manager merkezinde** **Cihazlar** > **Yapılandırma profillerini** açın, oluşturduğunuz profilleri orada görmeniz gerekir.
 
 2. **Yapılandırma profilleri** sayfasında MDE tercihleri profilini seçin.
 

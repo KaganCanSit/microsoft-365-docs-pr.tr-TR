@@ -18,16 +18,14 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Uyumluluk Yöneticisi kullanıcı izinlerini ve rollerini ayarlayın ve eylemlerin otomatik testini yapılandırın. Kullanıcı geçmişini yönetin ve pano görünümünüzü filtreleyin.
-ms.openlocfilehash: 76126f9a13716e3ebf48309f8129de6ede4d11e9
-ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
+ms.openlocfilehash: 1053ff60416a80d88e29e8a8f4bc9ac3fdfc133b
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66574057"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634775"
 ---
 # <a name="get-started-with-compliance-manager"></a>Uyumluluk Yöneticisini kullanmaya başlama
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **Bu makalede:** Bu makale, Uyumluluk Yöneticisi'nin ayarlanmasına yardımcı olur. Uyumluluk Yöneticisi'ne **erişmeyi** , **rolleri ve izinleri ayarlamayı ve** **iyileştirme eylemlerinin otomatik testini yapılandırmayı** öğrenin. **Uyumluluk Yöneticisi panonuzda** ilerleyin ve ana sayfaları anlayın: iyileştirme eylemleri sayfası, çözümler sayfası, değerlendirmeler sayfası ve değerlendirme şablonları sayfası.
 

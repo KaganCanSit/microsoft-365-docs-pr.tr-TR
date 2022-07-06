@@ -20,20 +20,18 @@ search.appverid:
 - MBS150
 - MET150
 ms.assetid: 5c8c1db6-d8ac-4dbb-8a7a-f65d452169b9
-description: Microsoft Purview uyumluluk portalında bir İçerik aramasının gerçek sonuçlarını dışarı aktarmak yerine, arama sonuçları raporunu dışarı aktarabilirsiniz. Rapor, arama sonuçlarının özetini ve dışarı aktarılacak her öğe hakkında ayrıntılı bilgi içeren bir belge içerir.
+description: Microsoft Purview uyumluluk portalı bir İçerik aramasının gerçek sonuçlarını dışarı aktarmak yerine, arama sonuçları raporunu dışarı aktarabilirsiniz. Rapor, arama sonuçlarının özetini ve dışarı aktarılacak her öğe hakkında ayrıntılı bilgi içeren bir belge içerir.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 35e0a0b13594a6396ae1f757e3a1fc8a3e952173
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 294ea5ec35e141606c1197613bf5e7dc908a4ac7
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093075"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624277"
 ---
 # <a name="export-a-content-search-report"></a>İçerik arama raporunu dışarı aktarma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Arama sonuçlarının tamamını Microsoft Purview uyumluluk portalındaki bir İçerik aramasından (veya Microsoft Purview eKeşif (Standart) durumuyla ilişkili bir aramadan) dışarı aktarmak yerine, gerçek arama sonuçlarını dışarı aktardığınızda oluşturulan raporları dışarı aktarabilirsiniz.
+arama sonuçlarının tamamını Microsoft Purview uyumluluk portalı bir İçerik aramasından (veya Microsoft Purview eKeşif (Standart) bir olayla ilişkili bir aramadan) dışarı aktarmak yerine, gerçek arama sonuçlarını dışarı aktardığınızda oluşturulan raporları dışarı aktarabilirsiniz.
   
 Bir raporu dışarı aktardığınızda, rapor dosyaları yerel bilgisayarınızdaki İçerik Arama ile aynı ada sahip ancak *_ReportsOnly* eklenmiş bir klasöre indirilir. Örneğin, İçerik Araması  *ContosoCase0815* olarak adlandırılırsa rapor *ContosoCase0815_ReportsOnly* adlı bir klasöre indirilir. Rapora dahil edilen belgelerin listesi için bkz. [Rapora eklenenler](#whats-included-in-the-report).
 
@@ -45,16 +43,16 @@ Bir raporu dışarı aktardığınızda, rapor dosyaları yerel bilgisayarınız
 
 - Arama raporunu dışarı aktarmak için kullandığınız bilgisayarın aşağıdaki sistem gereksinimlerini karşılaması gerekir:
   
-  - en son Windows sürümü (32 bit veya 64 bit)
+  - Windows'un en son sürümü (32 bit veya 64 bit)
   
   - Microsoft .NET Framework 4.7 veya üzeri
   
-- eBulma Dışarı Aktarma Aracı'nı çalıştırmak için Microsoft Edge <sup>1</sup> kullanmanız gerekir. Arama sonuçlarını dışarı aktarmak için Internet Explorer 11'in kullanılması artık <sup>desteklenmiyor2</sup>.
+- eBulma Dışarı Aktarma Aracı'nı çalıştırmak için Microsoft Edge<sup>1'i</sup> kullanmanız gerekir. Arama sonuçlarını dışarı aktarmak için Internet Explorer 11'in kullanılması artık desteklenmiyor<sup>2</sup>.
   
   > [!NOTE]
-  > <sup>1</sup> Microsoft Edge yapılan son değişikliklerin bir sonucu olarak, ClickOnce desteği artık varsayılan olarak etkin değildir. Edge'de ClickOnce desteğini etkinleştirme yönergeleri için bkz. [Microsoft Edge'de eBulma Dışarı Aktarma Aracı'nı kullanma](configure-edge-to-export-search-results.md). Ayrıca Microsoft, ClickOnce uygulamaları için üçüncü taraf uzantılar veya eklentiler üretmez. Üçüncü taraf uzantıları veya eklentileri olan desteklenmeyen bir tarayıcı kullanarak arama sonuçlarını dışarı aktarma desteklenmez.
+  > <sup>1</sup> Microsoft Edge'de yapılan son değişikliklerin bir sonucu olarak ClickOnce desteği artık varsayılan olarak etkin değildir. Edge'de ClickOnce desteğini etkinleştirme yönergeleri için bkz. [Microsoft Edge'de eKeşif Dışarı Aktarma Aracı'nı kullanma](configure-edge-to-export-search-results.md). Ayrıca Microsoft, ClickOnce uygulamaları için üçüncü taraf uzantılar veya eklentiler üretmez. Üçüncü taraf uzantıları veya eklentileri olan desteklenmeyen bir tarayıcı kullanarak arama sonuçlarını dışarı aktarma desteklenmez.
   > 
-  > <sup>2</sup> Ağustos 2021'den itibaren Microsoft 365 uygulamalar ve hizmetler artık Internet Explorer 11'i (IE11) desteklemeyecektir ve kullanıcılar düşük bir deneyime sahip olabilir veya bu uygulama ve hizmetlere bağlanamayabilir. Bu uygulamalar ve hizmetler, desteğin sorunsuz bir şekilde sona ermesini sağlamak için önümüzdeki haftalar ve aylar içinde aşamalı olarak kullanıma sunulacaktır. Her uygulama ve hizmet, bağımsız zamanlamalarla aşamalı olarak kullanıma alınıyor. Daha fazla bilgi için bu [blog gönderisini inceleyin](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
+  > <sup>2</sup> Ağustos 2021'den itibaren, Microsoft 365 uygulamaları ve hizmetleri artık Internet Explorer 11'i (IE11) desteklemeyecektir ve kullanıcılar düşük bir deneyime sahip olabilir veya bu uygulama ve hizmetlere bağlanamayabilir. Bu uygulamalar ve hizmetler, desteğin sorunsuz bir şekilde sona ermesini sağlamak için önümüzdeki haftalar ve aylar içinde aşamalı olarak kullanıma sunulacaktır. Her uygulama ve hizmet, bağımsız zamanlamalarla aşamalı olarak kullanıma alınıyor. Daha fazla bilgi için bu [blog gönderisini inceleyin](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 
 - Arama tarafından döndürülen sonuçların tahmini toplam boyutu 2 TB'ı aşarsa, raporları dışarı aktarma işlemi başarısız olur. Raporları başarılı bir şekilde dışarı aktarmak için kapsamı daraltmayı ve sonuçların tahmini boyutunun 2 TB'tan küçük olması için aramayı yeniden çalıştırmayı deneyin.
 
@@ -84,7 +82,7 @@ Bir raporu dışarı aktardığınızda, rapor dosyaları yerel bilgisayarınız
   
     - **Yalnızca tanınmayan biçime sahip olan, şifrelenen veya başka nedenlerle dizine eklenemeyen öğeler**. Bu seçenek yalnızca dizine alınmamış öğeler hakkındaki bilgileri dışarı aktarır.
 
-4. **Exchange içerik için yinelenenleri kaldırmayı etkinleştir** seçeneğini yapılandırın.
+4. **Exchange içeriği için yinelenenleri kaldırmayı etkinleştir** seçeneğini yapılandırın.
   
    - Bu seçeneği seçerseniz, yinelenen iletilerin sayısı (yinelenenleri kaldırmadan önce ve yinelenenleri kaldırmadan sonra) dışarı aktarma özeti raporuna eklenir. Ayrıca, bir iletinin yalnızca bir kopyası manifest.xml dosyasına eklenir. Ancak dışarı aktarma sonuçları raporu, yinelenen iletinin bir kopyasını içeren posta kutularını tanımlayabilmeniz için yinelenen iletinin her kopyası için bir satır içerir. Dışarı aktarılan raporlar hakkında daha fazla bilgi için bkz. [Rapora eklenenler](#whats-included-in-the-report).
 
@@ -94,7 +92,7 @@ Bir raporu dışarı aktardığınızda, rapor dosyaları yerel bilgisayarınız
 
 5. **Rapor oluştur'a** tıklayın.
 
-   Arama raporları indirilmeye hazırlanır. Bu da rapor belgelerinin Microsoft bulutundaki bir Azure Depolama konumuna yüklendiği anlamına gelir. Bu işlem birkaç dakika sürebilir.
+   Arama raporları indirilmeye hazırlanmıştır, bu da rapor belgelerinin Microsoft bulutundaki bir Azure Depolama konumuna yüklendiği anlamına gelir. Bu işlem birkaç dakika sürebilir.
 
 Dışarı aktarılan arama raporlarını indirme yönergeleri için sonraki bölüme bakın.
   
@@ -142,7 +140,7 @@ Sonraki adım, raporu Azure Depolama alanından yerel bilgisayarınıza indirmek
   
 - **Bildirim:** Arama sonuçlarına dahil edilen her öğe hakkında bilgi içeren bir bildirim dosyası (XML biçiminde). Yinelenenleri kaldırma seçeneğini etkinleştirdiyseniz, yinelenen iletiler bildirim dosyasına eklenmez.
 
-- **Sonuç -ları:** Arama sonuçlarıyla birlikte dışarı aktarılacak dizine alınan her öğe hakkında bilgi içeren bir satır içeren bir Excel belgesi. E-posta için, sonuç günlüğü her ileti hakkında aşağıdakiler dahil olmak üzere bilgiler içerir: 
+- **Sonuç -ları:** Arama sonuçlarıyla birlikte dışarı aktarılacak, dizine alınan her öğe hakkında bilgi içeren bir satır içeren bir Excel belgesi. E-posta için, sonuç günlüğü her ileti hakkında aşağıdakiler dahil olmak üzere bilgiler içerir: 
 
   - İletinin kaynak posta kutusunda konumu (iletinin birincil posta kutusunda mı yoksa arşiv posta kutusunda mı olduğu dahil).
 
@@ -152,7 +150,7 @@ Sonraki adım, raporu Azure Depolama alanından yerel bilgisayarınıza indirmek
 
   - İletinin göndereni ve alıcıları.
 
-  SharePoint ve OneDrive İş sitelerindeki belgeler için, sonuç günlüğü her belge hakkında aşağıdakiler dahil olmak üzere bilgiler içerir:
+  SharePoint ve OneDrive İş sitelerindeki belgeler için, sonuç günlüğü aşağıdakiler dahil olmak üzere her belge hakkında bilgi içerir:
 
   - Belgenin URL'si.
 

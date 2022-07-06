@@ -16,16 +16,14 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 description: Bu makale hassas bilgi türlerine ve hassas öğeleri tanımlamak için sosyal güvenlik, kredi kartı veya banka hesabı numaraları gibi hassas bilgileri nasıl algıladıklarına genel bakış sağlar
-ms.openlocfilehash: d814bd413fc95a02bc35ab05a804c544d9b84b1e
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 34c40c99cf759341ece1948164a5f7d904996b44
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014244"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639390"
 ---
 # <a name="learn-about-sensitive-information-types"></a>Hassas bilgi türleri hakkında daha fazla bilgi edinme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kuruluşunuzun denetimi altındaki hassas öğeleri tanımlamak ve sınıflandırmak[, Information Protection uzmanlık alanında](./information-protection.md) ilk adımdır.  Microsoft Purview, sınıflandırılabilmeleri için öğeleri tanımlamanın üç yolunu sağlar:
 
@@ -130,7 +128,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_argentina_national_id"></a>Keyword_argentina_national_id
 
@@ -206,6 +204,6 @@ Uyumluluk Merkezi'nde özel hassas bilgi türleri oluşturmak için çeşitli se
 - [Özel hassas bilgi türü oluşturma](create-a-custom-sensitive-information-type.md)
 - [PowerShell'de özel hassas bilgi türü oluşturma](create-a-custom-sensitive-information-type-in-scc-powershell.md)
 
-Veri gizliliği düzenlemelerine uymak için hassas bilgi türlerini kullanmayı öğrenmek için bkz[. Microsoft 365 (aka.ms/m365dataprivacy) ile veri gizliliği düzenlemeleri için bilgi koruması dağıtma](../solutions/information-protection-deploy.md).
+Veri gizliliği düzenlemelerine uymak için hassas bilgi türlerini kullanmayı öğrenmek için bkz. [Microsoft 365 (aka.ms/m365dataprivacy) ile veri gizliliği düzenlemeleri için bilgi koruması dağıtma](../solutions/information-protection-deploy.md)  .
 
 <!-- fwlink for this topic https://go.microsoft.com/fwlink/?linkid=2135644-->

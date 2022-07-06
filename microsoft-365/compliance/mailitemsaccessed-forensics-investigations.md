@@ -16,16 +16,14 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Güvenliği aşılmış kullanıcı hesaplarının adli araştırmalarını gerçekleştirmek için MailItemsAccessed posta kutusu denetim eylemini kullanın.
-ms.openlocfilehash: 5ff3c078dfd29b5b44bfac5f04b329bf014507ea
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: a2c6d8030ba90f213f665036157b3efe0c267e80
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090949"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629475"
 ---
-# <a name="use-microsoft-purview-audit-premium-to-investigate-compromised-accounts"></a>Güvenliği aşılmış hesapları araştırmak için Microsoft Purview Denetimi'ni (Premium) kullanma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+# <a name="use-microsoft-purview-audit-premium-to-investigate-compromised-accounts"></a>Güvenliği aşılmış hesapları araştırmak için Microsoft Purview Denetim (Premium) kullanma
 
 Güvenliği aşılmış kullanıcı hesabı ( *hesap devralma* olarak da adlandırılır), bir saldırganın bir kullanıcı hesabına erişim kazanması ve kullanıcı olarak çalışması bir saldırı türüdür. Bu tür saldırılar bazen saldırganın hedefleyenden daha fazla hasara neden olur. Güvenliği aşılmış e-posta hesaplarını araştırırken, saldırganın gerçek iletişim durumunu izleyerek belirtilebilenden daha fazla posta verisinin gizliliğinin ihlal edildiği varsayılmalıdır. E-posta iletilerindeki verilerin türüne bağlı olarak, hassas bilgilerin açığa çıkmadığını kanıtlayamadığınız sürece hassas bilgilerin gizliliğinin ihlal edildiği veya yasal düzenleme cezalarıyla karşı karşıya kalındığını varsaymanız gerekir. Örneğin HIPAA tarafından düzenlenen kuruluşlar, hasta sağlığı bilgilerinin (PHI) açığa çıkarıldığına dair kanıt varsa önemli para cezalarıyla karşı karşıya kalır. Bu gibi durumlarda saldırganların PHI ile ilgilenme olasılığı düşüktür ancak aksini kanıtlayamadığı sürece kuruluşların yine de veri ihlallerini bildirmesi gerekir.
 
@@ -188,8 +186,8 @@ Bir saldırganın posta kutusuna, posta kutusu sahibinin eriştiği aynı anda e
 
 |Denetim kaydı 1|Denetim kaydı 2|Denetim kaydı 3|
 |---|---|---|
-|ClientIPAddress1<br/>**SessionId2**|ClientIPAddress2<br/>**SessionId2**|ClientIPAddress1<br/>**SessionId3**|
-|**InternetMessageIdA**<br/>**InternetMessageIdD**<br/>**InternetMessageIdE**<br/>**InternetMessageIdF**<br/>|**InternetMessageIdA**<br/>**InternetMessageIdC**|**InternetMessageIdB**|
+|ClientIPAddress **1**<br/>SessionId **2**|ClientIPAddress **2**<br/>SessionId **2**|ClientIPAddress **1**<br/>SessionId **3**|
+|InternetMessageId **A**<br/>InternetMessageId **D**<br/>InternetMessageId **E**<br/>InternetMessageId **F**<br/>|InternetMessageId **A**<br/>InternetMessageId **C**|InternetMessageId **B**|
 |
 
 [Önceki bölümde](#filtering-of-duplicate-audit-records) tabloda listelenen özelliklerden herhangi biri farklıysa, yeni bağlamı izlemek için ayrı bir denetim kaydı oluşturulur. Erişimler, etkinliğin gerçekleştiği bağlama bağlı olarak ayrı denetim kayıtlarına sıralanır.

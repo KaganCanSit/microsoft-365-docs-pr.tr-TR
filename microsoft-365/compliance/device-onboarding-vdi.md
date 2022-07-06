@@ -13,39 +13,39 @@ ms.collection:
 - M365-security-compliance
 search.appverid:
 - MET150
-description: Yapılandırma paketini sanal masaüstü altyapısı (VDI) cihazına dağıtarak Microsoft 365 Uç Nokta veri kaybı önleme hizmetine eklenmelerini sağlayın.
-ms.openlocfilehash: 6bfb0f69198afbcc9d2949d583e151631cc7953b
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Uç nokta veri kaybı önleme hizmetine eklenmeleri için yapılandırma paketini sanal masaüstü altyapısı (VDI) cihazına dağıtın.
+ms.openlocfilehash: 8a54d4ce3cfb4b3ba6571f2aee63cd60c2a6d71f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760635"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636149"
 ---
 # <a name="onboard-non-persistent-virtual-desktop-infrastructure-devices"></a>Kalıcı olmayan sanal masaüstü altyapısı cihazlarını ekleme
 
 **Şunlar için geçerlidir:**
 
-- [Microsoft 365 Uç nokta veri kaybı önleme (DLP)](./endpoint-dlp-learn-about.md)
-- [İçeriden risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
+- [Uç nokta veri kaybı önleme (DLP)](./endpoint-dlp-learn-about.md)
+- [İçeriden risk yönetimi](insider-risk-management.md)
 
 - Sanal masaüstü altyapısı (VDI) cihazları
 
 > [!WARNING]
-> Windows Sanal Masaüstü için Microsoft 365 Uç nokta veri kaybı önleme desteği tek oturum senaryolarını destekler. Windows Sanal Masaüstü'ne yönelik çoklu oturum senaryoları şu anda desteklenmemektedir.
+> Windows Sanal Masaüstü için uç nokta veri kaybı önleme desteği tek oturum senaryolarını destekler. Windows Sanal Masaüstü'ne yönelik çoklu oturum senaryoları şu anda desteklenmemektedir.
 
 ## <a name="onboard-vdi-devices"></a>VDI cihazlarını ekleme
 
-Microsoft 365 kalıcı olmayan sanal masaüstü altyapısı (VDI) oturumu eklemeyi destekler.
+Microsoft 365, kalıcı olmayan sanal masaüstü altyapısı (VDI) oturumu eklemeyi destekler.
 
 > [!NOTE]
 > Kalıcı olmayan VDI oturumlarını eklemek için VDI cihazlarının Windows 10 1809 veya üzeri bir sürümde olması gerekir.
 
 VDI'leri eklerken ilgili zorluklar olabilir. Bu senaryo için tipik zorluklar şunlardır:
 
-- Gerçek sağlamadan önce Microsoft 365 eklenmelidir kısa süreli oturumları anında erken ekleme.
+- Gerçek sağlamadan önce Microsoft 365'e eklenmesi gereken kısa süreli oturumları anında erken ekleme.
 - Cihaz adı genellikle yeni oturumlar için yeniden kullanılır.
 
-VDI cihazları Microsoft 365 Uyumluluk merkezinde şu şekilde görünebilir:
+VDI cihazları Microsoft Purview uyumluluk portalı şu şekilde görünebilir:
 
 - Her cihaz için tek giriş.
 Bu durumda, oturum oluşturulduğunda, örneğin katılımsız yanıt dosyası kullanılarak *aynı* cihaz adının yapılandırılması gerektiğini unutmayın.
@@ -56,9 +56,9 @@ Aşağıdaki adımlar VDI cihazlarını ekleme konusunda size yol gösterir ve t
 > [!WARNING]
 > Düşük kaynak yapılandırmalarının olduğu ortamlarda, VDI önyükleme yordamı cihaz ekleme işlemini yavaşlatabilir.
 
-1. [Microsoft Uyumluluk merkezi'nden](https://compliance.microsoft.com) VDI yapılandırma paketi .zip dosyasını (*DeviceCompliancePackage.zip*) alın.
+1. VDI yapılandırma paketini .zip dosyasını (*DeviceCompliancePackage.zip*) [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com) alın.
 
-2. Gezinti bölmesinde **Ayarlar** >  **Cihaz eklemeOnboarding'i** >  seçin.
+2. Gezinti bölmesinde **Ayarlar** > **Cihaz ekleme** > **Ekleme'yi** seçin.
 
 3. **Dağıtım yöntemi** alanında **, kalıcı olmayan uç noktalar için VDI ekleme betikleri'ni** seçin.
 
@@ -73,7 +73,7 @@ Aşağıdaki adımlar VDI cihazlarını ekleme konusunda size yol gösterir ve t
     > [!NOTE]
     > Klasörü görmüyorsanız `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup` , gizli olabilir. Dosya Gezgini **Gizli dosya ve klasörleri göster** seçeneğini belirlemeniz gerekir.
 
-8. Yerel grup ilkesi Düzenleyicisi penceresini açın ve **Bilgisayar Yapılandırması** >  **Windows Ayarlar** >  **ScriptsStartup'a** >  gidin.
+8. Yerel grup ilkesi Düzenleyicisi penceresini açın ve **Bilgisayar Yapılandırması** > **Windows Ayarları** > **Betikleri** > **Başlatma'ya** gidin.
 
    > [!NOTE]
    > Etki alanı grup ilkesi, kalıcı olmayan VDI cihazlarının eklenmesi için de kullanılabilir.
@@ -82,11 +82,11 @@ Aşağıdaki adımlar VDI cihazlarını ekleme konusunda size yol gösterir ve t
 
    **Her cihaz için tek giriş için**
 
-   **PowerShell Betikleri** sekmesini seçin, ardından **Ekle'ye** tıklayın (Windows Explorer daha önce ekleme betiğini kopyaladığınız yolda açılır). PowerShell betiğini `Onboard-NonPersistentMachine.ps1`ekleme bölümüne gidin.
+   **PowerShell Betikleri** sekmesini seçin ve **Ekle'ye** tıklayın (Windows Gezgini, ekleme betiğini daha önce kopyaladığınız yolda doğrudan açılır). PowerShell betiğini `Onboard-NonPersistentMachine.ps1`ekleme bölümüne gidin.
 
    **Her cihaz için birden çok giriş için**:
 
-   **Betikler** sekmesini seçin, ardından **Ekle'ye** tıklayın (Windows Gezgin daha önce ekleme betiğini kopyaladığınız yolda doğrudan açılır). Ekleme bash betiğine `DeviceComplianceOnboardingScript.cmd`gidin.
+   **Betikler** sekmesini seçin, ardından **Ekle'ye** tıklayın (Windows Gezgini, ekleme betiğini daha önce kopyaladığınız yolda doğrudan açılır). Ekleme bash betiğine `DeviceComplianceOnboardingScript.cmd`gidin.
 
 10. Çözümünüzü test edin:
     1. Tek bir cihazla havuz oluşturun.
@@ -116,11 +116,11 @@ DISM komutları ve çevrimdışı bakım hakkında daha fazla bilgi için lütfe
 
 - [DISM kullanarak Windows görüntüsünü değiştirme](/windows-hardware/manufacture/desktop/mount-and-modify-a-windows-image-using-dism)
 - [DISM Görüntü Yönetimi Command-Line Seçenekleri](/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14)
-- [Çevrimdışı Windows Görüntüsündeki Bileşen Deposunun Boyutunu Küçültme](/windows-hardware/manufacture/desktop/reduce-the-size-of-the-component-store-in-an-offline-windows-image)
+- [Çevrimdışı Windows Görüntüsünde Bileşen Deposu Boyutunu Küçültme](/windows-hardware/manufacture/desktop/reduce-the-size-of-the-component-store-in-an-offline-windows-image)
 
 Çevrimdışı hizmet, kalıcı olmayan VDI ortamınız için uygun bir seçenek değilse tutarlılığı ve algılayıcı durumunu sağlamak için aşağıdaki adımlar izlenmelidir:
 
-1. Çevrimiçi bakım veya düzeltme eki uygulama için altın renkli görüntüyü önyükledikten sonra Microsoft 365 cihaz izleme algılayıcısını kapatmak için bir çıkarma betiği çalıştırın. Daha fazla bilgi için bkz. [Yerel betik kullanarak cihazları çıkarma](device-onboarding-script.md#offboard-devices-using-a-local-script).
+1. Çevrimiçi bakım veya düzeltme eki uygulama için altın renkli görüntüyü önyükledikten sonra, Microsoft 365 cihaz izleme algılayıcısını kapatmak için bir çıkarma betiği çalıştırın. Daha fazla bilgi için bkz. [Yerel betik kullanarak cihazları çıkarma](device-onboarding-script.md#offboard-devices-using-a-local-script).
 
 2. Aşağıdaki komutu bir CMD penceresinde çalıştırarak algılayıcının durdurulduğunu doğrulayın:
 

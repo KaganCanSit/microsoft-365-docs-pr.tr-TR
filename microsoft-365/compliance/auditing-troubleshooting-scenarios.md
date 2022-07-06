@@ -19,16 +19,14 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: E-posta hesaplarıyla ilgili yaygın destek sorunlarını gidermeye yardımcı olmak için Microsoft 365 denetim günlüğü arama aracını kullanmayı öğrenin.
-ms.openlocfilehash: 57d8cfd1cbb07300b7cd69fb78ff6a0b33b302f5
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: d97e8e074c2d0e14bb75fd46a512cacb6827047a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097194"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633861"
 ---
 # <a name="search-the-audit-log-to-investigate-common-support-issues"></a>Yaygın destek sorunlarını araştırmak için denetim günlüğünde arama yapma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makalede, yaygın destek sorunlarını araştırmanıza yardımcı olması için denetim günlüğü arama aracının nasıl kullanılacağı açıklanmaktadır. Bu, denetim günlüğünü kullanarak şunları içerir:
 
@@ -42,11 +40,11 @@ Bu makalede, yaygın destek sorunlarını araştırmanıza yardımcı olması i�
 
 ## <a name="using-the-audit-log-search-tool"></a>Denetim günlüğü arama aracını kullanma
 
-Bu makalede açıklanan sorun giderme senaryolarının her biri, Microsoft Purview uyumluluk portalındaki denetim günlüğü arama aracını kullanmayı temel alır. Bu bölümde, denetim günlüğünde arama yapmak için gereken izinler listelenir ve denetim günlüğü aramalarına erişme ve bunları çalıştırma adımları açıklanmaktadır. Her senaryo bölümünde bir denetim günlüğü arama sorgusunun nasıl yapılandırıldığını ve denetim kayıtlarındaki arama ölçütlerine uyan ayrıntılı bilgilerde nelerin arandığını açıklar.
+Bu makalede açıklanan sorun giderme senaryolarının her biri, Microsoft Purview uyumluluk portalı denetim günlüğü arama aracını kullanmayı temel alır. Bu bölümde, denetim günlüğünde arama yapmak için gereken izinler listelenir ve denetim günlüğü aramalarına erişme ve bunları çalıştırma adımları açıklanmaktadır. Her senaryo bölümünde bir denetim günlüğü arama sorgusunun nasıl yapılandırıldığını ve denetim kayıtlarındaki arama ölçütlerine uyan ayrıntılı bilgilerde nelerin arandığını açıklar.
 
 ### <a name="permissions-required-to-use-the-audit-log-search-tool"></a>Denetim günlüğü arama aracını kullanmak için gereken izinler
 
-Denetim günlüğünde arama yapmak için Exchange Online'da View-Only Denetim Günlükleri veya Denetim Günlükleri rolüne atanmış olmanız gerekir. Varsayılan olarak, bu roller <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezindeki</a> **İzinler** sayfasındaki Uyumluluk Yönetimi ve Kuruluş Yönetimi rol gruplarına atanır. Office 365 ve Microsoft 365'deki genel yöneticiler otomatik olarak Exchange Online'da Kuruluş Yönetimi rol grubunun üyeleri olarak eklenir. Daha fazla bilgi için bkz. [Exchange Online rol gruplarını yönetme](/Exchange/permissions-exo/role-groups).
+Denetim günlüğünde arama yapmak için Exchange Online'da View-Only Denetim Günlükleri veya Denetim Günlükleri rolüne atanmış olmanız gerekir. Varsayılan olarak, bu roller <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezindeki</a> **İzinler** sayfasındaki Uyumluluk Yönetimi ve Kuruluş Yönetimi rol gruplarına atanır. Office 365 ve Microsoft 365'teki genel yöneticiler otomatik olarak Exchange Online Kuruluş Yönetimi rol grubunun üyeleri olarak eklenir. Daha fazla bilgi için bkz. [Exchange Online rol gruplarını yönetme](/Exchange/permissions-exo/role-groups).
 
 ### <a name="running-audit-log-searches"></a>Denetim günlüğü aramalarını çalıştırma
 
@@ -84,7 +82,7 @@ Herhangi bir kullanıcı tarafından gerçekleştirilen bir etkinliğe karşıl�
 
 Bu senaryo için bir denetim günlüğü arama sorgusu şu şekilde yapılandırılır:
 
-**Faaliyetleri:** Servis talebinizle ilgiliyse, aranacak belirli bir etkinliği seçin. Güvenliği aşılmış hesapların sorunlarını gidermek için, Exchange **posta kutusu etkinlikleri altında Kullanıcı posta kutusunda oturum açtı** etkinliğini **seçmeyi** göz önünde bulundurun. Bu, posta kutusunda oturum açarken kullanılan IP adresini gösteren denetim kayıtlarını döndürür. Aksi takdirde, tüm etkinliklerin denetim kayıtlarını döndürmek için bu alanı boş bırakın. 
+**Faaliyetleri:** Servis talebinizle ilgiliyse, aranacak belirli bir etkinliği seçin. Güvenliği aşılmış hesapların sorunlarını gidermek için, Exchange **posta kutusu etkinlikleri altında Kullanıcı posta kutusu etkinliğinde oturum açtı** seçeneğini **belirlemeyi** göz önünde bulundurun. Bu, posta kutusunda oturum açarken kullanılan IP adresini gösteren denetim kayıtlarını döndürür. Aksi takdirde, tüm etkinliklerin denetim kayıtlarını döndürmek için bu alanı boş bırakın. 
 
 > [!TIP]
 > Bu alanı boş bırakmak, kullanıcının bir kullanıcı hesabında oturum açtığını belirten bir Azure Active Directory etkinliği olan **UserLoggedIn** etkinliklerini döndürür. **UserLoggedIn** denetim kayıtlarını görüntülemek için arama sonuçlarında filtrelemeyi kullanın.
@@ -143,7 +141,7 @@ Varsayılan olarak günlüğe kaydedilen posta kutusu eylemleri, posta kutusu sa
 
 Bu senaryo için bir denetim günlüğü arama sorgusu şu şekilde yapılandırılır:
 
-**Faaliyetleri:** **posta kutusu etkinlikleri Exchange** altında aşağıdaki etkinliklerden birini veya ikisini birden seçin:
+**Faaliyetleri:** **Exchange posta kutusu etkinlikleri'nin** altında aşağıdaki etkinliklerden birini veya ikisini birden seçin:
 
 - **Silinmiş Öğeler klasöründen silinen iletiler:** Bu etkinlik **, SoftDelete** posta kutusu denetim eylemine karşılık gelir. Bu etkinlik, kullanıcı öğeyi seçip **Shift+Delete** tuşlarına basarak kalıcı olarak sildiğinde de günlüğe kaydedilir. Bir öğe kalıcı olarak silindikten sonra, silinen öğe saklama süresi dolana kadar kullanıcı öğeyi kurtarabilir.
 
@@ -179,11 +177,11 @@ Daha önce açıklandığı gibi, silinmiş öğe saklama süresinin dolmamış 
 Kullanıcılar Exchange Online posta kutuları için bir gelen kutusu kuralı oluşturduğunuzda, ilgili denetim kaydı denetim günlüğüne kaydedilir. Gelen kutusu kuralları hakkında daha fazla bilgi için bkz:
 
 - [Web üzerinde Outlook gelen kutusu kurallarını kullanma](https://support.office.com/article/use-inbox-rules-in-outlook-on-the-web-8400435c-f14e-4272-9004-1548bb1848f2)
-- [kuralları kullanarak Outlook e-posta iletilerini yönetme](https://support.office.com/article/Manage-email-messages-by-using-rules-C24F5DEA-9465-4DF4-AD17-A50704D66C59)
+- [Outlook'ta kuralları kullanarak e-posta iletilerini yönetme](https://support.office.com/article/Manage-email-messages-by-using-rules-C24F5DEA-9465-4DF4-AD17-A50704D66C59)
 
 Bu senaryo için bir denetim günlüğü arama sorgusu şu şekilde yapılandırılır:
 
-**Faaliyetleri:** **posta kutusu etkinlikleri Exchange** altında aşağıdaki etkinliklerden birini veya ikisini birden seçin:
+**Faaliyetleri:** **Exchange posta kutusu etkinlikleri'nin** altında aşağıdaki etkinliklerden birini veya ikisini birden seçin:
 
 - **New-Gelen KutusuRule Outlook Web App yeni gelen kutusu kuralı oluşturun**. Bu etkinlik, Outlook web uygulaması kullanılarak veya PowerShell Exchange Online gelen kutusu kuralları oluşturulduğunda denetim kayıtlarını döndürür.
 
@@ -209,36 +207,36 @@ d. **UserId** alanı, **ObjectId** alanında belirtilen gelen kutusu kuralını 
 
 ## <a name="investigate-why-there-was-a-successful-login-by-a-user-outside-your-organization"></a>Kuruluşunuzun dışındaki bir kullanıcı tarafından neden başarılı bir oturum açma işlemi olduğunu araştırma
 
-Denetim günlüğündeki denetim kayıtlarını gözden geçirirken, dış kullanıcının Azure Active Directory tarafından kimliğinin doğrulandığını ve kuruluşunuzda başarıyla oturum açtığını belirten kayıtlar görebilirsiniz. Örneğin, contoso.onmicrosoft.com'daki bir yönetici, farklı bir kuruluştan (örneğin, fabrikam.onmicrosoft.com) bir kullanıcının contoso.onmicrosoft.com başarıyla oturum açtığını gösteren bir denetim kaydı görebilir. Benzer şekilde, kuruluşunuzda başarıyla oturum açmış Outlook.com veya Live.com gibi Microsoft Hesabı (MSA) olan kullanıcıları gösteren denetim kayıtları görebilirsiniz. Bu gibi durumlarda, denetlenen etkinlik **Kullanıcı oturum açmış** olur. 
+Denetim günlüğündeki denetim kayıtlarını gözden geçirirken, dış kullanıcının Kimliğinin Azure Active Directory tarafından doğrulandığını ve kuruluşunuzda başarıyla oturum açtığını belirten kayıtlar görebilirsiniz. Örneğin, contoso.onmicrosoft.com'daki bir yönetici, farklı bir kuruluştan (örneğin, fabrikam.onmicrosoft.com) bir kullanıcının contoso.onmicrosoft.com başarıyla oturum açtığını gösteren bir denetim kaydı görebilir. Benzer şekilde, kuruluşunuzda başarıyla oturum açmış Outlook.com veya Live.com gibi Microsoft Hesabı (MSA) olan kullanıcıları gösteren denetim kayıtları görebilirsiniz. Bu gibi durumlarda, denetlenen etkinlik **Kullanıcı oturum açmış** olur. 
 
-Bu davranış tasarımdan kaynaklanır. Dizin hizmeti Azure Active Directory (Azure AD), dış kullanıcı kuruluşunuzdaki bir SharePoint sitesine veya OneDrive konumuna erişmeye çalıştığında *geçişli kimlik doğrulaması* olarak adlandırılan bir şeye izin verir. Dış kullanıcı bunu yapmaya çalıştığında kimlik bilgilerini girmesi istenir. Azure AD, kimlik bilgilerini kullanıcının kimliğini doğrulamak için kullanır; yani yalnızca Azure AD kullanıcının söylediği kişi olduğunu doğrular. Denetim kaydında başarılı oturum açma işleminin göstergesi, Azure AD'nin kullanıcının kimliğini doğrulamasının sonucudur. Başarılı oturum açma, kullanıcının kuruluşunuzdaki herhangi bir kaynağa erişebileceği veya başka eylemler gerçekleştirebileceği anlamına gelmez. Yalnızca kullanıcının Kimliğinin Azure AD tarafından doğrulandığını gösterir. Geçişli kullanıcının SharePoint veya OneDrive kaynaklarına erişebilmesi için, kuruluşunuzdaki bir kullanıcının bir kaynağı paylaşım daveti veya anonim paylaşım bağlantısı göndererek dış kullanıcıyla açıkça paylaşması gerekir. 
+Bu davranış tasarımdan kaynaklanır. Dizin hizmeti olan Azure Active Directory (Azure AD), dış kullanıcı kuruluşunuzdaki bir SharePoint sitesine veya OneDrive konumuna erişmeye çalıştığında *doğrudan kimlik doğrulaması* olarak adlandırılan bir şeye izin verir. Dış kullanıcı bunu yapmaya çalıştığında kimlik bilgilerini girmesi istenir. Azure AD kimlik bilgilerini kullanıcının kimliğini doğrulamak için kullanır, yani yalnızca Azure AD kullanıcının söylediği kişi olduğunu doğrular. Denetim kaydındaki başarılı oturum açma işleminin göstergesi, kullanıcının kimliğini doğrulamanın Azure AD sonucudur. Başarılı oturum açma, kullanıcının kuruluşunuzdaki herhangi bir kaynağa erişebileceği veya başka eylemler gerçekleştirebileceği anlamına gelmez. Yalnızca kullanıcının kimliğinin Azure AD tarafından doğrulandığını gösterir. Geçişli bir kullanıcının SharePoint veya OneDrive kaynaklarına erişebilmesi için, kuruluşunuzdaki bir kullanıcının bir kaynağı paylaşım daveti veya anonim paylaşım bağlantısı göndererek dış kullanıcıyla açıkça paylaşması gerekir. 
 
 > [!NOTE]
-> Azure AD, yalnızca SharePoint Online ve OneDrive İş gibi *birinci taraf uygulamalar* için doğrudan kimlik doğrulamasına izin verir. Diğer üçüncü taraf uygulamalar için buna izin verilmez.
+> Azure AD, doğrudan kimlik doğrulamasına yalnızca SharePoint Online ve OneDrive İş gibi *birinci taraf uygulamalar* için izin verir. Diğer üçüncü taraf uygulamalar için buna izin verilmez.
 
 Burada, doğrudan kimlik doğrulamasının bir sonucu olan Oturum **Açan Kullanıcının denetim kaydındaki** ilgili özelliklerin bir örneği ve açıklamaları verilmiştir. **Ayrıntılar** açılır sayfasını görüntülemek için denetim kaydını seçin ve ardından **Daha fazla bilgi'yi** seçin.
 
 ![Başarılı geçiş kimlik doğrulaması için denetim kaydı örneği.](../media/PassThroughAuth1.png)
 
-   a. Bu alan, kuruluşunuzdaki bir kaynağa erişmeye çalışan kullanıcının kuruluşunuzun Azure AD'sinde bulunmadığını gösterir.
+   a. Bu alan, kuruluşunuzdaki bir kaynağa erişmeye çalışan kullanıcının kuruluşunuzun Azure AD bulunamadığını gösterir.
 
    b. Bu alan, kuruluşunuzdaki bir kaynağa erişmeye çalışan dış kullanıcının UPN'sini görüntüler. Bu kullanıcı kimliği, denetim kaydındaki **User** ve **UserId** özelliklerinde de tanımlanır.
 
-   c. **ApplicationId** özelliği, oturum açma isteğini tetikleyen uygulamayı tanımlar. Bu denetim kaydındaki ApplicationId özelliğinde görüntülenen 00000003-0000-0ff1-ce00-00000000000000 değerinin SharePoint Online olduğunu gösterir. OneDrive İş aynı ApplicationId'ye de sahiptir.
+   c. **ApplicationId** özelliği, oturum açma isteğini tetikleyen uygulamayı tanımlar. Bu denetim kaydındaki ApplicationId özelliğinde görüntülenen 00000003-0000-0ff1-ce00-000000000000 değerinin SharePoint Online olduğunu gösterir. OneDrive İş aynı ApplicationId'ye de sahiptir.
 
    d. Bu, geçiş kimlik doğrulamasının başarılı olduğunu gösterir. Başka bir deyişle, kullanıcının kimliği Azure AD tarafından başarıyla doğrulandı. 
 
-   e. **15'in RecordType** değeri, denetlenen etkinliğin (UserLoggedIn) Azure AD'de bir Güvenli Belirteç Hizmeti (STS) oturum açma olayı olduğunu gösterir.
+   e. **15'in RecordType** değeri, denetlenen etkinliğin (UserLoggedIn) Azure AD bir Güvenli Belirteç Hizmeti (STS) oturum açma olayı olduğunu gösterir.
 
-UserLoggedIn denetim kaydında görüntülenen diğer özellikler hakkında daha fazla bilgi için Office 365 [Yönetim Etkinliği API'sinin şemasındaki](/office/office-365-management-api/office-365-management-activity-api-schema#azure-active-directory-base-schema) Azure AD ile ilgili şema bilgilerine bakın.
+UserLoggedIn denetim kaydında görüntülenen diğer özellikler hakkında daha fazla bilgi için, Office 365 [Yönetim Etkinliği API'sinin şemasındaki Azure AD ilgili şema bilgilerine](/office/office-365-management-api/office-365-management-activity-api-schema#azure-active-directory-base-schema) bakın.
 
 Doğrudan kimlik doğrulaması nedeniyle **başarılı bir Kullanıcının denetim etkinliğinde oturum açmasıyla** sonuçlanan iki örnek senaryo aşağıda verilmiştir: 
 
   - Microsoft Hesabı (SaraD@outlook.com gibi) olan bir kullanıcı, fourthcoffee.onmicrosoft.com'daki bir OneDrive İş hesabındaki bir belgeye erişmeye çalıştı ve fourthcoffee.onmicrosoft.com'da SaraD@outlook.com için karşılık gelen bir konuk kullanıcı hesabı yok.
 
-  - Bir kuruluşta İş veya Okul hesabı olan bir kullanıcı (pilarp@fabrikam.onmicrosoft.com gibi) contoso.onmicrosoft.com'da SharePoint bir siteye erişmeye çalıştı ve contoso.onmicrosoft.com'da pilarp@fabrikam.com için karşılık gelen bir konuk kullanıcı hesabı yok.
+  - Bir kuruluşta İş veya Okul hesabı (pilarp@fabrikam.onmicrosoft.com gibi) olan bir kullanıcı contoso.onmicrosoft.com'da bir SharePoint sitesine erişmeye çalıştı ve contoso.onmicrosoft.com'da pilarp@fabrikam.com için karşılık gelen bir konuk kullanıcı hesabı yok.
 
-### <a name="tips-for-investigating-successful-logins-resulting-from-pass-through-authentication"></a>Doğrudan kimlik doğrulamasından kaynaklanan başarılı oturum açma bilgilerini araştırmak için İpuçları
+### <a name="tips-for-investigating-successful-logins-resulting-from-pass-through-authentication"></a>Doğrudan kimlik doğrulamasından kaynaklanan başarılı oturum açma bilgilerini araştırma ipuçları
 
 - Denetim günlüğünde, **Kullanıcı denetim kaydında oturum açmış** olan dış kullanıcı tarafından gerçekleştirilen etkinlikler için arama yapın. **Kullanıcılar** kutusuna dış kullanıcı için UPN yazın ve senaryonuzla ilgiliyse bir tarih aralığı kullanın. Örneğin, aşağıdaki arama ölçütlerini kullanarak bir arama oluşturabilirsiniz:
 
@@ -246,9 +244,9 @@ Doğrudan kimlik doğrulaması nedeniyle **başarılı bir Kullanıcının denet
 
     **Kullanıcının oturum açtığı** etkinliklere ek olarak, kuruluşunuzdaki bir kullanıcının kaynakları dış kullanıcıyla paylaştığını ve dış kullanıcının kendisiyle paylaşılan bir belgeye erişip erişmediğini, değiştirdiğini veya indirdiğini belirten diğer denetim kayıtları döndürülebilir.
 
-- Kullanıcının denetim kaydında oturum açtığı dış kullanıcıyla bir dosyanın paylaşıldığını belirten SharePoint paylaşım **etkinliklerini** arayın. Daha fazla bilgi için bkz. [Denetim günlüğünde paylaşım denetimini kullanma](use-sharing-auditing.md).
+- Bir dosyanın, denetim **kaydında oturum açmış bir Kullanıcı** tarafından tanımlanan dış kullanıcıyla paylaşıldığını gösteren SharePoint paylaşım etkinliklerini arayın. Daha fazla bilgi için bkz. [Denetim günlüğünde paylaşım denetimini kullanma](use-sharing-auditing.md).
 
-- Dış kullanıcıyla ilgili diğer etkinlikleri aramak için Excel kullanabilmeniz için araştırmanızla ilgili kayıtları içeren denetim günlüğü arama sonuçlarını dışarı aktarın. Daha fazla bilgi için bkz.  [Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md).
+- Dış kullanıcıyla ilgili diğer etkinlikleri aramak için Excel'i kullanabilmek için araştırmanızla ilgili kayıtları içeren denetim günlüğü arama sonuçlarını dışarı aktarın. Daha fazla bilgi için bkz.  [Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md).
 
 ## <a name="search-for-mailbox-activities-performed-by-users-with-non-e5-licenses"></a>E5 lisansı olmayan kullanıcılar tarafından gerçekleştirilen posta kutusu etkinliklerini arama
 

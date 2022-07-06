@@ -1,5 +1,5 @@
 ---
-title: İleti Şifreleme Görüntüleyicisi Uygulamasını kullanımdandandan kullanımdandan kullanımdan
+title: OME Görüntüleyicisi uygulamasını kullanımdan kaldırma
 f1.keywords:
 - NOCSH
 ms.author: krowley
@@ -18,44 +18,42 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Uygulama Office 365 İleti Şifrelemesi Görüntüleyicisi uygulaması, Android ve Apple mağazalarından 2018'de kaldırılmıştır.
-ms.openlocfilehash: 0eded17f4da5347e1f1a88031a780cee5f8b1dee
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Office 365 İleti Şifrelemesi (OME) Görüntüleyici uygulaması 2018'de Android ve Apple mağazalarından kaldırılmıştır.
+ms.openlocfilehash: 2e1e0ead7d34761a3159b4b51368ea4460acb596
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983230"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630091"
 ---
-# <a name="deprecating-message-encryption-viewer-app"></a>İleti Şifreleme Görüntüleyicisi Uygulamasını kullanımdandandan kullanımdandan kullanımdan
+# <a name="deprecating-message-encryption-viewer-app"></a>İleti Şifreleme Görüntüleyicisi Uygulamasını KullanımDan Kaldırma
 
-15 Ağustos 2018 tarihinde Android ve Apple Office 365 İleti Şifrelemesi OME) Görüntüleyicisi mobil uygulamasını kaldırdık. Bu Office 365 İleti Şifrelemesi Görüntüleyicisi uygulaması, Apple ve Android telefonlarda OME'nin önceki sürümüyle şifrelenmiş e-posta iletilerini ve ekleri okumak için gereklidir. OME Görüntüleyicisi uygulamasını kaldırmanın dışında, OME'nin önceki sürümünde başka bir değişiklik yapıyoruz.
+15 Ağustos 2018'de android ve Apple mağazalarından Office 365 İleti Şifrelemesi (OME) Görüntüleyicisi mobil uygulamasını kaldırdık. Office 365 İleti Şifreleme Görüntüleyicisi mobil uygulamasının, Apple ve Android telefonlarda OME'nin önceki sürümüyle şifrelenmiş e-posta iletilerini ve eklerini okuması gerekiyordu. OME Görüntüleyicisi uygulamasını kaldırmanın dışında, OME'nin önceki sürümünde başka bir değişiklik yapmayız.
   
-## <a name="changes-from-august-2018"></a>Ağustos 2018'den itibaren yapılan değişiklikler
+## <a name="changes-from-august-2018"></a>Ağustos 2018'den itibaren değişiklikler
 
-Eylül 2017'de duyurularak, kullanıcıların mobil uygulamaya gerek kalmadan kuruluş içinden veya dışından herkese şifreli ve korumalı iletiler göndereyyler için yeni bir [Office 365 İleti Şifrelemesi](https://aka.ms/ome2017) sürümü yayınlandı. O zamandan beri ek özellikler ekledik:
+Eylül 2017'de duyurulduğu gibi, kullanıcıların mobil uygulamanın gereksinimi olmadan kuruluş içindeki veya dışındaki herkese şifrelenmiş ve korumalı iletiler gönderebilmesi için Office 365 [İleti Şifrelemesi'nin](https://aka.ms/ome2017) yeni bir sürümünü yayımladık. O zamandan beri ek özellikler ekledik:
   
 - [Yalnızca şifrele şablonu](https://aka.ms/encryptonly)
 
-- [Eklerin şifresini çözmek için denetim](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007)
+- [Eklerin şifresini çözme denetimi](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007)
 
-Bu değişiklikle, kullanıcılar 1 Ağustos'Office 365 İleti Şifrelemesi Görüntüleyicisi mobil uygulamayı indirmeyecek. Sonuç olarak, posta alıcıları bazı Android ve Apple mobil cihazlarında OME'nin önceki sürümüyle şifrelenmiş iletileri okuy ediyor olabilir. Bununla birlikte, bu iletileri kişisel bilgisayarlarda (masaüstü tarayıcıları üzerinden) okuyabilirler. Uygulamayı indiren kullanıcılar uygulamayı kullanmaya devam edecektir.
+Bu değişiklikle, kullanıcılar 1 Ağustos'tan itibaren Office 365 İleti Şifreleme Görüntüleyicisi mobil uygulamasını indiremeyecek. Sonuç olarak, posta alıcıları bazı Android ve Apple mobil cihazlarında OME'nin önceki sürümüyle şifrelenmiş iletileri okuyamayabilir. Ancak, bu iletileri kişisel bilgisayarlarda (masaüstü tarayıcıları aracılığıyla) okumaya devam edebilirler. Uygulamayı zaten indirmiş olan kullanıcılar uygulamayı kullanmaya devam eder.
   
-## <a name="why-this-change-was-made"></a>Bu değişiklik neden yapıldı?
+## <a name="why-this-change-was-made"></a>Bu değişikliğin nedeni
 
-OME'nin yeni sürümü, artık korumalı e-posta iletilerini ve ekleri okumak için mobil uygulama gerektirmeyecek. Yeni OME özelliklerini kullanan müşteriler korumalı iletiyi mobil Outlook olmayan müşteriler de korumalı iletileri tarayıcıda iletiyi mobilde 2.
+OME'nin yeni sürümü artık korumalı e-posta iletilerini ve eklerini okumak için bir mobil uygulama gerektirmez. Microsoft Purview İleti Şifrelemesi kullanan müşteriler, korumalı iletiyi Outlook Mobile'da, müşteri olmayanlar ise korumalı iletileri tarayıcıda görüntüleyebilir.
   
-Kullanıcıların mobil uygulamayı indirmelerini gerektiren uygulamalar, müşterilerin korunan iletileri görüntülemesi için engelli bir engeldir. Yeni Office 365 İleti Şifrelemesi özellikleri, daha iyi bir mobil deneyim sunar.
+Kullanıcıların mobil uygulama indirmesini gerektirmek, müşterilerin korumalı iletileri görüntülemesi için bir diğer engeldir. Microsoft Purview İleti Şifrelemesi daha iyi bir mobil deneyim sağlar.
   
-## <a name="can-i-still-use-the-previous-version-of-office-365-message-encryption"></a>Office 365 İleti Şifrelemesi'in önceki sürümünü kullanmaya devam Office 365 İleti Şifrelemesi
+## <a name="can-i-still-use-the-previous-version-of-office-365-message-encryption"></a>Office 365 İleti Şifrelemesi'nin önceki sürümünü kullanmaya devam edebilir miyim?
 
-Office 365 İleti Şifrelemesi'in önceki sürümü şu anda kullanımdan kullanımdan kullanım dışı olmayacaktır; bununla birlikte, kullanıcıların korumalı iletileri doğrudan okuma olanağı da dahil olmak üzere hassas verileri herkes ve herhangi bir cihazda şifrelemeyi ve korumayı kolaylaştıran yeni Office 365 İleti Şifrelemesi sürümünde önemli geliştirmeler yaptık.  (Outlook, mobil ve web). 
+Office 365 İleti Şifrelemesi'nin önceki sürümü şu anda kullanımdan kaldırılmayacaktır, ancak Microsoft Purview İleti Şifrelemesi kullanıcıların korumalı iletileri doğrudan Outlook'ta (masaüstü, mobil ve  web).
   
-## <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Bu değişiklike hazırlanmak için ne yapabilirim?
+## <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Bu değişikliğe hazırlanmak için ne yapmam gerekiyor?
 
-Organizasyonunız şu anda OME Görüntüleyicisi uygulaması gerektiren alıcılara şifreli ekler gönderiyorsa, belgelerinizi ve eğitim kaynaklarınızı güncelleştirmeniz gerekir.
+Kuruluşunuz şu anda OME Görüntüleyicisi uygulamasını gerektiren alıcılara şifreli ekler gönderiyorsa, belgelerinizi ve eğitim kaynaklarınızı güncelleştirmeniz gerekir.
   
-Kurum gerek yeni Exchange gelişmiş özelliklerden yararlanabilmek için, posta akışı kurallarını ve geçerli sürümünü kullanmak üzere var olan E-posta akış kurallarını güncelleştirmenizi öneririz. Yeni OME özelliklerini bir kez ayardan sonra, alıcıların mobil cihazlarda şifrelenmiş iletileri okumak için OME Görüntüleyicisi uygulamasına ihtiyacı olmayacaktır.
+Kuruluşunuzun yeni ve geliştirilmiş özelliklerden yararlanabilmesi için mevcut Exchange posta akışı kurallarını Microsoft Purview İleti Şifrelemesi kullanacak şekilde güncelleştirmenizi öneririz. Microsoft Purview İleti Şifrelemesi ayarladıktan sonra, alıcıların mobil cihazlarda şifrelenmiş iletileri okumak için OME Görüntüleyicisi uygulamasına ihtiyacı olmaz.
   
-Microsoft, yeni OME özelliklerine, kurum için uygun olduğu anda bir plan yapmanızı önerir. Yönergeler için bkz[. Yeni özellik Office 365 İleti Şifrelemesi ayarlama](set-up-new-message-encryption-capabilities.md). Yeni becerilerin nasıl ilk kez çalışması hakkında daha fazla bilgi almak için [bkz. Office 365 İleti Şifrelemesi](ome.md).
-  
-
+Microsoft, kuruluşunuz için makul olduğu anda Microsoft Purview İleti Şifrelemesi'e geçmek için bir plan yapmanızı önerir. Yönergeler için bkz[. Microsoft Purview İleti Şifrelemesi ayarlama](set-up-new-message-encryption-capabilities.md). önce ileti şifrelemenin nasıl çalıştığı hakkında daha fazla bilgi edinmek istiyorsanız bkz. [İleti Şifrelemesi](ome.md).

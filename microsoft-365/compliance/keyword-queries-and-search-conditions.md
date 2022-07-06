@@ -21,19 +21,17 @@ search.appverid:
 ms.assetid: c4639c2e-7223-4302-8e0d-b6e10f1c3be3
 ms.custom:
 - seo-marvel-apr2020
-description: Microsoft 365'daki eBulma arama araçlarını kullanarak arama yapabileceğiniz e-posta ve belge özellikleri hakkında bilgi edinin.
-ms.openlocfilehash: ebea983caedc73c8471d6e460b58314bd76f1861
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Microsoft 365'teki eBulma arama araçlarını kullanarak arama yapabileceğiniz e-posta ve belge özellikleri hakkında bilgi edinin.
+ms.openlocfilehash: 3ff2143a170531b527850b4805cb9a79f10afb5e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012350"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623881"
 ---
 # <a name="keyword-queries-and-search-conditions-for-ediscovery"></a>eBulma için anahtar sözcük sorguları ve arama koşulları
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Bu makalede, e-posta öğelerinde arayabileceğiniz e-posta ve belge özellikleri ve Exchange Online sohbet konuşmaları Microsoft Teams ve Microsoft Purview uyumluluk portalındaki eBulma arama araçlarını kullanarak SharePoint ve OneDrive İş sitelerinde depolanan belgeler açıklanmaktadır. Buna İçerik arama, Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium) dahildir (eBulma'daki (Premium) eBulma aramalarına *koleksiyon* adı verilir). Bu özellikleri aramak için Güvenlik & Uyumluluk PowerShell'deki -ComplianceSearch cmdlet'lerini de kullanabilirsiniz **\***. Makalede ayrıca şunlar açıklanmaktadır:
+Bu makalede, Exchange Online e-posta öğelerinde ve Microsoft Teams sohbet konuşmalarında arama yapabileceğiniz e-posta ve belge özellikleri ile Microsoft Purview uyumluluk portalı'deki eBulma arama araçlarını kullanarak SharePoint ve OneDrive İş sitelerinde depolanan belgeler açıklanmaktadır. Buna İçerik arama, Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium) dahildir (eBulma(Premium) içindeki eBulma aramaları *koleksiyon* olarak adlandırılır). Bu özellikleri aramak için Güvenlik & Uyumluluk PowerShell'deki -ComplianceSearch cmdlet'lerini de kullanabilirsiniz **\***. Makalede ayrıca şunlar açıklanmaktadır:
 
 - Arama sonuçlarınızı daraltmak için Boole arama işleçlerini, arama koşullarını ve diğer arama sorgusu tekniklerini kullanma.
 - SharePoint ve OneDrive İş hassas veri türlerini ve özel hassas veri türlerini arama.
@@ -59,7 +57,7 @@ Aşağıdaki tabloda, uyumluluk portalındaki eBulma arama araçları kullanıla
 |---|---|---|---|
 |AttachmentNames|E-posta iletisine eklenen dosyaların adları.|`attachmentnames:annualreport.ppt` <p> `attachmentnames:annual*` <br/> `attachmentnames:.pptx`|annualreport.ppt adlı ekli bir dosyası olan iletiler. İkinci örnekte, joker karakter ( * ) kullanıldığında, ekin dosya adında "yıllık" sözcüğü bulunan iletiler döndürülüyor. Üçüncü örnek, pptx dosya uzantısına sahip tüm ekleri döndürür.|
 |Gizli|E-posta iletisinin Gizli alanı. <sup>1</sup>|`bcc:pilarp@contoso.com` <p> `bcc:pilarp` <p> `bcc:"Pilar Pinilla"`|Tüm örnekler Gizli alanına Pilar Pinilla eklenmiş iletileri döndürür.<br>([Bkz. Alıcı Genişletmesi](keyword-queries-and-search-conditions.md#recipient-expansion))|
-|Kategori|Aranacak kategoriler. Kategoriler kullanıcılar tarafından Outlook veya Web üzerinde Outlook (eski adıyla Outlook Web App) kullanılarak tanımlanabilir. Olası değerler: <ul><li>Mavi<li>Yeşil<li>Turuncu<li>Mor<li>Kırmızı<li>Sarı</li></ul>|`category:"Red Category"`|Kaynak posta kutularında kırmızı kategoriye atanmış iletiler.|
+|Kategori|Aranacak kategoriler. Kategoriler, kullanıcılar tarafından Outlook veya Web üzerinde Outlook (eski adıyla Outlook Web App) kullanılarak tanımlanabilir. Olası değerler: <ul><li>Mavi<li>Yeşil<li>Turuncu<li>Mor<li>Kırmızı<li>Sarı</li></ul>|`category:"Red Category"`|Kaynak posta kutularında kırmızı kategoriye atanmış iletiler.|
 |Cc|E-posta iletisinin Bilgi alanı. <sup>1</sup>|`cc:pilarp@contoso.com` <p> `cc:"Pilar Pinilla"`|Her iki örnekte de Bilgi alanında Pilar Pinilla'nın belirtildiği iletiler.<br>([Bkz. Alıcı Genişletmesi](keyword-queries-and-search-conditions.md#recipient-expansion))|
 |Folderid|Belirli bir posta kutusu klasörünün klasör kimliği (GUID). Bu özelliği kullanırsanız, belirtilen klasörün bulunduğu posta kutusunda arama yapmaya özen gösterin. Yalnızca belirtilen klasör aranacak. Klasördeki alt klasörler aranmayacak. Alt klasörleri aramak için, aramak istediğiniz alt klasörün Folderid özelliğini kullanmanız gerekir. <p> Folderid özelliğini arama ve belirli bir posta kutusunun klasör kimliklerini almak için betik kullanma hakkında daha fazla bilgi için bkz. [Hedeflenen koleksiyonlar için İçerik aramasını kullanma](use-content-search-for-targeted-collections.md).|`folderid:4D6DD7F943C29041A65787E30F02AD1F00000000013A0000` <p> `folderid:2370FB455F82FC44BE31397F47B632A70000000001160000 AND participants:garthf@contoso.com`|İlk örnek, belirtilen posta kutusu klasöründeki tüm öğeleri döndürür. İkinci örnek, belirtilen posta kutusu klasöründeki garthf@contoso.com tarafından gönderilen veya alınan tüm öğeleri döndürür.|
 |Kaynak|E-posta iletisinin göndereni. <sup>1</sup>|`from:pilarp@contoso.com` <p> `from:contoso.com`|Belirtilen kullanıcı tarafından gönderilen veya belirtilen bir etki alanından gönderilen iletiler.<br>([Bkz. Alıcı Genişletmesi](keyword-queries-and-search-conditions.md#recipient-expansion))|
@@ -67,12 +65,12 @@ Aşağıdaki tabloda, uyumluluk portalındaki eBulma arama araçları kullanıla
 |Önemi|Gönderenin ileti gönderirken belirtebileceği e-posta iletisinin önemi. Varsayılan olarak, gönderen önem derecesini **yüksek** veya **düşük** olarak belirlemediği sürece iletiler normal öneme sahip olarak gönderilir.|`importance:high` <p> `importance:medium` <p> `importance:low`|Yüksek önem, orta önem veya düşük önem olarak işaretlenmiş iletiler.|
 |IsRead|İletilerin okunup okunmadığını gösterir. **true** veya **false** değerlerini kullanın.|`isread:true` <p> `isread:false`|İlk örnek, IsRead özelliğinin **True** olarak ayarlandığı iletileri döndürür. İkinci örnek, IsRead özelliğinin **False** olarak ayarlandığı iletileri döndürür.|
 |ItemClass|Kuruluşunuzun Office 365 aktarmış olduğu belirli üçüncü taraf veri türlerini aramak için bu özelliği kullanın. Bu özellik için aşağıdaki söz dizimini kullanın:  `itemclass:ipm.externaldata.<third-party data type>*`|`itemclass:ipm.externaldata.Facebook* AND subject:contoso` <p> `itemclass:ipm.externaldata.Twitter* AND from:"Ann Beebe" AND "Northwind Traders"`|İlk örnek, Subject özelliğinde "contoso" sözcüğünü içeren Facebook öğelerini döndürür. İkinci örnek, Ann Beebe tarafından gönderilen ve "Northwind Traders" anahtar sözcüğünü içeren Twitter öğelerini döndürür. <p> ItemClass özelliği için üçüncü taraf veri türleri için kullanılacak değerlerin tam listesi için bkz. [Office 365 içeri aktarılan üçüncü taraf verilerinde arama yapmak için İçerik aramasını kullanma](use-content-search-to-search-third-party-data-that-was-imported.md).|
-|Tür|Aranacak e-posta iletisinin türü. Olası değerler: <p>  Kişiler <p>  Dokümanlar <p>  E-posta <p>  externaldata <p>  Faks <p>  Im <p>  Günlük <p>  Toplantı <p>  microsoftteams (Microsoft Teams sohbetlerden, toplantılardan ve aramalardan öğeleri döndürür) <p>  Notlar <p>  Mesaj <p>  rssfeeds <p>  Görev <p>  Sesli|`kind:email` <p> `kind:email OR kind:im OR kind:voicemail` <p> `kind:externaldata`|İlk örnek, arama ölçütlerine uyan e-posta iletilerini döndürür. İkinci örnek e-posta iletilerini, anlık ileti konuşmalarını (Skype Kurumsal konuşmalar ve Microsoft Teams sohbetler dahil) ve arama ölçütlerini karşılayan sesli mesajları döndürür. Üçüncü örnek, arama ölçütlerini karşılayan Twitter, Facebook ve Cisco Jabber gibi üçüncü taraf veri kaynaklarından Microsoft 365 posta kutularına aktarılan öğeleri döndürür. Daha fazla bilgi için bkz[. Office 365 üçüncü taraf verilerini arşivleme](https://www.microsoft.com/?ref=go).|
+|Tür|Aranacak e-posta iletisinin türü. Olası değerler: <p>  Kişiler <p>  Dokümanlar <p>  E-posta <p>  externaldata <p>  Faks <p>  Im <p>  Günlük <p>  Toplantı <p>  microsoftteams (Microsoft Teams'de sohbetlerden, toplantılardan ve aramalardan öğeleri döndürür) <p>  Notlar <p>  Mesaj <p>  rssfeeds <p>  Görev <p>  Sesli|`kind:email` <p> `kind:email OR kind:im OR kind:voicemail` <p> `kind:externaldata`|İlk örnek, arama ölçütlerine uyan e-posta iletilerini döndürür. İkinci örnek e-posta iletilerini, anlık ileti konuşmalarını (Microsoft Teams'de Skype Kurumsal konuşmalar ve sohbetler dahil) ve arama ölçütlerini karşılayan sesli mesajları döndürür. Üçüncü örnek Twitter, Facebook ve Cisco Jabber gibi üçüncü taraf veri kaynaklarından Microsoft 365'teki posta kutularına aktarılan ve arama ölçütlerini karşılayan öğeleri döndürür. Daha fazla bilgi için bkz[. Office 365 üçüncü taraf verilerini arşivleme](https://www.microsoft.com/?ref=go).|
 |Katılımcı|E-posta iletisindeki tüm kişiler alanları. Bu alanlar Kimden, Kime, Bilgi ve <sup>Gizli'dir.1</sup>|`participants:garthf@contoso.com` <p> `participants:contoso.com`|tarafından gönderilen veya garthf@contoso.com gönderilen iletiler. İkinci örnek, contoso.com etki alanındaki bir kullanıcı tarafından gönderilen veya kullanıcıya gönderilen tüm iletileri döndürür.<br>([Bkz. Alıcı Genişletmesi](keyword-queries-and-search-conditions.md#recipient-expansion))|
 |Alınan|E-posta iletisinin alıcı tarafından alındığı tarih.|`received:2021-04-15` <p> `received>=2021-01-01 AND received<=2021-03-31`|15 Nisan 2021'de alınan iletiler. İkinci örnek, 1 Ocak 2021 ile 31 Mart 2021 arasında alınan tüm iletileri döndürür.|
 |Alıcı|E-posta iletisindeki tüm alıcı alanları. Bu alanlar Kime, Bilgi ve <sup>Gizli'dir.1</sup>|`recipients:garthf@contoso.com` <p> `recipients:contoso.com`|garthf@contoso.com gönderilen iletiler. İkinci örnek, contoso.com etki alanındaki herhangi bir alıcıya gönderilen iletileri döndürür.<br>([Bkz. Alıcı Genişletmesi](keyword-queries-and-search-conditions.md#recipient-expansion))|
 |Gönderilen|Gönderen tarafından e-posta iletisinin gönderildiği tarih.|`sent:2021-07-01` <p> `sent>=2021-06-01 AND sent<=2021-07-01`|Belirtilen tarihte gönderilen veya belirtilen tarih aralığında gönderilen iletiler.|
-|Boyutu|Bir öğenin bayt cinsinden boyutu.|`size>26214400` <p> `size:1..1048567`|25 MB'tan büyük iletiler. İkinci örnek, boyutu 1 ile 1.048.567 bayt (1 MB) arasında olan iletileri döndürür.|
+|Boyut|Bir öğenin bayt cinsinden boyutu.|`size>26214400` <p> `size:1..1048567`|25 MB'tan büyük iletiler. İkinci örnek, boyutu 1 ile 1.048.567 bayt (1 MB) arasında olan iletileri döndürür.|
 |Konu|E-posta iletisinin konu satırındaki metin. <p> **Not:** Sorguda Subject özelliğini kullandığınızda, arama, konu satırının aradığınız metni içerdiği tüm iletileri döndürür. Başka bir deyişle, sorgu yalnızca tam eşleşmesi olan iletileri döndürmez. Örneğin, için  `subject:"Quarterly Financials"`arama yaparsanız sonuçlarınız "Quarterly Financials 2018" konusuna sahip iletileri içerir.|`subject:"Quarterly Financials"` <p> `subject:northwind`|Konu satırının metninin herhangi bir yerinde "Üç Aylık Finansallar" ifadesini içeren iletiler. İkinci örnek, konu satırında northwind sözcüğünü içeren tüm iletileri döndürür.|
 |Hedef|E-posta iletisinin To alanı. <sup>1</sup>|`to:annb@contoso.com` <p> `to:annb ` <br/> `to:"Ann Beebe"`|Tüm örnekler, Ann Beebe'nin To: satırında belirtildiği iletileri döndürür.|
 
@@ -81,24 +79,24 @@ Aşağıdaki tabloda, uyumluluk portalındaki eBulma arama araçları kullanıla
 
 ### <a name="recipient-expansion"></a>Alıcı genişletme
 
-Alıcı özelliklerinden herhangi birinde arama yaparken (Kimden, Kime, Bilgi, Gizli, Katılımcılar ve Alıcılar) Microsoft 365 her kullanıcının kimliğini Azure Active Directory (Azure AD) içinde arayarak genişletmeye çalışır.  Kullanıcı Azure AD bulunursa, sorgu kullanıcının e-posta adresini (veya UPN'sini), diğer adını, görünen adını ve LegacyExchangeDN'yi içerecek şekilde genişletilir. Örneğin, gibi `participants:ronnie@contoso.com` bir sorgu olarak `participants:ronnie@contoso.com OR participants:ronnie OR participants:"Ronald Nelson" OR participants:"<LegacyExchangeDN>"`genişletir.
+Alıcı özelliklerinden herhangi birinde arama yaparken (Kimden, Kime, Bilgi, Gizli, Katılımcılar ve Alıcılar), Microsoft 365 her kullanıcının kimliğini Azure Active Directory'de (Azure AD) arayarak genişletmeye çalışır.  Kullanıcı Azure AD bulunursa, sorgu kullanıcının e-posta adresini (veya UPN'sini), diğer adını, görünen adını ve LegacyExchangeDN'yi içerecek şekilde genişletilir. Örneğin, gibi `participants:ronnie@contoso.com` bir sorgu olarak `participants:ronnie@contoso.com OR participants:ronnie OR participants:"Ronald Nelson" OR participants:"<LegacyExchangeDN>"`genişletir.
 
 Alıcının genişlemesini önlemek için e-posta adresinin sonuna joker karakter (yıldız) ekleyin ve azaltılmış bir etki alanı adı kullanın; örneğin, `participants:"ronnie@contoso*"` e-posta adresini çift tırnak işaretiyle çevrelemeye özen gösterin.
 
-Ancak, arama sorgusunda alıcının genişlemesini engellemenin, arama sonuçlarında ilgili öğelerin döndürülmemesine neden olabileceğini unutmayın. Exchange'daki e-posta iletileri, alıcı alanlarında farklı metin biçimleriyle kaydedilebilir. Alıcı genişletmesi, farklı metin biçimleri içerebilecek iletiler döndürerek bu gerçeğin azaltılmasına yardımcı olmak için tasarlanmıştır. Bu nedenle, alıcının genişlemesini önlemek, arama sorgusunun araştırmanızla ilgili olabilecek tüm öğeleri döndürmemesine neden olabilir.
+Ancak, arama sorgusunda alıcının genişlemesini engellemenin, arama sonuçlarında ilgili öğelerin döndürülmemesine neden olabileceğini unutmayın. Exchange'deki e-posta iletileri, alıcı alanlarında farklı metin biçimleriyle kaydedilebilir. Alıcı genişletmesi, farklı metin biçimleri içerebilecek iletiler döndürerek bu gerçeğin azaltılmasına yardımcı olmak için tasarlanmıştır. Bu nedenle, alıcının genişlemesini önlemek, arama sorgusunun araştırmanızla ilgili olabilecek tüm öğeleri döndürmemesine neden olabilir.
 
 > [!NOTE]
 > Alıcı genişletmesi nedeniyle arama sorgusu tarafından döndürülen öğeleri gözden geçirmeniz veya azaltmanız gerekiyorsa eBulma (Premium) kullanmayı göz önünde bulundurun. İletileri arayabilir (alıcı genişletme özelliğinden yararlanarak), bunları bir gözden geçirme kümesine ekleyebilir ve ardından sonuçları gözden geçirmek veya daraltmak için gözden geçirme kümesi sorgularını veya filtrelerini kullanabilirsiniz. Daha fazla bilgi için bkz. [Servis talebi için veri toplama](collecting-data-for-ediscovery.md) ve [Gözden geçirme kümesindeki verileri sorgulama](review-set-search.md).
 
 ## <a name="searchable-site-properties"></a>Aranabilir site özellikleri
 
-Aşağıdaki tabloda, Microsoft Purview uyumluluk portalındaki eBulma arama araçları kullanılarak veya **New-ComplianceSearch** veya **Set-ComplianceSearch** cmdlet'i kullanılarak aranabilecek SharePoint ve OneDrive İş özelliklerinden bazıları listelenmiştir. Tabloda her  _özellik için property:value_ söz dizimi örneği ve örnekler tarafından döndürülen arama sonuçlarının açıklaması yer alır.
+Aşağıdaki tabloda, Microsoft Purview uyumluluk portalı eBulma arama araçları kullanılarak veya **New-ComplianceSearch** veya **Set-ComplianceSearch** cmdlet'i kullanılarak aranabilecek bazı SharePoint ve OneDrive İş özellikleri listelenmiştir. Tabloda her  _özellik için property:value_ söz dizimi örneği ve örnekler tarafından döndürülen arama sonuçlarının açıklaması yer alır.
 
-Aranabilecek SharePoint özelliklerin tam listesi için bkz. [SharePoint'da gezinilen ve yönetilen özelliklere genel bakış](/SharePoint/technical-reference/crawled-and-managed-properties-overview). **Sorgulanabilir** sütununda **Evet** ile işaretlenmiş özellikler aranabilir.
+Aranabilecek SharePoint özelliklerinin tam listesi için bkz. [SharePoint'te gezinilen ve yönetilen özelliklere genel bakış](/SharePoint/technical-reference/crawled-and-managed-properties-overview). **Sorgulanabilir** sütununda **Evet** ile işaretlenmiş özellikler aranabilir.
 
 |Özellik|Özellik açıklaması|Örnek|Örnekler tarafından döndürülen arama sonuçları|
 |---|---|---|---|
-|Yazar|Office belgedeki yazar alanı, belge kopyalandığında kalıcı olur. Örneğin, bir kullanıcı bir belge oluşturursa ve belgeyi başka birine e-postayla SharePoint, belge özgün yazarı korur. Bu özellik için kullanıcının görünen adını kullandığınızdan emin olun.|`author:"Garth Fort"`|Garth Fort tarafından yazılan tüm belgeler.|
+|Yazar|Bir belge kopyalandığında kalıcı olan Office belgelerindeki yazar alanı. Örneğin, bir kullanıcı bir belge oluşturursa ve belgeyi SharePoint'e yükleyen başka birine e-postayla bildirirse, belge özgün yazarı korur. Bu özellik için kullanıcının görünen adını kullandığınızdan emin olun.|`author:"Garth Fort"`|Garth Fort tarafından yazılan tüm belgeler.|
 |Contenttype|Öğe, Belge veya Video gibi bir öğenin SharePoint içerik türü.|`contenttype:document`|Tüm belgeler döndürülür.|
 |Oluşturuldu|Bir öğenin oluşturulduğu tarih.|`created>=2021-06-01`|1 Haziran 2021 veya sonrasında oluşturulan tüm öğeler.|
 |Createdby|Öğeyi oluşturan veya karşıya yükleyen kişi. Bu özellik için kullanıcının görünen adını kullandığınızdan emin olun.|`createdby:"Garth Fort"`|Garth Fort tarafından oluşturulan veya yüklenen tüm öğeler.|
@@ -108,11 +106,11 @@ Aranabilecek SharePoint özelliklerin tam listesi için bkz. [SharePoint'da gezi
 |Dosyaadı|Dosyanın adı.|`filename:"marketing plan"` <p> `filename:estimate`|İlk örnek, başlıkta tam olarak "pazarlama planı" tümceciği bulunan dosyaları döndürür. İkinci örnek, dosya adında "tahmin" sözcüğü bulunan dosyaları döndürür.|
 |LastModifiedTime|Bir öğenin son değiştirildiği tarih.|`lastmodifiedtime>=2021-05-01` <p> `lastmodifiedtime>=2021-05-01 AND lastmodifiedtime<=2021-06-01`|İlk örnek, 1 Mayıs 2021 veya sonrasında değiştirilmiş öğeleri döndürür. İkinci örnek, 1 Mayıs 2021 ile 1 Haziran 2021 arasında değiştirilen öğeleri döndürür.|
 |Modifiedby|Bir öğeyi en son değiştiren kişi. Bu özellik için kullanıcının görünen adını kullandığınızdan emin olun.|`modifiedby:"Garth Fort"`|En son Garth Fort tarafından değiştirilen tüm öğeler.|
-|Yol|SharePoint veya OneDrive İş sitedeki belirli bir sitenin yolu (URL). <p> Yalnızca belirtilen siteden öğe döndürmek için url'nin sonuna sondakini `/` eklemeniz gerekir; örneğin, `path: "https://contoso.sharepoint.com/sites/international/"` <p> Sitedeki klasörlerde bulunan ve path özelliğinde belirttiğiniz öğeleri döndürmek için URL'nin sonuna eklemeniz `/*` gerekir; örneğin,  `path: "https://contoso.sharepoint.com/Shared Documents/*"` <p> **Not:** `Path` OneDrive konumları aramak için özelliğinin kullanılması, arama sonuçlarında .png, .tiff veya .wav dosyaları gibi medya dosyalarını döndürmez. OneDrive klasörlerdeki medya dosyalarını aramak için arama sorgunuzda farklı bir site özelliği kullanın. <br/>|`path:"https://contoso-my.sharepoint.com/personal/garthf_contoso_com/"` <p> `path:"https://contoso-my.sharepoint.com/personal/garthf_contoso_com/*" AND filename:confidential`|İlk örnek, belirtilen OneDrive İş sitesindeki tüm öğeleri döndürür. İkinci örnek, belirtilen sitede (ve sitedeki klasörlerde) dosya adında "gizli" sözcüğünü içeren belgeleri döndürür.|
+|Yol|SharePoint veya OneDrive İş sitesindeki belirli bir sitenin yolu (URL). <p> Yalnızca belirtilen siteden öğe döndürmek için url'nin sonuna sondakini `/` eklemeniz gerekir; örneğin, `path: "https://contoso.sharepoint.com/sites/international/"` <p> Sitedeki klasörlerde bulunan ve path özelliğinde belirttiğiniz öğeleri döndürmek için URL'nin sonuna eklemeniz `/*` gerekir; örneğin,  `path: "https://contoso.sharepoint.com/Shared Documents/*"` <p> **Not:** Özelliği kullanarak `Path` OneDrive konumlarında arama yapmak, arama sonuçlarında .png, .tiff veya .wav dosyaları gibi medya dosyalarını döndürmez. OneDrive klasörlerindeki medya dosyalarını aramak için arama sorgunuzda farklı bir site özelliği kullanın. <br/>|`path:"https://contoso-my.sharepoint.com/personal/garthf_contoso_com/"` <p> `path:"https://contoso-my.sharepoint.com/personal/garthf_contoso_com/*" AND filename:confidential`|İlk örnek, belirtilen OneDrive İş sitesindeki tüm öğeleri döndürür. İkinci örnek, belirtilen sitede (ve sitedeki klasörlerde) dosya adında "gizli" sözcüğünü içeren belgeleri döndürür.|
 |SharedWithUsersOWSUser|Belirtilen kullanıcıyla paylaşılan ve kullanıcının OneDrive İş sitesindeki **Benimle paylaşılan** sayfasında görüntülenen belgeler. Bunlar, kuruluşunuzdaki diğer kişiler tarafından belirtilen kullanıcıyla açıkça paylaşılmış belgelerdir. SharedWithUsersOWSUser özelliğini kullanan bir arama sorgusuyla eşleşen belgeleri dışarı aktardığınızda, belgeler belgeyi belirtilen kullanıcıyla paylaşan kişinin özgün içerik konumundan dışarı aktarılır. Daha fazla bilgi için bkz. [Kuruluşunuzda paylaşılan site içeriğini arama](#searching-for-site-content-shared-within-your-organization).|`sharedwithusersowsuser:garthf` <p> `sharedwithusersowsuser:"garthf@contoso.com"`|Her iki örnek de Garth Fort ile açıkça paylaşılan ve Garth Fort'un OneDrive İş hesabının **Benimle paylaşılan** sayfasında görünen tüm iç belgeleri döndürür.|
 |Site|Kuruluşunuzdaki bir sitenin veya site grubunun URL'si.|`site:"https://contoso-my.sharepoint.com"` <p> `site:"https://contoso.sharepoint.com/sites/teams"`|İlk örnek, kuruluştaki tüm kullanıcılar için OneDrive İş sitelerindeki öğeleri döndürür. İkinci örnek, tüm ekip sitelerindeki öğeleri döndürür.|
-|Boyutu|Bir öğenin bayt cinsinden boyutu.|`size>=1` <p> `size:1..10000`|İlk örnek 1 bayttan büyük öğeleri döndürür. İkinci örnek, boyutu 1 ile 10.000 bayt arasında olan öğeleri döndürür.|
-|Başlık|Belgenin başlığı. Title özelliği, Microsoft Office belgelerde belirtilen meta verilerdir. Belgenin dosya adından farklıdır.|`title:"communication plan"`|bir Office belgesinin Başlık meta veri özelliğinde "iletişim planı" ifadesini içeren tüm belgeler.|
+|Boyut|Bir öğenin bayt cinsinden boyutu.|`size>=1` <p> `size:1..10000`|İlk örnek 1 bayttan büyük öğeleri döndürür. İkinci örnek, boyutu 1 ile 10.000 bayt arasında olan öğeleri döndürür.|
+|Başlık|Belgenin başlığı. Title özelliği, Microsoft Office belgelerinde belirtilen meta verilerdir. Belgenin dosya adından farklıdır.|`title:"communication plan"`|Bir Office belgesinin Başlık meta veri özelliğinde "iletişim planı" ifadesini içeren tüm belgeler.|
 
 ## <a name="searchable-contact-properties"></a>Aranabilir kişi özellikleri
 
@@ -124,7 +122,7 @@ Aşağıdaki tabloda, dizine alınan ve eBulma arama araçlarını kullanarak ar
 |Özellik|Özellik açıklaması|
 |---|---|
 |BusinessAddress|**İş Adresi** özelliğindeki adres. Özelliği, kişi özellikleri sayfasındaki **İş** adresi olarak da adlandırılır.|
-|İş Telefonu|**İş Telefon** numarası özelliklerinden herhangi birindeki telefon numarası.|
+|İş Telefonu|**İş Telefonu** numarası özelliklerinden herhangi birindeki telefon numarası.|
 |Şirketadı|**Şirket** özelliğindeki ad.|
 |Bölüm|**Department** özelliğindeki ad.|
 |Displayname|Kişinin görünen adı. Bu, kişinin **Tam Ad** özelliğindeki addır.|
@@ -152,7 +150,7 @@ Arayabileceğiniz hassas bilgi türlerinin listesini görmek için uyumluluk por
 
 ### <a name="limitations-for-searching-sensitive-data-types"></a>Hassas veri türlerini arama sınırlamaları
 
-- Özel hassas bilgi türlerini aramak için özelliğinde hassas bilgi türünün `SensitiveType` kimliğini belirtmeniz gerekir. Özel bir hassas bilgi türünün adını kullanmak (önceki bölümde yerleşik hassas bilgi türleri örneğinde gösterildiği gibi) hiçbir sonuç döndürmez. Yerleşik **ve** özel hassas bilgi türlerini ayırt etmek için uyumluluk merkezindeki **Hassas bilgi türleri** sayfasındaki (veya PowerShell'deki Publisher özelliği) **Publisher** sütununu kullanın. Yerleşik hassas veri türleri **, Publisher** özelliği için değerine `Microsoft Corporation` sahiptir.
+- Özel hassas bilgi türlerini aramak için özelliğinde hassas bilgi türünün `SensitiveType` kimliğini belirtmeniz gerekir. Özel bir hassas bilgi türünün adını kullanmak (önceki bölümde yerleşik hassas bilgi türleri örneğinde gösterildiği gibi) hiçbir sonuç döndürmez. Yerleşik **ve özel hassas bilgi türleri** arasında ayrım yapmak için uyumluluk merkezindeki (veya PowerShell'deki Publisher özelliğindeki) Hassas bilgi türleri sayfasındaki **Publisher** **sütununu** kullanın. Yerleşik hassas veri türlerinin `Microsoft Corporation` **Publisher** özelliği için değeri vardır.
 
   Kuruluşunuzdaki özel hassas veri türlerinin adını ve kimliğini görüntülemek için Güvenlik & Uyumluluk PowerShell'de aşağıdaki komutu çalıştırın:
 
@@ -162,7 +160,7 @@ Arayabileceğiniz hassas bilgi türlerinin listesini görmek için uyumluluk por
 
   Ardından arama özelliğindeki `SensitiveType` kimliği kullanarak özel hassas veri türünü içeren belgeleri döndürebilirsiniz; örneğin, `SensitiveType:7e13277e-6b04-3b68-94ed-1aeb9d47de37`
 
-- Exchange Online posta kutularında bekleyen hassas verileri aramak için hassas bilgi türlerini ve `SensitiveType` arama özelliğini kullanamazsınız. Buna 1:1 sohbet iletileri, 1:N grup sohbet iletileri ve Microsoft Teams ekip kanalı konuşmaları dahildir çünkü bu içeriğin tümü posta kutularında depolanır. Ancak, aktarım sırasındaki hassas e-posta verilerini korumak için veri kaybı önleme (DLP) ilkelerini kullanabilirsiniz. Daha fazla bilgi için bkz. [Veri kaybını önleme hakkında bilgi edinme](dlp-learn-about-dlp.md) ve [Kişisel verileri arama ve bulma](/compliance/regulatory/gdpr).
+- Exchange Online posta kutularında bekleyen hassas verileri aramak için hassas bilgi türlerini ve `SensitiveType` arama özelliğini kullanamazsınız. Bu içeriğin tümü posta kutularında depolandığından 1:1 sohbet iletilerini, 1:N grup sohbet iletilerini ve Microsoft Teams'deki ekip kanalı konuşmalarını içerir. Ancak, aktarım sırasındaki hassas e-posta verilerini korumak için veri kaybı önleme (DLP) ilkelerini kullanabilirsiniz. Daha fazla bilgi için bkz. [Veri kaybını önleme hakkında bilgi edinme](dlp-learn-about-dlp.md) ve [Kişisel verileri arama ve bulma](/compliance/regulatory/gdpr).
 
 ## <a name="search-operators"></a>Arama işleçleri
 
@@ -213,9 +211,9 @@ Aynı aramada posta kutularını ve siteleri ararken ortak özellikleri kullanar
 |Durum|Açıklama|
 |---|---|
 |Tarih|E-posta için, iletinin bir alıcı tarafından alındığı veya gönderen tarafından gönderildiği tarih. Belgeler için, belgenin son değiştirildiği tarih.|
-|Gönderen/Yazar|E-posta için, ileti gönderen kişi. Belgeler için, Office belgelerden yazar alanında alıntı yapılan kişi. Virgülle ayırarak birden fazla ad yazabilirsiniz. İki veya daha fazla değer **OR** işleci tarafından mantıksal olarak bağlanır.<br>([Bkz. Alıcı Genişletmesi](keyword-queries-and-search-conditions.md#recipient-expansion))|
+|Gönderen/Yazar|E-posta için, ileti gönderen kişi. Belgeler için, Office belgelerinden yazar alanında alıntı yapılan kişi. Virgülle ayırarak birden fazla ad yazabilirsiniz. İki veya daha fazla değer **OR** işleci tarafından mantıksal olarak bağlanır.<br>([Bkz. Alıcı Genişletmesi](keyword-queries-and-search-conditions.md#recipient-expansion))|
 |Boyut (bayt cinsinden)|Hem e-posta hem de belgeler için öğenin boyutu (bayt cinsinden).|
-|Konu/Başlık|E-posta için, iletinin konu satırındaki metin. Belgeler için, belgenin başlığı. Daha önce açıklandığı gibi Title özelliği, Microsoft Office belgelerde belirtilen meta verilerdir. Birden çok konu/başlık değerinin adını virgülle ayırarak yazabilirsiniz. İki veya daha fazla değer **OR** işleci tarafından mantıksal olarak bağlanır. <p> **Not**: Bu arama koşulu kullanılırken tırnak işaretleri otomatik olarak eklendiğinden, bu koşulun değerlerine çift tırnak işareti eklemeyin. Değere tırnak işareti eklerseniz, koşul değerine iki çift tırnak eklenir ve arama sorgusu hata döndürür.|
+|Konu/Başlık|E-posta için, iletinin konu satırındaki metin. Belgeler için, belgenin başlığı. Daha önce açıklandığı gibi, Title özelliği Microsoft Office belgelerinde belirtilen meta verilerdir. Birden çok konu/başlık değerinin adını virgülle ayırarak yazabilirsiniz. İki veya daha fazla değer **OR** işleci tarafından mantıksal olarak bağlanır. <p> **Not**: Bu arama koşulu kullanılırken tırnak işaretleri otomatik olarak eklendiğinden, bu koşulun değerlerine çift tırnak işareti eklemeyin. Değere tırnak işareti eklerseniz, koşul değerine iki çift tırnak eklenir ve arama sorgusu hata döndürür.|
 |Bekletme etiketi|Hem e-posta hem de belgeler için, iletilere ve belgelere otomatik olarak veya el ile uygulanabilen bekletme etiketleri. Bekletme etiketleri, kayıtları bildirmek ve etiket tarafından belirtilen saklama ve silme kurallarını zorunlu kılarak içeriğin veri yaşam döngüsünü yönetmenize yardımcı olmak için kullanılabilir. Bekletme etiketi adının bir bölümünü yazabilir ve joker karakter kullanabilir veya tam etiket adını yazabilirsiniz. Bekletme etiketleri hakkında daha fazla bilgi için bkz. [Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin](retention.md).|
 
 ### <a name="conditions-for-mail-properties"></a>Posta özellikleri koşulları
@@ -226,7 +224,7 @@ Posta kutularını veya ortak klasörleri ararken posta özelliklerini kullanara
 |---|---|
 |İleti türü|Aranacak ileti türü. Bu, Kind e-posta özelliğiyle aynı özelliktir. Olası değerler: <ul><li>Kişiler</li><li>Dokümanlar</li><li>E-posta</li><li>externaldata</li><li>Faks</li><li>Im</li><li>Günlük</li><li>Toplantı</li><li>microsoftteams</li><li>Notlar</li><li>Mesaj</li><li>rssfeeds</li><li>Görev</li><li>Sesli</li></ul>|
 |Katılımcı|E-posta iletisindeki tüm kişiler alanları. Bu alanlar Kimden, Kime, Bilgi ve Gizli alanlarıdır. ([Bkz. Alıcı Genişletmesi](keyword-queries-and-search-conditions.md#recipient-expansion))|
-|Tür|E-posta öğesinin ileti sınıfı özelliği. Bu, ItemClass e-posta özelliğiyle aynı özelliktir. Aynı zamanda çok değerli bir koşuldur. Birden çok ileti sınıfı seçmek için **CTRL** tuşunu basılı tutun ve ardından koşula eklemek istediğiniz açılan listede iki veya daha fazla ileti sınıfına tıklayın. Listede seçtiğiniz her ileti sınıfı, ilgili arama sorgusundaki **OR** işleci tarafından mantıksal olarak bağlanır. <p> Exchange tarafından kullanılan ve **İleti sınıfı** listesinde seçebileceğiniz ileti sınıflarının listesi için bkz [. Öğe Türleri ve İleti Sınıfları](/office/vba/outlook/Concepts/Forms/item-types-and-message-classes).|
+|Tür|E-posta öğesinin ileti sınıfı özelliği. Bu, ItemClass e-posta özelliğiyle aynı özelliktir. Aynı zamanda çok değerli bir koşuldur. Birden çok ileti sınıfı seçmek için **CTRL** tuşunu basılı tutun ve ardından koşula eklemek istediğiniz açılan listede iki veya daha fazla ileti sınıfına tıklayın. Listede seçtiğiniz her ileti sınıfı, ilgili arama sorgusundaki **OR** işleci tarafından mantıksal olarak bağlanır. <p> Exchange tarafından kullanılan ve İleti sınıfı listesinden seçebileceğiniz ileti sınıflarının (ve karşılık gelen ileti **sınıfı** kimliklerinin) listesi için bkz [. Öğe Türleri ve İleti Sınıfları](/office/vba/outlook/Concepts/Forms/item-types-and-message-classes).|
 |Alınan|E-posta iletisinin alıcı tarafından alındığı tarih. Bu, Alınan e-posta özelliğiyle aynı özelliktir.|
 |Alıcı|E-posta iletisindeki tüm alıcı alanları. Bu alanlar Kime, Bilgi ve Gizli alanlarıdır. ([Bkz. Alıcı Genişletmesi](keyword-queries-and-search-conditions.md#recipient-expansion))|
 |Gönderen|E-posta iletisinin göndereni.|
@@ -240,8 +238,8 @@ SharePoint ve OneDrive İş sitelerinde belge ararken belge özelliklerini kulla
 
 |Durum|Açıklama|
 |---|---|
-|Yazar|Office belgedeki yazar alanı, belge kopyalandığında kalıcı olur. Örneğin, bir kullanıcı bir belge oluşturursa ve belgeyi başka birine e-postayla SharePoint, belge özgün yazarı korur.|
-|Başlık|Belgenin başlığı. Title özelliği, Office belgelerde belirtilen meta verilerdir. Belgenin dosya adından farklıdır.|
+|Yazar|Bir belge kopyalandığında kalıcı olan Office belgelerindeki yazar alanı. Örneğin, bir kullanıcı bir belge oluşturursa ve belgeyi SharePoint'e yükleyen başka birine e-postayla bildirirse, belge özgün yazarı korur.|
+|Başlık|Belgenin başlığı. Title özelliği, Office belgelerinde belirtilen meta verilerdir. Belgenin dosya adından farklıdır.|
 |Oluşturuldu|Belgenin oluşturulduğu tarih.|
 |Son değiştirme|Belgenin son değiştirildiği tarih.|
 |Dosya türü|Dosyanın uzantısı; örneğin, docx, one, pptx veya xlsx. Bu, FileExtension site özelliğiyle aynı özelliktir. <p> **Not:** Bir arama sorgusuna **Eşittir** veya **Eşittir** işlecini kullanan bir Dosya türü koşulu eklerseniz, bir dosya türünün tüm sürümlerini döndürmek için bir ön ek araması (dosya türünün sonuna joker karakter ( \* ) ekleyerek) kullanamazsınız. Bunu yaparsanız joker karakter yoksayılır. Örneğin koşulunu `Equals any of doc*`eklerseniz, yalnızca uzantısına `.doc` sahip dosyalar döndürülür. uzantısına `.docx` sahip dosyalar döndürülmeyecek. Bir dosya türünün tüm sürümlerini döndürmek için anahtar sözcük sorgusunda *property:value* çiftini kullandı; örneğin, `filetype:doc*`.|
@@ -298,11 +296,11 @@ Arama koşullarını kullanırken aşağıdakileri göz önünde bulundurun.
 
 ### <a name="examples-of-using-conditions-in-search-queries"></a>Arama sorgularında koşulları kullanma örnekleri
 
-Aşağıdaki örneklerde bir arama sorgusunun gui tabanlı sürümü ve koşullar, seçili aramanın ayrıntılar bölmesinde görüntülenen arama sorgusu söz dizimi (**Get-ComplianceSearch** cmdlet'i tarafından da döndürülür) ve ilgili KQL sorgusunun mantığı gösterilir.
+Aşağıdaki örneklerde, arama sorgusunun koşullu GUI tabanlı sürümü, seçili aramanın ayrıntılar bölmesinde görüntülenen arama sorgusu söz dizimi ( **Get-ComplianceSearch** cmdlet'i tarafından da döndürülür) ve ilgili KQL sorgusunun mantığı gösterilir.
 
 #### <a name="example-1"></a>Örnek 1
 
-Bu örnek, kredi kartı numarası içeren ve en son 1 Ocak 2021'de değiştirilmiş SharePoint ve OneDrive İş sitelerindeki belgeleri döndürür.
+Bu örnek, SharePoint ve OneDrive İş sitelerinde kredi kartı numarası içeren ve en son 1 Ocak 2021'de değiştirilmiş belgeleri döndürür.
 
 **GUI**:
 
@@ -358,7 +356,7 @@ Bazı özel karakterler arama dizinine dahil edilmez ve bu nedenle aranamaz. Bu,
 
 ## <a name="searching-for-site-content-shared-with-external-users"></a>Dış kullanıcılarla paylaşılan site içeriğini arama
 
-Kuruluşunuzun dışındaki kişilerle paylaşılan SharePoint ve OneDrive İş sitelerinde depolanan belgeleri aramak için uyumluluk merkezindeki eBulma arama araçlarını da kullanabilirsiniz. Bu, kuruluşunuzun dışında paylaşılmakta olan hassas veya özel bilgileri belirlemenize yardımcı olabilir. Bir anahtar sözcük sorgusunda  `ViewableByExternalUsers` özelliğini kullanarak bunu yapabilirsiniz. Bu özellik, aşağıdaki paylaşım yöntemlerinden biri kullanılarak dış kullanıcılarla paylaşılan belgeleri veya siteleri döndürür:
+SharePoint'te depolanan belgeleri ve kuruluşunuzun dışındaki kişilerle paylaşılan siteleri OneDrive İş için uyumluluk merkezindeki eBulma arama araçlarını da kullanabilirsiniz. Bu, kuruluşunuzun dışında paylaşılmakta olan hassas veya özel bilgileri belirlemenize yardımcı olabilir. Bir anahtar sözcük sorgusunda  `ViewableByExternalUsers` özelliğini kullanarak bunu yapabilirsiniz. Bu özellik, aşağıdaki paylaşım yöntemlerinden biri kullanılarak dış kullanıcılarla paylaşılan belgeleri veya siteleri döndürür:
 
 - Kullanıcıların kuruluşunuzda kimliği doğrulanmış kullanıcı olarak oturum açmasını gerektiren paylaşım daveti.
 - Bu bağlantıya sahip olan herkesin kimliğinin doğrulanması gerekmeden kaynağa erişmesine olanak tanıyan anonim bir konuk bağlantısı.
@@ -391,7 +389,7 @@ Bu senaryolarda,  `ViewableByExternalUsers` site veya belge kitaplığı yeniden
 
 Daha önce açıklandığı gibi özelliğini kullanarak  `SharedWithUsersOWSUser` kuruluşunuzdaki kişiler arasında paylaşılan belgeleri arayabilirsiniz. Bir kişi, kuruluşunuzdaki başka bir kullanıcıyla dosya (veya klasör) paylaştığında, paylaşılan dosyanın bağlantısı, dosyanın paylaşıldığı kişinin OneDrive İş hesabındaki **Benimle** paylaşılan sayfasında görünür. Örneğin, Sara Davis ile paylaşılan belgeleri aramak için sorgusunu  `SharedWithUsersOWSUser:"sarad@contoso.com"`kullanabilirsiniz. Bu aramanın sonuçlarını dışarı aktarırsanız, özgün belgeler (Belgeleri Sara ile paylaşan kişinin içerik konumunda bulunur) indirilir.
 
-Özelliği kullanılırken  `SharedWithUsersOWSUser` arama sonuçlarında döndürülmek için belgelerin belirli bir kullanıcıyla açıkça paylaşılması gerekir. Örneğin, bir kişi OneDrive hesabında bir belge paylaştığında, belgeyi herkesle (kuruluşun içinde veya dışında) paylaşma, yalnızca kuruluş içindeki kişilerle paylaşma veya belirli bir kişiyle paylaşma seçeneğine sahiptir. OneDrive'daki **Paylaş** penceresinin üç paylaşım seçeneğini gösteren ekran görüntüsü.
+Özelliği kullanılırken  `SharedWithUsersOWSUser` arama sonuçlarında döndürülmek için belgelerin belirli bir kullanıcıyla açıkça paylaşılması gerekir. Örneğin, bir kişi OneDrive hesabında bir belge paylaştığında, belgeyi herkesle (kuruluşun içinde veya dışında) paylaşma, yalnızca kuruluş içindeki kişilerle paylaşma veya belirli bir kişiyle paylaşma seçeneğine sahiptir. Burada, OneDrive'daki **Paylaş** penceresinin üç paylaşım seçeneğini gösteren ekran görüntüsü yer alır.
 
 ![Yalnızca belirli kişilerle paylaşılan dosyalar SharedWithUsersOWSUser özelliğini kullanan bir arama sorgusu tarafından döndürülür.](../media/469a4b61-68bd-4ab0-b612-ab6302973886.png)
 
@@ -405,13 +403,13 @@ Yalnızca üçüncü seçenek kullanılarak paylaşılan belgeler ( **Belirli ki
 kind:im
 ```
 
-Önceki arama sorgusu, Microsoft Teams sohbetlerini de döndürür. Bunu önlemek için, aşağıdaki anahtar sözcük sorgusunu kullanarak arama sonuçlarını yalnızca Skype Kurumsal konuşmaları içerecek şekilde daraltabilirsiniz:
+Önceki arama sorgusu, Microsoft Teams'den gelen sohbetleri de döndürür. Bunu önlemek için, aşağıdaki anahtar sözcük sorgusunu kullanarak arama sonuçlarını yalnızca Skype Kurumsal konuşmaları içerecek şekilde daraltabilirsiniz:
 
 ```powershell
 kind:im AND subject:conversation
 ```
 
-Önceki anahtar sözcük sorgusu, Skype Kurumsal konuşmalar "Konuşma" sözcüğüyle başlayan bir Konu satırıyla e-posta iletileri olarak kaydedildiğinden, Microsoft Teams sohbetleri dışlar.
+Önceki anahtar sözcük sorgusu Microsoft Teams'deki sohbetleri dışlar çünkü Skype Kurumsal konuşmalar "Konuşma" sözcüğüyle başlayan bir Konu satırıyla e-posta iletileri olarak kaydedilir.
 
 Belirli bir tarih aralığında gerçekleşen Skype Kurumsal konuşmaları aramak için aşağıdaki anahtar sözcük sorgusunu kullanın:
 
@@ -421,17 +419,17 @@ kind:im AND subject:conversation AND (received=startdate..enddate)
 
 ## <a name="character-limits-for-searches"></a>Aramalar için karakter sınırları
 
-SharePoint sitelerde ve OneDrive hesaplarında içerik ararken arama sorguları için 4.000 karakter sınırı vardır.
+SharePoint sitelerinde ve OneDrive hesaplarında içerik ararken arama sorguları için 4.000 karakter sınırı vardır.
 Arama sorgusundaki toplam karakter sayısı şu şekilde hesaplanır:
 
 - Anahtar sözcük arama sorgusundaki karakterler (hem kullanıcı hem de filtre alanları dahil) bu sınıra göre sayılır.
-- Herhangi bir konum özelliğindeki karakterler (tüm SharePoint sitelerin URL'leri veya aranmakta olan OneDrive konumlar gibi) bu sınıra göre sayılır.
+- Herhangi bir konum özelliğindeki karakterler (tüm SharePoint sitelerinin URL'leri veya aranmakta olan OneDrive konumları gibi) bu sınıra göre sayılır.
 - Tüm arama izinleri filtrelerindeki karakterler, sınıra göre arama sayısını çalıştıran kullanıcıya uygulanır.
 
 Karakter sınırları hakkında daha fazla bilgi için bkz. [eBulma arama sınırları](limits-for-content-search.md#search-limits).
 
 > [!NOTE]
-> 4.000 karakter sınırı İçerik arama, eBulma (Standart) ve eBulma (Premium) için geçerlidir.
+> İçerik arama, eBulma (Standart) ve eBulma (Premium) için 4.000 karakter sınırı geçerlidir.
 
 ## <a name="search-tips-and-tricks"></a>Arama ipuçları ve püf noktaları
 
@@ -451,6 +449,6 @@ Karakter sınırları hakkında daha fazla bilgi için bkz. [eBulma arama sını
 
 - Belirli bir özellik değeriyle işaretlenmiş içeriği arama sonuçlarınızdan dışlamak için, özelliğin adının önüne eksi işareti (-) koyun. Örneğin, `-from:"Sara Davis"` Sara Davis tarafından gönderilen tüm iletileri hariç tutar.
 
-- İleti türüne göre öğeleri dışarı aktarabilirsiniz. Örneğin, Microsoft Teams Skype konuşmaları ve sohbetleri dışarı aktarmak için söz dizimini `kind:im`kullanın. Yalnızca e-posta iletilerini döndürmek için kullanabilirsiniz `kind:email`. Microsoft Teams'de sohbetleri, toplantıları ve aramaları döndürmek için kullanın`kind:microsoftteams`.
+- İleti türüne göre öğeleri dışarı aktarabilirsiniz. Örneğin, Microsoft Teams'de Skype konuşmalarını ve sohbetlerini dışarı aktarmak için söz dizimini `kind:im`kullanın. Yalnızca e-posta iletilerini döndürmek için kullanabilirsiniz `kind:email`. Microsoft Teams'de sohbetleri, toplantıları ve aramaları döndürmek için kullanın `kind:microsoftteams`.
 
 - Daha önce açıklandığı gibi, sitelerde arama yaparken yalnızca belirtilen sitedeki öğeleri döndürmek için özelliğini kullanırken `path` URL'nin sonuna sondakini `/` eklemeniz gerekir. Sondaki `/`öğesini eklemezseniz, benzer yol adına sahip bir sitedeki öğeler de döndürülür. Örneğin, kullanırsanız `path:sites/HelloWorld` veya `sites/HelloWorld_West` adlı `sites/HelloWorld_East` sitelerdeki öğeler de döndürülür. Yalnızca HelloWorld sitesinden öğe döndürmek için kullanmanız `path:sites/HelloWorld/`gerekir.

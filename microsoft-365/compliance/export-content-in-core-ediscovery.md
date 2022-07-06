@@ -17,25 +17,23 @@ search.appverid:
 - MOE150
 - MET150
 ms.custom: admindeeplinkCOMPLIANCE
-description: Microsoft 365'da eBulma (Standart) durumundan içerik dışarı aktarmayı ve indirmeyi açıklar.
-ms.openlocfilehash: 550bdda2c8b2f8afb0e7b4934f5337d7ee323d3a
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+description: Microsoft 365'teki bir eBulma (Standart) servis talebine ait içeriği dışarı aktarma ve indirme işlemlerini açıklar.
+ms.openlocfilehash: 144bb7248753894c72accebbf3e87ab2d7d82d2d
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318668"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634279"
 ---
 # <a name="export-content-from-a-ediscovery-standard-case"></a>eBulma (Standart) durumundan içeriği dışarı aktarma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview eBulma (Standart) olayıyla ilişkilendirilmiş bir arama başarıyla çalıştırıldıktan sonra, arama sonuçlarını dışarı aktarabilirsiniz. Arama sonuçlarını dışarı aktardığınızda, posta kutusu öğeleri PST dosyalarına veya tek tek iletiler olarak indirilir. SharePoint ve OneDrive İş sitelerdeki içeriği dışarı aktardığınızda, yerel Office belgelerin ve diğer belgelerin kopyaları dışarı aktarılır. Dışarı aktarılan her öğe hakkında bilgi içeren bir Results.csv dosyası ve her arama sonucu hakkında bilgi içeren bir bildirim dosyası (XML biçiminde) de dışarı aktarılır.
+Microsoft Purview eKeşif (Standart) servis talebiyle ilişkilendirilmiş bir arama başarıyla çalıştırıldıktan sonra, arama sonuçlarını dışarı aktarabilirsiniz. Arama sonuçlarını dışarı aktardığınızda, posta kutusu öğeleri PST dosyalarına veya tek tek iletiler olarak indirilir. SharePoint ve OneDrive İş sitelerindeki içeriği dışarı aktardığınızda, yerel Office belgelerinin ve diğer belgelerin kopyaları dışarı aktarılır. Dışarı aktarılan her öğe hakkında bilgi içeren bir Results.csv dosyası ve her arama sonucu hakkında bilgi içeren bir bildirim dosyası (XML biçiminde) de dışarı aktarılır.
   
 ## <a name="export-search-results"></a>Arama sonuçlarını dışarı aktarma
 
 1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> gidin ve uygun eBulma izinlerine atanmış kullanıcı hesabının kimlik bilgilerini kullanarak oturum açın.
 
-2. Uyumluluk portalının sol gezinti bölmesinde **Tümünü göster'i** ve ardından **eBulma** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=2174007" target="_blank">**(Standart)'**</a>ı seçin.
+2. Uyumluluk portalının sol gezinti bölmesinde **Tümünü göster'i** ve ardından **eKeşif** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2174007" target="_blank">**eBulma (Standart)'**</a>ı seçin.
 
 3. **eBulma (Standart)** sayfasında, ayrı tutmayı oluşturmak istediğiniz servis talebinin adına tıklayın.
 
@@ -71,4 +69,4 @@ Microsoft Purview eBulma (Standart) olayıyla ilişkilendirilmiş bir arama baş
 
 - Dışarı aktarmayı yeniden başlatırsanız, dışarı aktarma işini oluşturan arama sorgularına yapılan değişiklikler alınan arama sonuçlarını etkilemez. Dışarı aktarmayı yeniden başlattığınızda, dışarı aktarma işi oluşturulduğunda çalıştırılan birleşik arama sorgusu işi yeniden çalıştırılır.
 
-- Ayrıca dışarı aktarmayı yeniden başlatırsanız, Azure Depolama konumuna kopyalanan arama sonuçları önceki sonuçların üzerine yazar. Kopyalanan önceki sonuçlar indirilmeyecek.
+- Ayrıca, dışarı aktarmayı yeniden başlatırsanız, Azure Depolama konumuna kopyalanan arama sonuçları önceki sonuçların üzerine yazar. Kopyalanan önceki sonuçlar indirilmeyecek.

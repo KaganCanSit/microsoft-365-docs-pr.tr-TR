@@ -1,5 +1,5 @@
 ---
-title: Özel Hassas Bilgi Türü Filtreleri Başvurusu
+title: Özel hassas bilgi türü filtreleri referansı
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -14,23 +14,23 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Bu makalede, özel hassas bilgi türlerine kodlanmış filtrelerin listesi görüntülenir.
-ms.openlocfilehash: bcecc13776b20f8b4c61eaf499a99397931fe498
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+description: Bu makalede, özel hassas bilgi türlerine kodlanabilen filtrelerin listesi gösterilir.
+ms.openlocfilehash: 79e4a2520ab922248f65adf1b0506219987fe832
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015516"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631969"
 ---
-# <a name="custom-sensitive-information-type-filters-reference"></a>Özel hassas bilgi türü filtreleri başvurusu
+# <a name="custom-sensitive-information-type-filters-reference"></a>Özel hassas bilgi türü filtreleri referansı
 
-Microsoft'ta, özel hassas bilgi türleri (SIT) oluştururken filtreler veya diğer denetimleri tanımlayabilirsiniz.
+Microsoft'ta, özel hassas bilgi türleri (SIT) oluştururken filtreler veya başka denetimler tanımlayabilirsiniz.
 
-## <a name="list-of-supported-filters-and-use-cases"></a>Desteklenen filtrelerin ve kullanım durumlarının listesi
+## <a name="list-of-supported-filters-and-use-cases"></a>Desteklenen filtrelerin ve kullanım örneklerinin listesi
 
 ### <a name="alldigitssame-exclude"></a>AllDigitsSame Exclude
 
-Açıklama: 111-111-111 gibi, tüm basamakları yinelenen basamaklar olarak 111111111 eşleşmeleri dışlamana olanak sağlar
+Açıklama: 111111111 veya 111-111-111 gibi tüm basamakları yinelenen basamak olarak içeren eşleşmeleri hariç tutmanıza olanak tanır
 
 Filtreleri tanımlama
 ```xml
@@ -39,7 +39,7 @@ Filtreleri tanımlama
 </Filters>
 ```
 
-Bunu varlık düzeyindeki kural paketinde kullanma
+Varlık düzeyinde kural paketinde kullanma
 ```xml
 <Entity id="50842eb7-edc8-4019-85dd-5a5c1f2bb085" patternsProximity="300" recommendedConfidence="85"  filters="ssn_filters">
       <Pattern confidenceLevel="85">
@@ -48,7 +48,7 @@ Bunu varlık düzeyindeki kural paketinde kullanma
 </Entity>
 ```
 
-Bunu desen düzeyindeki kural paketinde kullanma
+Kural paketinde desen düzeyinde kullanma
 ```xml
 <Entity id="50842eb7-edc8-4019-85dd-5a5c1f2bb085" patternsProximity="300" recommendedConfidence="85">
       <Pattern confidenceLevel="85"  filters="ssn_filters">
@@ -59,9 +59,9 @@ Bunu desen düzeyindeki kural paketinde kullanma
 
 ### <a name="textmatchfilter-startswith"></a>TextMatchFilter StartsWith 
 
-Açıklama: Varlık için başlangıç karakterlerini tanımlamaya olanak sağlar. bu modelin, dahil etmek ve hariç tutmak için iki çeşitlemesi vardır.
+Açıklama: Varlığın başlangıç karakterlerini tanımlamanızı sağlar. dahil edip hariç tutmak üzere iki çeşidi vardır.
 
-Örneğin, aşağıdaki gibi bir listede 0500, 91, 091, 010 ile başlayan sayıları dışarıda tutmak için:
+Örneğin, aşağıdaki gibi bir listede 0500, 91, 091, 010 ile başlayan sayıları dışlamak için:
 
 - 0500-4500-027
 - 91564721450
@@ -70,7 +70,7 @@ Açıklama: Varlık için başlangıç karakterlerini tanımlamaya olanak sağla
 - 1000-3265-9874
 - 0100-7892-3012
 
-Aşağıdaki xml'yi kullanabilirsiniz
+Aşağıdaki xml dosyasını kullanabilirsiniz
 
 ```xml
 <Filters id="phone_number_filters_exc">
@@ -96,7 +96,7 @@ Aşağıdaki xml'yi kullanabilirsiniz
 - 1000-3265-9874
 - 0100-7892-3012
 
-Aşağıdaki xml'yi kullanabilirsiniz
+Aşağıdaki xml dosyasını kullanabilirsiniz
 
 ```xml
 <Filters id="phone_filters_inc">
@@ -106,16 +106,16 @@ Aşağıdaki xml'yi kullanabilirsiniz
 
 ### <a name="textmatchfilter-endswith"></a>TextMatchFilter EndsWith 
 
-Açıklama: Varlığa ilişkin bitiş karakterlerini tanımlamaya olanak sağlar. 
+Açıklama: Varlığın bitiş karakterlerini tanımlamanızı sağlar. 
 
-Örneğin, aşağıdaki gibi bir listede 0500.91.091, 0100 ile biten sayıları dışarıda tutmak için:
+Örneğin, aşağıdaki gibi bir listede 0500.91.091, 0100 ile biten sayıları dışlamak için:
 
 - 1234567891
 - 1234-5678-0091
 - 1234.4567.7091
 - 1234-8091-4564
 
-Aşağıdaki xml'yi kullanabilirsiniz
+Aşağıdaki xml dosyasını kullanabilirsiniz
 
 ```xml
 <Filters id="phone_number_filters_exc">
@@ -139,7 +139,7 @@ Aşağıdaki xml'yi kullanabilirsiniz
 - 1234.4567.7091
 - 1234-8091-4564
 
-Aşağıdaki xml'yi kullanabilirsiniz
+Aşağıdaki xml dosyasını kullanabilirsiniz
 
 ```xml
 <Filters id="phone_filters_inc">
@@ -149,15 +149,15 @@ Aşağıdaki xml'yi kullanabilirsiniz
 
 ### <a name="textmatchfilter-full"></a>TextMatchFilter Full
 
-Açıklama: Bazı eşleşmeleri engelleyerek kuralı tetiklemesini engellemeye olanak sağlar. Örneğin, geçerli 4111111111111111 kartı eşleşmeleri listesinden bu listede yer alan geçerli kredi kartlarını dışlayın.
+Açıklama: Kuralı tetiklemelerini önlemek için belirli eşleşmeleri yasaklamanıza izin verir. Örneğin, 4111111111111111 geçerli kredi kartı eşleşmeleri listesinden hariç tutun.
 
-Örneğin, aşağıdaki gibi bir listede yer alan 4111111111111111 3241891031113111 kredi kartı numaralarını hariç tutmak için:
+Örneğin, 4111111111111111 ve 3241891031113111 gibi kredi kartı numaralarını aşağıdaki gibi bir listede hariç tutmak için:
 
 - 4485 3647 3952 7352
 - 4111111111111111
 - 3241891031113111
 
-Aşağıdaki xml'yi kullanabilirsiniz
+Aşağıdaki xml dosyasını kullanabilirsiniz
 
 ```xml
 <Filters id="cc_number_filters_exc">
@@ -172,13 +172,13 @@ Aşağıdaki xml'yi kullanabilirsiniz
   </Keyword>
 ```
 
-Örneğin, aşağıdaki gibi bir listeye 4111111111111111 3241891031113111 kredi kartı numaraları eklemek için:
+Örneğin, 4111111111111111 ve 3241891031113111 gibi kredi kartı numaralarını aşağıdaki gibi bir listeye eklemek için:
 
 - 4485 3647 3952 7352
 - 4111111111111111
 - 3241891031113111
 
-Aşağıdaki xml'yi kullanabilirsiniz
+Aşağıdaki xml dosyasını kullanabilirsiniz
 
 ```xml
 <Filters id="cc_filters_inc">
@@ -186,17 +186,17 @@ Aşağıdaki xml'yi kullanabilirsiniz
 </Filter>
 ```
 
-### <a name="textmatchfilter-prefix"></a>TextMatchFilter Prefix
+### <a name="textmatchfilter-prefix"></a>TextMatchFilter Ön Eki
 
-Açıklama: Her zaman dahil edilecek veya hariç tutulacak önceki karakterleri tanımlamaya olanak sağlar. Örneğin, Kredi kartı numarasının önünde 'Sipariş Kimliği:' varsa geçerli eşleşmelerden eşleşmeyi kaldırın.
+Açıklama: Her zaman dahil edilmesi veya dışlanması gereken önceki karakterleri tanımlamanıza olanak tanır. Örneğin, Kredi kartı numarasından önce 'Sipariş Kimliği:' varsa, eşleşmeyi geçerli eşleşmelerden kaldırın.
 
-Örneğin, numara içeren telefon numaraları Telefon **ve** beni telefon numarasıdan önce dizelerle aramak için,  aşağıdaki gibi bir listede:
+Örneğin, Telefon numarası olan telefon numaralarının oluşumlarını dışlamak ve telefon **numarasından** önceki dizelerde **beni şu** şekilde bir listede aramak için:
 
-- Telefon 091-8974-653278
+- Telefon numarası 091-8974-653278
 - Telefon 45-124576532-123
 - 45-124576532-123
 
-Aşağıdaki xml'yi kullanabilirsiniz
+Aşağıdaki xml dosyasını kullanabilirsiniz
 
 ```xml
 <Filters id="cc_number_filters_exc">
@@ -210,12 +210,12 @@ Aşağıdaki xml'yi kullanabilirsiniz
   </Keyword>
 ```
 
-Örneğin, kredi kartı numarasından önce kredi **kartı** ve **kart #** dizeleri içeren tekrarları şu şekilde listeye eklemek için:
+Örneğin, kredi kartı numarasından önce **kredi kartı** ve **kart #** dizeleri olan oluşumları aşağıdaki gibi bir listeye eklemek için:
 
 - Kredi kartı 45-124576532-123 
 - 45-124576532-123 (telefon numarası olabilir)
 
-Aşağıdaki xml'yi kullanabilirsiniz
+Aşağıdaki xml dosyasını kullanabilirsiniz
 
 ```xml
 <Filters id="cc_filters_inc">
@@ -232,14 +232,14 @@ Aşağıdaki xml'yi kullanabilirsiniz
 
 ### <a name="textmatchfilter-suffix"></a>TextMatchFilter Soneki
 
-Açıklama: Her zaman dahil edilecek veya hariç tutulacak aşağıdaki karakterleri tanımlamaya olanak sağlar. Örneğin, Kredi kartı numarasından sonra '/xuid' varsa, geçerli eşleşmelerden eşleşmeyi kaldırın.
+Açıklama: Her zaman dahil edilmesi veya dışlanması gereken aşağıdaki karakterleri tanımlamanıza olanak tanır. Örneğin, Kredi kartı numarasının ardından '/xuid' geliyorsa, eşleşmeyi geçerli eşleşmelerden kaldırın.
 
-Örneğin, bir listede sonek olarak dört basamaktan beş basamak daha varsa, en çok yineler şunların gibi olur:
+Örneğin, aşağıdaki gibi bir listede sonek olarak dört basamak içeren beş örnek daha varsa, en üst dışlama oluşumları:
 
 - 1234-5678-9321 4500 9870 6321 48925566
 - 1234-5678-9321
 
-Aşağıdaki xml'yi kullanabilirsiniz
+Aşağıdaki xml dosyasını kullanabilirsiniz
 
 ```xml
 <Filters id="cc_number_filters_exc">
@@ -248,12 +248,12 @@ Aşağıdaki xml'yi kullanabilirsiniz
 
   <Regexid="Regex_false_positives_suffix">(\d{4}){5,}</Regex>
 ```
-Örneğin, bu listede olduğu gibi, / **xuidsuffix tarafından takip** edilen oluşumları hariç tutmak için:
+Örneğin, / **xuidsuffix** tarafından takip edilen oluşumları dışlamak için, örneğin bu listedekilerden biri:
 
 - 1234-5678-9321 /xuid
 - 1234-5678-9321
 
-Bu xml'yi kullanabilirsiniz
+Bu xml dosyasını kullanabilirsiniz
 
 ```xml
 <Filters id="cc_number_filters_exc">
@@ -267,13 +267,13 @@ Bu xml'yi kullanabilirsiniz
   </Keyword>
 ```
 
-Örneğin, bir oluşumun bu listede ikisi gibi süresi **cvv** veya süresi dolsa içermesi gerekir:
+Örneğin, bir oluşumu yalnızca **cvv** tarafından takip edilirse veya **süresi dolarsa** (bu listedeki iki örnek gibi) dahil etmek için:
 
 - 45-124576532-123 
 - 45-124576532-123 cvv 966
-- 45-124576532-123 son kullanma tarihi 23/03
+- 45-124576532-123'un süresi 03/23 doluyor
 
-Bu xml'yi kullanabilirsiniz
+Bu xml dosyasını kullanabilirsiniz
 
 ```xml
 <Filters id="cc_filters_inc">
@@ -290,13 +290,13 @@ Bu xml'yi kullanabilirsiniz
 
 ## <a name="using-filters-in-rule-packages"></a>Kural paketlerinde filtre kullanma
 
-Filtreler BÜTÜN SIT'ta veya belirli bir düzende tanımlanabilir. Aşağıda bazı kod parçacıkları örnekleri verilmiştir. 
+Filtreler tüm SIT üzerinde veya bir desen üzerinde tanımlanabilir. Burada bazı kod parçacıkları örnekleri verilmiştir. 
 
 ### <a name="at-sensitive-information-type-level"></a>Hassas bilgi türü düzeyinde
 
-Varlık- Filtreler tüm alt düzenleri kapsıyor
+Varlık filtreleri - tüm alt desenleri kapsar
 
-Filtreler, o **varlıkta yer alan** herhangi bir desene / hassas türe göre sınıflandırılan tüm örneklere uygulanır
+Filtreler, bu varlıktaki /hassas türdeki desenlerden herhangi biri tarafından sınıflandırılan **tüm** örneklere uygulanır
 
 ```xml
 <Entity id="6443b88f-2808-482a-8e1a-3ae5026645e1" patternsProximity="300" recommendedConfidence="85" filters="CompositeFiltersAtEntityLevel">
@@ -306,11 +306,11 @@ Filtreler, o **varlıkta yer alan** herhangi bir desene / hassas türe göre sı
 </Entity>
 ```
 
-### <a name="at-the-individual-pattern-of-the-sensitive-information-type-level"></a>Hassas bilgi türü düzeyinin tek tek deseninde
+### <a name="at-the-individual-pattern-of-the-sensitive-information-type-level"></a>Hassas bilgi türü düzeyinin bireysel deseninde
 
 Yalnızca desen düzeyinde filtreler.
 
-Filtre, desene göre örneklerde uygulanır.
+Filtre, desenle eşleşen örneklere uygulanır.
 
 ```xml
 <Entity id="50842eb7-edc8-4019-85dd-5a5c1f2bb085" patternsProximity="300" recommendedConfidence="85">
@@ -321,11 +321,11 @@ Filtre, desene göre örneklerde uygulanır.
 ```
 
 
-### <a name="at-sensitive-information-type-level-and-an-additional-filter-on-some-of-the-patterns-of-that-entity"></a>Hassas bilgi türü düzeyinde ve o varlığın bazı desenleri üzerinde ek bir filtre
+### <a name="at-sensitive-information-type-level-and-an-additional-filter-on-some-of-the-patterns-of-that-entity"></a>Hassas bilgi türü düzeyinde ve bu varlığın bazı desenleri üzerinde ek bir filtre
 
-Varlık + desenli Filtreler
+Varlık + desendeki filtreler
 
-Filtreler, o varlık **/hassas** tür içinde yer alan düzenlerden herhangi biri tarafından sınıflandırılan tüm örneklere uygulanır. Desen düzeyi filtresi, bu modelle eşlenmiş olan örnekleri filtrelemektedir.
+Filtreler, bu varlık/hassas türdeki desenlerden herhangi biri tarafından sınıflandırılan **tüm** örneklere uygulanır. Desen düzeyi filtresi, bu desenle eşleşen örnekleri filtreler.
 
 ```xml
 <Entity id="6443b88f-2808-482a-8e1a-3ae5026645e1" patternsProximity="300" recommendedConfidence="85" filters="CompositeFiltersAtEntityLevel">
@@ -339,7 +339,7 @@ Filtreler, o varlık **/hassas** tür içinde yer alan düzenlerden herhangi bir
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- [Veri kaybını önleme hakkında bilgi](dlp-learn-about-dlp.md)
+- [Microsoft Purview Veri Kaybı Önleme hakkında bilgi edinin](dlp-learn-about-dlp.md)
 
 - [Hassas bilgi türü varlık tanımları](sensitive-information-type-entity-definitions.md)
 

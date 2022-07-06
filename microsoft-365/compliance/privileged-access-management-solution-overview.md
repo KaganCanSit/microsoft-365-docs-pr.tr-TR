@@ -1,6 +1,6 @@
 ---
-title: Microsoft 365'de ayrıcalıklı erişim Microsoft 365
-description: Farklı bir yıl boyunca insider risk özelliklerini yapılandırmayı Microsoft 365.
+title: Ayrıcalıklı erişim yönetimi
+description: Microsoft Purview genelinde insider risk özelliklerini yapılandırmayı öğrenin.
 keywords: Microsoft 365, insider riski, uyumluluk
 ms.localizationpriority: medium
 ms.service: O365-seccomp
@@ -16,29 +16,29 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 - m365solution-scenario
-ms.openlocfilehash: fe229318d3eaabfe9a20fb83d9c42d06651a5f85
-ms.sourcegitcommit: be074f57e33c811bb3857043152825209bc8af07
+ms.openlocfilehash: 67857a2ad2ac57543ce20dd8eab544cf7dcfef42
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "62988795"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639874"
 ---
-# <a name="privileged-access-management-in-microsoft-365"></a>Microsoft 365'de ayrıcalıklı erişim Microsoft 365
+# <a name="privileged-access-management"></a>Ayrıcalıklı erişim yönetimi
 
-Bazı kullanıcıların ayakta duran hassas bilgilere veya Microsoft Exchange Online kritik ağ yapılandırma ayarlarına erişmesi, güvenliği tehlikeye atılmış hesaplar veya iç tehdit etkinlikleri için olası bir patikadır. Ayrıcalıklı erişim yönetimi, kurum ayarlarınızın ihlallere karşı korunmasına ve hassas verilere ayakta erişimi veya kritik yapılandırma ayarlarına erişimi sınırlaarak uyumluluk için en iyi yöntemleri karşılamaya yardımcı olur. Yöneticilerde sabit erişim yerine, yükseltilmiş izinlere gerek olan görevlere tam zamanlı erişim kuralları uygulanır. Exchange Online'ta güvenlik Exchange Online yönetiminin etkinleştirilmesi Microsoft 365 sıfır ayaktaki ayrıcalıklarla çalışmasına olanak sağlar ve ayaktaki yönetim erişimi güvenlik açıklarına karşı bir savunma katmanı sağlar.
+Microsoft Exchange Online'da bazı kullanıcıların hassas bilgilere veya kritik ağ yapılandırma ayarlarına ayakta erişmesi, güvenliği aşılmış hesaplar veya iç tehdit etkinlikleri için olası bir yoldur. Microsoft Purview Privileged Access Management, kuruluşunuzun ihlallere karşı korunmasına yardımcı olur ve hassas verilere veya kritik yapılandırma ayarlarına erişimi sınırlayarak uyumluluk en iyi yöntemlerini karşılamaya yardımcı olur. Yöneticilerin sürekli erişime sahip olması yerine, yükseltilmiş izinlere ihtiyaç duyan görevler için tam zamanında erişim kuralları uygulanır. Microsoft 365'te Exchange Online için ayrıcalıklı erişim yönetiminin etkinleştirilmesi, kuruluşunuzun sıfır ayakta ayrıcalıklarla çalışmasına ve yönetim erişim açıklarına karşı bir savunma katmanı sağlamasına olanak tanır.
 
-## <a name="configure-privileged-access-management-for-microsoft-365"></a>E-posta için ayrıcalıklı erişim yönetimini Microsoft 365
+## <a name="configure-privileged-access-management"></a>Ayrıcalıklı erişim yönetimini yapılandırma
 
-Ayrıcalı erişim yönetimini yapılandırmak için aşağıdaki adımları kullanın:
+Kuruluşunuz için ayrıcalıklı erişim yönetimini yapılandırmak için aşağıdaki adımları kullanın:
 
 ![Insider risk çözümü ayrıcalıklı erişim yönetimi adımları.](../media/ir-solution-pam-steps.png)
 
-1. [Microsoft 365'ta ayrıcalıklı](privileged-access-management-overview.md) erişim yönetimi hakkında Microsoft 365
-2. Onaylayan [grubu oluşturma](privileged-access-management-configuration.md#step-1-create-an-approvers-group)
-3. Ayrıcalıklı [erişim yönetimini etkinleştirme](privileged-access-management-configuration.md#step-2-enable-privileged-access)
-4. Erişim [ilkesi oluşturma](privileged-access-management-configuration.md#step-3-create-an-access-policy)
-5. Ayrıcalıklı erişim isteklerini [gönderme/onaylama](privileged-access-management-configuration.md#step-4-submitapprove-privileged-access-requests)
+1. [Ayrıcalıklı erişim yönetimi](privileged-access-management.md) hakkında bilgi edinin
+2. [Onaylayan grubu](privileged-access-management-configuration.md#step-1-create-an-approvers-group) oluşturma
+3. [Ayrıcalıklı erişim yönetimini](privileged-access-management-configuration.md#step-2-enable-privileged-access) etkinleştirme
+4. [Erişim ilkesi](privileged-access-management-configuration.md#step-3-create-an-access-policy) oluşturma
+5. [Ayrıcalıklı erişim isteklerini](privileged-access-management-configuration.md#step-4-submitapprove-privileged-access-requests) gönderme/onaylama
 
 ## <a name="more-information-about-privileged-access-management"></a>Ayrıcalıklı erişim yönetimi hakkında daha fazla bilgi
 
-- [Ayrıcalıklı erişim yönetimi hakkında sık sorulan sorular](privileged-access-management-overview.md#frequently-asked-questions)
+- [Ayrıcalıklı erişim yönetimi hakkında sık sorulan sorular](privileged-access-management.md#frequently-asked-questions)

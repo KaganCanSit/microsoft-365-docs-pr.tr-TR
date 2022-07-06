@@ -13,16 +13,14 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 74194d4bca71350c180799e071936b75044a6b4e
-ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
+ms.openlocfilehash: 631df77a6f10c15dafcb78e58a715a029d32bb73
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65663700"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627557"
 ---
 # <a name="double-key-encryption"></a>Çift Anahtarlı Şifreleme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > *Şunlar için geçerlidir: Microsoft Purview Çift Anahtar Şifrelemesi, [Microsoft Purview](https://www.microsoft.com/microsoft-365/business/compliance-management), [Azure Information Protection](https://azure.microsoft.com/pricing/)*
 >
@@ -30,7 +28,7 @@ ms.locfileid: "65663700"
 
 > *Hizmet açıklaması: [Microsoft Purview](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
 
-Çift Anahtar Şifrelemesi (DKE), korumalı içeriğe erişmek için iki anahtarı birlikte kullanır. Microsoft bir anahtarı Microsoft Azure depolar ve siz diğer anahtarı tutarsınız. Anahtarlarınızdan birinin tam denetimini Çift Anahtar Şifrelemesi hizmetini kullanarak sürdürebilirsiniz. Son derece hassas içeriğinize Azure Information Protection birleşik etiketleme istemcisini kullanarak koruma uygularsınız.
+Çift Anahtar Şifrelemesi (DKE), korumalı içeriğe erişmek için iki anahtarı birlikte kullanır. Microsoft, bir anahtarı Microsoft Azure içinde tutar, siz de diğer anahtarı elinizde bulundurursunuz. Anahtarlarınızdan birinin tam denetimini Çift Anahtar Şifrelemesi hizmetini kullanarak sürdürebilirsiniz. Son derece hassas içeriğinize Azure Information Protection birleşik etiketleme istemcisini kullanarak koruma uygularsınız.
 
 Çift Anahtarlı Şifreleme hem bulut hem de şirket içi dağıtımları destekler. Bu dağıtımlar, korumalı verileri depoladığınız her yerde şifrelenmiş verilerin donuk kalmasını sağlamaya yardımcı olur.
 
@@ -44,7 +42,7 @@ Varsayılan, bulut tabanlı kiracı kök anahtarları hakkında daha fazla bilgi
 - Microsoft Delve
 - Ediscovery
 - İçerik arama ve dizin oluşturma
-- birlikte yazma işlevselliği dahil Office Web Apps
+- Birlikte yazma işlevselliği de dahil olmak üzere Office Web Apps
 
 Microsoft Bilgi Koruması (MIP) SDK'sı aracılığıyla DKE ile tümleştirilmemiş tüm dış uygulamalar veya hizmetler şifrelenmiş veriler üzerinde eylem gerçekleştiremez.
 
@@ -60,21 +58,21 @@ Kuruluşunuz aşağıdaki gereksinimlerden herhangi birine sahipse, içeriğiniz
 
 ## <a name="system-and-licensing-requirements-for-dke"></a>DKE için sistem ve lisans gereksinimleri
 
-**Çift Anahtar şifrelemesi** Microsoft 365 E5 ile birlikte gelir. Microsoft 365 E5 lisansınız yoksa [deneme](https://aka.ms/M365E5ComplianceTrial) sürümüne kaydolabilirsiniz. Bu lisanslar hakkında daha fazla bilgi için bkz. [Microsoft 365 güvenlik & uyumluluğu için lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+**Çift Anahtar şifrelemesi** Microsoft 365 E5 ile birlikte gelir. Microsoft 365 E5 lisansınız yoksa [deneme](https://aka.ms/M365E5ComplianceTrial) sürümüne kaydolabilirsiniz. Bu lisanslar hakkında daha fazla bilgi için bkz. [Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
 **Azure Information Protection**. DKE duyarlılık etiketleriyle çalışır ve Azure Information Protection gerektirir.
 
 DKE duyarlılık etiketleri, Office Masaüstü Uygulamaları'ndaki AIP Birleşik Etiketleme istemcisindeki duyarlılık düğmesi aracılığıyla son kullanıcıların kullanımına sunulur. Korumalı belgeleri korumak ve kullanmak istediğiniz her istemci bilgisayara bu önkoşulları yükleyin.
 
-**Windows kurumsal** sürüm 2009 veya üzeri (Word, PowerPoint ve Excel'nin masaüstü sürümleri) için Microsoft Office Uygulamalar.
+Windows'da kurumsal sürüm 2009 veya üzeri (Word, PowerPoint ve Excel'in masaüstü sürümleri) **için Microsoft Office Apps**.
 
 **Azure Information Protection Birleşik Etiketleme İstemcisi** sürüm 2.7.93.0 veya üzeri. Birleşik Etiketleme istemcisini [Microsoft indirme merkezinden](https://www.microsoft.com/download/details.aspx?id=53018) indirin ve yükleyin.
 
 ## <a name="supported-environments-for-storing-and-viewing-dke-protected-content"></a>DKE korumalı içeriği depolamak ve görüntülemek için desteklenen ortamlar
 
-**Desteklenen uygulamalar**. [word, Excel](https://www.microsoft.com/microsoft-365/business/microsoft-365-apps-for-enterprise-product) ve PowerPoint dahil olmak üzere Windows istemciler Kurumlar için Microsoft 365 Uygulamaları.
+**Desteklenen uygulamalar**. Windows'da Word, Excel ve PowerPoint gibi istemcileri [Kurumlar için Microsoft 365 Uygulamaları](https://www.microsoft.com/microsoft-365/business/microsoft-365-apps-for-enterprise-product).
 
-**Çevrimiçi içerik desteği**. Çift Anahtar Şifrelemesi ile korunan belgeleri ve dosyaları hem Microsoft SharePoint hem de OneDrive İş çevrimiçi olarak depolayabilirsiniz. Bu konumlara yüklemeden önce DKE ile belgeleri ve dosyaları desteklenen uygulamalar tarafından etiketlemeniz ve korumanız gerekir. Şifrelenmiş içeriği e-postayla paylaşabilirsiniz, ancak şifrelenmiş belgeleri ve dosyaları çevrimiçi görüntüleyemezsiniz. Bunun yerine, yerel bilgisayarınızda desteklenen masaüstü uygulamalarını ve istemcilerini kullanarak korumalı içeriği görüntülemeniz gerekir.
+**Çevrimiçi içerik desteği**. Çift Anahtar Şifrelemesi ile korunan belgeleri ve dosyaları hem Microsoft SharePoint'te hem de OneDrive İş çevrimiçi olarak depolayabilirsiniz. Bu konumlara yüklemeden önce DKE ile belgeleri ve dosyaları desteklenen uygulamalar tarafından etiketlemeniz ve korumanız gerekir. Şifrelenmiş içeriği e-postayla paylaşabilirsiniz, ancak şifrelenmiş belgeleri ve dosyaları çevrimiçi görüntüleyemezsiniz. Bunun yerine, yerel bilgisayarınızda desteklenen masaüstü uygulamalarını ve istemcilerini kullanarak korumalı içeriği görüntülemeniz gerekir.
 
 ## <a name="overview-of-deploying-dke"></a>DKE dağıtımına genel bakış
 
@@ -84,7 +82,7 @@ DKE'yi ayarlamak için bu genel adımları izleyeceksiniz. Bu adımları tamamla
 
 2. Çift Anahtar Şifrelemesi ile bir etiket oluşturun. Microsoft Purview uyumluluk portalı **Bilgi koruması'na** gidin ve Çift AnahtarLı Şifreleme ile yeni bir etiket oluşturun. Bkz. [Şifreleme uygulamak için duyarlılık etiketlerini kullanarak içeriğe erişimi kısıtlama](./encryption-sensitivity-labels.md).
 
-3. Çift Anahtarlı Şifreleme etiketlerini kullanın. Microsoft Office Duyarlılık şeridinden Çift Tuşla Şifrelenmiş etiketini seçerek verileri koruyun.
+3. Çift Anahtarlı Şifreleme etiketlerini kullanın. Microsoft Office'teki Duyarlılık şeridinden Çift Tuşla Şifrelenmiş etiketini seçerek verileri koruyun.
 
 Çift AnahtarLı Şifreleme dağıtma adımlarından bazılarını tamamlamanın birkaç yolu vardır. Bu makalede, daha az deneyimli yöneticilerin hizmeti başarıyla dağıtabilmesi için ayrıntılı yönergeler sağlanır. Bunu rahatça yapabilirseniz kendi yöntemlerinizi kullanmayı seçebilirsiniz.
 
@@ -92,12 +90,11 @@ DKE'yi ayarlamak için bu genel adımları izleyeceksiniz. Bu adımları tamamla
 
 Bu makalede ve dağıtım videosunda DKE hizmetinin dağıtım hedefi olarak Azure kullanılır. Başka bir konuma dağıtıyorsanız, kendi değerlerinizi sağlamanız gerekir.
 
-Bu makaledeki kavramlara adım adım genel bakış görmek için [Çift Anahtar Şifrelemesi dağıtım videosunu](https://youtu.be/vDWfHN_kygg) izleyin. Videonun tamamlanması yaklaşık 18 dakika sürer.
 
 Kuruluşunuz için Çift Anahtar şifrelemesi ayarlamak için bu genel adımları izleyeceksiniz.
 
 1. [DKE hizmeti için yazılım önkoşullarını yükleme](#install-software-prerequisites-for-the-dke-service)
-1. [Çift Anahtar şifreleme GitHub deposunu kopyalama](#clone-the-dke-github-repository)
+1. [Çift Anahtarlı Şifreleme GitHub deposunu kopyalama](#clone-the-dke-github-repository)
 1. [Uygulama ayarlarını değiştirme](#modify-application-settings)
 1. [Test anahtarları oluşturma](#generate-test-keys)
 1. [Projeyi oluşturma](#build-the-project)
@@ -108,7 +105,7 @@ Kuruluşunuz için Çift Anahtar şifrelemesi ayarlamak için bu genel adımlar�
 1. [İstemcinizde DKE'yi etkinleştirme](#enable-dke-in-your-client)
 1. [Korumalı dosyaları HYOK etiketlerinden DKE etiketlerine geçirme](#migrate-protected-files-from-hyok-labels-to-dke-labels)
 
-İşiniz bittiğinde, belgeleri ve dosyaları DKE kullanarak şifreleyebilirsiniz. Bilgi için bkz. [Office dosyalarınıza ve e-postalarınıza duyarlılık etiketleri uygulama](https://support.microsoft.com/office/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9).
+İşiniz bittiğinde, belgeleri ve dosyaları DKE kullanarak şifreleyebilirsiniz. Bilgi için bkz. [Office'te dosyalarınıza ve e-postalarınıza duyarlılık etiketleri uygulama](https://support.microsoft.com/office/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9).
 
 ### <a name="install-software-prerequisites-for-the-dke-service"></a>DKE hizmeti için yazılım önkoşullarını yükleme
 
@@ -126,7 +123,7 @@ Bu önkoşulları DKE hizmetini yüklemek istediğiniz bilgisayara yükleyin.
 
 - [Git](https://git-scm.com/downloads)
 
-- [GitHub Masaüstü](https://desktop.github.com/)
+- [GitHub Desktop](https://desktop.github.com/)
 
 - [GitHub Enterprise](https://github.com/enterprise)
 
@@ -134,7 +131,7 @@ Bu önkoşulları DKE hizmetini yüklemek istediğiniz bilgisayara yükleyin.
 
 ### <a name="clone-the-dke-github-repository"></a>DKE GitHub deposunu kopyalama
 
-Microsoft, DKE kaynak dosyalarını bir GitHub deposunda sağlar. Projeyi kuruluşunuzun kullanımı için yerel olarak oluşturmak üzere depoyu klonlarsınız. DKE GitHub deposu konumunda [https://github.com/Azure-Samples/DoubleKeyEncryptionService](https://github.com/Azure-Samples/DoubleKeyEncryptionService)bulunur.
+Microsoft, DKE kaynak dosyalarını bir GitHub deposunda sağlar. Projeyi kuruluşunuzun kullanımı için yerel olarak oluşturmak üzere depoyu klonlarsınız. DKE GitHub deposu konumundadır [https://github.com/Azure-Samples/DoubleKeyEncryptionService](https://github.com/Azure-Samples/DoubleKeyEncryptionService).
 
 Aşağıdaki yönergeler deneyimsiz git veya Visual Studio Code kullanıcılarına yöneliktir:
 
@@ -145,14 +142,14 @@ Aşağıdaki yönergeler deneyimsiz git veya Visual Studio Code kullanıcıları
     Örneğin:
 
    > [!div class="mx-imgBorder"]
-   > ![GitHub'den Çift Anahtar şifreleme hizmeti deposunu kopyalayın.](../media/dke-clone.png)
+   > ![GitHub'dan Çift Anahtar Şifreleme hizmeti deposunu kopyalayın.](../media/dke-clone.png)
 
 3. Visual Studio Code **Komut Paleti** **Görüntüle'yi** \> ve **git: Kopyala'yı** seçin. Listedeki seçeneğe atlamak için, girdileri filtrelemek için yazmaya `git: clone` başlayın ve açılan listeden seçin. Örneğin:
 
    > [!div class="mx-imgBorder"]
    > ![GIT:Clone seçeneğini Visual Studio Code.](../media/dke-vscode-clone.png)
 
-4. Metin kutusuna Git'ten kopyaladığınız URL'yi yapıştırın ve **GitHub Kopyala'yı** seçin.
+4. Metin kutusuna Git'ten kopyaladığınız URL'yi yapıştırın ve **GitHub'dan Kopyala'yı** seçin.
 
 5. Görüntülenen **Klasör Seç** iletişim kutusunda, depoyu depolamak için konumu bulun ve seçin. İstemde **Aç'ı** seçin.
 
@@ -249,10 +246,10 @@ DKE kiracısı ve anahtar ayarları **appsettings.json** dosyasında bulunur.
 > [!NOTE]
 > Anahtar deponuza dış B2B erişimini etkinleştirmek istiyorsanız, bu dış kiracıları da geçerli verenler listesinin bir parçası olarak eklemeniz gerekir.
 
-öğesini `JwtAudience`bulun. değerini DKE hizmetinin çalıştırılacağı makinenin ana bilgisayar adıyla değiştirin `<yourhostname>` . Örneğin:
+öğesini `JwtAudience`bulun. değerini DKE hizmetinin çalıştırılacağı makinenin ana bilgisayar adıyla değiştirin `<yourhostname>` . Örneğin: "https://dkeservice.contoso.com"
 
   > [!IMPORTANT]
-  > değerinin `JwtAudience` konağınızın adıyla *tam olarak* eşleşmesi gerekir. Hata ayıklama sırasında **localhost:5001** kullanabilirsiniz. Ancak hata ayıklamayı bitirdiğinizde bu değeri sunucunun ana bilgisayar adına güncelleştirdiğinizden emin olun.
+  > değerinin `JwtAudience` konağınızın adıyla *tam olarak* eşleşmesi gerekir.  
 
 - `TestKeys:Name`. Anahtarınız için bir ad girin. Örneğin: `TestKey1`
 - `TestKeys:Id`. Bir GUID oluşturun ve değer olarak `TestKeys:ID` girin. Örneğin, `DCE1CC21-FF9B-4424-8FF4-9914BD19A1BE`. Rastgele bir GUID oluşturmak için [Çevrimiçi GUID Oluşturucu](https://guidgenerator.com/) gibi bir site kullanabilirsiniz.
@@ -267,7 +264,7 @@ Uygulama ayarlarınızı tanımladıktan sonra genel ve özel test anahtarları 
 
 Anahtar oluşturmak için:
 
-1. Windows Başlat menüsü OpenSSL Komut İstemi'ni çalıştırın.
+1. Windows Başlat menüsünde OpenSSL Komut İstemi'ni çalıştırın.
 
 1. Test anahtarlarını kaydetmek istediğiniz klasöre geçin. Bu görevdeki adımları tamamlayarak oluşturduğunuz dosyalar aynı klasörde depolanır.
 
@@ -361,17 +358,8 @@ DKE projesini yerel olarak oluşturmak için aşağıdaki yönergeleri kullanın
 
    Kırmızı hatalar varsa konsol çıkışını denetleyin. Önceki tüm adımları doğru bir şekilde tamamladığınızdan ve doğru derleme sürümlerinin mevcut olduğundan emin olun.
 
-4. İşlemde hata ayıklamak için **Hata Ayıklamayı Başlat'ı** **çalıştır'ı** \> seçin. Bir ortam seçmeniz istenirse **.NET core'u** seçin.
 
-   .NET core hata ayıklayıcısı genellikle için `https://localhost:5001`başlatılır. Test anahtarınızı görüntülemek için adresine gidin `https://localhost:5001` ve bir eğik çizgi (/) ve anahtarınızın adını ekleyin. Örneğin:
-
-   ```https
-   https://localhost:5001/TestKey1
-   ```
-
-   Anahtar JSON biçiminde görüntülenmelidir.
-
-Kurulumunuz artık tamamlandı. JwtAudience ayarı için appsettings.json dosyasında keystore'u yayımlamadan önce konak adı değerinin App Service ana bilgisayar adınızla tam olarak eşleştiğinden emin olun. Derleme sorunlarını gidermek için localhost olarak değiştirmiş olabilirsiniz.
+Kurulumunuz artık tamamlandı. JwtAudience ayarı için appsettings.json dosyasında keystore'u yayımlamadan önce konak adı değerinin App Service ana bilgisayar adınızla tam olarak eşleştiğinden emin olun. 
 
 ### <a name="deploy-the-dke-service-and-publish-the-key-store"></a>DKE hizmetini dağıtma ve anahtar deposunu yayımlama
 
@@ -385,7 +373,7 @@ Pilot dağıtımlar için Azure'da dağıtım yapabilir ve hemen kullanmaya baş
 
 Anahtar depoyu yayımlamak için DKE dağıtımınızı barındırmak için bir Azure App Service örneği oluşturacaksınız. Ardından, oluşturulan anahtarlarınızı Azure'da yayımlayacaksınız.
 
-1. Tarayıcınızda [Microsoft Azure portalında](https://ms.portal.azure.com) oturum açın ve **Uygulama Hizmetleri** > **Ekle'ye** gidin.
+1. Tarayıcınızda [Microsoft Azure portal](https://ms.portal.azure.com) oturum açın ve **Uygulama Hizmetleri** > **Ekle'ye** gidin.
 
 2. Aboneliğinizi ve kaynak grubunuzu seçin ve örnek ayrıntılarınızı tanımlayın.
 
@@ -410,7 +398,7 @@ Anahtar depoyu yayımlamak için DKE dağıtımınızı barındırmak için bir 
 
 1. `https://<WebAppInstanceName>.scm.azurewebsites.net/ZipDeployUI` adresine gidin.
 
-   Örneğin: `https://dkeservice.scm.azurewebsites.net/ZipDeployUI`
+   Örneğin: `https://dkeservice.contoso.scm.azurewebsites.net/ZipDeployUI`
 
 2. Anahtar deposunun kod tabanında **customer-key-store\src\customer-key-store** klasörüne gidin ve bu klasörün **customerkeystore.csproj** dosyasını içerdiğini doğrulayın.
 
@@ -428,7 +416,7 @@ DKE dağıtılır ve oluşturduğunuz test anahtarlarına göz atabilirsiniz. A�
 
 #### <a name="publish-via-ftp"></a>FTP aracılığıyla yayımlama
 
-1. [Yukarıda](#deploy-the-dke-service-and-publish-the-key-store) oluşturduğunuz App Service Bağlan.
+1. [Yukarıda](#deploy-the-dke-service-and-publish-the-key-store) oluşturduğunuz App Service bağlanın.
 
    Tarayıcınızda: **Azure portal** >  **App Service** >  **Deployment Center** > **El ile Dağıtım** > **FTP** > **Panosu'na** gidin.
 
@@ -450,7 +438,7 @@ DKE dağıtılır ve oluşturduğunuz test anahtarlarına göz atabilirsiniz. A�
 
 6. Yayımlama dizinindeki tüm dosyaları zip dosyasına gönderin. .zip dosyasını oluştururken, dizindeki tüm dosyaların .zip dosyasının kök düzeyinde olduğundan emin olun.
 
-7. FTP istemcinizden, App Service bağlanmak için kopyaladığınız bağlantı bilgilerini kullanın. Önceki adımda oluşturduğunuz .zip dosyasını Web Uygulamanızın kök dizinine Upload.
+7. FTP istemcinizden, App Service bağlanmak için kopyaladığınız bağlantı bilgilerini kullanın. Önceki adımda oluşturduğunuz .zip dosyasını Web Uygulamanızın kök dizinine yükleyin.
 
 DKE dağıtılır ve oluşturduğunuz test anahtarlarına göz atabilirsiniz. Ardından [Dağıtımınızı doğrulayın](#validate-your-deployment).
 
@@ -467,7 +455,7 @@ src\customer-key-store\scripts\key_store_tester.ps1 dkeserviceurl/mykey
 Örneğin:
 
 ```powershell
-key_store_tester.ps1 https://mydkeservice.com/mykey
+key_store_tester.ps1 https://dkeservice.contoso.com/TestKey1
 ```
 
 Çıkışta hata görünmediğinden emin olun. Hazır olduğunuzda [anahtar deponuzu kaydedin](#register-your-key-store).
@@ -480,15 +468,13 @@ Aşağıdaki adımlar DKE hizmetinizi kaydetmenizi sağlar. DKE hizmetinizi kayd
 
 DKE hizmetini kaydetmek için:
 
-1. Tarayıcınızda [Microsoft Azure portalını](https://ms.portal.azure.com/) açın ve **Tüm Hizmetler** \> **Kimlik** \> **Uygulaması Kayıtları'na** gidin.
+1. Tarayıcınızda [Microsoft Azure portal](https://ms.portal.azure.com/) açın ve **Tüm Hizmetler** \> **Kimlik** \> **Uygulaması Kayıtları'na** gidin.
 
 2. **Yeni kayıt'ı** seçin ve anlamlı bir ad girin.
 
 3. Görüntülenen seçeneklerden bir hesap türü seçin.
 
-   onmicrosoft.com gibi özel olmayan bir etki alanıyla **Microsoft Azure** kullanıyorsanız Yalnızca **bu kuruluş dizinindeki hesaplar (yalnızca Microsoft - Tek kiracı)** seçeneğini belirleyin.
-
-   Örneğin:
+    Örneğin:
 
    > [!div class="mx-imgBorder"]
    > ![Yeni Uygulama Kaydı.](../media/dke-app-registration.png)
@@ -507,14 +493,13 @@ DKE hizmetini kaydetmek için:
 
    - Girdiğiniz URL, DKE hizmetinizin dağıtıldığı ana bilgisayar adıyla eşleşmelidir.
    - Etki alanı [doğrulanmış bir etki alanı](/azure/active-directory/develop/reference-breaking-changes#appid-uri-in-single-tenant-applications-will-require-use-of-default-scheme-or-verified-domains) olmalıdır.
-   - Visual Studio ile yerel olarak test ediyorsanız kullanın`https://localhost:5001`.
-   - Her durumda, şema **https** olmalıdır.
+    - Her durumda, şema **https** olmalıdır.
 
-   Konak adının App Service ana bilgisayar adınızla tam olarak eşleştiğinden emin olun. Derlemeyle ilgili sorunları gidermek için bunu `localhost` olarak değiştirmiş olabilirsiniz. **appsettings.json** dosyasında bu değer için `JwtAudience`ayarladığınız konak adıdır.
+   Konak adının App Service ana bilgisayar adınızla tam olarak eşleştiğinden emin olun.
 
 9. **Örtük izin'in** altında **Kimlik belirteçleri** onay kutusunu seçin.
 
-10. Değişikliklerinizi kaydetmek için **Kaydet'i** seçin.
+10. Değişikliklerinizi kaydetmek için **Tamam**’ı seçin.
 
 11. Sol bölmede, Uygulama Kimliği URI'si'nin yanındaki **Bir API'yi kullanıma sunma'yı** seçin, hem konak adı hem de etki alanı da dahil olmak üzere App Service URL'nizi girin ve **ardından Ayarla'yı** seçin.
 
@@ -534,7 +519,7 @@ DKE hizmetini kaydetmek için:
 
     Yeni istemci uygulamasında:
 
-    1. İstemci Kimliğini olarak `d3590ed6-52b3-4102-aeff-aad2292ab01c`tanımlayın. Bu değer Microsoft Office istemci kimliğidir ve Office anahtar deponuz için erişim belirteci almasını sağlar.
+    1. İstemci Kimliğini olarak `d3590ed6-52b3-4102-aeff-aad2292ab01c`tanımlayın. Bu değer Microsoft Office istemci kimliğidir ve Office'in anahtar deponuz için bir erişim belirteci almasını sağlar.
 
     2. **Yetkili kapsamlar'ın** altında **user_impersonation** kapsamını seçin.
 
@@ -562,7 +547,7 @@ Eklediğiniz tüm DKE etiketleri, Kurumlar için Microsoft 365 Uygulamaları en 
 
 ### <a name="enable-dke-in-your-client"></a>İstemcinizde DKE'yi etkinleştirme
 
-Office Insider'sanız DKE sizin için etkinleştirilir. Aksi takdirde, aşağıdaki kayıt defteri anahtarlarını ekleyerek istemciniz için DKE'yi etkinleştirin:
+Office Insider üyesiyseniz DKE sizin için etkinleştirilir. Aksi takdirde, aşağıdaki kayıt defteri anahtarlarını ekleyerek istemciniz için DKE'yi etkinleştirin:
 
 ```console
    [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\flighting]

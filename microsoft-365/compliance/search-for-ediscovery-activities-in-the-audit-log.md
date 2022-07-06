@@ -15,20 +15,18 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 67cc7f42-a53d-4751-b929-6005c80798f7
-description: Kullanıcılara eBulma izinleri atanan kullanıcılar Microsoft Purview uyumluluk portalında İçerik arama, eBulma (Standart) ve eBulma (Premium) görevlerini gerçekleştirdiğinde hangi olayların günlüğe kaydedileceklerini öğrenin.
+description: Kullanıcılara eBulma izinleri atanan kullanıcılar Microsoft Purview uyumluluk portalı İçerik arama, eBulma (Standart) ve eBulma (Premium) görevlerini gerçekleştirdiğinde hangi olayların günlüğe kaydedileceklerini öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 1e22371999044d5cb70282356045446b46f833fa
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 416cc91a0eb1c97f43c5d279cd47b68c115c3b71
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015506"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639368"
 ---
 # <a name="search-for-ediscovery-activities-in-the-audit-log"></a>Denetim günlüğünde eKeşif etkinliklerini ara
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview uyumluluk portalında veya ilgili PowerShell cmdlet'leri çalıştırılarak gerçekleştirilen İçerik Arama ve eBulma ile ilgili etkinlikler (Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium)) için denetim günlüğüne kaydedilir. Yöneticiler veya eBulma yöneticileri (veya eBulma izinleri atanmış herhangi bir kullanıcı) uyumluluk portalında aşağıdaki İçerik Arama ve eBulma (Standart) görevlerini gerçekleştirdiğinde olaylar günlüğe kaydedilir:
+Microsoft Purview uyumluluk portalı veya ilgili PowerShell cmdlet'leri çalıştırılarak gerçekleştirilen İçerik Arama ve eBulma ile ilgili etkinlikler (Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium)) için günlüğe kaydedilir öğesini seçin. Yöneticiler veya eBulma yöneticileri (veya eBulma izinleri atanmış herhangi bir kullanıcı) uyumluluk portalında aşağıdaki İçerik Arama ve eBulma (Standart) görevlerini gerçekleştirdiğinde olaylar günlüğe kaydedilir:
   
 - eBulma (Standart) ve eBulma (Premium) servis taleplerini oluşturma ve yönetme
 
@@ -52,7 +50,7 @@ Denetim günlüğünde arama yapma, gerekli izinler ve arama sonuçlarını dı�
 
 2. Uyumluluk portalının sol gezinti bölmesinde **Denetim'e** tıklayın.
 
-3. **Etkinlikler** açılan listesinde, **eBulma etkinlikleri** veya **eBulma (Premium) etkinlikleri** altında, aranacak bir veya daha fazla etkinliğe tıklayın.
+3. **Etkinlikler** açılan listesinde, **eBulma etkinlikleri** veya **eBulma (Premium) etkinlikleri** altında, aramak için bir veya daha fazla etkinliğe tıklayın.
 
     > [!NOTE]
     > **Etkinlikler** açılan listesi, cmdlet denetim günlüğünden kayıt döndürecek **eBulma cmdlet etkinlikleri** adlı bir etkinlik grubunu da içerir.
@@ -69,7 +67,7 @@ Denetim günlüğünde arama yapma, gerekli izinler ve arama sonuçlarını dı�
 
     Olay kaydındaki ayrıntılı özellikleri içeren bir **Ayrıntılar** açılır sayfası görüntülenir. Ek ayrıntıları görüntülemek için **Daha fazla bilgi'ye** tıklayın. Bu özelliklerin açıklaması [için eBulma etkinlikleri için ayrıntılı özellikler](#detailed-properties-for-ediscovery-activities) bölümüne bakın.
 
-9. İsterseniz, denetim günlüğü arama sonuçlarını bir CSV dosyasına aktarabilir ve ardından bu kayıtları biçimlendirmek ve filtrelemek için Excel Power Query özelliğini kullanabilirsiniz. Daha fazla bilgi için bkz. [Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md).
+9. İsterseniz, denetim günlüğü arama sonuçlarını bir CSV dosyasına aktarabilir ve sonra bu kayıtları biçimlendirmek ve filtrelemek için Excel Power Query özelliğini kullanabilirsiniz. Daha fazla bilgi için bkz. [Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md).
 
 ## <a name="ediscovery-activities"></a>eBulma etkinlikleri
 
@@ -103,13 +101,13 @@ Aşağıdaki tabloda, bir yönetici veya eBulma yöneticisi uyumluluk portalın�
 |İçerik aramasının indirilmiş dışarı aktarması  <br/> |SearchExportDownloaded  <br/> |Yok  <br/> |Bir kullanıcı, içerik aramasının sonuçlarını yerel bilgisayarına indirdi. Arama sonuçlarının indirilebilmesi için önce içerik arama etkinliğinin başlatılmış **bir dışarı aktarımının** başlatılması gerekir.  <br/> |
 |İçerik aramasının önizlemesi yapılan sonuçlar  <br/> |SearchPreviewed  <br/> |Yok  <br/> |Bir kullanıcı içerik aramasının sonuçlarının önizlemesini görüntüledi.  <br/> |
 |İçerik aramasının sonuçları temizlenmiş  <br/> |SearchResultsPurged  <br/> |New-ComplianceSearchAction  <br/> |Kullanıcı **, New-ComplianceSearchAction -Purge** komutunu çalıştırarak İçerik aramasının sonuçlarını temizledi.  <br/> |
-|İçerik arama analizi kaldırıldı  <br/> |KaldırıldıSearchResultsSentToZoom  <br/> |Remove-ComplianceSearchAction  <br/> |İçerik arama hazırlama eylemi (arama sonuçlarını eBulma (Premium) için hazırlamak için) silindi. Hazırlık eylemi iki haftadan kısaysa, eBulma (Premium) için hazırlanan arama sonuçları Microsoft Azure depolama alanından silindi. Hazırlık eylemi 2 haftadan eskiyse, bu olay yalnızca ilgili hazırlık eyleminin silindiğini gösterir.  <br/> |
+|İçerik arama analizi kaldırıldı  <br/> |KaldırıldıSearchResultsSentToZoom  <br/> |Remove-ComplianceSearchAction  <br/> |İçerik arama hazırlama eylemi (arama sonuçlarını eBulma (Premium) için hazırlamak için) silindi. Hazırlık eylemi iki haftadan kısa bir süre önceyse, eKeşif (Premium) için hazırlanan arama sonuçları Microsoft Azure depolama alanından silindi. Hazırlık eylemi 2 haftadan eskiyse, bu olay yalnızca ilgili hazırlık eyleminin silindiğini gösterir.  <br/> |
 |İçerik aramasının dışarı aktarımı kaldırıldı  <br/> |KaldırıldıSearchExported  <br/> |Remove-ComplianceSearchAction  <br/> |İçerik arama dışarı aktarma eylemi silindi. Dışarı aktarma eylemi iki haftadan kısa bir süre önceyse, Microsoft Azure depolama alanına yüklenen arama sonuçları silinir. Dışarı aktarma eylemi 2 haftadan eskiyse, bu olay yalnızca ilgili dışarı aktarma eyleminin silindiğini gösterir.  <br/> |
 |eBulma durumundan üye kaldırıldı  <br/> |CaseMemberRemoved  <br/> |Remove-ComplianceCaseMember  <br/> |Bir kullanıcı eBulma olayının üyesi olarak kaldırıldı.  <br/> |
 |İçerik aramasının önizleme sonuçları kaldırıldı  <br/> |KaldırıldıSearchPreviewed  <br/> |Remove-ComplianceSearchAction  <br/> |İçerik arama önizleme eylemi silindi.  <br/> |
 |İçerik aramada gerçekleştirilen temizleme eylemi kaldırıldı  <br/> |KaldırıldıSearchResultsPurged  <br/> |Remove-ComplianceSearchAction  <br/> |İçerik arama temizleme eylemi silindi.  <br/> |
 |Arama raporu kaldırıldı  <br/> |SearchReportRemoved  <br/> |Remove-ComplianceSearchAction  <br/> |İçerik arama dışarı aktarma raporu eylemi silindi.  <br/> |
-|İçerik arama analizi başlatıldı  <br/> |SearchResultsSentToZoom  <br/> |New-ComplianceSearchAction  <br/> |İçerik aramasının sonuçları eBulma(Premium) içinde analiz için hazırlandı.  <br/> |
+|İçerik arama analizi başlatıldı  <br/> |SearchResultsSentToZoom  <br/> |New-ComplianceSearchAction  <br/> |İçerik aramasının sonuçları eBulma (Premium) içinde analiz için hazırlandı.  <br/> |
 |İçerik araması başlatıldı  <br/> |Arama Başlatıldı  <br/> |Start-ComplianceSearch  <br/> |İçerik araması başlatıldı. Uyumluluk portalını kullanarak içerik araması oluşturduğunuzda veya değiştirdiğinizde, arama otomatik olarak başlatılır.<br/> |
 |İçerik aramasının dışarı aktarımı başlatıldı  <br/> |SearchExported  <br/> |New-ComplianceSearchAction  <br/> |Bir kullanıcı içerik aramasının sonuçlarını dışarı aktardı.  <br/> |
 |Dışarı aktarma raporu başlatıldı  <br/> |Arama Raporu  <br/> |New-ComplianceSearchAction  <br/> |Kullanıcı bir içerik arama raporunu dışarı aktardı.  <br/> |
@@ -127,8 +125,8 @@ Aşağıdaki tabloda, denetim günlüğüne kaydedilen eBulma (Premium) etkinlik
 |**Kolay ad**|**Işlem**|**Açıklama**|
 |:-----|:-----|:-----|
 |Başka bir gözden geçirme kümesine veri eklendi|AddWorkingSetQueryToWorkingSet|Kullanıcı, bir gözden geçirme kümesindeki belgeleri farklı bir gözden geçirme kümesine ekledi.|
-|Gözden geçirme kümesine veri eklendi|AddQueryToWorkingSet|Kullanıcı, eBulma (Premium) olayıyla ilişkilendirilmiş içerik aramasından gelen arama sonuçlarını bir gözden geçirme kümesine ekledi.|
-|Kümeyi gözden geçirmek için Microsoft 365 olmayan veriler eklendi|AddNonOffice365DataToWorkingSet|Kullanıcı bir gözden geçirme kümesine Microsoft 365 olmayan veriler ekledi.|
+|Gözden geçirme kümesine veri eklendi|AddQueryToWorkingSet|Kullanıcı, eBulma (Premium) olayıyla ilişkilendirilmiş bir içerik aramasından gelen arama sonuçlarını bir gözden geçirme kümesine ekledi.|
+|Kümeyi gözden geçirmek için Microsoft 365 dışı veriler eklendi|AddNonOffice365DataToWorkingSet|Kullanıcı bir gözden geçirme kümesine Microsoft 365 dışı veriler ekledi.|
 |Kümeyi gözden geçirmek için düzeltilmiş belgeler eklendi|AddRemediatedData|Kullanıcı, bir gözden geçirme kümesine düzeltilen dizin oluşturma hataları olan belgeleri karşıya yükler.|
 |Gözden geçirme kümesindeki analiz edilen veriler|RunAlgo|Kullanıcı bir inceleme kümesindeki belgeler üzerinde analiz çalıştırmıştı.|
 |Gözden geçirme kümesinde ek açıklamalı belge|AnnotateDocument|Kullanıcı, bir gözden geçirme kümesindeki bir belgeye açıklama eklemiştir. Ek açıklama, belgedeki içeriği yeniden boyutlandırmayı içerir.|
@@ -179,7 +177,7 @@ Daha önce belirtildiği gibi, eBulma cmdlet etkinliklerinin denetim günlüğü
 |Değiştirilen içerik araması  <br/> |[Set-ComplianceSearch](/powershell/module/exchange/set-compliancesearch) <br/> |Mevcut bir içerik araması değiştirildi. Değişiklikler, arama yapılan içerik konumlarını eklemeyi veya kaldırmayı ve arama sorgusunu düzenlemeyi içerebilir.  <br/> |
 |İçerik araması başlatıldı  <br/> |[Start-ComplianceSearch](/powershell/module/exchange/start-compliancesearch) <br/> |İçerik araması başlatıldı. Uyumluluk merkezi GUI'sini kullanarak içerik araması oluşturduğunuzda veya değiştirdiğinizde, arama otomatik olarak başlatılır. **New-ComplianceSearch** veya **Set-ComplianceSearch** cmdlet'ini kullanarak arama oluşturur veya değiştirirseniz, aramayı başlatmak için **Start-ComplianceSearch** cmdlet'ini çalıştırmanız gerekir.  <br/> |
 |Durdurulan içerik araması  <br/> |[Uyumluluğu DurdurArama](/powershell/module/exchange/stop-compliancesearch) <br/> |Çalışan bir içerik araması durduruldu.  <br/> |
-|İçerik arama eylemi oluşturuldu  <br/> |[New-ComplianceSearchAction](/powershell/module/exchange/new-compliancesearchaction) <br/> |İçerik arama eylemi oluşturuldu. İçerik arama eylemleri arama sonuçlarının önizlemesini görüntülemeyi, arama sonuçlarını dışarı aktarmayı, arama sonuçlarını eBulma'da (Premium) analiz için hazırlamayı ve içerik aramasının arama ölçütlerine uyan öğeleri kalıcı olarak silmeyi içerir.  <br/> |
+|İçerik arama eylemi oluşturuldu  <br/> |[New-ComplianceSearchAction](/powershell/module/exchange/new-compliancesearchaction) <br/> |İçerik arama eylemi oluşturuldu. İçerik arama eylemleri arama sonuçlarının önizlemesini görüntülemeyi, arama sonuçlarını dışarı aktarmayı, arama sonuçlarını eBulma'da (Premium) analiz için hazırlamayı ve içerik arama ölçütlerine uyan öğeleri kalıcı olarak silmeyi içerir.  <br/> |
 |Silinen içerik arama eylemi  <br/> |[Remove-ComplianceSearchAction](/powershell/module/exchange/remove-compliancesearchaction) <br/> |İçerik arama eylemi silindi.  <br/> |
 |Arama izinleri filtresi oluşturuldu  <br/> |[New-ComplianceSecurityFilter](/powershell/module/exchange/new-compliancesecurityfilter) <br/> |Arama izinleri filtresi oluşturuldu.  <br/> |
 |Silinen arama izinleri filtresi  <br/> |[Remove-ComplianceSecurityFilter](/powershell/module/exchange/remove-compliancesecurityfilter) <br/> |Arama izinleri filtresi silindi.  <br/> |
@@ -197,7 +195,7 @@ Daha önce belirtildiği gibi, eBulma cmdlet etkinliklerinin denetim günlüğü
 Aşağıdaki tabloda, arama sonuçlarında listelenen bir eBulma etkinliği için açılır sayfaya eklenen özellikler açıklanmaktadır. Bu özellikler, denetim günlüğü arama sonuçlarını dışarı aktardığınızda CSV dosyasına da eklenir. eBulma etkinliği için denetim günlüğü kaydı, aşağıda listelenen tüm ayrıntılı özellikleri içermez.
   
 > [!TIP]
-> Arama sonuçlarını dışarı aktardığınızda, CSV dosyası çok değerli bir özellikte aşağıdaki tabloda açıklanan ayrıntılı özellikleri içeren **AudtiData** adlı bir sütun içerir. Her özelliğin kendi sütununa sahip olması için bu sütunu birden çok sütuna bölmek için Excel'daki Power Query özelliğini kullanabilirsiniz. Bu, bu özelliklerden birini veya daha fazlasını sıralamanıza ve filtrelemenize olanak verir. Daha fazla bilgi için Denetim [günlüğünde arama'nın](search-the-audit-log-in-security-and-compliance.md#step-3-export-the-search-results-to-a-file) "Arama sonuçlarını bir dosyaya aktarma" bölümüne bakın. 
+> Arama sonuçlarını dışarı aktardığınızda, CSV dosyası çok değerli bir özellikte aşağıdaki tabloda açıklanan ayrıntılı özellikleri içeren **AudtiData** adlı bir sütun içerir. Excel'deki Power Query özelliğini kullanarak bu sütunu birden çok sütuna bölerek her özelliğin kendi sütununa sahip olmasını sağlayabilirsiniz. Bu, bu özelliklerden birini veya daha fazlasını sıralamanıza ve filtrelemenize olanak verir. Daha fazla bilgi için Denetim [günlüğünde arama'nın](search-the-audit-log-in-security-and-compliance.md#step-3-export-the-search-results-to-a-file) "Arama sonuçlarını bir dosyaya aktarma" bölümüne bakın. 
   
 |**Özellik**|**Açıklama**|
 |:-----|:-----|
@@ -223,7 +221,7 @@ Aşağıdaki tabloda, arama sonuçlarında listelenen bir eBulma etkinliği içi
 |Kayıt Türü  <br/> |Kayıt tarafından belirtilen işlem türü. **18** değeri [, eBulma cmdlet etkinlikleri](#ediscovery-cmdlet-activities) bölümünde listelenen bir etkinlikle ilgili bir olayı gösterir. **24** değeri [, eBulma etkinliklerini arama ve görüntüleme](#how-to-search-for-and-view-ediscovery-activities) bölümünde listelenen bir etkinlikle ilgili olayı gösterir.  <br/> |
 |ResultStatus  <br/> |Eylemin (Operation özelliğinde belirtilen) başarılı olup olmadığını gösterir.  <br/> |
 |SecurityComplianceCenterEventType  <br/> |Etkinliğin bir uyumluluk merkezi olayı olduğunu gösterir. Tüm eBulma etkinlikleri bu özellik için **0** değerine sahip olacaktır.  <br/> |
-|SharepointLocations  <br/> |İçerik aramasında yer alan veya eBulma servis talebine askıya eklenen SharePoint Online siteleri.  <br/> |
+|SharepointLocations  <br/> |İçerik aramasında yer alan veya eBulma servis talebine beklemeye konulan SharePoint Online siteleri.  <br/> |
 |Starttime  <br/> |eBulma etkinliğinin başlatıldığı Eşgüdümlü Evrensel Saat (UTC) tarihi ve saati.  <br/> |
 |Userıd  <br/> |Kaydın günlüğe kaydedilmesiyle sonuçlanan etkinliği gerçekleştiren kullanıcı (Operation özelliğinde belirtilir). Sistem hesapları (NT AUTHORITY\SYSTEM gibi) tarafından gerçekleştirilen eBulma etkinliğinin kayıtları da denetim günlüğüne eklenir.  <br/> |
 |UserKey  <br/> |UserId özelliğinde tanımlanan kullanıcı için alternatif bir kimlik. eBulma etkinlikleri için bu özelliğin değeri genellikle UserId özelliğiyle aynıdır.  <br/> |

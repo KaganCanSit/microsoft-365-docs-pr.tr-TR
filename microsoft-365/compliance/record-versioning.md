@@ -1,5 +1,5 @@
 ---
-title: SharePoint veya OneDrive'da kayıt sürümü oluşturma özelliğini kullanma
+title: SharePoint veya OneDrive'da kayıt sürümü oluşturmayı kullanma
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -16,28 +16,26 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft 365'de kayıt yönetimi çözümü uygulamanıza yardımcı olacak kayıtlar hakkında bilgi edinin.
-ms.openlocfilehash: 9515622af6a6ddb5abe28d6fb920eed72f487f41
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+description: Microsoft 365'te kayıt yönetimi çözümü uygulamanıza yardımcı olacak kayıtlar hakkında bilgi edinin.
+ms.openlocfilehash: 176e0a005d388681fcda119798fd838d73b7f733
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285072"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629365"
 ---
-# <a name="use-record-versioning-to-update-records-stored-in-sharepoint-or-onedrive"></a>SharePoint veya OneDrive depolanan kayıtları güncelleştirmek için kayıt sürümü oluşturma özelliğini kullanma
+# <a name="use-record-versioning-to-update-records-stored-in-sharepoint-or-onedrive"></a>SharePoint veya OneDrive'da depolanan kayıtları güncelleştirmek için kayıt sürümü oluşturmayı kullanma
 
->*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+>*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 > [!NOTE]
 > Mevzuat kayıtları düzenlemeyi engellediğinden, kayıt sürümü oluşturma yasal kayıtlarda kullanılamaz.
 >
-> Ayrıca, yasal düzenleme kayıtlarını kullanmasanız bile kiracınız için kayıt sürümü oluşturmayı engelleyebilirsiniz: Kayıt yönetimi ayarlarını > Microsoft Purview uyumluluk portalında **Kayıt yönetimi'ne** gidin **Kayıt** >  **yönetim ayarlarını kaldırma** >  **Kayıt sürümü oluşturmayı** yapılandırma ve ardından **Kayıt sürümünü etkinleştirme** ayarını kapatın.
+> Ayrıca, yasal kayıt kullanmıyor olsanız bile kiracınız için kayıt sürümü oluşturmayı engelleyebilirsiniz: kayıt yönetimi ayarları  > **bekletme etiketleri** >  Kayıt **sürümü oluşturmayı yapılandırma** Microsoft Purview uyumluluk portalı > bölümünde **Kayıt yönetimi'ne** gidin ve kayıt **sürümü oluşturmayı etkinleştir** ayarını kapatın.
 
 Belgeyi kayıt olarak işaretleme ve [kayıt](records-management.md#records) üzerinde gerçekleştirilebilecek eylemleri kısıtlama özelliği, tüm kayıt yönetimi çözümleri için önemli bir hedeftir. Ancak, kişilerin sonraki sürümleri oluşturması için de işbirliği gerekebilir.
 
-Örneğin, bir satış sözleşmesini kayıt olarak işaretleyebilir, ancak ardından sözleşmeyi yeni koşullarla güncelleştirmeniz ve önceki kayıt sürümünü korurken en son sürümü yeni bir kayıt olarak işaretlemeniz gerekir. Bu tür senaryolar için SharePoint ve OneDrive *kayıt sürümü oluşturma desteği sağlar*. OneNote not defteri klasörleri kayıt sürümü oluşturma işlemini desteklemez.
+Örneğin, bir satış sözleşmesini kayıt olarak işaretleyebilir, ancak ardından sözleşmeyi yeni koşullarla güncelleştirmeniz ve önceki kayıt sürümünü korurken en son sürümü yeni bir kayıt olarak işaretlemeniz gerekir. Bu tür senaryolar için SharePoint ve OneDrive *kayıt sürümü oluşturmayı destekler*. OneNote not defteri klasörleri kayıt sürümü oluşturma işlemini desteklemez.
 
 Kayıt sürümü oluşturmayı kullanmak için, önce belgeyi [öğeleri kayıt olarak işaretlemek üzere yapılandırılmış bir bekletme etiketiyle](declare-records.md) etiketlersiniz. Bu noktada, bekletme etiketinin yanında *Kayıt durumu* adlı bir belge özelliği görüntülenir. Etiketin varsayılan olarak kaydın kilidini açmak için yapılandırılıp yapılandırılmadığına bağlı olarak (şu anda kullanıma sunılıyor), ilk kayıt durumu **Kilitli** veya **Kilitsiz'dir**.
 
@@ -48,9 +46,9 @@ Artık aşağıdakileri yapabilirsiniz:
     > [!NOTE]
     > Etiket varsayılan olarak kaydın kilidini açmak üzere yapılandırılmışsa, ancak sürüm oluşturma yönetici tarafından etkinleştirilmediyse veya kayıt yönetimi ayarı tarafından engelleniyorsa, kullanıcılar belgeyi kilitledikten sonra belgenin kilidini açamaz.
 
-- **Kayıtların siteyle birlikte bulunan yerinde kayıt deposunda otomatik olarak depolanmasını sağlayın.** SharePoint ve OneDrive'daki her site, Koruma Bekletme kitaplığındaki içeriği korur. Kayıt sürümleri bu kitaplıktaki Kayıtlar klasöründe depolanır. Koruma Bekletme kitaplığının nasıl çalıştığı hakkında daha fazla bilgi için bkz. [Bekletme SharePoint ve OneDrive için nasıl çalışır](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive)?
+- **Kayıtların siteyle birlikte bulunan yerinde kayıt deposunda otomatik olarak depolanmasını sağlayın.** SharePoint ve OneDrive'daki her site, Koruma Bekletme kitaplığındaki içeriği korur. Kayıt sürümleri bu kitaplıktaki Kayıtlar klasöründe depolanır. Koruma Bekletme kitaplığının nasıl çalıştığı hakkında daha fazla bilgi için bkz. [SharePoint ve OneDrive için bekletme nasıl çalışır](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive)?
 
-- **Tüm sürümleri içeren her zaman yeşil bir belgeyi koruyun.** Varsayılan olarak, her SharePoint ve OneDrive belgenin öğe menüsünde bir sürüm geçmişi vardır. Bu sürüm geçmişinde, hangi sürümlerin kayıt olduğunu kolayca görebilir ve bu belgeleri görüntüleyebilirsiniz.
+- **Tüm sürümleri içeren her zaman yeşil bir belgeyi koruyun.** Varsayılan olarak, her SharePoint ve OneDrive belgesinin öğe menüsünde bir sürüm geçmişi vardır. Bu sürüm geçmişinde, hangi sürümlerin kayıt olduğunu kolayca görebilir ve bu belgeleri görüntüleyebilirsiniz.
 
 > [!TIP]
 > Silme eylemi olan bir bekletme etiketiyle kayıt sürümü oluşturmayı kullandığınızda, Bekletme süresini **başlat seçeneğini şu şekilde** yapılandırmayı göz önünde bulundurun: **Öğeler etiketlendiğinde** olacak şekilde. Bu etiket ayarıyla, saklama süresinin başlangıcı her yeni kayıt sürümü için sıfırlanır ve bu da eski sürümlerin daha yeni sürümlerden önce silinmesini sağlar.

@@ -13,16 +13,14 @@ ms.author: shmehta
 ms.reviewer: krowley
 appliesto:
 - Office 365 Business
-ms.openlocfilehash: 584bf2b27be9c33399a9158038853dac195e3146
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: 9edbbb463d04447ee4babcd66b4d6e320663209a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66044235"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639764"
 ---
 # <a name="preparing-for-tls-12-in-office-365-and-office-365-gcc"></a>Office 365 ve Office 365 GCC'de TLS 1.2'ye hazırlanma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 ## <a name="summary"></a>Özet
 
@@ -77,7 +75,7 @@ Karma senaryolar veya Active Directory Federation Services için herhangi bir ş
 Aşağıdaki kaynaklar, müşterilerinizin TLS 1.2 veya daha sonraki bir sürümü kullandığından emin olmak ve TLS 1.0 ve 1.1'i devre dışı bıraktırmaya yardımcı olmak için kılavuz sağlar.
 
 - Office 365'e bağlanan Windows 7 istemcileri için TLS 1.2'nin Windows'da WinHTTP'deki varsayılan güvenli protokol olduğundan emin olun. Daha fazla bilgi için bkz: [KB 3140245 - Windows'da WinHTTP'de varsayılan güvenli protokol olarak TLS 1.1 ve TLS 1.2'yi etkinleştirmek için güncelleme.](https://support.microsoft.com/help/3140245/update-to-enable-tls-1-1-and-tls-1-2-as-a-default-secure-protocols-in)
-- [Office 365 tarafından desteklenen TLS şifreleme paketleri](/microsoft-365/compliance/technical-reference-details-about-encryption#tls-cipher-suites-supported-by-office-365)
+- [Office 365 tarafından desteklenen TLS şifre paketleri](/microsoft-365/compliance/technical-reference-details-about-encryption#tls-cipher-suites-supported-by-office-365)
 - TLS 1.0 ve 1.1 bağımlılıklarını kaldırarak zayıf TLS kullanımını düzenlemeye başlamak için [Microsoft'ta TLS 1.2 desteğine](https://cloudblogs.microsoft.com/microsoftsecure/2017/06/20/tls-1-2-support-at-microsoft/) bakın.
 - [Yeni IIS işlevi,](https://cloudblogs.microsoft.com/microsoftsecure/2017/09/07/new-iis-functionality-to-help-identify-weak-tls-usage/) [Windows Server 2012 R2](https://support.microsoft.com/help/4025335/windows-8-1-windows-server-2012-r2-update-kb4025335) ve [Windows Server 2016](https://support.microsoft.com/help/4025334/windows-10-update-kb4025334)'da zayıf güvenlik protokolleri kullanarak hizmete bağlanan istemcileri bulmayı kolaylaştırır.
 - [TLS 1.0 sorununu çözme](https://www.microsoft.com/download/details.aspx?id=55266) hakkında daha fazla bilgi edinin.

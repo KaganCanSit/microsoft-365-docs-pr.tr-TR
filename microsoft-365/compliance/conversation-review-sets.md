@@ -15,24 +15,22 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Microsoft Teams ve Yammer gruplarında sohbet konuşmalarını yeniden yapılandırmak, gözden geçirmek ve dışarı aktarmak için Microsoft Purview eBulma (Premium) (konuşma yazışması olarak adlandırılır) konuşma yeniden oluşturma özelliği hakkında bilgi edinin.
+description: Microsoft Teams ve Yammer gruplarında sohbet konuşmalarını yeniden derlemek, gözden geçirmek ve dışarı aktarmak için Microsoft Purview eKeşif (Premium) (konuşma yazışması olarak adlandırılır) uygulamasındaki konuşma yeniden yapılandırma özelliği hakkında bilgi edinin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 075424bc6db144e86406b10ce9a4f4d28c1b937f
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 43b9bccd06ab9ca5ac94f48efa40b1c06707dde5
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097084"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634797"
 ---
 # <a name="conversation-threading-in-ediscovery-premium"></a>eBulma'da konuşma yazışması oluşturma (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Anlık ileti, soru sormanın, fikir paylaşmanın veya büyük kitleler arasında hızlı bir şekilde iletişim kurmanın kullanışlı bir yoludur. Microsoft Teams ve Yammer grupları gibi anlık ileti platformları kurumsal işbirliğinin temeli haline geldikçe kuruluşların eKeşif iş akışlarının bu yeni iletişim ve işbirliği biçimlerini nasıl ele alacağını değerlendirmesi gerekir.
 
-Anlık ileti, soru sormanın, fikir paylaşmanın veya büyük kitleler arasında hızlı bir şekilde iletişim kurmanın kullanışlı bir yoludur. Microsoft Teams ve Yammer grupları gibi anlık ileti platformları kurumsal işbirliğinin temeli haline geldikçe kuruluşların eBulma iş akışlarının bu yeni iletişim ve işbirliği biçimlerini nasıl ele alacağını değerlendirmesi gerekir.
+Microsoft Purview eKeşif'daki (Premium) konuşma yeniden yapılandırma özelliği, bağlamsal içeriği tanımlamanıza ve farklı konuşma görünümleri oluşturmanıza yardımcı olmak için tasarlanmıştır. Bu özellik, Microsoft Teams gibi platformlarda oluşturulan eksiksiz anlık ileti konuşmalarını ( *yazışma konuşmaları* olarak da adlandırılır) verimli ve hızlı bir şekilde gözden geçirmenizi sağlar.
 
-Microsoft Purview eKeşif'teki (Premium) konuşma yeniden yapılandırma özelliği, bağlamsal içeriği belirlemenize ve farklı konuşma görünümleri oluşturmanıza yardımcı olmak için tasarlanmıştır. Bu özellik, Microsoft Teams gibi platformlarda oluşturulan anlık ileti konuşmalarını (*yazışma konuşmaları* olarak da adlandırılır) verimli ve hızlı bir şekilde gözden geçirmenizi sağlar.
-
-Konuşma yeniden yapılandırma ile, iş parçacıklı konuşmaları yeniden yapılandırmak, gözden geçirmek ve dışarı aktarmak için yerleşik özellikleri kullanabilirsiniz. eBulma (Premium) konuşma yeniden derlemesini kullanarak:
+Konuşma yeniden yapılandırma ile, iş parçacıklı konuşmaları yeniden yapılandırmak, gözden geçirmek ve dışarı aktarmak için yerleşik özellikleri kullanabilirsiniz. eBulma (Premium) konuşma yeniden yapılandırma özelliğini kullanarak:
 
 - Konuşmadaki tüm iletilerde benzersiz ileti düzeyinde meta verileri koruma.
 
@@ -48,15 +46,15 @@ Konuşma yeniden yapılandırmayı kullanmaya başlamanıza yardımcı olacak bi
 
 - **Ileti:** Konuşmanın en küçük birimini temsil edin. İletilerin boyutu, yapısı ve meta verileri farklılık gösterebilir.
 
-- **Konuşma:** Bir veya daha fazla iletinin gruplandırma işlemini temsil eder. Farklı uygulamalarda konuşmalar farklı şekillerde gösterilebilir. Bazı uygulamalarda, var olan bir iletiyi yanıtlamaktan kaynaklanan açık bir eylem vardır. Konuşmalar, bu kullanıcı eyleminin bir sonucu olarak açıkça oluşturulur. Örneğin, Microsoft Teams'daki kanal konuşmasının ekran görüntüsü aşağıda verilmiştir.
+- **Konuşma:** Bir veya daha fazla iletinin gruplandırma işlemini temsil eder. Farklı uygulamalarda konuşmalar farklı şekillerde gösterilebilir. Bazı uygulamalarda, var olan bir iletiyi yanıtlamaktan kaynaklanan açık bir eylem vardır. Konuşmalar, bu kullanıcı eyleminin bir sonucu olarak açıkça oluşturulur. Örneğin, Microsoft Teams'de kanal konuşmasının ekran görüntüsü aşağıda verilmiştir.
 
-   ![kanal konuşma Microsoft Teams.](../media/threadedchat.png)
+   ![Microsoft Teams Kanal Konuşması.](../media/threadedchat.png)
 
-   Diğer uygulamalarda (Teams grup sohbeti iletileri gibi), resmi bir yanıt zinciri yoktur ve bunun yerine iletiler tek bir yazışma içinde "iletilerin düz nehri" olarak görünür. Bu tür uygulamalarda, konuşmalar belirli bir süre içinde gerçekleşen bir ileti grubundan çıkarılır. İletilerin bu "geçici gruplandırılması" (yanıt zincirinin aksine) belirli bir ilgi konusuyla ilgili "ileri geri" konuşmayı temsil eder.
+   Diğer uygulamalarda (Teams'deki grup sohbeti iletileri gibi), resmi bir yanıt zinciri yoktur ve bunun yerine iletiler tek bir yazışma içinde "düz bir ileti nehri" olarak görünür. Bu tür uygulamalarda, konuşmalar belirli bir süre içinde gerçekleşen bir ileti grubundan çıkarılır. İletilerin bu "geçici gruplandırılması" (yanıt zincirinin aksine) belirli bir ilgi konusuyla ilgili "ileri geri" konuşmayı temsil eder.
 
 ## <a name="step-1-create-a-draft-collection"></a>1. Adım: Taslak koleksiyon oluşturma
 
-İlgili koruyucuları ve içerik konumlarını belirledikten sonra, uygun olabilecek içeriği bulmak için bir arama oluşturabilirsiniz. eBulma (Premium) örneğindeki **Koleksiyonlar** sekmesinde, Yeni koleksiyon'a tıklayıp sihirbazı izleyerek bir **koleksiyon** oluşturabilirsiniz. Koleksiyon oluşturma, arama sorgusu oluşturma ve arama sonuçlarını önizleme hakkında bilgi için bkz. [Taslak koleksiyonu oluşturma](create-draft-collection.md).
+İlgili koruyucuları ve içerik konumlarını belirledikten sonra, uygun olabilecek içeriği bulmak için bir arama oluşturabilirsiniz. eBulma (Premium) durumundaki **Koleksiyonlar** sekmesinde, Yeni koleksiyon'a tıklayıp sihirbazı izleyerek bir **koleksiyon** oluşturabilirsiniz. Koleksiyon oluşturma, arama sorgusu oluşturma ve arama sonuçlarını önizleme hakkında bilgi için bkz. [Taslak koleksiyonu oluşturma](create-draft-collection.md).
 
 ## <a name="step-2-commit-a-draft-collection-to-a-review-set"></a>2. Adım: Taslak koleksiyonu gözden geçirme kümesine işleme
 
@@ -110,7 +108,7 @@ Gözden geçirme kümesinden konuşmaları dışarı aktarırken seçebileceğin
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-eBulma'da (Premium) büyük/küçük harf verilerini gözden geçirme hakkında daha fazla bilgi edinmek için aşağıdaki makalelere bakın:
+eBulma'da (Premium) servis talebi verilerini gözden geçirme hakkında daha fazla bilgi edinmek için aşağıdaki makalelere bakın:
 
 - [Bir inceleme setindeki içeriği sorgulama ve filtreleme](review-set-search.md)
 - [Bir inceleme setindeki belgeleri etiketleme](tagging-documents.md)

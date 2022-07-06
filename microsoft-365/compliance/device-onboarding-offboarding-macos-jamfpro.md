@@ -14,18 +14,16 @@ ms.collection:
 search.appverid:
 - MET150
 description: JAMF Pro kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma hakkında bilgi edinin
-ms.openlocfilehash: bf15868b865afa80146df2b16199caf360a55ce2
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: a4f6928098525cf04c2e752b8c6d467800f270da
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953437"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635633"
 ---
 # <a name="onboard-and-offboard-macos-devices-into-microsoft-purview-solutions-using-jamf-pro"></a>JAMF Pro kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-MacOS cihazlarını Uç nokta veri kaybını önleme gibi Microsoft Purview çözümlerine eklemek için JAMF Pro kullanabilirsiniz.
+MacOS cihazlarını Uç nokta veri kaybı önleme gibi Microsoft Purview çözümlerine eklemek için JAMF Pro'yi kullanabilirsiniz.
 
 > [!IMPORTANT]
 > macOS ***cihazlarınıza dağıtılmış*** Uç Nokta için Microsoft Defender (MDE) yoksa bu yordamı kullanın
@@ -37,7 +35,7 @@ MacOS cihazlarını Uç nokta veri kaybını önleme gibi Microsoft Purview çö
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- [macOS cihazlarınızın JAMF pro aracılığıyla yönetildiğinden ve JAMF](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) Bağlan veya Intune aracılığıyla bir kimlikle (Azure AD'ye katılmış UPN) ilişkilendirildiğinden emin olun.
+- [macOS cihazlarınızın JAMF pro aracılığıyla yönetildiğinden ve JAMF](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) Connect veya Intune aracılığıyla bir kimlikle (Azure AD birleştirilmiş UPN) ilişkilendirildiğinden emin olun.
 - macOS cihazlarınıza v95+ Edge tarayıcısını yükleme
 
 ## <a name="onboard-devices-into-microsoft-purview-solutions-using-jamf-pro"></a>JAMF Pro kullanarak cihazları Microsoft Purview çözümlerine ekleme
@@ -69,7 +67,7 @@ MacOS cihazını Uyumluluk çözümlerine ekleme işlemi çok aşamalı bir işl
 
 ### <a name="get-the-device-onboarding-package"></a>Cihaz ekleme paketini alma
 
-1. **Uyumluluk merkezinde** **Ayarlar** >  **Cihaz Ekleme'yi** açın ve **Ekleme'yi** seçin.
+1. **Uyumluluk merkezinde** **Ayarlar** > **Cihaz Ekleme'yi** açın ve **Ekleme'yi** seçin.
 
 1. **Ekleme işlemini başlatmak için işletim sistemini seçin** **için macOS'u** seçin
 
@@ -79,9 +77,9 @@ MacOS cihazını Uyumluluk çözümlerine ekleme işlemi çok aşamalı bir işl
 
 1. Cihaz ekleme paketinin içeriğini ayıklayın. JAMF klasöründe *DeviceComplainceOnboarding.plist* dosyasını görmeniz gerekir.
 
-### <a name="create-a-jamf-pro-configuration-profile-for-the-onboarding-package"></a>Ekleme paketi için jamf Pro yapılandırma profili oluşturma
+### <a name="create-a-jamf-pro-configuration-profile-for-the-onboarding-package"></a>Ekleme paketi için JAMF Pro yapılandırma profili oluşturma
 
-1. JAMF Pro'de yeni bir yapılandırma profili oluşturun. [JAMF Pro yöneticileri kılavuzuna](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) bakın. Şu değerleri kullanın:
+1. JAMF Pro'da yeni bir yapılandırma profili oluşturun. [JAMF Pro yöneticileri kılavuzuna](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) bakın. Şu değerleri kullanın:
     - Ad: `MDATP onboarding for macOS`
     - Açıklama: `MDATP EDR onboarding for macOS`
     - Kategori: `none`
@@ -106,7 +104,7 @@ MacOS cihazını Uyumluluk çözümlerine ekleme işlemi çok aşamalı bir işl
 > [!IMPORTANT]
 > Tercih Etki Alanı değeri olarak ***com.microsoft.wdav** _ kullanmalısınız. Uç Nokta için Microsoft Defender yönetilen ayarlarını yüklemek için bu adı ve _ *_com.microsoft.wdav.ext_** kullanır.
 
-1. JAMF Pro'de yeni bir yapılandırma profili oluşturun. [JAMF Pro yöneticileri kılavuzuna](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) bakın. Şu değerleri kullanın:
+1. JAMF Pro'da yeni bir yapılandırma profili oluşturun. [JAMF Pro yöneticileri kılavuzuna](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) bakın. Şu değerleri kullanın:
     - Ad: `MDATP MDAV configuration settings`
     - Açıklama: Bunu boş bırakın
     - Kategori: `none`
@@ -116,7 +114,7 @@ MacOS cihazını Uyumluluk çözümlerine ekleme işlemi çok aşamalı bir işl
 1. **Uygulama & Özel Ayarlar** sekmesinde **Dış Uygulamalar'ı** seçin, **Ekle'yi** seçin ve tercih etki alanı için **Özel Şema'yı** seçin. Şu değeri kullanın:
     - Tercih etki alanı: `com.microsoft.wdav`
 
-1. **Şema Ekle'yi** seçin ve *schema.json* dosyasını karşıya yüklemek için **Upload**.
+1. *Schema.json* dosyasını karşıya yüklemek için **Şema Ekle** ve **Karşıya Yükle'yi** seçin.
 
 1. **Kaydet**'i seçin.
 
@@ -134,16 +132,16 @@ MacOS cihazını Uyumluluk çözümlerine ekleme işlemi çok aşamalı bir işl
 
 ### <a name="create-and-deploy-a-configuration-profile-for-microsoft-autoupdate-mau"></a>Microsoft AutoUpdate (MAU) için yapılandırma profili oluşturma ve dağıtma
 
-1. **com.microsoft.autoupdate2.plist** dosyasını kullanarak jamf Pro yapılandırma dosyası oluşturun. [JAMF Pro yöneticileri kılavuzuna](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) bakın. Şu değerleri kullanın:
+1. **com.microsoft.autoupdate2.plist** dosyasını kullanarak bir JAMF Pro yapılandırma dosyası oluşturun. [JAMF Pro yöneticileri kılavuzuna](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) bakın. Şu değerleri kullanın:
     - Ad: `MDATP MDAV MAU settings`
     - Açıklama: `Microsoft AutoUPdate settings for MDATP for macOS`
     - Kategori: `none`
     - Dağıtım yöntemi: `install automatically`
     - Düzey: `computer level`
 
-1. **Uygulama & Özel Ayarlar** **Upload** ve **Ekle'yi** seçin.
+1. **Uygulama & Özel Ayarlar'da** **Karşıya Yükle** ve **Ekle'yi** seçin.
 
-1. **Tercihler Etki Alanı** alanına girin `com.microsoft.autoupdate2` ve **ardından Upload'ı** seçin.
+1. **Tercihler Etki Alanı** alanına girip `com.microsoft.autoupdate2` **Karşıya Yükle'yi** seçin.
 
 1. **com.microsoft.autoupdate2.plist** dosyasını seçin.
 
@@ -161,11 +159,11 @@ MacOS cihazını Uyumluluk çözümlerine ekleme işlemi çok aşamalı bir işl
 
 1. **fulldisk.mobileconfig** dosyasını kullanın.
 
-1. **fulldisk.mobileconfig** dosyasını JAMF'ye Upload. [JAMF Pro kullanarak Özel Yapılandırma Profilleri Dağıtma](https://docs.jamf.com/technical-articles/Deploying_Custom_Configuration_Profiles_Using_Jamf_Pro.html) bölümüne bakın.
+1. **fulldisk.mobileconfig** dosyasını JAMF'ye yükleyin. [JAMF Pro kullanarak Özel Yapılandırma Profillerini Dağıtma](https://docs.jamf.com/technical-articles/Deploying_Custom_Configuration_Profiles_Using_Jamf_Pro.html) bölümüne bakın.
 
 ### <a name="create-and-deploy-a-configuration-profile-for-system-extensions"></a>Sistem uzantıları için yapılandırma profili oluşturma ve dağıtma
 
-1. [JAMF Pro yöneticileri kılavuzundaki yordamları kullanarak bir JAMF Pro](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) yapılandırma dosyası oluşturun. Şu değerleri kullanın:
+1. JAMF Pro [yönetici kılavuzundaki yordamları kullanarak bir JAMF Pro](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) yapılandırma dosyası oluşturun. Şu değerleri kullanın:
     - Ad: `MDATP MDAV System Extensions`
     - Açıklama: `MDATP system extensions`
     - Kategori: `none`
@@ -188,19 +186,19 @@ MacOS cihazını Uyumluluk çözümlerine ekleme işlemi çok aşamalı bir işl
 
 ### <a name="configure-network-extension"></a>Ağ uzantısını yapılandırma
 
-1. GitHub'dan indirdiğiniz **netfilter.mobileconfig** dosyasını kullanın.
+1. GitHub'dan indirdiğiniz **netfilter.mobileconfig**  dosyasını kullanın.
 
-2. [Jamf Pro kullanarak Özel Yapılandırma Profilleri Dağıtma bölümünde açıklandığı gibi JAMF'ye Upload](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
+2. [Jamf Pro kullanarak Özel Yapılandırma Profilleri Dağıtma bölümünde açıklandığı gibi JAMF'e](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro) yükleyin.
 
 ### <a name="grant-accessibility-access-to-dlp"></a>DLP'ye erişilebilirlik erişimi verme
 
-1. GitHub'den indirdiğiniz **accessibility.mobileconfig** dosyasını kullanın.
+1. GitHub'dan indirdiğiniz **accessibility.mobileconfig** dosyasını kullanın.
 
-2. [Jamf Pro kullanarak Özel Yapılandırma Profilleri Dağıtma bölümünde açıklandığı gibi JAMF'ye Upload](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
+2. [Jamf Pro kullanarak Özel Yapılandırma Profilleri Dağıtma bölümünde açıklandığı gibi JAMF'e](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro) yükleyin.
 
 ### <a name="get-the-installation-package"></a>Yükleme paketini alma
 
-1. **Uyumluluk merkezinde** **Ayarlar** >  **Cihaz Ekleme'yi** açın ve **Ekleme'yi** seçin.
+1. **Uyumluluk merkezinde** **Ayarlar** > **Cihaz Ekleme'yi** açın ve **Ekleme'yi** seçin.
 
 1. **Ekleme işlemini başlatmak için işletim sistemini seçin** **için macOS'u** seçin
 
@@ -227,7 +225,7 @@ MacOS cihazını Uyumluluk çözümlerine ekleme işlemi çok aşamalı bir işl
     - **Seçenekler sekmesi**: Varsayılan değerleri değiştirmeyin
     - **Sınırlamalar sekmesi**: varsayılan değerleri bırakın
 
-1. **Kaydet**'i seçin. Bu işlem paketi JAMF Pro yükler.
+1. **Kaydet**'i seçin. Bu işlem paketi JAMF Pro'ya yükler.
 
 1. **İlkeler** sayfasını açın.
 
@@ -240,7 +238,7 @@ MacOS cihazını Uyumluluk çözümlerine ekleme işlemi çok aşamalı bir işl
 
 1. **Kaydet**'i seçin.
 
-1. **PaketlerYapılandırma'yı** >  seçin.
+1. **Paketleri** > **Yapılandır'ı** seçin.
 
 1. **Ekle**'yi seçin.
 
@@ -260,7 +258,7 @@ MacOS cihazını Uyumluluk çözümlerine ekleme işlemi çok aşamalı bir işl
 
 1. macOS cihazını yeniden başlatın.
 
-1. Sistem **TercihleriProfiller'i** >  açın.
+1. **Sistem Tercihleri Profillerini** >  açın.
 
 1. Şunu görmeniz gerekir:
     - Accessiblity
@@ -275,7 +273,7 @@ MacOS cihazını Uyumluluk çözümlerine ekleme işlemi çok aşamalı bir işl
 ## <a name="offboard-macos-devices-using-jamf-pro"></a>JAMF Pro kullanarak macOS cihazlarını çıkarma
 
 1. Uygulamayı kaldırma (MDE kullanmıyorsa)
-    1. Bkz. JAMF Pro Docs - Paket Dağıtımı - [JAMF Pro yöneticileri kılavuzuJamf](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) Pro Yönetici Kılavuzu
+    1. Bkz. JAMF Pro Docs - Paket Dağıtımı - [JAMF Pro yönetici kılavuzu](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/)Jamf Pro Yönetici Kılavuzu
 
 1. macOS cihazını yeniden başlatma - Bazı uygulamalar yeniden başlatılana kadar yazdırma işlevselliğini kaybedebilir
 

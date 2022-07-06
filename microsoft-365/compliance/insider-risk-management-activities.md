@@ -1,7 +1,7 @@
 ---
 title: Insider risk yönetimi etkinliklerini araştırma
-description: Microsoft Purview'de insider risk yönetimi etkinliklerini araştırma hakkında bilgi edinin
-keywords: Microsoft 365, Microsoft Purview, iç risk, risk yönetimi, uyumluluk
+description: Microsoft Purview'da insider risk yönetimi etkinliklerini araştırma hakkında bilgi edinin
+keywords: Microsoft 365, Microsoft Purview, insider riski, risk yönetimi, uyumluluk
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -13,16 +13,14 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: a808e2d52692c44364e542cb8cd9e7a2b0c57cac
-ms.sourcegitcommit: d9842a9fcaead280bb704e92d44c1f4c201f9eb4
+ms.openlocfilehash: 53b56c8e96beb3e68c56fd968ac87e58994bc2ee
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65759878"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622975"
 ---
 # <a name="investigate-insider-risk-management-activities"></a>Insider risk yönetimi etkinliklerini araştırma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Riskli kullanıcı etkinliklerini araştırmak, kuruluşunuz için insider risklerini en aza indirmenin önemli bir ilk adımıdır. Bu riskler, şirket içi risk yönetimi ilkelerinden uyarı oluşturan etkinlikler veya ilkeler tarafından algılanan ancak kullanıcılar için hemen bir iç risk yönetimi uyarısı oluşturmayan etkinlikler olabilir. **Kullanıcı etkinlik raporlarını (önizleme)** veya **Uyarı panosunu** kullanarak bu tür etkinlikleri araştırabilirsiniz.
 
@@ -30,7 +28,7 @@ Riskli kullanıcı etkinliklerini araştırmak, kuruluşunuz için insider riskl
 
 Kullanıcı etkinliği raporları, belirli kullanıcılara yönelik etkinlikleri geçici olarak veya açık bir şekilde şirket içi risk yönetimi ilkesine atamak zorunda kalmadan tanımlı bir süre boyunca incelemenize olanak tanır. Çoğu şirket içi risk yönetimi senaryosunda kullanıcılar ilkelerde açıkça tanımlanır ve ilke uyarıları (olayları tetiklemeye bağlı olarak) ve etkinliklerle ilişkili risk puanları olabilir. Ancak bazı senaryolarda, bir ilkede açıkça tanımlanmayan kullanıcıların etkinliklerini incelemek isteyebilirsiniz. Bu etkinlikler, kullanıcı ve riskli olabilecek etkinlikler hakkında bir ipucu aldığınız kullanıcılar veya genellikle bir iç risk yönetimi ilkesine atanma ihtiyacı olmayan kullanıcılara yönelik olabilir.
 
-Insider risk yönetimi **Ayarlar** sayfasında göstergeleri yapılandırdıktan sonra, seçilen göstergelerle ilişkili riskli etkinlik için kullanıcı etkinliği algılanır. Kuruluşunuzdaki kullanıcıların riskli etkinliklerini algılamak ve raporlamak için kullanıcı etkinliği raporları için bir ilke yapılandırmanız gerekmez. Kullanıcı etkinlik raporlarına dahil edilen etkinlikler, etkinliklerin görüntülenmesi için olayların tetiklenmesine gerek yoktur. Bu yapılandırma, kullanıcı için algılanan tüm etkinliklerin bir tetikleyici olayı olup olmadığına veya bir uyarı oluştursa bile gözden geçirilebilir olduğu anlamına gelir. Raporlar kullanıcı başına oluşturulur ve özel 90 günlük bir süre için tüm etkinlikleri içerebilir. Aynı kullanıcı için birden çok rapor desteklenmez.
+Insider risk yönetimi **Ayarları** sayfasında göstergeleri yapılandırdıktan sonra, seçilen göstergelerle ilişkili riskli etkinlik için kullanıcı etkinliği algılanır. Kuruluşunuzdaki kullanıcıların riskli etkinliklerini algılamak ve raporlamak için kullanıcı etkinliği raporları için bir ilke yapılandırmanız gerekmez. Kullanıcı etkinlik raporlarına dahil edilen etkinlikler, etkinliklerin görüntülenmesi için olayların tetiklenmesine gerek yoktur. Bu yapılandırma, kullanıcı için algılanan tüm etkinliklerin bir tetikleyici olayı olup olmadığına veya bir uyarı oluştursa bile gözden geçirilebilir olduğu anlamına gelir. Raporlar kullanıcı başına oluşturulur ve özel 90 günlük bir süre için tüm etkinlikleri içerebilir. Aynı kullanıcı için birden çok rapor desteklenmez.
 
 Bir kullanıcının etkinliklerini inceledikten sonra araştırmacılar zararsız olarak tek tek etkinlikleri kapatabilir, raporun bağlantısını diğer araştırmacılarla paylaşabilir veya e-postayla gönderebilir ya da kullanıcıyı geçici veya açık olarak bir iç risk yönetimi ilkesine atamayı seçebilir. **Kullanıcı etkinlik raporları** sayfasını görüntülemek için kullanıcıların *Insider Risk Yönetimi Araştırmacıları* rol grubuna atanması gerekir.  
 
@@ -163,7 +161,7 @@ Bu sekme Etkinlik gezginini açar. Daha fazla bilgi için bu makaledeki Etkinlik
 1. **Zaman filtreleri**: Varsayılan olarak, Kullanıcı etkinlik grafiğinde görüntülenen etkinliklerin son üç ayıdır. Kabarcık grafiğinde *6 Ay*, *3 Ay* veya *1 Ay* sekmelerini seçerek grafik görünümünü kolayca filtreleyebilirsiniz.
 2. **Risk uyarısı etkinliği ve ayrıntıları**: Risk etkinlikleri, Kullanıcı etkinlik grafiğinde renkli kabarcıklar olarak görsel olarak görüntülenir. Kabarcıklar farklı risk kategorileri ve için oluşturulur. Her risk etkinliğinin ayrıntılarını görüntülemek için bir kabarcık seçin. Ayrıntılar şunlardır:
     - Risk etkinliğinin **tarihi**.
-    - **Risk etkinliği kategorisi**. Örneğin, *kuruluş dışına gönderilen ekleri içeren e-postalar* veya *SharePoint Online'dan indirilen Dosyalar*.
+    - **Risk etkinliği kategorisi**. Örneğin, *SharePoint Online'dan indirilen* *kuruluş veya Dosyalar dışında gönderilen ekleri içeren e-postalar*.
     - Uyarı için **risk puanı**. Bu puan, uyarı riski önem düzeyi için sayısal puandır.
     - Uyarıyla ilişkili olay sayısı. Risk etkinliğiyle ilişkili her dosyaya veya e-postaya bağlantılar da sağlanır.
 3. **Filtreler ve sıralama (önizleme)**:

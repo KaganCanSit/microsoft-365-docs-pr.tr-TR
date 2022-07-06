@@ -17,19 +17,17 @@ search.appverid:
 ms.assetid: 7b40eeaa-544c-4534-b89b-9f79998e374c
 ms.custom:
 - seo-marvel-apr2020
-description: Bu makaledeki PowerShell betiğini kullanarak Microsoft 365'deki Microsoft Purview uyumluluk portalında mevcut bir İçerik Aramasını hızla kopyalayabilirsiniz.
-ms.openlocfilehash: f5ec0433e445256865033b71082c92889972f827
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Microsoft 365'teki Microsoft Purview uyumluluk portalı mevcut İçerik Aramasını hızla kopyalamak için bu makaledeki PowerShell betiğini kullanın.
+ms.openlocfilehash: 806705202865d97136713dba4afb263b605ef0f8
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017454"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66628825"
 ---
 # <a name="clone-a-content-search"></a>İçerik Araması Kopyalama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview uyumluluk portalında, birçok posta kutusunda veya SharePoint ve OneDrive İş sitelerde arama yapılan Microsoft 365 İçerik Araması oluşturmak biraz zaman alabilir. Url'yi yanlış yazdığınızda, aranacak sitelerin belirtilmesi hatalara da açık olabilir. Bu sorunlardan kaçınmak için bu makaledeki Windows PowerShell betiğini kullanarak mevcut İçerik Aramasını hızla kopyalayabilirsiniz. Bir aramayı kopyaladığınızda, özgün aramayla aynı özellikleri (içerik konumları ve arama sorgusu gibi) içeren yeni bir arama (farklı bir ada sahip) oluşturulur. Ardından anahtar sözcük sorgusunu veya tarih aralığını değiştirerek yeni aramayı düzenleyebilir ve çalıştırabilirsiniz.
+Microsoft 365'teki Microsoft Purview uyumluluk portalı birçok posta kutusunda veya SharePoint'te ve OneDrive İş sitelerde arama yapılan bir İçerik Araması oluşturmak biraz zaman alabilir. Url'yi yanlış yazdığınızda, aranacak sitelerin belirtilmesi hatalara da açık olabilir. Bu sorunlardan kaçınmak için bu makaledeki Windows PowerShell betiğini kullanarak mevcut İçerik Aramasını hızla kopyalayabilirsiniz. Bir aramayı kopyaladığınızda, özgün aramayla aynı özellikleri (içerik konumları ve arama sorgusu gibi) içeren yeni bir arama (farklı bir ada sahip) oluşturulur. Ardından anahtar sözcük sorgusunu veya tarih aralığını değiştirerek yeni aramayı düzenleyebilir ve çalıştırabilirsiniz.
 
 İçerik Aramalarını neden kopyalamalı?
 
@@ -43,13 +41,13 @@ Microsoft Purview uyumluluk portalında, birçok posta kutusunda veya SharePoint
 
 - Exchange Online V2 modülünü yüklemeniz gerekir. Yönergeler için bkz. [EXO V2 modülünü yükleme ve koruma](/powershell/exchange/exchange-online-powershell-v2#install-and-maintain-the-exo-v2-module).
 
-- Bu konuda açıklanan betiği çalıştırmak için Microsoft Purview uyumluluk portalında eBulma Yöneticisi rol grubunun üyesi olmanız gerekir.
+- Bu konuda açıklanan betiği çalıştırmak için Microsoft Purview uyumluluk portalı eBulma Yöneticisi rol grubunun üyesi olmanız gerekir.
 
 - Betik en az hata işleme içerir. Betiğin birincil amacı, bir içerik aramasını hızla kopyalamaktır.
 
 - Betik yeni bir İçerik Araması oluşturur ancak başlatmaz.
 
-- Bu betik, kopyaladığınız İçerik Aramasının bir eBulma olayıyla ilişkilendirilip ilişkilendirilmediğini dikkate alır. Arama bir servis talebiyle ilişkilendirilmişse, yeni arama aynı servis talebiyle de ilişkilendirilir. Mevcut arama bir servis talebiyle ilişkilendirilmiyorsa, yeni arama Microsoft Purview uyumluluk portalındaki **İçerik arama** sayfasında listelenir.
+- Bu betik, kopyaladığınız İçerik Aramasının bir eBulma olayıyla ilişkilendirilip ilişkilendirilmediğini dikkate alır. Arama bir servis talebiyle ilişkilendirilmişse, yeni arama aynı servis talebiyle de ilişkilendirilir. Mevcut arama bir servis talebiyle ilişkilendirilmiyorsa, yeni arama Microsoft Purview uyumluluk portalı **İçerik arama** sayfasında listelenir.
 
 - Bu konuda sağlanan örnek betik, herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betik, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiğin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
 
@@ -57,7 +55,7 @@ Microsoft Purview uyumluluk portalında, birçok posta kutusunda veya SharePoint
 
 Bu adımdaki betik, var olan bir betiği kopyalayarak yeni bir İçerik Araması oluşturur. Bu betiği çalıştırdığınızda aşağıdaki bilgiler istenir:
 
-- **Kullanıcı kimlik bilgileriniz** - Betik, Güvenlik & Uyumluluk PowerShell'e bağlanmak için kimlik bilgilerinizi kullanır. Daha önce belirtildiği gibi, betiği çalıştırmak için Microsoft Purview uyumluluk portalında eKeşif Yöneticisi rol grubunun üyesi olmanız gerekir.
+- **Kullanıcı kimlik bilgileriniz** - Betik, Güvenlik & Uyumluluk PowerShell'e bağlanmak için kimlik bilgilerinizi kullanır. Daha önce belirtildiği gibi, betiği çalıştırmak için Microsoft Purview uyumluluk portalı eBulma Yöneticisi rol grubunun üyesi olmanız gerekir.
 
 - **Var olan aramanın adı** - Bu, kopyalamak istediğiniz İçerik Araması'dır.
 
@@ -113,7 +111,7 @@ Aramayı kopyalamak için:
    }
    ```
 
-2. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell). Aynı PowerShell penceresinde betiği kaydettiğiniz klasöre gidin.
+2. [Güvenlik & Uyumluluğu PowerShell'e bağlanın](/powershell/exchange/connect-to-scc-powershell). Aynı PowerShell penceresinde betiği kaydettiğiniz klasöre gidin.
 
 3. Betiği çalıştırın; örneğin:
 
@@ -126,11 +124,11 @@ Aramayı kopyalamak için:
      - Mevcut aramanın adı.
      - Yeni aramanın adı.
 
-     Betik yeni İçerik Aramasını oluşturur ancak başlatmaz. Bu size sonraki adımda aramayı düzenleme ve çalıştırma fırsatı verir. Yeni aramanın bir servis talebiyle ilişkilendirilip ilişkilendirilmediğine bağlı olarak **, Get-ComplianceSearch** cmdlet'ini çalıştırarak veya Microsoft Purview uyumluluk portalındaki **İçerik araması** veya **eBulma** sayfasına giderek yeni aramanın özelliklerini görüntüleyebilirsiniz.
+     Betik yeni İçerik Aramasını oluşturur ancak başlatmaz. Bu size sonraki adımda aramayı düzenleme ve çalıştırma fırsatı verir. Yeni aramanın bir servis talebiyle ilişkilendirilip ilişkilendirilmediğine bağlı olarak **, Get-ComplianceSearch** cmdlet'ini çalıştırarak veya Microsoft Purview uyumluluk portalı **İçerik arama** veya **eBulma** sayfasına giderek yeni aramanın özelliklerini görüntüleyebilirsiniz.
 
-## <a name="step-2-edit-and-run-the-cloned-search-in-the-microsoft-purview-compliance-portal"></a>2. Adım: Kopyalanan aramayı Microsoft Purview uyumluluk portalında düzenleme ve çalıştırma
+## <a name="step-2-edit-and-run-the-cloned-search-in-the-microsoft-purview-compliance-portal"></a>2. Adım: Kopyalanan aramayı Microsoft Purview uyumluluk portalı düzenleme ve çalıştırma
 
-Mevcut bir İçerik Aramasını kopyalamak için betiği çalıştırdıktan sonra, sonraki adım yeni aramayı düzenlemek ve çalıştırmak için Microsoft Purview uyumluluk portalına gitmektir. Daha önce belirtildiği gibi, anahtar sözcük arama sorgusunu değiştirerek ve arama koşullarını ekleyerek veya kaldırarak bir aramayı düzenleyebilirsiniz. Daha fazla bilgi için bkz.:
+Mevcut bir İçerik Aramasını kopyalamak için betiği çalıştırdıktan sonra, sonraki adım yeni aramayı düzenlemek ve çalıştırmak için Microsoft Purview uyumluluk portalı gitmektir. Daha önce belirtildiği gibi, anahtar sözcük arama sorgusunu değiştirerek ve arama koşullarını ekleyerek veya kaldırarak bir aramayı düzenleyebilirsiniz. Daha fazla bilgi için bkz.:
 
 - [Office 365 İçerik Arama](content-search.md)
 

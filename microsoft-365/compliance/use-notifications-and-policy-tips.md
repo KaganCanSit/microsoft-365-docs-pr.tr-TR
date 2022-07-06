@@ -22,18 +22,16 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Bir kullanıcıya DLP ilkesiyle çakişen içerikle çalıştığını bildirmek için veri kaybı önleme (DLP) ilkesine ilke ipucu eklemeyi öğrenin.
-ms.openlocfilehash: 13387890ca1096115c5c933627ae674aaad15581
-ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
+ms.openlocfilehash: 19ec7b5e359b32cc38310c51c6674968aecc666f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65863640"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630951"
 ---
 # <a name="send-email-notifications-and-show-policy-tips-for-dlp-policies"></a>DLP ilkeleri için e-posta bildirimleri gönderme ve ilke ipuçlarını gösterme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Office 365 genelinde hassas bilgileri tanımlamak, izlemek ve korumak için Microsoft Purview veri kaybı önleme (DLP) ilkesi kullanabilirsiniz. Kuruluşunuzda bu hassas bilgilerle çalışan kişilerin DLP ilkelerinizle uyumlu kalmasını istiyorsunuz, ancak işlerini yapmalarını gereksiz yere engellemek istemiyorsunuz. Burada e-posta bildirimleri ve ilke ipuçları yardımcı olabilir.
+Office 365 hassas bilgileri tanımlamak, izlemek ve korumak için Bir Microsoft Purview veri kaybı önleme (DLP) ilkesi kullanabilirsiniz. Kuruluşunuzda bu hassas bilgilerle çalışan kişilerin DLP ilkelerinizle uyumlu kalmasını istiyorsunuz, ancak işlerini yapmalarını gereksiz yere engellemek istemiyorsunuz. Burada e-posta bildirimleri ve ilke ipuçları yardımcı olabilir.
 
 ![İleti çubuğu, Excel 2016 ilke ipucunu gösterir](../media/7002ff54-1656-4a6c-993f-37427d6508c8.png)
 
@@ -43,23 +41,21 @@ DLP ilkesi oluşturduğunuzda, kullanıcı bildirimlerini şu şekilde yapıland
 
 - DLP ilkesiyle çakişen içerik için bir ilke ipucu görüntüleyin:
 
-  - Web üzerinde Outlook ve Outlook 2013 ve sonraki sürümlerdeki e-postalar için, ileti oluşturulurken, ilke ipucu alıcıların üstündeki iletinin üst kısmında görünür.
+  - Web üzerinde Outlook ve Outlook 2013 ve sonraki sürümlerdeki e-postalar için, ileti oluşturulurken, ilke ipucu alıcıların üzerinde bir iletinin en üstünde görünür.
 
-  - OneDrive İş hesabındaki veya çevrimiçi SharePoint sitedeki belgeler için ilke ipucu, öğede görünen bir uyarı simgesiyle gösterilir. Daha fazla bilgi görüntülemek için bir öğeyi ve ardından **Bilgi** ![Bilgileri bölmesi simgesini seçebilirsiniz.](../media/50b6d51b-92b4-4c5f-bb4b-4ca2d4aa3d04.png) ayrıntılar bölmesini açmak için sayfanın sağ üst köşesinde.
+  - OneDrive İş hesabındaki veya SharePoint Online sitesindeki belgeler için ilke ipucu, öğede görünen bir uyarı simgesiyle gösterilir. Daha fazla bilgi görüntülemek için bir öğeyi ve ardından **Bilgi** ![Bilgileri bölmesi simgesini seçebilirsiniz.](../media/50b6d51b-92b4-4c5f-bb4b-4ca2d4aa3d04.png) ayrıntılar bölmesini açmak için sayfanın sağ üst köşesinde.
 
-  - Excel, PowerPoint ve DLP ilkesine dahil edilen bir OneDrive İş sitede veya SharePoint Online sitesinde depolanan Word belgeleri için, ilke ipucu İleti Çubuğu'nda ve Backstage görünümünde (**Dosya** menüsü \> **Bilgileri**) görüntülenir.
+  - DLP ilkesine dahil edilen bir OneDrive İş sitesinde veya SharePoint Online sitesinde depolanan Excel, PowerPoint ve Word belgeleri için, ilke ipucu İleti Çubuğu'nda ve Backstage görünümünde (**Dosya** menüsü \> **Bilgileri**) görüntülenir.
 
 ## <a name="add-user-notifications-to-a-dlp-policy"></a>DLP ilkesine kullanıcı bildirimleri ekleme
 
-DLP ilkesi oluşturduğunuzda **Kullanıcı bildirimlerini** etkinleştirebilirsiniz. Kullanıcı bildirimleri etkinleştirildiğinde Microsoft 365 hem e-posta bildirimlerini hem de ilke ipuçlarını gönderir. Bildirim e-postalarının kime gönderileceğini, e-posta metnini ve ilke ipucu metnini özelleştirebilirsiniz.
+DLP ilkesi oluşturduğunuzda **Kullanıcı bildirimlerini** etkinleştirebilirsiniz. Kullanıcı bildirimleri etkinleştirildiğinde, Microsoft 365 hem e-posta bildirimlerini hem de ilke ipuçlarını gönderir. Bildirim e-postalarının kime gönderileceğini, e-posta metnini ve ilke ipucu metnini özelleştirebilirsiniz.
 
 1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/permissions) gidin.
 
 2. İş veya okul hesabınızı kullanarak oturum açın.
 
 3. sol \> gezinti Microsoft Purview uyumluluk portalı \> **Veri kaybı önleme** \> **İlkesi** \> **+ İlke oluştur'a tıklayın**.
-
-    ![İlke düğmesi oluşturun.](../media/b1e48a08-92e2-47ca-abdc-4341694ddc7c.png)
 
 4. **İleri'yi** korumak istediğiniz \> hassas bilgi türlerini koruyan DLP ilke şablonunu seçin.
 
@@ -73,9 +69,9 @@ DLP ilkesi oluşturduğunuzda **Kullanıcı bildirimlerini** etkinleştirebilirs
 
    - Belirli konumları \> **seçmeme izin ver** **İleri'yi** seçin.
 
-   Tüm Exchange e-posta veya tüm OneDrive hesapları gibi bir konumun tamamını dahil etmek veya hariç tutmak için bu konumun **Durumunu** açın veya kapatın.
+   Tüm Exchange e-postaları veya tüm OneDrive hesapları gibi bir konumun tamamını dahil etmek veya hariç tutmak için, o konumun **Durumunu** açın veya kapatın.
 
-   Yalnızca belirli SharePoint siteleri veya OneDrive hesaplarını eklemek için **, Durum'u** açık olarak değiştirin ve **ardından Ekle** altındaki bağlantılara tıklayarak belirli siteleri veya hesapları seçin.
+   Yalnızca belirli SharePoint sitelerini veya OneDrive hesaplarını eklemek için **, Durum'u** açık duruma getirin ve ardından **Ekle** altındaki bağlantılara tıklayarak belirli siteleri veya hesapları seçin.
 
 7. **Gelişmiş ayarları** \> kullan **İleri'yi** seçin.
 
@@ -112,7 +108,7 @@ Bildirimlerin, gerçekleştirilen eylemle başlayan bir Konu satırı vardır. �
 
 Varsayılan olarak, bildirimler sitedeki bir öğe için aşağıdakine benzer bir metin görüntüler. Bildirim metni her kural için ayrı ayrı yapılandırıldığından, görüntülenen metin hangi kuralın eşleştirildiğine bağlı olarak değişir.
 
-|DLP ilke kuralı bunu yaparsa...|Ardından, SharePoint veya OneDrive İş belgeler için varsayılan bildirimde bu...|Ardından Outlook iletileri için varsayılan bildirimde şu ifade yer alır:...|
+|DLP ilke kuralı bunu yaparsa...|Ardından SharePoint veya OneDrive İş belgeleri için varsayılan bildirimde bu...|Ardından Outlook iletileri için varsayılan bildirimde bu...|
 |---|---|---|
 |Bildirim gönderir ancak geçersiz kılmaya izin vermez|Bu öğe, kuruluşunuzdaki bir ilkeyle çakişer.|E-posta iletiniz kuruluşunuzdaki bir ilkeyle çakişer.|
 |Erişimi engeller, bildirim gönderir ve geçersiz kılmaya izin verir|Bu öğe, kuruluşunuzdaki bir ilkeyle çakişer. Bu çakışmayı çözmezseniz, bu dosyaya erişim engellenebilir.|E-posta iletiniz kuruluşunuzdaki bir ilkeyle çakişer. İleti tüm alıcılara teslim edilmedi.|
@@ -129,6 +125,7 @@ E-posta bildirimini özelleştirmeye yardımcı olması için aşağıdaki belir
 |%%AppliedActions%%|İçeriğe uygulanan eylemler.|
 |%%ContentURL%%|SharePoint Online sitesindeki veya OneDrive İş sitedeki belgenin URL'si.|
 |%%MatchedConditions%%|İçerikle eşleşen koşullar. İçerikle ilgili olası sorunlar hakkında kişileri bilgilendirmek için bu belirteci kullanın.|
+|%%BlockedMessageInfo%%|Engellenen iletinin ayrıntıları. Engellenen iletinin ayrıntılarını kişilere bildirmek için bu belirteci kullanın.|
 
 ![Belirteçlerin nerede göründüğünü gösteren bildirim iletisi.](../media/cd3f36b3-40db-4f30-99e4-190750bd1955.png)
 
@@ -184,9 +181,9 @@ Kuralı geçersiz kılmak için ilke ipucu kullanma hakkında anlamanız gereken
 |Notify + Block + AllowOverride + False positive + With justification     |Engelle         |Evet         |Evet         |
 
 
-## <a name="policy-tips-on-onedrive-for-business-sites-and-sharepoint-online-sites"></a>OneDrive İş siteleri ve SharePoint Çevrimiçi siteleri ile ilgili ilke ipuçları
+## <a name="policy-tips-on-onedrive-for-business-sites-and-sharepoint-online-sites"></a>OneDrive İş siteleri ve SharePoint Online siteleri ile ilgili ilke ipuçları
 
-OneDrive İş sitedeki veya çevrimiçi SharePoint sitedeki bir belge DLP ilkesindeki bir kuralla eşleştiğinde ve bu kural ilke ipuçlarını kullandığında, ilke ipuçları belgede özel simgeler görüntüler:
+OneDrive İş bir sitedeki veya SharePoint Online sitesindeki bir belge DLP ilkesindeki bir kuralla eşleştiğinde ve bu kural ilke ipuçlarını kullandığında, ilke ipuçları belgede özel simgeler görüntüler:
 
 1. Kural dosya hakkında bir bildirim gönderirse uyarı simgesi görüntülenir.
 
@@ -238,19 +235,19 @@ Bir e-postaya hassas bilgiler eklediğinizde, hassas bilgilerin eklenmesiyle ilk
 
 ### <a name="outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions"></a>Outlook 2013 ve üzeri, yalnızca bazı koşullar için ilke ipuçlarının gösterilmesini destekler
 
-Şu anda Outlook 2013 ve üzeri sürümler yalnızca şu koşullar için ilke ipuçlarının gösterilmesini destekler:
+Şu anda, Outlook 2013 ve üzeri yalnızca bu koşullar için ilke ipuçlarının gösterilmesini destekler:
 
 - İçerik içeriği
 - İçerik paylaşılıyor
 
-Özel durumlar koşul olarak kabul edilir ve bu koşulların tümü, içerikle eşleşecekleri ve içerik üzerinde koruyucu eylemler uygulayacakları Outlook çalışır. Ancak kullanıcılara ilke ipuçlarının gösterilmesi henüz desteklenmiyor. 
+Özel durumların koşul olarak kabul edildiğini ve bu koşulların tümünün, içerikle eşleşecekleri ve içerik üzerinde koruyucu eylemler uygulayacakları Outlook'ta çalıştığını unutmayın. Ancak kullanıcılara ilke ipuçlarının gösterilmesi henüz desteklenmiyor. 
 
 > [!NOTE]
 > Outlook, dinamik dağıtım grubuna veya e-posta etkin olmayan güvenlik gruplarına uygulanan DLP poli'leri için ilke ipuçlarının gösterilmesini desteklemez. 
 
 ### <a name="policy-tips-in-the-exchange-admin-center-vs-the-microsoft-purview-compliance-portal"></a>Exchange yönetim merkezinde ve Microsoft Purview Uyumluluk portalında ilke ipuçları
 
-İlke ipuçları<a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">, Exchange yönetim merkezinde</a> oluşturulan DLP ilkeleri ve posta akışı kurallarıyla veya uyumluluk portalında oluşturulan DLP ilkeleriyle çalışabilir, ancak ikisini birden çalışmaz. Bunun nedeni, bu ilkelerin farklı konumlarda depolanmasıdır, ancak ilke ipuçları yalnızca tek bir konumdan çizim yapabilir.
+İlke ipuçları <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">, Exchange yönetim merkezinde</a> oluşturulan DLP ilkeleri ve posta akışı kurallarıyla veya uyumluluk portalında oluşturulan DLP ilkeleriyle çalışabilir, ancak ikisini birden çalışmaz. Bunun nedeni, bu ilkelerin farklı konumlarda depolanmasıdır, ancak ilke ipuçları yalnızca tek bir konumdan çizim yapabilir.
 
 Exchange yönetim merkezinde ilke ipuçlarını yapılandırdıysanız, uyumluluk portalında yapılandırdığınız ilke ipuçları, Exchange yönetim merkezindeki ipuçlarını kapatana kadar Web üzerinde Outlook ve Outlook 2013 ve sonraki sürümlerde kullanıcılara gösterilmez. Bu, geçerli Exchange posta akışı kurallarınızın (taşıma kuralları olarak da bilinir) uyumluluk portalına geçiş yapmayı seçene kadar çalışmaya devam etmesini sağlar.
 
@@ -268,16 +265,16 @@ Varsayılan olarak, ilke ipuçları e-posta için aşağıdakine benzer bir meti
 
 ## <a name="policy-tips-in-excel-powerpoint-and-word"></a>Excel, PowerPoint ve Word'de ilke ipuçları
 
-kişiler Excel, PowerPoint ve Word'ün masaüstü sürümlerinde hassas içerikle çalıştığında, ilke ipuçları onlara içeriğin bir DLP ilkesiyle çakışıp çakışmadığını gerçek zamanlı olarak bildirebilir. Bunun için şunlar gerekir:
+Kişiler Excel, PowerPoint ve Word'ün masaüstü sürümlerinde hassas içerikle çalıştığında, ilke ipuçları içeriğin bir DLP ilkesiyle çakışıp çakışmadığını onlara gerçek zamanlı olarak bildirebilir. Bunun için şunlar gerekir:
 
 - Office belgesi OneDrive İş bir sitede veya SharePoint Online sitesinde depolanır.
 
 - Site, ilke ipuçlarını kullanacak şekilde yapılandırılmış bir DLP ilkesine dahil edilir.
 
-Office masaüstü programları DLP ilkelerini doğrudan Office 365'dan otomatik olarak eşitler ve ardından belgelerinizi tarar ve DLP ilkelerinizle çakışmadığından ve ilke ipuçlarını gerçek zamanlı olarak görüntülemediğinden emin olur.
+Office masaüstü programları DLP ilkelerini doğrudan Office 365'den otomatik olarak eşitler ve ardından belgelerinizi tarar ve DLP ilkelerinizle çakışmadığından ve ilke ipuçlarını gerçek zamanlı olarak görüntülemediğinden emin olur.
 
 > [!NOTE]
-> Office masaüstü uygulamaları, DLP ilke ipuçlarının gösterilip gösterilmeyeceğini belirlemek için belgeleri kendileri tarar; Çevrimiçi sitelerin veya SharePoint OneDrive İş sitelerin zaten belirlediği ilke ipuçlarının bir dosyada gösterilmesi gerektiğini göstermez. Sonuç olarak, SharePoint Çevrimiçi sitelerinde veya OneDrive İş sitelerinde gördüğünüz masaüstü uygulamalarında her zaman bir DLP ilkesi ipucu göremeyebilirsiniz. Buna karşılık, web'deki Office uygulamaları yalnızca çevrimiçi sitelerin veya OneDrive İş sitelerin önceden belirlediği DLP ilkesi ipuçlarının gösterilmesini SharePoint gösterir.
+> Office masaüstü uygulamaları, DLP ilkesi ipuçlarının gösterilip gösterilmeyeceğini belirlemek için belgeleri kendileri tarar; SharePoint Online sitelerinin veya OneDrive İş sitelerinin zaten belirlediği ilke ipuçlarının bir dosyada gösterilmesi gerektiğini göstermezler. Sonuç olarak, SharePoint Online sitelerinde veya OneDrive İş sitelerinde gördüğünüz masaüstü uygulamalarında her zaman bir DLP ilkesi ipucu göremeyebilirsiniz. Buna karşılık, web'deki Office uygulamaları yalnızca SharePoint Online sitelerinin veya OneDrive İş sitelerinin zaten belirlediği DLP ilkesi ipuçlarını gösterir.
 
 DLP ilkesindeki ilke ipuçlarını nasıl yapılandırdığınıza bağlı olarak, kişiler ilke ipucunu yoksaymayı, ilkeyi iş gerekçesiyle veya gerekçe olmadan geçersiz kılmayı veya hatalı pozitif rapor etmeyi seçebilir.
 
@@ -293,7 +290,7 @@ DLP ilkesindeki ilke ipuçları bu seçeneklerle yapılandırılmışsa **Çöz�
 
 ![Excel 2016 Backstage'da ilke ipucu seçenekleri.](../media/5b3857ba-907e-456e-ae43-888b594c049c.png)
 
-Bu Office masaüstü programlarının her birinde, insanlar ilke ipuçlarını kapatmayı seçebilir. Kapalıysa, basit bildirimler olan ilke ipuçları İleti Çubuğu veya Backstage görünümünde ( **Dosya** sekmesinde) görünmez. Ancak engelleme ve geçersiz kılmayla ilgili ilke ipuçları görünmeye devam eder ve e-posta bildirimini almaya devam eder. Ayrıca, ilke ipuçlarını kapatmak belgeyi uygulanan DLP ilkelerinden muaf tutmaz.
+Bu Office masaüstü programlarının her birinde, kişiler ilke ipuçlarını kapatmayı seçebilir. Kapalıysa, basit bildirimler olan ilke ipuçları İleti Çubuğu veya Backstage görünümünde ( **Dosya** sekmesinde) görünmez. Ancak engelleme ve geçersiz kılmayla ilgili ilke ipuçları görünmeye devam eder ve e-posta bildirimini almaya devam eder. Ayrıca, ilke ipuçlarını kapatmak belgeyi uygulanan DLP ilkelerinden muaf tutmaz.
 
 ### <a name="default-text-for-policy-tips-in-excel-2016-powerpoint-2016-and-word-2016"></a>Excel 2016, PowerPoint 2016 ve Word 2016 ilke ipuçları için varsayılan metin
 

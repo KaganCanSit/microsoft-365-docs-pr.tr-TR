@@ -20,16 +20,14 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 description: DLP için hazırlanma ve PowerBI konumlarına dağıtma.
-ms.openlocfilehash: f831d42898e491258a53423c1d59b9f50c0b289d
-ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
+ms.openlocfilehash: e94ab7bce1fefc7ab370425a269f6e304aee165f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "66616940"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641854"
 ---
 # <a name="get-started-with-data-loss-prevention-policies-for-power-bi-preview"></a>Power BI için Veri kaybını önleme ilkelerini kullanmaya başlama (önizleme)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kuruluşların hassas verilerini algılamalarına ve korumalarına yardımcı olmak için [Microsoft Purview veri kaybı önleme (DLP) ilkeleri](/microsoft-365/compliance/dlp-learn-about-dlp) Power BI'ı destekler. Bir PowerBI veri kümesi bir DLP ilkesindeki ölçütle eşleştiğinde, hassas içeriğin doğasını açıklayan bir uyarı tetiklenebilir. Bu uyarı, yöneticiler tarafından izlenmesi ve yönetilmesi için Microsoft uyumluluk portalındaki veri kaybı önleme **Uyarıları** sekmesine de kaydedilir. Ayrıca, yöneticilere ve belirtilen kullanıcılara e-posta uyarıları gönderilebilir.
 

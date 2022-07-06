@@ -17,20 +17,18 @@ search.appverid:
 - MET150
 ms.assetid: af398293-c69d-465e-a249-d74561552d30
 description: Dosya planı bekletme etiketleri için gelişmiş yönetim özellikleri sağlar.
-ms.openlocfilehash: 67844e521aeec2257440aea34a79f0b96333f7f9
-ms.sourcegitcommit: e6443eb3a4c826792806873428c0c17b59f4fde5
+ms.openlocfilehash: 4257f7306767f1ede04edfc949419b1ab7477d8b
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65889377"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635381"
 ---
 # <a name="use-file-plan-to-create-and-manage-retention-labels"></a>Bekletme etiketleri oluşturmak ve yönetmek için dosya planını kullanma
 
 >*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview uyumluluk portalında **Veri yaşam döngüsü yönetiminden** bekletme etiketleri oluşturup yönetebilirsiniz ancak **Kayıtlar yönetiminin** dosya planı ek yönetim özelliklerine sahiptir:
+Microsoft Purview uyumluluk portalı **Veri yaşam döngüsü yönetiminden** bekletme etiketleri oluşturup yönetebilirsiniz ancak **Kayıtlar yönetiminin** dosya planı ek yönetim özelliklerine sahiptir:
 
 - İlgili bilgileri bir elektronik tablodan içeri aktararak bekletme etiketlerini toplu olarak oluşturabilirsiniz.
 
@@ -51,7 +49,7 @@ Dosya planına erişmek için aşağıdaki yönetici rollerinden birine sahip ol
 - Bekletme Yöneticisi
 - Yalnızca görüntüleme bekletme yöneticisi
 
-[Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com/) **Çözüm** > **Kayıtları yönetimi** > **Dosya planı'na** gidin:
+[Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com/) **Çözüm** > **Kayıtları yönetimi** > **Dosya planı'na** gidin:
 
 ![Dosya planı sayfası](../media/compliance-file-plan.png). 
 
@@ -59,7 +57,7 @@ Dosya planına erişmek için aşağıdaki yönetici rollerinden birine sahip ol
 
 ## <a name="navigating-your-file-plan"></a>Dosya planınızda gezinme
 
-Microsoft Purview uyumluluk portalında **Veri yaşam döngüsü yönetiminden** bekletme etiketleri oluşturduysanız, bu etiketler dosya planınızda otomatik olarak görüntülenir. 
+Microsoft Purview uyumluluk portalı **Veri yaşam döngüsü yönetiminden** bekletme etiketleri oluşturduysanız, bu etiketler dosya planınızda otomatik olarak görüntülenir. 
 
 Benzer şekilde, artık dosya planında bekletme etiketleri oluşturursanız, etiketler içeriği kayıt olarak işaretlemek üzere yapılandırılmamışsa **veri yaşam döngüsü yönetiminde** de kullanılabilir.
 
@@ -203,11 +201,11 @@ yeni bekletme etiketlerini içeri aktarmak için indirilen şablonu doldurmanız
 |Özellik|Tür|Gerekli|Geçerli değerler|
 |:-----|:-----|:-----|:-----|
 |LabelName|Dize|Evet|Bu özellik, bekletme etiketinin adını belirtir ve kiracınızda benzersiz olmalıdır. İçeri aktarma için desteklenen karakterler: a-z, A-Z, 0-9, kısa çizgi (-) ve boşluk karakteri.|
-|Açıklama ekleme|Dize|Hayır|Yöneticiler için bekletme etiketi hakkında bir açıklama eklemek için bu özelliği kullanın. Bu açıklama yalnızca Microsoft Purview uyumluluk portalında bekletme etiketini yöneten yöneticilere görünür.|
+|Açıklama ekleme|Dize|Hayır|Yöneticiler için bekletme etiketi hakkında bir açıklama eklemek için bu özelliği kullanın. Bu açıklama yalnızca Microsoft Purview uyumluluk portalı bekletme etiketini yöneten yöneticilere görünür.|
 |Notlar|Dize|Hayır|Kullanıcılar için bekletme etiketi hakkında bir açıklama eklemek için bu özelliği kullanın. Bu açıklama, kullanıcılar Outlook, SharePoint ve OneDrive gibi uygulamalarda etiketin üzerine geldiğinde görünür. Bu özelliği boş bırakırsanız, etiketin bekletme ayarlarını açıklayan varsayılan bir açıklama görüntülenir. |
 |IsRecordLabel|Dize|**Hayır, Mevzuat** **DOĞRU** değilse|Bu özellik, etiketin içeriği kayıt olarak işaretleyip işaretlemediğini belirtir. Geçerli değerler şunlardır: </br>**DOĞRU**: Etiket öğeyi kayıt olarak işaretler ve sonuç olarak öğe silinemez. </br>**YANLIŞ**: Etiket içeriği kayıt olarak işaretlemez. Bu, varsayılan değerdir. </br> </br> Grup bağımlılıkları: Bu özellik belirtildiğinde RetentionAction, RetentionDuration ve RetentionType da belirtilmelidir.|
 |RetentionAction|Dize|Hayır, **RetentionDuration**, **RetentionType** veya **ReviewerEmail** belirtilmediği sürece|Bu özellik, RetentionDuration özelliği (belirtildiyse) tarafından belirtilen değerin süresi dolduktan sonra hangi eylemin gerçekleştireceğini belirtir. Geçerli değerler şunlardır: </br>**Sil**: RetentionDuration özelliği tarafından belirtilen değerden eski öğeler silinir.</br>**Koru**: Öğeleri RetentionDuration özelliği tarafından belirtilen süre boyunca tutun ve süre dolduğunda hiçbir şey yapma. </br>**KeepAndDelete**: Öğeleri RetentionDuration özelliği tarafından belirtilen süre boyunca tutun ve süre dolduğunda silin. </br> </br> Grup bağımlılıkları: Bu özellik belirtildiğinde, RetentionDuration ve RetentionType da belirtilmelidir. |
-|RetentionDuration|Dize|Hayır, **RetentionAction** veya **RetentionType** belirtilmediği sürece|Bu özellik, içeriğin tutulacak gün sayısını belirtir. Geçerli değerler şunlardır: </br>**Sınırsız**: Öğeler süresiz olarak korunur. </br>**_n_*: Gün olarak pozitif bir tamsayı; örneğin, **365**. Desteklenen maksimum sayı 68 yıl olan 24.855'tir. Bu üst sınırdan daha uzun bir süreye ihtiyacınız varsa, bunun yerine Sınırsız'ı kullanın.</br> </br> Grup bağımlılıkları: Bu özellik belirtildiğinde, RetentionAction ve RetentionType da belirtilmelidir.
+|RetentionDuration|Dize|Hayır, **RetentionAction** veya **RetentionType** belirtilmediği sürece|Bu özellik, içeriğin tutulacak gün sayısını belirtir. Geçerli değerler şunlardır: </br>**Sınırsız**: Öğeler süresiz olarak korunur. </br>**_n_*: Gün olarak pozitif bir tamsayı; örneğin, **365**. Desteklenen maksimum sayı 36.525'tir ve bu da 100 yıldır. Bu üst sınırdan daha uzun bir süreye ihtiyacınız varsa, bunun yerine Sınırsız'ı kullanın.</br> </br> Grup bağımlılıkları: Bu özellik belirtildiğinde, RetentionAction ve RetentionType da belirtilmelidir.
 |RetentionType|Dize|Hayır, **RetentionAction** veya **RetentionDuration** belirtilmediği sürece|Bu özellik, bekletme süresinin (belirtildiyse) içerik oluşturma tarihi, olay tarihi, etiketlenme tarihi veya son değiştirme tarihinden hesaplanıp hesaplanmadığını belirtir. Geçerli değerler şunlardır: </br>**CreationAgeInDays**</br>**EventAgeInDays**</br>**TaggedAgeInDays**</br>**ModificationAgeInDays** </br> </br> Grup bağımlılıkları: Bu özellik belirtildiğinde RetentionAction ve RetentionDuraction da belirtilmelidir.|
 |Gözden GeçirenE-posta|SmtpAddress|Hayır|Bu özellik belirtildiğinde, bekletme süresi dolduğunda bir değerlendirme gözden geçirmesi tetiklenir. Bu özellik **, Kiracınızda KeepAndDelete** bekletme eylemi için gözden geçirenin e-posta adresini belirtir. </br> </br> Kiracınıza tek tek kullanıcıların, dağıtım gruplarının veya güvenlik gruplarının e-posta adresini ekleyebilirsiniz. Birden çok e-posta adresini noktalı virgülle ayırarak belirtin. </br> </br> Grup bağımlılıkları: Bu özellik belirtildiğinde **RetentionAction** ( **KeepAndDelete**, **RetentionDuration** ve **RetentionType** da belirtilmelidir.|
 |ReferenceId|Dize|Hayır|Bu özellik, kuruluşunuz için benzersiz bir değer olarak kullanabileceğiniz **Başvuru Kimliği** dosya planı tanımlayıcısında görüntülenen değeri belirtir.| 

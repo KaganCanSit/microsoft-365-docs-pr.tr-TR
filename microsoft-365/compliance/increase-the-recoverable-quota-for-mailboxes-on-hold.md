@@ -15,19 +15,17 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: a8bdcbdd-9298-462f-b889-df26037a990c
-description: arşiv posta kutusunu etkinleştirin ve Microsoft 365 bir posta kutusunun Kurtarılabilir Öğeler klasörünün boyutunu artırmak için otomatik genişletme arşivlemeyi açın.
-ms.openlocfilehash: d426afffb1002e1187adafc794d5340d730cc7e7
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+description: Arşiv posta kutusunu etkinleştirin ve Microsoft 365'te bir posta kutusunun Kurtarılabilir Öğeler klasörünün boyutunu artırmak için otomatik genişletme arşivlemeyi açın.
+ms.openlocfilehash: cd5a051ec97d292ca03179fc8b530eb311033dbc
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66044148"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66640060"
 ---
 # <a name="increase-the-recoverable-items-quota-for-mailboxes-on-hold"></a>Beklemedeki posta kutuları için Kurtarılabilir Öğeler kotasını artırma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Exchange Online'daki yeni posta kutularına otomatik olarak uygulanan varsayılan Exchange bekletme *ilkesi (Varsayılan MRM İlkesi* olarak adlandırılır) Kurtarılabilir Öğeler adlı bir bekletme etiketi içerir 14 gün arşive taşınır. Bu bekletme etiketi, bir öğenin 14 günlük saklama süresi dolduktan sonra öğeleri kullanıcının birincil posta kutusunda bulunan Kurtarılabilir Öğeler klasöründen kullanıcının arşiv posta kutusunda Kurtarılabilir Öğeler klasörüne taşır. Silmeler klasöründeki e-postalar **RetainDeletedItemsFor** parametresine göre korunur ve kurtarılabilir silinmiş öğelerdeki diğer klasörlere ve ardından arşiv posta kutusuna taşınır. Bunun gerçekleşmesi için kullanıcının arşiv posta kutusunun etkinleştirilmesi gerekir. Arşiv posta kutusu etkinleştirilmemişse hiçbir eylem yapılmaz; başka bir deyişle, 14 günlük saklama süresi dolduktan sonra, bekleyen bir posta kutusu için Kurtarılabilir Öğeler klasöründeki öğeler arşiv posta kutusuna taşınmaz. Beklemedeki bir posta kutusundan hiçbir şey silinmediğinden, özellikle de kullanıcının arşiv posta kutusu etkinleştirilmemişse Kurtarılabilir Öğeler klasörünün depolama kotası aşılabilir.
+Exchange Online'daki yeni posta kutularına otomatik olarak uygulanan *Varsayılan MRM İlkesi* adlı varsayılan Exchange bekletme ilkesi, Kurtarılabilir Öğeler adlı bir bekletme etiketi içerir 14 gün arşive taşınır. Bu bekletme etiketi, bir öğenin 14 günlük saklama süresi dolduktan sonra öğeleri kullanıcının birincil posta kutusunda bulunan Kurtarılabilir Öğeler klasöründen kullanıcının arşiv posta kutusunda Kurtarılabilir Öğeler klasörüne taşır. Silmeler klasöründeki e-postalar **RetainDeletedItemsFor** parametresine göre korunur ve kurtarılabilir silinmiş öğelerdeki diğer klasörlere ve ardından arşiv posta kutusuna taşınır. Bunun gerçekleşmesi için kullanıcının arşiv posta kutusunun etkinleştirilmesi gerekir. Arşiv posta kutusu etkinleştirilmemişse hiçbir eylem yapılmaz; başka bir deyişle, 14 günlük saklama süresi dolduktan sonra, bekleyen bir posta kutusu için Kurtarılabilir Öğeler klasöründeki öğeler arşiv posta kutusuna taşınmaz. Beklemedeki bir posta kutusundan hiçbir şey silinmediğinden, özellikle de kullanıcının arşiv posta kutusu etkinleştirilmemişse Kurtarılabilir Öğeler klasörünün depolama kotası aşılabilir.
 
 Bu sınırı aşma olasılığını azaltmaya yardımcı olmak için, Exchange Online bir posta kutusuna ayrı tutma yerleştirildiğinde Kurtarılabilir Öğeler klasörünün depolama kotası otomatik olarak 30 GB'tan 100 GB'a yükseltilir. Arşiv posta kutusu etkinleştirilirse, arşiv posta kutusunda Kurtarılabilir Öğeler klasörünün depolama kotası da 30 GB'tan 100 GB'a yükseltilir. Exchange Online'da otomatik genişletme arşivleme özelliği etkinleştirilirse, Kurtarılabilir Öğeler klasörü de dahil olmak üzere kullanıcının arşiv posta kutusu için toplam depolama kotası 1,5 TB'tır.
 
@@ -48,7 +46,7 @@ Bekleyen bir posta kutusunun birincil posta kutusunda Kurtarılabilir Öğeler k
     > [!NOTE]
     > Kurtarılabilir Öğeler klasörünün depolama kotasını aşmaya yakın bir posta kutusu için arşivi etkinleştirdikten sonra, yönetilen klasör yardımcısı'nı çalıştırarak, süresi dolan öğelerin arşiv posta kutusunda Kurtarılabilir Öğeler klasörüne taşınması için yardımcının posta kutusunu işlemesini el ile tetiklemeniz gerekebilir. Yönergeler için bkz [. 4. Adım](#optional-step-4-run-the-managed-folder-assistant-to-apply-the-new-retention-settings) . Kullanıcının posta kutusunda bulunan diğer öğelerin yeni arşiv posta kutusuna taşınabileceğini unutmayın. Kullanıcıya, arşiv posta kutusunu etkinleştirdikten sonra bunun olabileceğini söylemeyi göz önünde bulundurun.
 
-- **Ayrı tutmadaki posta kutuları için özel bir Exchange bekletme ilkesi oluşturun.** Arşiv posta kutusunu etkinleştirmenin yanı sıra, Dava Bekletme veya In-Place Ayrı Tutma'da posta kutuları için arşivlemeyi otomatik olarak genişletmenin yanı sıra, beklemedeki posta kutuları için özel bir Exchange bekletme ilkesi de oluşturmak isteyebilirsiniz. Bu, ayrı tutmada olmayan posta kutularına uygulanan Varsayılan MRM İlkesi'nden farklı bir bekletme ilkesi uygulamanıza olanak tanır ve ayrı tutmadaki posta kutuları için tasarlanmış bekletme etiketleri uygulamanıza olanak tanır. Bu, Kurtarılabilir Öğeler klasörü için yeni bir bekletme etiketi oluşturmayı içerir.
+- **Ayrı tutulacak posta kutuları için özel bir Exchange bekletme ilkesi oluşturun.** Arşiv posta kutusunu etkinleştirmenin yanı sıra, Dava Ayrı Tutma veya In-Place Ayrı Tutma'da posta kutuları için arşivlemeyi otomatik olarak genişletmenin yanı sıra, beklemedeki posta kutuları için özel bir Exchange bekletme ilkesi de oluşturmak isteyebilirsiniz. Bu, ayrı tutmada olmayan posta kutularına uygulanan Varsayılan MRM İlkesi'nden farklı bir bekletme ilkesi uygulamanıza olanak tanır ve ayrı tutmadaki posta kutuları için tasarlanmış bekletme etiketleri uygulamanıza olanak tanır. Bu, Kurtarılabilir Öğeler klasörü için yeni bir bekletme etiketi oluşturmayı içerir.
 
 Bu konunun geri kalanında, beklemedeki posta kutuları için özel bir Exchange bekletme ilkesi oluşturmaya yönelik adım adım yordamlar açıklanmaktadır.
 
@@ -64,7 +62,7 @@ Bu konunun geri kalanında, beklemedeki posta kutuları için özel bir Exchange
 
 İlk adım, Kurtarılabilir Öğeler klasörü için özel bir bekletme etiketi (bekletme ilkesi etiketi veya RPT olarak adlandırılır) oluşturmaktır. Daha önce açıklandığı gibi, bu RPT öğeleri kullanıcının birincil posta kutusunda bulunan Kurtarılabilir Öğeler klasöründen kullanıcının arşiv posta kutusunda Kurtarılabilir Öğeler klasörüne taşır. Kurtarılabilir Öğeler klasörü için bir RPT oluşturmak için PowerShell'i kullanmanız gerekir. Exchange yönetim merkezini (EAC) kullanamazsınız.
 
-1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell)
+1. [Exchange Online PowerShell’e bağlanma](/powershell/exchange/connect-to-exchange-online-powershell)
 
 2. Kurtarılabilir Öğeler klasörü için yeni bir RPT oluşturmak için aşağıdaki komutu çalıştırın:
 
@@ -205,7 +203,7 @@ Get-Mailbox -ResultSize unlimited | Where-Object {$_.InPlaceHolds -ne $null} | F
 
 ## <a name="optional-step-4-run-the-managed-folder-assistant-to-apply-the-new-retention-settings"></a>(İsteğe bağlı) 4. Adım: Yeni bekletme ayarlarını uygulamak için Yönetilen Klasör Yardımcısı'nı çalıştırın
 
-Yeni Exchange bekletme ilkesini beklemedeki posta kutularına uyguladıktan sonra, Yönetilen Klasör Yardımcısı'nın yeni bekletme ilkesindeki ayarları kullanarak bu posta kutularını işlemesi Exchange Online 7 gün kadar sürebilir. Yönetilen Klasör Yardımcısı'nın çalışmasını beklemek yerine **Start-ManagedFolderAssistant** cmdlet'ini kullanarak yardımcının yeni bekletme ilkesini uyguladığınız posta kutularını işlemesini el ile tetikleyebilirsiniz.
+Yeni Exchange bekletme ilkesini beklemedeki posta kutularına uyguladıktan sonra, Yönetilen Klasör Yardımcısı'nın yeni bekletme ilkesindeki ayarları kullanarak bu posta kutularını işlemesi Exchange Online 7 güne kadar sürebilir. Yönetilen Klasör Yardımcısı'nın çalışmasını beklemek yerine **Start-ManagedFolderAssistant** cmdlet'ini kullanarak yardımcının yeni bekletme ilkesini uyguladığınız posta kutularını işlemesini el ile tetikleyebilirsiniz.
 
 Pilar Pinilla'nın posta kutusu için Yönetilen Klasör Yardımcısı'nı başlatmak için aşağıdaki komutu çalıştırın.
 
@@ -227,4 +225,4 @@ $MailboxesOnHold.DistinguishedName | Start-ManagedFolderAssistant
 
 - Kullanıcının arşiv posta kutusunu etkinleştirdikten sonra, kullanıcıya posta kutularındaki diğer öğelerin (yalnızca Kurtarılabilir Öğeler klasöründeki öğeler değil) arşiv posta kutusuna taşınabileceğini söylemeyi göz önünde bulundurun. Bunun nedeni, Exchange Online posta kutularına atanan Varsayılan MRM İlkesi'nin öğeleri posta kutusuna teslim edildikten veya kullanıcı tarafından oluşturulduktan iki yıl sonra arşiv posta kutusuna taşıyan bir bekletme etiketi (Varsayılan 2 yıl arşive taşıma olarak adlandırılır) içermesidir. Daha fazla bilgi için bkz. [Exchange Online'de Varsayılan Bekletme İlkesi](/exchange/security-and-compliance/messaging-records-management/default-retention-policy)
 
-- Kullanıcının arşiv posta kutusunu etkinleştirdikten sonra, kullanıcıya arşiv posta kutusunun Kurtarılabilir Öğeler klasöründeki silinmiş öğeleri kurtarabileceğini de söyleyebilirsiniz. Bunu Outlook arşiv posta kutusunda **Silinmiş Öğeler** klasörünü seçip **Giriş** sekmesinde **Silinmiş Öğeleri Sunucudan Kurtar'a** tıklayarak gerçekleştirebilirler. Silinen öğeleri kurtarma hakkında daha fazla bilgi için bkz. [Windows için Outlook'da silinen öğeleri kurtarma](https://go.microsoft.com/fwlink/p/?LinkId=624829).
+- Kullanıcının arşiv posta kutusunu etkinleştirdikten sonra, kullanıcıya arşiv posta kutusunun Kurtarılabilir Öğeler klasöründeki silinmiş öğeleri kurtarabileceğini de söyleyebilirsiniz. Bunu Outlook'ta, arşiv posta kutusunda **Silinmiş Öğeler** klasörünü seçip **Giriş** sekmesinde **Silinmiş Öğeleri Sunucudan Kurtar'a** tıklayarak gerçekleştirebilirler. Silinen öğeleri kurtarma hakkında daha fazla bilgi için bkz. [Windows için Outlook'ta silinen öğeleri kurtarma](https://go.microsoft.com/fwlink/p/?LinkId=624829).

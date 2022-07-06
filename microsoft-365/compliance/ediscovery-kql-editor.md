@@ -16,32 +16,30 @@ search.appverid:
 - MOE150
 - MET150
 description: İçerik arama, eBulma (Standart) ve eBulma (Premium) içinde eBulma arama sorgularını yapılandırmak için KQL düzenleyicisini kullanabilirsiniz.
-ms.openlocfilehash: d97beb6cf8df95aa5112537c75caf4f548f7658d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 966ab29cd71aff76483a982e55e15d4432857a60
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098592"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638399"
 ---
 # <a name="use-the-kql-editor-to-build-search-queries"></a>Arama sorguları oluşturmak için KQL düzenleyicisini kullanma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft 365 eBulma araçları aramasında yeni KQL sorgu deneyimi, İçerik arama, Microsoft Purview eBulma (Standart) ve eBulma (Premium) içinde arama sorguları oluştururken geri bildirim ve rehberlik sağlar. Düzenleyiciye sorgu yazdığınızda, desteklenen aranabilir özellikler ve koşullar için otomatik tamamlama sağlar ve standart özellikler ve koşullar için desteklenen değerlerin listelerini sağlar. Örneğin, sorgunuzda e-posta özelliğini belirtirseniz `kind` düzenleyici, seçebileceğiniz desteklenen değerlerin listesini sunar. KQL düzenleyicisi, aramayı çalıştırmadan önce düzeltebileceğiniz olası sorgu hatalarını gerçek zamanlı olarak da görüntüler. En iyisi, standart koşul oluşturucusunda anahtar sözcükler ve koşullar kartlarını kullanarak sorguları el ile oluşturmak zorunda kalmadan karmaşık sorguları doğrudan düzenleyiciye yapıştırabilirsiniz.
+Microsoft 365 eKeşif araçları aramasında yeni KQL sorgu deneyimi, İçerik arama, Microsoft Purview eKeşif (Standart) ve eBulma (Premium) içinde arama sorguları oluştururken geri bildirim ve rehberlik sağlar. Düzenleyiciye sorgu yazdığınızda, desteklenen aranabilir özellikler ve koşullar için otomatik tamamlama sağlar ve standart özellikler ve koşullar için desteklenen değerlerin listelerini sağlar. Örneğin, sorgunuzda e-posta özelliğini belirtirseniz `kind` düzenleyici, seçebileceğiniz desteklenen değerlerin listesini sunar. KQL düzenleyicisi, aramayı çalıştırmadan önce düzeltebileceğiniz olası sorgu hatalarını gerçek zamanlı olarak da görüntüler. En iyisi, standart koşul oluşturucusunda anahtar sözcükler ve koşullar kartlarını kullanarak sorguları el ile oluşturmak zorunda kalmadan karmaşık sorguları doğrudan düzenleyiciye yapıştırabilirsiniz.
   
 KQL düzenleyicisini kullanmanın başlıca avantajları şunlardır:
 
 - Rehberlik sağlar ve sıfırdan arama sorguları oluşturmanıza yardımcı olur.
 
-- Uzun ve karmaşık sorguları doğrudan düzenleyiciye hızlı bir şekilde yapıştırmanızı sağlar. Örneğin, karşı danışmandan karmaşık bir sorgu alırsanız, koşul oluşturucusunu kullanmak yerine bunu KQL düzenleyicisine yapıştırabilirsiniz.
+- Uzun ve karmaşık sorguları doğrudan düzenleyiciye hızlı bir şekilde yapıştırmanızı sağlar. Örneğin, karşı danışmandan karmaşık bir sorgu alırsanız, bunu koşul oluşturucusunu kullanmak yerine KQL düzenleyicisine yapıştırabilirsiniz.
 
 - Olası hataları hızla tanımlar ve sorunların nasıl çözüleceğini gösteren ipuçları görüntüler.
 
-KQL düzenleyicisi, eBulma (Standart) ve eBulma (Premium) içinde sorgu tabanlı tutmalar oluşturduğunuzda da kullanılabilir.
+EBulma (Standart) ve eBulma (Premium) içinde sorgu tabanlı tutmalar oluşturduğunuzda da KQL düzenleyicisi kullanılabilir.
 
 ## <a name="displaying-the-kql-editor"></a>KQL düzenleyicisini görüntüleme
 
-Bir eBulma araması oluşturduğunuzda veya düzenlediğinizde, KQL düzenleyicisini görüntüleme ve kullanma seçeneği, arama veya koleksiyonlar sihirbazının **Koşullar** sayfasında bulunur.
+Bir eBulma araması oluşturduğunuzda veya düzenlediğinizde, KQL düzenleyicisini görüntüleme ve kullanma seçeneği arama veya koleksiyonlar sihirbazının **Koşullar** sayfasında bulunur.
 
 ### <a name="kql-editor-in-content-search-and-ediscovery-standard"></a>İçerik arama ve eBulma'da KQL düzenleyicisi (Standart)
 
@@ -53,11 +51,11 @@ Bir eBulma araması oluşturduğunuzda veya düzenlediğinizde, KQL düzenleyici
 
 ## <a name="using-the-kql-editor"></a>KQL düzenleyicisini kullanma
 
-Aşağıdaki bölümlerde, KQL düzenleyicisinin nasıl öneriler sağladığına ve olası hataları nasıl algılayabileceklerine ilişkin örnekler gösterilir.
+Aşağıdaki bölümlerde KQL düzenleyicisinin nasıl öneriler sağladığına ve olası hataları nasıl algılayabileceklerine ilişkin örnekler gösterilir.
 
 ### <a name="autocompletion-of-search-properties-and-operators"></a>Arama özelliklerini ve işleçlerini otomatik olarak tamamlama
 
-KQL düzenleyicisine bir arama sorgusu yazmaya başladığınızda, düzenleyici seçebileceğiniz desteklenen arama özelliklerinin (*özellik kısıtlamaları* olarak da adlandırılır) önerilen otomatik tamamlamasını görüntüler. Bu iki karakterle başlayan desteklenen özelliklerin listesini görüntülemek için en az iki karakter yazmanız gerekir. Örneğin, aşağıdaki ekran görüntüsü ile `Se`başlayan önerilen arama özelliklerini gösterir.
+KQL düzenleyicisinde bir arama sorgusu yazmaya başladığınızda düzenleyici, seçebileceğiniz desteklenen arama özelliklerinin ( *özellik kısıtlamaları* olarak da adlandırılır) önerilen otomatik tamamlamasını görüntüler. Bu iki karakterle başlayan desteklenen özelliklerin listesini görüntülemek için en az iki karakter yazmanız gerekir. Örneğin, aşağıdaki ekran görüntüsü ile `Se`başlayan önerilen arama özelliklerini gösterir.
 
 ![KQL düzenleyicisi desteklenen özellikler önerir](../media/KQLEditorAutoCompleteProperties.png)
 
@@ -75,7 +73,7 @@ KQL düzenleyicisi bazı özelliklerin olası değerleri için öneriler sağlar
 
 Düzenleyici ayrıca, , `To``Recipients` ve `Participants`gibi `From`e-posta alıcısı özelliklerini yazdığınızda kullanıcıların listesini (UPN biçiminde) önerir.
 
-![KQL düzenleyicisi, kullanıcılara alıcı e-posta özellikleri önerir](../media/KQLEditorRecipientSuggestions.png)
+![KQL düzenleyicisi, alıcı e-posta özellikleri için kullanıcılar önerir](../media/KQLEditorRecipientSuggestions.png)
 
 ### <a name="detection-of-potential-errors"></a>Olası hataları algılama
 
@@ -89,4 +87,4 @@ Bu durumda, olası hata ipuçlarını kullanarak sorgu sorunlarını giderebilir
 
 - Koşul oluşturucu ile KQL düzenleyicisi arasında geçiş yapabilirsiniz. Örneğin, Anahtar Sözcükler kutusunu ve birden çok koşul kartını kullanarak sorgu yapılandırmak için koşul oluşturucusunu kullanırsanız, sonuçta elde edilen sorguyu KQL düzenleyicisinde görüntüleyebilirsiniz. Ancak, KQL düzenleyicisinde karmaşık bir sorgu (anahtar sözcükler ve koşullarla) oluşturursanız, sonuçta elde edilen sorgu yalnızca koşul oluşturucusunda görüntülediğinizde Anahtar Sözcükler kutusunda görüntülenir.
 
-- karmaşık bir sorguyu KQL düzenleyicisine yapıştırırsanız, düzenleyici olası hataları algılar ve hataları çözmek için olası çözümler önerir.
+- Karmaşık bir sorguyu KQL düzenleyicisine yapıştırırsanız düzenleyici olası hataları algılar ve hataları çözmek için olası çözümler önerir.

@@ -1,5 +1,5 @@
 ---
-title: Hassas bilgi türleri için yaygın kullanım senaryoları
+title: Hassas bilgi türleri için ortak kullanım senaryoları
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -15,117 +15,117 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Yaygın hassas bilgi türleri uygulama kullanım durumu senaryoları
+description: Yaygın hassas bilgi türleri kullanım örneği senaryolarını uygulama
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 39afa17fc7bf258848de9d5554b3dd56a1ce21b5
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 54945a3ac6f13ed541cef212305f713d8b5d2b73
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63525744"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633377"
 ---
-# <a name="common-usage-scenarios-for-sensitive-information-types"></a>Hassas bilgi türleri için yaygın kullanım senaryoları
+# <a name="common-usage-scenarios-for-sensitive-information-types"></a>Hassas bilgi türleri için ortak kullanım senaryoları
 
-Bu makalede, bazı yaygın hassas bilgi türü (SIT) kullanım durumu senaryolarını nasıl uygulayacağım açıklanmıştır. Bu yordamları örnek olarak kullanabilir ve özel ihtiyaçlarınıza uyarlanabilirsiniz.
+Bu makalede bazı yaygın hassas bilgi türü (SIT) kullanım örneği senaryolarının nasıl uygulandığı açıklanmaktadır. Bu yordamları örnek olarak kullanabilir ve bunları özel gereksinimlerinize uyarlayabilirsiniz.
 
 ## <a name="protect-credit-card-numbers"></a>Kredi kartı numaralarını koruma
 
-Contoso Bank'in, çıkaracakları kredi kartı numaralarını hassas olarak sınıflandırması gerekir. Kredi kartları altı basamaklı desenlerle başlar. Yalnızca altı basamaklı düzenleriyle başlayan kredi kartı numaralarını algılamak için, ilk kutusundan önce yer alan kredi kartı tanımını özelleştirmek istiyorum.
+Contoso Bank'ın, verdikleri kredi kartı numaralarını hassas olarak sınıflandırması gerekir. Kredi kartları altı basamaklı bir dizi desenle başlar. Yalnızca altı basamaklı düzenlerinden başlayarak kredi kartı numaralarını algılamak için kullanıma açık kredi kartı tanımını özelleştirmek istiyor.
 
 **Önerilen çözüm**
 
-1. Kredi kartı SIT'in bir kopyasını oluşturun. Kredi kartı [SIT'ini kopyalamak için hassas bilgi türünü](create-a-custom-sensitive-information-type.md#copy-and-modify-a-sensitive-information-type) kopyalama ve değiştirme adımlarını kullanın.
-1. Yüksek güven desenini düzenleyin. Hassas bilgi türü [desenini düzenleme veya silme adımlarını izleyin](sit-get-started-exact-data-match-create-rule-package.md#edit-or-delete-the-sensitive-information-type-pattern).
-1. 'Başlar' ekle onay kutusunu seçin ve ikili rakam listesini ekleyin (biçimlendirilmemiş & biçimlendirildi). Örneğin, yalnızca 411111 & 433512 ile başlayan kredi kartlarının geçerli kabul olmasını sağlamak için, aşağıdaki listeyi 4111 11, 4111-11, 411111, 4335 12, 4335-12, 433512.
-1. Düşük güven düzeni için 2. & 3. adımı yinelayın.
+1. Kredi kartı SIT'in bir kopyasını oluşturun. Kredi kartı [SIT'ini kopyalamak için hassas bir bilgi türünü kopyalamak ve değiştirmek](create-a-custom-sensitive-information-type.md#copy-and-modify-a-sensitive-information-type) için adımları kullanın.
+1. Yüksek güvenilirlik desenini düzenleyin. [Hassas bilgi türü desenini düzenleme veya silme adımlarını](sit-get-started-exact-data-match-create-rule-package.md#edit-or-delete-the-sensitive-information-type-pattern) izleyin.
+1. 'şununla başlar' denetimi ekleyin ve bölme basamasının listesini ekleyin (biçimlendirilmemiş & biçimlendirilmiş). Örneğin, yalnızca 411111 & 433512 ile başlayan kredi kartlarının geçerli kabul edilmesini sağlamak için aşağıdakileri 4111 11, 4111-11, 411111, 4335 12, 4335-12, 433512 listesine ekleyin.
+1. Düşük güvenilirlik deseni için 2. & 3. adımı yineleyin.
 
 ## <a name="test-numbers-similar-to-social-security-numbers"></a>Sosyal Güvenlik numaralarına benzer test numaraları
 
-Contoso, Sosyal Güvenlik Numarası (SSN) veri kaybını önleme (DLP) ilkesinde hatalı pozitif eşleşmeleri tetikleyen dokuz basamaklı birkaç test numarası belirledi. SSN için geçerli eşleşmeler listesinden bu sayıları dışarıda tutmak istiyorum.
+Contoso, Sosyal Güvenlik Numarası (SSN) Microsoft Purview veri kaybı önleme (DLP) ilkesinde hatalı pozitif eşleşmeleri tetikleyen birkaç dokuz basamaklı test numarası tanımladı. Bu sayıları SSN için geçerli eşleşmeler listesinden dışlamak istiyorlar.
 
 **Önerilen çözüm**
 
-1. SSN SIT'in bir kopyasını oluşturun. SSN [SIT'i kopyalamak üzere hassas bir bilgi türünü](create-a-custom-sensitive-information-type.md#copy-and-modify-a-sensitive-information-type) kopyalamak ve değiştirmek için adımları kullanın.
-1. Yüksek güven desenini düzenleyin. Hassas bilgi türü [desenini düzenleme veya silme adımlarını izleyin](sit-get-started-exact-data-match-create-rule-package.md#edit-or-delete-the-sensitive-information-type-pattern).
-1. 'Belirli değerleri hariç tut' ek denetiminde hariç tutulacak numaraları ekleyin. Örneğin, 239-23-532 & 23923532 hariç tutmak için yalnızca 23923532 eklemek yeterlidir
-1. Diğer güven düzenleri için 2. & 3. adımı yinele
+1. SSN SIT'in bir kopyasını oluşturun. SSN SIT'i [kopyalamak için hassas bir bilgi türünü kopyalamak ve değiştirmek](create-a-custom-sensitive-information-type.md#copy-and-modify-a-sensitive-information-type) için adımları kullanın.
+1. Yüksek güvenilirlik desenini düzenleyin. [Hassas bilgi türü desenini düzenleme veya silme adımlarını](sit-get-started-exact-data-match-create-rule-package.md#edit-or-delete-the-sensitive-information-type-pattern) izleyin.
+1. Dışlanacak sayıları 'belirli değerleri hariç tut' ek denetimine ekleyin. Örneğin, 239-23-532 & 23923532 hariç tutmak için yalnızca 23923532 eklemek yeterli olacaktır
+1. Diğer güvenilirlik desenleri için de 2. & 3. adımı yineleyin
 
-## <a name="phone-numbers-in-signature-trigger-match"></a>Telefon tetikleyicisi eşleşmesinde yer alan numaraları ekleme
+## <a name="phone-numbers-in-signature-trigger-match"></a>İmza tetikleyicisindeki telefon numaraları eşleşmesi
 
-Avustralya tabanlı Contoso, e-posta imzalarında yer alan telefon numaralarının Avustralya şirket numarası DLP ilkesi için bir eşleşmeyi tetikle olduğunu bulur.
-
-**Önerilen çözüm**
-
-"Telefon", "Mobile", "email", "Thanks and regards" vb. gibi e-posta imzalarında sık kullanılan anahtar sözcükleri içeren bir anahtar sözcük listesini kullanarak destek öğelerinde "Not" grubu ekleyin. Daha doğru doğruluğu için bu anahtar sözcük listesinin yakınlıklarını 50 karakter gibi daha küçük bir değerle kullanın. Daha fazla bilgi için bkz [. Özel hassas bilgi türleriyle çalışmaya başlama](create-a-custom-sensitive-information-type.md).
-
-## <a name="unable-to-trigger-aba-routing-policy"></a>ABA yönlendirme ilkesi tetikleyemiyor
-
-DLP ilkesi büyük Excel dosyalarında ABA yönlendirme numarası ilkesi tetikleyemiyor, çünkü gerekli anahtar sözcük 300 karakter içinde bulunamıyor.
+Avustralya merkezli Contoso, e-posta imzalarındaki telefon numaralarının Avustralya şirket numarası DLP ilkesiyle eşleşme tetiklediğini bulur.
 
 **Önerilen çözüm**
 
-Yerleşik SIT'in bir kopyasını oluşturun ve "300 karakter" olan anahtar sözcük listesinin yakınlıklarını "Belgenin herhangi bir yerinde" olarak değiştirmek için bu kopyayı düzenleyin.
+"Telefon", "Mobil", "e-posta", "Teşekkürler ve saygılar" gibi e-posta imzasında yaygın olarak kullanılan anahtar sözcükleri içeren bir anahtar sözcük listesi kullanarak destekleyici öğelere bir 'not' grubu ekleyin. Daha iyi doğruluk için bu anahtar sözcük listesinin 50 karakter gibi daha küçük bir değere yakınlığını koruyun. Daha fazla bilgi için bkz. [Özel hassas bilgi türlerini kullanmaya başlama](create-a-custom-sensitive-information-type.md).
+
+## <a name="unable-to-trigger-aba-routing-policy"></a>ABA yönlendirme ilkesi tetiklenemiyor
+
+Gerekli anahtar sözcük 300 karakter içinde bulunmadığından DLP ilkesi büyük excel dosyalarında ABA yönlendirme numarası ilkesini tetikleyemiyor.
+
+**Önerilen çözüm**
+
+Yerleşik SIT'in bir kopyasını oluşturun ve anahtar sözcük listesinin "300 karakterden" "Belgede herhangi bir yere" yakınlık değerini değiştirmek için bu kopyayı düzenleyin.
 
 > [!TIP]
-> Anahtar sözcük listesini, organizasyonuyla ilgili anahtar sözcükleri dahil etmek/hariç tutmak için düzenleyebilirsiniz.
+> Kuruluşunuzla ilgili anahtar sözcükleri dahil etmek/hariç tutmak için anahtar sözcük listesini düzenleyebilirsiniz.
 
-## <a name="unable-to-detect-credit-card-numbers-with-unusual-delimiters"></a>Sıra dışı sınırlayıcıları olan kredi kartı numaraları algılanamadı
+## <a name="unable-to-detect-credit-card-numbers-with-unusual-delimiters"></a>Olağan dışı sınırlayıcılarla kredi kartı numaraları algılanamıyor
 
-Contoso Bank, çalışanlarından bazılarının kredi kartı numaralarını '/' ile sınırlayıcı olarak paylaştığını fark etti; örneğin 4111/1111/1111/1111, hazır bulunan kredi kartı tanımı tarafından algılanmaz. Contoso, luhnCheck kullanarak kendi kayıt defterlerini tanımlamak ve doğrulamak istiyorum.
+Contoso Bank, çalışanlarından bazılarının kredi kartı numaralarını sınırlayıcı olarak '/' ile paylaştığını fark etti, örneğin 4111/1111/1111/1111; bu, kullanıma hazır kredi kartı tanımı tarafından algılanmıyor. Contoso kendi regex'ini tanımlamak ve LuhnCheck kullanarak doğrulamak istiyor.
 
 **Önerilen çözüm**
 
-1. Yerleşik hassas bilgi türünü özelleştirme konusunda yer alan adımları kullanarak KREDI [kartı SIT'in bir kopyasını oluşturun](customize-a-built-in-sensitive-information-type.md).
+1. [Yerleşik hassas bilgi türünü özelleştirme'deki adımları kullanarak Kredi kartı SIT'in bir](customize-a-built-in-sensitive-information-type.md) kopyasını oluşturun.
 1. Yeni desen ekleme
-1. Birincil öğede, normal ifadeyi seçin
-1. Normal ifadenin bir parçası olarak '/' içeren normal ifadeyi tanımlayın, ardından doğrulayıcıyı seçin ve regex'in LuhnCheck'i de geçtiğinden emin olmak için luhncheck veya func_credit_card'ı seçin.
+1. Birincil öğede normal ifadeyi seçin
+1. Normal ifadenin bir parçası olarak '/' içeren normal ifadeyi tanımlayın ve ardından doğrulayıcıyı seçin ve regex'in LuhnCheck değerini de geçtiğinden emin olmak için luhncheck veya func_credit_card seçin.
 
 ## <a name="ignore-a-disclaimer-notice"></a>Bildirim bildirimini yoksayma
 
-Birçok kuruluş e-posta iletilerinin altına, kuruluşlarını giren veya bırakırken, bazı durumlarda da kuruluşlar içinde bile yasal uyarı, açıklama bildirimi, imza veya başka bilgiler ekler. Çalışanların kendileri, motivasyona bağlı alıntılar, sosyal mesajlar gibi imzalar koymalarıdır. Bir uyarı veya imza, bir CC'nin tutarsızlık içinde bulunan terimleri içerebilir ve birçok yanlış pozitif sonuç üreteci olabilir.  
+Birçok kuruluş, kuruluşuna giren veya ayrılan e-posta iletilerinin en üstüne veya altına ve hatta bazı durumlarda kuruluş içinde bile yasal uyarı, açıklama bildirimleri, imzalar veya diğer bilgileri ekler. Çalışanlar, motivasyona dayalı alıntılar, sosyal mesajlar vb. gibi imzalar koyar. Bir sorumluluk reddi veya imza, CC sözlüğünde bulunan terimleri içerebilir ve çok sayıda hatalı pozitif sonuç oluşturabilir.  
 
-Örneğin, tipik bir uyarıda hassas veya gizli gibi sözcükler yer almaktadır ve hassas bilgileri arayan bir ilke bunu bir olay olarak algılar ve bu da birçok hatalı pozitif sonuç verir. Bu nedenle müşterilere uyarıyı yoksayma seçeneği sağlamak hatalı pozitif sonuç sayısını azaltabilir ve uyumluluk ekibinin verimliliğini artırır.
+Örneğin, tipik bir sorumluluk reddi, hassas veya gizli gibi sözcükler içerebilir ve hassas bilgileri arayan bir ilke bunu bir olay olarak algılar ve bu da çok sayıda hatalı pozitif sonuçla sonuçlanır. Böylece müşterilere yasal uyarıyı yoksayma seçeneği sağlamak hatalı pozitif sonuçları azaltabilir ve uyumluluk ekibinin verimliliğini artırabilir.
 
-### <a name="example-of-disclaimer"></a>Uyarı örneği
+### <a name="example-of-disclaimer"></a>Yasal uyarı örneği
 
-Aşağıdaki tekzleci dikkate alın:
+Aşağıdaki yasal uyarıyı göz önünde bulundurun:
 
-ÖNEMLİ TİPİ: Bu e-posta iletisinin yalnızca içerdiği gizli bilgileri alma hakkı olan kişilerce verilmesi amaçlanan bir iletidir. Contoso istemcilerine gönderilen e-posta iletileri gizli ve yasal olarak ayrıcalıklı bilgiler içerebilir. Lütfen hedeflenen iletiyi alıcı olmadığınız sürece bu iletiyi okumayı, kopyalamayı, iletmeyi veya depolamayın. Bu iletiyi hatayla aldıysanız, lütfen gönderene iletin ve bilgisayarınızdan tamamen silin.
+ÖNEMLİ BİlDİrİm: Bu e-posta iletisinin yalnızca içerebileceği gizli bilgileri almaya hak kazanan kişiler tarafından alınması amaçlanmıştır. Contoso istemcilerine gönderilen e-posta iletileri gizli ve yasal olarak ayrıcalıklı bilgiler içerebilir. Hedeflenen alıcı değilseniz lütfen bu iletiyi okumayın, kopyalamayı, iletmeyi veya depolamayın. Bu iletiyi hatayla aldıysanız, lütfen gönderene iletin ve bilgisayar sisteminizden tamamen silin.
 
-SIT, gizli bir anahtar sözcüğü algılayan şekilde yapılandırılmışsa, bu düzen e-postada her uyarı kullanıldığında eşleşmeyi çağırır ve bu da birçok hatalı pozitif sonuç verir.
+SIT gizli anahtar sözcüğü algılayacak şekilde yapılandırılmışsa, desen e-postada her bildirim kullanıldığında eşleşmeyi çağırır ve bu da çok sayıda hatalı pozitif sonuç oluşturur.
 
-### <a name="ignore-disclaimer-using-prefix-and-suffix-in-sit"></a>SIT'te ön ek ve son ek kullanarak uyarıyı yoksayma
+### <a name="ignore-disclaimer-using-prefix-and-suffix-in-sit"></a>SIT'te ön ek ve soneki kullanarak sorumluluk reddini yoksayma
 
-Yasal uyarıda anahtar sözcük örneklerini yoksaymanın bir yolu, ön ek ile önce gelen ve sonek ile devam eden anahtar sözcüklerin örneklerini dışlamamaktır.
+Sorumluluk reddindeki anahtar sözcüklerin örneklerini yoksayma yollarından biri, önce bir önek ve ardından bir sonek olan anahtar sözcük örneklerini dışlamaktır.
 
-Bu tekzleci dikkate alın:
+Bu uyarıyı göz önünde bulundurun:
 
-ÖNEMLİ TİPİ: Bu e-posta iletisinin yalnızca içerdiği gizli bilgileri  alma hakkı olan **kişilerce verilmesi amaçlanan bir iletidir**. Contoso istemcilerine gönderilen e-posta iletileri gizli ve yasal olarak ayrıcalıklı bilgiler içerebilir. Lütfen hedeflenen iletiyi alıcı olmadığınız sürece bu iletiyi okumayı, kopyalamayı, iletmeyi veya depolamayın. Bu iletiyi hatayla aldıysanız, lütfen gönderene iletin ve bilgisayarınızdan tamamen silin.
+ÖNEMLİ BİlDİrİm: Bu e-posta iletisinin yalnızca **içerebileceği gizli bilgileri** *almaya hak kazanan* kişiler tarafından alınması amaçlanmıştır. Contoso istemcilerine gönderilen e-posta iletileri gizli ve yasal olarak ayrıcalıklı bilgiler içerebilir. Hedeflenen alıcı değilseniz lütfen bu iletiyi okumayın, kopyalamayı, iletmeyi veya depolamayın. Bu iletiyi hatayla aldıysanız, lütfen gönderene iletin ve bilgisayar sisteminizden tamamen silin.
 
-"Gizli" anahtar sözcüğünün iki örneği vardır ve SIT'i bu anahtar sözcüğün ön eklerinden önce gelen (örnekte italik) örneklerini, ardından da sonekleri (örnekte kalın yazıyla gösterilir) yoksayacak şekilde yapılandırıyorsanız, çoğu durumda feragatlerin yoksaynarak başarabilirsiniz.
+"Gizli" anahtar sözcüğünü iki örneğimiz vardır ve SIT'i ön eklerden (örnekte italik) ve ardından sonekleri (örnekte kalın yazıyla) gelen bu anahtar sözcüğün örneklerini yoksayacak şekilde yapılandırırsak, çoğu durumda sorumluluk reddini yoksaymayı başarabiliriz.
 
-Ön ek ve son ek kullanarak tekzleci yoksaymak için:
+Ön ek ve soneki kullanarak bildirimi yoksaymak için:
 
-1. Yasal uyarıda yoksaymak istediğiniz anahtar sözcüğün ön ek ve son ek metnini dışarıda tutmak için geçerli SIT'te ek denetimler ekleyin.
-1. Öneki hariç tutmak için seçin ve **Önekler** metin kutusuna **, önek olarak bulunan bilgileri girin**.
-1. Son eki ve Sonekler metin kutusuna girerek **yasal** olarak ayrıcalıklı **seçeneğine tıklayın**.
-1. Aşağıdaki grafikte gösterildiği gibi, bu işlemi yasal uyarıda anahtar sözcüklerin diğer örnekleri için yinele.
+1. Geçerli SIT'e, bildirimde yoksaymak istediğimiz ön ek ve sonek metnini anahtar sözcükte dışlamak için ek denetimler ekleyin.
+1. Ön eki dışlamak için seçin ve **Önekler** metin kutusuna şu **bilgileri girin**:
+1. Soneki dışlamak için seçin ve **Sonekler** metin kutusuna **ve yasal olarak ayrıcalıklı** girin.
+1. Aşağıdaki grafikte gösterildiği gibi, bildirimdeki anahtar sözcüklerin diğer örnekleri için bu işlemi yineleyin.
 
-### <a name="ignore-disclaimer-by-excluding-secondary-elements"></a>İkincil öğeler hariç bırakarak tekzciliği yoksayma
+### <a name="ignore-disclaimer-by-excluding-secondary-elements"></a>İkincil öğeleri dışlayarak sorumluluk reddini yoksayma
 
-İkincil öğeleri hariç tutmak için destekleyen öğeler listesi (uyarıda bulunan örnekler) eklemenin bir diğer yolu da ikincil öğeleri hariç tutmaktır.
+Dışlanması gereken destekleyici öğelerin (sorumluluk reddindeki örnekler) listesini eklemenin bir diğer yolu da ikincil öğeleri dışlamaktır.
 
-Bu tekzleci dikkate alın:
+Bu uyarıyı göz önünde bulundurun:
 
-ÖNEMLİ TİPİ: Bu e-posta iletisinin yalnızca içerdiği gizli bilgileri alma hakkı olan kişilerce verilmesi amaçlanan bir iletidir. Contoso istemcilerine gönderilen e-posta iletileri gizli ve yasal olarak ayrıcalıklı bilgiler içerebilir. Lütfen hedeflenen iletiyi alıcı olmadığınız sürece bu iletiyi okumayı, kopyalamayı, iletmeyi veya depolamayın. Bu iletiyi hatayla aldıysanız, lütfen gönderene iletin ve bilgisayarınızdan tamamen silin.
+ÖNEMLİ BİlDİrİm: Bu e-posta iletisinin yalnızca içerebileceği gizli bilgileri almaya hak kazanan kişiler tarafından alınması amaçlanmıştır. Contoso istemcilerine gönderilen e-posta iletileri gizli ve yasal olarak ayrıcalıklı bilgiler içerebilir. Hedeflenen alıcı değilseniz lütfen bu iletiyi okumayın, kopyalamayı, iletmeyi veya depolamayın. Bu iletiyi hatayla aldıysanız, lütfen gönderene iletin ve bilgisayar sisteminizden tamamen silin.
 
-Bu örnekte "gizli" anahtar sözcüğünün iki örneği vardır. SIT'i bu anahtar sözcüğün örneklerini yasal uyarıda (kırmızı olarak altı çizili) yoksayacak şekilde yapılandırırsanız, çoğu durumda yasal uyarıyı yoksaymamizi başarabilirsiniz.
+Bu örnekte "gizli" anahtar sözcüğünü iki örneğimiz vardır. SIT'i bu anahtar sözcüğün sorumluluk reddindeki örneklerini yoksayacak şekilde yapılandırırsak (kırmızı olarak altı çizili), çoğu durumda sorumluluk reddini yoksayabiliriz.
 
-:::image type="content" source="../media/sit-scenario-edit-pattern.png" alt-text="Sorumluluk reddinde ek örnekleri dışarıda tutmak için bu modele daha fazla koşullar  eklersiniz.":::
+:::image type="content" source="../media/sit-scenario-edit-pattern.png" alt-text="Bildirimdeki ek örnekleri dışlamak için desene daha fazla koşul ekleyebilirsiniz.":::
 
-İkincil öğeleri kullanarak tekzciliği yoksaymak için:
+İkincil öğeleri kullanarak bildirimi yoksaymak için:
 
-1. Desteklenen **öğelerde Bu gruplardan** herhangi biri değil'i seçin.
-1. Bir anahtar sözcük listesi/sözlüğü olarak yoksaymak istediğiniz uyarı örneklerini ekleyin.
-1. Anahtar sözcükleri yoksaymak istediğiniz yeni bir satır olarak ekleyin. Her metnin uzunluğunun 50 karakterden fazla olamaz.
-1. Bu öğenin yakınlıklarını, birincil öğenin 50-60 karakteri arasında olacak şekilde ayarlayın.
+1. Destekleyici öğelerde **Bu gruptan herhangi biri değil'i** seçin.
+1. Yoksaymak istediğimiz sorumluluk reddi örneklerini anahtar sözcük listesi/sözlük olarak ekleyin.
+1. Anahtar sözcükleri yoksaymak istediğimiz yeni bir satır olarak ekleyin. Her metnin uzunluğunun 50 karakterden uzun olamaz.
+1. Bu öğenin yakınlık değerini birincil öğenin 50-60 karakteri içinde olacak şekilde ayarlayın.

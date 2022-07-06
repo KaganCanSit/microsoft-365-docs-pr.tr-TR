@@ -23,16 +23,14 @@ ms.custom:
 - admindeeplinkMAC
 - admindeeplinkEXCHANGE
 description: Office 365 genel yöneticilerin şifreleme portalının içeriği & şifrelenmiş e-posta iletilerine kuruluşunuzun markasını nasıl uygulayabileceğini öğrenin.
-ms.openlocfilehash: fb0525b112137bf57007b4188bc461abbb0c3f27
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: bf6f3b9de64185778be7eeb4da6cc8e537f0305a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66016866"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637031"
 ---
-# <a name="add-your-organizations-brand-to-your-microsoft-365-for-business-message-encryption-encrypted-messages"></a>kuruluşunuzun markasını iş için Microsoft 365 İleti Şifrelemesi şifreli iletilerinize ekleme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+# <a name="add-your-organizations-brand-to-your-microsoft-365-for-business-message-encryption-encrypted-messages"></a>İş için Microsoft 365 İleti Şifrelemesi şifreli iletilerinize kuruluşunuzun markasını ekleme
 
 Kuruluşunuzun e-posta iletilerinin ve şifreleme portalının görünümünü özelleştirmek için şirketinizin markasını uygulayabilirsiniz. Başlamadan önce iş veya okul hesabınıza genel yönetici izinleri uygulamanız gerekir. Bu izinlere sahip olduktan sonra, şifrelenmiş e-posta iletilerinin bu bölümlerini özelleştirmek için Exchange Online PowerShell'deki Get-OMEConfiguration ve Set-OMEConfiguration cmdlet'lerini kullanın:
 
@@ -53,7 +51,7 @@ Daha fazla denetim istiyorsanız, kuruluşunuzdan kaynaklanan şifrelenmiş e-po
 - E-postaların iptal edilmesine izin vermek isteyip istemediğiniz
 - Dış alıcılara gönderilen e-postaların süresinin belirtilen sayıda gün sonra dolmasını isteyip istemediğiniz.
 
-Şablonları oluşturduktan sonra, Exchange posta akışı kurallarını kullanarak şifrelenmiş e-postalara uygulayabilirsiniz. Microsoft Purview Gelişmiş İleti Şifrelemesi'ne sahipseniz, bu şablonları kullanarak markaladığınız tüm e-postaları iptal edebilirsiniz.
+Şablonları oluşturduktan sonra, Exchange posta akışı kurallarını kullanarak bunları şifrelenmiş e-postalara uygulayabilirsiniz. Microsoft Purview Gelişmiş İleti Şifrelemesi'ne sahipseniz, bu şablonları kullanarak markaladığınız tüm e-postaları iptal edebilirsiniz.
 
 ## <a name="work-with-ome-branding-templates"></a>OME marka şablonlarıyla çalışma
 
@@ -146,25 +144,25 @@ Yalnızca oluşturduğunuz marka şablonlarını kaldırabilir veya silebilirsin
 
    Daha fazla bilgi için bkz [. Remove-OMEConfiguration](/powershell/module/exchange/remove-omeconfiguration).
 
-## <a name="create-an-exchange-mail-flow-rule-that-applies-your-custom-branding-to-encrypted-emails"></a>Özel markanızı şifrelenmiş e-postalara uygulayan bir Exchange posta akışı kuralı oluşturma
+## <a name="create-an-exchange-mail-flow-rule-that-applies-your-custom-branding-to-encrypted-emails"></a>Şifrelenmiş e-postalara özel markanızı uygulayan bir Exchange posta akışı kuralı oluşturma
 
 > [!IMPORTANT]
 > Postayı taratan ve değiştiren üçüncü taraf uygulamalar, OME markasının doğru uygulanmasını engelleyebilir.
 
 Varsayılan şablonu değiştirdikten veya yeni marka şablonları oluşturduktan sonra, belirli koşullara göre özel markanızı uygulamak için Exchange posta akışı kuralları oluşturabilirsiniz. En önemlisi, e-posta şifrelenmelidir. Böyle bir kural aşağıdaki senaryolarda özel markalama uygular:
 
-- E-posta son kullanıcı tarafından Outlook veya Web üzerinde Outlook kullanılarak el ile şifrelendiyse, önceden Outlook Web App
+- E-posta Outlook veya Web üzerinde Outlook kullanılarak son kullanıcı tarafından el ile şifrelendiyse, eski adıyla Outlook Web App
 - E-posta bir Exchange posta akışı kuralı veya Microsoft Purview Veri Kaybı Önleme ilkesi tarafından otomatik olarak şifrelendiyse
 
-Microsoft Purview İleti Şifrelemesi'nin özel markanızı uyguladığını güvence altına almak için, e-posta iletilerinizi şifrelemek için bir posta akışı kuralı ayarlayın. Şifreleme kuralının önce işlenmesi için şifreleme kuralının önceliği markalama kuralından daha yüksek olmalıdır. Varsayılan olarak, şifreleme kuralını marka kuralından önce oluşturursanız şifreleme kuralı daha yüksek önceliğe sahip olur. Şifreleme uygulayan bir Exchange posta akışı kuralı oluşturma hakkında bilgi için bkz. [Office 365 e-posta iletilerini şifrelemek için posta akışı kuralları tanımlama](define-mail-flow-rules-to-encrypt-email.md). Posta akışı kuralının önceliğini ayarlama hakkında bilgi için bkz. [Posta akışı kurallarını yönetme](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#set-the-priority-of-a-mail-flow-rule).
+Microsoft Purview İleti Şifrelemesi özel markanızı uyguladığınızdan emin olmak için e-posta iletilerinizi şifrelemek için bir posta akışı kuralı ayarlayın. Şifreleme kuralının önce işlenmesi için şifreleme kuralının önceliği markalama kuralından daha yüksek olmalıdır. Varsayılan olarak, şifreleme kuralını marka kuralından önce oluşturursanız şifreleme kuralı daha yüksek önceliğe sahip olur. Şifreleme uygulayan bir Exchange posta akışı kuralı oluşturma hakkında bilgi için bkz. [Office 365 e-posta iletilerini şifrelemek için posta akışı kuralları tanımlama](define-mail-flow-rules-to-encrypt-email.md). Posta akışı kuralının önceliğini ayarlama hakkında bilgi için bkz. [Posta akışı kurallarını yönetme](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#set-the-priority-of-a-mail-flow-rule).
 
 1. Web tarayıcısında, genel yönetici izinleri verilmiş bir iş veya okul hesabı kullanarak [Office 365 oturum açın](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser).
 
 2. **Yönetici** kutucuğunu seçin.
 
-3. <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> yönetim **merkezleri** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">**Exchange'ı**</a> seçin.
+3. <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> Yönetici **merkezleri** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">**Exchange'i**</a> seçin.
 
-4. EAC'de **Posta akışı** \> **Kuralları'na** gidin ve **Yeni Yeni simgesi'ni** ![seçin.](../media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \>**Yeni bir kural oluşturun**. EAC'yi kullanma hakkında daha fazla bilgi için bkz. [Exchange Online Exchange yönetim merkezi](/exchange/exchange-admin-center).
+4. EAC'de **Posta akışı** \> **Kuralları'na** gidin ve **Yeni Yeni simgesi'ni** ![seçin.](../media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \>**Yeni bir kural oluşturun**. EAC'yi kullanma hakkında daha fazla bilgi için bkz. [Exchange Online'de Exchange yönetim merkezi](/exchange/exchange-admin-center).
 
 5. **Ad** alanına kural için satış departmanı için markalama gibi bir ad yazın.
 
@@ -176,7 +174,7 @@ Microsoft Purview İleti Şifrelemesi'nin özel markanızı uyguladığını gü
 
 7. Şifreleme uygulamak için zaten bir posta akışı kuralı tanımladıysanız bu adımı atlayın. Aksi takdirde, posta akışı kuralını şifreleme uygulayacak şekilde yapılandırmak için **Aşağıdakileri yapın** bölümünde **İleti güvenliğini değiştir'i** ve ardından **İleti Şifrelemesi ve hak koruması Office 365 Uygula'yı** seçin. Listeden bir RMS şablonu seçin ve eylem **ekle'yi** seçin.
 
-   Şablon listesi varsayılan şablonları ve seçenekleri ve oluşturduğunuz tüm özel şablonları içerir. Liste boşsa Microsoft Purview İleti Şifrelemesi'ni ayarladığınızdan emin olun. Yönergeler için bkz. [Microsoft Purview İleti Şifrelemesini Ayarlama](set-up-new-message-encryption-capabilities.md). Varsayılan şablonlar hakkında bilgi için bkz. [Azure Information Protection için şablonları yapılandırma ve yönetme](/information-protection/deploy-use/configure-policy-templates). **İletme** seçeneği hakkında bilgi için bkz. [E-postalar için İletme seçeneği](/information-protection/deploy-use/configure-usage-rights#do-not-forward-option-for-emails). **Yalnızca şifrele** seçeneği hakkında bilgi için bkz. [E-postalar için Yalnızca Şifrele seçeneği](/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails).
+   Şablon listesi varsayılan şablonları ve seçenekleri ve oluşturduğunuz tüm özel şablonları içerir. Liste boşsa, Microsoft Purview İleti Şifrelemesi ayarladığınızdan emin olun. Yönergeler için bkz[. Microsoft Purview İleti Şifrelemesi ayarlama](set-up-new-message-encryption-capabilities.md). Varsayılan şablonlar hakkında bilgi için bkz. [Azure Information Protection için şablonları yapılandırma ve yönetme](/information-protection/deploy-use/configure-policy-templates). **İletme** seçeneği hakkında bilgi için bkz. [E-postalar için İletme seçeneği](/information-protection/deploy-use/configure-usage-rights#do-not-forward-option-for-emails). **Yalnızca şifrele** seçeneği hakkında bilgi için bkz. [E-postalar için Yalnızca Şifrele seçeneği](/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails).
 
 8. **Aşağıdakileri yapın bölümünde** **İleti güvenliğini** \> değiştir **OME iletilerine özel marka uygulama'yı** seçin. Ardından açılan listeden bir marka şablonu seçin.
 

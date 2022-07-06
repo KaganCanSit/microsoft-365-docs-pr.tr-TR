@@ -1,7 +1,7 @@
 ---
-title: Insider risk yönetimi bildirimi şablonları
-description: Insider risk yönetimi bildirimi şablonları hakkında daha fazla bilgi Microsoft 365
-keywords: Microsoft 365, insider risk yönetimi, risk yönetimi, uyumluluk
+title: Insider risk yönetimi bildirim şablonları
+description: Microsoft Purview'da insider risk yönetimi bildirim şablonları hakkında bilgi edinin
+keywords: Microsoft 365, Microsoft Purview, insider riski, risk yönetimi, uyumluluk
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -13,28 +13,28 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: cfa9628861e592b1e8cf235fe5c68e538be354ba
-ms.sourcegitcommit: efb333ce0772265da91632110acba39acfbe0bde
+ms.openlocfilehash: 7af1152d1393aaaf9eeb242c78b280cf0e9d80e6
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "62997097"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639808"
 ---
-# <a name="insider-risk-management-notice-templates"></a>Insider risk yönetimi bildirimi şablonları
+# <a name="insider-risk-management-notice-templates"></a>Insider risk yönetimi bildirim şablonları
 
-Insider risk yönetimi bildirimi şablonları, bir ilke eşleşmesi ve onaylandı uyarısı oluşturan etkinlikler için olay oluşturulduğunda kullanıcılara otomatik olarak e-posta iletileri göndermenizi sağlar. Vaka oluşturan çoğu uyarı için, kullanıcı eylemleri kötü amaçlı olmayan hataların veya yanlışlıkla etkinliklerin sonucu olur. Bildirimler, kullanıcıların daha dikkatli olması, bilgileri tazeleme eğitimi veya kurumsal ilke kaynaklarına bağlantılar sağlamak için basit anımsatıcılar olarak kullanılabilir. Bildirimler, iç uyumluluk eğitim programınız için önemli bir parçası olabilir ve yinelenen risk etkinliklerine sahip kullanıcılar için belgeli bir denetim izi oluşturmanıza yardımcı olabilir.
+Insider risk yönetimi bildirim şablonları, ilke eşleşmesi ve onaylanan uyarı oluşturan etkinlikler için bir servis talebi oluşturulduğunda kullanıcılara otomatik olarak e-posta iletileri göndermenizi sağlar. Vaka oluşturan uyarıların çoğu için kullanıcı eylemleri, hatalı amaçlara sahip olmayan hataların veya yanlışlıkla yapılan etkinliklerin sonucu olur. Bildirimler, kullanıcılara daha dikkatli olmaları, daha yenileyici eğitimle ilgili bilgilere bağlantılar sağlamaları veya şirket ilkesi kaynaklarına yönelik basit anımsatıcılar görevi görür. Bildirimler, iç uyumluluk eğitim programınızın önemli bir parçası olabilir ve yinelenen risk etkinlikleri olan kullanıcılar için belgelenmiş bir denetim kaydı oluşturmanıza yardımcı olabilir.
 
-Kullanıcılara, olay çözümleme sürecinin bir parçası olarak ilke eşleşmeleri için e-posta anımsatıcı bildirimi göndermek için bildirim şablonları oluşturun. Bildirimler yalnızca gözden geçen olayla ilişkilendirilmiş olan kullanıcı e-posta adresine gönderebilirsiniz. İlke eşleşmesi için uygulanacak bildirim şablonunu seçerseniz, şablonda tanımlanan alan değerlerini kabul etme veya gereken alanların üzerine yazmayı seçebilirsiniz
+Kullanıcılara, servis talebi çözümleme sürecinin bir parçası olarak ilke eşleşmeleri için bir e-posta anımsatıcı bildirimi göndermek istiyorsanız bildirim şablonları oluşturun. Bildirimler yalnızca incelenmekte olan servis talebiyle ilişkili kullanıcı e-posta adresine gönderilebilir. İlke eşleşmesine uygulanacak bir bildirim şablonu seçerken, şablonda tanımlanan alan değerlerini kabul etmeyi veya gerektiğinde alanların üzerine yazmayı seçebilirsiniz
 
-## <a name="notice-templates-dashboard"></a>Bildirim şablonları panosu
+## <a name="notice-templates-dashboard"></a>Şablon panosuna dikkat edin
 
-Bildirimler **şablonları panosu, yapılandırılmış** bildirim şablonlarının listesini görüntüler ve yeni bildirim şablonları oluşturmanıza olanak sağlar. Bildirim şablonları, en son bildirim şablonu ilk sırada, ters tarih sırasına göre listelenir.
+**Bildirimler şablonları panosu**, yapılandırılmış bildirim şablonlarının listesini görüntüler ve yeni bildirim şablonları oluşturmanıza olanak tanır. Bildirim şablonları, en son bildirim şablonunun ilk sırada listelendiği ters tarih sırasına göre listelenir.
 
-![Insider risk yönetimi bildirimi şablon panosu.](../media/insider-risk-notices-dashboard.png)
+![Insider risk yönetimi bildirim şablonu panosu.](../media/insider-risk-notices-dashboard.png)
 
 ## <a name="html-for-notices"></a>Bildirimler için HTML
 
-Bildirimler için metin tabanlı basit bir e-posta iletisinden daha fazlasını oluşturmak için, bildirim şablonunun ileti gövdesi alanında HTML kullanarak daha ayrıntılı bir ileti oluşturabilirsiniz. Aşağıdaki örnekte, temel HTML tabanlı bir e-posta bildirim şablonu için ileti gövdesi biçimi ve şöyledir:
+Bildirimler için basit bir metin tabanlı e-posta iletisinden daha fazlasını oluşturmak isterseniz, bildirim şablonunun ileti gövdesi alanında HTML kullanarak daha ayrıntılı bir ileti oluşturabilirsiniz. Aşağıdaki örnek, temel HTML tabanlı e-posta bildirim şablonu için ileti gövdesi biçimini sağlar:
 
 ```HTML
 <!DOCTYPE html>
@@ -50,44 +50,44 @@ Bildirimler için metin tabanlı basit bir e-posta iletisinden daha fazlasını 
 ```
 
 > [!NOTE]
-> Insider risk yönetimi bildirim şablonlarında HTML href özniteliği uygulaması şu anda URL başvuruları için çift tırnak yerine yalnızca tek tırnak işaretlerini destekler.
+> Insider risk yönetimi bildirim şablonlarındaki HTML href özniteliği uygulaması şu anda URL başvuruları için çift tırnak işaretleri yerine yalnızca tek tırnak işaretlerini destekler.
 
 ## <a name="create-a-new-notice-template"></a>Yeni bildirim şablonu oluşturma
 
-Yeni bir Insider risk yönetimi bildirimi şablonu oluşturmak için, aşağıdaki çalışma sayfalarındaki **Insider risk yönetimi** çözümünde bildirim oluşturma aracını Microsoft 365 uyumluluk merkezi.
+Yeni bir insider risk yönetimi bildirim şablonu oluşturmak için, Microsoft Purview uyumluluk portalı **Insider risk yönetimi** çözümünde bildirim oluşturma aracını kullanacaksınız.
 
-Yeni bir Insider risk yönetimi bildirimi şablonu oluşturmak için aşağıdaki adımları tamamlayın:
+Yeni bir insider risk yönetimi bildirim şablonu oluşturmak için aşağıdaki adımları tamamlayın:
 
-1. Giriş [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) **Insider risk yönetimi'ne gidin** ve Bildirim şablonları **sekmesini** seçin.
-2. Bildirim **oluşturma aracını açmak için** Bildirim şablonu oluştur'a seçin.
-3. Yeni **bildirim şablonu oluştur sayfasında** , aşağıdaki alanları doldurun:
-    - **Şablon adı**: Bildirim için kolay bir ad girin. Bu ad, bir vakadan bildirim gönderirken bildirim panosunda ve bildirim seçim listesinde bildirimler listesinde görünür.
-    - **Gönderen:** Bildirim için gönderenin e-posta adresini girin. Bu adres, bir **vakadan bildirim** gönderirken değiştirmedikçe kullanıcılara gönderilen tüm bildirimlerde Gönderen: alanında görünür.
-    - **Bilgi ve Gizli alanları** : Aboneliğiniz için Active Directory'den seçilen, ilke eşleşmesi hakkında bilgi alınacak isteğe bağlı kullanıcılar veya gruplar.
-    - **Konu**: İletinin konu satırlarında görüntülenen bilgiler metin karakterlerini destekler.
-    - **İleti gövdesi**: İleti gövdesinde görünen bilgiler metin veya HTML değerlerini destekler.
-4. Bildirim **şablonunu oluşturmak** ve kaydetmek için Oluştur'a veya bildirim şablonunu **kaydetmeden** kapatmak için İptal'i seçin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Bildirim şablonları** sekmesini seçin.
+2. Bildirim oluşturma aracını açmak için Bildirim **şablonu oluştur'u** seçin.
+3. **Yeni bildirim şablonu oluştur** sayfasında aşağıdaki alanları doldurun:
+    - **Şablon adı**: Bildirim için kolay bir ad girin. Bu ad, bildirim panosundaki bildirimler listesinde ve servis talebiyle ilgili bildirimler gönderilirken bildirim seçimi listesinde görünür.
+    - **Gönderen**: Bildirim için gönderen e-posta adresini girin. Bu adres, servis talebi bildirimi gönderilirken değiştirilmediği sürece kullanıcılara gönderilen tüm bildirimlerde **Kimden:** alanında görünür.
+    - **Bilgi ve Gizli** alanları: aboneliğiniz için Active Directory'den seçilen ilke eşleşmesinin bildirilmesi için isteğe bağlı kullanıcılar veya gruplar.
+    - **Konu**: İletinin konu satırında görünen bilgiler metin karakterlerini destekler.
+    - **İleti gövdesi: İleti** gövdesinde görünen bilgiler metin veya HTML değerlerini destekler.
+4. Bildirim şablonunu oluşturup kaydetmek için **Oluştur'u** veya bildirim şablonunu kaydetmeden kapatmak için **İptal'i** seçin.
 
 ## <a name="update-a-notice-template"></a>Bildirim şablonunu güncelleştirme
 
-Var olan bir Insider risk yönetimi bildirimi şablonunu güncelleştirmek için aşağıdaki adımları tamamlayın:
+Mevcut bir insider risk yönetimi bildirim şablonunu güncelleştirmek için aşağıdaki adımları tamamlayın:
 
-1. Giriş [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) **Insider risk yönetimi'ne gidin** ve Bildirim şablonları **sekmesini** seçin.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Bildirim şablonları** sekmesini seçin.
 2. Bildirim panosunda, yönetmek istediğiniz bildirim şablonunu seçin.
-3. Bildirim ayrıntıları sayfasında Düzenle'yi **seçin**
-4. Düzenle **sayfasında** , aşağıdaki alanları düzenleyebilirsiniz:
-    - **Şablon adı**: Bildirim için yeni bir kolay ad girin. Bu ad, bir vakadan bildirim gönderirken bildirim panosunda ve bildirim seçim listesinde bildirimler listesinde görünür.
-    - **Gönderen:** Bildirim için gönderenin e-posta adresini güncelleştirin. Bu adres, bir **vakadan bildirim** gönderirken değiştirmedikçe kullanıcılara gönderilen tüm bildirimlerde Gönderen: alanında görünür.
-    - **Bilgi ve Gizli alanları** : Aboneliğiniz için Active Directory'den seçilecek ilke eşleşmesi hakkında bilgi edinilecek isteğe bağlı kullanıcıları veya grupları güncelleştirin.
-    - **Konu**: İletinin konu satırlarında görünen bilgileri güncelleştirin, metin karakterlerini desteklemektedir.
-    - **İleti gövdesi**: İleti gövdesinde görünen bilgileri güncelleştirin; metin veya HTML değerlerini destekler.
-5. **Güncellemek** için Kaydet'i seçin ve bildirimi kaydedin veya bildirim **şablonunu kaydetmeden** kapatmak için İptal'i seçin.
+3. Bildirim ayrıntıları sayfasında **Düzenle'yi** seçin
+4. **Düzenle** sayfasında, aşağıdaki alanları düzenleyebilirsiniz:
+    - **Şablon adı**: Bildirim için yeni bir kolay ad girin. Bu ad, bildirim panosundaki bildirimler listesinde ve servis talebiyle ilgili bildirimler gönderilirken bildirim seçimi listesinde görünür.
+    - **Gönderen:** Bildirim için gönderen e-posta adresini güncelleştirin. Bu adres, servis talebi bildirimi gönderilirken değiştirilmediği sürece kullanıcılara gönderilen tüm bildirimlerde **Kimden:** alanında görünür.
+    - **Bilgi ve Gizli** alanları: aboneliğiniz için Active Directory'den seçilen ilke eşleşmesinin bildirilmesi için isteğe bağlı kullanıcıları veya grupları güncelleştirin.
+    - **Konu**: İletinin konu satırında görünen bilgileri güncelleştirin, metin karakterlerini destekler.
+    - **İleti gövdesi: İleti** gövdesinde görünen bilgileri güncelleştirin, metin veya HTML değerlerini destekler.
+5. Bildirimi güncelleştirmek ve kaydetmek için **Kaydet'i** veya bildirim şablonunu kaydetmeden kapatmak için **İptal'i** seçin.
 
 ## <a name="delete-a-notice-template"></a>Bildirim şablonunu silme
 
-Var olan bir Insider risk yönetimi bildirimi şablonunu silmek için aşağıdaki adımları tamamlayın:
+Mevcut bir insider risk yönetimi bildirim şablonunu silmek için aşağıdaki adımları tamamlayın:
 
-1. Giriş [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) **Insider risk yönetimi'ne gidin** ve Bildirim şablonları **sekmesini** seçin.
-2. Bildirim panosunda, silmek istediğiniz bildirim şablonunu seçin.
-3. Araç çubuğunda **Sil** simgesini seçin.
-4. Bildirim şablonunu silmek için sil iletişim **kutusunda Evet'i** seçin. Silme işlemini iptal etmek için İptal'i **seçin**.
+1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Bildirim şablonları** sekmesini seçin.
+2. Bildirim panosunda silmek istediğiniz bildirim şablonunu seçin.
+3. Araç **çubuğunda Sil simgesini** seçin.
+4. Bildirim şablonunu silmek için sil iletişim kutusunda **Evet'i** seçin. Silme işlemini iptal etmek için **İptal'i** seçin.

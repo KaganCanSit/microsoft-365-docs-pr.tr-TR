@@ -1,5 +1,5 @@
 ---
-title: Adlandırılmış varlıklar hakkında bilgi edinin
+title: Adlandırılmış varlıklar hakkında bilgi edinme
 f1.keywords:
 - CSH
 ms.author: chrfox
@@ -16,25 +16,23 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 description: Adlandırılmış varlıkların, veri kaybı önleme ilkeleri aracılığıyla kişi adlarını, fiziksel adresleri ve tıbbi terimleri içeren hassas öğeleri algılamanıza nasıl yardımcı olduğunu öğrenin
-ms.openlocfilehash: 6c20932216953d64abe4515b529bba66b2561647
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 013d2453190c692eeb3ae9a0dfd48437bded1f0c
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973211"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633509"
 ---
-# <a name="learn-about-named-entities"></a>Adlandırılmış varlıklar hakkında bilgi edinin
+# <a name="learn-about-named-entities"></a>Adlandırılmış varlıklar hakkında bilgi edinme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-*Adlandırılmış varlıklar* [hassas bilgi türleridir](sensitive-information-type-learn-about.md) (SIT). Bunlar kişi adlarını, fiziksel adresleri ve tıbbi hüküm ve koşulları algılamak için kullanabileceğiniz karmaşık sözlük ve desen tabanlı sınıflandırıcılardır. Bunları **Microsoft Purview uyumluluk portalında > Veri sınıflandırma > Hassas bilgi türlerinde** görebilirsiniz. BURADA, SID'leri kullanabileceğiniz kısmi bir liste yer alıyor:
+*Adlandırılmış varlıklar* [hassas bilgi türleridir](sensitive-information-type-learn-about.md) (SIT). Bunlar kişi adlarını, fiziksel adresleri ve tıbbi hüküm ve koşulları algılamak için kullanabileceğiniz karmaşık sözlük ve desen tabanlı sınıflandırıcılardır. Bunları **Microsoft Purview uyumluluk portalı > Veri sınıflandırması > Hassas bilgi türlerinde** görebilirsiniz. BURADA, SID'leri kullanabileceğiniz kısmi bir liste yer alıyor:
 
 
 - [Microsoft Purview Veri Kaybı Önleme ilkeleri (DLP)](dlp-learn-about-dlp.md) 
 - [Duyarlılık etiketleri](sensitivity-labels.md)
 - [İçeriden risk yönetimi](insider-risk-management-solution-overview.md)
 - [Bulut Uygulamaları için Microsoft Defender](/cloud-app-security/what-is-cloud-app-security)
-- [Microsoft Purview Information Protection](apply-sensitivity-label-automatically.md)
+- [Microsoft Purview Bilgi Koruması](apply-sensitivity-label-automatically.md)
 - [Veri Yaşam Döngüsü Yönetimi](information-governance.md)
 - [Kayıt yönetimi](records-management.md)
 - [Microsoft Purview eKeşif](ediscovery.md)
@@ -68,7 +66,7 @@ Burada adlandırılmış varlık SID'lerine bazı örnekler verilmiştir. Bunlar
 
 ## <a name="examples-of-enhanced-dlp-policies"></a>Gelişmiş DLP ilkeleri örnekleri
 
-Burada adlandırılmış varlık SID'lerini kullanan gelişmiş DLP ilkelerine bazı örnekler verilmiştir. Bunların 10'unu **Microsoft Purview uyumluluk portalında > Veri kaybını önleme > İlke oluştur'da** bulabilirsiniz. Gelişmiş şablonlar DLP ve otomatik etiketlemede kullanılabilir.
+Burada adlandırılmış varlık SID'lerini kullanan gelişmiş DLP ilkelerine bazı örnekler verilmiştir. Bunların 10'unu **Microsoft Purview uyumluluk portalı > Veri kaybı önleme > oluşturma ilkesinde** bulabilirsiniz. Gelişmiş şablonlar DLP ve otomatik etiketlemede kullanılabilir.
 
 |İlke kategorisi  |Şablon  |Açıklama  |
 |---------|---------|---------|
@@ -79,7 +77,7 @@ Burada adlandırılmış varlık SID'lerini kullanan gelişmiş DLP ilkelerine b
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Veri kaybı önleme ilkelerinizde adlandırılmış varlıkları kullanma](named-entities-use.md)
+- [Veri kaybını önleme ilkelerinizde adlandırılmış varlıkları kullanma](named-entities-use.md)
 
 
 ## <a name="for-further-information"></a>Daha fazla bilgi için

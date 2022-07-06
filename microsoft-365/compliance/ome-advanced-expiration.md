@@ -17,16 +17,14 @@ ms.collection:
 - M365-security-compliance
 description: Özel markalı bir şablon aracılığıyla e-postalarda son kullanma tarihi ayarlayarak e-posta güvenliğinizi genişletmek için Microsoft Purview Gelişmiş İleti Şifrelemesi'ni kullanın.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 78855ae8906367293b69406ba74246619b5af465
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: b93aad4f217f956561b686b1415c64456a4360db
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015572"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635161"
 ---
 # <a name="set-an-expiration-date-for-email-encrypted-by-microsoft-purview-advanced-message-encryption"></a>Microsoft Purview Gelişmiş İleti Şifreleme tarafından şifrelenen e-posta için bir son geçerlilik tarihi belirleme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview Gelişmiş İleti Şifrelemesi [Microsoft 365 Kurumsal E5, Office 365 E5](https://www.microsoft.com/microsoft-365/enterprise/home), Microsoft 365 E5 (Kar Amacı Gütmeyen Personel Fiyatlandırması), Office 365 Kurumsal E5 (Kar Amacı Gütmeyen Personel Fiyatlandırması) ve Office 365 Eğitim A5. Microsoft 365 E3, Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatlandırması) için SKU eklentisini veya Microsoft 365 E3 için Office 365 Gelişmiş Uyumluluk SKU eklentisini Microsoft 365 E5 Uyumluluk , Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatlandırması) veya SKU'ları Office 365.
 
@@ -44,7 +42,7 @@ Microsoft Purview Gelişmiş İleti Şifrelemesi ile özel markalama uyguladığ
 
 ## <a name="create-a-custom-branding-template-to-force-mail-expiration-by-using-powershell"></a>PowerShell kullanarak posta süre sonunu zorlamak için özel bir marka şablonu oluşturma
 
-1. [PowerShell'i](/powershell/exchange/connect-to-exchange-online-powershell) kuruluşunuzda genel yönetici izinlerine sahip bir hesapla Exchange Online Bağlan.
+1. Kuruluşunuzda genel yönetici izinlerine sahip bir hesapla [Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. New-OMEConfiguration cmdlet'ini çalıştırın.
 

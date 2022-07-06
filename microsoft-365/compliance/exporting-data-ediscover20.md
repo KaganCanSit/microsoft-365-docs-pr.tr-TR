@@ -1,5 +1,5 @@
 ---
-title: eBulma'da büyük/küçük harf verilerini dışarı aktarma (Premium)
+title: eBulma'da servis talebi verilerini dışarı aktarma (Premium)
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -17,16 +17,14 @@ search.appverid:
 ms.assetid: ''
 description: eBulma (Premium) durumunda sunular veya dış incelemeler için bir gözden geçirme kümesinden içeriği dışarı aktarmayı veya indirmeyi öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: d4ee1627587196527987afec5a675b9440ea806e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 2650e38509baa11cbd93e014f13d15e734ee02c3
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096952"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624145"
 ---
-# <a name="export-case-data-in-ediscovery-premium"></a>eBulma'da büyük/küçük harf verilerini dışarı aktarma (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+# <a name="export-case-data-in-ediscovery-premium"></a>eBulma'da servis talebi verilerini dışarı aktarma (Premium)
 
 Gözden geçirme kümesinden verileri dışarı aktarmanın üç yolu vardır:
 
@@ -37,4 +35,4 @@ Gözden geçirme kümesinden verileri dışarı aktarmanın üç yolu vardır:
 **Başka bir gözden geçirme kümesine ekleyin:** Bir gözden geçirme kümesindeki verileri farklı bir gözden geçirme kümesine kopyalayın. Daha fazla bilgi için bkz. [Bir gözden geçirme kümesinden başka bir gözden geçirme kümesine veri ekleme](add-data-to-review-set-from-another-review-set.md).
 
 > [!NOTE]
-> Microsoft 365'da veriler karmalanır ve bu karmalar doğrulama amacıyla çıkış dosyasında sağlanır. Bu, denetim günlükleri ve koleksiyon istatistikleri, yük kümesi raporları ve dışarı aktarma raporları (dışarı aktarma yük dosyası dahil) gibi raporlama işlevleriyle tamamlanır.
+> Microsoft 365'te veriler karma olarak sağlanır ve bu karmalar doğrulama amacıyla çıkış dosyasında sağlanır. Bu, denetim günlükleri ve koleksiyon istatistikleri, yük kümesi raporları ve dışarı aktarma raporları (dışarı aktarma yük dosyası dahil) gibi raporlama işlevleriyle tamamlanır.

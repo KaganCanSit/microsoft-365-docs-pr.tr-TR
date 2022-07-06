@@ -18,29 +18,27 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-description: Denetim günlüğünde arama yapmak için Exchange Online'da Search-UnifiedAuditLog cmdlet'ini çalıştıran bir PowerShell betiği kullanın. Bu betik, her çalıştırdığınızda büyük bir denetim kayıtları kümesi döndürecek şekilde iyileştirilmiştir. Betik, bu kayıtları Excel'da Power Query kullanarak görüntüleyebileceğiniz veya dönüştürebileceğiniz bir CSV dosyasına aktarır.
-ms.openlocfilehash: 8799f1a4ddf2ef7dd536ccb3e6e70a4b731b4cd6
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Denetim günlüğünde arama yapmak için Exchange Online'da Search-UnifiedAuditLog cmdlet'ini çalıştıran bir PowerShell betiği kullanın. Bu betik, her çalıştırdığınızda büyük bir denetim kayıtları kümesi döndürecek şekilde iyileştirilmiştir. Betik, bu kayıtları Excel'de Power Query kullanarak görüntüleyebileceğiniz veya dönüştürebileceğiniz bir CSV dosyasına aktarır.
+ms.openlocfilehash: 0c1d8d6ab8f6a2c8a0dc6a1c858a164c2f4ff494
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100863"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632849"
 ---
 # <a name="use-a-powershell-script-to-search-the-audit-log"></a>Denetim günlüğünü aramak için PowerShell betiği kullanma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Güvenlik, uyumluluk ve denetim, günümüzün dünyasında BT yöneticileri için en önemli öncelik haline gelmiştir. Microsoft 365, kuruluşların güvenlik, uyumluluk ve denetimi yönetmesine yardımcı olan çeşitli yerleşik özelliklere sahiptir. Özellikle, birleşik denetim günlüğü güvenlik olaylarını ve uyumluluk sorunlarını araştırmanıza yardımcı olabilir. Aşağıdaki yöntemleri kullanarak denetim günlüklerini alabilirsiniz:
+Güvenlik, uyumluluk ve denetim, günümüzün dünyasında BT yöneticileri için en önemli öncelik haline gelmiştir. Microsoft 365, kuruluşların güvenlik, uyumluluk ve denetimi yönetmesine yardımcı olmak için çeşitli yerleşik özelliklere sahiptir. Özellikle, birleşik denetim günlüğü güvenlik olaylarını ve uyumluluk sorunlarını araştırmanıza yardımcı olabilir. Aşağıdaki yöntemleri kullanarak denetim günlüklerini alabilirsiniz:
 
 - [Office 365 Yönetim Etkinliği API'si](/office/office-365-management-api/office-365-management-activity-api-reference)
 
-- Microsoft Purview uyumluluk portalındaki [denetim günlüğü arama aracı](search-the-audit-log-in-security-and-compliance.md)
+- Microsoft Purview uyumluluk portalı denetim [günlüğü arama aracı](search-the-audit-log-in-security-and-compliance.md)
 
 - Exchange Online PowerShell'de [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) cmdlet'i
 
 Denetim günlüklerini düzenli olarak almanız gerekiyorsa, büyük kuruluşlara sürekli olarak milyonlarca denetim kaydını almaları için ölçeklenebilirlik ve performans sağlayabilen Office 365 Yönetim Etkinliği API'sini kullanan bir çözüm düşünmelisiniz. Uyumluluk portalında denetim günlüğü arama aracını kullanmak, daha kısa zaman aralığında gerçekleşen belirli işlemlerin denetim kayıtlarını hızla bulmanın iyi bir yoludur. Denetim günlüğü arama aracında, özellikle de büyük kuruluşlar için daha uzun zaman aralıkları kullanmak, kolayca yönetmek veya dışarı aktarmak için çok fazla kayıt döndürebilir.
 
-Özellikle büyük kuruluşlardaki daha uzun tarih aralıkları için belirli bir araştırma veya olay için denetim verilerini el ile almanız gereken durumlar olduğunda, **Search-UnifiedAuditLog** cmdlet'ini kullanmak en iyi seçenek olabilir. Bu makale, 50.000 denetim kaydını alabilen (cmdlet'i her çalıştırdığınızda) cmdlet'ini kullanan ve bunları gözden geçirmenize yardımcı olmak için Excel'deki Power Query kullanarak biçimlendirebileceğiniz bir CSV dosyasına aktaran bir PowerShell betiği içerir. Bu makaledeki betiğin kullanılması, büyük denetim günlüğü aramalarının hizmette zaman aşımına neden olma olasılığını da en aza indirir.
+Özellikle büyük kuruluşlardaki daha uzun tarih aralıkları için belirli bir araştırma veya olay için denetim verilerini el ile almanız gereken durumlar olduğunda, **Search-UnifiedAuditLog** cmdlet'ini kullanmak en iyi seçenek olabilir. Bu makale, 50.000 denetim kaydını alabilen (cmdlet'i her çalıştırdığınızda) cmdlet'ini kullanan ve incelemenize yardımcı olması için Excel'de Power Query kullanarak biçimlendirebileceğiniz bir CSV dosyasına aktaran bir PowerShell betiği içerir. Bu makaledeki betiğin kullanılması, büyük denetim günlüğü aramalarının hizmette zaman aşımına neden olma olasılığını da en aza indirir.
 
 ## <a name="before-you-run-the-script"></a>Betiği çalıştırmadan önce
 
@@ -58,9 +56,9 @@ Denetim günlüklerini düzenli olarak almanız gerekiyorsa, büyük kuruluşlar
 
 - Bu makalede sağlanan örnek betik, herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betik, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiğin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiğin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiğin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
 
-## <a name="step-1-connect-to-exchange-online-powershell"></a>1. Adım: PowerShell'i Exchange Online için Bağlan
+## <a name="step-1-connect-to-exchange-online-powershell"></a>1. Adım: Exchange Online PowerShell'e bağlanma
 
-İlk adım, Exchange Online PowerShell'e bağlanmaktır. Modern kimlik doğrulaması kullanarak veya çok faktörlü kimlik doğrulaması (MFA) ile bağlanabilirsiniz. Adım adım yönergeler için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+İlk adım, Exchange Online PowerShell'e bağlanmaktır. Modern kimlik doğrulaması kullanarak veya çok faktörlü kimlik doğrulaması (MFA) ile bağlanabilirsiniz. Adım adım yönergeler için bkz[. Exchange Online PowerShell'e bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
 
 ## <a name="step-2-modify-and-run-the-script-to-retrieve-audit-records"></a>2. Adım: Denetim kayıtlarını almak için betiği değiştirme ve çalıştırma
 
@@ -176,4 +174,4 @@ Betik, çalışırken ilerleme iletilerini görüntüler. Betiğin çalışması
 
 ## <a name="step-3-format-and-view-the-audit-records"></a>3. Adım: Denetim kayıtlarını biçimlendirme ve görüntüleme
 
-Betiği çalıştırdıktan ve denetim kayıtlarını bir CSV dosyasına aktardıktan sonra, denetim kayıtlarını gözden geçirmeyi ve çözümlemeyi kolaylaştırmak için CSV'yi biçimlendirmek isteyebilirsiniz. Bunu gerçekleştirmenin bir yolu, **AuditData** sütunundaki JSON nesnesindeki her özelliği kendi sütununa bölmek için Excel Power Query JSON dönüştürme özelliğidir. Adım adım yönergeler için, denetim günlüğü kayıtlarını dışarı aktarma[, yapılandırma ve görüntüleme](export-view-audit-log-records.md#step-2-format-the-exported-audit-log-using-the-power-query-editor) başlığı altındaki "2. Adım: Power Query Düzenleyicisi kullanarak dışarı aktarılan denetim günlüğünü biçimlendirme" bölümüne bakın.
+Betiği çalıştırdıktan ve denetim kayıtlarını bir CSV dosyasına aktardıktan sonra, denetim kayıtlarını gözden geçirmeyi ve çözümlemeyi kolaylaştırmak için CSV'yi biçimlendirmek isteyebilirsiniz. Bunun bir yolu, Excel'de JSON dönüştürme özelliğinin Power Query, **AuditData** sütunundaki JSON nesnesindeki her özelliği kendi sütununa bölmektir. Adım adım yönergeler için, denetim günlüğü kayıtlarını dışarı aktarma[, yapılandırma ve görüntüleme](export-view-audit-log-records.md#step-2-format-the-exported-audit-log-using-the-power-query-editor) başlığı altındaki "2. Adım: Power Query Düzenleyicisi kullanarak dışarı aktarılan denetim günlüğünü biçimlendirme" bölümüne bakın.

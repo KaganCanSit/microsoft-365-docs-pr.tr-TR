@@ -14,23 +14,21 @@ ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: e09331fb819d2b00764cd6dacd1687ade8ee116c
-ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
+ms.openlocfilehash: a1549a0cb3bf03056b37a75175c3b24416bec7b5
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65396277"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639786"
 ---
 # <a name="information-barriers-attributes"></a>Bilgi engelleri öznitelikleri
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Azure Active Directory'deki belirli öznitelikler, kullanıcıları bilgi engellerinde (IB) segmentlere ayırmak için kullanılabilir. Segmentler tanımlandıktan sonra, bu segmentler IB ilkeleri için filtre olarak kullanılabilir. Örneğin, kuruluşunuzdaki departmanlara göre kullanıcı segmentlerini tanımlamak için **Departman'ı** kullanabilirsiniz (tek bir çalışanın aynı anda iki departmanda çalışmadığı varsayılır).
 
 Bu makalede, bilgi engelleri olan özniteliklerin nasıl kullanılacağı açıklanır ve kullanılabilecek özniteliklerin listesi sağlanır. Bilgi engelleri hakkında daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 
 - [Bilgi engelleri](information-barriers.md)
-- [Microsoft Teams'da bilgi engelleri için ilke tanımlama](information-barriers-policies.md)
+- [Microsoft Teams'de bilgi engelleri için ilke tanımlama](information-barriers-policies.md)
 - [IB ilkelerini düzenleme (veya kaldırma)](information-barriers-edit-segments-policies.md)
 
 ## <a name="how-to-use-attributes-in-ib-policies"></a>IB ilkelerinde öznitelikleri kullanma
@@ -99,6 +97,6 @@ Aşağıdaki tabloda, bilgi engelleriyle kullanabileceğiniz öznitelikler liste
 
 ## <a name="resources"></a>Kaynaklar
 
-- [Microsoft Teams'da bilgi engelleri için ilke tanımlama](information-barriers-policies.md)
+- [Microsoft Teams'de bilgi engelleri için ilke tanımlama](information-barriers-policies.md)
 - [Sorun giderme bilgileri engelleri](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting)
 - [Bilgi engelleri](information-barriers.md)

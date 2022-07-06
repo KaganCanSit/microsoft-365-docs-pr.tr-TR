@@ -14,27 +14,25 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Purview eKeşif'teki (Premium) bir olaya hızla birden çok koruyucu ve ilişkili veri kaynağı eklemek için toplu içeri aktarma aracını kullanın.
-ms.openlocfilehash: a9274ebd01a034af82eec510b4e16534150e2216
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Toplu içeri aktarma aracını kullanarak Microsoft Purview eKeşif (Premium) içindeki bir servis talebine hızla birden çok koruyucu ve ilişkili veri kaynağı ekleyin.
+ms.openlocfilehash: f50304711b12cbcf0b42f0cb185d29d085924108
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097810"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626875"
 ---
 # <a name="import-custodians-to-an-ediscovery-premium-case"></a>Koruyucuları eBulma (Premium) olayına aktarma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Birçok koruyucu içeren Microsoft Purview eKeşif (Premium) vakalarında, bir servis talebine eklemek için gerekli bilgileri içeren bir CSV dosyası kullanarak birden çok koruyucuyu aynı anda içeri aktarabilirsiniz. İçeri aktarma koruyucuları aracı, içeri aktarma işi oluşturulmadan önce CSV dosyasını da doğrular. Bu, bir koruyucunun olaya eklenmesini engelleyen hatalar olduğunu öğrenmeden önce içeri aktarma işinin tamamlanmasını beklemek yerine CSV dosyasındaki hataları düzeltebileceğiniz anlamına gelir.
+Çok sayıda koruyucu içeren Microsoft Purview eKeşif (Premium) durumlarda, bir servis talebine eklemek için gerekli bilgileri içeren bir CSV dosyası kullanarak birden çok koruyucuyu aynı anda içeri aktarabilirsiniz. İçeri aktarma koruyucuları aracı, içeri aktarma işi oluşturulmadan önce CSV dosyasını da doğrular. Bu, bir koruyucunun olaya eklenmesini engelleyen hatalar olduğunu öğrenmeden önce içeri aktarma işinin tamamlanmasını beklemek yerine CSV dosyasındaki hataları düzeltebileceğiniz anlamına gelir.
 
 ## <a name="before-you-import-custodians"></a>Koruyucuları içeri aktarmadan önce
 
-- CSV dosyası başına en fazla 1.000 koruyucu (satır) içeri aktarabilirsiniz.
+- CSV dosyası başına en fazla 1.000 koruyucu (satır) içeri aktarabilirsiniz. Aynı anda 1.000 koruyucunun içeri aktarılmasının zaman aşımı hatalarına neden olabileceğini ve bazı koruyucuların içeri aktarma işleminde başarısız olabileceğini unutmayın. Bunu düzeltmek için içeri aktarma işlemini yineleyin; başarısız olan koruyucular içeri aktarılmalıdır. Zaman aşımlarından kaçınmak için tek seferde 200 koruyucu içeri aktarmanızı öneririz.
 
 - Her koruyucu için en fazla 500 veri kaynağı ilişkilendirebilirsiniz.  
 
-- Yalnızca kuruluşunuzun Azure Active Directory parçası olan koruyucuları içeri aktarabilirsiniz.
+- Yalnızca kuruluşunuzun Azure Active Directory'sinin parçası olan koruyucuları içeri aktarabilirsiniz.
 
 - Her koruyucu benzersiz bir e-posta adresine sahip olmalıdır.
 
@@ -44,7 +42,7 @@ Birçok koruyucu içeren Microsoft Purview eKeşif (Premium) vakalarında, bir s
 
 1. eBulma (Premium) servis talebini açın ve **Veri kaynakları** sekmesini seçin.
 
-2. **Veri kaynağı** >  **ekleKaynakları içeri aktar'a** tıklayın.
+2. **Veri kaynağı** >  ekle **Koruyucuları içeri aktar'a** tıklayın.
 
 3. **Şablon alma** sihirbazı sayfasında **CSV şablonunu indir'e** tıklayarak bir koruyucu şablonu CSV dosyası indirin.
 
@@ -52,9 +50,9 @@ Birçok koruyucu içeren Microsoft Purview eKeşif (Premium) vakalarında, bir s
 
 4. Koruyucu bilgileri CSV dosyasına ekleyin ve yerel bilgisayarınıza kaydedin. CSV dosyasındaki gerekli özellikler hakkında ayrıntılı bilgi için [Koruyucu CSV dosyası](#custodian-csv-file) bölümüne bakın.
 
-5. Csv dosyasını koruyucu bilgileriyle birlikte hazırladıktan sonra **Veri kaynakları** sekmesine dönün ve Veri kaynağı  > **ekleYeniden** **koruyucuları** içeri aktar'a tıklayın.
+5. Csv dosyasını koruyucu bilgileriyle birlikte hazırladıktan sonra **Veri kaynakları** sekmesine dönün ve **Veri kaynağı** >  ekle **Koruyucuları içeri aktar'a** yeniden tıklayın.
 
-6. **Upload CSV dosyası** sihirbazı sayfasında, **Upload csv dosyasına** tıklayın ve ardından koruyucu bilgilerini içeren CSV dosyasını karşıya yükleyin.
+6. **CSV dosyasını karşıya yükleme** sihirbazı sayfasında **Csv dosyasını karşıya yükle'ye** tıklayın ve ardından koruyucu bilgilerini içeren CSV dosyasını karşıya yükleyin.
 
    CSV dosyasını karşıya yükledikten sonra içeri aktarma sihirbazı CSV dosyasını doğrular. Doğrulama hataları varsa sihirbaz, hataları görüntülemek için bir bağlantı içeren bir hata başlığı görüntüler.
 
@@ -84,8 +82,8 @@ CSV koruyucu şablonunu indirdikten sonra, her satıra koruyucuları ve veri kay
 |**Exchange Etkin** | Koruyucunun posta kutusunu dahil etmek veya eklememek için DOĞRU/YANLIŞ değeri.      |
 |**OneDrive Etkin** | Koruyucunun OneDrive İş hesabını dahil etmek veya eklememek için DOĞRU/YANLIŞ değeri. |
 |**Is OnHold**        | Koruyucu veri kaynaklarının beklemeye alıp almayacağını belirten DOĞRU/YANLIŞ değeri. <sup>1</sup>     |
-|**İş Yükü1 Türü**         |Koruyucu ile ilişkilendirilecek veri kaynağının türünü gösteren dize değeri. Olası değerler şunlardır: <br/>- ExchangeMailbox<br/> - SharePointSite<br/>- <sup>TeamsMailbox2</sup><br/>- <sup>YammerMailbox2</sup>. Bu iş yükü türleri için önceki değerler büyük/küçük harfe duyarlıdır. CSV dosyası üç iş yükü türüne ve karşılık gelen iş yükü konumlarına yönelik sütunlar içerir. Toplam 500 iş yükü türü ve konumu ekleyebilirsiniz.|
-|**İş Yükü1 Konumu**     | İş yükü türünüze bağlı olarak, bu veri kaynağının konumudur. Örneğin, bir Exchange posta kutusunun e-posta adresi veya bir SharePoint sitesinin URL'si. |
+|**İş Yükü1 Türü**         |Koruyucu ile ilişkilendirilecek veri kaynağının türünü gösteren dize değeri. Olası değerler şunlardır: <br/>- ExchangeMailbox<br/> - SharePointSite<br/>- TeamsMailbox<sup>2</sup><br/>- YammerMailbox<sup>2</sup>. Bu iş yükü türleri için önceki değerler büyük/küçük harfe duyarlıdır. CSV dosyası üç iş yükü türüne ve karşılık gelen iş yükü konumlarına yönelik sütunlar içerir. Toplam 500 iş yükü türü ve konumu ekleyebilirsiniz.|
+|**İş Yükü1 Konumu**     | İş yükü türünüze bağlı olarak, bu veri kaynağının konumudur. Örneğin, Exchange posta kutusunun e-posta adresi veya SharePoint sitesinin URL'si. |
 |||
 
 > [!NOTE]

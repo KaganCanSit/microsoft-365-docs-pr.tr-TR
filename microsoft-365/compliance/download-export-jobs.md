@@ -16,42 +16,40 @@ search.appverid:
 - MET150
 ms.custom: seo-marvel-mar2020
 description: Gözden geçirme kümesindeki belgeleri Azure Depolama hesabına aktarın ve ardından Azure Depolama Gezgini kullanarak bunları yerel bir bilgisayara indirin.
-ms.openlocfilehash: e0dfe3eb37ea440c93dc7753c7c4206d8d33c1f3
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 87e7f04f2e21becb5320c3bca999d7e0ff4900b2
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098636"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626501"
 ---
 # <a name="export-documents-in-a-review-set-to-an-azure-storage-account"></a>Gözden geçirme kümesindeki belgeleri Azure Depolama hesabına aktarma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-eBulma (Premium) durumundaki bir gözden geçirme kümesinden belgeleri dışarı aktardığınızda, bunları kuruluşunuz tarafından yönetilen bir Azure Depolama hesabına dışarı aktarma seçeneğiniz vardır. Bu seçeneği kullanırsanız belgeler Azure Depolama konumunuza yüklenir. Dışarı aktarıldıktan sonra, Azure Depolama Gezgini kullanarak belgelere erişebilir (ve bunları yerel bir bilgisayara veya başka bir konuma indirebilirsiniz). Bu makalede, belgeleri Azure Depolama hesabınıza dışarı aktarma ve dışarı aktarılan belgeleri indirmek üzere azure Depolama konumuna bağlanmak için Azure Depolama Gezgini kullanma yönergeleri sağlanır. Azure Depolama Gezgini hakkında daha fazla bilgi için bkz. [Azure Depolama Gezgini kullanma](/azure/storage/blobs/storage-quickstart-blobs-storage-explorer).
+eBulma (Premium) durumundaki bir gözden geçirme kümesinden belgeleri dışarı aktardığınızda, bunları kuruluşunuz tarafından yönetilen bir Azure Depolama hesabına dışarı aktarma seçeneğiniz vardır. Bu seçeneği kullanırsanız, belgeler Azure Depolama konumunuza yüklenir. Dışarı aktarıldıktan sonra, Azure Depolama Gezgini kullanarak belgelere erişebilir (ve bunları yerel bir bilgisayara veya başka bir konuma indirebilirsiniz). Bu makalede, belgeleri Azure Depolama hesabınıza aktarma ve dışarı aktarılan belgeleri indirmek üzere azure depolama konumuna bağlanmak için Azure Depolama Gezgini kullanma yönergeleri sağlanır. Azure Depolama Gezgini hakkında daha fazla bilgi için bkz. [Azure Depolama Gezgini kullanma](/azure/storage/blobs/storage-quickstart-blobs-storage-explorer).
 
 ## <a name="before-you-export-documents-from-a-review-set"></a>Gözden geçirme kümesinden belgeleri dışarı aktarmadan önce
 
 - Belgeleri gözden geçirme kümesinden dışarı aktarmak için Azure Depolama hesabınız için paylaşılan erişim imzası (SAS) belirteci ve depolama hesabındaki belirli bir kapsayıcının URL'sini sağlamanız gerekir. 2. Adım'ı gerçekleştirirken bunların elinizin altında olduğundan emin olun (örneğin, bir metin dosyasına kopyalanır)
 
-  - **SAS belirteci**: SAS belirtecini azure Depolama hesabınız için aldığınızdan emin olun (kapsayıcı için değil). Azure Depolama hesabınız için bir SAS belirteci oluşturabilirsiniz. Bunu yapmak için Azure Depolama hesabına gidin ve depolama hesabı dikey penceresindeki **Ayarlar** ayarları altında **Erişim imzasını paylaş'ı** seçin. Varsayılan ayarları kullanın ve SAS belirtecini oluştururken tüm kaynak türlerine izin verin.
+  - **SAS belirteci**: SAS belirtecini azure depolama hesabınız için aldığınızdan emin olun (kapsayıcı için değil). Azure Depolama'da hesabınız için bir SAS belirteci oluşturabilirsiniz. Bunu yapmak için Azure Depolama hesabına gidin ve depolama hesabı dikey penceresindeki **Ayarlar** ayarları altında **Erişim imzasını paylaş'ı** seçin. Varsayılan ayarları kullanın ve SAS belirtecini oluştururken tüm kaynak türlerine izin verin.
 
-  - **Kapsayıcı URL'si**: Gözden geçirme kümesi belgelerini karşıya yüklemek için bir kapsayıcı oluşturmanız ve ardından kapsayıcının URL'sinin bir kopyasını almanız gerekir; örneğin, `https://ediscoverydata.blob.core.windows.net/exportdata`. URL'yi almak için Azure Depolama'deki kapsayıcıya gidin ve kapsayıcı dikey penceresinin **Ayarlar** bölümünde **Özellikler'i** seçin.
+  - **Kapsayıcı URL'si**: Gözden geçirme kümesi belgelerini karşıya yüklemek için bir kapsayıcı oluşturmanız ve ardından kapsayıcının URL'sinin bir kopyasını almanız gerekir; örneğin, `https://ediscoverydata.blob.core.windows.net/exportdata`. URL'yi almak için Azure Depolama'daki kapsayıcıya gidin ve kapsayıcı dikey penceresinin **Ayarlar** bölümünde **Özellikler'i** seçin.
 
 - Azure Depolama Gezgini indirip yükleyin. Yönergeler için bkz. [Azure Depolama Gezgini aracı](https://go.microsoft.com/fwlink/p/?LinkId=544842). Azure Depolama hesabınızdaki kapsayıcıya bağlanmak ve 1. Adımda dışarı aktardığınız belgeleri indirmek için bu aracı kullanırsınız.
 
 ## <a name="step-1-export-the-documents-from-a-review-set"></a>1. Adım: Belgeleri gözden geçirme kümesinden dışarı aktarma
 
-İlk adım, belgeleri gözden geçirme kümesinden dışarı aktarmak için bir dışarı aktarma işi oluşturmaktır. Tüm dışarı aktarma seçenekleri hakkında daha ayrıntılı yönergeler için bkz. [Belgeleri gözden geçirme kümesinden dışarı aktarma](export-documents-from-review-set.md). Aşağıdaki yordamda, belgeleri kuruluşunuzun Azure Depolama hesabına dışarı aktarma ayarları vurgulanır.
+İlk adım, belgeleri gözden geçirme kümesinden dışarı aktarmak için bir dışarı aktarma işi oluşturmaktır. Tüm dışarı aktarma seçenekleri hakkında daha ayrıntılı yönergeler için bkz. [Belgeleri gözden geçirme kümesinden dışarı aktarma](export-documents-from-review-set.md). Aşağıdaki yordamda, belgeleri kuruluşunuzun Azure Depolama hesabına aktarma ayarları vurgulanır.
 
-1. Microsoft Purview uyumluluk portalında eBulma (Premium) servis talebini açın, **Gözden geçirme kümeleri** sekmesini seçin ve ardından dışarı aktarmak istediğiniz gözden geçirme kümesini seçin.
+1. Microsoft Purview uyumluluk portalı, eBulma (Premium) servis talebini açın, **Gözden geçirme kümeleri** sekmesini seçin ve ardından dışarı aktarmak istediğiniz gözden geçirme kümesini seçin.
 
-2. Gözden geçirme kümesinde **ActionExport'a** >  tıklayın.
+2. Gözden geçirme kümesinde **Eylem** > **Dışarı Aktar'a** tıklayın.
 
 3. **Dışarı aktarma seçenekleri** açılır sayfasında, dışarı aktarma için bir ad (gerekli) ve açıklama (isteğe bağlı) yazın.
 
 4. Belgeler, meta veriler, içerik ve seçenekler bölümlerindeki ayarları yapılandırın. Bu ayarlar hakkında daha fazla bilgi için bkz. [Belgeleri gözden geçirme kümesinden dışarı aktarma](export-documents-from-review-set.md).
 
-5. **Çıkış seçenekleri** bölümünde **, Azure Depolama hesabınıza dışarı aktarılan Sıkıştırılmış dizin yapısını** seçin.
+5. **Çıkış seçenekleri** bölümünde **, Azure Depolama hesabınıza dışarı aktarılan Sıkıştırılmış dizin yapısı** seçeneğini belirleyin.
 
 6. Kapsayıcı URL'sini ve depolama hesabınız için SAS belirtecini ilgili alanlara yapıştırın.
 
@@ -63,7 +61,7 @@ eBulma (Premium) durumundaki bir gözden geçirme kümesinden belgeleri dışar�
 
 Sonraki adım, 1. Adımda dışarı aktarma işini oluşturduktan sonra oluşturulan SAS URL'sini almaktır. Gözden geçirme kümesi belgelerini dışarı aktardığınız Azure Depolama hesabınızdaki kapsayıcıya bağlanmak için SAS URL'sini kullanırsınız.
 
-1. **eBulma (Premium)** sayfasında büyük/küçük harfe gidin ve **Dışarı Aktarmalar** sekmesine tıklayın.
+1. **eBulma (Premium)** sayfasında servis talebine gidin ve **Dışarı Aktarmalar** sekmesine tıklayın.
 
 2. **Dışarı Aktarmalar** sekmesinde, indirmek istediğiniz dışarı aktarma işine tıklayın. Bu, 1. Adımda oluşturduğunuz dışarı aktarma işidir.
 
@@ -72,9 +70,9 @@ Sonraki adım, 1. Adımda dışarı aktarma işini oluşturduktan sonra oluştur
    ![Konumlar altında görüntülenen SAS URL'sini kopyalayın.](../media/eDiscoExportJob.png)
 
    > [!TIP]
-   > Dışarı aktarma işinde görüntülenen SAS URL'si, Azure Depolama hesabınızın kapsayıcı URL'si ve SAS belirtecinin birleştirilmiş bir sonucudur. Url'yi ve SAS belirtecini birleştirerek dışarı aktarma işinden kopyalayabilir veya kendiniz oluşturabilirsiniz.
+   > Dışarı aktarma işinde görüntülenen SAS URL'si, Azure Depolama hesabınızın kapsayıcı URL'si ile SAS belirtecinin birleştirilmiş bir sonucudur. Url'yi ve SAS belirtecini birleştirerek dışarı aktarma işinden kopyalayabilir veya kendiniz oluşturabilirsiniz.
 
-## <a name="step-3-connect-to-the-azure-storage-container"></a>3. Adım: Azure Depolama kapsayıcısına Bağlan
+## <a name="step-3-connect-to-the-azure-storage-container"></a>3. Adım: Azure Depolama kapsayıcısına bağlanma
 
 Son adım, Azure Depolama hesabınızdaki kapsayıcıya bağlanmak ve dışarı aktarılan belgeleri yerel bir bilgisayara indirmek için Azure Depolama Gezgini ve SAS URL'sini kullanmaktır.
 
@@ -84,7 +82,7 @@ Son adım, Azure Depolama hesabınızdaki kapsayıcıya bağlanmak ve dışarı 
 
    ![Hesap ekle simgesine tıklayın.](../media/AzureStorageConnect.png)
 
-3. **Azure Depolama Bağlan** sayfasında **Blob kapsayıcısı'na** tıklayın.
+3. **Azure Depolama'ya Bağlan** sayfasında **Blob kapsayıcısı'na** tıklayın.
 
 4. **Kimlik Doğrulama Yöntemini Seç** sayfasında **Paylaşılan erişim imzası (SAS)** seçeneğini belirleyin ve **ardından İleri'ye** tıklayın.
 

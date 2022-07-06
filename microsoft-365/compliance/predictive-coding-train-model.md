@@ -13,19 +13,17 @@ ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: M365-security-compliance
-description: ''
-ms.openlocfilehash: 1f94f49f93310ea4b40d588c7c43ecce7ec535cc
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Tahmine dayalı kodlama için ilk eğitim turunu gerçekleştirme hakkında bilgi edinin.
+ms.openlocfilehash: 509e47372655691130be9a4621c973b5e6575f80
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091467"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66642360"
 ---
 # <a name="train-a-predictive-coding-model-preview"></a>Tahmine dayalı kodlama modeli eğit (önizleme)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview eKeşif'te (Premium) tahmine dayalı bir kodlama modeli oluşturduktan sonra, sonraki adım modeli inceleme kümenizdeki ilgili ve ilgili olmayan içerik konusunda eğitmek için ilk eğitim turunu gerçekleştirmektir. Eğitimin ilk turunu tamamladıktan sonra modelin ilgili ve ilgili olmayan içeriği tahmin etme becerisini geliştirmek için sonraki eğitim turlarını gerçekleştirebilirsiniz.
+Microsoft Purview eKeşif(Premium) içinde tahmine dayalı bir kodlama modeli oluşturduktan sonra, sonraki adım modeli gözden geçirme kümenizdeki ilgili ve ilgili olmayan içerik konusunda eğitmek için ilk eğitim turunu gerçekleştirmektir. Eğitimin ilk turunu tamamladıktan sonra modelin ilgili ve ilgili olmayan içeriği tahmin etme becerisini geliştirmek için sonraki eğitim turlarını gerçekleştirebilirsiniz.
 
 Tahmine dayalı kodlama iş akışını gözden geçirmek için bkz. [eBulma'da tahmine dayalı kodlama hakkında bilgi edinme (Premium)](predictive-coding-overview.md#the-predictive-coding-workflow)
 
@@ -35,9 +33,9 @@ Tahmine dayalı kodlama iş akışını gözden geçirmek için bkz. [eBulma'da 
 
 ## <a name="train-a-model-for-the-first-time"></a>Modeli ilk kez eğitin
 
-1. Microsoft Purview uyumluluk portalında bir eBulma (Premium) servis talebi açın ve ardından **Kümeleri gözden geçir** sekmesini seçin.
+1. Microsoft Purview uyumluluk portalı bir eBulma (Premium) servis talebi açın ve ardından **Kümeleri gözden geçir** sekmesini seçin.
 
-2. Bir gözden geçirme kümesi açın ve **ardından Analytics** >  **Tahmine dayalı kodlamayı yönet (önizleme)'** ye tıklayın.
+2. Bir gözden geçirme kümesi açın ve ardından **Analiz** > **Tahmine dayalı kodlamayı yönet (önizleme)** seçeneğine tıklayın.
 
 3. **Tahmine dayalı kodlama modelleri (önizleme)** sayfasında eğitmek istediğiniz modeli seçin.
 

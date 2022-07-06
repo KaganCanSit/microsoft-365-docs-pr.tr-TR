@@ -15,16 +15,14 @@ search.appverid:
 - MOE150
 - MET150
 description: PowerShell kullanarak özel hassas bilgileri değiştirmeyi öğrenin.
-ms.openlocfilehash: deb50679702cec69187392337511b4dde2d1ceb3
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 639a52526924d3068ce2d1cd38006a1773b6d098
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014398"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66621985"
 ---
 # <a name="modify-a-custom-sensitive-information-type-using-powershell"></a>PowerShell kullanarak özel hassas bilgi türünü değiştirme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Güvenlik & Uyumluluğu PowerShell'de, özel bir hassas bilgi türünü değiştirmek için şunlar gerekir:
 

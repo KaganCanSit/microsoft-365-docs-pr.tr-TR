@@ -17,18 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Bir öğenin birden çok bekletme ilkesi veya bekletme etiketi ve bekletme ilkesi olduğunda sonucu belirlemek için akış çizelgesi kullanma
-ms.openlocfilehash: cf35a89faf3ed526c94acf362f1a927eb36420f0
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 4e5c1cf887144f89764e88a39ba14a95a2df576c
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286812"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633465"
 ---
 # <a name="flowchart-to-determine-when-an-item-will-be-retained-or-permanently-deleted"></a>Bir öğenin ne zaman tutulacağını veya kalıcı olarak silineceğini saptamak için akış çizelgesi
 
->*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+>*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 Bir öğeye [bekletme ilkelerini](retention.md#the-principles-of-retention-or-what-takes-precedence) uygulamak için aşağıdaki akış çizelgesini kullanarak sistemin saklama etiketinin veya bekletme ilkesinin bir sonucu olarak saklamayı mı yoksa kalıcı olarak mı sileceğini belirleyin.
 

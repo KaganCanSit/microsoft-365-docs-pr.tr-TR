@@ -16,16 +16,14 @@ search.appverid:
 - MET150
 ms.assetid: 47e8b964-4b09-44f7-a2d7-b8a06e8e389c
 description: Üçüncü taraf denetimleri indirin, Microsoft'un müşteri verilerini nasıl güvende tuttuğunu öğrenin ve Office 365 kullandığınızda ISO, HIPAA, FINRA ve FedRAMP ile nasıl uyumlu olabileceğinizi öğrenin.
-ms.openlocfilehash: 8247eee98d9c039e05aca2b621881f56b59c2ee5
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: fdd60478266ee4ef55f550aa04a62d9e1148856e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077845"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622403"
 ---
 # <a name="service-assurance-in-the-security--compliance-center"></a>Güvenlik & Uyumluluk Merkezi'nde hizmet güvencesi
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Aşağıdakiler gibi çeşitli konuları açıklayan belgelere erişmek için Güvenlik & Uyumluluk Merkezi'nde Hizmet güvencesini kullanın: 
   
@@ -43,7 +41,7 @@ Ayrıca Office 365 müşterilerin aşağıdakiler gibi endüstriler genelindeki 
     
 - Federal Risk ve Yetkilendirme Yönetimi Programı (FedRAMP)
     
-## <a name="who-can-access-office-365-service-assurance-and-how"></a>Who Office 365 Hizmet güvencesi'ne erişebilir ve nasıl erişebilir?
+## <a name="who-can-access-office-365-service-assurance-and-how"></a>Office 365 Hizmet güvencesi'ne kimler erişebilir ve nasıl erişebilir?
 
  **Yeni müşteriler ve Microsoft çevrimiçi hizmetler değerlendiren müşteriler,** Office 365 Kurumsal E3 ve E5 planlarına (hem deneme hem de ücretli abonelikler) dahil olan Hizmet güvencesine erişebilir. Bu planlardan birine sahip değilseniz ve Hizmet güvencesini denemek istiyorsanız [E5 Office 365 Kurumsal deneme sürümüne kaydolabilirsiniz](https://go.microsoft.com/fwlink/p/?LinkID=698279).
   
@@ -54,7 +52,7 @@ Ayrıca Office 365 müşterilerin aşağıdakiler gibi endüstriler genelindeki 
 
 Hizmet güvencesine ilk kez eriştiğinizde, ilk adım sektör ve bölgesel ayarlarınızı yapılandırmaktır. Bu ayarları istediğiniz zaman değiştirebilirsiniz. Bu ayarların yapılandırılması, Hizmet güvencesi'nin size kuruluşunuzla en ilgili içeriği sağlamasını sağlar. Sektör ve bölge ayarlarınızı yapılandırmak için:
   
-1. Hizmet güvencesine eriştikte **Ayarlar'ı** seçtiğinizde bölge ve sektör ayarları sayfası aşağıdaki ekran görüntüsünde gösterildiği gibi görüntülenir. 
+1. Hizmet güvencesine eriştikte **Ayarlar'ı** seçip Bölge ve sektör ayarları sayfası aşağıdaki ekran görüntüsünde gösterildiği gibi görüntülenir. 
     
     ![Koruma merkezi ayarları sayfasını gösterir.](../media/101716e8-9c0a-4839-a2c0-f6aacf64eb9d.png)
   

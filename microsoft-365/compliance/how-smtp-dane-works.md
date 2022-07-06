@@ -14,16 +14,14 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Posta sunucuları arasındaki e-posta iletişiminin güvenliğini sağlamak için SMTP DNS Tabanlı Adlandırılmış Varlıkların Kimlik Doğrulamasının (DANE) nasıl çalıştığını öğrenin.
-ms.openlocfilehash: 200dde9c62fb9825ce36eea7416304727bd6b598
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 2202cccc3c1feb9f50cc35dbb3e38d6b443675fd
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015780"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625159"
 ---
 # <a name="how-smtp-dns-based-authentication-of-named-entities-dane-works"></a>Adlandırılmış Varlıkların SMTP DNS Tabanlı Kimlik Doğrulaması (DANE) nasıl çalışır?
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 SMTP protokolü, iletileri posta sunucuları arasında aktarmak için kullanılan ana protokoldür ve varsayılan olarak güvenli değildir. İletilerin SMTP üzerinden şifrelenmiş iletimini desteklemek için Aktarım Katmanı Güvenliği (TLS) protokolü yıllar önce kullanıma sunulmuştur. Bu, bir gereksinim olarak değil, genellikle fırsatçı olarak kullanılır ve çok fazla e-posta trafiğinin net metin halinde bırakılması, kötü aktörlerin müdahalesine karşı savunmasız olmasıdır. Ayrıca SMTP, kimlik sahtekarlığına ve OrtaDaki Adam (MITM) saldırılarına duyarlı olan genel DNS altyapısı aracılığıyla hedef sunucuların IP adreslerini belirler. Bu, e-posta gönderme ve alma güvenliğini artırmak için birçok yeni standardın oluşturulmasına neden olmuştur. Bunlardan biri, Adlandırılmış Varlıkların DNS Tabanlı Kimlik Doğrulamasıdır (DANE). 
 
@@ -93,7 +91,7 @@ Exchange Online müşterisi olarak, giden e-postanız için bu gelişmiş e-post
 
 Sertifika Kullanımı alanından oluşan bir TLSA kaydı olan SMTP DANE için RFC uygulama kılavuzu başına 3, Seçici alanı 1 olarak ayarlanmış ve Eşleşen Tür alanı 1 olarak ayarlanmış olmalıdır.
 
-## <a name="exchange-online-mail-flow-with-smtp-dane"></a>SMTP DANE ile Posta Flow Exchange Online
+## <a name="exchange-online-mail-flow-with-smtp-dane"></a>SMTP DANE ile Posta Akışını Exchange Online
 
 Aşağıdaki akış grafiğinde gösterilen SMTP DANE ile Exchange Online için posta akışı işlemi, DNSSEC aracılığıyla etki alanı ve kaynak kaydı güvenliğini, hedef posta sunucusunda TLS desteğini ve hedef posta sunucusunun sertifikasının ilişkili TLSA kaydına göre beklenenle eşleşdiğini doğrular.
 
@@ -103,7 +101,7 @@ SMTP DANE hatasının e-postanın engellenmesine neden olacağı yalnızca iki s
 
 - Hedef etki alanı için tüm MX kayıtlarının TLSA kayıtları vardır ve hedef sunucunun sertifikalarından hiçbiri TSLA kayıt verilerine göre beklenenle eşleşmez veya hedef sunucu tarafından TLS bağlantısı desteklenmez.
 
-:::image type="content" source="../media/compliance-trial/mail-flow-smtp-dane.png" alt-text="SMTP DANE ile çevrimiçi posta akışını Exchange" lightbox="../media/compliance-trial/mail-flow-smtp-dane.png":::
+:::image type="content" source="../media/compliance-trial/mail-flow-smtp-dane.png" alt-text="SMTP DANE ile Exchange online posta akışı" lightbox="../media/compliance-trial/mail-flow-smtp-dane.png":::
 
 ## <a name="related-technologies"></a>İlgili Teknolojiler
 
@@ -118,7 +116,7 @@ SMTP DANE hatasının e-postanın engellenmesine neden olacağı yalnızca iki s
 
 Şu anda, Exchange Online ile e-posta gönderirken DANE için dört hata kodu vardır. Microsoft bu hata kodu listesini etkin bir şekilde güncelleştiriyor. Hatalar şu şekilde görünür:
 
-1. İleti İzleme Ayrıntıları görünümü aracılığıyla Exchange Yönetim Merkezi portalı.
+1. İleti İzleme Ayrıntıları görünümü aracılığıyla Exchange Yönetici Center portalı.
 2. DANE veya DNSSEC hatası nedeniyle ileti gönderilmediğinde oluşturulan NDR'ler.
 3. Uzak Bağlantı Çözümleyicisi aracı [Microsoft Uzaktan Bağlantı Çözümleyicisi](https://testconnectivity.microsoft.com/tests/o365).
 
@@ -142,14 +140,14 @@ Bu genellikle hedef posta sunucusuyla ilgili bir sorunu gösterir. İletiyi ald�
 
 1. Hedef e-posta adresinin doğru girildiğini denetleyin.
 2. Hedef sunucunun TLS kullanarak iletileri alacak şekilde doğru yapılandırılıp yapılandırılmadığını belirleyebilmesi için hedef e-posta yöneticisini bu hata kodunu aldığınıza dair uyarın.
-3. E-postayı göndermeyi yeniden deneyin ve Exchange Yönetim Merkezi portalındaki ileti için İleti İzleme Ayrıntıları'nı gözden geçirin.
+3. E-postayı göndermeyi yeniden deneyin ve Exchange Yönetici Center portalındaki ileti için İleti İzleme Ayrıntıları'nı gözden geçirin.
 
 ### <a name="troubleshooting-57322-certificate-expired"></a>5.7.322 sertifikasının süresi doldu sorunlarını giderme
 
 Süresi dolmamış geçerli bir X.509 sertifikasının gönderen e-posta sunucusuna sunulması gerekir. X.509 sertifikaları genellikle yıllık olarak sona erdikten sonra yenilenmelidir. İletiyi aldıktan sonra:
 
 1. Hedef e-posta yöneticisini bu hata kodunu aldığınız konusunda uyarın ve hata kodu dizesini sağlayın.
-2. Hedef sunucu sertifikasının yenilenmesi ve TLSA kaydının yeni sertifikaya başvurmak üzere güncelleştirilebilmesi için zaman tanıyın. Ardından, e-postayı göndermeyi yeniden deneyin ve Exchange Yönetim Merkezi portalındaki ileti için İleti İzleme Ayrıntıları'nı gözden geçirin.
+2. Hedef sunucu sertifikasının yenilenmesi ve TLSA kaydının yeni sertifikaya başvurmak üzere güncelleştirilebilmesi için zaman tanıyın. Ardından, e-postayı göndermeyi yeniden deneyin ve Exchange Yönetici Center portalındaki ileti için İleti İzleme Ayrıntıları'nı gözden geçirin.
 
 ### <a name="troubleshooting-57323-tlsa-invalid"></a>5.7.323 tlsa-invalid sorunlarını giderme
 
@@ -163,7 +161,7 @@ Bu hata kodu TLSA kaydının yanlış yapılandırılması ile ilgilidir ve yaln
 İletiyi aldıktan sonra:
 
 1. Hedef e-posta yöneticisini bu hata kodunu aldığınız konusunda uyarın ve hata kodu dizesini sağlayın.
-2. Hedef e-posta yöneticisinin DANE yapılandırmasını ve e-posta sunucusu sertifikası geçerliliğini gözden geçirmesine izin verin. Ardından, e-postayı göndermeyi yeniden deneyin ve Exchange Yönetim Merkezi portalındaki ileti için İleti İzleme Ayrıntıları'nı gözden geçirin.
+2. Hedef e-posta yöneticisinin DANE yapılandırmasını ve e-posta sunucusu sertifikası geçerliliğini gözden geçirmesine izin verin. Ardından, e-postayı göndermeyi yeniden deneyin ve Exchange Yönetici Center portalındaki ileti için İleti İzleme Ayrıntıları'nı gözden geçirin.
 
 ### <a name="troubleshooting-57324-dnssec-invalid"></a>5.7.324 dnssec-invalid sorunlarını giderme
 
@@ -172,7 +170,7 @@ Hedef etki alanı DNSSEC-authentic olduğunu belirttiğinde ancak Exchange Onlin
 İletiyi aldıktan sonra:
 
 1. Hedef e-posta yöneticisini bu hata kodunu aldığınız konusunda uyarın ve hata kodu dizesini sağlayın.
-2. Hedef e-posta yöneticisinin etki alanının DNSSEC yapılandırmasını gözden geçirmesi için zaman tanıyın. Ardından, e-postayı göndermeyi yeniden deneyin ve Exchange Yönetim Merkezi portalındaki ileti için İleti İzleme Ayrıntıları'nı gözden geçirin.
+2. Hedef e-posta yöneticisinin etki alanının DNSSEC yapılandırmasını gözden geçirmesi için zaman tanıyın. Ardından, e-postayı göndermeyi yeniden deneyin ve Exchange Yönetici Center portalındaki ileti için İleti İzleme Ayrıntıları'nı gözden geçirin.
 
 ## <a name="troubleshooting-receiving-emails-with-smtp-dane"></a>SMTP DANE ile E-posta Alma Sorunlarını Giderme
 

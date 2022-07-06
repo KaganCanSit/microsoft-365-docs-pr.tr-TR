@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365'de şifreleme
+title: Microsoft 365'te şifreleme
 f1.keywords:
 - NOCSH
 ms.author: krowley
@@ -20,18 +20,16 @@ ms.collection:
 - m365solution-mip
 - m365initiative-compliance
 description: Office 365 ile içeriğiniz bekleyen ve aktarım halindeki en güçlü şifreleme, protokoller ve teknolojiler ile şifrelenir. Office 365'da şifrelemeye genel bir bakış edinin.
-ms.openlocfilehash: 5b7b0f9fecbcbb6150eb56e19757c954aeb3e812
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: e26ade7021434461e72e24b7aa8176888d9c21d0
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637483"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629651"
 ---
 # <a name="encryption"></a>Şifreleme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Şifreleme, dosya koruma ve bilgi koruma stratejinizin önemli bir parçasıdır. Bu makalede, Office 365 için şifrelemeye genel bir bakış sağlanır. Kuruluşunuz için şifrelemeyi ayarlama ve Office belgeleri parolayla koruma gibi şifreleme görevleriyle ilgili yardım alın.
+Şifreleme, dosya koruma ve bilgi koruma stratejinizin önemli bir parçasıdır. Bu makalede, Office 365 için şifrelemeye genel bir bakış sağlanır. Kuruluşunuz için şifrelemeyi ayarlama ve Office belgelerini parolayla koruma gibi şifreleme görevleriyle ilgili yardım alın.
   
 - TLS gibi sertifikalar ve teknolojiler hakkında bilgi için bkz. [Office 365 şifreleme hakkında teknik başvuru ayrıntıları](technical-reference-details-about-encryption.md).
 
@@ -55,20 +53,20 @@ Office 365 ile verilerinizin güvenliğini sağlamak için birden çok katman ve
   
 |**İçerik Türleri**|**Şifreleme Teknolojileri**|**Daha fazla bilgi edinmek için kaynaklar**|
 |:-----|:-----|:-----|
-|Bir cihazdaki dosyalar. Bu dosyalar bir klasöre kaydedilmiş e-posta iletilerini Office bilgisayara, tablete veya telefona kaydedilmiş belgeleri ya da Microsoft buluta kaydedilmiş verileri içerebilir.  <br/> |Microsoft veri merkezlerinde BitLocker. BitLocker, Windows bilgisayarlar ve tabletler gibi istemci makinelerinde de kullanılabilir  <br/> Microsoft veri merkezlerinde Dağıtılmış Anahtar Yöneticisi (DKM)  <br/> Microsoft 365 için Müşteri Anahtarı  <br/> |[Windows BT Merkezi: BitLocker](/windows/device-security/bitlocker/bitlocker-overview) <br/> [Microsoft Güven Merkezi: Şifreleme](https://www.microsoft.com/TrustCenter/Security/Encryption) <br/> [Bulut güvenlik denetimleri serisi: Bekleyen Verileri Şifreleme](https://blogs.microsoft.com/microsoftsecure/2015/09/10/cloud-security-controls-series-encrypting-data-at-rest) <br/> [Exchange Online, e-posta sırlarınızı nasıl güvence altına alır?](exchange-online-secures-email-secrets.md) <br/> [Müşteri Anahtarı ile hizmet şifrelemesi](customer-key-overview.md) <br/> |
-|Kullanıcılar arasında aktarımda olan dosyalar. Bu dosyalar, kullanıcılar arasında paylaşılan Office belgeleri veya SharePoint liste öğelerini içerebilir.  <br/> |Aktarımdaki dosyalar için TLS  <br/> |[Data Encryption in OneDrive for Business and SharePoint Online](data-encryption-in-odb-and-spo.md) <br/> [Skype Kurumsal Online: Güvenlik ve Arşivleme](/office365/servicedescriptions/skype-for-business-online-service-description/skype-for-business-online-features) <br/> |
+|Bir cihazdaki dosyalar. Bu dosyalar bir klasöre kaydedilmiş e-posta iletilerini, bilgisayar, tablet veya telefona kaydedilmiş Office belgelerini ya da Microsoft buluta kaydedilmiş verileri içerebilir.  <br/> |Microsoft veri merkezlerinde BitLocker. BitLocker, Windows bilgisayarlar ve tabletler gibi istemci makinelerinde de kullanılabilir  <br/> Microsoft veri merkezlerinde Dağıtılmış Anahtar Yöneticisi (DKM)  <br/> Microsoft 365 için Müşteri Anahtarı  <br/> |[Windows BT Merkezi: BitLocker](/windows/device-security/bitlocker/bitlocker-overview) <br/> [Microsoft Güven Merkezi: Şifreleme](https://www.microsoft.com/TrustCenter/Security/Encryption) <br/> [Bulut güvenlik denetimleri serisi: Bekleyen Verileri Şifreleme](https://blogs.microsoft.com/microsoftsecure/2015/09/10/cloud-security-controls-series-encrypting-data-at-rest) <br/> [Exchange Online, e-posta sırlarınızı nasıl güvence altına alır?](exchange-online-secures-email-secrets.md) <br/> [Müşteri Anahtarı ile hizmet şifrelemesi](customer-key-overview.md) <br/> |
+|Kullanıcılar arasında aktarımda olan dosyalar. Bu dosyalar, kullanıcılar arasında paylaşılan Office belgelerini veya SharePoint liste öğelerini içerebilir.  <br/> |Aktarımdaki dosyalar için TLS  <br/> |[Data Encryption in OneDrive for Business and SharePoint Online](data-encryption-in-odb-and-spo.md) <br/> [Skype Kurumsal Online: Güvenlik ve Arşivleme](/office365/servicedescriptions/skype-for-business-online-service-description/skype-for-business-online-features) <br/> |
 |Alıcılar arasında aktarım halindeki e-posta. Bu e-posta, Exchange Online tarafından barındırılan e-postaları içerir.  <br/> |Aktarımdaki e-posta için Azure Rights Management, S/MIME ve TLS ile Microsoft Purview İleti Şifrelemesi  <br/> |[İleti Şifrelemesi](ome.md) <br/> [Office 365'de e-posta şifrelemesi](email-encryption.md) <br/> [Exchange Online, Office 365’de e-posta bağlantılarını güvence altına almak için TLS'yi nasıl kullanır?](exchange-online-uses-tls-to-secure-email-connections.md) <br/> |
-|Microsoft Teams kullanarak alıcılar arasında ileti halinde olan sohbetler, iletiler ve dosyalar. <br/> |Teams anlık iletileri şifrelemek için TLS ve MTLS kullanır. Medya trafiği Güvenli RTP (SRTP) kullanılarak şifrelenir. Teams şifreleme anahtarı değişimleri için FIPS (Federal Bilgi İşleme Standardı) uyumlu algoritmalar kullanır. <br/> |[Teams için şifreleme](/microsoftteams/teams-security-guide#encryption-for-teams) <br/> |
+|Microsoft Teams'i kullanan alıcılar arasında aktarımda olan sohbetler, iletiler ve dosyalar. <br/> |Teams, anlık iletileri şifrelemek için TLS ve MTLS kullanır. Medya trafiği Güvenli RTP (SRTP) kullanılarak şifrelenir. Teams, şifreleme anahtarı değişimleri için FIPS (Federal Bilgi İşleme Standardı) uyumlu algoritmalar kullanır. <br/> |[Teams için Şifreleme](/microsoftteams/teams-security-guide#encryption-for-teams) <br/> |
 
 ## <a name="what-if-i-need-more-control-over-encryption-to-meet-security-and-compliance-requirements"></a>Güvenlik ve uyumluluk gereksinimlerini karşılamak için şifreleme üzerinde daha fazla denetime ihtiyacım olursa ne olur?
 
-Microsoft 365, Office 365'da birim şifrelemesi, dosya şifrelemesi ve posta kutusu şifrelemesi için Microsoft tarafından yönetilen çözümler sağlar. Ayrıca, Microsoft yönetebileceğiniz ve denetleyebileceğiniz şifreleme çözümleri sağlar. Bu şifreleme çözümleri Azure'da oluşturulur.
+Microsoft 365, Office 365 birim şifrelemesi, dosya şifrelemesi ve posta kutusu şifrelemesi için Microsoft tarafından yönetilen çözümler sağlar. Ayrıca, Microsoft yönetebileceğiniz ve denetleyebileceğiniz şifreleme çözümleri sağlar. Bu şifreleme çözümleri Azure'da oluşturulur.
   
 Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
   
 - [Azure Rights Management nedir?](/information-protection/understand-explore/what-is-azure-rms)
 
-- [Yönetim merkezinde Rights Management etkinleştirme](../enterprise/activate-rms-in-microsoft-365.md)
+- [Yönetim merkezinde Rights Management'ı etkinleştirme](../enterprise/activate-rms-in-microsoft-365.md)
 
 - [Set up Information Rights Management (IRM) in SharePoint admin center](set-up-irm-in-sp-admin-center.md)
 
@@ -82,14 +80,14 @@ Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 |:-----|:-----|
 |Kuruluşum için şifrelemeyi ayarlama|[Office 365 Kurumsal'de şifrelemeyi ayarlama](set-up-encryption.md)|
 |Sertifikalar, teknolojiler ve TLS şifreleme paketleri hakkındaki ayrıntıları görüntüleme|[Şifreleme hakkında teknik ayrıntılar](technical-reference-details-about-encryption.md)|
-|Mobil cihazda şifrelenmiş iletilerle çalışma|[Android cihazınızda şifrelenmiş iletileri görüntüleme](https://support.office.com/article/83d60f17-2305-407a-a762-7d518401fdeb) [iPhone veya iPad](https://support.microsoft.com/en-us/office/view-protected-messages-on-your-iphone-or-ipad-4d631321-0d26-4bcc-a483-d294dd0b1caf)|
-|Parola koruması kullanarak belgeyi şifreleme. (Parola koruması tarayıcıda desteklenmez. Parola koruması için Word, Excel ve PowerPoint masaüstü sürümlerini kullanın.) |[Belgenize, çalışma kitabınıza veya sununuza koruma ekleyin veya kaldırın](https://support.office.com/article/05084cc3-300d-4c1a-8416-38d3e37d6826). **Koruma ekle** bölümünü seçin ve ardından bkz. **Parola ile şifreleme**.|
+|Mobil cihazda şifrelenmiş iletilerle çalışma|[Android cihazınızda şifrelenmiş iletileri görüntüleme](https://support.office.com/article/83d60f17-2305-407a-a762-7d518401fdeb)[iPhone veya iPad'inizde şifrelenmiş iletileri görüntüleme](https://support.microsoft.com/en-us/office/view-protected-messages-on-your-iphone-or-ipad-4d631321-0d26-4bcc-a483-d294dd0b1caf)|
+|Parola koruması kullanarak belgeyi şifreleme. (Parola koruması tarayıcıda desteklenmez. Parola koruması için Word, Excel ve PowerPoint'in masaüstü sürümlerini kullanın.) |[Belgenize, çalışma kitabınıza veya sununuza koruma ekleyin veya kaldırın](https://support.office.com/article/05084cc3-300d-4c1a-8416-38d3e37d6826). **Koruma ekle** bölümünü seçin ve ardından bkz. **Parola ile şifreleme**.|
 |Belgeden şifrelemeyi kaldırma|[Belgenize, çalışma kitabınıza veya sununuza koruma ekleyin veya kaldırın](https://support.office.com/article/05084cc3-300d-4c1a-8416-38d3e37d6826). **Korumayı kaldır** bölümünü seçin ve ardından bkz **. Parola şifrelemesini kaldırma**.  |
 
 ## <a name="related-topics"></a>İlgili konular
 
 [Microsoft 365 güvenlik ve bilgi koruma özelliklerini planlama](plan-for-security-and-compliance.md)
 
-[İş planları için Microsoft 365 güvenliğini sağlamaya yönelik en iyi yöntemler](/office365/admin/security-and-compliance/secure-your-business-data)
+[İş için Microsoft 365 planlarının güvenliğini sağlamaya yönelik en iyi yöntemler](/office365/admin/security-and-compliance/secure-your-business-data)
 
 [Microsoft Stream Video düzeyinde şifreleme ve kayıttan yürütme akışı](/stream/network-overview#video-level-encryption-and-playback-flow)

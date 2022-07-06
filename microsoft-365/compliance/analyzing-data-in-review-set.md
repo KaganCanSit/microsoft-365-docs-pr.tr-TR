@@ -17,18 +17,16 @@ search.appverid:
 ms.assetid: ''
 description: Microsoft Purview eKeşif (Premium) servis talebini analiz ederken belge kümelerini düzenlemek için kullanılabilecek araçlar hakkında bilgi edinin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: af34a790881cad2af5d278cf187b963f0aa58146
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 822c21c05b865bdf1208f7679eaff9ea35b10a9e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099839"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634841"
 ---
 # <a name="analyze-data-in-a-review-set-in-ediscovery-premium"></a>eBulma'da bir gözden geçirme kümesindeki verileri analiz etme (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Toplanan belgelerin sayısı büyük olduğunda, hepsini gözden geçirmek zor olabilir. Microsoft Purview eBulma (Premium), herhangi bir bilgi kaybı olmadan gözden geçirilecek belgelerin hacmini azaltmak ve belgeleri tutarlı bir şekilde düzenlemenize yardımcı olmak için belgeleri analiz etmek için çeşitli araçlar sağlar. Bu özellikler hakkında daha fazla bilgi edinmek için bkz:
+Toplanan belgelerin sayısı büyük olduğunda, hepsini gözden geçirmek zor olabilir. Microsoft Purview eKeşif (Premium), bilgi kaybı olmadan gözden geçirilecek belgelerin hacmini azaltmak ve belgeleri tutarlı bir şekilde düzenlemenize yardımcı olmak için belgeleri analiz etmek için çeşitli araçlar sağlar. Bu özellikler hakkında daha fazla bilgi edinmek için bkz:
 
 - [Yakın eş kopya algılama](near-duplicate-detection-in-advanced-ediscovery.md)
 
@@ -44,7 +42,7 @@ Gözden geçirme kümesindeki verileri analiz etmek için:
 
 2. Analiz etmek istediğiniz gözden geçirme kümesini açın.
 
-3. **AnalizE-posta** >  **analizi & Belgeyi çalıştır'a** tıklayın.
+3. **Analiz** > **Belgeyi çalıştır & e-posta analizi'ne** tıklayın.
 
    ![Analiz açılan listesinden Belgeyi çalıştır & e-posta analizi'ni seçin](..\media\RunAnalytics1.png)
 
@@ -72,12 +70,12 @@ Aşağıdaki listede, filtre sorgusunun sonucu, siz gözden geçirme kümesine u
 
 - **Belgeler ve diğer**. Yinelenen belgeleri filtreler. Yalnızca gözden geçirme kümesinde benzersiz olan belgeler görüntülenir.
 
-- **konuşmaları Teams**. Gözden geçirme kümesindeki tüm Teams (ve Yammer) konuşmalar görüntülenir.
+- **Teams konuşmaları**. Gözden geçirme kümesindeki tüm Teams (ve Yammer) konuşmaları görüntülenir.
 
 Kapsayıcı türler ve belge benzersizliği hakkında daha fazla bilgi için bkz. [eBulma'da e-posta iş parçacığı oluşturma (Premium)](email-threading-in-advanced-ediscovery.md).
 
 > [!NOTE]
-> eBulma'da (Premium) [yeni durum biçiminin](advanced-ediscovery-new-case-format.md) genel önizlemesi sırasında **Gözden Geçir için** filtre sorgusu, 4 Kasım 2021'den önce oluşturulan gözden geçirme kümeleri (büyük harf biçimini kullanan durumlarda) için Teams veya Yammer konuşmaları döndürmedi. Bu sorun çözüldü. Başka bir deyişle **, Gözden Geçir için** sorgusunu büyük harf biçimini kullanan bir inceleme kümesine yeniden uygulamanız durumunda, tüm Teams veya Yammer konuşmaları dahil edildiğinden filtre sorgusuyla eşleşen daha fazla öğe görüntülenebilir.
+> eBulma'da (Premium) [yeni durum biçiminin](advanced-ediscovery-new-case-format.md) genel önizlemesi sırasında **Gözden Geçir için** filtre sorgusu, 4 Kasım 2021'den önce oluşturulan gözden geçirme kümeleri (büyük harf biçimini kullanan durumlarda) için Teams veya Yammer konuşmalarını döndürmedi. Bu sorun çözüldü. Başka bir deyişle **, Gözden Geçir için** sorgusunu büyük harf biçimini kullanan bir inceleme kümesine yeniden uygulamanız durumunda, tüm Teams veya Yammer konuşmaları dahil edildiğinden filtre sorgusuyla eşleşen daha fazla öğe görüntülenebilir.
 
 ## <a name="analytics-report"></a>Analiz raporu
 
@@ -85,7 +83,7 @@ Bir gözden geçirme kümesinin analiz raporunu görüntülemek için:
 
 1. Gözden geçirme kümesini açın.
 
-2. **Analytics** >  **Raporları göster'e** tıklayın.
+2. **Analiz Raporları göster'e** >  tıklayın.
 
 **Analiz** raporu, analizden yedi bileşen içerir:
 

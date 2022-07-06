@@ -18,22 +18,20 @@ search.appverid:
 - MET150
 ms.assetid: e3cbc79c-5e97-43d3-8371-9fbc398cd92e
 ms.custom: seo-marvel-apr2020
-description: Belirli bir posta kutusu veya site klasöründeki öğeleri arayan hedefli bir koleksiyon gerçekleştirmek için Microsoft Purview uyumluluk portalındaki İçerik arama özelliğini kullanın.
-ms.openlocfilehash: 224da8e651599d1d007684a069b0dbb9d30a6119
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Belirli bir posta kutusu veya site klasöründeki öğeleri arayan hedefli bir koleksiyon gerçekleştirmek için Microsoft Purview uyumluluk portalı İçerik arama özelliğini kullanın.
+ms.openlocfilehash: ab4fda56e3ccbd04ac8b7b820c4305e9c6e45093
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015550"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623683"
 ---
 # <a name="use-content-search-for-targeted-collections"></a>Hedeflenen koleksiyonlar için İçerik aramasını kullanma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview uyumluluk portalındaki İçerik arama aracı, kullanıcı arabiriminde Exchange posta kutularındaki veya SharePoint ve OneDrive İş sitelerdeki belirli klasörleri aramak için doğrudan bir yol sağlamaz. Ancak, gerçek arama sorgusu söz dizimindeki siteler için e-posta veya yol (DocumentLink) özelliği için klasör kimliği özelliğini belirterek belirli klasörlerde ( *hedeflenen koleksiyon* olarak adlandırılır) arama yapmak mümkündür. Hedeflenen bir koleksiyonu gerçekleştirmek için İçerik Arama'yı kullanmak, büyük/küçük harfe veya ayrıcalıklı öğelere yanıt veren öğelerin belirli bir posta kutusunda veya site klasöründe bulunduğundan emin olduğunuzda kullanışlıdır. Posta kutusu klasörlerinin klasör kimliğini veya bir SharePoint ve OneDrive İş sitesindeki klasörlerin yolunu (DocumentLink) almak için bu makaledeki betiği kullanabilirsiniz. Ardından, klasörde bulunan öğeleri döndürmek için bir arama sorgusundaki klasör kimliğini veya yolunu kullanabilirsiniz.
+Microsoft Purview uyumluluk portalı İçerik arama aracı, Exchange posta kutuları veya SharePoint ve OneDrive İş sitelerindeki belirli klasörleri aramak için kullanıcı arabiriminde doğrudan bir yol sağlamaz. Ancak, gerçek arama sorgusu söz dizimindeki siteler için e-posta veya yol (DocumentLink) özelliği için klasör kimliği özelliğini belirterek belirli klasörlerde ( *hedeflenen koleksiyon* olarak adlandırılır) arama yapmak mümkündür. Hedeflenen bir koleksiyonu gerçekleştirmek için İçerik Arama'yı kullanmak, büyük/küçük harfe veya ayrıcalıklı öğelere yanıt veren öğelerin belirli bir posta kutusunda veya site klasöründe bulunduğundan emin olduğunuzda kullanışlıdır. Bu makaledeki betiği, posta kutusu klasörlerinin klasör kimliğini veya SharePoint ve OneDrive İş sitesindeki klasörlerin yolunu (DocumentLink) almak için kullanabilirsiniz. Ardından, klasörde bulunan öğeleri döndürmek için bir arama sorgusundaki klasör kimliğini veya yolunu kullanabilirsiniz.
 
 > [!NOTE]
-> SharePoint veya OneDrive İş sitedeki bir klasörde bulunan içeriği döndürmek için, bu konudaki betik Path özelliği yerine DocumentLink yönetilen özelliğini kullanır. DocumentLink özelliği, bir klasördeki tüm içeriği döndüreceği için Path özelliğinden daha sağlamdır, Path özelliği ise bazı medya dosyalarını döndürmez.
+> SharePoint veya OneDrive İş sitesindeki bir klasörde bulunan içeriği döndürmek için, bu konudaki betik Path özelliği yerine DocumentLink yönetilen özelliğini kullanır. DocumentLink özelliği, bir klasördeki tüm içeriği döndüreceği için Path özelliğinden daha sağlamdır, Path özelliği ise bazı medya dosyalarını döndürmez.
 
 ## <a name="before-you-run-a-targeted-collection"></a>Hedeflenen bir koleksiyonu çalıştırmadan önce
 
@@ -41,7 +39,7 @@ Microsoft Purview uyumluluk portalındaki İçerik arama aracı, kullanıcı ara
 
 - Ayrıca, Exchange Online kuruluşunuzda Posta Alıcıları rolüne de atanmış olmanız gerekir. Betikte bulunan **Get-MailboxFolderStatistics** cmdlet'ini çalıştırmak için bu gereklidir. Varsayılan olarak, Posta Alıcıları rolü Exchange Online'deki Kuruluş Yönetimi ve Alıcı Yönetimi rol gruplarına atanır. Exchange Online izin atama hakkında daha fazla bilgi için bkz. [Rol grubu üyelerini yönetme](/exchange/manage-role-group-members-exchange-2013-help). Ayrıca özel bir rol grubu oluşturabilir, buna Posta Alıcıları rolünü atayabilir ve ardından 1. Adımda betiği çalıştırması gereken üyeleri ekleyebilirsiniz. Daha fazla bilgi için bkz. [Rol gruplarını yönetme](/Exchange/permissions-exo/role-groups).
 
-- Bu makaledeki betik modern kimlik doğrulamasını destekler. Microsoft 365 veya Microsoft 365 GCC bir kuruluşsanız betiği olduğu gibi kullanabilirsiniz. Office 365 Almanya kuruluşu, Microsoft 365 GCC High kuruluşu veya Microsoft 365 DoD kuruluşuysanız, betiği başarıyla çalıştırmak için düzenlemeniz gerekir. Özellikle, Exchange Online PowerShell'e bağlanmak için satırı `Connect-ExchangeOnline` düzenlemeniz ve *ExchangeEnvironmentName* parametresini (ve kuruluşunuzun türü için uygun değeri) kullanmanız gerekir.  Ayrıca, Güvenlik & Uyumluluğu PowerShell'e bağlanmak için satırı `Connect-IPPSSession` düzenlemeniz ve *ConnectionUri* ve *AzureADAuthorizationEndpointUri* parametrelerini (ve kuruluşunuzun türü için uygun değerleri) kullanmanız gerekir. Daha fazla bilgi için [PowerShell'i Exchange Online ve Güvenlik &](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-without-using-mfa) [Uyumluluğu PowerShell'e Bağlan için Bağlan örneklerine](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa) bakın.
+- Bu makaledeki betik modern kimlik doğrulamasını destekler. Microsoft 365 veya Microsoft 365 GCC kuruluşuysanız betiği olduğu gibi kullanabilirsiniz. Office 365 Almanya kuruluşu, Microsoft 365 GCC High kuruluşu veya Microsoft 365 DoD kuruluşuysanız, betiği başarıyla çalıştırmak için düzenlemeniz gerekir. Özellikle, Exchange Online PowerShell'e bağlanmak için satırı `Connect-ExchangeOnline` düzenlemeniz ve *ExchangeEnvironmentName* parametresini (ve kuruluşunuzun türü için uygun değeri) kullanmanız gerekir.  Ayrıca, Güvenlik & Uyumluluğu PowerShell'e bağlanmak için satırı `Connect-IPPSSession` düzenlemeniz ve *ConnectionUri* ve *AzureADAuthorizationEndpointUri* parametrelerini (ve kuruluşunuzun türü için uygun değerleri) kullanmanız gerekir. Daha fazla bilgi için Bkz[. PowerShell'e bağlanma ve Exchange Online PowerShell'e](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-without-using-mfa) [bağlanma ve Güvenlik & Uyumluluk PowerShell'e bağlanma](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa).
 
 - Betiği her çalıştırdığınızda yeni bir uzak PowerShell oturumu oluşturulur. Bu, kullanabileceğiniz tüm uzak PowerShell oturumlarını kullanabileceğiniz anlamına gelir. Bunun olmasını önlemek için, etkin uzak PowerShell oturumlarınızın bağlantısını kesmek için aşağıdaki komutları çalıştırın.
 
@@ -49,7 +47,7 @@ Microsoft Purview uyumluluk portalındaki İçerik arama aracı, kullanıcı ara
   Get-PSSession | Remove-PSSession; Disconnect-ExchangeOnline
   ```
 
-    Daha fazla bilgi için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+    Daha fazla bilgi için bkz[. Exchange Online PowerShell'e bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Betik en az hata işleme içerir. Betiğin birincil amacı, hedeflenen bir koleksiyonu gerçekleştirmek için İçerik Arama'nın arama sorgusu söz diziminde kullanılabilecek posta kutusu klasör kimliklerinin veya site yollarının listesini hızla görüntülemektir.
 
@@ -57,13 +55,13 @@ Microsoft Purview uyumluluk portalındaki İçerik arama aracı, kullanıcı ara
 
 ## <a name="step-1-run-the-script-to-get-a-list-of-folders-for-a-mailbox-or-site"></a>1. Adım: Posta kutusu veya site için klasörlerin listesini almak için betiği çalıştırın
 
-Bu ilk adımda çalıştırdığınız betik, posta kutusu klasörlerinin veya SharePoint ve OneDrive İş klasörlerin listesini ve her klasörün ilgili klasör kimliğini veya yolunu döndürür. Bu betiği çalıştırdığınızda sizden aşağıdaki bilgileri ister.
+Bu ilk adımda çalıştırdığınız betik, posta kutusu klasörlerinin veya SharePoint ve OneDrive İş klasörlerinin listesini ve her klasör için ilgili klasör kimliğini veya yolunu döndürür. Bu betiği çalıştırdığınızda sizden aşağıdaki bilgileri ister.
 
-- **E-posta adresi veya site URL'si**: posta kutusu klasörlerinin ve klasör kimliklerinin listesini Exchange için koruyucunun e-posta adresini yazın. Veya bir SharePoint sitesinin URL'sini veya belirtilen sitenin yollarının listesini döndürmek için OneDrive İş bir sitenin URL'sini yazın. İşte birkaç örnek:
+- **E-posta adresi veya site URL'si**: Exchange posta kutusu klasörlerinin ve klasör kimliklerinin listesini döndürmek için koruyucunun e-posta adresini yazın. Veya bir SharePoint sitesinin URL'sini veya belirtilen sitenin yollarının listesini döndürmek için bir OneDrive İş sitesi yazın. İşte birkaç örnek:
 
-  - **Exchange**:`stacig@contoso.onmicrosoft.com`
+  - **Exchange**: `stacig@contoso.onmicrosoft.com`
 
-  - **SharePoint**:`https://contoso.sharepoint.com/sites/marketing`
+  - **SharePoint**: `https://contoso.sharepoint.com/sites/marketing`
 
   - **OneDrive İş**:`https://contoso-my.sharepoint.com/personal/stacig_contoso_onmicrosoft_com`
 
@@ -210,7 +208,7 @@ Posta kutusu klasörleri için betik tarafından döndürülen çıktının bir 
 
 ### <a name="script-output-for-site-folders"></a>Site klasörleri için betik çıkışı
 
-**documentlink** özelliğinin yolunu SharePoint veya OneDrive İş sitelerden alıyorsanız, betik Güvenlik & Uyumluluğu PowerShell'e bağlanır, sitede klasörler için arama yapılan yeni bir İçerik Araması oluşturur ve ardından belirtilen sitede bulunan klasörlerin listesini görüntüler. Betik her klasörün adını görüntüler ve **belge bağlantısının** ön ekini klasör URL'sine ekler. **Documentlink** özelliği aranabilir bir özellik olduğundan, bu klasörde arama yapmak için 2. Adım'daki bir arama sorgusunda property:value çiftini kullanacaksınız`documentlink:<path>`. Betik en fazla 100 site klasörü görüntüler. 100'den fazla site klasörü varsa, en yeni klasörler görüntülenir.
+**Documentlink** özelliğinin yolunu SharePoint'ten veya OneDrive İş sitelerden alıyorsanız, betik Güvenlik & Uyumluluğu PowerShell'e bağlanır, sitede klasörler için aramalar sağlayan yeni bir İçerik Araması oluşturur ve ardından belirtilen sitede bulunan klasörlerin listesini görüntüler. Betik her klasörün adını görüntüler ve **belge bağlantısının** ön ekini klasör URL'sine ekler. **Documentlink** özelliği aranabilir bir özellik olduğundan, bu klasörde arama yapmak için 2. Adım'daki bir arama sorgusunda property:value çiftini kullanacaksınız`documentlink:<path>`. Betik en fazla 100 site klasörü görüntüler. 100'den fazla site klasörü varsa, en yeni klasörler görüntülenir.
 
 Aşağıda, site klasörleri için betik tarafından döndürülen çıktının bir örneği verilmiştır.
 
@@ -236,11 +234,11 @@ Belirli bir kullanıcının klasör kimliklerinin veya belge bağlantılarının
 
 5. Posta kutusu klasöründe mi yoksa site klasöründe mi arama yaptığınıza bağlı olarak aşağıdakilerden birini yapın:
 
-    - **E-posta Exchange** yanında **Kullanıcıları, grupları veya ekipleri seç'e** tıklayın ve ardından 1. Adımda betiği çalıştırdığınızda belirttiğiniz posta kutusunu ekleyin.
+    - **Exchange e-postası'nın** yanında **Kullanıcıları, grupları veya ekipleri seçin'e** tıklayın ve ardından 1. Adımda betiği çalıştırdığınızda belirttiğiniz posta kutusunu ekleyin.
 
       Veya
 
-    - **siteleri SharePoint** yanında **Siteleri seç'e** tıklayın ve ardından 1. Adımda betiği çalıştırdığınızda belirttiğiniz site URL'sini ekleyin.
+    - **SharePoint siteleri'nin** yanındaki **Siteleri seç'e** tıklayın ve ardından 1. Adımda betiği çalıştırdığınızda belirttiğiniz site URL'sini ekleyin.
 
 6. Arama yapmak için içerik konumunu kaydettikten sonra **Kaydet'e tıklayın & çalıştırın**, İçerik Araması için bir ad yazın ve hedeflenen koleksiyon aramasını başlatmak için **Kaydet'e** tıklayın.
 

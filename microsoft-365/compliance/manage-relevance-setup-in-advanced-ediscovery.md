@@ -1,5 +1,5 @@
 ---
-title: eBulma'da İlgi ayarlarını yönetme (Premium)
+title: eBulma'da İlgi kurulumunu yönetme (Premium)
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -15,24 +15,22 @@ search.appverid:
 - MET150
 ms.assetid: fd6be6d3-2e8d-449d-9851-03ab7546e6aa
 ROBOTS: NOINDEX, NOFOLLOW
-description: EBulma'da (Premium) ilgili dosyaları puanlama ve analiz sonuçları oluşturma ile ilgili ilgi eğitimi ayarlama önerilerini okuyun.
-ms.openlocfilehash: be9347468ef39fd5d6ae254ff4eb662a795f4f0b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Dosyaları ilgilerine göre puanlayıp analiz sonuçları oluşturmak için eBulma'da (Premium) İlgi eğitimini ayarlama önerilerini okuyun.
+ms.openlocfilehash: 6c6d1b88f9cbb92d44a040f1f060b860252df263
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098526"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635249"
 ---
-# <a name="manage-relevance-setup-in-ediscovery-premium-classic"></a>eBulma (Premium) (klasik) içinde İlgi ayarlarını yönetme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+# <a name="manage-relevance-setup-in-ediscovery-premium-classic"></a>eBulma(Premium) (klasik) içinde İlgi ayarlarını yönetme
 
 > [!NOTE]
-> Microsoft Purview eKeşif (Premium), kuruluşunuz için Gelişmiş Uyumluluk eklentisi veya E5 aboneliğine sahip bir Office 365 E3 gerektirir. Bu plana sahip değilseniz ve eKeşif 'i (Premium) denemek istiyorsanız[, E5 Office 365 Kurumsal deneme sürümüne kaydolabilirsiniz](https://go.microsoft.com/fwlink/p/?LinkID=698279). 
+> Microsoft Purview eKeşif (Premium), kuruluşunuz için Gelişmiş Uyumluluk eklentisine veya E5 aboneliğine sahip bir Office 365 E3 gerektirir. Bu plana sahip değilseniz ve eKeşif 'i (Premium) denemek istiyorsanız[, E5 Office 365 Kurumsal deneme sürümüne kaydolabilirsiniz](https://go.microsoft.com/fwlink/p/?LinkID=698279). 
   
- eKeşif (Premium) İlgi teknolojisi, dosyaları ilgilerine göre puanlama için uzman destekli yazılım kullanıyor. eBulma (Premium) İlgisi, Erken Vaka Değerlendirmesi (ECA), itlaf ve dosya örneği incelemesi için kullanılabilir. 
+ eKeşif (Premium) İlgi teknolojisi, dosyaları ilgilerine göre puanlama için uzman destekli yazılım kullanıyor. eBulma (Premium) İlgisi Erken Vaka Değerlendirmesi (ECA), suçlu bulma ve dosya örneği incelemesi için kullanılabilir. 
   
- eBulma (Premium), bir servis talebiyle ilgili dosyaların ilgi eğitimi ve etiketlenmesi için bileşenler içerir. eBulma (Premium), her dosya için İlgi puanları sağlamak üzere eğitilen İlgili ve İlgili Olmayan dosya örneklerinden bilgi edinerek, dosya gözden geçirme işlemi sırasında ve sonrasında kullanılabilecek analitik sonuçlar oluşturur. 
+ eBulma (Premium), bir servis talebiyle ilgili dosyaların ilgi eğitimi ve etiketlenmesi için bileşenler içerir. eBulma (Premium), her dosya için İlgi puanlarını sağlamak üzere eğitilen İlgili ve İlgili Olmayan dosya örneklerinden öğrenir ve dosya gözden geçirme işlemi sırasında ve sonrasında kullanılabilecek analitik sonuçlar oluşturur. 
   
 ## <a name="guidelines-for-setting-up-relevance-training"></a>İlgi eğitimini ayarlama yönergeleri
 
@@ -46,7 +44,7 @@ ms.locfileid: "65098526"
   
   - Her dosya grubunun yalnızca belirli bir sorunla ilgili olup olmadığını belirleyin.
 
-  - Bir sorun çok genel tanımlanmışsa, eBulma (Premium) ilgili olmayan çok fazla dosya verebilir. Bir sorun çok dar bir şekilde tanımlanırsa İlgi eğitim süreci daha uzun sürebilir. 
+  - Bir sorun çok genel olarak tanımlanmışsa, eBulma (Premium) ilgili olmayan çok fazla dosya verebilir. Bir sorun çok dar bir şekilde tanımlanırsa İlgi eğitim süreci daha uzun sürebilir. 
 
   - Her İlgi eğitim döngüsü sırasında, eBulma (Premium) tek bir etkin soruna odaklanır ve buna göre ara örnek sonuçlar görüntülenir.
 

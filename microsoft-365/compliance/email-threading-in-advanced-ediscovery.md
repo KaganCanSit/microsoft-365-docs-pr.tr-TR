@@ -14,24 +14,22 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: eBulma (Premium) analizi yaparken, e-posta yazışması bir e-posta konuşmasını ayrıştırıp her iletiyi farklı kategorilere ayırır.
+description: EBulma (Premium) analizi yaparken, e-posta yazışması bir e-posta konuşmasını ayrıştırıp her iletiyi farklı kategorilere ayırır.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 6aa8bfdccf2f7430da1aa00ed444a9c218525ee8
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: a17f746cb0c88fb68e4654d0dd7de528135d62ee
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65622139"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629717"
 ---
 # <a name="email-threading-in-ediscovery-premium"></a>eBulma'da e-posta yazışması oluşturma (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bir süredir devam eden bir e-posta konuşmasını düşünün. Çoğu durumda, e-posta yazışmasının son iletisi önceki tüm iletilerin içeriğini içerir. Bu nedenle, son ileti gözden geçirilirken yazışmada gerçekleşen konuşmanın tam bir bağlamı gösterilir. E-posta yazışması, gözden geçirenlerin herhangi bir bağlamı kaybetmeden toplanan belgelerin bir bölümünü gözden geçirebilmesi için bu tür iletileri tanımlar.
 
 ## <a name="what-does-email-threading-do"></a>E-posta yazışmaları ne işe olur?
 
-E-posta yazışması her e-posta yazışmasını ayrıştırıp ayrı ayrı iletilere oluşturur. Her e-posta yazışması, ayrı ayrı iletiler zinciridir. Microsoft Purview eBulma (Premium), gözden geçirme kümesindeki tüm e-posta iletilerini analiz eder ve bir e-posta iletisinin benzersiz içeriği olup olmadığını veya zincirin (üst iletiler) e-posta yazışmasının son iletisinde tamamen bulunup bulunmadığını belirler. E-posta iletileri dört kapsayıcı değere ayrılır:
+E-posta yazışması her e-posta yazışmasını ayrıştırıp ayrı ayrı iletilere oluşturur. Her e-posta yazışması, ayrı ayrı iletiler zinciridir. Microsoft Purview eKeşif (Premium), bir e-posta iletisinin benzersiz içeriği olup olmadığını veya zincirin (üst iletiler) e-posta yazışmasında son iletide tamamen bulunup bulunmadığını belirlemek için gözden geçirme kümesindeki tüm e-posta iletilerini analiz eder. E-posta iletileri dört kapsayıcı değere ayrılır:
 
 - **Kapsayıcı**: *Kapsayıcı* e-posta, bir e-posta yazışmasında son e-posta iletisidir ve bu e-posta yazışmasının önceki tüm içeriğini içerir.
 
@@ -41,8 +39,8 @@ E-posta yazışması her e-posta yazışmasını ayrıştırıp ayrı ayrı ilet
 
 - **Hiçbiri**: *Hiçbiri* değeri, iletinin içeriğinin Kapsayıcı veya Kapsayıcı eksi olarak işaretlenmiş en az bir e-posta iletisinde tamamen bulunduğunu gösterir.
 
-## <a name="how-is-it-different-from-conversations-in-outlook"></a>Outlook konuşmalarından farkı nedir?
+## <a name="how-is-it-different-from-conversations-in-outlook"></a>Outlook'taki konuşmalardan farkı nedir?
 
-Bu, bir bakışta Outlook konuşma gruplandırmalarına benzer. Ancak bazı önemli ayrımlar vardır. İki konuşmaya çatallanmış bir e-posta konuşması düşünün; örneğin, birisi konuşmadaki en son e-posta olmayan bir e-postayı yanıtladı, bu nedenle konuşmadaki son iki e-postanın da benzersiz içeriği var.
+Bir bakışta bu, Outlook'taki konuşma gruplandırmalarına benzer. Ancak bazı önemli ayrımlar vardır. İki konuşmaya çatallanmış bir e-posta konuşması düşünün; örneğin, birisi konuşmadaki en son e-posta olmayan bir e-postayı yanıtladı, bu nedenle konuşmadaki son iki e-postanın da benzersiz içeriği var.
 
-Outlook e-postaları tek bir konuşmada gruplandırmaya devam eder; yalnızca son e-postayı okumak, benzersiz içerik de içeren ikinciden son e-postanın bağlamının eksik olduğu anlamına gelir. E-posta yazışması her e-postayı ayrı ayrı bileşenlere ayırıp karşılaştırdığından, e-posta yazışması son iki e-postayı da kapsayıcı olarak işaretleyerek kapsayıcı olarak işaretlenmiş tüm e-postaları okuduğunuz sürece bağlamı kaçırmamanızı sağlar.
+Outlook yine de e-postaları tek bir konuşmada gruplandıracak; yalnızca son e-postayı okumak, benzersiz içerik de içeren ikinciden sona e-postanın bağlamının eksik olduğu anlamına gelir. E-posta yazışması her e-postayı ayrı ayrı bileşenlere ayırıp karşılaştırdığından, e-posta yazışması son iki e-postayı da kapsayıcı olarak işaretleyerek kapsayıcı olarak işaretlenmiş tüm e-postaları okuduğunuz sürece bağlamı kaçırmamanızı sağlar.

@@ -15,12 +15,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Veri kaybı önleme (DLP) ilkesi tasarlamayı öğrenin
-ms.openlocfilehash: 2d7c370ab34eea2c708769674495a2c51f1a3fcf
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 32204659da3adcc2fd868568bf3a7bd909e5f2f9
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782049"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623019"
 ---
 # <a name="design-a-data-loss-prevention-policy"></a>Veri kaybı önleme ilkesi tasarlama
 
@@ -30,9 +30,9 @@ ms.locfileid: "64782049"
 
  if you have to do a lot of tuning to get a policy to yield the intended results can be time consuming .-->
 
-Microsoft 365 DLP kullanmaya yeni başladıysanız, ilke tasarlamaya başlamadan önce şu makalelere göz atabilirsiniz:
+Microsoft Purview DLP'yi kullanmaya yeni başladıysanız, ilke tasarlamaya başlamadan önce şu makalelere göz atabilirsiniz:
 
-- [Veri kaybı önleme hakkında bilgi edinin](dlp-learn-about-dlp.md#learn-about-data-loss-prevention) - bu makalede veri kaybı önleme uzmanlık alanı ve Microsoft'un DLP uygulaması tanıtılarak
+- [Microsoft Purview Veri Kaybı Önleme hakkında bilgi edinin](dlp-learn-about-dlp.md#learn-about-data-loss-prevention) - bu makalede veri kaybı önleme uzmanlık alanı ve Microsoft'un DLP uygulaması tanıtılarak tanıtabilirsiniz
 - [Veri kaybı önlemeyi (DLP) planlama](dlp-overview-plan-for-dlp.md#plan-for-data-loss-prevention-dlp) - bu makale üzerinde çalışarak şunları yapacaksınız:
   - [Paydaşları belirleme](dlp-overview-plan-for-dlp.md#identify-stakeholders)
   - [Korunacak hassas bilgi kategorilerini açıklama](dlp-overview-plan-for-dlp.md#describe-the-categories-of-sensitive-information-to-protect)
@@ -56,7 +56,7 @@ Tek bir deyimde sahip olduğunuz her ilkenin iş amacını özetleyebilmelidir. 
 
 Örneğin, dört sorunun da yanıtlarını sağlayan bir amaç bildiriminin kurgusal ilk taslağı aşağıda verilmiştir:
 
-*"ABD merkezli bir kuruluşuz ve HIPPA tarafından kapsanan ve OneDrive/SharePoint depolanan hassas sağlık hizmetleri bilgilerini içeren Office belgeleri algılamamız ve Teams sohbet ve kanal iletilerinde paylaşılmakta olan bilgilere karşı koruma sağlamamız ve herkesin bunları yetkisiz üçüncü taraflarla paylaşmasını kısıtlamamız gerekiyor".*
+*"ABD merkezli bir kuruluşuz ve OneDrive/SharePoint'te depolanan HIPPA'nın kapsadığı hassas sağlık hizmetleri bilgilerini içeren Office belgelerini algılamamız ve Teams sohbetinde ve kanal iletilerinde paylaşılmakta olan bilgilere karşı koruma sağlamamız ve herkesin bunları yetkisiz üçüncü taraflarla paylaşmasını kısıtlamamız gerekiyor".*
 
 İlke tasarımı geliştirirken büyük olasılıkla deyimini değiştirecek ve genişleteceksiniz.
 
@@ -66,9 +66,9 @@ Tek bir deyimde sahip olduğunuz her ilkenin iş amacını özetleyebilmelidir. 
 
 |Deyim|Yapılandırma sorusu yanıtlandı ve yapılandırma eşlemesi|
 |---|---|
-|"ABD merkezli bir kuruluşuz ve HIPPA'nın kapsadığı hassas sağlık hizmetleri bilgilerini içeren Office belgeleri algılamamız gerekiyor...|- **İzlenecekler**: belgeleri Office, [ABD Sağlık Sigortası Yasası (HIPAA)](what-the-dlp-policy-templates-include.md#us-health-insurance-act-hipaa) şablonunu kullanın </br>- **Eşleşme koşulları**: (önceden yapılandırılmış ancak düzenlenebilir) - öğe ABD SSN ve Uyuşturucu Uygulama Dairesi (DEA) numarası, Uluslararası Hastalık Sınıflandırması (ICD-9-CM), Uluslararası Hastalık Sınıflandırması (ICD-10-CM) içerir, içerik kuruluşum dışındaki kişilerle paylaşılır  </br> - [güvenilirlik düzeyleri](sensitive-information-type-learn-about.md#more-on-confidence-levels) ve [örnek sayısı](dlp-policy-reference.md#content-contains) (sızıntıya dayanıklılık olarak adlandırılır) gibi algılama için tetikleme eşiğini netleştirmek için konuşmaları destekler.|
-|... OneDrive/SharePoint depolanan ve sohbet ve kanal iletileri Teams paylaşılan bilgilere karşı koruma sağlar...|- **İzlenecek yer**: OneDrive ve SharePoint siteleri ve Teams sohbet/kanal hesaplarını veya dağıtım gruplarını ekleyerek veya hariç tutarak [konum kapsamını](dlp-policy-reference.md#locations) belirleme.|
-|... ve herkesin bu öğeleri yetkisiz üçüncü taraflarla paylaşmalarını kısıtlayın."|- **Yapılması gereken eylemler**[:](dlp-policy-reference.md#actions) *Erişimi kısıtla veya içeriği Microsoft 365 konumlarda şifrele* </br> - Paylaşım kısıtlamaları gibi koruyucu eylemler, bildirimler ve uyarılar gibi farkındalık eylemleri ve bir engelleme eyleminin kullanıcı geçersiz kılınmasına izin verme gibi kullanıcı güçlendirme eylemleri de dahil olmak üzere bir ilke tetiklendiğinde hangi eylemlerin gerçekleştirilmesi konusunda konuşmayı teşvik eder|
+|"ABD merkezli bir kuruluşuz ve HIPPA'nın kapsadığı hassas sağlık hizmetleri bilgilerini içeren Office belgelerini algılamamız gerekiyor...|- **İzlenecekler**: Office belgeleri, [ABD Sağlık Sigortası Yasası (HIPAA)](what-the-dlp-policy-templates-include.md#us-health-insurance-act-hipaa) şablonunu kullanın </br>- **Eşleşme koşulları**: (önceden yapılandırılmış ancak düzenlenebilir) - öğe ABD SSN ve Uyuşturucu Uygulama Dairesi (DEA) numarası, Uluslararası Hastalık Sınıflandırması (ICD-9-CM), Uluslararası Hastalık Sınıflandırması (ICD-10-CM) içerir, içerik kuruluşum dışındaki kişilerle paylaşılır  </br> - [güvenilirlik düzeyleri](sensitive-information-type-learn-about.md#more-on-confidence-levels) ve [örnek sayısı](dlp-policy-reference.md#content-contains) (sızıntıya dayanıklılık olarak adlandırılır) gibi algılama için tetikleme eşiğini netleştirmek için konuşmaları destekler.|
+|... OneDrive/SharePoint'te depolanan ve paylaşılan Teams sohbet ve kanal iletilerine karşı koruma sağlayan...|- **İzlenecek yer**: OneDrive ve SharePoint sitelerini ve Teams sohbet/kanal hesaplarını veya dağıtım gruplarını ekleyerek veya hariç tutarak  [konum kapsamını](dlp-policy-reference.md#locations) belirleme.|
+|... ve herkesin bu öğeleri yetkisiz üçüncü taraflarla paylaşmalarını kısıtlayın."|- **Yapılması gereken eylemler**: *Microsoft 365 konumlarında Erişimi kısıtla veya içeriği şifrele'yi* [eklersiniz](dlp-policy-reference.md#actions) </br> - Paylaşım kısıtlamaları gibi koruyucu eylemler, bildirimler ve uyarılar gibi farkındalık eylemleri ve bir engelleme eyleminin kullanıcı geçersiz kılınmasına izin verme gibi kullanıcı güçlendirme eylemleri de dahil olmak üzere bir ilke tetiklendiğinde hangi eylemlerin gerçekleştirilmesi konusunda konuşmayı teşvik eder|
 
 Bu örnek bir DLP ilkesinin tüm yapılandırma noktalarını kapsamaz, genişletilmesi gerekir. Ancak kendi DLP ilke amaç ifadelerinizi geliştirirken doğru yönde düşünmenizi sağlamalıdır.
 

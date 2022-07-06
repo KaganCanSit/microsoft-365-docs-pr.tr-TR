@@ -15,16 +15,14 @@ search.appverid:
 - MET150
 recommendations: false
 description: dlp ilkesi koşulları ve özel durumları hakkında bilgi edinin
-ms.openlocfilehash: cd252002f2fcef3e3935dd44b1333e801bcba46d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 9e1c27e8b4aa79da94fd035bbeb15912b1618be8
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090461"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629937"
 ---
 # <a name="dlp-policy-conditions-exceptions-and-actions"></a>DLP ilke koşulları, özel durumlar ve eylemler
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 DLP ilkelerindeki koşullar ve özel durumlar, ilkenin uygulandığı hassas öğeleri tanımlar. Eylemler, bir özel durumun karşılanmasının bir sonucu olarak ne olacağını tanımlar.
 
@@ -32,7 +30,7 @@ DLP ilkelerindeki koşullar ve özel durumlar, ilkenin uygulandığı hassas ö�
 - Özel durumlar nelerin hariç tutulacaklarını tanımlar.
 - Eylemler, koşulun veya özel durumun karşılanmasının bir sonucu olarak ne olacağını tanımlar
 
-Çoğu koşul ve özel durum, bir veya daha fazla değeri destekleyen bir özelliğe sahiptir. Örneğin, DLP ilkesi Exchange e-postalara uygulanıyorsa, **Gönderen** koşulu iletinin gönderenini gerektirir. Bazı koşulların iki özelliği vardır. Örneğin, **A ileti üst bilgisi bu sözcüklerden herhangi birini içerir** koşulu, ileti üst bilgisi alanını belirtmek için bir özellik ve üst bilgi alanında aranacak metni belirtmek için ikinci bir özellik gerektirir. Bazı koşulların veya özel durumların herhangi bir özelliği yoktur. Örneğin, **Ek parola korumalı koşulu yalnızca parola korumalı** iletilerdeki ekleri arar.
+Çoğu koşul ve özel durum, bir veya daha fazla değeri destekleyen bir özelliğe sahiptir. Örneğin, DLP ilkesi Exchange e-postalarına uygulanıyorsa, **Gönderen** koşulu iletinin gönderenini gerektirir. Bazı koşulların iki özelliği vardır. Örneğin, **A ileti üst bilgisi bu sözcüklerden herhangi birini içerir** koşulu, ileti üst bilgisi alanını belirtmek için bir özellik ve üst bilgi alanında aranacak metni belirtmek için ikinci bir özellik gerektirir. Bazı koşulların veya özel durumların herhangi bir özelliği yoktur. Örneğin, **Ek parola korumalı koşulu yalnızca parola korumalı** iletilerdeki ekleri arar.
 
 Eylemler genellikle ek özellikler gerektirir. Örneğin, DLP ilke kuralı bir iletiyi yeniden yönlendirdiğinde, iletinin nereye yönlendirileceğini belirtmeniz gerekir.
 <!-- Some actions have multiple properties that are available or required. For example, when the rule adds a header field to the message header, you need to specify both the name and value of the header. When the rule adds a disclaimer to messages, you need to specify the disclaimer text, but you can also specify where to insert the text, or what to do if the disclaimer can't be added to the message. Typically, you can configure multiple actions in a rule, but some actions are exclusive. For example, one rule can't reject and redirect the same message.-->
@@ -68,21 +66,21 @@ Gönderen adresi konumunu DLP kural düzeyinde yapılandırmak için parametresi
 
 - **Üst bilgi veya zarf** (`HeaderOrEnvelope`) İleti üst bilgisinde ve ileti zarfında gönderenleri inceleyin.
 
-|DLP'de koşul veya özel durum|Microsoft 365 PowerShell'de koşul/özel durum parametreleri|özellik türü|Açıklama|
+|DLP'de koşul veya özel durum|Güvenlik & Uyumluluk PowerShell'de koşul/özel durum parametreleri|özellik türü|Açıklama|
 |---|---|---|---|
 |Gönderen|koşul: *Kimden* <br/><br/> özel durum: *ExceptIfFrom*|Adresler|Belirtilen posta kutuları, posta kullanıcıları, posta kişileri veya kuruluştaki Microsoft 365 grupları tarafından gönderilen iletiler.|
 |Gönderen, |*FromMemberOf* <br/><br/> *ExceptIfFromMemberOf*|Adresler|Belirtilen dağıtım grubunun, posta özellikli güvenlik grubunun veya Microsoft 365 grubunun bir üyesi tarafından gönderilen iletiler.|
 |Gönderen IP adresi|koşul: *SenderIPRanges*<br/><br/> exception: *ExceptIfSenderIPRanges*|IPAddressRanges|Gönderenin IP adresinin belirtilen IP adresiyle eşleştiği veya belirtilen IP adresi aralığı içinde yer aldığı iletiler.|
 |Gönderen adresi sözcükler içeriyor|koşul: *FromAddressContainsWords* <br/><br/> exception: *ExceptIfFromAddressContainsWords*|Kelime|Gönderenin e-posta adresinde belirtilen sözcükleri içeren iletiler.|
 |Gönderen adresi desenleri eşleştirir|koşul: *FromAddressMatchesPatterns* <br/><br/> özel durum: *ExceptFromAddressMatchesPatterns*|Desen|Gönderenin e-posta adresinin belirtilen normal ifadelerle eşleşen metin desenleri içerdiği iletiler.|
-|Gönderen etki alanı|condition: *SenderDomainIs* <br/><br/> özel durum: *ExceptIfSenderDomainIs*|Etkialanıadı|Gönderenin e-posta adresinin etki alanının belirtilen değerle eşleştiği iletiler. Belirtilen etki alanını *içeren* gönderen etki alanlarını bulmanız gerekiyorsa (örneğin, bir etki alanının herhangi bir alt etki alanı), **Gönderen adresi eşleşmeleri** (*FromAddressMatchesPatterns*) koşulunu kullanın ve şu söz dizimini kullanarak etki alanını belirtin: '\.domaincom\.$'.|
+|Gönderen etki alanı|condition: *SenderDomainIs* <br/><br/> özel durum: *ExceptIfSenderDomainIs*|Etkialanıadı|Gönderenin e-posta adresinin etki alanının belirtilen değerle eşleştiği iletiler. Belirtilen etki alanını *içeren* gönderen etki alanlarını bulmanız gerekiyorsa (örneğin, bir etki alanının herhangi bir alt etki alanı), **Gönderen adresi eşleşmeleri**(*FromAddressMatchesPatterns*) koşulunu kullanın ve şu sözdizimini kullanarak etki alanını belirtin: '\.etki alanı\.com$'.|
 |Gönderen kapsamı|koşul: *FromScope* <br/><br/> özel durum: *ExceptIfFromScope*|UserScopeFrom|İç veya dış gönderenler tarafından gönderilen iletiler.|
 |Gönderenin belirtilen özellikleri bu sözcüklerden herhangi birini içerir|koşul: *SenderADAttributeContainsWords* <br/><br/> exception: *ExceptIfSenderADAttributeContainsWords*|İlk özellik: `ADAttribute` <br/><br/> İkinci özellik: `Words`|Gönderenin belirtilen Active Directory özniteliğinin belirtilen sözcüklerden herhangi birini içerdiği iletiler.|
 |Gönderenin belirtilen özellikleri bu metin desenlerine uyuyor|koşul: *SenderADAttributeMatchesPatterns* <br/><br/> exception: *ExceptIfSenderADAttributeMatchesPatterns*|İlk özellik: `ADAttribute` <br/><br/> İkinci özellik: `Patterns`|Gönderenin belirtilen Active Directory özniteliğinin belirtilen normal ifadelerle eşleşen metin desenleri içerdiği iletiler.|
 
 ### <a name="recipients"></a>Alıcı
 
-|DLP'de koşul veya özel durum|Microsoft 365 PowerShell'de koşul/özel durum parametreleri|özellik türü|Açıklama|
+|DLP'de koşul veya özel durum|Güvenlik & Uyumluluk PowerShell'de koşul/özel durum parametreleri|özellik türü|Açıklama|
 |---|---|---|---|
 |Alıcı|koşul: *SentTo* <br/><br/> özel durum: *ExceptIfSentTo*|Adresler|Alıcılardan birinin kuruluştaki belirtilen posta kutusu, posta kullanıcısı veya posta kişisi olduğu iletiler. Alıcılar iletinin **Kime**, **Bilgi** veya **Gizli** alanlarında olabilir.|
 |Alıcı etki alanı|condition: *RecipientDomainIs* <br/><br/> exception: *ExceptIfRecipientDomainIs*|Etkialanıadı|Alıcının e-posta adresinin etki alanının belirtilen değerle eşleştiği iletiler.|
@@ -94,7 +92,7 @@ Gönderen adresi konumunu DLP kural düzeyinde yapılandırmak için parametresi
 
 ### <a name="message-subject-or-body"></a>İleti konusu veya gövdesi
 
-|DLP'de koşul veya özel durum|Microsoft 365 PowerShell'de koşul/özel durum parametreleri|özellik türü|Açıklama|
+|DLP'de koşul veya özel durum|Güvenlik & Uyumluluk PowerShell'de koşul/özel durum parametreleri|özellik türü|Açıklama|
 |---|---|---|---|
 |Konu sözcükleri veya tümcecikleri içerir|koşul: *SubjectContainsWords* <br/> exception: *ExceptIf SubjectContainsWords*|Kelime|Konu alanında belirtilen sözcükleri içeren iletiler.|
 |Konu desenleri eşleştirir|koşul: *SubjectMatchesPatterns* <br/> exception: *ExceptIf SubjectMatchesPatterns*|Desen|Konu alanının belirtilen normal ifadelerle eşleşen metin desenleri içerdiği iletiler.|
@@ -105,29 +103,29 @@ Gönderen adresi konumunu DLP kural düzeyinde yapılandırmak için parametresi
 
 ### <a name="attachments"></a>Ekler
 
-|DLP'de koşul veya özel durum|Microsoft 365 PowerShell'de koşul/özel durum parametreleri|özellik türü|Açıklama|
+|DLP'de koşul veya özel durum|Güvenlik & Uyumluluk PowerShell'de koşul/özel durum parametreleri|özellik türü|Açıklama|
 |---|---|---|---|
-|Ek parola korumalı|koşul: *DocumentIsPasswordProtected* <br/><br/> exception: *ExceptIfDocumentIsPasswordProtected*|Hiçbiri|Ekin parola korumalı olduğu (ve bu nedenle taranamazsınız) iletiler. Parola algılama yalnızca Office belgeler, .zip dosyaları ve .7z dosyaları için çalışır.|
+|Ek parola korumalı|koşul: *DocumentIsPasswordProtected* <br/><br/> exception: *ExceptIfDocumentIsPasswordProtected*|yok|Ekin parola korumalı olduğu (ve bu nedenle taranamazsınız) iletiler. Parola algılama yalnızca Office belgeleri, .zip dosyaları ve .7z dosyaları için çalışır.|
 |Ekin dosya uzantısı|condition: *ContentExtensionMatchesWords* <br/><br/> özel durum: *ExceptIfContentExtensionMatchesWords*|Kelime|Ekin dosya uzantısının belirtilen sözcüklerden herhangi biri ile eşleştiği iletiler.|
 |E-posta eklerinin içeriği taranamadı|koşul: *DocumentIsUnsupported* <br/><br/>özel durum: *ExceptIf DocumentIsUnsupported*|yok|Ekin Exchange Online tarafından yerel olarak tanınmadığı iletiler.|
 |E-posta eklerinin içeriği taramayı tamamlamadı|condition: *ProcessingLimitExceeded* <br/><br/> özel durum: *ExceptIfProcessingLimitExceeded*|yok|Kural altyapısının eklerin taranma işlemini tamamlayamadığı iletiler. İçeriğin tam olarak taranamadığı iletileri tanımlamak ve işlemek için birlikte çalışan kurallar oluşturmak için bu koşulu kullanabilirsiniz.|
 |Belge adı sözcükler içeriyor|koşul: *DocumentNameMatchesWords* <br/><br/> exception: *ExceptIfDocumentNameMatchesWords*|Kelime|Ekin dosya adının belirtilen sözcüklerden herhangi biri ile eşleştiği iletiler.|
 |Belge adı desenler ile eşleşir|koşul: *DocumentNameMatchesPatterns* <br/><br/> exception: *ExceptIfDocumentNameMatchesPatterns*|Desen|Ekin dosya adının belirtilen normal ifadelerle eşleşen metin desenleri içerdiği iletiler.|
-|Belge özelliği şudur:|koşul: *ContentPropertyContainsWords* <br/><br/> exception: *ExceptIfContentPropertyContainsWords*|Kelime|Ekin dosya uzantısının belirtilen sözcüklerden herhangi biri ile eşleştiği iletiler veya belgeler.|
-|Belge boyutu eşittir veya büyüktür|koşul: *DocumentSizeOver* <br/><br/> exception: *ExceptIfDocumentSizeOver*|Boyutu|Herhangi bir ekin belirtilen değerden büyük veya buna eşit olduğu iletiler.|
+|Belge özelliği şudur:|koşul: *ContentPropertyContainsWords* <br/><br/> exception: *ExceptIfContentPropertyContainsWords*|Kelime|Ekin özel özelliğinin verilen değerle eşleştiği belgeler içeren iletiler.|
+|Belge boyutu eşittir veya büyüktür|koşul: *DocumentSizeOver* <br/><br/> exception: *ExceptIfDocumentSizeOver*|Boyut|Herhangi bir ekin belirtilen değerden büyük veya buna eşit olduğu iletiler.|
 |Eklerin içeriği bu sözcüklerden herhangi birini içerir|koşul: *DocumentContainsWords* <br/><br/> exception: *ExceptIfDocumentContainsWords*|`Words`|Ekin belirtilen sözcükleri içerdiği iletiler.|
 |Tüm ekler içeriği bu metin desenleriyle eşleşir|koşul: *DocumentMatchesPatterns* <br/><br/> exception: *ExceptIfDocumentMatchesPatterns*|`Patterns`|Ekin belirtilen normal ifadelerle eşleşen metin desenleri içerdiği iletiler.|
 
 ### <a name="message-headers"></a>İleti Üst Bilgileri
 
-|DLP'de koşul veya özel durum|Microsoft 365 PowerShell'de koşul/özel durum parametreleri|özellik türü|Açıklama|
+|DLP'de koşul veya özel durum|Güvenlik & Uyumluluk PowerShell'de koşul/özel durum parametreleri|özellik türü|Açıklama|
 |---|---|---|---|
 |Üst bilgi sözcükler veya tümcecikler içeriyor|koşul: *HeaderContainsWords* <br/><br/> özel durum: *ExceptIfHeaderContainsWords*|Karma Tablo|Belirtilen üst bilgi alanını içeren iletiler ve bu üst bilgi alanının değeri belirtilen sözcükleri içerir.|
 |Üst bilgi desenleri eşleştirir|koşul: *HeaderMatchesPatterns* <br/><br/> exception: *ExceptIfHeaderMatchesPatterns*|Karma Tablo|Belirtilen üst bilgi alanını içeren iletiler ve bu üst bilgi alanının değeri belirtilen normal ifadeleri içerir.|
 
 ### <a name="message-properties"></a>İleti özellikleri
 
-|DLP'de koşul veya özel durum|Microsoft 365 PowerShell'de koşul/özel durum parametreleri|özellik türü|Açıklama|
+|DLP'de koşul veya özel durum|Güvenlik & Uyumluluk PowerShell'de koşul/özel durum parametreleri|özellik türü|Açıklama|
 |---|---|---|---|
 |Önem derecesiyle|koşul: *WithImportance* <br/><br/> özel durum: *ExceptIfWithImportance*|Önemi|Belirtilen önem düzeyiyle işaretlenmiş iletiler.|
 |İçerik karakter kümesi sözcükler içeriyor|koşul: *ContentCharacterSetContainsWords* <br/><br/> *ExceptIfContentCharacterSetContainsWords*|CharacterSets|Belirtilen karakter kümesi adlarından herhangi birine sahip iletiler.|
@@ -139,7 +137,7 @@ Gönderen adresi konumunu DLP kural düzeyinde yapılandırmak için parametresi
 
 Bu tabloda DLP'de kullanılabilen eylemler açıklanmaktadır.
 
-|DLP'de eylem|Microsoft 365 PowerShell'de eylem parametreleri|özellik türü|Açıklama|
+|DLP'de eylem|Güvenlik & Uyumluluğu PowerShell'de eylem parametreleri|özellik türü|Açıklama|
 |---|---|---|---|
 |Üst bilgiyi ayarla|SetHeader|İlk özellik: *Üst Bilgi Adı* <br/><br/> İkinci özellik: *Üst Bilgi Değeri*|SetHeader parametresi, DLP kuralı için ileti üst bilgisine bir üst bilgi alanı ve değer ekleyen veya değiştiren bir eylem belirtir. Bu parametre "HeaderName:HeaderValue" söz dizimini kullanır. Virgülle ayrılmış birden çok üst bilgi adı ve değer çifti belirtebilirsiniz|
 |Üst bilgiyi kaldır|RemoveHeader|İlk özellik: *MessageHeaderField*<br/><br/> İkinci özellik: *Dize*|RemoveHeader parametresi, DLP kuralı için ileti üst bilgisinden üst bilgi alanını kaldıran bir eylem belirtir. Bu parametre "HeaderName" veya "HeaderName:HeaderValue" söz dizimini kullanır. Virgülle ayrılmış birden çok üst bilgi adı veya üst bilgi adı ve değer çifti belirtebilirsiniz|

@@ -12,26 +12,24 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Müşteri Anahtarı ile birlikte kullanılan Azure Key Vault depolanan müşteri kök anahtarlarının nasıl alındığını öğrenin. Hizmetler Exchange Online, Skype Kurumsal, SharePoint Online, OneDrive İş ve Teams dosyalarını içerir.
-ms.openlocfilehash: f34e79ee772df1a88058625c0b2df5f62413bcfd
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 474df9b4776df09b4a46ca002f506155606bdb52
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017344"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636501"
 ---
 # <a name="roll-or-rotate-a-customer-key-or-an-availability-key"></a>Bir Müşteri Anahtarını veya uygunluk anahtarını toplama veya döndürme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 > [!CAUTION]
-> Yalnızca güvenlik veya uyumluluk gereksinimleriniz anahtarın alınması gerektiğini belirlediğinde Müşteri Anahtarı ile kullandığınız bir şifreleme anahtarını yuvarlayın. Ayrıca, ilkelerle ilişkilendirilmiş veya ilişkili anahtarları silmeyin. Anahtarlarınızı yuvarladığınızda, önceki anahtarlarla şifrelenmiş içerik olacaktır. Örneğin, etkin posta kutuları sık sık yeniden şifrelenirken, etkin olmayan, bağlantısı kesilmiş ve devre dışı bırakılmış posta kutuları önceki anahtarlarla yine de şifrelenebilir. SharePoint Online, geri yükleme ve kurtarma amacıyla içeriğin yedeğini gerçekleştirir, bu nedenle eski anahtarları kullanan arşivlenmiş içerik olabilir.
+> Yalnızca güvenlik veya uyumluluk gereksinimleriniz anahtarın alınması gerektiğini belirlediğinde Müşteri Anahtarı ile kullandığınız bir şifreleme anahtarını yuvarlayın. Ayrıca, ilkelerle ilişkilendirilmiş veya ilişkili anahtarları silmeyin. Anahtarlarınızı yuvarladığınızda, önceki anahtarlarla şifrelenmiş içerik olacaktır. Örneğin, etkin posta kutuları sık sık yeniden şifrelenirken, etkin olmayan, bağlantısı kesilmiş ve devre dışı bırakılmış posta kutuları önceki anahtarlarla yine de şifrelenebilir. SharePoint Online, geri yükleme ve kurtarma amacıyla içeriğin yedeğini gerçekleştirir, bu nedenle eski anahtarlar kullanılarak arşivlenmiş içerik olabilir.
 
 ## <a name="about-rolling-the-availability-key"></a>Kullanılabilirlik anahtarını döndürme hakkında
 
-Microsoft, kullanılabilirlik anahtarının doğrudan denetimini müşterilere sunmaz. Örneğin, yalnızca Azure Key Vault sahip olduğunuz anahtarları yuvarlayabilir (döndürebilirsiniz). Microsoft 365, kullanılabilirlik anahtarlarını dahili olarak tanımlanmış bir zamanlamaya göre yuvarlar. Bu anahtar dağıtımlar için müşteriye yönelik, hizmet düzeyi sözleşmesi (SLA) yoktur. Microsoft 365, otomatik, el ile olmayan bir işlemde Microsoft 365 hizmet kodunu kullanarak kullanılabilirlik anahtarını döndürür. Microsoft yöneticileri, roll işlemini başlatabilir. Anahtar, anahtar deposuna doğrudan erişim olmadan otomatik mekanizmalar kullanılarak alınır. Kullanılabilirlik anahtarı gizli deposuna erişim Microsoft yöneticilerine sağlanmaz. Kullanılabilirlik anahtarı yuvarlama, başlangıçta anahtarı oluşturmak için kullanılan mekanizmayı kullanır. Kullanılabilirlik anahtarı hakkında daha fazla bilgi için bkz. [Kullanılabilirlik anahtarını anlama](customer-key-availability-key-understand.md).
+Microsoft, kullanılabilirlik anahtarının doğrudan denetimini müşterilere sunmaz. Örneğin, yalnızca Azure Key Vault sahip olduğunuz anahtarları yuvarlayabilir (döndürebilirsiniz). Microsoft 365, kullanılabilirlik anahtarlarını dahili olarak tanımlanmış bir zamanlamaya göre dağıtır. Bu anahtar dağıtımlar için müşteriye yönelik, hizmet düzeyi sözleşmesi (SLA) yoktur. Microsoft 365, microsoft 365 hizmet kodunu kullanarak kullanılabilirlik anahtarını otomatik ve el ile olmayan bir işlemle döndürür. Microsoft yöneticileri, roll işlemini başlatabilir. Anahtar, anahtar deposuna doğrudan erişim olmadan otomatik mekanizmalar kullanılarak alınır. Kullanılabilirlik anahtarı gizli deposuna erişim Microsoft yöneticilerine sağlanmaz. Kullanılabilirlik anahtarı yuvarlama, başlangıçta anahtarı oluşturmak için kullanılan mekanizmayı kullanır. Kullanılabilirlik anahtarı hakkında daha fazla bilgi için bkz. [Kullanılabilirlik anahtarını anlama](customer-key-availability-key-understand.md).
 
 > [!IMPORTANT]
-> Exchange Online ve Skype Kurumsal kullanılabilirlik anahtarları, oluşturduğunuz her DEP için benzersiz bir kullanılabilirlik anahtarı oluşturulduğundan yeni bir DEP oluşturan müşteriler tarafından etkili bir şekilde alınabilir. SharePoint Online, OneDrive İş ve Teams dosyaları için kullanılabilirlik anahtarları orman düzeyinde bulunur ve DEP'ler ve müşteriler arasında paylaşılır, yani sıra yalnızca Microsoft tarafından dahili olarak tanımlanmış bir zamanlamada gerçekleşir. Her yeni DEP oluşturulduğunda kullanılabilirlik anahtarını döndürmeme riskini azaltmak için, her yeni DEP oluşturulduğunda müşteri kök anahtarları ve kullanılabilirlik anahtarı tarafından sarmalanan anahtar olan kiracı ara anahtarını (TIK) SharePoint, OneDrive ve Teams yuvarlayın.
+> Exchange Online ve Skype Kurumsal kullanılabilirlik anahtarları, oluşturduğunuz her DEP için benzersiz bir kullanılabilirlik anahtarı oluşturulduğundan yeni bir DEP oluşturan müşteriler tarafından etkili bir şekilde alınabilir. SharePoint Online, OneDrive İş ve Teams dosyalarının kullanılabilirlik anahtarları orman düzeyinde bulunur ve DEP'ler ve müşteriler arasında paylaşılır, yani sıra yalnızca Microsoft tarafından dahili olarak tanımlanmış bir zamanlamada gerçekleşir. Her yeni DEP oluşturulduğunda kullanılabilirlik anahtarını döndürmeme riskini azaltmak için SharePoint, OneDrive ve Teams, her yeni DEP oluşturulduğunda müşteri kök anahtarları ve kullanılabilirlik anahtarı tarafından sarmalanan anahtar olan kiracı ara anahtarını (TIK) alır.
 
 ## <a name="request-a-new-version-of-each-existing-root-key-you-want-to-roll"></a>Almak istediğiniz mevcut her kök anahtarın yeni bir sürümünü isteyin
 

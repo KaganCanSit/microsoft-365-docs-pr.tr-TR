@@ -16,24 +16,22 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Yasal tutma bildirimlerinizin durumunu izlemek ve gerekirse bunları güncelleştirip yeniden göndermek için eBulma (Premium) içindeki iletişim iş akışını kullanın.
-ms.openlocfilehash: 95417d54f7a84439b0321e31f0d6c0f2236af047
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 161628061d27c17e9e606cb7f88fbbe52d22be8f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093975"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632255"
 ---
 # <a name="manage-hold-notifications"></a>Bekletme bildirimlerini yönetme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Yasal tutma bildirimi iş akışınızı başlattıktan sonra, iletişimlerinizin durumunu izlemek için Microsoft Purview eKeşif 'teki (Premium) iletişim iş akışını kullanabilirsiniz. İletişimler sekmesi, eBulma (Premium) servis talebinizdeki tüm bildirimlerin listesini içerir. Atanmış veya bildirimi kabul etmiş olan koruyucuların sayısı gibi ayrıntıları görebilirsiniz.
+Yasal tutma bildirimi iş akışınızı başlattıktan sonra, iletişimlerinizin durumunu izlemek için Microsoft Purview eKeşif (Premium) içindeki iletişim iş akışını kullanabilirsiniz. İletişimler sekmesi, eBulma (Premium) servis talebinizdeki tüm bildirimlerin listesini içerir. Atanmış veya bildirimi kabul etmiş olan koruyucuların sayısı gibi ayrıntıları görebilirsiniz.
 
 ## <a name="monitor-acknowledgments"></a>Onayları izleme
 
 **İletişimler** sekmesinden bir iletişim seçtikten sonra, ayrı tutma bildirimini kabul eden koruyucuların listesini görüntüleyebilirsiniz. 
 
-1. Uyumluluk merkezinde **eBulma > eBulma (Premium)** bölümüne gidin.
+1. Uyumluluk merkezinde **eBulma > eKeşif (Premium)** bölümüne gidin.
 
 2. Bir servis talebi seçin ve **İletişimler** sekmesine tıklayın.
 
@@ -47,7 +45,7 @@ Bazen, koruyucular günlük işlerinde e-posta iletilerinin izini kaybeder. Ya d
 
 Bir saklama bildirimini bir koruyucuya yeniden göndermek için:
 
-1. eBulma'da (Premium), bir servis talebi seçin ve **İletişimler** sekmesine tıklayın.
+1. eBulma 'da (Premium) bir servis talebi seçin ve **İletişimler** sekmesine tıklayın.
 
 2. Koruyucu iletişim açılır sayfasını görüntülemek için bir **iletişim** seçin.
 
@@ -68,7 +66,7 @@ Olay ilerledikçe, koruyucuların daha önce belirtilenden daha fazla veya daha 
 
 İlk ayrı tutma bildiriminin içeriğini güncelleştirmek için:
 
-1. eBulma'da (Premium), bir servis talebi seçin ve **İletişimler** sekmesine tıklayın.
+1. eBulma 'da (Premium) bir servis talebi seçin ve **İletişimler** sekmesine tıklayın.
 
 2. Güncelleştirmek istediğiniz ayrı tutma bildirimini seçin ve **Koruyucu iletişim** açılır sayfasında **Düzenle'ye** tıklayın.
 

@@ -15,16 +15,14 @@ search.appverid:
 - MOE150
 - MET150
 description: PowerShell kullanarak özel hassas bilgi türünü kaldırmayı öğrenin
-ms.openlocfilehash: e935c9340c353561e71e25fdadfec5509da041e5
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: ba29c2f20133b94d87c14f527d454980c41373c9
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014750"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66621699"
 ---
 # <a name="remove-a-custom-sensitive-information-type-using-powershell"></a>PowerShell kullanarak özel hassas bilgi türünü kaldırma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Güvenlik & Uyumluluğu PowerShell'de, özel hassas bilgi türlerini kaldırmak için iki yöntem vardır:
 
@@ -33,7 +31,7 @@ Güvenlik & Uyumluluğu PowerShell'de, özel hassas bilgi türlerini kaldırmak 
 - **Özel kural paketini ve içerdiği tüm özel hassas bilgi türlerini kaldırın**: Bu yöntem bu bölümde belgelenmiştir.
 
 > [!NOTE]
-> Özel bir hassas bilgi türünü kaldırmadan önce, DLP ilkelerinin veya Exchange posta akışı kurallarının (aktarım kuralları olarak da bilinir) hassas bilgi türüne başvurmadığını doğrulayın.
+> Özel bir hassas bilgi türünü kaldırmadan önce, DLP ilkelerinin veya Exchange posta akışı kurallarının (aktarım kuralları olarak da bilinir) hala hassas bilgi türüne başvurmadığını doğrulayın.
 
 1. [Güvenlik & Uyumluluğu PowerShell](/powershell/exchange/exchange-online-powershell)
 

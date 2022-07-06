@@ -1,7 +1,7 @@
 ---
 title: İçeriden risk yönetimi planı
 description: Kuruluşunuzda insider risk yönetimi ilkelerini kullanmayı planlamayı öğrenin.
-keywords: Microsoft 365, Microsoft Purview, iç risk, risk yönetimi, uyumluluk
+keywords: Microsoft 365, Microsoft Purview, insider riski, risk yönetimi, uyumluluk
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -13,16 +13,14 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 043ee6cac3a7aa7408d949b4455fd90f7f6a66d0
-ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
+ms.openlocfilehash: d117ba643ceb15cc867e0688675b56caa3d302f7
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65810932"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637295"
 ---
 # <a name="plan-for-insider-risk-management"></a>İçeriden risk yönetimi planı
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kuruluşunuzda [insider risk yönetimine](insider-risk-management.md) başlamadan önce, bilgi teknolojisi ve uyumluluk yönetimi ekipleriniz tarafından gözden geçirilmesi gereken önemli planlama etkinlikleri ve dikkat edilmesi gereken noktalar vardır. Aşağıdaki alanlarda dağıtımı ayrıntılı bir şekilde anlamak ve planlamak, iç risk yönetimi özelliklerini uygulama ve kullanımınızın sorunsuz bir şekilde ilerlemesini ve çözüm için en iyi yöntemlerle uyumlu olmasını sağlamaya yardımcı olur. 
 
@@ -75,27 +73,27 @@ Insider risk yönetimiyle çalışırken bu rol grubu seçenekleri ve çözüm e
 Aşağıdaki rollerin üyeleri kullanıcıları insider risk yönetimi rol gruplarına atayabilir ve *Insider Risk Management Yönetici* rol grubuna dahil olan çözüm izinlerine sahip olabilir:
 
 - Azure Active Directory *Genel Yöneticisi*
-- *Azure Active Directory Uyumluluk Yöneticisi*
+- Azure Active Directory *Uyumluluk Yöneticisi*
 - Microsoft Purview uyumluluk portalı *Kuruluş Yönetimi*
 - *Microsoft Purview uyumluluk portalı Uyumluluk Yöneticisi*
 
 ## <a name="understand-requirements-and-dependencies"></a>Gereksinimleri ve bağımlılıkları anlama
 
-Insider risk yönetimi ilkelerini nasıl uygulamayı planladığınıza bağlı olarak, uygun Microsoft 365 lisans aboneliklerine sahip olmanız ve bazı çözüm önkoşullarını anlamanız ve planlamanız gerekir.
+Insider risk yönetimi ilkelerini nasıl uygulamayı planladığınıza bağlı olarak, uygun Microsoft 365 lisanslama aboneliklerine sahip olmanız ve bazı çözüm önkoşullarını anlamanız ve planlamanız gerekir.
 
-**Lisans:** Insider risk yönetimi, çok çeşitli Microsoft 365 lisanslama aboneliklerinin bir parçası olarak kullanılabilir. Ayrıntılar için [Insider risk yönetimi ile çalışmaya başlama](insider-risk-management-configure.md#subscriptions-and-licensing) makalesine bakın.
+**Lisans:** Insider risk yönetimi, microsoft 365 lisanslama aboneliklerinin geniş bir yelpazesinin bir parçası olarak kullanılabilir. Ayrıntılar için [Insider risk yönetimi ile çalışmaya başlama](insider-risk-management-configure.md#subscriptions-and-licensing) makalesine bakın.
 
 > [!IMPORTANT]
 > Insider risk yönetimi şu anda coğrafi bölgelerde barındırılan kiracılarda ve Azure hizmet bağımlılıkları tarafından desteklenen ülkelerde kullanılabilir. Kuruluşunuzda insider risk yönetiminin desteklendiğini doğrulamak için bkz. [Ülkeye/bölgeye göre Azure bağımlılığı kullanılabilirliği](/troubleshoot/azure/general/dependency-availability-by-country).
 
-Mevcut bir Microsoft 365 Kurumsal E5 planınız yoksa ve içeriden risk yönetimini denemek istiyorsanız, mevcut aboneliğinize [Microsoft 365 ekleyebilir](/office365/admin/try-or-buy-microsoft-365) veya E5 Microsoft 365 Kurumsal [deneme sürümüne kaydolabilirsiniz](https://www.microsoft.com/microsoft-365/enterprise).
+Mevcut bir Microsoft 365 Kurumsal E5 planınız yoksa ve içeriden risk yönetimini denemek istiyorsanız, [microsoft 365'i](/office365/admin/try-or-buy-microsoft-365) mevcut aboneliğinize ekleyebilir veya E5 Microsoft 365 Kurumsal [deneme sürümüne kaydolabilirsiniz](https://www.microsoft.com/microsoft-365/enterprise).
 
 **İlke şablonu gereksinimleri:** Seçtiğiniz ilke şablonuna bağlı olarak, kuruluşunuzda insider risk yönetimini yapılandırmadan önce anlamanız ve planlamanız gereken gereksinimler vardır:
 
-- **Kullanıcılardan ayrılarak Veri hırsızlığı** şablonunu kullanırken, kuruluşunuzdaki kullanıcıların istifa ve sonlandırma tarihi bilgilerini düzenli aralıklarla içeri aktarmak için bir Microsoft 365 İk bağlayıcısı yapılandırmanız gerekir. Kuruluşunuz için [Microsoft 365 İk bağlayıcısını](import-hr-data.md) yapılandırmaya yönelik adım adım yönergeler için İk bağlayıcısı ile verileri içeri aktarma makalesine bakın.
+- **Kullanıcılardan ayrılarak veri hırsızlığı** şablonunu kullanırken, kuruluşunuzdaki kullanıcıların istifa ve sonlandırma tarihi bilgilerini düzenli aralıklarla içeri aktarmak için bir Microsoft 365 İK bağlayıcısı yapılandırmanız gerekir. Kuruluşunuz için Microsoft 365 İK bağlayıcısını yapılandırmaya yönelik adım adım yönergeler için [İk bağlayıcısı ile verileri içeri aktarma](import-hr-data.md) makalesine bakın.
 - **Veri sızıntıları şablonlarını** kullanırken, kuruluşunuzdaki hassas bilgileri tanımlamak ve Yüksek Önem Derecesi DLP ilkesi uyarıları için iç risk uyarıları almak için en az bir Microsoft Purview Veri Kaybı Önleme (DLP) ilkesi yapılandırmanız gerekir. Kuruluşunuz için DLP ilkelerini yapılandırmaya yönelik adım adım yönergeler için [DLP ilkesi oluşturma, test etme ve ayarlama](create-test-tune-dlp-policy.md) makalesine bakın.
 - **Güvenlik ilkesi ihlal** şablonlarını kullanırken, güvenlik ihlali uyarılarını içeri aktarmak için Defender Güvenlik Merkezi'nde insider risk yönetimi tümleştirmesi için Uç Nokta için Microsoft Defender etkinleştirmeniz gerekir. Uç Nokta için Defender tümleştirmesini insider risk yönetimiyle etkinleştirmeye yönelik adım adım yönergeler için bkz. [Uç Nokta için Microsoft Defender'de gelişmiş özellikleri yapılandırma](/windows/security/threat-protection/microsoft-defender-atp/advanced-features).
-- **Dağıtılan kullanıcı** şablonlarını kullanırken, kuruluşunuzdaki kullanıcıların performans veya indirgeme durumu bilgilerini düzenli aralıklarla içeri aktarmak için bir Microsoft 365 İk bağlayıcısı yapılandırmanız gerekir. Kuruluşunuz için [Microsoft 365 İk bağlayıcısını](import-hr-data.md) yapılandırmaya yönelik adım adım yönergeler için İk bağlayıcısı ile verileri içeri aktarma makalesine bakın.
+- **Dağıtılan kullanıcı** şablonlarını kullanırken, kuruluşunuzdaki kullanıcıların performans veya indirgeme durumu bilgilerini düzenli aralıklarla içeri aktarmak için bir Microsoft 365 İK bağlayıcısı yapılandırmanız gerekir. Kuruluşunuz için Microsoft 365 İK bağlayıcısını yapılandırmaya yönelik adım adım yönergeler için [İk bağlayıcısı ile verileri içeri aktarma](import-hr-data.md) makalesine bakın.
 
 ## <a name="test-with-a-small-group-of-users-in-a-production-environment"></a>Üretim ortamında küçük bir kullanıcı grubuyla test edin
 
@@ -119,5 +117,5 @@ Insider risk yönetimi belgelerini, kuruluşunuzdaki yönetim ve düzeltme iş a
 
 Kuruluşunuz için insider risk yönetimini yapılandırmaya hazır mısınız? Aşağıdaki makaleleri gözden geçirin:
 
-- Genel ilke ayarlarını yapılandırmak için [insider risk yönetimi ayarlarıyla Kullanmaya başlayın](insider-risk-management-settings.md).
-- Önkoşulları yapılandırmak, ilkeler oluşturmak ve uyarıları almaya başlamak için [insider risk yönetimiyle Kullanmaya başlayın](insider-risk-management-configure.md).
+- Genel ilke ayarlarını yapılandırmak için [insider risk yönetimi ayarlarını kullanmaya başlayın](insider-risk-management-settings.md).
+- Önkoşulları yapılandırmak, ilkeler oluşturmak ve uyarıları almaya başlamak için [insider risk yönetimini kullanmaya başlayın](insider-risk-management-configure.md).

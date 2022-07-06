@@ -14,20 +14,18 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: eBulma'daki (Premium) yeni tahmine dayalı kodlama modülü, bir inceleme kümesindeki öğeleri analiz etmek için makine öğrenmesini kullanarak olay veya araştırmanızla ilgili öğeleri tahmin eder.
-ms.openlocfilehash: cc0db62b4ec7d632dae70347aaba5644138bcdce
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 3ea3d59aa2387b1a762e66fd11942ed96a6288a2
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100775"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625049"
 ---
-# <a name="learn-about-predictive-coding-in-ediscovery-premium-preview"></a>eBulma (Premium) (önizleme) içinde tahmine dayalı kodlama hakkında bilgi edinin
+# <a name="learn-about-predictive-coding-in-ediscovery-premium-preview"></a>eBulma(Premium) (önizleme) içinde tahmine dayalı kodlama hakkında bilgi edinin
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+eBulma (Premium) içindeki tahmine dayalı kodlama modülü, inceleyecek içerik miktarını azaltmanıza yardımcı olmak için akıllı, makine öğrenmesi özelliklerini kullanır. Tahmine dayalı kodlama, büyük hacimli servis talebi içeriğini gözden geçirmek üzere önceliklendirebileceğiniz ilgili bir öğe kümesiyle azaltmanıza ve bunları iptal etmenize yardımcı olur. Bu, bir gözden geçirme kümesindeki en ilgili öğelerin gözden geçirilmesini önceliklendirmenize yardımcı olan kendi tahmine dayalı kodlama modellerinizi oluşturup eğiterek gerçekleştirilir.
 
-eBulma'daki (Premium) tahmine dayalı kodlama modülü, inceleyecek içerik miktarını azaltmanıza yardımcı olmak için akıllı, makine öğrenmesi özelliklerini kullanır. Tahmine dayalı kodlama, büyük hacimli servis talebi içeriğini gözden geçirmek üzere önceliklendirebileceğiniz ilgili bir öğe kümesiyle azaltmanıza ve bunları iptal etmenize yardımcı olur. Bu, bir gözden geçirme kümesindeki en ilgili öğelerin gözden geçirilmesini önceliklendirmenize yardımcı olan kendi tahmine dayalı kodlama modellerinizi oluşturup eğiterek gerçekleştirilir.
-
-Tahmine dayalı kodlama modülü, bir gözden geçirme kümesi içinde modeli yönetmenin karmaşıklığını kolaylaştırmak ve modelinizi eğitmek için yinelemeli bir yaklaşım sağlayarak eBulma'daki (Premium) makine öğrenmesi özellikleriyle daha hızlı çalışmaya başlamanızı sağlayacak şekilde tasarlanmıştır. Başlamak için bir model oluşturabilir, ilgili veya uygun olmayan en az 50 öğe etiketleyebilirsiniz. Sistem, inceleme kümesindeki her öğeye tahmin puanları uygulamak için bu eğitimi kullanır. Bu, öğeleri tahmin puanına göre filtrelemenize olanak tanır ve bu sayede önce en ilgili (veya ilgili olmayan) öğeleri gözden geçirebilirsiniz. Modelleri daha yüksek doğruluk ve geri çağırma oranlarıyla eğitmek istiyorsanız, model sabit olana kadar sonraki eğitim turlarında öğeleri etiketlemeye devam edebilirsiniz.  
+Tahmine dayalı kodlama modülü, bir gözden geçirme kümesi içinde modeli yönetmenin karmaşıklığını kolaylaştırmak ve modelinizi eğitmek için yinelemeli bir yaklaşım sağlayarak eKeşif (Premium) içindeki makine öğrenmesi özellikleriyle daha hızlı çalışmaya başlamanızı sağlayacak şekilde tasarlanmıştır. Başlamak için bir model oluşturabilir, ilgili veya uygun olmayan en az 50 öğe etiketleyebilirsiniz. Sistem, inceleme kümesindeki her öğeye tahmin puanları uygulamak için bu eğitimi kullanır. Bu, öğeleri tahmin puanına göre filtrelemenize olanak tanır ve bu sayede önce en ilgili (veya ilgili olmayan) öğeleri gözden geçirebilirsiniz. Modelleri daha yüksek doğruluk ve geri çağırma oranlarıyla eğitmek istiyorsanız, model sabit olana kadar sonraki eğitim turlarında öğeleri etiketlemeye devam edebilirsiniz.  
 
 ## <a name="the-predictive-coding-workflow"></a>Tahmine dayalı kodlama iş akışı
 

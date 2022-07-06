@@ -17,19 +17,17 @@ search.appverid:
 ms.assetid: f5caf497-5e8d-4b7a-bfff-d02942f38150
 ms.custom:
 - seo-marvel-apr2020
-description: Artık etkin olmayan Microsoft 365 posta kutusunun içeriğini korumanız gerekmediğinde, etkin olmayan posta kutusunu kalıcı olarak silebilirsiniz.
-ms.openlocfilehash: 1f45e5ce3aca79e4f5abbc13442876ecbb22e90c
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Artık Microsoft 365 etkin olmayan posta kutusunun içeriğini korumanız gerekmediğinde, etkin olmayan posta kutusunu kalıcı olarak silebilirsiniz.
+ms.openlocfilehash: a8bdd0cb98d744b6c64f651b7b7bb1754ff4f12e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017952"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634499"
 ---
 # <a name="delete-an-inactive-mailbox"></a>Etkin olmayan posta kutusunu silme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Etkin olmayan posta kutusu, kuruluşunuzdan ayrılan eski bir çalışanın e-postasını korumak için kullanılır. Artık etkin olmayan posta kutusunun içeriğini korumanız gerekmediğinde, saklamayı kaldırarak etkin olmayan posta kutusunu kalıcı olarak silebilirsiniz. Ayrıca, etkin olmayan bir posta kutusuna birden çok ayrı tutma yerleştirilebilir. Örneğin, etkin olmayan bir posta kutusu Dava Tutma'ya ve bir veya daha fazla In-Place Ayrı Tutma'ya yerleştirilebilir. Ayrıca, etkin olmayan posta kutusuna Microsoft 365 saklama uygulanabilir. Silmek için etkin olmayan bir posta kutusundan tüm saklama ve saklama ilkelerini kaldırmanız gerekir. Saklama ve saklama ilkelerini kaldırdıktan sonra, etkin olmayan posta kutusu silinmek üzere işaretlenir ve işlendikten sonra kalıcı olarak silinir.
+Etkin olmayan posta kutusu, kuruluşunuzdan ayrılan eski bir çalışanın e-postasını korumak için kullanılır. Artık etkin olmayan posta kutusunun içeriğini korumanız gerekmediğinde, saklamayı kaldırarak etkin olmayan posta kutusunu kalıcı olarak silebilirsiniz. Ayrıca, etkin olmayan bir posta kutusuna birden çok ayrı tutma yerleştirilebilir. Örneğin, etkin olmayan bir posta kutusu Dava Tutma'ya ve bir veya daha fazla In-Place Ayrı Tutma'ya yerleştirilebilir. Ayrıca, microsoft 365 saklama etkin olmayan posta kutusuna uygulanabilir. Silmek için etkin olmayan bir posta kutusundan tüm saklama ve saklama ilkelerini kaldırmanız gerekir. Saklama ve saklama ilkelerini kaldırdıktan sonra, etkin olmayan posta kutusu silinmek üzere işaretlenir ve işlendikten sonra kalıcı olarak silinir.
   
 > [!IMPORTANT]
 > Posta kutusu içeriğini korumak için farklı yöntemlerle yatırım yapmaya devam ettikçe, Exchange yönetim merkezinde In-Place Tutmaların kullanımdan kaldırılıp kaldırılamını duyuruyoruz. Bu, etkin olmayan bir posta kutusu oluşturmak için Dava Tutmaları ve bekletme ilkelerini kullanmanız gerektiği anlamına gelir. 1 Temmuz 2020'den itibaren Exchange Online'da yeni In-Place Tutmaları oluşturamayacaksınız. Ancak, etkin olmayan bir posta kutusuna yerleştirilen In-Place Ayrı Tutmanın bekleme süresini de değiştirebilirsiniz. Ancak 1 Ekim 2020'den itibaren saklama süresini değiştiremezsiniz. Etkin olmayan bir posta kutusunu yalnızca In-Place Ayrı Tut'unu kaldırarak silebilirsiniz. In-Place Ayrı Tutma'da bulunan etkin olmayan posta kutuları, ayrı tutma kaldırılana kadar korunur. In-Place Tutmaların kullanımdan kaldırılması hakkında daha fazla bilgi için bkz. [Eski eKeşif araçlarının kullanımdan kaldırılması](legacy-ediscovery-retirement.md).
@@ -38,7 +36,7 @@ Etkin olmayan posta kutusundan ayrı tutmalar kaldırıldıktan sonra ne olacağ
   
 ## <a name="before-you-delete-an-inactive-mailbox"></a>Etkin olmayan posta kutusunu silmeden önce
 
-- Etkin olmayan posta kutusundan ayrı tutmaları kaldırmak için powershell Exchange Online kullanmanız gerekir. Bu yordamlar için Exchange yönetim merkezini (EAC) veya Microsoft Purview uyumluluk portalını kullanamazsınız. Exchange Online PowerShell'i kullanmaya yönelik adım adım yönergeler için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+- Etkin olmayan posta kutusundan ayrı tutmaları kaldırmak için powershell Exchange Online kullanmanız gerekir. Bu yordamlar için Exchange yönetim merkezini (EAC) veya Microsoft Purview uyumluluk portalı kullanamazsınız. Exchange Online PowerShell'i kullanmaya yönelik adım adım yönergeler için bkz. [PowerShell'Exchange Online bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Etkin olmayan bir posta kutusunun içeriğini başka bir posta kutusuna kopyalayarak saklamayı kaldırabilir ve etkin olmayan bir posta kutusunu silebilirsiniz. Ayrıntılar için bkz. [Office 365'da etkin olmayan posta kutusunu geri yükleme](restore-an-inactive-mailbox.md).
 
@@ -50,7 +48,7 @@ Etkin olmayan posta kutusundan ayrı tutmalar kaldırıldıktan sonra ne olacağ
 
 Daha önce belirtildiği gibi, etkin olmayan bir posta kutusuna Bir Dava Tutma, In-Place Saklama veya saklama ilkesi yerleştirilebilir. İlk adım, etkin olmayan bir posta kutusunda tutmaları belirlemektir.
   
-[PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell)ve ardından kuruluşunuzdaki tüm etkin olmayan posta kutularının saklama bilgilerini görüntülemek için aşağıdaki komutu çalıştırın.
+[Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell)ve ardından kuruluşunuzdaki tüm etkin olmayan posta kutularının saklama bilgilerini görüntülemek için aşağıdaki komutu çalıştırın.
   
 ```powershell
 Get-Mailbox -InactiveMailboxOnly | FL DisplayName,Name,IsInactiveMailbox,LitigationHoldEnabled,InPlaceHolds

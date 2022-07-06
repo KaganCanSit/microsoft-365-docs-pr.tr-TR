@@ -15,17 +15,15 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Microsoft Purview eKeşif (Premium) durumundaki içeriği gözden geçirirken makine öğrenmesi tabanlı ayrıcalıklı içerik algılamasını kullanmak için avukat-istemci ayrıcalık algılama modelini kullanın.
-ms.openlocfilehash: 359dccc041a0655ade291a37e511038a50148f7b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Bir Microsoft Purview eKeşif (Premium) olaydaki içeriği gözden geçirirken makine öğrenmesi tabanlı ayrıcalıklı içerik algılamasını kullanmak için avukat-istemci ayrıcalık algılama modelini kullanın.
+ms.openlocfilehash: 9f81ff216ecf0045aec69191b3a61916b6ea3081
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094041"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624641"
 ---
 # <a name="set-up-attorney-client-privilege-detection-in-ediscovery-premium"></a>eBulma'da avukat-istemci ayrıcalık algılamayı ayarlama (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Herhangi bir eBulma işleminin gözden geçirme aşamasının önemli ve maliyetli bir yönü, ayrıcalıklı içerik için belgeleri gözden geçirmektir. Microsoft Purview eKeşif (Premium), bu süreci daha verimli hale getirmek için makine öğrenmesi tabanlı ayrıcalıklı içerik algılaması sağlar. Bu özellik *, avukat-istemci ayrıcalık algılama* olarak adlandırılır.
 
@@ -57,19 +55,19 @@ Avukat-istemci ayrıcalık algılama modelini etkinleştirmek için kuruluşunuz
 
 ### <a name="step-1-turn-on-attorney-client-privilege-detection"></a>1. Adım: Avukat-istemci ayrıcalık algılamayı açma
 
-Kuruluşunuzda eBulma Yöneticisi olan bir kişi (eBulma Yöneticisi rol grubundaki eBulma Yöneticisi alt grubunun üyesi) modeli eBulma (Premium) vakalarınızda kullanılabilir hale getirmelidir.
+Kuruluşunuzda eBulma Yöneticisi olan bir kişi (eBulma Yöneticisi rol grubundaki eBulma Yöneticisi alt grubunun üyesi) modeli eBulma (Premium) durumlarınızda kullanılabilir hale getirmelidir.
 
-1. Microsoft Purview uyumluluk portalında [eBulma (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) seçeneğine gidin ve **eBulma (Premium) ayarları'na** tıklayın.
+1. Microsoft Purview uyumluluk portalı [, eBulma (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) seçeneğine gidin ve **ardından eBulma (Premium) ayarları'na** tıklayın.
 
    ![eBulma (Premium) ayarlarını seçin](..\media\HistoricalVersions1.png)
 
-2. **Ayarlar** sayfasında **Analiz** sekmesini seçin ve ardından **Avukat-istemci ayrıcalık algılama** iki durumlu düğmesini açık konuma getirin.
+2. **Ayarlar** sayfasında **Analiz** sekmesini seçin ve **ardından Avukat-istemci ayrıcalık algılama** iki durumlu düğmesini açık konuma getirin.
 
    ![Avukat-istemci ayrıcalık algılamasını açmak için iki durumlu düğmeyi tıklatın](..\media\TurnOnAttorneyClientPrivilegeDetection.png)
 
 3. Değişikliği kaydetmek için **Kaydet'e** tıklayın.
 
-### <a name="step-2-upload-a-list-of-attorneys-optional"></a>2. Adım: Avukat listesini Upload (isteğe bağlı)
+### <a name="step-2-upload-a-list-of-attorneys-optional"></a>2. Adım: Avukat listesini karşıya yükleme (isteğe bağlı)
 
 Avukat-istemci ayrıcalık algılama modelinden tam olarak yararlanmak ve daha önce açıklanan **Has Attorney** veya **Potansiyel Ayrıcalıklı** algılama sonuçlarını kullanmak için, kuruluşunuzda çalışan avukatlar ve hukuk personeli için e-posta adreslerinin bir listesini karşıya yüklemenizi öneririz.
 
@@ -77,7 +75,7 @@ Avukat-istemci ayrıcalık algılama modeli tarafından kullanılmak üzere bir 
 
 1. Bir .csv dosyası oluşturun (üst bilgi satırı olmadan) ve her uygun kişinin e-posta adresini ayrı bir satıra ekleyin. Bu dosyayı yerel bilgisayarınıza kaydedin.
 
-2. eBulma (Premium) **Ayarlar** sayfasında **Analiz** sekmesini seçin.
+2. eBulma (Premium) **Ayarları** sayfasında **Analiz** sekmesini seçin.
 
    **Avukat-istemci ayrıcalık** sayfası görüntülenir ve **Avukat-müşteri ayrıcalık algılama** iki durumlu düğmesi açılır.
 
@@ -111,7 +109,7 @@ Gözden geçirme sürecinizde avukat-istemci ayrıcalık algılamasının sonuç
 
 ### <a name="step-2-analyze-a-review-set"></a>2. Adım: Gözden geçirme kümesini analiz etme
 
-Belgeleri bir gözden geçirme kümesinde analiz ettiğinizde, avukat-istemci ayrıcalık algılama modeli de çalışır ve ilgili özellikler ( [nasıl çalışır?](#how-does-it-work)) gözden geçirme kümesindeki her belgeye eklenir. Gözden geçirme kümesindeki verileri analiz etme hakkında daha fazla bilgi için bkz. [eBulma(Premium) içinde bir gözden geçirme kümesindeki verileri çözümleme](analyzing-data-in-review-set.md).
+Belgeleri bir gözden geçirme kümesinde analiz ettiğinizde, avukat-istemci ayrıcalık algılama modeli de çalışır ve ilgili özellikler ( [nasıl çalışır?](#how-does-it-work)) gözden geçirme kümesindeki her belgeye eklenir. Gözden geçirme kümesindeki verileri analiz etme hakkında daha fazla bilgi için bkz. [eBulma (Premium)'da bir gözden geçirme kümesindeki verileri analiz](analyzing-data-in-review-set.md) etme.
 
 ### <a name="step-3-use-the-smart-tag-group-for-review-of-privileged-content"></a>3. Adım: Ayrıcalıklı içeriği gözden geçirmek için akıllı etiket grubunu kullanma
 

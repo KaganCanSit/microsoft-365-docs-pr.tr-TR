@@ -19,17 +19,15 @@ ms.assetid: aaca8987-5b62-458b-9882-c28476a66918
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-description: Posta kutusu denetim günlüğü varsayılan olarak Microsoft 365 ('varsayılan posta kutusu denetimi' veya 'posta kutusu denetimi varsayılan olarak açık' olarak da adlandırılır) etkindir. Bu yapılandırma, posta kutusu sahipleri, temsilciler ve yöneticiler tarafından gerçekleştirilen belirli eylemlerin otomatik olarak posta kutusu denetim günlüğüne kaydedildiği ve burada posta kutusunda gerçekleştirilen etkinlikleri arayabileceğiniz anlamına gelir.
-ms.openlocfilehash: d5d966cf4d5b7c58c15df4ce8d4039331ebca8c4
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+description: Posta kutusu denetim günlüğü Microsoft 365'te varsayılan olarak açıktır ('varsayılan posta kutusu denetimi' veya 'posta kutusu denetimi varsayılan olarak açık' olarak da adlandırılır). Bu yapılandırma, posta kutusu sahipleri, temsilciler ve yöneticiler tarafından gerçekleştirilen belirli eylemlerin otomatik olarak posta kutusu denetim günlüğüne kaydedildiği ve burada posta kutusunda gerçekleştirilen etkinlikleri arayabileceğiniz anlamına gelir.
+ms.openlocfilehash: c59e1e552f6598287c10adfb2661ec4d358529f9
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972639"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627403"
 ---
 # <a name="manage-mailbox-auditing"></a>Posta kutusu denetimini yönetme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Ocak 2019'dan itibaren Microsoft, tüm kuruluşlar için posta kutusu denetim günlüğünü varsayılan olarak açmalıdır. Bu, posta kutusu sahipleri, temsilciler ve yöneticiler tarafından gerçekleştirilen belirli eylemlerin otomatik olarak günlüğe kaydedileceği ve posta kutusu denetim günlüğünde bunları aradığınızda ilgili posta kutusu denetim kayıtlarının kullanılabilir olacağı anlamına gelir. Posta kutusu denetimi varsayılan olarak açılmadan önce, bunu kuruluşunuzdaki her kullanıcı posta kutusu için el ile etkinleştirmeniz gerekiyordu.
 
@@ -43,7 +41,7 @@ Posta kutusu denetiminin varsayılan olarak bazı avantajları şunlardır:
 > [!NOTE]
 >
 > - Posta kutusu denetiminin varsayılan olarak açık olarak yayımlanması hakkında hatırlamanız gereken önemli şey şudur: Posta kutusu denetimini yönetmek için hiçbir şey yapmanız gerekmez. Ancak, daha fazla bilgi edinmek, posta kutusu denetimini varsayılan ayarlardan özelleştirmek veya tamamen kapatmak için bu makale size yardımcı olabilir.
-> - Varsayılan olarak, Microsoft Purview uyumluluk portalında veya Office 365 Yönetim Etkinliği API'sinde denetim günlüğü aramalarında yalnızca E5 kullanıcıları için posta kutusu denetim olayları kullanılabilir. Daha fazla bilgi için bu makalenin [Daha fazla bilgi](#more-information) bölümüne bakın.
+> - Varsayılan olarak, Microsoft Purview uyumluluk portalı veya Office 365 Yönetim Etkinliği API'sinde denetim günlüğü aramalarında yalnızca E5 kullanıcıları için posta kutusu denetim olayları kullanılabilir. Daha fazla bilgi için bu makalenin [Daha fazla bilgi](#more-information) bölümüne bakın.
 
 ## <a name="verify-mailbox-auditing-on-by-default-is-turned-on"></a>Posta kutusu denetiminin varsayılan olarak açık olduğunu doğrulama
 
@@ -68,7 +66,7 @@ Aşağıdaki tabloda, şu anda varsayılan olarak üzerinde posta kutusu denetim
 |---|:---:|
 |Kullanıcı posta kutuları|![Onay işareti.](../media/checkmark.png)|
 |Paylaşılan posta kutuları|![Onay işareti.](../media/checkmark.png)|
-|Microsoft 365 Grubu posta kutuları|![Onay işareti.](../media/checkmark.png)|
+|Microsoft 365 Grup posta kutuları|![Onay işareti.](../media/checkmark.png)|
 |Kaynak posta kutuları||
 |Ortak klasör posta kutuları||
 
@@ -104,15 +102,15 @@ Aşağıdaki tabloda, kullanıcı posta kutuları ve paylaşılan posta kutular�
 |**FolderBind**|Bir posta kutusu klasörüne erişildi. Yönetici veya temsilci posta kutusunu açtığında da bu eylem günlüğe kaydedilir. <br/><br/> **Not**: Temsilciler tarafından gerçekleştirilen klasör bağlama eylemleri için denetim kayıtları bir araya getirilir. 24 saatlik bir süre içinde tek tek klasör erişimi için bir denetim kaydı oluşturulur.|![Onay işareti.](../media/checkmark.png)|![Onay işareti.](../media/checkmark.png)||
 |**HardDelete**|Kurtarılabilir Öğeler klasöründen bir ileti temizlendi.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|
 |**MailboxLogin**|Kullanıcı posta kutusunda oturum açtı.|||![Onay işareti](../media/checkmark.png)|
-|**MailItemsAccessed**|**Not**: Bu değer yalnızca E5/A5/G5 lisansına sahip kullanıcılar için kullanılabilir. Daha fazla bilgi için bkz. [Microsoft Purview Denetimini Ayarlama (Premium)](set-up-advanced-audit.md). <br/><br/> Posta verilerine posta protokolleri ve istemciler tarafından erişilir.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti](../media/checkmark.png)<sup>\*</sup>|
+|**MailItemsAccessed**|**Not**: Bu değer yalnızca E5/A5/G5 lisansına sahip kullanıcılar için kullanılabilir. Daha fazla bilgi için bkz[. Microsoft Purview Denetim ayarlama (Premium)](set-up-advanced-audit.md). <br/><br/> Posta verilerine posta protokolleri ve istemciler tarafından erişilir.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti](../media/checkmark.png)<sup>\*</sup>|
 |**MessageBind**|**Not**: Bu değer yalnızca E5/A5/G5 lisansı *olmayan* kullanıcılar için kullanılabilir. <br/><br/> Önizleme bölmesinde bir ileti görüntülendi veya bir yönetici tarafından açıldı.|![Onay işareti](../media/checkmark.png)|||
 |**ModifyFolderPermissions**|Bu değer bir posta kutusu eylemi olarak kabul edilmiş olsa da, **UpdateFolderPermissions** eylemine zaten dahil edilmiş ve ayrı olarak denetlenmiyor. Başka bir deyişle, bu değeri kullanmayın.||||
 |**Hareket**|İleti başka bir klasöre taşındı.|![Onay işareti.](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|
 |**MoveToDeletedItems**|Bir ileti silindi ve Silinmiş Öğeler klasörüne taşındı.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti](../media/checkmark.png)<sup>\*</sup>|
 |**RecordDelete**|Kayıt olarak etiketlenmiş bir öğe geçici olarak silindi (Kurtarılabilir Öğeler klasörüne taşındı). Kayıt olarak etiketlenen öğeler kalıcı olarak silinemez (Kurtarılabilir Öğeler klasöründen temizlenir).|![Onay işareti.](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|
 |**RemoveFolderPermissions**|Bu değer bir posta kutusu eylemi olarak kabul edilmiş olsa da, **UpdateFolderPermissions** eylemine zaten dahil edilmiş ve ayrı olarak denetlenmiyor. Başka bir deyişle, bu değeri kullanmayın.||||
-|**SearchQueryInitiated**|**Not**: Bu değer yalnızca E5/A5/G5 lisansına sahip kullanıcılar için kullanılabilir. Daha fazla bilgi için bkz. [Microsoft Purview Denetimini Ayarlama (Premium)](set-up-advanced-audit.md). <br/><br/> Bir kişi posta kutusunda öğeleri aramak için Outlook (Windows, Mac, iOS, Android veya Web üzerinde Outlook) veya Windows 10 için Posta uygulamasını kullanır.|||![Onay işareti](../media/checkmark.png)|
-|**Gönderin**|**Not**: Bu değer yalnızca E5/A5/G5 lisansına sahip kullanıcılar için kullanılabilir. Daha fazla bilgi için bkz. [Microsoft Purview Denetimini Ayarlama (Premium)](set-up-advanced-audit.md). <br/><br/> Kullanıcı bir e-posta iletisi gönderir, e-posta iletisini yanıtlar veya e-posta iletisini iletir.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>||![Onay işareti](../media/checkmark.png)<sup>\*</sup>|
+|**SearchQueryInitiated**|**Not**: Bu değer yalnızca E5/A5/G5 lisansına sahip kullanıcılar için kullanılabilir. Daha fazla bilgi için bkz[. Microsoft Purview Denetim ayarlama (Premium)](set-up-advanced-audit.md). <br/><br/> Bir kişi posta kutusunda öğeleri aramak için Outlook 'u (Windows, Mac, iOS, Android veya Web üzerinde Outlook) veya Windows 10 için Posta uygulamasını kullanır.|||![Onay işareti](../media/checkmark.png)|
+|**Gönderin**|**Not**: Bu değer yalnızca E5/A5/G5 lisansına sahip kullanıcılar için kullanılabilir. Daha fazla bilgi için bkz[. Microsoft Purview Denetim ayarlama (Premium)](set-up-advanced-audit.md). <br/><br/> Kullanıcı bir e-posta iletisi gönderir, e-posta iletisini yanıtlar veya e-posta iletisini iletir.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>||![Onay işareti](../media/checkmark.png)<sup>\*</sup>|
 |**GöndermeLer**|SendAs izni kullanılarak bir ileti gönderildi. Bu, başka bir kullanıcının iletiyi posta kutusu sahibinden gelmiş gibi gönderdiği anlamına gelir.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti](../media/checkmark.png)<sup>\*</sup>||
 |**SendOnBehalf**|SendOnBehalf izni kullanılarak bir ileti gönderildi. Bu, başka bir kullanıcının iletiyi posta kutusu sahibi adına gönderdiği anlamına gelir. İleti, iletinin kimin adına gönderildiğini ve iletiyi gerçekten kimin gönderdiğini alıcıya gösterir.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti](../media/checkmark.png)<sup>\*</sup>||
 |**SoftDelete**|İleti kalıcı olarak silinmiş veya Silinmiş Öğeler klasöründen silinmiş. Geçici olarak silinen öğeler Kurtarılabilir Öğeler klasörüne taşınır.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti](../media/checkmark.png)<sup>\*</sup>|
@@ -129,7 +127,7 @@ Aşağıdaki tabloda, kullanıcı posta kutuları ve paylaşılan posta kutular�
 
 Posta kutusu denetimi varsayılan olarak Microsoft 365 Grubu posta kutularına posta kutusu denetim günlüğü getirir, ancak günlüğe kaydedilenleri özelleştiremezsiniz (herhangi bir oturum açma türü için günlüğe kaydedilen posta kutusu eylemlerini ekleyemez veya kaldıramazsınız).
 
-Aşağıdaki tabloda, her oturum açma türü için grup posta kutuları Microsoft 365 varsayılan olarak günlüğe kaydedilen posta kutusu eylemleri açıklanmaktadır.
+Aşağıdaki tabloda, her oturum açma türü için Microsoft 365 Grubu posta kutularına varsayılan olarak günlüğe kaydedilen posta kutusu eylemleri açıklanmaktadır.
 
 Microsoft 365 Grubu posta kutusuna Tam Erişim izni olan bir yöneticinin temsilci olarak kabul edildiğini unutmayın.
 
@@ -153,7 +151,7 @@ Değeri kullanıcı posta kutularında veya paylaşılan posta kutularında gör
 Get-Mailbox -Identity <MailboxIdentity> | Format-List DefaultAuditSet
 ```
 
-değeri Microsoft 365 grup posta kutularında görüntülemek için değerini paylaşılan posta kutusunun adı, diğer adı veya e-posta adresiyle değiştirin \<MailboxIdentity\> ve powershell'Exchange Online aşağıdaki komutu çalıştırın:
+Değeri Microsoft 365 grup posta kutularında görüntülemek için değerini paylaşılan posta kutusunun adı, diğer adı veya e-posta adresiyle değiştirin \<MailboxIdentity\> ve Exchange Online PowerShell'de aşağıdaki komutu çalıştırın:
 
 ```PowerShell
 Get-Mailbox -Identity <MailboxIdentity> -GroupMailbox | Format-List DefaultAuditSet
@@ -161,7 +159,7 @@ Get-Mailbox -Identity <MailboxIdentity> -GroupMailbox | Format-List DefaultAudit
 
 Değer `Admin, Delegate, Owner` aşağıdakileri gösterir:
 
-- Üç oturum açma türünün de varsayılan posta kutusu eylemleri denetleniyor. Microsoft 365 Grubu posta kutularında göreceğiniz tek değer budur.
+- Üç oturum açma türünün de varsayılan posta kutusu eylemleri denetleniyor. Bu, Microsoft 365 Grubu posta kutularında göreceğiniz tek değerdir.
 - Yönetici, kullanıcı posta kutusunda veya paylaşılan posta kutusunda herhangi bir oturum açma türü için denetlenen posta kutusu eylemlerini *değiştirmedi* . Kuruluşunuzda posta kutusu denetimi varsayılan olarak açıldıktan sonra bu varsayılan durumdur.
 
 Yönetici bir oturum açma türü için denetlenen posta kutusu eylemlerini değiştirdiyse (**Set-Mailbox** cmdlet'indeki *AuditAdmin*, *AuditDelegate* veya *AuditOwner* parametrelerini kullanarak), özellik değeri farklı olacaktır.
@@ -180,7 +178,7 @@ Daha fazla bilgi için bu makalenin [Varsayılan olarak günlüğe kaydedilen po
 Kullanıcı posta kutularında veya paylaşılan posta kutularında oturum açmakta olan posta kutusu eylemlerini görmek için yerine \<MailboxIdentity\> posta kutusunun adını, diğer adını, e-posta adresini veya kullanıcı asıl adını (kullanıcı adı) yazın ve Exchange Online PowerShell'de aşağıdaki komutlardan birini veya daha fazlasını çalıştırın.
 
 > [!NOTE]
-> Microsoft 365 Grubu posta kutuları için aşağıdaki **Get-Mailbox** komutlarına anahtarı ekleyebilirsiniz `-GroupMailbox` ancak döndürülen değerlere inanmayın. Microsoft 365 Grubu posta kutuları için denetlenen varsayılan ve statik posta kutusu eylemleri, bu makalenin önceki bölümlerindeki [Microsoft 365 Grubu posta kutuları için posta kutusu eylemleri](#mailbox-actions-for-microsoft-365-group-mailboxes) bölümünde açıklanmıştır.
+> Microsoft 365 Grubu posta kutuları için aşağıdaki **Get-Mailbox** komutlarına anahtarı ekleyebilirsiniz `-GroupMailbox` ancak döndürülen değerlere inanmayın. Microsoft 365 Grup posta kutuları için denetlenen varsayılan ve statik posta kutusu eylemleri, bu makalenin önceki bölümlerinde microsoft [365 Grubu posta kutuları için posta kutusu eylemleri](#mailbox-actions-for-microsoft-365-group-mailboxes) bölümünde açıklanmıştır.
 
 #### <a name="owner-actions"></a>Sahip eylemleri
 
@@ -194,7 +192,7 @@ Get-Mailbox -Identity <MailboxIdentity> | Select-Object -ExpandProperty AuditOwn
 Get-Mailbox -Identity <MailboxIdentity> | Select-Object -ExpandProperty AuditDelegate
 ```
 
-#### <a name="admin-actions"></a>Yönetici eylemleri
+#### <a name="admin-actions"></a>eylemleri Yönetici
 
 ```PowerShell
 Get-Mailbox -Identity <MailboxIdentity> | Select-Object -ExpandProperty AuditAdmin
@@ -244,7 +242,7 @@ Kullandığınız yöntemden bağımsız olarak, kullanıcı posta kutularında 
 ### <a name="restore-the-default-mailbox-actions"></a>Varsayılan posta kutusu eylemlerini geri yükleme
 
 > [!NOTE]
-> Aşağıdaki yordamlar Microsoft 365 Grubu posta kutuları için geçerli değildir ([burada](#mailbox-actions-for-microsoft-365-group-mailboxes) açıklandığı gibi varsayılan eylemlerle sınırlıdır).
+> Aşağıdaki yordamlar Microsoft 365 Grubu posta kutuları için geçerli değildir ( [burada](#mailbox-actions-for-microsoft-365-group-mailboxes) açıklandığı gibi varsayılan eylemlerle sınırlıdır).
 
 Kullanıcı posta kutusunda veya paylaşılan posta kutusunda denetlenen posta kutusu eylemlerini özelleştirdiyseniz, bu söz dizimini kullanarak bir veya tüm oturum açma türleri için varsayılan posta kutusu eylemlerini geri yükleyebilirsiniz:
 
@@ -260,7 +258,7 @@ Bu örnek, posta kutusu mark@contoso.onmicrosoft.com tüm oturum açma türleri 
 Set-Mailbox -Identity mark@contoso.onmicrosoft.com -DefaultAuditSet Admin,Delegate,Owner
 ```
 
-Bu örnek, posta kutusu chris@contoso.onmicrosoft.com Yönetici oturum açma türü için varsayılan denetlenen posta kutusu eylemlerini geri yükler, ancak Temsilci ve Sahip oturum açma türleri için özelleştirilmiş denetimli posta kutusu eylemlerini bırakır.
+Bu örnek, posta kutusu chris@contoso.onmicrosoft.com Yönetici oturum açma türü için varsayılan denetimli posta kutusu eylemlerini geri yükler, ancak Temsilci ve Sahip oturum açma türleri için özelleştirilmiş denetimli posta kutusu eylemlerini bırakır.
 
 ```PowerShell
 Set-Mailbox -Identity chris@contoso.onmicrosoft.com -DefaultAuditSet Admin
@@ -304,7 +302,7 @@ Ancak, eylemlerin nerede gerçekleştiğine bakılmaksızın, belirtilen kullan�
 
 - Atlanan kullanıcılar tarafından gerçekleştirilen posta kutusu sahibi eylemleri günlüğe kaydedilmez.
 - Diğer kullanıcıların posta kutularında atlanan kullanıcılar tarafından gerçekleştirilen temsilci eylemleri (paylaşılan posta kutuları dahil) günlüğe kaydedilmez.
-- Atlanan kullanıcılar tarafından gerçekleştirilen yönetici eylemleri günlüğe kaydedilmez.
+- Atlanan kullanıcılar tarafından gerçekleştirilen Yönetici eylemleri günlüğe kaydedilmez.
 
 Belirli bir kullanıcının posta kutusu denetim günlüğünü atlamak için değerini kullanıcının adı, e-posta adresi, diğer ad veya kullanıcı asıl adı (kullanıcı adı) ile değiştirin \<MailboxIdentity\> ve aşağıdaki komutu çalıştırın:
 
@@ -322,11 +320,11 @@ Get-MailboxAuditBypassAssociation -Identity <MailboxIdentity> | Format-List Audi
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- Posta kutusu denetim günlüğü tüm kuruluşlar için varsayılan olarak etkin olsa da, yalnızca E5 lisansına sahip kullanıcılar Microsoft Purview uyumluluk portalında veya [Office 365 Yönetim Etkinliği](/office/office-365-management-api/office-365-management-activity-api-reference) [API'sindeki denetim günlüğü aramalarında posta kutusu denetim günlüğü olaylarını](search-the-audit-log-in-security-and-compliance.md) **varsayılan olarak** döndürür.
+- Posta kutusu denetim günlüğü tüm kuruluşlar için varsayılan olarak etkin olsa da, yalnızca E5 lisansına sahip kullanıcılar Microsoft Purview uyumluluk portalı veya [Office 365 Yönetim Etkinliği](/office/office-365-management-api/office-365-management-activity-api-reference) [API'sindeki denetim günlüğü aramalarında posta kutusu denetim günlüğü olaylarını](search-the-audit-log-in-security-and-compliance.md) **varsayılan olarak** döndürür.
 
   E5/A5/G5 lisansı olmayan kullanıcıların posta kutusu denetim günlüğü girdilerini almak için aşağıdaki geçici çözümlerden birini kullanabilirsiniz:
 
-  - Tek tek posta kutularında posta kutusu denetimini el ile etkinleştirin (komutunu çalıştırın). `Set-Mailbox -Identity <MailboxIdentity> -AuditEnabled $true` Bunu yaptıktan sonra, Microsoft Purview uyumluluk portalında veya Office 365 Yönetim Etkinliği API'sini kullanarak denetim günlüğü aramalarını kullanabilirsiniz.
+  - Tek tek posta kutularında posta kutusu denetimini el ile etkinleştirin (komutunu çalıştırın). `Set-Mailbox -Identity <MailboxIdentity> -AuditEnabled $true` Bunu yaptıktan sonra, Microsoft Purview uyumluluk portalı veya Office 365 Yönetim Etkinliği API'sini kullanarak denetim günlüğü aramalarını kullanabilirsiniz.
 
     > [!NOTE]
     > Posta kutusu denetimi posta kutusunda zaten etkin görünüyorsa ancak aramalarınız sonuç döndürmezse *AuditEnabled* parametresinin `$false` değerini olarak değiştirin ve sonra öğesine geri dönün `$true`.
@@ -368,4 +366,4 @@ Get-MailboxAuditBypassAssociation -Identity <MailboxIdentity> | Format-List Audi
 
 - Uyumluluk Merkezi'nde bir posta kutusu beklemeye alınırsa veya bekletme ilkesine atanırsa, denetim günlüğü kayıtları posta kutusunun *AuditLogAgeLimit* özelliği (varsayılan olarak 90 gün) tarafından tanımlanan süre boyunca korunur. Beklemedeki posta kutuları için denetim günlüğü kayıtlarını daha uzun süre tutmak için, posta kutusunun *AuditLogAgeLimit* değerini artırmanız gerekir.
 
-- Çok coğrafi bir ortamda, coğrafi bölgeler arası posta kutusu denetimi desteklenmez. Örneğin, kullanıcıya farklı bir coğrafi konumdaki paylaşılan posta kutusuna erişim izinleri atanmışsa, bu kullanıcı tarafından gerçekleştirilen posta kutusu eylemleri paylaşılan posta kutusunun posta kutusu denetim günlüğüne kaydedilmez. Exchange yönetici denetim olayları şu anda yalnızca varsayılan konum için kullanılabilir.
+- Çok coğrafi bir ortamda, coğrafi bölgeler arası posta kutusu denetimi desteklenmez. Örneğin, kullanıcıya farklı bir coğrafi konumdaki paylaşılan posta kutusuna erişim izinleri atanmışsa, bu kullanıcı tarafından gerçekleştirilen posta kutusu eylemleri paylaşılan posta kutusunun posta kutusu denetim günlüğüne kaydedilmez. Exchange yöneticisi denetim olayları şu anda yalnızca varsayılan konum için kullanılabilir.

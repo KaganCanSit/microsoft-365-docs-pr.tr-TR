@@ -16,22 +16,20 @@ search.appverid:
 - MET150
 description: Microsoft Purview uyumluluk portalı bir eBulma (Standart) olayıyla ilişkili İçerik aramalarının ve aramalarının istatistiklerini görüntülemek için arama istatistikleri özelliğini kullanmayı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: cc8e249f62b0dbfbeaa6bcf32e7873ca2ff5b36d
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: df1ebeeb7b420be3dbe6ccac6174078008b7f0e8
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318082"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623595"
 ---
 # <a name="view-statistics-for-ediscovery-search-results"></a>eBulma arama sonuçlarının istatistiklerini görüntüleme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-bir İçerik araması veya Microsoft Purview eBulma (Standart) olayıyla ilişkilendirilmiş bir arama oluşturup çalıştırdıktan sonra, tahmini arama sonuçlarıyla ilgili istatistikleri görüntüleyebilirsiniz. Bu, arama sonuçlarının özetini (arama açılır öğesi sayfasında görüntülenen tahmini arama sonuçlarının özetine benzer), arama sorgusuyla eşleşen öğelerin bulunduğu içerik konumlarının sayısı ve en çok eşleşen öğelere sahip içerik konumlarının kimliği gibi sorgu istatistiklerini içerir.
+İçerik araması veya Microsoft Purview eKeşif (Standart) servis talebiyle ilişkili bir arama oluşturup çalıştırdıktan sonra, tahmini arama sonuçlarıyla ilgili istatistikleri görüntüleyebilirsiniz. Bu, arama sonuçlarının özetini (arama açılır öğesi sayfasında görüntülenen tahmini arama sonuçlarının özetine benzer), arama sorgusuyla eşleşen öğelerin bulunduğu içerik konumlarının sayısı ve en çok eşleşen öğelere sahip içerik konumlarının kimliği gibi sorgu istatistiklerini içerir.
   
 Ayrıca, arama sorgusundaki her anahtar sözcüğün istatistiklerini döndürmek üzere arama yapılandırmak için anahtar sözcükler listesini kullanabilirsiniz. Bu, sorgudaki her anahtar sözcük tarafından döndürülen sonuç sayısını karşılaştırmanıza olanak tanır.
   
-Arama istatistiklerini bir CSV dosyasına da indirebilirsiniz. Bu, sonuçları karşılaştırmak ve raporları arama sonuçlarınız için hazırlamak için Excel'daki filtreleme ve sıralama özelliklerini kullanmanıza olanak tanır.
+Arama istatistiklerini bir CSV dosyasına da indirebilirsiniz. Bu, sonuçları karşılaştırmak ve raporları arama sonuçlarınız için hazırlamak için Excel'deki filtreleme ve sıralama özelliklerini kullanmanıza olanak tanır.
   
 ## <a name="get-statistics-for-searches"></a>Aramalar için istatistikleri alma
 
@@ -43,7 +41,7 @@ Arama istatistiklerini bir CSV dosyasına da indirebilirsiniz. Bu, sonuçları k
 
      VEYA
 
-   - **eKeşifBulma** >  **(Standart) seçeneğine** tıklayın, bir servis talebi seçin ve sonra açılır sayfayı görüntülemek için **Aramalar** sekmesinde bir arama seçin.
+   - **eBulma** > **eBulma (Standart)** seçeneğine tıklayın, bir servis talebi seçin ve sonra açılır sayfayı görüntülemek için **Aramalar** sekmesinde bir arama seçin.
 
 2. Seçili aramanın açılır sayfasında, **Arama istatistikleri** sekmesine tıklayın.
   
@@ -69,7 +67,7 @@ Bu bölümde, arama sorgusuyla ilgili istatistikler ve arama sorgusunun farklı 
 
 ![Koşul raporu.](../media/SearchContentReportNoKeywordList.png)
 
-- **Konum türü**: Sorgu istatistiklerinin uygulanabilecek içerik konumu türü. **Exchange** değeri posta kutusu konumunu, **SharePoint** değeri ise site konumunu gösterir.
+- **Konum türü**: Sorgu istatistiklerinin uygulanabilecek içerik konumu türü. **Exchange** değeri bir posta kutusu konumunu gösterir; **SharePoint** değeri site konumunu gösterir.
 
 - **Bölüm**: arama sorgusunun istatistikler için geçerli olan bölümü. **Birincil** , arama sorgusunun tamamını gösterir. **Anahtar sözcük** , satırdaki istatistiklerin belirli bir anahtar sözcük için olduğunu gösterir. Arama sorgusu için bir anahtar sözcük listesi kullanırsanız, sorgunun her bileşenine ilişkin istatistikler bu tabloya eklenir. Daha fazla bilgi için bkz. [Aramalar için anahtar sözcük istatistiklerini alma](#get-keyword-statistics-for-searches).
 

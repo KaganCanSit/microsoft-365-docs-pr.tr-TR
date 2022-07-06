@@ -12,12 +12,12 @@ ms.collection:
 - m365initiative-defender-office365
 description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'de kimlik avı saldırıları simülasyonu için oturum açma sayfaları oluşturmayı ve yönetmeyi öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: 5ecbdddfff4d528c1af8e20cf4d3831d3250eacc
-ms.sourcegitcommit: 03543c27c33427ac7f11af4c04fff35a181a2524
+ms.openlocfilehash: 7057f443675cb0715a41f78c80feb69cdc75d22c
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "66609292"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66640312"
 ---
 # <a name="login-pages-in-attack-simulation-training"></a>Saldırı simülasyonu eğitimindeki oturum açma sayfaları
 
@@ -73,7 +73,7 @@ Aşağıdaki konumlarda özel oturum açma sayfaları oluşturabilirsiniz:
    Yeni oluştur simgesine tıklayın ![.](../../media/m365-cc-sc-create-icon.png) Son kullanıcı oturum açma sayfası oluşturma sihirbazını başlatmak için **yeni oluşturun**.
 
    > [!NOTE]
-   > Yeni ![oluştur simgesi.](../../media/m365-cc-sc-create-icon.png) **Yeni oluştur** , simülasyon oluşturmanın yük seçimi adımı sırasında da kullanılabilir. Daha fazla bilgi için bkz. [Office 365 için Defender'de Saldırı benzetimi eğitimi ile kimlik avı saldırısı simülasyonu](attack-simulation-training.md) yapma.
+   > ![Yeni simge oluştur'u seçin.](../../media/m365-cc-sc-create-icon.png) **Yeni oluştur** , simülasyon veya simülasyon otomasyonu oluşturmanın yük seçimi adımında da kullanılabilir. Daha fazla bilgi için bkz [. Simülasyon oluşturma: Yük ve oturum açma sayfası seçme ve](attack-simulation-training.md#select-a-payload-and-login-page) [Simülasyon otomasyonu oluşturma: Yük ve oturum açma sayfası seçme](attack-simulation-training-simulation-automations.md#select-a-payload-and-login-page).
    >
    > Oluşturma sihirbazı sırasında herhangi bir noktada Kaydet **ve kapat'a** tıklayarak ilerlemenizi kaydedebilir ve oturum açma sayfasını daha sonra yapılandırmaya devam edebilirsiniz. **Oturum** açma **sayfalarında Kiracı oturum açma sayfaları** sekmesinde oturum açma sayfasını seçip Düzenle simgesine tıklayarak ![kaldığınız yerden devam edebilirsiniz.](../../media/m365-cc-sc-edit-icon.png) **Düzenle'yi seçin**. Kısmen tamamlanmış oturum açma sayfasında **Durum** değeri **Taslak** olacaktır.
 

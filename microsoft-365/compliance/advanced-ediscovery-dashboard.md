@@ -15,23 +15,21 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Gözden geçirme stratejinizi geliştirmenize yardımcı olacak eğilimleri veya önemli istatistikleri belirlemek üzere corpus'unuzu hızla analiz etmek üzere gözden geçirme kümeleri için Microsoft Purview eBulma (Premium) panosunu kullanın.
-ms.openlocfilehash: 00d4c6648d74fdf459965ed410dd43c73e698c23
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Gözden geçirme stratejinizi geliştirmenize yardımcı olacak eğilimleri veya önemli istatistikleri belirlemek üzere corpus'unuzu hızla analiz etmek üzere gözden geçirme kümeleri için Microsoft Purview eKeşif (Premium) panosunu kullanın.
+ms.openlocfilehash: 225cc0d732023322b87e0e04c2cca1455fb0ff87
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097876"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629067"
 ---
 # <a name="ediscovery-premium-dashboard-for-review-sets"></a>Gözden geçirme kümeleri için eBulma (Premium) panosu
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview eKeşif 'te (Premium) bazı durumlarda, gözden geçirilmesi gereken çok sayıda belgeniz ve e-posta iletileriniz olabilir. Gözden geçirme işlemine başlamadan önce, gözden geçirme stratejinizi geliştirmenize yardımcı olacak eğilimleri veya önemli istatistikleri belirlemek için corpus'unuzu hızla analiz etmek isteyebilirsiniz. Bunu yapmak için, corpus'unuzu hızla analiz etmek üzere gözden geçirme kümeleri için eBulma (Premium) panosunu kullanabilirsiniz.
+Microsoft Purview eKeşif 'da (Premium) bazı durumlarda, gözden geçirilmesi gereken çok büyük miktarda belgeniz ve e-posta iletileriniz olabilir. Gözden geçirme işlemine başlamadan önce, gözden geçirme stratejinizi geliştirmenize yardımcı olacak eğilimleri veya önemli istatistikleri belirlemek için corpus'unuzu hızla analiz etmek isteyebilirsiniz. Bunu yapmak için, gözden geçirme kümeleri için eBulma (Premium) panosunu kullanarak corpus'unuzu hızla analiz edebilirsiniz.
 
 ## <a name="step-1-create-a-widget-on-the-review-set-dashboard"></a>1. Adım: Gözden geçirme kümesi panosunda pencere öğesi oluşturma
 
-1. Microsoft Purview uyumluluk portalında, kuruluşunuzdaki servis taleplerinin listesini görüntülemek için **eBulma > eBulma (Premium)** bölümüne gidin.
+1. Microsoft Purview uyumluluk portalı, kuruluşunuzdaki servis taleplerinin listesini görüntülemek için **eBulma > eBulma (Premium)** bölümüne gidin.
   
 2. Mevcut bir servis talebini seçin.
   
@@ -39,7 +37,7 @@ Microsoft Purview eKeşif 'te (Premium) bazı durumlarda, gözden geçirilmesi g
   
 4. **Tek tek sonuçlar** açılan listesinde **Profil görünümünde ara'ya** tıklayın. 
 
-   ![DashbordPivot.](../media/dashboardpivot.png)
+   ![PanoPivot.](../media/dashboardpivot.png)
 
    **Arama profili görünümü** sayfası görüntülenir; bu sayfayı ilk kez görüntülüyorsanız, üç varsayılan pencere öğesi görüntülenir.
 
@@ -59,7 +57,7 @@ Microsoft Purview eKeşif 'te (Premium) bazı durumlarda, gözden geçirilmesi g
 
     a. Pencere öğesi başlık çubuğunda görüntülenen pencere öğesi için bir ad yazın. Bir pencere öğesini adlandırmak gereklidir, ancak pencere öğesi verilerini tanımlamak yararlı olur.
 
-    b. **Özet seç** açılan listesinde pencere öğesi verileri için kullanılacak bir özellik seçin. Bu listedeki öğeler, gözden geçirme kümesindeki öğelerin aranabilir özellikleridir. Bu özelliklerin açıklaması için bkz[. eBulma'da (Premium) belge meta veri alanları](document-metadata-fields-in-Advanced-eDiscovery.md). Pencere öğesinin özet seçenekleri, bu konunun **Aranabilir alan adı** sütununda listelenir.
+    b. **Özet seç** açılan listesinde pencere öğesi verileri için kullanılacak bir özellik seçin. Bu listedeki öğeler, gözden geçirme kümesindeki öğelerin aranabilir özellikleridir. Bu özelliklerin açıklaması için bkz [. eBulma'da (Premium) belge meta veri alanları](document-metadata-fields-in-Advanced-eDiscovery.md). Pencere öğesinin özet seçenekleri, bu konunun **Aranabilir alan adı** sütununda listelenir.
 
     c. Seçili özet özelliğindeki verileri görüntülemek için bir grafik türü seçin.
 
@@ -69,7 +67,7 @@ Microsoft Purview eKeşif 'te (Premium) bazı durumlarda, gözden geçirilmesi g
 
 1. Pencere öğesi başlık çubuğunda **...** öğesine tıklayın ve ardından **Koşulu uygula'ya** tıklayın.
 
-   ![Pano.](../media/searchprofilehome.png)
+   ![Pano giriş sayfası.](../media/searchprofilehome.png)
 
 2. Açılır sayfada, pencere öğesi anahtarı veya pencere öğesi grafiğindeki bir öğeye tıklayarak filtre oluşturun.
 

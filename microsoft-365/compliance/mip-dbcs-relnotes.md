@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 karakter kümesi sürüm notları için uyumluluk desteği
+title: Çift bayt karakter kümesi sürüm notları için Microsoft Purview desteği
 ms.author: chrfox
 author: chrfox
 manager: laurawi
@@ -13,43 +13,43 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Çift bayt karakter kümesi desteği için sürüm notları.
-ms.openlocfilehash: 2de0e67c78ac558f4bdc2648790e49fad86e3178
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+description: Çift bayt karakter kümeleri için destek için sürüm notları.
+ms.openlocfilehash: 593e1db04c5e4dc56bc4cc1a7fd11d907d4fe09d
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64595070"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622435"
 ---
-# <a name="support-for-double-byte-character-set-release-notes"></a>Çift byte karakter kümesi sürüm notları desteği
+# <a name="support-for-double-byte-character-set-release-notes"></a>Çift bayt karakter kümesi sürüm notları desteği
 
- Microsoft 365 Information Protection artık çift byte karakter kümesi dillerini destekler:
+ Microsoft 365 Information Protection artık aşağıdakiler için çift bayt karakter kümesi dillerini destekliyor:
 
 - Çince (basitleştirilmiş)
 - Çince (geleneksel)
 - Korean
 - Japanese
 
-Bu destek hassas bilgi türleri ve anahtar sözcük sözlükleri için kullanılabilir ve veri kaybı önleme (Exchange Online, SharePoint Online, OneDrive İş ve Teams için), İletişim Uyumluluğu, Ofis uygulamaları ve Microsoft Defender for Cloud Apps.
+Bu destek hassas bilgi türleri ve anahtar sözcük sözlükleri için kullanılabilir ve Microsoft Purview Veri Kaybı Önleme (Exchange Online, SharePoint Online, OneDrive İş ve Teams için), İletişim Uyumluluğu, Office uygulamalarında Otomatik Etiketleme ve Microsoft Defender for Cloud Apps.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-- E-postaya eklenmiş bir metin dosyası, byte order mark (LIŞ) olmadan UTF-8 biçiminde olduğunda, e-posta İletişim Uyumluluğu ilkesi tarafından algılanmaz.
+- E-postaya eklenmiş bir metin dosyası bayt sırası işareti (BOM) olmadan UTF-8 biçimindeyse, e-posta İletişim Uyumluluğu ilkesi tarafından algılanmaz.
 
-- İletişim Uyumluluğu ilkeleri, ilke koşulu için bir tümce girilirse değerleri algıamaz: "İleti şu sözcüklerden herhangi birini içeriyor". İlkede belirtilen metin sözcük olarak yazılırsa, algılanmaz; Ancak, bir cümlenin ortasına yazılmışsa, algılanmaz.
+- İletişim Uyumluluğu ilkeleri, ilke koşulu için bir cümle girilirse değerleri algılayamaz: "İleti bu sözcüklerden herhangi birini içeriyor". İlkede belirtilen metin bir sözcük olarak yazılmışsa algılanabilir; ancak, bir cümlenin ortasında yazılmışsa algılanmaz.
 
-- Sözlükleri tür bilgisi olarak belirten İletişim Uyumluluğu ilkeleri özel sohbetleri Teams sohbetleri algılamaz.
+- Sözlükleri tür bilgileri olarak belirten İletişim Uyumluluğu ilkeleri, Teams özel sohbetlerini ve kanal sohbetlerini algılamaz.
 
-- Bu aşamada, İletişim Uyumluluğu için aşağıdaki koşullar desteklenmiyor (bu sorunları gelecekte çözmeyi planlıyoruz): 
+- Bu aşamada İletişim Uyumluluğu için aşağıdaki koşullar desteklenmez (gelecekte bu sorunları düzeltmeyi planlıyoruz): 
   - "İleti bu sözcüklerden herhangi birini içeriyor"
-  - "İletide bu sözcüklerden hiçbiri yok"
-  - "Ek bu sözcüklerden herhangi birini içerir"
-  - "Ek bu sözcüklerden herhangi birini içerir"
+  - "İleti bu sözcüklerin hiçbirini içermiyor"
+  - "Ek bu sözcüklerden herhangi birini içeriyor"
+  - "Ek bu sözcüklerden herhangi birini içeriyor"
 
-- Veri kaybı önleme ilkeleri, Japonca dahil olmak üzere Doğu Asya dilleri için aşağıda belirtilen koşullar dışında Catalina 10.15 ve daha yüksek sürümü çalıştıran macOS cihazlarında (önizleme) zorunlu kılınabilir.
-  - Japonya banka hesap numarası gibi yerleşik şablon kullanımı gibi tam genişlikli numaralar algılanmaz
-  - Sınırlayıcı olmayan sayılar algılanmaz
-  - Yarım genişlikli bir alanla ayrılan anahtar sözcükler hassas bir bilgi türü için algılanmaz. Örneğin: Japonca sözcük hassas bilgi türünde ayarlanmıştır ve bir tümce içinde yer alan sözlük algılanmaz
-  - İngilizce ve Japonca (東京2020) içeren sözcükler algılanmaz
+- Veri kaybı önleme ilkeleri, Japonca dahil olmak üzere Doğu Asya dilleri için aşağıda belirtilen koşullar dışında Catalina 10.15 ve üzerini çalıştıran macOS cihazlarda (önizleme) uygulanabilir.
+  - Japonya banka hesap numarası gibi yerleşik şablon kullanma gibi tam genişlikli sayılar algılanmadı
+  - Sınırlayıcıları olmayan sayılar algılanmadı
+  - Hassas bir bilgi türü için yarım genişlikte boşlukla ayrılmış anahtar sözcükler algılanmadı. Örneğin: Japonca sözcük hassas bilgi türünde ayarlanır ve tümce içindeyse sözlük algılanmadı
+  - İngilizce ve Japonca (東京2020) içeren sözcükler algılanmadı
 
-Bunun yerine, iletiler ve ekler arasındaki desenleri algılayan anahtar sözcük sözlüğüyle özel bir Hassas Bilgi Türü (SIT) oluşturmanızı ve bu özel SIT'i İletişim Uyumluluğu ilkesi koşulu olarak kullanmanızı öneririz.
+Bunun yerine, iletiler ve ekler arasındaki desenleri algılayacak anahtar sözcük sözlüğüne sahip özel bir Hassas Bilgi Türü (SIT) oluşturmanızı ve bu özel SIT'i İletişim Uyumluluğu ilke koşulu olarak kullanmanızı öneririz.

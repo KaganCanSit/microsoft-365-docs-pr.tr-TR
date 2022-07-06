@@ -16,30 +16,28 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Kuruluşunuzda her durumda kullanılabilmesi için eKeşif'e (Premium) koruyucu iletişim şablonları (bekletme bildirimi şablonu gibi) ekleyebilirsiniz.
-ms.openlocfilehash: faf4ea91ae6f160b2ba7388a7cfea8ad6cb9797b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0ae8496178cd27a395de66e18355ccd675006486
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097282"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630829"
 ---
 # <a name="manage-custodian-communications-templates-in-ediscovery-premium"></a>eBulma'da koruyucu iletişim şablonlarını yönetme (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Siz veya diğer kullanıcılar ayrı tutma bildirimi veya diğer tür koruyucu iletişimler oluşturduğunuzda, eBulma (Premium) durumunda **İletişimler** sekmesindeki iletişim düzenleyicisini kullanarak iletişim belgesini sıfırdan oluşturmanız gerekiyordu. Şimdi, kuruluşunuzda her durumda iletişim oluşturmak için kullanılabilecek iletişim şablonları oluşturmanıza olanak tanıyan yeni bir özellik yayımladık. İletişim şablonları oluşturulduktan sonra, bir durumda kullanılabilir. Bu, avukatların veya koruyucu iletişim oluşturan diğer kullanıcıların bildirim oluşturmak için sıfırdan başlaması gerekmeyecek anlamına gelir. Bunun yerine, bir koruyucuya gönderilen bildirimi oluşturmak için bir şablon seçebilirler.
+Siz veya diğer kullanıcılar ayrı tutma bildirimi veya başka türde koruyucu iletişimler oluşturduğunuzda, eBulma (Premium) durumunda **İletişimler** sekmesindeki iletişim düzenleyicisini kullanarak iletişim belgesini sıfırdan oluşturmanız gerekiyordu. Şimdi, kuruluşunuzda her durumda iletişim oluşturmak için kullanılabilecek iletişim şablonları oluşturmanıza olanak tanıyan yeni bir özellik yayımladık. İletişim şablonları oluşturulduktan sonra, bir durumda kullanılabilir. Bu, avukatların veya koruyucu iletişim oluşturan diğer kullanıcıların bildirim oluşturmak için sıfırdan başlaması gerekmeyecek anlamına gelir. Bunun yerine, bir koruyucuya gönderilen bildirimi oluşturmak için bir şablon seçebilirler.
 
 Bu makalede, belirli bir eBulma (Premium) olayı için yeni bir koruyucu bildirimi oluştururken kuruluş genelinde iletişim şablonları oluşturma ve bunları seçme işlemleri açıklanmaktadır.
 
 ## <a name="before-you-create-templates-in-the-communications-library"></a>İletişim kitaplığında şablon oluşturmadan önce
 
-- eBulma'da (Premium) İletişim kitaplığına şablon eklemek veya kaldırmak için kuruluşunuzda eBulma Yöneticisi olmanız gerekir. Daha fazla bilgi için bkz. [Microsoft Purview uyumluluk portalında eBulma izinleri atama](assign-ediscovery-permissions.md)  
+- eKeşif (Premium) içindeki İletişim kitaplığına şablon eklemek veya kaldırmak için kuruluşunuzda eBulma Yöneticisi olmanız gerekir. Daha fazla bilgi için bkz[. Microsoft Purview uyumluluk portalı eBulma izinleri atama](assign-ediscovery-permissions.md)  
 
 - Kuruluşunuzun İletişim kitaplığında en fazla 50 şablonu olabilir.
 
 ## <a name="create-a-communications-template"></a>İletişim şablonu oluşturma
 
-1. Uyumluluk portalında [eBulma (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) bölümüne gidin ve **eBulma (Premium) ayarlarına** tıklayın.
+1. Uyumluluk portalında [eBulma (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) seçeneğine gidin ve **ardından eBulma (Premium) ayarları'na** tıklayın.
 
    ![eBulma (Premium) ayarlarını seçin](..\media\HistoricalVersions1.png)
 

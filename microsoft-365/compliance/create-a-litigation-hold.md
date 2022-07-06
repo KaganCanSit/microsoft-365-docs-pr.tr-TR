@@ -17,16 +17,14 @@ ms.custom:
 - seo-marvel-mar2020
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 00c7e809fd878b677947dc1db2a55c612ef04997
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: ddc55ef097a02c4005e2dcae2ca19fd673cc4c62
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097062"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631083"
 ---
 # <a name="create-a-litigation-hold"></a>Yasal askıya alma oluşturma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Silinen öğeler ve değiştirilen öğelerin özgün sürümleri de dahil olmak üzere tüm posta kutusu içeriğini korumak için bir posta kutusunu Dava Tutma'ya yerleştirebilirsiniz. Bir kullanıcı posta kutusunu Dava Tutma'ya yerleştirdiğinizde, kullanıcının arşiv posta kutusunda (etkinse) içerik de korunur. Ayrı tutma oluşturduğunuzda, silinen ve değiştirilen öğelerin belirli bir süre boyunca saklanması ve ardından posta kutusundan kalıcı olarak silinmesi için bir *ayrı tutma süresi (zamana bağlı saklama* olarak da adlandırılır) belirtebilirsiniz. Ya da içeriği süresiz olarak ( *sonsuz ayrı tutma* olarak adlandırılır) veya Dava ayrılığı kaldırılana kadar saklayabilirsiniz. Ayrı tutma süresi belirtirseniz, iletinin alındığı veya posta kutusu öğesinin oluşturulduğu tarihten hesaplanır. 
   
@@ -51,7 +49,7 @@ Bir Exchange Online posta kutusunu Dava bekletmeye yerleştirmek için, Exchange
 
 Microsoft 365 yönetim merkezi kullanarak bir posta kutusunu Dava bekletmeye yerleştirme adımları aşağıdadır.
 
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Microsoft 365 yönetim merkezi</a> gidin ve **KullanıcılarEtkin** >  kullanıcılar'a tıklayın.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Microsoft 365 yönetim merkezi</a> gidin ve **Kullanıcılar** > **Etkin kullanıcılar'a** tıklayın.
 
 2. Dava ayrı tutmaya yerleştirmek istediğiniz kullanıcıyı seçin.
 
@@ -63,9 +61,9 @@ Microsoft 365 yönetim merkezi kullanarak bir posta kutusunu Dava bekletmeye yer
 
     1. **Saklama süresi (gün):** Zamana dayalı ayrı tutma oluşturmak ve posta kutusu Dava ayrı tutmaya yerleştirildiğinde posta kutusu öğelerinin ne kadar süre tutulacağını belirtmek için bu kutuyu kullanın. Süre, posta kutusu öğesinin alındığı veya oluşturulduğu tarihten hesaplanır. Belirli bir öğe için saklama süresi dolduğunda, bu öğe artık korunmaz. Bu kutuyu boş bırakırsanız, öğeler süresiz olarak veya ayrı tutma kaldırılana kadar korunur. Süreyi belirtmek için gün kullanın.
 
-    2. **Kullanıcıya görünen not**: Bu kutuyu, kullanıcıya posta kutusunun Dava tutmada olduğunu bildirmek için kullanın. Not, Outlook 2010 veya sonraki bir sürümü kullanıyorsa kullanıcının posta kutusunda Hesap Bilgileri sayfasında görünür. Kullanıcılar bu sayfaya erişmek için Outlook'da **Dosya'ya** tıklayabilir.
+    2. **Kullanıcıya görünen not**: Bu kutuyu, kullanıcıya posta kutusunun Dava tutmada olduğunu bildirmek için kullanın. Not, Outlook 2010 veya sonraki bir sürümü kullanıyorsa kullanıcının posta kutusunda Hesap Bilgileri sayfasında görünür. Bu sayfaya erişmek için kullanıcılar Outlook'ta **Dosya'ya** tıklayabilir.
 
-    3. **Kullanıcı için daha fazla bilgi içeren web sayfası**: Dava tutma hakkında daha fazla bilgi için kullanıcıyı bir web sitesine yönlendirmek için bu kutuyu kullanın. Bu URL, Outlook 2010 veya sonraki bir sürümü kullanıyorsa kullanıcının posta kutusunda Hesap Bilgileri sayfasında görünür. Kullanıcılar bu sayfaya erişmek için Outlook'da **Dosya'ya** tıklayabilir.
+    3. **Kullanıcı için daha fazla bilgi içeren web sayfası**: Dava tutma hakkında daha fazla bilgi için kullanıcıyı bir web sitesine yönlendirmek için bu kutuyu kullanın. Bu URL, Outlook 2010 veya sonraki bir sürümü kullanıyorsa kullanıcının posta kutusunda Hesap Bilgileri sayfasında görünür. Bu sayfaya erişmek için kullanıcılar Outlook'ta **Dosya'ya** tıklayabilir.
 
 . Ayrı tutma oluşturmak için **Dava tutma** açılır sayfasında **Değişiklikleri kaydet'e** tıklayın.
 
@@ -97,9 +95,9 @@ Daha fazla bilgi için bkz. [Set-Mailbox](/powershell/module/exchange/set-mailbo
 
 ## <a name="how-does-litigation-hold-work"></a>Dava nasıl çalışır?
 
-Normal silinmiş öğe iş akışında, bir kullanıcı öğeyi kalıcı olarak sildiğinde (Shift + Delete) veya Silinmiş Öğeler klasöründen sildiğinde, posta kutusu öğesi Kurtarılabilir Öğeler klasöründeki Silmeler alt klasörüne taşınır. Silme ilkesi (saklamayı sil eylemiyle yapılandırılmış bir bekletme etiketidir) bekletme süresi dolduğunda öğeleri Silmeler alt klasörüne de taşır. Kullanıcı Kurtarılabilir Öğeler klasöründeki bir öğeyi temizlediğinde veya bir öğe için silinen öğe saklama süresinin süresi dolduğunda, Kurtarılabilir Öğeler klasöründeki Temizlemeler alt klasörüne taşınır ve kalıcı silme için işaretlenir. Posta kutusu Yönetilen Klasör Yardımcısı (MFA) tarafından bir sonraki işlendiğinde Exchange temizlenir.
+Normal silinmiş öğe iş akışında, bir kullanıcı öğeyi kalıcı olarak sildiğinde (Shift + Delete) veya Silinmiş Öğeler klasöründen sildiğinde, posta kutusu öğesi Kurtarılabilir Öğeler klasöründeki Silmeler alt klasörüne taşınır. Silme ilkesi (saklamayı sil eylemiyle yapılandırılmış bir bekletme etiketidir) bekletme süresi dolduğunda öğeleri Silmeler alt klasörüne de taşır. Kullanıcı Kurtarılabilir Öğeler klasöründeki bir öğeyi temizlediğinde veya bir öğe için silinen öğe saklama süresinin süresi dolduğunda, Kurtarılabilir Öğeler klasöründeki Temizlemeler alt klasörüne taşınır ve kalıcı silme için işaretlenir. Posta kutusu Yönetilen Klasör Yardımcısı (MFA) tarafından bir sonraki işlendiğinde Exchange'den temizlenir.
 
-Bir posta kutusu Dava bekletmesine yerleştirildiğinde, Temizlemeler alt klasöründeki öğeler, Dava ayrı tutması tarafından belirtilen saklama süresi boyunca korunur. Saklama süresi, bir öğenin alındığı veya oluşturulduğu özgün tarihten hesaplanır ve Temizlemeler alt klasöründeki öğelerin ne kadar süre tutulduğunu tanımlar. Temizleme alt klasöründeki bir öğenin saklama süresi dolduğunda, öğe kalıcı silme için işaretlenir ve posta kutusu MFA tarafından bir sonraki işlendiğinde Exchange temizlenir. Bir posta kutusuna süresiz ayrı tutma yerleştirilirse, öğeler hiçbir zaman Temizleme alt klasöründen temizlenmez.
+Bir posta kutusu Dava bekletmesine yerleştirildiğinde, Temizlemeler alt klasöründeki öğeler, Dava ayrı tutması tarafından belirtilen saklama süresi boyunca korunur. Saklama süresi, bir öğenin alındığı veya oluşturulduğu özgün tarihten hesaplanır ve Temizlemeler alt klasöründeki öğelerin ne kadar süre tutulduğunu tanımlar. Temizleme alt klasöründeki bir öğenin saklama süresi dolduğunda, öğe kalıcı silme için işaretlenir ve posta kutusu MFA tarafından bir sonraki işlendiğinde Exchange'den temizlenir. Bir posta kutusuna süresiz ayrı tutma yerleştirilirse, öğeler hiçbir zaman Temizleme alt klasöründen temizlenmez.
 
 Aşağıdaki çizimde Kurtarılabilir Öğeler klasörlerindeki alt klasörler ve tutma iş akışı işlemi gösterilmektedir.
 

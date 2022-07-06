@@ -19,22 +19,20 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: Office 365 Güvenlik & Uyumluluk Merkezi'nde anahtar sözcük sözlüğü oluşturmanın temel adımlarını öğrenin.
-ms.openlocfilehash: d00ba4a93c6ead4ecde75ac5415ccac08812feb3
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 82d6a1292b5ac8c13471df8e1b2c298c8cf262b3
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66013342"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637383"
 ---
 # <a name="create-a-keyword-dictionary"></a>Anahtar sözcük sözlüğü oluşturma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview Veri Kaybı Önleme (DLP), hassas öğelerinizi tanımlayabilir, izleyebilir ve koruyabilir. Hassas öğelerin tanımlanması bazen özellikle genel içeriği (sağlık hizmetleriyle ilgili iletişim gibi) veya uygunsuz veya açık dili tanımlarken anahtar sözcüklerin aranması gerekir. Hassas bilgi türlerinde anahtar sözcük listeleri oluşturabilirsiniz ancak anahtar sözcük listelerinin boyutu sınırlıdır ve bunları oluşturmak veya düzenlemek için XML'nin değiştirilmesi gerekir. Anahtar sözcük sözlükleri, sözlükte 1 MB'a kadar terimleri (sıkıştırma sonrası) destekleyen ve herhangi bir dili destekleyen anahtar sözcüklerin daha basit bir şekilde yönetilmesini ve çok daha büyük bir ölçekte yönetilmesini sağlar. Sıkıştırmadan sonra kiracı sınırı da 1 MB'tır. 1 MB sıkıştırma sonrası sınırı, kiracı genelinde birleştirilen tüm sözlüklerin 1 milyona yakın karaktere sahip olabileceği anlamına gelir.
 
 ## <a name="keyword-dictionary-limits"></a>Anahtar sözcük sözlüğü sınırları
 
-Kiracı başına oluşturulabilecek 50 anahtar sözcük sözlüğü tabanlı hassas bilgi türü sınırı vardır. Kiracınızda kaç anahtar sözcük sözlükünüzün olduğunu öğrenmek için, kiracınıza bağlanmak ve bu PowerShell betiğini çalıştırmak [için Bağlan Güvenlik & Uyumluluğu PowerShell'e](/powershell/exchange/connect-to-scc-powershell) Bağlan yordamlarını kullanarak bağlanın.
+Kiracı başına oluşturulabilecek 50 anahtar sözcük sözlüğü tabanlı hassas bilgi türü sınırı vardır. Kiracınızda kaç anahtar sözcük sözlükünüzün olduğunu öğrenmek için, kiracınıza bağlanmak [için Güvenlik & Uyumluluğu PowerShell'e bağlanma](/powershell/exchange/connect-to-scc-powershell) ve bu PowerShell betiğini çalıştırma yordamlarını kullanarak bağlanın.
 
 ```powershell
 $rawFile = $env:TEMP + "\rule.xml"
@@ -76,7 +74,7 @@ Remove-Item $rawFile
 
 Sözlüğünüzün anahtar sözcükleri, en yaygın olarak hizmette veya PowerShell cmdlet'i tarafından içeri aktarılan bir dosyadan (.csv veya .txt listesi gibi), doğrudan PowerShell cmdlet'ine girdiğiniz bir listeden veya mevcut bir sözlükten gelen çeşitli kaynaklardan gelebilir. Anahtar sözcük sözlüğü oluşturduğunuzda aynı temel adımları izlersiniz:
 
-1. *<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalını</a> kullanın veya  **Microsoft Purview uyumluluk portalı PowerShell'e bağlanın**.
+1. *<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> kullanın veya **Microsoft Purview uyumluluk portalı PowerShell'e bağlanın**.
 
 2. **Anahtar sözcüklerinizi hedeflenen kaynağınızdan tanımlayın veya yükleyin**. Sihirbaz ve cmdlet,özel anahtar sözcük sözlüğü oluşturmak için virgülle ayrılmış bir anahtar sözcük listesi kabul eder, bu nedenle bu adım anahtar sözcüklerinizin nereden geldiğine bağlı olarak biraz farklılık gösterir. Yüklendikten sonra, içeri aktarılmadan önce kodlanır ve bir bayt dizisine dönüştürülür.
 
@@ -86,7 +84,7 @@ Sözlüğünüzün anahtar sözcükleri, en yaygın olarak hizmette veya PowerSh
 
 Özel bir sözlük için anahtar sözcükler oluşturmak ve içeri aktarmak için aşağıdaki adımları kullanın:
 
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalına</a> Bağlan.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> bağlanın.
 
 2. **Sınıflandırmalar > Hassas bilgi türleri'ne** gidin.
 
@@ -112,11 +110,11 @@ Sözlüğünüzün anahtar sözcükleri, en yaygın olarak hizmette veya PowerSh
 
 ## <a name="create-a-keyword-dictionary-from-a-file-using-powershell"></a>PowerShell kullanarak bir dosyadan anahtar sözcük sözlüğü oluşturma
 
-Genellikle büyük bir sözlük oluşturmanız gerektiğinde, bir dosyadan veya başka bir kaynaktan dışarı aktarılan bir listeden anahtar sözcükler kullanmaktır. Bu durumda, dış e-postada ekrana alınacak uygun olmayan dilin listesini içeren bir anahtar sözcük sözlüğü oluşturacaksınız. Öncelikle [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) gerekir.
+Genellikle büyük bir sözlük oluşturmanız gerektiğinde, bir dosyadan veya başka bir kaynaktan dışarı aktarılan bir listeden anahtar sözcükler kullanmaktır. Bu durumda, dış e-postada ekrana alınacak uygun olmayan dilin listesini içeren bir anahtar sözcük sözlüğü oluşturacaksınız. Öncelikle [Güvenlik & Uyumluluk PowerShell'e bağlanmalısınız](/powershell/exchange/connect-to-scc-powershell).
 
 1. Anahtar sözcükleri bir metin dosyasına kopyalayın ve her anahtar sözcüğün ayrı bir satırda olduğundan emin olun.
 
-2. Metin dosyasını Unicode kodlama ile kaydedin. Not Defteri \> **Kodlama** \> **Unicode** **Olarak** \> Kaydet'te.
+2. Metin dosyasını Unicode kodlama ile kaydedin. Not Defteri'nde \> **Kodlama** \> **Olarak** \> Kaydet **Unicode**.
 
 3. Şu cmdlet'i çalıştırarak dosyayı bir değişkene okuyun:
 
@@ -176,7 +174,7 @@ Kimliği özel hassas bilgi türünüzün XML'ine yapıştırın ve karşıya y�
 ```
 
 > [!NOTE]
-> Microsoft 365 Information Protection için çift baytlık karakter kümesi dillerini destekler:
+> Microsoft 365 Information Protection, aşağıdakiler için çift baytlık karakter kümesi dillerini destekler:
 >
 > - Çince (basitleştirilmiş)
 > - Çince (geleneksel)

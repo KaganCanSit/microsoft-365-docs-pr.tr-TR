@@ -19,18 +19,16 @@ search.appverid:
 ms.assetid: 40829b57-793c-4d41-b171-e9270129173d
 ms.custom: seo-marvel-apr2020
 description: Yönetici, PST dosyalarını bir sabit sürücüye kopyalayıp Microsoft'a göndererek PST dosyalarını Microsoft 365 posta kutularına toplu olarak aktarmayı öğrenebilir.
-ms.openlocfilehash: 4f3c38c203b98fd4448657edfac6ee9b72a515be
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: ac8b24c04823bf3635b7762d160cee71a356ebfd
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095454"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626083"
 ---
 # <a name="use-drive-shipping-to-import-your-organizations-pst-files"></a>Kuruluşunuzun PST dosyalarını içeri aktarmak için sürücü gönderimini kullanma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-**Bu makale yöneticilere yöneliktir. PST dosyalarını kendi posta kutunuza aktarmaya mı çalışıyorsunuz? Bkz [. Outlook .pst dosyasından e-postayı, kişileri ve takvimi içeri aktarma](https://go.microsoft.com/fwlink/p/?LinkID=785075)**
+**Bu makale yöneticilere yöneliktir. PST dosyalarını kendi posta kutunuza aktarmaya mı çalışıyorsunuz? Bkz. [Outlook .pst dosyasından e-postayı, kişileri ve takvimi içeri aktarma](https://go.microsoft.com/fwlink/p/?LinkID=785075)**
    
 PST dosyalarını kullanıcı posta kutularına toplu olarak aktarmak için İçeri aktarma hizmeti ve sürücü gönderimi Office 365 kullanın. Sürücü gönderimi, PST dosyalarını bir sabit disk sürücüsüne kopyalamanız ve ardından sürücüyü fiziksel olarak Microsoft'a göndermeniz anlamına gelir. Microsoft sabit sürücünüzü aldığında, veri merkezi personeli verileri sabit sürücüden Microsoft bulutundaki bir depolama alanına kopyalar. Ardından, hangi verilerin içeri aktarılacağını denetleye filtreler ayarlayarak hedef posta kutularına aktarılan PST verilerini kırpma fırsatınız olur. İçeri aktarma işini başlattıktan sonra İçeri Aktarma hizmeti PST verilerini depolama alanından kullanıcı posta kutularına aktarır. PST dosyalarını kullanıcı posta kutularına aktarmak için sürücü gönderimini kullanmak, kuruluşunuzun e-postasını Office 365 geçirmenin bir yoludur.
   
@@ -55,7 +53,7 @@ PST dosyalarını Office 365 aktarmak için sürücü gönderimi kullanma hakkı
   
 ## <a name="before-you-import-pst-files"></a>PST dosyalarını içeri aktarmadan önce
 
-- Microsoft Purview uyumluluk portalında içeri aktarma işleri oluşturmak ve PST dosyalarını kullanıcı posta kutularına aktarmak için Exchange Online'da Posta Kutusu İçeri Aktarma rolüne atanmış olmanız gerekir. Varsayılan olarak, bu rol Exchange Online'daki hiçbir rol grubuna atanmaz. Posta Kutusu İçeri Aktarma Dışarı Aktarma rolünü Kuruluş Yönetimi rol grubuna ekleyebilirsiniz. Ya da bir rol grubu oluşturabilir, Posta Kutusu İçeri Aktarma Dışarı Aktarma rolünü atayabilir ve ardından kendinizi üye olarak ekleyebilirsiniz. Daha fazla bilgi için Rol [gruplarını yönetme](/Exchange/permissions-exo/role-groups) bölümündeki "Rol grubuna rol ekleme" veya "Rol grubu oluşturma" bölümlerine bakın.
+- Microsoft Purview uyumluluk portalı içeri aktarma işleri oluşturmak ve PST dosyalarını kullanıcı posta kutularına aktarmak için Exchange Online'da Posta Kutusu İçeri Aktarma rolüne atanmış olmanız gerekir. Varsayılan olarak, bu rol Exchange Online'daki hiçbir rol grubuna atanmaz. Posta Kutusu İçeri Aktarma Dışarı Aktarma rolünü Kuruluş Yönetimi rol grubuna ekleyebilirsiniz. Ya da bir rol grubu oluşturabilir, Posta Kutusu İçeri Aktarma Dışarı Aktarma rolünü atayabilir ve ardından kendinizi üye olarak ekleyebilirsiniz. Daha fazla bilgi için Rol [gruplarını yönetme](/Exchange/permissions-exo/role-groups) bölümündeki "Rol grubuna rol ekleme" veya "Rol grubu oluşturma" bölümlerine bakın.
 
     Posta Kutusu İçeri Aktarma Dışarı Aktarma rolüne ek olarak, Exchange Online'de Posta Alıcıları rolüne de atanmış olmanız gerekir. Varsayılan olarak, bu rol Exchange Online'deki Kuruluş Yönetimi ve Alıcı Yönetimi rol gruplarına atanır.
 
@@ -71,7 +69,7 @@ PST dosyalarını Office 365 aktarmak için sürücü gönderimi kullanma hakkı
     > [!IMPORTANT]
     > Yerleşik USB bağdaştırıcısıyla birlikte gelen harici sabit sürücüler, Office 365 İçeri Aktarma hizmeti tarafından desteklenmez. Ayrıca, harici bir sabit sürücünün kasası içindeki disk kullanılamaz. Lütfen harici sabit sürücüleri göndermeyin. 
   
-- PST dosyalarını kopyaladığınız sabit sürücü BitLocker ile şifrelenmelidir. 2. Adımda çalıştırdığınız WAImportExport.exe aracı, BitLocker'ı ayarlamanıza yardımcı olur. Ayrıca, Microsoft veri merkezi personelinin PST dosyalarını Microsoft bulutundaki Azure Depolama alanına yüklemek üzere sürücüye erişmek için kullandığı bir BitLocker şifreleme anahtarı oluşturur.
+- PST dosyalarını kopyaladığınız sabit sürücü BitLocker ile şifrelenmelidir. 2. Adımda çalıştırdığınız WAImportExport.exe aracı, BitLocker'ı ayarlamanıza yardımcı olur. Ayrıca, Microsoft veri merkezi personelinin PST dosyalarını Microsoft bulutunda Azure Depolama alanına yüklemek üzere sürücüye erişmek için kullandığı bir BitLocker şifreleme anahtarı oluşturur.
     
 - Sürücü gönderimi bir Microsoft Kurumsal Anlaşma (EA) aracılığıyla sağlanır. Sürücü gönderimi, Microsoft Ürün ve Hizmet Sözleşmesi (MPSA) aracılığıyla kullanılamaz.
     
@@ -91,14 +89,14 @@ PST dosyalarını Office 365 aktarmak için sürücü gönderimi kullanma hakkı
     
 - PST dosyaları bir Microsoft 365 posta kutusuna aktarıldıktan sonra, posta kutusunun bekletme ayarı süresiz olarak açılır. Bu, saklama saklamayı kapatana veya saklamayı kapatmak için bir tarih ayarlayana kadar posta kutusuna atanan bekletme ilkesinin işlenmeyeceği anlamına gelir. Bunu neden yapıyoruz? Posta kutusuna içeri aktarılan iletiler eskiyse, posta kutusu için yapılandırılan bekletme ayarlarına göre bekletme süreleri dolduğundan kalıcı olarak silinebilir (temizlenebilir). Posta kutusunun bekletmeye yerleştirilmesi, posta kutusu sahibine bu yeni içeri aktarılan iletileri yönetmesi için zaman verir veya posta kutusunun bekletme ayarlarını değiştirmeniz için size zaman verir. Bekletme saklamayı yönetme hakkında öneriler için [Daha fazla bilgi](#more-information) bölümüne bakın. 
     
-- Varsayılan olarak, bir Microsoft 365 posta kutusu tarafından alınabilecek ileti boyutu üst sınırı 35 MB'tır. Bunun nedeni, bir posta kutusunun  *MaxReceiveSize*  özelliğinin varsayılan değerinin 35 MB olarak ayarlanmasıdır. Ancak, Microsoft 365 en fazla ileti alma boyutu sınırı 150 MB'tır. Bu nedenle, 35 MB'tan büyük bir öğe içeren bir PST dosyasını içeri aktarırsanız İçeri Aktarma hizmeti Office 365 hedef posta kutusunda *MaxReceiveSize* özelliğinin değerini otomatik olarak 150 MB olarak değiştiririz. Bu, 150 MB'a kadar olan iletilerin kullanıcı posta kutularına aktarılmasını sağlar. 
+- Varsayılan olarak, Bir Microsoft 365 posta kutusu tarafından alınabilecek ileti boyutu üst sınırı 35 MB'tır. Bunun nedeni, bir posta kutusunun  *MaxReceiveSize*  özelliğinin varsayılan değerinin 35 MB olarak ayarlanmasıdır. Ancak, Microsoft 365'te ileti alma boyutu üst sınırı 150 MB'tır. Bu nedenle, 35 MB'tan büyük bir öğe içeren bir PST dosyasını içeri aktarırsanız İçeri Aktarma hizmeti Office 365 hedef posta kutusunda *MaxReceiveSize* özelliğinin değerini otomatik olarak 150 MB olarak değiştiririz. Bu, 150 MB'a kadar olan iletilerin kullanıcı posta kutularına aktarılmasını sağlar. 
     
     > [!TIP]
     > Bir posta kutusunun ileti alma boyutunu tanımlamak için şu komutu powershell Exchange Online de çalıştırabilirsiniz: `Get-Mailbox <user mailbox> | FL MaxReceiveSize`. 
   
 - PST dosyalarını Office 365 etkin olmayan bir posta kutusuna aktarabilirsiniz. Bunu, PST İçeri Aktarma eşleme dosyasındaki parametresinde  `Mailbox` etkin olmayan posta kutusunun GUID'sini belirterek yaparsınız. Daha fazla bilgi için bkz [. 3. Adım: PST İçeri Aktarma eşleme dosyasını oluşturma](#step-3-create-the-pst-import-mapping-file) . 
     
-- Exchange karma dağıtımda, birincil posta kutusu şirket içinde olan bir kullanıcının PST dosyalarını bulut tabanlı arşiv posta kutusuna aktarabilirsiniz. Bunu, PST İçeri Aktarma eşleme dosyasında aşağıdakileri yaparak yaparsınız:
+- Exchange karma dağıtımında, birincil posta kutusu şirket içinde olan bir kullanıcının PST dosyalarını bulut tabanlı arşiv posta kutusuna aktarabilirsiniz. Bunu, PST İçeri Aktarma eşleme dosyasında aşağıdakileri yaparak yaparsınız:
     
   - parametresinde kullanıcının şirket içi posta kutusunun e-posta  `Mailbox` adresini belirtin. 
     
@@ -111,7 +109,7 @@ PST dosyalarını Office 365 aktarmak için sürücü gönderimi kullanma hakkı
 İlk adım, aracı indirmek ve PST dosyalarını sabit sürücüye kopyalamak için 2. Adımda kullandığınız aracı indirmektir.
   
 > [!IMPORTANT]
-> Sürücü gönderim yöntemini kullanarak PST dosyalarını başarıyla içeri aktarmak için Azure İçeri/Dışarı Aktarma aracı sürüm 1'i (WAimportExportV1) kullanmanız gerekir. Azure İçeri/Dışarı Aktarma aracının 2. sürümü desteklenmez ve bunu kullanmak, sabit sürücünün içeri aktarma işi için yanlış hazırlanmasına neden olur. Bu adımdaki yordamları izleyerek Microsoft Purview uyumluluk portalından Azure İçeri/Dışarı Aktarma aracını indirdiğinizden emin olun. 
+> Sürücü gönderim yöntemini kullanarak PST dosyalarını başarıyla içeri aktarmak için Azure İçeri/Dışarı Aktarma aracı sürüm 1'i (WAimportExportV1) kullanmanız gerekir. Azure İçeri/Dışarı Aktarma aracının 2. sürümü desteklenmez ve bunu kullanmak sabit sürücünün içeri aktarma işi için yanlış hazırlanmasına neden olur. Bu adımdaki yordamları izleyerek Microsoft Purview uyumluluk portalı Azure İçeri/Dışarı Aktarma aracını indirdiğinizden emin olun. 
   
 1. <https://compliance.microsoft.com> Adresine gidin ve kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak oturum açın.
 
@@ -130,7 +128,7 @@ PST dosyalarını Office 365 aktarmak için sürücü gönderimi kullanma hakkı
   
 6. **Verileri içeri aktar** sayfasında aşağıdakileri yapın:     
     
-    **Azure İçeri/Dışarı Aktarma** (sürüm 1) aracını indirip yüklemek için Azure İçeri/Dışarı Aktarma aracını indirin.
+    **Azure İçeri/Dışarı Aktarma aracını indirerek Azure İçeri/Dışarı** Aktarma (sürüm 1) aracını indirin.
     
     - WaImportExportV1.zip dosyasını yerel bilgisayarınızdaki bir klasöre kaydetmek için açılır pencerede **Farklı Kaydet'e** \> tıklayın.
     
@@ -169,7 +167,7 @@ Sonraki adım, PST dosyalarını sabit sürücüye kopyalamak için WAImportExpo
     | `/t:` <br/> |Sabit sürücünün yerel bilgisayarınıza bağlıyken sürücü harfini belirtir.  <br/> | `/t:h` <br/> |
     | `/id:` <br/> |Kopyalama oturumunun adını belirtir. Bir oturum, dosyaları sabit sürücüye kopyalamak için WAImportExport.exe aracını her çalıştırdığınızda olarak tanımlanır. PST dosyaları, bu parametre tarafından belirtilen oturum adıyla adlı klasöre kopyalanır.  <br/> | `/id:driveship1` <br/> |
     | `/srcdir:` <br/> |Kuruluşunuzda oturum sırasında kopyalanacak PST dosyalarını içeren kaynak dizini belirtir. Bu parametrenin değerini çift tırnak işareti (" ") ile çevrelemeye özen gösterin.  <br/> | `/srcdir:"\\FILESERVER01\PSTs"` <br/> |
-    | `/dstdir:` <br/> |PST'lerin yüklendiği Microsoft bulutundaki Azure Depolama alanındaki hedef dizini belirtir. değerini  `ingestiondata/`kullanmanız gerekir. Bu parametrenin değerini çift tırnak işareti (" ") ile çevrelemeye özen gösterin.  <br/> İsteğe bağlı olarak, bu parametrenin değerine ek bir dosya yolu da ekleyebilirsiniz. Örneğin, parametrede belirtilen  `/srcdir:` sabit sürücüdeki (URL biçimine dönüştürülür) kaynak dizinin dosya yolunu kullanabilirsiniz. Örneğin,  `\\FILESERVER01\PSTs` olarak  `FILESERVER01/PSTs`değiştirilir. Bu durumda, yine de dosya yoluna eklemeniz  `ingestiondata` gerekir. Bu örnekte parametresinin  `/dstdir:` değeri olacaktır  `"ingestiondata/FILESERVER01/PSTs"`.  <br/> Ek dosya yolunu eklemenin bir nedeni, aynı dosya adına sahip PST dosyalarınız olmasıdır.  <br/> > [!NOTE]> İsteğe bağlı yol adını eklerseniz, Bir PST dosyasının Azure Depolama alanına yüklendikten sonra ad alanı yol adını ve PST dosyasının adını içerir; örneğin, `FILESERVER01/PSTs/annb.pst`. Yol adı eklemezseniz, ad alanı yalnızca PST dosya adıdır; örneğin  `annb.pst`, .           | `/dstdir:"ingestiondata/"` <br/> Veya  <br/>  `/dstdir:"ingestiondata/FILESERVER01/PSTs"` <br/> |
+    | `/dstdir:` <br/> |PST'lerin yüklendiği Microsoft bulutundaki Azure Depolama alanındaki hedef dizini belirtir. değerini  `ingestiondata/`kullanmanız gerekir. Bu parametrenin değerini çift tırnak işareti (" ") ile çevrelemeye özen gösterin.  <br/> İsteğe bağlı olarak, bu parametrenin değerine ek bir dosya yolu da ekleyebilirsiniz. Örneğin, parametrede belirtilen  `/srcdir:` sabit sürücüdeki (URL biçimine dönüştürülür) kaynak dizinin dosya yolunu kullanabilirsiniz. Örneğin,  `\\FILESERVER01\PSTs` olarak  `FILESERVER01/PSTs`değiştirilir. Bu durumda, yine de dosya yoluna eklemeniz  `ingestiondata` gerekir. Bu örnekte parametresinin  `/dstdir:` değeri olacaktır  `"ingestiondata/FILESERVER01/PSTs"`.  <br/> Ek dosya yolunu eklemenin bir nedeni, aynı dosya adına sahip PST dosyalarınız olmasıdır.  <br/> > [!NOTE]> İsteğe bağlı yol adını eklerseniz, Bir PST dosyasının Azure Depolama alanına yüklendikten sonra ad alanı yol adını ve PST dosyasının adını içerir; örneğin,  `FILESERVER01/PSTs/annb.pst`. Yol adı eklemezseniz, ad alanı yalnızca PST dosya adıdır; örneğin  `annb.pst`, .           | `/dstdir:"ingestiondata/"` <br/> Veya  <br/>  `/dstdir:"ingestiondata/FILESERVER01/PSTs"` <br/> |
     | `/blobtype:` <br/> |PST dosyalarının içeri aktarılacağını Azure Depolama alanındaki blobların türünü belirtir. PST dosyalarını içeri aktarmak için **BlockBlob** değerini kullanın. Bu parametre gereklidir.   <br/> | `/blobtype:BlockBlob` <br/> |
     | `/encrypt` <br/> |Bu anahtar, sabit sürücü için BitLocker'i açar. bu parametre, WAImportExport.exe aracını ilk kez çalıştırdığınızda gereklidir.  <br/> BitLocker şifreleme anahtarı günlük dosyasına ve parametresini kullanırsanız  `/logfile:` oluşturulan günlük dosyasına kopyalanır. Daha önce açıklandığı gibi günlük dosyası, WAImportExport.exe aracının bulunduğu klasöre kaydedilir.  <br/> | `/encrypt` <br/> |
     | `/logdir:` <br/> |Bu isteğe bağlı parametre, günlük dosyalarının kaydedilecek bir klasörü belirtir. Belirtilmezse, günlük dosyaları WAImportExport.exe aracının bulunduğu klasöre kaydedilir. Bu parametrenin değerini çift tırnak işareti (" ") ile çevrelemeye özen gösterin.  <br/> | `/logdir:"c:\users\admin\desktop\PstImportLogs"` <br/> |
@@ -196,11 +194,11 @@ Sonraki adım, PST dosyalarını sabit sürücüye kopyalamak için WAImportExpo
 
 ## <a name="step-3-create-the-pst-import-mapping-file"></a>3. Adım: PST İçeri Aktarma eşleme dosyasını oluşturma
 
-Microsoft veri merkezi personeli PST dosyalarını sabit sürücüden Azure Depolama alanına yükledikten sonra İçeri Aktarma hizmeti, PST dosyalarının hangi kullanıcı posta kutularına aktarılacağını belirten, virgülle ayrılmış değer (CSV) dosyası olan PST İçeri Aktarma eşleme dosyasındaki bilgileri kullanır. Bir PST İçeri Aktarma işi oluşturduğunuzda sonraki adımda bu CSV dosyasını gönderebilirsiniz.
+Microsoft veri merkezi personeli PST dosyalarını sabit sürücüden Azure Depolama alanına yükledikten sonra İçeri Aktarma hizmeti, PST dosyalarının hangi kullanıcı posta kutularına aktarılacağını belirten, virgülle ayrılmış bir değer (CSV) dosyası olan PST İçeri Aktarma eşleme dosyasındaki bilgileri kullanır. Bir PST İçeri Aktarma işi oluşturduğunuzda sonraki adımda bu CSV dosyasını gönderebilirsiniz.
   
 1. [PST İçeri Aktarma eşleme dosyasının bir kopyasını indirin](https://go.microsoft.com/fwlink/p/?LinkId=544717).
     
-2. CSV dosyasını yerel bilgisayarınıza açın veya kaydedin. Aşağıdaki örnekte tamamlanmış bir PST İçeri Aktarma eşleme dosyası (Not Defteri'nde açılır) gösterilmektedir. CSV dosyasını düzenlemek için Microsoft Excel kullanmak çok daha kolaydır.
+2. CSV dosyasını yerel bilgisayarınıza açın veya kaydedin. Aşağıdaki örnekte tamamlanmış bir PST İçeri Aktarma eşleme dosyası (Not Defteri'nde açılır) gösterilmektedir. CSV dosyasını düzenlemek için Microsoft Excel'i kullanmak çok daha kolaydır.
 
     ```text
     Workload,FilePath,Name,Mailbox,IsArchive,TargetRootFolder,ContentCodePage,SPFileContainer,SPManifestContainer,SPSiteUrl
@@ -219,7 +217,7 @@ Microsoft veri merkezi personeli PST dosyalarını sabit sürücüden Azure Depo
     CSV dosyasının ilk satırı veya üst bilgi satırı, PST İçeri Aktarma hizmeti tarafından PST dosyalarını kullanıcı posta kutularına aktarmak için kullanılacak parametreleri listeler. Her parametre adı virgülle ayrılır. Üst bilgi satırının altındaki her satır, pst dosyasını belirli bir posta kutusuna aktarmaya yönelik parametre değerlerini temsil eder. Sabit sürücüye kopyalanan her PST dosyası için bir satıra ihtiyacınız vardır. Eşleme dosyasındaki yer tutucu verileri gerçek verilerinizle değiştirerek değiştirmeyi unutmayın.
 
     > [!NOTE]
-    > SharePoint parametreleri de dahil olmak üzere üst bilgi satırındaki hiçbir şeyi değiştirmeyin; PST İçeri Aktarma işlemi sırasında bunlar yoksayılır. 
+    > SharePoint parametreleri de dahil olmak üzere üst bilgi satırında hiçbir şeyi değiştirmeyin; PST İçeri Aktarma işlemi sırasında yoksayılırlar. 
   
 3. CSV dosyasını gerekli bilgilerle doldurmak için aşağıdaki tabloda yer alan bilgileri kullanın.
     
@@ -326,7 +324,7 @@ Sabit sürücüyü Microsoft'a gönderdikten sonra hizmeti içeri aktarma sayfas
   
 1. <https://compliance.microsoft.com> Adresine gidin ve kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak oturum açın.
 
-2. Uyumluluk portalının sol gezinti bölmesinde **Veri yaşam döngüsü yönetimiİleri** >  **aktar'a** tıklayın.
+2. Uyumluluk portalının sol gezinti bölmesinde **Veri yaşam döngüsü yönetimi** > **İçeri Aktar'a** tıklayın.
 
 3. **İçeri Aktar** sekmesinde, takip numarasını girmek istediğiniz sürücü sevkiyatının işine tıklayın.
 
@@ -348,7 +346,7 @@ Sabit sürücüyü Microsoft'a gönderdikten sonra hizmeti içeri aktarma sayfas
 
 Sabit sürücünüz Microsoft tarafından alındıktan sonra PST **dosyalarını içeri aktar** sayfasındaki içeri aktarma işinin durumu **Alınan Sürücüler** olarak değişir. Veri merkezi personeli, PST dosyalarınızı kuruluşunuzun Azure Depolama alanına yüklemek için günlük dosyasındaki bilgileri kullanır. Bu noktada, durum **devam eden İçeri aktar** olarak değişir. Daha önce belirtildiği gibi, PST dosyalarını karşıya yüklemek için sabit sürücünüzü aldıktan sonra 7 ila 10 iş günü sürer.
   
-PST dosyaları Azure'a yüklendikten sonra durum **Analiz sürüyor** olarak değiştirilir. Bu, Microsoft 365 öğelerin yaşını ve PST dosyalarına dahil edilen farklı ileti türlerini tanımlamak için PST dosyalarındaki verileri (güvenli ve güvenli bir şekilde) analiz ettiğini gösterir. Çözümleme tamamlandığında ve veriler içeri aktarmaya hazır olduğunda, içeri aktarma işinin durumu **Çözümleme tamamlandı** olarak değiştirilir. Bu noktada, PST dosyalarında yer alan tüm verileri içeri aktarma seçeneğiniz vardır veya hangi verilerin içeri aktarılacağını denetleyebilen filtreler ayarlayarak içeri aktarılan verileri kırpabilirsiniz.
+PST dosyaları Azure'a yüklendikten sonra durum **Analiz sürüyor** olarak değiştirilir. Bu, Microsoft 365'in öğelerin yaşını ve PST dosyalarına dahil edilen farklı ileti türlerini tanımlamak için PST dosyalarındaki verileri (güvenli ve güvenli bir şekilde) analiz ettiğini gösterir. Çözümleme tamamlandığında ve veriler içeri aktarmaya hazır olduğunda, içeri aktarma işinin durumu **Çözümleme tamamlandı** olarak değiştirilir. Bu noktada, PST dosyalarında yer alan tüm verileri içeri aktarma seçeneğiniz vardır veya hangi verilerin içeri aktarılacağını denetleyebilen filtreler ayarlayarak içeri aktarılan verileri kırpabilirsiniz.
   
 1. <https://compliance.microsoft.com> Adresine gidin ve kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak oturum açın.
 
@@ -378,26 +376,26 @@ PST dosyaları Azure'a yüklendikten sonra durum **Analiz sürüyor** olarak de�
 
     İçeri aktarma işinin durumu **PST dosyalarını içeri aktar** sayfasında görüntülenir. Yenile simgesine tıklayın ![.](../media/O365-MDM-Policy-RefreshIcon.gif) **Durum** sütununda görüntülenen durum bilgilerini güncelleştirmek için **yenileyin**. İçeri aktarılan her PST dosyasıyla ilgili durum bilgilerini görüntüleyen durum açılır listesini görüntülemek için içeri aktarma işine tıklayın. İçeri aktarma işlemi tamamlandığında ve PST dosyaları kullanıcı posta kutularına aktarıldığında, durum **Tamamlandı** olarak değiştirilir.
 
-## <a name="view-a-list-of-the-pst-files-uploaded-to-microsoft-365"></a>Microsoft 365'a yüklenen PST dosyalarının listesini görüntüleme
+## <a name="view-a-list-of-the-pst-files-uploaded-to-microsoft-365"></a>Microsoft 365'e yüklenen PST dosyalarının listesini görüntüleme
 
-Kuruluşunuzun Azure Depolama alanına (Microsoft veri merkezi personeli tarafından) yüklediğimiz PST dosyalarının listesini görüntülemek için Microsoft Azure Depolama Gezgini (ücretsiz, açık kaynak bir araçtır) yükleyebilir ve kullanabilirsiniz. Microsoft'a gönderdiğiniz sabit sürücülerden PST dosyalarının Azure Depolama alanına başarıyla yüklendiğini doğrulamak için bunu yapabilirsiniz.
+Kuruluşunuzun Azure Depolama alanına (Microsoft veri merkezi personeli tarafından) yüklendiğimiz PST dosyalarının listesini görüntülemek için Microsoft Azure Depolama Gezgini (ücretsiz, açık kaynak bir araçtır) yükleyip kullanabilirsiniz. Bunu, Microsoft'a gönderdiğiniz sabit sürücülerden PST dosyalarının Azure Depolama alanına başarıyla yüklendiğini doğrulamak için yapabilirsiniz.
   
 > [!IMPORTANT]
-> PST dosyalarını karşıya yüklemek veya değiştirmek için Azure Depolama Gezgini kullanamazsınız. PST dosyalarını Microsoft 365 aktarmak için desteklenen tek yöntem AzCopy kullanmaktır. Ayrıca, Azure blob'a yüklediğiniz PST dosyalarını silemezsiniz. BIR PST dosyasını silmeye çalışırsanız, gerekli izinlere sahip olmadığınız konusunda bir hata alırsınız. Tüm PST dosyaları Azure Depolama alanınızdan otomatik olarak silinir. Devam eden içeri aktarma işi yoksa, en son içeri aktarma işi oluşturulduktan 30 gün sonra ** alma verileri ** kapsayıcısında bulunan tüm PST dosyaları silinir.
+> PST dosyalarını karşıya yüklemek veya değiştirmek için Azure Depolama Gezgini kullanamazsınız. PST dosyalarını Microsoft 365'e aktarmak için desteklenen tek yöntem AzCopy kullanmaktır. Ayrıca, Azure blob'a yüklediğiniz PST dosyalarını silemezsiniz. BIR PST dosyasını silmeye çalışırsanız, gerekli izinlere sahip olmadığınız konusunda bir hata alırsınız. Tüm PST dosyaları Azure Depolama alanınızdan otomatik olarak silinir. Devam eden içeri aktarma işi yoksa, en son içeri aktarma işi oluşturulduktan 30 gün sonra ** alma verileri ** kapsayıcısında bulunan tüm PST dosyaları silinir.
   
-Kuruluşunuzun Paylaşılan Erişim İmzası (SAS) URL'sini almak için aşağıdaki adımları gerçekleştirin. Bu URL, kuruluşunuz için Microsoft bulutundaki Azure Depolama konumunun ağ URL'si ile SAS anahtarının birleşimidir. Bu anahtar, kuruluşunuzun Azure Depolama konumuna erişmek için gerekli izinleri sağlar.
+Kuruluşunuzun Paylaşılan Erişim İmzası (SAS) URL'sini almak için aşağıdaki adımları gerçekleştirin. Bu URL, kuruluşunuz için Microsoft bulutundaki Azure Depolama konumu için ağ URL'si ile SAS anahtarının bir birleşimidir. Bu anahtar, kuruluşunuzun Azure Depolama konumuna erişmek için gerekli izinleri sağlar.
 
 Azure Depolama Gezgini yüklemek ve Azure Depolama alanınıza bağlanmak için:
 
 1. <https://compliance.microsoft.com> Adresine gidin ve kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak oturum açın.
 
-2. Uyumluluk portalının sol bölmesinde **Veri yaşam döngüsü yönetimiİleri** >  **aktar'a** tıklayın.
+2. Uyumluluk portalının sol bölmesinde **Veri yaşam döngüsü yönetimi** > **İçeri Aktar'a** tıklayın.
 
 3. **İçeri Aktar** sekmesinde Simge Ekle'ye tıklayın![.](../media/ITPro-EAC-AddIcon.gif) **Yeni içeri aktarma işi**.
 
 4. İçeri aktarma işi sihirbazında, PST içeri aktarma işi için bir ad yazın ve **İleri'ye** tıklayın. Küçük harf, sayı, kısa çizgi ve alt çizgi kullanın. Büyük harfler kullanamaz veya ada boşluk ekleyemezsiniz.
 
-5. **İçeri aktarma işi türünü seçin** sayfasında **verilerinizi Upload** ve ardından **İleri'ye** tıklayın.
+5. **İçeri aktarma iş türünü seçin** sayfasında **Verilerinizi karşıya yükle'ye** ve ardından **İleri'ye** tıklayın.
 
 6. 2. adımda **Ağ karşıya yükleme SAS URL'sini göster'e** tıklayın.
 
@@ -410,34 +408,34 @@ Azure Depolama Gezgini yüklemek ve Azure Depolama alanınıza bağlanmak için:
 
 9. [Microsoft Azure Depolama Gezgini aracını](https://go.microsoft.com/fwlink/p/?LinkId=544842) indirin ve yükleyin.
 
-10. Microsoft Azure Depolama Gezgini başlatın, sol bölmede **Depolama Hesapları'na** sağ tıklayın ve ardından **Azure Depolama'a Bağlan'e** tıklayın.
+10. Microsoft Azure Depolama Gezgini başlatın, sol bölmede **Depolama Hesapları'na** sağ tıklayın ve ardından **Azure Depolama'ya Bağlan'a** tıklayın.
 
-    ![Depolama Hesapları'na sağ tıklayın ve ardından Azure Depolama'a Bağlan'a tıklayın.](../media/75b80cc3-c336-4f96-ad32-54ac9b96a7af.png)
+    ![Depolama Hesapları'na sağ tıklayın ve ardından Azure Depolama'ya Bağlan'a tıklayın.](../media/75b80cc3-c336-4f96-ad32-54ac9b96a7af.png)
   
 11. **Paylaşılan erişim imzası (SAS) URI'sini veya bağlantı dizesini kullan'a** ve **ardından İleri'ye** tıklayın.
 
 12. **SAS URI'si kullan'a** tıklayın, 1. adımda aldığınız SAS URL'sini **URI'nin** altındaki kutuya yapıştırın ve ardından **İleri'ye** tıklayın.
 
-13. **Bağlantı özeti** sayfasında, bağlantı bilgilerini gözden geçirebilir ve **ardından Bağlan'e** tıklayabilirsiniz.
+13. **Bağlantı özeti** sayfasında bağlantı bilgilerini gözden geçirebilir ve **bağlan'a** tıklayabilirsiniz.
 
     **ingestiondata** kapsayıcısı açılır. Sabit sürücünüzden PST dosyalarını içerir. **ingestiondata** kapsayıcısı **Depolama Hesapları** \> **(SAS Bağlı Hizmetler)** \> **Blob Kapsayıcıları** altında bulunur.
 
     ![Azure Depolama Gezgini karşıya yüklediğiniz PST dosyalarının listesini görüntüler.](../media/12376fed-13a5-4a09-8fe6-e819e011b334.png)
   
-14. Microsoft Azure Depolama Gezgini kullanmayı bitirdiğinizde alma **verileri'ne** sağ tıklayın ve ardından Azure Depolama alanınızın bağlantısını kesmek için **Ayır'a** tıklayın. Aksi takdirde, bir sonraki ekleme denemesinde bir hata alırsınız. 
+14. Microsoft Azure Depolama Gezgini kullanmayı bitirdiğinizde, **alma verileri'ne** sağ tıklayın ve ardından Azure Depolama alanınızın bağlantısını kesmek için **Ayır'a** tıklayın. Aksi takdirde, bir sonraki ekleme denemesinde bir hata alırsınız. 
 
     ![Alma işlemine sağ tıklayın ve Azure Depolama alanınızın bağlantısını kesmek için Ayır'a tıklayın.](../media/1e8e5e95-4215-4ce4-a13d-ab5f826a0510.png)
 
 ## <a name="troubleshooting-tips"></a>Sorun giderme ipuçları
 
-- **PST İçeri Aktarma CSV eşleme dosyasındaki hatalar nedeniyle içeri aktarma işi başarısız olursa ne olur?** Eşleme dosyasındaki hatalar nedeniyle içeri aktarma işi başarısız olursa, içeri aktarma işi oluşturmak için sabit sürücüyü Microsoft'a yeniden göndermeniz gerekmez. Bunun nedeni, sürücü gönderimi içeri aktarma işi için gönderdiğiniz sabit sürücüdeki PST dosyalarının kuruluşunuzun Azure Depolama alanına zaten yüklenmiş olmasıdır. Bu durumda, yalnızca PST İçeri Aktarma CSV eşleme dosyasındaki hataları düzeltmeniz ve ardından yeni bir "ağ karşıya yükleme" içeri aktarma işi oluşturmanız ve düzeltilmiş CSV eşleme dosyasını göndermeniz gerekir. Yeni bir ağ karşıya yükleme içeri aktarma işi oluşturmak ve başlatmak için bkz[. 5. Adım: Microsoft 365'de PST İçeri Aktarma işi oluşturma](use-network-upload-to-import-pst-files.md#step-5-create-a-pst-import-job) ve [6. Adım: Verileri filtreleme ve "PST](use-network-upload-to-import-pst-files.md#step-6-filter-data-and-start-the-pst-import-job) dosyalarını Office 365 aktarmak için ağ yükleme özelliğini kullanma" başlığı altındaki PST İçeri Aktarma işini başlatma. 
+- **PST İçeri Aktarma CSV eşleme dosyasındaki hatalar nedeniyle içeri aktarma işi başarısız olursa ne olur?** Eşleme dosyasındaki hatalar nedeniyle içeri aktarma işi başarısız olursa, içeri aktarma işi oluşturmak için sabit sürücüyü Microsoft'a yeniden göndermeniz gerekmez. Bunun nedeni, sürücü gönderimi içeri aktarma işi için gönderdiğiniz sabit sürücüdeki PST dosyalarının kuruluşunuzun Azure Depolama alanına zaten yüklenmiş olmasıdır. Bu durumda, yalnızca PST İçeri Aktarma CSV eşleme dosyasındaki hataları düzeltmeniz ve ardından yeni bir "ağ karşıya yükleme" içeri aktarma işi oluşturmanız ve düzeltilmiş CSV eşleme dosyasını göndermeniz gerekir. Yeni bir ağ karşıya yükleme içeri aktarma işi oluşturmak ve başlatmak için bkz[. 5. Adım: Microsoft 365'te PST İçeri Aktarma işi oluşturma](use-network-upload-to-import-pst-files.md#step-5-create-a-pst-import-job) ve [6. Adım: Verileri filtreleme ve "PST](use-network-upload-to-import-pst-files.md#step-6-filter-data-and-start-the-pst-import-job) dosyalarını Office 365 aktarmak için ağ yükleme özelliğini kullanma" konusunda PST İçeri Aktarma işini başlatma. 
     
     > [!NOTE]
     > PST İçeri Aktarma CSV eşleme dosyasının sorunlarını gidermenize yardımcı olması için [, Azure Depolama Gezgini](#view-a-list-of-the-pst-files-uploaded-to-microsoft-365) aracını kullanarak Sabit sürücünüzden Azure depolama alanına yüklenen PST dosyalarının **alma verileri** kapsayıcısında klasör yapısını görüntüleyin. Eşleme dosyası hataları genellikle FilePath parametresindeki yanlış bir değerden kaynaklanıyor. Bu parametre, Bir PST dosyasının Azure depolama alanındaki konumunu belirtir. [3. Adım'daki](#step-3-create-the-pst-import-mapping-file) tablodaki FilePath parametresinin açıklamasına bakın. Daha önce açıklandığı gibi, [2. Adımda](#step-2-copy-the-pst-files-to-the-hard-drive) WAImportExport.exe aracını çalıştırdığınızda, Pst dosyalarının Azure depolama alanındaki konumu parametresi tarafından `/dstdir:` belirtildi. 
   
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- Sürücü gönderimi, kuruluşunuzda kullanılabilen uyumluluk özelliklerinden yararlanmak için büyük miktarlarda arşiv mesajlaşma verilerini Microsoft 365 aktarmak için etkili bir yoldur. Arşiv verileri kullanıcı posta kutularına aktarıldıktan sonra şunları yapabilirsiniz:
+- Sürücü gönderimi, kuruluşunuzda kullanılabilen uyumluluk özelliklerinden yararlanmak için büyük miktarlarda arşiv mesajlaşma verilerini Microsoft 365'e aktarmanın etkili bir yoludur. Arşiv verileri kullanıcı posta kutularına aktarıldıktan sonra şunları yapabilirsiniz:
 
   - Kullanıcılara veriler için daha fazla posta kutusu depolama alanı sağlamak için [arşiv posta kutularını](enable-archive-mailboxes.md) ve [arşivlemeyi otomatik olarak genişletmeyi](enable-autoexpanding-archiving.md) etkinleştirin. 
 
@@ -445,7 +443,7 @@ Azure Depolama Gezgini yüklemek ve Azure Depolama alanınıza bağlanmak için:
 
   - Verilerde arama yapmak için Microsoft [eBulma araçlarını](search-for-content.md) kullanın. 
 
-  - Verilerin ne kadar [süreyle](retention.md) tutulacağını ve saklama süresi dolduktan sonra hangi eylemin uygulanacağını denetlemek için Microsoft 365 bekletme ilkeleri uygulayın. 
+  - Verilerin ne kadar süreyle tutulacağını ve saklama süresi dolduktan sonra hangi eylemin yapılacağını denetlemek için [Microsoft 365 bekletme ilkeleri](retention.md) uygulayın. 
 
   - Denetim [günlüğünde](search-the-audit-log-in-security-and-compliance.md) bu veriyle ilgili olayları arayın. 
 

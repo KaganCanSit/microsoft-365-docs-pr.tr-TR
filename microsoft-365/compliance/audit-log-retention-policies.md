@@ -16,19 +16,17 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Denetim günlüğü saklama ilkeleri, yeni Microsoft Purview Denetimi (Premium) özelliklerinin bir parçasıdır. Denetim günlüğü saklama ilkesi, kuruluşunuzda denetim günlüklerinin ne kadar süre tutulacağını belirtmenize olanak tanır.
-ms.openlocfilehash: e75c88ba3ddd47b433e733984b76716532ab3ffa
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Denetim günlüğü saklama ilkeleri, yeni Microsoft Purview Denetim (Premium) özelliklerinin bir parçasıdır. Denetim günlüğü saklama ilkesi, kuruluşunuzda denetim günlüklerinin ne kadar süre tutulacağını belirtmenize olanak tanır.
+ms.openlocfilehash: bf9f06fbce71af479ed089f912d440ba6c840b29
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012438"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639214"
 ---
 # <a name="manage-audit-log-retention-policies"></a>Denetim günlüğü saklama ilkelerini yönetme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview uyumluluk portalında denetim günlüğü saklama ilkeleri oluşturabilir ve yönetebilirsiniz. Denetim günlüğü saklama ilkeleri, yeni Microsoft Purview Denetimi (Premium) özelliklerinin bir parçasıdır. Denetim günlüğü saklama ilkesi, kuruluşunuzda denetim günlüklerinin ne kadar süre tutulacağını belirtmenize olanak tanır. Denetim günlüklerini 10 yıla kadar saklayabilirsiniz. İlkeleri aşağıdaki ölçütlere göre oluşturabilirsiniz:
+Microsoft Purview uyumluluk portalı denetim günlüğü saklama ilkeleri oluşturabilir ve yönetebilirsiniz. Denetim günlüğü saklama ilkeleri, yeni Microsoft Purview Denetim (Premium) özelliklerinin bir parçasıdır. Denetim günlüğü saklama ilkesi, kuruluşunuzda denetim günlüklerinin ne kadar süre tutulacağını belirtmenize olanak tanır. Denetim günlüklerini 10 yıla kadar saklayabilirsiniz. İlkeleri aşağıdaki ölçütlere göre oluşturabilirsiniz:
 
 - Bir veya daha fazla Microsoft 365 hizmetindeki tüm etkinlikler
 - Tüm kullanıcılar veya belirli kullanıcılar tarafından gerçekleştirilen belirli etkinlikler (Microsoft 365 hizmetinde)
@@ -36,7 +34,7 @@ Microsoft Purview uyumluluk portalında denetim günlüğü saklama ilkeleri olu
 
 ## <a name="default-audit-log-retention-policy"></a>Varsayılan denetim günlüğü saklama ilkesi
 
-Microsoft 365'daki denetim (Premium), tüm kuruluşlar için varsayılan denetim günlüğü saklama ilkesi sağlar. Bu ilke tüm Exchange Online, SharePoint Online, OneDrive İş ve Azure Active Directory denetim kayıtlarını bir yıl boyunca korur. Bu varsayılan ilke **, workload** özelliği (etkinliğin gerçekleştiği hizmettir) için **Exchange**, **SharePoint**, **OneDrive**, **AzureActiveDirectory** değerini içeren denetim kayıtlarını korur. Varsayılan ilke değiştirilemez. Varsayılan ilkeye dahil edilen her iş yükü için kayıt türlerinin listesi için bu makaledeki [Daha fazla bilgi](#more-information) bölümüne bakın.
+Microsoft 365'teki Denetim (Premium), tüm kuruluşlar için varsayılan denetim günlüğü saklama ilkesi sağlar. Bu ilke tüm Exchange Online, SharePoint Online, OneDrive İş ve Azure Active Directory denetim kayıtlarını bir yıl boyunca saklar. Bu varsayılan ilke **, Workload** özelliği (etkinliğin gerçekleştiği hizmettir) için **Exchange**, **SharePoint**, **OneDrive**, **AzureActiveDirectory** değerini içeren denetim kayıtlarını korur. Varsayılan ilke değiştirilemez. Varsayılan ilkeye dahil edilen her iş yükü için kayıt türlerinin listesi için bu makaledeki [Daha fazla bilgi](#more-information) bölümüne bakın.
 
 > [!NOTE]
 > Varsayılan denetim günlüğü saklama ilkesi yalnızca Office 365 veya Microsoft 365 E5 lisansı atanmış ya da Microsoft 365 E5 Uyumluluk ya da E5 eBulma ve Denetim eklentisi lisansına sahip kullanıcılar tarafından gerçekleştirilen etkinlik denetim kayıtları için geçerlidir. Kuruluşunuzda E5 dışı kullanıcılarınız veya konuk kullanıcılarınız varsa, ilgili denetim kayıtları 90 gün boyunca saklanır.
@@ -49,7 +47,7 @@ Microsoft 365'daki denetim (Premium), tüm kuruluşlar için varsayılan denetim
 
 - Denetim günlüğünü 90 günden (ve 1 yıla kadar) uzun süre saklamak için, denetim günlüğünü oluşturan kullanıcıya (denetim etkinliği gerçekleştirerek) bir Office 365 E5 veya Microsoft 365 E5 lisansı atanması ya da Microsoft 365 E5 Uyumluluk ya da E5 eBulma ve Denetim eklentisi lisansına sahip olması gerekir. Denetim günlüklerini 10 yıl boyunca tutmak için, denetim günlüğünü oluşturan kullanıcıya E5 lisansına ek olarak 10 yıllık denetim günlüğü saklama eklentisi lisansı da atanmalıdır.
 
-- Tüm özel denetim günlüğü saklama ilkeleri (kuruluşunuz tarafından oluşturulan) varsayılan bekletme ilkesine göre önceliklidir. Örneğin, bir yıldan kısa bir saklama süresine sahip Exchange posta kutusu etkinliği için bir denetim günlüğü saklama ilkesi oluşturursanız, Exchange posta kutusu etkinliklerinin denetim kayıtları özel ilke tarafından belirtilen daha kısa süre boyunca korunur.
+- Tüm özel denetim günlüğü saklama ilkeleri (kuruluşunuz tarafından oluşturulan) varsayılan bekletme ilkesine göre önceliklidir. Örneğin, bir yıldan kısa bir saklama süresi olan Exchange posta kutusu etkinliği için bir denetim günlüğü saklama ilkesi oluşturursanız, Exchange posta kutusu etkinliklerinin denetim kayıtları özel ilke tarafından belirtilen daha kısa süre boyunca saklanır.
 
 ## <a name="create-an-audit-log-retention-policy"></a>Denetim günlüğü saklama ilkesi oluşturma
 
@@ -102,7 +100,7 @@ Ayrıca, açılır sayfada ayarlarını görüntülemek için bir ilke seçebili
 
 > [!IMPORTANT]
 >
-> **New-UnifiedAuditLogRetentionPolicy** cmdlet'ini kullanıyorsanız, panodaki **Denetim bekletme ilkesi oluşturma** aracında bulunmayan kayıt türleri veya etkinlikler için bir denetim günlüğü bekletme ilkesi oluşturabilirsiniz. Bu durumda, ilkeyi **Denetim bekletme ilkeleri** panosundan düzenleyemezsiniz (örneğin, bekletme süresini değiştiremez veya etkinlik ekleyip kaldıramazsınız). İlkeyi yalnızca Microsoft Purview uyumluluk portalında görüntüleyebilir ve silebilirsiniz. İlkeyi düzenlemek için Güvenlik & Uyumluluğu PowerShell.>'da [Set-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/set-unifiedauditlogretentionpolicy) cmdlet'ini kullanmanız gerekir
+> **New-UnifiedAuditLogRetentionPolicy** cmdlet'ini kullanıyorsanız, panodaki **Denetim bekletme ilkesi oluşturma** aracında bulunmayan kayıt türleri veya etkinlikler için bir denetim günlüğü bekletme ilkesi oluşturabilirsiniz. Bu durumda, ilkeyi **Denetim bekletme ilkeleri** panosundan düzenleyemezsiniz (örneğin, bekletme süresini değiştiremez veya etkinlik ekleyip kaldıramazsınız). İlkeyi yalnızca Microsoft Purview uyumluluk portalı görüntüleyip silebilirsiniz. İlkeyi düzenlemek için Güvenlik & Uyumluluğu PowerShell.>'da [Set-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/set-unifiedauditlogretentionpolicy) cmdlet'ini kullanmanız gerekir
 >
 > **Ipucu:** PowerShell kullanılarak düzenlenmesi gereken ilkeler için açılır sayfa üst kısmında bir ileti görüntülenir.
 
@@ -118,7 +116,7 @@ Denetim günlüğü saklama ilkeleri oluşturmak ve yönetmek için Güvenlik & 
 
 PowerShell'de denetim günlüğü saklama ilkesi oluşturmak için şu adımları izleyin:
 
-1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+1. [Güvenlik & Uyumluluğu PowerShell'e bağlanın](/powershell/exchange/connect-to-scc-powershell).
 
 2. Denetim günlüğü saklama ilkesi oluşturmak için aşağıdaki komutu çalıştırın:
 
@@ -129,8 +127,8 @@ PowerShell'de denetim günlüğü saklama ilkesi oluşturmak için şu adımlar�
    Bu örnek, şu ayarlarla "Microsoft Teams Denetim İlkesi" adlı bir denetim günlüğü saklama ilkesi oluşturur:
 
    - İlkenin açıklaması.
-   - Tüm Microsoft Teams etkinliklerini korur (*RecordType* parametresi tarafından tanımlandığı şekilde).
-   - Microsoft Teams denetim günlüklerini 10 yıl boyunca korur.
+   - Tüm Microsoft Teams etkinliklerini korur ( *RecordType* parametresi tarafından tanımlandığı şekilde).
+   - Microsoft Teams denetim günlüklerini 10 yıl boyunca saklar.
    - 100'ün önceliği.
 
 Aşağıda bir denetim günlüğü saklama ilkesi oluşturmaya yönelik başka bir örnek verilmiştir. Bu ilke, "Oturum açan kullanıcı" etkinliğinin denetim günlüklerini kullanıcı admin@contoso.onmicrosoft.com için altı ay boyunca saklar.
@@ -164,7 +162,7 @@ Denetim günlüğü saklama ilkesini silmek için Güvenlik & Uyumluluk PowerShe
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-Daha önce belirtildiği gibi, Azure Active Directory, Exchange Online, SharePoint Online ve OneDrive İş'daki işlemlerin denetim kayıtları varsayılan olarak bir yıl boyunca saklanır. Aşağıdaki tabloda, varsayılan denetim günlüğü saklama ilkesine dahil edilen tüm kayıt türleri (bu hizmetlerin her biri için) listelenmektedir. Bu, özel denetim günlüğü saklama ilkesinin belirli bir kayıt türü, işlem veya kullanıcı için öncelikli olmadığı sürece, bu kayıt türüne sahip herhangi bir işlemin denetim günlüklerinin bir yıl boyunca tutulduğunu gösterir. Her kayıt türü için Enum değeri (bir denetim kaydındaki RecordType özelliğinin değeri olarak görüntülenir) parantez içinde gösterilir.
+Daha önce belirtildiği gibi Azure Active Directory, Exchange Online, SharePoint Online ve OneDrive İş işlemleri için denetim kayıtları varsayılan olarak bir yıl boyunca saklanır. Aşağıdaki tabloda, varsayılan denetim günlüğü saklama ilkesine dahil edilen tüm kayıt türleri (bu hizmetlerin her biri için) listelenmektedir. Bu, özel denetim günlüğü saklama ilkesinin belirli bir kayıt türü, işlem veya kullanıcı için öncelikli olmadığı sürece, bu kayıt türüne sahip herhangi bir işlemin denetim günlüklerinin bir yıl boyunca tutulduğunu gösterir. Her kayıt türü için Enum değeri (bir denetim kaydındaki RecordType özelliğinin değeri olarak görüntülenir) parantez içinde gösterilir.
 
 <br>
 
@@ -174,7 +172,7 @@ Daha önce belirtildiği gibi, Azure Active Directory, Exchange Online, SharePoi
 |---|---|---|
 |AzureActiveDirectory (8)|ExchangeAdmin (1)|ComplianceDLPSharePoint (11)|
 |AzureActiveDirectoryAccountLogon (9)|ExchangeItem (2)|ComplianceDLPSharePointClassification (33)|
-|AzureActiveDirectoryStsLogon (15)|Kampanya (62)|Project (35)|
+|AzureActiveDirectoryStsLogon (15)|Kampanya (62)|Proje (35)|
 ||ComplianceDLPExchange (13)|SharePoint (4)|
 ||ComplianceSupervisionExchange (68)|SharePointCommentOperation (37)|
 ||CustomerKeyServiceEncryption (69)|SharePointContentTypeOperation (55)|

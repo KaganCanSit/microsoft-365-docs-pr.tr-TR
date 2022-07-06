@@ -1,7 +1,7 @@
 ---
 title: Insider risk yönetimi durumları
-description: Microsoft Purview'de insider risk yönetimi durumları hakkında bilgi edinin
-keywords: Microsoft 365, Microsoft Purview, iç risk, risk yönetimi, uyumluluk
+description: Microsoft Purview'da insider risk yönetimi durumları hakkında bilgi edinin
+keywords: Microsoft 365, Microsoft Purview, insider riski, risk yönetimi, uyumluluk
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -13,16 +13,14 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 916fb67d8fb2376a1a59d3d2aa61a8e7d041f194
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 678d500b5d523c2b656f4f30fa4ef4a4ed5015a7
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65469392"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66628715"
 ---
 # <a name="insider-risk-management-cases"></a>Insider risk yönetimi durumları
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Vakalar, içeriden risk yönetiminin merkezidir ve ilkelerinizde tanımlanan risk göstergeleri tarafından oluşturulan sorunları derinlemesine araştırmanıza ve üzerinde işlem yapmanızı sağlar. Servis talepleri, kullanıcının uyumlulukla ilgili bir sorunu gidermek için başka bir eyleme ihtiyaç duyulduğu durumlarda uyarılardan el ile oluşturulur. Her servis talebinin kapsamı tek bir kullanıcı olarak belirlenmiştir ve mevcut bir servis talebine veya yeni bir servis talebine kullanıcı için birden çok uyarı eklenebilir.
 
@@ -101,7 +99,7 @@ Bir servis talebi seçildiğinde olay yönetimi araçları açılır ve analistl
 **Uyarılar** sekmesi, servis talebine dahil edilen geçerli uyarıları özetler. Mevcut bir servis talebine yeni uyarılar eklenebilir ve atandıkları sırada **Uyarı** kuyruğuna eklenirler. Aşağıdaki uyarı öznitelikleri kuyrukta listelenir:
 
 - Durum
-- Önem
+- Önem derecesi
 - Algılanan süre
 
 **Uyarı ayrıntı** sayfasını görüntülemek için kuyruktan bir uyarı seçin.
@@ -109,7 +107,7 @@ Bir servis talebi seçildiğinde olay yönetimi araçları açılır ve analistl
 Belirli bir metin için uyarı adlarını aramak için arama denetimini kullanın ve servis taleplerini aşağıdaki özniteliklere göre sıralamak için uyarı filtresini kullanın:
 
 - Durum
-- Önem
+- Önem derecesi
 - Algılanan saat, başlangıç tarihi ve bitiş tarihi
 
 Uyarıları aşağıdakiler gibi çeşitli özniteliklere göre filtrelemek için filtre denetimini kullanın:
@@ -165,7 +163,7 @@ Bir servis talebine katkıda bulunan eklemek için:
 1. [Microsoft Purview uyumluluk portalı](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Servis Talepleri** sekmesini seçin.
 2. Bir servis talebi seçin ve katkıda **bulunanlar** sekmesini seçin.
 3. **Katkıda bulunan ekle'yi** seçin.
-4. **Katkıda bulunan ekle** iletişim kutusunda, eklemek istediğiniz kullanıcının adını yazmaya başlayın ve ardından önerilen kullanıcı listesinden kullanıcıyı seçin. Bu liste, kiracı aboneliğinizin Azure Active Directory oluşturulur.
+4. **Katkıda bulunan ekle** iletişim kutusunda, eklemek istediğiniz kullanıcının adını yazmaya başlayın ve ardından önerilen kullanıcı listesinden kullanıcıyı seçin. Bu liste, kiracı aboneliğinizin Azure Active Directory'sinden oluşturulur.
 5. Kullanıcıyı katkıda bulunan olarak eklemek için **Ekle'yi** seçin veya **İptal'i** seçerek kullanıcıyı katkıda bulunan olarak eklemeden iletişim kutusunu kapatın.
 
 ## <a name="case-actions"></a>Servis talebi eylemleri
@@ -188,7 +186,7 @@ Servis talebine atanan kullanıcıya bildirim göndermek için:
 
 ### <a name="escalate-for-investigation"></a>Araştırma için yükseltme
 
-Kullanıcının risk etkinliği için ek yasal inceleme gerektiren durumlarda kullanıcı araştırması için olayı yükseltin. Bu yükseltme, Microsoft 365 kuruluşunuzda yeni bir Microsoft Purview eBulma (Premium) olayı açar. eBulma (Premium), kuruluşunuzun iç ve dış yasal araştırmalarına yanıt veren içeriği korumak, toplamak, gözden geçirmek, analiz etmek ve dışarı aktarmak için uçtan uca bir iş akışı sağlar. Ayrıca, yasal ekibinizin bir olaya dahil olan koruyucularla iletişim kurmak için yasal tutma bildirimi iş akışının tamamını yönetmesine olanak tanır. Bir şirket içi risk yönetimi olayından bir eBulma (Premium) olayına geçiş yapmak, yasal ekibinizin uygun eylemleri gerçekleştirmesine ve içerik korumasını yönetmesine yardımcı olur. eBulma (Premium) durumları hakkında daha fazla bilgi edinmek için bkz. [Microsoft Purview eKeşif'e (Premium) genel bakış](overview-ediscovery-20.md).
+Kullanıcının risk etkinliği için ek yasal inceleme gerektiren durumlarda kullanıcı araştırması için olayı yükseltin. Bu yükseltme, Microsoft 365 kuruluşunuzda yeni bir Microsoft Purview eKeşif (Premium) servis talebi açar. eBulma (Premium), kuruluşunuzun iç ve dış yasal araştırmalarına yanıt veren içeriği korumak, toplamak, gözden geçirmek, analiz etmek ve dışarı aktarmak için uçtan uca bir iş akışı sağlar. Ayrıca, yasal ekibinizin bir olaya dahil olan koruyucularla iletişim kurmak için yasal tutma bildirimi iş akışının tamamını yönetmesine olanak tanır. Bir şirket içi risk yönetimi olayından bir eBulma (Premium) olayına geçiş yapmak, yasal ekibinizin uygun eylemleri gerçekleştirmesine ve içerik korumasını yönetmesine yardımcı olur. eBulma (Premium) durumları hakkında daha fazla bilgi edinmek için bkz. [Microsoft Purview eKeşif genel bakış (Premium)](overview-ediscovery-20.md).
 
 Bir olayı kullanıcı araştırmasına ilerletmek için:
 
@@ -198,7 +196,7 @@ Bir olayı kullanıcı araştırmasına ilerletmek için:
 4. Bildirim alanlarını gözden geçirin ve uygun şekilde güncelleştirin. Buraya girilen değerler şablondaki değerleri geçersiz kılar.
 5. Kullanıcı araştırma olayı oluşturmak için **Onayla'yı** seçin veya yeni bir kullanıcı araştırma olayı oluşturmadan iletişim kutusunu kapatmak için **İptal'i** seçin.
 
-Insider risk yönetimi olayı yeni bir kullanıcı araştırma olayına yükseltildikten sonra, yeni olayı Microsoft Purview uyumluluk portalı **eKeşifGelişmiş** >  alanında gözden geçirebilirsiniz.
+Insider risk yönetimi olayı yeni bir kullanıcı araştırma olayına yükseltildikten sonra, yeni olayı Microsoft Purview uyumluluk portalı **eKeşif** > **Gelişmiş** alanında gözden geçirebilirsiniz.
 
 ### <a name="run-automated-tasks-with-power-automate-flows-for-the-case"></a>Servis talebi için Power Automate akışlarıyla otomatik görevleri çalıştırma
 
@@ -209,23 +207,23 @@ Insider risk yönetimi olayı yeni bir kullanıcı araştırma olayına yükselt
 - ServiceNow'da insider risk yönetimi olayı için kayıt oluşturma
 - Insider risk ilkesine eklendiklerinde kullanıcılara bildirme
 
-Insider risk yönetimi olayı için Power Automate akışları çalıştırmak, yönetmek veya oluşturmak için:
+Insider risk yönetimi olayı için Power Automate akışlarını çalıştırmak, yönetmek veya oluşturmak için:
 
 1. Servis talebi eylem araç çubuğunda **Otomatikleştir'i** seçin. 
-2. Çalıştırılacak Power Automate akışını seçin ve ardından **Akışı çalıştır'ı** seçin. 
+2. Çalıştırılacak Power Automate akışını ve ardından **Akışı çalıştır'ı** seçin. 
 3. Akış tamamlandıktan sonra **Bitti'yi** seçin.
 
-Insider risk yönetimine yönelik Power Automate akışları hakkında daha fazla bilgi edinmek için bkz. [Insider risk yönetimi ayarlarını kullanmaya başlama](insider-risk-management-settings.md#power-automate-flows-preview).
+Insider risk yönetimi için Power Automate akışları hakkında daha fazla bilgi edinmek için bkz. [Insider risk yönetimi ayarlarını kullanmaya başlama](insider-risk-management-settings.md#power-automate-flows-preview).
 
 ### <a name="view-or-create-a-microsoft-teams-team-for-the-case"></a>Servis talebi için bir Microsoft Teams ekibi görüntüleme veya oluşturma
 
-Ayarlarda insider risk yönetimi için Microsoft Teams tümleştirme etkinleştirildiğinde, bir uyarı onaylandığında ve servis talebi oluşturulduğunda otomatik olarak bir Microsoft Teams ekibi oluşturulur. Risk araştırmacıları ve analistleri Microsoft Teams hızla açabilir ve servis talebi eylem araç çubuğundan Ekibi görüntüle Microsoft Teams seçerek servis talebi için doğrudan **takıma** gidebilir.
+Ayarlarda insider risk yönetimi için Microsoft Teams tümleştirmesi etkinleştirildiğinde, her uyarı onaylandığında ve bir servis talebi oluşturulduğunda otomatik olarak bir Microsoft Teams ekibi oluşturulur. Risk araştırmacıları ve analistler, servis talebi eylem araç çubuğunda Microsoft Teams **ekibini görüntüle'yi seçerek Microsoft Teams'i** hızla açabilir ve bir servis talebi için doğrudan ekise gidebilir.
 
-Microsoft Team tümleştirmesini etkinleştirmeden önce açılan servis talepleri için risk araştırmacıları ve analistler, servis talebi eylem araç çubuğunda Microsoft Teams **ekip oluştur'u** seçerek bir servis talebi için yeni bir Microsoft Teams ekibi oluşturabilir.
+Microsoft Team tümleştirmesini etkinleştirmeden önce açılan servis talepleri için risk araştırmacıları ve analistleri, servis talebi eylem araç çubuğunda Microsoft **Teams ekibi oluştur'u** seçerek bir servis talebi için yeni bir Microsoft Teams ekibi oluşturabilir.
 
 Bir servis talebi çözümlendiğinde, ilişkili Microsoft Ekibi otomatik olarak arşivlenir (gizlenir ve salt okunur duruma gelir).
 
-Insider risk yönetimi Microsoft Teams hakkında daha fazla bilgi edinmek için bkz. [Insider risk yönetimi ayarlarını kullanmaya başlama](insider-risk-management-settings.md#microsoft-teams-preview).
+Insider risk yönetimi için Microsoft Teams hakkında daha fazla bilgi edinmek için bkz. [Insider risk yönetimi ayarlarını kullanmaya başlama](insider-risk-management-settings.md#microsoft-teams-preview).
 
 ### <a name="resolve-the-case"></a>Servis talebini çözme
 

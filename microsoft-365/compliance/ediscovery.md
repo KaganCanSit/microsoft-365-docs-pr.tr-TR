@@ -19,38 +19,36 @@ search.appverid:
 - SPO160
 - MOE150
 - MET150
-description: Microsoft Purview; Exchange posta kutuları, SharePoint ve OneDrive İş siteleri, Microsoft 365 Grupları, Microsoft Teams ve konuşmaları Skype Kurumsal. eBulma (Standart) ve eBulma (Premium), araştırmalarınızı yönetmenize yardımcı olacak birçok ek özellik sağlar.
-ms.openlocfilehash: 9262f2773d17f19bd5adaea3eed9e747e343e625
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+description: Microsoft Purview; Exchange posta kutuları, SharePoint ve OneDrive İş siteleri, Microsoft 365 Grupları, Microsoft Teams ve Skype Kurumsal konuşmaları gibi farklı konumlarda bulunan içeriği aramak ve dışarı aktarmak için kullanabileceğiniz üç eBulma aracı sunar. eBulma (Standart) ve eBulma (Premium), araştırmalarınızı yönetmenize yardımcı olacak birçok ek özellik sağlar.
+ms.openlocfilehash: 6bfc08b8f264f9bd6c1e61cdf98231f4ca8a9d9b
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66043403"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634345"
 ---
 # <a name="microsoft-purview-ediscovery-solutions"></a>Microsoft Purview eKeşif çözümleri
 
 > [!TIP]
-> *Dokuz Microsoft Purview çözümlerinin tamamının premium sürümlerini ücretsiz olarak deneyebileceğinizi biliyor muydunuz?* Sağlam Purview özelliklerinin kuruluşunuzun uyumluluk gereksinimlerini karşılamasına nasıl yardımcı olabileceğini keşfetmek için 90 günlük Purview çözümleri deneme sürümünü kullanın. Microsoft 365 E3 ve Office 365 E3 müşterileri artık [Microsoft Purview uyumluluk portalı deneme hub'ında](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) başlayabilir. [Kaydolabilecek kişiler ve deneme koşulları](compliance-easy-trials.md) hakkında ayrıntılı bilgi edinin.
+> *Dokuz Microsoft Purview çözümlerinin tamamının premium sürümlerini ücretsiz olarak deneyebileceğinizi biliyor muydunuz?* Sağlam Purview özelliklerinin kuruluşunuzun uyumluluk gereksinimlerini karşılamasına nasıl yardımcı olabileceğini keşfetmek için 90 günlük Purview çözümleri deneme sürümünü kullanın. Microsoft 365 E3 ve Office 365 E3 müşterileri şimdi [Microsoft Purview uyumluluk portalı deneme hub'ında](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) başlayabilir. [Kaydolabilecek kişiler ve deneme koşulları](compliance-easy-trials.md) hakkında ayrıntılı bilgi edinin.
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Elektronik bulma veya eBulma, yasal davalarda kanıt olarak kullanılabilecek elektronik bilgileri tanımlama ve teslim etme işlemidir. Exchange Online, OneDrive İş, SharePoint Online, Microsoft Teams, Microsoft 365 Grupları ve Yammer ekiplerindeki içeriği aramak için Microsoft Purview'daki eBulma araçlarını kullanabilirsiniz. Aynı eBulma aramasında posta kutularını ve siteleri arayabilir ve ardından arama sonuçlarını dışarı aktarabilirsiniz. Posta kutularında ve sitelerde bulunan içeriği tanımlamak, tutmak ve dışarı aktarmak için Microsoft Purview eKeşif (Standart) durumları kullanabilirsiniz. Kuruluşunuzun Office 365 E5 veya Microsoft 365 E5 aboneliği (veya ilgili E5 eklenti abonelikleri) varsa, Microsoft 365'teki zengin özelliklere sahip Microsoft Purview eKeşif (Premium) çözümünü kullanarak koruyucuları daha fazla yönetebilir ve içeriği analiz edebilirsiniz.
 
-Elektronik bulma veya eBulma, yasal davalarda kanıt olarak kullanılabilecek elektronik bilgileri tanımlama ve teslim etme işlemidir. Exchange Online, OneDrive İş, SharePoint Online, Microsoft Teams, Microsoft 365 Grupları ve Yammer ekiplerindeki içeriği aramak için Microsoft Purview'daki eBulma araçlarını kullanabilirsiniz. Aynı eBulma aramasında posta kutularını ve siteleri arayabilir ve ardından arama sonuçlarını dışarı aktarabilirsiniz. Posta kutularında ve sitelerde bulunan içeriği tanımlamak, tutmak ve dışarı aktarmak için Microsoft Purview eKeşif (Standart) servis taleplerini kullanabilirsiniz. Kuruluşunuzun bir Office 365 E5 veya Microsoft 365 E5 aboneliği (veya ilgili E5 eklenti abonelikleri) varsa, Microsoft 365 özellik bakımından zengin Microsoft Purview eKeşif (Premium) çözümünü kullanarak koruyucuları daha fazla yönetebilir ve içeriği analiz edebilirsiniz.
-
-## <a name="ediscovery-solutions"></a>eBulma çözümleri
+## <a name="ediscovery-solutions"></a>eKeşif çözümleri
 
 Microsoft Purview üç eBulma çözümü sağlar: İçerik arama, eBulma (Standart) ve eBulma (Premium).
 
 ![Microsoft Purview eKeşif araçlarının temel özellikleri.](..\media\m365-ediscovery-solution-graphic.png)
 
-- **İçerik araması**. İçerik arama aracını kullanarak Microsoft 365 veri kaynakları arasında içerik arayın ve arama sonuçlarını yerel bir bilgisayara aktarın.
+- **İçerik araması**. İçerik arama aracını kullanarak Microsoft 365 veri kaynaklarında içerik arayın ve arama sonuçlarını yerel bir bilgisayara aktarın.
 
 - **eBulma (Standart)**. eBulma (Standart), eBulma servis talepleri oluşturmanızı ve belirli servis talepleri için eBulma yöneticileri atamanızı sağlayarak İçerik aramanın temel arama ve dışarı aktarma işlevselliğini temel alır. eBulma yöneticileri yalnızca üye oldukları durumlara erişebilir. eBulma (Standart), aramaları ve dışarı aktarmaları bir servis talebiyle ilişkilendirmenize ve servis talebiyle ilgili içerik konumlarına eBulma ayrılığı yerleştirmenize de olanak tanır.
 
-- **eBulma (Premium)**. eKeşif (Premium) aracı, eBulma(Standart) içindeki mevcut servis talebi yönetimi, koruma, arama ve dışarı aktarma özelliklerini temel alıyor. eBulma (Premium), kuruluşunuzun iç ve dış araştırmalarına yanıt veren içeriği tanımlamak, korumak, toplamak, gözden geçirmek, analiz etmek ve dışarı aktarmak için uçtan uca bir iş akışı sağlar. Yasal ekiplerin, bir olayla ilgili koruyucularla iletişim kurmak için koruyucuları ve yasal tutma bildirimi iş akışını yönetmesine olanak tanır. İş akışınızın en uygun içeriği belirleyebilmesi ve buna odaklanabilmesi için daha fazla gözden geçirmeden ilgili olmayan içeriği silmek için içeriği filtreleyebilir, arayabilir ve etiketleyebilirsiniz; canlı hizmetten verileri toplamanıza ve gözden geçirme kümelerine kopyalamanıza olanak tanır. eBulma (Premium), araştırmanızın kapsamını en uygun içerikle daha da daraltmak için analiz ve makine öğrenmesi tabanlı tahmine dayalı kodlama modelleri sağlar.
+- **eBulma (Premium)**. eBulma (Premium) aracı, eBulma(Standart) içindeki mevcut servis talebi yönetimi, koruma, arama ve dışarı aktarma özelliklerini temel alıyor. eBulma (Premium), kuruluşunuzun iç ve dış araştırmalarına yanıt veren içeriği tanımlamak, korumak, toplamak, gözden geçirmek, analiz etmek ve dışarı aktarmak için uçtan uca bir iş akışı sağlar. Yasal ekiplerin, bir olayla ilgili koruyucularla iletişim kurmak için koruyucuları ve yasal tutma bildirimi iş akışını yönetmesine olanak tanır. İş akışınızın en uygun içeriği belirleyebilmesi ve buna odaklanabilmesi için daha fazla gözden geçirmeden ilgili olmayan içeriği silmek için içeriği filtreleyebilir, arayabilir ve etiketleyebilirsiniz; canlı hizmetten verileri toplamanıza ve gözden geçirme kümelerine kopyalamanıza olanak tanır. eBulma (Premium), araştırmanızın kapsamını en ilgili içeriğe daha da daraltmak için analiz ve makine öğrenmesi tabanlı tahmine dayalı kodlama modelleri sağlar.
 
 ## <a name="comparison-of-key-capabilities"></a>Önemli özelliklerin karşılaştırması
 
-Aşağıdaki tabloda İçerik arama, eKeşif (Standart) ve eBulma (Premium) ile sağlanan temel özellikler karşılaştırılarak elde edilen özellikler karşılaştırılarak sağlanır.
+Aşağıdaki tabloda İçerik arama, eKeşif (Standart) ve eBulma (Premium) ile sunulan temel özellikler karşılaştırılarak elde edilmiştir.
 
 |Yeteneği|İçerik arama|eKeşif (Standart)|eKeşif (Premium)|
 |:------|:-------------|:-------------|:-------------|
@@ -81,13 +79,13 @@ Aşağıdaki tabloda İçerik arama, eKeşif (Standart) ve eBulma (Premium) ile 
 
 Her eBulma özelliğinin açıklaması aşağıdadır.
 
-- **İçerik arayın**. Exchange posta kutuları, OneDrive İş hesapları, SharePoint siteleri, Microsoft Teams, Microsoft 365 Grupları ve Yammer Teams depolanan içeriği arayın. Bu, posta kutularında ve sitelerde veri depolayan diğer Microsoft 365 uygulamaları tarafından oluşturulan içeriği içerir.
+- **İçerik arayın**. Exchange posta kutuları, OneDrive İş hesapları, SharePoint siteleri, Microsoft Teams, Microsoft 365 Grupları ve Yammer Teams'de depolanan içeriği arayın. Bu, posta kutularında ve sitelerde veri depolayan diğer Microsoft 365 uygulamaları tarafından oluşturulan içeriği içerir.
 
 - **Anahtar sözcük sorguları ve arama koşulları**. Sorgu ölçütlerine uyan içeriği aramak için KQL anahtar sözcük arama sorguları oluşturun. Aramanızın kapsamını daraltmak için koşullar da ekleyebilirsiniz.
 
 - **Arama istatistikleri**. Bir arama çalıştırdıktan sonra, arama ölçütlerinizle eşleşen öğelerin sayısı ve toplam boyutu gibi tahmini arama sonuçlarının istatistiklerini görüntüleyebilirsiniz. Diğer istatistikler, arama sonuçlarını içeren en üst içerik konumlarını ve arama sorgusunun farklı bölümleriyle eşleşen öğelerin sayısını içerir.
 
-- **Arama sonuçlarını dışarı aktarın**. İki adımlı bir işlemde arama sonuçlarını kuruluşunuzdaki yerel bir bilgisayara aktarın. Arama sonuçlarını dışarı aktardığınızda, öğeler özgün içerik konumlarından Microsoft 365 Microsoft tarafından sağlanan bir Azure Depolama konumuna kopyalanır. Ardından bu öğeleri yerel bir bilgisayara indirebilirsiniz.
+- **Arama sonuçlarını dışarı aktarın**. İki adımlı bir işlemde arama sonuçlarını kuruluşunuzdaki yerel bir bilgisayara aktarın. Arama sonuçlarını dışarı aktardığınızda, öğeler Microsoft 365'teki özgün içerik konumundan Microsoft tarafından sağlanan azure depolama konumuna kopyalanır. Ardından bu öğeleri yerel bir bilgisayara indirebilirsiniz.
 
 - **Rol tabanlı izinler**. Farklı kullanıcıların gerçekleştirebileceği eBulma ile ilgili görevleri denetlemek için rol tabanlı erişim (RBAC) izinlerini kullanın. Yerleşik eBulma ile ilgili bir rol grubu kullanabilir veya belirli eBulma izinlerini atayan özel rol grupları oluşturabilirsiniz.
 
@@ -97,19 +95,19 @@ Her eBulma özelliğinin açıklaması aşağıdadır.
 
 - **Bekçi yönetimi**. Olayla ilgilendiğiniz kişiler olarak tanımladığınız kişileri ( *koruyucu* olarak adlandırılır) ve bir koruyucuyla ilişkilendirilmeyebilecek diğer veri kaynaklarını yönetin. Bir olaya koruyucular ve gözetimsiz veri kaynakları eklediğinizde, bu veri kaynaklarına yasal bir saklama ekleyebilir, yasal saklama bildirim sürecini kullanarak koruyucularla iletişim kurabilir ve olayla ilgili içerik toplamak için koruyucu ve gözetimsiz veri kaynaklarını arayabilirsiniz.
 
-- **Yasal tutma bildirimleri**. Olay koruyucularıyla iletişim kurma sürecini yönetin. Yasal saklama bildirimi, koruyuculara olayla ilgili içeriği korumalarını emredmektedir. Koruyucular tarafından alınan, okunan ve onaylanan bildirimleri izleyebilirsiniz. eBulma'daki (Premium) iletişim iş akışı, koruyucuların bir ayrı tutma bildirimini kabul etmemesi durumunda ilk bildirimleri, anımsatıcıları ve yükseltmeleri oluşturmanıza ve göndermenize olanak tanır.
+- **Yasal tutma bildirimleri**. Olay koruyucularıyla iletişim kurma sürecini yönetin. Yasal saklama bildirimi, koruyuculara olayla ilgili içeriği korumalarını emredmektedir. Koruyucular tarafından alınan, okunan ve onaylanan bildirimleri izleyebilirsiniz. eKeşif (Premium) içindeki iletişim iş akışı, koruyucuların ayrı tutma bildirimini kabul etmemesi durumunda ilk bildirimleri, anımsatıcıları ve yükseltmeleri oluşturup göndermenizi sağlar.
 
 - **Gelişmiş dizin oluşturma**. Bir olaya koruyucu ve koruyucu olmayan veri kaynakları eklediğinizde, ilişkili içerik konumları yeniden dizinlenir ( *Gelişmiş dizin oluşturma* olarak adlandırılan bir işlemde), bir araştırma için veri topladığınızda kısmen dizinlenmiş olarak kabul edilen tüm içeriğin tamamen aranabilir hale getirmek üzere yeniden işlenmesini sağlar.
 
 - **Hata düzeltme**. Hata düzeltme adlı bir işlem kullanarak işleme hatalarını *düzeltin*. Hata düzeltme, Gelişmiş dizin oluşturma sırasında eBulma'nın (Premium) içeriği düzgün işlemesini engelleyen veri sorunlarını düzeltmenize olanak tanır. Örneğin, parola korumalı dosyalar kilitli veya şifrelenmiş olduğundan işlenemez. Hata düzeltmeyi kullanarak hata içeren dosyaları indirebilir, parola korumasını kaldırabilir ve ardından düzeltilmiş dosyaları karşıya yükleyebilirsiniz.
 
-- **Kümeleri gözden geçirin**. Bir gözden geçirme kümesine ilgili verileri ekleyin. Gözden geçirme kümesi, Microsoft tarafından sağlanan güvenli bir Azure Depolama Microsoft bulutu konumudur. Bir gözden geçirme kümesine veri eklediğinizde, toplanan öğeler özgün içerik konumlarından gözden geçirme kümesine kopyalanır. Gözden geçirme kümeleri, tahmine dayalı kodlama modellerini kullanarak arama yapabileceğiniz, filtreleyebileceğiniz, etiketleyebileceğiniz, çözümleyebileceğiniz ve İlgiyi tahminleyebileceğiniz statik, bilinen bir içerik kümesi sağlar. Ayrıca, gözden geçirme kümesine hangi içeriğin eklendiğini izleyebilir ve raporlayabilirsiniz.
+- **Kümeleri gözden geçirin**. Bir gözden geçirme kümesine ilgili verileri ekleyin. Gözden geçirme kümesi, Microsoft bulutunda Microsoft tarafından sağlanan güvenli bir Azure Depolama konumudur. Bir gözden geçirme kümesine veri eklediğinizde, toplanan öğeler özgün içerik konumlarından gözden geçirme kümesine kopyalanır. Gözden geçirme kümeleri, tahmine dayalı kodlama modellerini kullanarak arama yapabileceğiniz, filtreleyebileceğiniz, etiketleyebileceğiniz, çözümleyebileceğiniz ve İlgiyi tahminleyebileceğiniz statik, bilinen bir içerik kümesi sağlar. Ayrıca, gözden geçirme kümesine hangi içeriğin eklendiğini izleyebilir ve raporlayabilirsiniz.
 
 - **Bulut ekleri ve SharePoint sürümleri için destek**. Bir gözden geçirme kümesine içerik eklediğinizde, bulut eklerini veya bağlı dosyaları ekleme seçeneğiniz vardır. Bu, bulut ekinin veya bağlı dosyanın hedef dosyasının gözden geçirme kümesine eklendiği anlamına gelir. Ayrıca, bir SharePoint belgesinin tüm sürümlerini gözden geçirme kümesine ekleme seçeneğiniz de vardır.
 
 - **Optik karakter tanıma (OCR)**. bir gözden geçirme kümesine içerik eklendiğinde, OCR işlevi görüntülerden metin ayıklar ve bir gözden geçirme kümesine eklenen içeriği içeren görüntü metnini içerir. Bu, inceleme kümesindeki içeriği sorguladığınızda resim metnini aramanıza olanak tanır.
 
-- **Konuşma yazışması**. Teams ve Yammer konuşmalardan gelen sohbet iletileri bir gözden geçirme kümesine eklendiğinde, konuşma yazışmasının tamamını toplayabilirsiniz. Bu, koleksiyon ölçütlerine uyan öğeleri içeren sohbet konuşmasının tamamının gözden geçirme kümesine eklendiği anlamına gelir. Bu, sohbet öğelerini ileri geri konuşma bağlamında gözden geçirmenize olanak tanır.
+- **Konuşma yazışması**. Teams ve Yammer konuşmalarından gelen sohbet iletileri bir gözden geçirme kümesine eklendiğinde, konuşma yazışmasının tamamını toplayabilirsiniz. Bu, koleksiyon ölçütlerine uyan öğeleri içeren sohbet konuşmasının tamamının gözden geçirme kümesine eklendiği anlamına gelir. Bu, sohbet öğelerini ileri geri konuşma bağlamında gözden geçirmenize olanak tanır.
 
 - **Toplama istatistikleri ve raporları**. Taslak koleksiyon oluşturduktan veya bir koleksiyonu gözden geçirme kümesine işledikten sonra, arama ölçütleriyle eşleşen en çok öğeyi içeren içerik konumları ve arama sorgusu tarafından döndürülen öğe sayısı gibi, alınan öğelerle ilgili zengin bir istatistik kümesini görüntüleyebilirsiniz. Sonuçların bir alt kümesini de önizleyebilirsiniz.
 
@@ -121,20 +119,20 @@ Her eBulma özelliğinin açıklaması aşağıdadır.
 
 - **Tahmine dayalı kodlama modelleri**. Büyük hacimli büyük harf içeriklerini gözden geçirmek üzere önceliklendirebileceğiniz ilgili bir öğe kümesiyle azaltmak ve silmek için tahmine dayalı kodlama modellerini kullanın. Bu, bir gözden geçirme kümesindeki en ilgili öğelerin gözden geçirilmesini önceliklendirmenize yardımcı olan kendi tahmine dayalı kodlama modellerinizi oluşturup eğiterek gerçekleştirilir. Sistem, inceleme kümesindeki her öğeye tahmin puanlarını uygulamak için eğitimi kullanır. Bu, öğeleri tahmin puanına göre filtrelemenize olanak tanır ve bu sayede önce en ilgili (veya ilgili olmayan) öğeleri gözden geçirebilirsiniz.
 
-- **Hesaplanan belge meta verileri**. Gelişmiş dizin oluşturma, konuşma yazışması, analiz ve tahmine dayalı kodlama gibi eBulma (Premium) özelliklerinin çoğu, ayarlanan belgeleri gözden geçirmek için meta veri özellikleri ekler. Bu meta veriler, belirli bir özellik tarafından gerçekleştirilen işlevle ilgili bilgileri içerir. Belgeleri gözden geçirirken, filtre ölçütlerinizle eşleşen belgeleri görüntülemek için meta veri özelliklerine göre filtreleyebilirsiniz. Bu meta veriler, gözden geçirme kümesi belgeleri dışarı aktarıldıktan sonra üçüncü taraf gözden geçirme uygulamalarına aktarılabilir.
+- **Hesaplanan belge meta verileri**. Gelişmiş dizin oluşturma, konuşma yazışması, analiz ve tahmine dayalı kodlama gibi eBulma (Premium) özelliklerinin çoğu, ayarlanmış belgeleri gözden geçirmek için meta veri özellikleri ekler. Bu meta veriler, belirli bir özellik tarafından gerçekleştirilen işlevle ilgili bilgileri içerir. Belgeleri gözden geçirirken, filtre ölçütlerinizle eşleşen belgeleri görüntülemek için meta veri özelliklerine göre filtreleyebilirsiniz. Bu meta veriler, gözden geçirme kümesi belgeleri dışarı aktarıldıktan sonra üçüncü taraf gözden geçirme uygulamalarına aktarılabilir.
 
-- **Uzun süre çalışan işlerin saydamlığı**. eBulma 'daki (Premium) işler genellikle bir olaya koruyucu ekleme, inceleme kümesine içerik ekleme, analiz çalıştırma ve tahmine dayalı kodlama modellerini eğitma gibi kullanıcı eylemleri tarafından tetiklenen uzun süre çalışan işlemlerdir. Sorunları MS Desteği'ne aktarmanız gerekiyorsa bu işlerin durumunu izleyebilir ve destek bilgilerini alabilirsiniz.
+- **Uzun süre çalışan işlerin saydamlığı**. eBulma (Premium) içindeki işler genellikle bir servis talebine koruyucu ekleme, inceleme kümesine içerik ekleme, analiz çalıştırma ve tahmine dayalı kodlama modellerini eğitma gibi kullanıcı eylemleri tarafından tetiklenen uzun süre çalışan işlemlerdir. Sorunları MS Desteği'ne aktarmanız gerekiyorsa bu işlerin durumunu izleyebilir ve destek bilgilerini alabilirsiniz.
 
 - **Müşteriye ait Azure Depolama konumuna aktarın**. Gözden geçirme kümesindeki belgeleri dışarı aktardığınızda, bunları kuruluşunuz tarafından yönetilen bir Azure Depolama hesabına dışarı aktarma seçeneğiniz vardır. Ayrıca, eBulma (Premium) hangi verilerin dışarı aktarılmış olduğunu özelleştirmenize olanak tanır. Dosya meta verilerini, yerel dosyaları, metin dosyalarını, etiketleri ve PDF dosyasına kaydedilen yeniden işlem uygulanmış belgeleri dışarı aktarmayı içerir.
 
 ## <a name="ediscovery-subscription-comparison"></a>eBulma aboneliği karşılaştırması
 
-Aşağıdaki bölümlerde İçerik arama, eBulma (Standart) ve eBulma (Premium) için minimum abonelik gereksinimleri gösterilir. eKeşif 'i (Standart) destekleyen abonelikler de İçerik aramayı destekler. eBulma 'yı (Premium) destekleyen abonelikler, İçerik arama ve eBulma 'yı (Standart) da destekler.
+Aşağıdaki bölümlerde İçerik arama, eBulma (Standart) ve eBulma (Premium) için en düşük abonelik gereksinimleri gösterilir. eKeşif 'i (Standart) destekleyen abonelikler de İçerik aramayı destekler. eBulma 'yı (Premium) destekleyen abonelikler, İçerik arama ve eKeşif (Standart) desteği de sağlar.
 
 ### <a name="content-search"></a>İçerik arama
 
-- E1 aboneliğini Microsoft 365
-- G1 aboneliğini Microsoft 365
+- Microsoft 365 E1 aboneliği
+- Microsoft 365 G1 aboneliği
 - Microsoft 365 F1 veya F3 aboneliği ya da F5 Güvenlik eklentisi
 - aboneliği Microsoft 365 İş Ekstra
 - aboneliği Microsoft 365 İş Standart
@@ -145,12 +143,12 @@ Aşağıdaki bölümlerde İçerik arama, eBulma (Standart) ve eBulma (Premium) 
 
 ### <a name="ediscovery-standard"></a>eKeşif (Standart)
 
-- Exchange çevrimiçi Plan 2
+- Exchange online Plan 2
 - Sharepoint online Plan 2
 - aboneliği Microsoft 365 E3
 - aboneliği Microsoft 365 G3
 - aboneliği Microsoft 365 İş Ekstra
-- F5 Uyumluluğu eklentisini veya F5 Güvenlik & Uyumluluğu eklentisini Microsoft 365
+- Microsoft 365 F5 Uyumluluk eklentisi veya F5 Güvenlik & Uyumluluğu eklentisi
 - A3 veya Office 365 Eğitim A3 aboneliğini Microsoft 365 Eğitim
 - aboneliği Office 365 E3
 
@@ -159,15 +157,15 @@ Aşağıdaki bölümlerde İçerik arama, eBulma (Standart) ve eBulma (Premium) 
 - Microsoft 365 E5 veya Office 365 E5 aboneliği
 - E5 Uyumluluk eklentisini içeren Microsoft 365 E3 aboneliği
 - E5 eKeşif ve Denetim eklentisi ile aboneliği Microsoft 365 E3
-- G5 aboneliğini Microsoft 365
-- G5 Uyumluluğu eklentisiyle G5 aboneliğini Microsoft 365
-- G5 eBulma ve Denetim eklentisi ile G5 aboneliğini Microsoft 365
-- F5 Uyumluluğu eklentisini veya F5 Güvenlik & Uyumluluğu eklentisini Microsoft 365
+- Microsoft 365 G5 aboneliği
+- G5 Uyumluluk eklentisi ile Microsoft 365 G5 aboneliği
+- G5 eKeşif ve Denetim eklentisi ile Microsoft 365 G5 aboneliği
+- Microsoft 365 F5 Uyumluluk eklentisi veya F5 Güvenlik & Uyumluluğu eklentisi
 - A5 veya Office 365 Eğitim A5 aboneliğini Microsoft 365 Eğitim
 
-## <a name="get-started-with-ediscovery"></a>eBulma ile Kullanmaya başlayın
+## <a name="get-started-with-ediscovery"></a>eKeşif'i kullanmaya başlama
 
-Daha fazla bilgi edinmenize ve Microsoft 365'daki eBulma çözümlerini kullanmaya başlamanıza yardımcı olmak için aşağıdaki makalelere bakın.
+Daha fazla bilgi edinmenize ve Microsoft 365'teki eKeşif çözümlerini kullanmaya başlamanıza yardımcı olmak için aşağıdaki makalelere bakın.
 
 ### <a name="content-search"></a>İçerik arama
 
@@ -181,7 +179,7 @@ Daha fazla bilgi edinmenize ve Microsoft 365'daki eBulma çözümlerini kullanma
 
 ### <a name="ediscovery-premium"></a>eKeşif (Premium)
 
-- [eBulma'ya genel bakış (Premium)](overview-ediscovery-20.md)
+- [eKeşif'e Genel Bakış (Premium)](overview-ediscovery-20.md)
 
 - [eKeşif'i (Premium) ayarlama](get-started-with-advanced-ediscovery.md)
 
@@ -189,8 +187,8 @@ Daha fazla bilgi edinmenize ve Microsoft 365'daki eBulma çözümlerini kullanma
 
 ## <a name="ediscovery-roadmap"></a>eBulma yol haritası
 
-Hangi eBulma özelliklerinin başlatıldığını, dağıtıldığını veya geliştirildiğini görmek için [Microsoft 365 Yol Haritası'na](https://aka.ms/eDiscoRoadMap) bakın.
+Hangi eBulma özelliklerinin başlatıldığını, dağıtıldığını veya geliştirildiğini görmek için bkz. [Microsoft 365 Yol Haritası](https://aka.ms/eDiscoRoadMap).
 
 ## <a name="training"></a>Eğitim
 
-İçerik arama, eBulma (Standart) ve eKeşif (Premium) ile ilgili temel bilgiler konusunda BT yöneticilerinizi, eBulma yöneticilerinizi ve uyumluluk araştırma ekiplerinizi eğiterek kuruluşunuzun Microsoft 365 eBulma araçlarını kullanarak daha hızlı bir şekilde çalışmaya başlamasına yardımcı olabilirsiniz. Microsoft 365, kuruluşunuzdaki bu kullanıcıların eBulma'ya başlamalarına yardımcı olmak için aşağıdaki kaynağı sağlar: [Microsoft 365 eBulma ve denetim özelliklerini açıklama](/learn/modules/describe-ediscovery-capabilities-of-microsoft-365).
+İçerik arama, eKeşif (Standart) ve eKeşif (Premium) ile ilgili temel bilgiler konusunda BT yöneticilerinizi, eBulma yöneticilerinizi ve uyumluluk araştırma ekiplerinizi eğiterek kuruluşunuzun Microsoft 365 eKeşif araçlarını kullanarak daha hızlı bir şekilde çalışmaya başlamasına yardımcı olabilirsiniz. Microsoft 365, kuruluşunuzdaki bu kullanıcıların eBulma'ya başlamalarına yardımcı olmak için aşağıdaki kaynağı sağlar: [Microsoft 365'in eBulma ve denetim özelliklerini açıklama](/learn/modules/describe-ediscovery-capabilities-of-microsoft-365).

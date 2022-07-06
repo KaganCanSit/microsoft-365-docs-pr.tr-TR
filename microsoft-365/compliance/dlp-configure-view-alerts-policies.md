@@ -1,5 +1,5 @@
 ---
-title: Veri kaybı önleme ilkeleri için uyarıları yapılandırma ve görüntüleme
+title: DLP ilkeleri için uyarıları yapılandırma ve görüntüleme
 f1.keywords:
 - CSH
 ms.author: chrfox
@@ -21,138 +21,138 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: Veri kaybı önleme ilkeleri için uyarıları tanımlamayı ve yönetmeyi öğrenin.
-ms.openlocfilehash: 9b8ee897502f76dbdb63e3fbac99e4223f378a1a
-ms.sourcegitcommit: b6ab10ba95e4b986065c51179ead3810cc1e2a85
+ms.openlocfilehash: 60d5188b9288b1e131e36e145f7abb98a34d5ead
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63018868"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627657"
 ---
-# <a name="configure-and-view-alerts-for-data-loss-prevention-polices"></a>Veri kaybı önleme uyarıları için uyarıları yapılandırma ve görüntüleme
+# <a name="configure-and-view-alerts-for-data-loss-prevention-polices"></a>Veri kaybı önleme ilkeleri için uyarıları yapılandırma ve görüntüleme
 
-Veri kaybı önleme (DLP) ilkeleri, hassas öğelerinintersiz olarak paylaşımını önlemek için koruyucu işlemler gerçekleştirebilirsiniz. Hassas bir öğe üzerinde eyleme geç olduğunda, DLP için uyarılar yapılandırarak size bildirebilirsiniz. Bu makalede, veri kaybı önleme (DLP) ilkelerinize bağlı zengin uyarı ilkelerinin nasıl tanımladığınıza bakın. DLP ilkesi ihlallerine yönelik uyarıları, olayları ve ilişkili <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">meta verileri görüntülemek</a> için Microsoft 365 uyumluluk merkezi DLP uyarı yönetim panosunun nasıl kullanıla olacağını görürsünüz.
+Microsoft Purview Veri Kaybı Önleme (DLP) ilkeleri, hassas öğelerin yanlışlıkla paylaşılmasını önlemek için koruyucu eylemler gerçekleştirebilir. Hassas bir öğe üzerinde eylem yapıldığında, DLP için uyarılar yapılandırılarak bildirim alabilirsiniz. Bu makalede, veri kaybı önleme (DLP) ilkelerinize bağlı zengin uyarı ilkelerinin nasıl tanımlanacağı gösterilmektedir. DLP ilke ihlallerine yönelik uyarıları, olayları ve ilişkili meta verileri görüntülemek için <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> yeni DLP uyarı yönetimi panosunu nasıl kullanacağınızı göreceksiniz.
 
-## <a name="features"></a>Özellikler
+## <a name="features"></a>Özellik
 
-Aşağıdaki özellikler bunun bir bölümünü içerir:
+Aşağıdaki özellikler bunun bir parçasıdır:
 
--   **DLP uyarı yönetimi panosu**: <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a>, bu pano aşağıdaki iş yüklerinde zorunlu kılınan DLP ilkelerine yönelik uyarıları gösterir:
+-   **DLP uyarı yönetimi panosu**: <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a>, bu pano aşağıdaki iş yüklerinde zorunlu kılınan DLP ilkelerine yönelik uyarıları gösterir:
 
     -   Exchange
     -   SharePoint
     -   OneDrive
     -   Teams
-    -   Cihazlar
--   **Gelişmiş uyarı yapılandırma seçenekleri**: Bu seçenekler DLP ilkesi yazma akışının bir parçasıtır. Zengin uyarı yapılandırmaları oluşturmak için bu yapılandırmaları kullanın. Sızdırılan verilerin sayısına veya boyutuna bağlı olarak tek etkinlikli uyarı veya toplu uyarı oluşturabilirsiniz.
+    -   Aygıtları
+-   **Gelişmiş uyarı yapılandırma seçenekleri**: Bu seçenekler DLP ilkesi yazma akışının bir parçasıdır. Zengin uyarı yapılandırmaları oluşturmak için bunları kullanın. Olay sayısına veya sızdırılan verilerin boyutuna bağlı olarak tek olaylı bir uyarı veya toplu uyarı oluşturabilirsiniz.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Başlamadan önce, gerekli önkoşullara sahip olduğundan emin olun:
+Başlamadan önce gerekli önkoşullara sahip olduğunuzdan emin olun:
 
 -   DLP uyarıları yönetim panosu için lisanslama
 -   Uyarı yapılandırma seçenekleri için lisanslama
--   Roller
+-   Rolleri
 
-### <a name="licensing-for-the-dlp-alert-management-dashboard"></a>DLP uyarı yönetim panosu için lisanslama
+### <a name="licensing-for-the-dlp-alert-management-dashboard"></a>DLP uyarı yönetimi panosu için lisanslama
 
-DLP için tüm uygun Office 365 DLP uyarı yönetim panosuna erişim sağlar. Bu nedenle, Exchange Online, SharePoint Online ve Office 365 DLP OneDrive İş. OFFICE 365 DLP lisans gereksinimleri hakkında daha fazla bilgi için bkz. Hangi lisanslar kullanıcının hizmetten [yararlanması için hak sağlar?](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#which-licenses-provide-the-rights-for-a-user-to-benefit-from-the-service-16).
+Office 365 DLP için uygun tüm kiracılar yeni DLP uyarı yönetimi panosuna erişebilir. Başlamak için Exchange Online, SharePoint Online ve OneDrive İş için Office 365 DLP'ye uygun olmanız gerekir. Office 365 DLP'nin lisans gereksinimleri hakkında daha fazla bilgi için bkz[. Hangi lisanslar kullanıcının hizmetten yararlanma haklarını sağlar?](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#which-licenses-provide-the-rights-for-a-user-to-benefit-from-the-service-16).
 
-Uç Nokta [DLP'sini](endpoint-dlp-learn-about.md) kullanan ve [Teams DLP](dlp-microsoft-teams.md) için uygun olan müşteriler, uç nokta DLP ilkesi uyarılarını ve DLP uyarı yönetim panosunda Teams DLP ilkesi uyarılarını görebilirler.
+[Teams DLP'ye uygun Olan Uç Nokta DLP](endpoint-dlp-learn-about.md) kullanan müşteriler, DLP uyarı yönetimi panosunda uç nokta DLP ilkesi uyarılarını ve Teams DLP ilkesi uyarılarını görür.[](dlp-microsoft-teams.md)
 
 ### <a name="licensing-for-alert-configuration-options"></a>Uyarı yapılandırma seçenekleri için lisanslama
 
-- **Tek olaylı** uyarı yapılandırması: E1, F1 veya G1 aboneliğine ya da E3 ya da G3 aboneliğine sahip kuruluşlar yalnızca her etkinlik oluştuğunda uyarının tetiklendiğinde uyarı ilkeleri oluşturabilir.
-- **Toplanan uyarı yapılandırması**: Bir eşik tabanlı toplam uyarı ilkelerini yapılandırmak için, aşağıdaki yapılandırmalardan birini kullanabilirsiniz:
+- **Tek olaylı uyarı yapılandırması**: E1, F1 veya G1 aboneliği ya da E3 ya da G3 aboneliği olan kuruluşlar, yalnızca her etkinlik gerçekleştiğinde bir uyarının tetiklendiği durumlarda uyarı ilkeleri oluşturabilir.
+- **Toplu uyarı yapılandırması**: Bir eşiğe göre toplu uyarı ilkelerini yapılandırmak için aşağıdaki yapılandırmalardan herhangi birini kullanmanız gerekir:
   - E5 veya G5 aboneliği
   - Aşağıdaki özelliklerden birini içeren bir E1, F1 veya G1 aboneliği ya da E3 veya G3 aboneliği:
-    - Office 365 Tehdit Koruması Planı 2
+    - Office 365 Gelişmiş Tehdit Koruması Planı 2
     - Microsoft 365 E5 Uyumluluk
-    - Microsoft 365 Bulma ve Denetim eklenti lisansı ekleme
+    - Microsoft 365 eKeşif ve Denetim eklenti lisansı
 
-### <a name="roles"></a>Roller
+### <a name="roles"></a>Rolleri
 
-DLP uyarı yönetim panosuni görüntülemek veya DLP ilkesinde uyarı yapılandırma seçeneklerini düzenlemek için, şu rol gruplarından birinin üyesi olun:
+DLP uyarı yönetimi panosunu görüntülemek veya bir DLP ilkesindeki uyarı yapılandırma seçeneklerini düzenlemek istiyorsanız, şu rol gruplarından birinin üyesi olmanız gerekir:
 
 -   Uyumluluk Yöneticisi
--   Uyumluluk Veri Yöneticisi
+-   Uyumluluk Verileri Yöneticisi
 -   Güvenlik Yöneticisi
 -   Güvenlik İşleci
--   Güvenlik Okuyucu
+-   Güvenlik Okuyucusu
 
-DLP uyarı yönetimi panosuna erişmek için, Uyarılar rolünü ve aşağıdaki rollerden birini yönetmeniz gerekir:
+DLP uyarı yönetimi panosuna erişmek için Uyarıları yönet rolüne ve aşağıdaki rollerden birini kullanmanız gerekir:
 
 -   DLP Uyumluluk Yönetimi
 -   View-Only DLP Uyumluluk Yönetimi
 
 ## <a name="alert-configuration-experience"></a>Uyarı yapılandırma deneyimi
 
-Toplu uyarı yapılandırma seçeneklerine uygunsanız [,](#licensing-for-alert-configuration-options) DLP ilkesi yazma deneyiminde aşağıdaki seçenekleri satır içinde görüyorsunuz.
+[Toplu uyarı yapılandırma seçenekleri](#licensing-for-alert-configuration-options) için uygunsanız DLP ilkesi yazma deneyiminde aşağıdaki seçenekleri satır içinde görürsünüz.
 
-:::image type="content" source="../media/incident-reports-options-aggregated-alerts.png" alt-text="Toplanan uyarı yapılandırma seçeneklerine uygun kullanıcılar için olay raporları seçeneklerini gösteren ekran görüntüsü." border="false":::
+:::image type="content" source="../media/incident-reports-options-aggregated-alerts.png" alt-text="Toplu uyarı yapılandırma seçenekleri için uygun kullanıcılar için olay raporları seçeneklerini gösteren ekran görüntüsü." border="false":::
 
-Bu yapılandırma, uyarı oluşturmak için bir ilke ayarlamaya olanak sağlar:
+Bu yapılandırma uyarı oluşturmak için bir ilke ayarlamanıza olanak tanır:
 
-- bir etkinliğin ilke koşullarıyla her eşleşmesi
-- tanımlı eşik karşılandığı veya aşılırken
-- etkinliklerin sayısına göre
-- exfiltrated verilerin hacmine bağlı olarak
+- bir etkinlik ilke koşullarıyla her eşleştiğinde
+- tanımlanan eşik karşılandığında veya aşıldığında
+- etkinlik sayısına bağlı olarak
+- dışarı sızan verilerin hacmine bağlı olarak
 
-Bildirim e-postalarının akınını önlemek için, bir dakikalık bir pencere içinde oluşan ve aynı DLP kuralına yönelik olan tüm eşleşmeler, aynı uyarıda birlikte gruptur. Bir dakika toplama zaman penceresi özelliği şularda kullanılabilir: 
+Bildirim e-postalarının taşmasını önlemek için, bir dakikalık bir zaman penceresinde gerçekleşen ve aynı DLP kuralına yönelik olan ve aynı konumdaki tüm eşleşmeler aynı uyarıda birlikte gruplandırılır. Bir dakikalık toplama süresi penceresi özelliği şu durumlarda kullanılabilir: 
 
 - E5 veya G5 aboneliği
 - Aşağıdaki özelliklerden birini içeren bir E1, F1 veya G1 aboneliği ya da E3 veya G3 aboneliği:
-    - Office 365 Tehdit Koruması Planı 2
+    - Office 365 Gelişmiş Tehdit Koruması Planı 2
     - Microsoft 365 E5 Uyumluluk
-    - Microsoft 365 Bulma ve Denetim eklenti lisansı ekleme
+    - Microsoft 365 eKeşif ve Denetim eklenti lisansı
  
-E1, F1 veya G1 aboneliği ya da E3 veya G3 aboneliği olan kuruluşlar için toplama süresi penceresi 15 dakikadır.
+E1, F1 veya G1 aboneliği ya da E3 veya G3 aboneliği olan kuruluşlar için toplama süresi 15 dakikadır.
 
-## <a name="dlp-alert-management-dashboard"></a>DLP uyarı yönetim panosu
+## <a name="dlp-alert-management-dashboard"></a>DLP uyarı yönetimi panosu
 
-DLP uyarı yönetim panosuyla çalışmak için:
+DLP uyarı yönetimi panosuyla çalışmak için:
 
-1.  Aşağıdaki <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi Kaybı</a> **Önleme'ye gidin**.
+1.  <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> **Veri Kaybı Önleme'ye** gidin.
 
-2.  DLP **uyarıları panosuna** görüntülemek için Uyarılar sekmesini seçin.
+2.  DLP **uyarıları** panosunu görüntülemek için Uyarılar sekmesini seçin.
 
-    -   Uyarı listesini iyileştirmek için filtreleri seçin. Görmek **istediğiniz özellikleri** liste için Sütunları özelleştir'i seçin. Ayrıca, uyarıları herhangi bir sütunda artan veya azalan düzende sıralamayı da seçebilirsiniz.
+    -   Uyarı listesini daraltmak için filtreleri seçin. Görmek istediğiniz özellikleri listelemek için **Sütunları özelleştir'i** seçin. Ayrıca, uyarıları herhangi bir sütunda artan veya azalan düzende sıralamayı da seçebilirsiniz.
     -   Ayrıntıları görmek için bir uyarı seçin:
 
-        :::image type="content" source="../media/alert-details.png" alt-text="DLP uyarı yönetim panosunda uyarı ayrıntılarını gösteren ekran görüntüsü." border="false":::
+        :::image type="content" source="../media/alert-details.png" alt-text="DLP uyarı yönetimi panosundaki uyarı ayrıntılarını gösteren ekran görüntüsü." border="false":::
 
-1.  Uyarıyla  ilişkili tüm olayları görüntülemek için Olaylar sekmesini seçin. Ayrıntılarını görüntülemek için belirli bir etkinliği seçebilirsiniz. Aşağıdaki tabloda olay ayrıntılarının bazıları yer alır.
+1.  Uyarıyla ilişkili tüm olayları görüntülemek için **Olaylar** sekmesini seçin. Ayrıntılarını görüntülemek için belirli bir olayı seçebilirsiniz. Aşağıdaki tabloda olay ayrıntılarından bazıları gösterilmektedir.
     
     | Kategori          | Özellik adı                 | Açıklama                                                                | Geçerli olay türleri                   |
     |-------------------|-------------------------------|----------------------------------------------------------------------------|------------------------------------------|
     |*Olay ayrıntıları*||
-    |      | Kimlik                            | Etkinlikle ilişkilendirilmiş benzersiz kimlik                                        | Tüm etkinlikler                               |
-    |                   | Konum                      | Olayın algılandığında iş yükü                                      | Tüm etkinlikler                               |
-    |                   | Etkinlik zamanı              | DLP ihlaline neden olan kullanıcı etkinliğinin zamanı                    | Tüm etkinlikler                               |
-    |*Etkide olan varlıklar*||
-    |  | Kullanıcı                          | DLP ihlaline neden olan kullanıcı                                          | Tüm etkinlikler                               |
-    |                   | Ana bilgisayar adı                      | DLP ihlali algılandığında makinenin ana bilgisayar adı              | Cihazlar olayları                           |
-    |                   | IP adresi                    | Makinenin IP adresi                                                  | Cihazlar olayları                           |
-    |                   | Dosya yolu                     | İhlali olan dosyanın mutlak yolu                        | SharePoint, OneDrive ve Cihazlar olaylarını geri edin |
-    |                   | E-posta alıcıları              | DLP ilkesi ihlal eden e-postanın alıcıları                       | Exchange etkinlikleri                          |
-    |                   | E-posta konusu                 | DLP ilkesi ihlal eden e-postanın konusu                          | Exchange etkinlikleri                          |
-    |                   | E-posta ekleri             | E-postada yer alan ve DLP İlkesini ihlal eden eklerin adları         | Exchange etkinlikleri                          |
-    |                   | Site sahibi                    | Site sahibinin adı                                                     | SharePoint ve OneDrive hakkında           |
-    |                   | Site URL'si                      | Sitenin veya sitenin SharePoint URL'si OneDrive URL'si                                | SharePoint ve OneDrive hakkında           |
-    |                   | Dosya oluşturuldu                  | Dosya oluşturma zamanı                                                      | SharePoint ve OneDrive hakkında           |
-    |                   | En son değiştirilen dosya            | Dosyada son değişiklik zamanı                                  | SharePoint ve OneDrive hakkında           |
-    |                   | Dosya boyutu                     | Dosya boyutu                                                           | SharePoint ve OneDrive hakkında           |
-    |                   | Dosya sahibi                    | Dosyanın sahibi                                                          | SharePoint ve OneDrive hakkında           |
+    |      | Kimlik                            | Olayla ilişkilendirilmiş benzersiz kimlik                                        | Tüm olaylar                               |
+    |                   | Konum                      | Olayın algılandığı iş yükü                                      | Tüm olaylar                               |
+    |                   | Etkinlik zamanı              | DLP ihlaline neden olan kullanıcı etkinliğinin zamanı                    | Tüm olaylar                               |
+    |*Etkilenen varlıklar*||
+    |  | Kullanıcı                          | DLP ihlaline neden olan kullanıcı                                          | Tüm olaylar                               |
+    |                   | Ana bilgisayar adı                      | DLP ihlalinin algılandığı makinenin ana bilgisayar adı              | Cihaz olayları                           |
+    |                   | IP adresi                    | Makinenin IP adresi                                                  | Cihaz olayları                           |
+    |                   | Dosya yolu                     | İhlale katılan dosyanın mutlak yolu                        | SharePoint, OneDrive ve Cihazlar olayları |
+    |                   | E-posta alıcıları              | DLP ilkesini ihlal eden e-postanın alıcıları                       | Exchange olayları                          |
+    |                   | E-posta konusu                 | DLP ilkesini ihlal eden e-postanın konusu                          | Exchange olayları                          |
+    |                   | E-posta ekleri             | E-postadaki DLP ilkesini ihlal eden eklerin adları         | Exchange olayları                          |
+    |                   | Site sahibi                    | Site sahibinin adı                                                     | SharePoint ve OneDrive olayları           |
+    |                   | Site URL'si                      | SharePoint veya OneDrive sitesinin tam URL'si                                | SharePoint ve OneDrive olayları           |
+    |                   | Dosya oluşturuldu                  | Dosya oluşturma zamanı                                                      | SharePoint ve OneDrive olayları           |
+    |                   | Dosya son değiştirildi            | Dosyanın son değiştirilme zamanı                                  | SharePoint ve OneDrive olayları           |
+    |                   | Dosya boyutu                     | Dosyanın boyutu                                                           | SharePoint ve OneDrive olayları           |
+    |                   | Dosya sahibi                    | Dosyanın sahibi                                                          | SharePoint ve OneDrive olayları           |
     |*İlke ayrıntıları*||
-    |     | DLP ilkesi eşleşmeli            | Eşleri olan DLP ilkesi adı                                    | Tüm etkinlikler                               |
-    |                   | Eşanlı kural                  | DLP ilkesinde yer alan ve ile eşenen DLP kuralının adı                    | Tüm etkinlikler                               |
-    |                   | Algılanan hassas bilgi türleri | DLP ilkesi kapsamında algılanan hassas bilgi türleri | Tüm etkinlikler                               |
-    |                   | 2007'de                 | Eşanlı DLP ilkesi kapsamında  alınan eylemler                          | Tüm etkinlikler                               |
-    |                   | Kullanıcı aşırı kullanıcı ilkesi          | Kullanıcının ilke ipucu aracılığıyla ilkeyi overrode edip edip olmadığı                | Tüm etkinlikler                               |
-    |                   | Yaslama metnini geçersiz kılma   | İlke ipucu geçersiz kılınan gerekçelendirme                          | Tüm etkinlikler                               |
+    |     | DLP ilkesi eşleştirildi            | Eşleşen DLP ilkesinin adı                                    | Tüm olaylar                               |
+    |                   | Kural eşleştirildi                  | DLP ilkesinde eşleşen DLP kuralının adı                    | Tüm olaylar                               |
+    |                   | Hassas bilgi türleri algılandı | DLP ilkesinin bir parçası olarak algılanan hassas bilgi türleri | Tüm olaylar                               |
+    |                   | Gerçekleştirilen eylemler                 | Eşleşen DLP ilkesinin bir parçası olarak gerçekleştirilen eylemler                          | Tüm olaylar                               |
+    |                   | Kullanıcı overrode ilkesi          | Kullanıcının ilke ipucu aracılığıyla ilkeyi aşırı kullanıp kullanmayacağı                | Tüm olaylar                               |
+    |                   | Gerekçe metnini geçersiz kılma   | İlke ipucunu geçersiz kılmak için sağlanan gerekçe                          | Tüm olaylar                               |
     
-1.  İçerikte **algılanan hassas bilgi** türleriyle ilgili ayrıntıları görüntülemek için Hassas Bilgi Türleri sekmesini seçin. Ayrıntılar güven ve sayım içerir.
+1.  İçerikte algılanan hassas bilgi türleri hakkındaki ayrıntıları görüntülemek için **Hassas Bilgi Türleri** sekmesini seçin. Ayrıntılar arasında güvenilirlik ve sayı yer alır.
 
-2.  Uyarıyı araştırtıktan sonra, **durumu değiştirmek için Uyarıyı** yönet'i seçin (**Etkin**, **Araştırılıyor**, **Yok,** **Çözüldü).** Ayrıca, açıklama ekleyebilir ve uyarıyı kuruluşta başka birine atamazsiniz.
+2.  Uyarıyı araştırdıktan sonra, durumu değiştirmek için **Uyarıyı yönet'i** seçin (**Etkin**, **Araştırılıyor**, **Kapatıldı** veya **Çözümlendi**). Ayrıca açıklamalar ekleyebilir ve uyarıyı kuruluşunuzdaki birine atayabilirsiniz.
 
-    -   İş akışı yönetiminin geçmişini görmek için Yönetim **günlüğü'ne seçin**.
-    -   Uyarı için gerekli eylemi verdikten sonra, uyarının durumunu Çözümlendi olarak **ayarlayın**.
+    -   İş akışı yönetiminin geçmişini görmek için **Yönetim günlüğü'nü** seçin.
+    -   Uyarı için gerekli eylemi gerçekleştirdikten sonra uyarının durumunu **Çözüldü** olarak ayarlayın.

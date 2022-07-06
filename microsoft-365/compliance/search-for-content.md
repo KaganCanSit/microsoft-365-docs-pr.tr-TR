@@ -10,19 +10,17 @@ audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 ms.localizationpriority: medium
-description: Exchange posta kutularında e-postayı, SharePoint sitelerdeki ve OneDrive konumlarındaki belgeleri ve Skype Kurumsal'deki anlık ileti konuşmalarını hızla bulmak için Microsoft Purview uyumluluk portalındaki İçerik arama eBulma aracını kullanın.
-ms.openlocfilehash: cf5c6b61e9b4cc041d9f8e315321c63c78415a63
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Exchange posta kutularında e-postayı, SharePoint sitelerindeki ve OneDrive konumlarındaki belgeleri ve Skype Kurumsal anlık ileti konuşmalarını hızla bulmak için Microsoft Purview uyumluluk portalı İçerik arama eBulma aracını kullanın.
+ms.openlocfilehash: 42084e764ffaf93f59e0225194db331c2ac952db
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66009441"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637871"
 ---
 # <a name="search-for-content-using-the-content-search-tool"></a>İçerik arama aracını kullanarak içerik arama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Exchange posta kutularında e-postayı, SharePoint sitelerdeki ve OneDrive konumlardaki belgeleri ve Skype Kurumsal anlık ileti konuşmalarını hızla bulmak için Microsoft Purview uyumluluk portalındaki İçerik arama aracını kullanın. Microsoft Teams ve Microsoft 365 Grupları gibi işbirliği araçlarında e-posta, belge ve anlık ileti konuşmalarını aramak için içerik arama aracını kullanabilirsiniz.
+Exchange posta kutularında e-postayı, SharePoint sitelerindeki ve OneDrive konumlarındaki belgeleri ve Skype Kurumsal anlık ileti konuşmalarını hızla bulmak için Microsoft Purview uyumluluk portalı İçerik arama aracını kullanın. Microsoft Teams ve Microsoft 365 Grupları gibi işbirliği araçlarında e-posta, belge ve anlık ileti konuşmalarını aramak için içerik arama aracını kullanabilirsiniz.
   
 ## <a name="search-for-content"></a>İçerik için arama yapma
 
@@ -36,11 +34,11 @@ Exchange posta kutularında e-postayı, SharePoint sitelerdeki ve OneDrive konum
 
 - EBulma yöneticisinin kuruluşunuzdaki posta kutularının veya sitelerin yalnızca alt kümesini aramasını sağlayan [arama izinleri filtrelemesini yapılandırın](permissions-filtering-for-content-search.md)
 
-- Microsoft 365'da şirket içi kullanıcılar için [bulut tabanlı posta kutularında arama](search-cloud-based-mailboxes-for-on-premises-users.md)
+- Microsoft 365'te şirket içi kullanıcılar için [bulut tabanlı posta kutularını arama](search-cloud-based-mailboxes-for-on-premises-users.md)
 
 - Arama sonuçlarının [anahtar sözcük istatistiklerini görüntüleyin](view-keyword-statistics-for-content-search.md) ve gerekirse sorguyu daraltın
 
-- Kuruluşunuzun Microsoft 365 aktardığı [üçüncü taraf verilerini arama](use-content-search-to-search-third-party-data-that-was-imported.md)
+- Kuruluşunuzun Microsoft 365'e aktardığı [üçüncü taraf verilerini arama](use-content-search-to-search-third-party-data-that-was-imported.md)
 
 - [Gizli alıcıları](/exchange/policy-and-compliance/holds/preserve-bcc-recipients-and-group-members) aramanız için koruyun
 
@@ -62,7 +60,7 @@ Bir aramayı çalıştırdıktan ve gerektiği gibi daraltdıktan sonra, sonraki
 
 - [Tahmini ve gerçek arama sonuçları ile arama sonuçlarını](differences-between-estimated-and-actual-ediscovery-search-results.md) dışarı aktarıp indirdiğinizde aralarında farklılıklar olmasının nedenleri
 
-- [Exchange ve SharePoint kısmen dizinlenmiş öğeler](partially-indexed-items-in-content-search.md) ve arama sonuçlarını dışarı aktarıp indirirken bunları dahil etme veya dışlama
+- [Exchange ve SharePoint'te kısmen dizine alınmış öğeler](partially-indexed-items-in-content-search.md) ve arama sonuçlarını dışarı aktarıp indirirken bunları dahil etme veya dışlama
 
 - [Kısmen dizine alınan öğeleri araştırma](investigating-partially-indexed-items-in-ediscovery.md) ve kuruluşunuzun bunlara maruz kalmasını belirleme
 

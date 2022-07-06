@@ -17,20 +17,18 @@ search.appverid:
 ms.assetid: ''
 description: eBulma 'da (Premium) içeriğin düzgün işlenmesini engelleyebilecek veri sorunlarını düzeltmek için hata düzeltmeyi kullanmayı öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: e119458281a81ab41f8034ce76e65a5946536204
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 2052e60e1c27e2b3e138124e5d268477f6a9cd18
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093119"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634367"
 ---
 # <a name="error-remediation-when-processing-data"></a>Verileri işlerken hata düzeltme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Hata düzeltme, eBulma yöneticilerinin Microsoft Purview eKeşif (Premium) içeriği düzgün işlemesini engelleyen veri sorunlarını düzeltmesine olanak tanır. Örneğin, parola korumalı dosyalar kilitli veya şifrelenmiş olduğundan işlenemez. Hata düzeltmeyi kullanan eBulma yöneticileri bu tür hatalara sahip dosyaları indirebilir, parola korumasını kaldırabilir ve ardından düzeltilmiş dosyaları karşıya yükleyebilir.
 
-Hata düzeltme, eBulma yöneticilerinin Microsoft Purview eBulma'nın (Premium) içeriği düzgün bir şekilde işlemesini engelleyen veri sorunlarını düzeltmesine olanak tanır. Örneğin, parola korumalı dosyalar kilitli veya şifrelenmiş olduğundan işlenemez. Hata düzeltmeyi kullanan eBulma yöneticileri bu tür hatalara sahip dosyaları indirebilir, parola korumasını kaldırabilir ve ardından düzeltilmiş dosyaları karşıya yükleyebilir.
-
-eBulma (Premium) olaylarındaki hatalarla dosyaları düzeltmek için aşağıdaki iş akışını kullanın.
+eBulma (Premium) durumlarındaki hatalarla dosyaları düzeltmek için aşağıdaki iş akışını kullanın.
 
 ## <a name="create-an-error-remediation-session-to-remediate-files-with-processing-errors"></a>İşleme hatalarıyla dosyaları düzeltmek için hata düzeltme oturumu oluşturma
 
@@ -45,7 +43,7 @@ eBulma (Premium) olaylarındaki hatalarla dosyaları düzeltmek için aşağıda
 
 3. **Yeni hata düzeltme'ye** tıklayın.
 
-    Hata düzeltme iş akışı, hataları olan dosyaların microsoft tarafından sağlanan bir Azure Depolama konumuna kopyalandığı bir hazırlık aşamasıyla başlar, böylece bunları düzeltmek için yerel bilgisayarınıza indirebilirsiniz.
+    Hata düzeltme iş akışı, hataları olan dosyaların düzeltilmesi için yerel bilgisayarınıza indirebilmeniz için Microsoft tarafından sağlanan bir Azure Depolama konumuna kopyalandığı bir hazırlık aşamasıyla başlar.
 
     ![Hata düzeltme hazırlanıyor.](../media/390572ec-7012-47c4-a6b6-4cbb5649e8a8.png)
 
@@ -57,12 +55,12 @@ eBulma (Premium) olaylarındaki hatalarla dosyaları düzeltmek için aşağıda
 
    Üst klasörün yolu otomatik olarak AzCopy komutuna eklenir ( **/Dest** parametresinin değeri olarak).
 
-6. **Panoya kopyala'ya** tıklayarak önceden tanımlanmış komutu kopyalayın. Windows Komut İstemi'ni açın, AzCopy komutunu yapıştırın ve **enter tuşuna** basın.
+6. **Panoya kopyala'ya** tıklayarak önceden tanımlanmış komutu kopyalayın. Bir Windows Komut İstemi açın, AzCopy komutunu yapıştırın ve **enter tuşuna** basın.
 
     ![Hata düzeltmeye hazırlanın.](../media/f364ab4d-31c5-4375-b69f-650f694a2f69.png)
 
     > [!NOTE]
-    > **Dosyaları indir** sayfasında sağlanan komutu başarıyla kullanmak için AzCopy v8.1 kullanmanız gerekir. 10. adımda dosyaları karşıya yüklemek için AzCopy v8.1'i de kullanmanız gerekir. AzCopy'nin bu sürümünü yüklemek için bkz[. Windows'de AzCopy v8.1 ile veri aktarma](/previous-versions/azure/storage/storage-use-azcopy). Sağlanan AzCopy komutu başarısız olursa, lütfen [eBulma'da (Premium) AzCopy sorunlarını giderme](troubleshooting-azcopy.md) bölümüne bakın.
+    > **Dosyaları indir** sayfasında sağlanan komutu başarıyla kullanmak için AzCopy v8.1 kullanmanız gerekir. 10. adımda dosyaları karşıya yüklemek için AzCopy v8.1'i de kullanmanız gerekir. AzCopy'nin bu sürümünü yüklemek için bkz. [Windows'da AzCopy v8.1 ile veri aktarma](/previous-versions/azure/storage/storage-use-azcopy). Sağlanan AzCopy komutu başarısız olursa, lütfen [eBulma(Premium) içinde AzCopy sorunlarını giderme](troubleshooting-azcopy.md) bölümüne bakın.
 
     Seçtiğiniz dosyalar, 5. adımda belirttiğiniz konuma indirilir. Üst klasörde (örneğin, **C:\Düzeltme**) aşağıdaki alt klasör yapısı otomatik olarak oluşturulur:
 
@@ -85,15 +83,15 @@ eBulma (Premium) olaylarındaki hatalarla dosyaları düzeltmek için aşağıda
 
 7. Dosyaları indirdikten sonra uygun bir araçla düzeltebilirsiniz. Parola korumalı dosyalar için kullanabileceğiniz çeşitli parola çözme araçları vardır. Dosyaların parolalarını biliyorsanız, bunları açabilir ve parola korumasını kaldırabilirsiniz.
 
-8. eBulma (Premium) ve hata düzeltme sihirbazına dönün ve **ardından İleri: Upload dosyaları'na** tıklayın.  Bu, artık dosyaları karşıya yükleyebileceğiniz bir sonraki sayfaya taşınır.
+8. eBulma (Premium) ve hata düzeltme sihirbazına dönün ve **İleri: Dosyaları karşıya yükle'ye** tıklayın.  Bu, artık dosyaları karşıya yükleyebileceğiniz bir sonraki sayfaya taşınır.
 
-    ![Dosyaları Upload.](../media/af3d8617-1bab-4ecd-8de0-22e53acba240.png)
+    ![Dosyaları Karşıya Yükle'yi seçin.](../media/af3d8617-1bab-4ecd-8de0-22e53acba240.png)
 
 9. Düzeltilmiş dosyaların dosyaların **konumuna giden yol** metin kutusunda bulunduğu üst klasörü belirtin. Üst klasör, dosyaları indirdiğinizde oluşturulan alt klasör yapısına sahip olmalıdır.
 
     Üst klasörün yolu otomatik olarak AzCopy komutuna eklenir ( **/Source** parametresinin değeri olarak).
 
-10. **Panoya kopyala'ya** tıklayarak önceden tanımlanmış komutu kopyalayın. Windows Komut İstemi'ni açın, AzCopy komutunu yapıştırın ve **enter tuşuna** basın. dosyaları karşıya yükleyin.
+10. **Panoya kopyala'ya** tıklayarak önceden tanımlanmış komutu kopyalayın. Bir Windows Komut İstemi açın, AzCopy komutunu yapıştırın ve **enter tuşuna** basın. dosyaları karşıya yükleyin.
 
     ![Azcopy'de düzeltilmiş dosyaların başarıyla karşıya yüklenmesinin sonuçları.](../media/ff2ff691-629f-4065-9b37-5333f937daf6.png)
 
@@ -103,7 +101,7 @@ eBulma (Premium) olaylarındaki hatalarla dosyaları düzeltmek için aşağıda
 
 ## <a name="remediating-errors-in-container-files"></a>Kapsayıcı dosyalarındaki hataları düzeltme
 
-Kapsayıcı dosyasının içeriği (.zip dosyası gibi) eBulma (Premium) tarafından ayıklanamıyorsa kapsayıcılar indirilebilir ve içerik özgün kapsayıcının bulunduğu klasöre genişletilebilir. Genişletilmiş dosyalar, ilk olarak eBulma (Premium) tarafından genişletilmiş gibi üst kapsayıcıya özniteliklendirilir. İşlem, değiştirme dosyası olarak tek bir dosyanın karşıya yüklenmesi dışında yukarıda açıklandığı gibi çalışır.  Düzeltilmiş dosyaları karşıya yüklediğinizde, özgün kapsayıcı dosyasını eklemeyin.
+Kapsayıcı dosyasının içeriği (.zip dosyası gibi) eBulma (Premium) tarafından ayıklanamıyorsa, kapsayıcılar indirilebilir ve içerik özgün kapsayıcının bulunduğu klasöre genişletilebilir. Genişletilmiş dosyalar, ilk olarak eBulma (Premium) tarafından genişletilmiş gibi üst kapsayıcıya özniteliklendirilir. İşlem, değiştirme dosyası olarak tek bir dosyanın karşıya yüklenmesi dışında yukarıda açıklandığı gibi çalışır.  Düzeltilmiş dosyaları karşıya yüklediğinizde, özgün kapsayıcı dosyasını eklemeyin.
 
 ## <a name="remediating-errors-by-uploading-the-extracted-text"></a>Ayıklanan metni karşıya yükleyerek hataları düzeltme
 
@@ -123,4 +121,4 @@ Düzeltilen dosyalar karşıya yüklendiğinde, özgün meta veriler aşağıdak
 - WordCount
 - WorkingsetId
 
-eBulma'daki (Premium) tüm meta veri alanlarının tanımı için bkz. [Belge meta veri alanları](document-metadata-fields-in-advanced-ediscovery.md).
+eBulma (Premium) içindeki tüm meta veri alanlarının tanımı için bkz. [Belge meta veri alanları](document-metadata-fields-in-advanced-ediscovery.md).

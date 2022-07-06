@@ -18,22 +18,20 @@ ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
 description: eBulma'da (Premium) çeşitli veri biçimlerini işlemeye genel bakış.
-ms.openlocfilehash: cefacd8fc4039e820a4fa899eb16f3cefdb22a87
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 8ccc87c7961618f8239c130decfc8d1ff5693180
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090905"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625005"
 ---
 # <a name="work-with-processing-errors-in-ediscovery-premium"></a>eBulma'daki işleme hatalarıyla çalışma (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 *İşleme* , dosya tanımlama, ekli belge ve eklerin genişletilmesi, metin ayıklama ve görüntü dosyalarının Optik Karakter Tanıma (OCR) ve bu içeriğin sonraki dizinleme işlemidir.  
 
-**Kaynaklar** sekmesindeki bir servis talebine koruyucular ve koruyucu olmayan veri kaynakları eklediğinizde, Microsoft 365 kısmen dizine alınan tüm öğeler tamamen aranabilir hale getirmek için işlenir. Benzer şekilde, hem Microsoft 365 hem de Microsoft 365 olmayan veri kaynaklarından bir gözden geçirme kümesine içerik eklendiğinde, bu içerik de işlenir.
+**Kaynaklar** sekmesindeki bir servis talebine koruyucular ve koruyucu olmayan veri kaynakları eklediğinizde, Microsoft 365'ten kısmen dizine alınan tüm öğeler tamamen aranabilir hale getirmek için işlenir. Benzer şekilde, hem Microsoft 365 hem de Microsoft dışı 365 veri kaynaklarından bir inceleme kümesine içerik eklendiğinde, bu içerik de işlenir.
 
-eBulma(Premium) içindeki **İşleme** sekmesi, farklı işleme senaryoları için gelişmiş dizin oluşturmanın durumu hakkında içgörü sağlar.
+eBulma (Premium) içindeki **İşleme** sekmesi, farklı işleme senaryoları için gelişmiş dizin oluşturmanın durumu hakkında içgörü sağlar.
 
 Daha fazla bilgi için aşağıdaki makalelere bakın:
 

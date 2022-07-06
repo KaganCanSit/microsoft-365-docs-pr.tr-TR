@@ -16,16 +16,14 @@ search.appverid:
 - MET150
 description: Microsoft Purview çözümleri deneme playbook'u.
 ms.custom: trial-playbook
-ms.openlocfilehash: 981f4d619eeef380625d6de8194e9cb0c42e2011
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: 2b84a3e5636edad78a9d221a0d088b84392cf49e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66530290"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633795"
 ---
 # <a name="trial-playbook-microsoft-purview-solutions"></a>Deneme playbook'u: Microsoft Purview çözümleri
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview çözümleri deneme playbook'una hoş geldiniz. Bu playbook, Microsoft Purview ve güvenlik ürünlerinin güçlü ve kapsamlı özelliklerini keşfetmenize yardımcı olarak 90 günlük ücretsiz denemenizden en iyi şekilde yararlanabilirsiniz.
 

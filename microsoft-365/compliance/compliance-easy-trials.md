@@ -14,20 +14,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview çözümleri deneme sürümü ve nasıl kaydolacağınızı öğrenin.
-ms.openlocfilehash: 425c9c3aecd4df38a53a5b6bee818f466f167a27
-ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
+ms.openlocfilehash: dd223402153048b0d7f452b202804e6bf1853b97
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66185137"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66640126"
 ---
 # <a name="about-the-microsoft-purview-solutions-trial"></a>Microsoft Purview çözümleri deneme sürümü hakkında
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Microsoft Purview çözümleri, kuruluşunuzun dosya ve e-postalardaki uygunsuz izinlerden kaynaklanan iç tehditlere karşı korunmasına yardımcı olur ve kuruluşunuzun mevzuat ve şirket içi iş gereksinimlerine uymasına yardımcı olur.
 
-Microsoft Purview çözümleri, kuruluşunuzun dosyalar ve e-postalar üzerindeki uygunsuz izinlerden kaynaklanan iç tehditlere karşı korunmasına yardımcı olur ve kuruluşunuzun mevzuat ve şirket içi iş gereksinimlerine uymasına yardımcı olur.
-
-Microsoft Purview çözümleri deneme sürümü, Microsoft Purview çözümlerin tüm özelliklerini denemenin ve ayarlamanın yalnızca birkaç dakika sürmesinin en kolay yoludur. Deneme kurulumu tamamlandıktan sonra, Microsoft E5 lisans paketinin tüm özellikleri 90 güne kadar kullanabilirsiniz.
+Microsoft Purview çözümleri deneme sürümü, Microsoft Purview çözümlerinin tüm özelliklerini denemenin en kolay yoludur ve kurulumu yalnızca birkaç dakika sürer. Deneme kurulumu tamamlandıktan sonra, Microsoft E5 lisans paketinin tüm özellikleri 90 güne kadar kullanabilirsiniz.
 
 ## <a name="terms-and-conditions"></a>Hüküm ve koşullar
 
@@ -47,6 +45,7 @@ Kullanıcıların bir deneme sürümüne kaydolmak veya bu denemeyi sonlandırma
 - Faturalama Yöneticisi
 - Uyumluluk Yöneticisi
 - Genel Yönetici
+- Uyumluluk Verileri Yöneticisi
 
 [Rollerle ilgili ayrıntıları yönetici rolleri hakkında](../admin/add-users/about-admin-roles.md) sayfasından edinebilirsiniz.
 
@@ -54,7 +53,7 @@ Kullanıcıların bir deneme sürümüne kaydolmak veya bu denemeyi sonlandırma
 
 Deneme sürümüne kaydolmak için [Microsoft 365 deneme merkezini](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) ziyaret edin. Aşağıdaki adımları da izleyebilirsiniz:
 
-1. [Microsoft Purview uyumluluk portalı](https://go.microsoft.com/fwlink/p/?linkid=2077149) sol gezinti **bölmesinden Denemeler'i** seçerek Microsoft 365 denemeler hub'ına gidin.
+1. microsoft 365 **denemeler** hub'ına ulaşmak için [Microsoft Purview uyumluluk portalı](https://go.microsoft.com/fwlink/p/?linkid=2077149) sol gezinti bölmesinde Denemeler'i seçin.
 2. **Uyumluluk denemeleri'nin** altında **Microsoft Purview çözümleri** kartını bulun ve **Şimdi deneyin'i** seçin.
 3. **Microsoft Purview çözümleri deneme sürümü** açılır öğesi bölmesinde, deneme sürümünü başlattığınızda nelerin dahil olduğu ve neler bekleyebileceğiniz hakkındaki bilgileri gözden geçirin, ardından **Denemeyi başlat'ı seçin.**
 
@@ -70,7 +69,7 @@ Başlamanıza yardımcı olması için [deneme playbook'umuzu](compliance-easy-t
 
 #### <a name="finding-support"></a>Destek bulma
 
-Kiracının en az 150 lisansı varsa kuruluşlar deneme dağıtımı desteği için FastTrack kullanabilir. [FastTrack hakkında](/fasttrack/introduction) daha fazla bilgi edinin.
+Kiracının en az 150 lisansı varsa kuruluşlar deneme dağıtımı desteği için FastTrack kullanabilir. [FastTrack hakkında](/fasttrack/introduction) daha fazla ayrıntı edinin.
 
 #### <a name="extending-the-trial"></a>Deneme süresini uzatma
 
@@ -78,7 +77,7 @@ Deneme süresini, deneme süresinin son 15 günü içinde uzatabilirsiniz. En fa
 
 #### <a name="ending-the-trial"></a>Deneme sürümünü sonlandırma
 
-Yöneticiler, Microsoft 365 denemeler hub'ında **Purview çözümleri deneme** kartına giderek (bkz. [Deneme sürümüne kaydolma](#how-to-sign-up-for-the-trial)) ve **Denemeyi sonlandır'ı** seçerek deneme sürümünü istediğiniz zaman devre dışı bırakabilir.
+Yöneticiler, Microsoft 365 deneme sürümü hub'ında **Purview çözümleri deneme** kartına giderek (bkz. [Deneme sürümüne kaydolma](#how-to-sign-up-for-the-trial)) ve **Denemeyi sonlandır'ı** seçerek deneme sürümünü istediğiniz zaman devre dışı bırakabilir.
 
 Çözüm için aksi belirtilmedikçe E5 düzeyi çözümlere yükseltmemeye karar verirseniz deneme verileriniz kalıcı olarak silinmeden önce genellikle 180 gün boyunca korunur. Deneme süresince toplanan verilere o zamana kadar erişmeye devam edebilirsiniz.
 
@@ -88,7 +87,7 @@ Yöneticiler, Microsoft 365 denemeler hub'ında **Purview çözümleri deneme** 
 
 - **Denetim**
 
-  Microsoft Purview Denetim (Premium), kuruluşların bir araştırma yürütmek için gereken denetim günlüğü saklama süresini artırarak, risk kapsamını belirlemeye yardımcı olan önemli olaylara erişim sağlayarak ve Office 365 Yönetim Etkinliği API'sine daha hızlı erişim sağlayarak adli ve uyumluluk araştırmaları gerçekleştirmelerine yardımcı olur. [Denetim](advanced-audit.md) hakkında daha fazla bilgi edinin
+  Microsoft Purview Denetim (Premium), kuruluşların araştırma yapmak için gereken denetim günlüğü saklama süresini artırarak, risk kapsamını belirlemeye yardımcı olan önemli olaylara erişim sağlayarak ve Office 365 Yönetim Etkinliği API'sine daha hızlı erişim sağlayarak adli ve uyumluluk araştırmaları gerçekleştirmelerine yardımcı olur. [Denetim](advanced-audit.md) hakkında daha fazla bilgi edinin
 
 - **İletişim Uyumluluğu**
 
@@ -104,7 +103,7 @@ Yöneticiler, Microsoft 365 denemeler hub'ında **Purview çözümleri deneme** 
 
 - **Veri Kaybı Önleme**
 
-  Microsoft Purview Veri Kaybı Önleme (DLP), cihazlarda, uygulamalarda ve hizmetlerde hassas bilgilerin paylaşımını ve kullanımını denetlemenize yardımcı olur. Denemeler sayesinde DLP ilkelerinin kapsamını Teams ve cihazlara genişletebilir, eğitilebilir sınıflandırıcıları ve tam veri eşleşmesini (EDM) kullanarak daha da hassas içerikleri koruyabilir ve önerilen DLP ilkelerimizle hızlı bir şekilde çalışmaya başlayabilirsiniz.  [Veri Kaybı Önleme hakkında daha fazla bilgi edinin](dlp-learn-about-dlp.md)
+  Microsoft Purview Veri Kaybı Önleme (DLP), cihazlarda, uygulamalarda ve hizmetlerde hassas bilgilerin paylaşımını ve kullanımını denetlemenize yardımcı olur. Denemeler sayesinde DLP ilkelerinin kapsamını Teams ve cihazlara genişletebilir, eğitilebilir sınıflandırıcıları ve tam veri eşleşmesini (EDM) kullanarak daha da hassas içerikleri koruyabilir ve önerilen DLP ilkelerimizi hızlı bir şekilde kullanmaya başlayabilirsiniz.  [Veri Kaybı Önleme hakkında daha fazla bilgi edinin](dlp-learn-about-dlp.md)
 
    Deneme süresi sona erdiğinde:
 
@@ -119,7 +118,7 @@ Yöneticiler, Microsoft 365 denemeler hub'ında **Purview çözümleri deneme** 
 
   Hassas içeriğinizi nerede olursa olsun keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olmak için [duyarlılık etiketleriyle](sensitivity-labels.md) Microsoft Purview Bilgi Koruması uygulayın. Denemeler sayesinde kullanıcıların e-postalarına ve belgelerine duyarlılık etiketleri uygulamasını, hassas içeriği bulup otomatik olarak etiketlemesini, makine öğrenmesi tabanlı sınıflandırıcılardan yararlanmasını ve önerilen etiketleri ve ilkelerimizi hızlı bir şekilde kullanmaya başlamasını önerebilirsiniz.
 
-  Information Protection deneme sürümü, Teams ve cihazlar tarafından paylaşılan kredi kartı numaralarını korumak için size varsayılan etiketler, belgeler ve e-postalar için otomatik etiketleme ve veri kaybı önleme sağlar. Sizin için oluşturduğumuz varsayılan ilkeler hızlı bir şekilde çalışmaya başlamanızı sağlar, ancak bunları istediğiniz gibi tamamen özelleştirebilirsiniz.
+  Information Protection deneme sürümü, Teams'de ve cihazlar tarafından paylaşılan kredi kartı numaralarını korumak için size varsayılan etiketler, belgeler ve e-postalar için otomatik etiketleme ve veri kaybı önleme sağlar. Sizin için oluşturduğumuz varsayılan ilkeler hızlı bir şekilde çalışmaya başlamanızı sağlar, ancak bunları istediğiniz gibi tamamen özelleştirebilirsiniz.
 
     Deneme süresi sona erdiğinde:
 
@@ -133,7 +132,7 @@ Yöneticiler, Microsoft 365 denemeler hub'ında **Purview çözümleri deneme** 
 
 - **Insider Risk Management**
 
-  İç riskleri hızla belirlemenize, önceliklendirmenize ve düzeltmenize yardımcı olmak için yapay zekadan yararlanın. Microsoft 365 ve Azure hizmetlerindeki günlükleri kullanarak risk sinyallerini izleyen ilkeler tanımlayabilir, ardından kullanıcı eğitimini yükseltme veya araştırma başlatma gibi düzeltme eylemleri gerçekleştirebilirsiniz. [Insider Risk Management](insider-risk-management-solution-overview.md) hakkında daha fazla bilgi edinin
+  İç riskleri hızla belirlemenize, önceliklendirmenize ve düzeltmenize yardımcı olmak için yapay zekadan yararlanın. Microsoft 365 ve Azure hizmetlerinin günlüklerini kullanarak risk sinyallerini izleyen ilkeler tanımlayabilir, ardından kullanıcı eğitimini yükseltme veya araştırma başlatma gibi düzeltme eylemleri gerçekleştirebilirsiniz. [Insider Risk Management](insider-risk-management-solution-overview.md) hakkında daha fazla bilgi edinin
 
 <!--
 - **privacy management**

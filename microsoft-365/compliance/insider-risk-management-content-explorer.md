@@ -1,7 +1,7 @@
 ---
 title: Insider risk yönetimi İçerik gezgini
-description: Insider risk yönetimi Hakkında bilgi edinmek için Microsoft 365
-keywords: Microsoft 365, insider risk yönetimi, risk yönetimi, uyumluluk
+description: Microsoft Purview'da insider risk yönetimi İçerik gezgini hakkında bilgi edinin
+keywords: Microsoft 365, Microsoft Purview, insider riski, risk yönetimi, uyumluluk
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -12,110 +12,110 @@ author: robmazz
 manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
-ms.openlocfilehash: d60726b7fbf68ecbeb8af2d40c4c18e2bb9aaa7c
-ms.sourcegitcommit: be074f57e33c811bb3857043152825209bc8af07
+ms.openlocfilehash: c193325608feef3bc8114b50af9d5e5832eb9d66
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "62988805"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66642557"
 ---
 # <a name="insider-risk-management-content-explorer"></a>Insider risk yönetimi İçerik gezgini
 
-Insider risk yönetimi **İçerik gezgini** , uyarılarda etkinlikle ilişkilendirilmiş içeriğin bağlamını ve ayrıntılarını incelemek için *Insider Risk Yönetimi* Güvenlik Rolü'ne atanan kullanıcıların olanak sağlar. İçerik gezgininde olay verileri yeni etkinlikler eklemek için her gün yenilenir. Bir vakada onaylanan tüm uyarılar için, veri ve ileti dosyalarının kopyaları öğelerin zamanında anlık görüntü olarak arşivlenir ve bu sırada depolama kaynaklarında özgün dosyalar ve iletiler tutularak arşivlenir. Gerekirse, büyük/küçük harf veri dosyaları taşınabilir belge dosyası (PDF) olarak veya özgün dosya biçiminde dışarı aktarabilirsiniz.
+Insider risk yönetimi **İçerik gezgini** , *Insider Risk Yönetimi Araştırmacıları* rolüne atanan kullanıcıların uyarılardaki etkinlikle ilişkili içeriğin bağlamını ve ayrıntılarını incelemesine olanak tanır. İçerik gezginindeki servis talebi verileri her gün yeni etkinlik içerecek şekilde yenilenir. Bir servis talebi için onaylanan tüm uyarılar için, verilerin ve ileti dosyalarının kopyaları öğelerin zamanında anlık görüntü olarak arşivlenir ve depolama kaynaklarında özgün dosyalar ve iletiler korunur. Gerekirse, servis talebi veri dosyaları taşınabilir belge dosyası (PDF) olarak veya özgün dosya biçiminde dışarı aktarılabilir.
 
-Yeni durumlarda, genellikle içeriğin İçerik gezgini'nde doldurmak yaklaşık bir saat sürer. Çok fazla içerik olan durumlarda anlık görüntü oluşturmak daha uzun sürebilir. İçerik gezgininde hala içerik yükleniyorsa, tamamlanma yüzdesini gösteren bir ilerleme göstergesi görüntülenir.
+Yeni durumlarda, içerik gezgininde içeriğin doldurulma süresi genellikle yaklaşık bir saat sürer. Büyük miktarda içeriğe sahip durumlarda anlık görüntü oluşturmak daha uzun sürebilir. İçerik gezgininde içerik yüklenmeye devam ediyorsa tamamlanma yüzdesini gösteren bir ilerleme göstergesi görürsünüz.
 
-Bazı durumlarda, bir vakayla ilişkilendirilmiş veriler İçerik Gezgini'nde gözden geçirme için anlık görüntü olarak kullanılamıyor olabilir. Bu durum, büyük/küçük harf verileri silindiğinde veya taşındığında ya da büyük/küçük harf verileri iş sürecinde geçici bir hata oluştuğunda oluşabilir. Bu durum oluşursa, dosya **adlarını** , dosya yolunu ve her dosyanın başarısızlığın nedenini görüntülemek için uyarı çubuğunda Dosyaları görüntüle'yi seçin. Gerekirse, bu bilgiler bir .csv (virgülle ayrılmış değerler) dosyasına aktarabilirsiniz.
+Bazı durumlarda, bir servis talebiyle ilişkili veriler İçerik gezgininde gözden geçirilecek anlık görüntü olarak kullanılamayabilir. Bu durum, servis talebi verileri silindiğinde veya taşındığında veya olay verileri işlenirken geçici bir hata oluştuğunda ortaya çıkabilir. Bu durum oluşursa, her dosya için dosya adlarını, dosya yolunu ve hatanın nedenini görüntülemek için uyarı çubuğunda Dosyaları **görüntüle'yi** seçin. Gerekirse, bu bilgiler bir .csv (virgülle ayrılmış değerler) dosyasına aktarılabilir.
 
-İçerik Bilgi Hakları Yönetimi izinlerini de içerirse, kopyalanan içerik için bu izinler korunur ve *Insider Risk Management Atı'lara* Rol atanan kullanıcılar, dosyaları açmaları ve görüntülemeleri gerekirse bu izinlere ve haklara ihtiyaç yaşar. Yönetim amacıyla insider risk yönetimi durumunda her dosyaya ve iletiye otomatik olarak benzersiz bir dosya kimliği atanır. Cihaz göstergesi etkinlikleriyle ilişkili belgeler İçerik gezgininde yerlanmaz.
+İçerik Bilgi Hakları Yönetimi izinlerini içeriyorsa, kopyalanan içerik için bu izinler korunur ve *Insider Risk Yönetimi Araştırmacıları* rolüne atanan kullanıcılar, dosyaları açıp görüntülemeleri gerekiyorsa bu izinlere ve haklara ihtiyaç duyar. Her dosya ve iletiye, yönetim amacıyla insider risk yönetimi örneğinde otomatik olarak benzersiz bir dosya kimliği atanır. Cihaz göstergesi etkinlikleriyle ilişkili belgeler İçerik gezginine dahil değildir.
 
 > [!NOTE]
-> İçerik gezgini, Microsoft 365, Exchange, Microsoft Teams ve diğer sitelerde kullanıcı etkinliği gibi, SharePoint hizmet dosyalarıyla ilgili kullanıcı OneDrive İş.
+> İçerik gezgini; SharePoint, Exchange, Microsoft Teams ve OneDrive İş üzerindeki kullanıcı etkinliği gibi Microsoft 365 hizmet dosyalarıyla ilgili kullanıcı etkinliklerini içerir.
 
 ## <a name="column-options"></a>Sütun seçenekleri
 
-Risk analistleri ve güvenlik analistleri için yakalanan verileri ve iletileri gözden geçirmeyi ve durumu incelemeyi kolaylaştırmak için İçerik gezgininde çeşitli filtreleme ve sıralama araçları yer almaktadır. Temel sıralama için, **Tarih ve** **Dosya sınıf sütunları** içerik sırası bölmesindeki sütun başlıklarını kullanarak sıralamayı destekler. Dosyalar ve iletiler üzerinde farklı özetler sağlamak için, görünüme eklemek için diğer kuyruk sütunları kullanılabilir.
+Risk analistlerinin ve araştırmacıların yakalanan verileri ve iletileri gözden geçirmesini ve olayın bağlamını gözden geçirmesini kolaylaştırmak için İçerik gezginine çeşitli filtreleme ve sıralama araçları eklenmiştir. Temel sıralama için **Tarih** ve **Dosya sınıfı** sütunları, içerik kuyruğu bölmesindeki sütun başlıklarını kullanarak sıralamayı destekler. Diğer kuyruk sütunları, dosya ve iletilerde farklı özetler sağlamak için görünüme eklenebilir.
 
-İçerik kuyruğuna sütun başlıkları eklemek veya kaldırmak için Sütunları düzenle **denetimine tıklayın** ve aşağıdaki sütun seçeneklerinden birini belirleyin. Bu sütunlar, İçerik gezgininde desteklenen ve bu makalenin sonraki sayfalarında listelenen ortak, e-posta ve belge özelliği koşullarıyla eşlenmiştir.
+İçerik kuyruğuna sütun başlıkları eklemek veya kaldırmak için **Sütunları düzenle** denetimini kullanın ve aşağıdaki sütun seçeneklerinden birini belirleyin. Bu sütunlar İçerik gezgininde desteklenen ve bu makalenin devamında listelenen ortak, e-posta ve belge özelliği koşullarıyla eşlenmektedir.
 
 | **Sütun seçeneği** | **Açıklama** |
 |:------------------|:----------------|
-| **Yazar** | Belgelerden yazar Office alanı; belge kopyalanırsa kalıcı olur. Örneğin, bir kullanıcı belgeyi oluşturur ve bu belgeyi başka birine e-postayla gönderdikten sonra SharePoint, belge özgün yazarı korur. |
-| **Gizli** | E-posta iletileri için, Gizli ileti alanında bulunan kullanıcılar tarafından kullanılabilir. |
-| **Bilgi** | E-posta iletileri için, Bilgi ileti alanında bulunan kullanıcılar tarafından kullanılabilir. |
-| **Bileşik yol** | Öğenin kaynağını açıklayan, insanlar tarafından okunabilir yol. |
-| **Konuşma Kimliği** | İletiden Konuşma Kimliği. |
+| **Yazar** | Bir belge kopyalandığında kalıcı olan Office belgelerindeki yazar alanı. Örneğin, bir kullanıcı bir belge oluşturursa ve belgeyi SharePoint'e yükleyen başka birine e-postayla bildirirse, belge özgün yazarı korur. |
+| **Gizli** | Gizli ileti alanındaki kullanıcılar, e-posta iletileri için kullanılabilir. |
+| **Cc** | Bilgi iletisi alanındaki kullanıcılar olan e-posta iletileri için kullanılabilir. |
+| **Bileşik yol** | Öğenin kaynağını açıklayan okunabilir yol. |
+| **Konuşma Kimliği** | İletideki konuşma kimliği. |
 | **Konuşma dizini** | İletiden konuşma dizini. |
-| **Oluşturulma zamanı** | Dosya veya e-posta iletisi oluşturma zamanı. |
-| **Tarih (UTC)** | E-posta için, iletinin bir alıcı tarafından veya gönderen tarafından gönderildiği tarihtir. Belgeler için, belgenin son değiştirilma tarihidir. Tarih Eşgüdümli Evrensel Saat 'e (UTC) sahiptir.|
-| **Baskın tema** | Analizler için hesaplanan olarak baskın tema. |
-| **E-posta kümesi kimliği** | Aynı e-posta kümesinde yer alan tüm iletiler için grup kimliği. |
-| **Aile Kimliği** | Aile Kimliği, tüm öğeleri bir araya gruplar; e-posta için bu sütun iletiyi ve tüm ekleri içerir; Belgeler için, bu sütun belgeyi ve ekli öğeleri içerir. |
-| **Dosya sınıfı** | E-posta SharePoint OneDrive için: **Belge**; Exchange içeriği için: **E-posta** veya **Ek**. |
-| **Dosya Kimliği** | Olay içindeki benzersiz belge tanımlayıcısı. |
+| **Oluşturma zamanı** | Dosyanın veya e-posta iletisinin oluşturulduğu saat. |
+| **Tarih (UTC)** | E-posta için, iletinin bir alıcı tarafından alındığı veya gönderen tarafından gönderildiği tarih. Belgeler için, belgenin son değiştirildiği tarih. Tarih Eşgüdümlü Evrensel Saat (UTC) biçimindedir.|
+| **Baskın tema** | Analiz için hesaplanmış baskın tema. |
+| **E-posta kümesi kimliği** | Aynı e-posta kümesindeki tüm iletiler için grup kimliği. |
+| **Aile Kimliği** | Aile Kimliği tüm öğeleri birlikte gruplandır; e-posta için bu sütun iletiyi ve tüm ekleri içerir; bu sütun, belgeler için belgeyi ve eklenmiş öğeleri içerir. |
+| **Dosya sınıfı** | SharePoint ve OneDrive içeriği için: **Belge**; Exchange'den içerik için: **E-posta** veya **Ek**. |
+| **Dosya Kimliği** | Servis talebi içinde benzersiz belge tanımlayıcısı. |
 | **Dosya türü simgesi** | Dosyanın uzantısı; örneğin, docx, one, pptx veya xlsx. Bu alan, FileExtension site özelliğiyle aynı özelliktir. |
 | **Kimlik** | Dosyanın GUID tanımlayıcısı. |
-| **Değişmez Kimlik** | Dosyada depolandığı gibi değişmez Office 365. |
-| **Kapsayıcı tür** | Çözümleme için hesaplanan kapsayıcı tür: **0** - dahil değildir; **1** - dahil; **2** - dahil eksi; **3** - dahil kopya. |
-| **Son değiştirme** | Belgenin son değiştir bitiş tarihi. |
-| **Temsili olarak işaretlenmiş** | Her bir yineleme kümesinden bir belge temsilci olarak işaretlenir. |
-| **İletinin tür** | Aranan e-posta iletisi türü. Olası değerler: kişiler, belgeler, e-posta, dış veriler, fakslar, im, günlükler, toplantılar, microsoft ekipleri (Microsoft Teams'ta sohbetlerden, toplantılardan ve aramalardan öğe döndürür), notlar, gönderiler, RSS akışları, görevler, sesli mesaj |
-| **Katılımcılar** | İletinin tüm katılımcılarının listesi; örneğin, Gönderen, Son, Bilgi, Gizli. |
-| **Özet Kimlik** | Özet kimliği. |
-| **Alındı** | E-posta iletisi alıcı tarafından alınmıştır. Bu alan, Alınan e-posta özelliğiyle aynı özelliktir. |
-| **Alıcılar** | E-posta iletisinde tüm alıcı alanları. Bu alanlar To, Bilgi ve Gizli'dir. |
-| **Temsili Kimlik** | Her bir tam yineleme kümesi için sayısal tanımlayıcı. |
-| **Gönderen** | E-posta iletisi gönderen. |
-| **Gönderen/Yazar** | E-posta için, iletiyi gönderen kişidir. Belgeler için, yazar alanında adı geçen kişi Office içerir. Virgülle ayırarak birden çok ad yazın. İki veya daha fazla değer OR işleci tarafından mantıksal olarak bağlantılıdır. |
+| **Sabit Kimlik** | Office 365 depolanan sabit kimlik. |
+| **Kapsayıcı tür** | Analiz için hesaplanan kapsayıcı tür: **0** - dahil değil; **1** - dahil; **2** - dahil eksi; **3** - dahil kopya. |
+| **Son değiştirme** | Belgenin son değiştirildiği tarih. |
+| **Temsilci olarak işaretlendi** | Her yineleme kümesinden bir belge temsilci olarak işaretlenir. |
+| **İleti türü** | Aranacak e-posta iletisinin türü. Olası değerler: kişiler, belgeler, e-posta, dış veriler, fakslar, anlık ileti, günlükler, toplantılar, Microsoft teams (Microsoft Teams'de sohbetlerden, toplantılardan ve aramalardan öğeleri döndürür), notlar, gönderiler, RSS akışları, görevler, sesli mesaj |
+| **Katılımcı** | İletinin tüm katılımcılarının listesi; örneğin, Gönderen, Kime, Bilgi, Gizli. |
+| **Özet Kimliği** | Özetin kimliği. |
+| **Alınan** | E-posta iletisinin alıcı tarafından alındığı tarih. Bu alan, Alınan e-posta özelliğiyle aynı özelliktir. |
+| **Alıcı** | E-posta iletisindeki tüm alıcı alanları. Bu alanlar Kime, Bilgi ve Gizli alanlarıdır. |
+| **Temsilci Kimliği** | Her yineleme kümesinin sayısal tanımlayıcısı. |
+| **Gönderen** | E-posta iletisinin göndereni. |
+| **Gönderen/Yazar** | E-posta için, ileti gönderen kişi. Belgeler için, Office belgelerinden yazar alanında alıntı yapılan kişi. Virgülle ayırarak birden fazla ad yazabilirsiniz. İki veya daha fazla değer OR işleci tarafından mantıksal olarak bağlanır. |
 | **Hassas bilgi türleri** | İçerikte tanımlanan hassas bilgi türleri. |
-| **Duyarlılık etiketleri** | İçeriklere uygulanan duyarlılık etiketleri. |
-| **Gönderildi** | Gönderen tarafından e-posta iletisi gönderildiği tarih. Bu alan, Gönderilmiş e-posta özelliğiyle aynı özelliktir. |
-| **Boyut** | Hem e-posta hem de belgeler için, öğenin boyutu (bayt cinsinden). |
-| **Konu** | E-posta iletisi konu satırı metindir. |
-| **Konu/Başlık** | E-posta için, iletinin konu satırı metindir. Belgeler için, belgenin başlığı. Daha önce de belirtildiği gibi Başlık özelliği, bu belgelerde belirtilen Microsoft Office veridir. Birbirinden virgülle ayırarak birden çok konu/başlığın adını yazın. İki veya daha fazla değer OR işleci tarafından mantıksal olarak bağlantılıdır. |
-| **Temalar listesi** | Analizler için hesaplanan temalar listesi. |
-| **Başlık** | Belgenin başlığı. Başlık özelliği, bu belgelerde belirtilen meta Office kullanılır. Belgenin dosya adıyla aynı değil. |
-| **Hedef** | E-posta iletisi alıcısı, Son alanında. |
+| **Duyarlılık etiketleri** | İçeriğe uygulanan duyarlılık etiketleri. |
+| **Gönderilen** | Gönderen tarafından e-posta iletisinin gönderildiği tarih. Bu alan, Gönderilmiş e-posta özelliğiyle aynı özelliktir. |
+| **Boyut** | Hem e-posta hem de belgeler için öğenin boyutu (bayt cinsinden). |
+| **Konu** | E-posta iletisinin konu satırındaki metin. |
+| **Konu/Başlık** | E-posta için, iletinin konu satırındaki metin. Belgeler için, belgenin başlığı. Daha önce açıklandığı gibi, Title özelliği Microsoft Office belgelerinde belirtilen meta verilerdir. Birden çok konunun/başlığın adını virgülle ayırarak yazabilirsiniz. İki veya daha fazla değer OR işleci tarafından mantıksal olarak bağlanır. |
+| **Temalar listesi** | Analiz için hesaplanan temalar listesi. |
+| **Başlık** | Belgenin başlığı. Title özelliği, Office belgelerinde belirtilen meta verilerdir. Belgenin dosya adından farklıdır. |
+| **Hedef** | E-posta iletisinin Alıcı alanındaki alıcısı. |
 
 ## <a name="filtering"></a>Filtreleme
 
-Bir aramanın kapsamını daraltmak ve daha daraltılmış bir sonuç kümesi geri dönmek için bir veya daha fazla filtre kullanabilirsiniz. Filtre ayarlamak için, içerik **kuyruğun** üst kısmında Filtreler'i seçin. Birçok filtre, filtre tarafından döndürülen sonuçları daraltmaya yardımcı olmak için ek filtreleme seçenekleri içerir. Örneğin, Tarih filtresi *,* Tarih filtresi için Başlangıç tarihi *ve Bitiş* *tarihi yapılandırma* **denetimlerini** içerir. Aşağıdaki kategorilerden bir veya daha fazla filtre öğesini seçin:
+Bir aramanın kapsamını daraltmak ve daha iyileştirilmiş bir sonuç kümesi döndürmek için bir veya daha fazla filtre kullanabilirsiniz. Filtre ayarlamak için içerik kuyruğunun üst kısmındaki **Filtreler'i** seçin. Birçok filtre, filtre tarafından döndürülen sonuçları daraltmaya yardımcı olmak için ek filtreleme seçenekleri içerir. Örneğin *, Tarih* filtresi, Tarih filtresi için *Başlangıç tarihi* ve *Bitiş tarihi* yapılandırma denetimleri içerir. Aşağıdaki kategorilerden bir veya daha fazla filtre öğesi seçin:
 
 ### <a name="common-filters"></a>Ortak filtreler
 
-| **Filtre** | **Açıklama** |
+| **Filtrele** | **Açıklama** |
 |:---------------------|:----------------|
-| **Tarih (UTC)** | E-posta için, iletinin bir alıcı tarafından veya gönderen tarafından gönderildiği tarihtir. Belgeler için, belgenin son değiştirilma tarihidir. |
-| **Gönderen/Yazar** | E-posta için, iletiyi gönderen kişidir. Belgeler için, belgelerde Yazar alanında *adı* Office. Virgülle ayırarak birden çok ad yazın. |
-| **Kaynak** | Belgenizin kuruluş konumunu gösterir. Örneğin, belirli bir SharePoint konumu. |
-| **Konu/Başlık** | E-posta için, iletinin konu satırı metindir. Belgeler için, belgenin başlığı. Belgeler'in Başlık özelliği, bu belgelerde belirtilen Microsoft Office verilerdir. Birbirinden virgülle ayırarak birden çok konu/başlığın adını yazın. İki veya daha fazla değer OR işleci tarafından mantıksal olarak bağlantılıdır. |
+| **Tarih (UTC)** | E-posta için, iletinin bir alıcı tarafından alındığı veya gönderen tarafından gönderildiği tarih. Belgeler için, belgenin son değiştirildiği tarih. |
+| **Gönderen/Yazar** | E-posta için, ileti gönderen kişi. Belgeler için, Office belgelerinden *Yazar* alanında alıntı yapılan kişi. Virgülle ayırarak birden fazla ad yazabilirsiniz. |
+| **Kaynak** | Belgenin kuruluşunuzdaki konumu. Örneğin, belirli bir SharePoint sitesi konumu. |
+| **Konu/Başlık** | E-posta için, iletinin konu satırındaki metin. Belgeler için, belgenin başlığı. Belgelerdeki Title özelliği, Microsoft Office belgelerinde belirtilen meta verilerdir. Birden çok konunun/başlığın adını virgülle ayırarak yazabilirsiniz. İki veya daha fazla değer OR işleci tarafından mantıksal olarak bağlanır. |
 
 ### <a name="email-filters"></a>E-posta filtreleri
 
-| **Filtre** | **Açıklama** |
+| **Filtrele** | **Açıklama** |
 |:---------------------|:----------------|
-| **Gizli** | E-posta iletisine ait Gizli alanı. |
-| **Bilgi** | E-posta iletisi bilgi alanı. |
-| **Eki var** | İletinin eki olup olmadığını gösterir. Değerler doğru veya **yanlış olarak** **listelenir**. |
-| **E-posta ekidir** | Belge bir ekse, değer Evet olarak **listelenir**. |
-| **Belge eklenmiş** | Belge e-posta iletisine eklenmişse, değer Evet olarak **listelenir**. |
-| **Satır içi ek** | Belge e-posta iletisine gelen satır içi bir ekse, değer Evet olarak **listelenir**. |
-| **Katılımcılar** | E-posta iletisinde tüm kişiler alanları. Bu alanlar Ilk, Son, Bilgi ve Gizli alanlarıdır. |
-| **Alındı** | E-posta iletisi alıcı tarafından alınmıştır. |
-| **Alıcı etki alanları** | İletinin tüm alıcıları etki alanlarının listesi. |
-| **Alıcılar** | E-posta iletisi alıcıları. |
-| **Gönderen** | İleti türleri için Gönderen (Gönderen) alanı.  Biçim, **DisplayName 'tir \<SmtpAddress>**. |
+| **Gizli** | E-posta iletisinin Gizli alanı. |
+| **Cc** | E-posta iletisinin Bilgi alanı. |
+| **Eki var** | İletinin eki olup olmadığını gösterir. Değerler **true** veya **false** olarak listelenir. |
+| **E-posta eki mi?** | Belge bir ekse, değer **Evet** olarak listelenir. |
+| **Eklenmiş belgedir** | Belge e-posta iletisine eklenmişse, değer **Evet** olarak listelenir. |
+| **Satır içi ektir** | Belge e-posta iletisinde satır içi bir ekse, değer **Evet** olarak listelenir. |
+| **Katılımcı** | E-posta iletisindeki tüm kişiler alanları. Bu alanlar Kimden, Kime, Bilgi ve Gizli alanlarıdır. |
+| **Alınan** | E-posta iletisinin alıcı tarafından alındığı tarih. |
+| **Alıcı etki alanları** | İletinin alıcılarının tüm etki alanlarının listesi. |
+| **Alıcı** | E-posta iletisi alıcıları. |
+| **Gönderen** | İleti türleri için Gönderen (Kimden) alanı.  Biçim **DisplayName \<SmtpAddress>** şeklindedir. |
 | **Gönderen etki alanı** | Gönderenin etki alanı. |
-| **Hedef** | E-posta iletisine gelen To alanı. |
-| **E-posta kümesinde benzersiz** | E-posta kümesinde ekin yinelenen bir kopyası varsa False. |
+| **Hedef** | E-posta iletisinin To alanı. |
+| **E-posta kümesinde benzersiz** | E-posta kümesinde ekin bir kopyası varsa False. |
 
 ## <a name="document-filters"></a>Belge filtreleri
 
 | **Filtreler** | **Açıklama** |
 |:---------------------|:----------------|
-| **Uyumluluk etiketleri** | Uyumluluk etiketleri alanlarına Office 365. |
-| **Oluşturma saati (UTC)** | Dosya veya e-posta iletisi oluşturulan tarih ve saat. Tarih ve saat, Eşgüdümli Evrensel Saat'e (UTC) sahiptir. |
-| **Son değiştirme tarihi (UTC)** | Belgenin son değiştir bitiş tarihi. Tarih ve saat, Eşgüdümli Evrensel Saat'e (UTC) sahiptir. |
+| **Uyumluluk etiketleri** | Office 365 uygulanan uyumluluk etiketleri. |
+| **Oluşturma saati (UTC)** | Dosyanın veya e-posta iletisinin oluşturulduğu tarih ve saat. Tarih ve saat Eşgüdümlü Evrensel Saat (UTC) içindedir. |
+| **Son değiştirme tarihi (UTC)** | Belgenin son değiştirildiği tarih. Tarih ve saat Eşgüdümlü Evrensel Saat (UTC) içindedir. |
 | **Dosya uzantısı** | Dosyanın uzantı türü. |
-| **Kullanıcı etkinliği olayları** | Olaydaki belirli kullanıcı etkinliğiyle ilgili öğeler için etkinlik.  Örneğin, bir vakanın Kullanıcı Etkinliği sayfasında bir etkinlik için 'İçeriği Keşfet' bağlantısını seçerek  bu etkinlikle ilgili öğeleri görüntülemek için bu filtre kullanılır. |
-| **İş ürünü** | Belge için iş ürününün türü. Örneğin, belgedeki ek açıklamalar veya etiketler. |
+| **Kullanıcı etkinliği olayları** | Bir servis talebindeki belirli kullanıcı etkinliğiyle ilgili öğeler için etkinlik.  Örneğin, bir servis talebinin **Kullanıcı Etkinliği** sayfasındaki bir etkinlik için 'İçeriği Keşfet' bağlantısını seçtiğinizde, bu filtre bu etkinlikle ilgili öğeleri görüntülemek için kullanılır. |
+| **İş ürünü** | Belgenin iş ürününün türü. Örneğin, belgedeki ek açıklamalar veya etiketler. |

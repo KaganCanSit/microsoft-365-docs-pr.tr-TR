@@ -21,25 +21,23 @@ ms.assetid: bad352ff-d5d2-45d8-ac2a-6cb832f10e73
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkSPO
-description: Microsoft Purview uyumluluk portalında eBulma olayıyla ilişkili yeni bir ayrı tutmaya posta kutuları & OneDrive İş siteleri eklemek için bir betik çalıştırmayı öğrenin.
-ms.openlocfilehash: 04d41936e437740a39ab73aeafb9ca40b914dd2f
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Microsoft Purview uyumluluk portalı bir eBulma olayıyla ilişkili yeni bir ayrı tutmaya posta kutuları & OneDrive İş siteleri eklemek için bir betik çalıştırmayı öğrenin.
+ms.openlocfilehash: ebfe9bf2fc2784e8c590b949912aa15c1b773cc0
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012780"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66621655"
 ---
 # <a name="use-a-script-to-add-users-to-a-hold-in-a-ediscovery-standard-case"></a>eBulma (Standart) durumunda bir ayrı tutmaya kullanıcı eklemek için betik kullanma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Güvenlik & Uyumluluğu PowerShell, eBulma servis taleplerini oluşturma ve yönetmeyle ilgili zaman alan görevleri otomatikleştirmenize olanak sağlayan cmdlet'ler sağlar. Şu anda, Çok sayıda koruyucu içerik konumunu beklemeye almak için Microsoft Purview uyumluluk portalında Microsoft Purview eKeşif (Standart) durumunu kullanmak zaman ve hazırlık gerektirir. Örneğin, ayrı tutma oluşturmadan önce, ayrı tutmaya yerleştirmek istediğiniz her OneDrive İş sitesinin URL'sini toplamanız gerekir. Ardından, beklemeye almak istediğiniz her kullanıcı için posta kutusunu ve OneDrive İş sitesini ayrı tutmaya eklemeniz gerekir. Bu işlemi otomatikleştirmek için bu makaledeki betiği kullanabilirsiniz.
+Güvenlik & Uyumluluğu PowerShell, eBulma servis taleplerini oluşturma ve yönetmeyle ilgili zaman alan görevleri otomatikleştirmenize olanak sağlayan cmdlet'ler sağlar. Şu anda, çok sayıda koruyucu içerik konumunu beklemeye almak için Microsoft Purview uyumluluk portalı Microsoft Purview eKeşif (Standart) durumunu kullanmak zaman ve hazırlık gerektirir. Örneğin, ayrı tutma oluşturmadan önce, ayrı tutmaya yerleştirmek istediğiniz her OneDrive İş sitesinin URL'sini toplamanız gerekir. Ardından, beklemeye almak istediğiniz her kullanıcı için posta kutusunu ve OneDrive İş sitesini ayrı tutmaya eklemeniz gerekir. Bu işlemi otomatikleştirmek için bu makaledeki betiği kullanabilirsiniz.
 
 Betik, kuruluşunuzun Sitem etki alanının adını ister (örneğin, URL'dehttps://contoso-my.sharepoint.com), `contoso` var olan bir eBulma servis talebinin adı, servis talebiyle ilişkili yeni ayrı tutmanın adı, beklemeye almak istediğiniz kullanıcıların e-posta adreslerinin listesi ve sorgu tabanlı ayrı tutma oluşturmak istiyorsanız kullanmak üzere bir arama sorgusu. Betik daha sonra listedeki her kullanıcı için OneDrive İş sitesinin URL'sini alır, yeni ayrı tutmayı oluşturur ve ardından listedeki her kullanıcı için posta kutusunu ve OneDrive İş sitesini ayrı tutmaya ekler. Betik ayrıca yeni ayrı tutma hakkında bilgi içeren günlük dosyaları da oluşturur.
 
 Bunun gerçekleşmesi için adımlar şunlardır:
 
-[1. Adım: SharePoint Online Management Shell'i yükleme](#step-1-install-the-sharepoint-online-management-shell)
+[1. Adım: SharePoint Online Yönetim Kabuğu'nı yükleme](#step-1-install-the-sharepoint-online-management-shell)
 
 [2. Adım: Kullanıcıların listesini oluşturma](#step-2-generate-a-list-of-users)
 
@@ -55,19 +53,19 @@ Bunun gerçekleşmesi için adımlar şunlardır:
 
 - Betik, kullanıcıların listesini mevcut bir servis talebiyle ilişkili yeni bir ayrı tutmaya ekler. Betiği çalıştırmadan önce ayrı tutma işlemini ilişkilendirmek istediğiniz durumun oluşturulduğundan emin olun.
 
-- Bu makaledeki betik, Güvenlik & Uyumluluğu PowerShell'e ve SharePoint Çevrimiçi Yönetim Kabuğu'na bağlanırken modern kimlik doğrulamasını destekler. Microsoft 365 veya Microsoft 365 GCC bir kuruluşsanız betiği olduğu gibi kullanabilirsiniz. Office 365 Almanya kuruluşu, Microsoft 365 GCC High kuruluşu veya Microsoft 365 DoD kuruluşuysanız, betiği başarıyla çalıştırmak için düzenlemeniz gerekir. Özellikle, Güvenlik & Uyumluluğu PowerShell'e bağlanmak için satırı `Connect-IPPSSession` düzenlemeniz ve *ConnectionUri* ve *AzureADAuthorizationEndpointUri* parametrelerini (ve kuruluşunuzun türü için uygun değerleri) kullanmanız gerekir. Daha fazla bilgi için [güvenlik & Uyumluluk PowerShell Bağlan örneklerine](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa) bakın.
+- Bu makaledeki betik, Güvenlik & Uyumluluğu PowerShell ve SharePoint Online Yönetim Kabuğu'na bağlanırken modern kimlik doğrulamasını destekler. Microsoft 365 veya Microsoft 365 GCC kuruluşuysanız betiği olduğu gibi kullanabilirsiniz. Office 365 Almanya kuruluşu, Microsoft 365 GCC High kuruluşu veya Microsoft 365 DoD kuruluşuysanız, betiği başarıyla çalıştırmak için düzenlemeniz gerekir. Özellikle, Güvenlik & Uyumluluğu PowerShell'e bağlanmak için satırı `Connect-IPPSSession` düzenlemeniz ve *ConnectionUri* ve *AzureADAuthorizationEndpointUri* parametrelerini (ve kuruluşunuzun türü için uygun değerleri) kullanmanız gerekir. Daha fazla bilgi için [Bkz. Güvenlik & Uyumluluk PowerShell'e Bağlanma](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa).
 
-- Betiğin Güvenlik & Uyumluluğu PowerShell ve SharePoint Çevrimiçi Yönetim Kabuğu bağlantısı otomatik olarak kesilir.
+- Betiğin Güvenlik & Uyumluluğu PowerShell ve SharePoint Online Yönetim Kabuğu ile bağlantısı otomatik olarak kesilir.
 
 - Betik en az hata işleme içerir. Birincil amacı, her kullanıcının posta kutusunu ve OneDrive İş sitesini hızlı ve kolay bir şekilde beklemeye almaktır.
 
 - Bu konuda sağlanan örnek betikler, herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betikler, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiklerin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
 
-## <a name="step-1-install-the-sharepoint-online-management-shell"></a>1. Adım: SharePoint Online Management Shell'i yükleme
+## <a name="step-1-install-the-sharepoint-online-management-shell"></a>1. Adım: SharePoint Online Yönetim Kabuğu'nı yükleme
 
-İlk adım, yerel bilgisayarınızda yüklü değilse SharePoint Çevrimiçi Yönetim Kabuğu'nun yüklenmesidir. Bu yordamda kabuğu kullanmanız gerekmez, ancak 3. Adımda çalıştırdığınız betiğin gerektirdiği önkoşulları içerdiğinden bunu yüklemeniz gerekir. Bu önkoşullar, betiğin OneDrive İş sitelerinin URL'lerini almak için SharePoint Online ile iletişim kurmasına olanak sağlar.
+İlk adım, yerel bilgisayarınızda yüklü değilse SharePoint Online Yönetim Kabuğu'nun yüklenmesidir. Bu yordamda kabuğu kullanmanız gerekmez, ancak 3. Adımda çalıştırdığınız betiğin gerektirdiği önkoşulları içerdiğinden bunu yüklemeniz gerekir. Bu önkoşullar, betiğin sharepoint online ile iletişim kurarak OneDrive İş sitelerinin URL'lerini almasına olanak sağlar.
 
-[SharePoint Çevrimiçi Yönetim Kabuğu ortamını ayarlama'ya](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) gidin ve SharePoint Çevrimiçi Yönetim Kabuğu'nı yerel bilgisayarınıza yüklemek için 1. ve 2. Adım'ı gerçekleştirin.
+[SharePoint Online Yönetim Kabuğu ortamını ayarlama'ya gidin ve SharePoint Online Yönetim Kabuğu'nı](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) yerel bilgisayarınıza yüklemek için 1. ve 2. Adım'ı gerçekleştirin.
 
 ## <a name="step-2-generate-a-list-of-users"></a>2. Adım: Kullanıcıların listesini oluşturma
 
@@ -85,9 +83,9 @@ Bu komutu çalıştırdıktan sonra, metin dosyasını açın ve özellik adın�
 
 Bu adımda betiği çalıştırdığınızda sizden aşağıdaki bilgileri isteyecektir. Betiği çalıştırmadan önce bu bilgilerin hazır olduğundan emin olun.
 
-- **Kullanıcı kimlik bilgileriniz:** Betik, Güvenlik & Uyumluluk PowerShell'e bağlanmak için kimlik bilgilerinizi kullanır. Kullanıcı listesinin OneDrive İş URL'lerini almak üzere SharePoint Online'a erişmek için de bu kimlik bilgilerini kullanır.
+- **Kullanıcı kimlik bilgileriniz:** Betik, Güvenlik & Uyumluluk PowerShell'e bağlanmak için kimlik bilgilerinizi kullanır. Ayrıca, kullanıcı listesinin OneDrive İş URL'lerini almak üzere SharePoint Online'a erişmek için bu kimlik bilgilerini kullanır.
 
-- **SharePoint etki alanınızın adı:** Betik, <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint yönetim merkezine</a> bağlanabilmesi için bu adı girmenizi ister. Ayrıca kuruluşunuzdaki OneDrive URL'leri için etki alanı adını kullanır. Örneğin, yönetim merkezinizin `https://contoso-admin.sharepoint.com` URL'si ve OneDrive URL'si ise`https://contoso-my.sharepoint.com`, betik sizden etki alanı adınızı isterse girersiniz`contoso`.
+- **SharePoint etki alanınızın adı:** Betik, <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint yönetim merkezine</a> bağlanabilmesi için bu adı girmenizi ister. Ayrıca kuruluşunuzdaki OneDrive URL'leri için etki alanı adını da kullanır. Örneğin, yönetim merkezinizin `https://contoso-admin.sharepoint.com` URL'si ve OneDrive URL'si ise `https://contoso-my.sharepoint.com`, betik sizden etki alanı adınızı isterse girersiniz `contoso` .
 
 - **Servis talebinin adı:** Mevcut bir servis talebinin adı. Betik, bu servis talebiyle ilişkili yeni bir ayrı tutma oluşturur.
 

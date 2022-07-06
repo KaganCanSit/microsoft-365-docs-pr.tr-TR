@@ -1,5 +1,5 @@
 ---
-title: Eski eBulma aramalarını ve tutmalarını Microsoft Purview uyumluluk portalına geçirme
+title: Eski eBulma aramalarını ve tutmalarını Microsoft Purview uyumluluk portalı geçirme
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -15,20 +15,18 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkEXCHANGE
 ROBOTS: NOINDEX, NOFOLLOW
 description: ''
-ms.openlocfilehash: 3b80db06faea9c76c7df671468b94fc11f0c63df
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 607b66d863c0584ce1bb06c069de7870245cb167
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66010098"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622601"
 ---
 # <a name="migrate-legacy-ediscovery-searches-and-holds-to-the-compliance-portal"></a>Eski eBulma aramalarını ve tutmalarını uyumluluk portalına geçirme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Microsoft Purview uyumluluk portalı, eBulma kullanımı için gelişmiş bir deneyim sunar: daha yüksek güvenilirlik, daha iyi performans ve içeriğinizi maddeye göre düzenleme örnekleri dahil olmak üzere eBulma iş akışlarına uyarlanmış birçok özellik, içeriği gözden geçirmek için inceleme kümeleri ve analizler de dahil olmak üzere yinelenene yakın gruplandırma, e-posta iş parçacığı oluşturma, tema analizi ve tahmine dayalı kodlama gibi verileri gözden geçirmeye yardımcı olur.
 
-Microsoft Purview uyumluluk portalı, eKeşif kullanımı için gelişmiş bir deneyim sağlar: daha yüksek güvenilirlik, daha iyi performans ve içeriğinizi maddeye göre düzenleme örnekleri dahil olmak üzere eBulma iş akışlarına uyarlanmış birçok özellik, içeriği gözden geçirmek için inceleme kümeleri ve analizler de dahil olmak üzere, verileri gözden geçirmek üzere neredeyse yinelenen gruplandırma, e-posta iş parçacığı oluşturma, tema analizi ve tahmine dayalı kodlama gibi birçok özellik.
-
-Müşterilerin yeni ve geliştirilmiş işlevlerden yararlanmasına yardımcı olmak için, bu makalede In-Place eBulma aramalarını ve tutmalarını <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezinden</a> uyumluluk portalına geçirme konusunda temel yönergeler sağlanır.
+Müşterilerin yeni ve geliştirilmiş işlevsellikten yararlanmasına yardımcı olmak için bu makalede, <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">exchange yönetim merkezinden</a> uyumluluk portalına In-Place eBulma aramalarını ve tutmalarını geçirme konusunda temel yönergeler sağlanır.
 
 > [!NOTE]
 > Birçok farklı senaryo olduğundan bu makale, uyumluluk portalında arama ve ayrı tutma işlemlerini eBulma (Standart) durumuna geçirme konusunda genel rehberlik sağlar. eBulma servis taleplerinin kullanılması her zaman gerekli değildir, ancak kuruluşunuzdaki eBulma servis taleplerine kimlerin erişimi olduğunu denetlemek için izinler atamanıza izin vererek ek bir güvenlik katmanı ekler.
@@ -37,11 +35,11 @@ Müşterilerin yeni ve geliştirilmiş işlevlerden yararlanmasına yardımcı o
 
 - Exchange Online V2 modülünü yüklemeniz gerekir. Yönergeler için bkz. [EXO V2 modülünü yükleme ve koruma](/powershell/exchange/exchange-online-powershell-v2#install-and-maintain-the-exo-v2-module).
 
-- Bu makalede açıklanan PowerShell komutlarını çalıştırmak için uyumluluk portalında eBulma Yöneticisi rol grubunun üyesi olmanız gerekir. Ayrıca<a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">, Exchange yönetim merkezinde</a> Bulma Yönetimi rol grubunun da üyesi olmanız gerekir.
+- Bu makalede açıklanan PowerShell komutlarını çalıştırmak için uyumluluk portalında eBulma Yöneticisi rol grubunun üyesi olmanız gerekir. Ayrıca <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">, Exchange yönetim merkezindeki</a> Bulma Yönetimi rol grubunun da üyesi olmanız gerekir.
 
 - Bu makalede, eBulma ayrı tutma oluşturma hakkında yönergeler sağlanır. Saklama ilkesi, zaman uyumsuz bir işlem aracılığıyla posta kutularına uygulanır. eBulma ayrı tutması oluştururken hem CaseHoldPolicy hem de CaseHoldRule oluşturmanız gerekir, aksi takdirde ayrı tutma oluşturulmaz ve içerik konumları ayrı tutmaya alınmaz.
 
-## <a name="step-1-connect-to-exchange-online-powershell-and-security--compliance-powershell"></a>1. Adım: PowerShell ve Güvenlik & Uyumluluğu PowerShell'i Exchange Online için Bağlan
+## <a name="step-1-connect-to-exchange-online-powershell-and-security--compliance-powershell"></a>1. Adım: Exchange Online PowerShell ve Güvenlik & Uyumluluk PowerShell'e bağlanma
 
 İlk adım, aynı PowerShell penceresinde Exchange Online PowerShell ve Güvenlik & Uyumluluğu PowerShell'e bağlanmaktır. Aşağıdaki komutları kopyalayabilir, bir PowerShell penceresine yapıştırabilir ve ardından çalıştırabilirsiniz. Sizden kimlik bilgileri istenir.
 
@@ -50,7 +48,7 @@ Connect-IPPSSession
 Connect-ExchangeOnline -UseRPSSession
 ```
 
-Ayrıntılı yönergeler için bkz. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) ve [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+Ayrıntılı yönergeler için bkz[. Güvenlik & Uyumluluğu PowerShell'e](/powershell/exchange/connect-to-scc-powershell) [bağlanma ve Exchange Online PowerShell'e bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
 
 ## <a name="step-2-get-a-list-of-in-place-ediscovery-searches-by-using-get-mailboxsearch"></a>2. Adım: Get-MailboxSearch kullanarak In-Place eBulma aramalarının listesini alma
 
@@ -85,7 +83,7 @@ Bu iki komutun çıkışı aşağıdakine benzer olacaktır:
 > [!NOTE]
 > Bu örnekteki In-Place Tutma süresi belirsizdir (*ItemHoldPeriod: Sınırsız*). Bu, eBulma ve yasal araştırma senaryoları için tipiktir. Saklama süresi belirsiz değerden farklıysa, bunun nedeni büyük olasılıkla bekletme senaryosundaki içeriği korumak için kullanılmakta olmasıdır. Bekletme senaryoları için Güvenlik & Uyumluluğu PowerShell'deki eBulma cmdlet'lerini kullanmak yerine, içeriği korumak için [New-RetentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy) ve [New-RetentionComplianceRule](/powershell/module/exchange/new-retentioncompliancerule) kullanmanızı öneririz. Bu cmdlet'leri kullanmanın sonucu **New-CaseHoldPolicy** ve **New-CaseHoldRule** kullanımına benzer, ancak saklama süresi sona erdikten sonra içeriği silme gibi bir saklama süresi ve bekletme eylemi belirtebilirsiniz. Ayrıca, bekletme cmdlet'lerini kullanmak için bekletme saklamayı bir eBulma olayıyla ilişkilendirmeniz gerekmez.
 
-## <a name="step-4-create-a-case-in-the-microsoft-purview-compliance-portal"></a>4. Adım: Microsoft Purview uyumluluk portalında servis talebi oluşturma
+## <a name="step-4-create-a-case-in-the-microsoft-purview-compliance-portal"></a>4. Adım: Microsoft Purview uyumluluk portalı servis talebi oluşturma
 
 eBulma ayrı tutması oluşturmak için ayrı tutma ile ilişkilendirilecek bir eBulma servis talebi oluşturmanız gerekir. Aşağıdaki örnek, seçtiğiniz bir adı kullanarak bir eBulma olayı oluşturur. Yeni servis talebinin özelliklerini daha sonra kullanmak üzere bir değişkende depolayacağız. Olayı oluşturduktan sonra komutunu çalıştırarak `$case | FL` bu özellikleri görüntüleyebilirsiniz.
 
@@ -139,7 +137,7 @@ New-ComplianceSearch -Name $search.Name -ExchangeLocation $search.SourceMailboxe
 
 Her şeyin doğru ayarlandığından emin olmak için adresinden uyumluluk portalına [https://compliance.microsoft.com](https://compliance.microsoft.com)gidin ve **eBulma > Core'a** tıklayın.
 
-![Microsoft Purview uyumluluk portalı eKeşif.](../media/MigrateLegacyeDiscovery7.png)
+![eBulma'Microsoft Purview uyumluluk portalı.](../media/MigrateLegacyeDiscovery7.png)
 
 3. Adımda oluşturduğunuz servis talebi **, eBulma (Standart)** sayfasında listelenir. Servis talebini açın ve 4. Adımda oluşturduğunuz ayrı tutmanın **Ayrı Tut** sekmesinde listelendiğine dikkat edin. Ayrı tutmanın uygulandığı posta kutularının sayısı ve dağıtım durumu da dahil olmak üzere açılır sayfada ayrıntıları görmek için ayrı tutmayı seçebilirsiniz.
 
@@ -153,7 +151,7 @@ bir In-Place eBulma aramasını geçirirseniz ancak bir eBulma olayıyla ilişki
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- Exchange <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">yönetim merkezinde</a> In-Place eBulma & Tutmaları hakkında daha fazla bilgi için bkz:
+- <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezinde</a> In-Place eBulma & Tutmaları hakkında daha fazla bilgi için bkz:
 
   - [Yerinde eKeşif](/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery)
 
@@ -175,4 +173,4 @@ bir In-Place eBulma aramasını geçirirseniz ancak bir eBulma olayıyla ilişki
 
   - [Start-ComplianceSearch](/powershell/module/exchange/start-compliancesearch)
 
-- Uyumluluk portalı hakkında daha fazla bilgi için bkz. [Microsoft Purview uyumluluk portalına genel bakış](microsoft-365-compliance-center.md).
+- Uyumluluk portalı hakkında daha fazla bilgi için bkz. [Microsoft Purview uyumluluk portalı genel bakış](microsoft-365-compliance-center.md).

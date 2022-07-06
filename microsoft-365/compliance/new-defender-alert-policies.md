@@ -19,16 +19,14 @@ ms.custom:
 - admindeeplinkDEFENDER
 ROBOTS: noindex,nofollow
 description: Office 365 için Microsoft Defender için yeni uyarı ilkeleri yayınlıyoruz. Ayrıca, yeni ilkelerle değiştirilen iki mevcut uyarı ilkesi de kullanımdan kaldırılmıştır.
-ms.openlocfilehash: c883a352bad5af918d605bd8fa95112a7df07bd3
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0f9a8b74febe3ea59d022baceff7c15c3ee2e5d1
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098008"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634016"
 ---
 # <a name="new-alert-policies-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da yeni uyarı ilkeleri
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Office 365 için Microsoft Defender, teslim sonrası algılamalarla ilgili yeni ve geliştirilmiş uyarı ilkeleri kullanıma sunm Office 365 için Microsoft Defender. Bu, bunlarla ilişkili Otomatik Araştırma & Yanıtı (AIR) playbook'larında yapılan iyileştirmeleri içerir. Ayrıca, bu ilkeler tarafından oluşturulan uyarıları kuruluşunuz üzerindeki etkileriyle daha iyi uyumlu hale getirmek için altı varsayılan uyarı ilkesi için önem derecesi sınıflandırmasını değiştiriyoruz.
 
@@ -56,7 +54,7 @@ Aşağıdaki tablo için önem derecesi sınıflandırmaları değiştirilen var
 |**Şüpheli e-posta iletme etkinliği**|BFD48F06-0865-41A6-85FF-ADB746423EBF|Orta|Yüksek|
 |**Kullanıcı tarafından kötü amaçlı yazılım veya kimlik avı olarak bildirilen e-posta**|B26A5770-0C38-434A-9380-3A3C2C27BBB3|Bilgi|Düşük|
 |**Kimlik avı olarak bildirilen e-postada olağan dışı artış**|A00D8C62-9320-4EEA-A7E5-966B9AC09558|Yüksek|Orta|
-|**Yönetici Gönderimi sonucu tamamlandı**|AE9B83DD-6039-4EA9-B675-6B0AC3BF4A41|Düşük|Bilgi|
+|**Yönetici Gönderim sonucu tamamlandı**|AE9B83DD-6039-4EA9-B675-6B0AC3BF4A41|Düşük|Bilgi|
 |**İletme/yeniden yönlendirme kuralı oluşturma**|D59A8FD4-1272-41EE-9408-86F7BCF72479|Düşük|Bilgi|
 |**eBulma araması başlatıldı veya dışarı aktarıldı**|6FDC5710-3998-47F0-AFBB-57CEFD7378A|Meduim|Bilgi|
 
@@ -99,7 +97,7 @@ Yeni uyarılar tetiklenmeye başlar ve yukarıda listelenen tarihlerde kuruluşu
 
 ## <a name="what-you-need-to-do-to-prepare-for-these-changes"></a>Bu değişikliklere hazırlanmak için yapmanız gerekenler
 
-Kuruluşunuzun bu uyarıları nasıl kullandığı, hazırlanmak için yapmanız gerekenleri belirler. Uyarıları kullanıma hazır hale getirdiyseniz ve bunları bir API, uyarı e-posta bildirimi veya <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalında</a> veya <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında</a> kullanıyorsanız, iş akışlarınızı değiştirmeniz gerekir.
+Kuruluşunuzun bu uyarıları nasıl kullandığı, hazırlanmak için yapmanız gerekenleri belirler. Uyarıları kullanıma hazır hale getirdiyseniz ve bir API, uyarı e-posta bildirimi veya <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> veya <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalı</a> aracılığıyla kullanıyorsanız veya kullanıyorsanız, iş akışlarınızı değiştirmeniz gerekir.
 
 **Bu uyarıları kullanıma hazır hale getirmediyseniz aşağıdakilerden birini yapabilirsiniz:**
 

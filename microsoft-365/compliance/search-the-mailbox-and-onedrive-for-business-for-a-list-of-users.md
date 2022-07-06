@@ -19,18 +19,16 @@ search.appverid:
 ms.assetid: 5f4f8206-2d6a-4cb2-bbc6-7a0698703cc0
 description: Bu makaledeki İçerik Arama'yı ve betiği kullanarak posta kutularında ve OneDrive İş sitelerinde bir kullanıcı grubu arayın.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 838e565d385077416d1001afc02e1aceeebb5188
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 02ee9790d35eca411a9e27607a7e99ca962ddf05
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66011646"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629177"
 ---
 # <a name="use-content-search-to-search-the-mailbox-and-onedrive-for-business-site-for-a-list-of-users"></a>Kullanıcı listesi için posta kutusu ve OneDrive İş sitesinde arama yapmak için İçerik Arama'yı kullanma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Güvenlik & Uyumluluğu PowerShell, zaman alan eBulma ile ilgili görevleri otomatikleştirmenize olanak sağlayan bir dizi cmdlet sağlar. Şu anda, çok sayıda koruyucu içerik konumunu aramak için Microsoft Purview uyumluluk portalında İçerik araması oluşturmak zaman ve hazırlık gerektirir. Arama oluşturmadan önce, her OneDrive İş sitenin URL'sini toplamanız ve ardından her posta kutusunu ve OneDrive İş siteyi aramaya eklemeniz gerekir. Gelecek sürümlerde, uyumluluk portalında bunu yapmak daha kolay olacaktır. O zamana kadar, bu işlemi otomatikleştirmek için bu makaledeki betiği kullanabilirsiniz. Bu betik, kuruluşunuzun Sitem etki alanının adını (örneğin, URL'deki `https://contoso-my.sharepoint.com`**contoso** ), kullanıcı e-posta adreslerinin listesini, yeni İçerik Aramasının adını ve kullanılacak arama sorgusunu ister. Betik, listedeki her kullanıcı için OneDrive İş URL'sini alır ve ardından, sağladığınız arama sorgusunu kullanarak posta kutusunda arama yapıp listedeki her kullanıcı için siteyi OneDrive İş bir İçerik Araması oluşturur ve başlatır.
+Güvenlik & Uyumluluğu PowerShell, zaman alan eBulma ile ilgili görevleri otomatikleştirmenize olanak sağlayan bir dizi cmdlet sağlar. Şu anda, çok sayıda koruyucu içerik konumunu aramak için Microsoft Purview uyumluluk portalı bir İçerik araması oluşturmak zaman ve hazırlık ister. Arama oluşturmadan önce, her OneDrive İş sitenin URL'sini toplamanız ve ardından her posta kutusunu ve OneDrive İş siteyi aramaya eklemeniz gerekir. Gelecek sürümlerde, uyumluluk portalında bunu yapmak daha kolay olacaktır. O zamana kadar, bu işlemi otomatikleştirmek için bu makaledeki betiği kullanabilirsiniz. Bu betik, kuruluşunuzun Sitem etki alanının adını (örneğin, URL'deki `https://contoso-my.sharepoint.com`**contoso** ), kullanıcı e-posta adreslerinin listesini, yeni İçerik Aramasının adını ve kullanılacak arama sorgusunu ister. Betik, listedeki her kullanıcı için OneDrive İş URL'sini alır ve ardından, sağladığınız arama sorgusunu kullanarak posta kutusunda arama yapıp listedeki her kullanıcı için siteyi OneDrive İş bir İçerik Araması oluşturur ve başlatır.
 
 ## <a name="permissions-and-script-information"></a>İzinler ve betik bilgileri
 
@@ -42,15 +40,15 @@ Güvenlik & Uyumluluğu PowerShell, zaman alan eBulma ile ilgili görevleri otom
 
 - Bu konuda sağlanan örnek betikler, herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betikler, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiklerin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
 
-## <a name="step-1-install-the-sharepoint-online-management-shell"></a>1. Adım: SharePoint Online Management Shell'i yükleme
+## <a name="step-1-install-the-sharepoint-online-management-shell"></a>1. Adım: SharePoint Online Yönetim Kabuğu'nı yükleme
 
-İlk adım, SharePoint Online Management Shell'i yüklemektir. Bu yordamda kabuğu kullanmanız gerekmez, ancak 3. Adımda çalıştırdığınız betiğin gerektirdiği önkoşulları içerdiğinden bunu yüklemeniz gerekir. Bu önkoşullar, betiğin OneDrive İş sitelerinin URL'lerini almak için SharePoint Online ile iletişim kurmasına olanak sağlar.
+İlk adım, SharePoint Online Yönetim Kabuğu'na yüklemektir. Bu yordamda kabuğu kullanmanız gerekmez, ancak 3. Adımda çalıştırdığınız betiğin gerektirdiği önkoşulları içerdiğinden bunu yüklemeniz gerekir. Bu önkoşullar, betiğin sharepoint online ile iletişim kurarak OneDrive İş sitelerinin URL'lerini almasına olanak sağlar.
 
-[SharePoint Çevrimiçi Yönetim Kabuğu ortamını ayarlama'ya](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) gidin ve SharePoint Online Management Shell'i yüklemek için 1. ve 2. Adım'ı gerçekleştirin.
+[SharePoint Online Yönetim Kabuğu ortamını ayarlama'ya gidin ve SharePoint Online Yönetim Kabuğu'nı](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) yüklemek için 1. ve 2. Adım'ı gerçekleştirin.
 
 ## <a name="step-2-generate-a-list-of-users"></a>2. Adım: Kullanıcıların listesini oluşturma
 
-3. Adım'daki betik, posta kutularında arama yapmak ve hesapları kullanıcı listesi için OneDrive için bir İçerik Araması oluşturur. E-posta adreslerini bir metin dosyasına yazabilir veya PowerShell'de bir komut çalıştırarak e-posta adreslerinin listesini alabilir ve bir dosyaya kaydedebilirsiniz (betiği 3. Adımda kaydedebileceğiniz klasörde bulunur).
+3. Adım'daki betik, posta kutularında ve OneDrive hesaplarında kullanıcı listesi aramak için bir İçerik Araması oluşturur. E-posta adreslerini bir metin dosyasına yazabilir veya PowerShell'de bir komut çalıştırarak e-posta adreslerinin listesini alabilir ve bir dosyaya kaydedebilirsiniz (betiği 3. Adımda kaydedebileceğiniz klasörde bulunur).
 
 Burada, kuruluşunuzdaki tüm kullanıcıların e-posta adreslerinin listesini almak ve adlı `Users.txt`bir metin dosyasına kaydetmek üzere çalıştırabileceğiniz bir [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) komutu verilmiştir.
 
@@ -64,7 +62,7 @@ Bu komutu çalıştırdıktan sonra dosyayı açtığınızdan ve özellik adın
 
 Bu adımda betiği çalıştırdığınızda sizden aşağıdaki bilgileri isteyecektir. Betiği çalıştırmadan önce bu bilgilerin hazır olduğundan emin olun.
 
-- **Kullanıcı kimlik bilgileriniz** - Betik, OneDrive İş URL'lerini almak ve Güvenlik & Uyumluluğu PowerShell'e bağlanmak için SharePoint Online'a erişmek için kimlik bilgilerinizi kullanır.
+- **Kullanıcı kimlik bilgileriniz** - Betik, OneDrive İş URL'lerini almak ve Güvenlik & Uyumluluğu PowerShell'e bağlanmak üzere SharePoint Online'a erişmek için kimlik bilgilerinizi kullanır.
 
 - **Sitem etki alanınızın adı** - Sitem etki alanı, kuruluşunuzdaki tüm OneDrive İş sitelerini içeren etki alanıdır. Örneğin, Sitem etki alanınızın URL'si ise **https://contoso-my.sharepoint.com**, betik sitem etki alanınızın adını istediğinizde girersiniz  `contoso` .
 

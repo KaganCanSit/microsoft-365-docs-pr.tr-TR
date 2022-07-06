@@ -13,23 +13,21 @@ ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: M365-security-compliance
-description: Yöneticiler, elektronik sağlık kayıtlarını (EHR) sağlık sisteminden Microsoft 365 aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, çalışanlarınız tarafından hasta verilerine yetkisiz erişim etkinliğini algılamanıza yardımcı olmak için iç risk yönetimi ilkelerinde EHR verilerini kullanmanıza olanak tanır.
-ms.openlocfilehash: 90f50628e255267baeff7d39c776f9a6bf8cc426
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Yöneticiler, elektronik sağlık kayıtlarını (EHR) sağlık sisteminden Microsoft 365'e aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, çalışanlarınız tarafından hasta verilerine yetkisiz erişim etkinliğini algılamanıza yardımcı olmak için iç risk yönetimi ilkelerinde EHR verilerini kullanmanıza olanak tanır.
+ms.openlocfilehash: be5429ea1a5fb4e2e2be6a7029f2401fcbdab94e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077894"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641394"
 ---
 # <a name="set-up-a-connector-to-import-healthcare-ehr-audit-data-preview"></a>Sağlık EHR denetim verilerini içeri aktarmak için bağlayıcı ayarlama (önizleme)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Kuruluşunuzun Elektronik Sağlık Kayıtları (EHR) sisteminde kullanıcı etkinliği için denetim verilerini içeri aktarmak için Microsoft Purview uyumluluk portalında bir veri bağlayıcısı ayarlayabilirsiniz. Sağlık EHR sisteminizdeki denetim verileri, hastanın sağlık kayıtlarına erişmeyle ilgili olaylara ilişkin verileri içerir. Healthcare EHR denetim verileri, kuruluşunuzun hasta bilgilerine yetkisiz erişimden korunmasına yardımcı olmak için Microsoft 365 [insider risk yönetimi çözümü](insider-risk-management.md) tarafından kullanılabilir.
+Kuruluşunuzun Elektronik Sağlık Kayıtları (EHR) sisteminde kullanıcı etkinliği için denetim verilerini içeri aktarmak için Microsoft Purview uyumluluk portalı bir veri bağlayıcısı ayarlayabilirsiniz. Sağlık EHR sisteminizdeki denetim verileri, hastanın sağlık kayıtlarına erişmeyle ilgili olaylara ilişkin verileri içerir. Healthcare EHR denetim verileri, kuruluşunuzun hasta bilgilerine yetkisiz erişimden korunmasına yardımcı olmak için Microsoft 365 [insider risk yönetimi çözümü](insider-risk-management.md) tarafından kullanılabilir.
 
 Healthcare bağlayıcısının ayarlanması aşağıdaki görevlerden oluşur:
 
-- sağlık EHR denetim verilerini içeren sekmeyle ayrılmış metin dosyasını kabul eden bir API uç noktasına erişmek için Azure Active Directory 'de (Azure AD) bir uygulama oluşturma.
+- Azure Active Directory'de (Azure AD) sağlık EHR denetim verilerini içeren sekmeyle ayrılmış metin dosyasını kabul eden bir API uç noktasına erişmek için uygulama oluşturma.
 
 - Bağlayıcı şemasında tanımlanan tüm gerekli alanları içeren bir metin dosyası oluşturma.
 
@@ -41,7 +39,7 @@ Healthcare bağlayıcısının ayarlanması aşağıdaki görevlerden oluşur:
 
 ## <a name="before-you-set-up-the-connector"></a>Bağlayıcıyı ayarlamadan önce
 
-- 3. Adımda Healthcare bağlayıcısını oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
+- 3. Adımda Healthcare bağlayıcısını oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
 - Kuruluşunuzun sağlık EHR sisteminden (günlük olarak) verilerin nasıl alınacağını veya dışarı aktarıldığını belirlemeniz ve 2. Adımda açıklanan bir metin dosyası oluşturmanız gerekir. 4. Adımda çalıştırdığınız betik, metin dosyasındaki verileri API uç noktasına iletir.
 
@@ -49,15 +47,15 @@ Healthcare bağlayıcısının ayarlanması aşağıdaki görevlerden oluşur:
 
 ## <a name="step-1-create-an-app-in-azure-active-directory"></a>1. Adım: Azure Active Directory'de uygulama oluşturma
 
-İlk adım, Azure Active Directory'de (Azure AD) yeni bir uygulama oluşturmak ve kaydetmektir. Uygulama, 3. Adımda oluşturduğunuz Healthcare bağlayıcısına karşılık gelir. Bu uygulamayı oluşturmak, Azure AD'nin sağlık EHR denetim verilerini içeren metin dosyası için anında iletme isteğinin kimliğini doğrulamasını sağlar. Bu Azure AD uygulamasını oluştururken aşağıdaki bilgileri kaydettiğinizden emin olun. Bu değerler sonraki adımlarda kullanılacaktır.
+İlk adım, Azure Active Directory'de (Azure AD) yeni bir uygulama oluşturmak ve kaydetmektir. Uygulama, 3. Adımda oluşturduğunuz Healthcare bağlayıcısına karşılık gelir. Bu uygulamanın oluşturulması, Azure AD sağlık EHR denetim verilerini içeren metin dosyası için anında iletme isteğinin kimliğini doğrulamasını sağlar. Bu Azure AD uygulamasını oluştururken aşağıdaki bilgileri kaydettiğinizden emin olun. Bu değerler sonraki adımlarda kullanılacaktır.
 
-- Azure AD uygulama kimliği ( *uygulama kimliği* veya *istemci kimliği* olarak da adlandırılır)
+- Azure AD uygulama kimliği (*uygulama kimliği* veya *istemci kimliği* olarak da adlandırılır)
 
-- Azure AD uygulama gizli dizisi ( *istemci gizli dizisi* olarak da adlandırılır)
+- Azure AD uygulama gizli dizisi (*istemci gizli dizisi* olarak da adlandırılır)
 
 - Kiracı Kimliği ( *dizin kimliği* olarak da adlandırılır)
 
-Azure AD'de uygulama oluşturmaya yönelik adım adım yönergeler için bkz. [Uygulamayı Microsoft kimlik platformu kaydetme](\azure\active-directory\develop\quickstart-register-app).
+Azure AD'da uygulama oluşturmaya yönelik adım adım yönergeler için bkz. [Uygulamayı Microsoft kimlik platformu kaydetme](\azure\active-directory\develop\quickstart-register-app).
 
 ## <a name="step-2-prepare-a-text-file-with-healthcare-ehr-auditing-data"></a>2. Adım: Sağlık EHR denetim verileriyle metin dosyası hazırlama
 
@@ -70,8 +68,8 @@ Aşağıdaki tabloda, insider risk yönetimi senaryolarını etkinleştirmek iç
 
 |Alan|Kategori|
 |:----|:----------|
-| Oluşturma *TimeEvent<br/> Adı*<br/>İş İstasyonu Kimliği<br/>Olay Bölümü<br/>Olay Kategorisi |Bu alanlar, sağlık EHR sisteminizdeki erişim etkinliği olaylarını tanımlamak için kullanılır.|
-| Hasta Kayıt Defteri Kimliği<br/>Hasta *AdıPatik<br/> İkinci Ad <br/>Hastanın Soyadı* <br/>Hasta Adres Satırı 1* <br/>Hasta Adres Satırı 2<br/>Patient City* <br/>Hasta Posta Kodu*  <br/>Hasta Durumu <br/>Hasta Ülke <br/>Hasta Bölümü              | Bu alanlar hasta profili bilgilerini tanımlamak için kullanılır.|
+| Oluşturma Zamanı *<br/>Olay Adı*<br/>İş İstasyonu Kimliği<br/>Olay Bölümü<br/>Olay Kategorisi |Bu alanlar, sağlık EHR sisteminizdeki erişim etkinliği olaylarını tanımlamak için kullanılır.|
+| Hasta Kayıt Defteri Kimliği<br/>Hasta Adı *<br/>Hasta İkinci Adı <br/>Hastanın Soyadı* <br/>Hasta Adres Satırı 1* <br/>Hasta Adres Satırı 2<br/>Patient City* <br/>Hasta Posta Kodu*  <br/>Hasta Durumu <br/>Hasta Ülke <br/>Hasta Bölümü              | Bu alanlar hasta profili bilgilerini tanımlamak için kullanılır.|
 | Kısıtlı Erişim Nedeni*<br/> Kısıtlı Erişim Açıklaması | Bu alanlar kısıtlı kayıtlara erişimi tanımlamak için kullanılır.|
 | E-posta Adresi (UPN) veya SamAccountName*<br/>Çalışan Kullanıcı Adı <br/> Çalışan Kimliği <br/> Çalışan Soyadı <sup>1</sup> <br/> Çalışan Adı <sup>1</sup> | Bu alanlar, Aile/Komşu/Çalışan kayıtlarına erişimi belirlemek için gereken adres ve ad eşleştirme için çalışan profili bilgilerini tanımlamak için kullanılır. |
 |||
@@ -93,13 +91,13 @@ Sonraki adım, uyumluluk portalında bir Healthcare bağlayıcısı oluşturmakt
 
 5. **Kimlik doğrulama kimlik bilgileri** sayfasında aşağıdakileri yapın ve **İleri'ye** tıklayın:
 
-    1. 1. Adımda oluşturduğunuz Azure uygulaması için Azure AD uygulama kimliğini yazın veya yapıştırın.
+    1. 1. Adımda oluşturduğunuz Azure uygulamasının Azure AD uygulama kimliğini yazın veya yapıştırın.
 
     2. Sağlık bağlayıcısı için bir ad yazın.
 
 6. **Dosya eşleme yöntemi** sayfasında, aşağıdaki seçeneklerden birini seçin ve **İleri'ye** tıklayın.
 
-   - **Örnek bir dosya Upload**. Bu seçeneği seçerseniz, 2. Adımda hazırladığınız dosyayı karşıya yüklemek için **örnek** Upload dosyasına tıklayın. Bu seçenek, sütunları sağlık bağlayıcısı için gerekli şemaya eşlemek için bir açılan listeden metin dosyanızdaki sütun adlarını hızla seçmenize olanak tanır. 
+   - **Örnek bir dosyayı karşıya yükleyin**. Bu seçeneği seçerseniz, 2. Adımda hazırladığınız dosyayı karşıya yüklemek için **Örnek dosyayı karşıya yükle'ye** tıklayın. Bu seçenek, sütunları sağlık bağlayıcısı için gerekli şemaya eşlemek için bir açılan listeden metin dosyanızdaki sütun adlarını hızla seçmenize olanak tanır. 
 
     Veya
 
@@ -133,12 +131,12 @@ Henüz yapmadıysanız **, Azure Uygulaması Kimliği** ve **Bağlayıcı iş ki
 
 ## <a name="step-4-run-the-sample-script-to-upload-your-healthcare-ehr-auditing-data"></a>4. Adım: Sağlık ehr denetim verilerinizi karşıya yüklemek için örnek betiği çalıştırın
 
-Healthcare bağlayıcısını ayarlamanın son adımı, metin dosyasındaki (1. Adımda oluşturduğunuz) sağlık EHR denetim verilerini Microsoft buluta yükleyecek örnek bir betik çalıştırmaktır. Özellikle betik verileri Healthcare bağlayıcısına yükler. Betiği çalıştırdıktan sonra, 3. Adımda oluşturduğunuz Healthcare bağlayıcısı, sağlık ehr denetim verilerini insider risk yönetimi çözümü gibi diğer uyumluluk araçları tarafından erişilebilen Microsoft 365 kuruluşunuza aktarır. Betiği çalıştırdıktan sonra, en güncel çalışan sonlandırma verilerinin Microsoft buluta yüklenmesi için günlük olarak otomatik olarak çalıştırılacak bir görev zamanlamayı göz önünde bulundurun. Bkz. [(İsteğe bağlı) 6. Adım: Betiği otomatik olarak çalışacak şekilde zamanlama](#optional-step-6-schedule-the-script-to-run-automatically).
+Healthcare bağlayıcısını ayarlamanın son adımı, metin dosyasındaki (1. Adımda oluşturduğunuz) sağlık EHR denetim verilerini Microsoft buluta yükleyecek örnek bir betik çalıştırmaktır. Özellikle betik verileri Healthcare bağlayıcısına yükler. Betiği çalıştırdıktan sonra, 3. Adımda oluşturduğunuz Healthcare bağlayıcısı, sağlık ehr denetim verilerini Microsoft 365 kuruluşunuza aktarır ve burada Insider risk yönetimi çözümü gibi diğer uyumluluk araçları tarafından erişilebilir. Betiği çalıştırdıktan sonra, en güncel çalışan sonlandırma verilerinin Microsoft buluta yüklenmesi için günlük olarak otomatik olarak çalıştırılacak bir görev zamanlamayı göz önünde bulundurun. Bkz. [(İsteğe bağlı) 6. Adım: Betiği otomatik olarak çalışacak şekilde zamanlama](#optional-step-6-schedule-the-script-to-run-automatically).
 
 > [!NOTE]
 > Daha önce belirtildiği gibi, denetim verilerini içeren metin dosyasının boyutu üst sınırı 3 GB'tır. En fazla satır sayısı 5 milyondur. Bu adımda çalıştırdığınız betiğin büyük metin dosyalarından denetim verilerini içeri aktarması yaklaşık 30 ila 40 dakika sürer. Ayrıca betik, büyük metin dosyalarını 100 bin satırlık daha küçük bloklara böler ve ardından bu blokları sırayla içeri aktarır.
 
-1. Örnek betikle GitHub sitesine erişmek için önceki adımda açık bıraktığınız pencereye gidin. Alternatif olarak, yer işaretli siteyi açın veya kopyaladığınız URL'yi kullanın. Betike [buradan](https://github.com/microsoft/m365-compliance-connector-sample-scripts/blob/main/sample_script.ps1) da erişebilirsiniz.
+1. GitHub sitesine örnek betikle erişmek için önceki adımda açık bıraktığınız pencereye gidin. Alternatif olarak, yer işaretli siteyi açın veya kopyaladığınız URL'yi kullanın. Betike [buradan](https://github.com/microsoft/m365-compliance-connector-sample-scripts/blob/main/sample_script.ps1) da erişebilirsiniz.
 
 2. Betiği metin görünümünde görüntülemek için **Ham** düğmesine tıklayın.
 
@@ -160,9 +158,9 @@ Aşağıdaki tabloda, bu betikle kullanılacak parametreler ve bunların gerekli
 
 |Parametre  |Açıklama|
 |:----------|:----------|
-|tenantId|Bu, 1. Adımda aldığınız Microsoft 365 kuruluşunuzun kimliğidir. Ayrıca, Azure AD yönetim merkezindeki **Genel Bakış** dikey penceresinde kuruluşunuzun kiracı kimliğini de alabilirsiniz. Bu, kuruluşunuzu tanımlamak için kullanılır.|
-|Appıd|Bu, 1. Adımda Azure AD'de oluşturduğunuz uygulamanın Azure AD uygulama kimliğidir. Bu, betik Microsoft 365 kuruluşunuza erişmeye çalıştığında Azure AD tarafından kimlik doğrulaması için kullanılır.|
-|appSecret|Bu, 1. Adımda Azure AD'de oluşturduğunuz uygulamanın Azure AD uygulama gizli dizisidir. Bu, kimlik doğrulaması için de kullanılır.|
+|tenantId|Bu, 1. Adımda edindiğiniz Microsoft 365 kuruluşunuzun kimliğidir. Ayrıca, Azure AD yönetim merkezindeki **Genel Bakış** dikey penceresinde kuruluşunuzun kiracı kimliğini de alabilirsiniz. Bu, kuruluşunuzu tanımlamak için kullanılır.|
+|Appıd|Bu, 1. Adımda Azure AD oluşturduğunuz uygulamanın Azure AD uygulama kimliğidir. Bu, Azure AD tarafından betik Microsoft 365 kuruluşunuza erişmeye çalıştığında kimlik doğrulaması için kullanılır.|
+|appSecret|Bu, 1. Adımda Azure AD oluşturduğunuz uygulamanın Azure AD uygulama gizli dizisidir. Bu, kimlik doğrulaması için de kullanılır.|
 |Jobıd|Bu, 3. Adımda oluşturduğunuz Healthcare bağlayıcısının iş kimliğidir. Bu, Microsoft buluta yüklenen sağlık ehr denetim verilerini Healthcare bağlayıcısı ile ilişkilendirmek için kullanılır.|
 |Filepath|Bu, 2. Adımda oluşturduğunuz metin dosyasının (betikle aynı sistemde depolanan) dosya yoludur. Dosya yolunda boşluklardan kaçınmaya çalışın; aksi takdirde tek tırnak işareti kullanın.|
 |||
@@ -173,7 +171,7 @@ Aşağıda, her parametre için gerçek değerleri kullanan Healthcare bağlayı
 .\HealthcareConnector.ps1 -tenantId d5723623-11cf-4e2e-b5a5-01d1506273g9 -appId 29ee526e-f9a7-4e98-a682-67f41bfd643e -appSecret MNubVGbcQDkGCnn -jobId b8be4a7d-e338-43eb-a69e-c513cd458eba -filePath 'C:\Users\contosoadmin\Desktop\Data\healthcare_audit_records.csv'
 ```
 
-Karşıya yükleme başarılı olursa, betik **Upload Başarılı** iletisini görüntüler.
+Karşıya yükleme başarılı olursa, betik **Karşıya Yükleme Başarılı** iletisini görüntüler.
 
 > [!NOTE]
 > Yürütme ilkeleri nedeniyle önceki komutu çalıştırırken sorun yaşıyorsanız, yürütme ilkelerini ayarlama hakkında yönergeler için [Bkz. Yürütme İlkeleri Hakkında](/powershell/module/microsoft.powershell.core/about/about_execution_policies) ve [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy) .
@@ -196,7 +194,7 @@ Healthcare bağlayıcısını oluşturduktan ve EHR denetim verilerinizi gönder
 
 Sağlık hizmetleri EHR sisteminizdeki en son denetim verilerinin insider risk yönetimi çözümü gibi araçlar tarafından kullanılabildiğinden emin olmak için betiği günlük olarak otomatik olarak çalışacak şekilde zamanlamanızı öneririz. Bu, aynı metin dosyasındaki EHR denetim verilerini benzer bir zamanlamada (aynı değilse) güncelleştirmenizi ve böylece çalışanlarınızın hasta kayıtlarına erişim etkinlikleriyle ilgili en son bilgileri içermesini de gerektirir. Amaç, Healthcare bağlayıcısının bunu insider risk yönetimi çözümünün kullanımına sunabilmesi için en güncel denetim verilerini karşıya yüklemektir.
 
-Betiği her gün otomatik olarak çalıştırmak için Windows'da Görev Zamanlayıcı uygulamasını kullanabilirsiniz.
+Betiği her gün otomatik olarak çalıştırmak için Windows'ta Görev Zamanlayıcı uygulamasını kullanabilirsiniz.
 
 1. Yerel bilgisayarınızda, Windows **Başlat** düğmesine tıklayın ve görev **zamanlayıcı** yazın.
 
@@ -214,7 +212,7 @@ Betiği her gün otomatik olarak çalıştırmak için Windows'da Görev Zamanla
 
 6. **Tetikleyiciler** sekmesini seçin, **Yeni'ye** tıklayın ve aşağıdaki işlemleri yapın:
 
-    1. **Ayarlar** altında **Günlük** seçeneğini belirleyin ve ardından betiği ilk kez çalıştırmak için bir tarih ve saat seçin. Betik her gün belirtilen saatte çalıştırılır.
+    1. **Ayarlar'ın** altında **Günlük** seçeneğini belirleyin ve ardından betiği ilk kez çalıştırmak için bir tarih ve saat seçin. Betik her gün belirtilen saatte çalıştırılır.
 
     2. **Gelişmiş ayarlar'ın** altında **Etkin** onay kutusunun seçili olduğundan emin olun.
 

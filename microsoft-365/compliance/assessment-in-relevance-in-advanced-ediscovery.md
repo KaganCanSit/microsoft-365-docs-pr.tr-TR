@@ -15,25 +15,23 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 1d33d4fb-91ed-41c0-b72e-5a26eca3a2a7
-description: Microsoft Purview eKeşif'te (Premium) İlgi eğitimi sırasındaki sorunların zenginliğini belirlemede Değerlendirme aşamasına ve rolüne genel bir bakış edinin.
+description: Değerlendirme aşamasına ve Microsoft Purview eKeşif 'de (Premium) İlgi eğitimi sırasında sorunların zenginliğini belirlemedeki rolüne genel bir bakış elde edin.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 3bfd6087bbcade2c7e4d9afdcda0f47bbea6f53d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 19d518e116fbd86dc0f781443ba16c21890c4346
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096126"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625577"
 ---
 # <a name="assessment-in-the-relevance-module-in-ediscovery-premium"></a>eBulma'daki İlgi modülünde değerlendirme (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
   
-Microsoft Purview eBulma (Premium), örneğin tanımlanan sorunlar ve bir servis talebi için içeri aktarılan veriler için erken değerlendirmeyi etkinleştirir. eBulma (Premium), uzmanın benimsenen bir yaklaşım hakkında karar vermesine ve bu kararları belge gözden geçirme projesine uygulamasına olanak tanır.
+Microsoft Purview eKeşif (Premium), örneğin tanımlanan sorunlar ve bir servis talebi için içeri aktarılan veriler için erken değerlendirmeyi etkinleştirir. eKeşif (Premium), uzmanın benimsenen bir yaklaşım hakkında karar vermesine ve bu kararları belge gözden geçirme projesine uygulamasına olanak tanır.
   
 ## <a name="understanding-assessment"></a>Değerlendirmeyi anlama
 
-Değerlendirme bölümünde uzman, sorunların zenginliğini belirlemek ve eğitim sonuçlarını yansıtan istatistikler üretmek için kullanılan en az 500 dosyadan oluşan rastgele bir kümeyi inceler. Değerlendirme, eBulma (Premium) İlgisinin doğru istatistikler sağlamasına ve eğitim sürecinde dengelenme noktasını etkili bir şekilde belirlemesine yardımcı olacak istatistiksel bir düzeye ulaşmak için yeterli ilgili dosya bulunduğunda başarılı olur. 
+Değerlendirme bölümünde uzman, sorunların zenginliğini belirlemek ve eğitim sonuçlarını yansıtan istatistikler üretmek için kullanılan en az 500 dosyadan oluşan rastgele bir kümeyi inceler. EBulma (Premium) İlgisi'nin doğru istatistikler sağlamasına ve eğitim sürecindeki dengeleme noktasını etkili bir şekilde belirlemesine yardımcı olacak istatistiksel bir düzeye ulaşmak için yeterli ilgili dosya bulunduğunda değerlendirme başarılı olur. 
   
 Değerlendirme kümesindeki ilgili dosya sayısı ne kadar yüksek olursa, istatistikler ve kararlılık algoritmasının etkinliği de o kadar doğru olur. Değerlendirme dosyalarındaki ilgili dosyaların sayısı sorunun zenginliğine bağlıdır. Zenginlik, kümedeki ilgili dosyaların bir sorunla ilgili tahmini yüzdesidir. Daha yüksek zenginliğe sahip sorunlar, daha düşük zenginliğe sahip sorunlardan daha hızlı bir şekilde daha fazla sayıda ilgili dosyaya ulaşır. Son derece düşük zenginliğe sahip sorunlar (örneğin, %2 veya daha az), önemli sayıda İlgili dosyaya ulaşmak için çok büyük bir değerlendirme kümesi gerektirir.
   

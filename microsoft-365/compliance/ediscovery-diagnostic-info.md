@@ -17,18 +17,16 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: bir Microsoft Desteği olayı için eBulma tanılama bilgilerini toplama hakkında bilgi edinin.
-ms.openlocfilehash: f5dba88a598a73441c67e3eaa08a59b7258ea712
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 46c85e822daf82cc88e6bf89ceea97dede3e2276
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014442"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641822"
 ---
 # <a name="collect-ediscovery-diagnostic-information"></a>eKeşif tanılama bilgilerini toplama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Bazen Microsoft Desteği mühendisleri, Microsoft Purview eKeşif (Standart) veya Microsoft Purview eKeşif (Premium) ile ilgili bir destek olayı açtığınızda sorununuz hakkında belirli bilgiler gerektirir. Bu makalede, destek mühendislerinin sorunları araştırmasına ve çözmesine yardımcı olmak için tanılama bilgilerini toplama konusunda rehberlik sağlanır. Genellikle, bir Microsoft Desteği mühendisi tarafından isteninceye kadar bu bilgileri toplamanız gerekmez.
+bazen Microsoft Desteği mühendisleri, Microsoft Purview eKeşif (Standart) veya Microsoft Purview eKeşif (Premium) ile ilgili bir destek olayı açtığınızda sorununuz hakkında belirli bilgiler gerektirir. Bu makalede, destek mühendislerinin sorunları araştırmasına ve çözmesine yardımcı olmak için tanılama bilgilerini toplama konusunda rehberlik sağlanır. Genellikle, bir Microsoft Desteği mühendisi tarafından isteninceye kadar bu bilgileri toplamanız gerekmez.
 
 > [!IMPORTANT]
 > Bu makalede açıklanan cmdlet'lerden ve tanılama bilgilerinden elde edilen çıkış, kuruluşunuzdaki davalar veya iç soruşturmalar hakkında hassas bilgiler içerebilir. ham tanılama bilgilerini Microsoft Desteği göndermeden önce, bilgileri gözden geçirmeli ve yerine ile değiştirerek `XXXXXXX`hassas bilgileri (dava veya soruşturma tarafları hakkında adlar veya diğer bilgiler gibi) yeniden dağıtmanız gerekir. Bu yöntemin kullanılması, Microsoft Desteği mühendisine bilgilerin yeniden dağıtıldığını da gösterir.
@@ -42,7 +40,7 @@ Aşağıdaki cmdlet'leri çalıştırmak [için Güvenlik & Uyumluluk PowerShell
 Oluşturulan metin dosyasını gözden geçirdikten ve hassas bilgileri yeniden işledikten sonra, olayınız üzerinde çalışan Microsoft Desteği mühendisine gönderin.
 
 > [!NOTE]
-> Microsoft Purview uyumluluk portalındaki **İçerik arama** sayfasında listelenen aramalar ve dışarı aktarmalar için tanılama bilgilerini toplamak için bu bölümdeki komutları da çalıştırabilirsiniz.
+> Microsoft Purview uyumluluk portalı **İçerik arama** sayfasında listelenen aramalar ve dışarı aktarmalar için tanılama bilgilerini toplamak için bu bölümdeki komutları da çalıştırabilirsiniz.
 
 ### <a name="collect-information-about-searches"></a>Aramalar hakkında bilgi toplama
 
@@ -76,19 +74,19 @@ Bazen sorununuzu araştırmak için Microsoft Desteği hangi bilgilerin gerekli 
 Get-ComplianceCase "<eDiscovery (Standard) case name>"| %{$_|fl;"`t==Searches==";Get-ComplianceSearch -Case $_.Name | FL;"`t==Search Actions==";Get-ComplianceSearchAction -Case $_.Name |FL;"`t==Holds==";Get-CaseHoldPolicy -Case $_.Name | %{$_|FL;"`t`t ==$($_.Name) Rules==";Get-CaseHoldRule -Policy $_.Name | FL}} > "eDiscoveryCase.txt"
 ```
 
-## <a name="collect-diagnostic-information-for-ediscovery-premium"></a>eBulma (Premium) için tanılama bilgilerini toplama
+## <a name="collect-diagnostic-information-for-ediscovery-premium"></a>eBulma için tanılama bilgilerini toplama (Premium)
 
-eBulma (**Premium**) durumundaki Ayarlar sekmesi, servis talebi için tanılama bilgilerini hızla kopyalamanıza olanak tanır. Tanılama bilgileri panoya kaydedilir, böylece bunu bir metin dosyasına yapıştırabilir ve Microsoft Desteği gönderebilirsiniz.
+eBulma (Premium) durumundaki **Ayarlar** sekmesi, servis talebi için tanılama bilgilerini hızla kopyalamanıza olanak tanır. Tanılama bilgileri panoya kaydedilir, böylece bunu bir metin dosyasına yapıştırabilir ve Microsoft Desteği gönderebilirsiniz.
 
 1. Uyumluluk portalına gidin ve **eBulma Gelişmiş'i** >  seçin.<a href="https://go.microsoft.com/fwlink/p/?linkid=2174006" target="_blank"></a>
 
-2. Bir servis talebi seçin ve **Ayarlar** sekmesine tıklayın.
+2. Bir servis talebi seçin ve ardından **Ayarlar** sekmesine tıklayın.
 
 3. **Servis Talebi Bilgileri'nin** altında **Seç'e** tıklayın.
 
 4. Açılır sayfada **Eylemler** > **Destek bilgilerini kopyalama'ya** tıklayarak bilgileri panoya kopyalayın.
 
-5. Bir metin dosyası açın (Not Defteri) ve ardından bilgileri metin dosyasına yapıştırın.
+5. Bir metin dosyası açın (Not Defteri'nde) ve ardından bilgileri metin dosyasına yapıştırın.
 
 6. Metin dosyasını kaydedin ve gibi `AeD Diagnostic Info YYYY.MM.DD` bir ad verin (örneğin, `AeD Diagnostic Info 2020.11.03`).
 

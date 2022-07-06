@@ -12,16 +12,14 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Müşteri Anahtarı'nı ayarladıktan sonra, AKV anahtarlarını geri yükleyerek ve izinleri yöneterek ve veri şifreleme ilkeleri oluşturup atayarak anahtarı yönetmeyi öğrenin.
-ms.openlocfilehash: 08fae19a5f0f27ff530c734c46453f885ea9043e
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: d9f9e992b78b673df08d0c0d5b12ba09cfa9ea84
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015758"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637339"
 ---
 # <a name="manage-customer-key"></a>Müşteri Anahtarını Yönet
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Müşteri Anahtarını ayarladıktan sonra bir veya daha fazla veri şifreleme ilkesi (DEP) oluşturup atamanız gerekir. DEP'lerinizi atadıktan sonra anahtarlarınızı bu makalede açıklandığı gibi yönetebilirsiniz. İlgili konularda Müşteri Anahtarı hakkında daha fazla bilgi edinin.
 
@@ -57,7 +55,7 @@ New-M365DataAtRestEncryptionPolicy -Name "Contoso_Global" -AzureKeyIDs "https://
 
 ### <a name="assign-multi-workload-policy"></a>Çok iş yükü ilkesi atama
 
-Set-M365DataAtRestEncryptionPolicyAssignment cmdlet'ini kullanarak DEP'yi atayın. İlkeyi atadıktan sonra Microsoft 365 verileri DEP'te tanımlanan anahtarla şifreler.
+Set-M365DataAtRestEncryptionPolicyAssignment cmdlet'ini kullanarak DEP'yi atayın. İlkeyi atadıktan sonra, Microsoft 365 verileri DEP'te tanımlanan anahtarla şifreler.
 
 ```powershell
 Set-M365DataAtRestEncryptionPolicyAssignment -DataEncryptionPolicy <PolicyName or ID>
@@ -75,7 +73,7 @@ Set-M365DataAtRestEncryptionPolicyAssignment -DataEncryptionPolicy "Contoso_Glob
 
 Başlamadan önce Azure Key Vault ayarlamak için gereken görevleri tamamladığınızdan emin olun. Bilgi için bkz. [Müşteri Anahtarını Ayarlama](customer-key-set-up.md). Bu adımları PowerShell Exchange Online de tamamlayacaksınız.
 
-DEP, Azure Key Vault'de depolanan bir dizi anahtarla ilişkilendirilir. Microsoft 365 bir posta kutusuna DEP atarsınız. Microsoft 365 daha sonra posta kutusunu şifrelemek için ilkede tanımlanan anahtarları kullanır. DEP'yi oluşturmak için kurulum sırasında aldığınız Key Vault URI'lere ihtiyacınız vardır. Bilgi için bkz. [Her Azure Key Vault anahtarı için URI'yi alma](customer-key-set-up.md#obtain-the-uri-for-each-azure-key-vault-key).
+DEP, Azure Key Vault'de depolanan bir dizi anahtarla ilişkilendirilir. Microsoft 365'te posta kutusuna DEP atarsınız. Microsoft 365 daha sonra posta kutusunu şifrelemek için ilkede tanımlanan anahtarları kullanır. DEP'yi oluşturmak için kurulum sırasında aldığınız Key Vault URI'lere ihtiyacınız vardır. Bilgi için bkz. [Her Azure Key Vault anahtarı için URI'yi alma](customer-key-set-up.md#obtain-the-uri-for-each-azure-key-vault-key).
 
 Hatırla! DEP oluşturduğunuzda iki farklı Azure Key Vault'ta iki anahtar belirtirsiniz. Coğrafi olarak yedeklilik sağlamak için bu anahtarları iki ayrı Azure bölgesinde oluşturun.
 
@@ -117,7 +115,7 @@ Set-Mailbox -Identity <MailboxIdParameter> -DataEncryptionPolicy <PolicyName>
 
 Burada *MailboxIdParameter* bir kullanıcı posta kutusu belirtir. Set-Mailbox cmdlet'i hakkında daha fazla bilgi için bkz. [Set-Mailbox](/powershell/module/exchange/set-mailbox).
 
-Karma ortamlarda, Exchange Online kiracınızla eşitlenen şirket içi posta kutusu verilerine bir DEP atayabilirsiniz. Bu eşitlenmiş posta kutusu verilerine bir DEP atamak için Set-MailUser cmdlet'ini kullanacaksınız. Karma ortamdaki posta kutusu verileri hakkında daha fazla bilgi için bkz. karma [Modern Kimlik Doğrulaması ile iOS ve Android için Outlook kullanan şirket içi posta kutuları](/exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
+Karma ortamlarda, Exchange Online kiracınızla eşitlenen şirket içi posta kutusu verilerine bir DEP atayabilirsiniz. Bu eşitlenmiş posta kutusu verilerine bir DEP atamak için Set-MailUser cmdlet'ini kullanacaksınız. Karma ortamdaki posta kutusu verileri hakkında daha fazla bilgi için bkz. [Karma Modern Kimlik Doğrulaması ile iOS ve Android için Outlook kullanan şirket içi posta kutuları](/exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
 
 ```powershell
 Set-MailUser -Identity <MailUserIdParameter> -DataEncryptionPolicy <PolicyName>
@@ -125,17 +123,17 @@ Set-MailUser -Identity <MailUserIdParameter> -DataEncryptionPolicy <PolicyName>
 
 Burada *MailUserIdParameter* bir posta kullanıcı (posta etkin kullanıcı olarak da bilinir) belirtir. Set-MailUser cmdlet'i hakkında daha fazla bilgi için bkz [. Set-MailUser](/powershell/module/exchange/set-mailuser).
 
-## <a name="create-a-dep-for-use-with-sharepoint-online-onedrive-for-business-and-teams-files"></a>SharePoint Online, OneDrive İş ve Teams dosyalarıyla kullanmak üzere bir DEP oluşturma
+## <a name="create-a-dep-for-use-with-sharepoint-online-onedrive-for-business-and-teams-files"></a>SharePoint Online, OneDrive İş ve Teams dosyalarıyla kullanmak için DEP oluşturma
 
 Başlamadan önce Azure Key Vault ayarlamak için gereken görevleri tamamladığınızdan emin olun. Bilgi için bkz. [Müşteri Anahtarını Ayarlama](customer-key-set-up.md).
 
-SharePoint Online, OneDrive İş ve Teams dosyaları için Müşteri Anahtarı'nın ayarlanması için SharePoint Online PowerShell'de bu adımları tamamlarsınız.
+SharePoint Online, OneDrive İş ve Teams dosyaları için Müşteri Anahtarı'nın ayarlanması için bu adımları SharePoint Online PowerShell'de tamamlarsınız.
 
-DeP'i Azure Key Vault'da depolanan bir dizi anahtarla ilişkilendirirsiniz. Tüm verilerinize coğrafi olarak da adlandırılan tek bir coğrafi konumda bir DEP uygularsınız. Office 365 çok coğrafi özelliğini kullanıyorsanız, coğrafi olarak farklı anahtarlar kullanma özelliğine sahip coğrafi bölge başına bir DEP oluşturabilirsiniz. Çok coğrafi bölge kullanmıyorsanız, kuruluşunuzda SharePoint Online, OneDrive İş ve Teams dosyalarıyla kullanmak üzere bir DEP oluşturabilirsiniz. Microsoft 365, bu coğrafi bölgede verilerinizi şifrelemek için DEP'de tanımlanan anahtarları kullanır. DEP'yi oluşturmak için kurulum sırasında aldığınız Key Vault URI'lere ihtiyacınız vardır. Bilgi için bkz. [Her Azure Key Vault anahtarı için URI'yi alma](customer-key-set-up.md#obtain-the-uri-for-each-azure-key-vault-key).
+DeP'i Azure Key Vault'da depolanan bir dizi anahtarla ilişkilendirirsiniz. Tüm verilerinize coğrafi olarak da adlandırılan tek bir coğrafi konumda bir DEP uygularsınız. Office 365 çok coğrafi özelliğini kullanıyorsanız, coğrafi olarak farklı anahtarlar kullanma özelliğine sahip coğrafi bölge başına bir DEP oluşturabilirsiniz. Çoklu coğrafi bölge kullanmıyorsanız, kuruluşunuzda SharePoint Online, OneDrive İş ve Teams dosyalarıyla kullanmak üzere bir DEP oluşturabilirsiniz. Microsoft 365, bu coğrafi bölgede verilerinizi şifrelemek için DEP'de tanımlanan anahtarları kullanır. DEP'yi oluşturmak için kurulum sırasında aldığınız Key Vault URI'lere ihtiyacınız vardır. Bilgi için bkz. [Her Azure Key Vault anahtarı için URI'yi alma](customer-key-set-up.md#obtain-the-uri-for-each-azure-key-vault-key).
 
 Hatırla! DEP oluşturduğunuzda iki farklı Azure Key Vault'ta iki anahtar belirtirsiniz. Coğrafi olarak yedeklilik sağlamak için bu anahtarları iki ayrı Azure bölgesinde oluşturun.
 
-DEP oluşturmak için SharePoint Online PowerShell kullanmanız gerekir.
+DEP oluşturmak için SharePoint Online PowerShell'i kullanmanız gerekir.
 
 1. Yerel bilgisayarınızda, kuruluşunuzda genel yönetici izinlerine sahip bir iş veya okul hesabı kullanarak [SharePoint Online PowerShell'e bağlanın](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?preserve-view=true&view=sharepoint-ps).
 
@@ -346,9 +344,16 @@ Remove-AzKeyVaultAccessPolicy -VaultName Contoso-O365EX-NA-VaultA1 -UserPrincipa
 Microsoft tarafından yönetilen anahtarlara geri dönmeniz gerekiyorsa geri dönebilirsiniz. Kullanıma aldığınızda, verileriniz her bir iş yükü tarafından desteklenen varsayılan şifreleme kullanılarak yeniden şifrelenir. Örneğin, Exchange Online Microsoft tarafından yönetilen anahtarları kullanarak varsayılan şifrelemeyi destekler.
 
 > [!IMPORTANT]
-> Çıkarma, veri temizleme işlemiyle aynı değildir. Veri temizleme, kuruluşunuzun verilerini Microsoft 365'dan kalıcı olarak şifreler ve çıkarma işlemi yapmaz. Birden çok iş yükü ilkesi için veri temizleme işlemi gerçekleştiremezsiniz.
+> Çıkarma, veri temizleme işlemiyle aynı değildir. Veri temizleme işlemi kuruluşunuzun verilerini Microsoft 365'ten kalıcı olarak siler, çıkarma işlemi yapılmaz. Birden çok iş yükü ilkesi için veri temizleme işlemi gerçekleştiremezsiniz.
 
-Çok iş yüküne sahip DEP'leri atamak için Müşteri Anahtarını artık kullanmamaya karar verirseniz, Müşteri Anahtarı'ndan "kullanıma alma" isteğiyle Microsoft desteğine ulaşmanız gerekir. Destek ekibinden Microsoft Purview Müşteri Anahtarı ekibine bir hizmet isteği göndermesini isteyin. Sorularınız varsa m365-ck@service.microsoft.com ulaşın.
+**Çok iş yüküne sahip DEP'leri atamak için Müşteri Anahtarı'nı artık kullanmamaya karar verirseniz Microsoft yönetici portalınızı kullanarak bir destek bileti oluşturmanız ve isteğinizde aşağıdaki ayrıntıları sağlamanız gerekir:**
+
+1. Kiracı FQDN'si
+2. Çıkarma isteği için kiracı kişisi
+3. Çıkarma nedeni
+4. Hizmet biletine isteğin M365 Müşteri Anahtarı ekibine yönlendirilmesi gerektiğini belirten bir not ekleyin ve olayı dahil edin #
+
+Microsoft tarafından yönetilen anahtarlar kullanılarak verilerin yeniden çizilmesi için uygun izinlere sahip Müşteri Anahtarı AKV'lerinizi ve şifreleme anahtarlarınızı saklamanız gerekir. Sorularınız varsa lütfen m365-ck@service.microsoft.com ulaşın.
 
 Posta kutusu düzeyi DEP'leri kullanarak tek tek posta kutularını şifrelemek istemiyorsanız, posta kutusu düzeyi DEP'lerin atamasını tüm posta kutularınızdan kaldırabilirsiniz.
 
@@ -365,7 +370,7 @@ Posta kutusu DEP'lerinin atamasını silmek için Set-Mailbox PowerShell cmdlet'
 Bu cmdlet'in çalıştırılması, şu anda atanmış olan DEP'nin atamasını kaldırın ve varsayılan Microsoft tarafından yönetilen anahtarlarla ilişkilendirilmiş DEP'yi kullanarak posta kutusunun şifresini yeniden şifreler. Microsoft tarafından yönetilen anahtarlar tarafından kullanılan DEP'nin atamasını kaldıramazsınız. Microsoft tarafından yönetilen anahtarları kullanmak istemiyorsanız, posta kutusuna başka bir Müşteri Anahtarı DEP'i atayabilirsiniz.
 
 > [!IMPORTANT]
-> SharePoint Online, OneDrive İş ve Teams dosyaları için Müşteri Anahtarı'ndan Microsoft tarafından yönetilen anahtarlara geri alma desteklenmez.
+> SharePoint Online, OneDrive İş ve Teams dosyaları için Müşteri Anahtarı'ndan Microsoft tarafından yönetilen anahtarlara geri dönme desteklenmez.
 
 ## <a name="revoke-your-keys-and-start-the-data-purge-path-process"></a>Anahtarlarınızı iptal etme ve veri temizleme yolu işlemini başlatma
 
@@ -377,7 +382,7 @@ Microsoft 365, veri temizleme yolunu denetler ve doğrular. Daha fazla bilgi iç
 
 - [O365 Çıkış Planlama Konuları](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=77ea7ebf-ce1b-4a5f-9972-d2d81a951d99&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers)
 
-Müşteri Anahtarı için çok iş yükülü DEP'nin temizlenmesi desteklenmez. Çoklu iş yükü DEP, tüm kiracı kullanıcıları genelinde birden çok iş yükündeki verileri şifrelemek için kullanılır. Bu tür DEP'lerin temizlenmesi, birden çok iş yükünden gelen verilerin erişilemez hale gelmesine neden olur. Microsoft 365 hizmetlerden tamamen çıkmaya karar verirseniz, belgelenen işlem başına kiracı silme yolunu takip edebilirsiniz. [Azure Active Directory'da kiracıyı silme bölümüne](/azure/active-directory/enterprise-users/directory-delete-howto) bakın.
+Müşteri Anahtarı için çok iş yükülü DEP'nin temizlenmesi desteklenmez. Çoklu iş yükü DEP, tüm kiracı kullanıcıları genelinde birden çok iş yükündeki verileri şifrelemek için kullanılır. Bu tür DEP'lerin temizlenmesi, birden çok iş yükünden gelen verilerin erişilemez hale gelmesine neden olur. Microsoft 365 hizmetlerinden tamamen çıkmaya karar verirseniz, belgelenen işlem başına kiracı silme yolunu takip edebilirsiniz. [Bkz. Azure Active Directory'de bir kiracıyı silme](/azure/active-directory/enterprise-users/directory-delete-howto).
 
 ### <a name="revoke-your-customer-keys-and-the-availability-key-for-exchange-online-and-skype-for-business"></a>müşteri anahtarlarınızı ve Exchange Online ve Skype Kurumsal için kullanılabilirlik anahtarını iptal etme
 
@@ -404,15 +409,15 @@ Veri temizleme yolunu başlatmak için şu adımları tamamlayın:
 
 4. Microsoft desteğine başvurun ve Veri Temizleme eDocument'ını isteyin.
 
-    İsteğiniz üzerine Microsoft, veri silme işlemini onaylamanız ve yetkilendirmeniz için size yasal bir belge gönderir. Kuruluşunuzda, ekleme sırasında FastTrack teklifinde onaylayan olarak kaydolan kişinin bu belgeyi imzalaması gerekir. Normalde bu, kuruluşunuz adına evrakları imzalamak için yasal olarak yetkili bir yönetici veya şirketinizde başka bir atanmış kişidir.
+    İsteğiniz üzerine Microsoft, veri silme işlemini onaylamanız ve yetkilendirmeniz için size yasal bir belge gönderir. Kuruluşunuzda, ekleme sırasında FastTrack teklifine onaylayan olarak kaydolan kişinin bu belgeyi imzalaması gerekir. Normalde bu, kuruluşunuz adına evrakları imzalamak için yasal olarak yetkili bir yönetici veya şirketinizde başka bir atanmış kişidir.
 
 5. Temsilciniz yasal belgeyi imzaladıktan sonra Microsoft'a iade edin (genellikle bir eDoc imzası aracılığıyla).
 
     Microsoft yasal belgeyi aldıktan sonra, microsoft ilk olarak ilkeyi silen, posta kutularını kalıcı silme için işaretleyen ve ardından kullanılabilirlik anahtarını silen veri temizleme işlemini tetikleyen cmdlet'leri çalıştırır. Veri temizleme işlemi tamamlandıktan sonra veriler temizlenir, Exchange Online erişilemez ve kurtarılamaz.
 
-### <a name="revoke-your-customer-keys-and-the-availability-key-for-sharepoint-online-onedrive-for-business-and-teams-files"></a>SharePoint Online, OneDrive İş ve Teams dosyaları için Müşteri Anahtarlarınızı ve kullanılabilirlik anahtarınızı iptal etme
+### <a name="revoke-your-customer-keys-and-the-availability-key-for-sharepoint-online-onedrive-for-business-and-teams-files"></a>Müşteri Anahtarlarınızı ve SharePoint Online, OneDrive İş ve Teams dosyalarının kullanılabilirlik anahtarını iptal etme
 
-müşteri anahtarında SharePoint, iş veya okul için OneDrive ve Teams dosya DEP'lerinin temizlenmesi desteklenmez. Bu çoklu iş yükü DEP'leri, tüm kiracı kullanıcıları genelinde birden çok iş yükündeki verileri şifrelemek için kullanılır. Böyle bir DEP'nin temizlenmesi birden çok iş yükünden gelen verilerin erişilemez hale gelmesine neden olur. Microsoft 365 hizmetlerden tamamen çıkmaya karar verirseniz, belgelenen işlem başına kiracı silme yolunu takip edebilirsiniz. [Azure Active Directory'da kiracıyı silmeyi](/azure/active-directory/enterprise-users/directory-delete-howto) öğrenin.
+SharePoint, iş veya okul için OneDrive ve Teams dosyaları DEP'lerinin temizlenmesi Müşteri Anahtarı'nda desteklenmez. Bu çoklu iş yükü DEP'leri, tüm kiracı kullanıcıları genelinde birden çok iş yükündeki verileri şifrelemek için kullanılır. Böyle bir DEP'nin temizlenmesi birden çok iş yükünden gelen verilerin erişilemez hale gelmesine neden olur. Microsoft 365 hizmetlerinden tamamen çıkmaya karar verirseniz, belgelenen işlem başına kiracı silme yolunu takip edebilirsiniz. [Bkz. Azure Active Directory'de bir kiracıyı silme](/azure/active-directory/enterprise-users/directory-delete-howto).
 
 ## <a name="related-articles"></a>İlgili makaleler
 

@@ -15,19 +15,17 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Microsoft 365'deki Microsoft Purview eKeşif (Premium) uygulamasının çift baytlık karakter kümesi kullanan Çince, Japonca ve Korece (CJK) dilleri nasıl desteklediğini öğrenin.
-ms.openlocfilehash: e6399136713ff7be4b3c065de05b587a3f942b01
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Microsoft 365'teki Microsoft Purview eKeşif (Premium), çift baytlık karakter kümesi kullanan Çince, Japonca ve Korece (CJK) dilleri nasıl desteklediğini öğrenin.
+ms.openlocfilehash: a16f1f63deee7cbc77b105c9c49431a8eeda0e71
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095916"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636215"
 ---
 # <a name="cjk-language-support-for-ediscovery-premium"></a>eKeşif için CJK dil desteği (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview eKeşif (Premium), bir inceleme kümesindeki aşağıdaki gelişmiş senaryolar için çift baytlık karakter kümesi dillerini destekler (bunlar topluca *CJK* dilleri olarak bilinen Basitleştirilmiş Çince, Geleneksel Çince, Japonca ve Korece'yi içerir):
+Microsoft Purview eKeşif (Premium), bir inceleme kümesindeki aşağıdaki gelişmiş senaryolar için çift baytlık karakter kümesi dillerini destekler (bunlar topluca *CJK* dilleri olarak bilinen Basitleştirilmiş Çince, Geleneksel Çince, Japonca ve Korece dillerini içerir):
 
 - [Bir gözden geçirme kümesindeki verileri sorguladığınızda](review-set-search.md).
 
@@ -39,7 +37,7 @@ Microsoft Purview eKeşif (Premium), bir inceleme kümesindeki aşağıdaki geli
 
 **CJK karakterleri içeren öğeleri toplamak için bir arama oluşturmak Nasıl yaparım??**
 
-eBulma'da (Premium) içerik ararken [anahtar sözcük aramaları](building-search-queries.md#keyword-searches), [anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md) için CJK karakterlerini kullanabilirsiniz. Microsoft Purview eKeşif (Standart) ve İçerik Arama'da içerik ararken CJK karakterlerini arama da desteklenir.
+eBulma (Premium) içinde içerik [ararken anahtar sözcük aramaları](building-search-queries.md#keyword-searches), [anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md) için CJK karakterlerini kullanabilirsiniz. Microsoft Purview eKeşif (Standart) ve İçerik Arama'da içerik ararken CJK karakterlerini arama da desteklenir.
 
 Boole [işleçleri](keyword-queries-and-search-conditions.md#search-operators) **VE**, **OR**, **NOT** ve **NEAR** dahil olmak üzere tüm arama işleçleri ve [arama koşulları](keyword-queries-and-search-conditions.md#search-conditions) için CJK desteği sağlıyoruz.
 
@@ -49,7 +47,7 @@ Boole [işleçleri](keyword-queries-and-search-conditions.md#search-operators) *
 
 Arama senaryonuza bağlıdır.
 
-- eBulma'da (Premium) [bir gözden geçirme kümesindeki verileri sorguladığınızda](review-set-search.md), birden çok dil arayabilirsiniz.
+- eBulma (Premium) içindeki [bir gözden geçirme kümesindeki verileri sorguladığınızda](review-set-search.md) , birden çok dil arayabilirsiniz.
 
 - [Veri toplamak için bir arama oluşturduğunuzda](create-draft-collection.md), hedeflediğiniz her dil için ayrı koleksiyonlar oluşturun. Örneğin, hem Çince hem de Korece içeren bir belge arıyorsanız, ilk koleksiyonunuz için Çince'yi ve ikinci koleksiyonunuz için Korece'yi seçin.
 

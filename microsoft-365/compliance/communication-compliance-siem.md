@@ -19,24 +19,22 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: f111fbd831f36cd8f1647e4b99565a24372387b8
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 4d9ee561e033e98919063d1f344aa3207a6bb6cd
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953880"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626545"
 ---
 # <a name="communication-compliance-with-siem-solutions"></a>SIEM çözümleri ile iletişim uyumluluğu
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 [İletişim uyumluluğu](communication-compliance.md) , Microsoft Purview'da kuruluşunuzdaki uygunsuz iletileri algılamanıza, yakalamanıza ve üzerinde işlem yapmanıza yardımcı olarak iletişim risklerini en aza indirmeye yardımcı olan bir iç risk çözümüdür. [Microsoft Sentinel](https://azure.microsoft.com/services/azure-sentinel) veya [Splunk](https://www.splunk.com/) gibi güvenlik bilgileri ve olay yönetimi (SIEM) çözümleri genellikle kuruluş içindeki tehditleri toplamak ve izlemek için kullanılır.
 
-Kuruluşların yaygın ihtiyaçlarından biri, iletişim uyumluluk uyarılarını ve bu SIEM çözümlerini tümleştirmektir. Bu tümleştirme sayesinde kuruluşlar, iletişim uyumluluk uyarılarını SIEM çözümlerinde görüntüleyebilir ve ardından iletişim uyumluluğu iş akışı ve kullanıcı deneyimi içindeki uyarıları düzeltebilir. Örneğin, bir çalışan başka bir çalışana rahatsız edici bir ileti gönderir ve bu ileti uygunsuz içerik için bir iletişim uyumluluk ilkesi izlemesi tarafından algılanır. Bu olaylar, iletişim uyumluluk çözümü tarafından Microsoft 365 Denetiminde ("birleşik denetim günlüğü" olarak da bilinir) izlenir ve SIEM çözümüne aktarılır. Daha sonra kuruluş için SIEM çözümünde, Microsoft 365 Denetimi'nde izlenen ve iletişim uyumluluk uyarılarıyla ilişkili olaylardan bir uyarı tetiklenir. Araştırmacılara SIEM çözümlerinde uyarı bildirilir ve ardından iletişim uyumluluk çözümünde uyarıyı araştırır ve düzelterler.
+Kuruluşların yaygın ihtiyaçlarından biri, iletişim uyumluluk uyarılarını ve bu SIEM çözümlerini tümleştirmektir. Bu tümleştirme sayesinde kuruluşlar, iletişim uyumluluk uyarılarını SIEM çözümlerinde görüntüleyebilir ve ardından iletişim uyumluluğu iş akışı ve kullanıcı deneyimi içindeki uyarıları düzeltebilir. Örneğin, bir çalışan başka bir çalışana rahatsız edici bir ileti gönderir ve bu ileti uygunsuz içerik için bir iletişim uyumluluk ilkesi izlemesi tarafından algılanır. Bu olaylar, iletişim uyumluluk çözümü tarafından Microsoft 365 Denetiminde ("birleşik denetim günlüğü" olarak da bilinir) izlenir ve SIEM çözümüne aktarılır. Daha sonra, Microsoft 365 Denetimi'nde izlenen ve iletişim uyumluluk uyarılarıyla ilişkili olaylardan kuruluş için SIEM çözümünde bir uyarı tetiklenir. Araştırmacılara SIEM çözümlerinde uyarı bildirilir ve ardından iletişim uyumluluk çözümünde uyarıyı araştırır ve düzelterler.
 
-## <a name="communication-compliance-alerts-in-microsoft-365-audit"></a>Microsoft 365 Denetiminde iletişim uyumluluğu uyarıları
+## <a name="communication-compliance-alerts-in-microsoft-365-audit"></a>Microsoft 365 Denetimi'nde iletişim uyumluluğu uyarıları
 
-Tüm iletişim uyumluluk ilkesi eşleşmeleri Microsoft 365 Denetiminde yakalanır. Aşağıdaki örneklerde, seçili iletişim uyumluluk ilkesi eşleştirme etkinlikleri için kullanılabilen ayrıntılar gösterilir:
+Tüm iletişim uyumluluk ilkesi eşleşmeleri Microsoft 365 Denetimi'nde yakalanır. Aşağıdaki örneklerde, seçili iletişim uyumluluk ilkesi eşleştirme etkinlikleri için kullanılabilen ayrıntılar gösterilir:
 
 **Uygunsuz İçerik ilkesi şablonu eşleşmesi için denetim günlüğü girdisi örneği:**
 
@@ -71,21 +69,21 @@ ObjectState: Unchanged
 ```
 
 > [!NOTE]
-> Şu anda, ilke eşleşmesinin Microsoft 365 Denetimi'ne kaydedildiği süre ile iletişim uyumluluğunda ilke eşleşmelerini araştırabileceğiniz süre arasında 24 saate kadar gecikme olabilir.
+> Şu anda, ilke eşleşmesinin Microsoft 365 Denetimi'nde kaydedildiği süre ile iletişim uyumluluğunda ilke eşleşmelerini araştırabileceğiniz süre arasında 24 saate kadar gecikme olabilir.
 
 ## <a name="configure-communication-compliance-and-microsoft-sentinel-integration"></a>İletişim uyumluluğunu ve Microsoft Sentinel tümleştirmesini yapılandırma
 
-İletişim uyumluluk ilkesi eşleşmelerini toplamak için Microsoft Sentinel'i kullanırken, Sentinel veri kaynağı olarak Microsoft 365 Denetimi kullanır. İletişim uyumluluk uyarılarını Sentinel ile tümleştirmek için aşağıdaki adımları tamamlayın:
+İletişim uyumluluk ilkesi eşleşmelerini toplamak için Microsoft Sentinel'i kullanırken, Sentinel veri kaynağı olarak Microsoft 365 Denetimi'ni kullanır. İletişim uyumluluk uyarılarını Sentinel ile tümleştirmek için aşağıdaki adımları tamamlayın:
 
 1. [Microsoft Sentinel'e ekleme](/azure/sentinel/quickstart-onboard). Ekleme işleminin bir parçası olarak veri kaynaklarınızı yapılandıracaksınız.
-2. Microsoft Sentinel [Microsoft Office 365 veri bağlayıcısını](/azure/sentinel/data-connectors-reference#microsoft-office-365) yapılandırın ve bağlayıcı yapılandırması altında *Exchange'ı* seçin.
+2. Microsoft Sentinel [Microsoft Office 365 veri bağlayıcısını](/azure/sentinel/data-connectors-reference#microsoft-office-365) yapılandırın ve bağlayıcı yapılandırması altında *Exchange'i* seçin.
 3. İletişim uyumluluk uyarılarını almak için arama sorgusunu yapılandırın. Örneğin:
 
     *| OfficeActivity | burada OfficeWorkload == "Exchange" ve Operation == "SupervisionRuleMatch" | TimeGenerated'a göre sıralama*
 
     Belirli bir kullanıcıya filtre uygulamak için aşağıdaki sorgu biçimini kullanabilirsiniz:
 
-    *| OfficeActivity | burada OfficeWorkload == "Exchange" ve Operation == "SupervisionRuleMatch" ve UserId == "User1@Contoso.com" | TimeGenerated'a göre sıralama*
+    *| OfficeActivity | where OfficeWorkload == "Exchange" and Operation == "SupervisionRuleMatch" and UserId == "User1@Contoso.com" | TimeGenerated'a göre sıralama*
 
 Microsoft Sentinel tarafından toplanan Office 365 için Microsoft 365 Denetim günlükleri hakkında daha fazla bilgi için bkz. [Azure İzleyici Günlükleri başvurusu](/azure/azure-monitor/reference/tables/OfficeActivity).
 
@@ -94,7 +92,7 @@ Microsoft Sentinel tarafından toplanan Office 365 için Microsoft 365 Denetim g
 İletişim uyumluluk uyarılarını Splunk ile tümleştirmek için aşağıdaki adımları tamamlayın:
 
 1. [Microsoft Office 365 için Splunk Eklentisini](https://docs.splunk.com/Documentation/AddOns/released/MSO365/ConfigureinputsmanagementAPI) yükleme
-2. Microsoft Office 365 için Splunk Eklentisi için Azure AD'de tümleştirme uygulaması yapılandırma
+2. Microsoft Office 365 için Splunk Eklentisi için Azure AD'de bir tümleştirme uygulaması yapılandırma
 3. Splunk çözümünüzde arama sorgularını yapılandırın. Tüm iletişim uyumluluk uyarılarını tanımlamak için aşağıdaki arama örneğini kullanın:
 
     *index=\* sourcetype="o365:management:activity" Workload=Exchange Operation=SupervisionRuleMatch*
@@ -109,8 +107,8 @@ Aşağıdaki tabloda farklı ilke türleri için örnek arama sonuçları göste
 
 | İlke türleri | Örnek arama sonuçları |
 | :------------------ | :--------------------------------------- |
-| Özel hassas bilgi türü anahtar sözcük listesini algılama ilkesi | { <br> CreationTime: 2021-09-17T16:29:57 <br> Kimlik: 4b9ce23d-ee60-4f66-f38d-08d979f8631f <br> IsPolicyHit: true <br> Objectıd: <CY1PR05MB27158B96AF7F3AFE62E1F762CFDD9@CY1PR05MB2715.namprd05.prod.outlook.com> <br> İşlem: SupervisionRuleMatch <br> OrganizationId: d6a06676-95e8-4632-b949-44bc00f0793f <br> Kayıt Türü: 68 <br> ResultStatus: {"ItemClass":"IPM. Not","CcsiResults":"leak"} <br> SRPolicyMatchDetails: { [+] } <br> UserId: user1@contoso.OnMicrosoft.com <br> UserKey: SupervisionStoreDeliveryAgent <br> UserType: 0 <br> Sürüm: 1 <br> İş yükü: Exchange <br> } |
-| Uygunsuz dili algılama ilkesi | { <br> CreationTime: 2021-09-17T23:44:35 <br> Kimlik: e0ef6f54-9a52-4e4c-9584-08d97a351ad0 <br> IsPolicyHit: true <br> Objectıd: <BN6PR05MB3571AD9FBB85C4E12C1F66B4CCDD9@BN6PR05MB3571.namprd05.prod.outlook.com> <br> İşlem: SupervisionRuleMatch <br> OrganizationId: d6a06676-95e8-4632-b949-44bc00f0793f <br> Kayıt Türü: 68 <br> ResultStatus: {"ItemClass":"IPM.Yammer. İleti","CcsiResults":""} <br> SRPolicyMatchDetails: { [+] } <br> UserId: user1@contoso.com <br> UserKey: SupervisionStoreDeliveryAgent <br> UserType: 0 <br> Sürüm: 1 <br> }  |
+| Özel hassas bilgi türü anahtar sözcük listesini algılama ilkesi | { <br> CreationTime: 2021-09-17T16:29:57 <br> Kimlik: 4b9ce23d-ee60-4f66-f38d-08d979f8631f <br> IsPolicyHit: true <br> Objectıd: <CY1PR05MB27158B96AF7F3AFE62E1F762CFDD9@CY1PR05MB2715.namprd05.prod.outlook.com> <br> İşlem: SupervisionRuleMatch <br> OrganizationId: d6a06676-95e8-4632-b949-44bc00f0793f <br> Kayıt Türü: 68 <br> ResultStatus: {"ItemClass":"IPM. Not","CcsiResults":"leak"} <br> SRPolicyMatchDetails: { [+] } <br> UserId: user1@contoso.OnMicrosoft.com <br> UserKey: SupervisionStoreDeliveryAgent <br> UserType: 0 <br> Sürüm: 1 <br> İş Yükü: Exchange <br> } |
+| Uygunsuz dili algılama ilkesi | { <br> CreationTime: 2021-09-17T23:44:35 <br> Kimlik: e0ef6f54-9a52-4e4c-9584-08d97a351ad0 <br> IsPolicyHit: true <br> Objectıd: <BN6PR05MB3571AD9FBB85C4E12C1F66B4CCDD9@BN6PR05MB3571.namprd05.prod.outlook.com> <br> İşlem: SupervisionRuleMatch <br> OrganizationId: d6a06676-95e8-4632-b949-44bc00f0793f <br> Kayıt Türü: 68 <br> ResultStatus: {"ItemClass":"IPM. Yammer.Message","CcsiResults":""} <br> SRPolicyMatchDetails: { [+] } <br> UserId: user1@contoso.com <br> UserKey: SupervisionStoreDeliveryAgent <br> UserType: 0 <br> Sürüm: 1 <br> }  |
 
 ## <a name="configure-communication-compliance-with-other-siem-solutions"></a>Diğer SIEM çözümleriyle iletişim uyumluluğunu yapılandırma
 
@@ -136,5 +134,5 @@ Search-UnifiedAuditLog -StartDate $startDate -EndDate $endDate -RecordType Compl
 ## <a name="resources"></a>Kaynaklar
 
 - [İletişim uyumluluğu denetimi](communication-compliance-reports-audits.md#audit)
-- [Microsoft Purview Denetimi (Premium)](advanced-audit.md)
+- [Microsoft Purview Denetim (Premium)](advanced-audit.md)
 - [Office 365 Yönetim Etkinliği API’si referansı](/office/office-365-management-api/office-365-management-activity-api-reference)

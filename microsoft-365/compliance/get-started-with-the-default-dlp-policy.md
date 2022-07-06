@@ -19,16 +19,14 @@ ms.collection:
 ms.custom:
 - seo-marvel-apr2020
 description: Kuruluşunuzun varsayılan veri kaybı önleme (DLP) ilkesini iyileştirmek için raporu kullanmayı öğrenin.
-ms.openlocfilehash: 893aae6dfbc4e5c9fcf48a8eec53694352ead4f2
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: d47568f009745edaa8205ce65b4de9b481f58139
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65753462"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641504"
 ---
 # <a name="get-started-with-the-default-dlp-policy"></a>Varsayılan DLP ilkesini kullanmaya başlama
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 İlk Microsoft Purview Veri Kaybı Önleme (DLP) ilkenizi oluşturmadan önce, DLP hassas bilgilerinizin varsayılan ilkeyle korunmasına yardımcı olur. Bu varsayılan ilke ve önerisi (aşağıda gösterilmiştir) kuruluşunuzun dışındaki biriyle e-posta veya kredi kartı numarası içeren belgeler paylaşıldığında sizi bilgilendirerek hassas içeriğinizin güvenliğini sağlamaya yardımcı olur. Bu öneriyi Microsoft Purview uyumluluk portalı **Giriş** sayfasında görürsünüz. 
   
@@ -44,7 +42,7 @@ Ayrıntılı rapor, son 30 gün içinde kredi kartı numaralarını içeren içe
   
 Hassas bilgilerin korunmasına yardımcı olmak için varsayılan DLP ilkesi:
   
-- en az bir kredi kartı numarası içeren Exchange, SharePoint ve OneDrive içeriğinin kuruluşunuz dışındaki kişilerle paylaşıldığını algılar.
+- Exchange, SharePoint ve OneDrive'da en az bir kredi kartı numarası içeren içeriğin kuruluşunuzun dışındaki kişilerle paylaşıldığını algılar.
     
 - İlke ipucunu gösterir ve bu hassas bilgileri kuruluşunuz dışındaki kişilerle paylaşmaya çalışan kullanıcılara bir e-posta bildirimi gönderir. Bu seçenekler hakkında daha fazla bilgi için bkz. [DLP ilkeleri için e-posta bildirimleri gönderme ve ilke ipuçlarını gösterme](use-notifications-and-policy-tips.md).
     
@@ -62,7 +60,7 @@ Olay raporları veya erişimi kısıtlama hakkında daha fazla bilgi için bkz. 
   
 Bu seçenekleri daha sonra değiştirmek isterseniz, varsayılan DLP ilkesini istediğiniz zaman düzenleyebilirsiniz. Sonraki bölüme bakın.
   
-![Paylaşılan içeriği daha fazla koru adlı pencere öğesi için Ayarlar.](../media/dad30a84-2715-4c0a-a5c5-44d85492363e.png)
+![Paylaşılan içeriği daha fazla koru adlı pencere öğesi ayarları.](../media/dad30a84-2715-4c0a-a5c5-44d85492363e.png)
   
 ## <a name="edit-the-default-dlp-policy"></a>Varsayılan DLP ilkesini düzenleme
 

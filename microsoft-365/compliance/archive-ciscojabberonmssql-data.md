@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365'da MS SQL verileri üzerinde Cisco Jabber'ı arşivleme bağlayıcısı ayarlama
+title: Microsoft 365'te MS SQL verilerinde Cisco Jabber'ı arşivleme bağlayıcısı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -11,25 +11,23 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Yöneticiler, ms sql verileri üzerinde Cisco Jabber'ı Microsoft 365'daki Veritas'tan içeri aktarmak ve arşivlemek için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyabilmenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: 8df9c0b0ec7f69a45578ac91d14315730059d864
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+description: Yöneticiler, Microsoft 365'teki Veritas'tan MS SQL verilerini içeri aktarmak ve arşivlemek için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'teki üçüncü taraf veri kaynaklarından verileri arşivlenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
+ms.openlocfilehash: 39a41ab4d89023c263cea43c2ac89a9b174f3235
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65320228"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636909"
 ---
 # <a name="set-up-a-connector-to-archive-cisco-jabber-on-ms-sql-data"></a>MS SQL verilerinde Cisco Jabber'ı arşivleme amacıyla bağlayıcı ayarlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Cisco Jabber platformundaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalı bir Veritas bağlayıcısı kullanın. Veritas, Jabber'ın MS SQL Veritabanı 1:1 sohbet iletileri ve grup sohbetleri gibi öğeleri yakalamak ve ardından bu öğeleri Microsoft 365'e aktarmak için yapılandırılmış bir [Cisco Jabber](https://globanet.com/jabber/) bağlayıcısı sağlar. Bağlayıcı, Cisco Jabber'ın MS SQL Veritabanı verileri alır, işler ve kullanıcının Cisco Jabber hesabındaki içeriği e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'te kullanıcının posta kutusuna aktarır.
 
-Cisco Jabber platformundaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalı bir Veritas bağlayıcısı kullanın. Veritas, Jabber'ın MS SQL Veritabanı 1:1 sohbet iletileri ve grup sohbetleri gibi öğeleri yakalamak ve ardından bu öğeleri Microsoft 365'a aktarmak için yapılandırılmış bir [Cisco Jabber](https://globanet.com/jabber/) bağlayıcısı sağlar. Bağlayıcı, Cisco Jabber'ın MS SQL Veritabanı verileri alır, işler ve kullanıcının Cisco Jabber hesabındaki içeriği e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365 kullanıcının posta kutusuna aktarır.
-
-Cisco Jabber verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft Purview özellikleri uygulayabilirsiniz. Microsoft 365'de verileri içeri aktarmak ve arşivlemek için Cisco Jabber bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+Cisco Jabber verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'te verileri içeri aktarmak ve arşivlemek için Cisco Jabber bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-cisco-jabber-data"></a>Cisco Jabber verilerini arşivlemeyle ilgili genel bakış
 
-Aşağıdaki genel bakış, Microsoft 365'da MS SQL verileri üzerinde Cisco Jabber'ı arşivleme amacıyla bağlayıcı kullanma işlemini açıklar.
+Aşağıdaki genel bakış, Microsoft 365'te MS SQL verileri üzerinde Cisco Jabber'ı arşivleme amacıyla bağlayıcı kullanma işlemini açıklar.
 
 ![Cisco Jabber verileri için arşivleme iş akışı.](../media/CiscoJabberonMSSQLConnectorWorkflow.png)
 
@@ -49,13 +47,13 @@ Aşağıdaki genel bakış, Microsoft 365'da MS SQL verileri üzerinde Cisco Jab
 
 - 1. Adımda Cisco Jabber bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu Veritas veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
+- Bu Veritas veri bağlayıcısı, Microsoft 365 US Government bulutundaki GCC ortamlarında genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerini Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolamayı, iletmeyi ve işlemeyi içerebilir ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="step-1-set-up-the-cisco-jabber-on-ms-sql-connector"></a>1. Adım: MS SQL bağlayıcısı üzerinde Cisco Jabber'ı ayarlama
 
 İlk adım, uyumluluk portalındaki **Veri Bağlayıcıları'na** erişmek ve MS SQL verilerinde Cisco Jabber için bir bağlayıcı oluşturmaktır.
 
-1. [https://compliance.microsoft.com](https://compliance.microsoft.com/)ADRESINE gidin ve MS SQL'de **Veri bağlayıcılarıCisco** >  **Jabber'a** tıklayın.
+1. [https://compliance.microsoft.com](https://compliance.microsoft.com/)ADRESINE gidin ve MS SQL'de **Veri bağlayıcıları** > **Cisco Jabber'a** tıklayın.
 
 2. **MS SQL'de Cisco Jabber** ürün açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın.
 
@@ -75,7 +73,7 @@ Aşağıdaki genel bakış, Microsoft 365'da MS SQL verileri üzerinde Cisco Jab
 
 Kullanıcıları eşlemek ve uyumluluk portalında ayarlanan bağlayıcıyı tamamlamak için şu adımları izleyin:
 
-1. **MS SQL kullanıcılarını Microsoft 365 için Cisco Jabber** eşleme sayfasında otomatik kullanıcı eşlemesini etkinleştirin. MS SQL öğelerindeki Cisco Jabber, kuruluşunuzdaki kullanıcıların *e-posta adreslerini içeren E-posta* adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcıyla ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır.
+1. **MS SQL kullanıcılarını Microsoft 365 kullanıcıları ile eşleme** sayfasında, otomatik kullanıcı eşlemesini etkinleştirin. MS SQL öğelerindeki Cisco Jabber, kuruluşunuzdaki kullanıcıların *e-posta adreslerini içeren E-posta* adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcısı ile ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır.
 
 2. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve yeni bağlayıcının içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları** sayfasına gidin.
 

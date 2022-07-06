@@ -1,5 +1,5 @@
 ---
-title: IRM'yi Azure Rights Management'i kullanmak üzere yapılandırma
+title: IRM'yi Azure Rights Management kullanacak şekilde yapılandırma
 f1.keywords:
 - NOCSH
 ms.author: krowley
@@ -17,14 +17,14 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Bu makale, Office 365 İleti Şifrelemesi OME'nin yeni özellikleri hakkında bilgi içerir.
-ms.openlocfilehash: ec60ceb2843c03f3d91c95c2c4eca2d56e393a44
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bu makale Microsoft Purview İleti Şifrelemesi hakkında bilgi içerir.
+ms.openlocfilehash: 978d6356531da6b29bfe7b557cb419ba2958f040
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983235"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66642228"
 ---
-# <a name="configure-irm-to-use-azure-rights-management"></a>IRM'yi Azure Rights Management'i kullanmak üzere yapılandırma
+# <a name="configure-irm-to-use-azure-rights-management"></a>IRM'yi Azure Rights Management kullanacak şekilde yapılandırma
 
-Uygulamanın (OME) yeni özellikleri Office 365 İleti Şifrelemesi, artık IRM'i ayrı olarak ayarlamaya gerek yoktur. Microsoft, Azure Hak Yönetimi ile eski OME ve IRM kullanarak yeni dağıtımlar ayarlamanızı önerilmez. Yeni OME özellikleri hakkında daha fazla bilgi için aşağıdaki [SSS Office 365 İleti Şifrelemesi bakın](./ome-faq.yml). Kurum içindeki yeni OME özelliklerini kullanmaya başlamaya hazırsanız, bkz. [Azure Information Protection'ın Office 365 İleti Şifrelemesi](./set-up-new-message-encryption-capabilities.md) yeni özellikler ayarlama.
+Microsoft Purview İleti Şifrelemesi sürümüyle birlikte artık IRM'yi ayrı olarak ayarlamanız gerekmez. Microsoft, Azure Rights Management ile eski OME ve IRM kullanarak yeni dağıtımların ayarlanmasını önermez. Microsoft Purview İleti Şifrelemesi hakkında daha fazla bilgi için [bkz. İleti şifrelemesi SSS](./ome-faq.yml). Kuruluşunuzdaki Microsoft Purview İleti Şifrelemesi kullanmaya başlamaya hazırsanız bkz. [Microsoft Purview İleti Şifrelemesi ayarlama](./set-up-new-message-encryption-capabilities.md).

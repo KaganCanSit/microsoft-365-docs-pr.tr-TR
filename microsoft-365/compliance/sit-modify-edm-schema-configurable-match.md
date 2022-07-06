@@ -17,30 +17,28 @@ search.appverid:
 - MET150
 description: Yapılandırılabilir eşleşme kullanmak için edm şemasını nasıl değiştireceğinizi öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: f5eb282bd004956d6ca98a9347ef8d832784b55f
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: a90f81136bf6aa78aa11d732deca19ecd1d59b9c
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014794"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622073"
 ---
 # <a name="modify-exact-data-match-schema-to-use-configurable-match"></a>Yapılandırılabilir eşleşmeyi kullanmak için Tam Veri Eşleştirme şemasını değiştirme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Tam Veri Eşleşmesi (EDM) tabanlı sınıflandırma, hassas bilgi veritabanındaki tam değerlere başvuran özel hassas bilgi türleri oluşturmanıza olanak tanır. Tam bir dizenin çeşitlemelerine izin vermeniz gerektiğinde, Microsoft Purview'a büyük/küçük harf ve bazı sınırlayıcıları yoksaymasına izin vermek için *yapılandırılabilir eşleşmeyi* kullanabilirsiniz.
 
 > [!IMPORTANT]
 > Mevcut bir EDM şemasını ve veri dosyasını değiştirmek için bu yordamı kullanın.
 
-1. EDM şeması ve veri dosyası karşıya yükleme amacıyla **Microsoft 365** bağlanmak için kullandığınız bilgisayardanEdmUploadAgent.exekaldırın.
+1. EDM şeması ve veri dosyası karşıya yükleme amacıyla Microsoft 365'e bağlanmak için kullandığınız bilgisayardan **EdmUploadAgent.exe** kaldırın.
 
 2. Aşağıdaki bağlantıları kullanarak aboneliğiniz için uygun **EdmUploadAgent.exe** dosyasını indirin:
     - [Ticari + GCC](https://go.microsoft.com/fwlink/?linkid=2088639) - çoğu ticari müşteri bunu kullanmalıdır
     - [GCC-High](https://go.microsoft.com/fwlink/?linkid=2137521) - Bu özellikle yüksek güvenlikli kamu bulut abonelerine yöneliktir
     - [DoD](https://go.microsoft.com/fwlink/?linkid=2137807) - Bu özellikle Birleşik Devletler Savunma Bakanlığı bulut müşterilerine yöneliktir
 
-3. EDM Upload Aracısı'nı yetkilendileyin, bir Komut İstemi penceresi açın (yönetici olarak) ve aşağıdaki komutu çalıştırın:
+3. EDM Karşıya Yükleme Aracısı'nı yetkilendileyin, bir Komut İstemi penceresi açın (yönetici olarak) ve aşağıdaki komutu çalıştırın:
 
    ```dos
    EdmUploadAgent.exe /Authorize
@@ -107,10 +105,10 @@ Tam Veri Eşleşmesi (EDM) tabanlı sınıflandırma, hassas bilgi veritabanınd
     - \"
     - \,
 
-6. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+6. [Güvenlik & Uyumluluğu PowerShell'e bağlanın](/powershell/exchange/connect-to-scc-powershell).
 
     > [!NOTE]
-    > Kuruluşunuz [kiracı düzeyinde (genel önizleme) Microsoft 365 için Müşteri Anahtarı](customer-key-tenant-level.md#overview-of-customer-key-for-microsoft-365-at-the-tenant-level-public-preview) ayarladıysa, tam veri eşleşmesi şifreleme işlevini otomatik olarak kullanır. Bu yalnızca Ticari buluttaki E5 lisanslı kiracılar tarafından kullanılabilir.
+    > Kuruluşunuz [Microsoft 365 için Müşteri Anahtarı'nı kiracı düzeyinde (genel önizleme)](customer-key-tenant-level.md#overview-of-customer-key-for-microsoft-365-at-the-tenant-level-public-preview) ayarladıysa, tam veri eşleşmesi şifreleme işlevini otomatik olarak kullanır. Bu yalnızca Ticari buluttaki E5 lisanslı kiracılar tarafından kullanılabilir.
 
 7. Aşağıdaki komutu çalıştırarak şemanızı güncelleştirin:
 

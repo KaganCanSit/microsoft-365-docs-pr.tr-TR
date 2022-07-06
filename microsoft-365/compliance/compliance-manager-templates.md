@@ -17,19 +17,17 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Purview Uyumluluk Yöneticisi'nde değerlendirme oluşturmak için şablonların nasıl kullanılacağını ve yönetileceğini anlama. Biçimlendirilmiş bir Excel dosyası kullanarak şablonlar oluşturun ve değiştirin.
-ms.openlocfilehash: e83e079ba47a9e9ab33b3219ca648d1b4af9f124
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+description: Microsoft Purview Uyumluluk Yöneticisi'nde değerlendirme oluşturmak için şablonların nasıl kullanılacağını ve yönetileceğini anlama. Biçimlendirilmiş bir Excel dosyası kullanarak şablon oluşturma ve değiştirme.
+ms.openlocfilehash: ac4d3fb6f7a43aa642b9d8b343a68c9f38f29e25
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66116015"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635655"
 ---
 # <a name="learn-about-assessment-templates-in-compliance-manager"></a>Uyumluluk Yöneticisi'nde değerlendirme şablonları hakkında bilgi edinin
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-**Bu makalede:** **Şablonların nasıl çalıştığını** ve değerlendirme şablonları sayfanızdan **nasıl yönetileceğini** anlayın. Yeni şablonlar **oluşturma**, mevcut şablonları **genişletme** ve **değiştirme**, **şablon verilerinizi Excel ile biçimlendirme** ve şablon **raporlarını** dışarı aktarma yönergelerini alın.
+**Bu makalede:** **Şablonların nasıl çalıştığını** ve değerlendirme şablonları sayfanızdan **nasıl yönetileceğini** anlayın. Yeni şablonlar **oluşturma** , var olan şablonları **genişletme** ve **değiştirme** , **Excel ile şablon verilerinizi biçimlendirme ve şablon** **raporlarını** dışarı aktarma yönergelerini alın.
 
 > [!IMPORTANT]
 > Kuruluşunuzun kullanabileceği değerlendirme şablonları lisans sözleşmenize bağlıdır. [Ayrıntıları gözden geçirin](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-compliance-manager).
@@ -47,14 +45,14 @@ Uyumluluk Yöneticisi, farklı ürün türlerini değerlendirmek için kullanıl
 
 Evrensel şablonlardan yapılan değerlendirmeler daha genelleştirilmiştir ancak kuruluşunuzun uyumluluğunu birden çok üründe kolayca izlemenize yardımcı olabileceğinden genişletilmiş çok yönlülük sunar.
 
-US Government Community (GCC) Moderate, GCC High ve Department of Defense (DoD) müşterilerinin şu anda evrensel şablonları kullanamayacağını unutmayın.
+ABD Kamu Topluluğu (GCC) Orta, GCC High ve Savunma Bakanlığı (DoD) müşterilerinin şu anda evrensel şablonları kullanamayacaklarını unutmayın.
 
 ## <a name="template-availability-and-licensing"></a>Şablon kullanılabilirliği ve lisanslama
 
 Uyumluluk Yöneticisi'nde iki şablon kategorisi vardır: dahil ve premium.
 
 1. **Dahil edilen şablonlar** , Uyumluluk Yöneticisi lisansınız tarafından verilir ve temel düzenleme ve gereksinimleri kapsar. Lisans sözleşmeniz kapsamında hangi şablonların kullanılabilir olduğu hakkında daha fazla bilgi edinmek için lisans [ayrıntılarına](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#compliance-manager) bakın.
-2. ek gereksinimleri ve senaryoları kapsayan **Premium şablonları** şablon lisansları satın alınarak elde edilebilir.
+2. Ek ihtiyaçları ve senaryoları kapsayan **premium şablonlar**, şablon lisansları satın alınarak elde edilebilir.
 
 Değerlendirme oluşturmaya başladığınızda Uyumluluk Yöneticisi, kullanımınızı izleyebilebilmeniz için kaç şablonun etkin olduğunu izler. Daha fazla bilgi için bkz [. Etkin ve etkin olmayan şablonlar](compliance-manager-templates.md#active-and-inactive-templates).
 
@@ -71,24 +69,24 @@ Ticari ve GCC Moderate hesapları yönetim merkezinden şablon lisansları satı
 Satın alma bağlantıları:
 
 - [Ticari](https://admin.microsoft.com/Adminportal/Home?#/catalog/offer-details/compliance-manager-premium-assessment-add-on/46E9BF2A-3C8D-4A69-A7E7-3DA04687636D)
-- [orta GCC](https://admin.microsoft.com/Adminportal/Home?#/catalog/offer-details/compliance-manager-premium-assessment-add-on/3129986d-5f4b-413b-a34b-b706db5a7669)
+- [GCC Orta](https://admin.microsoft.com/Adminportal/Home?#/catalog/offer-details/compliance-manager-premium-assessment-add-on/3129986d-5f4b-413b-a34b-b706db5a7669)
 
-Ayrıca[, Bulut Çözümü Sağlayıcısı programına](https://partner.microsoft.com/membership/cloud-solution-provider) veya [toplu lisanslamaya](https://www.microsoft.com/licensing/licensing-programs/licensing-programs) katılarak lisans alabilirsiniz.
+Ayrıca [, Bulut Çözümü Sağlayıcısı programına](https://partner.microsoft.com/membership/cloud-solution-provider) veya [toplu lisanslamaya](https://www.microsoft.com/licensing/licensing-programs/licensing-programs) katılarak lisans alabilirsiniz.
 
-**Yüksek ve DOD hesaplarını GCC**
+**GCC Yüksek ve DOD hesapları**
 
-GCC Yüksek ve DOD hesapları [toplu lisanslama](https://www.microsoft.com/licensing/licensing-programs/licensing-programs) aracılığıyla şablon lisansları satın almalıdır.
+GCC High ve DOD hesaplarının [toplu lisanslama](https://www.microsoft.com/licensing/licensing-programs/licensing-programs) aracılığıyla şablon lisansları satın alması gerekir.
 
 ### <a name="try-out-premium-templates"></a>Premium şablonları deneyin
 
 Satın alma işlemi yapmadan önce premium şablonları denemek için lisansların deneme sürümlerini de alabilirsiniz. Deneme lisansları, 90 gün boyunca 25 şablona kadar kullanılabilir. Deneme lisansınızı aldıktan sonra şablonlar 48 saat içinde kiracınızda kullanılabilir duruma gelir.
 
-Kuruluşunuzun Uyumluluk Yöneticisi için ticari lisansı varsa, [Microsoft Purview Uyumluluk Yöneticisi premium değerlendirmeleri için ücretsiz deneme sürümü hakkında sayfasında denemenizi](compliance-easy-trials-compliance-manager-assessments.md) nasıl başlatacağınızı öğrenebilirsiniz.
+Kuruluşunuzun Uyumluluk Yöneticisi için ticari lisansı varsa, [Microsoft Purview Compliance Manager premium değerlendirmeleri için ücretsiz deneme sürümü hakkında](compliance-easy-trials-compliance-manager-assessments.md) makalesinde deneme sürümünüzü nasıl başlatacağınızı öğrenebilirsiniz.
 
 Kuruluşunuz GCC veya DOD lisansı altındaysa, kuruluşunuz için uygun deneme bağlantısını seçin:
 
-- [orta GCC](https://admin.microsoft.com/Adminportal/Home?#/catalog/offer-details/compliance-manager-premium-assessment-add-on/87ed2908-0a8d-430a-9635-558ed42b581f)
-- [yüksek GCC](https://portal.office365.us/SubscriptionDetails?OfferId=e14362d7-2c11-4a43-9c92-59f1b499b96a)
+- [GCC Orta](https://admin.microsoft.com/Adminportal/Home?#/catalog/offer-details/compliance-manager-premium-assessment-add-on/87ed2908-0a8d-430a-9635-558ed42b581f)
+- [GCC Yüksek](https://portal.office365.us/SubscriptionDetails?OfferId=e14362d7-2c11-4a43-9c92-59f1b499b96a)
 - [DOD](https://portal.apps.mil/Commerce/Trial.aspx?OfferId=17e28290-7de6-41a9-af30-f6497396ab2e)
 
 #### <a name="active-and-inactive-templates"></a>Etkin ve etkin olmayan şablonlar
@@ -116,7 +114,7 @@ Diğer ayrıntılar için bkz [. Uyumluluk Yöneticisi lisanslama kılavuzu](/of
 
 Uyumluluk Yöneticisi'ndeki değerlendirme şablonları sayfasında şablonların listesi ve bunlar hakkındaki önemli ayrıntılar görüntülenir. Liste, Uyumluluk Yöneticisi tarafından sağlanan şablonların yanı sıra kuruluşunuzun değiştirdiği veya oluşturduğu şablonları içerir. Sertifikasyon, ürün kapsamı, ülke, sektör, şablonu oluşturan kişi ve şablonun değerlendirme oluşturma için etkinleştirilip etkinleştirilmediğini temel alan bir şablon bulmak için filtreler uygulayabilirsiniz.
 
-Ayrıntılar sayfasını açmak için satırından bir şablon seçin. Bu sayfa şablonun açıklamasını ve sertifikasyon, kapsam ve denetim ayrıntıları hakkında daha fazla bilgi içerir. Bu sayfadan değerlendirme oluşturmak için uygun düğmeleri seçebilir, şablon verilerini Excel dışarı aktarabilir veya şablonu değiştirebilirsiniz.
+Ayrıntılar sayfasını açmak için satırından bir şablon seçin. Bu sayfa şablonun açıklamasını ve sertifikasyon, kapsam ve denetim ayrıntıları hakkında daha fazla bilgi içerir. Bu sayfadan değerlendirme oluşturmak, şablon verilerini Excel'e aktarmak veya şablonu değiştirmek için uygun düğmeleri seçebilirsiniz.
 
 ## <a name="create-an-assessment-template"></a>Değerlendirme şablonu oluşturma
 
@@ -124,7 +122,7 @@ Compliance Manager'da özel değerlendirmeler için kendi yeni şablonunuzu olu�
 
 ## <a name="modify-an-assessment-template"></a>Değerlendirme şablonunu değiştirme
 
-Uyumluluk Yöneticisi'nde değerlendirmelerle çalışırken, oluşturduğunuz bir değerlendirme şablonunu değiştirmek isteyebilirsiniz. bu işlem, şablon verilerinizi içeren biçimlendirilmiş bir Excel dosyasını karşıya yükleyebilmek için şablon oluşturma işlemine benzer. Değişiklik yapma ve hala korumak istediğiniz verileri koruma hakkında daha fazla bilgi edinmek için bkz. [Değerlendirme şablonunu değiştirme](compliance-manager-templates-modify.md).
+Uyumluluk Yöneticisi'nde değerlendirmelerle çalışırken, oluşturduğunuz bir değerlendirme şablonunu değiştirmek isteyebilirsiniz. bu işlem, şablon verilerinizle birlikte biçimlendirilmiş bir Excel dosyasını karşıya yükleyebilmek için şablon oluşturma işlemine benzer. Değişiklik yapma ve hala korumak istediğiniz verileri koruma hakkında daha fazla bilgi edinmek için bkz. [Değerlendirme şablonunu değiştirme](compliance-manager-templates-modify.md).
 
 ## <a name="extend-an-assessment-template"></a>Değerlendirme şablonunu genişletme
 
@@ -132,12 +130,12 @@ Uyumluluk Yöneticisi, mevcut bir şablona kendi denetimlerinizi ve iyileştirme
 
 ## <a name="format-assessment-template-data-in-excel"></a>Excel'de değerlendirme şablonu verilerini biçimlendirme
 
-Uyumluluk Yöneticisi'nde değerlendirme şablonları oluştururken, değiştirirken veya genişletirken, belirli bir biçim ve şema kullanan Excel elektronik tablolarla çalışırsınız. Dosyaların doğru içeri aktarılması için bu belirtimlere uyulmalıdır. Daha fazla bilgi için bkz. [Excel'de değerlendirme şablonu verilerini biçimlendirme](compliance-manager-templates-format-excel.md).
+Uyumluluk Yöneticisi'nde değerlendirme şablonları oluştururken, değiştirirken veya genişletirken, belirli bir biçim ve şema kullanan Excel elektronik tabloları ile çalışırsınız. Dosyaların doğru içeri aktarılması için bu belirtimlere uyulmalıdır. Daha fazla bilgi için bkz. [Excel'de değerlendirme şablonu verilerini biçimlendirme](compliance-manager-templates-format-excel.md).
 
 ## <a name="export-a-template"></a>Şablonu dışarı aktarma
 
 Şablonun tüm verilerini içeren bir Excel dosyasını dışarı aktarabilirsiniz. Değiştirmek için bir şablonu dışarı aktarmanız gerekir çünkü bu, [düzenleme ve değiştirme işleminde](compliance-manager-templates-modify.md) karşıya yüklediğiniz Excel dosyası olacaktır. Ayrıca, yeni bir özel şablon oluştururken şablonun verilerini kullanmak istiyorsanız başvuru için şablonu dışarı aktarabilirsiniz.
 
-Şablonunuzu dışarı aktarmak için şablon ayrıntıları sayfanıza gidin ve **Excel dışarı aktar** düğmesini seçin.
+Şablonunuzu dışarı aktarmak için şablon ayrıntıları sayfanıza gidin ve **Excel'e Aktar** düğmesini seçin.
 
 Uyumluluk Yöneticisi şablonundan genişlettiğiniz bir şablonu dışarı aktarırken, dışarı aktarılan dosyanın yalnızca şablona eklediğiniz öznitelikleri içereceğini unutmayın. Dışarı aktarılan dosya, Microsoft tarafından sağlanan özgün şablon verilerini içermez. Böyle bir rapor almak için [değerlendirme raporunu dışarı aktarma](compliance-manager-assessments.md#export-an-assessment-report) yönergelerine bakın.

@@ -16,16 +16,14 @@ ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 74da3ee1c2b3339a66ff205989dd978fdd00a530
-ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
+ms.openlocfilehash: fde4db2d646ccb9c7535096ec001c0371e78da8f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65396255"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632277"
 ---
 # <a name="get-started-with-information-barriers"></a>Bilgi engellerini kullanmaya başlama
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makalede, kuruluşunuzda bilgi engelleri (IB) ilkelerinin nasıl yapılandırıldığı açıklanır. Birkaç adım söz konusu olduğundan, IB ilkelerini yapılandırmaya başlamadan önce sürecin tamamını gözden geçirmeyi unutmayın.
 
@@ -46,11 +44,11 @@ IB'yi kullanmaya başlamadan önce Microsoft 365 aboneliğinizi ve tüm eklentil
 - Microsoft 365 E3/A3/A1 aboneliği + Microsoft 365 E5/A5 Uyumluluk eklentisi
 - Microsoft 365 E3/A3/A1 aboneliği + Microsoft 365 E5/A5 Insider Risk Management eklentisi
 
-Daha fazla bilgi için bkz[. güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
+Daha fazla bilgi için bkz. [Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
 
 [IB ilkelerini yönetmek](information-barriers-policies.md) için aşağıdaki rollerden birine atanmış olmanız gerekir:
 
-- Genel yönetici Microsoft 365
+- Microsoft 365 genel yöneticisi
 - Genel yönetici Office 365
 - Uyumluluk yöneticisi
 - IB Uyumluluk Yönetimi
@@ -61,7 +59,7 @@ Roller ve izinler hakkında daha fazla bilgi edinmek için bkz. [Office 365 Güv
 
 IB'yi yapılandırırken çeşitli nesneler ve kavramlarla çalışacaksınız.
 
-- **Kullanıcı hesabı öznitelikleri** Azure Active Directory (veya Exchange Online) içinde tanımlanır. Bu öznitelikler departman, iş unvanı, konum, ekip adı ve diğer iş profili ayrıntılarını içerebilir. Bu özniteliklere sahip segmentlere kullanıcı veya grup atayacaksınız.
+- **Kullanıcı hesabı öznitelikleri** Azure Active Directory'de (veya Exchange Online) tanımlanır. Bu öznitelikler departman, iş unvanı, konum, ekip adı ve diğer iş profili ayrıntılarını içerebilir. Bu özniteliklere sahip segmentlere kullanıcı veya grup atayacaksınız.
 - **Segmentler** , uyumluluk portalında veya seçilen grup veya kullanıcı hesabı özniteliklerini kullanan PowerShell kullanılarak tanımlanan grup veya kullanıcı kümeleridir. Ayrıntılar için [IB tarafından desteklenen özniteliklerin](information-barriers-attributes.md) listesine bakın.
 - **IB ilkeleri** , iletişim sınırlarını veya kısıtlamalarını belirler. IB ilkelerini tanımlarken iki tür ilke arasından seçim yapabilirsiniz:
   - *İlkeleri engelleme* , bir kesimin başka bir kesimle iletişim kurmasını engeller.
@@ -79,33 +77,33 @@ IB'yi yapılandırırken çeşitli nesneler ve kavramlarla çalışacaksınız.
 
 | **Adımlar** | **Nelerin dahil olduğu** |
 |:------|:----------------|
-| **1. Adım**: [Önkoşulların karşılandığından emin olun](#step-1-make-sure-prerequisites-are-met) | - Gerekli aboneliklere ve izinlere sahip olduğunuzu doğrulayın <br/>- Dizininizin kullanıcıları segmentlere ayırmaya yönelik veriler içerdiğini doğrulayın<br/>- [Microsoft Teams için ada göre aramayı](/microsoftteams/teams-scoped-directory-search) etkinleştirme<br/>- Denetim günlüğünün açık olduğundan emin olun<br/>- Exchange adres defteri ilkelerinin uygulanmadığından emin olun <br/>- Microsoft Teams için yönetici onayı sağlayın (adımlar dahildir) |
+| **1. Adım**: [Önkoşulların karşılandığından emin olun](#step-1-make-sure-prerequisites-are-met) | - Gerekli aboneliklere ve izinlere sahip olduğunuzu doğrulayın <br/>- Dizininizin kullanıcıları segmentlere ayırmaya yönelik veriler içerdiğini doğrulayın<br/>- [Microsoft Teams için ada göre aramayı](/microsoftteams/teams-scoped-directory-search) etkinleştirme<br/>- Denetim günlüğünün açık olduğundan emin olun<br/>- Exchange adres defteri ilkelerinin uygulanmadığından emin olun <br/>- Microsoft Teams için yönetici onayı sağlama (adımlar dahildir) |
 | **2. Adım**: [Kuruluşunuzdaki kullanıcıları segmentlere ayırma](#step-2-segment-users-in-your-organization) | - Hangi ilkelerin gerekli olduğunu belirleme<br/>- Tanımlayacak segmentlerin listesini oluşturma<br/>- Hangi özniteliklerin kullanılacağını belirleme<br/>- İlke filtreleri açısından segmentleri tanımlama |
 | **3. Adım**: [Bilgi engeli ilkeleri oluşturma](#step-3-create-ib-policies) | - İlkelerinizi oluşturma (henüz geçerli değildir)<br/>- İki tür arasından seçim yapın (engelle veya izin ver) |
 | **4. Adım**: [Bilgi engeli ilkelerini uygulama](#step-4-apply-ib-policies) | - İlkeleri etkin duruma ayarlama<br/>- İlke uygulamasını çalıştırma<br/>- İlke durumunu görüntüleme |
-| **5. Adım**: [SharePoint ve OneDrive ile ilgili bilgi engelleri için yapılandırma (isteğe bağlı)](#step-5-configuration-for-information-barriers-on-sharepoint-and-onedrive) | - IB'yi SharePoint ve OneDrive için yapılandırma |
+| **5. Adım**: [SharePoint ve OneDrive'da bilgi engelleri için yapılandırma (isteğe bağlı)](#step-5-configuration-for-information-barriers-on-sharepoint-and-onedrive) | - SharePoint ve OneDrive için IB yapılandırma |
 | **6. Adım**: [Bilgi engelleri modları (isteğe bağlı)](#step-6-information-barriers-modes) | - Varsa IB modlarını güncelleştirme |
 
 ## <a name="step-1-make-sure-prerequisites-are-met"></a>1. Adım: Önkoşulların karşılandığından emin olun
 
 Gerekli aboneliklere ve izinlere ek olarak, IB'yi yapılandırmadan önce aşağıdaki gereksinimlerin karşılandığından emin olun:
 
-- **Dizin verileri**: Kuruluşunuzun yapısının dizin verilerine yansıtıldığından emin olun. Bu eylemi gerçekleştirmek için kullanıcı hesabı özniteliklerinin (grup üyeliği, departman adı vb.) Azure Active Directory (veya Exchange Online) içinde doğru dolduruldığından emin olun. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
+- **Dizin verileri**: Kuruluşunuzun yapısının dizin verilerine yansıtıldığından emin olun. Bu eylemi gerçekleştirmek için kullanıcı hesabı özniteliklerinin (grup üyeliği, departman adı vb.) Azure Active Directory'de (veya Exchange Online) doğru dolduruldığından emin olun. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
   - [Bilgi engeli ilkeleri için öznitelikler](information-barriers-attributes.md)
   - [Azure Active Directory kullanarak kullanıcının profil bilgilerini ekleme veya güncelleştirme](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
   - [Office 365 PowerShell ile kullanıcı hesabı özelliklerini yapılandırma](../enterprise/configure-user-account-properties-with-microsoft-365-powershell.md)
 
-- **Kapsamlı dizin araması**: Kuruluşunuzun ilk IB ilkesini tanımlamadan önce, [Microsoft Teams'de kapsamlı dizin aramasını etkinleştirmeniz](/MicrosoftTeams/teams-scoped-directory-search) gerekir. IB ilkelerini ayarlamadan veya tanımlamadan önce kapsamlı dizin aramasını etkinleştirdikten sonra en az 24 saat bekleyin.
+- **Kapsamlı dizin araması**: Kuruluşunuzun ilk IB ilkesini tanımlamadan önce Microsoft [Teams'de kapsamlı dizin aramasını etkinleştirmeniz](/MicrosoftTeams/teams-scoped-directory-search) gerekir. IB ilkelerini ayarlamadan veya tanımlamadan önce kapsamlı dizin aramasını etkinleştirdikten sonra en az 24 saat bekleyin.
 
-- **Denetim günlüğünün etkin olduğunu doğrulayın**: IB ilke uygulamasının durumunu aramak için denetim günlüğünün açık olması gerekir. Denetim, Microsoft 365 kuruluşlar için varsayılan olarak etkindir. Bazı kuruluşlar belirli nedenlerle denetimi devre dışı bırakmış olabilir. Kuruluşunuzda denetim devre dışı bırakıldıysa, bunun nedeni başka bir yöneticinin kapatması olabilir. Bu adımı tamamlarken denetimi yeniden açmanın uygun olduğunu onaylamanızı öneririz. Daha fazla bilgi için bkz [. Denetim günlüğü aramasını açma veya kapatma](turn-audit-log-search-on-or-off.md).
+- **Denetim günlüğünün etkin olduğunu doğrulayın**: IB ilke uygulamasının durumunu aramak için denetim günlüğünün açık olması gerekir. Denetim, Microsoft 365 kuruluşları için varsayılan olarak etkindir. Bazı kuruluşlar belirli nedenlerle denetimi devre dışı bırakmış olabilir. Kuruluşunuzda denetim devre dışı bırakıldıysa, bunun nedeni başka bir yöneticinin kapatması olabilir. Bu adımı tamamlarken denetimi yeniden açmanın uygun olduğunu onaylamanızı öneririz. Daha fazla bilgi için bkz [. Denetim günlüğü aramasını açma veya kapatma](turn-audit-log-search-on-or-off.md).
 
 - **Mevcut Exchange Online adres defteri ilkelerini kaldırma**: IB ilkelerini tanımlayıp uygulamadan önce, kuruluşunuzdaki tüm Exchange Online adres defteri ilkelerini kaldırmanız gerekir. IB ilkeleri adres defteri ilkelerini temel alır ve mevcut ABP ilkeleri IB tarafından oluşturulan ABP'lerle uyumlu değildir. Mevcut adres defteri ilkelerinizi kaldırmak için bkz. [Exchange Online'da adres defteri ilkesini kaldırma](/exchange/address-books/address-book-policies/remove-an-address-book-policy). IB ilkeleri ve Exchange Online hakkında daha fazla bilgi için bkz. [Bilgi engelleri ve Exchange Online](information-barriers.md#information-barriers-and-exchange-online).
 
 - **PowerShell kullanarak yönetme (isteğe bağlı):** IB kesimleri ve ilkeleri Office 365 Güvenlik & Uyumluluğu PowerShell'de tanımlanabilir ve yönetilebilir. Bu makalede çeşitli örnekler sağlansa da, IB segmentlerini ve ilkelerini yapılandırmak ve yönetmek için PowerShell'i kullanmayı seçerseniz PowerShell cmdlet'lerini ve parametrelerini bilmeniz gerekir. Bu yapılandırma seçeneğini belirlerseniz Azure Active Directory PowerShell modülüne de ihtiyacınız olacaktır.
-  - [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell)
+  - [Güvenlik & Uyumluluğu PowerShell'e bağlanma](/powershell/exchange/connect-to-scc-powershell)
   - [Graph için Azure Active Directory PowerShell'i yükleme](/powershell/azure/active-directory/install-adv2)
 
-- **Microsoft Teams'de IB için yönetici onayı**: IB ilkeleriniz geçerli olduğunda, IB uyumsuz uyumluluk kullanıcılarını Gruplar'dan kaldırabilirler (örneğin, grupları temel alan Teams kanalları). Bu yapılandırma, kuruluşunuzun ilkeler ve düzenlemeler ile uyumlu kalmasını sağlamaya yardımcı olur. IB ilkelerinin Microsoft Teams beklendiği gibi çalışmasını sağlamak için aşağıdaki yordamı kullanın.
+- **Microsoft Teams'de IB için onay Yönetici**: IB ilkeleriniz hazır olduğunda, IB uyumsuz kullanıcıları Gruplar'dan kaldırabilirler (örneğin, grupları temel alan Teams kanalları). Bu yapılandırma, kuruluşunuzun ilkeler ve düzenlemeler ile uyumlu kalmasını sağlamaya yardımcı olur. IB ilkelerinin Microsoft Teams'de beklendiği gibi çalışmasını sağlamak için aşağıdaki yordamı kullanın.
 
    1. Önkoşul: [Graph için Azure Active Directory PowerShell'i yükleyin](/powershell/azure/active-directory/install-adv2).
 
@@ -161,7 +159,7 @@ Kuruluşunuzun dizin verilerinde segmentleri tanımlamak için hangi öznitelikl
 Uyumluluk portalında segmentleri tanımlamak için aşağıdaki adımları tamamlayın:
 
 1. Kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [uyumluluk portalında](https://compliance.microsoft.com) oturum açın.
-2. Uyumluluk portalında **Bilgi engelleriEgments'i** >  seçin.
+2. Uyumluluk portalında **Bilgi engelleri Segmentleri'ni** >  seçin.
 3. **Segmentler** sayfasında **Yeni segment'i** seçerek yeni bir segment oluşturun ve yapılandırın.
 4. **Ad** sayfasında, segment için bir ad girin. Bir segment oluşturulduktan sonra yeniden adlandıramazsınız.
 5. **İleri**'yi seçin.
@@ -247,7 +245,7 @@ Segmentlerin birbiriyle iletişim kurmasını engellemek istediğinizde iki ilke
 Uyumluluk portalında ilkeleri tanımlamak için aşağıdaki adımları tamamlayın:
 
 1. Kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [uyumluluk portalında](https://compliance.microsoft.com) oturum açın.
-2. Uyumluluk portalında **Bilgi engelleriİlkeler'i** >  seçin.
+2. Uyumluluk portalında **Bilgi engelleri İlkeleri'ni** >  seçin.
 3. **İlkeler** sayfasında İlke **oluştur'u** seçerek yeni bir IB ilkesi oluşturun ve yapılandırın.
 4. **Ad** sayfasında ilke için bir ad girin ve **İleri'yi** seçin.
 5. **Atanan segment** sayfasında **Segment seç'i** seçin. Bir segmenti ada göre aramak için arama kutusunu kullanın veya görüntülenen listeden segmenti seçmek için kaydırın. Seçili segmenti ilkeye eklemek için **Ekle'yi** seçin. Yalnızca bir segment seçebilirsiniz.
@@ -294,7 +292,7 @@ Bir segmentin yalnızca bir diğer segmentle iletişim kurmasına izin vermek is
 Uyumluluk portalında ilkeleri tanımlamak için aşağıdaki adımları tamamlayın:
 
 1. Kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [uyumluluk portalında](https://compliance.microsoft.com) oturum açın.
-2. Uyumluluk portalında **Bilgi engelleriİlkeler'i** >  seçin.
+2. Uyumluluk portalında **Bilgi engelleri İlkeleri'ni** >  seçin.
 3. **İlkeler** sayfasında İlke **oluştur'u** seçerek yeni bir IB ilkesi oluşturun ve yapılandırın.
 4. **Ad** sayfasında ilke için bir ad girin ve **İleri'yi** seçin.
 5. **Atanan segment** sayfasında **Segment seç'i** seçin. Bir segmenti ada göre aramak için arama kutusunu kullanın veya görüntülenen listeden segmenti seçmek için kaydırın. Seçili segmenti ilkeye eklemek için **Ekle'yi** seçin. Yalnızca bir segment seçebilirsiniz.
@@ -341,7 +339,7 @@ IB ilkeleri etkin duruma ayarlayıp ilkeleri uygulayana kadar geçerli olmaz.
 Uyumluluk portalında ilkeleri uygulamak için aşağıdaki adımları tamamlayın:
 
 1. Kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [uyumluluk portalında](https://compliance.microsoft.com) oturum açın.
-2. Uyumluluk portalında **Bilgi engelleriİlke** >  **uygulaması'nı** seçin.
+2. Uyumluluk portalında **Bilgi engelleri** > **İlkesi uygulaması'nı** seçin.
 3. **İlkeler uygulaması** sayfasında, Kuruluşunuzdaki tüm IB ilkelerini uygulamak için **Tüm ilkeleri uygula'yı** seçin.
 
     >[!NOTE]
@@ -388,28 +386,28 @@ IB ilkelerinizi yönetmenize yardımcı olacak kaynaklar sağlanır.
 - IB ilkelerini düzenlemek, durdurmak veya kaldırmak için bkz. [Bilgi engeli ilkelerini yönetme](information-barriers-edit-segments-policies.md).
 - IB'de bir sorun olursa bkz [. Bilgi engelleriyle ilgili sorunları giderme](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting).
 
-## <a name="step-5-configuration-for-information-barriers-on-sharepoint-and-onedrive"></a>5. Adım: SharePoint ve OneDrive ile ilgili bilgi engelleri için yapılandırma
+## <a name="step-5-configuration-for-information-barriers-on-sharepoint-and-onedrive"></a>5. Adım: SharePoint ve OneDrive'da bilgi engelleri için yapılandırma
 
-IB'yi SharePoint ve OneDrive için yapılandırıyorsanız, bu hizmetlerde IB'yi etkinleştirmeniz gerekir. IB'yi Microsoft Teams için yapılandırıyorsanız bu hizmetlerde IB'yi de etkinleştirmeniz gerekir. Microsoft Teams ekipte bir ekip oluşturulduğunda, otomatik olarak bir SharePoint sitesi oluşturulur ve dosya deneyimi için Microsoft Teams ile ilişkilendirilir. IB ilkeleri bu yeni SharePoint sitesinde ve dosyalarında varsayılan olarak kabul edilmez.
+IB'yi SharePoint ve OneDrive için yapılandırıyorsanız, bu hizmetlerde IB'yi etkinleştirmeniz gerekir. Microsoft Teams için IB yapılandırıyorsanız bu hizmetlerde IB'yi de etkinleştirmeniz gerekir. Microsoft Teams ekibinde bir ekip oluşturulduğunda, dosya deneyimi için otomatik olarak bir SharePoint sitesi oluşturulur ve Microsoft Teams ile ilişkilendirilir. IB ilkeleri bu yeni SharePoint sitesinde ve dosyalarında varsayılan olarak kabul edilmez.
 
-SharePoint ve OneDrive IB'yi etkinleştirmek için SharePoint [bilgi engellerini kullanma](/sharepoint/information-barriers) makalesindeki yönergeleri ve adımları izleyin.
+SharePoint ve OneDrive'da IB'yi etkinleştirmek için [SharePoint ile bilgi engellerini kullanma](/sharepoint/information-barriers) makalesindeki yönergeleri ve adımları izleyin.
 
 ## <a name="step-6-information-barriers-modes"></a>6. Adım: Bilgi engelleri modları
 
-Modlar, kaynağın IB moduna göre Microsoft 365 kaynağın erişimini, paylaşımını ve üyeliğini güçlendirmeye yardımcı olabilir. Modlar Microsoft 365 Grupları, Microsoft Teams, OneDrive ve SharePoint sitelerinde desteklenir ve yeni veya mevcut IB yapılandırmanızda otomatik olarak etkinleştirilir.
+Modlar, kaynağın IB moduna göre Bir Microsoft 365 kaynağına erişimi, paylaşımı ve üyeliğini güçlendirmeye yardımcı olabilir. Modlar Microsoft 365 Grupları, Microsoft Teams, OneDrive ve SharePoint sitelerinde desteklenir ve yeni veya mevcut IB yapılandırmanızda otomatik olarak etkinleştirilir.
 
-Aşağıdaki IB modları Microsoft 365 kaynaklarda desteklenir:
+Aşağıdaki IB modları Microsoft 365 kaynaklarında desteklenir:
 
 | **Mod** | **Açıklama** | **Örnek** |
 |:-----|:------------|:--------|
-| **Açık** | Microsoft 365 kaynağıyla ilişkilendirilmiş IB ilkeleri veya kesimleri yoktur. Herkes kaynağın üyesi olmaya davet edilebilir. | Kuruluşunuz için piknik etkinliği için oluşturulmuş bir ekip sitesi. |
-| **Sahip Denetimli (önizleme)** | Microsoft 365 kaynağının IB ilkesi, kaynak sahibinin IB ilkesinden belirlenir. Kaynak sahipleri, IB ilkelerine göre herhangi bir kullanıcıyı kaynağa davet edebilir. Şirketiniz, sahibi tarafından denetlenen uyumsuz segment kullanıcıları arasında işbirliğine izin vermek istediğinde bu mod kullanışlıdır. IB ilkesine göre yalnızca kaynak sahibi yeni üyeler ekleyebilir. | İk Başkan Yardımcısı, Satış ve Araştırma VM'leri ile işbirliği yapmak istiyor. Hem Satış hem de Araştırma segmenti kullanıcılarını aynı siteye eklemek için IB modu *Sahip Moded* ile ayarlanan yeni bir SharePoint sitesi. Kaynağa uygun üyelerin eklendiğinden emin olmak sahibin sorumluluğundadır. |
+| **Açık** | Microsoft 365 kaynağıyla ilişkilendirilmiş IB ilkeleri veya segmentleri yoktur. Herkes kaynağın üyesi olmaya davet edilebilir. | Kuruluşunuz için piknik etkinliği için oluşturulmuş bir ekip sitesi. |
+| **Sahip Denetimli (önizleme)** | Microsoft 365 kaynağının IB ilkesi, kaynak sahibinin IB ilkesinden belirlenir. Kaynak sahipleri, IB ilkelerine göre herhangi bir kullanıcıyı kaynağa davet edebilir. Şirketiniz, sahibi tarafından denetlenen uyumsuz segment kullanıcıları arasında işbirliğine izin vermek istediğinde bu mod kullanışlıdır. IB ilkesine göre yalnızca kaynak sahibi yeni üyeler ekleyebilir. | İk Başkan Yardımcısı, Satış ve Araştırma VM'leri ile işbirliği yapmak istiyor. Hem Satış hem de Araştırma segmenti kullanıcılarını aynı siteye eklemek için IB modu *Sahibi Moded* ile ayarlanan yeni bir SharePoint sitesi. Kaynağa uygun üyelerin eklendiğinden emin olmak sahibin sorumluluğundadır. |
 | **Örtülü** | Microsoft 365 kaynağının IB ilkesi veya kesimleri, kaynak üyeleri IB ilkesinden devralınır. Sahibi, kaynağın mevcut üyeleriyle uyumlu olduğu sürece üye ekleyebilir. Bu mod, Microsoft Teams için varsayılan IB modudur. | Satış segmenti kullanıcısı, kuruluştaki diğer uyumlu segmentlerle işbirliği yapmak için bir Microsoft Teams ekibi oluşturur. |
 | **Açık** | Microsoft 365 kaynağının IB ilkesi, kaynakla ilişkili segmentlere göredir. Kaynak sahibi veya SharePoint yöneticisi, kaynak üzerindeki segmentleri yönetebilir.  | Yalnızca Satış segmenti üyelerinin, Satış segmentini siteyle ilişkilendirerek işbirliği yapmaları için oluşturulmuş bir site.   |
 
 IB modları ve hizmetler arasında nasıl yapılandırıldıkları hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [Bilgi engeli modları ve Microsoft Teams](/microsoftteams/information-barriers-in-teams)
+- [Bilgi engelleri modları ve Microsoft Teams](/microsoftteams/information-barriers-in-teams)
 - [Bilgi engelleri modları ve OneDrive](/onedrive/information-barriers)
 - [Bilgi engelleri modları ve SharePoint](/sharepoint/information-barriers)
 
@@ -468,6 +466,6 @@ Cmdlet tamamlandığında Contoso, sektör gereksinimleriyle uyumludur.
 ## <a name="resources"></a>Kaynaklar
 
 - [Bilgi engelleri hakkında daha fazla bilgi edinme](information-barriers.md)
-- [Microsoft Teams bilgi engelleri hakkında daha fazla bilgi edinin](/MicrosoftTeams/information-barriers-in-teams)
-- [SharePoint Online'da bilgi engelleri hakkında daha fazla bilgi edinin](/sharepoint/information-barriers)
-- [OneDrive bilgi engelleri hakkında daha fazla bilgi edinin](/onedrive/information-barriers)
+- [Microsoft Teams'de bilgi engelleri hakkında daha fazla bilgi edinin](/MicrosoftTeams/information-barriers-in-teams)
+- [SharePoint Online'daki bilgi engelleri hakkında daha fazla bilgi edinin](/sharepoint/information-barriers)
+- [OneDrive'daki bilgi engelleri hakkında daha fazla bilgi edinin](/onedrive/information-barriers)

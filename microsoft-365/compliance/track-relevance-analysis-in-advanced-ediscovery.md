@@ -16,19 +16,17 @@ search.appverid:
 - MET150
 ms.assetid: 3ab1e2c3-28cf-4bf5-b0a8-c0222f32bdf5
 ROBOTS: NOINDEX, NOFOLLOW
-description: eBulma'daki (Premium) durum sorunları için İlgi eğitim durumunu ve sonuçlarını görüntülemeyi ve yorumlamayı öğrenin.
-ms.openlocfilehash: dd2eecbcd347125b1728851d873068b37f82aced
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: eBulma (Premium) ile ilgili durum sorunları için İlgi eğitim durumunu ve sonuçlarını görüntülemeyi ve yorumlamayı öğrenin.
+ms.openlocfilehash: dce726553d5664714f9c479113ae00abd91aafff
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093997"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627359"
 ---
 # <a name="track-relevance-analysis-in-ediscovery-premium"></a>eBulma'da İlgi analizini izleme (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
   
-Microsoft Purview eBulma'da (Premium), İlgi İzleme sekmesi Etiket sekmesinde gerçekleştirilen İlgi eğitiminin hesaplanmış geçerliliğini görüntüler ve İlgi alanındaki yinelemeli eğitim sürecinde atılması gereken sonraki adımı gösterir. 
+Microsoft Purview eKeşif (Premium) içinde İlgi İzleme sekmesi, Etiket sekmesinde gerçekleştirilen İlgi eğitiminin hesaplanmış geçerliliğini görüntüler ve İlgi'deki yinelemeli eğitim sürecinde atlanacak sonraki adımı gösterir. 
   
 ## <a name="tracking-relevance-training-status"></a>İlgi eğitim durumunu izleme
 
@@ -108,11 +106,11 @@ Dosya etiketlemede tutarsızlıklar varsa, bu çözümlemeyi etkileyebilir. Sonu
   
 ![İlgi İzleme etiketleme özeti.](../media/0ec906fc-bc84-4245-a964-fb3ca37891db.png)
   
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 Anahtar sözcük, bir dosyanın ilgili olup olmadığının önemli bir göstergesi olarak eBulma (Premium) tarafından tanımlanan bir dosyadaki benzersiz bir dize, sözcük, tümcecik veya sözcük dizisidir. "Dahil Et" sütunları, İlgili olarak etiketlenen dosyalardaki anahtar sözcük ve ağırlıklar, "Hariç Tut" sütunları ise uygun değil olarak etiketlenen dosyalarda anahtar sözcükleri ve ağırlıkları listeler.
   
-eBulma (Premium) negatif veya pozitif anahtar sözcük ağırlık değerleri atar. Ağırlık ne kadar yüksek olursa, Batch hesaplaması sırasında anahtar sözcüğün görüntülendiği bir dosyaya daha yüksek bir İlgi puanı atanma olasılığı o kadar yüksek olur.
+eBulma (Premium), negatif veya pozitif anahtar sözcük ağırlık değerleri atar. Ağırlık ne kadar yüksek olursa, Batch hesaplaması sırasında anahtar sözcüğün görüntülendiği bir dosyaya daha yüksek bir İlgi puanı atanma olasılığı o kadar yüksek olur.
   
 EBulma (Premium) anahtar sözcük listesi, bir uzman tarafından oluşturulan bir listeyi tamamlamak veya dosya gözden geçirme sürecinin herhangi bir noktasında dolaylı bir akıl sağlığı denetimi olarak kullanılabilir.
   
@@ -130,7 +128,7 @@ EBulma (Premium) anahtar sözcük listesi, bir uzman tarafından oluşturulan bi
 
 - **Uyarı**: Birçok dosya tutarsız olarak etiketlenebilir. (Kırmızı ışık görüntüleniyor)
 
-**Eğitim ilerleme durumu grafiği**: F ölçüsü değerine kıyasla birçok İlgi eğitim döngüsünden sonra İlgi eğitimi kararlılığının derecesini gösterir. Grafikte soldan sağa doğru ilerlerken güvenilirlik aralığı daralıyor ve F ölçüsüyle birlikte eBulma (Premium) İlgi ile birlikte, İlgi eğitim sonuçlarının ne zaman iyileştirileceğini belirlemek için kararlılığı belirlemek için kullanılıyor.
+**Eğitim ilerleme durumu grafiği**: F ölçüsü değerine kıyasla birçok İlgi eğitim döngüsünden sonra İlgi eğitimi kararlılığının derecesini gösterir. Grafikte soldan sağa doğru ilerlerken güvenilirlik aralığı daralıyor ve F ölçüsüyle birlikte eBulma (Premium) İlgisi ile birlikte ilgi eğitim sonuçlarının ne zaman iyileştirileceğini belirlemek için kararlılığı belirlemek için kullanılıyor.
   
 > [!NOTE]
 > İlgi, Yakalama işlevinin Duyarlık'ın iki katı ağırlık aldığı F2 ölçümünü kullanır. Yüksek zenginliğe (%25'in üzerinde) sahip durumlarda İlgi F1 (1:1 oran) kullanır. F ölçüsü oranı İlgi **kurulumu** \> **Gelişmiş ayarlar** bölümünde yapılandırılabilir.

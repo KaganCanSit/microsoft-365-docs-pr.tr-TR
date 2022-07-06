@@ -12,12 +12,12 @@ search.appverid: ''
 ms.localizationpriority: medium
 ROBOTS: ''
 description: Microsoft 365 çözümü kullanarak sözleşme dosyalarını tanımlamak ve verileri ayıklamak için SharePoint Syntex kullanmayı öğrenin.
-ms.openlocfilehash: 7d2874260ce7a307aa42c67ba571104ed4c4da87
-ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
+ms.openlocfilehash: 2d9967cc432cb4d75bebbc67b7b9b0a812baa031
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65368099"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631991"
 ---
 # <a name="step-1-use-sharepoint-syntex-to-identify-contract-files-and-extract-data"></a>Adım 1. Sözleşme dosyalarını tanımlamak ve verileri ayıklamak için SharePoint Syntex kullanma
 
@@ -35,7 +35,7 @@ Belge anlama modelleri, hem örnek dosyalar içeren bir model eğittiğinizde he
 
 3. Modelinizde, her sözleşmeden belirli veri parçalarını çekmek için [bir ayıklayıcı oluşturabilirsiniz](create-an-extractor.md) . Örneğin, her sözleşme için en çok endişelendiğiniz bilgiler müşterinin kim olduğu, yüklenicinin adı ve toplam maliyettir.
 
-4. Modelinizi başarıyla oluşturduktan sonra [SharePoint belge kitaplığına uygulayın](apply-a-model.md). Belgeleri belge kitaplığına yüklerken, belge anlama modeliniz çalışır ve modelinizde tanımladığınız sözleşme içerik türüyle eşleşen tüm dosyaları tanımlar ve sınıflandırır. Sözleşme olarak sınıflandırılan tüm dosyalar özel kitaplık görünümünde görüntülenir. Dosyalar, ayıklayıcınızda tanımladığınız her sözleşmedeki değerleri de görüntüler.
+4. Modelinizi başarıyla oluşturduktan sonra [sharepoint belge kitaplığına uygulayın](apply-a-model.md). Belgeleri belge kitaplığına yüklerken, belge anlama modeliniz çalışır ve modelinizde tanımladığınız sözleşme içerik türüyle eşleşen tüm dosyaları tanımlar ve sınıflandırır. Sözleşme olarak sınıflandırılan tüm dosyalar özel kitaplık görünümünde görüntülenir. Dosyalar, ayıklayıcınızda tanımladığınız her sözleşmedeki değerleri de görüntüler.
 
    ![Belge kitaplığındaki sözleşmeler.](../media/content-understanding/doc-lib-solution.png)
 
@@ -65,15 +65,15 @@ Belge anlama modelleri, hem örnek dosyalar içeren bir model eğittiğinizde he
 
 Sözleşme belgesi olan en az beş örnek dosya ve sözleşme belgesi olmayan bir örnek dosya (örneğin, çalışma bildirimi) eklemeniz gerekir. 
 
-1. **Modeller > Sözleşme** sayfasında **, Anahtar eylemleriEkle** >  **örnek dosyalar'ın** altında **Dosya ekle'yi** seçin.
+1. **Modeller > Sözleşme** sayfasında **, Anahtar eylemleri** > **Örnek dosyalar ekle'nin** altında **Dosya ekle'yi** seçin.
 
    ![Örnek dosya ekle seçeneğinin vurgulandığı Sözleşmeler sayfasını gösteren ekran görüntüsü.](../media/content-understanding/key-actions-add-example-files.png)
 
-2. **Modelinizin örnek dosyalarını seçin** sayfasında Sözleşme klasörünü açın, kullanmak istediğiniz dosyaları seçin ve ardından **Ekle'yi** seçin. Orada örnek dosyalarınız yoksa, eklemek **için Upload'ı** seçin.
+2. **Modelinizin örnek dosyalarını seçin** sayfasında Sözleşme klasörünü açın, kullanmak istediğiniz dosyaları seçin ve ardından **Ekle'yi** seçin. Orada örnek dosyalarınız yoksa karşıya **yükle'yi** seçerek bunları ekleyin.
 
 #### <a name="label-the-files-as-positive-or-negative-examples"></a>Dosyaları pozitif veya negatif örnekler olarak etiketleme
 
-1. **Modeller > Sözleşme** sayfasında **, Anahtar eylemleri** >  **Dosyaları sınıflandırma ve eğitimi çalıştırma** altında **Sınıflandırıcıyı eğit'i** seçin.
+1. **Modeller > Sözleşme** sayfasında **, Önemli eylemler** > **Dosyaları sınıflandır ve eğitimi çalıştır'ın** altında **Sınıflandırıcıyı eğit'i** seçin.
 
    ![Dosyaları sınıflandır ve eğitim çalıştır seçeneğinin vurgulandığı Sözleşmeler sayfasını gösteren ekran görüntüsü.](../media/content-understanding/key-actions-classify-files.png)
 
@@ -117,7 +117,7 @@ Sözleşme modelinizi daha önce görmediği örnek dosyalarda test edebilirsini
 
 ### <a name="create-and-train-an-extractor"></a>Ayıklayıcı oluşturma ve eğitma
 
-1. **Modeller > Sözleşme** sayfasında **, Önemli eylemler** >  **Ayıklayıcı oluştur ve eğit'in** altında **Ayıklayıcı oluştur'u** seçin.
+1. **Modeller > Sözleşme** sayfasındaki **Önemli eylemler** > **Ayıklayıcı oluştur ve eğit'in** altında **Ayıklayıcı oluştur'u** seçin.
 
    ![Ayıklayıcı oluştur ve eğit seçeneğinin vurgulandığı Sözleşmeler sayfasını gösteren ekran görüntüsü.](../media/content-understanding/key-actions-create-extractors.png)
 
@@ -149,7 +149,7 @@ Varlık biçiminin kendisi ve örnek dosyalarda sahip olabileceği çeşitlemele
 - 14 Ekim 2019, Cumartesi
 - 14 Ekim 2019 Pazartesi
 
-*Sözleşme Başlangıç Tarihi'ni* tanımlamaya yardımcı olmak için bir desen açıklaması oluşturabilirsiniz.
+*Sözleşme Başlangıç Tarihi'ni* tanımlamaya yardımcı olmak için bir açıklama oluşturabilirsiniz.
 
 1. **Açıklamalar** bölümünde **Yeni'yi** ve ardından **Boş'ı** seçin.
 
@@ -157,7 +157,7 @@ Varlık biçiminin kendisi ve örnek dosyalarda sahip olabileceği çeşitlemele
 
     a. **Ad** alanına açıklamanın adını yazın (*Tarih* gibi).
 
-    b. **Açıklama türü** alanında **Desen listesi'ni** seçin.
+    b. **Açıklama türü** alanında **Tümcecik listesi'ni** seçin.
 
     c. **Değer** alanında, örnek dosyalarda göründükleri şekilde tarih çeşitlemesi sağlayın. Örneğin, 00.00.0000 olarak görünen tarih biçimleriniz varsa, belgelerinizde görünen çeşitlemeleri girersiniz, örneğin:
 
@@ -182,7 +182,7 @@ Sözleşme modelinizi daha önce görmediği örnek dosyalarda test edebilirsini
 
 Modelinizi bir SharePoint belge kitaplığına uygulamak için:
 
-1. **Modeller > Sözleşme** sayfasında **, Anahtar** **eylemleriUygulamalara** >  model **uygulama'nın altında Modeli uygula'yı** seçin.
+1. **Modeller > Sözleşme** sayfasında, **Anahtar eylemleri** > **Modeli kitaplıklara uygula'nın** altında **Modeli uygula'yı** seçin.
 
    ![Modeli kitaplıklara uygula seçeneğinin vurgulandığı Sözleşmeler sayfasını gösteren ekran görüntüsü.](../media/content-understanding/key-actions-apply-model.png)
 
@@ -197,11 +197,11 @@ Modelinizi bir SharePoint belge kitaplığına uygulamak için:
 
 5. Modeli kitaplığa uygulamak için **Ekle'yi** seçin.
 
-6. **Modeller > Sözleşmesi** sayfasının **Bu modele sahip kitaplıklar** bölümünde, listelenen SharePoint sitesinin URL'sini görürsünüz.
+6. **Modeller > Sözleşmesi** sayfasının **Bu modele sahip kitaplıklar** bölümünde SharePoint sitesinin URL'sini listelenmiş olarak görürsünüz.
 
     ![Bu modele sahip Kitaplıklar bölümünü gösteren Sözleşme giriş sayfasının ekran görüntüsü.](../media/content-understanding/contract-libraries-with-this-model.png)
 
-7. **Ayarlar** >  **Library ayarları** altında:
+7. **Ayarlar** > **Kitaplığı ayarları** altında:
 
    - **Durum** adlı bir sütun ekleyin ve sütun türü olarak **Seçim'i** seçin.
    - **Gözden geçirme**, **Onaylandı** ve **Reddedildi** değerlerini uygulayın.
@@ -210,4 +210,4 @@ Modeli belge kitaplığına uyguladıktan sonra, belgeleri siteye yüklemeye ba�
 
 ## <a name="next-step"></a>Sonraki adım
 
-[2. Adım. Sözleşme yönetimi kanalınızı oluşturmak için Microsoft Teams kullanma](solution-manage-contracts-step2.md)
+[2. Adım. Sözleşme yönetim kanalınızı oluşturmak için Microsoft Teams'i kullanma](solution-manage-contracts-step2.md)

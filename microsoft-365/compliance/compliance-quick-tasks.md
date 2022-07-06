@@ -16,16 +16,14 @@ ms.custom:
 - admindeeplinkDEFENDER
 - intro-get-started
 ms.localizationpriority: medium
-ms.openlocfilehash: cb8471ffea418ac47921777a0ee9594fa73fe4ac
-ms.sourcegitcommit: a5e75d7f7651313818bd2de292d5c38b290d8975
+ms.openlocfilehash: 5e5b0aa9efb5d00602bba39ca18ef582cf34271a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65930229"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632651"
 ---
 # <a name="quick-tasks-for-getting-started-with-compliance-in-microsoft-purview"></a>Microsoft Purview'da uyumlulukla çalışmaya başlamaya yönelik hızlı görevler
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview'u kullanmaya yeni başladıysanız ve nereden başlayacağınızı merak ediyorsanız, bu makale temel bilgiler hakkında rehberlik sağlar ve önemli uyumluluk görevlerinin önceliklerini verir. Bu makale verilerinizi yönetmeye ve izlemeye, bilgileri korumaya ve iç riskleri en aza indirmeye hızlı bir şekilde başlamanıza yardımcı olur.
 
@@ -35,7 +33,7 @@ Bu temel uyumluluk görevlerini tamamladıktan sonra, ek Microsoft Purview çöz
 
 ## <a name="task-1-configure-compliance-permissions"></a>Görev 1: Uyumluluk izinlerini yapılandırma
 
-İçeriği görüntülemek ve yönetim görevlerini gerçekleştirmek için kuruluşunuzda kimlerin Microsoft Purview uyumluluk portalına erişimi olduğunu yönetmek önemlidir. Microsoft 365, uyumluluk ve Microsoft Purview uyumluluk portalında bulunan araçları kullanmaya özgü yönetim rolleri sağlar.
+kuruluşunuzda kimlerin içeriği görüntülemek ve yönetim görevlerini gerçekleştirmek için Microsoft Purview uyumluluk portalı erişimi olduğunu yönetmek önemlidir. Microsoft 365, uyumluluk ve Microsoft Purview uyumluluk portalı dahil edilen araçları kullanmaya özgü yönetim rolleri sağlar.
 
 Kuruluşunuzdaki kişilere bu görevleri gerçekleştirebilmeleri ve yetkisiz kişilerin sorumlulukları dışındaki alanlara erişmesini önlemek için uyumluluk izinleri atayarak başlayın. Microsoft 365'e dahil edilen uyumluluk çözümlerini yapılandırmaya ve uygulamaya başlamadan önce uygun kişileri **Uyumluluk veri yöneticisine** ve **Uyumluluk yöneticisi** yönetici rollerine atadığınızdan emin olmak istersiniz. Ayrıca, Uyumluluk Yöneticisi'nde verileri görüntülemek için kullanıcıları Azure Active Directory genel okuyucu rolüne atamanız gerekir.
 
@@ -52,7 +50,7 @@ Uyumluluk Yöneticisi'ne başlamaya yönelik adım adım yönergeler için bkz. 
 > [!IMPORTANT]
 > Güvenlik ve uyumluluk çoğu kuruluş için sıkı bir şekilde tümleşiktir. Kuruluşunuzun hem güvenlik hem de uyumluluk açısından derinlemesine bir savunma yaklaşımı sağlamaya yardımcı olmak için temel güvenlik, tehdit koruması ve kimlik ve erişim yönetimi alanlarını ele almaları önemlidir.
 >
-> [Microsoft 365](/microsoft-365/security/defender/microsoft-secure-score) <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Defender portalında Microsoft 365</a> Güvenli Puanınızı denetleyin ve aşağıdaki makalelerde açıklanan görevleri tamamlayın:
+> <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında</a> [Microsoft 365 Güvenli Puanınızı](/microsoft-365/security/defender/microsoft-secure-score) denetleyin ve aşağıdaki makalelerde özetlenen görevleri tamamlayın:
 >
 > - [Güvenlik yol haritası - İlk 30 gün, 90 gün ve sonrası için en önemli öncelikler](/microsoft-365/security/office-365-security/security-roadmap)
 > - [Güvenlik ekiplerinin evden çalışmayı desteklemesi için en önemli 12 görev](/microsoft-365/security/top-security-tasks-for-remote-work)
@@ -152,7 +150,7 @@ Kuruluşunuzun verilerinde yer alan bilgilere göre hassas bilgi türlerini tan�
 
 ### <a name="prevent-data-loss"></a>Veri kaybını önleme
 
-[Microsoft Purview Veri Kaybı Önleme (DLP) ilkeleri](/microsoft-365/compliance/dlp-learn-about-dlp) , Microsoft 365 kuruluşunuz genelinde hassas bilgileri tanımlamanıza, izlemenize ve otomatik olarak korumanıza olanak sağlar. Microsoft hizmetlerindeki hassas öğeleri tanımlamak, hassas öğelerin yanlışlıkla paylaşılmasını önlemek ve kullanıcıların iş akışlarını kesintiye uğratmadan uyumlu kalmayı öğrenmelerine yardımcı olmak için DLP ilkelerini kullanın.
+[Microsoft Purview Veri Kaybı Önleme (DLP) ilkeleri](/microsoft-365/compliance/dlp-learn-about-dlp), Microsoft 365 kuruluşunuz genelinde hassas bilgileri tanımlamanıza, izlemenize ve otomatik olarak korumanıza olanak sağlar. Microsoft hizmetlerindeki hassas öğeleri tanımlamak, hassas öğelerin yanlışlıkla paylaşılmasını önlemek ve kullanıcıların iş akışlarını kesintiye uğratmadan uyumlu kalmayı öğrenmelerine yardımcı olmak için DLP ilkelerini kullanın.
 
 DLP ilkelerini yapılandırmaya yönelik adım adım yönergeler için [DLP ilkesi oluşturma, test etme ve ayarlama](/microsoft-365/compliance/create-test-tune-dlp-policy). Veri kaybı yönetimi lisans bilgileri için bkz. [Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#office-365-data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business).
 
