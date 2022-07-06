@@ -17,12 +17,12 @@ ms.collection:
 description: Yöneticiler iyi ve kötü iletileri, URL'leri, e-posta eklerini ve yöneticileri analiz için Microsoft'a bildirmenin farklı yollarını öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 4c967eec1f0bb13523c3e8bdbe2f7a312f35ef27
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 071e6329e16ecfce0e55649869d93ff31dfc9664
+ms.sourcegitcommit: 4a1efedd15146744511378a44a307d44b16f3fb5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/06/2022
-ms.locfileid: "66621105"
+ms.locfileid: "66644017"
 ---
 # <a name="report-items-to-microsoft"></a>Öğeleri Microsoft'a bildirme
 
@@ -39,11 +39,11 @@ Ayrıca, Uç Nokta için Microsoft Defender yöneticileri olan Microsoft 365 kur
 
 |Yöntem|Açıklama|
 |---|---|
-|[Şüpheli istenmeyen posta, kimlik avı, URL'ler ve e-posta eklerini Microsoft'a göndermek için Gönderimler portalını kullanın](admin-submission.md)|Exchange Online posta kutuları olan kuruluşlardaki yöneticiler için önerilen raporlama yöntemi (tek başına EOP'de kullanılamaz).|
+|[Şüpheli istenmeyen postaları, kimlik avı, URL'leri ve dosyaları Microsoft'a göndermek için Gönderimler portalını kullanın](admin-submission.md)|Exchange Online posta kutuları olan kuruluşlardaki yöneticiler için önerilen raporlama yöntemi (tek başına EOP'de kullanılamaz).|
 |[Rapor İletisini veya Rapor Kimlik Avı eklentilerini etkinleştirme](enable-the-report-message-add-in.md)|Outlook ve Web üzerinde Outlook (eski adıyla Outlook Web App) ile çalışır. <br/><br/> Aboneliğinize bağlı olarak, kullanıcıların eklentilerle bildirdiği iletiler [Yönetici Gönderimler portalında](admin-submission.md), [Otomatik araştırma ve yanıt (AIR) sonuçlarında](air-view-investigation-results.md), [Kullanıcı tarafından bildirilen iletiler raporunda](view-email-security-reports.md#user-reported-messages-report) ve [Gezgin'de](threat-explorer-views.md#email--submissions) kullanılabilir. <br/><br/> Bildirilen iletileri, belirttiğiniz bir posta kutusuna kopyalanacak veya yeniden yönlendirilecek şekilde yapılandırabilirsiniz. Daha fazla bilgi için bkz. [Kullanıcı gönderim ilkeleri](user-submission.md).
 |[Outlook'ta yanlış pozitifleri ve yanlış negatifleri bildirme](report-false-positives-and-false-negatives.md)|Rapor İletisi özelliğini kullanarak hatalı pozitif sonuçları (engellenmiş veya gereksiz klasöre gönderilmiş iyi e-posta) ve hatalı negatifleri (gelen kutusuna teslim edilen istenmeyen e-posta veya kimlik avı) Exchange Online Protection (EOP) adresine gönderin.|
 |[Kullanıcıların Microsoft'a ne bildirdiğini görmek için posta akışı kurallarını kullanma](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-see-what-users-are-reporting-to-microsoft)|Kullanıcılar analiz için Microsoft'a ileti bildirdiğinde size bildirimde bulunmanızı sağlayan bir posta akışı kuralı (taşıma kuralı olarak da bilinir) oluşturmayı öğrenin.|
-|[Şüpheli dosyaları analiz için Microsoft'a gönderme](submitting-malware-and-non-malware-to-microsoft-for-analysis.md)|Ekleri ve diğer dosyaları göndermek için Microsoft Güvenlik Zekası sitesini kullanın.|
+|[Kötü amaçlı yazılımları ve kötü amaçlı olmayan yazılımları analiz için Microsoft'a gönderme](submitting-malware-and-non-malware-to-microsoft-for-analysis.md)|Ekleri ve diğer dosyaları göndermek için Microsoft Güvenlik Zekası sitesini kullanın.|
 
 > [!NOTE]
 > Bir e-posta varlığını Microsoft'a bildirdiğinizde, sürekli algoritma incelemelerimize dahil etmek için e-postayla ilişkili her şeyin bir kopyasını oluştururuz. Bu kopya e-posta içeriğini, e-posta üst bilgilerini ve e-posta yönlendirmeyle ilgili verileri içerir. İletideki ekler de eklenir.

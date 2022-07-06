@@ -14,21 +14,19 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: aed65bcd-0a4f-43e9-b5e5-b98cc376bdf8
-description: eBulma'daki (Premium) Karar Ver sekmesinin, servis talebi dosyalarının gözden geçirme kümesinin doğru boyutunu belirlemenize yardımcı olabilecek verileri nasıl sağladığını öğrenin.
+description: eBulma (Premium) içindeki Karar Ver sekmesinin, servis talebi dosyalarının gözden geçirme kümesinin doğru boyutunu belirlemenize yardımcı olabilecek verileri nasıl sağladığını öğrenin.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 50acdd36a536c417485d441e14c5d155f9de2f94
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: abf5ef38f253a99709ad3cb3c02793e36db5e8fd
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621806"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66642052"
 ---
 # <a name="decisions-based-on-relevance-results-in-ediscovery-premium"></a>eBulma (Premium) ile ilgili sonuçlara dayalı kararlar
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
   
-eBulma'daki İlgi modülünde (Premium), Karar sekmesi, servis talebi dosyalarının gözden geçirme kümesinin boyutunu belirlemek için karar destek istatistiklerini görüntülemeye ve kullanmaya yönelik ek bilgiler sağlar.
+eBulma 'daki (Premium) İlgi modülünde, Karar sekmesi olay dosyalarının gözden geçirme kümesinin boyutunu belirlemek için karar destek istatistiklerini görüntülemeye ve kullanmaya yönelik ek bilgiler sağlar.
   
 ## <a name="using-the-decide-tab"></a>Karar sekmesini kullanma
 

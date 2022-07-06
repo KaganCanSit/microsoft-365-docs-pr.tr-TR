@@ -18,20 +18,18 @@ search.appverid:
 - MOE150
 ms.custom: admindeeplinkMAC
 description: Microsoft destek mühendisinin bir sorunla karşılaştığınızda verilerinize nasıl erişebileceğini denetlemenize olanak sağlayan Müşteri Kasası istekleri hakkında bilgi edinin.
-ms.openlocfilehash: cf9a2a6d682ca87e97986389f640a536775ca014
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 7094de30722c4419e3c1c33d0c06f2cdb6d37290
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953836"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66642184"
 ---
 # <a name="microsoft-purview-customer-lockbox"></a>Microsoft Purview Müşteri Kasası
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Bu makalede Müşteri Kasası için dağıtım ve yapılandırma yönergeleri sağlanır. Müşteri Kasası Exchange Online, SharePoint Online, OneDrive İş ve Teams'deki verilere erişme isteklerini destekler. Diğer hizmetler için destek önermek için [Geri Bildirim Portalı'nda](https://feedbackportal.microsoft.com) bir istek gönderin.
 
-Bu makalede Müşteri Kasası için dağıtım ve yapılandırma yönergeleri sağlanır. Müşteri Kasası Exchange Online, SharePoint Online, OneDrive İş ve Teams verilerine erişme isteklerini destekler. Diğer hizmetler için destek önermek için [Geri Bildirim Portalı'nda](https://feedbackportal.microsoft.com) bir istek gönderin.
-
-Kullanıcılarınızın Microsoft Purview tekliflerinden yararlanması için lisanslama seçeneklerini görmek [için güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzuna](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance) bakın.
+Kullanıcılarınızın Microsoft Purview tekliflerinden yararlanması için lisanslama seçeneklerini görmek [için bkz. Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
 Müşteri Kasası, Microsoft'un açık onayınız olmadan hizmet işlemleri yapmak için içeriğinize erişememesini sağlar. Müşteri Kasası sizi Microsoft'un yalnızca yetkili isteklerin içeriğinize erişim izni vermek için kullandığı onay iş akışı sürecine getirir. Microsoft'un iş akışı süreci hakkında daha fazla bilgi edinmek için bkz [. Ayrıcalıklı erişim yönetimi](privileged-access-management-solution-overview.md).
 
@@ -77,7 +75,7 @@ müşteri kasası denetimlerini Microsoft 365 yönetim merkezi açabilirsiniz. M
 
 1. Genel yöneticinin veya **Müşteri Kasası erişim onaylayıcısı** rolünün atandığı bir iş veya okul hesabı kullanarak adresine gidin [https://admin.microsoft.com](https://admin.microsoft.com) ve oturum açın.
 
-2. **Ayarlar** >  **Org Ayarlar** >  **Güvenlik & Gizlilik'i** seçin.
+2. **Ayarlar** > **Kuruluş Ayarları** > **Güvenlik & Gizlilik'i** seçin.
 
 3. **Güvenlik & Gizlilik'i** ve ardından sol sütunda **Müşteri Kasası'nı** seçin. **Tüm veri erişim istekleri için onay iste** onay kutusunu işaretleyin ve özelliği açmak için değişiklikleri kaydedin.
 
@@ -108,11 +106,11 @@ müşteri kasası denetimlerini Microsoft 365 yönetim merkezi açabilirsiniz. M
 
 ## <a name="auditing-customer-lockbox-requests"></a>Müşteri Kasası isteklerini denetleme
 
-Müşteri Kasası isteklerine karşılık gelen denetim kayıtları Microsoft 365 denetim günlüğüne kaydedilir. Microsoft Purview uyumluluk portalındaki [denetim günlüğü arama aracını](search-the-audit-log-in-security-and-compliance.md) kullanarak bu günlüklere erişebilirsiniz. Müşteri Kasası isteğini kabul etme veya reddetme ile ilgili eylemler ve Microsoft mühendisleri tarafından gerçekleştirilen eylemler (erişim istekleri onaylandığında) denetim günlüğüne de kaydedilir. Bu denetim kayıtlarını arayabilir ve gözden geçirebilirsiniz.
+Müşteri Kasası isteklerine karşılık gelen denetim kayıtları Microsoft 365 denetim günlüğüne kaydedilir. Microsoft Purview uyumluluk portalı [denetim günlüğü arama aracını kullanarak bu günlüklere](search-the-audit-log-in-security-and-compliance.md) erişebilirsiniz. Müşteri Kasası isteğini kabul etme veya reddetme ile ilgili eylemler ve Microsoft mühendisleri tarafından gerçekleştirilen eylemler (erişim istekleri onaylandığında) denetim günlüğüne de kaydedilir. Bu denetim kayıtlarını arayabilir ve gözden geçirebilirsiniz.
 
 ### <a name="search-the-audit-log-for-activity-related-to-customer-lockbox-requests"></a>Müşteri Kasası istekleriyle ilgili etkinlik için denetim günlüğünde arama yapma
 
-Müşteri Kasası isteklerini izlemek için denetim günlüğünü kullanabilmeniz için denetim günlüğünü ayarlamak için izlemeniz gereken, denetim günlüğünde arama izinleri atama gibi bazı adımlar vardır. Daha fazla bilgi için bkz. [Microsoft Purview Denetimini Ayarlama (Standart)](set-up-basic-audit.md). Kurulumu tamamladıktan sonra, Müşteri Kasası ile ilgili denetim kayıtlarını döndürmek üzere bir denetim günlüğü arama sorgusu oluşturmak için şu adımları kullanın:
+Müşteri Kasası isteklerini izlemek için denetim günlüğünü kullanabilmeniz için denetim günlüğünü ayarlamak için izlemeniz gereken, denetim günlüğünde arama izinleri atama gibi bazı adımlar vardır. Daha fazla bilgi için bkz[. Microsoft Purview Denetim ayarlama (Standart)](set-up-basic-audit.md). Kurulumu tamamladıktan sonra, Müşteri Kasası ile ilgili denetim kayıtlarını döndürmek üzere bir denetim günlüğü arama sorgusu oluşturmak için şu adımları kullanın:
 
 1. <https://compliance.microsoft.com> adresine gidin.
   
@@ -154,14 +152,14 @@ Ayrıca denetim günlüğü arama sonuçlarını bir CSV dosyasına aktarabilir 
 
 Denetim kayıtlarını dışarı aktarmak için önceki adımları kullanarak denetim günlüğünde arama yapın. Arama tamamlandığında Dışarı Aktar > Arama sonuçları sayfasının üst kısmındaki **Tüm sonuçları indir'i** seçin. Dışarı aktarma işlemi tamamlandığında CSV dosyasını yerel bilgisayarınıza indirebilirsiniz. Daha ayrıntılı yönergeler için bkz. [Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md).
 
-Dosyayı indirdikten sonra, Excel'da açabilir ve ardından **İşletimler** sütununa filtreleyerek **Set-AccessToCustomerDataRequest** etkinliklerinin denetim kayıtlarını görüntüleyebilirsiniz. Ayrıca, Microsoft mühendisleri tarafından gerçekleştirilen etkinliklerin denetim kayıtlarını görüntülemek için **UserIds** sütununa ( **Microsoft İşleci** değerini kullanarak) filtreleyebilirsiniz.
+Dosyayı indirdikten sonra, Dosyayı Excel'de açabilir ve ardından **İşlemler** sütununa filtreleyerek **Set-AccessToCustomerDataRequest** etkinliklerinin denetim kayıtlarını görüntüleyebilirsiniz. Ayrıca, Microsoft mühendisleri tarafından gerçekleştirilen etkinliklerin denetim kayıtlarını görüntülemek için **UserIds** sütununa ( **Microsoft İşleci** değerini kullanarak) filtreleyebilirsiniz.
 
 > [!NOTE]
-> CSV dosyasında denetim kayıtlarını görüntülerken, **AuditData** sütununda ek bilgiler bulunur. Bu sütundaki bilgiler, virgülle ayrılmış *property:value* çiftleri olarak yapılandırılan birden çok özellik içeren bir JSON nesnesinde yer alır. Excel'daki Power Query Düzenleyicisi JSON dönüştürme özelliğini kullanarak **AuditData** sütunundaki JSON nesnesindeki her özelliği birden çok sütuna bölerek her özelliğin kendi sütununa sahip olmasını sağlayabilirsiniz. Bu, bu bilgileri yorumlamayı kolaylaştırır. Ayrıntılı yönergeler için bkz. [Power Query Düzenleyicisi kullanarak dışarı aktarılan denetim günlüğünü biçimlendirme](export-view-audit-log-records.md#step-2-format-the-exported-audit-log-using-the-power-query-editor).
+> CSV dosyasında denetim kayıtlarını görüntülerken, **AuditData** sütununda ek bilgiler bulunur. Bu sütundaki bilgiler, virgülle ayrılmış *property:value* çiftleri olarak yapılandırılan birden çok özellik içeren bir JSON nesnesinde yer alır. Excel'deki Power Query Düzenleyicisi JSON dönüştürme özelliğini kullanarak **AuditData** sütunundaki JSON nesnesindeki her özelliği birden çok sütuna bölerek her özelliğin kendi sütununa sahip olmasını sağlayabilirsiniz. Bu, bu bilgileri yorumlamayı kolaylaştırır. Ayrıntılı yönergeler için bkz. [Power Query Düzenleyicisi kullanarak dışarı aktarılan denetim günlüğünü biçimlendirme](export-view-audit-log-records.md#step-2-format-the-exported-audit-log-using-the-power-query-editor).
 
 ### <a name="use-powershell-to-search-and-export-audit-records"></a>Denetim kayıtlarını aramak ve dışarı aktarmak için PowerShell kullanma
 
-Microsoft Purview uyumluluk portalında denetim arama aracını kullanmanın bir alternatifi, Exchange Online PowerShell'de [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) cmdlet'ini çalıştırmaktır. PowerShell kullanmanın avantajlarından biri, Microsoft mühendisleri tarafından müşteri kasası isteğiyle ilgili **olarak gerçekleştirilen Set-AccessToCustomerDataRequest** etkinliklerini veya etkinliklerini özel olarak aramanızdır.
+Microsoft Purview uyumluluk portalı denetim arama aracını kullanmanın bir alternatifi, Exchange Online PowerShell'de [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) cmdlet'ini çalıştırmaktır. PowerShell kullanmanın avantajlarından biri, Microsoft mühendisleri tarafından müşteri kasası isteğiyle ilgili **olarak gerçekleştirilen Set-AccessToCustomerDataRequest** etkinliklerini veya etkinliklerini özel olarak aramanızdır.
 
 [Exchange Online PowerShell'e bağlandıktan](/powershell/exchange/connect-to-exchange-online-powershell) sonra aşağıdaki komutlardan birini çalıştırın. Yer tutucuları belirli bir tarih aralığıyla değiştirin.
 
@@ -211,21 +209,21 @@ Müşteri Kasası isteği onaylandıktan (ve müşteri içeriğine erişmeye ned
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
-### <a name="which-microsoft-365-services-does-customer-lockbox-apply-to"></a>Müşteri Kasası hangi Microsoft 365 hizmetler için geçerlidir?
+### <a name="which-microsoft-365-services-does-customer-lockbox-apply-to"></a>Müşteri Kasası hangi Microsoft 365 hizmetleri için geçerlidir?
 
-Müşteri Kasası şu anda Exchange Online, SharePoint Online, OneDrive İş ve Teams desteklenmektedir.
+Müşteri Kasası şu anda Exchange Online, SharePoint Online, OneDrive İş ve Teams'de desteklenmektedir.
 
 ### <a name="is-customer-lockbox-available-to-all-customers"></a>Müşteri Kasası tüm müşterilerin kullanımına açık mı?
 
-Müşteri Kasası Microsoft 365 veya Office 365 E5 aboneliklerine dahil edilir ve Information Protection ve Uyumluluk veya Gelişmiş Uyumluluk eklenti aboneliği ile diğer planlara eklenebilir. Daha fazla bilgi için bkz. [Planlar ve fiyatlandırma](https://products.office.com/business/office-365-enterprise-e5-business-software) .
+Müşteri Kasası Microsoft 365 veya Office 365 E5 aboneliklerine dahildir ve Information Protection ve Uyumluluk veya Gelişmiş Uyumluluk eklenti aboneliğiyle diğer planlara eklenebilir. Daha fazla bilgi için bkz. [Planlar ve fiyatlandırma](https://products.office.com/business/office-365-enterprise-e5-business-software) .
 
 ### <a name="what-is-customer-content"></a>Müşteri içeriği nedir?
 
-Müşteri içeriği, Microsoft 365 hizmet ve uygulama kullanıcıları tarafından oluşturulan verilerdir. Müşteri içeriğine örnek olarak şunlar verilebilir:
+Müşteri içeriği, Microsoft 365 hizmetlerinin ve uygulamalarının kullanıcıları tarafından oluşturulan verilerdir. Müşteri içeriğine örnek olarak şunlar verilebilir:
 
 - E-posta gövdesi veya e-posta ekleri
 
-- Site içeriğini SharePoint
+- SharePoint site içeriği
 
 - SharePoint dosyasının gövdesindeki bilgiler
 
@@ -233,21 +231,21 @@ Müşteri içeriği, Microsoft 365 hizmet ve uygulama kullanıcıları tarafınd
 
 - Anlık iletiler (anlık ileti) veya sesli konuşmalar
 
-- Teams sohbetlere ve Teams kanallarına girilen metin( örneğin, 1:1 sohbetler, grup sohbetleri, paylaşılan kanallar, özel kanallar ve toplantı sohbeti)
+- Teams sohbetlerine ve Teams kanallarına girilen metin( örneğin, 1:1 sohbetler, grup sohbetleri, paylaşılan kanallar, özel kanallar ve toplantı sohbeti)
 
-- Teams sohbet yazışmalarına yapıştırılan kod parçacıkları, resimler, ses ve video iletileri ve bağlantılar gibi diğer veriler
+- Kod parçacıkları, resimler, ses ve video iletileri ve bağlantılar gibi Teams sohbet yazışmalarına yapıştırılan diğer veriler
 
-- Teams sohbetlerde ve Teams kanallarında uygulama ve bot verileri
+- Teams sohbetlerinde ve Teams kanallarında uygulama ve bot verileri
 
-- etkinlik akışını Teams
+- Teams etkinlik akışı
 
-- Toplantı kayıtlarını ve transkriptlerini Teams
+- Teams toplantı kayıtları ve dökümleri
 
 - Sesli
 
-- Teams sohbetlere ve Teams kanallarına gönderilen dosyalar
+- Teams sohbetlerine ve Teams kanallarına gönderilen dosyalar
 
-- Müşteri tarafından oluşturulan blob veya yapılandırılmış depolama verileri (örneğin, SQL Kapsayıcılar)
+- Müşteri tarafından oluşturulan blob veya yapılandırılmış depolama verileri (örneğin, SQL Kapsayıcıları)
 
 - Müşteriye ait güvenlik bilgileri (örneğin, sertifikalar, şifreleme anahtarları ve parolalar)
 
@@ -255,11 +253,11 @@ Müşteri içeriği, Microsoft 365 hizmet ve uygulama kullanıcıları tarafınd
 
 Office 365'daki müşteri içeriği hakkında daha fazla bilgi için [Office 365 Güven Merkezi'ne](https://products.office.com/business/office-365-trust-center-privacy/) bakın.
 
-### <a name="who-is-notified-when-there-is-a-request-to-access-my-content"></a>İçeriğime erişim isteği olduğunda Who bildirilir?
+### <a name="who-is-notified-when-there-is-a-request-to-access-my-content"></a>İçeriğime erişim isteği olduğunda kimlere bildirilir?
 
 Genel yöneticilere ve Müşteri Kasası erişimi onaylayan yönetici rolüne atanan herkese bildirilir. Bunlar aynı zamanda Müşteri Kasası isteklerini onaylayan kullanıcılardır.
 
-### <a name="who-can-approve-or-reject-these-requests-in-my-organization"></a>Kuruluşumda bu istekleri Who onaylayabilir veya reddedebilir?
+### <a name="who-can-approve-or-reject-these-requests-in-my-organization"></a>Kuruluşumda bu istekleri kimler onaylayabilir veya reddedebilir?
 
 Genel yöneticiler ve Müşteri Kasası erişim onaylayıcısı yönetici rolüne atanan herkes Müşteri Kasası isteklerini onaylayabilir. Müşteriler, kuruluşlarında bu rol atamalarını denetler.
 
@@ -279,7 +277,7 @@ Müşteri Kasası en son [SOC 1 SSAE 16 denetim raporuna](https://servicetrust.m
 
 ### <a name="can-microsoft-modify-the-list-of-approvers-for-my-tenant-if-not-how-is-it-prevented"></a>Microsoft kiracımın onaylayanları listesini değiştirebilir mi? Aksi takdirde, nasıl engellenir?
 
-Müşteri Kasası isteklerini kimin onaylayabileceğinizi yalnızca kuruluşunuzdaki bir genel yönetici belirtebilir. Bu, yalnızca Azure Active Directory'daki Genel yönetici grubunun üyelerinin isteği kimin onaylayabileceğinizi belirtebileceği anlamına gelir. Azure Active Directory'da Genel yönetici grubunun üyeliği yalnızca kuruluşunuz tarafından yönetilir.
+Müşteri Kasası isteklerini kimin onaylayabileceğinizi yalnızca kuruluşunuzdaki bir genel yönetici belirtebilir. Bu, yalnızca Azure Active Directory'deki Genel yönetici grubunun üyelerinin isteği kimin onaylayabileceğinizi belirtebileceği anlamına gelir. Azure Active Directory'deki Genel yönetici grubunun üyeliği yalnızca kuruluşunuz tarafından yönetilir.
 
 ### <a name="what-if-i-need-more-information-about-a-content-access-request-to-approve-it"></a>Onaylamak için bir içerik erişim isteği hakkında daha fazla bilgiye ihtiyacım olursa ne olur?
 
@@ -317,7 +315,7 @@ Daha fazla bilgi için üçüncü taraf veri istekleriyle ilgili [Microsoft Güv
 
 ### <a name="how-does-microsoft-ensure-that-a-member-of-its-staff-doesnt-have-standing-access-to-customer-content-in-office-365-applications"></a>Microsoft, personelinin bir üyesinin Office 365 uygulamalarında müşteri içeriğine erişimi olmamasını nasıl sağlar?
 
-Microsoft, erişim denetim sistemleri aracılığıyla kapsamlı önleyici önlemler ve bu erişim denetim sistemlerini aşma girişimlerini belirlemek ve ele almak için dedektif önlemleri uygular. Microsoft 365 en az ayrıcalık ve tam zamanında erişim ilkeleriyle çalışır. Bu nedenle, hiçbir Microsoft personelinin müşteri içeriğine sürekli olarak erişme izni yoktur. İzin verilirse, sınırlı bir süre için geçerlidir.
+Microsoft, erişim denetim sistemleri aracılığıyla kapsamlı önleyici önlemler ve bu erişim denetim sistemlerini aşma girişimlerini belirlemek ve ele almak için dedektif önlemleri uygular. Microsoft 365, en az ayrıcalık ve tam zamanında erişim ilkeleriyle çalışır. Bu nedenle, hiçbir Microsoft personelinin müşteri içeriğine sürekli olarak erişme izni yoktur. İzin verilirse, sınırlı bir süre için geçerlidir.
 
 Microsoft 365, hizmet içinde işletimsel ve yönetim işlevlerini gerçekleştirme olanağı veren izin isteklerini işlemek için *Lockbox* adlı bir erişim denetim sistemi kullanır. Operatörün, erişim verilmeden önce istek üzerinde işlem yapması (örneğin, onaylayın) için ikinci bir kişinin gerektirdiği Kilit Kutusu'nu kullanarak müşteri içeriğine erişim istemesi gerekir. İkinci kişi istek sahibi olamaz ve müşteri içeriğine erişimi onaylayacak şekilde belirlenmelidir. Yalnızca istek onaylanırsa operatör müşteri içeriğine geçici erişim elde eder. Yükseltme süresi dolduktan sonra, Kilit Kutusu erişimi iptal eder.
 
@@ -325,7 +323,7 @@ Microsoft genel güvenlik uygulamaları hakkında daha fazla bilgi için [Çevri
 
 ### <a name="under-what-circumstances-do-microsoft-engineers-need-access-to-my-content"></a>Microsoft mühendislerinin içeriğime hangi koşullarda erişmesi gerekiyor?
 
-Microsoft mühendislerinin müşteri içeriğine erişmesi gereken en yaygın senaryo, müşterinin sorun giderme için erişim gerektiren bir destek isteğinde bulunduğu durumdur. Microsoft 365 temel ilkelerinden biri, hizmetin Microsoft'un müşteri içeriğine erişimi olmadan çalışmasıdır. Microsoft tarafından gerçekleştirilen neredeyse tüm hizmet işlemleri tamamen otomatiktir ve insan katılımı yüksek oranda denetlenip müşteri içeriğinden soyutlanır. Microsoft 365 amacı, müşteri belirli bir Microsoft erişimi isteğini onaylayana kadar hizmeti desteklemek için müşteri içeriğine erişim gerekli değildir.
+Microsoft mühendislerinin müşteri içeriğine erişmesi gereken en yaygın senaryo, müşterinin sorun giderme için erişim gerektiren bir destek isteğinde bulunduğu durumdur. Microsoft 365'in temel ilkelerinden biri, hizmetin Microsoft'un müşteri içeriğine erişimi olmadan çalışmasıdır. Microsoft tarafından gerçekleştirilen neredeyse tüm hizmet işlemleri tamamen otomatiktir ve insan katılımı yüksek oranda denetlenip müşteri içeriğinden soyutlanır. Microsoft 365'in amacı, müşteri belirli bir Microsoft erişimi isteğini onaylayana kadar hizmeti desteklemek için müşteri içeriğine erişim sağlamaktır.
 
 ### <a name="i-already-thought-my-data-was-secure-with-the-microsoft-cloud-so-why-do-i-need-customer-lockbox"></a>Verilerimin Microsoft bulutuyla güvenli olduğunu sanıyordum, neden Müşteri Kasasına ihtiyacım var?
 

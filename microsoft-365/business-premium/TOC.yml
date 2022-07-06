@@ -104,8 +104,10 @@
       href: ../security/office-365-security/responding-to-a-compromised-email-account.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
 - name: Ortamınızı koruma
   items:
-    - name: Genel bakış
+    - name: Genel Bakış
       href: m365bp-maintain-environment.md
+    - name: Güvenlik işlemleri kılavuzu
+      href: m365bp-security-incident-quick-start.md
     - name: Kullanıcıları kaldırma
       href: ../admin/add-users/remove-former-employee.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
     - name: Kullanıcıları ekleme

@@ -16,24 +16,22 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 - Strat_O365_IP
-description: Microsoft 365'da kök sertifikaların ve sertifika yetkililerinin (CA) tam listesini görüntüleyin.
-ms.openlocfilehash: a15c22218d481f62e1363e3ef4d521bd59283f10
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+description: Microsoft 365'te kök sertifikaların ve sertifika yetkililerinin (CA) tam listesini görüntüleyin.
+ms.openlocfilehash: e131aa1c56890289735fd7605db7ace95d24fd7a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65468008"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641800"
 ---
 # <a name="microsoft-365-encryption-chains"></a>Microsoft 365 şifreleme zincirleri
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft 365 bir dizi farklı sertifika sağlayıcısından yararlanıyor. Aşağıda, müşterilerin Microsoft 365 erişirken karşılaşabileceği bilinen Microsoft 365 kök sertifikaların tam listesi açıklanmaktadır. Kendi altyapınıza yüklemeniz gerekebilecek sertifikalar hakkında bilgi için bkz. [Microsoft 365 için üçüncü taraf SSL sertifikalarını planlama](../enterprise/plan-for-third-party-ssl-certificates.md). Aşağıdaki sertifika bilgileri, Microsoft 365 tüm dünya çapındaki ve ulusal bulut örnekleri için geçerlidir.
+Microsoft 365, bir dizi farklı sertifika sağlayıcısından yararlanıyor. Aşağıda, müşterilerin Microsoft 365'e erişirken karşılaşabileceği bilinen Microsoft 365 kök sertifikalarının tam listesi açıklanmaktadır. Kendi altyapınıza yüklemeniz gerekebilecek sertifikalar hakkında bilgi için bkz. [Microsoft 365 için üçüncü taraf SSL sertifikaları planlama](../enterprise/plan-for-third-party-ssl-certificates.md). Aşağıdaki sertifika bilgileri Microsoft 365'in tüm dünya çapında ve ulusal bulut örnekleri için geçerlidir.
 
 Son güncelleştirme: **25/4/2022**
 
 > [!NOTE]
-> **DOD ve GCC High** müşterileri için geçerli sertifika bilgileri için bkz. [Microsoft 365 şifreleme zincirleri - DOD ve GCC High](encryption-office-365-certificate-chains-itar.md).
+> **DOD ve GCC High** müşterileri için geçerli olan sertifika bilgileri için bkz. [Microsoft 365 şifreleme zincirleri - DOD ve GCC High](encryption-office-365-certificate-chains-itar.md).
 
 | **Sertifika türü** | **P7b indirme** | **CRL Uç Noktaları** | **OCSP Uç Noktaları** | **AIA Uç Noktaları** |
 | --- | --- | --- | --- | --- |
@@ -42,7 +40,7 @@ Son güncelleştirme: **25/4/2022**
 
 Sertifika sağlayıcılarıyla ilgili ek ayrıntıları görmek için aşağıdaki kök ve ara bölümleri genişletin.
 
-## <a name="microsoft-365-root-certificate-details"></a>**kök sertifika ayrıntılarını Microsoft 365**
+## <a name="microsoft-365-root-certificate-details"></a>**Microsoft 365 Kök Sertifika Ayrıntıları**
 
 ### <a name="baltimore-cybertrust-root"></a>**Baltimore CyberTrust Kökü**
 
@@ -164,7 +162,7 @@ Sertifika sağlayıcılarıyla ilgili ek ayrıntıları görmek için aşağıda
 
 ### <a name="entrustnet-certification-authority-2048"></a>**Entrust.net Sertifika Yetkilisi (2048)**
 
-| **Konu** | CN=Entrust.net Sertifika Yetkilisi (2048)<br>OU=(c) 1999 Entrust.net Sınırlı<br>OU=www.entrust.net/CPS2048\_ incorp. ref. (limit s liab.)<br>O=Entrust.net |
+| **Konu** | CN=Entrust.net Sertifika Yetkilisi (2048)<br>OU=(c) 1999 Entrust.net Sınırlı<br>OU=www.entrust.net/CPS\_2048 incorp. ref. (limit s liab.)<br>O=Entrust.net |
 | --- | --- |
 | **Seri Numarası** | 38:63:DE:F8 |
 | **Ortak Anahtar Uzunluğu** | RSA 2048 bitleri (e 65537) |
@@ -247,7 +245,7 @@ Sertifika sağlayıcılarıyla ilgili ek ayrıntıları görmek için aşağıda
 | **Parmak izi (SHA-256)** | 9ACFAB7E43C8D880D06B262A94DEEEE4B4659989C3D0CAF19BAF6405E41AB7DF |
 | **Pin (SHA-256)** | JbQbUG5JMJUoI6brnx0x3vZF6jilxsapbXGVfjhN8Fg= |
 
-## <a name="microsoft-365-intermediate-certificate-details"></a>**Ara Sertifika Ayrıntılarını Microsoft 365**
+## <a name="microsoft-365-intermediate-certificate-details"></a>**Microsoft 365 Ara Sertifika Ayrıntıları**
 
 ### <a name="cnnic-sha256-ssl"></a>**CNNIC SHA256 SSL**
 
@@ -450,7 +448,7 @@ Sertifika sağlayıcılarıyla ilgili ek ayrıntıları görmek için aşağıda
 
 | **Konu** | CN=Entrust Sertifika Yetkilisi - L1C<br>OU=&quot;(c) 2009 Entrust, Inc.&quot;<br>OU=www.entrust.net/rpa başvuru ile birleştirilir<br>O=&quot;Entrust, Inc.&quot;<br>C=ABD |
 | --- | --- |
-| **Veren** | CN=Entrust.net Sertifika Yetkilisi (2048)<br>OU=(c) 1999 Entrust.net Sınırlı<br>OU=www.entrust.net/CPS2048\_ incorp. tarafından başvuru (limitler liab.)<br>O=Entrust.net |
+| **Veren** | CN=Entrust.net Sertifika Yetkilisi (2048)<br>OU=(c) 1999 Entrust.net Sınırlı<br>OU=www.entrust.net/CPS\_2048 incorp. tarafından başvuru (limitler liab.)<br>O=Entrust.net |
 | **Seri Numarası** | 4C:0E:8C:39 |
 | **Ortak Anahtar Uzunluğu** | RSA 2048 bitleri (e 65537) |
 | **İmza Algoritması** | sha1RSA |
@@ -607,7 +605,7 @@ Sertifika sağlayıcılarıyla ilgili ek ayrıntıları görmek için aşağıda
 | **CRL URL'leri** | http://crl.identrust.com/DSTROOTCAX3CRL.crl |
 | **OCSP URL'leri** | http://isrg.trustid.ocsp.identrust.com |
 
-### <a name="microsoft-azure-tls-issuing-ca-01"></a>**TLS Veren CA 01'i Microsoft Azure**
+### <a name="microsoft-azure-tls-issuing-ca-01"></a>**Microsoft Azure TLS Veren CA 01**
 
 | **Konu** | CN=Microsoft Azure TLS Veren CA 01<br>O=Microsoft Corporation<br>C=ABD |
 | --- | --- |
@@ -624,7 +622,7 @@ Sertifika sağlayıcılarıyla ilgili ek ayrıntıları görmek için aşağıda
 | **CRL URL'leri** | http://crl3.digicert.com/DigiCertGlobalRootG2.crl http://crl4.digicert.com/DigiCertGlobalRootG2.crl |
 | **OCSP URL'leri** | http://ocsp.digicert.com |
 
-### <a name="microsoft-azure-tls-issuing-ca-02"></a>**MICROSOFT AZURE TLS Veren CA 02**
+### <a name="microsoft-azure-tls-issuing-ca-02"></a>**Microsoft Azure TLS Veren CA 02**
 
 | **Konu** | CN=Microsoft Azure TLS Veren CA 02<br>O=Microsoft Corporation<br>C=ABD |
 | --- | --- |
@@ -641,7 +639,7 @@ Sertifika sağlayıcılarıyla ilgili ek ayrıntıları görmek için aşağıda
 | **CRL URL'leri** | http://crl3.digicert.com/DigiCertGlobalRootG2.crl http://crl4.digicert.com/DigiCertGlobalRootG2.crl |
 | **OCSP URL'leri** | http://ocsp.digicert.com |
 
-### <a name="microsoft-azure-tls-issuing-ca-05"></a>**MICROSOFT AZURE TLS Veren CA 05**
+### <a name="microsoft-azure-tls-issuing-ca-05"></a>**Microsoft Azure TLS Veren CA 05**
 
 | **Konu** | CN=Microsoft Azure TLS Veren CA 05<br>O=Microsoft Corporation<br>C=ABD |
 | --- | --- |
@@ -658,7 +656,7 @@ Sertifika sağlayıcılarıyla ilgili ek ayrıntıları görmek için aşağıda
 | **CRL URL'leri** | http://crl3.digicert.com/DigiCertGlobalRootG2.crl http://crl4.digicert.com/DigiCertGlobalRootG2.crl |
 | **OCSP URL'leri** | http://ocsp.digicert.com |
 
-### <a name="microsoft-azure-tls-issuing-ca-06"></a>**MICROSOFT AZURE TLS Veren CA 06**
+### <a name="microsoft-azure-tls-issuing-ca-06"></a>**Microsoft Azure TLS Veren CA 06**
 
 | **Konu** | CN=Microsoft Azure TLS Veren CA 06<br>O=Microsoft Corporation<br>C=ABD |
 | --- | --- |
@@ -840,7 +838,7 @@ Sertifika sağlayıcılarıyla ilgili ek ayrıntıları görmek için aşağıda
 
 ### <a name="verizon-akamai-sureserver-ca-g14-sha2"></a>**Verizon Akamai SureServer CA G14-SHA2**
 
-| **Konu** | CN=Verizon Akamai SureServer CA G14-SHA2<br>OU=Cybertrust<br>O=Verizon Enterprise Çözümleri<br>L=Amsterdam<br>C=NL |
+| **Konu** | CN=Verizon Akamai SureServer CA G14-SHA2<br>OU=Cybertrust<br>O=Verizon Enterprise Solutions<br>L=Amsterdam<br>C=NL |
 | --- | --- |
 | **Veren** | CN=Baltimore CyberTrust Root<br>OU=CyberTrust<br>O=Baltimore<br>C=IE |
 | **Seri Numarası** | 07:27:A4:6B |

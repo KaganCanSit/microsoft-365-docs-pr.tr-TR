@@ -18,28 +18,26 @@ search.appverid:
 - MET150
 ms.assetid: 72bbad69-035b-4d33-b8f4-549a2743e97d
 ROBOTS: NOINDEX, NOFOLLOW
-description: Kullanıcılar belirli etkinlikleri gerçekleştirdiğinde Microsoft 365 size e-posta bildirimleri göndermesi için Microsoft Purview uyumluluk portalında etkinlik uyarıları ekleme ve yönetme
-ms.openlocfilehash: b08c23ec80562418112266d03c58f4b764a128ba
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Kullanıcılar belirli etkinlikleri gerçekleştirdiğinde Microsoft 365'in size e-posta bildirimleri göndermesi için Microsoft Purview uyumluluk portalı etkinlik uyarıları ekleme ve yönetme
+ms.openlocfilehash: a2f93ed9c0c73dfb6886e0860e63ec38e49294a5
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66018107"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66642272"
 ---
 # <a name="create-activity-alerts"></a>Etkinlik uyarıları oluşturma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 Kullanıcılar Office 365'da belirli etkinlikler gerçekleştirdiğinde size e-posta bildirimi gönderecek bir etkinlik uyarısı oluşturabilirsiniz. Etkinlik uyarıları, denetim günlüğündeki olayları aramaya benzer, ancak uyarı oluşturduğunuz bir etkinlik için bir olay gerçekleştiğinde size e-posta iletisi gönderilir.
 
- **Denetim günlüğünde arama yerine neden etkinlik uyarıları kullanmalısınız?** Gerçekten bilmek istediğiniz belirli kullanıcılar tarafından gerçekleştirilen belirli etkinlik veya etkinlik türleri olabilir. Bu etkinlikler için denetim günlüğünde arama yapmayı unutmamak yerine, etkinlik uyarılarını kullanarak kullanıcılar bu etkinlikleri gerçekleştirirken Microsoft 365 size e-posta iletisi göndermesini sağlayabilirsiniz. Örneğin, bir kullanıcı SharePoint'da dosyaları sildiğinde sizi bilgilendirmek için bir etkinlik uyarısı oluşturabilir veya bir kullanıcı posta kutusundan iletileri kalıcı olarak sildiğinde sizi bilgilendirecek bir uyarı oluşturabilirsiniz. Size gönderilen e-posta bildirimi, hangi etkinliğin gerçekleştirildiği ve bunu gerçekleştiren kullanıcı hakkındaki bilgileri içerir.
+ **Denetim günlüğünde arama yerine neden etkinlik uyarıları kullanmalısınız?** Gerçekten bilmek istediğiniz belirli kullanıcılar tarafından gerçekleştirilen belirli etkinlik veya etkinlik türleri olabilir. Bu etkinlikler için denetim günlüğünde arama yapmayı unutmamak yerine, kullanıcılar bu etkinlikleri gerçekleştirdiğinde Microsoft 365'in size e-posta iletisi göndermesini sağlamak için etkinlik uyarılarını kullanabilirsiniz. Örneğin, bir kullanıcı SharePoint'te dosyaları sildiğinde sizi bilgilendirmek için bir etkinlik uyarısı oluşturabilir veya bir kullanıcı posta kutusundan iletileri kalıcı olarak sildiğinde sizi bilgilendirecek bir uyarı oluşturabilirsiniz. Size gönderilen e-posta bildirimi, hangi etkinliğin gerçekleştirildiği ve bunu gerçekleştiren kullanıcı hakkındaki bilgileri içerir.
 
 > [!NOTE]
 > Etkinlik uyarıları kullanım dışı bırakılıyor. Yeni etkinlik uyarıları oluşturmak yerine güvenlik ve uyumluluk merkezinde uyarı ilkelerini kullanmaya başlamanızı öneririz. Uyarı ilkeleri, herhangi bir kullanıcı belirli bir etkinliği gerçekleştirdiğinde uyarıyı tetikleyen bir uyarı ilkesi oluşturma ve güvenlik ve uyumluluk merkezindeki **Uyarıları görüntüle sayfasında uyarıları** görüntüleme gibi ek işlevler sağlar. Daha fazla bilgi için bkz [. Uyarı ilkeleri](alert-policies.md).
 
 ## <a name="confirm-roles-and-configure-audit-logging"></a>Rolleri onaylama ve denetim günlüğünü yapılandırma
 
-- Etkinlik uyarılarını yönetmek için Microsoft Purview uyumluluk portalında Kuruluş Yapılandırması rolüne atanmış olmanız gerekir. Varsayılan olarak, bu rol Uyumluluk Yöneticisi ve Kuruluş Yönetimi rol gruplarına atanır. Rol gruplarına üye ekleme hakkında daha fazla bilgi için bkz. [Kullanıcılara Microsoft Purview uyumluluk portalına erişim verme](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
+- Etkinlik uyarılarını yönetmek için Microsoft Purview uyumluluk portalı Kuruluş Yapılandırması rolüne atanmış olmanız gerekir. Varsayılan olarak, bu rol Uyumluluk Yöneticisi ve Kuruluş Yönetimi rol gruplarına atanır. Rol gruplarına üye ekleme hakkında daha fazla bilgi için bkz. [Kullanıcılara Microsoft Purview uyumluluk portalı erişim izni verme](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
 
 - Etkinlik uyarılarını kullanmaya başlayabilmeniz için önce sizin (veya başka bir yöneticinin) kuruluşunuz için denetim günlüğünü açmanız gerekir. Bunu yapmak için **Etkinlik uyarıları** sayfasında **Kullanıcı ve yönetici etkinliğini kaydetmeyi başlat'a** tıklamak gerekir. (Bu bağlantıyı görmüyorsanız, kuruluşunuz için denetim zaten açık durumdadır.) Uyumluluk portalındaki **Denetim günlüğü arama** sayfasında denetimi de açabilirsiniz ( **Denetim'e** gidin). Bunu kuruluşunuz için yalnızca bir kez yapmanız gerekir.
 
@@ -125,8 +123,8 @@ Etkinlik uyarısını yeniden açmak için bu adımları yineleyin ve **Kapalı*
 
     | Bir kullanıcı bunu yaparsa... | Bu etkinlik için uyarı oluştur | Etkinlik grubu |
     |:-----|:-----|:-----|
-    |Bir e-posta iletisini posta kutusundan kalıcı olarak siler (temizler).  |İletileri posta kutusundan temizleme  | Posta kutusu etkinliklerini Exchange  |
-    |Paylaşılan posta kutusundan e-posta iletisi gönderir.  |Farklı Gönder izinleri kullanılarak gönderilen ileti  <br/> Ve  <br/> Adına Gönder izinleri kullanılarak gönderilen ileti  | Posta kutusu etkinliklerini Exchange  |
+    |Bir e-posta iletisini posta kutusundan kalıcı olarak siler (temizler).  |İletileri posta kutusundan temizleme  | Exchange posta kutusu etkinlikleri  |
+    |Paylaşılan posta kutusundan e-posta iletisi gönderir.  |Farklı Gönder izinleri kullanılarak gönderilen ileti  <br/> Ve  <br/> Adına Gönder izinleri kullanılarak gönderilen ileti  | Exchange posta kutusu etkinlikleri  |
 
 - Etkinlik uyarıları oluşturmak ve düzenlemek için Güvenlik & Uyumluluk PowerShell'de **New-ActivityAlert** ve **Set-ActivityAlert** cmdlet'lerini de kullanabilirsiniz. Etkinlik uyarıları oluşturmak veya düzenlemek için bu cmdlet'leri kullanıyorsanız aşağıdaki şeyleri göz önünde bulundurun:
 

@@ -14,18 +14,16 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Tahmine dayalı kodlama modelinin ilgili veya ilgili olmadığı tahmin edilen öğeleri görüntülemek için tahmin puanı filtresi kullanın.
-ms.openlocfilehash: 64abac8b9f53baa9afb869d77296089544919fea
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 7a05b85fa81396da2c9d66eddb68b542b7eb8eba
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096622"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66642414"
 ---
 # <a name="apply-a-prediction-score-filter-to-a-review-set-preview"></a>Gözden geçirme kümesine tahmin puanı filtresi uygulama (önizleme)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview eKeşif'te (Premium) tahmine dayalı bir kodlama modeli oluşturduktan ve kararlı olduğu noktaya eğittikte, modelin belirlediği gözden geçirme kümesi öğelerini görüntülemek için tahmin puanı filtresini uygulayabilirsiniz (veya uygun değildir). Bir model oluşturduğunuzda, buna karşılık gelen tahmin puanı filtresi de oluşturulur. Bu filtreyi, belirtilen aralık içinde tahmin puanı atanmış öğeleri görüntülemek için kullanabilirsiniz. Genel olarak, **modelin** tahminde bulunduğu öğelere 0 ile **0,5** arasındaki tahmin puanları atanmamaktadır. **0,5** ile **1,0** arasında tahmin puanları atanan öğeler, modelin tahminde bulunduğu öğelerdir.
+Microsoft Purview eKeşif(Premium) içinde tahmine dayalı bir kodlama modeli oluşturduktan ve kararlı olduğu noktaya eğittikte, modelin ilgili (veya ilgili olmayan) gözden geçirme kümesi öğelerini görüntülemek için tahmin puanı filtresini uygulayabilirsiniz. Bir model oluşturduğunuzda, buna karşılık gelen tahmin puanı filtresi de oluşturulur. Bu filtreyi, belirtilen aralık içinde tahmin puanı atanmış öğeleri görüntülemek için kullanabilirsiniz. Genel olarak, **modelin** tahminde bulunduğu öğelere 0 ile **0,5** arasındaki tahmin puanları atanmamaktadır. **0,5** ile **1,0** arasında tahmin puanları atanan öğeler, modelin tahminde bulunduğu öğelerdir.
 
 Tahmin puanı filtresini kullanmanın iki yolu şunlardır:
 
@@ -41,7 +39,7 @@ Tahmin puanı filtresini kullanmanın iki yolu şunlardır:
 
 ## <a name="apply-a-prediction-score-filter"></a>Tahmin puanı filtresi uygulama
 
-1. Microsoft Purview uyumluluk portalında eBulma (Premium) servis talebini açın, **Gözden geçirme kümeleri** sekmesini seçin ve gözden geçirme kümesini açın.
+1. Microsoft Purview uyumluluk portalı eBulma (Premium) servis talebini açın, **Gözden geçirme kümeleri** sekmesini seçin ve gözden geçirme kümesini açın.
 
    ![Filtreler açılır sayfasını görüntülemek için Filtreler'e tıklayın.](..\media\PredictionScoreFilter0.png)   
 
