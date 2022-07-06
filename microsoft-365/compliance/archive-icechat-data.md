@@ -11,25 +11,23 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Yöneticiler ICE Sohbet aracındaki verileri Microsoft 365 içeri aktarmak ve arşivlemesi için bir bağlayıcı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: 1704795d28062bf6259129e2548e797b2f6bc7e9
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Yöneticiler, ICE Sohbet aracındaki verileri Microsoft 365'e aktarmak ve arşivlemesi için bir bağlayıcı ayarlayabilir. Bu sayede Microsoft 365'teki üçüncü taraf veri kaynaklarından verileri arşivleyebilir, böylece kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
+ms.openlocfilehash: 7e9fdf0e5c9d294948eeb03e78477487697cb537
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090571"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625907"
 ---
 # <a name="set-up-a-connector-to-archive-ice-chat-data"></a>ICE Chat verilerini arşivleye bağlayıcı ayarlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]V
+ICE Chat işbirliği aracından finansal hizmetler sohbet verilerini içeri aktarmak ve arşiv etmek için Microsoft Purview uyumluluk portalı yerel bir bağlayıcı kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her gün bir kez kuruluşunuzun ICE Chat güvenli FTP (SFTP) sitesine bağlanır, sohbet iletilerinin içeriğini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'teki posta kutularına aktarır.
 
-ICE Chat işbirliği aracından finansal hizmetler sohbet verilerini içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında yerel bir bağlayıcı kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her gün bir kez kuruluşunuzun ICE Chat güvenli FTP (SFTP) sitesine bağlanır, sohbet iletilerinin içeriğini e-posta iletisi biçimine dönüştürür ve sonra bu öğeleri Microsoft 365'daki posta kutularına aktarır.
-
-ICE sohbet verileri kullanıcı posta kutularında depolandıktan sonra, dava tutma, eBulma, arşivleme, denetim, iletişim uyumluluğu ve Microsoft 365 bekletme ilkeleri gibi Microsoft Purview özelliklerini ICE Chat verilerine uygulayabilirsiniz. Örneğin, içerik aramasını kullanarak ICE Chat iletilerinde arama yapabilir veya ICE Chat verilerini içeren posta kutusunu eBulma (Premium) olayındaki bir koruyucuyla ilişkilendirebilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için ICE Chat bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+ICE sohbet verileri kullanıcı posta kutularında depolandıktan sonra, dava tutma, eBulma, arşivleme, denetim, iletişim uyumluluğu ve Microsoft 365 bekletme ilkeleri gibi Microsoft Purview özelliklerini ICE Chat verilerine uygulayabilirsiniz. Örneğin, içerik aramasını kullanarak ICE Chat iletilerinde arama yapabilir veya ICE Chat verilerini içeren posta kutusunu eBulma (Premium) durumundaki bir koruyucuyla ilişkilendirebilirsiniz. Microsoft 365'te verileri içeri aktarmak ve arşivlemek için ICE Chat bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-ice-chat-data"></a>ICE Sohbet verilerini arşivleme hakkında genel bakış
 
-Aşağıdaki genel bakış, MICROSOFT 365'da ICE sohbet verilerini arşivleyen bir bağlayıcı kullanma işlemini açıklar.
+Aşağıdaki genel bakış, Microsoft 365'te ICE sohbet verilerini arşivlerken bağlayıcı kullanma işlemini açıklar.
 
 ![ICE Sohbet arşivleme iş akışı.](../media/ICEChatConnectorWorkflow.png)
 
@@ -45,19 +43,19 @@ Aşağıdaki genel bakış, MICROSOFT 365'da ICE sohbet verilerini arşivleyen b
 
 ## <a name="before-you-set-up-a-connector"></a>Bağlayıcıyı ayarlamadan önce
 
-ICE Chat verilerini arşiv etmek için gereken uygulama adımlarından bazıları Microsoft 365 dışındadır ve bağlayıcıyı uyumluluk merkezinde oluşturabilmeniz için önce tamamlanması gerekir.
+ICE Chat verilerini arşivlerken gereken uygulama adımlarından bazıları Microsoft 365'in dışındadır ve bağlayıcıyı uyumluluk merkezinde oluşturabilmeniz için önce tamamlanması gerekir.
 
 - ICE Chat, müşterilerinden dış uyumluluk için bir ücret alır. Kuruluşunuz, üzerinde tartışmak ve adresinden edinebileceğiniz [https://www.theice.com/publicdocs/agreements/ICE\_Data\_Services\_Agreement.pdf](https://www.theice.com/publicdocs/agreements/ICE\_Data\_Services\_Agreement.pdf)ICE Chat veri hizmetleri sözleşmesini imzalamak için ICE Chat satış grubuyla iletişime geçmelidir. Bu sözleşme ICE Chat ile kuruluşunuz arasında yer alır ve Microsoft'u içermez. 2. Adımda bir ICE Chat SFTP sitesi ayarladıktan sonra, ICE Chat FTP kimlik bilgilerini doğrudan kuruluşunuza sağlar. Ardından, 3. Adımda bağlayıcıyı ayarlarken bu kimlik bilgilerini Microsoft'a sağlayacak olan siz olursunuz.
 
 - 3. Adımda bağlayıcıyı oluşturmadan önce bir ICE Chat SFTP sitesi ayarlamanız gerekir. SFTP sitesini ayarlamak için ICE Chat ile çalıştıktan sonra, ICE Chat'ten gelen veriler her gün SFTP sitesine yüklenir. 3. Adımda oluşturduğunuz bağlayıcı bu SFTP sitesine bağlanır ve sohbet verilerini Microsoft 365 posta kutularına aktarır. SFTP, aktarım işlemi sırasında posta kutularına gönderilen ICE Chat verilerini de şifreler.
 
-- ICE Chat bağlayıcısı ayarlamak için Oldukça İyi Gizlilik (PGP) ve Secure Shell (SSH) için anahtarlar ve anahtar parolaları kullanmanız gerekir. Bu anahtarlar ICE Chat SFTP sitesini yapılandırmak için kullanılır ve bağlayıcı tarafından verileri Microsoft 365 içeri aktarmak üzere ICE Chat SFTP sitesine bağlanmak için kullanılır. PGP anahtarı, ICE Chat SFTP sitesinden Microsoft 365 aktarılan verilerin şifrelenmesini yapılandırmak için kullanılır. Bağlayıcı ICE Chat SFTP sitesine bağlandığında güvenli bir uzaktan oturum açmayı etkinleştirmek için güvenli kabuğu yapılandırmak için SSH anahtarı kullanılır.
+- ICE Chat bağlayıcısı ayarlamak için Oldukça İyi Gizlilik (PGP) ve Secure Shell (SSH) için anahtarlar ve anahtar parolaları kullanmanız gerekir. Bu anahtarlar ICE Chat SFTP sitesini yapılandırmak için kullanılır ve bağlayıcı tarafından verileri Microsoft 365'e aktarmak üzere ICE Chat SFTP sitesine bağlanmak için kullanılır. PGP anahtarı, ICE Chat SFTP sitesinden Microsoft 365'e aktarılan verilerin şifrelenmesini yapılandırmak için kullanılır. Bağlayıcı ICE Chat SFTP sitesine bağlandığında güvenli bir uzaktan oturum açmayı etkinleştirmek için güvenli kabuğu yapılandırmak için SSH anahtarı kullanılır.
 
   Bağlayıcıyı ayarlarken, Microsoft tarafından sağlanan ortak anahtarları ve anahtar parolalarını kullanma seçeneğiniz vardır veya kendi özel anahtarlarınızı ve parolalarınızı kullanabilirsiniz. Microsoft tarafından sağlanan ortak anahtarları kullanmanızı öneririz. Ancak, kuruluşunuz özel anahtarları kullanarak zaten bir ICE Chat SFTP sitesi yapılandırdıysa, aynı özel anahtarları kullanarak bir bağlayıcı oluşturabilirsiniz.
 
-- ICE Chat bağlayıcısı tek bir günde toplam 200.000 öğeyi içeri aktarabilir. SFTP sitesinde 200.000'den fazla öğe varsa, bu öğelerin hiçbiri Microsoft 365 aktarılamaz.
+- ICE Chat bağlayıcısı tek bir günde toplam 200.000 öğeyi içeri aktarabilir. SFTP sitesinde 200.000'den fazla öğe varsa, bu öğelerin hiçbiri Microsoft 365'e aktarılamaz.
 
-- 3. Adımda ICE Chat bağlayıcısını oluşturan (ve 1. Adımda ortak anahtarları ve IP adresini indiren) yöneticiye Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
+- 3. Adımda ICE Chat bağlayıcısını oluşturan (ve 1. Adımda ortak anahtarları ve IP adresini indiren) yöneticiye Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
 ## <a name="set-up-a-connector-using-public-keys"></a>Ortak anahtarları kullanarak bağlayıcı ayarlama
 
@@ -65,7 +63,7 @@ Bu bölümdeki adımlarda, Pretty Good Privacy (PGP) ve Secure Shell (SSH) için
 
 ### <a name="step-1-obtain-pgp-and-ssh-public-keys"></a>1. Adım: PGP ve SSH ortak anahtarlarını alma
 
-İlk adım, Oldukça İyi Gizlilik (PGP) ve Secure Shell (SSH) için ortak anahtarların bir kopyasını almaktır. Bağlayıcının (3. Adımda oluşturduğunuz) SFTP sitesine bağlanmasına ve ICE Chat verilerini Microsoft 365 posta kutularına aktarmasına izin verecek şekilde ICE Chat SFTP sitesini yapılandırmak için 2. Adımda bu anahtarları kullanırsınız. Bu adımda, ICE Chat SFTP sitesini yapılandırırken kullandığınız bir IP adresi de alırsınız.
+İlk adım, Oldukça İyi Gizlilik (PGP) ve Secure Shell (SSH) için ortak anahtarların bir kopyasını almaktır. 2. Adımda bu anahtarları, BAĞLAYıCının (3. Adımda oluşturduğunuz) SFTP sitesine bağlanmasına ve ICE Chat verilerini Microsoft 365 posta kutularına aktarmasına izin verecek şekilde ICE Chat SFTP sitesini yapılandırmak için kullanırsınız. Bu adımda, ICE Chat SFTP sitesini yapılandırırken kullandığınız bir IP adresi de alırsınız.
 
 1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** [https://compliance.microsoft.com](https://compliance.microsoft.com) gidin ve tıklayın.
 
@@ -85,7 +83,7 @@ Bu bölümdeki adımlarda, Pretty Good Privacy (PGP) ve Secure Shell (SSH) için
 
    Bu dosyalar, 2. Adımda ICE Chat SFTP sitesini yapılandırmak için kullanılan aşağıdaki öğeleri içerir:
 
-   - PGP ortak anahtarı: Bu anahtar, ICE Chat SFTP sitesinden Microsoft 365 aktarılan verilerin şifrelenmesini yapılandırmak için kullanılır.
+   - PGP ortak anahtarı: Bu anahtar, ICE Chat SFTP sitesinden Microsoft 365'e aktarılan verilerin şifrelemesini yapılandırmak için kullanılır.
 
    - SSH ortak anahtarı: Bu anahtar, bağlayıcı ICE Chat SFTP sitesine bağlandığında güvenli bir uzaktan oturum açmayı etkinleştirmek için Güvenli SSH'yi yapılandırmak için kullanılır.
 
@@ -95,11 +93,11 @@ Bu bölümdeki adımlarda, Pretty Good Privacy (PGP) ve Secure Shell (SSH) için
 
 ### <a name="step-2-configure-the-ice-chat-sftp-site"></a>2. Adım: ICE Chat SFTP sitesini yapılandırma
 
-Sonraki adım, ICE Chat SFTP sitesi için PGP şifrelemesini ve SSH kimlik doğrulamasını yapılandırmak üzere 1. Adımda aldığınız PGP ve SSH ortak anahtarlarını ve IP adresini kullanmaktır. Bu, 3. Adımda oluşturduğunuz ICE Chat bağlayıcısının ICE Chat SFTP sitesine bağlanmasını ve ICE Chat verilerini Microsoft 365 aktarmasını sağlar. ICE Chat SFTP sitenizi ayarlamak için ICE Chat müşteri desteğiyle çalışmanız gerekir.
+Sonraki adım, ICE Chat SFTP sitesi için PGP şifrelemesini ve SSH kimlik doğrulamasını yapılandırmak üzere 1. Adımda aldığınız PGP ve SSH ortak anahtarlarını ve IP adresini kullanmaktır. Bu, 3. Adımda oluşturduğunuz ICE Chat bağlayıcısının ICE Chat SFTP sitesine bağlanmasını ve ICE Chat verilerini Microsoft 365'e aktarmasını sağlar. ICE Chat SFTP sitenizi ayarlamak için ICE Chat müşteri desteğiyle çalışmanız gerekir.
 
 ### <a name="step-3-create-an-ice-chat-connector"></a>3. Adım: ICE Chat bağlayıcısı oluşturma
 
-Son adım, uyumluluk portalında bir ICE Chat bağlayıcısı oluşturmaktır. Bağlayıcı, ICE Chat SFTP sitesine bağlanmak ve sohbet iletilerini Microsoft 365 ilgili kullanıcı posta kutusu kutularına aktarmak için sağladığınız bilgileri kullanır.
+Son adım, uyumluluk portalında bir ICE Chat bağlayıcısı oluşturmaktır. Bağlayıcı, ICE Chat SFTP sitesine bağlanmak ve sohbet iletilerini Microsoft 365'teki ilgili kullanıcı posta kutusu kutularına aktarmak için sağladığınız bilgileri kullanır.
 
 1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** [https://compliance.microsoft.com](https://compliance.microsoft.com) gidin ve tıklayın.
 
@@ -129,10 +127,10 @@ Son adım, uyumluluk portalında bir ICE Chat bağlayıcısı oluşturmaktır. B
 
      - **Yalnızca Dava tutan kullanıcılar**. Yalnızca posta kutuları Dava tutmada yer alan kullanıcılar için verileri içeri aktarmak için bu seçeneği belirleyin. Bu seçenek, LitigationHoldEnabled özelliği True olarak ayarlanmış kullanıcı posta kutularına veri aktarır. Daha fazla bilgi için bkz. [Dava tutma oluşturma](create-a-litigation-hold.md).
 
-9. **Dış kullanıcıları Microsoft 365 kullanıcılarla eşle** sayfasında otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlayın. Bu sayfada kullanıcı eşleme CSV dosyasının bir kopyasını indirebilirsiniz. Dosyaya kullanıcı eşlemeleri ekleyebilir ve sonra dosyayı karşıya yükleyebilirsiniz.
+9. **Dış kullanıcıları Microsoft 365 kullanıcıları ile eşle** sayfasında otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlayın. Bu sayfada kullanıcı eşleme CSV dosyasının bir kopyasını indirebilirsiniz. Dosyaya kullanıcı eşlemeleri ekleyebilir ve sonra dosyayı karşıya yükleyebilirsiniz.
 
    > [!NOTE]
-   > Daha önce açıklandığı gibi, özel eşleme dosyası CSV dosyası ICE Chat imid ve her kullanıcı için ilgili Microsoft 365 posta kutusu adresini içerir. Otomatik kullanıcı eşlemesini etkinleştirir ve her sohbet öğesi için özel bir eşleme sağlarsanız bağlayıcı önce özel eşleme dosyasına bakar. Kullanıcının ICE Chat kimliğine karşılık gelen geçerli bir Microsoft 365 kullanıcısı bulamazsa, bağlayıcı öğeyi sohbet öğesinin *SenderEmail* ve *RecipientEmail* özelliklerinde belirtilen kullanıcıların posta kutularına aktarır. Bağlayıcı otomatik veya özel kullanıcı eşlemesi ile geçerli bir Microsoft 365 kullanıcı bulamazsa, öğe içeri aktarılamaz.
+   > Daha önce açıklandığı gibi, özel eşleme dosyası CSV dosyası ICE Chat imid ve her kullanıcı için karşılık gelen Microsoft 365 posta kutusu adresini içerir. Otomatik kullanıcı eşlemesini etkinleştirir ve her sohbet öğesi için özel bir eşleme sağlarsanız bağlayıcı önce özel eşleme dosyasına bakar. Kullanıcının ICE Chat kimliğine karşılık gelen geçerli bir Microsoft 365 kullanıcısı bulamazsa, bağlayıcı öğeyi sohbet öğesinin *SenderEmail* ve *RecipientEmail* özelliklerinde belirtilen kullanıcıların posta kutularına aktarır. Bağlayıcı otomatik veya özel kullanıcı eşlemesi ile geçerli bir Microsoft 365 kullanıcısı bulamazsa, öğe içeri aktarılamaz.
 
 10. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve ardından **Son'a** tıklayarak bağlayıcıyı oluşturun.
 
@@ -144,7 +142,7 @@ Bu bölümdeki adımlarda, PGP ve SSH özel anahtarlarını kullanarak ICE Chat 
 
 ### <a name="step-1-obtain-an-ip-address-to-configure-the-ice-chat-sftp-site"></a>1. Adım: ICE Chat SFTP sitesini yapılandırmak için bir IP adresi alma
 
-Kuruluşunuz bir ICE Chat SFTP sitesi ayarlamak için PGP ve SSH özel anahtarlarını kullandıysa, bir IP adresi edinmeniz ve ICE Chat müşteri desteğine sağlamanız gerekir. ICE Chat SFTP sitesi, bu IP adresinden gelen bağlantı isteklerini kabul etmek üzere yapılandırılmalıdır. Aynı IP adresi, ICE Chat bağlayıcısı tarafından SFTP sitesine bağlanmak ve ICE Chat verilerini Microsoft 365 aktarmak için kullanılır.
+Kuruluşunuz bir ICE Chat SFTP sitesi ayarlamak için PGP ve SSH özel anahtarlarını kullandıysa, bir IP adresi edinmeniz ve ICE Chat müşteri desteğine sağlamanız gerekir. ICE Chat SFTP sitesi, bu IP adresinden gelen bağlantı isteklerini kabul etmek üzere yapılandırılmalıdır. Ice Chat bağlayıcısı tarafından SFTP sitesine bağlanmak ve ICE Chat verilerini Microsoft 365'e aktarmak için aynı IP adresi kullanılır.
 
 IP adresini almak için:
 
@@ -170,7 +168,7 @@ ICE Chat SFTP sitenizi bu IP adresinden gelen bağlantı isteklerini kabul edece
 
 ### <a name="step-2-create-an-ice-chat-connector"></a>2. Adım: ICE Chat bağlayıcısı oluşturma
 
-ICE Chat SFTP siteniz yapılandırıldıktan sonra, sonraki adım uyumluluk portalında bir ICE Chat bağlayıcısı oluşturmaktır. Bağlayıcı, ICE Chat SFTP sitesine bağlanmak ve e-posta iletilerini Microsoft 365 ilgili kullanıcı posta kutusu kutularına aktarmak için sağladığınız bilgileri kullanır. Bu adımı tamamlamak için ICE Chat SFTP sitenizi ayarlamak için kullandığınız aynı özel anahtarların ve anahtar parolalarının kopyalarına sahip olduğunuzdan emin olun.
+ICE Chat SFTP siteniz yapılandırıldıktan sonra, sonraki adım uyumluluk portalında bir ICE Chat bağlayıcısı oluşturmaktır. Bağlayıcı, ICE Chat SFTP sitesine bağlanmak ve e-posta iletilerini Microsoft 365'teki ilgili kullanıcı posta kutusu kutularına aktarmak için sağladığınız bilgileri kullanır. Bu adımı tamamlamak için ICE Chat SFTP sitenizi ayarlamak için kullandığınız aynı özel anahtarların ve anahtar parolalarının kopyalarına sahip olduğunuzdan emin olun.
 
 1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** <https://compliance.microsoft.com> gidin ve tıklayın.
 
@@ -210,10 +208,10 @@ ICE Chat SFTP siteniz yapılandırıldıktan sonra, sonraki adım uyumluluk port
 
      - **Yalnızca Dava tutan kullanıcılar**. Yalnızca posta kutuları Dava tutmada yer alan kullanıcılar için verileri içeri aktarmak için bu seçeneği belirleyin. Bu seçenek, LitigationHoldEnabled özelliği True olarak ayarlanmış kullanıcı posta kutularına veri aktarır. Daha fazla bilgi için bkz. [Dava tutma oluşturma](create-a-litigation-hold.md).
 
-9. **ICE Chat kullanıcılarını Microsoft 365 kullanıcılara eşle** sayfasında otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlayın.
+9. **ICE Chat kullanıcılarını Microsoft 365 kullanıcılarına eşle** sayfasında otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlayın.
 
    > [!NOTE]
-   > Daha önce açıklandığı gibi, özel eşleme dosyası CSV dosyası ICE Chat imid ve her kullanıcı için ilgili Microsoft 365 posta kutusu adresini içerir. Otomatik kullanıcı eşlemesini etkinleştirir ve her sohbet öğesi için özel bir eşleme sağlarsanız bağlayıcı önce özel eşleme dosyasına bakar. Kullanıcının ICE Chat kimliğine karşılık gelen geçerli bir Microsoft 365 kullanıcısı bulamazsa, bağlayıcı öğeyi sohbet öğesinin *SenderEmail* ve *RecipientEmail* özelliklerinde belirtilen kullanıcıların posta kutularına aktarır. Bağlayıcı otomatik veya özel kullanıcı eşlemesi ile geçerli bir Microsoft 365 kullanıcı bulamazsa, öğe içeri aktarılamaz.
+   > Daha önce açıklandığı gibi, özel eşleme dosyası CSV dosyası ICE Chat imid ve her kullanıcı için karşılık gelen Microsoft 365 posta kutusu adresini içerir. Otomatik kullanıcı eşlemesini etkinleştirir ve her sohbet öğesi için özel bir eşleme sağlarsanız bağlayıcı önce özel eşleme dosyasına bakar. Kullanıcının ICE Chat kimliğine karşılık gelen geçerli bir Microsoft 365 kullanıcısı bulamazsa, bağlayıcı öğeyi sohbet öğesinin *SenderEmail* ve *RecipientEmail* özelliklerinde belirtilen kullanıcıların posta kutularına aktarır. Bağlayıcı otomatik veya özel kullanıcı eşlemesi ile geçerli bir Microsoft 365 kullanıcısı bulamazsa, öğe içeri aktarılamaz.
 
 10. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve ardından **Son'a** tıklayarak bağlayıcıyı oluşturun.
 

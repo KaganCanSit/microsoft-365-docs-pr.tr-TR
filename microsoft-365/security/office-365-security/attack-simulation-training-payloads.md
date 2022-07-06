@@ -1,5 +1,5 @@
 ---
-title: Saldırı simülasyonu eğitimindeki yükleri
+title: Saldırı simülasyonu eğitimi için yükler
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'de Saldırı simülasyonu eğitimi için yük oluşturmayı ve yönetmeyi öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: 38e9e60c50a7bc0dec4e8f9f75845fdc34e4b237
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 6cb3f2b2edb3c55063db2640eab1dd888f9aa5b7
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66487234"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66621303"
 ---
 # <a name="payloads-in-attack-simulation-training-in-defender-for-office-365"></a>Office 365 için Defender'de Saldırı simülasyonu eğitimi yükleri
 
@@ -101,7 +101,7 @@ Listeden bir yük seçtiğinizde, aşağıdaki bilgilerle birlikte bir ayrıntı
    ![Microsoft 365 Defender portalındaki Saldırı benzetimi eğitimindeki Yüklerin Kiracı yükleri sekmesinde bir yük oluşturun.](../../media/attack-sim-training-payload-create.png)
 
    > [!NOTE]
-   > ![Yük simgesi oluşturun.](../../media/m365-cc-sc-create-icon.png) **Yük oluşturma** , simülasyon oluşturma sihirbazının **Yükü seçin** sayfasında da kullanılabilir. Daha fazla bilgi için bkz. [Office 365 için Defender'de kimlik avı saldırısı benzetimi](attack-simulation-training.md) yapma.
+   > ![Yük simgesi oluşturun.](../../media/m365-cc-sc-create-icon.png) **Yük oluşturma** , simülasyon oluşturma sihirbazının **Yükü seçin ve oturum açma sayfası** adımında da kullanılabilir. Daha fazla bilgi için bkz [. Simülasyon oluşturma: Yük seçme ve oturum açma sayfası](attack-simulation-training.md#select-a-payload-and-login-page).
    >
    > Oluşturma sihirbazı sırasında herhangi bir noktada Kaydet **ve kapat'a** tıklayarak ilerlemenizi kaydedebilir ve yükü daha sonra yapılandırmaya devam edebilirsiniz. **Yüklerin Kiracı yükleri** sekmesindeki bildirimi seçip Yükü düzenle simgesine tıklayarak ![kaldığınız yerden devam edebilirsiniz.](../../media/m365-cc-sc-edit-icon.png) **Yükü düzenle**. Kısmen tamamlanan yük **, Taslak** **Durum** değerine sahip olacaktır.
 

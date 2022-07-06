@@ -16,17 +16,15 @@ search.appverid:
 - MET150
 ms.assetid: ''
 ms.custom: seo-marvel-mar2020
-description: Bir durumda ayarlanan tüm incelemeler için geçerli olan Microsoft Purview eBulma (Premium) ayarlarını yapılandırın. Bu, analiz ve Optik karakter tanıma ayarlarını içerir.
-ms.openlocfilehash: 0ef76833d18b44a2a1c39db41f7d6fa31f99293e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Bir durumda tüm inceleme kümesi için geçerli olan Microsoft Purview eKeşif (Premium) ayarlarını yapılandırın. Bu, analiz ve Optik karakter tanıma ayarlarını içerir.
+ms.openlocfilehash: 315448606e99a768bacd8d7d4ac7f858c79c7bed
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097150"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624575"
 ---
 # <a name="configure-search-and-analytics-settings-in-ediscovery-premium"></a>eBulma'da arama ve analiz ayarlarını yapılandırma (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Aşağıdaki işlevleri denetlemek için her Microsoft Purview eKeşif (Premium) olayı için ayarları yapılandırabilirsiniz.
 
@@ -74,7 +72,7 @@ Bu bölümde, temalar için parametreler ayarlayabilirsiniz. Daha fazla bilgi i�
 
 ## <a name="review-set-query"></a>Küme sorgusunu gözden geçirme
 
-**Analizden sonra kaydedilen gözden geçirme için otomatik olarak oluştur** onay kutusunu seçerseniz, eBulma (Premium) Gözden **Geçirme için** adlı gözden geçirme kümesi sorgusunu otomatik olarak oluşturur. 
+**Analizden sonra kaydedilen gözden geçirme için otomatik olarak oluştur** onay kutusunu seçerseniz, eBulma (Premium) gözden geçirme için adlı gözden geçirme kümesi sorgusunu otomatik olarak oluşturur **.** 
 
 ![Gözden Geçir otomatik oluşturulan sorgusu.](../media/AeDForReviewQuery.png)
 

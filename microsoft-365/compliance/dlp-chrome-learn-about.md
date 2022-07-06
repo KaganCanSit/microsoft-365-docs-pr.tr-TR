@@ -19,16 +19,14 @@ ms.collection:
 search.appverid:
 - MET150
 description: Microsoft Purview Uzantısı, dosya etkinliklerinin ve koruyucu eylemlerin izlenmesini ve denetimini Google Chrome tarayıcısına genişletir
-ms.openlocfilehash: a74cfeb734f41622d491c8aaffe3a5e054479a2a
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 08078871765a75577475c93ba35cabda9ee3fd6a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172241"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622909"
 ---
 # <a name="learn-about-the-microsoft-purview-extension"></a>Microsoft Purview Uzantısı hakkında bilgi edinme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 [Uç nokta veri kaybı önleme (uç nokta DLP),](endpoint-dlp-learn-about.md) [Microsoft Purview veri kaybı önlemenin (DLP)](dlp-learn-about-dlp.md) etkinlik izleme ve koruma özelliklerini Windows 10 cihazlardaki hassas öğelere genişletir. Cihazlar Microsoft Purview çözümlerine eklendikten sonra, kullanıcıların hassas öğelerle yaptıklarıyla ilgili bilgiler [etkinlik gezgininde](data-classification-activity-explorer.md) görünür hale getirilir ve [DLP ilkeleri](create-test-tune-dlp-policy.md) aracılığıyla bu öğeler üzerinde koruyucu eylemler uygulayabilirsiniz.
 
@@ -47,23 +45,23 @@ Etkinlik |Açıklama  | desteklenen ilke eylemleri|
 |dosya ağ paylaşımına kopyalandı  |Bir kullanıcının Chrome tarayıcısında açık olan hassas bir öğeden bir ağ paylaşımına veya eşlenmiş ağ sürücüsüne hassas bir öğeyi veya bilgileri kopyalamayı denediğini algılar.|denetim, geçersiz kılma ile engelleme, engelleme |
 
 ## <a name="deployment-process"></a>Dağıtım işlemi
-1. [Uç nokta veri kaybı önleme ile Kullanmaya başlayın](endpoint-dlp-getting-started.md)
+1. [Uç nokta veri kaybı önlemeyi kullanmaya başlama](endpoint-dlp-getting-started.md)
 2. [Windows 10 cihazlar için ekleme araçları ve yöntemleri](device-onboarding-overview.md)
 3. [Uzantıyı Windows 10 cihazlarınıza yükleme](dlp-chrome-get-started.md)
 4. Bulut hizmetine yüklemeyi veya izin verilmeyen tarayıcı eylemleriyle erişimi kısıtlayan ve bunları Windows 10 cihazlarınıza uygulayan [DLP ilkeleri oluşturma veya düzenleme](create-test-tune-dlp-policy.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Eksiksiz dağıtım yordamları ve senaryoları için [bkz. Microsoft Purview Uzantısı ile Kullanmaya başlayın](dlp-chrome-get-started.md).
+Eksiksiz dağıtım yordamları ve senaryoları için bkz. [Microsoft Purview Uzantısı ile çalışmaya başlama](dlp-chrome-get-started.md) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Microsoft Purview Uzantısı ile Kullanmaya başlayın](dlp-chrome-get-started.md)
+- [Microsoft Purview Uzantısı'nı kullanmaya başlama](dlp-chrome-get-started.md)
 - [Uç nokta veri kaybı önleme hakkında daha fazla bilgi edinme](endpoint-dlp-learn-about.md)
 - [Uç nokta veri kaybı önlemeyi kullanmaya başlama](endpoint-dlp-getting-started.md)
 - [Uç noktada veri kaybı önlemeyi kullanma](endpoint-dlp-using.md)
 - [Veri kaybı önleme hakkında daha fazla bilgi edinme](dlp-learn-about-dlp.md)
 - [Bir DLP ilkesi oluşturma, test etme ve ayarlama](create-test-tune-dlp-policy.md)
-- [Etkinlik gezgini ile Kullanmaya başlayın](data-classification-activity-explorer.md)
+- [Etkinlik gezginini kullanmaya başlama](data-classification-activity-explorer.md)
 - [Uç Nokta için Microsoft Defender](/windows/security/threat-protection/)
 - [İçeriden risk yönetimi](insider-risk-management.md)

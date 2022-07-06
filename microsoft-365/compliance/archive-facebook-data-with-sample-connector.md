@@ -14,21 +14,19 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
-description: Microsoft Purview uyumluluk portalında bağlayıcıyı ayarlamayı & facebook iş sayfalarından Microsoft 365 & arşiv verilerini içeri aktarmayı öğrenin.
-ms.openlocfilehash: 2d732352d8b6eebaee304a030736f35bcf32b84c
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Facebook İş sayfalarından Microsoft 365'e & arşiv verilerini içeri aktarmak için Microsoft Purview uyumluluk portalı bağlayıcıyı ayarlamayı & kullanmayı öğrenin.
+ms.openlocfilehash: d8b951e7f0b9733dacca7cfd16eed1042d84c460
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099333"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623363"
 ---
 # <a name="set-up-a-connector-to-archive-facebook-data-preview"></a>Facebook verilerini arşivleme (önizleme) için bağlayıcı ayarlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Facebook business sayfalarından Microsoft 365'e verileri içeri aktarmak ve arşiv etmek için Microsoft Purview uyumluluk portalı bir bağlayıcı kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, Facebook İş sayfasına bağlanır (zamanlanmış olarak), Facebook öğelerinin içeriğini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'teki bir posta kutusuna aktarır.
 
-Facebook business sayfalarından Microsoft 365 verileri içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir bağlayıcı kullanın. Bağlayıcıyı ayarladıktan ve yapılandırdıktan sonra, Facebook İş sayfasına bağlanır (zamanlanmış olarak), Facebook öğelerinin içeriğini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365 bir posta kutusuna aktarır.
-
-Facebook verileri içeri aktarıldıktan sonra, Facebook verilerine Dava Tutma, İçerik Arama, In-Place Arşivleme, Denetim, İletişim uyumluluğu ve Microsoft 365 saklama ilkeleri gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Örneğin, bir posta kutusu Dava Tutma'ya yerleştirildiğinde veya bir saklama ilkesine atandığında, Facebook verileri korunur. İçerik Arama'yı kullanarak üçüncü taraf verilerinde arama yapabilir veya Facebook verilerinin depolandığı posta kutusunu Microsoft Purview eKeşif (Premium) olayındaki bir koruyucuyla ilişkilendirebilirsiniz. Microsoft 365'da Facebook verilerini içeri aktarmak ve arşivlerken bağlayıcı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+Facebook verileri içeri aktarıldıktan sonra, Dava Tutma, İçerik Arama, In-Place Arşivleme, Denetim, İletişim uyumluluğu ve Microsoft 365 saklama ilkeleri gibi Microsoft Purview özelliklerini Facebook verilerine uygulayabilirsiniz. Örneğin, bir posta kutusu Dava Tutma'ya yerleştirildiğinde veya bir saklama ilkesine atandığında, Facebook verileri korunur. İçerik Arama'yı kullanarak üçüncü taraf verilerinde arama yapabilir veya Facebook verilerinin depolandığı posta kutusunu Microsoft Purview eKeşif (Premium) durumdaki bir koruyucuyla ilişkilendirebilirsiniz. Microsoft 365'te Facebook verilerini içeri aktarmak ve arşivlerken bağlayıcı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="prerequisites-for-setting-up-a-connector-for-facebook-business-pages"></a>Facebook business sayfaları için bağlayıcı ayarlama önkoşulları
 
@@ -43,37 +41,37 @@ Uyumluluk portalında kuruluşunuzun Facebook business sayfalarından verileri i
     - [Kullandıkça Öde Azure aboneliğine kaydolma](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/)
 
     > [!NOTE]
-    > [Microsoft 365 aboneliğinize](use-your-free-azure-ad-subscription-in-office-365.md) dahil olan ücretsiz Azure Active Directory aboneliği, uyumluluk portalındaki bağlayıcıları desteklemez.
+    > Microsoft 365 [aboneliğinize dahil olan ücretsiz Azure Active Directory](use-your-free-azure-ad-subscription-in-office-365.md) aboneliği, uyumluluk portalındaki bağlayıcıları desteklemez.
 
-- Facebook Business sayfalarının bağlayıcısı tek bir günde toplam 200.000 öğeyi içeri aktarabilir. Bir günde 200.000'den fazla Facebook İş öğesi varsa, bu öğelerin hiçbiri Microsoft 365 aktarılamaz.
+- Facebook Business sayfalarının bağlayıcısı tek bir günde toplam 200.000 öğeyi içeri aktarabilir. Bir günde 200.000'den fazla Facebook İş öğesi varsa, bu öğelerin hiçbiri Microsoft 365'e aktarılamaz.
 
-- Uyumluluk portalında (5. Adımda) özel bağlayıcıyı ayarlayan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
+- Uyumluluk portalında (5. Adımda) özel bağlayıcıyı ayarlayan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
 ## <a name="step-1-create-an-app-in-azure-active-directory"></a>1. Adım: Azure Active Directory'de uygulama oluşturma
 
-İlk adım, yeni bir uygulamayı Azure Active Directory'a (AAD) kaydetmektir. Bu uygulama, Facebook bağlayıcısı için 4. Ve 5. Adım'da uyguladığınız web uygulaması kaynağına karşılık gelir.
+İlk adım, Azure Active Directory'ye (AAD) yeni bir uygulama kaydetmektir. Bu uygulama, Facebook bağlayıcısı için 4. Ve 5. Adım'da uyguladığınız web uygulaması kaynağına karşılık gelir.
 
 Adım adım yönergeler için bkz. [Azure Active Directory'de uygulama oluşturma](deploy-facebook-connector.md#step-1-create-an-app-in-azure-active-directory).
 
 Bu adımın tamamlanması sırasında (önceki adım adım yönergeleri kullanarak) aşağıdaki bilgileri bir metin dosyasına kaydedersiniz. Bu değerler dağıtım işleminin sonraki adımlarında kullanılır.
 
-- uygulama kimliğini AAD
+- AAD uygulama kimliği
 
-- Uygulama gizli dizi AAD
+- AAD uygulama gizli dizisi
 
 - Kiracı Kimliği
 
-## <a name="step-2-deploy-the-connector-web-service-from-github-to-your-azure-account"></a>2. Adım: Bağlayıcı web hizmetini GitHub Azure hesabınıza dağıtma
+## <a name="step-2-deploy-the-connector-web-service-from-github-to-your-azure-account"></a>2. Adım: Bağlayıcı web hizmetini GitHub'dan Azure hesabınıza dağıtma
 
-Bir sonraki adım, Facebook hesabınıza bağlanmak ve verileri Microsoft 365 içeri aktarabilmeniz için verileri ayıklamak için Facebook API'sini kullanacak Facebook business sayfaları bağlayıcı uygulamasının kaynak kodunu dağıtmaktır. Kuruluşunuz için dağıttığınız Facebook bağlayıcısı, Facebook İş sayfalarınızdaki öğeleri bu adımda oluşturulan Azure Depolama konumuna yükler. Uyumluluk portalında (5. Adımda) bir Facebook iş sayfaları bağlayıcısı oluşturduktan sonra İçeri Aktarma hizmeti, Facebook iş sayfaları verilerini Azure Depolama konumundan Microsoft 365 kuruluşunuzdaki bir posta kutusuna kopyalar. [Önkoşullar](#prerequisites-for-setting-up-a-connector-for-facebook-business-pages) bölümünde açıklandığı gibi, Azure Depolama hesabı oluşturmak için geçerli bir Azure aboneliğiniz olmalıdır.
+Sonraki adım, Facebook hesabınıza bağlanmak ve verileri Microsoft 365'e aktarabilmeniz için verileri ayıklamak için Facebook API'sini kullanacak Facebook business sayfaları bağlayıcı uygulamasının kaynak kodunu dağıtmaktır. Kuruluşunuz için dağıttığınız Facebook bağlayıcısı, Facebook İş sayfalarınızdaki öğeleri bu adımda oluşturulan Azure Depolama konumuna yükler. Uyumluluk portalında (5. Adımda) bir Facebook iş sayfaları bağlayıcısı oluşturduktan sonra İçeri Aktarma hizmeti, Facebook iş sayfaları verilerini Azure Depolama konumundan Microsoft 365 kuruluşunuzdaki bir posta kutusuna kopyalar. [Önkoşullar](#prerequisites-for-setting-up-a-connector-for-facebook-business-pages) bölümünde açıklandığı gibi, Azure Depolama hesabı oluşturmak için geçerli bir Azure aboneliğiniz olmalıdır.
 
-Adım adım yönergeler için bkz. [Bağlayıcı web hizmetini GitHub Azure hesabınıza dağıtma](deploy-facebook-connector.md#step-2-deploy-the-connector-web-service-from-github-to-your-azure-account).
+Adım adım yönergeler için bkz. [GitHub'dan Azure hesabınıza bağlayıcı web hizmetini dağıtma](deploy-facebook-connector.md#step-2-deploy-the-connector-web-service-from-github-to-your-azure-account).
 
 Bu adımı tamamlamak için adım adım yönergelerde aşağıdaki bilgileri sağlayacaksınız:
 
 - APISecretKey: Bu adımın tamamlanması sırasında bu gizli diziyi oluşturursunuz. 5. Adımda kullanılır.
 
-- TenantId: 1. Adımda Azure Active Directory'da Facebook bağlayıcı uygulamasını oluşturduktan sonra kopyaladığınız Microsoft 365 kuruluşunuzun kiracı kimliği.
+- TenantId: 1. Adımda Azure Active Directory'de Facebook bağlayıcı uygulamasını oluşturduktan sonra kopyaladığınız Microsoft 365 kuruluşunuzun kiracı kimliği.
 
 Bu adımı tamamladıktan sonra Azure app service URL'sini (örneğin, https://fbconnector.azurewebsites.net)) kopyaladığınızdan emin olun. 3. Adım, Adım 4 ve 5. Adımı tamamlamak için bu URL'yi kullanmanız gerekir).
 
@@ -111,7 +109,7 @@ Bu adımın tamamlanması sırasında (adım adım yönergeleri izleyerek), aşa
 
 ## <a name="step-5-set-up-a-facebook-business-pages-connector-in-the-compliance-portal"></a>5. Adım: Uyumluluk portalında Facebook Business sayfaları bağlayıcısı ayarlama
 
-Son adım, uyumluluk portalında Facebook business sayfalarınızdaki verileri Microsoft 365'daki belirli bir posta kutusuna aktaracak bağlayıcıyı ayarlamaktır. Bu adımı tamamladıktan sonra, İçeri Aktarma Microsoft 365 hizmeti Facebook business sayfalarınızdaki verileri Microsoft 365 aktarmaya başlar.
+Son adım, uyumluluk portalında Facebook business sayfalarınızdaki verileri Microsoft 365'teki belirli bir posta kutusuna aktaracak bağlayıcıyı ayarlamaktır. Bu adımı tamamladıktan sonra, Microsoft 365 İçeri Aktarma hizmeti Facebook İş sayfalarınızdaki verileri Microsoft 365'e aktarmaya başlar.
 
 Adım adım yönergeler için bkz. [Uyumluluk portalında 5. Adım: Facebook bağlayıcısı ayarlama](deploy-facebook-connector.md#step-5-set-up-a-facebook-connector-in-the-compliance-portal).
 

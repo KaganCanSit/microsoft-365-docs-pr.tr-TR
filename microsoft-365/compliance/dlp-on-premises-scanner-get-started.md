@@ -1,5 +1,5 @@
 ---
-title: Şirket içi Microsoft 365 kaybı önleme ile çalışmaya başlama
+title: Şirket içi tarayıcıda veri kaybını önlemeyi kullanmaya başlama
 f1.keywords:
 - CSH
 ms.author: chrfox
@@ -19,37 +19,37 @@ ms.collection:
 ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
-description: Şirket içi Microsoft 365 önlemeyi ayarlama
-ms.openlocfilehash: 1586489389931b3df19a1c84f0ae49ac7ff9c099
-ms.sourcegitcommit: d37fce3b708ea5232b4102fd0e693f4bf17a8948
+description: Şirket içi tarayıcıda veri kaybı önlemeyi ayarlama
+ms.openlocfilehash: a1bcebfb48a502a9d7c484d266d91fe105603f84
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/21/2022
-ms.locfileid: "63014120"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625445"
 ---
-# <a name="get-started-with-the-data-loss-prevention-on-premises-scanner"></a>Şirket içi tarayıcıda veri kaybı önlemeye başlama
+# <a name="get-started-with-the-data-loss-prevention-on-premises-scanner"></a>Şirket içi veri kaybı önleme tarayıcısını kullanmaya başlama
 
-Bu makale, şirket içi tarayıcıda veri kaybı önleme Microsoft 365 önkoşullarda ve yapılandırmada size yol gösterir.
+Bu makalede, Şirket içi Microsoft Purview veri kaybı önleme tarayıcısının önkoşulları ve yapılandırmasında size yol gösterildi.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-### <a name="skusubscriptions-licensing"></a>SKU/abonelik lisansı
+### <a name="skusubscriptions-licensing"></a>SKU/abonelik lisanslama
 
-Şirket içi tarayıcıya başlamadan önce, Microsoft 365 [aboneliğinizi ve tüm](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1) eklentileri onaylamanız gerekir. DLP kurallarını ayarleyen yönetici hesabına aşağıdaki lisanslardan biri atanabilir:
+DLP şirket içi tarayıcıyı kullanmaya başlamadan önce [Microsoft 365 aboneliğinizi](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1) ve tüm eklentileri onaylamanız gerekir. DLP kurallarını ayarlayan yönetici hesabına aşağıdaki lisanslardan biri atanmalıdır:
 
 - Microsoft 365 E5
 - Microsoft 365 E5 Uyumluluk
-- Microsoft 365 E5 Koruma ve & Yönetimi 
+- İdareyi Microsoft 365 E5 Information Protection & 
 
 
-Tüm lisans ayrıntıları için bkz. [güvenlik Microsoft 365 uyumluluğu için lisans & kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
+Tam lisanslama ayrıntıları için bkz. [Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
 
 > [!IMPORTANT]
-> Dosyalar ekleyerek veya dosyaları tüketerek taranan konuma katkıda bulunan tüm kullanıcıların, yalnızca tarayıcı kullanıcısını değil, bir lisansının da sahip olduğu gerekir.
+> Taranan konuma dosya ekleyerek veya dosya kullanarak katkıda bulunan tüm kullanıcıların yalnızca tarayıcı kullanıcısına değil lisansa sahip olması gerekir.
 
 ### <a name="permissions"></a>İzinler
 
-DLP şirket içi tarayıcıdan gelen veriler Etkinlik [Gezgini'nde görüntülenebilirsiniz](data-classification-activity-explorer.md). Etkinlik gezginine izin veren dört rol vardır ve verilere erişim için kullanmakta olduğunuz hesabın bunlardan herhangi birinin üyesi olması gerekir.
+DLP şirket içi tarayıcıdaki veriler [Etkinlik gezgininde](data-classification-activity-explorer.md) görüntülenebilir. Etkinlik gezginine izin veren dört rol vardır; verilere erişmek için kullandığınız hesap bunlardan herhangi birinin üyesi olmalıdır.
 
 - Genel yönetici
 - Uyumluluk yöneticisi
@@ -58,98 +58,98 @@ DLP şirket içi tarayıcıdan gelen veriler Etkinlik [Gezgini'nde görüntülen
 
 #### <a name="roles-and-role-groups-in-preview"></a>Önizlemede Roller ve Rol Grupları
 
-Önizlemede, erişim denetimlerinize ince ayar yapmak için test etmek için deney erişiminiz olan roller ve rol grupları vardır.
+Önizlemede, erişim denetimlerinizde ince ayar yapmak için test yapabileceğiniz roller ve rol grupları vardır.
 
-İşte önizlemede olan Microsoft Bilgi Koruması (MIP) rollerinin listesi. Bu roller hakkında daha fazla bilgi edinmek [için Güvenlik ve Uyumluluk Merkezi'& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
+Aşağıda, önizleme aşamasında olan geçerli rollerin listesi yer alır. Bunlar hakkında daha fazla bilgi edinmek için bkz [. Güvenlik & Uyumluluk Merkezi'ndeki Roller](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Bilgi Koruması Yöneticisi
-- Bilgi Koruma Analisti
-- Bilgi Koruma Koruma Koruma Koruması
-- Bilgi Koruma Okuyucusu
+- Information Protection Yönetici
+- Information Protection Analisti
+- Information Protection Araştırmacısı
+- Information Protection Okuyucu
 
-Önizlemede olan MIP rol gruplarının listesi burada ve ve şekildedir. Bu gruplar hakkında daha fazla bilgi [edinmek için Güvenlik ve Uyumluluk Merkezi'nde & bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center).
+Aşağıda, önizleme aşamasında olan geçerli rol gruplarının listesi yer alır. hakkında daha fazla bilgi edinmek için bkz [. Güvenlik & Uyumluluk Merkezi'ndeki Rol grupları](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center)
 
-- Bilgi Koruması
-- Bilgi Koruması Yöneticileri
-- Bilgi Koruma Analistleri
-- Bilgi Koruma Koruma KorumaLarı
-- Bilgi Koruma Okuyucuları
+- Information Protection
+- Information Protection Yöneticileri
+- Information Protection Analistleri
+- Information Protection Araştırmacıları
+- Information Protection Okuyucular
 
 ### <a name="dlp-on-premises-scanner-prerequisites"></a>DLP şirket içi tarayıcı önkoşulları
 
-- Azure Information Protection (AIP) tarayıcı, DLP ilkesi eşleştirmesi ve ilke zorlaması sunar. Tarayıcı AIP istemcisinin bir parçası olarak yüklenir, dolayısıyla yüklemeniz AIP'nin, AIP istemcisinin ve AIP birleşik etiket tarayıcısının tüm önkoşullarını karşılaması gerekir.
-- AIP istemcisini ve tarayıcıyı dağıtın. Daha fazla bilgi [için AIP](/azure/information-protection/rms-client/install-unifiedlabelingclient-app) birleşik etiketleme istemcisini ve [] yükleme için bkz. [Azure Information Protection birleşik etiketleme tarayıcısını yapılandırma ve yükleme](/azure/information-protection/deploy-aip-scanner-configure-install).
-- Tüm algılama kurallarınız yalnızca hassas bilgi türlerini temel aldı olsa bile, kiracıda en az bir etiket ve ilke yayımlanması gerekir.
+- Azure Information Protection (AIP) tarayıcısı DLP ilke eşleştirme ve ilke zorlama uygular. Tarayıcı, AIP istemcisinin bir parçası olarak yüklenir, bu nedenle yüklemenizin AIP, AIP istemcisi ve AIP birleşik etiketleme tarayıcısı için tüm önkoşulları karşılaması gerekir.
+- AIP istemcisini ve tarayıcısını dağıtın. Daha fazla bilgi için [AIP birleşik etiketleme istemcisini yükleme](/azure/information-protection/rms-client/install-unifiedlabelingclient-app) ve [], bkz. [Azure Information Protection birleşik etiketleme tarayıcısını yapılandırma ve yükleme](/azure/information-protection/deploy-aip-scanner-configure-install).
+- Tüm algılama kurallarınız yalnızca hassas bilgi türlerini temel alsa bile kiracıda en az bir etiket ve ilke yayımlanmış olmalıdır.
 
-## <a name="deploy-the-dlp-on-premises-scanner"></a>DLP şirket içi tarayıcıyı dağıtma
+## <a name="deploy-the-dlp-on-premises-scanner"></a>DLP şirket içi tarayıcısını dağıtma
 
-1. [AIP birleşik etiketleme istemcisini yükleme altında yer alan yordamları izleyin](/azure/information-protection/rms-client/install-unifiedlabelingclient-app). 
-2. Tarayıcı yüklemesini tamamlamak [için Azure Information Protection](/azure/information-protection/deploy-aip-scanner-configure-install) birleşik etiketleme tarayıcısını yapılandırma ve yükleme yordamlarını izleyin.
-    1. Ağ bulma iş yapılandırması isteğe bağlı bir adımdır. Bunu atlayıp içerik tarama işinizin içinde taranacak belirli depolar tanımlayabilirsiniz.
-    2. İçerik tarama işi oluşturmalı ve DLP altyapısı tarafından değerlendirilmesi gereken dosyaları barındıran depoları belirtebilirsiniz.
-    3. Oluşturulan İçerik tarama işsinde DLP kurallarını etkinleştirin ve doğrudan DLP zorlama  aşamasına gitmek istemiyorsanız Zorla seçeneğini Kapalı olarak ayarlayın.
-3. İçerik tarama işinin doğru kümeye atan olduğunu doğrulayın. Yine de içerik tarama işi oluşturmadıysanız yeni bir iş oluşturun ve bu işi tarayıcı düğümlerini içeren kümeye attayın.
+1. [AIP birleşik etiketleme istemcisini yükleme başlığı altında yer alan](/azure/information-protection/rms-client/install-unifiedlabelingclient-app) yordamları izleyin. 
+2. Tarayıcı yüklemesini tamamlamak için [Azure Information Protection birleşik etiketleme tarayıcısını yapılandırma ve yükleme](/azure/information-protection/deploy-aip-scanner-configure-install) başlığı altında yer alan yordamları izleyin.
+    1. Ağ bulma işleri yapılandırması isteğe bağlı bir adımdır. Bunu atlayabilir ve içerik tarama işinizde taranacak belirli depoları tanımlayabilirsiniz.
+    2. İçerik tarama işi oluşturmanız ve DLP altyapısı tarafından değerlendirilmesi gereken dosyaları barındıran depoları belirtmeniz gerekir.
+    3. Oluşturulan İçerik tarama işinde DLP kurallarını etkinleştirin ve doğrudan DLP zorlama aşamasına geçmek istemiyorsanız **Zorla** seçeneğini **Kapalı** olarak ayarlayın.
+3. İçerik tarama işinizin doğru kümeye atandığını doğrulayın. Yine de içerik tarama işi oluşturmadıysanız yeni bir tane oluşturun ve tarayıcı düğümlerini içeren kümeye atayın.
 
-4. Bağlan [Azure Portal'daki Azure Information Protection](https://portal.azure.com/#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/scannerProfilesBlade) uzantısına tıklayın ve depolarınızı taramayı gerçekleştirecek içerik tarama işine ekleyin.
+4. [Azure portal'da Azure Information Protection uzantısına](https://portal.azure.com/#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/scannerProfilesBlade) bağlanın ve depolarınızı taramayı gerçekleştirecek içerik tarama işine ekleyin.
 
 5. Taramanızı çalıştırmak için aşağıdakilerden birini yapın:
-    1. tarayıcı zamanlamayı ayarlama
-    1. portalda el **ile Şimdi** Tara seçeneğini kullanma
-    1. veya **Start-AIPScan** PowerShell cmdlet'ini çalıştırma
+    1. tarayıcı zamanlamasını ayarlama
+    1. portalda el ile **Şimdi Tara** seçeneğini kullanma
+    1. veya **Start-AIPScan** PowerShell cmdlet'ini çalıştırın
 
    > [!IMPORTANT]
-   > Tarayıcının varsayılan olarak depoda değişiklikli bir tarama çalıştırıldığını ve dosya değişmedikçe veya tam bir yeniden tarama başlatmadınız sürece, önceki tarama döngüsünde zaten taranmış olan dosyaların atlanacaklarını unutmayın. Tam yeniden can, kullanıcı arabiriminde tüm dosyaları yenidencan seçeneği kullanılarak veya **Start-AIPScan-Reset çalıştırarak başlatabilirsiniz**.
+   > Tarayıcının depoda varsayılan olarak bir delta taraması çalıştırdığını ve dosya değiştirilmediği veya tam yeniden tarama başlatmadığınız sürece önceki tarama döngüsünde zaten taranmış olan dosyaların atlandığını unutmayın. Tam yeniden tarama, kullanıcı arabirimindeki **tüm dosyaları yeniden tara** seçeneği kullanılarak veya **Start-AIPScan-Reset** çalıştırılarak başlatılabilir.
 
-6.  Uyumluluk [Merkezi'nde Veri](https://compliance.microsoft.com/datalossprevention?viewid=policies) kaybı önleme Microsoft 365 açın.
+6.  Microsoft Purview uyumluluk portalı [Veri kaybı önleme sayfasını](https://compliance.microsoft.com/datalossprevention?viewid=policies) açın.
 
-7. **İlke oluştur'a** seçin ve bir test DLP ilkesi oluşturun. [İlke oluştururken yardıma ihtiyacınız olursa bkz. Şablondan DLP](create-a-dlp-policy-from-a-template.md) ilkesi oluşturma. Bu özelliği rahat hale gelene kadar testte çalıştırmayı emin olun. İlkeniz için şu parametreleri kullanın:
-    1. Gerekirse, DLP şirket içi tarayıcı kuralının kapsamını belirli konumlarda açık kullanın. Konumların kapsamını **Herkes olarak** **kullanırsanız**, tarayıcı tarafından taranan tüm dosyalar DLP kuralı eşleştirme ve zorlamaya tabi olur.
-    1. Konumları belirtirken dışlama veya ekleme listesini kullanabilirsiniz. Kuralın yalnızca ekleme listesinde listelenen desenlerden birini eşleşen yollarla veya ekleme listesinde listelenen desenle eşleşen dosyalar dışında tüm dosyalarla ilgili olduğunu tanımlayabilirsiniz. Hiçbir yerel yol desteklenmiyor. Geçerli yollara bazı örnekler:
+7. **İlke oluştur'u** seçin ve test DLP ilkesi oluşturun. İlke oluşturma konusunda yardıma ihtiyacınız varsa bkz. [Şablondan DLP ilkesi oluşturma](create-a-dlp-policy-from-a-template.md) . Bu özelliği rahatça kullanıncaya kadar testte çalıştırdığınızdan emin olun. İlkeniz için şu parametreleri kullanın:
+    1. DLP şirket içi tarayıcı kuralının kapsamını gerekirse belirli konumlara ayarlayın. **Konumları** **Tümü** olarak kapsamlarsanız, tarayıcı tarafından taranan tüm dosyalar DLP kuralı eşleştirme ve zorlamaya tabi olur.
+    1. Konumları belirtirken dışlama veya ekleme listesini kullanabilirsiniz. Kuralın yalnızca ekleme listesinde listelenen desenlerden biriyle eşleşen yollara veya ekleme listesinde listelenen desenle eşleşen dosyalar dışında tüm dosyalara uygun olduğunu tanımlayabilirsiniz. Hiçbir yerel yol desteklenmez. Geçerli yollara bazı örnekler aşağıda verilmiştir:
       - \\\server\share
       - \\\server\share\folder1\subfolderabc
       - \*\\klasör1
       - \*gizli\*.docx
       - \*gizlidir\*.\*
-      - https:// sp2010.local/sites/HR
+      - sp2010.local/sites/HR https://
       - \*https:///İk 
-    3. Kabul edilemez değer kullanım örneklerini aşağıda verilmiştir:
+    3. Kabul edilemez değerlerin kullanımına bazı örnekler aşağıda verilmiştir:
       - \*
-      - \*\\a
-      - Aaa
+      - \*\\A
+      - Acar
       - c:\
       - C:\test
 
 > [!IMPORTANT]
-> Dışlama listesi, eklemeler listesine göre önceliklidir.
+> Dışlama listesi, ekleme listesinden önceliklidir.
 
-### <a name="viewing-dlp-on-premises-scanner-alerts-in-dlp-alerts-management-dashboard"></a>DLP Uyarıları Yönetimi panosunda DLP şirket içi tarayıcı uyarılarını görüntüleme
+### <a name="viewing-dlp-on-premises-scanner-alerts-in-dlp-alerts-management-dashboard"></a>DLP Uyarı Yönetimi panosunda DLP şirket içi tarayıcı uyarılarını görüntüleme
 
-1. Uyumluluk [Merkezi'nde Veri](https://compliance.microsoft.com/datalossprevention?viewid=policies) kaybı önleme sayfasını Microsoft 365 **Uyarılar'ı seçin**.
+1. Microsoft Purview uyumluluk portalı [Veri kaybı önleme sayfasını](https://compliance.microsoft.com/datalossprevention?viewid=policies) açın ve **Uyarılar'ı** seçin.
 
-2. Uç Nokta DLP [ilkelerinize yönelik uyarıları görüntülemek üzere DLP](dlp-configure-view-alerts-policies.md) ilkelerinizin uyarılarını yapılandırma ve görüntüleme makalesinde yer alan yordamlara bakın.
+2. Uç Nokta [DLP ilkelerinizin uyarılarını görüntülemek için DLP ilkelerinizin uyarılarını yapılandırma ve görüntüleme](dlp-configure-view-alerts-policies.md) bölümündeki yordamlara bakın.
 
 ### <a name="viewing-dlp-on-premises-scanner-in-activity-explorer-and-audit-log"></a>Etkinlik gezgininde ve denetim günlüğünde DLP şirket içi tarayıcıyı görüntüleme
 
 > [!NOTE]
-> Şirket içi tarayıcı denetimin etkinleştirilmesi gerekir. Bu Microsoft 365 denetim varsayılan olarak etkindir.
+> Şirket içi tarayıcı, denetimin etkinleştirilmesini gerektirir. Microsoft 365'te denetim varsayılan olarak etkindir.
 
-1. Uyumluluk merkezinde [etki alanınız](https://compliance.microsoft.com/dataclassification?viewid=overview) için Veri sınıflandırma sayfasını açın Microsoft 365 gezgini'ni seçin.
+1. Microsoft Purview uyumluluk portalı etki alanınız için [Veri sınıflandırma sayfasını](https://compliance.microsoft.com/dataclassification?viewid=overview) açın ve Etkinlik gezgini'ni seçin.
 
-2. Şirket içi tarayıcı [konumlar için tüm verilere](data-classification-activity-explorer.md) erişmek ve bu konumlara filtre uygulama için Etkinlik gezgini ile çalışmaya başlama'daki yordamlara bakın.
+2. Şirket içi tarayıcı konumlarınızın tüm verilerine erişmek ve verileri filtrelemek için [Etkinlik gezginini kullanmaya başlama'daki](data-classification-activity-explorer.md) yordamlara bakın.
 
-3. Uyumluluk [merkezinde Denetim günlüğünü açın](https://security.microsoft.com/auditlogsearch). DLP kuralı eşleşmeleri Denetim günlüğü kullanıcı arabiriminde kullanılabilir veya [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) PowerShell tarafından erişilebilir 
+3. [Uyumluluk merkezinde Denetim günlüğünü](https://security.microsoft.com/auditlogsearch) açın. DLP kuralı eşleşmeleri Denetim günlüğü kullanıcı arabiriminde kullanılabilir veya [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) PowerShell tarafından erişilebilir 
 
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Artık şirket içi konumlar için bir test ilkesi dağıttıktan ve Etkinlik gezgininde etkinlik verilerini görüntüley uygun olduğunuz için, hassas öğelerinizi koruyan DLP ilkelerini oluşturan bir sonraki adımınıza geçebilirsiniz.
+Şirket içi DLP konumları için bir test ilkesi dağıttığınız ve etkinlik verilerini Etkinlik gezgininde görüntüleyebildiğinize göre, hassas öğelerinizi koruyan DLP ilkeleri oluşturduğunuz bir sonraki adıma geçmeye hazırsınız.
 
-- [DLP şirket içi kullanma](dlp-on-premises-scanner-use.md)
+- [Şirket içi DLP kullanma](dlp-on-premises-scanner-use.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DLP şirket içi tarayıcı hakkında bilgi](dlp-on-premises-scanner-learn.md)
+- [DLP şirket içi tarayıcısı hakkında bilgi edinin](dlp-on-premises-scanner-learn.md)
 - [DLP şirket içi tarayıcıyı kullanma](dlp-on-premises-scanner-use.md)
-- [Veri kaybını önleme hakkında bilgi](dlp-learn-about-dlp.md)
-- [DLP ilkesi oluşturma, sınama ve ayarlama](create-test-tune-dlp-policy.md)
-- [Etkinlik gezgini ile çalışmaya başlama](data-classification-activity-explorer.md)
+- [Veri kaybı önleme hakkında daha fazla bilgi edinme](dlp-learn-about-dlp.md)
+- [Bir DLP ilkesi oluşturma, test etme ve ayarlama](create-test-tune-dlp-policy.md)
+- [Etkinlik gezginini kullanmaya başlama](data-classification-activity-explorer.md)
 - [Microsoft 365 aboneliği](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1)

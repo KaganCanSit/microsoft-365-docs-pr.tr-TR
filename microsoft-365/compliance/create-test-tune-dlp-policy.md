@@ -19,16 +19,14 @@ ms.custom:
 - seo-marvel-mar2020
 ms.assetid: 59414438-99f5-488b-975c-5023f2254369
 description: Bu makalede, kuruluş gereksinimlerinize göre bir DLP ilkesi oluşturmayı, test etmeyi ve ayarlamayı öğreneceksiniz.
-ms.openlocfilehash: 8e4c96a1625e3e11995aed66fff4a289da5d059d
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: dff47d07a582be807d877471fb7621960b776f24
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66016976"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624741"
 ---
 # <a name="create-test-and-tune-a-dlp-policy"></a>Bir DLP ilkesi oluşturma, test etme ve ayarlama
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview Veri Kaybı Önleme (DLP), hassas bilgilerin yanlışlıkla veya yanlışlıkla paylaşılmasını önlemenize yardımcı olur.
 
@@ -42,9 +40,9 @@ DLP, kredi kartı numarası gibi hassas bilgiler için e-posta iletilerini ve do
 
 DLP ilkeleri oluşturacak uyumluluk ekibinizin üyelerinin Uyumluluk Merkezi'ne yönelik izinlere sahip olması gerekir. Varsayılan olarak, kiracı yöneticinizin erişimi uyumluluk görevlilerine ve diğer kişilere erişim verebilir. Şu adımları izleyin:
   
-1. Microsoft 365'de bir grup oluşturun ve gruba uyumluluk görevlileri ekleyin.
+1. Microsoft 365'te bir grup oluşturun ve gruba uyumluluk görevlileri ekleyin.
     
-2. Microsoft Purview uyumluluk portalının **İzinler** sayfasında bir rol grubu oluşturun. 
+2. Microsoft Purview uyumluluk portalı **İzinler** sayfasında bir rol grubu oluşturun. 
 
 3. Rol grubunu oluştururken Rol **Seç** bölümünü kullanarak rol grubuna şu rolü ekleyin: **DLP Uyumluluk Yönetimi**.
     
@@ -62,7 +60,7 @@ Bu izinler, ilkeleri zorlamamak için bir DLP ilkesi oluşturmak ve uygulamak i�
 
 Aşağıda, önizleme aşamasında olan geçerli rollerin listesi yer alır. Bunlar hakkında daha fazla bilgi edinmek için bkz [. Güvenlik & Uyumluluk Merkezi'ndeki Roller](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Information Protection Yöneticisi
+- Information Protection Yönetici
 - Information Protection Analisti
 - Information Protection Araştırmacısı
 - Information Protection Okuyucu
@@ -94,7 +92,7 @@ Bkz. Her bilgi türünün nasıl algılandığını açıklayan hassas bilgi tü
 
 Veri sızıntısı riskleri tamamen belirgin olmadığında, DLP'yi uygulamaya tam olarak nereden başlamanız gerektiğini bulmak zordur. Neyse ki DLP ilkeleri "test modunda" çalıştırılabilir ve bunları açmadan önce bunların verimliliğini ve doğruluğunu ölçmenizi sağlar.
 
-Exchange Online için DLP ilkeleri Exchange yönetim merkezi üzerinden yönetilebilir. Ancak Microsoft Purview uyumluluk portalı aracılığıyla tüm iş yükleri için DLP ilkelerini yapılandırabilirsiniz, bu nedenle bu makaledeki tanıtımlar için bunu kullanacağız. Microsoft Purview uyumluluk portalında DLP ilkelerini **Veri kaybı önleme** > **İlkesi** altında bulabilirsiniz. Başlamak için **İlke oluştur'u** seçin.
+Exchange Online için DLP ilkeleri Exchange yönetim merkezi üzerinden yönetilebilir. Ancak Microsoft Purview uyumluluk portalı aracılığıyla tüm iş yükleri için DLP ilkelerini yapılandırabilirsiniz, bu nedenle bu makaledeki tanıtımlar için bunu kullanacağız. Microsoft Purview uyumluluk portalı veri **kaybı önleme** > **ilkesi** altında DLP ilkelerini bulacaksınız. Başlamak için **İlke oluştur'u** seçin.
 
 Microsoft 365, ilke oluşturmak için kullanabileceğiniz bir dizi [DLP ilke şablonu](what-the-dlp-policy-templates-include.md) sağlar. Diyelim ki avustralyalı bir işsiniz. Avustralya'da şablonları filtreleyebilir ve Finansal, Tıbbi ve Sağlık ile Gizlilik'i seçebilirsiniz.
 
@@ -112,13 +110,13 @@ Yeni DLP ilkenize bir ad verin. Varsayılan ad DLP ilke şablonuyla eşleşecekt
 
 ![Tüm konumları seçme seçeneği.](../media/DLP-create-test-tune-choose-locations.png)
 
-İlk **İlke Ayarlar** adımında şimdilik varsayılanları kabul edin. DLP ilkelerini özelleştirebilirsiniz, ancak varsayılanlar başlamak için iyi bir yerdir.
+İlk **İlke Ayarları** adımında şimdilik varsayılanları kabul edin. DLP ilkelerini özelleştirebilirsiniz, ancak varsayılanlar başlamak için iyi bir yerdir.
 
 ![Korunacak içerik türünü özelleştirme seçenekleri.](../media/DLP-create-test-tune-default-customization-settings.png)
 
-İleri'ye tıkladıktan sonra** size daha fazla özelleştirme seçeneği içeren daha fazla **İlke Ayarlar** sayfası sunulur. Yalnızca test ettiğiniz bir ilke için bazı ayarlamalar yapmaya buradan başlayabilirsiniz.
+İleri'ye tıkladıktan sonra** size daha fazla özelleştirme seçeneği içeren daha fazla **İlke Ayarları** sayfası sunulur. Yalnızca test ettiğiniz bir ilke için bazı ayarlamalar yapmaya buradan başlayabilirsiniz.
 
-- İlke ipuçlarını şimdilik kapattım. Bu, yalnızca test ettiğiniz ve kullanıcılara henüz hiçbir şey göstermek istemediğinizde atabileceğiniz makul bir adımdır. İlke ipuçları, kullanıcılara bir DLP ilkesini ihlal etmek üzere olduklarına ilişkin uyarılar görüntüler. Örneğin, Outlook bir kullanıcı eklemiş olduğu dosyanın kredi kartı numaraları içerdiğini ve e-postalarının reddedilmesine neden olacağını belirten bir uyarı görür. İlke ipuçlarının amacı, uyumlu olmayan davranışı gerçekleşmeden önce durdurmaktır.
+- İlke ipuçlarını şimdilik kapattım. Bu, yalnızca test ettiğiniz ve kullanıcılara henüz hiçbir şey göstermek istemediğinizde atabileceğiniz makul bir adımdır. İlke ipuçları, kullanıcılara bir DLP ilkesini ihlal etmek üzere olduklarına ilişkin uyarılar görüntüler. Örneğin, outlook kullanıcısı ekledikleri dosyanın kredi kartı numaraları içerdiğini ve e-postalarının reddedilmesine neden olacağını belirten bir uyarı görür. İlke ipuçlarının amacı, uyumlu olmayan davranışı gerçekleşmeden önce durdurmaktır.
 - Ayrıca örnek sayısını 10'dan 1'e düşürerek bu ilkenin yalnızca verilerin toplu paylaşımını değil Avustralya PII verilerinin paylaşımını algılamasını da sağladım.
 - Olay raporu e-postasına başka bir alıcı da ekledim.
 
@@ -194,9 +192,9 @@ Ayrıca, ilkeyi ihlal eden içeriğe erişimi gerçekten engellemek veya kısıt
 
 ![İlke ipuçlarını test modunda gösterme seçeneği.](../media/DLP-create-test-tune-show-policy-tips.png)
 
-Sunucu tarafında (veya isterseniz bulut tarafında), çeşitli işlem aralıkları nedeniyle değişiklik hemen geçerli olmayabilir. Kullanıcıya yeni ilke ipuçlarını gösterecek bir DLP ilkesi değişikliği yapıyorsanız, kullanıcı Outlook istemcisinde değişikliklerin hemen geçerli olduğunu göremeyebilir ve bu da ilke değişikliklerini 24 saatte bir denetler. Test için işleri hızlandırmak istiyorsanız, [policyNudges anahtarından son indirme zaman damgasını temizlemek](https://support.microsoft.com/en-au/help/2823261/changes-to-a-data-loss-prevention-policy-don-t-take-effect-in-outlook?__hstc=18650278.46377037dc0a82baa8a30f0ef07a7b2f.1538687978676.1538693509953.1540315763430.3&__hssc=18650278.1.1540315763430&__hsfp=3446956451) için bu kayıt defteri düzeltmesini kullanabilirsiniz. Outlook, en son ilke bilgilerini bir sonraki yeniden başlatışınızda indirir ve e-posta iletisi oluşturma işlemine başlarsınız.
+Sunucu tarafında (veya isterseniz bulut tarafında), çeşitli işlem aralıkları nedeniyle değişiklik hemen geçerli olmayabilir. Kullanıcıya yeni ilke ipuçlarını gösterecek bir DLP ilkesi değişikliği yapıyorsanız, kullanıcı outlook istemcisinde değişikliklerin hemen geçerli olduğunu göremeyebilir ve bu da ilke değişikliklerini 24 saatte bir denetler. Test için işleri hızlandırmak istiyorsanız, [policyNudges anahtarından son indirme zaman damgasını temizlemek](https://support.microsoft.com/en-au/help/2823261/changes-to-a-data-loss-prevention-policy-don-t-take-effect-in-outlook?__hstc=18650278.46377037dc0a82baa8a30f0ef07a7b2f.1538687978676.1538693509953.1540315763430.3&__hssc=18650278.1.1540315763430&__hsfp=3446956451) için bu kayıt defteri düzeltmesini kullanabilirsiniz. Outlook, en son ilke bilgilerini bir sonraki yeniden başlatışınızda indirir ve e-posta iletisi oluşturma işlemine başlar.
 
-İlke ipuçlarını etkinleştirdiyseniz, kullanıcı ipuçlarını Outlook görmeye başlar ve ortaya çıktığında size hatalı pozitif sonuçları bildirebilir.
+İlke ipuçlarını etkinleştirdiyseniz, kullanıcı Outlook'taki ipuçlarını görmeye başlar ve ortaya çıktığında size hatalı pozitif sonuçları bildirebilir.
 
 ![Hatalı pozitif raporlama seçeneğine sahip ilke ipucu.](../media/DLP-create-test-tune-policy-tip-in-outlook.png)
 
@@ -235,7 +233,7 @@ DLP ilkenizin hassas bilgi türlerini doğru ve etkili bir şekilde algıladığ
 
 ![İlkeyi açma seçeneği.](../media/DLP-create-test-tune-turn-on-policy.png)
  
-İlkenin ne zaman geçerli olacağını görmek için bekliyorsanız, [Security & Compliance PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) ve DistributionStatus'u görmek için [Get-DlpCompliancePolicy cmdlet'ini](/powershell/module/exchange/get-dlpcompliancepolicy) çalıştırın.
+İlkenin ne zaman geçerli olacağını görmek için bekliyorsanız, DistributionStatus'u görmek [için Güvenlik & Uyumluluğu PowerShell'e bağlanın](/powershell/exchange/connect-to-scc-powershell) ve [Get-DlpCompliancePolicy cmdlet'ini](/powershell/module/exchange/get-dlpcompliancepolicy) çalıştırın.
 
  ```powershell
  Get-DlpCompliancePolicy "Testing -Australia PII" -DistributionDetail | Select distributionstatus

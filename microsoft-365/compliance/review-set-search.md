@@ -15,18 +15,16 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Microsoft Purview eKeşif (Premium) durumunda daha verimli bir inceleme için içeriği düzenlemek üzere bir gözden geçirme kümesinde sorgu oluşturmayı ve çalıştırmayı öğrenin.
+description: bir Microsoft Purview eKeşif (Premium) durumunda daha verimli bir gözden geçirme için içeriği düzenlemek üzere bir gözden geçirme kümesinde sorgu oluşturmayı ve çalıştırmayı öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 44f4b9d6aed92a6593f5c6c70322656e4c770c3d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: b40ab6818b4063a0b160ab9a41fdded6f7e7d37e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090927"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623771"
 ---
 # <a name="query-and-filter-content-in-a-review-set"></a>Bir inceleme setindeki içeriği sorgulama ve filtreleme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Çoğu durumda, bir inceleme kümesindeki içeriği daha ayrıntılı incelemek ve daha verimli bir gözden geçirmeyi kolaylaştırmak için düzenlemek yararlı olacaktır. Gözden geçirme kümesinde filtreleri ve sorguları kullanmak, gözden geçirme ölçütlerinizi karşılayan belgelerin bir alt kümesine odaklanmanıza yardımcı olur.
 
@@ -34,7 +32,7 @@ ms.locfileid: "65090927"
 
 Bir gözden geçirme kümesinde, gözden geçirme kümesinde önceden yüklenmiş beş varsayılan filtre vardır:
 
-- Anahtar kelime -ler
+- Anahtar Sözcükler
 - Tarih
 - Gönderen/Yazar
 - Konu/Başlık
@@ -103,7 +101,7 @@ Filtre sorgusunu silmek için filtre panelini açın ve sorgunun yanındaki çö
 
 ## <a name="query-language"></a>Sorgu dili
 
-Filtreleri kullanmaya ek olarak, anahtar sözcükler filtresinde KQL benzeri bir sorgu dili kullanarak gözden geçirme kümesi arama sorgunuzu oluşturabilirsiniz. Gözden geçirme kümesi sorgularının sorgu dili **AND**, **OR**, **NOT** ve **NEAR** gibi standart Boole işleçlerini destekler. Ayrıca tek karakterli joker karakteri (?) ve çok karakterli joker karakteri (*) destekler.
+Filtreleri kullanmaya ek olarak, anahtar sözcükler filtresindeki KQL benzeri bir sorgu dilini kullanarak gözden geçirme kümesi arama sorgunuzu oluşturabilirsiniz. Gözden geçirme kümesi sorgularının sorgu dili **AND**, **OR**, **NOT** ve **NEAR** gibi standart Boole işleçlerini destekler. Ayrıca tek karakterli joker karakteri (?) ve çok karakterli joker karakteri (*) destekler.
 
 ## <a name="advanced-query-builder"></a>Gelişmiş sorgu oluşturucusu
 
@@ -115,7 +113,7 @@ Ayrıca, bir gözden geçirme kümesindeki belgeleri aramak için daha gelişmi�
 
 2. **KQL** filtresini seçin ve **Sorgu oluşturucusunu aç'a** tıklayın.
 
-   Bu panelde, sorgu oluşturucusunu kullanarak karmaşık KQL sorgular oluşturabilirsiniz. **AND** veya **OR** ilişkileri tarafından mantıksal olarak bağlanan birden çok koşuldan oluşan koşullar veya koşul grupları ekleyebilirsiniz.
+   Bu panelde, sorgu oluşturucusunu kullanarak karmaşık KQL sorguları oluşturabilirsiniz. **AND** veya **OR** ilişkileri tarafından mantıksal olarak bağlanan birden çok koşuldan oluşan koşullar veya koşul grupları ekleyebilirsiniz.
 
    ![Karmaşık filtre sorgularını yapılandırmak için sorgu oluşturucusunu kullanın.](../media/ComplexQuery.png)
 
@@ -131,7 +129,7 @@ Taslak koleksiyonu bir gözden geçirme kümesine işlediğiniz sırada ek veri 
 
 3. Yeni koleksiyonu aynı gözden geçirme kümesine işleyin. Ancak bu kez, ek veri kaynaklarından kısmen dizine alınan öğeleri ekleyin. 1. adımda oluşturduğunuz koleksiyondaki öğeler gözden geçirme kümesine zaten eklendiğinden, gözden geçirme kümesine yalnızca ikinci koleksiyondan kısmen dizine alınmış öğeler eklenir.
 
-4. Her iki koleksiyon da gözden geçirme kümesine eklendikten sonra gözden geçirme kümesine gidin ve **YönetYükleme kümeleri'ni** >  seçin.
+4. Her iki koleksiyon da gözden geçirme kümesine eklendikten sonra gözden geçirme kümesine gidin ve **Yük Kümelerini** **Yönet'i** >  seçin.
 
 5. İkinci koleksiyonun (2. adımda oluşturduğunuz **) Load Id** değerini kopyalayın veya not edin. Koleksiyon adı **Kaynak bilgileri** sütununda tanımlanır.
 

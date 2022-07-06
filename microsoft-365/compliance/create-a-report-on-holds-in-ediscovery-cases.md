@@ -20,18 +20,16 @@ ms.assetid: cca08d26-6fbf-4b2c-b102-b226e4cd7381
 ms.custom:
 - seo-marvel-apr2020
 description: eBulma servis talepleri ile ilişkili tüm ayrı tutmalar hakkında bilgi içeren bir rapor oluşturmayı öğrenin.
-ms.openlocfilehash: 9db08335ff023172092e7bf8bada7a3976956d29
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 9820eba0e29a510a1881a9349f63c7e2d9650728
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017020"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625489"
 ---
 # <a name="use-a-script-to-create-a-report-on-holds-in-ediscovery-cases"></a>eBulma durumlarında ayrı tutmalar hakkında rapor oluşturmak için betik kullanma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Bu makaledeki betik, eBulma yöneticilerinin ve eBulma yöneticilerinin Microsoft Purview uyumluluk portalındaki eBulma (Standart) ve eBulma (Premium) durumlarıyla ilişkili tüm tutmalar hakkında bilgi içeren bir rapor oluşturmasına olanak tanır. Rapor, ayrı tutmanın ilişkilendirildiği servis talebinin adı, ayrı tutmaya yerleştirilen içerik konumları ve ayrı tutmanın sorgu tabanlı olup olmadığı gibi bilgileri içerir. Ayrı tutması olmayan durumlar varsa betik, ayrı tutma olmayan servis taleplerinin listesini içeren ek bir rapor oluşturur.
+Bu makaledeki betik, eBulma yöneticilerinin ve eBulma yöneticilerinin Microsoft Purview uyumluluk portalı eBulma (Standart) ve eBulma (Premium) durumlarıyla ilişkili tüm tutmalar hakkında bilgi içeren bir rapor oluşturmasına olanak tanır. Rapor, ayrı tutmanın ilişkilendirildiği servis talebinin adı, ayrı tutmaya yerleştirilen içerik konumları ve ayrı tutmanın sorgu tabanlı olup olmadığı gibi bilgileri içerir. Ayrı tutması olmayan durumlar varsa betik, ayrı tutma olmayan servis taleplerinin listesini içeren ek bir rapor oluşturur.
 
 Rapora dahil edilen bilgilerin ayrıntılı açıklaması için [Daha fazla bilgi](#more-information) bölümüne bakın.
 
@@ -43,9 +41,9 @@ Rapora dahil edilen bilgilerin ayrıntılı açıklaması için [Daha fazla bilg
 
 - Bu konuda sağlanan örnek betikler, herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betikler, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiklerin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
 
-## <a name="step-1-connect-to-security--compliance-powershell"></a>1. Adım: Güvenlik & Uyumluluğu PowerShell'e Bağlan
+## <a name="step-1-connect-to-security--compliance-powershell"></a>1. Adım: Güvenlik & Uyumluluğu PowerShell'e bağlanma
 
-İlk adım, kuruluşunuz için Güvenlik & Uyumluluk PowerShell'e bağlanmaktır. Adım adım yönergeler için bkz[. Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+İlk adım, kuruluşunuz için Güvenlik & Uyumluluk PowerShell'e bağlanmaktır. Adım adım yönergeler için bkz [. Güvenlik & Uyumluluk PowerShell'e bağlanma](/powershell/exchange/connect-to-scc-powershell).
 
 ## <a name="step-2-run-the-script-to-report-on-holds-associated-with-ediscovery-cases"></a>2. Adım: eBulma servis talepleri ile ilişkili ayrı tutmaları raporlamak için betiği çalıştırın
 
@@ -203,7 +201,7 @@ Servis talebi, bu makaledeki betiği çalıştırdığınızda oluşturulan rapo
 
 - Ayrı tutmanın adı ve ayrı tutmanın ilişkili olduğu eBulma servis talebinin adı.
 
-- Ayrı tutmanın bir eBulma (Standart) veya eBulma (Premium) büyük/küçük harfle ilişkili olup olmadığı.
+- Ayrı tutmanın eBulma (Standart) veya eBulma (Premium) servis talebiyle ilişkili olup olmadığı.
 
 - eBulma servis talebinin etkin veya kapalı olup olmadığı.
 
@@ -215,7 +213,7 @@ Servis talebi, bu makaledeki betiği çalıştırdığınızda oluşturulan rapo
 
 - Bir servis talebi kapatılırsa, kapatılan kişi ve kapatıldığı saat ve tarih.
 
-- Exchange posta kutuları ve SharePoint site konumları beklemededir.
+- Exchange posta kutuları ve SharePoint site konumları ayrı tutulmaktadır.
 
 - Ayrı tutma sorgu tabanlıysa, sorgu söz dizimi.
 

@@ -20,18 +20,16 @@ ms.custom:
 - seo-marvel-may2020
 - seo-marvel-jun2020
 description: Genellikle kayıt yönetimi çözümünün bir parçası olarak, tanımladığınız bir olaya göre bekletme süresini başlatmak için bir bekletme etiketi yapılandırabilirsiniz.
-ms.openlocfilehash: 753188e187bd3a80cd83c10d41b373b1507a1e24
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: 953661a63c961273d54fde1041e4d85c5d786c26
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66603218"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622997"
 ---
 # <a name="start-retention-when-an-event-occurs"></a>Bir olay meydana geldiğinde saklamayı başlatma
 
 >*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 İçeriği koruduğunuzda saklama süresi genellikle içeriğin yaşına bağlıdır. Örneğin, oluşturulduktan sonra belgeleri yedi yıl saklayabilir ve sonra silebilirsiniz. Ancak [bekletme etiketlerini](retention.md#retention-labels) yapılandırırken, belirli bir olay türünün gerçekleştiği bir saklama süresini de temel alabilirsiniz. Olay, bekletme süresinin başlangıcını tetikler ve bu tür bir olay için bir bekletme etiketi uygulanmış olan tüm içerik, etiketin bekletme eylemlerinin bunlar üzerinde zorunlu tutulmasını sağlar.
   

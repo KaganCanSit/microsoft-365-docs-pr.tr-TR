@@ -1,5 +1,5 @@
 ---
-title: Microsoft Purview'de eBulma (Standart) durumlarıyla Kullanmaya başlayın
+title: Microsoft Purview'da eKeşif (Standart) servis taleplerini kullanmaya başlama
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -17,19 +17,17 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Purview'de eBulma (Standart) kullanmaya başlamayı açıklar. eBulma izinlerini atadıktan ve bir servis talebi oluşturduktan sonra, üyeleri ekleyebilir, eBulma tutmaları oluşturabilir ve ardından araştırmanızla ilgili içeriği arayabilir ve dışarı aktarabilirsiniz.
-ms.openlocfilehash: c8a3ca883191c450ebc20ddb555018b8b480199b
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+description: Microsoft Purview'da eKeşif (Standart) kullanmaya başlamayı açıklar. eBulma izinlerini atadıktan ve bir servis talebi oluşturduktan sonra, üyeleri ekleyebilir, eBulma tutmaları oluşturabilir ve ardından araştırmanızla ilgili içeriği arayabilir ve dışarı aktarabilirsiniz.
+ms.openlocfilehash: 2bbd7c0bdeb1a23274deacb5b70e83ba45aacdc5
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115883"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624321"
 ---
-# <a name="get-started-with-ediscovery-standard-in-microsoft-purview"></a>Microsoft Purview'de eBulma (Standart) ile Kullanmaya başlayın
+# <a name="get-started-with-ediscovery-standard-in-microsoft-purview"></a>Microsoft Purview'da eKeşif (Standart) kullanmaya başlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview'daki Microsoft Purview eKeşif (Standart), kuruluşların Microsoft 365 ve Office 365 içeriği aramak ve dışarı aktarmak için kullanabileceği temel bir eBulma aracı sağlar. eBulma (Standart) özelliğini, Exchange posta kutuları, SharePoint siteleri, OneDrive hesapları ve Microsoft Teams gibi içerik konumlarına eBulma bekletmesi yapmak için de kullanabilirsiniz. eKeşif 'i (Standart) dağıtmak için hiçbir şey gerekmez, ancak kuruluşunuzun içeriği aramak, dışarı aktarmak ve korumak için eKeşif 'i (Standart) kullanmaya başlayabilmesi için bt yöneticisinin ve eBulma yöneticisinin tamamlaması gereken bazı önkoşul görevleri vardır.
+Microsoft Purview'daki Microsoft Purview eKeşif (Standart), kuruluşların Microsoft 365 ve Office 365'da içerik aramak ve dışarı aktarmak için kullanabileceği temel bir eBulma aracı sağlar. eBulma (Standart) özelliğini, Exchange posta kutuları, SharePoint siteleri, OneDrive hesapları ve Microsoft Teams gibi içerik konumlarına eKeşif ayrılığı yerleştirmek için de kullanabilirsiniz. eKeşif 'i (Standart) dağıtmak için hiçbir şey gerekmez, ancak kuruluşunuzun içeriği aramak, dışarı aktarmak ve korumak için eKeşif 'i (Standart) kullanmaya başlayabilmesi için bt yöneticisinin ve eBulma yöneticisinin tamamlaması gereken bazı önkoşul görevleri vardır.
 
 Bu makalede, eBulma'yı (Standart) ayarlamak için gereken adımlar ele alınmaktadır. Bu, eBulma'ya (Standart) erişmek ve içerik konumlarına eBulma bekletmek için gereken uygun lisanslamanın yanı sıra bt, yasal ve araştırma ekibinize olaylara erişebilmeleri ve bunları yönetebilmeleri için izinler atamayı içerir. Bu makalede ayrıca içeriği aramak ve dışarı aktarmak için kullanım örneklerine üst düzey bir genel bakış sağlanır.
 
@@ -37,11 +35,11 @@ Bu makalede, eBulma'yı (Standart) ayarlamak için gereken adımlar ele alınmak
 
 eBulma için lisanslama (Standart) için uygun kuruluş aboneliği ve kullanıcı başına lisanslama gerekir.
 
-- **Kuruluş aboneliği:** Microsoft Purview uyumluluk portalı eBulma'ya (Standart) erişmek ve ayrı tutma ve dışarı aktarma özelliklerini kullanmak için kuruluşunuzun Exchange çevrimiçi Plan 2 veya Microsoft 365 E3 ya da Office 365 E3 aboneliği veya üzeri olması gerekir. Microsoft 365 Frontline kuruluşlarının F5 aboneliği olmalıdır.
+- **Kuruluş aboneliği:** Microsoft Purview uyumluluk portalı eBulma'ya (Standart) erişmek ve ayrı tutma ve dışarı aktarma özelliklerini kullanmak için kuruluşunuzun exchange online plan 2 veya Microsoft 365 E3 ya da Office 365 E3 aboneliği veya üzeri olması gerekir. Microsoft 365 Ön Cephe kuruluşlarının F5 aboneliği olmalıdır.
 
 - **Kullanıcı başına lisanslama:** Posta kutularına ve sitelere eBulma ayrılığı yerleştirmek için, kuruluş aboneliğinize bağlı olarak kullanıcılara aşağıdaki lisanslardan birinin atanması gerekir:
 
-  -  çevrimiçi Plan 2 lisansı Exchange
+  -  Exchange online Plan 2 lisansı
 
    VEYA
    
@@ -53,17 +51,17 @@ eBulma için lisanslama (Standart) için uygun kuruluş aboneliği ve kullanıc�
 
    VEYA
 
-  - Ön Hat F5 Uyumluluğu veya F5 Güvenlik & Uyumluluğu eklenti lisansını Microsoft 365  
+  - Microsoft 365 Ön Hat F5 Uyumluluğu veya F5 Güvenlik & Uyumluluğu eklenti lisansı  
 
   VE
 
-  - SharePoint Online Plan 2 veya OneDrive İş Plan 2 eklenti lisansıyla Office 365 E1 lisansı
+  - SharePoint Online Plan 2 veya OneDrive İş Plan 2 eklenti lisansıyla lisans Office 365 E1
   
   Lisans atama hakkında bilgi için bkz. [Kullanıcılara lisans atama](../admin/manage/assign-licenses-to-users.md).
 
 Güvenlik ve uyumluluk hakkında bilgi ve rehberlik için:
 
-- [Microsoft 365 Karşılaştırma tablosundaki](https://aka.ms/M365EnterprisePlans) eBulma ve denetim bölümünü indirip inceleyin.
+- [Microsoft 365 Karşılaştırma tablosundaki](https://aka.ms/M365EnterprisePlans) eBulma ve denetim bölümünü indirin ve bakın.
 
 - [Güvenlik & uyumluluğu için Microsoft 365 kılavuzuna bakın - Hizmet Açıklamaları | Microsoft Docs](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
@@ -129,7 +127,7 @@ Sonraki adım, bir servis talebi oluşturmak ve eBulma (Standart) kullanmaya ba�
 
 1. Uyumluluk portalındaki **eBulma (Standart)** sayfasında, üye eklemek istediğiniz servis talebinin adına tıklayın.
 
-2. Servis talebi giriş sayfasında **Ayarlar** sekmesini seçin ve sonra **erişim & izinleri'ni** seçin.
+2. Servis talebi giriş sayfasında **Ayarlar** sekmesini ve ardından **erişim & izinleri'ni** seçin.
 
 3. **Erişim & izinleri** açılır sayfasında, **Üyeler'in** altında **Ekle'ye** tıklayarak olaya üye ekleyin.
 
@@ -152,7 +150,7 @@ eKeşif 'i (Standart) kullanmaya başlamanız için, ilgilendiğiniz kişiler i�
 
 ![eBulma (Standart) iş akışı.](../media/CoreEdiscoveryWorkflow.png)
 
-1. **[eBulma ayrı tutması oluşturun](create-ediscovery-holds.md)**. Olay oluşturduktan sonraki ilk adım, araştırmanızla ilgilendiğiniz kişilerin içerik konumlarına ayrı *tutma (eBulma ayrılığı* olarak da adlandırılır) yerleştirmektir. İçerik konumları Exchange posta kutularını, SharePoint siteleri, OneDrive hesaplarını ve Microsoft Teams ve Microsoft 365 Grupları ile ilişkili posta kutularını ve siteleri içerir. Bu adım isteğe bağlı olsa da, eBulma ayrı tutması oluşturmak, araştırma sırasında olayla ilgili olabilecek içeriği korur. EBulma ayrı tutması oluşturduğunuzda, belirli içerik konumlarındaki tüm içeriği koruyabilir veya yalnızca ayrı tutma sorgusuyla eşleşen içeriği korumak için sorgu tabanlı ayrı tutma oluşturabilirsiniz. İçeriği korumanın yanı sıra, eBulma ayrı tutmaları oluşturmanın bir diğer iyi nedeni, sonraki adımda arama oluşturup çalıştırdığınızda beklemedeki içerik konumlarında hızlı bir şekilde arama yapmaktır (aranacak her konumu seçmek yerine). Araştırmanızı tamamladıktan sonra, oluşturduğunuz tüm ayrı tutmaları serbest bırakabilirsiniz.
+1. **[eBulma ayrı tutması oluşturun](create-ediscovery-holds.md)**. Olay oluşturduktan sonraki ilk adım, araştırmanızla ilgilendiğiniz kişilerin içerik konumlarına ayrı *tutma (eBulma ayrılığı* olarak da adlandırılır) yerleştirmektir. İçerik konumları Exchange posta kutularını, SharePoint sitelerini, OneDrive hesaplarını ve Microsoft Teams ve Microsoft 365 Grupları ile ilişkili posta kutularını ve siteleri içerir. Bu adım isteğe bağlı olsa da, eBulma ayrı tutması oluşturmak, araştırma sırasında olayla ilgili olabilecek içeriği korur. EBulma ayrı tutması oluşturduğunuzda, belirli içerik konumlarındaki tüm içeriği koruyabilir veya yalnızca ayrı tutma sorgusuyla eşleşen içeriği korumak için sorgu tabanlı ayrı tutma oluşturabilirsiniz. İçeriği korumanın yanı sıra, eBulma ayrı tutmaları oluşturmanın bir diğer iyi nedeni, sonraki adımda arama oluşturup çalıştırdığınızda beklemedeki içerik konumlarında hızlı bir şekilde arama yapmaktır (aranacak her konumu seçmek yerine). Araştırmanızı tamamladıktan sonra, oluşturduğunuz tüm ayrı tutmaları serbest bırakabilirsiniz.
 
 2. **[İçerik arayın](search-for-content-in-core-ediscovery.md)**. eBulma ayrı tutmaları oluşturduktan sonra, yerleşik arama aracını kullanarak beklemedeki içerik konumlarında arama yapın. Ayrıca, servis talebiyle ilgili olabilecek veriler için diğer içerik konumlarını da arayabilirsiniz. Büyük/küçük harfle ilişkili farklı aramalar oluşturabilir ve çalıştırabilirsiniz. Büyük olasılıkla servis talebiyle ilgili olan verilerle arama sonuçları döndüren [arama sorguları oluşturmak](keyword-queries-and-search-conditions.md) için anahtar sözcükleri, özellikleri ve koşulları kullanırsınız. Şunları da yapabilirsiniz:
 

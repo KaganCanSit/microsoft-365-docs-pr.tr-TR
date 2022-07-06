@@ -13,23 +13,21 @@ ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: M365-security-compliance
-description: Yöneticiler, kuruluşunuzun Epic sisteminden Microsoft 365 elektronik sağlık kayıtlarını (EHR) içeri aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, çalışanlarınız tarafından hasta verilerine yetkisiz erişim etkinliğini algılamanıza yardımcı olmak için iç risk yönetimi ilkelerinde Epic EHR verilerini kullanmanıza olanak tanır.
-ms.openlocfilehash: 55f33358af7b53dc6042fce94b1ddc92e9f130fa
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Yöneticiler, elektronik sağlık kayıtlarını (EHR) kuruluşunuzun Epic sisteminden Microsoft 365'e aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, çalışanlarınız tarafından hasta verilerine yetkisiz erişim etkinliğini algılamanıza yardımcı olmak için iç risk yönetimi ilkelerinde Epic EHR verilerini kullanmanıza olanak tanır.
+ms.openlocfilehash: c2caef93a8bb1c5cb272e0420b0c3ab8cfe4499b
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65078011"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624057"
 ---
 # <a name="set-up-a-connector-to-import-epic-ehr-audit-data-preview"></a>Epic EHR denetim verilerini içeri aktarmak için bağlayıcı ayarlama (önizleme)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Kuruluşunuzun Epic Elektronik Sağlık Kayıtları (EHR) sistemindeki kullanıcı etkinliği için denetim kayıtlarını içeri aktarmak için Microsoft Purview uyumluluk portalında bir veri bağlayıcısı ayarlayabilirsiniz. Epic EHR sisteminizdeki denetim kayıtları, hastanın sağlık kayıtlarına erişmeyle ilgili olayların kayıtlarını içerir. Epic EHR denetim kayıtları, kuruluşunuzun hasta bilgilerine yetkisiz erişimden korunmasına yardımcı olmak için Microsoft 365 [insider risk yönetimi çözümü](insider-risk-management.md) tarafından kullanılabilir.
+Kuruluşunuzun Epic Elektronik Sağlık Kayıtları (EHR) sistemindeki kullanıcı etkinliği için denetim kayıtlarını içeri aktarmak için Microsoft Purview uyumluluk portalı bir veri bağlayıcısı ayarlayabilirsiniz. Epic EHR sisteminizdeki denetim kayıtları, hastanın sağlık kayıtlarına erişmeyle ilgili olayların kayıtlarını içerir. Epic EHR denetim kayıtları, kuruluşunuzun hasta bilgilerine yetkisiz erişimden korunmasına yardımcı olmak için Microsoft 365 [insider risk yönetimi çözümü](insider-risk-management.md) tarafından kullanılabilir.
 
 Epic bağlayıcısının ayarlanması aşağıdaki görevlerden oluşur:
 
-- Epic EHR denetim kayıtlarını içeren sekmeyle ayrılmış metin dosyasını kabul eden bir API uç noktasına erişmek için Azure Active Directory 'de (Azure AD) bir uygulama oluşturma.
+- Epic EHR denetim kayıtlarını içeren sekmeyle ayrılmış metin dosyasını kabul eden bir API uç noktasına erişmek için Azure Active Directory'de (Azure AD) uygulama oluşturma.
 
 - Bağlayıcı şemasında tanımlanan tüm gerekli alanları içeren bir metin dosyası oluşturma.
 
@@ -41,7 +39,7 @@ Epic bağlayıcısının ayarlanması aşağıdaki görevlerden oluşur:
 
 ## <a name="before-you-set-up-the-connector"></a>Bağlayıcıyı ayarlamadan önce
 
-- 3. Adımda Epic bağlayıcısını oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
+- 3. Adımda Epic bağlayıcısını oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
 - Kuruluşunuzun Epic EHR sisteminden (günlük olarak) verilerin nasıl alınacağını veya dışarı aktarıldığını belirlemeniz ve 2. Adımda açıklanan bir metin dosyası oluşturmanız gerekir. 4. Adımda çalıştırdığınız betik, metin dosyasındaki verileri API uç noktasına iletir.
 
@@ -49,15 +47,15 @@ Epic bağlayıcısının ayarlanması aşağıdaki görevlerden oluşur:
 
 ## <a name="step-1-create-an-app-in-azure-active-directory"></a>1. Adım: Azure Active Directory'de uygulama oluşturma
 
-İlk adım, Azure Active Directory'de (Azure AD) yeni bir uygulama oluşturmak ve kaydetmektir. Uygulama, 3. Adımda oluşturduğunuz Epic bağlayıcısına karşılık gelir. Bu uygulamayı oluşturmak, Azure AD'nin Epic EHR denetim kayıtlarını içeren metin dosyası için anında iletme isteğinin kimliğini doğrulamasını sağlar. Bu Azure AD uygulamasını oluştururken aşağıdaki bilgileri kaydettiğinizden emin olun. Bu değerler sonraki adımlarda kullanılacaktır.
+İlk adım, Azure Active Directory'de (Azure AD) yeni bir uygulama oluşturmak ve kaydetmektir. Uygulama, 3. Adımda oluşturduğunuz Epic bağlayıcısına karşılık gelir. Bu uygulamanın oluşturulması, Azure AD Epic EHR denetim kayıtlarını içeren metin dosyası için anında iletme isteğinin kimliğini doğrulamasını sağlar. Bu Azure AD uygulamasını oluştururken aşağıdaki bilgileri kaydettiğinizden emin olun. Bu değerler sonraki adımlarda kullanılacaktır.
 
-- Azure AD uygulama kimliği ( *uygulama kimliği* veya *istemci kimliği* olarak da adlandırılır)
+- Azure AD uygulama kimliği (*uygulama kimliği* veya *istemci kimliği* olarak da adlandırılır)
 
-- Azure AD uygulama gizli dizisi ( *istemci gizli dizisi* olarak da adlandırılır)
+- Azure AD uygulama gizli dizisi (*istemci gizli dizisi* olarak da adlandırılır)
 
 - Kiracı Kimliği ( *dizin kimliği* olarak da adlandırılır)
 
-Azure AD'de uygulama oluşturmaya yönelik adım adım yönergeler için bkz. [Uygulamayı Microsoft kimlik platformu kaydetme](\azure\active-directory\develop\quickstart-register-app).
+Azure AD'da uygulama oluşturmaya yönelik adım adım yönergeler için bkz. [Uygulamayı Microsoft kimlik platformu kaydetme](\azure\active-directory\develop\quickstart-register-app).
 
 ## <a name="step-2-prepare-a-text-file-with-epic-ehr-audit-records"></a>2. Adım: Epic EHR denetim kayıtlarıyla metin dosyası hazırlama
 
@@ -70,10 +68,10 @@ Aşağıdaki tabloda, insider risk yönetimi senaryolarını etkinleştirmek iç
 
 |Alan|Kategori|
 |:----|:----------|
-| ACCESS_LOG. *<br/>ACCESS_TIME ACCESS_LOG_METRIC. METRIC_NAME*<br/>ACCESS_LOG. WORKSTATION_ID<br/>ZCMETRIC\_\_ GROUP.NAME<br/>ZCACCESS\_\_ ACTION.NAME |Bu alanlar, Epic EHR sisteminizdeki erişim etkinliği olaylarını tanımlamak için kullanılır.|
+| ACCESS_LOG. *<br/>ACCESS_LOG_METRIC ACCESS_TIME. METRIC_NAME*<br/>ACCESS_LOG. WORKSTATION_ID<br/>ZC\_ÖLÇÜM\_GROUP.NAME<br/>ZC\_ACCESS\_ACTION.NAME |Bu alanlar, Epic EHR sisteminizdeki erişim etkinliği olaylarını tanımlamak için kullanılır.|
 | HASTA. PAT_MRN_ID<br/>HASTA. PAT_FIRST_NAME* <br/>HASTA. PAT_MIDDLE_NAME <br/>HASTA. PAT_LAST_NAME* <br/>HASTA. ADD_LINE_1* <br/>HASTA. ADD_LINE_2  <br/>HASTA. ŞEHİr* <br/>PATIENT.ZIP*  <br/>ZC_STATE.NAME <br/>ZC_COUNTRY.NAME <br/>CLARITY_DEP. DEPARTMENT_NAME              | Bu alanlar hasta profili bilgilerini tanımlamak için kullanılır.|
 | ZC_BTG_REASON.NAME*<br/> PAT_BTG_AUDIT. BTG_EXPLANATION | Bu alanlar kısıtlı kayıtlara erişimi tanımlamak için kullanılır.|
-| EMP. SYSTEM_LOGIN*<br/>CLARITY_EMP. USER_ID <br/> employee_last_name <sup>1</sup> <br/> employee_first_name <sup>1</sup>                | Bu alanlar, Aile/Komşu/Çalışan kayıtlarına erişimi belirlemek için gereken adres ve ad eşleştirme için çalışan profili bilgilerini tanımlamak için kullanılır. |
+| EMP. SYSTEM_LOGIN*<br/>CLARITY_EMP. USER_ID <br/> employee_last_name<sup>1</sup> <br/> employee_first_name<sup>1</sup>                | Bu alanlar, Aile/Komşu/Çalışan kayıtlarına erişimi belirlemek için gereken adres ve ad eşleştirme için çalışan profili bilgilerini tanımlamak için kullanılır. |
 |||
 
 > [!NOTE]
@@ -125,7 +123,7 @@ Epic bağlayıcısını ayarlamanın son adımı, Metin dosyasındaki (1. Adımd
 > [!NOTE]
 > Daha önce belirtildiği gibi, denetim verilerini içeren metin dosyasının boyutu üst sınırı 3 GB'tır. En fazla satır sayısı 5 milyondur. Bu adımda çalıştırdığınız betiğin büyük metin dosyalarından denetim verilerini içeri aktarması yaklaşık 30 ila 40 dakika sürer. Ayrıca betik, büyük metin dosyalarını 100 bin satırlık daha küçük bloklara böler ve ardından bu blokları sırayla içeri aktarır.
 
-1. Örnek betikle GitHub sitesine erişmek için önceki adımda açık bıraktığınız pencereye gidin. Alternatif olarak, yer işaretli siteyi açın veya kopyaladığınız URL'yi kullanın. Betike [buradan](https://github.com/microsoft/m365-compliance-connector-sample-scripts/blob/main/sample_script.ps1) da erişebilirsiniz.
+1. GitHub sitesine örnek betikle erişmek için önceki adımda açık bıraktığınız pencereye gidin. Alternatif olarak, yer işaretli siteyi açın veya kopyaladığınız URL'yi kullanın. Betike [buradan](https://github.com/microsoft/m365-compliance-connector-sample-scripts/blob/main/sample_script.ps1) da erişebilirsiniz.
 
 2. Betiği metin görünümünde görüntülemek için **Ham** düğmesine tıklayın.
 
@@ -147,9 +145,9 @@ Aşağıdaki tabloda, bu betikle kullanılacak parametreler ve bunların gerekli
 
 |Parametre  |Açıklama|
 |:----------|:----------|
-|tenantId|Bu, 1. Adımda aldığınız Microsoft 365 kuruluşunuzun kimliğidir. Ayrıca, Azure AD yönetim merkezindeki **Genel Bakış** dikey penceresinde kuruluşunuzun kiracı kimliğini de alabilirsiniz. Bu, kuruluşunuzu tanımlamak için kullanılır.|
-|Appıd|Bu, 1. Adımda Azure AD'de oluşturduğunuz uygulamanın Azure AD uygulama kimliğidir. Bu, betik Microsoft 365 kuruluşunuza erişmeye çalıştığında Azure AD tarafından kimlik doğrulaması için kullanılır.|
-|appSecret|Bu, 1. Adımda Azure AD'de oluşturduğunuz uygulamanın Azure AD uygulama gizli dizisidir. Bu, kimlik doğrulaması için de kullanılır.|
+|tenantId|Bu, 1. Adımda edindiğiniz Microsoft 365 kuruluşunuzun kimliğidir. Ayrıca, Azure AD yönetim merkezindeki **Genel Bakış** dikey penceresinde kuruluşunuzun kiracı kimliğini de alabilirsiniz. Bu, kuruluşunuzu tanımlamak için kullanılır.|
+|Appıd|Bu, 1. Adımda Azure AD oluşturduğunuz uygulamanın Azure AD uygulama kimliğidir. Bu, Azure AD tarafından betik Microsoft 365 kuruluşunuza erişmeye çalıştığında kimlik doğrulaması için kullanılır.|
+|appSecret|Bu, 1. Adımda Azure AD oluşturduğunuz uygulamanın Azure AD uygulama gizli dizisidir. Bu, kimlik doğrulaması için de kullanılır.|
 |Jobıd|Bu, 3. Adımda oluşturduğunuz Epic bağlayıcısının iş kimliğidir. Bu, Microsoft buluta yüklenen Epic EHR denetim kayıtlarını Epic bağlayıcısıyla ilişkilendirmek için kullanılır.|
 |Filepath|Bu, 2. Adımda oluşturduğunuz metin dosyasının (betikle aynı sistemde depolanan) dosya yoludur. Dosya yolunda boşluklardan kaçınmaya çalışın; aksi takdirde tek tırnak işareti kullanın.|
 |||
@@ -160,7 +158,7 @@ Her parametre için gerçek değerleri kullanan Epic bağlayıcı betiğinin sö
 .\EpicConnector.ps1 -tenantId d5723623-11cf-4e2e-b5a5-01d1506273g9 -appId 29ee526e-f9a7-4e98-a682-67f41bfd643e -appSecret MNubVGbcQDkGCnn -jobId b8be4a7d-e338-43eb-a69e-c513cd458eba -filePath 'C:\Users\contosoadmin\Desktop\Data\epic_audit_records.txt'
 ```
 
-Karşıya yükleme başarılı olursa, betik **Upload Başarılı** iletisini görüntüler.
+Karşıya yükleme başarılı olursa, betik **Karşıya Yükleme Başarılı** iletisini görüntüler.
 
 > [!NOTE]
 > Yürütme ilkeleri nedeniyle önceki komutu çalıştırırken sorun yaşıyorsanız, yürütme ilkelerini ayarlama hakkında yönergeler için [Bkz. Yürütme İlkeleri Hakkında](/powershell/module/microsoft.powershell.core/about/about_execution_policies) ve [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy) .
@@ -185,7 +183,7 @@ Epic bağlayıcısını oluşturup EHR denetim kayıtlarınızı gönderdikten s
 
 Epic EHR sisteminizdeki en son denetim kayıtlarının insider risk yönetimi çözümü gibi araçlar tarafından kullanılabildiğinden emin olmak için betiği günlük olarak otomatik olarak çalışacak şekilde zamanlamanızı öneririz. Bunun için aynı metin dosyasındaki Epic denetim kaydı verilerini benzer bir zamanlamaya göre (aynı değilse) güncelleştirmeniz de gerekir, böylece hasta kayıtları hakkındaki en son bilgileri çalışanlarınız tarafından erişim etkinliklerine içerir. Amaç, Epic bağlayıcısının bunu insider risk yönetimi çözümünün kullanımına sunabilmesi için en güncel denetim kayıtlarını karşıya yüklemektir. 
 
-Betiği her gün otomatik olarak çalıştırmak için Windows'da Görev Zamanlayıcı uygulamasını kullanabilirsiniz.
+Betiği her gün otomatik olarak çalıştırmak için Windows'ta Görev Zamanlayıcı uygulamasını kullanabilirsiniz.
 
 1. Yerel bilgisayarınızda, Windows **Başlat** düğmesine tıklayın ve görev **zamanlayıcı** yazın.
 
@@ -203,7 +201,7 @@ Betiği her gün otomatik olarak çalıştırmak için Windows'da Görev Zamanla
 
 6. **Tetikleyiciler** sekmesini seçin, **Yeni'ye** tıklayın ve aşağıdaki işlemleri yapın:
 
-    1. **Ayarlar** altında **Günlük** seçeneğini belirleyin ve ardından betiği ilk kez çalıştırmak için bir tarih ve saat seçin. Betik her gün belirtilen saatte çalıştırılır.
+    1. **Ayarlar'ın** altında **Günlük** seçeneğini belirleyin ve ardından betiği ilk kez çalıştırmak için bir tarih ve saat seçin. Betik her gün belirtilen saatte çalıştırılır.
 
     2. **Gelişmiş ayarlar'ın** altında **Etkin** onay kutusunun seçili olduğundan emin olun.
 

@@ -19,16 +19,14 @@ hideEdit: true
 feedback_system: None
 recommendations: false
 description: DLP ilkelerinizde kullanmaya hazır birçok hassas bilgi türü vardır. Bu makalede bu hassas bilgi türlerinin tümü listelenmiştir ve bir DLP ilkesinin her türü algıladığında ne arayacağını gösterir.
-ms.openlocfilehash: af2cbd03de426aa34b9db82691a22684c4c1df0b
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 2d81410b86ca9a90b12dbaa850e36d8803af0d79
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130812"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622447"
 ---
 # <a name="sensitive-information-type-entity-definitions"></a>Hassas bilgi türü varlık tanımları
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makalede tüm hassas bilgi türü varlık tanımları listelenir. Her tanım, bir DLP ilkesinin her türü algılamak için ne arayacağını gösterir. Hassas bilgi türleri hakkında daha fazla bilgi edinmek için bkz [. Hassas bilgi türleri](sensitive-information-type-learn-about.md)
 
@@ -82,7 +80,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_aba_routing"></a>Keyword_aba_routing
 
@@ -340,7 +338,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_argentina_national_id"></a>Keyword_argentina_national_id
 
@@ -398,7 +396,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_argentina_unique_tax_key"></a>Keyword_Argentina_Unique_Tax_Key
 
@@ -488,7 +486,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
  </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_australia_bank_account_number"></a>Keyword_australia_bank_account_number
 
@@ -559,7 +557,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_australia_business_number"></a>Keyword_australia_business_number
 
@@ -622,7 +620,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_australia_company_number"></a>Keyword_australia_company_number
 
@@ -682,7 +680,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_australia_drivers_license_number"></a>Keyword_australia_drivers_license_number
 
@@ -823,7 +821,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_australia_medical_account_number"></a>Keyword_Australia_Medical_Account_Number
 
@@ -876,7 +874,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_australia_passport_number"></a>Keyword_australia_passport_number
 
@@ -943,7 +941,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_australia_tax_file_number"></a>Keyword_australia_tax_file_number
 
@@ -991,7 +989,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -1165,7 +1163,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_austria_eu_national_id_card"></a>Keywords_austria_eu_national_id_card
 
@@ -1228,7 +1226,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -1312,7 +1310,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_austria_eu_ssn_or_equivalent"></a>Keywords_austria_eu_ssn_or_equivalent
 
@@ -1384,7 +1382,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_austria_eu_tax_file_number"></a>Keywords_austria_eu_tax_file_number
 
@@ -1465,7 +1463,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_austria_value_added_tax"></a>Keyword_austria_value_added_tax
 
@@ -1522,7 +1520,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="cep_commonexamplekeywords"></a>CEP_CommonExampleKeywords
 
@@ -1583,7 +1581,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="cep_common_example_keywords"></a>CEP_common_example_keywords
 
@@ -1644,7 +1642,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="cep_common_example_keywords"></a>CEP_common_example_keywords
 
@@ -1695,7 +1693,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="cep_common_example_keywords"></a>CEP_common_example_keywords
 
@@ -1751,7 +1749,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="cep_common_example_keywords"></a>CEP_common_example_keywords
 
@@ -1847,7 +1845,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="cep_common_example_keywords"></a>CEP_common_example_keywords
 
@@ -1908,7 +1906,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="cep_azure_emulator_storage_account_filter"></a>CEP_azure_emulator_storage_account_filter
 
@@ -1930,7 +1928,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 - testacs.<!--no-hyperlink-->Com
 - s-int.<!--no-hyperlink-->Net
 
-## <a name="azure-storage-account-key-generic"></a>Azure Depolama hesap anahtarı (genel)
+## <a name="azure-storage-account-key-generic"></a>Azure Depolama hesabı anahtarı (genel)
 
 ### <a name="format"></a>Biçim
 
@@ -1995,7 +1993,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -2178,7 +2176,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_belgium_national_number"></a>Keyword_belgium_national_number
 
@@ -2292,7 +2290,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -2388,7 +2386,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
     </Version>
 ```
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_belgium_value_added_tax_number"></a>Keyword_belgium_value_added_tax_number
 
@@ -2470,7 +2468,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_brazil_cpf"></a>Keyword_brazil_cpf
 
@@ -2534,7 +2532,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_brazil_cnpj"></a>Keyword_brazil_cnpj
 
@@ -2606,7 +2604,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_brazil_rg"></a>Keyword_brazil_rg
 
@@ -2661,7 +2659,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -2842,7 +2840,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -2930,7 +2928,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_bulgaria_eu_national_id_card"></a>Keywords_bulgaria_eu_national_id_card
 
@@ -3027,7 +3025,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_canada_bank_account_number"></a>Keyword_canada_bank_account_number
 
@@ -3142,7 +3140,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_province_name_drivers_license_name"></a>Keyword_[province_name]_drivers_license_name
 
@@ -3315,7 +3313,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_canada_health_service_number"></a>Keyword_canada_health_service_number
 
@@ -3363,7 +3361,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_canada_passport_number"></a>Keyword_canada_passport_number
 
@@ -3431,7 +3429,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_canada_phin"></a>Keyword_canada_phin
 
@@ -3533,7 +3531,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_sin"></a>Keyword_sin
 
@@ -3610,7 +3608,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_chile_id_card"></a>Keyword_chile_id_card
 
@@ -3696,7 +3694,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 ### <a name="keyword_china_resident_id"></a>Keyword_china_resident_id
 
@@ -3758,7 +3756,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_cc_verification"></a>Keyword_cc_verification
 
@@ -4052,7 +4050,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -4213,7 +4211,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_croatia_id_card"></a>Keyword_croatia_id_card
 
@@ -4297,7 +4295,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
@@ -4361,7 +4359,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_croatia_oib_number"></a>Keyword_croatia_oib_number
 
@@ -4436,7 +4434,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -4604,7 +4602,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_cyprus_eu_national_id_card"></a>Keywords_cyprus_eu_national_id_card
 
@@ -4666,7 +4664,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
@@ -4758,7 +4756,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_cyprus_eu_tax_file_number"></a>Keywords_cyprus_eu_tax_file_number
 
@@ -4827,7 +4825,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -5008,7 +5006,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
@@ -5090,7 +5088,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
         </Version>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_czech_id_card"></a>Keyword_czech_id_card
 
@@ -5181,7 +5179,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -5361,7 +5359,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
@@ -5432,7 +5430,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_denmark_id"></a>Keyword_denmark_id
 
@@ -5573,7 +5571,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_dea_number"></a>Keyword_dea_number
 
@@ -5619,7 +5617,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -5800,7 +5798,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
@@ -5879,7 +5877,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_estonia_eu_national_id_card"></a>Keywords_estonia_eu_national_id_card
 
@@ -5965,7 +5963,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_eu_debit_card"></a>Keyword_eu_debit_card
 
@@ -6460,7 +6458,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -6637,7 +6635,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_finland_european_health_insurance_number"></a>Keyword_finland_european_health_insurance_number
 
@@ -6702,7 +6700,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 - ainutlaatuinen henkilökohtainen tunnus
 - henkilökohtainen tunnus
@@ -6806,7 +6804,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -6877,7 +6875,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_french_drivers_license"></a>Keyword_french_drivers_license
 
@@ -7050,7 +7048,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_france_health_insurance_number"></a>Keyword_France_health_insurance_number
 
@@ -7089,7 +7087,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_france_eu_national_id_card"></a>Keywords_france_eu_national_id_card
 
@@ -7162,7 +7160,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -7256,7 +7254,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_fr_insee"></a>Keyword_fr_insee
 
@@ -7341,7 +7339,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_france_eu_tax_file_number"></a>Keywords_france_eu_tax_file_number
 
@@ -7418,7 +7416,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_france_value_added_tax_number"></a>Keyword_France_value_added_tax_number
 
@@ -7481,7 +7479,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_german_drivers_license_number"></a>Keyword_german_drivers_license_number
 
@@ -7693,7 +7691,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_germany_id_card"></a>Keyword_germany_id_card
 
@@ -7771,7 +7769,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_german_passport"></a>Keyword_german_passport
 
@@ -7853,7 +7851,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_germany_eu_tax_file_number"></a>Keywords_germany_eu_tax_file_number
 
@@ -7935,7 +7933,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_germany_value_added_tax_number"></a>Keyword_germany_value_added_tax_number
 
@@ -7983,7 +7981,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -8161,7 +8159,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_greece_id_card"></a>Keyword_greece_id_card
 
@@ -8225,7 +8223,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -8302,7 +8300,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_greece_eu_ssn_or_equivalent"></a>Keywords_greece_eu_ssn_or_equivalent
 
@@ -8354,7 +8352,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_greece_eu_tax_file_number"></a>Keywords_greece_eu_tax_file_number
 
@@ -8430,7 +8428,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_hong_kong_id_card"></a>Keyword_hong_kong_id_card
 
@@ -8508,7 +8506,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -8687,7 +8685,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -8768,7 +8766,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_hungary_eu_national_id_card"></a>Keywords_hungary_eu_national_id_card
 
@@ -8826,7 +8824,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_hungary_eu_ssn_or_equivalent"></a>Keywords_hungary_eu_ssn_or_equivalent
 
@@ -8902,7 +8900,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_hungary_eu_tax_file_number"></a>Keywords_hungary_eu_tax_file_number
 
@@ -8980,7 +8978,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_hungary_value_added_tax_number"></a>Keyword_Hungary_value_added_tax_number
 
@@ -9058,7 +9056,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
         </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number_common"></a>Keywords_eu_driver s_license_number_common
 
@@ -9228,7 +9226,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_india_gst_number"></a>Keyword_india_gst_number
 
@@ -9283,7 +9281,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_india_permanent_account_number"></a>Keyword_india_permanent_account_number
 
@@ -9336,7 +9334,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
   </Pattern>
 </Entity>
 ```
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_india_aadhar"></a>Keyword_india_aadhar
 - aadhaar
@@ -9387,7 +9385,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
         </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_india_voter_id_card"></a>Keyword_india_voter_id_card
 
@@ -9439,7 +9437,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_indonesia_id_card"></a>Keyword_indonesia_id_card
 
@@ -9544,7 +9542,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 Yok
 
@@ -9586,7 +9584,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 Uluslararası [Hastalık Sınıflandırması, Onuncu Düzeltme, Klinik Modifikasyon (ICD-10-CM)](https://icd10cmtool.cdc.gov/) temelinde Dictionary_icd_10_updated anahtar sözcük sözlüğünden herhangi bir terim. Bu tür yalnızca terimi arar, sigorta kodlarını aramaz.
 
@@ -9629,7 +9627,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 Uluslararası [Hastalık Sınıflandırması, Dokuzuncu Düzeltme, Klinik Modifikasyon (ICD-9-CM)](https://go.microsoft.com/fwlink/?linkid=852605) temelinde Dictionary_icd_9_updated anahtar sözcük sözlüğünden herhangi bir terim. Bu tür yalnızca terimi arar, sigorta kodlarını aramaz.
 
@@ -9692,7 +9690,7 @@ IPv6 için bir DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgil
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_ipaddress"></a>Keyword_ipaddress
 
@@ -9738,7 +9736,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_ipaddress"></a>Keyword_ipaddress
 
@@ -9784,7 +9782,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_ipaddress"></a>Keyword_ipaddress
 
@@ -9831,7 +9829,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -10013,7 +10011,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
@@ -10098,7 +10096,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_ireland_eu_national_id_card"></a>Keywords_ireland_eu_national_id_card
 
@@ -10196,7 +10194,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_israel_bank_account_number"></a>Keyword_israel_bank_account_number
 
@@ -10239,7 +10237,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_israel_national_id"></a>Keyword_Israel_National_ID
 
@@ -10301,7 +10299,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -10485,7 +10483,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_italy_eu_national_id_card"></a>Keywords_italy_eu_national_id_card
 
@@ -10576,7 +10574,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
@@ -10665,7 +10663,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_italy_value_added_tax_number"></a>Keyword_italy_value_added_tax_number
 
@@ -10732,7 +10730,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_jp_bank_account"></a>Keyword_jp_bank_account
 
@@ -10814,7 +10812,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_jp_drivers_license_number"></a>Keyword_jp_drivers_license_number
 
@@ -10903,7 +10901,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_japan_my_number_corporate"></a>Keyword_japan_my_number_corporate
 
@@ -10970,7 +10968,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_japan_my_number_personal"></a>Keyword_japan_my_number_personal
 
@@ -11016,7 +11014,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_jp_passport"></a>Keyword_jp_passport
 
@@ -11070,7 +11068,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_jp_residence_card_number"></a>Keyword_jp_residence_card_number
 
@@ -11112,7 +11110,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_jp_resident_registration_number"></a>Keyword_jp_resident_registration_number
 
@@ -11172,7 +11170,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_jp_sin"></a>Keyword_jp_sin
 
@@ -11240,7 +11238,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -11423,7 +11421,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
@@ -11520,7 +11518,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_latvia_eu_national_id_card"></a>Keywords_latvia_eu_national_id_card
 
@@ -11643,7 +11641,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -11827,7 +11825,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_lithuania_eu_national_id_card"></a>Keywords_lithuania_eu_national_id_card
 
@@ -11923,7 +11921,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -11983,7 +11981,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -12164,7 +12162,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_luxemburg_eu_national_id_card"></a>Keywords_luxemburg_eu_national_id_card
 
@@ -12240,7 +12238,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_luxemburg_eu_tax_file_number"></a>Keywords_luxemburg_eu_tax_file_number
 
@@ -12333,7 +12331,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -12417,7 +12415,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_malaysia_id_card_number"></a>Keyword_malaysia_id_card_number
 
@@ -12486,7 +12484,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -12663,7 +12661,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_malta_eu_national_id_card"></a>Keywords_malta_eu_national_id_card
 
@@ -12730,7 +12728,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -12822,7 +12820,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_malta_eu_tax_file_number"></a>Keywords_malta_eu_tax_file_number
 
@@ -12913,7 +12911,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_mbi_card"></a>Keyword_mbi_card
 
@@ -12969,7 +12967,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_mexico_population_registry_code"></a>Keyword_mexico_population_registry_code
 
@@ -13030,7 +13028,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_netherlands_eu_national_id_card"></a>Keywords_netherlands_eu_national_id_card
 
@@ -13090,7 +13088,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -13270,7 +13268,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -13346,7 +13344,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_netherlands_eu_tax_file_number"></a>Keywords_netherlands_eu_tax_file_number
 
@@ -13440,7 +13438,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_netherlands_value_added_tax_number"></a>Keyword_netherlands_value_added_tax_number
 
@@ -13506,7 +13504,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_new_zealand_bank_account_number"></a>Keyword_new_zealand_bank_account_number
 
@@ -13565,7 +13563,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_new_zealand_drivers_license_number"></a>Keyword_new_zealand_drivers_license_number
 
@@ -13686,7 +13684,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_new_zealand_inland_revenue_number"></a>Keyword_new_zealand_inland_revenue_number
 
@@ -13738,7 +13736,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_nz_terms"></a>Keyword_nz_terms
 
@@ -13809,7 +13807,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Version>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_new_zealand_social_welfare_number"></a>Keyword_new_zealand_social_welfare_number
 
@@ -13863,7 +13861,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_norway_id_number"></a>Keyword_norway_id_number
 
@@ -13919,7 +13917,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_philippines_id"></a>Keyword_philippines_id
 
@@ -13968,7 +13966,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -14128,7 +14126,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_poland_national_id_passport_number"></a>Keyword_poland_national_id_passport_number
 
@@ -14182,7 +14180,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_pesel_identification_number"></a>Keyword_pesel_identification_number
 
@@ -14256,7 +14254,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -14345,7 +14343,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_poland_regon_number"></a>Keywords_poland_regon_number
 
@@ -14403,7 +14401,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_poland_eu_tax_file_number"></a>Keywords_poland_eu_tax_file_number
 
@@ -14466,7 +14464,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_portugal_citizen_card"></a>Keyword_portugal_citizen_card
 
@@ -14536,7 +14534,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -14726,7 +14724,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -14809,7 +14807,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_portugal_eu_tax_file_number"></a>Keywords_portugal_eu_tax_file_number
 
@@ -14873,7 +14871,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -15056,7 +15054,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -15129,7 +15127,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_romania_eu_national_id_card"></a>Keywords_romania_eu_national_id_card
 
@@ -15235,7 +15233,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_russia_passport_number_domestic"></a>Keyword_russia_passport_number_domestic
 
@@ -15297,7 +15295,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_russia_passport_number_international"></a>Keywords_russia_passport_number_international
 
@@ -15349,7 +15347,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_saudi_arabia_national_id"></a>Keyword_saudi_arabia_national_id
 
@@ -15402,7 +15400,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_singapore_nric"></a>Keyword_singapore_nric
 
@@ -15452,7 +15450,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -15633,7 +15631,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -15711,7 +15709,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Version>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_slovakia_eu_national_id_card"></a>Keywords_slovakia_eu_national_id_card
 
@@ -15802,7 +15800,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -15988,7 +15986,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -16073,7 +16071,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_slovenia_eu_tax_file_number"></a>Keywords_slovenia_eu_tax_file_number
 
@@ -16150,7 +16148,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_slovenia_eu_national_id_card"></a>Keywords_slovenia_eu_national_id_card
 
@@ -16218,7 +16216,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_south_africa_identification_number"></a>Keyword_south_africa_identification_number
 
@@ -16273,7 +16271,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_south_korea_resident_number"></a>Keyword_south_korea_resident_number
 
@@ -16340,7 +16338,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_spain_eu_national_id_card"></a>Keywords_spain_eu_national_id_card
 
@@ -16420,7 +16418,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -16613,7 +16611,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -16702,7 +16700,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_spain_eu_passport_number"></a>Keywords_spain_eu_passport_number
 
@@ -16793,7 +16791,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_spain_eu_tax_file_number"></a>Keywords_spain_eu_tax_file_number
 
@@ -16869,7 +16867,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="cep_globalfilter"></a>CEP_GlobalFilter
 
@@ -16949,7 +16947,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -17131,7 +17129,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_swedish_national_identifier"></a>Keywords_swedish_national_identifier
 
@@ -17203,7 +17201,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -17310,7 +17308,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_sweden_eu_tax_file_number"></a>Keywords_sweden_eu_tax_file_number
 
@@ -17374,7 +17372,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_swift"></a>Keyword_swift
 
@@ -17475,7 +17473,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_swiss_ssn_ahv_number"></a>Keyword_swiss_ssn_AHV_number
 
@@ -17542,7 +17540,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_taiwan_national_id"></a>Keyword_taiwan_national_id
 
@@ -17599,7 +17597,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_taiwan_passport"></a>Keyword_taiwan_passport
 
@@ -17646,7 +17644,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_taiwan_resident_certificate"></a>Keyword_taiwan_resident_certificate
 
@@ -17703,7 +17701,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_thai_citizen_id"></a>Keyword_thai_citizen_Id
 
@@ -17752,7 +17750,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_turkish_national_id"></a>Keyword_turkish_national_id
 
@@ -17823,7 +17821,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
@@ -17979,7 +17977,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_uk_electoral"></a>Keyword_uk_electoral
 
@@ -18033,7 +18031,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_uk_nhs_number"></a>Keyword_uk_nhs_number
 
@@ -18113,7 +18111,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_uk_nino"></a>Keyword_uk_nino
 
@@ -18184,7 +18182,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_uk_eu_tax_file_number"></a>Keywords_uk_eu_tax_file_number
 
@@ -18237,7 +18235,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_usa_bank_account"></a>Keyword_usa_Bank_Account
 
@@ -18319,7 +18317,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_us_drivers_license_abbreviations"></a>Keyword_us_drivers_license_abbreviations
 
@@ -18489,7 +18487,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_itin"></a>Keyword_itin
 
@@ -18575,7 +18573,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
   </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_ssn"></a>Keyword_ssn
 
@@ -18641,7 +18639,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
@@ -18700,7 +18698,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_ukraine_passport_domestic"></a>Keyword_ukraine_passport_domestic
 
@@ -18753,7 +18751,7 @@ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandı�
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar kelime -ler
+### <a name="keywords"></a>Anahtar Sözcükler
 
 #### <a name="keyword_ukraine_passport_international"></a>Keyword_ukraine_passport_international
 

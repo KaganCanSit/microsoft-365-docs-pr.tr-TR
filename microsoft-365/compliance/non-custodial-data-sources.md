@@ -1,5 +1,5 @@
 ---
-title: eBulma (Premium) olayına gözetimsiz veri kaynakları ekleme
+title: Bir eBulma (Premium) olayına gözetimsiz veri kaynakları ekleme
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -15,18 +15,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Bir eBulma (Premium) olayına gözetimsiz veri kaynakları ekleyebilir ve veri kaynağına ayrı tutabilirsiniz. Gözaltı olmayan veri kaynakları yeniden dizinlenir, bu nedenle kısmen dizinlenmiş olarak işaretlenmiş tüm içerikler tamamen ve hızlı bir şekilde aranabilir hale getirmek için yeniden işlenir.
-ms.openlocfilehash: 86011a0f19dcb8f46041f4c0aa7c91d89e4e2198
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: bb5ff8a4a58e62d3f4bf36f7c7e1e9001d829036
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097986"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625137"
 ---
-# <a name="add-non-custodial-data-sources-to-an-ediscovery-premium-case"></a>eBulma (Premium) olayına gözetimsiz veri kaynakları ekleme
+# <a name="add-non-custodial-data-sources-to-an-ediscovery-premium-case"></a>Bir eBulma (Premium) olayına gözetimsiz veri kaynakları ekleme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview eBulma (Premium) vakalarında, bir Microsoft 365 veri kaynağını bu durumda bir koruyucuyla ilişkilendirme gereksinimlerinizi her zaman karşılamaz. Ancak yine de arama yapmak, bir gözden geçirme kümesine eklemek ve analiz edip gözden geçirmek için bu verileri bir servis talebiyle ilişkilendirmeniz gerekebilir. eBulma (Premium) özelliği *, gözetim dışı veri kaynakları* olarak adlandırılır ve bunu bir koruyucuyla ilişkilendirmek zorunda kalmadan bir servis talebine veri eklemenize olanak tanır. Ayrıca aynı eBulma (Premium) işlevselliğini, koruyucuyla ilişkili veriler için kullanılabilen gözetimsiz verilere de uygular. Gözaltı olmayan verilere uygulayabileceğiniz en yararlı şeylerden ikisi, bunları bekletmek ve [Gelişmiş dizin oluşturma](indexing-custodian-data.md) kullanarak işlemektir.
+Microsoft Purview eKeşif (Premium) durumlarda, bir Microsoft 365 veri kaynağını bu durumda bir koruyucuyla ilişkilendirme gereksinimlerinizi her zaman karşılamaz. Ancak yine de arama yapmak, bir gözden geçirme kümesine eklemek ve analiz edip gözden geçirmek için bu verileri bir servis talebiyle ilişkilendirmeniz gerekebilir. eBulma (Premium) özelliği *, gözetim dışı veri kaynakları* olarak adlandırılır ve bunu bir koruyucuyla ilişkilendirmek zorunda kalmadan bir servis talebine veri eklemenize olanak tanır. Ayrıca, aynı eBulma (Premium) işlevselliğini, koruyucuyla ilişkili veriler için kullanılabilen gözetimsiz verilere de uygular. Gözaltı olmayan verilere uygulayabileceğiniz en yararlı şeylerden ikisi, bunları bekletmek ve [Gelişmiş dizin oluşturma](indexing-custodian-data.md) kullanarak işlemektir.
 
 ## <a name="add-a-non-custodial-data-source"></a>Gözetim altında olmayan bir veri kaynağı ekleme
 
@@ -36,16 +34,16 @@ Bir eBulma (Premium) olayına gözetimsiz veri kaynakları eklemek ve yönetmek 
 
 2. **Veri kaynakları** sekmesine ve ardından **Veri kaynağı** >  ekle **Veri konumları ekle'ye** tıklayın.
 
-3. **Yeni gözetim dışı veri konumları** açılır sayfasında, servis talebine eklemek istediğiniz veri kaynaklarını seçin. **SharePoint veya Exchange** bölümlerini genişletip **Düzenle'ye** tıklayarak birden çok posta kutusu ve site  ekleyebilirsiniz.
+3. **Yeni gözetim dışı veri konumları** açılır sayfasında, servis talebine eklemek istediğiniz veri kaynaklarını seçin. **SharePoint** veya **Exchange** bölümlerini genişletip **Düzenle'ye** tıklayarak birden çok posta kutusu ve site ekleyebilirsiniz.
 
-   ![SharePoint siteleri ve Exchange posta kutularını gözaltı olmayan veri kaynakları olarak ekleyin.](../media/NonCustodialDataSources1.png)
+   ![SharePoint sitelerini ve Exchange posta kutularını gözaltı olmayan veri kaynakları olarak ekleyin.](../media/NonCustodialDataSources1.png)
 
    - **SharePoint** - Site eklemek için **Düzenle'ye** tıklayın. Listeden bir site seçin veya arama çubuğuna sitenin URL'sini yazarak siteyi arayabilirsiniz. Koruyucu olmayan veri kaynakları olarak eklemek istediğiniz siteleri seçin ve **Ekle'ye** tıklayın.
 
    - **Exchange** - Posta kutuları eklemek için **Düzenle'ye** tıklayın. Posta kutuları veya dağıtım grupları için arama kutusuna bir ad veya diğer ad (en az üç karakter) yazın. Koruyucu olmayan veri kaynakları olarak eklemek istediğiniz posta kutularını seçin ve **Ekle'ye** tıklayın.
 
    > [!NOTE]
-   > **SharePoint** ve Exchange bölümlerini kullanarak, bir Ekip veya **Yammer** grubuyla ilişkili siteleri ve posta kutularını gözetim dışı veri kaynakları olarak ekleyebilirsiniz. Ekip veya Yammer grubuyla ilişkili posta kutusunu ve siteyi ayrı olarak eklemeniz gerekir.<br/><br/> Ayrıca, SharePoint veri kaynağı olarak bir kök site URL'si (veya `https://contoso-my.sharepoint.com/`gibi`https://contoso-my.sharepoint.com/personal/`) eklenmesi desteklenmez. Belirli siteleri eklemeniz gerekir.
+   > **SharePoint** ve **Exchange** bölümlerini, bir Ekip veya Yammer grubuyla ilişkili siteleri ve posta kutularını gözetim dışı veri kaynakları olarak eklemek için kullanabilirsiniz. Ekip veya Yammer grubuyla ilişkili posta kutusunu ve siteyi ayrı olarak eklemeniz gerekir.<br/><br/> Ayrıca, SharePoint veri kaynağı olarak bir kök site URL'si (veya `https://contoso-my.sharepoint.com/`gibi`https://contoso-my.sharepoint.com/personal/`) eklenmesi desteklenmez. Belirli siteleri eklemeniz gerekir.
 
 4. Gözetimsiz veri kaynaklarını ekledikten sonra, bu konumları beklemeye alma veya saklama seçeneğiniz vardır. Veri kaynağını beklemeye almak için veri kaynağının yanındaki **Ayrı Tut** onay kutusunu seçin veya seçimini kaldırın.
 

@@ -15,18 +15,16 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Gözden geçirme kümesindeki belgeleri etiketlemek, gereksiz içeriklerin kaldırılmasına ve eBulma (Premium) durumunda ilgili içeriğin tanımlanmasına yardımcı olur.
+description: Gözden geçirme kümesindeki belgeleri etiketlemek, gereksiz içeriğin kaldırılmasına ve eBulma (Premium) durumunda ilgili içeriğin tanımlanmasına yardımcı olur.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 358f62c83cdecd1aee92a2ca56db09b732ea3d9d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 2cd1243f520be21cf27c810a5f2dc2e4a033a33f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099619"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623749"
 ---
 # <a name="tag-documents-in-a-review-set-in-ediscovery-premium"></a>eBulma'da (Premium) bir gözden geçirme kümesinde belgeleri etiketleme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bir gözden geçirme kümesindeki içeriği düzenlemek, eBulma işleminde çeşitli iş akışlarını tamamlamak için önemlidir. Buna şunlar dahildir:
 
@@ -105,7 +103,7 @@ Etiket yapısı uygulandığında, gözden geçirenler etiketleme ayarlarını y
 
       - **İlişkili aile öğelerini dahil et**: Bu seçenek, etiketlenmiş öğelerin ilişkili aile öğelerine aynı etiketi uygular.  *Aile öğeleri* , aynı **FamilyId** meta veri özelliği değerini paylaşan öğelerdir. Örneğin, e-posta iletisine eklenmiş bir belge, e-posta iletisiyle aynı **FamilyId** değerini paylaşır. Bu nedenle, bu örnek için bu seçenek belirlenmişse, belge gözden geçirme kümesi öğeleri listesine eklenmese bile e-posta iletisi ve belge etiketlenir.
 
-      - **İlişkili konuşma öğelerini ekle**: Bu seçenek, etiketlenen öğelerle aynı Teams veya Yammer konuşmadaki tüm öğelere aynı etiketi uygular. *Konuşma öğeleri* , aynı **ConversationId** meta veri özelliği değerini paylaşan öğelerdir. Konuşmanın tüm iletileri, gönderileri ve ilgili transkript dosyası aynı **ConversationId değerini** paylaşır. Bu seçenek belirlenirse, aynı konuşmadaki (ve transkript dosyasındaki) tüm öğeler etiketlenir, ancak bu konuşma öğelerinin bazıları gözden geçirme kümesi öğeleri listesine eklenmeyebilir. Konuşma öğeleri hakkında daha fazla bilgi için, Microsoft Teams içeriği [için eBulma (Premium) iş akışının](teams-workflow-in-advanced-ediscovery.md#grouping) "Gruplandırma" bölümüne bakın.
+      - **İlişkili konuşma öğelerini ekle**: Bu seçenek, etiketlenen öğelerle aynı Teams veya Yammer konuşmasında yer alan tüm öğelere aynı etiketi uygular. *Konuşma öğeleri* , aynı **ConversationId** meta veri özelliği değerini paylaşan öğelerdir. Konuşmanın tüm iletileri, gönderileri ve ilgili transkript dosyası aynı **ConversationId değerini** paylaşır. Bu seçenek belirlenirse, aynı konuşmadaki (ve transkript dosyasındaki) tüm öğeler etiketlenir, ancak bu konuşma öğelerinin bazıları gözden geçirme kümesi öğeleri listesine eklenmeyebilir. Konuşma öğeleri hakkında daha fazla bilgi [için Microsoft Teams'deki içerik için eKeşif (Premium) iş akışının](teams-workflow-in-advanced-ediscovery.md#grouping) "Gruplandırma" bölümüne bakın.
 
       - **Hiçbiri**: Bu seçenek, aile öğelerine veya konuşma öğelerine etiket uygulamaz. Etiketleri yalnızca seçili öğelere veya gözden geçirme kümesi listesindeki tüm öğelere uygular.
 

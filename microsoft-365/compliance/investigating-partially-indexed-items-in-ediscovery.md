@@ -18,18 +18,16 @@ ms.assetid: 4e8ff113-6361-41e2-915a-6338a7e2a1ed
 ms.custom:
 - seo-marvel-apr2020
 description: Kuruluşunuzdaki Exchange, SharePoint ve OneDrive İş kısmen dizine alınmış öğeleri (dizine alınmamış öğeler olarak da adlandırılır) yönetmeyi öğrenin.
-ms.openlocfilehash: 528693febbb6d02f6ea143d94aaae154d3dfde7e
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: 1e048cece931ecefe395a5a26bbfb840c8b831f6
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078754"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625115"
 ---
 # <a name="investigating-partially-indexed-items-in-ediscovery"></a>eBulma'da kısmen dizine alınan öğeleri araştırma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview uyumluluk portalı çalıştırdığınız bir eBulma araması, bir arama çalıştırdığınızda tahmini arama sonuçlarında otomatik olarak kısmen dizine alınan öğeler içerir. Kısmen dizine alınan öğeler, SharePoint ve OneDrive İş sitelerindeki posta kutusu öğeleri ve belgeleri Exchange ve herhangi bir nedenle arama için tamamen dizine eklenmedi. Çoğu e-posta iletisi ve site belgesi, [e-posta iletileri için Dizin oluşturma sınırları](limits-for-content-search.md#indexing-limits-for-email-messages) içinde olduğundan başarıyla dizinlenir. Ancak, bazı öğeler bu dizin oluşturma sınırlarını aşabilir ve kısmen dizine alınabilir. eBulma araması çalıştırdığınızda öğelerin arama için dizine alınamamalarının ve kısmen dizine alınan öğeler olarak döndürüllerinin diğer nedenleri şunlardır:
+Microsoft Purview uyumluluk portalı çalıştırdığınız bir eBulma araması, bir arama çalıştırdığınızda tahmini arama sonuçlarında otomatik olarak kısmen dizine alınan öğeler içerir. Kısmen dizine alınan öğeler, SharePoint ve OneDrive İş sitelerindeki Exchange posta kutusu öğeleri ve belgeleridir ve herhangi bir nedenle arama için tamamen dizine eklenmemiştir. Çoğu e-posta iletisi ve site belgesi, [e-posta iletileri için Dizin oluşturma sınırları](limits-for-content-search.md#indexing-limits-for-email-messages) içinde olduğundan başarıyla dizinlenir. Ancak, bazı öğeler bu dizin oluşturma sınırlarını aşabilir ve kısmen dizine alınabilir. eBulma araması çalıştırdığınızda öğelerin arama için dizine alınamamalarının ve kısmen dizine alınan öğeler olarak döndürüllerinin diğer nedenleri şunlardır:
   
 - E-posta iletilerinin ekli bir dosyası vardır ve bu dosya açılamaz; Bu, kısmen dizine alınan e-posta öğelerinin en yaygın nedenidir.
 
@@ -47,7 +45,7 @@ Bir eBulma araması çalıştırdıktan sonra, arama yapılan konumlardaki kısm
   
 - Bir öğe kısmen dizine eklenmişse ve arama sorgusuyla eşleşiyorsa, hem arama sonucu öğelerinin sayısına (hem de boyutuna) ve kısmen dizine alınan öğelere dahil edilir. Ancak, aynı aramanın sonuçları dışarı aktarıldığında, öğe yalnızca arama sonuçları kümesine eklenir; kısmen dizinlenmiş bir öğe olarak dahil değildir.
 
-- SharePoint ve OneDrive sitelerinde bulunan kısmen dizinlenmiş öğeler, aramanın ayrıntılı istatistiklerinde görüntülenen kısmen dizinlenmiş öğelerin tahmininde yer *almaz*. Ancak, eBulma aramasının sonuçlarını dışarı aktardığınızda kısmen dizine alınan öğeler dışarı aktarılabilir. Örneğin, yalnızca sitelerde arama yaparsanız, kısmen dizine alınan tahmini öğe sayısı sıfır olur.
+- SharePoint ve OneDrive sitelerinde bulunan kısmen dizinlenmiş öğeler, aramanın ayrıntılı istatistiklerinde görüntülenen kısmen dizinlenmiş öğelerin tahmininde yer *almamaktadır* . Ancak, eBulma aramasının sonuçlarını dışarı aktardığınızda kısmen dizine alınan öğeler dışarı aktarılabilir. Örneğin, yalnızca sitelerde arama yaparsanız, kısmen dizine alınan tahmini öğe sayısı sıfır olur.
   
 ## <a name="calculating-the-ratio-of-partially-indexed-items-in-your-organization"></a>Kuruluşunuzda kısmen dizine alınan öğelerin oranını hesaplama
 
@@ -109,7 +107,7 @@ Aşağıda dizin oluşturma hatalarının listesi ve hatanın olası nedeninin a
 | `parserinputsize` <br/> |Ek ayrıştırıcının işleyemeyecek kadar büyük olduğunu ve bu ekin ayrıştırılması gerçekleşmedi veya tamamlanmadı.  <br/> |
 | `parsermalformed` <br/> |Ek yanlış biçimlendirilmiş ve ayrıştırıcı tarafından işlenemedi. Bu sonuç eski dosya biçimlerinden, uyumsuz yazılımlar tarafından oluşturulan dosyalardan veya iddia edilenden başka bir şeymiş gibi davranan virüslerden kaynaklanabilir.  <br/> |
 | `parseroutputsize` <br/> |Ek ayrıştırma çıktısı çok büyük ve kesilmesi gerekiyordu.  <br/> |
-| `parserunknowntype` <br/> |Ekin Microsoft 365 algılayamadık bir dosya türü vardı.  <br/> |
+| `parserunknowntype` <br/> |Ekte Microsoft 365'in algılayamadıdığı bir dosya türü vardı.  <br/> |
 | `parserunsupportedtype` <br/> |Ekin Office 365 algılayabildiği bir dosya türü vardı, ancak bu dosya türünün ayrıştırılması desteklenmiyor.  <br/> |
 | `propertytoobig` <br/> |Exchange Store'daki bir e-posta özelliğinin değeri alınamayacak kadar büyük ve ileti işlenemedi. Bu genellikle yalnızca bir e-posta iletisinin gövde özelliğine olur.  <br/> |
 | `retrieverrms` <br/> |İçerik alıcı, RMS korumalı bir iletinin kodunu çözemedi.  <br/> |

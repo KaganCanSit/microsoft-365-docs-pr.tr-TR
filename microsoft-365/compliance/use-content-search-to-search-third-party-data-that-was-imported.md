@@ -15,22 +15,20 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ec2677ff-c4d7-4363-a9e7-22c80e015688
-description: Sorgular oluşturarak üçüncü taraf veri kaynağından Microsoft 365 posta kutularına aktarılan öğeleri aramak için İçerik Arama eBulma aracını kullanın.
+description: Microsoft 365'te üçüncü taraf veri kaynağından posta kutularına aktarılan öğeleri sorgular oluşturarak aramak için İçerik Arama eBulma aracını kullanın.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 73967c8897ee0fd5143b8e15dfe8874fc0c85755
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 6d4475987cddb04e0ad49394eda14d638774c22e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095410"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624851"
 ---
 # <a name="use-content-search-to-search-third-party-data-imported-by-a-custom-partner-connector"></a>Özel bir iş ortağı bağlayıcısı tarafından içeri aktarılan üçüncü taraf verilerde arama yapmak için İçerik Arama'yı kullanma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Üçüncü taraf veri kaynağından Microsoft 365 posta kutularına aktarılan öğeleri aramak için Microsoft Purview uyumluluk portalındaki [İçerik arama eBulma aracını](content-search.md) kullanabilirsiniz. İçeri aktarılan tüm üçüncü taraf veri öğelerini aramak için bir sorgu oluşturabilir veya belirli üçüncü taraf veri öğelerini aramak için bir sorgu oluşturabilirsiniz. Ayrıca, üçüncü taraf verileri korumak için sorgu tabanlı saklama ilkesi veya sorgu tabanlı eBulma ayrı tutma da oluşturabilirsiniz.
+Microsoft 365'te üçüncü taraf veri kaynağından posta kutularına aktarılan öğeleri aramak için Microsoft Purview uyumluluk portalı [İçerik arama eBulma aracını](content-search.md) kullanabilirsiniz. İçeri aktarılan tüm üçüncü taraf veri öğelerini aramak için bir sorgu oluşturabilir veya belirli üçüncü taraf veri öğelerini aramak için bir sorgu oluşturabilirsiniz. Ayrıca, üçüncü taraf verileri korumak için sorgu tabanlı saklama ilkesi veya sorgu tabanlı eBulma ayrı tutma da oluşturabilirsiniz.
   
-Üçüncü taraf verileri içeri aktarmak için bir iş ortağıyla çalışma hakkında daha fazla bilgi ve Microsoft 365 aktarabileceğiniz üçüncü taraf veri türlerinin listesi için bkz. [Office 365'da üçüncü taraf verileri arşivlemek için iş ortağıyla çalışma](work-with-partner-to-archive-third-party-data.md).
+Üçüncü taraf verileri içeri aktarmak için bir iş ortağıyla çalışma hakkında daha fazla bilgi ve Microsoft 365'e aktarabileceğiniz üçüncü taraf veri türlerinin listesi için bkz. [Office 365'da üçüncü taraf verileri arşivlemek için iş ortağıyla çalışma](work-with-partner-to-archive-third-party-data.md).
 
 > [!IMPORTANT]
 > Bu makaledeki yönergeler yalnızca özel bir iş ortağı bağlayıcısı tarafından içeri aktarılan üçüncü taraf veriler için geçerlidir. Bu makale, Microsoft uyumluluk merkezindeki üçüncü taraf [veri bağlayıcıları kullanılarak içeri aktarılan üçüncü taraf veriler](archiving-third-party-data.md#third-party-data-connectors) için geçerli değildir.
@@ -85,14 +83,14 @@ Aşağıdaki tabloda, arayabileceğiniz üçüncü taraf veri türleri ve ileti 
 |BlackBerry SMS  <br/> | `ipm.externaldata.BlackBerrySMS*` <br/> |
 |Bloomberg  <br/> | `ipm.externaldata.Bloomberg*` <br/> |
 |Bloomberg Message  <br/> | `ipm.externaldata.conversation.Bloomberg Message*` <br/> |
-|Bloomberg Mesajlaşma  <br/> | `ipm.externaldata.BloombergMessaging*` <br/> |
+|Bloomberg Microsoft Mesajlaşma  <br/> | `ipm.externaldata.BloombergMessaging*` <br/> |
 |Kutusu  <br/> | `ipm.externaldata.Box*` <br/> |
 |Cisco Anlık İleti &amp; İletişim Durumu Sunucusu  <br/> | `ipm.externaldata.Jabber.IM` <br/> |
 |Cisco Jabber  <br/> | `ipm.externaldata.Jabber*` <br/> |
 |Salesforce Chatter için CipherCloud  <br/> | `ipm.externaldata.Chatter.Post` <br/>  `ipm.externaldata.Chatter.Comment` <br/> |
-|Doğrudan Bağlan  <br/> | `ipm.externaldata.DirectConnect*` <br/> |
+|Direct Connect  <br/> | `ipm.externaldata.DirectConnect*` <br/> |
 |Facebook  <br/> | `ipm.externaldata.Facebook*` <br/> |
-|FastTrack  <br/> | `ipm.externaldata.FastTrack*` <br/> |
+|Fasttrack  <br/> | `ipm.externaldata.FastTrack*` <br/> |
 |FXConnect  <br/> | `ipm.externaldata.FXConnect.chat` <br/> |
 |Flickr  <br/> | `ipm.externaldata.Flickr*` <br/> |
 |Gnutella  <br/> | `ipm.externaldata.Gnutella*` <br/> |
@@ -128,7 +126,7 @@ Aşağıdaki tabloda, arayabileceğiniz üçüncü taraf veri türleri ve ileti 
 |Microsoft SharePoint  <br/> | `ipm.externaldata.SharePoint*` <br/> |
 |Salesforce Chatter  <br/> | `ipm.externaldata.Chatter*` <br/> |
 |Skype Kurumsal  <br/> | `ipm.externaldata.Skype*` <br/> |
-|Slack Enterprise Kılavuzu  <br/> | `ipm.externaldata.Slack.IM` <br/> |
+|Slack Enterprise Grid  <br/> | `ipm.externaldata.Slack.IM` <br/> |
 |SoftEther  <br/> | `ipm.externaldata.SoftEther*` <br/> |
 |Squawker  <br/> | `ipm.externaldata.Squawker*` <br/> |
 |Symphony  <br/> | `ipm.externaldata.Symphony*` <br/> |

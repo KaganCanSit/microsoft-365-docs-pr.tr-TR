@@ -1,5 +1,5 @@
 ---
-title: Uyumluluk için arşiv posta kutuları hakkında Microsoft 365 öğrenin
+title: Microsoft Purview için arşiv posta kutuları hakkında bilgi edinin
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -14,41 +14,41 @@ ms.localizationpriority: high
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
-description: Ek posta kutusu depolama alanı sağlamak için arşiv posta kutuları hakkında bilgi alın.
-ms.openlocfilehash: a863df7be1b73d6a50d818bca5948f3017e3d373
-ms.sourcegitcommit: 400ef9ac34247978e3de7ecc0b376c4abb6c99d8
+description: Ek posta kutusu depolama alanı sağlamak için posta kutularını arşivle hakkında bilgi edinin.
+ms.openlocfilehash: 57de7c7791615e8587222de992588f1923348059
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63010849"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66621259"
 ---
-# <a name="learn-about-archive-mailboxes"></a>Arşiv posta kutuları hakkında bilgi alın
+# <a name="learn-about-archive-mailboxes"></a>Arşiv posta kutuları hakkında daha fazla bilgi edinme
 
-Aynı E-posta Microsoft 365 (Yerinde Arşivleme olarak da adlandırılan) posta kutusu *arşivleme*, kullanıcılara ek posta kutusu depolama alanı sağlar. Arşiv posta kutularını açtırdikten sonra, kullanıcının geçerli posta kutusu birincil posta kutusu olur  ve arşiv posta kutusu adı verilen başka bir *posta kutusu oluşturulur*. Her iki posta kutusu da Posta Kutusundan İçerik araması, bekletme süresi, Microsoft 365 uyumluluk merkezi Microsoft 365 Saklama gibi uyumluluk özellikleri için kullanıcının posta kutusu olarak kabul edilir.
+Microsoft 365'te posta kutusu *arşivleme (Yerinde Arşivleme* olarak da adlandırılır) kullanıcılara ek posta kutusu depolama alanı sağlar. Arşiv posta kutularını açtıktan sonra, kullanıcının geçerli posta kutusu *birincil posta kutusu* olur ve arşiv posta kutusu olarak adlandırılan ek bir *posta kutusu* oluşturulur. her iki posta kutusu da Microsoft Purview uyumluluk portalı İçerik araması, Microsoft 365 saklama ve Dava Tutma gibi uyumluluk özellikleri için kullanıcının posta kutusu olarak kabul edilir.
 
-Kullanıcılar, arşiv posta kutularına posta kutularına posta kutularına e-posta Outlook Web üzerinde Outlook. Kullanıcılar ayrıca, iletileri birincil posta kutularıyla arşiv posta kutuları arasında taşımak veya kopyalamak için de kullanabilir. Ayrıca, Silinmiş Öğeleri Kurtar aracını kullanarak, arşiv posta kutularıdaki Kurtarılabilir Öğeler klasöründeki silinmiş öğeleri de kurtarabilir.
+Kullanıcılar Outlook ve Web üzerinde Outlook kullanarak arşiv posta kutularındaki iletilere erişebilir ve iletileri depolayabilir. Kullanıcılar ayrıca iletileri birincil posta kutularıyla arşiv posta kutuları arasında taşıyabilir veya kopyalayabilir. Ayrıca Silinmiş Öğeleri Kurtar aracını kullanarak, silinmiş öğeleri arşiv posta kutularındaki Kurtarılabilir Öğeler klasöründen de kurtarabilirler.
 
-## <a name="managing-archive-mailboxes-with-messaging-records-management-mrm"></a>Mesajlaşma Kayıtları Yönetimi (MRM) ile arşiv posta kutularını yönetme
+## <a name="managing-archive-mailboxes-with-messaging-records-management-mrm"></a>arşiv posta kutularını Microsoft Mesajlaşma Kayıt Yönetimi (MRM) ile yönetme
 
-İletiler, İleti Kayıtları Yönetimi'nin (MRM) varsayılan [bekletme Exchange](/exchange/security-and-compliance/messaging-records-management/default-retention-policy) arşiv posta kutusuna da taşınır. Bu varsayılan ilke her posta kutusuna otomatik olarak atanır ve şunları yapar:
+İletiler, Microsoft Mesajlaşma Kayıt Yönetimi'nden (MRM) [varsayılan Exchange bekletme ilkesi](/exchange/security-and-compliance/messaging-records-management/default-retention-policy) tarafından arşiv posta kutusuna da taşınabilir. Bu varsayılan ilke her posta kutusuna otomatik olarak atanır ve aşağıdakileri yapar:
 
-  - İki yıllık veya daha eski öğeleri kullanıcının birincil posta kutusundan arşiv posta kutusuna taşır.
+  - kullanıcının birincil posta kutusundan iki yaş veya daha eski öğeleri arşiv posta kutusuna taşır.
 
-  - 14 günlük veya daha eski öğeleri kullanıcının birincil posta kutusunda kurtarılabilir Öğeler klasöründen arşiv posta kutusunun Kurtarılabilir Öğeler klasörüne taşır.
+  - Kullanıcının birincil posta kutusunda bulunan Kurtarılabilir Öğeler klasöründen 14 gün veya daha eski öğeleri arşiv posta kutularındaki Kurtarılabilir Öğeler klasörüne taşır.
 
-Bekletme etiketleriyle, kuruluş MRM ilkenizi [özelleştirebilirsiniz](/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies). Örnek bir yapılandırma için bkz [. Kuruluşta posta kutuları için bir arşivleme ve silme ilkesi ayarlama](set-up-an-archive-and-deletion-policy-for-mailboxes.md).
+Kuruluşunuzun MRM ilkesini [bekletme etiketleriyle](/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies) özelleştirebilirsiniz. Örnek yapılandırma için bkz. [Kuruluşunuzdaki posta kutuları için arşiv ve silme ilkesi ayarlama](set-up-an-archive-and-deletion-policy-for-mailboxes.md).
 
 > [!NOTE]
-> BEKLETME ilkeleri ve bekletme Microsoft 365 gibi MRM de belirtilen süre sonrasında e-postaları otomatik olarak silebilir. MrM, bekletme Microsoft 365 daha eski bir teknoloji olduğu için, Uyumluluk uyumluluk ilkeleri ve bekletme etiketleriyle yan yana çalışmaya Microsoft 365 devam eder. Daha fazla bilgi için bkz [. Eski özellikler yerine bekletme ilkelerini ve bekletme etiketlerini kullanma](retention.md#use-retention-policies-and-retention-labels-instead-of-older-features).
+> Microsoft 365 bekletme ilkeleri ve bekletme etiketleri gibi MRM de belirli bir süre sonra e-postaları otomatik olarak silebilir. Microsoft 365 saklamadan daha eski bir teknoloji olan MRM, Microsoft Purview'un bekletme ilkeleri ve bekletme etiketleriyle yan yana çalışmaya devam eder. Daha fazla bilgi için bkz. [Eski özellikler yerine bekletme ilkelerini ve bekletme etiketlerini kullanma](retention.md#use-retention-policies-and-retention-labels-instead-of-older-features).
 
-## <a name="auto-expanding-archiving"></a>Otomatik genişleyen arşivleme 
+## <a name="auto-expanding-archiving"></a>Arşivlemeyi otomatik olarak genişletme 
 
-Kullanıcının arşiv posta kutusu etkinleştirildikten sonra, 100 GB'a kadar ek depolama alanı kullanılabilir. Kullanıcıların daha fazla depolama alanına ihtiyacı varsa, arşiv posta kutularına 1,5 TB ek depolama alanı sağlamak için otomatik genişleyen arşivlemeyi etkinleştirin. Daha fazla bilgi için bkz[. Otomatik genişleyen arşivleme hakkında bilgi.](autoexpanding-archiving.md)
+Kullanıcının arşiv posta kutusu etkinleştirildikten sonra 100 GB'a kadar ek depolama alanı kullanılabilir. Kullanıcıların daha fazla depolama alanına ihtiyacı varsa arşiv posta kutularında 1,5 TB'a kadar ek depolama alanı sağlamak için otomatik genişletme arşivlemeyi etkinleştirin. Daha fazla bilgi için bkz. [Arşivlemeyi otomatik olarak genişletme hakkında bilgi edinin](autoexpanding-archiving.md).
 
 ## <a name="licensing"></a>Lisanslama
 
-Arşiv posta kutularını destekleyen Outlook lisanslarının listesi için bkz. In-Place Arşivleme'ye Outlook [için lisans gereksinimlerine Exchange bakın](https://support.microsoft.com/office/46b6b7c5-c3ca-43e5-8424-1e2807917c99).
+Arşiv posta kutularını destekleyen Outlook lisanslarının listesi için bkz. [Exchange özellikleri için Outlook lisans gereksinimlerinde](https://support.microsoft.com/office/46b6b7c5-c3ca-43e5-8424-1e2807917c99) arşivleme In-Place başvurularına bakın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bkz [. Uyumluluk merkezinde arşiv posta kutularını etkinleştirme](enable-archive-mailboxes.md).
+Bkz[. Microsoft Purview uyumluluk portalı arşiv posta kutularını etkinleştirme](enable-archive-mailboxes.md).

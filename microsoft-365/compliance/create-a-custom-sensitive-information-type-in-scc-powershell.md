@@ -15,25 +15,23 @@ search.appverid:
 - MOE150
 - MET150
 description: Uyumluluk merkezinde ilkeler için özel bir hassas bilgi türü oluşturmayı ve içeri aktarmayı öğrenin.
-ms.openlocfilehash: 8678b7c218844d9963bd610b66e8b6c2c2647dea
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: b71893afad2d68f9820f23e60ae9c3b15531f976
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014530"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625599"
 ---
 # <a name="create-a-custom-sensitive-information-type-using-powershell"></a>PowerShell kullanarak özel hassas bilgi türü oluşturma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makalede, özel [hassas bilgi türlerini](sensitive-information-type-entity-definitions.md) tanımlayan bir XML *kural paketi* dosyasının nasıl oluşturulacağı gösterilmektedir. Bu makalede, çalışan kimliğini tanımlayan özel bir hassas bilgi türü açıklanmaktadır. Bu makaledeki örnek XML'yi kendi XML dosyanız için başlangıç noktası olarak kullanabilirsiniz.
 
 Hassas bilgi türleri hakkında daha fazla bilgi için bkz. [Hassas bilgi türleri hakkında bilgi edinin](sensitive-information-type-learn-about.md).
 
-İyi biçimlendirilmiş bir XML dosyası oluşturduktan sonra PowerShell kullanarak dosyayı Microsoft 365 yükleyebilirsiniz. Ardından, ilkelerde özel hassas bilgi türünüzü kullanmaya hazır olursunuz. Hassas bilgileri istediğiniz gibi algılamadaki etkinliğini test edebilirsiniz.
+İyi biçimlendirilmiş bir XML dosyası oluşturduktan sonra PowerShell kullanarak dosyayı Microsoft 365'e yükleyebilirsiniz. Ardından, ilkelerde özel hassas bilgi türünüzü kullanmaya hazır olursunuz. Hassas bilgileri istediğiniz gibi algılamadaki etkinliğini test edebilirsiniz.
 
 > [!NOTE]
-> PowerShell'in sağladığı ayrıntılı denetime ihtiyacınız yoksa, Microsoft Purview uyumluluk portalında özel hassas bilgi türleri oluşturabilirsiniz. Daha fazla bilgi için bkz. [Özel hassas bilgi türü oluşturma](create-a-custom-sensitive-information-type.md).
+> PowerShell'in sağladığı ayrıntılı denetime ihtiyacınız yoksa, Microsoft Purview uyumluluk portalı özel hassas bilgi türleri oluşturabilirsiniz. Daha fazla bilgi için bkz. [Özel hassas bilgi türü oluşturma](create-a-custom-sensitive-information-type.md).
 
 ## <a name="important-disclaimer"></a>Önemli sorumluluk reddi
 
@@ -233,7 +231,7 @@ Bu örnekte, çalışan `ID` varlığı desen için normal ifadeye başvurmak i�
 
 ### <a name="additional-patterns-such-as-dates-or-addresses-built-in-functions"></a>Tarihler veya adresler gibi ek desenler [yerleşik işlevler]
 
-Hassas bilgi türleri, doğrulama kanıtlarını tanımlamak için yerleşik işlevleri de kullanabilir. Örneğin, ABD tarihi, AB tarihi, son kullanma tarihi veya ABD adresi. Microsoft 365 kendi özel işlevlerinizi karşıya yüklemeyi desteklemez. Ancak özel bir hassas bilgi türü oluşturduğunuzda varlığınız yerleşik işlevlere başvurabilir.
+Hassas bilgi türleri, doğrulama kanıtlarını tanımlamak için yerleşik işlevleri de kullanabilir. Örneğin, ABD tarihi, AB tarihi, son kullanma tarihi veya ABD adresi. Microsoft 365, kendi özel işlevlerinizi karşıya yüklemeyi desteklemez. Ancak özel bir hassas bilgi türü oluşturduğunuzda varlığınız yerleşik işlevlere başvurabilir.
 
 Örneğin, bir çalışan kimliği rozetinin işe alma tarihi vardır, bu nedenle bu özel varlık, ABD'de `Func_us_date` yaygın olarak kullanılan biçimdeki bir tarihi tanımlamak için yerleşik işlevi kullanabilir.
 
@@ -327,7 +325,7 @@ Her Pattern için confidenceLevel'e ek olarak, Varlığın önerilen birConfiden
 
 ## <a name="do-you-want-to-support-other-languages-in-the-ui-of-the-compliance-center-localizedstrings-element"></a>Uyumluluk merkezinin kullanıcı arabiriminde diğer dilleri desteklemek istiyor musunuz? [LocalizedStrings öğesi]
 
-Uyumluluk ekibiniz farklı yerel ayarlarda ve farklı dillerde ilke oluşturmak için Microsoft Purview uyumluluk portalını kullanıyorsa, özel hassas bilgi türünüzün adının ve açıklamasının yerelleştirilmiş sürümlerini sağlayabilirsiniz. Uyumluluk ekibiniz desteklediğiniz bir dilde Microsoft 365 kullandığında kullanıcı arabiriminde yerelleştirilmiş adı görür.
+Uyumluluk ekibiniz farklı yerel ayarlarda ve farklı dillerde ilke oluşturmak için Microsoft Purview uyumluluk portalı kullanıyorsa, özel hassas bilgi türünüzün adının ve açıklamasının yerelleştirilmiş sürümlerini sağlayabilirsiniz. Uyumluluk ekibiniz microsoft 365'i desteklediğiniz bir dilde kullandığında kullanıcı arabiriminde yerelleştirilmiş adı görür.
 
 ![Örnek sayısı ve eşleşme doğruluğu yapılandırması.](../media/11d0b51e-7c3f-4cc6-96d8-b29bcdae1aeb.png)
 
@@ -343,7 +341,7 @@ Son olarak, her RulePackage'ın başlangıcı, doldurmanız gereken bazı genel 
 
 En önemlisi, RulePack için bir GUID oluşturmanız gerekir. Yukarıda, varlık için bir GUID oluşturacaksınız; Bu, RulePack için ikinci bir GUID'dir. GUID oluşturmanın çeşitli yolları vardır, ancak bunu PowerShell'de [guid]::NewGuid() yazarak kolayca yapabilirsiniz.
 
-Version öğesi de önemlidir. Kural paketinizi ilk kez karşıya yüklediğinizde Microsoft 365 sürüm numarasını not edin. Daha sonra kural paketini güncelleştirir ve yeni bir sürüm yüklerseniz sürüm numarasını güncelleştirdiğinizden emin olun; Microsoft 365 kural paketini dağıtmaz.
+Version öğesi de önemlidir. Kural paketinizi ilk kez yüklediğinizde, Microsoft 365 sürüm numarasını not alır. Daha sonra kural paketini güncelleştirir ve yeni bir sürüm yüklerseniz sürüm numarasını güncelleştirdiğinizden emin olun; aksi takdirde Microsoft 365 kural paketini dağıtmaz.
 
 ```xml
 <?xml version="1.0" encoding="utf-16"?>
@@ -454,15 +452,15 @@ Bu örnekte, bir RegEx bölümü için tarih doğrulayıcı tanımlanmıştır.
 
 Daha önce, DLP için özel hassas bilgi türlerinizi içeri aktarmak için PowerShell Exchange Online kullanmış olabilirsiniz. Artık özel hassas bilgi türleriniz hem <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezinde</a> hem de Uyumluluk merkezinde kullanılabilir. Bu geliştirmenin bir parçası olarak, özel hassas bilgi türlerinizi içeri aktarmak için Güvenlik & Uyumluluğu PowerShell'i kullanmalısınız; bunları artık Exchange Online PowerShell'den içeri aktaramazsınız. Özel hassas bilgi türleriniz daha önce olduğu gibi çalışmaya devam eder; ancak Uyumluluk merkezindeki özel hassas bilgi türlerinde yapılan değişikliklerin Exchange yönetim merkezinde görünmesi bir saat kadar sürebilir.
 
-Uyumluluk merkezinde, bir kural paketini karşıya yüklemek için **[New-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/new-dlpsensitiveinformationtyperulepackage)** cmdlet'ini kullandığınızı unutmayın. (Daha önce Exchange yönetim merkezinde **ClassificationRuleCollection** cmdlet'ini kullandınız.)
+Uyumluluk merkezinde, bir kural paketini karşıya yüklemek için **[New-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/new-dlpsensitiveinformationtyperulepackage)** cmdlet'ini kullandığınızı unutmayın. (Daha önce Exchange yönetim merkezinde  **ClassificationRuleCollection** cmdlet'ini kullandınız.)
 
-## <a name="upload-your-rule-package"></a>Kural paketinizi Upload
+## <a name="upload-your-rule-package"></a>Kural paketinizi karşıya yükleme
 
 Kural paketinizi karşıya yüklemek için aşağıdaki adımları uygulayın:
 
 1. Unicode kodlamalı .xml dosyası olarak kaydedin.
 
-2. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/exchange-online-powershell)
+2. [Güvenlik & Uyumluluğu PowerShell'e bağlanma](/powershell/exchange/exchange-online-powershell)
 
 3. Aşağıdaki sözdizimini kullanın:
 
@@ -561,7 +559,7 @@ Kural paketi XML dosyanızı karşıya yüklediğinizde sistem XML'yi doğrular 
 
 Microsoft 365, site içeriğindeki hassas bilgileri tanımlamak ve sınıflandırmak için arama gezginini kullanır. SharePoint Online ve OneDrive İş sitelerindeki içerik her güncelleştirildiğinde otomatik olarak yeniden gezilir. Ancak tüm mevcut içerikteki yeni özel hassas bilgi türünüzü tanımlamak için bu içeriğin yeniden bulunması gerekir.
 
-Microsoft 365'da, bir kuruluşun tamamını el ile yeniden tarama isteğinde bulunamazsınız, ancak site koleksiyonu, listesi veya kitaplığı için el ile yeniden gezinme isteğinde bulunabilirsiniz. Daha fazla bilgi için bkz. [Sitenin, kitaplığın veya listenin el ile gezinmesini ve yeniden dizine alınmasını isteme](/sharepoint/crawl-site-content).
+Microsoft 365'te, bir kuruluşun tamamını el ile yeniden tarama isteğinde bulunamazsınız, ancak site koleksiyonu, listesi veya kitaplığı için el ile yeniden tarama isteğinde bulunabilirsiniz. Daha fazla bilgi için bkz. [Sitenin, kitaplığın veya listenin el ile gezinmesini ve yeniden dizine alınmasını isteme](/sharepoint/crawl-site-content).
 
 ## <a name="reference-rule-package-xml-schema-definition"></a>Başvuru: Kural paketi XML şema tanımı
 

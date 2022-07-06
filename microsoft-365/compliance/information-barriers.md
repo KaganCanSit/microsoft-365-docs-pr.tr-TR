@@ -1,6 +1,6 @@
 ---
 title: Bilgi engelleri hakkında daha fazla bilgi edinme
-description: Microsoft Purview bilgi engelleri hakkında bilgi edinin.
+description: Microsoft Purview'daki bilgi engelleri hakkında bilgi edinin.
 keywords: Microsoft 365, Microsoft Purview, uyumluluk, bilgi engelleri
 ms.author: robmazz
 author: robmazz
@@ -17,18 +17,16 @@ ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: f5db5fbe81913666f052cbd664e8a7f813da6a7c
-ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
+ms.openlocfilehash: b302231d7dbdcc92ee2e8e2e0564cedb27a4218e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65396211"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66621127"
 ---
 # <a name="learn-about-information-barriers"></a>Bilgi engelleri hakkında daha fazla bilgi edinme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview Bilgi Engelleri (IB), Microsoft Teams, SharePoint Online ve OneDrive İş gruplarla kullanıcılar arasında iki yönlü iletişimi ve işbirliğini kısıtlamanıza olanak tanıyan bir uyumluluk çözümüdür. IB, genellikle yüksek oranda düzenlenmiş sektörlerde kullanılır ve çıkar çatışmalarını önlemeye ve kullanıcılarla kuruluş alanları arasındaki iç bilgileri korumaya yardımcı olabilir.
+Microsoft Purview Information Barriers (IB), Microsoft Teams, SharePoint Online ve OneDrive İş gruplar ve kullanıcılar arasında iki yönlü iletişimi ve işbirliğini kısıtlamanıza olanak tanıyan bir uyumluluk çözümüdür. IB, genellikle yüksek oranda düzenlenmiş sektörlerde kullanılır ve çıkar çatışmalarını önlemeye ve kullanıcılarla kuruluş alanları arasındaki iç bilgileri korumaya yardımcı olabilir.
 
 IB ilkeleri geçerli olduğunda, diğer belirli kullanıcılarla iletişim kurmaması veya dosya paylaşmaması gereken kullanıcılar bu kullanıcıları bulamaz, seçemez, sohbet etmez veya arayamazsınız. IB ilkeleri, tanımlı gruplar ve kullanıcılar arasındaki yetkisiz iletişimi ve işbirliğini algılamak ve önlemek için otomatik olarak denetimler gerçekleştirir. IB ilkeleri, eBulma yöneticilerinin arayabileceği kullanıcı içerik konumlarını denetleen eBulma araştırmalarına yönelik [uyumluluk sınırlarından](/microsoft-365/compliance/set-up-compliance-boundaries) bağımsızdır.
 
@@ -57,28 +55,28 @@ Microsoft Teams'de IB ilkeleri aşağıdaki yetkisiz iletişim ve işbirliği t�
 - Dosyayı başka bir kullanıcıyla paylaşma
 - Bağlantı paylaşarak dosyaya erişme
 
-Bu etkinlikleri Microsoft Teams yürüten kullanıcılar, etkinliği önlemek için bir IB ilkesine dahil edilirse devam edemeyeceklerdir. Ayrıca, bir IB ilkesine dahil edilen herkesin Microsoft Teams'daki diğer kullanıcılarla iletişim kurması engellenebilir. IB ilkelerinden etkilenen kişiler aynı ekip veya grup sohbetinin parçası olduğunda, bu sohbet oturumlarından kaldırılabilir ve grupla daha fazla iletişime izin verilmeyebilir.
+Bu etkinlikleri Microsoft Teams'de yürüten kullanıcılar, etkinliği önlemek için bir IB ilkesine dahil edilirse devam edemeyecektir. Ayrıca, bir IB ilkesine dahil edilen herkesin Microsoft Teams'deki diğer kullanıcılarla iletişim kurması engellenebilir. IB ilkelerinden etkilenen kişiler aynı ekip veya grup sohbetinin parçası olduğunda, bu sohbet oturumlarından kaldırılabilir ve grupla daha fazla iletişime izin verilmeyebilir.
 
-Daha fazla bilgi için bkz. [Microsoft Teams bilgi engelleri](/MicrosoftTeams/information-barriers-in-teams).
+Daha fazla bilgi için bkz. [Microsoft Teams'deki bilgi engelleri](/MicrosoftTeams/information-barriers-in-teams).
 
-## <a name="information-barriers-and-sharepoint-and-onedrive"></a>Bilgi engelleri, SharePoint ve OneDrive
+## <a name="information-barriers-and-sharepoint-and-onedrive"></a>Bilgi engelleri ve SharePoint ve OneDrive
 
-SharePoint Online ve OneDrive,IB ilkeleri aşağıdaki tür yetkisiz işbirliğini algılar ve önler:
+SharePoint Online ve OneDrive'da, IB ilkeleri aşağıdaki tür yetkisiz işbirliğini algılar ve önler:
 
 - Siteye üye ekleme
 - Bir kullanıcı tarafından siteye veya içeriğe erişme
 - Siteyi veya içeriği başka bir kullanıcıyla paylaşma
 - Sitede arama
 
-Daha fazla bilgi için bkz[. SharePoint'deki bilgi engelleri](/sharepoint/information-barriers) ve [OneDrive bilgi engelleri](/onedrive/information-barriers).
+Daha fazla bilgi için bkz. [SharePoint'teki bilgi engelleri](/sharepoint/information-barriers) ve [OneDrive'daki bilgi engelleri](/onedrive/information-barriers).
 
 ## <a name="information-barriers-and-exchange-online"></a>Bilgi engelleri ve Exchange Online
 
 E-posta iletilerindeki gruplar ve kullanıcılar arasındaki iletişimi ve işbirliğini kısıtlamak için IB ilkeleri kullanılamaz. IB ilkeleri [Exchange Online Adres Defteri İlkelerini (ABP)](/exchange/address-books/address-book-policies/address-book-policies) temel alır. ABP'ler, kuruluşun genel adres defterinin (GAL) özelleştirilmiş görünümlerini sağlamak için kuruluşların kullanıcıları belirli gruplara sanal olarak atamasına olanak sağlar. IB ilkeleri oluşturulduğunda, ilkeler için ABP'ler otomatik olarak oluşturulur. Kuruluşunuza IB ilkeleri eklendikçe GAL'nizin yapısı ve davranışı IB ilkeleriyle uyumlu olacak şekilde değişir.
 
-IB ilkelerini tanımlamadan ve uygulamadan önce, kuruluşunuzdaki tüm mevcut Exchange adres defteri ilkelerini kaldırmanız gerekir. IB ilkeleri adres defteri ilkelerini temel alır ve mevcut ABP ilkeleri IB tarafından oluşturulan ABP'lerle uyumlu değildir. Mevcut adres defteri ilkelerinizi kaldırmak için bkz. [Exchange Online'da adres defteri ilkesini kaldırma](/exchange/address-books/address-book-policies/remove-an-address-book-policy). IB ilkeleri etkinleştirildikten ve hiyerarşik adres defteri etkinleştirildiyse, IB segmentinde yer almamış tüm kullanıcılar çevrimiçi Exchange [hiyerarşik adres defterini](/exchange/address-books/hierarchical-address-books/hierarchical-address-books) görür.
+IB ilkelerini tanımlamadan ve uygulamadan önce, kuruluşunuzdaki tüm mevcut Exchange adres defteri ilkelerini kaldırmanız gerekir. IB ilkeleri adres defteri ilkelerini temel alır ve mevcut ABP ilkeleri IB tarafından oluşturulan ABP'lerle uyumlu değildir. Mevcut adres defteri ilkelerinizi kaldırmak için bkz. [Exchange Online'da adres defteri ilkesini kaldırma](/exchange/address-books/address-book-policies/remove-an-address-book-policy). IB ilkeleri etkinleştirildikten ve hiyerarşik adres defteri etkinleştirildiyse, IB segmentinde yer almamış tüm kullanıcılar Exchange Online'da [hiyerarşik adres defterini](/exchange/address-books/hierarchical-address-books/hierarchical-address-books) görür.
 
-Şu anda IB ilkeleri için yalnızca Exchange Online dağıtımları desteklenmektedir. Kuruluşunuzun e-posta iletişimlerini tanımlaması ve denetlemesi gerekiyorsa [Exchange posta akışı kurallarını](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) kullanmayı göz önünde bulundurun.
+Şu anda IB ilkeleri için yalnızca Exchange Online dağıtımları desteklenmektedir. Kuruluşunuzun e-posta iletişimlerini tanımlaması ve denetlemesi gerekiyorsa [, Exchange posta akışı kurallarını](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) kullanmayı göz önünde bulundurun.
 
 ## <a name="ready-to-get-started"></a>Başlamaya hazır mısınız?
 

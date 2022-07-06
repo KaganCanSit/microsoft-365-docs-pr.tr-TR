@@ -1,5 +1,5 @@
 ---
-title: Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak macOS cihazlarını Uyumluluk çözümlerine ekleme ve çıkarma
+title: macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması
 f1.keywords: NOCSH
 ms.author: chrfox
 author: chrfox
@@ -14,16 +14,14 @@ ms.collection:
 search.appverid:
 - MET150
 description: Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma hakkında bilgi edinin
-ms.openlocfilehash: ba2ff7723e54451ace46823fafb5323dcb35069e
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 97ab1dbccc28cd1f9d14635c2fa351d0295202c1
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953393"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622931"
 ---
-# <a name="onboard-and-offboard-macos-devices-into-compliance-solutions-using-jamf-pro-for-microsoft-defender-for-endpoint-customers"></a>Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak macOS cihazlarını Uyumluluk çözümlerine ekleme ve çıkarma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+# <a name="onboard-and-offboard-macos-devices-into-compliance-solutions-using-jamf-pro-for-microsoft-defender-for-endpoint-customers"></a>macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması
 
 MACOS cihazlarını Microsoft Purview çözümlerine eklemek için JAMF Pro kullanabilirsiniz.
 
@@ -39,7 +37,7 @@ MACOS cihazlarını Microsoft Purview çözümlerine eklemek için JAMF Pro kull
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- [macOS cihazlarınızın JAMF pro aracılığıyla yönetildiğinden ve JAMF](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) Bağlan veya Intune aracılığıyla bir kimlikle (Azure AD'ye katılmış UPN) ilişkilendirildiğinden emin olun.
+- [macOS cihazlarınızın JAMF pro aracılığıyla yönetildiğinden ve JAMF](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) Connect veya Intune aracılığıyla bir kimlikle (Azure AD birleştirilmiş UPN) ilişkilendirildiğinden emin olun.
 - macOS cihazlarınıza v95+ Edge tarayıcısını yükleme
 
 ## <a name="onboard-devices-into-microsoft-purview-solutions-using-jamf-pro"></a>JAMF Pro kullanarak cihazları Microsoft Purview çözümlerine ekleme
@@ -82,19 +80,19 @@ tam disk erişimi     |[fulldisk.mobileconfig](https://github.com/microsoft/mdat
 
 1. Var olan tam disk erişim profilini **fulldisk.mobileconfig** dosyasıyla güncelleştirin.
 
-1. **fulldisk.mobileconfig** dosyasını JAMF'ye Upload. [JAMF Pro kullanarak Özel Yapılandırma Profilleri Dağıtma](https://docs.jamf.com/technical-articles/Deploying_Custom_Configuration_Profiles_Using_Jamf_Pro.html) bölümüne bakın.
+1. **fulldisk.mobileconfig** dosyasını JAMF'ye yükleyin. [JAMF Pro kullanarak Özel Yapılandırma Profillerini Dağıtma](https://docs.jamf.com/technical-articles/Deploying_Custom_Configuration_Profiles_Using_Jamf_Pro.html) bölümüne bakın.
 
 ### <a name="grant-accessibility-access-to-dlp"></a>DLP'ye erişilebilirlik erişimi verme
 
 1. Daha önce indirdiğiniz accessibility.mobileconfig dosyasını kullanın.
 
-1. [Jamf Pro kullanarak Özel Yapılandırma Profilleri Dağıtma bölümünde açıklandığı gibi JAMF'ye Upload](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
+1. [Jamf Pro kullanarak Özel Yapılandırma Profilleri Dağıtma bölümünde açıklandığı gibi JAMF'e](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro) yükleyin.
 
 ### <a name="check-the-macos-device"></a>macOS cihazını denetleme 
 
 1. macOS cihazını yeniden başlatın.
 
-1. Sistem **TercihleriProfiller'i** >  açın.
+1. **Sistem Tercihleri Profillerini** >  açın.
 
 1. Şunu görmeniz gerekir:
     - Accessiblity

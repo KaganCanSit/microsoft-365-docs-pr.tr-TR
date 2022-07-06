@@ -17,53 +17,53 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Uyumluluk Merkezi'nde bir anahtar sözcük sözlüğünün Microsoft 365 öğrenin.
-ms.openlocfilehash: acdf8b24aced21ed2f576fd57a3c685ef14debea
-ms.sourcegitcommit: 99067d5eb1fa7b094e7cdb1f7be65acaaa235a54
+description: Microsoft Purview uyumluluk portalı anahtar sözcük sözlüğünde değişiklik yapmayı öğrenin.
+ms.openlocfilehash: 8b2f2256be506f0ba01dc059bf0ac54e84c481c9
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2022
-ms.locfileid: "63010058"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66621721"
 ---
 # <a name="modify-a-keyword-dictionary"></a>Anahtar sözcük sözlüğü değiştirme
 
-Anahtar sözcük sözlükleri arasında anahtar sözcükleri değiştirmeniz veya yerleşik sözlüklerden birini değiştirmeniz gerekir. Bunu PowerShell veya Uyumluluk Merkezi aracılığıyla da yapabiliriz.
+Anahtar sözcük sözlüklerinizden birinde anahtar sözcükleri değiştirmeniz veya yerleşik sözlüklerden birini değiştirmeniz gerekebilir. Bunu PowerShell veya Uyumluluk merkezi aracılığıyla yapabilirsiniz.
 
 ## <a name="modify-a-keyword-dictionary-in-compliance-center"></a>Uyumluluk merkezinde anahtar sözcük sözlüğünü değiştirme
 
-Anahtar sözcük sözlükleri hassas bilgi türü `Primary elements` `Supporting elements` (SIT) düzenleri olarak veya bu düzenlerde kullanılabilir. Bir sit veya mevcut bir SIT oluştururken anahtar sözcük sözlüğünü düzenleyebilirsiniz. Örneğin, var olan bir anahtar sözcük sözlüğünü düzenlemek için:
+Anahtar sözcük sözlükleri hassas bilgi türü (SIT) desenleri olarak `Primary elements` veya `Supporting elements` olarak kullanılabilir. Sit oluştururken veya var olan bir SIT'te anahtar sözcük sözlüğü düzenleyebilirsiniz. Örneğin, mevcut bir anahtar sözcük sözlüğü düzenlemek için:
 
-1. Güncelleştirmek istediğiniz anahtar sözcük sözlüğünün yer alan deseni açın.
+1. Güncelleştirmek istediğiniz anahtar sözcük sözlüğüne sahip deseni açın.
 2. Güncelleştirmek istediğiniz anahtar sözcük sözlüğünü bulun ve düzenle'yi seçin.
-3. Satır başına tek bir anahtar sözcük kullanarak düzenlemelerinizi yapma.
+3. Satır başına bir anahtar sözcük kullanarak düzenlemelerinizi yapın.
 
-   ![anahtar sözcükleri düzenle ekran görüntüsü.](../media/edit-keyword-dictionary.png)
+   ![anahtar sözcükleri düzenleme ekran görüntüsü.](../media/edit-keyword-dictionary.png)
 
-4. 'yi seçin `Done`.
+4. öğesini seçin `Done`.
 
 ## <a name="modify-a-keyword-dictionary-using-powershell"></a>PowerShell kullanarak anahtar sözcük sözlüğü değiştirme
 
-Örneğin, PowerShell'de bazı terimleri değiştiririz, bu terimleri yerel olarak bir düzenleyicide değiştirerek yerel olarak kaydeder ve önceki terimleri yerinde güncelleştireriz.
+Örneğin, PowerShell'de bazı terimleri değiştirecek, düzenleyicide değiştirebileceğiniz terimleri yerel olarak kaydedip önceki terimleri güncelleştireceğiz.
 
-İlk olarak, sözlük nesnesini alın:
+İlk olarak sözlük nesnesini alın:
 
 ```powershell
 $dict = Get-DlpKeywordDictionary -Name "Diseases"
 ```
 
-Yazdırma `$dict` işlemi çeşitli özellikleri gösterir. Anahtar sözcüklerin kendileri arka uçta bir nesnede depolanır, `$dict.KeywordDictionary` ancak sözlükte değişiklik yapmak için kullanabileceğiniz dize temsilini içerir.
+Yazdırma `$dict` işlemi çeşitli özellikleri gösterir. Anahtar sözcüklerin kendileri arka uçtaki bir nesnede depolanır, ancak `$dict.KeywordDictionary` sözlüğünü değiştirmek için kullanacağınız dize gösterimini içerir.
 
-Sözlüğü değiştirmeden önce, yöntemi kullanarak terim dizesini yeniden diziye dönüştürebilirsiniz `.split(',')` . Ardından, yöntem ile anahtar sözcükler arasındaki istenmeyen boşlukları temizlenir `.trim()` ve yalnızca anahtar sözcüklerin birlikte çalışamaz halde bırakarak bu boşlukları temizleyebilirsiniz.
+Sözlüğü değiştirmeden önce, yöntemini kullanarak terim dizesini bir diziye `.split(',')` geri döndürmeniz gerekir. Ardından yöntemiyle `.trim()` anahtar sözcükler arasındaki istenmeyen boşlukları temizler ve yalnızca çalışabileceğiniz anahtar sözcükleri bırakırsınız.
 
 ```powershell
 $terms = $dict.KeywordDictionary.split(',').trim()
 ```
 
-Şimdi, sözlükten bazı terimleri kaldıracaksiniz. Örnek sözlüğün yalnızca birkaç anahtar sözcüğü olduğundan, sözlüğü Not Defteri'te dışarı aktarmayı ve düzenlemeyi kolayca atlayabilirsiniz, ancak sözlükler genellikle büyük miktarda metin içerir; dolayısıyla ilk olarak bunları PowerShell'de kolayca düzenlemek için bu yolu öğrenirsiniz.
+Şimdi sözlükten bazı terimleri kaldıracaksınız. Örnek sözlüğün yalnızca birkaç anahtar sözcüğü olduğundan, sözlüğü dışarı aktarmaya ve Not Defteri'nde düzenlemeye kolayca atlayabilirsiniz, ancak sözlükler genellikle büyük miktarda metin içerdiğinden, önce PowerShell'de bunları kolayca düzenlemeyi bu şekilde öğreneceksiniz.
 
-Son adımda, anahtar sözcükleri bir diziye kaydedtildiniz. Bir dizideki öğeleri kaldırmanın çeşitli yolları [vardır, ancak](/previous-versions/windows/it-pro/windows-powershell-1.0/ee692802(v=technet.10)) anlaşılır bir yaklaşım olarak, sözlükten kaldırmak istediğiniz terimlerin dizisini oluşturabilir ve sonra yalnızca sözlük terimlerini kaldırmak istediğiniz terimler listesinde olmayan bir dizi kopyalayıp kopyalayabilirsiniz.
+Son adımda anahtar sözcükleri bir diziye kaydettiniz. [Bir diziden öğeleri kaldırmanın](/previous-versions/windows/it-pro/windows-powershell-1.0/ee692802(v=technet.10)) çeşitli yolları vardır, ancak basit bir yaklaşım olarak, sözlükten kaldırmak istediğiniz terimlerin bir dizisini oluşturacak ve kaldırılacak terimler listesinde yer almayan terimleri ona kopyalayacaksınız.
 
-Geçerli terimlerin `$terms` listesini göstermek için komutu çalıştırın. Komutun çıkışı şöyle görünüyor:
+Geçerli terim listesini göstermek için komutunu `$terms` çalıştırın. Komutun çıkışı şöyle görünür:
 
 ```powershell
 aarskog's syndrome
@@ -86,19 +86,19 @@ aboulomania
 abrami's disease
 ```
 
-Kaldırmak istediğiniz terimleri belirtmek için bu komutu çalıştırın:
+Kaldırmak istediğiniz terimleri belirtmek için şu komutu çalıştırın:
 
 ```powershell
 $termsToRemove = @('abandonment','ablatio')
 ```
 
-Terimleri listeden gerçekten kaldırmak için bu komutu çalıştırın:
+Listeden terimleri kaldırmak için şu komutu çalıştırın:
 
 ```powershell
 $updatedTerms = $terms | Where-Object {$_ -notin $termsToRemove}
 ```
 
-Komutu çalıştırarak `$updatedTerms` güncelleştirilmiş terimlerin listesini gösterebilirsiniz. Komutun çıkışı şöyle görünüyor (belirtilen terimler kaldırıldı):
+Güncelleştirilmiş terim listesini göstermek için komutunu `$updatedTerms` çalıştırın. Komutun çıkışı şöyle görünür (belirtilen terimler kaldırılmıştır):
 
 ```powershell
 aarskog's syndrome
@@ -119,21 +119,21 @@ aboulomania
 abrami's disease
 ```
 
-Şimdi sözlüğü yerel olarak kaydedin ve birkaç terim daha ekleyin. Terimleri burada PowerShell'e  eklersiniz, ancak Unicode kodlamayla kaydedildik ve TIR'i içerdiğiden emin olmak için dosyayı yerel olarak dışarı aktarmanız gerekir.
+Şimdi sözlüğü yerel olarak kaydedin ve birkaç terim daha ekleyin. Terimleri doğrudan PowerShell'de buraya ekleyebilirsiniz, ancak dosyanın Unicode kodlaması ile kaydedildiğinden ve ürün reçetesini içerdiğinden emin olmak için dosyayı yerel olarak dışarı aktarmanız gerekir.
 
-Aşağıdakini çalıştırarak sözlüğü yerel olarak kaydedin:
+Aşağıdakileri çalıştırarak sözlüğü yerel olarak kaydedin:
 
 ```powershell
 Set-Content $updatedTerms -Path "C:\myPath\terms.txt"
 ```
 
-Şimdi dosyayı açın, diğer terimlerinizi ekleyin ve Unicode kodlamayla (UTF-16) kaydedin. Şimdi, güncelleştirilmiş terimleri karşıya yükp sözlüğü yerinde güncelleştirin.
+Şimdi dosyayı açın, diğer terimlerinizi ekleyin ve Unicode kodlama (UTF-16) ile kaydedin. Şimdi güncelleştirilmiş terimleri karşıya yükleyecek ve sözlüğü yerinde güncelleştireceksiniz.
 
 ```powershell
 Set-DlpKeywordDictionary -Identity "Diseases" -FileData ([System.IO.File]::ReadAllBytes('C:myPath\terms.txt'))
 ```
 
-Sözlük artık yerine güncelleştirildi. Alan `Identity` , sözlüğün adını alır. Ayrıca, `Set-` cmdlet'i kullanarak sözlüğün adını da değiştirmek istediysiniz, `-Name` yeni sözlük adınızla yukarıdakilere parametreyi eklemeniz gerekir.
+Şimdi sözlük yerinde güncelleştirildi. alanı `Identity` sözlüğün adını alır. Cmdlet'ini kullanarak `Set-` sözlüğünüzün adını da değiştirmek isterseniz, yeni sözlük adınızla yukarıdakine parametresini eklemeniz `-Name` yeterli olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

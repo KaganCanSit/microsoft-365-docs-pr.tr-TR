@@ -20,20 +20,18 @@ ms.custom:
 - seo-marvel-mar2020
 - admindeeplinkCOMPLIANCE
 description: Bu makalede, Office 365'da yer alan şablonlardan birini kullanarak DLP ilkeleri oluşturmayı öğreneceksiniz.
-ms.openlocfilehash: 952a552210b00061717c24db5de5e5a47b84d72b
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: 67d21d3e5a057960a4d3fa92bfaa709345cf38ff
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65754686"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624597"
 ---
 # <a name="create-a-dlp-policy-from-a-template"></a>Bir şablondan DLP ilkesi oluşturma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 DLP ilkelerini kullanmaya başlamanın en kolay ve en yaygın yolu, Microsoft Purview uyumluluk portalı dahil edilen şablonlardan birini kullanmaktır. Bu şablonlardan birini olduğu gibi kullanabilir veya kuruluşunuzun özel uyumluluk gereksinimlerini karşılamak için kuralları özelleştirebilirsiniz.
 
-Microsoft 365, çok çeşitli ortak mevzuat ve iş politikası gereksinimlerini karşılamanıza yardımcı olabilecek 40'ın üzerinde kullanıma hazır şablon içerir. Bkz. Tam liste için [ilke şablonları](dlp-policy-reference.md#policy-templates) . 
+Microsoft 365, çok çeşitli yaygın mevzuat ve iş ilkesi gereksinimlerini karşılamanıza yardımcı olabilecek 40'ın üzerinde kullanıma hazır şablon içerir. Bkz. Tam liste için [ilke şablonları](dlp-policy-reference.md#policy-templates) . 
 
 Mevcut kurallarından herhangi birini değiştirerek veya yenilerini ekleyerek bir şablona ince ayar yapabilirsiniz. Örneğin, bir kurala yeni türde hassas bilgiler ekleyebilir, kuraldaki sayıları değiştirerek tetiklenmesini zorlaştırabilir veya kolaylaştırabilir, kişilerin bir iş gerekçesi sağlayarak bir kuraldaki eylemleri geçersiz kılabilir veya bildirimlerin ve olay raporlarının gönderileceği kişileri değiştirebilirsiniz. DLP ilkesi şablonu, birçok yaygın uyumluluk senaryosu için esnek bir başlangıç noktasıdır.
 
@@ -43,7 +41,7 @@ Ayrıca, varsayılan kuralları olmayan Özel şablonu seçebilir ve kuruluşunu
 
 DLP ilkeleri oluşturacak uyumluluk ekibinizin üyelerinin Uyumluluk Merkezi'ne yönelik izinlere sahip olması gerekir. Varsayılan olarak, kiracı yöneticinizin erişimi uyumluluk görevlilerine ve diğer kişilere erişim verebilir. Şu adımları izleyin:
   
-1. Microsoft 365'de bir grup oluşturun ve gruba uyumluluk görevlileri ekleyin.
+1. Microsoft 365'te bir grup oluşturun ve gruba uyumluluk görevlileri ekleyin.
     
 2. Microsoft Purview uyumluluk portalı **İzinler** sayfasında bir rol grubu oluşturun. 
 
@@ -53,7 +51,7 @@ DLP ilkeleri oluşturacak uyumluluk ekibinizin üyelerinin Uyumluluk Merkezi'ne 
 
 DLP ilkeleri ve DLP raporları için yalnızca görüntüleme ayrıcalıklarına sahip rol grubu oluşturmak için **Yalnızca Görüntüleme DLP Uyumluluk Yönetimi** rolünü kullanın.
 
-Daha fazla bilgi için bkz. [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#permissions-in-the-microsoft-purview-compliance-portal).
+Daha fazla bilgi için bkz. [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md).
   
 Bu izinler, ilkeleri zorlamamak için bir DLP ilkesi oluşturmak ve uygulamak için gereklidir.
 
@@ -61,14 +59,14 @@ Bu izinler, ilkeleri zorlamamak için bir DLP ilkesi oluşturmak ve uygulamak i�
 
 Önizlemede, erişim denetimlerinizde ince ayar yapmak için test yapabileceğiniz roller ve rol grupları vardır.
 
-Aşağıda, önizleme aşamasında olan geçerli rollerin listesi yer alır. Bunlar hakkında daha fazla bilgi edinmek için [Microsoft Purview uyumluluk portalı İzinler bölümüne](microsoft-365-compliance-center-permissions.md#permissions-in-the-microsoft-purview-compliance-portal) bakın.
+Geçerli rollerin listesi aşağıdadır. Bunlar hakkında daha fazla bilgi edinmek için [bkz. Microsoft Purview uyumluluk portalı](microsoft-365-compliance-center-permissions.md)
 
 - Information Protection Yönetici
 - Information Protection Analisti
 - Information Protection Araştırmacısı
 - Information Protection Okuyucu
 
-Aşağıda, önizleme aşamasında olan geçerli rol gruplarının listesi yer alır. hakkında daha fazla bilgi edinmek için [bkz. Microsoft Purview uyumluluk portalı](microsoft-365-compliance-center-permissions.md#permissions-in-the-microsoft-purview-compliance-portal)
+Geçerli rol gruplarının listesi aşağıdadır. hakkında daha fazla bilgi edinmek için [bkz. Microsoft Purview uyumluluk portalı](microsoft-365-compliance-center-permissions.md)
 
 - Information Protection
 - Information Protection Yöneticileri
@@ -82,8 +80,6 @@ Aşağıda, önizleme aşamasında olan geçerli rol gruplarının listesi yer a
 
 2. Sol Microsoft Purview uyumluluk portalı \> gezinti \> **Çözümleri** \> **Veri kaybı önleme** \> **İlkeleri** \> **+ İlke oluştur'a tıklayın**.
 
-    ![İlke düğmesi oluşturun.](../media/b1e48a08-92e2-47ca-abdc-4341694ddc7c.png)
-          
 3. **İleri'ye** ihtiyacınız \> olan hassas bilgi türlerini koruyan DLP ilkesi şablonunu seçin.
 
 4. İlkeyi \> **İleri olarak adlandırın**.
@@ -103,13 +99,13 @@ Aşağıda, önizleme aşamasında olan geçerli rol gruplarının listesi yer a
    - **sonraki** **Office 365 tüm konumlar'ı** \> seçin.
    - Belirli konumları \> **seçmeme izin ver** **İleri'yi** seçin. Bu örnek için bunu seçin.
 
-   Tüm Exchange e-posta veya tüm OneDrive hesapları gibi bir konumun tamamını dahil etmek veya hariç tutmak için bu konumun **Durumunu** açın veya kapatın.
+   Tüm Exchange e-postaları veya tüm OneDrive hesapları gibi bir konumun tamamını dahil etmek veya hariç tutmak için, o konumun **Durumunu** açın veya kapatın.
 
-   Yalnızca belirli SharePoint siteleri veya OneDrive İş hesaplarını eklemek için **Durum'u** açık olarak değiştirin ve **ardından Ekle** altındaki bağlantılara tıklayarak belirli siteleri veya hesapları seçin. Bir siteye ilke uyguladığınızda, bu ilkede yapılandırılan kurallar otomatik olarak o sitenin tüm alt sitelerine uygulanır.
+   Yalnızca belirli SharePoint sitelerini veya OneDrive İş hesaplarını eklemek için **, Durum'u** açık duruma getirin ve ardından **Ekle** altındaki bağlantılara tıklayarak belirli siteleri veya hesapları seçin. Bir siteye ilke uyguladığınızda, bu ilkede yapılandırılan kurallar otomatik olarak o sitenin tüm alt sitelerine uygulanır.
 
    ![DLP ilkesinin uygulanabileceği konumlar için seçenekler.](../media/all-locations.png)
 
-   Bu örnekte, tüm OneDrive İş hesaplarında depolanan hassas bilgileri korumak için hem **Exchange e-posta** hem de **SharePoint sitelerin** **Durumu'nu** kapatın ve **OneDrive hesapları** için **Durum'u** açık bırakın.
+   Bu örnekte, tüm OneDrive İş hesaplarında depolanan hassas bilgileri korumak için hem **Exchange e-postası** hem de **SharePoint sitelerinin** **Durumu'nu** kapatın ve **OneDrive hesaplarının** **Durumu'nu** açık bırakın.
 
 7. **Gözden geçir'i seçin ve şablondan** \> varsayılan ayarları **özelleştirin İleri**.
 
@@ -121,7 +117,7 @@ Aşağıda, önizleme aşamasında olan geçerli rol gruplarının listesi yer a
     1. Exchange
     1. SharePoint
     1. OneDrive
-    1. Sohbet ve Kanal İletilerini Teams 
+    1. Teams Sohbet ve Kanal İletileri 
 
 10. **İleri**'yi seçin.
 

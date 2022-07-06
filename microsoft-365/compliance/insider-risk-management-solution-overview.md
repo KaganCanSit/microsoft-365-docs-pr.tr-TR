@@ -1,7 +1,7 @@
 ---
-title: Microsoft 365'te Insider risk Microsoft 365
-description: Bu projelerde insider risk yönetimini yapılandırmayı Microsoft 365.
-keywords: Microsoft 365, insider riski, uyumluluk
+title: İçeriden risk yönetimi
+description: Insider risk yönetimini yapılandırmayı öğrenin.
+keywords: Microsoft 365, Microsoft Purview, insider riski, risk yönetimi, uyumluluk
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -16,44 +16,44 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 - m365solution-scenario
-ms.openlocfilehash: c58a0022ed618cdcbd6c81c9d39d9a387d8f1007
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: efa2872d7dbece729bd45cfc890fead44b8162d3
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63032478"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66621149"
 ---
-# <a name="insider-risk-management-in-microsoft-365"></a>Microsoft 365'te Insider risk Microsoft 365
+# <a name="insider-risk-management"></a>İçeriden risk yönetimi
 
-Giderek, çalışanlar her platform ve hizmet yelpazesinde veri oluşturmak, yönetmek ve paylaşmak için daha fazla erişime sahip olur. Çoğu durumda, kuruluşların kuruluş genelindeki riskleri belirlemesi ve en iyi şekilde azaltmak için sınırlı kaynaklara ve araçlara sahip olduğu gibi, uyumluluk gereksinimlerini ve çalışan gizlilik standartlarını da karşılar. Bu riskler, yanlışlıkla kötü niyetli veya kötü niyetli bir şekilde çalışan çıkararak çalışanların şirket dışından bilgi sızıntıları ile veri hırsızlığına neden olabilir.
+Çalışanlar, geniş bir platform ve hizmet yelpazesinde veri oluşturmak, yönetmek ve paylaşmak için giderek daha fazla erişime sahiptir. Çoğu durumda kuruluşlar, uyumluluk gereksinimlerini ve çalışan gizlilik standartlarını karşılarken kuruluş genelindeki riskleri belirlemek ve azaltmak için sınırlı kaynaklara ve araçlara sahiptir. Bu riskler, çalışanları terk ederek veri hırsızlığını ve yanlışlıkla fazla paylaşım veya kötü amaçlı olarak kuruluşunuzun dışındaki bilgilerin veri sızıntılarını içerebilir.
 
-Microsoft 365'de Insider risk yönetimi, riskli kullanıcı etkinliğini hızla tanımlamanıza, değerlendirmenıza ve buna göre hareket adedemanıza yardımcı olmak için tam hizmet ve üçüncü taraf göstergelerini kullanır. Insider risk yönetimi Microsoft 365 Microsoft Graph günlükleri kullanarak, risk göstergelerini tanımlamak için belirli ilkeler tanımlamanıza olanak sağlar. Riskleri tanımdikten sonra, bu riskleri azaltmak için harekete geçsiniz.
+Microsoft Purview İçeriden Risk Yönetimi, riskli kullanıcı etkinliklerini hızla tanımlamanıza, önceliklendirmenize ve harekete geçirmenize yardımcı olmak için hizmetin ve üçüncü taraf göstergelerin tamamını kullanır. Insider risk yönetimi, Microsoft 365 ve Microsoft Graph günlüklerini kullanarak risk göstergelerini tanımlamak için belirli ilkeler tanımlamanızı sağlar. Riskleri belirledikten sonra, bu riskleri azaltmak için eylem gerçekleştirebilirsiniz.
 
-Insider risk yönetiminin kuruma risk engelleme, algılama ve risk içermeye nasıl yardımcı olduğunu öğrenmek için aşağıdaki videoları izleyin:
+Insider risk yönetiminin kuruluşunuzun riskleri engellemesine, algılamasına ve içermesine nasıl yardımcı olabileceğini öğrenmek için aşağıdaki videoları izleyin:
 <br>
 <br>
 
-**Geliştirme için Insider risk & çözümü**:
+**Insider risk yönetimi çözümü geliştirme &**:
 >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE4j9CN]
 <br>
 
 **Insider risk yönetimi iş akışı**:
 >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE4OUXB]
 
-## <a name="configure-insider-risk-management-for-microsoft-365"></a>Risk yönetimi için Insider risk Microsoft 365
+## <a name="configure-insider-risk-management"></a>Insider risk yönetimini yapılandırma
 
-Organizasyonunız için Insider risk yönetimini yapılandırmak için aşağıdaki adımları kullanın:
+Kuruluşunuzda insider risk yönetimini yapılandırmak için aşağıdaki adımları kullanın:
 
-![Insider risk çözümü Insider risk yönetimi adımları.](../media/ir-solution-ir-steps.png)
+![Insider risk çözümü insider risk yönetimi adımları.](../media/ir-solution-ir-steps.png)
 
-1. [Microsoft 365'da Insider risk](insider-risk-management.md) yönetimi hakkında bilgi Microsoft 365
-2. Insider [risk yönetimini planlama ve lisanslamayı doğrulama](insider-risk-management-plan.md)
+1. [Insider risk yönetimi](insider-risk-management.md) hakkında bilgi edinin
+2. [Insider risk yönetimini planlama ve lisanslama doğrulama](insider-risk-management-plan.md)
 3. [Insider risk yönetimi ayarlarını yapılandırma](insider-risk-management-settings.md)
-4. [Bağlayıcıların izinlerini](insider-risk-management-configure.md#step-1-required-enable-permissions-for-insider-risk-management) [ve ilke & yapılandırma](insider-risk-management-configure.md#step-4-recommended-configure-prerequisites-for-policies)
-5. [Insider risk yönetimi ilkelerini oluşturma ve yapılandırma](insider-risk-management-configure.md#step-6-required-create-an-insider-risk-management-policy)
+4. [bağlayıcılar & izinleri ve ilke önkoşullarını](insider-risk-management-configure.md#step-4-recommended-configure-prerequisites-for-policies) yapılandırma [](insider-risk-management-configure.md#step-1-required-enable-permissions-for-insider-risk-management)
+5. [Insider risk yönetimi ilkeleri](insider-risk-management-configure.md#step-6-required-create-an-insider-risk-management-policy) oluşturma ve yapılandırma
 
 ## <a name="more-information-about-insider-risk-management"></a>Insider risk yönetimi hakkında daha fazla bilgi
 
 - [Insider risk ilkelerini yönetme](insider-risk-management-policies.md)
-- [Insider risk etkinliklerini araştırma](insider-risk-management-activities.md)
-- [Insider risk durumlarında harekete geç](insider-risk-management-cases.md)
+- [İçeriden risk etkinliklerini araştırma](insider-risk-management-activities.md)
+- [İçeriden gelen risk durumlarına göre işlem yapma](insider-risk-management-cases.md)

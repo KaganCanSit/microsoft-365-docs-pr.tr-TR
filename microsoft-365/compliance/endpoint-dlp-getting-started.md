@@ -20,16 +20,14 @@ search.appverid:
 - MET150
 ms.custom: admindeeplinkCOMPLIANCE
 description: Dosya etkinliklerini izlemek ve bu dosyalar için uç noktalara koruyucu eylemler uygulamak için Uç nokta veri kaybı önlemeyi ayarlayın.
-ms.openlocfilehash: 1b22fbd10c78c638a9cc68acf939a22d5c140549
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: 7b9999b180262eb35f1b2b36c4059b5b34855e1e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66531034"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624167"
 ---
 # <a name="get-started-with-endpoint-data-loss-prevention"></a>Uç noktada veri kaybı önlemeyi kullanmaya başlama
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Uç nokta veri kaybını önleme (Endpoint DLP), Microsoft 365 hizmetlerindeki hassas öğeleri bulmak ve korumak için kullanabileceğiniz Microsoft Purview Veri Kaybı Önleme (DLP) özellik paketinin bir parçasıdır. Microsoft'un tüm DLP teklifleri hakkında daha fazla bilgi için bkz. [Veri kaybını önleme hakkında bilgi edinin](dlp-learn-about-dlp.md). Uç Nokta DLP hakkında daha fazla bilgi edinmek için bkz [. Uç nokta veri kaybını önleme hakkında bilgi edinin](endpoint-dlp-learn-about.md)
 

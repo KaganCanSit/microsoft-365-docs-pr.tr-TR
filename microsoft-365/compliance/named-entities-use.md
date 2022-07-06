@@ -16,16 +16,14 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 description: Veri kaybı önleme ilkelerinizdeki adlandırılmış varlıklardan yararlanmak için bu yordamları kullanın
-ms.openlocfilehash: 85d3d11704ea238f6c1acff64193d8aaba8994b8
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 0cdf544eddf873f3bbf761bd613641433dd2da6b
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637196"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623727"
 ---
 # <a name="use-named-entities-in-your-data-loss-prevention-policies"></a>Veri kaybını önleme ilkelerinizde adlandırılmış varlıkları kullanma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kullanmaya başlamadan önce [Adlandırılmış varlıklar hakkında bilgi edinin](named-entities-learn.md) bölümüne bakın.
 
@@ -44,11 +42,11 @@ Veri kaybı önleme (DLP) ilkelerini oluşturmak ve düzenlemek için kullandı�
 
 Bu konumlardaki hassas öğeleri algılamak ve korumak için adlandırılmış varlık SID'lerini ve gelişmiş ilkeleri kullanabilirsiniz:
 
-- siteleri SharePoint
-- hesapları OneDrive
-- Sohbet ve kanal iletilerini Teams
+- SharePoint siteleri
+- OneDrive hesapları
+- Teams sohbeti ve kanal iletileri
 - Cihazlar (Windows 10 ve 11 uç nokta cihazı)
-- posta kutularını Exchange
+- Exchange posta kutuları
 - Bulut Uygulamaları için Microsoft Defender
 
 Adlandırılmış varlık SID'leri ve gelişmiş ilkeler şunlar için desteklenmez:
@@ -62,8 +60,8 @@ DLP ilkesi oluşturmak veya düzenlemek için [DLP ilkesi oluşturma, test etme 
 
 ## <a name="workloads-and-services-that-support-named-entities"></a>Adlandırılmış varlıkları destekleyen iş yükleri ve hizmetler
 
-- **Microsoft 365 eBulma**, Substrate hizmetlerinde adlandırılmış varlıkların kullanımını destekler.
-- **Microsoft Defender for Cloud Apps**, Bulut için Defender uygulamaları portalındaki Bulut için Defender Uygulamaları ilkelerinde adlandırılmış varlıkların kullanımını destekler.
+- **Microsoft 365 eKeşif** , Substrate hizmetlerinde adlandırılmış varlıkların kullanımını destekler.
+- **Microsoft Defender for Cloud Apps**, Bulut uygulamaları için Defender portalındaki Bulut Uygulamaları için Defender ilkelerinde adlandırılmış varlıkların kullanımını destekler.
 - **Insider Risk Management** , Substrate hizmetlerinde adlandırılmış varlıkların kullanımını destekler.
 - **Kayıt Yönetimi** , adlandırılmış varlıkların kullanımını destekler.
 - **Hassas Bilgi Türleriyle Tam Veri Eşleşmesi** , adlandırılmış varlıkların kullanımını destekler.
@@ -74,15 +72,15 @@ DLP ilkesi oluşturmak veya düzenlemek için [DLP ilkesi oluşturma, test etme 
 
 |İş Yükü/Hizmetler  |Adlandırılmış Varlıklar için Destek  |
 |---------|---------|
-|win32 istemcileri ilke ipucunu Office    |Desteklenmiyor  |
-|WAC istemcileri ilke ipucunu Office    |Destekleniyor         |
+|Office Win32 istemcileri ilke ipucu    |Desteklenmiyor  |
+|Office WAC istemcileri ilke ipucu    |Destekleniyor         |
 |OWA ilke ipucu     |Desteklenmiyor         |
-|İlke ipucu Outlook     |Desteklenmiyor |
+|Outlook ilke ipucu     |Desteklenmiyor |
 |Uç noktalar (Windows 10 ve 11 cihaz)     |Destekleniyor  |
-|Exchange Taşıma kuralları     |Destekleniyor |
+|Exchange Aktarım kuralları     |Destekleniyor |
 |Bekleyen verileri OneDrive İş     |Destekleniyor         |
-|bekleyen çevrimiçi verileri SharePoint     |Destekleniyor         |
-|Bekleyen verileri Teams     |Destekleniyor         |
+|Bekleyen SharePoint Online verileri     |Destekleniyor         |
+|Teams bekleyen verileri     |Destekleniyor         |
 |Bekleyen e-posta iletileri verileri     |Gizlilik Hizmeti Planı ile kiracılar için desteklenir         |
 |Bulut Uygulamaları için Microsoft Defender     |Destekleniyor         |
 
@@ -90,21 +88,21 @@ DLP ilkesi oluşturmak veya düzenlemek için [DLP ilkesi oluşturma, test etme 
 
 |İş Yükü/Hizmetler |Adlandırılmış Varlıklar için Destek  |
 |---------|---------|
-|Win32 istemcilerini çevrimdışı Office   |Desteklenir, kullanıcı etiketi seçip el ile uygulamalıdır |
+|Office Win32 istemcileri çevrimdışı   |Desteklenir, kullanıcı etiketi seçip el ile uygulamalıdır |
 |Çevrimiçi Office Win32 istemcileri çevrimiçi|Eski güvenilirlik şemasıyla desteklenir |
-|çevrimiçi Outlook   |Eski güvenilirlik şemasıyla desteklenir  |
-|WAC istemci Office     |Destekleniyor |
+|Outlook Online   |Eski güvenilirlik şemasıyla desteklenir  |
+|Office WAC istemcisi     |Destekleniyor |
 |OWA     |Destekleniyor |
 |Exchange taşıma     |Destekleniyor |
 |Bekleyen verileri OneDrive İş     |Destekleniyor |
-|bekleyen çevrimiçi verileri SharePoint|Destekleniyor|
+|Bekleyen SharePoint Online verileri|Destekleniyor|
 |Azure Information Protection (AIP) tarayıcısı|Desteklenmiyor|
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
 |Sorun  |Etki  |
 |---------|---------|
-|DLP İlkesi ipuçları (OWA, Outlook Office Win32 istemcileri)     |   Varlık koşuluna sahip ilke ipuçları "eşleşme yok" ile sonuçlanır      |
+|DLP İlkesi ipuçları (OWA, Outlook, Office Win32 istemcileri)     |   Varlık koşuluna sahip ilke ipuçları "eşleşme yok" ile sonuçlanır      |
 | Kişi adı için Asya dili desteği (Çince, Japonca, Korece)    | Kişi adı için yalnızca Latin tabanlı karakter kümesi için desteklenen adlandırılmış varlıklar (yani kanji desteklenmez)        |
 |Şirket içi depolar    | İş yükü olarak desteklenmez|
 |Power BI (önizleme) | Desteklenmiyor
@@ -122,7 +120,7 @@ Adlandırılmış varlık SIT kullanan bir ilke oluştururken veya düzenlerken 
 - Adlandırılmış varlık SID'lerinin doğruluğunu test etmek için [Otomatik etiketleme simülasyonlarını](apply-sensitivity-label-automatically.md#learn-about-simulation-mode) kullanabilirsiniz. İlkeyle eşleşen öğeleri görmek için adlandırılmış varlık SIT kullanarak bir simülasyon çalıştırın. Bu bilgilerle, özel ilkelerinizdeki veya gelişmiş şablon koşullarındaki örnek sayılarını ve güvenilirlik düzeylerini ayarlayarak doğruluğu ayarlayabilirsiniz. Üretimde adlandırılmış varlıkları içeren bir DLP veya otomatik etiketleme ilkesi dağıtmadan önce simülasyonları doğruluk istediğiniz yere gelene kadar yineleyebilirsiniz. Akışa genel bir bakış aşağıdadır:
 
 1. Simülasyon modunda test etmek istediğiniz SIT veya SIP'ler bileşimini (özel veya kopyalanmış ve düzenlenmiş) tanımlayın.
-1. Otomatik etiketleme ilkesi Exchange, SharePoint sitelerde veya OneDrive hesaplarında eşleşme bulduğunda uygulanacak bir duyarlılık etiketi belirleyin veya oluşturun.
+1. Otomatik etiketleme ilkesi Exchange, SharePoint siteleri veya OneDrive hesaplarında bir eşleşme bulduğunda uygulanacak duyarlılık etiketini belirleyin veya oluşturun.
 1. 1. adımdaki SIT'i kullanan ve DLP ilkenizde kullanılacak Koşullar ve Özel Durumlar ile bir duyarlılık otomatik etiketleme ilkesi oluşturma
 1. İlke benzetimi çalıştırma
 1. Sonuçları görüntüleme
