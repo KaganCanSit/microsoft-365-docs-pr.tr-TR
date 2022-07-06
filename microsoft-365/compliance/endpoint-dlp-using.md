@@ -18,16 +18,14 @@ ms.collection:
 search.appverid:
 - MET150
 description: Uç nokta veri kaybı önleme konumlarını kullanmak için veri kaybı önleme (DLP) ilkelerini yapılandırmayı öğrenin.
-ms.openlocfilehash: 5ca57dfad74dea26e16fa415eead8a0a85eb9673
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 9107759e137d7b8dd86253f9c6567b76686d2518
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952808"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632387"
 ---
 # <a name="using-endpoint-data-loss-prevention"></a>Uç noktada veri kaybı önlemeyi kullanma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]  
 
 Uç Nokta DLP özelliklerini ve DLP ilkelerinde nasıl ortaya çıkardıklarını öğrenmek için izlemeniz gereken bazı senaryolar oluşturduk.
 
@@ -41,7 +39,7 @@ Uç Nokta DLP özelliklerini ve DLP ilkelerinde nasıl ortaya çıkardıkların�
 
 ## <a name="scenario-1-create-a-policy-from-a-template-audit-only"></a>Senaryo 1: Şablondan ilke oluşturma, yalnızca denetim
 
-Bu senaryolar, etkinlik gezginine eklenen ve raporlayan cihazlarınız olmasını gerektirir. Henüz cihaz eklemediyseniz bkz[. Uç nokta veri kaybı önleme ile Kullanmaya başlayın](endpoint-dlp-getting-started.md).
+Bu senaryolar, etkinlik gezginine eklenen ve raporlayan cihazlarınız olmasını gerektirir. Henüz cihaz eklemediyseniz bkz [. Uç nokta veri kaybı önlemeyi kullanmaya başlama](endpoint-dlp-getting-started.md).
 
 1. [Veri kaybı önleme sayfasını](https://compliance.microsoft.com/datalossprevention?viewid=policies) açın.
 
@@ -55,7 +53,7 @@ Bu senaryolar, etkinlik gezginine eklenen ve raporlayan cihazlarınız olmasın�
 
 6. Varsayılan **Koruma eylemleri** değerlerini kabul edin ve **İleri'yi** seçin.
 
-7. **Windows cihazlardaki etkinlikleri denetle veya kısıtla'yı** seçin ve eylemleri **Yalnızca denetle** olarak bırakın. **İleri**'yi seçin.
+7. **Windows cihazlarında Etkinlikleri denetle veya kısıtla'yı** seçin ve eylemleri **Yalnızca denetle** olarak bırakın. **İleri**'yi seçin.
 
 8. **İlk değeri test etmek istediğim** varsayılan değeri kabul edin ve **Test modundayken ilke ipuçlarını göster'i** seçin. **İleri**'yi seçin.
 
@@ -63,7 +61,7 @@ Bu senaryolar, etkinlik gezginine eklenen ve raporlayan cihazlarınız olmasın�
 
 10. Yeni DLP ilkesi, ilke listesinde görünür.
 
-11. İzlenen uç noktalardan gelen veriler için Etkinlik gezgini'ne bakın. Cihazlar için konum filtresini ayarlayın ve ilkeyi ekleyin, ardından bu ilkenin etkisini görmek için ilke adına göre filtreleyin; Gerekirse [etkinlik gezginiyle Kullanmaya başlayın](data-classification-activity-explorer.md) bölümüne bakın.
+11. İzlenen uç noktalardan gelen veriler için Etkinlik gezgini'ne bakın. Cihazlar için konum filtresini ayarlayın ve ilkeyi ekleyin, ardından bu ilkenin etkisini görmek için ilke adına göre filtreleyin; Gerekirse etkinlik [gezginini kullanmaya başlama](data-classification-activity-explorer.md) bölümüne bakın.
 
 12. ABD Kişisel Bilgiler (PII) Veri koşulunu tetikleyecek içerik içeren bir test öğesini kuruluşunuzun dışındaki biriyle paylaşmaya çalışın. Bu, ilkeyi tetiklemelidir.
 
@@ -103,7 +101,7 @@ Bu senaryolar, etkinlik gezginine eklenen ve raporlayan cihazlarınız olmasın�
 
 4. **Gelişmiş DLP kuralları** sayfasına gidin ve **Algılanan düşük hacimli abd kişisel bilgi kaynağını** düzenleyin.
 
-5. Ekranı aşağı kaydırarak **Windows cihazdaki etkinlikleri denetle veya kısıtla** bölümüne gelin ve her etkinlik için ilgili eylemi **Geçersiz kılmayla engelle** olarak ayarlayın.
+5. Ekranı aşağı kaydırarak **Windows cihazındaki etkinlikleri denetle veya kısıtla** bölümüne gelin ve her etkinlik için ilgili eylemi  **Geçersiz kılmayla engelle** olarak ayarlayın.
 
    > [!div class="mx-imgBorder"]
    > ![engellemeyi geçersiz kılma eylemiyle ayarlayın.](../media/endpoint-dlp-6-using-dlp-set-blocked-with-override.png)
@@ -127,17 +125,17 @@ Bu senaryolar, etkinlik gezginine eklenen ve raporlayan cihazlarınız olmasın�
 
 ### <a name="before-you-begin"></a>Başlamadan önce
 
-Bu senaryoda, **dosyaları Son Derece Gizli** duyarlılık etiketiyle OneDrive eşitleme engellenir. Bu, birden çok bileşen ve yordam içeren karmaşık bir senaryodur. Size gerekenler:
+Bu senaryoda, dosyaları **Son Derece Gizli** duyarlılık etiketiyle OneDrive ile eşitleme engellenir. Bu, birden çok bileşen ve yordam içeren karmaşık bir senaryodur. Size gerekenler:
 
-- Hedeflenecek AAD kullanıcı hesabı ve yerel bir OneDrive klasörünü OneDrive bulut depolama alanıyla zaten eşitleyen yerleşik bir Windows 10 bilgisayar.
-- Hedef Windows 10 bilgisayara yüklenmiş Microsoft Word
-- Duyarlılık etiketleri yapılandırılır ve yayımlanır; [bkz. duyarlılık etiketleriyle Kullanmaya başlayın](get-started-with-sensitivity-labels.md#get-started-with-sensitivity-labels) ve [Duyarlılık etiketleri ve ilkeleri oluşturma ve yapılandırma](create-sensitivity-labels.md#create-and-configure-sensitivity-labels-and-their-policies).
+- Yerel OneDrive klasörünü OneDrive bulut depolama alanıyla zaten eşitleyen, hedeflenecek bir AAD kullanıcı hesabı ve eklenen bir Windows 10 bilgisayar.
+- Hedef Windows 10 bilgisayarda yüklü Microsoft Word
+- Duyarlılık etiketleri yapılandırılır ve yayımlanır; bkz. [Duyarlılık etiketlerini kullanmaya başlama](get-started-with-sensitivity-labels.md#get-started-with-sensitivity-labels) ve [Duyarlılık etiketleri ve ilkeleri oluşturma ve yapılandırma](create-sensitivity-labels.md#create-and-configure-sensitivity-labels-and-their-policies).
 
 Üç prosedür vardır.
 
 1. Uç Nokta DLP Otomatik karantina ayarlarını yapılandırın.
 2. **Çok Gizli** duyarlılık etiketine sahip hassas öğeleri engelleyen bir ilke oluşturun.
-3. İlkenin hedeflendiği Windows 10 cihazda bir Word belgesi oluşturun, etiketi uygulayın ve eşitlenen kullanıcı hesapları yerel OneDrive klasörüne kopyalayın.  
+3. Windows 10 cihazında ilkenin hedeflendiği bir Word belgesi oluşturun, etiketi uygulayın ve eşitlenen kullanıcı hesapları yerel OneDrive klasörüne kopyalayın.  
 
 ### <a name="configure-endpoint-dlp-unallowed-app-and-auto-quarantine-settings"></a>Uç Nokta DLP'sinde izin verilmeyen uygulama ve Otomatik karantina ayarlarını yapılandırma
 
@@ -145,7 +143,7 @@ Bu senaryoda, **dosyaları Son Derece Gizli** duyarlılık etiketiyle OneDrive e
 
 2. **İzin verilmeyen uygulamalar'ı** genişletin.
 
-3. **İzin verilmeyen uygulamaları ekle veya düzenle'yi** seçin ve *OneDrive* görünen ad olarak ekleyin ve yürütülebilir ad *onedrive.exe*, **onedrive.exe Son Derece Gizli** etiketindeki öğelere erişmesini engelleyin.
+3. **İzin verilmeyen uygulamaları ekle veya düzenle'yi** seçin ve *OneDrive'ı* görünen ad olarak ekleyin ve yürütülebilir ad *onedrive.exe* onedrive.exe **Son Derece Gizli** etiketindeki öğelere erişmesini engelleyin.
 
 4. **Otomatik karantinaya al** ve **Kaydet'i** seçin.
 
@@ -162,7 +160,7 @@ Bu senaryoda, **dosyaları Son Derece Gizli** duyarlılık etiketiyle OneDrive e
     ve özgün dosya adına bir tarih ve saat damgası ekleyin.
     
     > [!NOTE]
-    > DLP Otomatik Karantina, izin verilmeyen her uygulama için dosyalar için alt klasörler oluşturur. Bu nedenle, izin verilmeyen uygulamalar listenizde hem *Not Defteri* hem *de OneDrive* varsa, **\OneDrive** için bir alt klasör ve **\** Not Defteri için başka bir alt klasör oluşturulur.
+    > DLP Otomatik Karantina, izin verilmeyen her uygulama için dosyalar için alt klasörler oluşturur. Bu nedenle, izin verilmeyen uygulamalar listenizde hem *Not Defteri* hem de *OneDrive* varsa, **\OneDrive** için bir alt klasör ve **\Not Defteri** için başka bir alt klasör oluşturulur.
 
 8. **Dosyaları aşağıdaki metni içeren bir .txt dosyasıyla değiştir'i** seçin ve yer tutucu dosyaya istediğiniz metni girin. Örneğin *, 1.docxauto quar* adlı bir dosya için:
     
@@ -170,11 +168,11 @@ Bu senaryoda, **dosyaları Son Derece Gizli** duyarlılık etiketiyle OneDrive e
     
     şu iletiyi içeren bir metin dosyası bırakır:
     
-    > otomatik quar 1.docx, kuruluşunuzun veri kaybı önleme (DLP) ilkesiyle koruduğu ve karantina klasörüne taşınan hassas bilgileri içerir: C:\Users\IsaiahLanger\Microsoft DLP\Quarantine\OneDrive\auto quar 1_20210728_151541.docx.
+    > auto quar 1.docx, kuruluşunuzun veri kaybı önleme (DLP) ilkesiyle koruduğu ve karantina klasörüne taşınan hassas bilgileri içerir: C:\Users\IsaiahLanger\Microsoft DLP\Quarantine\OneDrive\auto quar 1_20210728_151541.docx.
 
 9. **Kaydet'i** seçin
 
-### <a name="configure-a-policy-to-block-onedrive-synchronization-of-files-with-the-sensitivity-label-highly-confidential"></a>Duyarlılık etiketi Son Derece Gizli olan dosyaların OneDrive eşitlemesini engelleyecek bir ilke yapılandırma
+### <a name="configure-a-policy-to-block-onedrive-synchronization-of-files-with-the-sensitivity-label-highly-confidential"></a>Duyarlılık etiketi Son Derece Gizli olan dosyaların OneDrive eşitlemesini engellemek için bir ilke yapılandırma
 
 1. [Veri kaybı önleme sayfasını](https://compliance.microsoft.com/datalossprevention?viewid=policies) açın.
 
@@ -191,7 +189,7 @@ Bu senaryoda, **dosyaları Son Derece Gizli** duyarlılık etiketiyle OneDrive e
 7. Şu değerlerle bir kural oluşturun:
     1. **Adı** >  *Senaryo 4 Otomatik karantina*.
     1. **Koşul -ları** >  **İçerik içeriği** >  **Duyarlılık etiketleri** >  **Çok Gizli**.
-    1.  **Eylem** >  İzin **verilmeyen uygulamalarla** >  **Windows cihazlarda** >  etkinlikleri denetleme veya **kısıtlamaBlock**. Bu senaryonun amaçları doğrultusunda diğer tüm etkinlikleri temizleyin.
+    1.  **Eylem** >  **Windows cihazlarında** >  etkinlikleri denetleme veya kısıtlama **İzin verilmeyen uygulamalarla** >  erişim **Engelle'ye bakın**. Bu senaryonun amaçları doğrultusunda diğer tüm etkinlikleri temizleyin.
     1. **Kullanıcı bildirimleri** >  **Açık**.
     1. **Uç nokta cihazları** > Etkin olmayan **bir etkinlik olduğunda Kullanıcılara ilke ipucu bildirimi göster'i** seçin.
     
@@ -208,17 +206,17 @@ Bu senaryoda, **dosyaları Son Derece Gizli** duyarlılık etiketiyle OneDrive e
 
 ### <a name="test-auto-quarantine-on-the-windows-10-device"></a>Windows 10 cihazda Otomatik karantinayı test etme
 
-1. [Son Derece Gizli adım 5 duyarlılık etiketine sahip dosyaların OneDrive eşitlemesini engellemek için ilke yapılandırma bölümünde belirttiğiniz kullanıcı hesabıyla Windows 10](#configure-a-policy-to-block-onedrive-synchronization-of-files-with-the-sensitivity-label-highly-confidential) bilgisayarda oturum açın.
+1. [Son Derece Gizli 5. adım duyarlılık etiketine sahip dosyaların OneDrive eşitlemesini engellemek için ilke yapılandırma](#configure-a-policy-to-block-onedrive-synchronization-of-files-with-the-sensitivity-label-highly-confidential) bölümünde belirttiğiniz kullanıcı hesabıyla Windows 10 bilgisayarda oturum açın.
 
-2. İçeriği OneDrive eşitlenmeyecek bir klasör oluşturun. Örneğin:
+2. İçeriği OneDrive ile eşitlenmeyecek bir klasör oluşturun. Örneğin:
 
     *C:\otomatik karantina kaynak klasörü*
 
-3. Microsoft Word açın ve otomatik karantina kaynak klasöründe bir dosya oluşturun. **Son derece gizli** duyarlılık etiketini uygulayın; bkz. [Office'da dosyalarınıza ve e-postanıza duyarlılık etiketleri uygulama](https://support.microsoft.com/topic/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9).
+3. Microsoft Word'u açın ve otomatik karantina kaynak klasöründe bir dosya oluşturun. **Son derece gizli** duyarlılık etiketini uygulayın; Bkz. [Office'te dosyalarınıza ve e-postanıza duyarlılık etiketleri uygulama](https://support.microsoft.com/topic/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9).
 
 4. Yeni oluşturduğunuz dosyayı OneDrive eşitleme klasörünüze kopyalayın. Eyleme izin verilmediğini ve dosyanın karantinaya alınacağını belirten bir kullanıcı bildirimi görüntülenmelidir. Örneğin, kullanıcı adı *Isaiah Langer* ve *otomatik karantina belgesi* başlıklı belge 1.docxşu iletiyi görürsünüz:
 
-    ![Belirtilen dosya için OneDrive eşitleme eylemine izin verilmediğini ve dosyanın karantinaya alınacağını belirten veri kaybı önleme kullanıcı bildirimi açılır.](../media/auto-quarantine-user-notification-toast.png)
+    ![Belirtilen dosya için OneDrive eşitleme eylemine izin verilmediğini ve dosyanın karantinaya alınacağını belirten veri kaybı önleme kullanıcı bildirimi açılır penceresi.](../media/auto-quarantine-user-notification-toast.png)
     
     İleti şu şekildedir:
     
@@ -230,7 +228,7 @@ Bu senaryoda, **dosyaları Son Derece Gizli** duyarlılık etiketiyle OneDrive e
 
 7. Karantina klasörünü açın ve özgün dosyanın orada olduğunu onaylayın.
  
-8. İzlenen uç noktalardan gelen veriler için Etkinlik gezgini'ne bakın. Cihazlar için konum filtresini ayarlayın ve ilkeyi ekleyin, ardından bu ilkenin etkisini görmek için ilke adına göre filtreleyin; Gerekirse [etkinlik gezginiyle Kullanmaya başlayın](data-classification-activity-explorer.md) bölümüne bakın.
+8. İzlenen uç noktalardan gelen veriler için Etkinlik gezgini'ne bakın. Cihazlar için konum filtresini ayarlayın ve ilkeyi ekleyin, ardından bu ilkenin etkisini görmek için ilke adına göre filtreleyin; Gerekirse etkinlik [gezginini kullanmaya başlama](data-classification-activity-explorer.md) bölümüne bakın.
 
 9. Olay için Etkinlik gezgini'ni denetleyin.
 
@@ -238,7 +236,7 @@ Bu senaryoda, **dosyaları Son Derece Gizli** duyarlılık etiketiyle OneDrive e
 
 Uç Nokta DLP ve Edge Web tarayıcısı ile hassas öğelerin yanlışlıkla paylaşılmalarını izin verilmeyen bulut uygulamaları ve hizmetleriyle kısıtlayabilirsiniz. Edge, bir öğenin Bir Uç Nokta DLP ilkesi tarafından ne zaman kısıtlandığını anlar ve erişim kısıtlamalarını zorlar.
 
-Düzgün yapılandırılmış bir DLP ilkesinde konum olarak **Cihazlar'ı** seçip Microsoft Edge tarayıcıyı kullandığınızda, bu ayarlarda tanımladığınız izin verilmeyen tarayıcıların DLP ilke denetimlerinizle eşleşen hassas öğelere erişmesi engellenir. Bunun yerine kullanıcılar, DLP tarafından uygulanan kısıtlamaları anlayarak DLP ilkesindeki koşullar karşılandığında etkinlikleri engelleyebilecek veya kısıtlayan Microsoft Edge kullanmaya yönlendirilir.
+Düzgün yapılandırılmış bir DLP ilkesinde konum olarak **Cihazlar'ı** seçip Microsoft Edge tarayıcısını kullandığınızda, bu ayarlarda tanımladığınız izin verilmeyen tarayıcıların DLP ilke denetimlerinizle eşleşen hassas öğelere erişmesi engellenir. Bunun yerine kullanıcılar, DLP tarafından uygulanan kısıtlamaları anlayarak DLP ilkesindeki koşullar karşılandığında etkinlikleri engelleyebilecek veya kısıtlayan Microsoft Edge'i kullanmaya yönlendirilecektir.
 
 Bu kısıtlamayı kullanmak için üç önemli parça yapılandırmanız gerekir:
 
@@ -246,7 +244,7 @@ Bu kısıtlamayı kullanmak için üç önemli parça yapılandırmanız gerekir
 
 2. DLP ilkesi eşleşmesi gerçekleştiğinde belirli hassas öğelere erişmesine izin verilmeyen tarayıcıları ekleyin.
 
-3. Bulut **hizmetlerine Upload** ve **İzin verilmeyen tarayıcıdan erişim'i** açarak karşıya yüklemenin bu konumlara kısıtlanması gereken hassas öğe türlerini tanımlamak için DLP ilkelerini yapılandırın.
+3. **Bulut hizmetlerine yükle** ve **İzin verilmeyen tarayıcıdan erişim'i** açarak karşıya yüklemenin bu konumlara kısıtlanması gereken hassas öğe türlerini tanımlamak için DLP ilkelerini yapılandırın.
 
 İş gereksinimlerinizi karşılamak ve hassas verileri korumak için kısıtlamalarınızı genişletmek ve genişletmek için yeni hizmetler, uygulamalar ve ilkeler eklemeye devam edebilirsiniz. 
 
@@ -257,11 +255,11 @@ Bu yapılandırma, verilerinizin güvende kalmasını sağlarken kullanıcılar�
 - [Uç noktada veri kaybı önlemeyi kullanmaya başlama](endpoint-dlp-getting-started.md)
 - [Veri kaybı önleme hakkında daha fazla bilgi edinme](dlp-learn-about-dlp.md)
 - [Bir DLP ilkesi oluşturma, test etme ve ayarlama](create-test-tune-dlp-policy.md)
-- [Etkinlik gezgini ile Kullanmaya başlayın](data-classification-activity-explorer.md)
+- [Etkinlik gezginini kullanmaya başlama](data-classification-activity-explorer.md)
 - [Uç Nokta için Microsoft Defender](/windows/security/threat-protection/)
 - [Windows 10 ve Windows 11 cihazlarını Microsoft Purview'a eklemeye genel bakış](/microsoft-365/compliance/device-onboarding-overview)
-- [aboneliği Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1)
-- [Azure Active Directory (AAD) katıldı](/azure/active-directory/devices/concept-azure-ad-join)
-- [Chromium dayalı yeni Microsoft Edge indirme](https://support.microsoft.com/help/4501095/download-the-new-microsoft-edge-based-on-chromium)
+- [Microsoft 365 aboneliği](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1)
+- [Azure Active Directory 'ye (AAD) katılmış](/azure/active-directory/devices/concept-azure-ad-join)
+- [Chromium tabanlı yeni Microsoft Edge'i indirin](https://support.microsoft.com/help/4501095/download-the-new-microsoft-edge-based-on-chromium)
 - [Varsayılan DLP ilkesini kullanmaya başlama](get-started-with-the-default-dlp-policy.md)
 - [Bir şablondan DLP ilkesi oluşturma](create-a-dlp-policy-from-a-template.md)

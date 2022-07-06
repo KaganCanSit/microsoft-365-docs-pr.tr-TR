@@ -17,16 +17,14 @@ search.appverid:
 ms.assetid: ''
 description: Bir eBulma (Premium) örneğindeki verileri analiz etmek, sorgulamak, görüntülemek, etiketlemek ve dışarı aktarmak için gözden geçirme kümelerini yönetmeyi öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: d81bfa83126210bcaf80fe05b89b26a091e4192f
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 48b2bc1b4ad64606416c2191f2a191973e1d7c73
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65078855"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634103"
 ---
 # <a name="manage-review-sets-in-ediscovery-premium"></a>eBulma'da gözden geçirme kümelerini yönetme (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Gözden geçirme kümeleri, bir durumda verileri çözümleyebileceğiniz, sorgulayabileceğiniz, görüntüleyebileceğiniz, etiketleyebileceğiniz ve dışarı aktarabileceğiniz statik bir belge kümesidir. Bu görevleri gerçekleştirme hakkında daha fazla bilgi için bkz:
 
@@ -56,9 +54,9 @@ eBulma (Premium) durumunda bir gözden geçirme kümesine veri eklemenin üç fa
 
 1. [Gözden geçirme kümesine arama sonuçları ekleme](add-data-to-review-set.md)
 
-2. [gözden geçirme kümesine Microsoft 365 olmayan verileri yükleme](load-non-Office-365-data-into-a-review-set.md)
+2. [Gözden geçirme kümesine Microsoft 365 olmayan verileri yükleme](load-non-Office-365-data-into-a-review-set.md)
 
 3. [Başka bir gözden geçirme kümesinden bir gözden geçirme kümesine veri ekleme](add-data-to-review-set-from-another-review-set.md)
 
 > [!NOTE]
-> Gözden geçirme kümesindeki öğeleri silemezsiniz ve bir servis talebindeki gözden geçirme kümelerini silemezsiniz. Gözden geçirme kümesini silmek (ve içindeki verileri silmek) için, gözden geçirme kümesinin bulunduğu eBulma (Premium) servis talebini silmeniz gerekir. Daha fazla bilgi için bkz. [eBulma (Premium) servis talebini kapatma veya silme](close-or-delete-case.md).
+> Gözden geçirme kümesindeki öğeleri silemezsiniz ve bir servis talebindeki gözden geçirme kümelerini silemezsiniz. Bir gözden geçirme kümesini silmek (ve içindeki verileri silmek) için, gözden geçirme kümesinin bulunduğu eBulma (Premium) servis talebini silmeniz gerekir. Daha fazla bilgi için bkz. [eBulma (Premium) servis talebini kapatma veya silme](close-or-delete-case.md).

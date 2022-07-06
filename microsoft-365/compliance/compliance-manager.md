@@ -18,19 +18,17 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Uyumluluk Yöneticisi, kuruluşların risk değerlendirmelerini basitleştirmesine ve otomatikleştirmesine yardımcı olur ve riskleri gidermeye yardımcı olmak için önerilen eylemleri önerir.
-ms.openlocfilehash: dc08d38da7c02ef0c02401244934b7d2338ab5f7
-ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
+ms.openlocfilehash: 74783c99873b76d3b3637947203bb58d4a656b13
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66574117"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634753"
 ---
 # <a name="microsoft-purview-compliance-manager"></a>Microsoft Purview Uyumluluk Yöneticisi
 
 > [!TIP]
 > *Dokuz Microsoft Purview çözümlerinin tamamının premium sürümlerini ücretsiz olarak deneyebileceğinizi biliyor muydunuz?* Sağlam Purview özelliklerinin kuruluşunuzun uyumluluk gereksinimlerini karşılamasına nasıl yardımcı olabileceğini keşfetmek için 90 günlük Purview çözümleri deneme sürümünü kullanın. Microsoft 365 E3 ve Office 365 E3 müşterileri şimdi [Microsoft Purview uyumluluk portalı deneme hub'ında](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) başlayabilir. [Kaydolabilecek kişiler ve deneme koşulları](compliance-easy-trials.md) hakkında ayrıntılı bilgi edinin.
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **Bu makalede:** Uyumluluk Yöneticisi'nin ne olduğunu, uyumluluğu basitleştirmeye ve riski azaltmaya nasıl yardımcı olduğunu ve temel bileşenlerini öğrenin.
 

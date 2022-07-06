@@ -1,5 +1,5 @@
 ---
-title: E-posta iletilerini şifrelemek için posta akış kurallarını tanımlama
+title: E-posta iletilerini şifrelemek için posta akışı kurallarını tanımlama
 f1.keywords:
 - NOCSH
 ms.author: krowley
@@ -18,121 +18,121 @@ ms.collection:
 ms.custom:
 - admindeeplinkMAC
 - admindeeplinkEXCHANGE
-description: Yöneticiler, posta akış kurallarını (aktarım kuralları) kullanarak iletileri şifrelemeyi ve şifrelerini çözmeyi Office 365 İleti Şifrelemesi.
-ms.openlocfilehash: bb50ed5d2b22fd74d4a6f88eba29f82d10be1f50
-ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
+description: Yöneticiler, Microsoft Purview İleti Şifrelemesi kullanarak iletileri şifrelemek ve şifresini çözmek için posta akışı kuralları (aktarım kuralları) oluşturmayı öğrenebilir.
+ms.openlocfilehash: 75abd302bf661fda50b144f431572c8c6dfc8bcc
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2022
-ms.locfileid: "63512818"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635709"
 ---
-# <a name="define-mail-flow-rules-to-encrypt-email-messages"></a>E-posta iletilerini şifrelemek için posta akış kurallarını tanımlama
+# <a name="define-mail-flow-rules-to-encrypt-email-messages"></a>E-posta iletilerini şifrelemek için posta akışı kurallarını tanımlama
 
-Posta akışlarını yöneten bir Exchange Online olarak, gönderttirdiği ve alan e-posta iletilerini korumaya yardımcı olmak için posta akışı kuralları (aktarım kuralları olarak da bilinir) oluşturabilirsiniz. Tüm giden e-posta iletilerini şifrelemek ve kuruluş içinden gelen şifrelenmiş iletilerden veya kuruluştan gönderilen şifrelenmiş iletilere gönderilen yanıtlardan şifrelemeyi kaldırmak için kurallar kurabilirsiniz. Bu kuralları oluşturmak <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">için Exchange merkezini (EAC)</a> veya Exchange Online PowerShell'i kullanabilirsiniz. Genel şifreleme kurallarına ek olarak, son kullanıcılar için tek tek ileti şifreleme seçeneklerini etkinleştirmeyi veya devre dışı bırakmayı da seçebilirsiniz.
+Exchange Online yöneten bir yönetici olarak, gönderdiğiniz ve aldığınız e-posta iletilerini korumaya yardımcı olmak için posta akışı kuralları (taşıma kuralları olarak da bilinir) oluşturabilirsiniz. Giden e-posta iletilerini şifrelemek ve kuruluşunuzun içinden gelen veya kuruluşunuzdan gönderilen şifrelenmiş iletilere verilen yanıtlardan şifrelemeyi kaldırmak için kurallar ayarlayabilirsiniz. Bu kuralları oluşturmak için <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezini (EAC)</a> veya PowerShell'i Exchange Online kullanabilirsiniz. Genel şifreleme kurallarına ek olarak, son kullanıcılar için tek tek ileti şifreleme seçeneklerini etkinleştirmeyi veya devre dışı bırakmayı da seçebilirsiniz.
 
-Kuruluş dışındaki gönderenlerden gelen postayı şifreleyesiniz.
+Kuruluşunuzun dışındaki gönderenlerden gelen postaları şifreleyemezsiniz.
 
-Active Directory RMS'den Azure Information Protection'a yeni geçiş yaptıysanız, yeni ortamında çalışmaya devam edeceklerinden emin olmak için var olan posta akış kurallarınızı gözden geçirmeniz gerekir. Ayrıca Azure Information Protection aracılığıyla size Office 365 İleti Şifrelemesi OME) yeni özelliklerden yararlanmak için mevcut posta akış kurallarınızı güncelleştirmeniz gerekir. Aksi takdirde, kullanıcılarınız yeni, sorunsuz OME deneyimi yerine önceki HTML ek biçimini kullanan şifrelenmiş posta almaya devam eder. OME'i henüz ayarlamadısanız, bilgi için bkz[. Yeni Office 365 İleti Şifrelemesi özellikleri](set-up-new-message-encryption-capabilities.md) ayarlama.
+Kısa süre önce Active Directory RMS'den Azure Information Protection'ye geçiş yaparsanız, yeni ortamınızda çalışmaya devam etmelerini sağlamak için mevcut posta akışı kurallarınızı gözden geçirmeniz gerekir. Ayrıca azure Information Protection ile Microsoft Purview İleti Şifrelemesi kullanmak için mevcut posta akışı kurallarınızı güncelleştirmeniz gerekir. Aksi takdirde, kullanıcılarınız yeni ve sorunsuz deneyim yerine önceki HTML ek biçimini kullanan şifreli postalar almaya devam eder. İleti şifrelemesini henüz ayarlamadıysanız, bilgi için bkz. [Microsoft Purview İleti Şifrelemesi ayarlama](set-up-new-message-encryption-capabilities.md).
 
-Posta akış kurallarını ve posta akış kurallarının nasıl çalışmasıyla ilgili bileşenler hakkında bilgi için, bu konudaki Posta akış kuralları [(aktarım kuralları) Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules). Posta akış kurallarının Azure Information Protection ile çalışma hakkında ek bilgi için bkz. Azure Information Protection etiketleri için [Exchange Online akış kurallarını yapılandırma](/azure/information-protection/deploy-use/configure-exo-rules).
+Posta akışı kurallarını oluşturan bileşenler ve posta akışı kurallarının nasıl çalıştığı hakkında bilgi için bkz. [Exchange Online'de Posta akışı kuralları (aktarım kuralları).](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) Posta akışı kurallarının Azure Information Protection ile nasıl çalıştığı hakkında ek bilgi için bkz. [Azure Information Protection etiketleri için Exchange Online posta akışı kurallarını yapılandırma](/azure/information-protection/deploy-use/configure-exo-rules).
 
 > [!IMPORTANT]
-> Karma Exchange ortamlarında, şirket içi kullanıcılar yalnızca e-posta OME kullanarak şifrelenmiş posta gönderebilir ve Exchange Online. Karma bir Exchange ortamında OME'yi yapılandırmak için, önce Karma Yapılandırma sihirbazını kullanarak [](/Exchange/exchange-hybrid) karma yapılandırmanız ve ardından postanın [Office 365'tan](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail#part-1-configure-mail-to-flow-from-office-365-to-your-on-premises-email-server) e-posta sunucunuza akacak şekilde yapılandırılması ve postanın e-posta sunucunuzdan Office 365'a akacak şekilde yapılandırılması [gerekir.](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail#part-2-configure-mail-to-flow-from-your-email-server-to-office-365) Postayı akış kılavuzu olarak yapılandır Office 365, bu kılavuzu kullanarak OME için posta akış kurallarını yapılandırabilirsiniz.
+> Karma Exchange ortamları için, şirket içi kullanıcılar yalnızca e-posta Exchange Online üzerinden yönlendirildiğinde ileti şifrelemesi kullanarak şifreli posta gönderip alabilir. İleti şifrelemesini karma Exchange ortamında yapılandırmak için önce [Karma Yapılandırma sihirbazını kullanarak karma](/Exchange/exchange-hybrid) yapılandırmanız ve ardından [postayı Office 365'dan e-posta sunucunuza akacak şekilde yapılandırmanız ve e-posta sunucunuzdan](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail#part-1-configure-mail-to-flow-from-office-365-to-your-on-premises-email-server) [Office 365'a akacak şekilde yapılandırmanız](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail#part-2-configure-mail-to-flow-from-your-email-server-to-office-365) gerekir. Postayı Office 365 akacak şekilde yapılandırdıktan sonra, bu kılavuzu kullanarak ileti şifrelemesi için posta akışı kurallarını yapılandırabilirsiniz.
 
-## <a name="create-mail-flow-rules-to-encrypt-email-messages-with-the-new-ome-capabilities"></a>Yeni OME özellikleriyle e-posta iletilerini şifrelemek için posta akış kuralları oluşturma
+## <a name="create-mail-flow-rules-to-encrypt-email-messages-with-microsoft-purview-message-encryption"></a>Microsoft Purview İleti Şifrelemesi ile e-posta iletilerini şifrelemek için posta akışı kuralları oluşturma
 
-EAC kullanarak, yeni OME özellikleriyle ileti şifrelemeyi tetikleyen posta akış kuralları tanımlayabilirsiniz.
+EAC kullanarak ile ileti şifrelemesini tetikleme için posta akışı kuralları tanımlayabilirsiniz.
 
-### <a name="use-the-eac-to-create-a-rule-for-encrypting-email-messages-with-the-new-ome-capabilities"></a>EAC kullanarak e-posta iletilerini yeni OME özellikleriyle şifrelemek için bir kural oluşturma
+### <a name="use-the-eac-to-create-a-rule-for-encrypting-email-messages-with-microsoft-purview-message-encryption"></a>EAC kullanarak e-posta iletilerini Microsoft Purview İleti Şifrelemesi ile şifrelemek için bir kural oluşturma
 
-1. Web tarayıcısında, genel yönetici izinlerine sahip bir iş veya okul hesabı kullanarak [Office 365.](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser)
+1. Web tarayıcısında, genel yönetici izinleri verilmiş bir iş veya okul hesabı kullanarak [Office 365 oturum açın](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser).
 
-2. Yönetici **kutucuğunu** seçin.
+2. **Yönetici** kutucuğunu seçin.
 
-3. Genel <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi Yönetim</a> **merkezleri'ni Exchange**\>.
+3. <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> Yönetici **merkezleri** \> **Exchange'i** seçin.
 
-4. EAC'de, Posta akışı **Kuralları'ne gidin** \> **ve** Yeni Yeni **simgesi'yi** ![seçin.](../media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \>**Yeni kural oluşturma**. EAC'nin kullanımı hakkında daha fazla bilgi için bkz[. Exchange Yönetim Merkezi'Exchange Online](/exchange/exchange-admin-center).
+4. EAC'de **Posta akışı** \> **Kuralları'na** gidin ve **Yeni Yeni simgesi'ni** ![seçin.](../media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \>**Yeni bir kural oluşturun**. EAC'yi kullanma hakkında daha fazla bilgi için bkz. [Exchange Online'de Exchange yönetim merkezi](/exchange/exchange-admin-center).
 
-5. Ad **kutusuna** kural için Bir ad yazın; örneğin Posta şifreleme DrToniRamos@hotmail.com.
+5. **Ad** alanına kural için DrToniRamos@hotmail.com için posta şifreleme gibi bir ad yazın.
 
-6. Bu **kuralı uygula altında,** bir koşul seçin ve gerekiyorsa bir değer girin. Örneğin, iletileri şifrelemek için şunları DrToniRamos@hotmail.com:
+6. **Bu kuralı uygula** alanında bir koşul seçin ve gerekirse bir değer girin. Örneğin, DrToniRamos@hotmail.com giden iletileri şifrelemek için:
 
-   1. Şu **durumda bu kuralı uygula'da** **alıcıyı seçin**.
+   1. **Bu kuralı uygula** alanında **alıcıyı** seçin.
 
-   2. Kişi listesinden mevcut bir adı seçin veya onay adları kutusuna yeni bir **e-posta adresi** yazın.
+   2. Kişi listesinden var olan bir adı seçin veya **onay adları** kutusuna yeni bir e-posta adresi yazın.
 
-      - Var olan bir adı seçmek için, listeden adı seçin ve ardından Tamam'a **tıklayın**.
+      - Var olan bir adı seçmek için listeden seçin ve **ardından Tamam'a** tıklayın.
 
-      - Yeni bir ad girmek için, onay adları kutusuna bir **e-posta adresi yazın** ve adları onayla **Tamam'ı** \> **seçin**.
+      - Yeni bir ad girmek için, **onay adları** kutusuna bir e-posta adresi yazın ve ardından **adları** \> **denetle Tamam'ı** seçin.
 
-7. Daha fazla koşul eklemek için Diğer **seçenekler'i** , sonra koşul **ekle'yi seçin** ve listeden seçim yapabilirsiniz.
+7. Daha fazla koşul eklemek için **Diğer seçenekler'i** ve ardından **Koşul ekle'yi** seçin ve listeden seçin.
 
-   Örneğin, kuralı yalnızca alıcı kuruluş dışında olursa uygulamak için koşul ekle'yi seçin ve sonra  Alıcı, Kuruluş dışında **/** \> şirket dışında **Tamam'ı** \> **seçin**.
+   Örneğin, kuralı yalnızca alıcı kuruluşunuzun dışındaysa uygulamak için **Koşul ekle'yi** ve ardından Alıcı **kuruluş** \> **dışından/kuruluş** \> dışında **Tamam'ı** seçin.
 
-8. Yeni OME özelliklerini kullanarak şifrelemeyi etkinleştirmek için, Aşağıdakini yapın'da İleti güvenliğini  değiştir'i seçin ve sonra Office 365 İleti Şifrelemesi **ve hak koruması uygula'ya seçin**. Listeden bir RMS şablonu seçin, Kaydet'i **ve** ardından Tamam'ı **seçin**.
+8. İleti şifrelemesini etkinleştirmek için **Aşağıdakileri yapın** bölümünde **İleti güvenliğini değiştir'i** ve ardından **İleti Şifrelemesi ve hak koruması Office 365 uygula'yı** seçin. Listeden bir RMS şablonu seçin, **Kaydet'i** ve ardından **Tamam'ı** seçin.
   
-  Şablon listesi, tüm varsayılan şablonları ve seçeneklerin yanı sıra kullanıcı tarafından kullanmak üzere oluşturduğunuz tüm özel şablonları Office 365. Liste boşsa, Yeni Veri Yönetimi özelliklerini Office 365 İleti Şifrelemesi yeni özellikleri ayarlama konusunda açıklandığı gibi yeni özelliklerle liste [Office 365 İleti Şifrelemesi emin olur.](set-up-new-message-encryption-capabilities.md) Varsayılan şablonlar hakkında bilgi için bkz. [Azure Information Protection için şablonları yapılandırma ve yönetme](/information-protection/deploy-use/configure-policy-templates). E-postalarda **İleri seçeneğini iletme** [seçeneği hakkında bilgi için bkz. E-postalar için iletme seçeneği](/information-protection/deploy-use/configure-usage-rights#do-not-forward-option-for-emails). Yalnızca şifrele seçeneği **hakkında bilgi için** bkz. [E-postalar için yalnızca şifrele seçeneği](/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails).
+  Şablon listesi, tüm varsayılan şablonları ve seçeneklerin yanı sıra Office 365 tarafından kullanılmak üzere oluşturduğunuz tüm özel şablonları içerir. Liste boşsa, Microsoft Purview İleti Şifrelemesi ayarlama bölümünde açıklandığı gibi [Microsoft Purview İleti Şifrelemesi ayarladığınızdan](set-up-new-message-encryption-capabilities.md) emin olun. Varsayılan şablonlar hakkında bilgi için bkz. [Azure Information Protection için şablonları yapılandırma ve yönetme](/information-protection/deploy-use/configure-policy-templates). **İletme** seçeneği hakkında bilgi için bkz. [E-postalar için İletme seçeneği](/information-protection/deploy-use/configure-usage-rights#do-not-forward-option-for-emails). **Yalnızca şifrele** seçeneği hakkında bilgi için bkz. [E-postalar için yalnızca şifreleme seçeneği](/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails).
 
-  Başka bir **eylem belirtmek** için eylem ekle'yi seçebilirsiniz.
+  Başka bir eylem belirtmek istiyorsanız **Eylem ekle'yi** seçebilirsiniz.
 
-### <a name="use-the-eac-to-update-an-existing-mail-flow-rule-to-use-the-new-ome-capabilities"></a>Var olan bir posta akışı kuralını yeni OME özelliklerini kullanmak üzere güncelleştirmek için EAC'i kullanma
+### <a name="use-the-eac-to-update-an-existing-mail-flow-rule-to-use-microsoft-purview-message-encryption"></a>Mevcut bir posta akışı kuralını Microsoft Purview İleti Şifrelemesi kullanacak şekilde güncelleştirmek için EAC kullanma
 
-1. Web tarayıcısında, genel yönetici izinlerine sahip bir iş veya okul hesabı kullanarak [Office 365.](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser)
+1. Web tarayıcısında, genel yönetici izinleri verilmiş bir iş veya okul hesabı kullanarak [Office 365 oturum açın](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser).
 
-2. Yönetici **kutucuğunu** seçin.
+2. **Yönetici** kutucuğunu seçin.
 
-3. Genel <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi Yönetim</a> **merkezleri'ni Exchange**\>.
+3. <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> Yönetici **merkezleri** \> **Exchange'i** seçin.
 
-4. EAC'de, Posta akışı **Kuralları'ne** \> **gidin**.
+4. EAC'de **Posta akışı** \> **Kuralları'na** gidin.
 
-5. Posta akışı kuralları listesinde, yeni OME özelliklerini kullanmak için değiştirmek istediğiniz kuralı seçin ve sonra da **Düzenle simgesini** ![seçin](../media/ebd260e4-3556-4fb0-b0bb-cc489773042c.gif).
+5. Posta akışı kuralları listesinde, Microsoft Purview İleti Şifrelemesi ile kullanmak üzere değiştirmek istediğiniz **kuralı seçin** ![ve sonra Düzenle Düzenle simgesi..](../media/ebd260e4-3556-4fb0-b0bb-cc489773042c.gif).
 
-6. Yeni OME özelliklerini kullanarak şifrelemeyi etkinleştirmek için, Aşağıdakileri yapın'da İleti güvenliğini  değiştir'i seçin ve sonra da Office 365 İleti Şifrelemesi **ve hak koruması uygula'ya seçin**. Listeden bir RMS şablonu seçin, Kaydet'i **ve sonra** Tamam'ı **seçin**.
+6. Microsoft Purview İleti Şifrelemesi kullanarak şifrelemeyi etkinleştirmek için **Aşağıdakileri yapın** bölümünde **İleti güvenliğini değiştir'i** ve ardından **İleti Şifrelemesi ve hak koruması Office 365 uygula'yı** seçin. Listeden bir RMS şablonu seçin, **Kaydet'i** ve ardından **Tamam'ı** seçin.
 
-   Şablon listesi, tüm varsayılan şablonları ve seçeneklerin yanı sıra kullanıcı tarafından kullanmak üzere oluşturduğunuz tüm özel şablonları Office 365. Liste boşsa, Azure Information Protection'ın Office 365 İleti Şifrelemesi yeni özellikler ayarlama konusunda açıklandığı gibi yeni özelliklerle liste [Office 365 İleti Şifrelemesi özellikler ayarlamayı sağlar.](set-up-new-message-encryption-capabilities.md) Varsayılan şablonlar hakkında bilgi için bkz. [Azure Information Protection için şablonları yapılandırma ve yönetme](/information-protection/deploy-use/configure-policy-templates). E-postalarda İleri seçeneğini iletme [seçeneği hakkında bilgi için bkz. E-postalar için iletme seçeneği](/information-protection/deploy-use/configure-usage-rights#do-not-forward-option-for-emails). Yalnızca şifrele seçeneği hakkında bilgi için bkz. [E-postalar için Yalnızca Şifrele seçeneği](/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails).
+   Şablon listesi, tüm varsayılan şablonları ve seçeneklerin yanı sıra Office 365 tarafından kullanılmak üzere oluşturduğunuz tüm özel şablonları içerir. Liste boşsa, Microsoft Purview İleti Şifrelemesi ayarlama bölümünde açıklandığı gibi [Microsoft Purview İleti Şifrelemesi ayarladığınızdan](set-up-new-message-encryption-capabilities.md) emin olun. Varsayılan şablonlar hakkında bilgi için bkz. [Azure Information Protection için şablonları yapılandırma ve yönetme](/information-protection/deploy-use/configure-policy-templates). İletme seçeneği hakkında bilgi için bkz. [E-postalar için İletme seçeneği](/information-protection/deploy-use/configure-usage-rights#do-not-forward-option-for-emails). Yalnızca şifrele seçeneği hakkında bilgi için bkz. [E-postalar için Yalnızca Şifrele seçeneği](/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails).
 
-   Başka bir **eylem belirtmek** için eylem ekle'yi seçebilirsiniz.
+   Başka bir eylem belirtmek istiyorsanız **Eylem ekle'yi** seçebilirsiniz.
 
-7. Aşağıdakini **yapın listesinde**, İleti güvenliğini değiştirme OME'nin  \> önceki sürümünü uygulama **için atanmış tüm eylemleri kaldırın**.
+7. **Aşağıdakini yap** listesinden İleti **güvenliğini** \> değiştirme **OME'nin önceki sürümünü uygula'ya** atanan tüm eylemleri kaldırın.
 
 8. **Kaydet**'i seçin.
 
-## <a name="create-mail-flow-rules-to-remove-encryption-for-email-messages-with-the-new-ome-capabilities"></a>Yeni OME özellikleriyle e-posta iletilerinin şifrelemelerini kaldırmak için posta akış kuralları oluşturma
+## <a name="create-mail-flow-rules-to-remove-encryption-for-email-messages-with-microsoft-purview-message-encryption"></a>Microsoft Purview İleti Şifrelemesi ile e-posta iletilerinin şifrelemesini kaldırmak için posta akışı kuralları oluşturma
 
-EAC kullanarak, yeni OME özellikleriyle ileti şifrelemeyi kaldırmayı tetikleyen posta akış kuralları tanımlayabilirsiniz.
+EAC kullanarak Microsoft Purview İleti Şifrelemesi ile ileti şifrelemesini kaldırmak için posta akışı kuralları tanımlayabilirsiniz.
 
-### <a name="use-the-eac-to-create-a-rule-to-remove-encryption-from-email-messages-with-the-new-ome-capabilities"></a>Yeni OME özellikleriyle e-posta iletilerinden şifrelemeyi kaldırmak üzere bir kural oluşturmak için EAC'i kullanma
+### <a name="use-the-eac-to-create-a-rule-to-remove-encryption-from-email-messages-with-microsoft-purview-message-encryption"></a>EAC kullanarak Microsoft Purview İleti Şifrelemesi ile e-posta iletilerinden şifrelemeyi kaldırma kuralı oluşturma
 
-Şifrelemeyi, sizin tarafından uygulanmış olan iletilerden kaldırabilirsiniz. Ayrıca, e-posta iletinin tamamının koruma olmadan korunmasını sağlamak için, tüm şifreli eklerin şifrelemesini kaldırabilirsiniz.
+Kuruluşunuz tarafından uygulanan iletilerden şifrelemeyi kaldırabilirsiniz. Ayrıca, tüm e-posta iletisinin herhangi bir koruma olmadan olduğundan emin olmak için şifrelenmiş eklerden şifrelemeyi kaldırabilirsiniz.
 
-1. Web tarayıcısında, genel yönetici izinlerine sahip bir iş veya okul hesabı kullanarak [Office 365.](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser)
+1. Web tarayıcısında, genel yönetici izinleri verilmiş bir iş veya okul hesabı kullanarak [Office 365 oturum açın](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser).
 
-2. Yönetici **kutucuğunu** seçin.
+2. **Yönetici** kutucuğunu seçin.
 
-3. Genel <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi Yönetim</a> **merkezleri'ni Exchange**\>.
+3. <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> Yönetici **merkezleri** \> **Exchange'i** seçin.
 
-4. EAC'de, Posta akışı **Kuralları'ne gidin** \> **ve** Yeni Yeni **simgesi'yi** ![seçin.](../media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \>**Yeni kural oluşturma**. EAC'nin kullanımı hakkında daha fazla bilgi için bkz[. Exchange Yönetim Merkezi'Exchange Online](/exchange/exchange-admin-center).
+4. EAC'de **Posta akışı** \> **Kuralları'na** gidin ve **Yeni Yeni simgesi'ni** ![seçin.](../media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \>**Yeni bir kural oluşturun**. EAC'yi kullanma hakkında daha fazla bilgi için bkz. [Exchange Online'de Exchange yönetim merkezi](/exchange/exchange-admin-center).
 
-5. Ad **kutusuna** kural için, Giden postadan şifrelemeyi kaldır gibi bir ad yazın.
+5. **Ad** alanına kural için gibi `Remove encryption from outgoing mail`bir ad yazın.
 
-6. Aşağıdaki **durumda bu kuralı uygula** altında, şifrelemenin iletilerden kaldırılması gereken koşulları seçin. Ekle **Gönderen, posta göndermek** \> **için kuruluşun** içinde veya Alıcı  **, posta** \> almak **için kuruluşun** içinde yer alıyor.
+6. **Bu kuralı uygula altında**, iletilerden şifrelemenin kaldırılması gereken koşulları seçin. **Ekle Gönderen,** posta göndermek için **kuruluşun içinde** _veya_ \> Alıcı, posta almak üzere **kuruluşun içinde** **bulunur**\>.
 
-7. **Aşağıdakini yapın'da** İleti **güvenliğini değiştir Kuruluş tarafından** \> **Office 365 İleti Şifrelemesi hakları koruma kaldır'ı seçin**.
+7. **Aşağıdakileri yapın** bölümünde **İleti güvenliğini** \> değiştir **Office 365 İleti Şifrelemesini kaldır'ı ve kuruluş tarafından uygulanan hak korumasını** seçin.
 
-8. (İsteğe bağlı) Bunu **yapın'da** İleti güvenliğini **değiştir Kuruluş tarafından** \> **uygulanan ek hakları korumasını kaldır seçeneğini seçin**.
+8. (İsteğe bağlı) **Aşağıdakileri yapın** bölümünde İleti **güvenliğini** \> değiştir **Kuruluş tarafından uygulanan ek hakları korumasını kaldır'ı** seçin.
 
 Kuralı kaydedin.
 
-## <a name="create-mail-flow-rules-for-office-365-message-encryption-without-the-new-capabilities"></a>Yeni özelliklere sahip Office 365 İleti Şifrelemesi için posta akışı kuralları oluşturma
+## <a name="create-mail-flow-rules-for-office-365-message-encryption-without-microsoft-purview-message-encryption"></a>Microsoft Purview İleti Şifrelemesi olmadan Office 365 İleti Şifrelemesi için posta akışı kuralları oluşturma
 
-Organizasyonlarınızı henüz yeni OME özelliklerine taşımadıysanız, Microsoft, yeni OME özelliklerine kurum için uygun olduğu anda bir plan yapmanızı önerir. Yönergeler için bkz[. Azure Information Protection Office 365 İleti Şifrelemesi üzerine yerleşik yeni güvenlik özellikleri ayarlama](set-up-new-message-encryption-capabilities.md). Aksi takdirde, [yeni OME özelliklerini kullanmayan Office 365 İleti Şifrelemesi kullanıcı için posta akışı kurallarını tanımlama'ya bakın](legacy-information-for-message-encryption.md#defining-mail-flow-rules-for-office-365-message-encryption-that-dont-use-the-new-ome-capabilities).
+Kuruluşunuzu henüz Microsoft Purview İleti Şifrelemesi taşımadıysanız Microsoft, kuruluşunuz için makul olduğu anda taşınacak bir plan yapmanızı önerir. Yönergeler için bkz[. Microsoft Purview İleti Şifrelemesi ayarlama](set-up-new-message-encryption-capabilities.md). Aksi takdirde, Microsoft Purview İleti Şifrelemesi [kullanmayan Office 365 İleti Şifrelemesi için posta akışı kurallarını tanımlama](legacy-information-for-message-encryption.md#defining-mail-flow-rules-for-office-365-message-encryption-that-dont-use-microsoft-purview-message-encryption) bölümüne bakın.
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Şifreleme Office 365](encryption.md)
+[Office 365'de şifreleme](encryption.md)
 
-[Yeni özellik Office 365 İleti Şifrelemesi ayarlama](set-up-new-message-encryption-capabilities.md)
+[Microsoft Purview İleti Şifreleme'yi ayarlama](set-up-new-message-encryption-capabilities.md)
 
-[Şifreli iletilere markalama ekleme](add-your-organization-brand-to-encrypted-messages.md)
+[Şifrelenmiş iletilere marka ekleme](add-your-organization-brand-to-encrypted-messages.md)
 
-[posta akışı kuralları (aktarım kuralları) Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules)
+[Exchange Online'da posta akışı kuralları (aktarım kuralları)](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules)

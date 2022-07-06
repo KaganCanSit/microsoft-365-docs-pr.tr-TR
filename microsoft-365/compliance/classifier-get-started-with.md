@@ -18,19 +18,17 @@ ms.custom: admindeeplinkDEFENDER
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft 365 sınıflandırıcı, çeşitli içerik türlerini tanımak için eğitebileceğiniz ve bakabileceği örnekler veren bir araçtır. Bu makalede, özel sınıflandırıcı oluşturma ve eğitme ve doğruluğu artırmak için bunları yeniden eğitme hakkında bilgi verilmektedir.
-ms.openlocfilehash: d3a7639ed31dc42688cffbffb151049659a41660
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+description: Microsoft 365 sınıflandırıcısı, çeşitli içerik türlerini tanımak için eğitebileceğiniz ve bakabileceği örnekler veren bir araçtır. Bu makalede, özel sınıflandırıcı oluşturma ve eğitme ve doğruluğu artırmak için bunları yeniden eğitme hakkında bilgi verilmektedir.
+ms.openlocfilehash: ff23f24145cee1b694f96e933919dddf779dfd9a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173195"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631391"
 ---
 # <a name="get-started-with-trainable-classifiers"></a>Eğitilebilir sınıflandırıcıları kullanmaya başlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-eğitilebilir Microsoft 365 sınıflandırıcı, çeşitli içerik türlerini tanımak için eğitebileceğiniz ve bakabileceği örnekler veren bir araçtır. Eğitildikten sonra, Office duyarlılık etiketlerinin, İletişim uyumluluk ilkelerinin ve bekletme etiketi ilkelerinin uygulanmasına yönelik öğeyi tanımlamak için kullanabilirsiniz.
+Microsoft 365 eğitilebilir sınıflandırıcı, inceleyebileceğiniz örnekler vererek çeşitli içerik türlerini tanımak için eğitebileceğiniz bir araçtır. Eğitildikten sonra, Office duyarlılık etiketlerinin, İletişim uyumluluk ilkelerinin ve bekletme etiketi ilkelerinin uygulanmasına yönelik öğeyi tanımlamak için bu öğeyi kullanabilirsiniz.
 
 Özel eğitilebilir bir sınıflandırıcı oluşturmak için öncelikle bu sınıflandırıcıya insan tarafından seçilen ve kategoriyle pozitif bir şekilde eşleşen örnekler verilmesi gerekir. Ardından, bunları işledikten sonra, sınıflandırıcıların tahmin etme becerisini test etmek için pozitif ve negatif örneklerin bir karışımını verirsiniz. Bu makalede, özel sınıflandırıcı oluşturma ve eğitme ve yeniden eğitme yoluyla özel eğitilebilir sınıflandırıcıların ve önceden eğitilmiş sınıflandırıcıların yaşam süreleri boyunca performansını artırma işlemleri gösterilmektedir.
 
@@ -60,7 +58,7 @@ Bu senaryolarda sınıflandırıcıları kullanmak için bu izinlere sahip hesap
 
 - Bekletme etiketi ilkesi senaryosu: Kayıt Yönetimi ve Bekletme Yönetimi rolleri 
 - Duyarlılık etiketi ilkesi senaryosu: Güvenlik Yöneticisi, Uyumluluk Yöneticisi, Uyumluluk Verileri Yöneticisi
-- İletişim uyumluluk ilkesi senaryosu: Insider Risk Management Yöneticisi, Gözetmen Gözden Geçirme Yöneticisi 
+- İletişim uyumluluk ilkesi senaryosu: Insider Risk Management Yönetici, Gözetmen İnceleme Yöneticisi 
 
 > [!IMPORTANT]
 > Varsayılan olarak, yalnızca özel sınıflandırıcı oluşturan kullanıcı söz konusu sınıflandırıcı tarafından yapılan tahminleri eğitebilir ve gözden geçirebilir.
@@ -76,7 +74,7 @@ Bu zaman çizelgesi eğitilebilir sınıflandırıcıların örnek dağıtımın
 ![trainable-classifier-timeline.](../media/trainable-classifier-deployment-timeline_border.png)
 
 > [!TIP]
-> Eğitilebilir sınıflandırıcılar için ilk kez kabul etmek gerekir. Microsoft 365 kuruluş içeriğinizin temel değerlendirmesini tamamlaması on iki gün sürer. Kabul işlemini başlatması için genel yöneticinize başvurun.
+> Eğitilebilir sınıflandırıcılar için ilk kez kabul etmek gerekir. Microsoft 365'in kuruluş içeriğinizin temel değerlendirmesini tamamlaması on iki gün sürer. Kabul işlemini başlatması için genel yöneticinize başvurun.
 
 ### <a name="overall-workflow"></a>Genel iş akışı
 
@@ -98,7 +96,7 @@ Eğitilebilir sınıflandırıcı bir tahmin modeli oluşturmak için yeterli po
 
 ## <a name="how-to-create-a-trainable-classifier"></a>Eğitilebilir sınıflandırıcı oluşturma
 
-1. 50-500 arasında tohum içerik öğesi toplayın. Bunlar yalnızca eğitilebilir sınıflandırıcının sınıflandırma kategorisinde olduğunu pozitif olarak tanımlamasını istediğiniz içerik türünü güçlü bir şekilde temsil eden örnekler olmalıdır. Desteklenen dosya türleri için bkz. [SharePoint Sunucusu'nda varsayılan gezinilen dosya adı uzantıları ve ayrıştırılmış](/sharepoint/technical-reference/default-crawled-file-name-extensions-and-parsed-file-types) dosya türleri.
+1. 50-500 arasında tohum içerik öğesi toplayın. Bunlar yalnızca eğitilebilir sınıflandırıcının sınıflandırma kategorisinde olduğunu pozitif olarak tanımlamasını istediğiniz içerik türünü güçlü bir şekilde temsil eden örnekler olmalıdır. Bkz. [SharePoint Server'da desteklenen dosya türleri için varsayılan gezilen dosya adı uzantıları ve ayrıştırılmış](/sharepoint/technical-reference/default-crawled-file-name-extensions-and-parsed-file-types) dosya türleri.
 
    > [!IMPORTANT]
    > Tohum kümenizdeki öğelerin kategoriye **güçlü** örnekler olduğundan emin olun. Eğitilebilir sınıflandırıcı, başlangıçta modelini, neyle kullandığınıza göre oluşturur. Sınıflandırıcı, tüm çekirdek örneklerinin güçlü pozitifler olduğunu varsayar ve bir örneğin kategoriyle zayıf mı yoksa negatif mi olduğunu anlamanın hiçbir yolu yoktur.
@@ -108,7 +106,7 @@ Eğitilebilir sınıflandırıcı bir tahmin modeli oluşturmak için yeterli po
    > [!TIP]
    > Tohum verileriniz için yeni bir site ve klasör oluşturursanız, bu tohum verilerini kullanacak eğitilebilir sınıflandırıcıyı oluşturmadan önce bu konumun dizine alınması için en az bir saat bekleyin.
 
-3. Uyumluluk yöneticisi veya güvenlik yöneticisi rolü erişimiyle Microsoft Purview uyumluluk portalında oturum açın ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalını</a> veya <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalVeri</a> >  **sınıflandırmasını** açın.
+3. Uyumluluk yöneticisi veya güvenlik yöneticisi rolü erişimiyle Microsoft Purview uyumluluk portalı oturum açın ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> veya <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalı</a> > **Veri sınıflandırmasını** açın.
 
 4. **Eğitilebilir sınıflandırıcılar** sekmesini seçin.
 
@@ -116,7 +114,7 @@ Eğitilebilir sınıflandırıcı bir tahmin modeli oluşturmak için yeterli po
 
 6. Bu eğitilebilir sınıflandırıcının tanımlamasını `Name` istediğiniz öğe kategorisinin ve `Description` alanları için uygun değerleri doldurun.
 
-7. 2. adımdaki SharePoint Çevrimiçi site, kitaplık ve klasör URL'sini seçin. öğesini seçin `Add`.
+7. 2. adımdaki tohum içerik sitesinin SharePoint Online sitesini, kitaplığını ve klasör URL'sini seçin. öğesini seçin `Add`.
 
 8. Ayarları gözden geçirin ve öğesini seçin `Create trainable classifier`.
 
@@ -127,16 +125,16 @@ Eğitilebilir sınıflandırıcı bir tahmin modeli oluşturmak için yeterli po
     > [!div class="mx-imgBorder"]
     > ![eğitilebilir sınıflandırıcı test için hazır.](../media/classifier-trainable-ready-to-test-detail.png)
 
-11. En iyi sonuçlar için en az 200 test içeriği öğesi (en fazla 10.000) toplayın. Bunlar güçlü pozitifler, güçlü negatifler ve doğasında biraz daha az belirgin olan öğelerin bir karışımı olmalıdır. Desteklenen dosya türleri için bkz. [SharePoint Sunucusu'nda varsayılan gezinilen dosya adı uzantıları ve ayrıştırılmış](/sharepoint/technical-reference/default-crawled-file-name-extensions-and-parsed-file-types) dosya türleri.
+11. En iyi sonuçlar için en az 200 test içeriği öğesi (en fazla 10.000) toplayın. Bunlar güçlü pozitifler, güçlü negatifler ve doğasında biraz daha az belirgin olan öğelerin bir karışımı olmalıdır. Bkz. [SharePoint Server'da desteklenen dosya türleri için varsayılan gezilen dosya adı uzantıları ve ayrıştırılmış](/sharepoint/technical-reference/default-crawled-file-name-extensions-and-parsed-file-types) dosya türleri.
 
-12. Test içeriğini *yalnızca* test içeriğini tutmaya ayrılmış bir SharePoint Çevrimiçi klasörüne yerleştirin. SharePoint Çevrimiçi site, kitaplık ve klasör URL'sini not edin.
+12. Test içeriğini *yalnızca test* içeriğini tutmaya ayrılmış bir SharePoint Online klasörüne yerleştirin. SharePoint Online sitesi, kitaplığı ve klasör URL'sini not edin.
 
     > [!TIP]
     > Test verileriniz için yeni bir site ve klasör oluşturursanız, bu tohum verilerini kullanacak eğitilebilir sınıflandırıcıyı oluşturmadan önce bu konumun dizine alınması için en az bir saat bekleyin.
 
 13. öğesini seçin `Add items to test`.
 
-14. 12. adımdaki test içeriği sitesinin SharePoint Çevrimiçi site, kitaplık ve klasör URL'sini seçin. öğesini seçin `Add`.
+14. 12. adımdaki test içeriği sitesinin SharePoint Online sitesini, kitaplığını ve klasör URL'sini seçin. öğesini seçin `Add`.
 
 15. sihirbazını seçerek `Done`tamamlayın. Eğitilebilir sınıflandırıcınızın test dosyalarını işlemesi bir saat kadar sürer.
 
@@ -147,7 +145,7 @@ Eğitilebilir sınıflandırıcı bir tahmin modeli oluşturmak için yeterli po
 
 17. Öğeleri gözden geçirmek için Sekme'yi seçin `Tested items to review` .
 
-18. Microsoft 365 bir kerede 30 öğe gösterir. Bunları gözden geçirin ve `We predict this item is "Relevant". Do you agree?` kutuda veya öğesini `No` `Not sure, skip to next item`seçin`Yes`. Model doğruluğu her 30 öğeden sonra otomatik olarak güncelleştirilir.
+18. Microsoft 365, aynı anda 30 öğe sunar. Bunları gözden geçirin ve `We predict this item is "Relevant". Do you agree?` kutuda veya öğesini `No` `Not sure, skip to next item`seçin`Yes`. Model doğruluğu her 30 öğeden sonra otomatik olarak güncelleştirilir.
 
     > [!div class="mx-imgBorder"]
     > ![öğeleri gözden geçir kutusu.](../media/classifier-trainable-review-detail.png)
@@ -159,4 +157,4 @@ Eğitilebilir sınıflandırıcı bir tahmin modeli oluşturmak için yeterli po
 
 20. Sınıflandırıcıyı yayımlayın.
 
-21. Sınıflandırıcınız yayımlandıktan sonra [duyarlılık etiketleriyle Office otomatik etiketlemede](apply-sensitivity-label-automatically.md) bir koşul olarak kullanılabilir, [bekletme etiketi ilkesini bir koşula göre](apply-retention-labels-automatically.md#configuring-conditions-for-auto-apply-retention-labels) ve [İletişim uyumluluğuna](communication-compliance.md) göre otomatik olarak uygulayın.
+21. Sınıflandırıcınız yayımlandıktan sonra [, Duyarlılık etiketleriyle Office otomatik etiketlemesinde](apply-sensitivity-label-automatically.md) koşul olarak kullanılabilir, [bekletme etiketi ilkesini bir koşula göre](apply-retention-labels-automatically.md#configuring-conditions-for-auto-apply-retention-labels) ve [İletişim uyumluluğu'nda](communication-compliance.md) otomatik olarak uygulayın.

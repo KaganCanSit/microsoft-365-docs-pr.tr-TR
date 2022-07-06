@@ -17,16 +17,14 @@ search.appverid:
 - MOE150
 - MET150
 description: Kuruluşunuz için önemli olan düzenlemelerin ve sertifikaların gereksinimlerini karşılamanıza yardımcı olmak için Microsoft Purview Uyumluluk Yöneticisi'nde değerlendirmeler oluşturun.
-ms.openlocfilehash: cb2d90bf8dfbdcb2ec2ca534d1659a19d27998bc
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: 6eeb77e1e5d6adea3489764626910e63ce443a2d
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115751"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633575"
 ---
 # <a name="build-and-manage-assessments-in-compliance-manager"></a>Uyumluluk Yöneticisi'nde değerlendirme oluşturma ve yönetme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **Bu makalede:** **Değerlendirmeler** oluşturup yöneterek Kuruluşunuz için Uyumluluk Yöneticisi'nin nasıl özelleştirileceği hakkında bilgi edinin. Bu makalede değerlendirme oluşturma, bunları **gruplar** halinde düzenleme, **denetimlerle** çalışma, **güncelleştirmeleri** kabul etme ve değerlendirme **raporlarını** dışarı aktarma konusunda size yol gösterilir.
 
@@ -41,7 +39,7 @@ Tüm değerlendirmeleriniz Uyumluluk Yöneticisi'nin değerlendirmeler sekmesind
 
 ## <a name="data-protection-baseline-default-assessment"></a>Veri Koruma Temeli varsayılan değerlendirmesi
 
-Microsoft, çalışmaya başlamanız için **Microsoft 365 veri koruma temeli** için Uyumluluk Yöneticisi'nde **varsayılan** bir değerlendirme sağlar. Bu temel değerlendirme, veri koruma ve genel veri idaresi için temel düzenlemelere ve standartlara yönelik bir dizi denetime sahiptir. Bu temel öncelikle NIST CSF (National Institute of Standards and Technology Cybersecurity Framework) ve ISO (International Organization for Standardization) ile FedRAMP (Federal Risk ve Authorization Management Program) ve GDPR (Avrupa Birliği Genel Veri Koruma Yönetmeliği) öğelerini kullanır.
+Microsoft, kullanmaya başlamanız için Microsoft **365 veri koruma temeli** için Uyumluluk Yöneticisi'nde **varsayılan** bir değerlendirme sağlar. Bu temel değerlendirme, veri koruma ve genel veri idaresi için temel düzenlemelere ve standartlara yönelik bir dizi denetime sahiptir. Bu temel öncelikle NIST CSF (National Institute of Standards and Technology Cybersecurity Framework) ve ISO (International Organization for Standardization) ile FedRAMP (Federal Risk ve Authorization Management Program) ve GDPR (Avrupa Birliği Genel Veri Koruma Yönetmeliği) öğelerini kullanır.
 
 Bu değerlendirme, diğer değerlendirmeleri yapılandırmadan önce Uyumluluk Yöneticisi'ne ilk kez geldiğinizde ilk uyumluluk puanınızı hesaplamak için kullanılır. Uyumluluk Yöneticisi, Microsoft 365 çözümlerinizden ilk sinyalleri toplar. Kuruluşunuzun temel veri koruma standartlarına ve düzenlemelerine göre nasıl performans sergilediğini bir bakışta göreceksiniz ve gerçekleştirilecek önerilen iyileştirme eylemlerine göz atacaksınız.
 
@@ -115,7 +113,7 @@ Uyumluluk Yöneticisi hangi değerlendirmelerin kuruluşunuzla en ilgili olabile
 
 4. **Ürün, ad ve grup:** Değerlendirmenizi tanımlamak, hangi ürünü değerlendireceğini seçmek ve bir gruba atamak için bu özellikleri ayarlayın.
 
-    - **Ürün**: Değerlendirmenizin uygulanmasını istediğiniz ürünü seçin. Microsoft 365 için tasarlanmış bir Şablon gibi bir Microsoft şablonu kullanıyorsanız, uygun ürünü belirtmeniz için bu alan doldurulur ve değiştirilemez. Evrensel bir şablon kullanıyorsanız, bu değerlendirmeyi yeni bir ürün için mi yoksa Uyumluluk Yöneticisi'nde önceden tanımlamış olduğunuz özel bir ürün için mi oluşturduğunuzu seçin. Yeni bir ürün seçerseniz adını girin. Evrensel şablon kullanırken önceden tanımlanmış bir Microsoft ürünü seçemeyeceğinizi unutmayın.
+    - **Ürün**: Değerlendirmenizin uygulanmasını istediğiniz ürünü seçin. Microsoft 365 için tasarlanmış bir şablon gibi bir Microsoft şablonu kullanıyorsanız, uygun ürünü belirtmeniz için bu alan doldurulur ve değiştirilemez. Evrensel bir şablon kullanıyorsanız, bu değerlendirmeyi yeni bir ürün için mi yoksa Uyumluluk Yöneticisi'nde önceden tanımlamış olduğunuz özel bir ürün için mi oluşturduğunuzu seçin. Yeni bir ürün seçerseniz adını girin. Evrensel şablon kullanırken önceden tanımlanmış bir Microsoft ürünü seçemeyeceğinizi unutmayın.
     - **Değerlendirme adı**: **Değerlendirme adı** alanına değerlendirmeniz için bir ad girin. Değerlendirme adları gruplar içinde benzersiz olmalıdır. Değerlendirmenizin adı belirli bir gruptaki başka bir değerlendirmenin adıyla eşleşiyorsa farklı bir ad oluşturmanızı isteyen bir hata alırsınız.
     - **Grup**: Değerlendirmenizi bir gruba atayın. Aşağıdakilerden birini yapabilirsiniz:
         - Zaten oluşturduğunuz **bir gruba atamak için Var olan grubu kullan'ı** seçin; Veya
@@ -183,7 +181,7 @@ Microsoft ürünlerini destekleyen şablonlara dayalı değerlendirmeler için M
 
 Değerlendirme için bir güncelleştirme kullanılabilir olduğunda bir bildirim görürsünüz ve güncelleştirmeyi kabul etme veya daha sonra erteleme seçeneğine sahip olursunuz.
 
-Güncelleştirmeler, Microsoft 365 ile kullanılmak üzere tasarlanmış olanlar gibi Microsoft şablonlarını temel alan değerlendirmeler için kullanılabilir. Kuruluşunuz diğer ürünleri değerlendirmek için evrensel şablonlar kullanıyorsa devralma desteklenmiyor olabilir. Daha fazla bilgi için bkz. [Değerlendirme şablonlarını genişletme](compliance-manager-templates-extend.md).
+Güncelleştirmeler, Microsoft 365 ile kullanılmak üzere tasarlanmış olanlar gibi Microsoft şablonlarına dayalı değerlendirmeler için kullanılabilir. Kuruluşunuz diğer ürünleri değerlendirmek için evrensel şablonlar kullanıyorsa devralma desteklenmiyor olabilir. Daha fazla bilgi için bkz. [Değerlendirme şablonlarını genişletme](compliance-manager-templates-extend.md).
 
 ### <a name="what-causes-an-update"></a>Güncelleştirmeye neden olan nedenler
 
@@ -194,7 +192,7 @@ Microsoft, uzattığınız bir Uyumluluk Yöneticisi şablonunu güncelleştirir
 Oluşturduğunuz özel değerlendirmeler Microsoft'tan şablon güncelleştirmesi almaz. Özel değerlendirmeler geliştirme eylem güncelleştirmeleri alabilir, ancak değerlendirmeler ve iyileştirme eylemleri arasındaki eşlemeyi denetlemek için yapılan microsoft güncelleştirmeleri özel şablonlar için geçerli değildir.
 
 > [!NOTE]
-> Değerlendirme güncelleştirmeleri yalnızca grup düzeyinde geçerlidir. İki farklı grupta bulunan aynı şablondan oluşturulmuş iki değerlendirmeniz varsa, her değerlendirmenin bekleyen bir güncelleştirme bildirimi olur ve ilgili gruptaki her değerlendirmeye yönelik güncelleştirmeyi tek tek kabul etmeniz gerekir.
+> Değerlendirmelere Güncelleştirmeler yalnızca grup düzeyinde geçerlidir. İki farklı grupta bulunan aynı şablondan oluşturulmuş iki değerlendirmeniz varsa, her değerlendirmenin bekleyen bir güncelleştirme bildirimi olur ve ilgili gruptaki her değerlendirmeye yönelik güncelleştirmeyi tek tek kabul etmeniz gerekir.
 
 #### <a name="where-youll-see-assessment-update-notifications"></a>Değerlendirme güncelleştirme bildirimlerini nerede görürsünüz?
 
@@ -214,7 +212,7 @@ Değerlendirme ayrıntıları sayfasında **güncelleştirmeyi gözden geçir'i*
 - Güncelleştirmeyi açıklayan bir genel bakış
 - Uyumluluk puanınıza etkisi, değerlendirmenin tamamlanmasına yönelik ilerleme miktarı ve iyileştirme eylemleri ve denetimlerindeki belirli değişiklik sayısı gibi değişikliklerle ilgili belirli ayrıntılar.
 
-**Güncelleştirilmiş şablon** bağlantısı seçildiğinde, bekleyen güncelleştirmelerle şablonun sürümü için denetim verilerini içeren bir Excel dosyası indirilir. **Geçerli şablon** bağlantısı seçildiğinde, değişiklikler olmadan mevcut şablonun bir dosyası indirilir.
+**Güncelleştirilmiş şablon** bağlantısı seçildiğinde, bekleyen güncelleştirmelerle birlikte şablonun sürümü için denetim verilerini içeren bir Excel dosyası indirilir. **Geçerli şablon** bağlantısı seçildiğinde, değişiklikler olmadan mevcut şablonun bir dosyası indirilir.
 
 Güncelleştirmeyi kabul etmek ve değerlendirmenizde değişiklik yapmak için **Güncelleştirmeyi kabul et'i** seçin. Kabul edilen değişiklikler kalıcıdır.
 

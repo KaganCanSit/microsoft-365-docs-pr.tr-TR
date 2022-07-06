@@ -16,17 +16,16 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: a9d16cb82354bcb44e817de3207cb49de66dbf91
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+ms.openlocfilehash: 2b960141b8f6da710b7ef3cbbf812ac0f00f1ce5
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65873060"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634081"
 ---
 # <a name="deploy-microsoft-defender-for-endpoint-on-linux-manually"></a>Linux'ta Uç Nokta için Microsoft Defender el ile dağıtma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
-
 
 **Şunlar için geçerlidir:**
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -34,17 +33,16 @@ ms.locfileid: "65873060"
 
 > Uç nokta için Defender'i deneyimlemek ister misiniz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
-
 Bu makalede Linux'ta Uç Nokta için Microsoft Defender el ile nasıl dağıtılacağı açıklanmaktadır. Başarılı bir dağıtım için aşağıdaki görevlerin tümünün tamamlanması gerekir:
 
-  - [Önkoşullar ve sistem gereksinimleri](#prerequisites-and-system-requirements)
-  - [Linux yazılım deposunu yapılandırma](#configure-the-linux-software-repository)
-    - [RHEL ve varyantları (CentOS, Fedora, Oracle Linux ve Amazon Linux 2)](#rhel-and-variants-centos-fedora-oracle-linux-and-amazon-linux-2)
-    - [SLES ve çeşitlemeler](#sles-and-variants)
-    - [Ubuntu ve Debian sistemleri](#ubuntu-and-debian-systems)
-  - [Uygulama yüklemesi](#application-installation)
-  - [Ekleme paketini indirme](#download-the-onboarding-package)
-  - [İstemci yapılandırması](#client-configuration)
+- [Önkoşullar ve sistem gereksinimleri](#prerequisites-and-system-requirements)
+- [Linux yazılım deposunu yapılandırma](#configure-the-linux-software-repository)
+  - [RHEL ve varyantları (CentOS, Fedora, Oracle Linux ve Amazon Linux 2)](#rhel-and-variants-centos-fedora-oracle-linux-and-amazon-linux-2)
+  - [SLES ve çeşitlemeler](#sles-and-variants)
+  - [Ubuntu ve Debian sistemleri](#ubuntu-and-debian-systems)
+- [Uygulama yüklemesi](#application-installation)
+- [Ekleme paketini indirme](#download-the-onboarding-package)
+- [İstemci yapılandırması](#client-configuration)
 
 ## <a name="prerequisites-and-system-requirements"></a>Önkoşullar ve sistem gereksinimleri
 
@@ -77,20 +75,16 @@ Yeni özellikleri önizlemek ve erken geri bildirim sağlamak için kuruluşunuz
 
     Paketi bulma konusunda size yardımcı olması için aşağıdaki tabloyu kullanın:
 
-    <br>
-
-    ****
-
     |Dağıtım & sürümü|Paket|
     |---|---|
     |RHEL/Centos/Oracle 8.0-8.5 için|<https://packages.microsoft.com/config/rhel/8/[channel].repo>|
-    |RHEL/Centos/Oracle 7.2-7.9 & Amazon Linux 2 için |</azure/cognitive-services/speech-service/how-to-configure-rhel-centos-7>|
-    <!--|RHEL/Centos 6.7-6.10 için|<https://packages.microsoft.com/config/rhel/6/[channel].repo>|-->
+    |RHEL/Centos/Oracle 7.2-7.9 & Amazon Linux 2 için|</azure/cognitive-services/speech-service/how-to-configure-rhel-centos-7>|
     |Fedora için 33|<https://packages.microsoft.com/config/fedora/33/prod.repo>|
     |Fedora için 34|<https://packages.microsoft.com/config/fedora/34/prod.repo>|
 
-    Aşağıdaki komutlarda *[version]* ve *[channel]* sözcüklerini tanımladığınız bilgilerle değiştirin:
+    <!--|For RHEL/Centos 6.7-6.10|<https://packages.microsoft.com/config/rhel/6/[channel].repo>|-->
 
+    Aşağıdaki komutlarda *[version]* ve *[channel]* sözcüklerini tanımladığınız bilgilerle değiştirin:
 
     ```bash
     sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/[version]/[channel].repo
@@ -300,7 +294,7 @@ Ekleme paketini Microsoft 365 Defender portalından indirin.
 > [!IMPORTANT]
 > Bu adımı kaçırırsanız, yürütülen herhangi bir komut ürünün lisanssız olduğunu belirten bir uyarı iletisi gösterir. `mdatp health` Ayrıca komutu değerini `false`döndürür.
 
-1. Microsoft 365 Defender portalında **Ayarlar > Uç Noktaları > Cihaz yönetimi > Ekleme'ye** gidin.
+1. Microsoft 365 Defender portalında **Ayarlar > Uç Noktalar > Cihaz yönetimi > Ekleme'ye** gidin.
 2. İlk açılan menüde işletim sistemi olarak **Linux Server'ı** seçin. İkinci açılan menüde dağıtım yöntemi olarak **Yerel Betik'i** seçin.
 3. **Ekleme paketini indir'i** seçin. Dosyayı WindowsDefenderATPOnboardingPackage.zip olarak kaydedin.
 
@@ -341,7 +335,7 @@ Ekleme paketini Microsoft 365 Defender portalından indirin.
 
     > [!NOTE]
     > Bu komutu çalıştırmak için, disto ve sürüme bağlı olarak cihaza sahip `python`  olmanız veya `python3` yüklemeniz gerekir. Gerekirse bkz. [Linux'ta Python Yükleme için Adım Adım Yönergeler](https://opensource.com/article/20/4/install-python-linux).
-    
+
     RHEL 8.x veya Ubuntu 20.04 veya üzerini çalıştırıyorsanız kullanmanız `python3`gerekir.
 
     ```bash
@@ -349,11 +343,11 @@ Ekleme paketini Microsoft 365 Defender portalından indirin.
     ```
 
     Diğer dağıtımlar ve sürümler için kullanmanız `python`gerekir.
-    
+
     ```bash
     sudo python MicrosoftDefenderATPOnboardingLinuxServer.py
     ```
-    
+
 3. Cihazın artık kuruluşunuzla ilişkilendirildiğini ve geçerli bir kuruluş tanımlayıcısı bildirdiğini doğrulayın:
 
     ```bash
@@ -382,9 +376,9 @@ Ekleme paketini Microsoft 365 Defender portalından indirin.
         ```bash
         mdatp health --field real_time_protection_enabled
         ```
-        
+
       Etkinleştirilmemişse aşağıdaki komutu yürütür:
-      
+
        ```bash
         mdatp config real-time-protection --value enabled
         ```
@@ -401,7 +395,7 @@ Ekleme paketini Microsoft 365 Defender portalından indirin.
         mdatp threat list
         ```
 
-6. Cihazın düzgün şekilde eklendiğini ve hizmete bildirildiğini doğrulamak için bir EDR algılama testi çalıştırın ve algılama simülasyonu yapın. Yeni eklenen cihazda aşağıdaki adımları gerçekleştirin:
+6. Bir EDR algılama testi çalıştırın ve cihazın düzgün şekilde eklendiğini ve hizmete bildirildiğini doğrulamak için algılama simülasyonu yapın. Yeni eklenen cihazda aşağıdaki adımları gerçekleştirin:
 
     - Eklenen Linux sunucusunun Microsoft 365 Defender görüntülendiğini doğrulayın. Makinenin ilk eklemesi buysa, görünmesi 20 dakika kadar sürebilir.
 

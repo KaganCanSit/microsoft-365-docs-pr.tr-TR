@@ -1,5 +1,5 @@
 ---
-title: uyumluluk yöneticisi şablon listesini Microsoft Purview
+title: Microsoft Purview Uyumluluk Yöneticisi şablon listesi
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,25 +17,23 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Uyumluluk Yöneticisi ulusal, bölgesel ve sektör düzenlemelerine, standartlarına ve yasalarına uygun değerlendirmeler oluşturmak için şablonlar sağlar.
-ms.openlocfilehash: 1ee28bc4ef79e6565086ba087055b8e00a0fe034
-ms.sourcegitcommit: 852075d8d8a4ca052f69e854396d1565ef713500
+ms.openlocfilehash: bfac79126f167b6ec8faaacb0134f97aaea0fe4d
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65692793"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631215"
 ---
 # <a name="compliance-manager-templates-list"></a>Uyumluluk Yöneticisi şablonları listesi
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **Bu makalede:** Compliance Manager'da değerlendirme oluşturmak için kullanılabilecek **şablonların** kapsamlı listesini görüntüleyin.
 
 > [!IMPORTANT]
 > Kuruluşunuzun kullanabileceği değerlendirme şablonları lisans sözleşmenize bağlıdır. [Ayrıntıları gözden geçirin](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-compliance-manager).
 
-## <a name="overview"></a>Genel bakış
+## <a name="overview"></a>Genel Bakış
 
-[Microsoft Purview Uyumluluk Yöneticisi](compliance-manager.md), değerlendirme oluşturmak için kapsamlı bir şablon kümesi sağlar. Bu şablonlar, kuruluşunuzun verilerin toplanması ve kullanımını yöneten ulusal, bölgesel ve sektöre özgü gereksinimlere uymasına yardımcı olabilir.
+[Microsoft Purview Uyumluluk Yöneticisi](compliance-manager.md) , değerlendirme oluşturmak için kapsamlı bir şablon kümesi sağlar. Bu şablonlar, kuruluşunuzun verilerin toplanması ve kullanımını yöneten ulusal, bölgesel ve sektöre özgü gereksinimlere uymasına yardımcı olabilir.
 
 Yeni yasalar ve düzenlemeler yürürlüğe girdikçe Şablonlar Uyumluluk Yöneticisi'ne eklenir. Uyumluluk Yöneticisi, temel alınan yasalar veya düzenlemeler değiştiğinde şablonlarını da güncelleştirir. [Güncelleştirmeleri gözden geçirme ve kabul](compliance-manager-assessments.md#accept-updates-to-assessments) etme hakkında daha fazla bilgi edinin.
 
@@ -43,7 +41,7 @@ Yeni yasalar ve düzenlemeler yürürlüğe girdikçe Şablonlar Uyumluluk Yöne
 
 Aşağıda, Uyumluluk Yöneticisi'ndeki şablonların tam listesi yer almaktadır. Şablon adları, ilişkili düzenleme veya sertifikasyonla eşleşer. Varsa, aşağıdaki şablon adlarındaki bağlantılar sizi bu standart, düzenleme veya yasayla ilgili belgelere götürür.
 
-Her şablon ([Microsoft Veri Koruma Temeli](compliance-manager-assessments.md#data-protection-baseline-default-assessment) varsayılan şablonu hariç) Microsoft 365 gibi belirli bir ürünle kullanılmak üzere tasarlanmış en az bir sürümde ve tercih ettiğiniz diğer ürünleri değerlendirmek için kullanabileceğiniz evrensel bir sürümde kullanılabilir. Şablon seçenekleri hakkında daha fazla bilgi edinmek için bkz. [Değerlendirme şablonları hakkında bilgi edinin](compliance-manager-templates.md).
+Her şablon ( [Microsoft Veri Koruma Temeli](compliance-manager-assessments.md#data-protection-baseline-default-assessment) varsayılan şablonu hariç) microsoft 365 gibi belirli bir ürünle kullanılmak üzere tasarlanmış en az bir sürümde ve tercih ettiğiniz diğer ürünleri değerlendirmek için kullanabileceğiniz evrensel bir sürümde kullanılabilir. Şablon seçenekleri hakkında daha fazla bilgi edinmek için bkz. [Değerlendirme şablonları hakkında bilgi edinin](compliance-manager-templates.md).
 
 Ayrıca Uyumluluk Yöneticisi'nde şablonları tek tek seçerek düzenlemenin açıklaması ve şablonun özellikleri de dahil olmak üzere bunlar hakkında daha fazla bilgi görüntüleyebilirsiniz. Özet için **Hakkında** bölümünü okuyun.
 
@@ -72,7 +70,7 @@ Aşağıda listelenen şablonlardan biri veya daha fazlası lisans sözleşmeniz
 - NIST 800-53 Revs. 4 ve 5
 
 > [!NOTE]
-> ABD Kamu Community (GCC) Orta, GCC Yüksek ve Savunma Bakanlığı (DoD) müşterileri için: Yukarıda listelenen şablonlara ek olarak Siber Güvenlik Olgunluk Modeli Sertifikası (CMMC) Düzey 1 ile 5 arası şablonlar da dahildir.
+> US Government Community (GCC) Moderate, GCC High ve Department of Defense (DoD) müşterileri için: Yukarıda listelenen şablonlara ek olarak Siber Güvenlik Olgunluk Modeli Sertifikası (CMMC) Düzey 1 ile 5 arası şablonlar da dahildir.
 
 ## <a name="preview-templates"></a>Önizleme şablonları
 
@@ -89,7 +87,7 @@ Aşağıda listelenen şablonlar şu anda önizleme için kullanılabilir. Bu ş
 - Azure için ISO 27018:2019 (Önizleme)
 - Dynamics 365 için ISO 27018:2019 (Önizleme)
 
-## <a name="premium-templates"></a>şablonları Premium
+## <a name="premium-templates"></a>Premium şablonlar
 
 Aşağıda listelenen şablonlar kuruluşunuz tarafından satın alınabilir.
 
@@ -125,7 +123,7 @@ Aşağıda listelenen şablonlar kuruluşunuz tarafından satın alınabilir.
 - ARMA - Genel Kabul Görmüş Kayıt Tutma İlkelerini Uygulama (GARP)  
 - [CDSA İçerik Koruması & Güvenlik Standardı](/compliance/regulatory/offering-cdsa)  
 - [CIS Uygulama Grubu 1, Grup 2, Grup 3](/compliance/regulatory/offering-cis-benchmark)
-- CIS Microsoft 365 Temel Düzey 1 ve 2
+- CIS Microsoft 365 Foundation Düzey 1 ve 2
 - [Cloud Security Alliance (CSA) Bulut Denetimleri Matrisi (CCM)](/compliance/regulatory/offering-csa-star-attestation)
 - COBIT 5  
 - FINRA Siber Güvenlik Denetim Listesi  
@@ -140,7 +138,7 @@ Aşağıda listelenen şablonlar kuruluşunuz tarafından satın alınabilir.
 - Tüketici Finansal ve Sağlık Bilgilerinin Gizliliği Yönetmeliği, NAIC MDL-672, Q2 2017  
 - Operasyonel risklerin ses yönetimine yönelik ilkelerde yapılan düzeltmeler (Basel III Operasyon Riskleri)  
 - StandartLaştırılmış Bilgi Toplama (SIG) Anketi  
-- [Güvenilir Bilgi Güvenliği Değerlendirmesi Exchange](/compliance/regulatory/offering-tisax-germany)
+- [Güvenilir Bilgi Güvenliği Değerlendirme Değişimi](/compliance/regulatory/offering-tisax-germany)
 
 ### <a name="us-government"></a>ABD Hükümeti
 
@@ -287,7 +285,7 @@ Aşağıda listelenen şablonlar kuruluşunuz tarafından satın alınabilir.
 - Avustralya - ASD Essential 8 Olgunluk Düzeyi 2
 - Avustralya - ASD Essential 8 Olgunluk Düzeyi 3
 - Avustralya - Ulusal Arşivler Yasası
-- Avustralya - Victoria Kayıt Tutma Standartları Office Genel Kayıtlar  
+- Avustralya - Kamu Kayıtları Office Victoria Kayıt Tutma Standartları  
 - Avustralya - İstenmeyen Posta Yasası 2003  
 - Avustralya Gizlilik (Kredi Raporlama) Kodu  
 - Avustralya Gizlilik Yasası  
@@ -376,7 +374,7 @@ Aşağıda listelenen şablonlar kuruluşunuz tarafından satın alınabilir.
 - EudraLex - Avrupa Birliği'nde Tıbbi Ürünleri yöneten Kurallar  
 - Avrupa Ağ ve Bilgi Güvenliği Ajansı (ENISA) - Bulut Bilişim Bilgi Güvencesi Çerçevesi  
 - Finlandiya - Veri Koruma Yasası  
-- Bulut Hizmetlerinin Bilgi Güvenliğini DeğerlendirmeYenileme Ölçütleri
+- Cloud Services Bilgi Güvenliğinin Değerlendirilmesi için FinCe Ölçütleri
 - Fransa - Veri Koruma Yasası  
 - Gürcistan Kişisel Verileri Koruma Yasası  
 - Almanya - Risk Yönetimi için Minimum Gereksinimler'in açıklama metni  
@@ -440,7 +438,7 @@ Aşağıda listelenen şablonlar kuruluşunuz tarafından satın alınabilir.
 
 - Kanada - Güvenlik Koruma Yönetmeliğinin İhlali  
 - Kanada - Britanya Kolumbiyası - Bilgi Gizliliği & Güvenliği - FOIPPA  
-- [Kanada - Finansal Kurumlar Siber Güvenlik Self-Assessment Kılavuzu'nun Office](/compliance/regulatory/offering-osfi-canada)  
+- [Kanada - Finansal Kurumlar SüperIntendent Ofisi Siber Güvenlik Self-Assessment Kılavuzu](/compliance/regulatory/offering-osfi-canada)  
 - Kanada - Kişisel Sağlık Information Protection Yasası (PHIPA) 2020  
 - Kanada - Kişisel Information Protection ve Elektronik Belgeler Yasası (PIPEDA)  
 - Kanada - Korumalı B

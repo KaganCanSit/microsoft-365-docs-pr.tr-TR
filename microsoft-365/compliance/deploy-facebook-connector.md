@@ -15,29 +15,27 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 ROBOTS: NOINDEX, NOFOLLOW
-description: Yöneticiler, Facebook İş sayfalarını Microsoft 365 içeri aktarmak ve arşiv uygulamak için yerel bir bağlayıcı ayarlayabilir. Bu veriler Microsoft 365 aktarıldıktan sonra, kuruluşunuzun Facebook verilerinin idaresini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: b3f3770b4e3cf8415111ebdd1881905ae21f4739
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Yöneticiler, Facebook İş sayfalarını Microsoft 365'e içeri aktarmak ve arşiv etmek için yerel bir bağlayıcı ayarlayabilir. Bu veriler Microsoft 365'e aktarıldıktan sonra, kuruluşunuzun Facebook verilerinin idaresini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
+ms.openlocfilehash: 0b2d37859941cc0e1ae5c49fad6fd72312cc03cf
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098878"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632563"
 ---
 # <a name="deploy-a-connector-to-archive-facebook-business-pages-data"></a>Facebook business sayfaları verilerini arşivleye bağlayıcı dağıtma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Bu makale, Facebook business sayfalarından Microsoft 365 verileri içeri aktarmak için Office 365 İçeri Aktarma hizmetini kullanan bir bağlayıcıyı dağıtmaya ilişkin adım adım işlemi içerir. Bu işleme üst düzey bir genel bakış ve Bir Facebook bağlayıcısını dağıtmak için gereken önkoşulların listesi için bkz. [Facebook verilerini arşiv etmek için bağlayıcı ayarlama](archive-facebook-data-with-sample-connector.md).
+Bu makale, Facebook İş sayfalarından Microsoft 365'e veri aktarmak için Office 365 İçeri Aktarma hizmetini kullanan bir bağlayıcıyı dağıtmaya ilişkin adım adım işlemi içerir. Bu işleme üst düzey bir genel bakış ve Bir Facebook bağlayıcısını dağıtmak için gereken önkoşulların listesi için bkz. [Facebook verilerini arşiv etmek için bağlayıcı ayarlama](archive-facebook-data-with-sample-connector.md).
 
 ## <a name="step-1-create-an-app-in-azure-active-directory"></a>1. Adım: Azure Active Directory'de uygulama oluşturma
 
 1. <https://portal.azure.com> Genel yönetici hesabının kimlik bilgilerini kullanarak adresine gidin ve oturum açın.
 
-    ![AAD'de uygulama oluşturun.](../media/FBCimage1.png)
+    ![AAD'de uygulama oluşturma.](../media/FBCimage1.png)
 
-2. Sol gezinti bölmesinde **Azure Active Directory'e** tıklayın.
+2. Sol gezinti bölmesinde **Azure Active Directory'ye** tıklayın.
 
-    ![Azure Active Directory'e tıklayın.](../media/FBCimage2.png)
+    ![Azure Active Directory'ye tıklayın.](../media/FBCimage2.png)
 
 3. Sol gezinti bölmesinde **Uygulama kayıtları (Önizleme)** seçeneğine ve ardından **Yeni kayıt'a** tıklayın.
 
@@ -63,17 +61,17 @@ Bu makale, Facebook business sayfalarından Microsoft 365 verileri içeri aktarm
 
     ![Gizli diziyi yazın ve bir süre sonu seçin.](../media/FBCimage8.png)
 
-9. Gizli dizinin değerini kopyalayın ve bir metin dosyasına veya başka bir depolama konumuna kaydedin. Bu, sonraki adımlarda kullandığınız AAD uygulama gizli dizisidir.
+9. Gizli dizinin değerini kopyalayın ve bir metin dosyasına veya başka bir depolama konumuna kaydedin. Bu, sonraki adımlarda kullanacağınız AAD uygulama gizli dizisidir.
 
    ![Gizli anahtarın değerini kopyalayın ve kaydedin.](../media/FBCimage9.png)
 
-## <a name="step-2-deploy-the-connector-web-service-from-github-to-your-azure-account"></a>2. Adım: Bağlayıcı web hizmetini GitHub Azure hesabınıza dağıtma
+## <a name="step-2-deploy-the-connector-web-service-from-github-to-your-azure-account"></a>2. Adım: Bağlayıcı web hizmetini GitHub'dan Azure hesabınıza dağıtma
 
 1. [Bu GitHub sitesine](https://github.com/microsoft/m365-sample-connector-csharp-aspnet) gidin ve **Azure'a Dağıt'a** tıklayın.
 
     ![Azure'a Dağıt'a tıklayın.](../media/FBCGithubApp.png)
 
-2. **Azure'a Dağıt'a** tıkladıktan sonra özel şablon sayfası içeren bir Azure portal yönlendirilirsiniz. **Temel bilgiler** ve **Ayarlar** ayrıntılarını doldurun ve **Satın Al'a** tıklayın.
+2. **Azure'a Dağıt'a** tıkladıktan sonra özel şablon sayfası içeren bir Azure portal yönlendirilirsiniz. **Temel Bilgiler** ve **Ayarlar** ayrıntılarını doldurun ve **satın al'a** tıklayın.
 
    - **Abonelik:** Facebook İş sayfaları bağlayıcısı web hizmetini dağıtmak istediğiniz Azure aboneliğinizi seçin.
 
@@ -83,7 +81,7 @@ Bu makale, Facebook business sayfalarından Microsoft 365 verileri içeri aktarm
 
    - **Web Uygulaması Adı:** Bağlayıcı web uygulaması için benzersiz bir ad sağlayın. Adın uzunluğu 3 ile 18 karakter arasında olmalıdır. Bu ad, Azure app service URL'sini oluşturmak için kullanılır; örneğin, **fbconnector** web uygulaması adını sağlarsanız Azure uygulama hizmeti URL'si **fbconnector.azurewebsites.net**.
 
-   - **tenantId:** 1. Adımda Azure Active Directory'da Facebook bağlayıcı uygulamasını oluşturduktan sonra kopyaladığınız Microsoft 365 kuruluşunuzun kiracı kimliği.
+   - **tenantId:** 1. Adımda Azure Active Directory'de Facebook bağlayıcı uygulamasını oluşturduktan sonra kopyaladığınız Microsoft 365 kuruluşunuzun kiracı kimliği.
 
    - **APISecretKey:** Herhangi bir değeri gizli dizi olarak yazabilirsiniz. Bu, 5. Adımda bağlayıcı web uygulamasına erişmek için kullanılır.
 
@@ -91,7 +89,7 @@ Bu makale, Facebook business sayfalarından Microsoft 365 verileri içeri aktarm
 
 3. Dağıtım başarılı olduktan sonra sayfa aşağıdaki ekran görüntüsüne benzer:
 
-   ![Depolama'a tıklayın ve ardından Depolama hesabına tıklayın.](../media/FBCimage13.png)
+   ![Depolama'ya ve ardından Depolama hesabı'ne tıklayın.](../media/FBCimage13.png)
 
 ## <a name="step-3-register-the-facebook-app"></a>3. Adım: Facebook uygulamasını kaydetme
 
@@ -119,7 +117,7 @@ Bu makale, Facebook business sayfalarından Microsoft 365 verileri içeri aktarm
 
    ![Hızlı Başlangıç bölümünü tamamlayın.](../media/FBCimage30.png)
 
-7. **Facebook Oturum Açma'nın** altındaki sol gezinti bölmesinde **Ayarlar'e** tıklayın ve **Geçerli OAuth Yeniden Yönlendirme URI'leri kutusuna OAuth yeniden yönlendirme** URI'sini ekleyin. **/Views/FacebookOAuth biçimini\<connectorserviceuri>** kullanın; burada connectorserviceuri değeri kuruluşunuzun Azure uygulama hizmeti URL'sidir; örneğin, `https://fbconnector.azurewebsites.net`.
+7. **Facebook Oturum Açma'nın** altındaki sol gezinti bölmesinde **Ayarlar'a** tıklayın ve **Geçerli OAuth Yeniden Yönlendirme URI'leri kutusuna OAuth yeniden yönlendirme** URI'sini ekleyin. **/Views/FacebookOAuth biçimini\<connectorserviceuri>** kullanın; burada connectorserviceuri değeri kuruluşunuzun Azure uygulama hizmeti URL'sidir; örneğin, `https://fbconnector.azurewebsites.net`.
 
    ![OAuth yeniden yönlendirme URI'sini Geçerli OAuth Yeniden Yönlendirme URI'leri kutusuna ekleyin.](../media/FBCimage31.png)
 
@@ -171,7 +169,7 @@ Bu makale, Facebook business sayfalarından Microsoft 365 verileri içeri aktarm
 
    ![Oturum açma sayfasını görüntülemek için Yapılandır'a tıklayın.](../media/FBCimage42.png)
 
-3. Kiracı Kimliği kutusuna kiracı kimliğinizi (2. Adımda edindiğiniz) yazın veya yapıştırın. Parola kutusuna APISecretKey (2. Adımda edindiğiniz) yazın veya yapıştırın ve yapılandırma ayrıntıları sayfasını görüntülemek için **Yapılandırma Ayarlar Ayarla'ya** tıklayın.
+3. Kiracı Kimliği kutusuna kiracı kimliğinizi (2. Adımda edindiğiniz) yazın veya yapıştırın. Parola kutusuna APISecretKey (2. Adımda edindiğiniz) yazın veya yapıştırın ve yapılandırma ayrıntıları sayfasını görüntülemek için **Yapılandırma Ayarlarını Ayarla'ya** tıklayın.
 
     ![Kiracı kimliğinizi ve parolanızı kullanarak oturum açın ve yapılandırma ayrıntıları sayfasına gidin.](../media/FBCimage43.png)
 
@@ -191,7 +189,7 @@ Bu makale, Facebook business sayfalarından Microsoft 365 verileri içeri aktarm
 
 ## <a name="step-5-set-up-a-facebook-connector-in-the-compliance-portal"></a>5. Adım: Uyumluluk portalında Facebook bağlayıcısı ayarlama
 
-1. Microsoft Purview uyumluluk portalına gidin ve /a<**Veri bağlayıcıları'nı** seçin<a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank">.
+1. Microsoft Purview uyumluluk portalı gidin ve /a<**Veri bağlayıcıları'nı** seçin<a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank">.
 
 2. **Facebook İş sayfalarının** altındaki **Veri bağlayıcıları** sayfasında **Görüntüle'ye** tıklayın.
 
@@ -209,11 +207,11 @@ Bu makale, Facebook business sayfalarından Microsoft 365 verileri içeri aktarm
 
    - **Parola** kutusuna, 2. Adımda eklediğiniz APISecretKey değerini yazın veya yapıştırın.
 
-   - **Azure Uygulaması Kimliği** kutusuna, 1. Adımda oluşturduğunuz uygulama kimliği AAD olarak da adlandırılan Uygulama (istemci) kimliğinin değerini yazın veya yapıştırın.
+   - **Azure Uygulaması Kimliği** kutusuna, 1. Adımda oluşturduğunuz AAD Uygulama Kimliği olarak da adlandırılan Uygulama (istemci) kimliğinin değerini yazın veya yapıştırın.
 
 6. Bağlantı başarıyla doğrulandıktan sonra **İleri'ye** tıklayın.
 
-7. **Verileri içeri aktarmak için Microsoft 365 yetki ver** sayfasında APISecretKey'i yeniden yazın veya yapıştırın ve ardından **Oturum aç web uygulaması'na** tıklayın.
+7. **Microsoft 365'i veri içeri aktarma yetkisi ver** sayfasında APISecretKey'i yeniden yazın veya yapıştırın ve ardından **Web uygulamasını oturum aç'a** tıklayın.
 
 8. **Facebook bağlayıcısı uygulamasını yapılandır** sayfasında **Facebook ile oturum aç'a** tıklayın ve kuruluşunuzun Facebook İş sayfalarının hesabının kimlik bilgilerini kullanarak oturum açın. Oturum açtığınız Facebook hesabına kuruluşunuzun Facebook İş sayfaları için yönetici rolü atandığından emin olun.
 

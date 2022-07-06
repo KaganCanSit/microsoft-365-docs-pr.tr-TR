@@ -15,23 +15,21 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Microsoft 365'da eBulma (Premium) çözümü için geçerli olan durum sınırları, dizin oluşturma sınırları ve arama sınırları hakkında bilgi edinin.
-ms.openlocfilehash: 3b52b36ebdaca429b37cf5784281d22d4dd4be74
-ms.sourcegitcommit: 5fe7f2954a89406245416fc1a218cf4bf19abb85
+description: Microsoft 365'teki eBulma (Premium) çözümü için geçerli olan durum sınırları, dizin oluşturma sınırları ve arama sınırları hakkında bilgi edinin.
+ms.openlocfilehash: 5bf7e2be459f6238802b28da66650e238b2c4926
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65864485"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636039"
 ---
 # <a name="limits-in-ediscovery-premium"></a>eBulma sınırları (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Bu makalede, Microsoft 365'daki Microsoft Purview eBulma (Premium) çözümündeki sınırlar açıklanmaktadır.
+Bu makalede, Microsoft 365'teki Microsoft Purview eKeşif (Premium) çözümündeki sınırlar açıklanmaktadır.
 
 ## <a name="case-and-review-set-limits"></a>Servis talebi ve gözden geçirme belirlenen sınırlar
 
-Aşağıdaki tabloda, eBulma (Premium) içindeki servis taleplerinin ve gözden geçirme kümelerinin sınırları listeleniyor.
+Aşağıdaki tabloda, eBulma (Premium) içindeki servis talepleri ve gözden geçirme kümeleri için sınırlar listeleniyor.
 
 |Sınırın açıklaması|Klasik Büyük/Küçük Harf Sınırı|Yeni Servis Talebi Sınırı|
 |---|---|---|
@@ -51,13 +49,13 @@ Aşağıdaki tabloda, eBulma (Premium) olayıyla ilişkili tutma sınırları li
 
 | Sınırın açıklaması | Sınırı |
 |:-----|:-----|
-|Bir kuruluş için en fazla saklama ilkesi sayısı. Bu sınır, Microsoft Purview eBulma (Standart) ve Microsoft Purview eBulma (Premium) durumlarında birleştirilmiş saklama ilkeleri toplamını içerir. <br/> |10.000<sup>3</sup>  <br/> |
+|Bir kuruluş için en fazla saklama ilkesi sayısı. Bu sınır, Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium) durumlarda birleştirilmiş saklama ilkeleri toplamını içerir. <br/> |10.000<sup>3</sup>  <br/> |
 |Tek bir servis talebi ayrı tutmadaki en fazla posta kutusu sayısı. Bu sınır, kullanıcı posta kutularının toplamını ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili posta kutularını içerir. <br/> |1,000  <br/> |
-|Tek bir servis talebi saklamadaki en fazla site sayısı. Bu sınır, OneDrive İş sitelerin, SharePoint sitelerin ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili sitelerin toplamını içerir.  <br/> |100  <br/> |
+|Tek bir servis talebi saklamadaki en fazla site sayısı. Bu sınır, OneDrive İş sitelerin, SharePoint sitelerinin ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili sitelerin toplamını içerir.  <br/> |100  <br/> |
 
 ## <a name="indexing-limits"></a>Dizin oluşturma sınırları
 
-Aşağıdaki tabloda, eBulma (Premium) içindeki dizin oluşturma sınırları listeleniyor.
+Aşağıdaki tabloda, eBulma(Premium) içindeki dizin oluşturma sınırları listeleniyor.
 
 |Sınırın açıklaması|Sınırı|
 |---|---|
@@ -69,7 +67,7 @@ Aşağıdaki tabloda, eBulma (Premium) içindeki dizin oluşturma sınırları l
 
 ## <a name="search-limits"></a>Arama sınırları
 
-Bu bölümde açıklanan sınırlar, bir servis talebi için veri toplamak için **Aramalar** sekmesindeki arama aracının kullanılmasıyla ilgilidir. Daha fazla bilgi için bkz. [eBulma'da (Premium) bir servis talebi için veri toplama](collecting-data-for-ediscovery.md).
+Bu bölümde açıklanan sınırlar, bir servis talebi için veri toplamak için **Aramalar** sekmesindeki arama aracının kullanılmasıyla ilgilidir. Daha fazla bilgi için bkz. [eBulma 'da (Premium) bir servis talebi için veri toplama](collecting-data-for-ediscovery.md).
 
 |Sınırın açıklaması|Sınırı|
 |---|---|
@@ -107,7 +105,7 @@ Microsoft, tüm kuruluşlar tarafından çalıştırılan aramalar için perform
 
 |Sınırın açıklaması|Sınırı|
 |---|---|
-|Yerel görüntüleyicide görüntülenebilen Excel dosyasının en büyük boyutu.|4 MB|
+|Yerel görüntüleyicide görüntülenebilen en büyük Excel dosyası boyutu.|4 MB|
 
 ## <a name="export-limits---final-export-out-of-review-set"></a>Dışarı aktarma sınırları - Gözden Geçirme Kümesinden son dışarı aktarma
 
@@ -128,20 +126,20 @@ Bu bölümde açıklanan sınırlar, belgeleri gözden geçirme kümesinin dış
 ## <a name="reference-notes"></a>Başvuru notları
 <sup>1</sup> Bu, bir durumda oluşturabileceğiniz en fazla etiket sayısıdır. Bu sınır, etiketlenebilir belge sayısıyla ilgili değildir.
 
-<sup>2</sup> Bu sınır, diğer eBulma araçlarındaki içerik dışarı aktarıldığında paylaşılır. Bu, İçerik arama ve eBulma (Standart) içindeki eşzamanlı dışarı aktarma işlemlerinin (ve eBulma'daki (Premium)) kümeleri gözden geçirmek için içerik eklemenin bu sınıra göre uygulandığı anlamına gelir.
+<sup>2</sup> Bu sınır, diğer eBulma araçlarındaki içerik dışarı aktarıldığında paylaşılır. Bu, İçerik aramasında ve eBulma'da (Standart) eşzamanlı dışarı aktarmaların (ve eBulma(Premium)) içindeki kümeleri gözden geçirmek için içerik eklemenin bu sınıra göre uygulandığı anlamına gelir.
 
 <sup>3</sup> Tek bir ayrı tutma ilkesinde 1.000'den fazla posta kutusunu veya 100'den fazla siteyi beklemeye aldığınızda, sistem saklamayı gerektiği gibi otomatik olarak ölçeklendirir. Bu, sistemin veri konumlarını tek bir ayrı tutma ilkesine eklemek yerine otomatik olarak birden çok ayrı tutma ilkesine ekleyeceği anlamına gelir. Ancak, kuruluş başına 10.000 servis talebi saklama ilkesi sınırı hala geçerlidir.
 
 <sup>4</sup> Tek bir dosya sınırını aşan tüm öğeler işleme hatası olarak gösterilir.
 
-<sup>5</sup> SharePoint ve OneDrive İş konumları ararken, aranan sitelerin URL'lerindeki karakterler bu sınıra göre sayılır. Toplam karakter sayısı şunlardan oluşur:
+<sup>5</sup> SharePoint'te ve OneDrive İş konumlarında arama yaparken, aranmakta olan sitelerin URL'lerindeki karakterler bu sınıra göre sayılır. Toplam karakter sayısı şunlardan oluşur:
 
   - Hem Kullanıcılar hem de Filtreler alanlarındaki tüm karakterler.
   - Kullanıcıya uygulanan tüm arama izinleri filtreleri.
-  - Aramadaki ExchangeLocation, PublicFolderLocation, SharPointLocation, ExchangeLocationExclusion, PublicFolderLocationExclusion, SharePointLocationExclusion ve OneDriveLocationExclusion gibi konum özelliklerinden karakterler. Örneğin, aramadaki tüm SharePoint siteleri ve OneDrive hesapları dahil olmak üzere, hem SharePointLocation hem de OneDriveLocation alanında "ALL" sözcüğü görüneceğinden altı karakter olarak sayılır.
+  - Aramadaki ExchangeLocation, PublicFolderLocation, SharPointLocation, ExchangeLocationExclusion, PublicFolderLocationExclusion, SharePointLocationExclusion ve OneDriveLocationExclusion gibi konum özelliklerinden karakterler. Örneğin, aramada tüm SharePoint siteleri ve OneDrive hesapları dahil olmak üzere altı karakter olarak sayılır; hem SharePointLocation hem de OneDriveLocation alanında "ALL" sözcüğü görünür.
 
 <sup>6</sup> Tümcecik olmayan sorgular için (çift tırnak işareti kullanmayan bir anahtar sözcük değeri) özel bir ön ek dizini kullanırız. Bu, bir sözcüğün belgede olduğunu, ancak belgede nerede olduğunu söylemediğini bildirir. Tümcecik sorgusu yapmak için (çift tırnak işaretli bir anahtar sözcük değeri), tümcecikteki sözcüklerin belge içindeki konumunu karşılaştırmamız gerekir. Başka bir deyişle, tümcecik sorguları için ön ek dizinini kullanamayız. Bu durumda, ön ekin genişletilmesi olası tüm sözcüklerle sorguyu dahili olarak genişletiriz; örneğin,  **time\**_ _*"time VEYA timer OR times YA DA timex OR timeboxed OR ..." olarak genişletilebilir**. 10.000 sınırı, sorguyla eşleşen belge sayısı değil, sözcüğün genişletebileceği en fazla değişken sayısıdır. Tümcecik olmayan terimler için üst sınır yoktur.
 
-<sup>7</sup> eBulma (Premium) koleksiyonlarını depolayan Azure Bloblarının kullanım süresi bir yıldır. Bir yıl önce oluşturulan koleksiyonlara artık erişilemeyebilir.
+<sup>7</sup> eKeşif (Premium) koleksiyonlarını depolayan Azure Bloblarının kullanım süresi bir yıldır. Bir yıl önce oluşturulan koleksiyonlara artık erişilemeyebilir.
  
-<sup>8</sup> Bu sınır, seçilen belgeleri bir gözden geçirme kümesinden indirmek için geçerlidir. Bir gözden geçirme kümesinden belgeleri dışarı aktarmak için geçerli değildir. Belgeleri indirme ve dışarı aktarma hakkında daha fazla bilgi için bkz. [EBulma'da büyük/küçük harf verilerini dışarı aktarma (Premium)](exporting-data-ediscover20.md).
+<sup>8</sup> Bu sınır, seçilen belgeleri bir gözden geçirme kümesinden indirmek için geçerlidir. Bir gözden geçirme kümesinden belgeleri dışarı aktarmak için geçerli değildir. Belgeleri indirme ve dışarı aktarma hakkında daha fazla bilgi için bkz. [EBulma'da (Premium) büyük/küçük harf verilerini dışarı aktarma](exporting-data-ediscover20.md).

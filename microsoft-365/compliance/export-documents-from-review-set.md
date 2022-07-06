@@ -15,26 +15,24 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Sunular veya dış incelemeler için eBulma (Premium) gözden geçirme kümesinden içerik seçmeyi ve dışarı aktarmayı öğrenin.
+description: Sunular veya dış incelemeler için bir eBulma (Premium) gözden geçirme kümesinden içerik seçmeyi ve dışarı aktarmayı öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: a2cc2b5f528c7573c255e05cea4b512416711462
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 249990915cb012ca71a40ef074d8a1f5044b8d6e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096974"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635359"
 ---
-# <a name="export-documents-from-a-review-set-in-ediscovery-premium"></a>eBulma'da (Premium) bir gözden geçirme kümesinden belgeleri dışarı aktarma
+# <a name="export-documents-from-a-review-set-in-ediscovery-premium"></a>Belgeleri eBulma'daki bir gözden geçirme kümesinden dışarı aktarma (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Dışarı aktarma, eBulma(Premium) içindeki bir gözden geçirme kümesinden belgeyi dışarı aktardığınızda kullanıcıların indirme paketine dahil edilen içeriği özelleştirmesine olanak tanır.
+Dışarı aktarma, eKeşif (Premium) içindeki bir gözden geçirme kümesinden belgeyi dışarı aktardığınızda kullanıcıların indirme paketine dahil edilen içeriği özelleştirmesine olanak tanır.
 
 Gözden geçirme kümesindeki belgeleri dışarı aktarmak için:
 
-1. Microsoft Purview uyumluluk portalında eBulma (Premium) servis talebini açın, **Gözden geçirme kümeleri** sekmesini seçin ve ardından dışarı aktarmak istediğiniz gözden geçirme kümesini seçin.
+1. Microsoft Purview uyumluluk portalı, eBulma (Premium) servis talebini açın, **Gözden geçirme kümeleri** sekmesini seçin ve ardından dışarı aktarmak istediğiniz gözden geçirme kümesini seçin.
 
-2. Gözden geçirme kümesinde **ActionExport'a** >  tıklayın.
+2. Gözden geçirme kümesinde **Eylem** > **Dışarı Aktar'a** tıklayın.
 
    Dışarı Aktarma aracı, dışarı aktarmayı yapılandırma ayarlarıyla birlikte açılır sayfayı görüntüler. Bazı seçenekler varsayılan olarak seçilidir, ancak bunları değiştirebilirsiniz. Yapılandırabileceğiniz dışarı aktarma seçeneklerinin açıklamaları için aşağıdaki bölüme bakın.
 
@@ -69,7 +67,7 @@ Dışarı aktarmayı yapılandırmak için aşağıdaki seçenekleri kullanın. 
   
   - Sıkıştırılmış dizin yapısı: Dosyalar dışarı aktarılır ve indirmeye dahil edilir.
   
-  - Azure Depolama hesabınıza aktarılan sıkıştırılmış dizin yapısı: Dosyalar kuruluşunuzun Azure Depolama hesabına aktarılır. Bu seçenek için, dosyaları dışarı aktarmak için Azure Depolama hesabınızdaki kapsayıcının URL'sini sağlamanız gerekir. Azure Depolama hesabınız için paylaşılan erişim imzası (SAS) belirtecini de sağlamanız gerekir. Daha fazla bilgi için bkz. [Gözden geçirme kümesindeki belgeleri Azure Depolama hesabına](download-export-jobs.md) aktarma.
+  - Azure Depolama hesabınıza aktarılan sıkıştırılmış dizin yapısı: Dosyalar kuruluşunuzun Azure Depolama hesabına aktarılır. Bu seçenek için, dosyaları dışarı aktarmak için Azure Depolama hesabınızdaki kapsayıcının URL'sini sağlamanız gerekir. Azure Depolama hesabınız için paylaşılan erişim imzası (SAS) belirtecini de sağlamanız gerekir. Daha fazla bilgi için bkz. [Gözden geçirme kümesindeki belgeleri Azure Depolama hesabına aktarma](download-export-jobs.md).
 
 - **Içerir**
   
@@ -95,7 +93,7 @@ Bu dışarı aktarma seçeneğini seçerseniz, dışarı aktarılan içerik aşa
   
   - Uyarılar ve hatalar x / z.csv: Bu dosya, gözden geçirme kümesinden dışarı aktarmaya çalışırken karşılaşılan hatalar hakkında bilgi içerir.
   
-  - Exchange: Bu klasör, PST dosyalarında depolanan Exchange tüm içeriği içerir. Redakte edilmiş PDF dosyaları bu seçeneğe eklenemez. Gözden geçirme kümesinde bir ek seçilirse, üst e-posta iletisi ek eklenmiş olarak dışarı aktarılır.
+  - Exchange: Bu klasör, PST dosyalarında depolanan Tüm Exchange içeriğini içerir. Redakte edilmiş PDF dosyaları bu seçeneğe eklenemez. Gözden geçirme kümesinde bir ek seçilirse, üst e-posta iletisi ek eklenmiş olarak dışarı aktarılır.
   
     Exchange klasörü, aşağıdaki öğeleri içeren mailboxname_loosefiles.zip adlı bir alt klasör de içerebilir:
 
@@ -104,7 +102,7 @@ Bu dışarı aktarma seçeneğini seçerseniz, dışarı aktarılan içerik aşa
     - İletilerde başvuruda bulunan modern ekler veya bağlantılar.
     - Şifrelenmiş öğeler (Exchange klasöründeki PST dosyalarına dahil değildir).
   
-  - SharePoint: Bu klasör, SharePoint yerel dosya biçimindeki tüm yerel içeriği içerir. Redakte edilmiş PDF dosyaları bu seçeneğe eklenemez.
+  - SharePoint: Bu klasör, SharePoint'teki tüm yerel içeriği yerel dosya biçiminde içerir. Redakte edilmiş PDF dosyaları bu seçeneğe eklenemez.
 
 ### <a name="condensed-directory-structure"></a>Sıkıştırılmış dizin yapısı
 
@@ -124,4 +122,4 @@ Bu dışarı aktarma seçeneğini seçerseniz, dışarı aktarılan içerik aşa
 
 ### <a name="condensed-directory-structure-exported-to-your-azure-storage-account"></a>Azure Depolama Hesabınıza dışarı aktarılan sıkıştırılmış dizin yapısı
 
-Bu seçenek *, Sıkıştırılmış dizin yapısıyla aynı genel yapıyı* kullanır, ancak içerik sıkıştırmaz ve veriler Azure Depolama hesabınıza kaydedilir. Bu seçenek genellikle üçüncü taraf bir eBulma sağlayıcısıyla çalışırken kullanılır. Bu seçeneğin nasıl kullanılacağı hakkında ayrıntılı bilgi için bkz. [Belgeleri Azure Depolama hesabına ayarlanmış bir gözden geçirmede](download-export-jobs.md) dışarı aktarma.
+Bu seçenek *, Sıkıştırılmış dizin yapısıyla aynı genel yapıyı* kullanır, ancak içerik sıkıştırmaz ve veriler Azure Depolama hesabınıza kaydedilir. Bu seçenek genellikle üçüncü taraf bir eBulma sağlayıcısıyla çalışırken kullanılır. Bu seçeneğin nasıl kullanılacağı hakkında ayrıntılı bilgi için bkz. Belgeleri [Azure Depolama hesabına ayarlanmış bir gözden geçirmede dışarı aktarma](download-export-jobs.md).

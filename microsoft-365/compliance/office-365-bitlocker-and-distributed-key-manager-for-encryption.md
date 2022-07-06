@@ -15,37 +15,37 @@ ms.collection:
 - Strat_O365_Enterprise
 - M365-security-compliance
 - Strat_O365_Enterprise
-description: BitLocker'Office 365 kayıp veya çalınmış bilgisayarlar ve diskler nedeniyle veri hırsızlığı riskini azaltan BitLocker şifrelemesi'ni nasıl kullandığını öğrenin.
+description: Office 365 bitLocker şifrelemesini nasıl kullandığını ve kaybolan veya çalınan bilgisayarlar ve diskler nedeniyle veri hırsızlığı olasılığını nasıl azaltacağınızı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 343a5966dc24954e98d7d31977aacbc09daaba11
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: dec62da7bc4d29891dcd86ec378faeb52a2d3d9f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62986730"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633905"
 ---
 # <a name="bitlocker-and-distributed-key-manager-dkm-for-encryption"></a>Şifreleme için BitLocker ve Dağıtılmış Anahtar Yöneticisi (DKM)
 
-Microsoft sunucuları bitLocker kullanarak, işlem düzeyi düzeyinde müşteri verileri içeren disk sürücülerini şifreler. BitLocker şifrelemesi, bu şifrelemede yerleşik olarak Windows. BitLocker, diğer işlemlerde veya denetimlerde atlamalar (örneğin, erişim denetimi veya donanımın geri dönüşümi) durumunda birinin müşteri verilerini içeren disklere fiziksel erişim elde  alımına yol açmayacak şekilde tehditlere karşı korumak için kullanılan teknolojilerden biridir. Bu durumda BitLocker kayıp, çalınma veya uygun olmayan şekilde izinli bilgisayar ve diskler nedeniyle veri hırsızlığı veya açık kalma olasılarını ortadan kaldırıyor.
+Microsoft sunucuları, birim düzeyinde bekleyen müşteri verilerini içeren disk sürücülerini şifrelemek için BitLocker kullanır. BitLocker şifrelemesi, Windows'ta yerleşik olarak sunulan bir veri koruma özelliğidir. BitLocker, başka işlem veya denetimlerde (örneğin, erişim denetimi veya donanımın geri dönüştürülmesine) yönelik kilitlenmeler olması durumunda tehditlere karşı koruma sağlamak için kullanılan teknolojilerden biridir ve bu da birinin müşteri verilerini içeren disklere fiziksel erişim elde etmelerine neden olabilir. Bu durumda BitLocker, kaybolan, çalınan veya uygunsuz şekilde kullanımdan kaldırılan bilgisayarlar ve diskler nedeniyle veri hırsızlığı veya açığa çıkarma olasılığını ortadan kaldırır.
 
-BitLocker, Exchange Online, SharePoint Online ve Skype Kurumsal'de müşteri verilerini içeren diskler üzerinde Gelişmiş Şifreleme Standardı (AES) 256 bit şifreleme ile Skype Kurumsal. Disk sabiti, sunucudaki Güvenilen Platform Modülü'ne (TPM) bağlı olan Toplu Ana Anahtar (VMK) ile şifrelenmiş olan Tam Toplu Şifreleme Anahtarı (FVEK) ile şifrelenir. VMK doğrudan FVEK'yi korur ve dolayısıyla VMK'nin korunması kritik öneme sahip olur. Aşağıdaki şekilde, verili bir sunucu (bu örnekte, bir Veritabanı Sunucusu kullanarak) bitLocker anahtar koruma zincirinin bir örneği Exchange Online verilmiştir.
+BitLocker, Exchange Online, SharePoint Online ve Skype Kurumsal müşteri verilerini içeren disklerde Gelişmiş Şifreleme Standardı (AES) 256 bit şifreleme ile dağıtılır. Disk kesimleri, Birim Ana Anahtarı (VMK) ile şifrelenen ve sunucudaki Güvenilir Platform Modülü'ne (TPM) bağlı olan Tam Birim Şifreleme Anahtarı (FVEK) ile şifrelenir. VMK, FVEK'yi doğrudan korur ve bu nedenle VMK'yi korumak kritik hale gelir. Aşağıdaki şekilde, belirli bir sunucu için BitLocker anahtar koruma zinciri örneği gösterilmektedir (bu örnekte, Exchange Online sunucu kullanılarak).
 
-Aşağıdaki tabloda, belirli bir sunucu (bu örnekte bir veritabanı veya sunucu) için BitLocker anahtar koruma zinciri Exchange Online verilmiştir.
+Aşağıdaki tabloda, belirli bir sunucu için BitLocker anahtar koruma zinciri (bu örnekte bir Exchange Online sunucusu) açıklanmaktadır.
 
-| ANAHTAR KEY | AYRıNTıLıLıK | NASıL OLUŞTURULUR? | NEREDE DEPOLANıR? | KORUMA |
+| ANAHTAR KORUYUCUSU | TANECİKLİLİK | NASıL OLUŞTURULDU? | NEREDE DEPOLANıR? | KORUMA |
 |--------------------------------------------------------------------------------|-------------------------------------------------|----------------|-------------------------|--------------------------------------------------------------------------------------------------|
-| AES 256 bit Dış Anahtar | Sunucu Başına | BitLocker API'leri | TPM veya Gizli Kasa | Kasa / Erişim Denetimi |
+| AES 256 bit Dış Anahtar | Sunucu Başına | BitLocker API'leri | TPM veya Gizli Dizi Güvenli | Kasa / Access Control |
 |  |  |  | Posta Kutusu Sunucusu Kayıt Defteri | TPM şifreli |
-| 48 basamaklı Sayısal Parola | Disk Başına | BitLocker API'leri | Active Directory | Kasa / Erişim Denetimi |
-| Ortak Anahtar Anahtar Olarak Da Adlandırılan X.509 Veri Kurtarma Aracısı (DRA) Olarak Sertifika | Ortam (örneğin, Exchange Online çok boyutlu) | Microsoft CA | Derleme Sistemi | Hiç kimse özel anahtarın tam parolasını sahip olmaz. Parola fiziksel koruma altında. |
+| 48 basamaklı Sayısal Parola | Disk Başına | BitLocker API'leri | Active Directory | Kasa / Access Control |
+| Veri Kurtarma Aracısı olarak X.509 Sertifikası (DRA), Ortak Anahtar Koruyucusu olarak da adlandırılır | Ortam (örneğin, Exchange Online çok kiracılı) | Microsoft CA | Derleme Sistemi | Hiçbir kullanıcının özel anahtarın tam parolası yoktur. Parola fiziksel koruma altındadır. |
 
 
-BitLocker anahtar yönetimi, Microsoft veri merkezinde şifreli disklerin kilidini açmak/kurtarmak için kullanılan kurtarma anahtarlarının yönetimini içerir. Microsoft 365 anahtarlara güvenli bir paylaşımda depolar, yalnızca ekranlı olarak ekranı olan ve onaylanan bireyler erişebilirsiniz. Anahtarların kimlik bilgileri erişim denetim verileri için güvenli bir depoda depolanır (buna "gizli depo" denir) ve bu, tam zamanında erişim yükseltme aracı kullanarak yüksek düzeyde yükseltme ve yönetim onayları gerektirir.
+BitLocker anahtar yönetimi, Bir Microsoft veri merkezinde şifrelenmiş disklerin kilidini açmak/kurtarmak için kullanılan kurtarma anahtarlarının yönetimini içerir. Microsoft 365, ana anahtarları güvenli bir paylaşımda depolar ve bu anahtarlara yalnızca ekranı görüntülenen ve onaylanan kişiler erişebilir. Anahtarların kimlik bilgileri, erişim denetimi verileri için güvenli bir depoda ("gizli depo" olarak adlandırdığımız), tam zamanında erişim yükseltme aracı kullanılarak erişim için yüksek düzeyde yükseltme ve yönetim onayları gerektirir.
 
-BitLocker, iki yönetim kategorisine ayrılır:
+BitLocker, iki yönetim kategorisine giren anahtarları destekler:
 
-- BitLocker tarafından yönetilen anahtarlar, genel olarak çok kısa ömürlü olan ve sunucuya veya verilen bir diske yüklenmiş bir işletim sistemi örneğinin yaşam süresine bağlı olan. Bu anahtarlar sunucu yeniden yüklemesi veya disk biçimlendirmesi sırasında silinir ve sıfırlanır.
+- BitLocker tarafından yönetilen anahtarlar, genellikle kısa ömürlüdür ve bir sunucuya veya belirli bir diske yüklenmiş bir işletim sistemi örneğinin ömrüne bağlıdır. Bu anahtarlar, sunucu yeniden yükleme veya disk biçimlendirmesi sırasında silinir ve sıfırlanır.
 
-- BitLocker dışında yönetilen ancak disk şifresini çözmek için kullanılan BitLocker kurtarma anahtarları. BitLocker, işletim sisteminin yeniden yüklenme senaryosu için kurtarma anahtarlarını kullanır ve zaten şifrelenmiş veri diskleri vardır. Kurtarma anahtarları, yanıtlayanların bir diskin kilidini açması gerek Exchange Online yönetilen kullanılabilirlik izleme sistemi tarafından da kullanılabilir.
+- BitLocker dışında yönetilen ancak disk şifre çözme için kullanılan BitLocker kurtarma anahtarları. BitLocker, bir işletim sisteminin yeniden yüklendiği ve şifrelenmiş veri disklerinin zaten mevcut olduğu senaryo için kurtarma anahtarlarını kullanır. Kurtarma anahtarları, yanıtlayıcının disk kilidini açması gerekebileceği Exchange Online Yönetilen Kullanılabilirlik izleme yoklamaları tarafından da kullanılır.
 
-BitLocker korumalı birimler tam toplu şifreleme anahtarıyla şifrelenir ve bu da bir toplu işlem ana anahtarıyla şifrelenir. BitLocker, şifreleme anahtarlarının hiçbir zaman net bir şekilde kablo üzerinden depo veya gönderildiğini garanti etmek için FIPS uyumlu algoritmalar kullanır. Müşteri Microsoft 365 rest-protection uygulamasının varsayılan BitLocker uygulamasından sapmaz.
+BitLocker korumalı birimler tam birim şifreleme anahtarıyla şifrelenir ve bu da bir birim ana anahtarıyla şifrelenir. BitLocker, şifreleme anahtarlarının hiçbir zaman açık bir şekilde depolanmadığından veya kablo üzerinden gönderilmediğinden emin olmak için FIPS uyumlu algoritmalar kullanır. Bekleyen müşteri verilerinin Microsoft 365 uygulaması, varsayılan BitLocker uygulamasından sapmaz.

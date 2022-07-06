@@ -16,19 +16,17 @@ search.appverid:
 ms.assetid: c9b0ff0c-282b-4a44-b43f-cfc5b96557f9
 ms.custom:
 - seo-marvel-apr2020
-description: Microsoft Purview uyumluluk portalından bir İçerik Aramasının sonuçlarını dışarı aktardığınızda raporları devre dışı bırakmak için yerel bilgisayarınızda Windows Kayıt Defteri'ni düzenleyin.
-ms.openlocfilehash: 3f44c30b2fe3459e44f2d1c5a2d372e57774eeb2
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Microsoft Purview uyumluluk portalı bir İçerik Aramasının sonuçlarını dışarı aktardığınızda raporları devre dışı bırakmak için yerel bilgisayarınızda Windows Kayıt Defteri'ni düzenleyin.
+ms.openlocfilehash: 55a5405d516b0bf3daaca5970a25794b468a5119
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094978"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636193"
 ---
 # <a name="disable-reports-when-you-export-content-search-results"></a>İçerik Arama sonuçlarını dışarı aktarırken raporları devre dışı bırakma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview uyumluluk portalında bir İçerik Aramasının sonuçlarını dışarı aktarmak için eBulma Dışarı Aktarma aracını kullandığınızda, araç dışarı aktarılan içerik hakkında ek bilgi içeren iki raporu otomatik olarak oluşturur ve dışarı aktarır. Bu raporlar Results.csv dosyası ve Manifest.xml dosyasıdır (bu raporların ayrıntılı açıklamaları için bu konudaki [Dışarı aktarma raporlarını devre dışı bırakma hakkında sık sorulan sorular](#frequently-asked-questions-about-disabling-export-reports) bölümüne bakın). Bu dosyalar çok büyük olabileceğinden, indirme süresini hızlandırabilir ve bu dosyaların dışarı aktarılmasını engelleyerek disk alanından tasarruf edebilirsiniz. Bunu yapmak için, arama sonuçlarını dışarı aktarmak için kullandığınız bilgisayardaki Windows Kayıt Defteri'ni değiştirebilirsiniz. Raporları daha sonra eklemek isterseniz kayıt defteri ayarını düzenleyebilirsiniz. 
+Microsoft Purview uyumluluk portalı bir İçerik Aramasının sonuçlarını dışarı aktarmak için eBulma Dışarı Aktarma aracını kullandığınızda, araç dışarı aktarılan içerik hakkında ek bilgi içeren iki raporu otomatik olarak oluşturur ve dışarı aktarır. Bu raporlar Results.csv dosyası ve Manifest.xml dosyasıdır (bu raporların ayrıntılı açıklamaları için bu konudaki [Dışarı aktarma raporlarını devre dışı bırakma hakkında sık sorulan sorular](#frequently-asked-questions-about-disabling-export-reports) bölümüne bakın). Bu dosyalar çok büyük olabileceğinden, indirme süresini hızlandırabilir ve bu dosyaların dışarı aktarılmasını engelleyerek disk alanından tasarruf edebilirsiniz. Bunu yapmak için, arama sonuçlarını dışarı aktarmak için kullandığınız bilgisayardaki Windows Kayıt Defteri'ni değiştirebilirsiniz. Raporları daha sonra eklemek isterseniz kayıt defteri ayarını düzenleyebilirsiniz. 
   
 ## <a name="create-registry-settings-to-disable-the-export-reports"></a>Dışarı aktarma raporlarını devre dışı bırakmak için kayıt defteri ayarları oluşturma
 
@@ -40,7 +38,7 @@ Sonuçları bir içerik aramasını dışarı aktarmak için kullanacağınız b
     
     - **Results.csv**
     
-      Aşağıdaki metni bir .reg dosya adı soneki kullanarak bir Windows kayıt defteri dosyasına kaydedin; örneğin, DisableResultsCsv.reg.
+      Bir .reg dosya adı soneki kullanarak aşağıdaki metni bir Windows kayıt defteri dosyasına kaydedin; örneğin, DisableResultsCsv.reg.
     
       ```text
       Windows Registry Editor Version 5.00
@@ -49,7 +47,7 @@ Sonuçları bir içerik aramasını dışarı aktarmak için kullanacağınız b
 
     - **Manifest.xml**
     
-      Aşağıdaki metni bir .reg dosya adı soneki kullanarak Windows kayıt defteri dosyasına kaydedin; örneğin, DisableManifestXml.reg.
+      Bir .reg dosya adı soneki kullanarak aşağıdaki metni bir Windows kayıt defteri dosyasına kaydedin; örneğin, DisableManifestXml.reg.
     
       ```text
       Windows Registry Editor Version 5.00
@@ -74,7 +72,7 @@ Sonuçları bir içerik aramasını dışarı aktarmak için kullanacağınız b
     
     - **Results.csv**
     
-        DisableResultsCsv.reg dosyasını Not Defteri açın, değerini `False` olarak `True`değiştirin ve dosyayı kaydedin. Örneğin, dosyayı düzenledikten sonra şöyle görünür:
+        DisableResultsCsv.reg dosyasını Not Defteri'nde açın, değerini  `False` olarak  `True`değiştirin ve dosyayı kaydedin. Örneğin, dosyayı düzenledikten sonra şöyle görünür:
     
         ```text
         Windows Registry Editor Version 5.00
@@ -83,7 +81,7 @@ Sonuçları bir içerik aramasını dışarı aktarmak için kullanacağınız b
 
     - **Manifest.xml**
     
-        disableManifestXml.reg dosyasını Not Defteri açın, değerini `False` olarak `True`değiştirin ve dosyayı kaydedin. Örneğin, dosyayı düzenledikten sonra şöyle görünür:
+        DisableManifestXml.reg dosyasını Not Defteri'nde açın, değerini  `False` olarak  `True`değiştirin ve dosyayı kaydedin. Örneğin, dosyayı düzenledikten sonra şöyle görünür:
     
       ```text
       Windows Registry Editor Version 5.00

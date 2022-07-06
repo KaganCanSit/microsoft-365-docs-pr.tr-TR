@@ -14,28 +14,26 @@ search.appverid:
 - MOE150
 - MET150
 recommendations: false
-description: Microsoft Purview Veri Yaşam Döngüsü Yönetimi & Microsoft Purview Kayıt Yönetimi'nden gelen özellikleri uygulayarak verilerinizi uyumluluk veya mevzuat gereksinimlerine göre idare edin.
-ms.openlocfilehash: 2eff1aea82575a8364eb05f91652a089efbbe833
-ms.sourcegitcommit: f723ebbc56db8013598a88b0d7f13214d9d3eb10
+description: Verilerinizi uyumluluk veya mevzuat gereksinimlerine göre idare etmek için Microsoft Purview Veri Yaşam Döngüsü Yönetimi & Microsoft Purview Kayıt Yönetimi özelliklerini uygulayın.
+ms.openlocfilehash: 7578aad4bdbb44bf0937a58343fc05462449688f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65294744"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635995"
 ---
 # <a name="govern-your-data-with-microsoft-purview"></a>Microsoft Purview ile verilerinizi yönetme
 
->*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Verilerinizi uyumluluk veya mevzuat gereksinimlerine göre yönetmek için **Microsoft Purview Veri Yaşam Döngüsü Yönetimi** (eski adıyla Microsoft Information Governance) ve **Microsoft Purview Kayıt Yönetimi** özelliklerini kullanın.
+Microsoft Purview Veri Yaşam Döngüsü Yönetimi **(eski** adıYla Microsoft Information Governance) ve **Microsoft Purview Kayıt Yönetimi** özelliklerini kullanarak verilerinizi uyumluluk veya mevzuat gereksinimlerine göre idare edin.
 
 > [!TIP]
-> Çoklu bulut ve hizmet olarak yazılım (SaaS) dahil olmak üzere verilerinizi tüm veri varlığınızda eşlemek ve yönetmek mi istiyorsunuz? [Microsoft Purview Veri Haritası, Microsoft Purview Veri Kataloğu ve Microsoft Purview Data Estate Analizler](/azure/purview/overview) kullanın.
+> Çoklu bulut ve hizmet olarak yazılım (SaaS) dahil olmak üzere verilerinizi tüm veri varlığınızda eşlemek ve yönetmek mi istiyorsunuz? [Microsoft Purview Veri Eşlemesi, Microsoft Purview Veri Kataloğu ve Microsoft Purview Data Estate Analizler](/azure/purview/overview) kullanın.
 
-[Lisanslama açısından](#licensing-requirements) bakıldığında, veri yaşam döngüsü yönetimi ile kayıt yönetimi arasında önemli bir çakışma olabilir. Her iki çözüm de Microsoft 365 uygulamalar ve hizmetler için verilerin saklanmasını ve silinmesini destekler.
+[Lisanslama açısından](#licensing-requirements) bakıldığında, veri yaşam döngüsü yönetimi ile kayıt yönetimi arasında önemli bir çakışma olabilir. Her iki çözüm de Microsoft 365 uygulamaları ve hizmetleri için verilerin tutulmasını ve silinmesini destekler.
 
-Microsoft Purview uyumluluk portalında her biri kendi yapılandırma alanına sahip olan bu çözümlerin ana yapılandırılabilir bileşenlerini belirlemenize yardımcı olması için aşağıdaki grafiği kullanın:
+Her biri Microsoft Purview uyumluluk portalı kendi yapılandırma alanına sahip olan bu çözümlerin ana yapılandırılabilir bileşenlerini belirlemenize yardımcı olması için aşağıdaki grafiği kullanın:
 
 ![Microsoft Purview ile verilerinizi yapılandırmak ve yönetmek için kullanılacak ana bileşenler.](../media/govern-your-data.png)
 
@@ -49,14 +47,14 @@ Verilerinizi korumak için tamamlayıcı özellikler mi arıyorsunuz? Bkz [. Mic
  
 |Yeteneği|Hangi sorunları çözer?|
 |:------|:------------|:----------------|
-|[özel durumlar için bekletme etiketleriyle Microsoft 365 iş yükleri için bekletme ilkeleri](retention.md) | E-posta, belgeler, Teams ve Yammer iletileri için ilke yönetimiyle içeriği saklamanıza veya silmenize olanak tanır. |
+|[Microsoft 365 iş yükleri için bekletme ilkeleri ve özel durumlar için bekletme etiketleri](retention.md) | E-posta, belgeler, Teams ve Yammer iletileri için ilke yönetimiyle içeriği saklamanıza veya silmenize olanak tanır. |
 |[Etkin olmayan posta kutuları](inactive-mailboxes-in-office-365.md)| Çalışanlar kuruluştan ayrıldıktan sonra posta kutusu içeriğini korumanıza olanak tanır, böylece bu içerik yöneticiler, uyumluluk görevlileri ve kayıt yöneticileri tarafından erişilebilir kalır. |
 |[Posta kutularını arşivle](archive-mailboxes.md)| Kullanıcılar için ek posta kutusu depolama alanı sağlar.|
 |[PST dosyaları için içeri aktarma hizmeti](importing-pst-files-to-office-365.md)| Uyumluluk veya mevzuat gereksinimleri için e-posta iletilerini saklamak ve aramak için posta kutularını Exchange Online PST dosyalarını toplu olarak içeri aktarmayı destekler. |
 
 Daha fazla bilgi edinmek ister misiniz? Bkz. [Veri yaşam döngüsü yönetimi hakkında bilgi edinin](data-lifecycle-management.md).
 
-Bu özelliklerin bazılarını veya tümünü kullanmaya başlamaya hazır mısınız? Bkz. [Veri yaşam döngüsü yönetimiyle Kullanmaya başlayın](get-started-with-data-lifecycle-management.md).
+Bu özelliklerin bazılarını veya tümünü kullanmaya başlamaya hazır mısınız? Bkz. [Veri yaşam döngüsü yönetimini kullanmaya başlama](get-started-with-data-lifecycle-management.md).
 
 
 ## <a name="microsoft-purview-records-management"></a>Microsoft Purview Kayıt Yönetimi
@@ -71,12 +69,12 @@ Bu özelliklerin bazılarını veya tümünü kullanmaya başlamaya hazır mıs�
 
 Daha fazla bilgi edinmek ister misiniz? Bkz. [Kayıt yönetimi hakkında bilgi edinin](records-management.md).
 
-Bu özelliklerin bazılarını veya tümünü kullanmaya başlamaya hazır mısınız? Bkz. [kayıt yönetimiyle Kullanmaya başlayın](get-started-with-records-management.md).
+Bu özelliklerin bazılarını veya tümünü kullanmaya başlamaya hazır mısınız? Bkz [. Kayıt yönetimini kullanmaya başlama](get-started-with-records-management.md).
 
 
 ## <a name="licensing-requirements"></a>Lisans gereksinimleri
 
-Lisanslama gereksinimlerinizi ve seçeneklerinizi anlamak için [Microsoft 365 lisanslama belgelerindeki aşağıdaki bölümlere bakın](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance): 
+Lisans gereksinimlerinizi ve seçeneklerinizi anlamak için [Microsoft 365 lisanslama belgelerindeki](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance) aşağıdaki bölümlere bakın: 
 - [Microsoft Purview Veri Yaşam Döngüsü Yönetimi](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-data-lifecycle-management)
 - [Microsoft Purview Kayıt Yönetimi](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-records-management)
 

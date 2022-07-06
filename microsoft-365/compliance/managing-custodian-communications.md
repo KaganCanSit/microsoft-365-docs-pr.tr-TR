@@ -15,19 +15,17 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: eKeşif (Premium), yasal araştırmalarda koruyuculara bildirimde bulunarak yasal tutma bildirimi iş akışını yönetmeyi kolaylaştırır.
-ms.openlocfilehash: 59acf9dd561b46a7e7b970ffcd2c4c505f0b5a1c
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: eBulma (Premium), yasal araştırmalarda koruyuculara bildirimde bulunarak yasal tutma bildirimi iş akışını yönetmeyi kolaylaştırır.
+ms.openlocfilehash: 371ede05fc1d17caf8ec8a449dab2f386ac53628
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097744"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635227"
 ---
 # <a name="work-with-communications-in-ediscovery-premium"></a>eBulma'da iletişimlerle çalışma (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview eKeşif (Premium), yasal departmanların yasal tutma bildirimlerini izleme ve dağıtma süreçlerini basitleştirmesine olanak tanır. Koruyucu iletişim aracı, yasal departmanların ilk bildirimlerden anımsatıcılara ve yükseltmelere kadar tüm yasal saklama sürecini tek bir konumda yönetmesine ve otomatikleştirmesine olanak tanır.
+Microsoft Purview eKeşif (Premium), yasal departmanların yasal saklama bildirimlerini izleme ve dağıtma süreçlerini basitleştirmesine olanak tanır. Koruyucu iletişim aracı, yasal departmanların ilk bildirimlerden anımsatıcılara ve yükseltmelere kadar tüm yasal saklama sürecini tek bir konumda yönetmesine ve otomatikleştirmesine olanak tanır.
 
 ## <a name="what-is-a-legal-hold-notification"></a>Yasal saklama bildirimi nedir?
 

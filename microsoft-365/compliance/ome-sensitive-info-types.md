@@ -20,16 +20,14 @@ description: Office 365 İleti Şifrelemesi kullanarak kuruluşunuz için hassas
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-ms.openlocfilehash: 908ec1cf55d8bee06ce9b3b6ccc8eb699d2ba291
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 0974c30882177eb9fc46c2a2fcf65bc2edb43078
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012306"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633443"
 ---
 # <a name="create-a-sensitive-information-type-policy-for-your-organization-using-message-encryption"></a>İleti Şifrelemesi'ni kullanarak kuruluşunuz için hassas bilgi türü ilkesi oluşturma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Office 365 İleti Şifrelemesi ile hassas bir bilgi türü ilkesi oluşturmak için Exchange posta akışı kurallarını veya Microsoft Purview veri kaybı önlemeyi (DLP) kullanabilirsiniz. Exchange posta akışı kuralı oluşturmak için <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezini (EAC)</a> veya PowerShell'i kullanabilirsiniz.
 
@@ -68,8 +66,8 @@ Microsoft bir iletiyi şifreledikten sonra, alıcıların şifrelenmiş e-postal
 
 Kuruluşunuzdaki kişileri bu değişikliğe hazırlamak için geçerli son kullanıcı belgelerini ve eğitim malzemelerini güncelleştirmek isteyebilirsiniz. Bu Office 365 İleti Şifrelemesi kaynaklarını kullanıcılarınızla uygun şekilde paylaşın:
 
-- [Bilgisayar için Outlook şifrelenmiş iletileri gönderme, görüntüleme ve yanıtlama](https://support.microsoft.com/office/send-view-and-reply-to-encrypted-messages-in-outlook-for-pc-eaa43495-9bbb-4fca-922a-df90dee51980)
-- [Microsoft 365 Temel Parçalar Videosu: İleti Şifrelemesi](https://youtu.be/CQR0cG_iEUc)
+- [Pc için Outlook'ta şifrelenmiş iletileri gönderme, görüntüleme ve yanıtlama](https://support.microsoft.com/office/send-view-and-reply-to-encrypted-messages-in-outlook-for-pc-eaa43495-9bbb-4fca-922a-df90dee51980)
+- [Microsoft 365 Essentials Videosu: İleti Şifrelemesi](https://youtu.be/CQR0cG_iEUc)
 
 ## <a name="view-these-changes-in-the-audit-log"></a>Bu değişiklikleri denetim günlüğünde görüntüleyin
 
@@ -81,4 +79,4 @@ Microsoft 365 bu etkinliği denetler ve yöneticilerin kullanımına sağlar. İ
 
 ## <a name="to-disable-or-customize-the-sensitive-information-types-policy"></a>Hassas bilgi türleri ilkesini devre dışı bırakmak veya özelleştirmek için
 
-Exchange posta akışı kuralını oluşturduktan sonra, <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezinde</a> **Posta akışı** > **Kuralları'na** gidip "*Giden hassas e-postaları şifrele (kural dışı)*" kuralını devre dışı bırakarak kuralı [devre dışı bırakabilir veya düzenleyebilirsiniz](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#enable-or-disable-a-mail-flow-rule).
+Exchange posta akışı kuralını oluşturduktan sonra, <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezinde</a> **Posta akışı** > **Kuralları'na** gidip "*Giden hassas e-postaları şifrele (ilk kural)*" kuralını devre dışı bırakarak kuralı [devre dışı bırakabilir veya düzenleyebilirsiniz](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#enable-or-disable-a-mail-flow-rule).

@@ -15,18 +15,16 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Yasal tutma bildirimleri göndermek, toplamak ve izlemek için eBulma (Premium) durumunda İletişim aracını kullanın.
+description: Yasal saklama bildirimleri göndermek, toplamak ve izlemek için eBulma (Premium) durumunda İletişim aracını kullanın.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 21090274f385d6a3354852134764a1f53a311f10
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: e97630c75c05412e22afa17daaa1897f8627adf1
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095000"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634687"
 ---
 # <a name="create-a-legal-hold-notice"></a>Yasal tutma bildirimi oluşturma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kuruluşlar, eKeşif (Premium) koruyucu iletişimlerini kullanarak, koruyucularla iletişim kurma konusunda iş akışlarını yönetebilir. İletişim aracı aracılığıyla, yasal ekipler yasal saklama bildirimlerini sistematik olarak gönderebilir, toplayabilir ve izleyebilir. Esnek oluşturma işlemi, ekiplerin saklama bildirimi iş akışını ve koruyuculara gönderilen bildirimlerdeki içeriği özelleştirmesine de olanak tanır.
 
@@ -40,7 +38,7 @@ Makalede, ayrı tutma bildirimi iş akışındaki adımlar özetlenmiştir.
 
 ![İletişimi Adlandır sayfası.](../media/NameCommunication.PNG)
 
-1. Microsoft Purview uyumluluk portalında, kuruluşunuzdaki servis taleplerinin listesini görüntülemek için **eBulma > Gelişmiş'e** gidin.
+1. Microsoft Purview uyumluluk portalı, kuruluşunuzdaki servis taleplerinin listesini görüntülemek için **eBulma > Gelişmiş'e** gidin.
 
 2. Bir servis talebi seçin, **İletişimler** sekmesine ve ardından **Yeni iletişim'e** tıklayın.
 

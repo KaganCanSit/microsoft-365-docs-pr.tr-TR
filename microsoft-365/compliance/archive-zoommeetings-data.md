@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365'da Yakınlaştırma Toplantıları verilerini arşivleye bağlayıcı ayarlama
+title: Microsoft 365'te Zoom Toplantıları verilerini arşivleye bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -11,25 +11,23 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Yöneticiler Veritas Zoom Toplantıları'ndan verileri Microsoft 365 içeri aktaracak ve arşivecek bir bağlayıcı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: a04b0ba1c20bda73c86a8fad9e912d3ff9d9271f
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+description: Yöneticiler, Veritas Zoom Toplantıları'ndan Microsoft 365'e veri aktarıp arşivlemesi için bir bağlayıcı ayarlayabilir. Bu sayede Microsoft 365'teki üçüncü taraf veri kaynaklarından verileri arşivleyebilir, böylece kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
+ms.openlocfilehash: 3a2d63071ba29baa40c8d7a656e7e7437f9348bd
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318370"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631369"
 ---
 # <a name="set-up-a-connector-to-archive-zoom-meetings-data"></a>Yakınlaştırma Toplantıları verilerini arşivleye bağlayıcı ayarlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına Verileri Yakınlaştırma Toplantılarından içeri aktarmak ve arşiv etmek için Microsoft Purview uyumluluk portalı bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağındaki öğeleri yakalamak (düzenli olarak) ve bu öğeleri Microsoft 365'e aktarmak için yapılandırılmış bir [Yakınlaştırma Toplantıları](https://globanet.com/zoom/) bağlayıcısı sağlar. Bağlayıcı, Toplantıları Yakınlaştır hesabından toplantıların içeriğini (sohbetler, kayıtlı dosyalar ve meta veriler dahil) e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'teki kullanıcı posta kutularına aktarır.
 
-Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına Verileri Yakınlaştırma Toplantılarından içeri aktarmak ve arşiv uygulamak için Microsoft Purview uyumluluk portalı bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağındaki öğeleri yakalamak (düzenli olarak) ve bu öğeleri Microsoft 365 aktarmak için yapılandırılmış bir [Yakınlaştırma Toplantıları](https://globanet.com/zoom/) bağlayıcısı sağlar. Bağlayıcı, toplantıların içeriğini (sohbetler, kaydedilen dosyalar ve meta veriler dahil) Yakınlaştırma Toplantıları hesabından e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
-
-Yakınlaştırma Toplantıları verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft Purview özellikleri uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için Zoom Meetings bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+Yakınlaştırma Toplantıları verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'te verileri içeri aktarmak ve arşivlerken Yakınlaştırma Toplantıları bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-zoom-meetings-data"></a>Yakınlaştırma Toplantıları verilerini arşivlemeyle ilgili genel bakış
 
-Aşağıdaki genel bakış, Microsoft 365'da Yakınlaştırma Toplantıları verilerini arşivlemek için bağlayıcı kullanma işlemini açıklar.
+Aşağıdaki genel bakış, Microsoft 365'te Zoom Toplantıları verilerini arşivlerken bağlayıcı kullanma işlemini açıklar.
 
 ![Yakınlaştırma Toplantıları arşivleme iş akışı.](../media/ZoomMeetingsConnectorWorkflow.png)
 
@@ -45,7 +43,7 @@ Aşağıdaki genel bakış, Microsoft 365'da Yakınlaştırma Toplantıları ver
 
 - Microsoft bağlayıcıları için bir Veritas Merge1 hesabı oluşturun. Bu hesabı oluşturmak için [Veritas Müşteri Desteği'ne](https://globanet.com/ms-connectors-contact) başvurun. 1. Adımda bağlayıcıyı oluştururken bu hesapta oturum açarsınız.
 
-- Kuruluşunuzun Zoom business veya Zoom Enterprise hesabının kullanıcı adını ve parolasını alın. Yakınlaştırma Toplantıları bağlayıcısını yapılandırırken 2. Adımda bu hesapta oturum açmanız gerekir.
+- Kuruluşunuzun Zoom Business veya Zoom Enterprise hesabının kullanıcı adını ve parolasını alın. Yakınlaştırma Toplantıları bağlayıcısını yapılandırırken 2. Adımda bu hesapta oturum açmanız gerekir.
 
 - [Zoom Market'te](https://marketplace.zoom.us) aşağıdaki uygulamaları oluşturun:
 
@@ -59,13 +57,13 @@ Aşağıdaki genel bakış, Microsoft 365'da Yakınlaştırma Toplantıları ver
 
 - 1. Adımda Yakınlaştırma Toplantıları bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu Veritas veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
+- Bu Veritas veri bağlayıcısı, Microsoft 365 US Government bulutundaki GCC ortamlarında genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerini Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolamayı, iletmeyi ve işlemeyi içerebilir ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="step-1-set-up-the-zoom-meetings-connector"></a>1. Adım: Yakınlaştırma Toplantıları bağlayıcısını ayarlama
 
 İlk adım, uyumluluk portalında **Veri Bağlayıcıları'na** erişmek ve bir Yakınlaştırma Toplantıları bağlayıcısı oluşturmaktır.
 
-1. **Veri bağlayıcılarıZoom** >  **Toplantıları'na**[https://compliance.microsoft.com](https://compliance.microsoft.com/) gidin ve tıklayın.
+1. **Veri bağlayıcıları** > **Yakınlaştırma Toplantıları'na**[https://compliance.microsoft.com](https://compliance.microsoft.com/) gidin ve tıklayın.
 
 2. **Yakınlaştırma Toplantıları** ürün açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın.
 
@@ -83,9 +81,9 @@ Aşağıdaki genel bakış, Microsoft 365'da Yakınlaştırma Toplantıları ver
 
 ## <a name="step-3-map-users-and-complete-the-connector-setup"></a>3. Adım: Kullanıcıları eşleme ve bağlayıcı kurulumunu tamamlama
 
-1. **Dış kullanıcıları Microsoft 365 kullanıcılarla eşle** sayfasında otomatik kullanıcı eşlemesini etkinleştirin.
+1. **Dış kullanıcıları Microsoft 365 kullanıcıları ile eşle** sayfasında otomatik kullanıcı eşlemesini etkinleştirin.
 
-   Yakınlaştırma Toplantıları öğeleri, kuruluşunuzdaki kullanıcılar için *e-posta* adreslerini içeren E-posta adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcıyla ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır
+   Yakınlaştırma Toplantıları öğeleri, kuruluşunuzdaki kullanıcılar için *e-posta* adreslerini içeren E-posta adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcısı ile ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır
 
 2. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve yeni bağlayıcının içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları** sayfasına gidin.
 

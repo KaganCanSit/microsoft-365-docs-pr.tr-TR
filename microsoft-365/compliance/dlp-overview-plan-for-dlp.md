@@ -15,16 +15,14 @@ ms.collection:
 search.appverid:
 - MET150
 description: Veri kaybı önlemeye yönelik planlama sürecine genel bakış
-ms.openlocfilehash: 68e2b3145521433dd8e0f602b8edb571c45ed9df
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: afda017b2cc627876134888a83f70e9464aba2c8
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953459"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634455"
 ---
 # <a name="plan-for-data-loss-prevention-dlp"></a>Veri kaybı önlemeyi planlama (DLP)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Her kuruluşun iş gereksinimleri, hedefleri, kaynakları ve durumu kendilerine özel olduğundan, her kuruluş veri kaybı önlemeyi (DLP) farklı şekilde planlar ve uygular. Ancak, tüm başarılı DLP uygulamaları için ortak olan öğeler vardır. Bu makalede, kuruluşların DLP planlamalarında kullandığı en iyi yöntemler yer alır.
 
@@ -38,13 +36,13 @@ Kuruluşlar DLP yolculuğuna başlayabilir:
 - sağlık kayıtları gibi korumaya öncelik vermek istedikleri hassas bilgileri bilme ve doğrudan korumak için ilke tanımlamaya gitme
 - hassas bilgilerinin ne olduğunu, nerede olduğunu ve kimlerin ne yaptığını bilmeden keşif ve kategorilere ayırma ile başlayıp daha yöntemli bir yaklaşım benimsediler
 - hassas bilgilerinin ne olduğunu, nerede olduğunu ya da kimlerin ne yaptığını bilmeden, ancak doğrudan ilkeleri tanımlamaya ve bu sonuçları başlangıç noktası olarak kullanmaya ve ardından ilkelerini oradan iyileştirmeye devam ederler
-- Tam Microsoft Purview Information Protection yığınını uygulamaları gerektiğini bilerek ve bu nedenle daha uzun vadeli, yöntemsel bir yaklaşım benimsemeyi amaçladılar
+- tam Microsoft Purview Bilgi Koruması yığınını uygulamaya ihtiyaçları olduğunu bilerek ve bu nedenle daha uzun vadeli, yöntemsel bir yaklaşım benimsemeye niyetliler
 
 Bunlar, müşterilerin DLP'ye nasıl yaklaşabileceğine dair bazı örneklerdir ve nereden başladığınız önemli değildir, DLP başlangıçtan tam olarak gerçekleştirilen veri kaybı önleme stratejisine kadar çeşitli bilgi koruma yolculuklarını barındıracak kadar esnektir. 
 
 ## <a name="overview-of-planning-process"></a>Planlama sürecine genel bakış
 
-[Microsoft Purview Veri Kaybı Önleme hakkında bilgi edinin](dlp-learn-about-dlp.md#learn-about-data-loss-prevention) bölümünde [DLP planlama sürecinin](dlp-learn-about-dlp.md#plan-for-dlp) üç farklı yönü tanıtılır. Burada tüm DLP planlarında ortak olan öğeler hakkında daha ayrıntılı bilgi vereceğiz.
+[Microsoft Purview Veri Kaybı Önleme hakkında bilgi edinin](dlp-learn-about-dlp.md#learn-about-data-loss-prevention), [DLP planlama sürecinin](dlp-learn-about-dlp.md#plan-for-dlp) üç farklı yönünü tanıtır. Burada tüm DLP planlarında ortak olan öğeler hakkında daha ayrıntılı bilgi vereceğiz.
 
 ### <a name="identify-stakeholders"></a>Paydaşları belirleme
 
@@ -142,15 +140,15 @@ Kuruluşunuz mevzuat uyumluluğu gereksinimleri açısından nerede durduğunu �
 
 Kuruluşunuzun hassas bilgilerini içeren öğeler, iş yaparken her gün kullanılır. Bu hassas bilgilerin örneklerinin nerede gerçekleşebileceğini ve hangi iş süreçlerinde kullanıldıklarını bilmeniz gerekir. Bu, DLP ilkelerinizin uygulanacağı doğru konumları seçmenize yardımcı olur. DLP ilkeleri konumlara uygulanır:
 
-- e-postayı Exchange
-- siteleri SharePoint
-- hesapları OneDrive
-- Sohbet ve kanal iletilerini Teams
+- Exchange e-postası
+- SharePoint siteleri
+- OneDrive hesapları
+- Teams sohbeti ve kanal iletileri
 - cihazları Windows 10
 - Bulut Uygulamaları için Microsoft Defender
 - Şirket içi depolar
 
-**Örnek** Kuruluşunuzun iç denetçileri bir dizi kredi kartı numarasını izliyor. Elektronik tablolarını güvenli bir SharePoint sitesinde tutarlar. Çalışanlardan bazıları kopyaları alır ve Windows 10 cihazlarıyla eşitlenen iş OneDrive İş sitesine kaydeder. Bunlardan biri, 14 tanesinin listesini bir e-postaya yapıştırır ve gözden geçirilmesi için dış denetçilere göndermeye çalışır. İlkeyi güvenli SharePoint sitesine, tüm iç denetçilerin hesaplarına, Windows 10 cihazlarına ve Exchange e-postasına OneDrive İş istiyorsunuz.
+**Örnek** Kuruluşunuzun iç denetçileri bir dizi kredi kartı numarasını izliyor. Elektronik tablolarını güvenli bir SharePoint sitesinde tutarlar. Çalışanlardan bazıları kopyaları alır ve Windows 10 cihazlarıyla eşitlenen iş OneDrive İş sitesine kaydeder. Bunlardan biri, 14 tanesinin listesini bir e-postaya yapıştırır ve gözden geçirilmesi için dış denetçilere göndermeye çalışır. İlkeyi güvenli SharePoint sitesine, tüm iç denetçiler hesaplarına, Windows 10 cihazlarına ve Exchange e-postasına OneDrive İş istiyorsunuz.
 
 ##### <a name="what-is-your-organizations-tolerance-for-leakage"></a>Kuruluşların sızıntıya karşı dayanıklılığı nedir?
 
@@ -162,9 +160,9 @@ Kuruluşunuzdaki farklı grupların, kabul edilebilir düzeyde hassas öğe sız
 
 Bazı DLP konumlarını izleyebilebilmeniz için karşılanması gereken önkoşullar vardır. Başlamadan **önce** bölümlerine bakın:
 
-- [Şirket içi tarayıcı (önizleme) veri kaybı önleme ile Kullanmaya başlayın](dlp-on-premises-scanner-get-started.md#before-you-begin)
+- [Şirket içi veri kaybı önleme tarayıcısını kullanmaya başlama (önizleme)](dlp-on-premises-scanner-get-started.md#before-you-begin)
 - [Uç noktada veri kaybı önlemeyi kullanmaya başlama](endpoint-dlp-getting-started.md#before-you-begin)
-- [Microsoft uyumluluk uzantısıyla Kullanmaya başlayın](dlp-chrome-get-started.md#before-you-begin)
+- [Microsoft uyumluluk uzantısını kullanmaya başlama](dlp-chrome-get-started.md#before-you-begin)
 - [Microsoft dışı bulut uygulamaları için veri kaybı önleme ilkelerini kullanma (önizleme)](dlp-use-policies-non-microsoft-cloud-apps.md#before-you-begin)
 
 #### <a name="policy-deployment"></a>İlke dağıtımı
@@ -201,9 +199,9 @@ Kuruluşunuzun tabi olduğu düzenlemeler, yasalar ve endüstri standartları za
 
 |Müşteri iş gereksinimleri açıklaması  | Yaklaşım  |
 |---------|---------|
-|**Contoso Bank** yüksek düzeyde düzenlenmiş bir sektördedir ve birçok farklı konumda birçok farklı hassas öğe türüne sahiptir. </br> - Hangi hassas bilgi türlerinin en öncelikli olduğunu bilir. </br> - ilkeler dağıtılırken iş kesintilerini en aza indirmelidir. </br> - BT kaynaklarına sahiptir ve planlamaya, tasarım dağıtımına yardımcı olması için uzmanları işe alabilir </br> - Microsoft ile premier bir destek sözleşmesi var| - Hangi düzenlemelere uymaları gerektiğini ve nasıl uyum sağlayacaklarını anlamak için zaman ayırın. </br> -Microsoft Purview Information Protection yığınının birlikte daha iyi değerini anlamak için zaman ayırın </br> - Önceliklendirilmiş öğeler için duyarlılık etiketleme şeması geliştirin ve uygulayın </br> - İş süreci sahiplerini dahil edin </br>- Tasarım/kod ilkeleri, test modunda dağıtma, kullanıcıları eğitma </br>- tekrarla|
-|**TailSpin Toys** neleri olduğunu veya nerede olduğunu bilmez ve çok az kaynak derinliğine sahiptir. Teams, OneDrive İş ve Exchange kapsamlı olarak kullanırlar.     |- Öncelikli konumlarda basit ilkelerle başlayın. </br>- Tanımlananları izleme </br>- Duyarlılık etiketlerini uygun şekilde uygulama </br>- İlkeleri iyileştirme, kullanıcıları eğitma       |
-|**Fabrikam** küçük bir startup ve fikri mülkiyetini korumak istiyor ve hızla hareket etmelidir. Bazı kaynakları ayırmaya istekliler, ancak dışarıdan uzmanlar kiralamayı göze alamıyorlar. </br>- Hassas öğelerin tümü Microsoft 365 OneDrive İş/SharePoint </br>- OneDrive İş ve SharePoint benimsenmesi yavaştır, çalışanlar/gölge BT öğeleri paylaşmak/depolamak için DropBox ve Google sürücüsü kullanır </br>- Çalışanlar veri koruma uzmanlık alanına göre iş hızına değer verir </br>- Müşteri 18 çalışanın tümünü yeni Windows 10 cihazları birleştirip satın aldı     |- Teams'da varsayılan DLP ilkesinden yararlanın </br>- SharePoint öğeleri için varsayılan olarak kısıtlanmış ayarını kullanın </br>- Dış paylaşımı engelleyen ilkeler dağıtma </br>- İlkeleri öncelikli konumlara dağıtma </br>- Windows 10 cihazlara ilke dağıtma </br>- OneDrive İş olmayan bulut depolama alanına yüklemeleri engelleme      |
+|**Contoso Bank** yüksek düzeyde düzenlenmiş bir sektördedir ve birçok farklı konumda birçok farklı hassas öğe türüne sahiptir. </br> - Hangi hassas bilgi türlerinin en öncelikli olduğunu bilir. </br> - ilkeler dağıtılırken iş kesintilerini en aza indirmelidir. </br> - BT kaynaklarına sahiptir ve planlamaya, tasarım dağıtımına yardımcı olması için uzmanları işe alabilir </br> - Microsoft ile premier bir destek sözleşmesi var| - Hangi düzenlemelere uymaları gerektiğini ve nasıl uyum sağlayacaklarını anlamak için zaman ayırın. </br> -zaman ayırarak Microsoft Purview Bilgi Koruması yığınının birlikte daha iyi bir değere sahip olduğunu anlayın </br> - Önceliklendirilmiş öğeler için duyarlılık etiketleme şeması geliştirin ve uygulayın </br> - İş süreci sahiplerini dahil edin </br>- Tasarım/kod ilkeleri, test modunda dağıtma, kullanıcıları eğitma </br>- tekrarla|
+|**TailSpin Toys** neleri olduğunu veya nerede olduğunu bilmez ve çok az kaynak derinliğine sahiptir. Teams, OneDrive İş ve Exchange'i kapsamlı bir şekilde kullanır.     |- Öncelikli konumlarda basit ilkelerle başlayın. </br>- Tanımlananları izleme </br>- Duyarlılık etiketlerini uygun şekilde uygulama </br>- İlkeleri iyileştirme, kullanıcıları eğitma       |
+|**Fabrikam** küçük bir startup ve fikri mülkiyetini korumak istiyor ve hızla hareket etmelidir. Bazı kaynakları ayırmaya istekliler, ancak dışarıdan uzmanlar kiralamayı göze alamıyorlar. </br>- Hassas öğelerin tümü Microsoft 365 OneDrive İş/SharePoint'tedir </br>- OneDrive İş benimsenmesi ve SharePoint yavaş çalışıyor, çalışanlar/gölge BT öğeleri paylaşmak/depolamak için DropBox ve Google sürücüsü kullanıyor </br>- Çalışanlar veri koruma uzmanlık alanına göre iş hızına değer verir </br>- Müşteri 18 çalışanın tümünü yeni Windows 10 cihazları birleştirip satın aldı     |- Teams'de varsayılan DLP ilkesinden yararlanın </br>- SharePoint öğeleri için varsayılan olarak kısıtlanmış ayarını kullanın </br>- Dış paylaşımı engelleyen ilkeler dağıtma </br>- İlkeleri öncelikli konumlara dağıtma </br>- Windows 10 cihazlara ilke dağıtma </br>- OneDrive İş olmayan bulut depolama alanına yüklemeleri engelleme      |
 
 <!--
 

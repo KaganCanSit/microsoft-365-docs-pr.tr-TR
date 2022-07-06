@@ -14,16 +14,14 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Uyumluluk Yöneticisi premium değerlendirme denemeleri hakkında.
-ms.openlocfilehash: b5d653626eadbfcc6e58d2be36a7ed8899c02eeb
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 50950cc39d9a987239a7b10c70f68aece5647085
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65187766"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631281"
 ---
 # <a name="about-the-free-trial-for-microsoft-purview-compliance-manager-premium-assessments"></a>Microsoft Purview Uyumluluk Yöneticisi premium değerlendirmeleri için ücretsiz deneme hakkında
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Uyumluluk Yöneticisi, kuruluşunuzun uyumluluk gereksinimlerini yönetmenize ve uyumluluk puanınızı değerlendirmenize ve geliştirmenize yardımcı olur. Oluşturduğunuz değerlendirmeler, dünyanın dört bir yanındaki kamu düzenlemelerine ve endüstri standartlarına karşılık gelen şablonları temel alır.  
 
@@ -35,9 +33,9 @@ Microsoft 365 denemelerinin [hüküm ve koşullarına](/legal/microsoft-365/micr
 
 ## <a name="set-up-a-premium-assessment-trial"></a>Premium değerlendirme denemesi ayarlama
 
-Sol gezinti bölmesindeki **Denemeler** bağlantısını kullanarak Microsoft Purview uyumluluk portalında deneme sürümüne kaydolabilirsiniz. Premium değerlendirme şablonları için bir deneme başlatmak için **Uyumluluk Yöneticisi premium** değerlendirme deneme sürümünü seçin.
+Sol gezinti bölmesindeki **Denemeler** bağlantısını kullanarak Microsoft Purview uyumluluk portalı bir deneme sürümüne kaydolabilirsiniz. Premium değerlendirme şablonları için bir deneme başlatmak için **Uyumluluk Yöneticisi premium** değerlendirme deneme sürümünü seçin.
 
-Bu premium değerlendirme deneme sürümü, ticari lisans kapsamında Uyumluluk Yöneticisi kullanan kuruluşlar tarafından kullanılabilir. GCC ve DOD bilgileri ve deneme seçenekleri için bkz. [Uyumluluk Yöneticisi şablonlarıyla çalışma](compliance-manager-templates.md).
+Bu premium değerlendirme deneme sürümü, ticari lisans kapsamında Uyumluluk Yöneticisi kullanan kuruluşlar tarafından kullanılabilir. GCC ve DOD bilgileri ve deneme seçenekleri için bkz [. Uyumluluk Yöneticisi şablonlarıyla çalışma](compliance-manager-templates.md).
 
 Uyumluluk Yöneticisi özelliklerine tam erişim, Uyumluluk Yöneticisi lisans sözleşmenize bağlı olabilir. Uyumluluk Yöneticisi'ni içeren ücretsiz uyumluluk deneme sürümü hakkında daha fazla bilgi edinmek için bkz. [Microsoft Purview için ücretsiz deneme sürümü hakkında](compliance-easy-trials.md).
 

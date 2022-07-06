@@ -1,5 +1,5 @@
 ---
-title: ServiceNow 17a-4 DataParser verilerini Microsoft 365'de arşivleme için bağlayıcı ayarlama
+title: Microsoft 365'te ServiceNow 17a-4 DataParser verilerini arşivleme için bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -11,25 +11,23 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: ServiceNow verilerini Microsoft 365 içeri aktarmak ve arşivleme amacıyla 17a-4 ServiceNow DataParser bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: c160decc5e9516816b4dc1baa28ba4f5aa7f029a
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+description: Microsoft 365'te ServiceNow verilerini içeri aktarmak ve arşivleme amacıyla 17a-4 ServiceNow DataParser bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
+ms.openlocfilehash: 27939ec3e8bf9120986ed7151ac1c84d599e3c7a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65316820"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631661"
 ---
 # <a name="set-up-a-connector-to-archive-data-from-servicenow"></a>ServiceNow'dan verileri arşivleme için bağlayıcı ayarlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına ServiceNow'dan verileri içeri aktarmak ve arşivlemek için 17a-4 LLC'deki [ServiceNow DataParser'ı](https://www.17a-4.com/dataparser/) kullanın. DataParser, üçüncü taraf veri kaynağından öğeleri yakalamak ve bu öğeleri Microsoft 365'e aktarmak için yapılandırılmış bir ServiceNow bağlayıcısı içerir. ServiceNow DataParser bağlayıcısı ServiceNow verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'teki kullanıcı posta kutularına aktarır.
 
-ServiceNow'dan Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına verileri içeri aktarmak ve arşivlemek için 17a-4 LLC'deki [ServiceNow DataParser'ı](https://www.17a-4.com/dataparser/) kullanın. DataParser, üçüncü taraf veri kaynağındaki öğeleri yakalamak ve bu öğeleri Microsoft 365'a aktarmak için yapılandırılmış bir ServiceNow bağlayıcısı içerir. ServiceNow DataParser bağlayıcısı ServiceNow verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
-
-ServiceNow verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft Purview özellikleri uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için ServiceNow bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+ServiceNow verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'te verileri içeri aktarmak ve arşivlemek için ServiceNow bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-servicenow-data"></a>ServiceNow verilerini arşivlemeyle ilgili genel bakış
 
-Aşağıdaki genel bakışta ServiceNow verilerini Microsoft 365'de arşivleme amacıyla veri bağlayıcısı kullanma işlemi açıklanmaktadır.
+Aşağıdaki genel bakış, Microsoft 365'te ServiceNow verilerini arşivleme amacıyla veri bağlayıcısı kullanma işlemini açıklar.
 
 ![17a-4'ten ServiceNow verileri için arşivleme iş akışı.](../media/ServiceNowDataParserConnectorWorkflow.png)
 
@@ -47,13 +45,13 @@ Aşağıdaki genel bakışta ServiceNow verilerini Microsoft 365'de arşivleme a
 
 - 1. Adımda ServiceNow DataParser bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu 17a-4 veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
+- Bu 17a-4 veri bağlayıcısı, Microsoft 365 US Government bulutundaki GCC ortamlarında kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerini Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolamayı, iletmeyi ve işlemeyi içerebilir ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="step-1-set-up-a-servicenow-dataparser-connector"></a>1. Adım: ServiceNow DataParser bağlayıcısı ayarlama
 
 İlk adım, uyumluluk portalındaki Veri bağlayıcıları sayfasına erişmek ve ServiceNow verileri için bir 17a-4 bağlayıcısı oluşturmaktır.
 
-1. Veri **bağlayıcılarıServiceNow DataParser'a** > <https://compliance.microsoft.com> gidin ve tıklayın.
+1. **Veri bağlayıcıları****ServiceNow DataParser'a**<https://compliance.microsoft.com> >  gidin ve tıklayın.
 
 2. **ServiceNow DataParser** ürün açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın.
 
@@ -69,7 +67,7 @@ ServiceNow DataParser bağlayıcısını yapılandırmak için 17a-4 Desteği il
 
 ## <a name="step-3-map-users"></a>3. Adım: Kullanıcıları eşleme
 
-ServiceNow DataParser bağlayıcısı, verileri Microsoft 365 içeri aktarmadan önce kullanıcıları otomatik olarak Microsoft 365 e-posta adresleriyle eşler.
+ServiceNow DataParser bağlayıcısı, verileri Microsoft 365'e aktarmadan önce kullanıcıları otomatik olarak Microsoft 365 e-posta adresleriyle eşler.
 
 ## <a name="step-4-monitor-the-servicenow-dataparser-connector"></a>4. Adım: ServiceNow DataParser bağlayıcısını izleme
 

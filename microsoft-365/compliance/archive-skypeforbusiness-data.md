@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365'da Skype Kurumsal verileri arşivleye bir bağlayıcı ayarlama
+title: Microsoft 365'te Skype Kurumsal verilerini arşivleye bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -11,25 +11,23 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Skype Kurumsal'dan Microsoft 365 verileri içeri aktarmak ve arşivlerken Microsoft Purview uyumluluk portalı bağlayıcıyı ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: 8b824a8ac0db74d639c402bdec9e0894078b2dea
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+description: Skype Kurumsal'dan Microsoft 365'e verileri içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalı bağlayıcı ayarlamayı ve kullanmayı öğrenin.
+ms.openlocfilehash: 4301519561c75d4c76cdd47b7adae544f5170585
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65415958"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632881"
 ---
 # <a name="set-up-a-connector-to-archive-skype-for-business-data"></a>Skype Kurumsal verilerini arşivleye bir bağlayıcı ayarlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Skype Kurumsal platformundaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalı bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağındaki öğeleri yakalamak (düzenli olarak) ve bu öğeleri Microsoft 365'e aktarmak için yapılandırılmış bir [Skype Kurumsal](https://www.veritas.com/en/au/insights/merge1/skype-for-business) bağlayıcısı sağlar. Bağlayıcı, kullanıcılar arasındaki iletiler, kalıcı sohbetler ve konferans iletileri gibi içerikleri Skype Kurumsal bir e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'te kullanıcının posta kutusuna aktarır.
 
-Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına Skype Kurumsal platformundaki verileri içeri aktarmak ve arşivlerken Microsoft Purview uyumluluk portalı bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağından öğeleri yakalamak (düzenli olarak) ve bu öğeleri [Microsoft 365](https://www.veritas.com/en/au/insights/merge1/skype-for-business) aktarmak için yapılandırılmış bir Skype Kurumsal bağlayıcısı sağlar. Bağlayıcı, kullanıcılar arasındaki iletiler, kalıcı sohbetler ve konferans iletileri gibi içerikleri Skype Kurumsal e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'da kullanıcının posta kutusuna aktarır.
-
-Skype Kurumsal veriler kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri gibi Microsoft Purview özellikleri uygulayabilirsiniz. Microsoft 365'de verileri içeri aktarmak ve arşivlerken Skype Kurumsal bağlayıcı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+Skype Kurumsal veriler kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'te verileri içeri aktarmak ve arşivlerken Skype Kurumsal bağlayıcı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-skype-for-business-data"></a>Skype Kurumsal verileri arşivlemeye genel bakış
 
-Aşağıdaki genel bakış, Skype Kurumsal verilerini Microsoft 365'de arşivleyemek için bağlayıcı kullanma işlemini açıklar.
+Aşağıdaki genel bakış, Microsoft 365'te Skype Kurumsal verilerini arşivlemek için bağlayıcı kullanma işlemini açıklar.
 
 ![Skype Kurumsal veriler için iş akışı arşivleme.](../media/SkypeforBusinessConnectorWorkflow.png)
 
@@ -47,7 +45,7 @@ Aşağıdaki genel bakış, Skype Kurumsal verilerini Microsoft 365'de arşivley
 
 - 1. Adımda Skype Kurumsal bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu Veritas veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
+- Bu Veritas veri bağlayıcısı, Microsoft 365 US Government bulutundaki GCC ortamlarında genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerini Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolamayı, iletmeyi ve işlemeyi içerebilir ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="step-1-set-up-the-skype-for-business-connector"></a>1. Adım: Skype Kurumsal bağlayıcısını ayarlama
 
@@ -73,7 +71,7 @@ Aşağıdaki genel bakış, Skype Kurumsal verilerini Microsoft 365'de arşivley
 
 Kullanıcıları eşlemek ve uyumluluk portalında bağlayıcı kurulumunu tamamlamak için şu adımları izleyin:
 
-1. **Kullanıcıları Microsoft 365 kullanıcılarla eşleme Skype Kurumsal** sayfasında otomatik kullanıcı eşlemesini etkinleştirin. Skype Kurumsal öğeleri, kuruluşunuzdaki kullanıcıların *e-posta adreslerini içeren E-posta* adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcıyla ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır.
+1. **Kullanıcıları Microsoft 365 kullanıcıları ile Skype Kurumsal** eşle sayfasında otomatik kullanıcı eşlemesini etkinleştirin. Skype Kurumsal öğeleri, kuruluşunuzdaki kullanıcıların *e-posta adreslerini içeren E-posta* adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcısı ile ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır.
 
 2. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve yeni bağlayıcının içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları** sayfasına gidin.
 

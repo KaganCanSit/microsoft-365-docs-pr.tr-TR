@@ -20,17 +20,15 @@ ms.assetid: 296a02bd-ebde-4022-900e-547acf38ddd7
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-description: silinen posta kutularının içeriğini Microsoft 365 koruyan etkin olmayan posta kutuları oluşturun ve yönetin.
-ms.openlocfilehash: b7a33101135b43357b095af6864b54c618abd84d
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+description: Microsoft 365'te silinen posta kutularının içeriğini koruyan etkin olmayan posta kutuları oluşturun ve yönetin.
+ms.openlocfilehash: 15a9db1099eb687195d5c54b12d5bfca9a8c6f22
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417412"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634631"
 ---
 # <a name="create-and-manage-inactive-mailboxes"></a>Etkin olmayan posta kutuları oluşturma ve yönetme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Etkin olmayan posta kutuları, kuruluşunuzdan ayrıldıktan sonra eski çalışanların e-postalarını tutmanıza olanak tanır ve uyumluluk veya yasal [nedenlerle eBulma izinleri](assign-ediscovery-permissions.md) verilmiş yetkili kişiler tarafından erişilebilir. Örneğin, yöneticiler, uyumluluk görevlileri ve kayıt yöneticileri, etkin olmayan posta kutusunun içeriğini aramak ve dışarı aktarmak için İçerik Arama'yı kullanabilir. Devre dışı bırakılmış posta kutuları e-posta alamaz ve kuruluşunuzun paylaşılan adres defterinde veya başka listelerinde görüntülenmez.
 
@@ -42,7 +40,7 @@ Posta kutusunu devre dışı yapmak için posta kutusunda ayrı tutma ve ardınd
 
 Posta kutusunun devre dışı bırakılabilmesi için, bir Exchange Online Plan 2 lisansına (veya Exchange Online Arşivleme eklenti lisansına sahip bir Exchange Online Plan 1 lisansına) atanması gerekir, böylece saklama işlemi silinmeden önce posta kutusuna uygulanabilir. Kullanıcı hesabı silindikten sonra, kullanıcı hesabıyla ilişkili tüm Exchange Online lisansları yeni bir kullanıcıya atanabilecektir.
 
-Saklamayı posta kutusuna uygulamak için Microsoft 365 saklama kullanmanızı öneririz. Diğer yöntemler [, Etkin olmayan posta kutuları hakkında bilgi edinme bölümünde ele alınmıştır](inactive-mailboxes-in-office-365.md).
+Saklamayı posta kutusuna uygulamak için Microsoft 365 saklamayı kullanmanızı öneririz. Diğer yöntemler [, Etkin olmayan posta kutuları hakkında bilgi edinme bölümünde ele alınmıştır](inactive-mailboxes-in-office-365.md).
 
 Posta kutusunu silmenin en iyi yolu<a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">, Microsoft 365 yönetim merkezi</a> ilgili kullanıcı hesabını silmektir. Kullanıcı hesaplarını silme hakkında bilgi için bkz. [Kuruluşunuzdan kullanıcı silme](../admin/add-users/delete-a-user.md). Ancak, Exchange Online PowerShell'de **Remove-Mailbox** cmdlet'ini kullanarak da posta kutusunu silebilirsiniz. Daha fazla bilgi için bkz. [Exchange Online'da kullanıcı posta kutularını silme veya geri yükleme](/exchange/recipients-in-exchange-online/delete-or-restore-mailboxes).
 
@@ -53,11 +51,11 @@ Aşağıdaki tabloda, farklı bekletme senaryoları için etkin olmayan posta ku
 |Hedef...|Bunu yapın...|Sonuç|
 |---|---|---|
 |Bir çalışan kuruluştan ayrıldıktan sonra posta kutusu içeriğini süresiz olarak saklama|1. Posta kutusu (bekletme ilkesi) veya belirli e-posta öğeleri (bir veya daha fazla bekletme etiketi) için saklama eylemleriyle Microsoft 365 bekletme ayarlarını uygulayın. <br /><br> 2. Bekletme ayarlarının uygulanmasını bekleyin. <br /><br> 3. Kullanıcının Microsoft 365 hesabını kaldırın.|Kurtarılabilir Öğeler klasöründeki öğeler de dahil olmak üzere bekletme ayarlarının uygulandığı etkin olmayan posta kutusunda bulunan tüm içerik süresiz olarak korunur.|
-|Bir çalışan kuruluştan ayrıldıktan sonra tüm posta kutusu içeriğini belirli bir süre boyunca saklama ve ardından posta kutusunu silme|1. Saklama süresi dolduğunda öğeleri saklayan ve silecek bekletme ayarlarıyla posta kutusuna bir Microsoft 365 bekletme ilkesi uygulayın. <br /><br> 2. Bekletme ayarlarının uygulanmasını bekleyin. <br /><br> 3. Kullanıcının Microsoft 365 hesabını kaldırın.|Posta kutusu öğesinin saklama süresi dolduğunda, öğe Kurtarılabilir Öğeler klasörüne taşınır ve silinmiş öğe saklama süresi (Exchange posta kutuları için) sona erdiğinde etkin olmayan posta kutusundan kalıcı olarak silinir (temizlenir). Microsoft 365 bekletme ilkesinin bekletme süresi her zaman bir posta kutusu öğesinin alındığı veya oluşturulduğu özgün tarihe bağlıdır.|
+|Bir çalışan kuruluştan ayrıldıktan sonra tüm posta kutusu içeriğini belirli bir süre boyunca saklama ve ardından posta kutusunu silme|1. Bekletme süresi dolduğunda öğeleri saklayan ve silecek bekletme ayarlarıyla posta kutusuna bir Microsoft 365 bekletme ilkesi uygulayın. <br /><br> 2. Bekletme ayarlarının uygulanmasını bekleyin. <br /><br> 3. Kullanıcının Microsoft 365 hesabını kaldırın.|Posta kutusu öğesinin saklama süresi dolduğunda, öğe Kurtarılabilir Öğeler klasörüne taşınır ve silinmiş öğe saklama süresi (Exchange posta kutuları için) sona erdiğinde etkin olmayan posta kutusundan kalıcı olarak silinir (temizlenir). Microsoft 365 bekletme ilkesinin bekletme süresi her zaman bir posta kutusu öğesinin alındığı veya oluşturulduğu özgün tarihe bağlıdır.|
 
 
 > [!NOTE]
-> İçeriği saklamak veya saklamak ve silmek üzere yapılandırılmış Microsoft 365 bekletme ayarları posta kutusuna veya posta kutusu öğelerine zaten uygulanmışsa ya da bir posta kutusuna dava tutma zaten yerleştirilmişse veya etkin olmayan posta kutusu oluşturmak için yapmanız gereken tek şey ilgili kullanıcı hesabını silmektir.
+> İçeriği saklamak veya saklamak ve silmek üzere yapılandırılmış Microsoft 365 bekletme ayarları posta kutusuna veya posta kutusu öğelerine zaten uygulanmışsa ya da bir posta kutusuna dava tutma zaten yerleştirilmişse veya etkin olmayan posta kutusu oluşturmak için tek yapmanız gereken ilgili kullanıcı hesabını silmektir.
 
 
 ## <a name="view-a-list-of-inactive-mailboxes"></a>Etkin olmayan posta kutularının listesini görüntüleme
@@ -66,7 +64,7 @@ Kuruluşunuzdaki etkin olmayan posta kutularının listesini görüntülemek iç
 
 1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> gidin ve kuruluşunuzdaki bir Genel yönetici veya Uyumluluk yöneticisi hesabının kimlik bilgilerini kullanarak oturum açın.
 
-2. Sol gezinti bölmesinde **Tümünü göster'i** ve ardından **Veri yaşam döngüsü yönetimiYenileştirme** >  **ilkeleri'ni** seçin.
+2. Sol gezinti bölmesinde **Tümünü göster'i** ve ardından **Veri yaşam döngüsü yönetimi** > **Bekletme ilkeleri'ni** seçin.
 
 3. **Etkin olmayan posta kutusu** seçeneğini belirleyin:
 
@@ -74,7 +72,7 @@ Kuruluşunuzdaki etkin olmayan posta kutularının listesini görüntülemek iç
 
 4. **Etkin olmayan posta kutuları sayfasında etkin** olmayan posta kutularının listesi görüntülenir. Etkin olmayan posta kutusuyla ilgili ayrıntıları görmek için birini seçin. Ayrıntılar, posta kutusunun Exchange tanımlayıcısını ve [Dava Tutma'da](create-a-litigation-hold.md) olup olmadığını içerir.
     
-    Ayrıntılar bölmesinde Microsoft 365 bekletme ilkesi veya eBulma saklama gibi başka tür ayrı tutmalar görmezsiniz. Bu bilgileri bulmak için bkz. [Exchange Online posta kutusuna yerleştirilmiş saklama türünü tanımlama](identify-a-hold-on-an-exchange-online-mailbox.md).
+    Ayrıntılar bölmesinde microsoft 365 bekletme ilkesi veya eBulma saklama gibi başka tür ayrı tutmalar görmezsiniz. Bu bilgileri bulmak için bkz. [Exchange Online posta kutusuna yerleştirilmiş saklama türünü tanımlama](identify-a-hold-on-an-exchange-online-mailbox.md).
 
 Etkin olmayan çok sayıda posta kutunuz varsa, listede gördüğünüz ayrıntılar için csv dosyasında arama yapmak ve sıralamak daha kolay olabilir: **Etkin olmayan posta kutuları** sayfasında **Dışarı Aktar'ı** seçin:::image type="icon" source="../media/47205c65-babd-4b3a-bd7b-98dfd92883ba.png":::.
 
@@ -95,7 +93,7 @@ Get-Mailbox -InactiveMailboxOnly | Select Displayname,PrimarySMTPAddress,Disting
   
 ## <a name="search-and-export-the-contents-of-an-inactive-mailbox"></a>Etkin olmayan posta kutusunun içeriğini arama ve dışarı aktarma
 
-Microsoft Purview uyumluluk portalı İçerik Arama aracını kullanarak etkin olmayan posta kutusunun içeriğine erişebilirsiniz. Etkin olmayan bir posta kutusunda arama yaptığınızda, belirli öğeleri aramak için bir anahtar sözcük arama sorgusu oluşturabilir veya etkin olmayan posta kutusunun tüm içeriğini döndürebilirsiniz. Arama sonuçlarının önizlemesini görüntüleyebilir veya arama sonuçlarını bir Outlook Veri (PST) dosyasına veya tek tek e-posta iletileri olarak dışarı aktarabilirsiniz. Posta kutularını aramak ve arama sonuçlarını dışarı aktarmak için adım adım yordamlar için aşağıdaki konulara bakın:
+Microsoft Purview uyumluluk portalı İçerik Arama aracını kullanarak etkin olmayan posta kutusunun içeriğine erişebilirsiniz. Etkin olmayan bir posta kutusunda arama yaptığınızda, belirli öğeleri aramak için bir anahtar sözcük arama sorgusu oluşturabilir veya etkin olmayan posta kutusunun tüm içeriğini döndürebilirsiniz. Arama sonuçlarının önizlemesini görüntüleyebilir veya arama sonuçlarını bir Outlook Verileri (PST) dosyasına veya tek tek e-posta iletileri olarak dışarı aktarabilirsiniz. Posta kutularını aramak ve arama sonuçlarını dışarı aktarmak için adım adım yordamlar için aşağıdaki konulara bakın:
   
 - [İçerik arama](content-search.md)
 

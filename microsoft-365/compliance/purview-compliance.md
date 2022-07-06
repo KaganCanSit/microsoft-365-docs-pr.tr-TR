@@ -1,5 +1,5 @@
 ---
-title: risk ve uyumluluk çözümlerini Microsoft Purview
+title: Microsoft Purview risk ve uyumluluk çözümleri
 description: Microsoft Purview risk ve uyumluluk çözümleri hakkında daha fazla bilgi edinmek için bu makaleyi kullanın.
 keywords: Microsoft 365, Microsoft Purview, uyumluluk, çözümler
 f1.keywords:
@@ -14,16 +14,16 @@ ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: m365-security-compliance
-ms.openlocfilehash: c56c855983e27a3882796cd1e222c97305a627c4
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: 96b1efdddcf8a0b2e1034c392c27f160137379de
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66101553"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635665"
 ---
-# <a name="microsoft-purview-risk-and-compliance-solutions"></a>risk ve uyumluluk çözümlerini Microsoft Purview
+# <a name="microsoft-purview-risk-and-compliance-solutions"></a>Microsoft Purview risk ve uyumluluk çözümleri
 
-Microsoft Purview risk ve uyumluluk çözümleri verilerinizi yönetmenize ve izlemenize, bilgileri korumanıza, uyumluluk risklerini en aza indirmenize ve mevzuat gereksinimlerini karşılamanıza yardımcı olur. Bu makale, Microsoft Purview risk ve uyumluluk çözümleri hakkında bilgi edinmenize ve kuruluşunuz için belirli uyumluluk gereksinimlerini karşılamak için bu çözümleri dağıtmaya hızlı bir şekilde başlamanıza yardımcı olur.
+[Microsoft Purview](/purview/purview) risk ve uyumluluk çözümleri verilerinizi yönetmenize ve izlemenize, bilgileri korumanıza, uyumluluk risklerini en aza indirmenize ve mevzuat gereksinimlerini karşılamanıza yardımcı olur. Bu makale, Microsoft Purview risk ve uyumluluk çözümleri hakkında bilgi edinmenize ve kuruluşunuz için belirli uyumluluk gereksinimlerini karşılamak üzere bu çözümleri dağıtmaya hızlı bir şekilde başlamanıza yardımcı olur.
 
 ## <a name="protect-sensitive-data-across-clouds-apps-and-devices"></a>Bulutlar, uygulamalar ve cihazlar arasında hassas verileri koruma
 
@@ -54,7 +54,7 @@ Hassas öğelerin yanlışlıkla paylaşılması kuruluşunuza finansal zarar ve
 
 ### <a name="manage-your-data-lifecycle"></a>Veri yaşam döngünüzü yönetme
 
-[Microsoft Purview Veri Yaşam Döngüsü Yönetimi](/microsoft-365/compliance/manage-data-governance#microsoft-purview-data-lifecycle-management) (eski adıyla Microsoft Information Governance), Exchange, SharePoint OneDrive, Microsoft 365 Grupları, Teams ve Yammer. E-postaların, belgelerin ve iletilerin korunması ve silinmesi genellikle uyumluluk ve mevzuat gereksinimleri için gereklidir. Ancak artık iş değeri olmayan içeriklerin silinmesi saldırı yüzeyinizi de azaltır.
+[Microsoft Purview Veri Yaşam Döngüsü Yönetimi](/microsoft-365/compliance/manage-data-governance#microsoft-purview-data-lifecycle-management) (eski adıYla Microsoft Information Governance), Exchange, SharePoint, OneDrive, Microsoft 365 Grupları, Teams ve Yammer'da içeriği saklamaya ve silmeye yönelik araçlar ve özellikler sağlar. E-postaların, belgelerin ve iletilerin korunması ve silinmesi genellikle uyumluluk ve mevzuat gereksinimleri için gereklidir. Ancak artık iş değeri olmayan içeriklerin silinmesi saldırı yüzeyinizi de azaltır.
 
 Daha fazla bilgi için bkz. [Veri yaşam döngüsü yönetimi hakkında bilgi edinin](/microsoft-365/compliance/data-lifecycle-management).
 
@@ -62,7 +62,7 @@ Daha fazla bilgi için bkz. [Veri yaşam döngüsü yönetimi hakkında bilgi ed
 
 [Şifreleme](/microsoft-365/compliance/encryption) , dosya koruma ve bilgi koruma stratejinizin önemli bir parçasıdır. Şifreleme işlemi verilerinizi (düz metin olarak adlandırılır) şifreleme metnine kodlar. Düz metinden farklı olarak, şifre metni şifresi çözülene kadar ve şifresi çözülene kadar kişiler veya bilgisayarlar tarafından kullanılamaz. Şifre çözme, yalnızca yetkili kullanıcıların sahip olduğu bir şifreleme anahtarı gerektirir. Şifreleme, içeriğinizin şifresini yalnızca yetkili alıcıların çözebilmesine yardımcı olur.
 
-[Microsoft Purview Çift Anahtarlı Şifreleme](/microsoft-365/compliance/double-key-encryption), en katı koruma gereksinimlerine tabi olan en hassas verilerinizin güvenliğini sağlar. [Microsoft Purview Müşteri Anahtarı](/microsoft-365/compliance/customer-key-overview), kök anahtarları denetlemeye yönelik mevzuat veya uyumluluk yükümlülüklerini karşılamanıza yardımcı olur. eBulma, kötü amaçlı yazılımdan koruma, istenmeyen posta önleme, arama dizini oluşturma vb. gibi katma değerli bulut hizmetleri sağlamak için şifreleme anahtarlarınızı kullanmak üzere Microsoft 365 hizmetlerini açıkça yetkilendirebilirsiniz.
+[Microsoft Purview Çift Anahtarlı Şifreleme](/microsoft-365/compliance/double-key-encryption) , en katı koruma gereksinimlerine tabi olan en hassas verilerinizin güvenliğini sağlar. [Microsoft Purview Müşteri Anahtarı](/microsoft-365/compliance/customer-key-overview) , kök anahtarları denetlemeye yönelik mevzuat veya uyumluluk yükümlülüklerini karşılamanıza yardımcı olur. Microsoft 365 hizmetlerini eBulma, kötü amaçlı yazılımdan koruma, istenmeyen posta önleme, arama dizini oluşturma gibi katma değerli bulut hizmetleri sağlamak için şifreleme anahtarlarınızı kullanmaları için açıkça yetkilendirebilirsiniz.
 
 ## <a name="identify-data-risks-and-manage-regulatory-compliance-requirements"></a>Veri risklerini belirleme ve mevzuat uyumluluğu gereksinimlerini yönetme
 
@@ -79,31 +79,31 @@ Microsoft Purview, kuruluşunuzun veri riski ve uyumluluk gereksinimlerini yöne
 
 ### <a name="detect-and-act-on-risk-activities-with-insider-risk-management"></a>Insider risk yönetimi ile risk etkinliklerini algılama ve üzerinde işlem yapma
 
-[Microsoft Purview İçeriden Risk Yönetimi](/microsoft-365/compliance/insider-risk-management), kuruluşunuzdaki riskli kullanıcı etkinliklerini hızla tanımlamanıza, önceliklendirmenize ve işlem yapmanıza yardımcı olmak için hizmet ve üçüncü taraf göstergelerin tamamını kullanır. insider risk yönetimi, Microsoft 365 ve Microsoft Graph günlüklerini kullanarak risk göstergelerini tanımlamak için belirli ilkeler tanımlamanızı sağlar. Riskli etkinlikleri belirledikten sonra, bu riskleri azaltmak için eylem gerçekleştirebilirsiniz.
+[Microsoft Purview İçeriden Risk Yönetimi](/microsoft-365/compliance/insider-risk-management), kuruluşunuzdaki riskli kullanıcı etkinliklerini hızla tanımlamanıza, önceliklendirmenize ve işlem yapmanıza yardımcı olmak için hizmet ve üçüncü taraf göstergelerin tamamını kullanır. Insider risk yönetimi, Microsoft 365 ve Microsoft Graph günlüklerini kullanarak risk göstergelerini tanımlamak için belirli ilkeler tanımlamanızı sağlar. Riskli etkinlikleri belirledikten sonra, bu riskleri azaltmak için eylem gerçekleştirebilirsiniz.
 
 ### <a name="detect-and-act-on-inappropriate-and-sensitive-messages-with-communication-compliance"></a>İletişim uyumluluğu ile uygunsuz ve hassas iletileri algılama ve bu iletiler üzerinde işlem yapma
 
-Hassas bilgilerin korunması, iş yerinde taciz olaylarının algılanması ve bu olaylarda eylemde bulunılması, iç politikalar ve standartlara uyumun önemli bir parçasıdır. [Microsoft Purview İletişim Uyumluluğu](/microsoft-365/compliance/communication-compliance-policies), e-posta ve Microsoft Teams iletişimleri hızla algılamanıza, yakalamanıza ve düzeltme eylemleri gerçekleştirmenize yardımcı olarak bu riskleri en aza indirmenize yardımcı olur. Bunlar küfür, tehdit ve taciz içeren uygunsuz iletişimler ile kuruluşunuzun içinde ve dışında hassas bilgileri paylaşan iletişimleri içerir.
+Hassas bilgilerin korunması, iş yerinde taciz olaylarının algılanması ve bu olaylarda eylemde bulunılması, iç politikalar ve standartlara uyumun önemli bir parçasıdır. [Microsoft Purview İletişim Uyumluluğu](/microsoft-365/compliance/communication-compliance-policies), e-posta ve Microsoft Teams iletişimleri için hızlı bir şekilde algılamanıza, yakalamanıza ve düzeltme eylemleri gerçekleştirmenize yardımcı olarak bu riskleri en aza indirmenize yardımcı olur. Bunlar küfür, tehdit ve taciz içeren uygunsuz iletişimler ile kuruluşunuzun içinde ve dışında hassas bilgileri paylaşan iletişimleri içerir.
 
 ### <a name="restrict-communication-and-collaboration-between-users-with-information-barriers"></a>Bilgi engelleri olan kullanıcılar arasındaki iletişimi ve işbirliğini kısıtlama
 
-[Microsoft Purview Bilgi Engelleri (IB),](/microsoft-365/compliance/information-barriers) Microsoft Teams, SharePoint Online ve OneDrive İş gruplarla kullanıcılar arasında iki yönlü iletişimi ve işbirliğini kısıtlamanıza olanak tanıyan bir uyumluluk çözümüdür. IB, genellikle yüksek oranda düzenlenmiş sektörlerde kullanılır ve çıkar çatışmalarını önlemeye ve kullanıcılarla kuruluş alanları arasındaki iç bilgileri korumaya yardımcı olabilir.
+[Microsoft Purview Information Barriers (IB),](/microsoft-365/compliance/information-barriers) Microsoft Teams, SharePoint Online ve OneDrive İş gruplar ve kullanıcılar arasında iki yönlü iletişimi ve işbirliğini kısıtlamanıza olanak tanıyan bir uyumluluk çözümüdür. IB, genellikle yüksek oranda düzenlenmiş sektörlerde kullanılır ve çıkar çatışmalarını önlemeye ve kullanıcılarla kuruluş alanları arasındaki iç bilgileri korumaya yardımcı olabilir.
 
 ### <a name="manage-business-legal-or-regulatory-record-keeping-requirements-with-records-management"></a>Kayıt yönetimiyle iş, yasal veya mevzuat kaydı tutma gereksinimlerini yönetme
 
 [Microsoft Purview Kayıt Yönetimi](/microsoft-365/compliance/manage-data-governance#microsoft-purview-records-management), bir kuruluşun yasal yükümlülüklerini yönetmesine yardımcı olur, düzenlemelere uyumluluğu gösterme olanağı sağlar ve artık saklanması gerekmeyen, artık değer içermeyen veya iş amaçları için artık gerekli olmayan öğelerin düzenli olarak elden bırakılmasıyla verimliliği artırır. Daha fazla bilgi için bkz. [Kayıt yönetimi hakkında bilgi edinin](/microsoft-365/compliance/records-management).
 
-### <a name="log-and-search-for-audited-activities-in-sharepoint-and-onedrive-with-audit-premium-or-audit-standard"></a>Denetim (Premium) veya Denetim (Standart) ile SharePoint ve OneDrive'de denetlenen etkinlikleri günlüğe kaydetme ve arama
+### <a name="log-and-search-for-audited-activities-in-sharepoint-and-onedrive-with-audit-premium-or-audit-standard"></a>Denetim (Premium) veya Denetim (Standart) ile SharePoint ve OneDrive'da denetlenen etkinlikleri günlüğe kaydetme ve arama
 
-[Microsoft Purview denetim çözümleri](/microsoft-365/compliance/auditing-solutions-overview), kuruluşların güvenlik olaylarına, adli araştırmalara, iç araştırmalara ve uyumluluk yükümlülüklerine etkili bir şekilde yanıt vermelerine yardımcı olmak için tümleşik çözümler sağlar. Onlarca Microsoft 365 hizmeti ve çözümünde gerçekleştirilen binlerce kullanıcı ve yönetici işlemi, kuruluşunuzun birleşik denetim günlüğünde yakalanır, kaydedilir ve saklanır. Bu olaylar için denetim kayıtları güvenlik işlemleri, BT yöneticileri, insider risk ekipleri ve kuruluşunuzdaki uyumluluk ve hukuk araştırmacıları tarafından aranabilir. Bu özellik, Microsoft 365 kuruluşunuz genelinde gerçekleştirilen etkinliklere görünürlük sağlar.
+[Microsoft Purview denetim çözümleri](/microsoft-365/compliance/auditing-solutions-overview) , kuruluşların güvenlik olaylarına, adli araştırmalara, iç araştırmalara ve uyumluluk yükümlülüklerine etkili bir şekilde yanıt vermelerine yardımcı olmak için tümleşik çözümler sağlar. Onlarca Microsoft 365 hizmeti ve çözümünde gerçekleştirilen binlerce kullanıcı ve yönetici işlemi kuruluşunuzun birleşik denetim günlüğünde yakalanır, kaydedilir ve saklanır. Bu olaylar için denetim kayıtları güvenlik işlemleri, BT yöneticileri, insider risk ekipleri ve kuruluşunuzdaki uyumluluk ve hukuk araştırmacıları tarafından aranabilir. Bu özellik, Microsoft 365 kuruluşunuz genelinde gerçekleştirilen etkinliklere görünürlük sağlar.
 
 Denetim çözümleri hakkında daha fazla bilgi için bkz. [Denetim (Premium)](/microsoft-365/compliance/advanced-audit) ve [Denetim (Standart)](/microsoft-365/compliance/set-up-basic-audit).
 
 ### <a name="identify-and-manage-data-for-legal-cases-with-ediscovery-premium-or-ediscovery-standard"></a>eBulma (Premium) veya eBulma (Standart) ile yasal davalar için verileri tanımlama ve yönetme
 
-Elektronik bulma veya eBulma, elektronik bilgileri yasal, mevzuat veya iş nedenleriyle tanımlama, toplama ve denetleme sürecidir. [Exchange Online, OneDrive İş, SharePoint](/microsoft-365/compliance/ediscovery) Online, Microsoft Teams'da veri ve içerik aramak için Microsoft Purview eKeşif çözümleri kullanabilirsiniz. ekipleri Microsoft 365 Grupları ve Yammer. Aynı eBulma aramasında posta kutularında ve sitelerde arama yapabilir, ardından analiz ve gözden geçirme için arama sonuçlarını dışarı aktarabilirsiniz.
+Elektronik bulma veya eBulma, elektronik bilgileri yasal, mevzuat veya iş nedenleriyle tanımlama, toplama ve denetleme sürecidir. [Exchange Online, OneDrive İş](/microsoft-365/compliance/ediscovery), SharePoint Online, Microsoft Teams, Microsoft 365 Grupları ve Yammer ekiplerinde veri ve içerik aramak için Microsoft Purview eKeşif çözümleri kullanabilirsiniz. Aynı eBulma aramasında posta kutularında ve sitelerde arama yapabilir, ardından analiz ve gözden geçirme için arama sonuçlarını dışarı aktarabilirsiniz.
 
-eBulma çözümleri hakkında daha fazla bilgi için bkz. [eBulma (Premium)](/microsoft-365/compliance/overview-ediscovery-20) ve [eBulma (Standart)](/microsoft-365/compliance/get-started-core-ediscovery).
+eBulma çözümleri hakkında daha fazla bilgi için bkz. [eBulma (Premium)](/microsoft-365/compliance/overview-ediscovery-20) ve [eKeşif (Standart)](/microsoft-365/compliance/get-started-core-ediscovery).
 
 ## <a name="get-started-with-regulatory-compliance"></a>Mevzuat uyumluluğuyla başlayın
 
@@ -129,5 +129,5 @@ Alana özgü çözümler, güvenli ve uyumlu veri işbirliği için tümleşik u
 
 ## <a name="next-steps-for-organizations-new-to-risk-and-compliance-solutions"></a>Risk ve uyumluluk çözümlerine yeni eklenen kuruluşlar için sonraki adımlar
 
-- [Microsoft Purview çözümü deneme sürümü hakkında bilgi edinin](/microsoft-365/compliance/compliance-easy-trials)
-- [Microsoft Purview'de uyumlulukla çalışmaya başlamaya yönelik hızlı görevler](/microsoft-365/compliance/compliance-quick-tasks)
+- [Microsoft Purview çözüm deneme sürümü hakkında bilgi edinin](/microsoft-365/compliance/compliance-easy-trials)
+- [Microsoft Purview'da uyumlulukla çalışmaya başlamaya yönelik hızlı görevler](/microsoft-365/compliance/compliance-quick-tasks)

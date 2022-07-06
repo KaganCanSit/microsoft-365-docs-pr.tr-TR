@@ -23,16 +23,14 @@ ms.custom:
 - admindeeplinkCOMPLIANCE
 - admindeeplinkEXCHANGE
 description: Kuruluşunuzun ileti saklama, eKeşif ve saklama gereksinimlerini desteklemek için arşiv posta kutularını etkinleştirmeyi veya devre dışı bırakmayı öğrenin.
-ms.openlocfilehash: f95da36b48389bba2bd640825071dbff5c6ddb3d
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: 0fef0db0af845a0e3e03f7747775eb41591002a3
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772434"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635545"
 ---
 # <a name="enable-archive-mailboxes-in-the-microsoft-purview-compliance-portal"></a>Microsoft Purview uyumluluk portalındaki arşiv posta kutularını etkinleştirme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft 365’te arşivleme ( *Yerinde Arşivleme* olarak da adlandırılır) kullanıcılara ek posta kutusu depolama alanı sağlar. Daha fazla bilgi için bkz. [Arşiv posta kutuları hakkında bilgi](archive-mailboxes.md).
 
