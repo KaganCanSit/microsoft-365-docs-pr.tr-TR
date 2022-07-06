@@ -14,17 +14,17 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: seo-marvel-apr2020
-description: Yöneticiler, Microsoft 365 Defender portalında Gönderiler portalını kullanarak şüpheli e-postalar, şüpheli kimlik avı postaları, istenmeyen postalar ve diğer zararlı olabilecek iletileri, URL'leri ve e-posta eklerini yeniden tarama amacıyla Microsoft'a göndermeyi öğrenebilir.
+description: Yöneticiler, Microsoft 365 Defender portalında Gönderiler portalını kullanarak engellenen, şüpheli e-posta, şüpheli kimlik avı e-postası, istenmeyen posta, diğer zararlı olabilecek iletiler, URL'ler ve e-posta eklerini yeniden keşfetmek üzere Microsoft'a yasal e-posta göndermeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 280b609f39431759216ab4e40cfb5d01752b6514
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 17083a248e31d5ae1eff3c088497f071bcac643b
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66487707"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639456"
 ---
-# <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Şüpheli istenmeyen postaları, kimlik avı, URL'leri ve dosyaları Microsoft'a göndermek için Gönderimler portalını kullanın
+# <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-legitimate-email-getting-blocked-and-email-attachments-to-microsoft"></a>Şüpheli istenmeyen posta, kimlik avı, URL'ler, engellenen meşru e-postalar ve e-posta eklerini Microsoft'a göndermek için Gönderimler portalını kullanın
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
@@ -200,7 +200,7 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
      > :::image type="content" source="../../media/email-admin-submission-filters.png" alt-text="E-posta yöneticisi gönderimleri için filtre seçenekleri." lightbox="../../media/email-admin-submission-filters.png":::
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
-     - **Hiçbiri**
+     - **Yok**
      - **Neden**
      - **Durum**
      - **Sonuç**
@@ -294,7 +294,7 @@ Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Porta
      :::image type="content" source="../../media/url-admin-submission-customize-columns.png" alt-text="URL yöneticisi gönderimleri için filtre seçenekleri.":::
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
-     - **Hiçbiri**
+     - **Yok**
      - **Neden**
      - **Durum**
      - **Sonuç**
@@ -361,7 +361,7 @@ Geçersiz kılma bulunduysa, sonucun birkaç dakika içinde kullanılabilir olma
      > :::image type="content" source="../../media/admin-submission-reported-messages.png" alt-text="Kullanıcı gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/admin-submission-reported-messages.png":::
 
    - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
-     - **Hiçbiri**
+     - **Yok**
      - **Neden**
      - **Gönderen**
      - **Rapor eden**

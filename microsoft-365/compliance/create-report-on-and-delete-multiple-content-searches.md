@@ -19,22 +19,20 @@ search.appverid:
 ms.assetid: 1d463dda-a3b5-4675-95d4-83db19c9c4a3
 description: Güvenlik & Uyumluluğu PowerShell kullanarak arama oluşturma ve raporları çalıştırma gibi İçerik Arama görevlerini otomatikleştirmeyi öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 50d0a66957e4bdca1e39cb42c837aa0f992bad98
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: be456c737188f02cfad245d4a1dc4661f2c611a5
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66018085"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638598"
 ---
 # <a name="create-report-on-and-delete-multiple-content-searches"></a>Birden çok İçerik Araması oluşturma, raporlama ve silme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
  Bulma aramalarını hızla oluşturmak ve raporlamak, temel alınan veriler ve aramalarınızın zenginliği ve kalitesi hakkında bilgi edinmeye çalışırken eBulma ve araştırmalarda genellikle önemli bir adımdır. Bunu yapmanıza yardımcı olmak için Güvenlik & Uyumluluğu PowerShell, zaman alan İçerik Arama görevlerini otomatikleştirmek için bir dizi cmdlet sunar. Bu betikler, bir dizi arama oluşturmak için hızlı ve kolay bir yol sağlar ve ardından söz konusu veri miktarını belirlemenize yardımcı olabilecek tahmini arama sonuçlarının raporlarını çalıştırır. Betikleri, her birinin ürettiği sonuçları karşılaştırmak üzere aramaların farklı sürümlerini oluşturmak için de kullanabilirsiniz. Bu betikler, verilerinizi hızlı ve verimli bir şekilde tanımlamanıza ve iptal etmenize yardımcı olabilir.
 
 ## <a name="before-you-create-a-content-search"></a>İçerik Araması oluşturmadan önce
 
-- Bu konuda açıklanan betikleri çalıştırmak için Microsoft Purview uyumluluk portalında eBulma Yöneticisi rol grubunun üyesi olmanız gerekir.
+- Bu konuda açıklanan betikleri çalıştırmak için Microsoft Purview uyumluluk portalı eBulma Yöneticisi rol grubunun üyesi olmanız gerekir.
 
 - 1. Adımda CSV dosyasına ekleyebileceğiniz, kuruluşunuzdaki OneDrive İş sitelerinin URL'lerinin listesini toplamak için bkz. [Kuruluşunuzdaki tüm OneDrive konumlarının listesini oluşturma](/onedrive/list-onedrive-urls).
 
@@ -62,7 +60,7 @@ Bu adımda oluşturduğunuz virgülle ayrılmış değer (CSV) dosyası, aramak 
 
    Dosyanın ilk satırı veya üst bilgi satırı, yeni İçerik Aramaları oluşturmak için **New-ComplianceSearch** cmdlet'i (3. Adımdaki betikte) tarafından kullanılacak parametreleri listeler. Her parametre adı virgülle ayrılır. Üst bilgi satırında boşluk olmadığından emin olun. Üst bilgi satırının altındaki her satır, her arama için parametre değerlerini temsil eder. CSV dosyasındaki yer tutucu verileri gerçek verilerinizle değiştirerek değiştirmeyi unutmayın.
 
-2. .txt dosyasını Excel açın ve sonra dosyayı her aramayla ilgili bilgilerle düzenlemek için aşağıdaki tabloda yer alan bilgileri kullanın.
+2. .txt dosyasını Excel'de açın ve ardından aşağıdaki tabloda yer alan bilgileri kullanarak dosyayı her aramayla ilgili bilgilerle düzenleyin.
 
    ****
 
@@ -71,15 +69,15 @@ Bu adımda oluşturduğunuz virgülle ayrılmış değer (CSV) dosyası, aramak 
    |`ExchangeLocation`|Kullanıcının posta kutusunun SMTP adresi.|
    |`SharePointLocation`|Kullanıcının OneDrive İş sitesinin URL'si veya kuruluşunuzdaki herhangi bir sitenin URL'si. OneDrive İş sitelerin URL'si için şu biçimi kullanın: ` https://<your organization>-my.sharepoint.com/personal/<user alias>_<your organization>_onmicrosoft_com `. Örneğin,  `https://contoso-my.sharepoint.com/personal/sarad_contoso_onmicrosoft_com`.|
    |`ContentMatchQuery`|Aramanın arama sorgusu. Arama sorgusu oluşturma hakkında daha fazla bilgi için bkz [. İçerik Arama için anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md).|
-   |`StartDate`|E-posta için, iletinin alıcı tarafından alındığı veya gönderen tarafından gönderildiği tarih. SharePoint veya OneDrive İş sitelerdeki belgeler için, belgenin son değiştirilme tarihi veya sonrasındaki tarih.|
-   |`EndDate`|E-posta için, iletinin kullanıcı tarafından gönderilen bir tarafından gönderildiği veya gönderilmeden önceki tarih. SharePoint veya OneDrive İş sitelerdeki belgeler için, belgenin son değiştirilme tarihi veya öncesinde tarih.|
+   |`StartDate`|E-posta için, iletinin alıcı tarafından alındığı veya gönderen tarafından gönderildiği tarih. SharePoint veya OneDrive İş sitelerindeki belgeler için, belgenin son değiştirildiği veya değiştirildiği tarih.|
+   |`EndDate`|E-posta için, iletinin kullanıcı tarafından gönderilen bir tarafından gönderildiği veya gönderilmeden önceki tarih. SharePoint veya OneDrive İş sitelerindeki belgeler için, belgenin son değiştirildiği veya değiştirilmeden önceki tarih.|
    |
 
 3. Excel dosyasını CSV dosyası olarak yerel bilgisayarınızdaki bir klasöre kaydedin. 3. Adımda oluşturduğunuz betik, aramaları oluşturmak için bu CSV dosyasındaki bilgileri kullanır.
 
-## <a name="step-2-connect-to-security--compliance-powershell"></a>2. Adım: Güvenlik & Uyumluluğu PowerShell'e Bağlan
+## <a name="step-2-connect-to-security--compliance-powershell"></a>2. Adım: Güvenlik & Uyumluluğu PowerShell'e bağlanma
 
-Sonraki adım, kuruluşunuz için Güvenlik & Uyumluluk PowerShell'e bağlanmaktır. Adım adım yönergeler için bkz[. Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+Sonraki adım, kuruluşunuz için Güvenlik & Uyumluluk PowerShell'e bağlanmaktır. Adım adım yönergeler için bkz [. Güvenlik & Uyumluluk PowerShell'e bağlanma](/powershell/exchange/connect-to-scc-powershell).
 
 ## <a name="step-3-run-the-script-to-create-and-start-the-searches"></a>3. Adım: Aramaları oluşturmak ve başlatmak için betiği çalıştırın
 

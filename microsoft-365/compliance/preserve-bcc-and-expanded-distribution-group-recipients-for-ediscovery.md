@@ -12,18 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.assetid: eb8ddf15-0080-457e-9d83-e73e193da334
 description: In-Place Tutma, Dava Tutma ve Microsoft 365 saklama ilkeleri, mevzuat uyumluluğu ve eBulma gereksinimlerini karşılamak için posta kutusu içeriğini korumanıza olanak tanır.
-ms.openlocfilehash: 1a9ac5e19350fd2a98ecc20e94dcdcdcc84a71c7
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: de1a04c223856e1257e03e5dd47ae6d5e88033eb
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093031"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637097"
 ---
 # <a name="preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery"></a>eBulma için Gizli ve genişletilmiş dağıtım grubu alıcılarını koruma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
   
-Dava tutmaları, eBulma tutmaları ve [Microsoft 365 bekletme ilkeleri](./retention.md) (Microsoft Purview uyumluluk portalında oluşturulur), mevzuat uyumluluğu ve eBulma gereksinimlerini karşılamak için posta kutusu içeriğini korumanıza olanak tanır. Bir iletinin Kime ve Bilgi alanlarında doğrudan ele alınan alıcılar hakkındaki bilgiler varsayılan olarak tüm iletilere eklenir. Ancak kuruluşunuz, iletinin tüm alıcıları hakkındaki ayrıntıları arama ve yeniden oluşturma olanağı gerektirebilir. Buna şunlar dahildir:
+Dava tutmaları, eBulma tutmaları ve [Microsoft 365 saklama ilkeleri](./retention.md) (Microsoft Purview uyumluluk portalı oluşturulan), mevzuat uyumluluğu ve eBulma gereksinimlerini karşılamak için posta kutusu içeriğini korumanıza olanak tanır. Bir iletinin Kime ve Bilgi alanlarında doğrudan ele alınan alıcılar hakkındaki bilgiler varsayılan olarak tüm iletilere eklenir. Ancak kuruluşunuz, iletinin tüm alıcıları hakkındaki ayrıntıları arama ve yeniden oluşturma olanağı gerektirebilir. Buna şunlar dahildir:
   
 - **İletinin Gizli alanı kullanılarak adreslenen alıcılar:** Gizli alıcılar, iletide gönderenin posta kutusunda depolanır, ancak alıcılara teslim edilen iletinin üst bilgilerine eklenmez. 
     
@@ -35,13 +33,13 @@ Exchange Online ve Exchange Server 2013 (Toplu Güncelleştirme 7 ve sonraki sü
 
 Daha önce belirtildiği gibi Gizli alıcılarla ilgili bilgiler gönderenin posta kutusunda iletiyle birlikte depolanır. Bu bilgiler dizine eklenir ve eBulma aramaları ve tutmaları için kullanılabilir.
 
-Genişletilmiş dağıtım grubu alıcılarıyla ilgili bilgiler, In-Place Ayrı Tutma veya Dava Tutma'ya bir posta kutusu yerleştirildikten sonra iletiyle birlikte depolanır. Office 365'da, bu bilgiler posta kutusuna Microsoft 365 bekletme ilkesi uygulandığında da depolanır. Dağıtım grubu üyeliği, ileti gönderildiğinde belirlenir. İletiyle birlikte depolanan genişletilmiş alıcılar listesi, ileti gönderildikten sonra grubun üyeliğindeki değişikliklerden etkilenmez.
+Genişletilmiş dağıtım grubu alıcılarıyla ilgili bilgiler, In-Place Ayrı Tutma veya Dava Tutma'ya bir posta kutusu yerleştirildikten sonra iletiyle birlikte depolanır. Office 365'de bu bilgiler, posta kutusuna bir Microsoft 365 bekletme ilkesi uygulandığında da depolanır. Dağıtım grubu üyeliği, ileti gönderildiğinde belirlenir. İletiyle birlikte depolanan genişletilmiş alıcılar listesi, ileti gönderildikten sonra grubun üyeliğindeki değişikliklerden etkilenmez.
 
 |Hakkında bilgi...|Depolandığı yer...|Varsayılan olarak depolanıyor mu?|Erişim...|
 |---|---|---|---|
 |Kime ve Bilgi alıcıları|Gönderen ve alıcıların posta kutularındaki ileti özellikleri.|Evet|Gönderen, alıcılar ve uyumluluk görevlileri|
 |Gizli alıcılar|Gönderenin posta kutusunda ileti özelliği.|Evet|Gönderen ve uyumluluk görevlileri|
-|Genişletilmiş dağıtım grubu alıcıları|Gönderenin posta kutusunda ileti özellikleri.|Hayır. Genişletilmiş dağıtım grubu alıcı bilgileri, posta kutusu In-Place Ayrı Tutma veya Dava Ayrı Tutma'ya yerleştirildikten veya bir Microsoft 365 bekletme ilkesine atandıktan sonra depolanır.|Uyumluluk görevlileri|
+|Genişletilmiş dağıtım grubu alıcıları|Gönderenin posta kutusunda ileti özellikleri.|Hayır. Genişletilmiş dağıtım grubu alıcı bilgileri, bir posta kutusu In-Place Ayrı Tutma veya Dava Tutma'ya yerleştirildikten veya microsoft 365 saklama ilkesine atandıktan sonra depolanır.|Uyumluluk görevlileri|
 
 ## <a name="searching-for-messages-sent-to-bcc-and-expanded-distribution-group-recipients"></a>Gizli ve genişletilmiş dağıtım grubu alıcılarına gönderilen iletileri arama
 
@@ -78,7 +76,7 @@ C. Gizli alıcı bilgileri, gönderenin posta kutusunda özgün iletide varsayı
 
  **S. Genişletilmiş dağıtım grubu alıcılarının listesi ne zaman ve nerede depolanır?**
 
-C. Grup üyeliği, ileti gönderildiğinde genişletilir. Genişletilmiş dağıtım grubu üyelerinin listesi, gönderenin posta kutusunda özgün iletide depolanır. Gönderenin posta kutusu In-Place Ayrı Tutma, Dava Tutma veya Microsoft 365 saklama ilkesine atanmış olmalıdır.
+C. Grup üyeliği, ileti gönderildiğinde genişletilir. Genişletilmiş dağıtım grubu üyelerinin listesi, gönderenin posta kutusunda özgün iletide depolanır. Gönderenin posta kutusu In-Place Ayrı Tutma, Dava Tutma veya microsoft 365 saklama ilkesine atanmış olmalıdır.
 
  **S. Kime/Bilgi alıcıları hangi alıcıların Gizli olduğunu görebilir mi?**
 
@@ -86,7 +84,7 @@ C. Hayır. Bu bilgiler ileti üst bilgilerine dahil değildir ve Kime/Bilgi alı
 
  **S. Genişletilmiş dağıtım grubu alıcılarının her zaman korunmasını nasıl sağlayabilirim?**
 
-C. Genişletilmiş dağıtım grubu üyelerinin her zaman bir iletiyle korunmasını sağlamak için[, tüm posta kutularını beklemeye alın](/Exchange/policy-and-compliance/holds/place-all-mailboxes-on-hold) veya kuruluş genelinde Microsoft 365 bekletme ilkesi oluşturun.
+C. Genişletilmiş dağıtım grubu üyelerinin her zaman bir iletiyle korunmasını sağlamak için [tüm posta kutularını beklemeye alın](/Exchange/policy-and-compliance/holds/place-all-mailboxes-on-hold) veya kuruluş genelinde bir Microsoft 365 bekletme ilkesi oluşturun.
 
  **S. Hangi grup türleri desteklenir?**
 

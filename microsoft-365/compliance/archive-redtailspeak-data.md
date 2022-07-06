@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365'da Kırmızı kuyruk Konuşma verilerini arşivleye bir bağlayıcı ayarlama
+title: Microsoft 365'te Red tail Speak verilerini arşivleye bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -11,25 +11,23 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Yöneticiler, Red tail Speak verilerini Veritas'tan Microsoft 365 içeri aktarmak ve arşivlemek için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyabilmenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: fb2e3bcb2bc8725d7cd452bd091bb18408a4224e
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+description: Yöneticiler, Red tail Speak verilerini Veritas'tan Microsoft 365'e aktarmak ve arşivlemek için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'teki üçüncü taraf veri kaynaklarından verileri arşivlenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
+ms.openlocfilehash: 28fb3de980fd9520afb69c9ec74fb9392f14a0d6
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65320750"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639236"
 ---
 # <a name="set-up-a-connector-to-archive-redtail-speak-data"></a>Redtail Speak verilerini arşivleye bir bağlayıcı ayarlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına Redtail Speak'den verileri içeri aktarmak ve arşiv uygulamak için Microsoft Purview uyumluluk portalı bir Veritas bağlayıcısı kullanın. Veritas, öğelerin [Redtail'ten](https://globanet.com/redtail/) alındığı kuruluşunuzun SFTP sunucusundan öğeleri yakalamak için yapılandırılmış bir Redtail Speak bağlayıcısı sağlar. Bağlayıcı, Redtail Speak'deki içeriği e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'te kullanıcının posta kutusuna aktarır.
 
-Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına Redtail Speak'den verileri içeri aktarmak ve arşiv etmek için Microsoft Purview uyumluluk portalı bir Veritas bağlayıcısı kullanın. Veritas, öğelerin [Redtail'ten](https://globanet.com/redtail/) alındığı kuruluşunuzun SFTP sunucusundan öğeleri yakalamak için yapılandırılmış bir Redtail Speak bağlayıcısı sağlar. Bağlayıcı, Redtail Speak içeriğini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'de kullanıcının posta kutusuna aktarır.
-
-Redtail Speak verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri gibi Microsoft Purview özellikleri uygulayabilirsiniz. Microsoft 365'de verileri içeri aktarmak ve arşivlemek için Redtail Speak bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+Redtail Speak verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'te verileri içeri aktarmak ve arşivlerken Redtail Speak bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-the-redtail-speak-data"></a>Redtail Speak verilerini arşivleme işlemine genel bakış
 
-Aşağıdaki genel bakış, Microsoft 365'da Redtail Speak verilerini arşivleyen bir bağlayıcı kullanma işlemini açıklar.
+Aşağıdaki genel bakışta, Microsoft 365'te Redtail Speak verilerini arşivleyen bir bağlayıcı kullanma işlemi açıklanmaktadır.
 
 ![Redtail Speak verileri için arşivleme iş akışı.](../media/RedtailSpeakConnectorWorkflow.png)
 
@@ -49,7 +47,7 @@ Aşağıdaki genel bakış, Microsoft 365'da Redtail Speak verilerini arşivleye
 
 - 1. Adımda Redtail Speak Importer bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu Veritas veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
+- Bu Veritas veri bağlayıcısı, Microsoft 365 US Government bulutundaki GCC ortamlarında genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerini Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolamayı, iletmeyi ve işlemeyi içerebilir ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="step-1-set-up-the-redtail-speak-connector"></a>1. Adım: Redtail Speak bağlayıcısını ayarlama
 
@@ -75,7 +73,7 @@ Aşağıdaki genel bakış, Microsoft 365'da Redtail Speak verilerini arşivleye
 
 Kullanıcıları eşlemek ve bağlayıcı kurulumunu tamamlamak için şu adımları izleyin:
 
-1. **Kullanıcıları Microsoft 365 kullanıcılara seslendir** sayfasında otomatik kullanıcı eşlemesini etkinleştirin. Redtail Speak öğeleri, kuruluşunuzdaki kullanıcıların *e-posta adreslerini içeren E-posta* adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcıyla ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır.
+1. **Kullanıcıları Microsoft 365 kullanıcılarına seslendir** sayfasında otomatik kullanıcı eşlemesini etkinleştirin. Redtail Speak öğeleri, kuruluşunuzdaki kullanıcıların *e-posta adreslerini içeren E-posta* adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcısı ile ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır.
 
 2. **İleri'yi** seçin, ayarlarınızı gözden geçirin ve yeni bağlayıcının içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları** sayfasına gidin.
 

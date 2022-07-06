@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365'de Denetimi (Premium) ayarlama
+title: Microsoft 365'te Denetimi Ayarlama (Premium)
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -19,19 +19,17 @@ ms.custom: admindeeplinkMAC
 search.appverid:
 - MOE150
 - MET150
-description: Bu makalede, kullanıcı hesapları tehlikeye atıldığında veya güvenlikle ilgili diğer olayları araştırmak için adli incelemeler yapabilmeniz için Denetimin (Premium) nasıl ayarlanacağı açıklanır.
-ms.openlocfilehash: f1c858964ee3cb5e6cdfcdb7416468318393ebba
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Bu makalede, kullanıcı hesapları tehlikeye atıldığında veya güvenlikle ilgili diğer olayları araştırmak için adli incelemeler yapabilmeniz için Denetim (Premium) özelliğinin nasıl ayarlanacağı açıklanır.
+ms.openlocfilehash: adffd696a3eca2d51fb5325cd79c1ba26e58936c
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097964"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639346"
 ---
-# <a name="set-up-microsoft-purview-audit-premium"></a>Microsoft Purview Denetimini Ayarlama (Premium)
+# <a name="set-up-microsoft-purview-audit-premium"></a>Microsoft Purview Denetim ayarlama (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Kuruluşunuzun Denetimi (Premium) destekleyen bir aboneliği ve son kullanıcı lisansı varsa, Denetim (Premium) bölümündeki ek özellikleri ayarlamak ve kullanmak için aşağıdaki adımları gerçekleştirin.
+Kuruluşunuzun Denetimi (Premium) destekleyen bir aboneliği ve son kullanıcı lisansı varsa, Denetim (Premium) içindeki ek özellikleri ayarlamak ve kullanmak için aşağıdaki adımları gerçekleştirin.
 
 ![Denetimi ayarlamak için iş akışı (Premium).](../media/AdvancedAuditWorkflow.png)
 
@@ -39,13 +37,13 @@ Kuruluşunuzun Denetimi (Premium) destekleyen bir aboneliği ve son kullanıcı 
 
 MailItemsAccessed ve Send gibi önemli olayları günlüğe kaydetme özelliği gibi denetim (Premium) özellikleri için kullanıcılara uygun bir E5 lisansı atanması gerekir. Ayrıca, bu kullanıcılar için Gelişmiş Denetim uygulaması/hizmet planı etkinleştirilmelidir. Gelişmiş Denetim uygulamasının kullanıcılara atandığını doğrulamak için her kullanıcı için aşağıdaki adımları uygulayın:
 
-1. Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**KullanıcılarEtkin**</a> >  kullanıcılar'a gidin ve bir kullanıcı seçin.
+1. Microsoft 365 yönetim merkezi **Etkin Kullanıcılar'a** >  gidin ve bir kullanıcı seçin.<a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank"></a>
 
 2. Kullanıcı özellikleri açılır sayfasında **Lisanslar ve uygulamalar'a** tıklayın.
 
 3. **Lisanslar** bölümünde, kullanıcıya bir E5 lisansı atandığını veya uygun bir eklenti lisansı atandığını doğrulayın. Denetim (Premium) destekleyen lisansların listesi için bkz. [Denetim (Premium) lisans gereksinimleri](auditing-solutions-overview.md#audit-premium-1).
 
-4. **Uygulamalar** bölümünü genişletin ve **gelişmiş denetim Microsoft 365** onay kutusunun seçili olduğunu doğrulayın.
+4. **Uygulamalar** bölümünü genişletin ve **Microsoft 365 Gelişmiş Denetim** onay kutusunun seçili olduğunu doğrulayın.
 
 5. Onay kutusu seçili değilse, onay kutusunu seçin ve ardından **Değişiklikleri kaydet'e tıklayın.**
 
@@ -71,8 +69,8 @@ Arama sorgularının denetimini etkinleştirme komutu daha önce kullanıcının
 
 ## <a name="step-3-set-up-audit-retention-policies"></a>3. Adım: Denetim saklama ilkelerini ayarlama
 
-Exchange, SharePoint ve Azure AD denetim kayıtlarını bir yıl boyunca saklayan varsayılan ilkeye ek olarak, kuruluşunuzun güvenlik operasyonları, BT ve uyumluluk ekiplerinin gereksinimlerini karşılamak için ek denetim günlüğü saklama ilkeleri oluşturabilirsiniz. Daha fazla bilgi için bkz. [Denetim günlüğü saklama ilkelerini yönetme](audit-log-retention-policies.md).
+Exchange, SharePoint ve Azure AD denetim kayıtlarını bir yıl boyunca saklayan varsayılan ilkeye ek olarak, kuruluşunuzun güvenlik işlemlerinin, BT'nin ve uyumluluk ekiplerinin gereksinimlerini karşılamak için ek denetim günlüğü saklama ilkeleri oluşturabilirsiniz. Daha fazla bilgi için bkz. [Denetim günlüğü saklama ilkelerini yönetme](audit-log-retention-policies.md).
 
 ## <a name="step-4-search-for-audit-premium-events"></a>4. Adım: Denetim (Premium) olaylarını arama
 
-Kuruluşunuz için Denetim (Premium) ayarladığınıza göre, adli araştırma yaparken kritik Denetim (Premium) olayları ve diğer etkinlikleri arayabilirsiniz. 1. Adım ve 2. Adım'ı tamamladıktan sonra, güvenliği aşılmış hesapların ve diğer güvenlik veya uyumluluk araştırmalarının adli araştırmaları sırasında denetim günlüğünde Denetim (Premium) olayları ve diğer etkinlikler için arama yapabilirsiniz. MailItemsAccessed Audit (Premium) olayını kullanarak güvenliği aşılmış kullanıcı hesaplarıyla ilgili adli inceleme yürütme hakkında daha fazla bilgi için bkz. [Güvenliği aşılmış hesapları araştırmak için Denetimi (Premium) Kullanma](mailitemsaccessed-forensics-investigations.md).
+Kuruluşunuz için Denetim (Premium) ayarlandıktan sonra, adli araştırma yaparken kritik Denetim (Premium) olayları ve diğer etkinlikleri arayabilirsiniz. 1. Adım ve 2. Adım'ı tamamladıktan sonra, güvenliği aşılmış hesapların ve diğer güvenlik veya uyumluluk araştırmalarının adli araştırmalarında Denetim (Premium) olayları ve diğer etkinlikler için denetim günlüğünde arama yapabilirsiniz. MailItemsAccessed Audit (Premium) olayını kullanarak güvenliği aşılmış kullanıcı hesaplarıyla ilgili adli inceleme yürütme hakkında daha fazla bilgi için bkz. [Güvenliği aşılmış hesapları araştırmak için Denetimi (Premium) kullanma](mailitemsaccessed-forensics-investigations.md).

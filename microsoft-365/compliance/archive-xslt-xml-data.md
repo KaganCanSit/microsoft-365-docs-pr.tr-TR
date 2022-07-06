@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365'de XSLT/XML verilerini arşivleye bağlayıcı ayarlama
+title: Microsoft 365'te XSLT/XML verilerini arşivleye bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -11,25 +11,23 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Yöneticiler, Microsoft 365'da Veritas'tan XSLT/XML verilerini içeri aktarmak ve arşivlerken kullanmak için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal saklama, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: 450294107ce9ef7d138a60e4fcc5de47bce47ef1
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+description: Yöneticiler, Microsoft 365'te Veritas'tan XSLT/XML verilerini içeri aktarmak ve arşivlemek için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal saklama, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için Microsoft 365'teki üçüncü taraf veri kaynaklarından verileri arşivleyebilmenizi sağlar.
+ms.openlocfilehash: fa4901098dcd0104406107c4fc98aa9c04006c1d
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319406"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637737"
 ---
 # <a name="set-up-a-connector-to-archive-xsltxml-data"></a>XSLT/XML verilerini arşivleye bağlayıcı ayarlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Web sayfası kaynağındaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalı bir Veritas bağlayıcısı kullanın. Veritas, XML dosyalarını Microsoft 365'e aktarılabilir diğer dosya biçimlerine (HTML veya metin gibi) dönüştürmek için XSLT (Genişletilebilir Stil Sayfası Dil Dönüştürmeleri) kullanılarak oluşturulan dosyaların hızlı bir şekilde geliştirilmesine olanak tanıyan bir XSLT [/XML bağlayıcısı](https://globanet.com/xslt-xml) sağlar. Bağlayıcı, XSLT/XML kaynağındaki bir öğenin içeriğini e-posta iletisi biçimine dönüştürür ve ardından dönüştürülen öğeyi Microsoft 365 posta kutularına aktarır.
 
-Web sayfası kaynağındaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalı bir Veritas bağlayıcısı kullanın. Veritas size XSLT (Genişletilebilir Stil Sayfası Dil Dönüştürmeleri) kullanılarak oluşturulan dosyaların, XML dosyalarını Microsoft 365 aktarılabilir diğer dosya biçimlerine (HTML veya metin gibi) dönüştürmeye olanak tanıyan bir XSLT[/XML bağlayıcısı](https://globanet.com/xslt-xml) sağlar. Bağlayıcı, XSLT/XML kaynağındaki bir öğenin içeriğini e-posta iletisi biçimine dönüştürür ve ardından dönüştürülen öğeyi Microsoft 365 posta kutularına aktarır.
-
-XSLT/XML verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma ve bekletme ilkeleri ile bekletme etiketleri gibi Microsoft Purview özellikleri uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlerken XSLT/XML bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+XSLT/XML verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma ve bekletme ilkeleri ile bekletme etiketleri gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'te verileri içeri aktarmak ve arşivlerken XSLT/XML bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-xsltxml-data"></a>XSLT/XML verilerini arşivleme genel bakış
 
-Aşağıdaki genel bakış, Microsoft 365'da XSLT/XML kaynak verilerini arşivlerken bağlayıcı kullanma işlemini açıklar.
+Aşağıdaki genel bakış, Microsoft 365'te XSLT/XML kaynak verilerini arşivlerken bağlayıcı kullanma işlemini açıklar.
 
 ![XSLT/XML verileri için iş akışı arşivleme.](../media/XSLT-XMLConnectorWorkflow.png)
 
@@ -47,13 +45,13 @@ Aşağıdaki genel bakış, Microsoft 365'da XSLT/XML kaynak verilerini arşivle
 
 - 1. Adımda XSLT/XML bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu Veritas veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
+- Bu Veritas veri bağlayıcısı, Microsoft 365 US Government bulutundaki GCC ortamlarında genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerini Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolamayı, iletmeyi ve işlemeyi içerebilir ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="step-1-set-up-an-xsltxml-connector"></a>1. Adım: XSLT/XML bağlayıcısı ayarlama
 
 İlk adım, uyumluluk portalında **Veri Bağlayıcıları'na** erişmek ve XSLT/XML verileri için bir bağlayıcı oluşturmaktır.
 
-1. [https://compliance.microsoft.com](https://compliance.microsoft.com/) Adresine gidin ve **Veri bağlayıcılarıXSLT** > **/XML'e** tıklayın.
+1. **Veri bağlayıcıları** > **XSLT/XML'ye**[https://compliance.microsoft.com](https://compliance.microsoft.com/) gidin ve tıklayın.
 
 2. **XSLT/XML** ürün açıklaması sayfasında **Yeni bağlayıcı ekle'ye** tıklayın.
 
@@ -73,7 +71,7 @@ Aşağıdaki genel bakış, Microsoft 365'da XSLT/XML kaynak verilerini arşivle
 
 1. Kullanıcıları eşlemek ve uyumluluk portalında bağlayıcı kurulumunu tamamlamak için aşağıdaki adımları izleyin:
 
-2. **XSLT/XML kullanıcılarını Microsoft 365 kullanıcılarla eşle** sayfasında otomatik kullanıcı eşlemesini etkinleştirin. XSLT/XML öğeleri, kuruluşunuzdaki kullanıcıların *e-posta adreslerini içeren E-posta* adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcıyla ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır.
+2. **XSLT/XML kullanıcılarını Microsoft 365 kullanıcılarıyla eşle** sayfasında otomatik kullanıcı eşlemesini etkinleştirin. XSLT/XML öğeleri, kuruluşunuzdaki kullanıcıların *e-posta adreslerini içeren E-posta* adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcısı ile ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır.
 
 3. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve yeni bağlayıcının içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları** sayfasına gidin.
 

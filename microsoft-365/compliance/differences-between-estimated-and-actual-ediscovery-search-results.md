@@ -19,23 +19,21 @@ search.appverid:
 - MET150
 ms.assetid: 8f20ca4f-a908-46ec-99e6-9890d269ecf2
 description: Office 365'deki eBulma araçlarıyla yapılan aramalarda tahmini ve gerçek arama sonuçlarının neden farklılık gösterebileceğini anlayın.
-ms.openlocfilehash: 694d850d568aee4965530317f9bbc9f95727338c
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: db7026672af0e3abfcee524757a63c9747ff06e7
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092789"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638576"
 ---
 # <a name="differences-between-estimated-and-actual-ediscovery-search-results"></a>Tahmini ve gerçek eBulma arama sonuçları arasındaki farklar
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Bu makale, aşağıdaki Microsoft 365 eBulma araçlarından birini kullanarak çalıştırabileceğiniz aramalar için geçerlidir: 
+Bu makale, aşağıdaki Microsoft 365 eKeşif araçlarından birini kullanarak çalıştırabileceğiniz aramalar için geçerlidir: 
 
 - İçerik arama
 - eKeşif (Standart)
 
-Bir eBulma araması çalıştırdığınızda, kullanmakta olduğunuz araç arama ölçütleriyle eşleşen öğe sayısına (ve toplam boyutuna) ilişkin bir tahmin döndürür. Örneğin, Microsoft Purview uyumluluk portalında bir arama çalıştırdığınızda, seçilen aramanın açılır sayfasında tahmini arama sonuçları görüntülenir.
+Bir eBulma araması çalıştırdığınızda, kullanmakta olduğunuz araç arama ölçütleriyle eşleşen öğe sayısına (ve toplam boyutuna) ilişkin bir tahmin döndürür. Örneğin, Microsoft Purview uyumluluk portalı bir arama çalıştırdığınızda, seçilen aramanın açılır sayfasında tahmini arama sonuçları görüntülenir.
   
 ![Arama açılır sayfasında görüntülenen sonuçların tahmini.](../media/EstimatedSearchResults1.png)
   
@@ -63,7 +61,7 @@ Bu farklılıkların bazı nedenleri şunlardır:
 
   - Tarih sorgusu kullanılırken öğelerde artış. Bunun nedeni genellikle aşağıdaki iki nedendir:
 
-  - sürüm oluşturma SharePoint tutun. Bir belge, beklemedeki bir siteden silinirse ve belge sürümü oluşturma etkinleştirilirse, silinen belgenin tüm sürümleri korunur.
+  - SharePoint'te sürüm oluşturmayı basılı tutun. Bir belge, beklemedeki bir siteden silinirse ve belge sürümü oluşturma etkinleştirilirse, silinen belgenin tüm sürümleri korunur.
 
   - Takvim öğeleri. İletileri kabul edin ve reddedin; yinelenen toplantılar otomatik olarak eski tarihlerle arka planda yeni öğeler oluşturmaya devam eder.
 
@@ -81,23 +79,23 @@ Bu farklılıkların bazı nedenleri şunlardır:
 
     Dizine alınmamış öğelerin kuruluştaki her konumdan dışarı aktarılmamasının nedeni, dışarı aktarma hataları olasılığını artırıp arama sonuçlarını dışarı aktarmak ve indirmek için gereken süreyi artırabileceğidir.
 
-- **SharePoint ve OneDrive arama tahminlerine dahil olmayan dizine alınmamış öğeler**. SharePoint sitelerden ve OneDrive İş hesaplarından dizine alınmamış öğeler tahmini arama sonuçlarına dahil edilmez. Bunun nedeni, SharePoint dizininin dizine eklenmemiş öğeler için veri içermemesidir. Arama tahminlerine yalnızca posta kutularından dizine alınmamış öğeler eklenir. Ancak, arama sonuçlarını dışarı aktarırken dizine alınmamış öğeler eklerseniz, SharePoint ve OneDrive dizine alınmamış öğeler dahil edilir ve bu da aslında dışarı aktarılan öğelerin sayısını artırır. Bu, tahmini sonuçlar (SharePoint ve OneDrive sitelerindeki dizinlenmemiş öğeleri içermez) ile indirilen gerçek öğeler arasında farklara neden olur. Dizine alınmamış öğeleri yalnızca arama ölçütleriyle eşleşen öğeleri içeren içerik konumlarından dışarı aktarma kuralı bu durumda da geçerlidir.
+- **SharePoint ve OneDrive'daki dizine alınmamış öğeler arama tahminlerine dahil edilmez**. SharePoint sitelerinden ve OneDrive İş hesaplarından dizine alınmamış öğeler tahmini arama sonuçlarına dahil edilmez. Bunun nedeni, SharePoint dizininin dizine eklenmemiş öğeler için veri içermemesidir. Arama tahminlerine yalnızca posta kutularından dizine alınmamış öğeler eklenir. Ancak, arama sonuçlarını dışarı aktarırken dizine alınmamış öğeler eklerseniz SharePoint ve OneDrive'da dizine alınmamış öğeler eklenir ve bu da aslında dışarı aktarılan öğelerin sayısını artırır. Bu, tahmini sonuçlar (SharePoint ve OneDrive sitelerindeki dizinlenmemiş öğeleri içermez) ve indirilen gerçek öğeler arasında farklara neden olur. Dizine alınmamış öğeleri yalnızca arama ölçütleriyle eşleşen öğeleri içeren içerik konumlarından dışarı aktarma kuralı bu durumda da geçerlidir.
 
-- **SharePoint ve OneDrive belge sürümleri**. SharePoint siteleri ve OneDrive hesapları ararken, tahmini arama sonuçları sayısına belgenin birden çok sürümü dahil değildir. Ancak arama sonuçlarını dışarı aktarırken tüm belge sürümlerini dahil etme seçeneğiniz vardır. Arama sonuçlarını dışarı aktarırken belge sürümlerini eklerseniz, dışarı aktarılan öğelerin gerçek sayısı (ve toplam boyutu) artırılır.
+- **SharePoint ve OneDrive'daki belge sürümleri**. SharePoint sitelerinde ve OneDrive hesaplarında arama yaparken, tahmini arama sonuçları sayısına belgenin birden çok sürümü dahil değildir. Ancak arama sonuçlarını dışarı aktarırken tüm belge sürümlerini dahil etme seçeneğiniz vardır. Arama sonuçlarını dışarı aktarırken belge sürümlerini eklerseniz, dışarı aktarılan öğelerin gerçek sayısı (ve toplam boyutu) artırılır.
 
-- **klasörleri SharePoint**. SharePoint'daki klasörler arama sorgusuyla eşleşiyorsa (örneğin tarihe göre arama), arama tahmini son değiştirme tarihi aralığına sahip klasörlerin sayısını içerir (ancak bu klasörlerdeki öğeler dahil değildir). Arama sonuçlarını dışarı aktardığınızda, klasördeki öğeler dışarı aktarılır, ancak gerçek klasör dışarı aktarılamaz. Sonuç, dışarı aktarılan öğelerin sayısının tahmini arama sonuçlarının sayısından daha fazla olmasıdır. Klasör boşsa, gerçek klasör dışarı aktarılmadığından dışarı aktarılan gerçek arama sonuçlarının sayısı bir öğe azaltılır.
+- **SharePoint klasörleri**. SharePoint'teki klasörler, örneğin tarihe göre arama yapan bir arama sorgusuyla eşleşiyorsa, arama tahmini son değiştirme tarihi aralığına (ancak bu klasörlerdeki öğelere değil) sahip klasörlerin sayısını içerir. Arama sonuçlarını dışarı aktardığınızda, klasördeki öğeler dışarı aktarılır, ancak gerçek klasör dışarı aktarılamaz. Sonuç, dışarı aktarılan öğelerin sayısının tahmini arama sonuçlarının sayısından daha fazla olmasıdır. Klasör boşsa, gerçek klasör dışarı aktarılmadığından dışarı aktarılan gerçek arama sonuçlarının sayısı bir öğe azaltılır.
 
    > [!NOTE]
-   > Sorgu tabanlı arama çalıştırırken, sorguya aşağıdaki koşulu ekleyerek SharePoint klasörleri hariç tutabilirsiniz: `NOT(ContentType:folder)`.
+   > Sorgu tabanlı arama çalıştırırken, sorguya aşağıdaki koşulu ekleyerek SharePoint klasörlerini dışlayabilirsiniz: `NOT(ContentType:folder)`.
 
 - **SharePoint listeleri**. SharePoint listesinin adı bir arama sorgusuyla eşleşiyorsa, arama tahmini listedeki tüm öğelerin sayısını içerir. Arama sonuçlarını dışarı aktardığınızda, liste (ve liste öğeleri) tek bir CSV dosyası olarak dışarı aktarılır. Bu, gerçekten dışarı aktarılan öğelerin gerçek sayısını azaltır. Listede ekler varsa, ekler ayrı belgeler olarak dışarı aktarılır ve bu da dışarı aktarılan öğelerin sayısını artırır.
 
    > [!NOTE]
-   > Sorgu tabanlı arama çalıştırırken, sorguya aşağıdaki koşulu ekleyerek SharePoint listeleri dışlayabilirsiniz: `NOT(ContentType:list)`.
+   > Sorgu tabanlı arama çalıştırırken, sorguya aşağıdaki koşulu ekleyerek SharePoint listelerini dışlayabilirsiniz: `NOT(ContentType:list)`.
 
-- **Ham dosya biçimleri ve dışarı aktarılan dosya biçimleri**. Exchange öğeler için, arama sonuçlarının tahmini boyutu ham Exchange ileti boyutları kullanılarak hesaplanır. Ancak, e-posta iletileri bir PST dosyasında veya tek tek iletiler olarak (EML dosyaları olarak biçimlendirilir) dışarı aktarılır. Bu dışarı aktarma seçeneklerinin her ikisi de ham Exchange iletilerinden farklı bir dosya biçimi kullanır ve bu da dışarı aktarılan toplam dosya boyutunun tahmini dosya boyutundan farklı olmasına neden olur.
+- **Ham dosya biçimleri ve dışarı aktarılan dosya biçimleri**. Exchange öğeleri için, arama sonuçlarının tahmini boyutu ham Exchange ileti boyutları kullanılarak hesaplanır. Ancak, e-posta iletileri bir PST dosyasında veya tek tek iletiler olarak (EML dosyaları olarak biçimlendirilir) dışarı aktarılır. Bu dışarı aktarma seçeneklerinin her ikisi de ham Exchange iletilerinden farklı bir dosya biçimi kullanır ve bu da dışarı aktarılan toplam dosya boyutunun tahmini dosya boyutundan farklı olmasına neden olur.
 
-- **Dışarı aktarma sırasında Exchange öğelerinin yinelenenlerini kaldırma**. Exchange öğeler için yinelenenleri kaldırma, dışarı aktarılan öğelerin sayısını azaltır. Arama sonuçlarını dışarı aktarırken yinelenenleri kaldırma seçeneğiniz vardır. Exchange iletilerde, bu ileti birden çok posta kutusunda bulunabilse bile iletinin yalnızca tek bir örneğinin dışarı aktarılacağı anlamına gelir. Tahmini arama sonuçları bir iletinin her örneğini içerir. Dolayısıyla, arama sonuçlarını dışarı aktarırken yinelenenleri kaldırma seçeneğini belirlerseniz, dışarı aktarılan öğelerin gerçek sayısı tahmini öğe sayısından çok daha az olabilir.
+- **Dışarı aktarma sırasında Exchange öğelerinin yinelenenlerini kaldırma**. Exchange öğeleri için yinelenenleri kaldırma, dışarı aktarılan öğelerin sayısını azaltır. Arama sonuçlarını dışarı aktarırken yinelenenleri kaldırma seçeneğiniz vardır. Exchange iletileri için, bu ileti birden çok posta kutusunda bulunabilse bile iletinin yalnızca tek bir örneğinin dışarı aktarılacağı anlamına gelir. Tahmini arama sonuçları bir iletinin her örneğini içerir. Dolayısıyla, arama sonuçlarını dışarı aktarırken yinelenenleri kaldırma seçeneğini belirlerseniz, dışarı aktarılan öğelerin gerçek sayısı tahmini öğe sayısından çok daha az olabilir.
 
 Arama sonuçları raporu (Results.csv dosyası) her yinelenen ileti için bir girdi içerir ve yinelenen iletinin bulunduğu kaynak posta kutusunu tanımlar. Bu, yinelenen ileti içeren tüm posta kutularını belirlemenize yardımcı olur.
 

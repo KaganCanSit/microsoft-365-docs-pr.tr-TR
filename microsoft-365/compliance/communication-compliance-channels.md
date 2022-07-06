@@ -19,16 +19,14 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: b60337226a12f7395b4a5664b5a11b0d88ed4790
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: 0769dd3cfd64f611162803952a1e39b9241ac2ad
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65893382"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638686"
 ---
 # <a name="detect-channel-signals-with-communication-compliance"></a>İletişim uyumluluğu ile kanal sinyallerini tespit etme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 İletişim uyumluluk ilkeleriyle, aşağıdaki iletişim platformlarından bir veya daha fazlasında iletileri grup veya tek başına kaynak olarak taramayı seçebilirsiniz. Bu platformlarda yakalanan özgün iletiler, kuruluşunuzun [saklama ve saklama ilkelerine](/microsoft-365/compliance/information-governance) uygun olarak özgün platform konumunda tutulur. İletişim uyumluluk ilkeleri tarafından analiz ve araştırma için kullanılan iletilerin kopyaları, kullanıcılar kuruluşunuzdan ayrılsa ve posta kutuları silinse bile, ilke olduğu sürece saklanır. bir iletişim ilkesi silindiğinde, ilkeyle ilişkili iletilerin kopyaları da silinir.
 
@@ -61,7 +59,7 @@ Teams'de bireysel kullanıcı sohbetlerini ve kanal iletişimlerini denetlemek i
 
 - **Teams sohbet iletişimleri için:** İletişim uyumluluk ilkesine tek tek kullanıcılar atayın veya bir [dağıtım grubu](https://support.office.com/article/Distribution-groups-E8BA58A8-FAB2-4AAF-8AA1-2A304052D2DE) atayın. Bu ayar, bire bir veya bire çok kullanıcı/sohbet ilişkileri içindir.
 - **Teams Channel iletişimleri için:** Belirli bir kullanıcıyı içeren taramak istediğiniz her Microsoft Teams kanalını veya Microsoft 365 grubunu iletişim uyumluluk ilkesine atayın. Aynı kullanıcıyı diğer Microsoft Teams kanallarına veya Microsoft 365 gruplarına eklerseniz, bu yeni kanalları ve grupları iletişim uyumluluk ilkesine eklediğinizden emin olun. Kanalın herhangi bir üyesi bir ilke içinde denetimli bir kullanıcıysa ve *Gelen* yönü bir ilkede yapılandırılmışsa, kanal içinde gönderilen tüm iletiler gözden geçirilebilir ve olası ilke eşleşmeleri (kanaldaki kullanıcılar için bile açıkça denetlenmeyenler için). Örneğin, A Kullanıcısı bir kanalın sahibi veya üyesidir. B ve C Kullanıcısı aynı kanalın üyeleridir ve yalnızca A Kullanıcısını denetleyen uygunsuz içerik ilkesiyle eşleşen dili kullanır. Kullanıcı B ve C Kullanıcısı, uygunsuz içerik ilkesinde doğrudan denetlenmese bile kanal içindeki konuşmalar için ilke eşleşmeleri oluşturur. A Kullanıcısını içeren kanalın dışında yer alan B kullanıcısı ile C Kullanıcısı arasındaki teams konuşmaları, A Kullanıcısını içeren uygunsuz içerik ilkesine tabi olmaz. Kanalın diğer üyeleri açıkça denetlendiğinde kanal üyelerini denetimden çıkarmak için, ilgili iletişim uyumluluk ilkesinde *Gelen* iletişim yönü ayarını kapatın.
-- **Karma e-posta ortamlarıyla Teams sohbet iletişimleri** için: İletişim uyumluluğu, şirket içi Exchange dağıtımına veya Microsoft Teams'i etkinleştirmiş bir dış e-posta sağlayıcısına sahip kuruluşlar için kullanıcılara yönelik sohbet iletilerini izleyebilir. İzlemesi için şirket içi veya dış posta kutuları olan kullanıcılar için bir dağıtım grubu oluşturmanız gerekir. İletişim uyumluluk ilkesi oluştururken, bu dağıtım grubunu ilke sihirbazında **Denetimli kullanıcılar ve gruplar** seçimi olarak atayacaksınız. Bulut tabanlı depolamayı etkinleştirme gereksinimleri ve sınırlamaları ve şirket içi kullanıcılar için Teams desteği hakkında daha fazla bilgi için bkz. [Şirket içi kullanıcılar için Teams sohbet verilerini arama](search-cloud-based-mailboxes-for-on-premises-users.md).
+- **Karma e-posta ortamlarıyla Teams sohbet iletişimleri** için: İletişim uyumluluğu, şirket içi Exchange dağıtımına veya Microsoft Teams'i etkinleştirmiş bir dış e-posta sağlayıcısına sahip kuruluşlar için kullanıcılara yönelik sohbet iletilerini algılayabilir. İzlemesi için şirket içi veya dış posta kutuları olan kullanıcılar için bir dağıtım grubu oluşturmanız gerekir. İletişim uyumluluk ilkesi oluştururken, bu dağıtım grubunu ilke sihirbazında **Denetimli kullanıcılar ve gruplar** seçimi olarak atayacaksınız. Bulut tabanlı depolamayı etkinleştirme gereksinimleri ve sınırlamaları ve şirket içi kullanıcılar için Teams desteği hakkında daha fazla bilgi için bkz. [Şirket içi kullanıcılar için Teams sohbet verilerini arama](search-cloud-based-mailboxes-for-on-premises-users.md).
 
 ## <a name="exchange-email"></a>Exchange e-postası
 
@@ -71,15 +69,7 @@ Microsoft 365 veya Office 365 aboneliğinizin bir parçası olarak Exchange Onli
 
 Yammer topluluklarındaki özel iletiler, genel konuşmalar ve ilişkili ekler taranabilir. Kullanıcı, yammer'ı tanımlı bir kanal olarak içeren iletişim uyumluluk ilkesine eklendiğinde, kullanıcının üyesi olduğu tüm Yammer toplulukları arasındaki iletişimler tarama işlemine dahil edilir. İletişim uyumluluk ilkesi koşullarıyla eşleşen Yammer sohbetlerinin ve eklerinin işlenmesi 24 saat kadar sürebilir. 
 
-Yammer iletişimlerini ve eklerini izlemek için iletişim uyumluluk ilkeleri için Yammer [Yerel Modda](/yammer/configure-your-yammer-network/overview-native-mode) olmalıdır. Yerel Modda, tüm Yammer kullanıcıları Azure Active Directory'de (AAD), tüm gruplar Office 365 Grupları ve tüm dosyalar SharePoint Online'da depolanır.
-
-## <a name="skype-for-business-online"></a>Skype Kurumsal Çevrimiçi
-
-Skype Kurumsal Çevrimiçi Sürüm'deki sohbet iletişimleri ve ilişkili ekler denetlenebilir. İletişim uyumluluk ilkesi koşullarıyla eşleşen Skype Kurumsal Çevrimiçi Sürüm sohbetlerinin işlenmesi 24 saat kadar sürebilir. Denetimli sohbet konuşmaları [, Skype Kurumsal Çevrimiçi Sürüm'e kaydedilen önceki konuşmalardan](https://support.office.com/article/Find-a-previous-Skype-for-Business-conversation-18892eba-5f18-4281-8c87-fd48bd72e6a2) alınır.  
-
-Skype Kurumsal Çevrimiçi Sürüm'de kullanıcı sohbeti iletişimlerini denetlemek için aşağıdaki grup yönetimi yapılandırmasını kullanın:
-
-- **Skype Kurumsal Çevrimiçi Sürüm sohbet iletişimleri için**: Tek tek kullanıcılar atayın veya iletişim uyumluluk ilkesine bir [dağıtım grubu](https://support.office.com/article/Distribution-groups-E8BA58A8-FAB2-4AAF-8AA1-2A304052D2DE) atayın. Bu ayar, bire bir veya bire çok kullanıcı/sohbet ilişkileri içindir.
+Yammer iletişimlerini ve eklerini izlemek için iletişim uyumluluk ilkeleri için Yammer [Yerel Modda](/yammer/configure-your-yammer-network/overview-native-mode) olmalıdır. Yerel Modda, tüm Yammer kullanıcıları Azure Active Directory'de (AAD), tüm gruplar Office 365 Gruplar'dır ve tüm dosyalar SharePoint Online'da depolanır.
 
 ## <a name="third-party-sources"></a>Üçüncü taraf kaynaklar
 

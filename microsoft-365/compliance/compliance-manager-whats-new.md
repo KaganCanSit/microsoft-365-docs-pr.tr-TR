@@ -17,16 +17,14 @@ search.appverid:
 - MOE150
 - MET150
 description: Uyumluluk Yöneticisi'ndeki yeniliklere ve gelecek yeniliklere ulaşın. Güncelleştirilmiş değerlendirmeler, yeni değerlendirme şablonları, yeni eylemler ve daha fazlası hakkında bilgi edinin.
-ms.openlocfilehash: cf817b28c6d375e92e7aabdb1f57ea632c6f1a28
-ms.sourcegitcommit: 852075d8d8a4ca052f69e854396d1565ef713500
+ms.openlocfilehash: aab0ccefd6f139212e8e045eacd458e22f498f9b
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65692749"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638718"
 ---
 # <a name="whats-new-in-microsoft-purview-compliance-manager"></a>Microsoft Purview Uyumluluk Yöneticisi'ndeki yenilikler
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **Bu makalede:** Uyumluluk Yöneticisi'ndeki son güncelleştirmeler hakkında bilgi edinin.
 
@@ -38,7 +36,7 @@ Avrupa, Orta Doğu ve Afrika (EMEA)
 - Katar Ulusal Bilgi Güvencesi (NIA)
 - BAE Veri Gizliliği Yasası
 
-ABD Kamu Community (GCC) Orta, GCC Yüksek ve Savunma Bakanlığı (DoD) müşterileri bu şablonları önümüzdeki birkaç hafta içinde kullanıma sunmalıdır.
+ABD Kamu Topluluğu (GCC) Orta, GCC High ve Savunma Bakanlığı (DoD) müşterileri önümüzdeki birkaç hafta içinde bu şablonları görmelidir.
 
 [Değerlendirme şablonlarının tam listesini](compliance-manager-templates-list.md) görüntüleyin.
 
@@ -64,7 +62,7 @@ Uyumluluk Yöneticisi aşağıdaki yeni değerlendirme şablonlarını yayımlad
 
 ### <a name="continuous-compliance-assessment-of-improvement-actions"></a>İyileştirme eylemlerinin sürekli uyumluluk değerlendirmesi
 
-Uyumluluk Yöneticisi'nde daha önce Güvenli Puan kapsamında olmayan 35'in üzerinde geliştirme eylemi için otomatik test ve kanıt oluşturma işlemi ekliyoruz. Sürekli uyumluluk değerlendirmesiyle, uyumluluk değerlendirmelerinizle ilgiliyse ve ilgili çözümlere erişme lisansınız varsa bu iyileştirme eylemlerinden hangilerini tamamladığınızla ilgili güncelleştirmeler alabilirsiniz. Sürekli uyumluluk değerlendirmesi ayrıca kullanıcılara iyileştirme eylemlerinizin puanlama mantığı hakkında görünürlük sağlar ve neden belirli bir puan aldığınıza ilişkin içgörü ve kanıt sağlar. Bu özellik, Microsoft 365 Güvenli Puan ile mevcut tümleştirmelerle birlikte çalışır ve daha önce yapılandırdığınız tüm otomatik eylemler olduğu gibi çalışmaya devam eder. [Otomatik test ayarları](compliance-manager-setup.md#set-up-automated-testing) hakkında daha fazla bilgi edinin.
+Uyumluluk Yöneticisi'nde daha önce Güvenli Puan kapsamında olmayan 35'in üzerinde geliştirme eylemi için otomatik test ve kanıt oluşturma işlemi ekliyoruz. Sürekli uyumluluk değerlendirmesiyle, uyumluluk değerlendirmelerinizle ilgiliyse ve ilgili çözümlere erişme lisansınız varsa bu iyileştirme eylemlerinden hangilerini tamamladığınızla ilgili güncelleştirmeler alabilirsiniz. Sürekli uyumluluk değerlendirmesi ayrıca kullanıcılara iyileştirme eylemlerinizin puanlama mantığı hakkında görünürlük sağlar ve neden belirli bir puan aldığınıza ilişkin içgörü ve kanıt sağlar. Bu özellik, Microsoft 365 Güvenli Puanı ile mevcut tümleştirmelerle birlikte çalışır ve daha önce yapılandırdığınız tüm otomatik eylemler olduğu gibi çalışmaya devam eder. [Otomatik test ayarları](compliance-manager-setup.md#set-up-automated-testing) hakkında daha fazla bilgi edinin.
 
 ## <a name="february-2022"></a>Şubat 2022
 
@@ -121,7 +119,7 @@ Aşağıdakileri içeren yeni değerlendirme şablonları yayımladık:
 
 ### <a name="integration-with-microsoft-priva"></a>Microsoft Priva ile tümleştirme
 
-Uyumluluk Yöneticisi artık kuruluşunuzun Microsoft 365 depoladığınız kişisel verileri korumanıza yardımcı olabilecek bir çözüm olan Microsoft Priva ile birlikte çalışabilir. Priva verilerinizi görselleştirmenize ve anlamanıza, önemli risk senaryolarını yönetmeye ve konu hakları isteklerini işlemeye yönelik ilkeler uygulamanıza yardımcı olacak araçlar sunar. Depoladığınız kişisel verileri korumak için Priva adımlarını uyguladığınızda bu, Uyumluluk Yöneticisi'ndeki gizlilik değerlendirmelerinize katkıda bulunabilir ve uyumluluk puanınızı geliştirmenize yardımcı olabilir. Priva ve diğer çözümlerin puanınıza nasıl katkıda bulunduğuna bakmak ve daha fazla geliştirme için olası fırsatlar hakkında bilgi edinmek için Uyumluluk Yöneticisi'ndeki **Çözümler** sekmesine bakın. Priva hakkında daha fazla ayrıntıyı [Microsoft Priva hakkında bilgi edinin](/privacy/priva) makalesinde de bulabilirsiniz.
+Uyumluluk Yöneticisi artık kuruluşunuzun Microsoft 365'te depoladığınız kişisel verileri korumanıza yardımcı olabilecek bir çözüm olan Microsoft Priva ile birlikte çalışabilir. Priva, verilerinizi görselleştirmenize ve anlamanıza, önemli risk senaryolarını yönetmeye ve konu hakları isteklerini işlemeye yönelik ilkeler uygulamanıza yardımcı olacak araçlar sunar. Priva'da depoladığınız kişisel verileri korumak için adımlar attığınızda bu, Uyumluluk Yöneticisi'ndeki gizlilik değerlendirmelerinize katkıda bulunabilir ve uyumluluk puanınızı geliştirmenize yardımcı olabilir. Priva'nın ve diğer çözümlerin puanınıza nasıl katkıda bulunduğuna bakmak ve daha fazla geliştirme için olası fırsatlar hakkında bilgi edinmek için Uyumluluk Yöneticisi'ndeki **Çözümler** sekmesine bakın. Priva hakkında daha fazla bilgiyi [Microsoft Priva hakkında bilgi edinin](/privacy/priva) makalesinde de bulabilirsiniz.
 
 ## <a name="july-2021"></a>Temmuz 2021
 
@@ -133,7 +131,7 @@ Uyumluluk Yöneticisi artık kuruluşunuzun Microsoft 365 depoladığınız kiş
 
 Şu 75 yeni değerlendirme şablonu yayımladık:
 - Avustralya Gizlilik Yasası
-- CIS Microsoft 365 Temel Düzeyleri 1 ve 2
+- CIS Microsoft 365 Foundation Levels 1 ve 2
 - Almanya - Finansal Kurumlarda BT için Denetim Gereksinimleri (BAIT)
 - Sarbanes-Oxley Yasası
 - Güney Afrika - Bilgiye Erişimin Teşviki Yasası

@@ -16,24 +16,22 @@ ms.collection:
 search.appverid:
 - MET150
 description: Yönetici olarak ve ileti gönderen olarak, Microsoft Purview Gelişmiş İleti Şifrelemesi ile şifrelenen bazı e-postaları iptal edebilirsiniz.
-ms.openlocfilehash: 79d09c13755c0c73e4d68598e83ac41344b9281a
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: b27ea41d1d91b825450d39ade96afdef04c0fdea
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65187953"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639434"
 ---
 # <a name="revoke-email-encrypted-by-advanced-message-encryption"></a>Gelişmiş İleti Şifrelemesi ile şifrelenen e-postayı iptal etme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-E-posta iptali, Microsoft Purview Gelişmiş İleti Şifrelemesi'nin bir parçası olarak sunulur. Microsoft Purview Gelişmiş İleti Şifrelemesi [Microsoft 365 Kurumsal E5, Office 365 E5](https://www.microsoft.com/microsoft-365/enterprise/home), Microsoft 365 E5 (Kar Amacı Gütmeyen Personel Fiyatlandırması), Office 365 Kurumsal E5 (Kar Amacı Gütmeyen Personel Fiyatlandırması) ve Office 365 Eğitim A5. Gelişmiş İleti Şifrelemesi iptali ve süre sonu işlevlerini kullanmak için E5 lisansınızda **Premium Şifreleme Office 365** seçeneğini etkinleştirin.
+E-posta iptali, Microsoft Purview Gelişmiş İleti Şifrelemesi'nin bir parçası olarak sunulur. Microsoft Purview Gelişmiş İleti Şifrelemesi [Microsoft 365 Kurumsal E5, Office 365 E5](https://www.microsoft.com/microsoft-365/enterprise/home), Microsoft 365 E5 (Kar Amacı Gütmeyen Personel Fiyatlandırması), Office 365 Kurumsal E5 (Kar Amacı Gütmeyen Personel Fiyatlandırması) ve Office 365 Eğitim A5. Gelişmiş İleti Şifrelemesi iptali ve süre sonu işlevlerini kullanmak için E5 lisansınızdaki **Office 365 Premium Şifreleme** seçeneğini etkinleştirin.
 
 Kuruluşunuzun Microsoft Purview Gelişmiş İleti Şifrelemesi içermeyen bir aboneliği varsa, Microsoft 365 E3, Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatlandırması) için Microsoft 365 E5 Uyumluluk SKU eklentisiyle veya Microsoft 365 E3, Microsoft 365 E3 (Kar Amacı Gütmeyen Personel Fiyatlandırması) veya SKU'ları Office 365 için SKU eklentisini Office 365 Gelişmiş Uyumluluk.
 
 Bu makale, [Office 365 İleti Şifrelemesi](ome.md) hakkında daha büyük bir makale serisinin bir parçasıdır.
 
-Bir ileti Microsoft Purview Gelişmiş İleti Şifrelemesi kullanılarak şifrelendiyse ve Microsoft 365 yöneticisiyseniz veya iletiyi gönderen sizseniz, iletiyi belirli koşullar altında iptal edebilirsiniz. Yöneticiler PowerShell kullanarak iletileri iptal eder. Gönderen olarak, doğrudan Web üzerinde Outlook gönderdiğiniz bir iletiyi iptal edebilirsiniz. Bu makalede iptalin mümkün olduğu koşullar ve bunun nasıl gerçekleştirildiği açıklanmaktadır.
+Bir ileti Microsoft Purview Gelişmiş İleti Şifrelemesi kullanılarak şifrelendiyse ve bir Microsoft 365 yöneticisiyseniz veya iletiyi gönderen sizseniz, iletiyi belirli koşullar altında iptal edebilirsiniz. Yöneticiler PowerShell kullanarak iletileri iptal eder. Gönderen olarak, doğrudan Web üzerinde Outlook gönderdiğiniz bir iletiyi iptal edebilirsiniz. Bu makalede iptalin mümkün olduğu koşullar ve bunun nasıl gerçekleştirildiği açıklanmaktadır.
 
 > [!NOTE]
 > OME iletilerini izleme ve iptal etme özelliğinin kullanılabildiğini garanti etmek için özel bir markalama şablonu eklemeniz gerekir. Bkz. [Şifrelenmiş iletilerinize kuruluşunuzun markasını ekleme](add-your-organization-brand-to-encrypted-messages.md)
@@ -42,7 +40,7 @@ Bir ileti Microsoft Purview Gelişmiş İleti Şifrelemesi kullanılarak şifrel
 
 Alıcı bağlantı tabanlı, markalı bir şifreli e-posta aldıysa yöneticiler ve ileti gönderenler şifrelenmiş e-postaları iptal edebilir. Alıcı desteklenen bir Outlook istemcisinde yerel bir satır içi deneyim aldıysa, iletiyi iptal yapamazsınız.
 
-Alıcının bağlantı tabanlı bir deneyim veya satır içi deneyim alıp almadığı, alıcının kimlik türüne bağlıdır: Office 365 ve Microsoft hesabı alıcıları (örneğin, outlook.com kullanıcılar) desteklenen Outlook istemcilerinde satır içi deneyim elde eder. Gmail ve Yahoo alıcıları gibi diğer tüm alıcı türleri bağlantı tabanlı bir deneyim elde eder.
+Alıcının bağlantı tabanlı bir deneyim mi yoksa satır içi deneyim mi aldığı, alıcı kimliği türüne bağlıdır: Office 365 ve Microsoft hesabı alıcıları (örneğin, outlook.com kullanıcılar) desteklenen Outlook istemcilerinde satır içi deneyim elde eder. Gmail ve Yahoo alıcıları gibi diğer tüm alıcı türleri bağlantı tabanlı bir deneyim elde eder.
 
 Yöneticiler ve ileti gönderenler, doğrudan Web üzerinde Outlook şifreleme kullanılarak şifrelenmiş iletileri iptal edebilir. Örneğin, Yalnızca Şifrele seçeneğiyle şifrelenen iletiler.
 
@@ -58,7 +56,7 @@ Bir e-posta iptal edildikten sonra, alıcı şifrelenmiş e-postaya Office 365 �
 
 gmail.com veya yahoo.com gibi bir sosyal hesap kullanan tek bir alıcıya gönderdiğiniz postayı iptal edebilirsiniz. Başka bir deyişle, bağlantı tabanlı deneyimi alan tek bir alıcıya gönderilen e-postayı iptal edebilirsiniz.
 
-Office 365 veya Microsoft 365 ya da outlook.com hesabı gibi bir Microsoft hesabı kullanan bir kullanıcıdan iş veya okul hesabı kullanan bir alıcıya gönderdiğiniz postayı iptal edemezsiniz. 
+Office 365 veya Microsoft 365'ten iş veya okul hesabı kullanan bir alıcıya gönderdiğiniz postayı ya da microsoft hesabı kullanan bir kullanıcıyı (örneğin, bir outlook.com hesabı) iptal edemezsiniz. 
 
 Gönderdiğiniz şifrelenmiş iletiyi iptal etmek için şu adımları tamamlayın
 
@@ -138,7 +136,7 @@ Güvenlik &amp; Uyumluluk Merkezi'ni kullanarak iletiyi iptal etmek için
 
 Windows PowerShell kullanarak e-postayı iptal etmek için Set-OMEMessageRevocation cmdlet'ini kullanın.
 
-1. Kuruluşunuzda genel yönetici izinlerine sahip bir iş veya okul hesabı kullanarak [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+1. Kuruluşunuzda genel yönetici izinlerine sahip bir iş veya okul hesabı kullanarak [powershell Exchange Online bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Set-OMEMessageRevocation cmdlet'ini aşağıdaki gibi çalıştırın:
 

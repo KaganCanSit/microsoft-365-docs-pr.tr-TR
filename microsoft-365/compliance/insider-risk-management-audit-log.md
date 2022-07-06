@@ -1,7 +1,7 @@
 ---
 title: Insider risk yönetimi denetim günlüğü
-description: Microsoft 365'da Insider risk yönetimi denetim günlüğü hakkında bilgi Microsoft 365
-keywords: Microsoft 365, insider risk yönetimi, risk yönetimi, uyumluluk
+description: Microsoft Purview'da insider risk yönetimi denetim günlüğü hakkında bilgi edinin
+keywords: Microsoft 365, Microsoft Purview, insider riski, risk yönetimi, uyumluluk
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -12,78 +12,78 @@ author: robmazz
 manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 2bf453e8856f69e9ddb8c7c7a9264267ef77b4f0
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: 544c31205469bcb810bd3f05d9f686d650df6269
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989961"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638201"
 ---
 # <a name="insider-risk-management-audit-log"></a>Insider risk yönetimi denetim günlüğü
 
-Insider risk yönetimi denetim günlüğü, Insider risk yönetimi özellikleri üzerinde yapılan işlemler hakkında bilgi sahibi kalmanız için olanak sağlar. Bu günlük, bir veya birden çok insider risk yönetimi rol gruplarına atanan kullanıcıların  gerçekleştirdığı eylemlerin bağımsız olarak gözden alınmasına olanak sağlar. Insider risk yönetimi denetim günlüğü, kurum içinde otomatik olarak etkinleştirilir ve devre dışı bırakılamaz.
+Insider risk yönetimi denetim günlüğü, insider risk yönetimi özelliklerinde gerçekleştirilen eylemler hakkında bilgi sahibi olmanıza olanak tanır. Bu günlük, bir veya daha fazla iç risk yönetimi rol grubuna atanan kullanıcılar tarafından gerçekleştirilen eylemlerin bağımsız olarak gözden geçirilmesine olanak tanır. Insider risk yönetimi denetim günlüğü kuruluşunuzda otomatik olarak etkinleştirilir ve devre dışı bırakılamaz.
 
 ![Insider risk yönetimi denetim günlüğü.](../media/insider-risk-audit-log.png)
 
-Denetlenen etkinlikler her izlendiğinde denetim günlüğü otomatik olarak ve hemen güncelleştirilir ve günlük 180 gün (yaklaşık altı ay) boyunca etkinlikle ilgili bilgileri korur. 180 gün sonra, etkinlik verileri günlükten kalıcı olarak silinir.
+denetim günlüğü, izlenen etkinlikler gerçekleştiğinde otomatik olarak ve hemen güncelleştirilir ve günlük, etkinlik hakkındaki bilgileri 180 gün boyunca (yaklaşık altı ay) tutar. 180 gün sonra etkinlik verileri günlükten kalıcı olarak silinir.
 
-Etkinlik izlemesinde yer alan alanlar şunlardır:
+Etkinlik izlemede yer alan alanlar şunlardır:
 
 - İlkeler
-- Vakalar
+- Durumda
 - Uyarılar
 - Ayarlar
 - Kullanıcılar
 - Bildirim şablonları
 
-Denetim günlüğünden verileri görüntülemek ve dışarı aktar almak için, kullanıcıların *Insider Risk Yönetimi* veya *Insider Risk Yönetimi Denetçileri rol gruplarına atanmaları* gerekir. Insider risk yönetimi rol grupları hakkında daha fazla bilgi edinmek için bkz [. Insider risk yönetimiyle çalışmaya başlama 1. Adım: İzinleri etkinleştirme](insider-risk-management-configure.md#step-1-required-enable-permissions-for-insider-risk-management).
+Denetim günlüğündeki verileri görüntülemek ve dışarı aktarmak için kullanıcıların *Insider Risk Management* veya *Insider Risk Management Auditors* rol gruplarına atanması gerekir. Insider risk yönetimi rol grupları hakkında daha fazla bilgi edinmek için bkz. [Insider risk yönetimine başlama 1. Adım: İzinleri etkinleştirme](insider-risk-management-configure.md#step-1-required-enable-permissions-for-insider-risk-management).
 
 > [!NOTE]
-> Insider risk yönetimi denetim günlüğü, bağımsız denetim sistemleri Microsoft 365 ve ayrı etkinliklerle ilgili bilgi yakalamak için bu denetim günlüğüyle ilişkilendirilz. Denetim Microsoft 365 devre dışı bırakmak, Insider risk yönetimi içinde etkinlik denetimini etkilenmez.
+> Insider risk yönetimi denetim günlüğü Microsoft 365 denetim günlüğüyle ilişkili değildir, bağımsız denetim sistemleridir ve ayrı etkinliklerle ilgili bilgileri yakalar. Microsoft 365 denetimini devre dışı bırakmak, iç risk yönetimi içindeki etkinlik denetimini etkilemez.
 
 ## <a name="view-activity-in-the-insider-risk-audit-log"></a>Insider risk denetim günlüğünde etkinliği görüntüleme
 
-Insider risk yönetimiyle ilgili izlenen özellik etkinliğini görüntülemek için, herhangi bir Insider risk yönetimi sekmesinin sağ üst alanında **yer alan Insider risk** denetim günlüğü bağlantısına gidin ve bu bağlantıyı seçin. Varsayılan olarak, Insider risk yönetimi etkinlikleri için aşağıdaki bilgileri görüntülenir:
+Insider risk yönetimi için izlenen özellik etkinliğini görüntülemek için, herhangi bir insider risk yönetimi sekmesinin sağ üst kısmındaki **Insider risk denetim günlüğü** bağlantısına gidin ve seçin. Varsayılan olarak, insider risk yönetimi etkinlikleri için aşağıdaki bilgileri görürsünüz:
 
-- **Etkinlik:** Kullanıcı tarafından Insider risk yönetimi çözümü kapsamında  alınan etkinliğin açıklaması.
-- **Kategori:** Etkinliğin gerçekleştir olduğu alan veya öğe. Örneğin, ilke değişikliği etkinlikleri *gerçekleştirn* olduğunda İlkeler'i kategori olarak görüyorsunuz.
-- **Gerçekleştirilen etkinlik:** Etkinliği gerçekleştirilen kullanıcının kullanıcı adı.
-- **Tarih:** Etkinliğin gerçekleştirildi olduğu tarih ve saat. Tarih ve saat, kurum için yerel tarih ve saattir.
+- **Etkinlik:** Bir kullanıcı tarafından insider risk yönetimi çözümünde gerçekleştirilen etkinliğin açıklaması.
+- **Kategori:** Etkinliğin gerçekleştirildiği alan veya öğe. Örneğin, ilke değişikliği etkinlikleri gerçekleştirildiğinde  kategori olarak İlkeler'i görürsünüz.
+- **Gerçekleştirilen etkinlik:** Etkinliği gerçekleştiren kullanıcının kullanıcı adı.
+- **Tarih:** Etkinliğin gerçekleştirildiği tarih ve saat. Tarih ve saat, kuruluşunuzun yerel tarih ve saatidir.
 
-Günlüğe kaydedilen bir etkinlik hakkında daha fazla bilgi için etkinliği seçerek etkinlik ayrıntıları bölmesini görüntüleyin. Bu bölmede etkinlikle ilgili ek bilgiler yer eder.
+Günlüğe kaydedilen etkinlik hakkında daha fazla bilgi için etkinliği seçerek etkinlik ayrıntıları bölmesini görüntüleyin. Bu bölme, etkinlik hakkında ek bilgiler içerir.
 
 ## <a name="columns-and-filtering"></a>Sütunlar ve filtreleme
 
-Denetçilerin günlüğe kaydedilen etkinliği gözden geçirmesini kolaylaştırmak için, **filtreleme Insider risk denetim günlüğünde de destekler**. Temel filtreleme için, dosyalarda ve iletilerde farklı özetler sağlamak için kuyruk sütunları görünüme eklenir. Etkinlikleri Kategori, Tarih aralığı **ve alanlar tarafından gerçekleştirilen Etkinlik'e** **göre filtreleebilirsiniz** .
+Denetçilerin günlüğe kaydedilen etkinliği gözden geçirmesini kolaylaştırmak için **Insider risk denetim günlüğünde** filtreleme desteklenir. Temel filtreleme için, dosya ve iletilerde farklı özetler sağlamak üzere görünüme kuyruk sütunları eklenebilir. Etkinlikleri Alanlar **tarafından gerçekleştirilen** **Kategori, Tarih aralığı** ve Etkinlik'e göre filtreleyebilirsiniz.
 
-Etkinlik sırasına sütun başlıkları eklemek veya kaldırmak için Sütunları **özelleştirin seçeneğini kullanın** ve sütun seçeneklerinden birini belirleyin. Bu sütunlar, **Insider risk** denetim günlüğünde desteklenen yaygın koşulları eşler ve bu makalenin devamlarında listelenir.
+Etkinlik kuyruğuna sütun başlıkları eklemek veya kaldırmak için **Sütunları özelleştir** denetimini kullanın ve sütun seçeneklerinden seçim yapın. Bu sütunlar **Insider risk denetim günlüğünde** desteklenen yaygın koşullarla eşlenir ve bu makalenin devamında listelenmiştir.
 
 ## <a name="audit-log-export"></a>Denetim günlüğü dışarı aktarma
 
-*Insider Risk Yönetimi veya Insider* Risk Yönetimi Denetçileri rol gruplarına atanan kullanıcılar,  *Insider risk* denetim günlüğü sayfasındaki Dışarı Aktar'ı seçerek denetim günlüğünde bulunan tüm etkinlikleri bir .csv (virgülle ayrılmış değerler) dosyasına aktarabilir. Etkinlike bağlı olarak, etkinlikle ilgili bazı alanlar etkinlik için geçerli olamayabilirsiniz ve bu alanlar dışarı aktarıldı dosyasında boş olarak görünür.
+*Insider Risk Yönetimi veya Insider Risk Yönetimi* *Denetçileri* rol gruplarına atanan kullanıcılar, **Insider risk denetim** günlüğü sayfasında Dışarı **Aktar'ı** seçerek denetim günlüğündeki tüm etkinlikleri bir .csv (virgülle ayrılmış değerler) dosyasına aktarabilir. Etkinliğe bağlı olarak, bir etkinliğin bazı alanları etkinlik için geçerli olmayabilir ve bu alanlar dışarı aktarılan dosyada boş olarak görünür.
 
-Dosya, aşağıdaki alanlara ilişkin etkinlik bilgilerini içerir:
+Dosya aşağıdaki alanlar için etkinlik bilgilerini içerir:
 
-- **Gerçekleştirilen etkinlik:** Öğe değerini değiştiren kullanıcının kullanıcı adı. Burada listelenen kullanıcılar, aşağıdaki [Insider risk](insider-risk-management-configure.md#step-1-required-enable-permissions-for-insider-risk-management) yönetimi rol gruplarından bir veya birden fazlasına atanmıştır: *Insider Risk Yönetimi*, *Insider Risk Yönetimi* Yöneticileri, *Insider Risk Yönetimi* Analistleri, *Insider Risk Yönetimi İlkeleri*. Her rol grubunun Insider risk özelliklerini yönetmeye farklı izin düzeyleri vardır.
-- **Etkinlik:** Bir öğe üzerinde  alınan etkinlik. Değerler *Görüntüleniyor, Silindi, Eklendi, Düzenlenen ilke, Olay, Kullanıcı, Uyarı* ve *Ayarlar.*
-- **Eklendi**: Etkinlik sırasında eklenen, kullanıcılar, dosya türleri veya etki alanları gibi nesneler.
-- **Uyarı düzeyi**: Insider risk yönetimi ayarlarında tanımlanan uyarı düzeyi.
-- **Tutar**: İlke için şu anda seçili olan özel gösterge miktarıdır.
-- **Varlık Kimliği**: Etkinliğin gerçekleştirmiş olduğu öncelikli fiziksel varlığın varlık kimliğidir.
-- **Kategori:** Değiştirilen öğenin kategorisi. Değerler *İlkeler, Vakalar, Kullanıcılar, Uyarılar, Ayarlar Bildirim* *şablonlarıdır.*
-- **Tarih:** Kuruluşun yerel tarih ve saatlerinde listelenen tarih ve saat.
-- **Açıklama**: Üzerinde eylem yapılan nesne (ilke veya öncelikli kullanıcı grubu gibi) için kullanıcı tarafından yapılan açıklama.
-- **DLP ilkesi**: Veri kaybı önleme (DLP) ilkesi, insider risk yönetimi ilkesine dahil edilmeyi tetikler.
-- **Gösterge**: Insider risk ayarları içinde etkinliğin gerçekleştirilen göstergesi (bir gösterge ekleme veya kaldırma gibi).
-- **Bildirim şablonu**: Etkinliğin gerçekleştir olduğu bildirim şablonu.
-- **Gün sayısı**: Insider risk ayarlarında tanımlanan ilke etkinleştirme penceresi.
-- **Dosya sayısı**: Insider risk yönetimi ayarlarında tanımlanan dosya hacmi sınırı.
-- **İlke** şablonu: Göstergelerin üzerinde işlem yapılan ilke şablonu.
+- **Gerçekleştirilen etkinlik:** Bir öğe değerini değiştiren kullanıcının kullanıcı adı. Burada listelenen kullanıcılar şu rol [insider risk yönetimi rol gruplarından](insider-risk-management-configure.md#step-1-required-enable-permissions-for-insider-risk-management) birine veya daha fazlasına atanmıştır: *Insider Risk Management*, *Insider Risk Management Yöneticileri*, *Insider Risk Yönetimi Analistleri*, *Insider Risk Yönetimi Araştırmacıları*. Her rol grubunun insider risk özelliklerini yönetmek için farklı izin düzeyleri vardır.
+- **Etkinlik:** Bir öğe üzerinde gerçekleştirilen etkinlik. Değerler *Görüntülenir, Silinir, Eklenir, Düzenlenen ilke, Servis Talebi, Kullanıcı, Uyarı* ve *Ayarlar'dır.*
+- **Eklendi**: Etkinlik sırasında eklenen kullanıcılar, dosya türleri veya etki alanları gibi nesneler.
+- **Uyarı hacmi**: Insider risk yönetimi ayarlarında tanımlanan uyarı birimi düzeyi.
+- **Tutar**: İlke için şu anda seçili olan özel gösterge tutarları.
+- **Varlık Kimliği**: Etkinliğin gerçekleştirildiği öncelikli fiziksel varlığın varlık kimliği.
+- **Kategori:** Değiştirilen öğenin kategorisi. Değerler *İlkeler, Servis Talepleri, Kullanıcılar, Uyarılar, Ayarlar* ve *Bildirim şablonlarıdır.*
+- **Tarih:** Kuruluşunuzun yerel tarih ve saatinde listelenen tarih ve saat.
+- **Açıklama**: Kullanıcı tarafından üzerinde işlem yapılan nesne için açıklama girişi (ilke veya öncelikli kullanıcı grubu gibi).
+- **DLP ilkesi**: Bir iç risk yönetimi ilkesine dahil edilmeyi tetikleme amacıyla seçilen Microsoft Purview Veri Kaybı Önleme (DLP) ilkesi.
+- **Gösterge**: Etkinliğin gerçekleştirildiği iç risk ayarlarındaki gösterge (gösterge ekleme veya kaldırma gibi).
+- **Bildirim şablonu**: Etkinliğin gerçekleştirildiği bildirim şablonu.
+- **Gün sayısı**: İç risk ayarlarında tanımlanan ilke etkinleştirme penceresi.
+- **Dosya sayısı**: İç risk yönetimi ayarlarında tanımlanan dosya birimi sınırı.
+- **İlke şablonu**: Göstergelerin üzerinde işlem yaptığı ilke şablonu ait.
 - **Önceki tutar**: İlke için önceden seçilen özel gösterge tutarları.
-- **Öncelik kullanıcı grubu**: Etkinliğin gerçekleştir olduğu öncelik kullanıcı grubu.
-- **Kaldırıldı**: Etkinlik sırasında kullanıcılar, dosya türleri veya etki alanları gibi kaldırılan nesneler.
-- **Gönderen**: Etkinlik gerçekleştirilen bildirim şablonunun gönderen alanı.
-- **Hedef ilke**: Etkinliğin üzerinde gerçekleştirilen ilke (kullanıcı ekleme veya kullanıcının kaldırılması gibi).
-- **Şablon ileti gövdesi**: Etkinlik gerçekleştirilen bildirim şablonunun ileti gövdesi.
-- **Şablon konusu**: Etkinlik gerçekleştirilen bildirim şablonunun konu alanı.
-- **Kullanıcı:** Etkinlik gerçekleştirilen kullanıcı.
+- **Öncelikli kullanıcı grubu**: Etkinliğin gerçekleştirildiği öncelikli kullanıcı grubu.
+- **Kaldırıldı**: Etkinlik sırasında kaldırılan kullanıcılar, dosya türleri veya etki alanları gibi nesneler.
+- **Gönderen**: Etkinliğin gerçekleştirildiği bildirim şablonunun gönderen alanı.
+- **Hedef ilke**: Etkinliğin gerçekleştirildiği ilke (örneğin, bir kullanıcıyı ekleme veya kaldırma).
+- **Şablon ileti gövdesi**: Etkinliğin gerçekleştirildiği bildirim şablonunun ileti gövdesi.
+- **Şablon konusu**: Etkinliğin gerçekleştirildiği bildirim şablonunun konu alanı.
+- **Kullanıcı:** Etkinliğin gerçekleştirildiği kullanıcı.

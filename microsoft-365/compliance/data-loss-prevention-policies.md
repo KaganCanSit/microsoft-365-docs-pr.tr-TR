@@ -25,24 +25,22 @@ ms.custom:
 ROBOTS: NOINDEX, NOFOLLOW
 feedback_system: None
 description: veri kaybı önleme başvuru malzemesi
-ms.openlocfilehash: b7546d41310942a0e6eab99511a78c594822ee2a
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 5a52d79a073a9735d5c32ce3a9646ccacf1a0dcb
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017296"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636479"
 ---
 # <a name="data-loss-prevention-reference"></a>Veri kaybı önleme başvurusu
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 > [!IMPORTANT]
-> Bu başvuru konusu artık Microsoft Purview Veri Kaybı Önleme (DLP) bilgilerinin ana kaynağı değildir. DLP içerik kümesi güncelleştiriliyor ve yeniden yapılandırılıyor. Bu makalede ele alınan konular yeni, güncelleştirilmiş makalelere taşınacaktır. DLP hakkında daha fazla bilgi için bkz. [Veri kaybını önleme hakkında bilgi edinin](dlp-learn-about-dlp.md).
+> Bu başvuru konusu artık Microsoft Purview Veri Kaybı Önleme (DLP) bilgileri için ana kaynak değildir. DLP içerik kümesi güncelleştiriliyor ve yeniden yapılandırılıyor. Bu makalede ele alınan konular yeni, güncelleştirilmiş makalelere taşınacaktır. DLP hakkında daha fazla bilgi için bkz. [Veri kaybını önleme hakkında bilgi edinin](dlp-learn-about-dlp.md).
 
 <!-- this topic needs to be split into smaller, more coherent ones. It is confusing as it is. -->
 <!-- move this note to a more appropriate place, no topic should start with a note -->
 > [!NOTE]
-> Veri kaybı önleme özellikleri kısa süre önce Office 365 Gelişmiş Uyumluluk lisansına sahip kullanıcılar için sohbet ve kanal iletileri Microsoft Teams eklendi. Bu özellik tek başına bir seçenek olarak kullanılabilir ve Office 365 E5 ve Microsoft 365 E5 Uyumluluk. Lisanslama gereksinimleri hakkında daha fazla bilgi edinmek için bkz. [Microsoft 365 Tenant-Level Hizmetleri Lisanslama Kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance).
+> Veri kaybı önleme özellikleri kısa süre önce Office 365 Gelişmiş Uyumluluk lisansına sahip kullanıcılar için Microsoft Teams sohbetine ve kanal iletilerine eklendi. Bu, tek başına bir seçenek olarak kullanılabilir ve Office 365 E5 ve Microsoft 365 E5 Uyumluluk dahil edilir. Lisans gereksinimleri hakkında daha fazla bilgi edinmek için bkz. [Microsoft 365 Tenant-Level Hizmetleri Lisanslama Kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance).
 
 
 
@@ -73,9 +71,9 @@ With a DLP policy, you can:
 -->
 ## <a name="create-and-manage-dlp-policies"></a>DLP ilkeleri oluşturma ve yönetme
 
-DLP ilkelerini Microsoft Purview uyumluluk portalındaki veri kaybı önleme sayfasında oluşturur ve yönetirsiniz.
+DLP ilkelerini Microsoft Purview uyumluluk portalı veri kaybı önleme sayfasında oluşturur ve yönetirsiniz.
 
-![Microsoft Purview uyumluluk portalında veri kaybı önleme sayfası](../media/943fd01c-d7aa-43a9-846d-0561321a405e.png)
+![Microsoft Purview uyumluluk portalı veri kaybı önleme sayfası](../media/943fd01c-d7aa-43a9-846d-0561321a405e.png)
 
 <!-- MOVED TO LEARN ABOUT ## What a DLP policy contains
 
@@ -377,16 +375,16 @@ DLP ilkesinde koşul olarak önceden oluşturulmuş ve yayımlanmış bir [bekle
 
 - Bekletme etiketi, bir DLP ilkesinde koşul olarak kullanılmaya çalışılmadan önce oluşturulup yayımlanmalıdır.
 - Yayımlanan bekletme etiketlerinin eşitlenmesi bir ila yedi gün sürebilir. Daha fazla bilgi için bkz [. Bekletme etiketleri bir bekletme](create-apply-retention-labels.md#when-retention-labels-become-available-to-apply) ilkesinde yayımlanan bekletme etiketleri için geçerli olduğunda ve Bekletme etiketlerinin otomatik olarak yayımlanan bekletme etiketleri için [geçerli olması ne kadar sürer](apply-retention-labels-automatically.md#how-long-it-takes-for-retention-labels-to-take-effect) ?
-- İlkede bekletme etiketi kullanma **, yalnızca SharePoint ve OneDrive öğeleri için desteklenir**.
+- İlkede bekletme etiketi kullanma **, yalnızca SharePoint ve OneDrive'daki öğeler için desteklenir**.
 
   ![Koşul olarak etiketler.](../media/5b1752b4-a129-4a88-b010-8dcf8a38bb09.png)
 
   Bekletme ve kullanımda olan öğeleriniz varsa ve bunlara başka denetimler uygulamak istiyorsanız, DLP ilkesinde bekletme etiketi kullanmak isteyebilirsiniz, örneğin:
 
-  - **2018'den** itibaren SharePoint depolanan vergi belgelerine uygulandığında bunları 10 yıl boyunca saklayan vergi yılı 2018 adlı bir bekletme etiketi yayımladınız. Ayrıca bu öğelerin kuruluşunuzun dışında paylaşılmasını da istemezsiniz. Bunu bir DLP ilkesiyle yapabilirsiniz.
+  - **2018'den** itibaren SharePoint'te depolanan vergi belgelerine uygulandığında bunları 10 yıl boyunca saklayan vergi yılı 2018 adlı bir bekletme etiketi yayımladınız ve bunları attınız. Ayrıca bu öğelerin kuruluşunuzun dışında paylaşılmasını da istemezsiniz. Bunu bir DLP ilkesiyle yapabilirsiniz.
 
   > [!IMPORTANT]
-  > DLP ilkesinde koşul olarak bir bekletme etiketi belirtirseniz ve konum olarak da Exchange ve/veya Teams eklerseniz bu hatayı alırsınız: **"E-posta ve ekip iletilerinde etiketlenmiş içeriğin korunması desteklenmez. Aşağıdaki etiketi kaldırın veya Exchange kapatın ve konum olarak Teams."** Bunun nedeni, Exchange aktarım işleminin ileti gönderme ve teslim sırasında etiket meta verilerini değerlendirmemesidir.
+  > DLP ilkesinde koşul olarak bir bekletme etiketi belirtirseniz ve konum olarak Exchange ve/veya Teams'i de eklerseniz bu hatayı alırsınız: **"E-posta ve ekip iletilerinde etiketlenmiş içeriğin korunması desteklenmez. Aşağıdaki etiketi kaldırın veya Konum olarak Exchange ve Teams'i kapatın."** Bunun nedeni, Exchange aktarım işleminin ileti gönderme ve teslim sırasında etiket meta verilerini değerlendirmemesidir.
 
 ### <a name="using-a-sensitivity-label-as-a-condition-in-a-dlp-policy"></a>DLP ilkesinde koşul olarak duyarlılık etiketi kullanma
 
@@ -440,7 +438,7 @@ Bir bölüme hızla atlamak için kural düzenleyicisinin üst gezinti bölmesin
 
 DLP ilkesi oluşturmanın ilk adımı, hangi bilgilerin korunacağını seçmektir. Bir DLP şablonuyla başlayarak, sıfırdan yeni bir kural kümesi oluşturma ve varsayılan olarak hangi tür bilgilerin dahil edilmesi gerektiğini belirleme işini kaydedersiniz. Daha sonra, kuruluşunuzun özel gereksinimlerini karşılamak üzere kurala ince ayar yapmak için bu gereksinimleri ekleyebilir veya değiştirebilirsiniz.
 
-Önceden yapılandırılmış bir DLP ilke şablonu HIPAA verileri, PCI-DSS verileri, Gramm-Leach-Bliley Yasası verileri ve hatta yerel ayara özgü kişisel bilgiler (P.I.) gibi belirli hassas bilgi türlerini algılamanıza yardımcı olabilir. Yaygın hassas bilgi türlerini bulmanızı ve korumanızı kolaylaştırmak için, Microsoft 365'de bulunan ilke şablonları, kullanmaya başlamanız için gereken en yaygın hassas bilgi türlerini içerir.
+Önceden yapılandırılmış bir DLP ilke şablonu HIPAA verileri, PCI-DSS verileri, Gramm-Leach-Bliley Yasası verileri ve hatta yerel ayara özgü kişisel bilgiler (P.I.) gibi belirli hassas bilgi türlerini algılamanıza yardımcı olabilir. Yaygın hassas bilgi türlerini bulmanızı ve korumanızı kolaylaştırmak için, Microsoft 365'te bulunan ilke şablonları, kullanmaya başlamanız için gereken en yaygın hassas bilgi türlerini içerir.
 
 ![ABD Vatanseverlik Yasası şablonuna odaklanan veri kaybı önleme ilkelerine yönelik şablonların listesi.](../media/791b2403-430b-4987-8643-cc20abbd8148.png)
 
@@ -493,24 +491,24 @@ DLP, derin içerik analizi (yalnızca basit bir metin taraması değil) kullanar
 
 ### <a name="policies-are-synced"></a>İlkeler eşitlenir
 
-Microsoft Purview uyumluluk portalında bir DLP ilkesi oluşturduktan sonra, bu ilke merkezi bir ilke deposunda depolanır ve ardından aşağıdakiler gibi çeşitli içerik kaynaklarıyla eşitlenir:
+Microsoft Purview uyumluluk portalı bir DLP ilkesi oluşturduktan sonra, bu ilke merkezi bir ilke deposunda depolanır ve ardından aşağıdakiler gibi çeşitli içerik kaynaklarıyla eşitlenir:
 
-- Exchange Online ve oradan Web üzerinde Outlook ve Outlook.
+- Exchange Online ve oradan Web üzerinde Outlook ve Outlook'a.
 
 - siteleri OneDrive İş.
 
-- çevrimiçi siteleri SharePoint.
+- SharePoint Online siteleri.
 
-- masaüstü programlarını (Excel, PowerPoint ve Word) Office.
+- Office masaüstü programları (Excel, PowerPoint ve Word).
 
-- kanalları ve sohbet iletilerini Microsoft Teams.
+- Microsoft Teams kanalları ve sohbet iletileri.
 
 İlke doğru konumlara eşitlendikten sonra içeriği değerlendirmeye ve eylemleri zorlamaya başlar.
 <!-- what is the time delay for first deployment of a policy and what is the sync schedule? -->
 
 ### <a name="policy-evaluation-in-onedrive-for-business-and-sharepoint-online-sites"></a>OneDrive İş ve SharePoint Online sitelerinde ilke değerlendirmesi
 
-Tüm SharePoint Çevrimiçi siteleriniz ve OneDrive İş sitelerinizde belgeler sürekli değişiyor; bunlar sürekli oluşturuluyor, düzenleniyor, paylaşılıyor vb. Bu, belgelerin herhangi bir zamanda bir DLP ilkesiyle çakışabileceği veya uyumlu hale gelebileceği anlamına gelir. Örneğin, bir kişi ekip sitesine hassas bilgiler içermeyen bir belgeyi karşıya yükleyebilir, ancak daha sonra farklı bir kişi aynı belgeyi düzenleyip hassas bilgiler ekleyebilir.
+Tüm SharePoint Online sitelerinizde ve OneDrive İş sitelerinizde belgeler sürekli değişiyor; bunlar sürekli oluşturuluyor, düzenleniyor, paylaşılıyor vb. Bu, belgelerin herhangi bir zamanda bir DLP ilkesiyle çakışabileceği veya uyumlu hale gelebileceği anlamına gelir. Örneğin, bir kişi ekip sitesine hassas bilgiler içermeyen bir belgeyi karşıya yükleyebilir, ancak daha sonra farklı bir kişi aynı belgeyi düzenleyip hassas bilgiler ekleyebilir.
 
 Bu nedenle, DLP ilkeleri belgelerde ilke eşleşmelerini arka planda sık sık denetler. Bunu zaman uyumsuz ilke değerlendirmesi olarak düşünebilirsiniz.
 <!-- what is the frequency? looks like it is tied to the search crawl schedule -->
@@ -527,33 +525,33 @@ Son olarak, belgeler bir DLP ilkesiyle çakışabilir, ancak bir DLP ilkesiyle d
 DLP, dizine alınabilecek tüm içeriği değerlendirir. Hangi dosya türlerinin varsayılan olarak gezindiği hakkında daha fazla bilgi için bkz. [SharePoint Server'da varsayılan gezilen dosya adı uzantıları ve ayrıştırılmış dosya türleri](/SharePoint/technical-reference/default-crawled-file-name-extensions-and-parsed-file-types).
 
 > [!NOTE]
-> DLP ilkeleri bunları analiz etme fırsatına sahip olmadan önce belgelerin paylaşılmasını önlemek için, içeriği dizine alınana kadar SharePoint yeni dosyaların paylaşımı engellenebilir. Ayrıntılı bilgi için bkz. [Yeni dosyaları varsayılan olarak hassas olarak işaretleme](/sharepoint/sensitive-by-default) .
+> DLP ilkeleri bunları analiz etme fırsatına sahip olmadan önce belgelerin paylaşılmasını önlemek için, içeriği dizine alınana kadar SharePoint'te yeni dosyaların paylaşımı engellenebilir. Ayrıntılı bilgi için bkz. [Yeni dosyaları varsayılan olarak hassas olarak işaretleme](/sharepoint/sensitive-by-default) .
 
-### <a name="policy-evaluation-in-exchange-online-outlook-and-outlook-on-the-web"></a>Exchange Online, Outlook ve Web üzerinde Outlook ilke değerlendirmesi
+### <a name="policy-evaluation-in-exchange-online-outlook-and-outlook-on-the-web"></a>Exchange Online, Outlook ve Web üzerinde Outlook'da ilke değerlendirmesi
 
-Konum olarak Exchange Online içeren bir DLP ilkesi oluşturduğunuzda, ilke Microsoft Purview uyumluluk portalından Exchange Online ve Exchange Online ile Web üzerinde Outlook ve Outlook eşitlenir.
+Konum olarak Exchange Online içeren bir DLP ilkesi oluşturduğunuzda, ilke Microsoft Purview uyumluluk portalı Exchange Online ve ardından Exchange Online ile Web üzerinde Outlook eşitlenir  ve Outlook'u seçin.
 
-Outlook'da bir ileti oluşturulurken, oluşturulan içerik DLP ilkelerine göre değerlendirildikçe kullanıcı ilke ipuçlarını görebilir. İleti gönderildikten sonra, Exchange <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">yönetim merkezinde</a> oluşturulan Exchange posta akışı kuralları (taşıma kuralları olarak da bilinir) ve DLP ilkeleriyle birlikte posta akışının normal bir parçası olarak DLP ilkelerine göre değerlendirilir. DLP ilkeleri hem iletiyi hem de ekleri tarar.
+Outlook'ta bir ileti oluşturulurken, oluşturulan içerik DLP ilkelerine göre değerlendirildikçe kullanıcı ilke ipuçlarını görebilir. İleti gönderildikten sonra, exchange posta akışı kuralları (aktarım kuralları olarak da bilinir) ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezinde</a> oluşturulan DLP ilkeleriyle birlikte posta akışının normal bir parçası olarak DLP ilkelerine göre değerlendirilir. DLP ilkeleri hem iletiyi hem de ekleri tarar.
 
 ### <a name="policy-evaluation-in-the-office-desktop-programs"></a>Office masaüstü programlarında ilke değerlendirmesi
 
 <!-- same capability to identify sensitive information line conflates sensitive information types and such -->
 Excel, PowerPoint ve Word, hassas bilgileri tanımlamak ve DLP ilkelerini SharePoint Online ve OneDrive İş olarak uygulamak için aynı özelliği içerir. Bu Office programları, DLP ilkelerini doğrudan merkezi ilke deposundan eşitler ve kullanıcılar DLP ilkesine dahil edilen bir siteden açılan belgelerle çalışırken içeriği DLP ilkelerine karşı sürekli olarak değerlendirir.
 
-Office'da DLP ilkesi değerlendirmesi, programların performansını veya içerik üzerinde çalışan kişilerin üretkenliğini etkilemeyecek şekilde tasarlanmıştır. Büyük bir belge üzerinde çalışıyorsa veya kullanıcının bilgisayarı meşgulse, ilke ipucunun görünmesi birkaç saniye sürebilir.
+Office'te DLP ilkesi değerlendirmesi, programların performansını veya içerik üzerinde çalışan kişilerin üretkenliğini etkilemeyecek şekilde tasarlanmıştır. Büyük bir belge üzerinde çalışıyorsa veya kullanıcının bilgisayarı meşgulse, ilke ipucunun görünmesi birkaç saniye sürebilir.
 
 ### <a name="policy-evaluation-in-microsoft-teams"></a>Microsoft Teams'de ilke değerlendirmesi
  <!--what do you mean that it's synched to user accounts?  I thought DLP policies were applied to locations not users like sensitivity labels are  -->
 
-Konum olarak Microsoft Teams içeren bir DLP ilkesi oluşturduğunuzda, ilke Microsoft Purview uyumluluk portalından kullanıcı hesaplarına, Microsoft Teams kanallarına ve sohbet iletilerine eşitlenir. DLP ilkelerinin nasıl yapılandırıldığına bağlı olarak, birisi Microsoft Teams sohbette veya kanal iletisinde hassas bilgileri paylaşmayı denediğinde, ileti engellenebilir veya iptal edilebilir. Ayrıca, hassas bilgiler içeren ve konuklarla (dış kullanıcılar) paylaşılan belgeler bu kullanıcılar için açılmaz. Daha fazla bilgi edinmek için bkz[. Veri kaybı önleme ve Microsoft Teams](dlp-microsoft-teams.md).
+Konum olarak Microsoft Teams'i içeren bir DLP ilkesi oluşturduğunuzda, ilke Microsoft Purview uyumluluk portalı kullanıcı hesaplarıyla, Microsoft Teams kanallarıyla ve sohbet iletileriyle eşitlenir. DLP ilkelerinin nasıl yapılandırıldığına bağlı olarak, birisi bir Microsoft Teams sohbetinde veya kanal iletisinde hassas bilgileri paylaşmayı denediğinde, ileti engellenebilir veya iptal edilebilir. Ayrıca, hassas bilgiler içeren ve konuklarla (dış kullanıcılar) paylaşılan belgeler bu kullanıcılar için açılmaz. Daha fazla bilgi edinmek için bkz. [Veri kaybı önleme ve Microsoft Teams](dlp-microsoft-teams.md).
 
 ## <a name="permissions"></a>İzinler
 
-Varsayılan olarak, Genel yöneticiler, Güvenlik yöneticileri ve Uyumluluk yöneticileri DLP ilkesi oluşturma ve uygulama erişimine sahip olur. DLP ilkeleri oluşturacak uyumluluk ekibinizin diğer Üyelerinin Microsoft Purview uyumluluk portalında izinlere sahip olması gerekir. Varsayılan olarak, Kiracı yöneticiniz bu konuma erişebilir ve uyumluluk görevlilerine ve diğer kişilere Kiracı yöneticisinin tüm izinlerini vermeden Microsoft Purview uyumluluk portalına erişim izni verebilir. Bunu yapmak için şunları yapmanızı öneririz:
+Varsayılan olarak, Genel yöneticiler, Güvenlik yöneticileri ve Uyumluluk yöneticileri DLP ilkesi oluşturma ve uygulama erişimine sahip olur. DLP ilkeleri oluşturacak uyumluluk ekibinizin diğer üyelerinin Microsoft Purview uyumluluk portalı izinlerine sahip olması gerekir. Varsayılan olarak, Kiracı yöneticiniz bu konuma erişebilir ve uyumluluk görevlilerine ve diğer kişilere kiracı yöneticisinin tüm izinlerini vermeden Microsoft Purview uyumluluk portalı erişim izni verebilir. Bunu yapmak için şunları yapmanızı öneririz:
 
-1. Microsoft 365'de bir grup oluşturun ve gruba uyumluluk görevlileri ekleyin.
+1. Microsoft 365'te bir grup oluşturun ve gruba uyumluluk görevlileri ekleyin.
 
-2. Microsoft Purview uyumluluk portalının **İzinler** sayfasında bir rol grubu oluşturun.
+2. Microsoft Purview uyumluluk portalı **İzinler** sayfasında bir rol grubu oluşturun.
 
 3. Rol grubunu oluştururken **Rol Seç** bölümünü kullanarak Rol Grubuna şu rolü ekleyin: **DLP Uyumluluk Yönetimi**.
 
@@ -569,13 +567,13 @@ Bu izinler yalnızca DLP ilkesi oluşturmak ve uygulamak için gereklidir. İlke
 
 Microsoft Purview uyumluluk portalı cmdlet'lerinin çoğunu kullanmak için şunları yapmanız gerekir:
 
-1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+1. [Güvenlik & Uyumluluğu PowerShell'e bağlanın](/powershell/exchange/connect-to-scc-powershell).
 
 2. Bu [ilke ve uyumluluk-dlp cmdlet'lerinden](/powershell/module/exchange/export-dlppolicycollection) herhangi birini kullanın.
 
-Ancak DLP raporlarının Exchange Online dahil olmak üzere Microsoft 365 genelinden veri çekmesi gerekir. Bu nedenle ***, DLP raporlarına yönelik cmdlet'ler Microsoft Purview uyumluluk portalı Powershell'de değil Exchange Online Powershell'de kullanılabilir***. Bu nedenle, DLP raporları için cmdlet'leri kullanmak için şunları yapmanız gerekir:
+Ancak DLP raporlarının Exchange Online dahil olmak üzere Microsoft 365 genelinden veri çekmesi gerekir. Bu nedenle ***, DLP raporlarına yönelik cmdlet'ler Microsoft Purview uyumluluk portalı PowerShell'de değil Exchange Online PowerShell'de kullanılabilir***. Bu nedenle, DLP raporları için cmdlet'leri kullanmak için şunları yapmanız gerekir:
 
-1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Exchange Online PowerShell’e bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. DLP raporları için şu cmdlet'lerden birini kullanın:
 

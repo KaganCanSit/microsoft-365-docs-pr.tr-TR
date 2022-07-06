@@ -1,5 +1,5 @@
 ---
-title: Veri yönetimi önerileri için içerik nasıl tanımlanır?
+title: veri idaresi önerileri için içerik nasıl tanımlanır?
 f1.keywords:
 - NOCSH
 ms.author: brendonb
@@ -17,50 +17,50 @@ search.appverid:
 - MOE150
 - MET150
 ROBOTS: NOINDEX, NOFOLLOW
-description: Aşağıdaki Microsoft 365 Defender portalı ve Microsoft 365 uyumluluk merkezi geçerli kurulumuna dayalı olarak veri idaresi için öneriler sağlar ve birkaç tıklamayla ayarlamalar yapabilirsiniz. Bu önerilerden bazıları, kurum içinde belirli içerikleri algılar ve ardından bu içeriği yönetmek için önerilen adımları sağlar. Örneğin, iş açısından kritik içerik (avukatlık ayrıcalıkları veya NDA bilgileri gibi) içeren öğeleri algılayan ve ardından gerektiğinde sınıflandırılmalarını ve saklamalarını sağlamak için bu öğelere otomatik olarak bir bekletme etiketi uygulamanız önerisinde bulunabilirsiniz. Bu konu başlığında, gördüğünüz veri yönetimi önerileri listelenir ve her birinin tetiklenirken hangi içeriğin algılandığından anlatabilirsiniz.
-ms.openlocfilehash: cddd73fdd0c21605549450968db182883ab7e6ad
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+description: Microsoft 365 Defender portalı ve Microsoft Purview uyumluluk portalı kuruluşunuzun geçerli kurulumuna göre veri idaresi için öneriler sağlar ve birkaç tıklamayla ayarlamanızı sağlar. Bu önerilerden bazıları kuruluşunuzdaki belirli içeriği algılar ve ardından bu içeriği yönetmek için önerilen adımları sağlar. Örneğin, bir öneri iş açısından kritik içerik (avukat-müşteri ayrıcalığı veya NDA bilgileri gibi) içeren öğeleri algılayabilir ve sonra gerektiğinde sınıflandırılıp saklanmalarını sağlamak için bu öğelere otomatik olarak bir bekletme etiketi uygulamanıza izin verebilir. Bu konu başlığı altında, görebileceğiniz veri idaresi önerileri listelenir ve her birini tetikleyen hangi içeriğin algılandığı açıklanır.
+ms.openlocfilehash: 27fcc5dd07695be355fc15ba2145ffa5540673ca
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63006327"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637317"
 ---
-# <a name="how-content-is-identified-for-data-governance-recommendations"></a>Veri yönetimi önerileri için içerik nasıl tanımlanır?
+# <a name="how-content-is-identified-for-data-governance-recommendations"></a>veri idaresi önerileri için içerik nasıl tanımlanır?
 
-Aşağıdaki <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalı</a> <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">ve Microsoft 365 uyumluluk merkezi</a>, kuruluş mevcut kurulumuna dayalı olarak veri idaresi için öneriler sağlar ve birkaç tıklamayla ayarlamalar yapabilirsiniz. Bu önerilerden bazıları, kurum içinde belirli içerikleri algılar ve ardından bu içeriği yönetmek için önerilen adımları sağlar. Örneğin, iş açısından kritik içerik (avukatlık ayrıcalıkları veya NDA bilgileri gibi) içeren öğeleri algılayan ve ardından gerektiğinde sınıflandırılmalarını ve saklamalarını sağlamak için bu öğelere otomatik olarak bir bekletme etiketi uygulamanız önerisinde bulunabilirsiniz.
+<a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalı</a> ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalı</a> kuruluşunuzun geçerli kurulumuna göre veri idaresi için öneriler sağlar ve birkaç tıklamayla ayarlamanızı sağlar. Bu önerilerden bazıları kuruluşunuzdaki belirli içeriği algılar ve ardından bu içeriği yönetmek için önerilen adımları sağlar. Örneğin, bir öneri iş açısından kritik içerik (avukat-müşteri ayrıcalığı veya NDA bilgileri gibi) içeren öğeleri algılayabilir ve sonra gerektiğinde sınıflandırılıp saklanmalarını sağlamak için bu öğelere otomatik olarak bir bekletme etiketi uygulamanıza izin verebilir.
 
-Bu konu başlığında, gördüğünüz veri yönetimi önerileri listelenir ve her birinin tetiklenirken hangi içeriğin algılandığından anlatabilirsiniz.
+Bu konu başlığı altında, görebileceğiniz veri idaresi önerileri listelenir ve her birini tetikleyen hangi içeriğin algılandığı açıklanır.
 
 ## <a name="clean-up-voicemail"></a>Sesli mesajı temizleme
 
-Bu öneri, 'sesli mesaj' ileti türü olarak tanımlanan e-posta iletileri kullanıcıların posta kutularında algılandığında görünür. E-posta iletisi [özellikleri hakkında daha fazla bilgi Exchange](/exchange/policy-and-compliance/ediscovery/message-properties-and-search-operators#searchable-properties-in-exchange).
+Bu öneri, kullanıcıların posta kutularında 'sesli mesaj' ileti türü olarak tanımlanan e-posta iletileri algılandığında görünür. [Exchange'de ileti özellikleri](/exchange/policy-and-compliance/ediscovery/message-properties-and-search-operators#searchable-properties-in-exchange) hakkında daha fazla bilgi edinin.
 
-## <a name="label-attorney-client-privilege-content"></a>Avukat-müşteri ayrıcalık içeriğini etiketleme
+## <a name="label-attorney-client-privilege-content"></a>Etiket avukat-istemci ayrıcalık içeriği
 
-Bu öneri, aşağıdaki ölçütlerden herhangi biri karşılendiğinde görüntülenir.
+Bu öneri, aşağıdaki ölçütlerden biri karşılandığında görüntülenir.
 
-- Bu anahtar sözcüklerin herhangi bir bileşimi e-posta iletisi gövdesinde algılanır:
+- E-posta iletisinin gövdesinde bu anahtar sözcüklerin herhangi bir bileşimi algılanır:
   - ACP
-  - Avukat İstemcisi Ayrıcalıkları
-  - Attorney-Client Ayrıcalıkları
-  - Attorney-Client Ayrıcalıklı
+  - Avukat İstemci Ayrıcalığı
+  - Attorney-Client Ayrıcalığı
+  - Attorney-Client Privileged
 
-- Bu anahtar sözcüklerin herhangi bir bileşimi SharePoint veya OneDrive algılanır:
+- SharePoint veya OneDrive dosyalarında bu anahtar sözcüklerin herhangi bir bileşimi algılanır:
   - ACP
-  - Avukat İstemcisi Ayrıcalıkları*
-  - AC Ayrıcalıkları
+  - Avukat İstemci Ayrıcalığı*
+  - AC Ayrıcalığı
 
-## <a name="retain-audio-files"></a>Ses dosyalarını koruma
+## <a name="retain-audio-files"></a>Ses dosyalarını saklama
 
-Bu öneri, aşağıdaki dosya türlerinden herhangi biri E-SharePoint OneDrive.
+SharePoint veya OneDrive'da aşağıdaki dosya türlerinden herhangi biri algılandığında bu öneri görüntülenir.
 
 - .MP3
 - . WMA
 - . WAV
 - . RA
 - . RAM
-- .RM
-- . MID
+- RM
+- . ORTA
 - . OGG
 - . AIFF
 - . PCM
@@ -68,12 +68,12 @@ Bu öneri, aşağıdaki dosya türlerinden herhangi biri E-SharePoint OneDrive.
 - . FLAC
 - . ALAC
 
-## <a name="retain-cad-files"></a>CAD dosyalarını koruma
+## <a name="retain-cad-files"></a>CAD dosyalarını saklama
 
-Bu öneri, aşağıdaki dosya türlerinden herhangi biri E-SharePoint OneDrive.
+SharePoint veya OneDrive'da aşağıdaki dosya türlerinden herhangi biri algılandığında bu öneri görüntülenir.
 
 - .3DXML
-- . ACIS
+- . ACİS
 - . ARC
 - . ASM
 - .CAT*
@@ -90,7 +90,7 @@ Bu öneri, aşağıdaki dosya türlerinden herhangi biri E-SharePoint OneDrive.
 - . NEU
 - . PAR
 - . PKG
-- . ÇÇY
+- . ÇHC
 - . PRT
 - . PSM
 - . PWD
@@ -99,7 +99,7 @@ Bu öneri, aşağıdaki dosya türlerinden herhangi biri E-SharePoint OneDrive.
 - . STL
 - . STP
 - . U3D
-- . UNV
+- . ÜNV
 - . VRML
 - . WRL
 - . X_*
@@ -107,16 +107,16 @@ Bu öneri, aşağıdaki dosya türlerinden herhangi biri E-SharePoint OneDrive.
 - . XMT*
 - . XPR
 
-## <a name="retain-image-files"></a>Resim dosyalarını koruma
+## <a name="retain-image-files"></a>Görüntü dosyalarını koruma
 
-Bu öneri, aşağıdaki dosya türlerinden herhangi biri E-SharePoint OneDrive.
+SharePoint veya OneDrive'da aşağıdaki dosya türlerinden herhangi biri algılandığında bu öneri görüntülenir.
 
 - . JPEG
 - .GIF
 - . TIF*
 - .BMP
 - .PNG
-- . RAW
+- . HAM
 - .PSD
 - . PSP
 - .JPG
@@ -127,37 +127,37 @@ Bu öneri, aşağıdaki dosya türlerinden herhangi biri E-SharePoint OneDrive.
 - . PNM
 - . WEBP
 
-## <a name="retain-nda-content"></a>NDA içeriğini koruma
+## <a name="retain-nda-content"></a>NDA içeriğini saklama
 
-Bu öneri, aşağıdaki ölçütlerden herhangi biri karşılendiğinde görüntülenir.
+Bu öneri, aşağıdaki ölçütlerden biri karşılandığında görüntülenir.
 
-- Bu anahtar sözcüklerin herhangi bir bileşimi e-posta iletisi gövdesinde algılanır:
+- E-posta iletisinin gövdesinde bu anahtar sözcüklerin herhangi bir bileşimi algılanır:
   - NDA
   - "Gizlilik Sözleşmesi"
   - "Gizlilik Sözleşmesi"
 
-- Bu anahtar sözcüklerin herhangi bir bileşimi, .PDF veya .DOC dosyalarında SharePoint OneDrive:
+- SharePoint veya OneDrive'daki .PDF veya .DOC dosyalarında bu anahtar sözcüklerin herhangi bir bileşimi algılanır:
   - NDA
   - Gizlilik Sözleşmesi
 
 ## <a name="retain-software-development-files"></a>Yazılım geliştirme dosyalarını koruma
 
-Bu öneri, aşağıdaki dosya türlerinden herhangi biri E-SharePoint OneDrive.
+SharePoint veya OneDrive'da aşağıdaki dosya türlerinden herhangi biri algılandığında bu öneri görüntülenir.
 
 - . ASAX
 - . ASM
 - . ASP*
 - .BAT
 - .CONFIG
-- .CS
+- CS
 - . CSS
-- . YERKARAKA
+- . DİSKO
 - .HTM*
 - . INC
 - . JAD
 - . JAVA
 - .JS*
-- . LIB
+- . LİB
 - . O
 - . PHP
 - . RC
@@ -173,9 +173,9 @@ Bu öneri, aşağıdaki dosya türlerinden herhangi biri E-SharePoint OneDrive.
 - . XSD
 - . XSL*
 
-## <a name="retain-video-files"></a>Video dosyalarını koruma
+## <a name="retain-video-files"></a>Video dosyalarını tutma
 
-Bu öneri, aşağıdaki dosya türlerinden herhangi biri E-SharePoint OneDrive.
+SharePoint veya OneDrive'da aşağıdaki dosya türlerinden herhangi biri algılandığında bu öneri görüntülenir.
 
 - . AVCHD
 - .AVI

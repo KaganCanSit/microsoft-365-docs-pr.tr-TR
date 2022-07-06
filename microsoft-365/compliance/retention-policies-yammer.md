@@ -17,20 +17,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Yammer için geçerli olan bekletme ilkeleri hakkında bilgi edinin.
-ms.openlocfilehash: 25a746fcd5fe5dfd0e17edf08c9e7d3f722ce676
-ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
+ms.openlocfilehash: d2703947d2cebc5818793362e55b8eae9cec2ed8
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65810582"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639632"
 ---
 # <a name="learn-about-retention-for-yammer"></a>Yammer için bekletme hakkında bilgi edinin
 
->*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Bu makaledeki bilgiler, Yammer özgü bilgiler içerdiğinden [Saklama hakkında bilgi edinin'e](retention.md) ek olarak ek olarak verilmiştir.
+Bu makaledeki bilgiler, Yammer'a özgü bilgiler içerdiğinden [Bekletme hakkında bilgi edinin'e](retention.md) ek olarak ek olarak verilmiştir.
 
 Diğer iş yükleri için bkz:
 
@@ -40,7 +38,7 @@ Diğer iş yükleri için bkz:
 
 ## <a name="whats-included-for-retention-and-deletion"></a>Saklama ve silmeye dahil olanlar
 
-Yammer kullanıcı iletileri ve topluluk iletileri, Yammer için bekletme ilkeleri kullanılarak silinebilir ve bu iletilerdeki metne ek olarak, uyumluluk nedeniyle aşağıdaki öğeler korunabilir: Köprü metni bağlantıları ve diğer Yammer iletilerine bağlantılar.
+Yammer kullanıcı iletileri ve topluluk iletileri Yammer için bekletme ilkeleri kullanılarak silinebilir ve bu iletilerdeki metne ek olarak, uyumluluk nedenleriyle aşağıdaki öğeler korunabilir: Köprü metni bağlantıları ve diğer Yammer iletilerine bağlantılar.
 
 > [!NOTE]
 > Aşağıdaki bölümde açıklandığı gibi, kullanıcı iletileri tek bir kullanıcı için özel iletiler ve bu kullanıcıyla ilişkilendirilmiş tüm topluluk iletilerini içerir.
@@ -49,31 +47,31 @@ Kullanıcı iletileri konuşmadaki kişilerin tüm adlarını, topluluk iletiler
 
 Yammer için bekletme ilkelerini kullandığınızda ifade biçimindeki diğer kişilerden gelen tepkiler korunmaz.
 
-Yammer ile kullandığınız dosyalar, Yammer saklama ilkelerine dahil değildir. Bu öğelerin kendi bekletme ilkeleri vardır.
+Yammer ile kullandığınız dosyalar Yammer için bekletme ilkelerine dahil değildir. Bu öğelerin kendi bekletme ilkeleri vardır.
 
-## <a name="how-retention-works-with-yammer"></a>Bekletme Yammer ile nasıl çalışır?
+## <a name="how-retention-works-with-yammer"></a>Yammer ile bekletme nasıl çalışır?
 
-Uyumluluk gereksinimlerinizin arka uç depolama ve işlemleri tarafından nasıl karşılandığını ve şu anda Yammer uygulamasında görünen iletiler yerine eBulma araçları tarafından doğrulanması gerektiğini anlamak için bu bölümü kullanın.
+Uyumluluk gereksinimlerinizin arka uç depolama ve işlemleri tarafından nasıl karşılandığını ve yammer uygulamasında şu anda görünen iletiler yerine eBulma araçları tarafından doğrulanması gerektiğini anlamak için bu bölümü kullanın.
 
-Yammer'da topluluk iletilerinden ve kullanıcı iletilerinden verileri saklamak ve bu iletileri silmek için bekletme ilkesi kullanabilirsiniz. Arka planda, bu iletilerden kopyalanan verileri depolamak için Exchange posta kutuları kullanılır. Yammer kullanıcı iletilerindeki veriler, kullanıcı iletisine dahil edilen her kullanıcının posta kutusunda gizli bir klasörde depolanır ve topluluk iletileri için grup posta kutusundaki benzer bir gizli klasör kullanılır.
+Yammer'da topluluk iletilerinden ve kullanıcı iletilerinden verileri saklamak ve bu iletileri silmek için bekletme ilkesi kullanabilirsiniz. Arka planda Exchange posta kutuları, bu iletilerden kopyalanan verileri depolamak için kullanılır. Yammer kullanıcı iletilerindeki veriler, kullanıcı iletisine dahil edilen her kullanıcının posta kutusunda gizli bir klasörde depolanır ve topluluk iletileri için grup posta kutusundaki benzer bir gizli klasör kullanılır.
 
-Topluluk iletilerinin kopyaları, kullanıcılardan @ bahsettiklerinde veya kullanıcıya bir yanıtı bildirdiklerinde kullanıcı posta kutularının gizli klasöründe de depolanabilir. Bu iletiler bir topluluk iletisi olarak olsa da, Yammer kullanıcı iletileri için bekletme ilkesi genellikle topluluk iletilerinin kopyalarını içerir. Sonuç olarak, kullanıcı iletileri özel iletiyle sınırlı değildir.
+Topluluk iletilerinin kopyaları, kullanıcılardan @ bahsettiklerinde veya kullanıcıya bir yanıtı bildirdiklerinde kullanıcı posta kutularının gizli klasöründe de depolanabilir. Bu iletiler bir topluluk iletisi olarak başlasa da, Yammer kullanıcı iletileri için bir bekletme ilkesi genellikle topluluk iletilerinin kopyalarını içerir. Sonuç olarak, kullanıcı iletileri özel iletiyle sınırlı değildir.
 
 Bu gizli klasörler, kullanıcılar veya yöneticiler tarafından doğrudan erişilebilir olacak şekilde tasarlanmamıştır, bunun yerine uyumluluk yöneticilerinin eBulma araçlarıyla arayabileceği verileri depolar.
 
-Exchange depolanmış olsalar da, Yammer iletiler yalnızca **Yammer topluluk iletileri veya Yammer kullanıcı iletileri** konumları için yapılandırılmış bir bekletme **ilkesine** dahil edilir.
+Exchange'de depolanmış olsalar bile, Yammer iletileri yalnızca **Yammer topluluk iletileri** veya **Yammer kullanıcı iletileri** konumları için yapılandırılmış bir bekletme ilkesine dahil edilir.
 
 > [!NOTE]
-> Bir kullanıcı, Yammer verileri saklayan etkin bir bekletme ilkesine dahil edilirse ve bu ilkeye dahil edilen bir kullanıcının posta kutusunu silerseniz, Yammer verilerini korumak için posta kutusu [etkin olmayan bir posta kutusuna](inactive-mailboxes-in-office-365.md) dönüştürülür. Kullanıcı için bu Yammer verilerini saklamanız gerekmiyorsa, posta kutusunu silmeden önce kullanıcı hesabını bekletme ilkesinden hariç tutun.
+> Bir kullanıcı Yammer verilerini koruyan etkin bir bekletme ilkesine dahil edilirse ve bu ilkeye dahil edilen bir kullanıcının posta kutusunu silerseniz, Yammer verilerini korumak için posta kutusu [etkin olmayan posta kutusuna](inactive-mailboxes-in-office-365.md) dönüştürülür. Kullanıcı için bu Yammer verilerini saklamanız gerekmiyorsa, posta kutusunu silmeden önce kullanıcı hesabını bekletme ilkesinden hariç tutun.
 
-Yammer iletiler için bir bekletme ilkesi yapılandırıldıktan sonra, Exchange hizmetinden bir zamanlayıcı işi, bu Yammer iletilerinin depolandığı gizli klasördeki öğeleri düzenli aralıklarla değerlendirir. Zamanlayıcı işinin çalıştırılması yedi güne kadar sürer. Bu öğelerin saklama süresi dolduğunda, kalıcı olarak silinmeden önce "geçici olarak silinen" öğeleri depolamak için her kullanıcı veya grup posta kutusunda yer alan gizli bir klasör olan SubstrateHolds klasörüne taşınırlar.
+Yammer iletileri için bir bekletme ilkesi yapılandırıldıktan sonra, Exchange hizmetinden bir zamanlayıcı işi bu Yammer iletilerinin depolandığı gizli klasördeki öğeleri düzenli aralıklarla değerlendirir. Zamanlayıcı işinin çalıştırılması yedi güne kadar sürer. Bu öğelerin saklama süresi dolduğunda, kalıcı olarak silinmeden önce "geçici olarak silinen" öğeleri depolamak için her kullanıcı veya grup posta kutusunda yer alan gizli bir klasör olan SubstrateHolds klasörüne taşınırlar.
 
 > [!IMPORTANT]
-> [İlk saklama ilkesi](retention.md#the-principles-of-retention-or-what-takes-precedence) nedeniyle ve Yammer iletiler Exchange Online posta kutularında depolandığından, posta kutusu aynı konum için başka bir Yammer bekletme ilkesinden etkileniyorsa, Dava Tutma, bekletmeyi geciktirme veya posta kutusuna yasal veya araştırıcı nedenlerle eBulma ayrılığı uygulandığında SubstrateHolds klasöründen kalıcı silme işlemi her zaman askıya alınır.
+> [İlk saklama ilkesi](retention.md#the-principles-of-retention-or-what-takes-precedence) nedeniyle ve Yammer iletileri Exchange Online posta kutularında depolandığından, posta kutusu aynı konum, Dava Bekletme, gecikme bekletmesi için başka bir Yammer bekletme ilkesinden etkileniyorsa veya posta kutusuna yasal veya araştırıcı nedenlerle eBulma ayrılığı uygulandığında SubstrateHolds klasöründen kalıcı silme işlemi her zaman askıya alınır.
 >
-> Posta kutusu geçerli bir ayrı tutmaya dahil edilmiş olsa da, silinmiş Yammer iletiler artık Yammer görünür olmaz, ancak eBulma ile bulunabilir olmaya devam eder.
+> Posta kutusu geçerli bir ayrı tutmaya dahil edilmiş olsa da, silinen Yammer iletileri artık Yammer'da görünmez, ancak eBulma ile bulunabilir olmaya devam eder.
 
-bir bekletme ilkesi Yammer iletiler için yapılandırıldıktan sonra, içeriğin izlediği yollar, bekletme ilkesinin tutulup silineceği, yalnızca korunacak veya yalnızca silineceği durumlarına bağlıdır.
+Yammer iletileri için bir bekletme ilkesi yapılandırıldıktan sonra, içeriğin izlediği yollar, bekletme ilkesinin tutulup silineceği, yalnızca korunup tutulmayacağı veya yalnızca silineceği durumuna bağlıdır.
 
 Bekletme ilkesi korunup silinecekse:
 
@@ -81,14 +79,14 @@ Bekletme ilkesi korunup silinecekse:
 
 Diyagramdaki iki yol için:
 
-1. Bir Yammer iletisi saklama süresi boyunca kullanıcı tarafından **düzenlenir veya silinirse**, özgün ileti hemen kopyalanır (düzenlenirse) veya SubstrateHolds klasörüne taşınır (silinirse). İleti, saklama süresi dolana kadar orada depolanır ve ardından ileti hemen kalıcı olarak silinir.
+1. Yammer iletisi saklama süresi boyunca kullanıcı tarafından **düzenlenir veya silinirse**, özgün ileti hemen kopyalanır (düzenlenirse) veya SubstrateHolds klasörüne taşınır (silinirse). İleti, saklama süresi dolana kadar orada depolanır ve ardından ileti hemen kalıcı olarak silinir.
 
-2. **Bir Yammer iletisi silinmezse** ve düzenleme sonrasında geçerli iletiler için, saklama süresi dolduktan sonra ileti SubstrateHolds klasörüne taşınır. Bu eylem, bitiş tarihinden itibaren yedi güne kadar sürer. İleti SubstrateHolds klasöründe olduğunda, hemen kalıcı olarak silinir. 
+2. **Yammer iletisi silinmezse** ve düzenleme sonrasında geçerli iletiler için, saklama süresi dolduktan sonra ileti SubstrateHolds klasörüne taşınır. Bu eylem, bitiş tarihinden itibaren yedi güne kadar sürer. İleti SubstrateHolds klasöründe olduğunda, hemen kalıcı olarak silinir. 
 
 > [!NOTE]
 > SubstrateHolds klasöründeki iletiler eBulma araçları tarafından aranabilir. İletiler SubstrateHolds klasöründen kalıcı olarak silinene kadar eBulma araçları tarafından aranabilir durumda kalır.
 
-Bekletme süresinin süresi dolduğunda ve bir iletiyi SubstrateHolds klasörüne taşıdığında, Yammer hizmetine bir silme işlemi iletilir ve bu işlem aynı işlemi Yammer istemci uygulamasına geçirir. Bu iletişimdeki veya önbelleğe almadaki gecikmeler, kullanıcıların kısa bir süre boyunca bu iletileri Yammer uygulamasında görmeye devam etmelerini açıklayabilir.
+Bekletme süresinin süresi dolduğunda ve bir iletiyi SubstrateHolds klasörüne taşıdığında, Yammer hizmetine bir silme işlemi iletilir ve bu işlem aynı işlemi Yammer istemci uygulamasına geçirir. Bu iletişim veya önbelleğe almadaki gecikmeler, kullanıcıların kısa bir süre boyunca yammer uygulamasında bu iletileri görmeye devam etmelerini açıklayabilir.
 
 Yammer hizmetinin bekletme ilkesi nedeniyle silme komutu aldığı bu senaryoda, Yammer uygulamasındaki ilgili ileti konuşmadaki tüm kullanıcılar için silinir. Bu kullanıcılardan bazıları başka bir kuruluştan olabilir, saklama süresi daha uzun olan bir bekletme ilkesine sahip olabilir veya bu kullanıcılara hiçbir bekletme ilkesi atanmamış olabilir. Bu kullanıcılar için, iletilerin kopyaları posta kutularında depolanmaya devam eder ve iletiler başka bir bekletme ilkesi tarafından kalıcı olarak silinene kadar eBulma için aranabilir durumda kalır.
 
@@ -99,15 +97,15 @@ Bekletme ilkesi yalnızca saklama veya yalnızca silme olduğunda, içeriğin yo
 
 ### <a name="content-paths-for-retain-only-retention-policy"></a>Yalnızca saklama bekletme ilkesi için içerik yolları
 
-1. **bir Yammer iletisi düzenlenir veya silinirse**: SubstrateHolds klasöründe özgün iletinin bir kopyası hemen oluşturulur ve saklama süresi dolana kadar orada tutulur. Ardından ileti SubstrateHolds klasöründen hemen kalıcı olarak silinir.
+1. **Yammer iletisi düzenlenir veya silinirse**: Özgün iletinin bir kopyası SubstrateHolds klasöründe hemen oluşturulur ve saklama süresi dolana kadar orada tutulur. Ardından ileti SubstrateHolds klasöründen hemen kalıcı olarak silinir.
 
 2. **Yammer iletisi değiştirilmez veya silinmezse** ve bekletme süresi boyunca düzenlemeden sonra geçerli iletiler için: Bekletme süresinden önce ve sonra hiçbir şey olmaz; ileti özgün konumunda kalır.
 
 ### <a name="content-paths-for-delete-only-retention-policy"></a>Yalnızca silme bekletme ilkesi için içerik yolları
 
-1. saklama süresi boyunca **Yammer iletisi silinmezse**: Saklama süresinin sonunda, ileti SubstrateHolds klasörüne taşınır. Bu eylem, bitiş tarihinden itibaren yedi güne kadar sürer. Ardından ileti SubstrateHolds klasöründen hemen kalıcı olarak silinir.
+1. Yammer iletisi saklama süresi boyunca **silinmezse**: Saklama süresinin sonunda, ileti SubstrateHolds klasörüne taşınır. Bu eylem, bitiş tarihinden itibaren yedi güne kadar sürer. Ardından ileti SubstrateHolds klasöründen hemen kalıcı olarak silinir.
 
-2. **Yammer iletisi kullanıcı tarafından dönem içinde silinirse**, öğe hemen kalıcı olarak silindiği SubstrateHolds klasörüne taşınır.
+2. Yammer iletisi bu süre boyunca **kullanıcı tarafından silinirse**, öğe hemen kalıcı olarak silindiği SubstrateHolds klasörüne taşınır.
 
 #### <a name="example-flows-and-timings-for-retention-policies"></a>Bekletme ilkeleri için örnek akışlar ve zamanlamalar
 
@@ -180,9 +178,9 @@ Varsayılan olarak, Yammer kullanıcı iletileri için bir bekletme ilkesi kurul
 
 ## <a name="when-a-user-leaves-the-organization"></a>Kullanıcı kuruluştan ayrıldığında 
 
-Bir kullanıcı kuruluşunuzdan ayrılırsa ve Microsoft 365 hesabı silinirse, saklamaya tabi Yammer kullanıcı iletileri etkin olmayan bir posta kutusunda depolanır. Bu iletiler, posta kutusu devre dışı bırakılmadan önce kullanıcıya yerleştirilen bekletme ilkesine tabi kalır ve içerik eBulma aramasında kullanılabilir. Daha fazla bilgi için bkz [. Etkin olmayan posta kutuları hakkında bilgi edinin](inactive-mailboxes-in-office-365.md).
+Bir kullanıcı kuruluşunuzdan ayrılırsa ve Microsoft 365 hesabı silinirse, bekletmeye tabi olan Yammer kullanıcı iletileri etkin olmayan bir posta kutusunda depolanır. Bu iletiler, posta kutusu devre dışı bırakılmadan önce kullanıcıya yerleştirilen bekletme ilkesine tabi kalır ve içerik eBulma aramasında kullanılabilir. Daha fazla bilgi için bkz [. Etkin olmayan posta kutuları hakkında bilgi edinin](inactive-mailboxes-in-office-365.md).
 
-Kullanıcı Yammer'da herhangi bir dosya depoladıysa, SharePoint ve OneDrive için [eşdeğer bölüme](retention-policies-sharepoint.md#when-a-user-leaves-the-organization) bakın.
+Kullanıcı Yammer'da herhangi bir dosya depoladıysa SharePoint ve OneDrive için [eşdeğer bölüme](retention-policies-sharepoint.md#when-a-user-leaves-the-organization) bakın.
 
 ## <a name="limitations"></a>Sınırlamalar
 
@@ -192,6 +190,6 @@ Yammer topluluk iletileri ve kullanıcı iletileri için bekletme kullandığın
 
 ## <a name="configuration-guidance"></a>Yapılandırma kılavuzu
 
-Microsoft 365'de saklamayı yapılandırma konusunda yeniyseniz bkz. [Veri yaşam döngüsü yönetimiyle Kullanmaya başlayın](get-started-with-data-lifecycle-management.md).
+Microsoft 365'te saklamayı yapılandırmaya yeni başladıysanız bkz. [Veri yaşam döngüsü yönetimini kullanmaya başlama](get-started-with-data-lifecycle-management.md).
 
 Yammer için bir bekletme ilkesi yapılandırmaya hazırsanız bkz. [Bekletme ilkeleri oluşturma ve yapılandırma](create-retention-policies.md).

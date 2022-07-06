@@ -17,18 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: eBulma (Standart) olayıyla ilgili olabilecek içeriği arayın.
-ms.openlocfilehash: d0c565e46860329c4dc6dac741fb0312ddccfd2c
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 1c51475602e3a0807932501325e12d93a89fcba3
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318934"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638135"
 ---
 # <a name="search-for-content-in-a-ediscovery-standard-case"></a>eBulma (Standart) durumunda içerik arama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview eBulma (Standart) servis talebi oluşturulduktan ve servis talebiyle ilgilendiğiniz kişiler beklemeye alındıktan sonra, servis talebiyle ilgili içerik için bir veya daha fazla arama oluşturabilir ve çalıştırabilirsiniz. eBulma (Standart) servis talebiyle ilişkili aramalar, Microsoft Purview uyumluluk portalı **İçerik arama** sayfasında listelenmez. Bu aramalar, aramaların ilişkili olduğu eBulma (Standart) servis talebinin Aramalar **sayfasında listelenir** . Bu aynı zamanda bir servis talebiyle ilişkili aramalara yalnızca servis talebi üyeleri tarafından erişilebileceği anlamına gelir.
+bir Microsoft Purview eKeşif (Standart) servis talebi oluşturulduktan ve servis talebiyle ilgili kişiler beklemeye alındıktan sonra, servis talebiyle ilgili içerik için bir veya daha fazla arama oluşturabilir ve çalıştırabilirsiniz. eBulma (Standart) servis talebiyle ilişkili aramalar, Microsoft Purview uyumluluk portalı **İçerik arama** sayfasında listelenmez. Bu aramalar, aramaların ilişkili olduğu eBulma (Standart) servis talebinin Aramalar **sayfasında listelenir** . Bu aynı zamanda bir servis talebiyle ilişkili aramalara yalnızca servis talebi üyeleri tarafından erişilebileceği anlamına gelir.
 
 eBulma (Standart) araması oluşturmak için:
   
@@ -48,13 +46,13 @@ eBulma (Standart) araması oluşturmak için:
 
     ![Ayrı tutulacak içerik konumlarını seçin.](../media/ContentSearchLocations.png)
   
-   1. **posta kutularını Exchange**: İki durumlu düğmeyi **Açık** olarak ayarlayın ve ardından **Kullanıcıları, grupları veya ekipleri seç'e** tıklayarak beklemeye eklenecek posta kutularını belirtin. Kullanıcı posta kutularını ve dağıtım gruplarını bulmak için arama kutusunu kullanın (grup üyelerinin posta kutularına ayrı tutma yerleştirmek için). Ayrıca, Bir Microsoft Ekibi (kanal iletileri için), Office 365 Grubu ve Yammer Grubu ile ilişkili posta kutusunda arama yapabilirsiniz. Posta kutularında depolanan uygulama verileri hakkında daha fazla bilgi için bkz. [eBulma için posta kutularında depolanan içerik](what-is-stored-in-exo-mailbox.md).
+   1. **Exchange posta kutuları: İki** durumlu düğmeyi **Açık** olarak ayarlayın ve ardından Beklemeye alınan posta kutularını belirtmek için **Kullanıcıları, grupları veya ekipleri seçin'e** tıklayın. Kullanıcı posta kutularını ve dağıtım gruplarını bulmak için arama kutusunu kullanın (grup üyelerinin posta kutularına ayrı tutma yerleştirmek için). Microsoft Ekibi (kanal iletileri için), Office 365 Grubu ve Yammer Grubu ile ilişkili posta kutusunda da arama yapabilirsiniz. Posta kutularında depolanan uygulama verileri hakkında daha fazla bilgi için bkz. [eBulma için posta kutularında depolanan içerik](what-is-stored-in-exo-mailbox.md).
 
-   2. **siteleri SharePoint**: İki durumlu düğmeyi **Açık** olarak ayarlayın ve ardından **Siteleri seç'e** tıklayarak SharePoint siteleri ve OneDrive hesapları beklemeye alacak şekilde belirtin. Beklemeye almak istediğiniz her sitenin URL'sini yazın. Ayrıca bir Microsoft Ekibi, Office 365 Grubu veya Yammer Grubu için SharePoint sitesinin URL'sini de ekleyebilirsiniz.
+   2. **SharePoint siteleri**: İki durumlu düğmeyi **Açık** olarak ayarlayın ve ardından **Site seç'e** tıklayarak SharePoint sitelerini ve OneDrive hesaplarını beklemeye alacak şekilde belirtin. Beklemeye almak istediğiniz her sitenin URL'sini yazın. Microsoft Ekibi, Office 365 Grubu veya Yammer Grubu için SharePoint sitesinin URL'sini de ekleyebilirsiniz.
   
-   3. **Ortak klasörleri Exchange**: Exchange Online kuruluşunuzdaki tüm ortak klasörleri beklemeye almak için iki durumlu düğmeyi **Açık** olarak ayarlayın. Beklemeye almak için belirli ortak klasörleri seçemezsiniz. Ortak klasörleri bekletmek istemiyorsanız iki durumlu düğmeyi kapalı bırakın.
+   3. **Ortak klasörleri değiştirme: Tüm ortak klasörleri** Exchange Online kuruluşunuzda beklemeye almak için iki durumlu düğmeyi **Açık** olarak ayarlayın. Beklemeye almak için belirli ortak klasörleri seçemezsiniz. Ortak klasörleri bekletmek istemiyorsanız iki durumlu düğmeyi kapalı bırakın.
   
-   4. Şirket içi kullanıcılar için Teams içerik aramak için bu onay kutusunu seçili tutun. Örneğin, kuruluştaki tüm Exchange posta kutularında arama yaparsanız ve bu onay kutusu seçiliyse, şirket içi kullanıcılar için Teams sohbet verilerini depolamak için kullanılan bulut tabanlı depolama alanı arama kapsamına eklenir. Daha fazla bilgi için bkz[. Şirket içi kullanıcılar için Teams sohbet verilerini arama](search-cloud-based-mailboxes-for-on-premises-users.md).
+   4. Şirket içi kullanıcılar için Teams içeriği aramak için bu onay kutusunu seçili tutun. Örneğin, kuruluştaki tüm Exchange posta kutularında arama yaparsanız ve bu onay kutusu seçiliyse, şirket içi kullanıcılar için Teams sohbet verilerini depolamak için kullanılan bulut tabanlı depolama alanı arama kapsamına eklenir. Daha fazla bilgi için bkz. [Şirket içi kullanıcılar için Teams sohbet verilerini arama](search-cloud-based-mailboxes-for-on-premises-users.md).
 
 7. **Arama koşullarınızı tanımlayın** sayfasında bir anahtar sözcük sorgusu yazın ve gerekirse arama sorgusuna koşullar ekleyin.
 
@@ -79,6 +77,6 @@ Arama tamamlandıktan sonra arama sonuçlarının önizlemesini görebilirsiniz.
 
 - Aranacak posta kutularını belirtmek için **Kullanıcıları, grupları veya ekipleri seçin'e** tıkladığınızda, görüntülenen posta kutusu seçicisi boş olur. Bu, performansı geliştirmek için tasarım gereğidir. Bu listeye alıcı eklemek için **Kullanıcı, grup veya ekip seç'e** tıklayın, arama kutusuna bir ad (en az üç karakter) yazın, adın yanındaki onay kutusunu seçin ve **seç'e** tıklayın.
 
-- Etkin olmayan posta kutuları, Microsoft Teams, Yammer Grupları, Office 365 Grupları ve dağıtım gruplarını aranacak posta kutuları listesine ekleyebilirsiniz. Dinamik dağıtım grupları desteklenmez. Microsoft Teams, Yammer Grupları veya Office 365 Grupları eklerseniz, grup veya ekip posta kutusu aranıyor; grup üyelerinin posta kutuları aranmıyor.
+- Etkin olmayan posta kutuları, Microsoft Teams, Yammer Grupları, Office 365 Grupları ve dağıtım gruplarını aranacak posta kutuları listesine ekleyebilirsiniz. Dinamik dağıtım grupları desteklenmez. Microsoft Teams, Yammer Grupları veya Office 365 Grupları eklerseniz, grup veya ekip posta kutusu aranır; grup üyelerinin posta kutuları aranz.
 
-- Aramaya site eklemek için iki durumlu düğmeyi açın ve **ardından Site seç'e** tıklayın. Aramak istediğiniz her sitenin URL'sini yazın. Ayrıca Microsoft Ekibi, Yammer Grubu veya Office 365 Grubu için SharePoint sitesinin URL'sini de ekleyebilirsiniz.
+- Aramaya site eklemek için iki durumlu düğmeyi açın ve **ardından Site seç'e** tıklayın. Aramak istediğiniz her sitenin URL'sini yazın. Microsoft Ekibi, Yammer Grubu veya Office 365 Grubu için SharePoint sitesinin URL'sini de ekleyebilirsiniz.

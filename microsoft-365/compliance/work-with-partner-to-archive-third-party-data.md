@@ -17,21 +17,19 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Salesforce Chatter, Yahoo Messenger veya Yammer gibi veri kaynaklarından üçüncü taraf verileri içeri aktarmak için özel bağlayıcı ayarlamayı öğrenin.
-ms.openlocfilehash: 02c0d8a61668a0d3dd3e663c1cb4915be15d9a08
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 7b66c16da344a0254ecbc704311c6de5fe92c232
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015528"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637827"
 ---
 # <a name="work-with-a-partner-to-archive-third-party-data"></a>Üçüncü taraf verilerini arşivlemek için bir iş ortağıyla çalışma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Üçüncü taraf veri kaynağındaki verileri Microsoft 365 içeri aktarmak ve arşivlemek için bir Microsoft İş Ortağı ile çalışabilirsiniz. İş ortağı, üçüncü taraf veri kaynağından öğeleri ayıklamak (düzenli olarak) ve ardından bu öğeleri içeri aktarmak için yapılandırılmış özel bir bağlayıcı sağlayabilir. İş ortağı bağlayıcısı, bir öğenin içeriğini veri kaynağından e-posta iletisi biçimine dönüştürür ve sonra öğeleri posta kutularında depolar. Üçüncü taraf verileri içeri aktarıldıktan sonra, bu verilere Dava Tutma, eBulma, In-Place Arşivleme, Denetim ve Microsoft 365 bekletme ilkeleri gibi Microsoft Purview özelliklerini uygulayabilirsiniz.
+Üçüncü taraf veri kaynağındaki verileri Microsoft 365'e içeri aktarmak ve arşivlemek için bir Microsoft İş Ortağı ile çalışabilirsiniz. İş ortağı, üçüncü taraf veri kaynağından öğeleri ayıklamak (düzenli olarak) ve ardından bu öğeleri içeri aktarmak için yapılandırılmış özel bir bağlayıcı sağlayabilir. İş ortağı bağlayıcısı, bir öğenin içeriğini veri kaynağından e-posta iletisi biçimine dönüştürür ve sonra öğeleri posta kutularında depolar. Üçüncü taraf verileri içeri aktarıldıktan sonra, bu verilere Dava Tutma, eBulma, In-Place Arşivleme, Denetim ve Microsoft 365 bekletme ilkeleri gibi Microsoft Purview özelliklerini uygulayabilirsiniz.
 
 > [!IMPORTANT]
-> Microsoft 365'deki [İletişim uyumluluğu](communication-compliance.md) çözümü, bu makalede bahsedilen iş ortağı bağlayıcıları tarafından içeri aktarılan üçüncü taraf verilere uygulanamaz.
+> Microsoft 365'teki [İletişim uyumluluğu](communication-compliance.md) çözümü, bu makalede bahsedilen iş ortağı bağlayıcıları tarafından içeri aktarılan üçüncü taraf verilere uygulanamaz.
 
 Burada, üçüncü taraf verileri içeri aktarmak için bir Microsoft İş Ortağı ile çalışmak için gerekli işlemlere ve adımlara genel bir bakış bulabilirsiniz.
 
@@ -43,7 +41,7 @@ Burada, üçüncü taraf verileri içeri aktarmak için bir Microsoft İş Orta�
 
 [4. Adım: İş ortağınıza bilgi sağlayın](#step-4-provide-your-partner-with-information)
 
-[5. Adım: Üçüncü taraf veri bağlayıcısını Azure Active Directory'ye kaydetme](#step-5-register-the-third-party-data-connector-in-azure-active-directory)
+[5. Adım: Azure Active Directory'de üçüncü taraf veri bağlayıcısını kaydetme](#step-5-register-the-third-party-data-connector-in-azure-active-directory)
 
 ## <a name="how-the-third-party-data-import-process-works"></a>Üçüncü taraf veri içeri aktarma işlemi nasıl çalışır?
 
@@ -51,23 +49,23 @@ Aşağıdaki çizim ve açıklama, bir iş ortağıyla çalışırken üçüncü
 
 ![Üçüncü taraf veri içeri aktarma işleminin işleyişi.](../media/5d4cf8e9-b4cc-4547-90c8-d12d04a9f0e7.png)
 
-1. Müşteri, üçüncü taraf veri kaynağından öğeleri ayıklayacak ve ardından bu öğeleri Microsoft 365 aktaracak bir bağlayıcı yapılandırmak için tercih ettikleri iş ortağıyla birlikte çalışır.
+1. Müşteri, üçüncü taraf veri kaynağından öğeleri ayıklayacak ve ardından bu öğeleri Microsoft 365'e aktaracak bir bağlayıcı yapılandırmak için tercih ettikleri iş ortağıyla birlikte çalışır.
 
 2. İş ortağı bağlayıcısı üçüncü taraf veri kaynaklarına bir üçüncü taraf API aracılığıyla bağlanır (zamanlanmış veya yapılandırılmış olarak) ve veri kaynağından öğeleri ayıklar. İş ortağı bağlayıcısı bir öğenin içeriğini e-posta iletisi biçimine dönüştürür. İleti biçimi şemasının açıklaması için [Daha fazla bilgi](#more-information) bölümüne bakın.
 
-3. İş ortağı bağlayıcısı, Exchange Web Hizmeti'ni (EWS) iyi bilinen bir uç nokta aracılığıyla kullanarak Microsoft 365'da Azure hizmetine bağlanır.
+3. İş ortağı bağlayıcısı, iyi bilinen bir uç nokta üzerinden Exchange Web Service (EWS) kullanarak Microsoft 365'teki Azure hizmetine bağlanır.
 
 4. Öğeler belirli bir kullanıcının posta kutusuna veya "tümünü yakala" üçüncü taraf veri posta kutusuna aktarılır. Bir öğenin belirli bir kullanıcı posta kutusuna mı yoksa üçüncü taraf veri posta kutusuna mı içeri aktarılıp aktarılmadığı aşağıdaki ölçütlere bağlıdır:
 
-   1. **Kullanıcı hesabına karşılık gelen kullanıcı kimliğine sahip öğeler:** İş ortağı bağlayıcısı üçüncü taraf veri kaynağındaki öğenin kullanıcı kimliğini Microsoft 365'deki belirli bir kullanıcı kimliğiyle eşleyebilirse, öğe kullanıcının Kurtarılabilir Öğeler klasöründeki **Temizleme** klasörüne kopyalanır. Kullanıcılar Temizleme klasöründeki öğelere erişemez. Ancak, Temizleme klasöründeki öğeleri aramak için eBulma araçlarını kullanabilirsiniz.
+   1. **Kullanıcı hesabına karşılık gelen kullanıcı kimliğine sahip öğeler:** İş ortağı bağlayıcısı üçüncü taraf veri kaynağındaki öğenin kullanıcı kimliğini Microsoft 365'teki belirli bir kullanıcı kimliğiyle eşleyebilirse, öğe kullanıcının Kurtarılabilir Öğeler klasöründeki **Temizlemeler** klasörüne kopyalanır. Kullanıcılar Temizleme klasöründeki öğelere erişemez. Ancak, Temizleme klasöründeki öğeleri aramak için eBulma araçlarını kullanabilirsiniz.
 
    1. **Kullanıcı hesabına karşılık gelen kullanıcı kimliği olmayan öğeler:** İş ortağı bağlayıcısı bir öğenin kullanıcı kimliğini belirli bir kullanıcı kimliğiyle eşleyemezse, öğe üçüncü taraf veri posta kutusunun **Gelen Kutusu** klasörüne kopyalanır. Öğeleri gelen kutusuna aktarma, sizin veya kuruluşunuzdaki bir kişinin bu öğeleri görüntülemek ve yönetmek için üçüncü taraf posta kutusunda oturum açmanızı ve iş ortağı bağlayıcı yapılandırmasında herhangi bir ayarlama yapılması gerekip gerekmediğini görmenizi sağlar.
 
 ## <a name="step-1-find-a-third-party-data-partner"></a>1. Adım: Üçüncü taraf veri iş ortağı bulma
 
-Microsoft 365'da üçüncü taraf verileri arşivlemenin önemli bileşenlerinden biri, üçüncü taraf veri kaynağından verileri yakalama ve Microsoft 365 içeri aktarma konusunda uzmanlaşmış bir Microsoft iş ortağı bulmak ve bu iş ortağıyla çalışmaktır. Veriler içeri aktarıldıktan sonra, Exchange gelen e-posta ve SharePoint ve OneDrive İş belgeleri gibi kuruluşunuzun diğer Microsoft verileriyle birlikte arşivlenebilir ve korunabilir. İş ortağı, kuruluşunuzun üçüncü taraf veri kaynaklarından (BlackBerry, Facebook, Google+, Thomson Reuters, Twitter ve YouTube gibi) verileri ayıklayan ve bu verileri Exchange posta kutularına e-posta iletisi olarak aktaran bir Microsoft 365 API'sine geçiren bir bağlayıcı oluşturur.
+Microsoft 365'te üçüncü taraf verilerini arşivlemenin önemli bileşenlerinden biri, üçüncü taraf veri kaynağından verileri yakalama ve Microsoft 365'e aktarma konusunda uzmanlaşmış bir Microsoft iş ortağı bulmak ve bu iş ortağıyla çalışmaktır. Veriler içeri aktarıldıktan sonra, Exchange'den gelen e-posta ve SharePoint ve OneDrive İş belgeleri gibi kuruluşunuzun diğer Microsoft verileriyle birlikte arşivlenebilir ve korunabilir. İş ortağı, kuruluşunuzun üçüncü taraf veri kaynaklarından (BlackBerry, Facebook, Google+, Thomson Reuters, Twitter ve YouTube gibi) veri ayıklayan ve bu verileri Exchange posta kutularına e-posta iletisi olarak aktaran bir Microsoft 365 API'sine geçiren bir bağlayıcı oluşturur.
 
-Aşağıdaki bölümlerde, Microsoft 365'da üçüncü taraf verilerini arşivleme programına katılan Microsoft iş ortakları (ve destekledikleri üçüncü taraf veri kaynakları) listelenir.
+Aşağıdaki bölümlerde, Microsoft 365'te üçüncü taraf verilerini arşivleme programına katılan Microsoft iş ortakları (ve destekledikleri üçüncü taraf veri kaynakları) listelenir.
 
 [17a-4 LLC](#17a-4-llc)
 
@@ -87,7 +85,7 @@ Aşağıdaki bölümlerde, Microsoft 365'da üçüncü taraf verilerini arşivle
 
 - Blackberry
 
-- Bloomberg Veri Akışlar
+- Bloomberg Veri Akışları
 
 - Cisco Jabber
 
@@ -99,7 +97,7 @@ Aşağıdaki bölümlerde, Microsoft 365'da üçüncü taraf verilerini arşivle
 
 - LivePerson
 
-- MessageLabs Veri Akışlar
+- MessageLabs Veri Akışları
 
 - OpenText
 
@@ -117,7 +115,7 @@ Aşağıdaki bölümlerde, Microsoft 365'da üçüncü taraf verilerini arşivle
 
 - Skype Kurumsal Online (Lync Online)
 
-- veritabanlarını SQL
+- SQL Veritabanları
 
 - Squawker
 
@@ -207,7 +205,7 @@ Aşağıdaki bölümlerde, Microsoft 365'da üçüncü taraf verilerini arşivle
 
 - Skype Kurumsal, sürüm 2007 R2 - 2016 (şirket içi)
 
-- Slack Enterprise Kılavuzu
+- Slack Enterprise Grid
 
 - Symphony
 
@@ -287,13 +285,13 @@ Aşağıdaki bölümlerde, Microsoft 365'da üçüncü taraf verilerini arşivle
 
 - İşbirliği Gerçek Zamanlı Günlüğe Kaydetme
 
-- Doğrudan Bağlan
+- Direct Connect
 
 - Facebook
 
 - FactSet
 
-- FastTrack
+- Fasttrack
 
 - Gnutella
 
@@ -367,9 +365,9 @@ Aşağıdaki bölümlerde, Microsoft 365'da üçüncü taraf verilerini arşivle
 
 - NEONetwork
 
-- Lync Ayrılmış Microsoft 365
+- Microsoft 365 Lync Ayrılmış
 
-- Paylaşılan anlık Microsoft 365
+- Microsoft 365 Paylaşılan Anlık İletisi
 
 - Pinterest
 
@@ -469,17 +467,17 @@ Aşağıdaki bölümlerde, Microsoft 365'da üçüncü taraf verilerini arşivle
 
 - TwistedPair Radyo
 
-- masaüstü bilgisayar ekranını Windows
+- Windows Masaüstü Bilgisayar Ekranı
 
-## <a name="step-2-create-and-configure-a-third-party-data-mailbox-in-microsoft-365"></a>2. Adım: Microsoft 365'de üçüncü taraf veri posta kutusu oluşturma ve yapılandırma
+## <a name="step-2-create-and-configure-a-third-party-data-mailbox-in-microsoft-365"></a>2. Adım: Microsoft 365'te üçüncü taraf veri posta kutusu oluşturma ve yapılandırma
 
-Verileri Microsoft 365 aktarmak için üçüncü taraf veri posta kutusu oluşturma ve yapılandırma adımları aşağıdadır. Daha önce açıklandığı gibi, iş ortağı bağlayıcısı öğenin kullanıcı kimliğini bir kullanıcı hesabıyla eşleyemiyorsa öğeler bu posta kutusuna aktarılır.
+Microsoft 365'e veri aktarmak için üçüncü taraf veri posta kutusu oluşturma ve yapılandırma adımları aşağıdadır. Daha önce açıklandığı gibi, iş ortağı bağlayıcısı öğenin kullanıcı kimliğini bir kullanıcı hesabıyla eşleyemiyorsa öğeler bu posta kutusuna aktarılır.
 
 ### <a name="complete-these-tasks-in-the-microsoft-365-admin-center"></a>Bu görevleri Microsoft 365 yönetim merkezi
 
-1. Bir kullanıcı hesabı oluşturun ve Exchange Online Plan 2 lisansı atayın; bkz. [Microsoft 365 kullanıcı ekleme](../admin/add-users/add-users.md). Posta kutusunu Dava Tutma'ya yerleştirmek veya depolama kotası 1,5 TB'a kadar olan bir arşiv posta kutusunu etkinleştirmek için Plan 2 lisansı gerekir.
+1. Bir kullanıcı hesabı oluşturun ve Exchange Online Plan 2 lisansı atayın; bkz. [Microsoft 365'e kullanıcı ekleme](../admin/add-users/add-users.md). Posta kutusunu Dava Tutma'ya yerleştirmek veya depolama kotası 1,5 TB'a kadar olan bir arşiv posta kutusunu etkinleştirmek için Plan 2 lisansı gerekir.
 
-2. Üçüncü taraf veri posta kutusunun kullanıcı hesabını **Microsoft 365'daki Exchange yönetici** yönetici rolüne ekleyin; bkz. [Microsoft 365'da yönetici rolleri atama](../admin/add-users/assign-admin-roles.md).
+2. Üçüncü taraf veri posta kutusunun kullanıcı hesabını Microsoft 365'teki **Exchange yöneticisi** rolüne ekleyin; Bkz [. Microsoft 365'te yönetici rolleri atama](../admin/add-users/assign-admin-roles.md).
 
     > [!TIP]
     > Bu kullanıcı hesabının kimlik bilgilerini not edin. Bunları 4. Adımda açıklandığı gibi iş ortağınıza sağlamanız gerekir.
@@ -492,13 +490,13 @@ Verileri Microsoft 365 aktarmak için üçüncü taraf veri posta kutusu oluştu
     Set-Mailbox -Identity <identity of third-party data mailbox> -HiddenFromAddressListsEnabled $true
     ```
 
-2. Yöneticilerin veya uyumluluk görevlilerinin üçüncü taraf veri posta kutusunu Outlook masaüstü istemcisinde açabilmesi için üçüncü taraf veri posta kutusuna **FullAccess** iznini atayın; bkz. [Alıcılar için izinleri yönetme](https://go.microsoft.com/fwlink/p/?LinkId=692104).
+2. Yöneticilerin veya uyumluluk görevlilerinin Outlook masaüstü istemcisinde üçüncü taraf veri posta kutusunu açabilmesi için üçüncü taraf veri posta kutusuna **FullAccess** izni atayın; Bkz. [Alıcılar için izinleri yönetme](https://go.microsoft.com/fwlink/p/?LinkId=692104).
 
 3. Üçüncü taraf veri posta kutusu için aşağıdaki uyumlulukla ilgili özellikleri etkinleştirin:
 
     - Arşiv posta kutusunu etkinleştirin; Bkz [. Arşiv posta kutularını etkinleştirme](enable-archive-mailboxes.md) ve [Arşivlemeyi otomatik genişletmeyi etkinleştirme](enable-autoexpanding-archiving.md). Bu, üçüncü taraf veri öğelerini arşiv posta kutusuna taşıyan bir arşiv ilkesi ayarlayarak birincil posta kutusunda depolama alanı boşaltmanıza olanak tanır. Bu, üçüncü taraf veriler için 1,5 TB'a kadar depolama alanı sağlar.
 
-    - Üçüncü taraf veri posta kutusunu Dava Tutma'ya yerleştirin. Güvenlik ve uyumluluk merkezinde Microsoft 365 bekletme ilkesi de uygulayabilirsiniz. Bu posta kutusunu beklemeye almak, üçüncü taraf veri öğelerini (süresiz veya belirtilen süre boyunca) korur ve bunların posta kutusundan temizlenmesini önler. Aşağıdaki konulardan birine bakın:
+    - Üçüncü taraf veri posta kutusunu Dava Tutma'ya yerleştirin. Güvenlik ve uyumluluk merkezinde bir Microsoft 365 bekletme ilkesi de uygulayabilirsiniz. Bu posta kutusunu beklemeye almak, üçüncü taraf veri öğelerini (süresiz veya belirtilen süre boyunca) korur ve bunların posta kutusundan temizlenmesini önler. Aşağıdaki konulardan birine bakın:
 
       - [Dava Tutma'ya posta kutusu yerleştirme](./create-a-litigation-hold.md)
 
@@ -512,7 +510,7 @@ Sonraki adım, kullanıcı posta kutularını üçüncü taraf verileri destekle
 
 1. Her kullanıcı için arşiv posta kutusunu etkinleştirin; Bkz [. Arşiv posta kutularını etkinleştirme](enable-archive-mailboxes.md) ve [Arşivlemeyi otomatik genişletmeyi etkinleştirme](enable-autoexpanding-archiving.md).
 
-2. Kullanıcı posta kutularını Dava Tutma'ya yerleştirin veya Microsoft 365 bekletme ilkesi uygulayın; aşağıdaki konulardan birine bakın:
+2. Kullanıcı posta kutularını Dava Tutma'ya yerleştirin veya bir Microsoft 365 bekletme ilkesi uygulayın; aşağıdaki konulardan birine bakın:
 
     - [Dava Tutma'ya posta kutusu yerleştirme](./create-a-litigation-hold.md)
 
@@ -524,7 +522,7 @@ Sonraki adım, kullanıcı posta kutularını üçüncü taraf verileri destekle
 
 Son adım, bağlayıcıyı kuruluşunuza bağlanıp verileri kullanıcı posta kutularına ve üçüncü taraf veri posta kutusuna aktaracak şekilde yapılandırabilmesi için iş ortağınıza aşağıdaki bilgileri sağlamaktır.
 
-- Microsoft 365'de Azure hizmetine bağlanmak için kullanılan uç nokta:
+- Microsoft 365'te Azure hizmetine bağlanmak için kullanılan uç nokta:
 
     ```http
     https://office365ingestionsvc.gble1.protection.outlook.com/service/ThirdPartyIngestionService.svc
@@ -532,11 +530,11 @@ Son adım, bağlayıcıyı kuruluşunuza bağlanıp verileri kullanıcı posta k
 
 - 2. Adımda oluşturduğunuz üçüncü taraf veri posta kutusunun oturum açma kimlik bilgileri (Microsoft 365 kullanıcı kimliği ve parolası). Bu kimlik bilgileri, iş ortağı bağlayıcısının kullanıcı posta kutularına ve üçüncü taraf veri posta kutularına erişip öğeleri içeri aktarabilmesi için gereklidir.
 
-## <a name="step-5-register-the-third-party-data-connector-in-azure-active-directory"></a>5. Adım: Üçüncü taraf veri bağlayıcısını Azure Active Directory'ye kaydetme
+## <a name="step-5-register-the-third-party-data-connector-in-azure-active-directory"></a>5. Adım: Azure Active Directory'de üçüncü taraf veri bağlayıcısını kaydetme
 
-30 Eylül 2018'den itibaren Microsoft 365'deki Azure hizmeti, verileri içeri aktarmak için kuruluşunuza bağlanmaya çalışan üçüncü taraf veri bağlayıcılarının kimliğini doğrulamak için Exchange Online'de modern kimlik doğrulamasını kullanmaya başlayacaktır. Bu değişikliğin nedeni, modern kimlik doğrulamasının geçerli yöntemden daha fazla güvenlik sağlamasıdır. Bu, Azure hizmetine bağlanmak için daha önce açıklanan uç noktayı kullanan üçüncü taraf bağlayıcılar için izin verilenler listesini temel alır.
+30 Eylül 2018'den itibaren Microsoft 365'teki Azure hizmeti, verileri içeri aktarmak için kuruluşunuza bağlanmaya çalışan üçüncü taraf veri bağlayıcılarının kimliğini doğrulamak için Exchange Online modern kimlik doğrulamasını kullanmaya başlayacaktır. Bu değişikliğin nedeni, modern kimlik doğrulamasının geçerli yöntemden daha fazla güvenlik sağlamasıdır. Bu, Azure hizmetine bağlanmak için daha önce açıklanan uç noktayı kullanan üçüncü taraf bağlayıcılar için izin verilenler listesini temel alır.
 
-Bir üçüncü taraf veri bağlayıcısının yeni modern kimlik doğrulama yöntemini kullanarak Microsoft 365 bağlanmasına olanak tanımak için, kuruluşunuzdaki bir yöneticinin bağlayıcıyı Azure Active Directory'de güvenilir bir hizmet uygulaması olarak kaydetmeyi onaylaması gerekir. Bu, bağlayıcının Azure Active Directory'da kuruluşunuzun verilerine erişmesine izin vermek için bir izin isteği kabul ederek yapılır. Bu isteği kabul ettikten sonra, üçüncü taraf veri bağlayıcısı Azure Active Directory kurumsal bir uygulama olarak eklenir ve hizmet sorumlusu olarak temsil edilir. Onay işlemi hakkında daha fazla bilgi için bkz.  [Kiracı Yöneticisi Onayı](/skype-sdk/trusted-application-api/docs/tenantadminconsent).
+Üçüncü taraf veri bağlayıcısının yeni modern kimlik doğrulama yöntemini kullanarak Microsoft 365'e bağlanmasını sağlamak için, kuruluşunuzdaki bir yöneticinin bağlayıcıyı Azure Active Directory'de güvenilir bir hizmet uygulaması olarak kaydetmeyi onaylaması gerekir. Bu, bağlayıcının Azure Active Directory'de kuruluşunuzun verilerine erişmesine izin vermek için bir izin isteği kabul ederek yapılır. Bu isteği kabul ettikten sonra, üçüncü taraf veri bağlayıcısı Azure Active Directory'ye kurumsal uygulama olarak eklenir ve hizmet sorumlusu olarak temsil edilir. Onay işlemi hakkında daha fazla bilgi için bkz. [Kiracı Yönetici Onayı](/skype-sdk/trusted-application-api/docs/tenantadminconsent).
 
 Bağlayıcıyı kaydetme isteğine erişme ve kabul etme adımları şunlardır:
 
@@ -548,24 +546,24 @@ Bağlayıcıyı kaydetme isteğine erişme ve kabul etme adımları şunlardır:
 
 2. **Kabul Et'e** tıklayın.
 
-İsteği kabul ettikten sonra [Azure portal](https://portal.azure.com) görüntülenir. Kuruluşunuzun uygulama listesini görüntülemek için **Azure Active Directory** >  **Enterprise uygulamaları'na** tıklayın. Microsoft 365 üçüncü taraf veri bağlayıcısı **, Enterprise uygulamalar** dikey penceresinde listelenir.
+İsteği kabul ettikten sonra [Azure portal](https://portal.azure.com) görüntülenir. Kuruluşunuzun uygulama listesini görüntülemek için **Azure Active Directory** > **Kurumsal uygulamaları'na** tıklayın. Microsoft 365 üçüncü taraf veri bağlayıcısı **, Kurumsal uygulamalar** dikey penceresinde listelenir.
 
 > [!IMPORTANT]
-> 30 Eylül 2018'in ardından, Azure Active Directory üçüncü taraf veri bağlayıcısı kaydetmezseniz üçüncü taraf veriler artık kuruluşunuzdaki posta kutularına aktarılmayacaktır. Mevcut üçüncü taraf veri bağlayıcılarının (30 Eylül 2018'de oluşturulanlar) 5. Adım'daki yordamı izleyerek Azure Active Directory'ye de kaydedilmesi gerektiğini unutmayın.
+> 30 Eylül 2018'in ardından, Azure Active Directory'ye üçüncü taraf veri bağlayıcısı kaydetmezseniz üçüncü taraf veriler artık kuruluşunuzdaki posta kutularına aktarılmayacaktır. Mevcut üçüncü taraf veri bağlayıcılarının (30 Eylül 2018'de oluşturulanlar) 5. Adım'daki yordamı izleyerek Azure Active Directory'ye de kaydedilmesi gerektiğini unutmayın.
 
 ### <a name="revoking-consent-for-a-third-party-data-connector"></a>Üçüncü taraf veri bağlayıcısı için onayı iptal etme
 
-Kuruluşunuz Azure Active Directory bir üçüncü taraf veri bağlayıcısını kaydetme izni isteğine onay verdikten sonra, kuruluşunuz bu onayı istediğiniz zaman iptal edebilir. Bununla birlikte, bağlayıcı için onayın iptal edilmesi, üçüncü taraf veri kaynağındaki verilerin artık Microsoft 365 içeri aktarılmayacağı anlamına gelir.
+Kuruluşunuz Azure Active Directory'de üçüncü taraf veri bağlayıcısını kaydetme izni isteğini onayladıktan sonra, kuruluşunuz bu onayı istediğiniz zaman iptal edebilir. Ancak bağlayıcının onayını iptal etme, üçüncü taraf veri kaynağındaki verilerin artık Microsoft 365'e aktarılmayacağı anlamına gelir.
 
-Üçüncü taraf veri bağlayıcısının onayını iptal etmek için, Azure portal Enterprise **uygulamaları** dikey penceresini kullanarak veya Microsoft 365'da [Remove-MsolServicePrincipal](/powershell/module/msonline/remove-msolserviceprincipal) kullanarak uygulamayı Azure Active Directory silebilirsiniz (karşılık gelen hizmet sorumlusunu silerek) Powershell. Azure Active Directory PowerShell'de [Remove-AzureADServicePrincipal](/powershell/module/azuread/remove-azureadserviceprincipal) cmdlet'ini de kullanabilirsiniz.
+Üçüncü taraf veri bağlayıcısının onayını iptal etmek için, Azure portal **Kurumsal uygulamalar** dikey penceresini kullanarak veya Microsoft 365 PowerShell'de [Remove-MsolServicePrincipal'ı](/powershell/module/msonline/remove-msolserviceprincipal) kullanarak uygulamayı (karşılık gelen hizmet sorumlusunu silerek) Azure Active Directory'den silebilirsiniz. Azure Active Directory PowerShell'de [Remove-AzureADServicePrincipal](/powershell/module/azuread/remove-azureadserviceprincipal) cmdlet'ini de kullanabilirsiniz.
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- Daha önce açıklandığı gibi, üçüncü taraf veri kaynaklarından gelen öğeler Exchange posta kutularına e-posta iletisi olarak aktarılır. İş ortağı bağlayıcısı, Microsoft 365 API'sinin gerektirdiği bir şemayı kullanarak öğeyi içeri aktarır. Aşağıdaki tabloda, e-posta iletisi olarak bir Exchange posta kutusuna aktarıldıktan sonra üçüncü taraf veri kaynağındaki bir öğenin ileti özellikleri açıklanmaktadır. Tablo ayrıca ileti özelliğinin zorunlu olup olmadığını gösterir. Zorunlu özellikler doldurulmalıdır. Bir öğede zorunlu bir özellik eksikse öğe Microsoft 365'a aktarılamaz. İçeri aktarma işlemi, bir öğenin neden içeri aktarılamadığı ve hangi özelliğin eksik olduğunu açıklayan bir hata iletisi döndürür.
+- Daha önce açıklandığı gibi, üçüncü taraf veri kaynaklarından gelen öğeler Exchange posta kutularına e-posta iletileri olarak aktarılır. İş ortağı bağlayıcısı, Microsoft 365 API'sinin gerektirdiği bir şemayı kullanarak öğeyi içeri aktarır. Aşağıdaki tabloda, bir exchange posta kutusuna e-posta iletisi olarak aktarıldıktan sonra üçüncü taraf veri kaynağındaki bir öğenin ileti özellikleri açıklanmaktadır. Tablo ayrıca ileti özelliğinin zorunlu olup olmadığını gösterir. Zorunlu özellikler doldurulmalıdır. Bir öğede zorunlu bir özellik eksikse, öğe Microsoft 365'e aktarılamaz. İçeri aktarma işlemi, bir öğenin neden içeri aktarılamadığı ve hangi özelliğin eksik olduğunu açıklayan bir hata iletisi döndürür.
 
   |İleti özelliği|Zorunlu?|Açıklama|Örnek değer|
   |---|---|---|---|
-  |**KAYNAK**|Evet|Öğeyi ilk olarak üçüncü taraf veri kaynağında oluşturan veya gönderen kullanıcı. İş ortağı bağlayıcısı, kaynak öğedeki kullanıcı kimliğini (örneğin Twitter tanıtıcısı) tüm katılımcılar için bir kullanıcı hesabıyla (KIMDEN ve TO alanlarındaki kullanıcılar) eşlemeyi dener. İletinin bir kopyası her katılımcının posta kutusuna aktarılır. Öğedeki katılımcıların hiçbiri bir kullanıcı hesabıyla eşlenemezse, öğe Microsoft 365 üçüncü taraf arşivleme posta kutusuna aktarılır.  <br/> <br/> Öğenin göndereni olarak tanımlanan katılımcının, öğenin içeri aktarıldığı kuruluşta etkin bir posta kutusu olmalıdır. Gönderenin etkin bir posta kutusu yoksa aşağıdaki hata döndürülür:<br/><br/>  `One or more messages in the Request failed to be delivered to either From or Sender email address. You will need to resend your entire Request. Error: The request failed. The remote server returned an error: (401) Unauthorized.`|`bob@contoso.com`|
+  |**KAYNAK**|Evet|Öğeyi ilk olarak üçüncü taraf veri kaynağında oluşturan veya gönderen kullanıcı. İş ortağı bağlayıcısı, kaynak öğedeki kullanıcı kimliğini (örneğin Twitter tanıtıcısı) tüm katılımcılar için bir kullanıcı hesabıyla (KIMDEN ve TO alanlarındaki kullanıcılar) eşlemeyi dener. İletinin bir kopyası her katılımcının posta kutusuna aktarılır. Öğedeki katılımcıların hiçbiri bir kullanıcı hesabıyla eşlenemezse, öğe Microsoft 365'teki üçüncü taraf arşivleme posta kutusuna aktarılır.  <br/> <br/> Öğenin göndereni olarak tanımlanan katılımcının, öğenin içeri aktarıldığı kuruluşta etkin bir posta kutusu olmalıdır. Gönderenin etkin bir posta kutusu yoksa aşağıdaki hata döndürülür:<br/><br/>  `One or more messages in the Request failed to be delivered to either From or Sender email address. You will need to resend your entire Request. Error: The request failed. The remote server returned an error: (401) Unauthorized.`|`bob@contoso.com`|
   |**HEDEF**|Evet|Veri kaynağındaki bir öğe için uygunsa bir öğe alan kullanıcı.|`bob@contoso.com`|
   |**KONU**|Hayır|Kaynak öğedeki konu.|`"Mega deals with Contoso coming your way! #ContosoHolidayDeals"`|
   |**TARİH**|Evet|Öğenin ilk oluşturulduğu veya müşteri veri kaynağında deftere nakledildiği tarih. Örneğin, twitter iletisinin tweetlendiği tarih.|`01 NOV 2015`|
@@ -573,7 +571,7 @@ Kuruluşunuz Azure Active Directory bir üçüncü taraf veri bağlayıcısını
   |**EKİ**|Hayır|Veri kaynağındaki bir öğenin (Twitter'daki bir tweet veya anlık ileti konuşması gibi) ekli bir dosyası varsa veya görüntüler eklerse, iş ortağı bağlantısı önce **BODY** özelliğine ekleri eklemeyi dener. Bu mümkün değilse** EK ** özelliğine eklenir. Diğer ek örnekleri arasında Facebook'taki Beğeniler, içerik kaynağından meta veriler ve bir ileti veya gönderiye verilen yanıtlar yer alır.|`image.gif`|
   |**MESSAGECLASS**|Evet|Bu, iş ortağı bağlayıcısı tarafından oluşturulan ve doldurulan çok değerli bir özelliktir. Bu özelliğin biçimi şeklindedir  `IPM.NOTE.Source.Event`. (Bu özellik ile  `IPM.NOTE`başlamalıdır. Bu biçim, ileti sınıfına  `IPM.NOTE.X` benzer.) Bu özellik aşağıdaki bilgileri içerir:  <br/><br/>`Source`: Üçüncü taraf veri kaynağını gösterir; örneğin, Twitter, Facebook veya BlackBerry.  <br/> <br/>  `Event`: Öğeleri üreten üçüncü taraf veri kaynağında gerçekleştirilen etkinliğin türünü gösterir; örneğin, Twitter'da bir tweet veya Facebook'ta bir gönderi. Olaylar veri kaynağına özeldir.  <br/> <br/>  Bu özelliğin bir amacı, belirli öğeleri bir öğenin kaynaklandığı veri kaynağına veya olay türüne göre filtrelemektir. Örneğin, eBulma aramasında belirli bir kullanıcı tarafından gönderilen tüm tweet'leri bulmak için bir arama sorgusu oluşturabilirsiniz.|`IPM.NOTE.Twitter.Tweet`|
 
-- öğeler Microsoft 365'daki posta kutularına başarıyla aktarıldığında, HTTP yanıtının bir parçası olarak çağırana benzersiz bir tanımlayıcı döndürülür. adlı  `x-IngestionCorrelationID`bu tanımlayıcı, öğelerin uçtan uca izlenmesi için iş ortakları tarafından sonraki sorun giderme amacıyla kullanılabilir. İş ortaklarının bu bilgileri yakalaması ve sonunda uygun şekilde günlüğe kaydetmesi önerilir. Bu tanımlayıcıyı gösteren bir HTTP yanıtı örneği aşağıda verilmişti:
+- Öğeler Microsoft 365'teki posta kutularına başarıyla aktarıldığında, HTTP yanıtının bir parçası olarak çağırana benzersiz bir tanımlayıcı döndürülür. adlı  `x-IngestionCorrelationID`bu tanımlayıcı, öğelerin uçtan uca izlenmesi için iş ortakları tarafından sonraki sorun giderme amacıyla kullanılabilir. İş ortaklarının bu bilgileri yakalaması ve sonunda uygun şekilde günlüğe kaydetmesi önerilir. Bu tanımlayıcıyı gösteren bir HTTP yanıtı örneği aşağıda verilmişti:
 
     ```http
     HTTP/1.1 200 OK
@@ -591,7 +589,7 @@ Kuruluşunuz Azure Active Directory bir üçüncü taraf veri bağlayıcısını
 
   - **`itemclass:ipm.externaldata.<third-party data type>`**: Bu özellik-değer çiftini yalnızca bir üçüncü taraf veri türünü belirtmek için kullanın. Örneğin, yalnızca Subject özelliğinde "contoso" sözcüğünü içeren Facebook verilerinde arama yapmak için anahtar sözcük sorgusunu  `itemclass:ipm.externaldata.Facebook* AND subject:contoso`kullanırsınız.
 
-  Özelliğin üçüncü taraf veri türleri için kullanılacak değerlerin tam listesi için `itemclass` bkz. [İçerik Arama'yı kullanarak Microsoft 365 içeri aktarılan üçüncü taraf verileri arama](use-content-search-to-search-third-party-data-that-was-imported.md).
+  Özelliğin üçüncü taraf veri türleri için kullanılacak değerlerin tam listesi için  `itemclass` bkz. [Microsoft 365'e aktarılan üçüncü taraf verilerinde arama yapmak için İçerik Arama'yı kullanma](use-content-search-to-search-third-party-data-that-was-imported.md).
 
    İçerik Arama'yı kullanma ve anahtar sözcük arama sorguları oluşturma hakkında daha fazla bilgi için bkz:
 

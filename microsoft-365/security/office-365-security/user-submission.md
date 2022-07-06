@@ -18,12 +18,12 @@ ms.custom: ''
 description: Yöneticiler, kullanıcılar tarafından bildirilen istenmeyen posta ve kimlik avı e-postalarını toplamak için posta kutusunu yapılandırmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a4a46225b911c3272baa66772a0cf9ab63f1a1da
-ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
+ms.openlocfilehash: c4faa6ce80a885ecea864cc2fa51be29553c4a3d
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "66607597"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636435"
 ---
 # <a name="user-reported-message-settings"></a>Kullanıcı tarafından bildirilen ileti ayarları
 
@@ -51,9 +51,9 @@ Kullanıcı tarafından bildirilen iletilerin özel posta kutunuza gitmesi için
 
 - [Özel posta kutusunu SecOps posta kutusu olarak tanımlayın](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
 
-- Özel posta kutusu için [kötü amaçlı yazılımdan koruma ilkesi oluşturma](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies)
-  - Kötü amaçlı yazılım için sıfır saatlik otomatik temizleme (ZAP) kapalıdır (**Koruma ayarları** > **Kötü amaçlı yazılım için sıfır saatlik otomatik temizlemeyi etkinleştir** seçeneği seçilmez).
-  - Ortak ek filtresi seçeneği kapalıdır (**Koruma ayarları** bölümü > **Ortak ekler filtresini etkinleştir** seçili değildir).
+- Aşağıdaki ayarlarla özel posta kutusu için [kötü amaçlı yazılımdan koruma ilkesi oluşturun](configure-anti-malware-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-malware-policies):
+  - Kötü amaçlı yazılım için sıfır saatlik otomatik temizleme (ZAP) kapalıdır (**Koruma ayarları** bölümü \> **Kötü amaçlı yazılım için sıfır saatlik otomatik temizlemeyi etkinleştir** seçeneği seçilmez).
+  - Ortak ek filtresi seçeneği kapalıdır (**Koruma ayarları** bölümü \> **Ortak ekler filtresini etkinleştir** seçili değildir).
 
 Office 365 için Microsoft Defender varsa, gelişmiş filtrelememizin bildirilen iletileri etkilememesi için aşağıdaki ayarları da yapılandırmanız gerekir:
 

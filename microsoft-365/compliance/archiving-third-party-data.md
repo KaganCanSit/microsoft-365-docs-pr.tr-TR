@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365'da üçüncü taraf verileri içeri aktarmak ve arşivlemek için veri bağlayıcılarını kullanma
+title: Microsoft 365'te üçüncü taraf verileri içeri aktarmak ve arşivlemek için veri bağlayıcılarını kullanma
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -20,21 +20,19 @@ search.appverid:
 ms.assetid: 0ce338d5-3666-4a18-86ab-c6910ff408cc
 ms.custom:
 - seo-marvel-apr2020
-description: Posta kutularını Microsoft 365 için sosyal medya platformlarından, anlık ileti platformlarından ve belge işbirliği platformlarından üçüncü taraf verileri içeri aktarmayı ve arşivlemeyi öğrenin.
-ms.openlocfilehash: 75a1136c38c0b893babd1cd349dbe34aa9bbf8cd
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Sosyal medya platformlarından, anlık ileti platformlarından ve belge işbirliği platformlarından üçüncü taraf verilerini Microsoft 365 posta kutularına aktarmayı ve arşivlemeyi öğrenin.
+ms.openlocfilehash: b27d45577b98c1eef0f3dab11412f048adff6bcd
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093580"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637559"
 ---
 # <a name="learn-about-connectors-for-third-party-data"></a>Üçüncü taraf verileri için bağlayıcılar hakkında daha fazla bilgi edinme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Microsoft 365, yöneticilerin Microsoft 365 kuruluşunuzdaki posta kutularına microsoft dışı, üçüncü taraf verileri sosyal medya platformlarından, anlık ileti platformlarından ve belge işbirliği platformlarından içeri aktarmak ve arşivlemek için veri bağlayıcılarını kullanmasına olanak tanır. Microsoft 365'te üçüncü taraf verileri içeri aktarmak ve arşivleme amacıyla veri bağlayıcılarını kullanmanın birincil avantajlarından biri, içeri aktarıldıktan sonra verilere çeşitli Microsoft Purview çözümleri uygulayabilmenizdir. Bu, kuruluşunuzun Microsoft dışı verilerinin kuruluşunuzu etkileyen düzenlemelere ve standartlara uygun olduğundan emin olmanıza yardımcı olur.
 
-Microsoft 365, yöneticilerin Microsoft dışı üçüncü taraf verileri sosyal medya platformlarından, anlık ileti platformlarından ve belge işbirliği platformlarından Microsoft 365 kuruluşunuzdaki posta kutularına aktarmak ve arşivlemek için veri bağlayıcılarını kullanmasına olanak tanır. Microsoft 365'da üçüncü taraf verileri içeri aktarmak ve arşivleme amacıyla veri bağlayıcılarını kullanmanın birincil avantajlarından biri, içeri aktarıldıktan sonra verilere çeşitli Microsoft Purview çözümleri uygulayabilmenizdir. Bu, kuruluşunuzun Microsoft dışı verilerinin kuruluşunuzu etkileyen düzenlemelere ve standartlara uygun olduğundan emin olmanıza yardımcı olur.
-
-Üçüncü taraf verileri içeri aktarmak ve arşivleme amacıyla veri bağlayıcıları oluşturmayı ve Microsoft 365'a aktarıldıktan sonra verilere uyumluluk çözümleri uygulama örneklerini gösteren bu etkileşimli kılavuzu izleyin.
+Microsoft 365'e aktarıldıktan sonra üçüncü taraf verileri içeri aktarmak ve arşivlemek için veri bağlayıcıları oluşturmayı ve verilere uyumluluk çözümleri uygulama örneklerini gösteren bu etkileşimli kılavuzu izleyin.
 
 > [!VIDEO https://mslearn.cloudguides.com/guides/Archive%20data%20from%20non-Microsoft%20sources%20in%20Microsoft%20365]
 
@@ -54,7 +52,7 @@ Sonraki bölümlerde listelenen üçüncü taraf verileri (İk verileri ve Micro
 
 ### <a name="microsoft-data-connectors"></a>Microsoft veri bağlayıcıları
 
-Aşağıdaki tabloda, uyumluluk portalında kullanılabilen yerel üçüncü taraf veri bağlayıcıları listelemektedir. Tabloda, üçüncü taraf verileri Microsoft 365 içeri aktardıktan ve arşivledikten sonra uygulayabileceğiniz uyumluluk çözümleri de özetlenebilir. Her uyumluluk çözümünün daha ayrıntılı açıklaması ve üçüncü taraf verilerini nasıl desteklediği hakkında daha ayrıntılı bilgi için [Üçüncü taraf verilerini destekleyen](#overview-of-compliance-solutions-that-support-third-party-data) uyumluluk çözümlerine genel bakış bölümüne bakın.
+Aşağıdaki tabloda, uyumluluk portalında kullanılabilen yerel üçüncü taraf veri bağlayıcıları listelemektedir. Tabloda, Microsoft 365'te üçüncü taraf verilerini içeri aktardıktan ve arşivledikten sonra uygulayabileceğiniz uyumluluk çözümleri de özetlenebilir. Her uyumluluk çözümünün daha ayrıntılı açıklaması ve üçüncü taraf verilerini nasıl desteklediği hakkında daha ayrıntılı bilgi için [Üçüncü taraf verilerini destekleyen](#overview-of-compliance-solutions-that-support-third-party-data) uyumluluk çözümlerine genel bakış bölümüne bakın.
 
 Bu veri türü için bağlayıcı oluşturmaya yönelik adım adım yönergelere gitmek için **Üçüncü taraf veri** sütunundaki bağlantıya tıklayın.
 
@@ -75,9 +73,9 @@ Bu veri türü için bağlayıcı oluşturmaya yönelik adım adım yönergelere
 
 ### <a name="veritas-data-connectors"></a>Veritas veri bağlayıcıları
 
-Bu bölümdeki tabloda, Veritas ile ortaklaşa sağlanan üçüncü taraf veri bağlayıcıları listelenir. Tabloda ayrıca üçüncü taraf verileri içeri aktardıktan ve Microsoft 365 arşivledikten sonra uygulayabileceğiniz uyumluluk çözümleri de özetlenebilir. Her uyumluluk çözümünün daha ayrıntılı açıklaması ve üçüncü taraf verilerini nasıl desteklediği hakkında daha ayrıntılı bilgi için [Üçüncü taraf verilerini destekleyen](#overview-of-compliance-solutions-that-support-third-party-data) uyumluluk çözümlerine genel bakış bölümüne bakın.
+Bu bölümdeki tabloda, Veritas ile ortaklaşa sağlanan üçüncü taraf veri bağlayıcıları listelenir. Tabloda, üçüncü taraf verileri Microsoft 365'te içeri aktarıp arşivledikten sonra uygulayabileceğiniz uyumluluk çözümleri de özetlenebilir. Her uyumluluk çözümünün daha ayrıntılı açıklaması ve üçüncü taraf verilerini nasıl desteklediği hakkında daha ayrıntılı bilgi için [Üçüncü taraf verilerini destekleyen](#overview-of-compliance-solutions-that-support-third-party-data) uyumluluk çözümlerine genel bakış bölümüne bakın.
 
-Microsoft 365'da üçüncü taraf verilerini arşivlemeden önce, kuruluşunuz için arşivleme hizmetini (*Birleştir1* olarak adlandırılır) ayarlamak için Veritas ile çalışmanız gerekir. Daha fazla bilgi için **, üçüncü taraf veri** sütunundaki bağlantıya tıklayarak ilgili veri türü için bağlayıcı oluşturmaya yönelik adım adım yönergelere gidin.
+Microsoft 365'te üçüncü taraf verilerini arşivlemeden önce Veritas ile birlikte çalışarak kuruluşunuz için arşivleme hizmetini ( *Birleştirme1* olarak adlandırılır) ayarlamanız gerekir. Daha fazla bilgi için **, üçüncü taraf veri** sütunundaki bağlantıya tıklayarak ilgili veri türü için bağlayıcı oluşturmaya yönelik adım adım yönergelere gidin.
 
 |Üçüncü taraf verileri  |Dava tutma|Ediscovery  |Bekletme ayarları  |Kayıt yönetimi  |İletişim uyumluluğu  |İçeriden risk yönetimi  |
 |:---------|:---------|:---------|:---------|:---------|:---------|:---------|
@@ -114,18 +112,18 @@ Microsoft 365'da üçüncü taraf verilerini arşivlemeden önce, kuruluşunuz i
 
 ### <a name="telemessage-data-connectors"></a>TeleMessage veri bağlayıcıları
 
-Bu bölümdeki tabloda, TeleMessage ile ortaklaşa sağlanan üçüncü taraf veri bağlayıcıları listelenir. Tabloda ayrıca üçüncü taraf verileri içeri aktardıktan ve Microsoft 365 arşivledikten sonra uygulayabileceğiniz uyumluluk çözümleri de özetlenebilir. Her uyumluluk çözümünün daha ayrıntılı açıklaması ve üçüncü taraf verilerini nasıl desteklediği hakkında daha ayrıntılı bilgi için [Üçüncü taraf verilerini destekleyen](#overview-of-compliance-solutions-that-support-third-party-data) uyumluluk çözümlerine genel bakış bölümüne bakın.
+Bu bölümdeki tabloda, TeleMessage ile ortaklaşa sağlanan üçüncü taraf veri bağlayıcıları listelenir. Tabloda, üçüncü taraf verileri Microsoft 365'te içeri aktarıp arşivledikten sonra uygulayabileceğiniz uyumluluk çözümleri de özetlenebilir. Her uyumluluk çözümünün daha ayrıntılı açıklaması ve üçüncü taraf verilerini nasıl desteklediği hakkında daha ayrıntılı bilgi için [Üçüncü taraf verilerini destekleyen](#overview-of-compliance-solutions-that-support-third-party-data) uyumluluk çözümlerine genel bakış bölümüne bakın.
 
-üçüncü taraf verileri Microsoft 365 arşivlemeden önce, kuruluşunuz için arşivleme hizmetini ayarlamak için TeleMessage ile çalışmanız gerekir. Daha fazla bilgi için **, üçüncü taraf veri** sütunundaki bağlantıya tıklayarak ilgili veri türü için bağlayıcı oluşturmaya yönelik adım adım yönergelere gidin.
+Microsoft 365'te üçüncü taraf verilerini arşivlemeden önce, kuruluşunuzun arşivleme hizmetini ayarlamak için TeleMessage ile çalışmanız gerekir. Daha fazla bilgi için **, üçüncü taraf veri** sütunundaki bağlantıya tıklayarak ilgili veri türü için bağlayıcı oluşturmaya yönelik adım adım yönergelere gidin.
 
-TeleMessage veri bağlayıcıları, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda da kullanılabilir. Daha fazla bilgi için bu makalenin [ABD Kamu bulutundaki Veri bağlayıcıları](#data-connectors-in-the-us-government-cloud) bölümüne bakın.
+TeleMessage veri bağlayıcıları, Microsoft 365 US Government bulutundaki GCC ortamlarında da kullanılabilir. Daha fazla bilgi için bu makalenin [ABD Kamu bulutundaki Veri bağlayıcıları](#data-connectors-in-the-us-government-cloud) bölümüne bakın.
 
 |Üçüncü taraf verileri  |Dava tutma|Ediscovery  |Bekletme ayarları  |Kayıt yönetimi  |İletişim uyumluluğu  |İçeriden risk yönetimi  |
 |:---------|:---------|:---------|:---------|:---------|:---------|:---------|
 |[Android](archive-android-archiver-data.md)     |![Onay işareti.](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)||
 |[AT&T Ağı](archive-att-network-archiver-data.md)     |![Onay işareti.](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)||
 |[Bell Network](archive-bell-network-data.md)     |![Onay işareti.](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)||
-|[Enterprise Numarası](archive-enterprise-number-data.md)     |![Onay işareti.](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)||
+|[Kurumsal Numara](archive-enterprise-number-data.md)     |![Onay işareti.](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)||
 |[O2 Ağ](archive-o2-network-data.md)     |![Onay işareti.](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)||
 |[Rogers Network](archive-rogers-network-archiver-data.md)|![Onay işareti.](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)||
 |[Sinyal](archive-signal-archiver-data.md)|![Onay işareti.](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)||
@@ -138,11 +136,11 @@ TeleMessage veri bağlayıcıları, Microsoft 365 ABD Kamu bulutundaki GCC ortam
 
 ### <a name="17a-4-data-connectors"></a>17a-4 veri bağlayıcıları
 
-Bu bölümdeki tabloda, 17a-4 LLC ortaklığıyla sağlanan üçüncü taraf veri bağlayıcıları listelenir. Tabloda ayrıca üçüncü taraf verileri içeri aktardıktan ve Microsoft 365 arşivledikten sonra uygulayabileceğiniz uyumluluk çözümleri de özetlenebilir. Her uyumluluk çözümünün daha ayrıntılı açıklaması ve üçüncü taraf verilerini nasıl desteklediği hakkında daha ayrıntılı bilgi için [Üçüncü taraf verilerini destekleyen](#overview-of-compliance-solutions-that-support-third-party-data) uyumluluk çözümlerine genel bakış bölümüne bakın.
+Bu bölümdeki tabloda, 17a-4 LLC ortaklığıyla sağlanan üçüncü taraf veri bağlayıcıları listelenir. Tabloda, üçüncü taraf verileri Microsoft 365'te içeri aktarıp arşivledikten sonra uygulayabileceğiniz uyumluluk çözümleri de özetlenebilir. Her uyumluluk çözümünün daha ayrıntılı açıklaması ve üçüncü taraf verilerini nasıl desteklediği hakkında daha ayrıntılı bilgi için [Üçüncü taraf verilerini destekleyen](#overview-of-compliance-solutions-that-support-third-party-data) uyumluluk çözümlerine genel bakış bölümüne bakın.
 
-üçüncü taraf verilerini Microsoft 365 arşivlemeden önce, kuruluşunuz için arşivleme hizmetini (*DataParser* olarak adlandırılır) ayarlamak için 17a-4 LLC ile çalışmanız gerekir. Daha fazla bilgi için **, üçüncü taraf veri** sütunundaki bağlantıya tıklayarak ilgili veri türü için bağlayıcı oluşturmaya yönelik adım adım yönergelere gidin.
+Microsoft 365'te üçüncü taraf verilerini arşivlemeden önce, kuruluşunuz için arşivleme hizmetini ( *DataParser* olarak adlandırılır) ayarlamak için 17a-4 LLC ile çalışmanız gerekir. Daha fazla bilgi için **, üçüncü taraf veri** sütunundaki bağlantıya tıklayarak ilgili veri türü için bağlayıcı oluşturmaya yönelik adım adım yönergelere gidin.
 
-17a-4 veri bağlayıcıları, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda da kullanılabilir. Daha fazla bilgi için bu makalenin [ABD Kamu bulutundaki Veri bağlayıcıları](#data-connectors-in-the-us-government-cloud) bölümüne bakın.
+17a-4 veri bağlayıcıları, Microsoft 365 US Government bulutundaki GCC ortamlarında da kullanılabilir. Daha fazla bilgi için bu makalenin [ABD Kamu bulutundaki Veri bağlayıcıları](#data-connectors-in-the-us-government-cloud) bölümüne bakın.
 
 |Üçüncü taraf verileri  |Dava tutma|Ediscovery  |Bekletme ayarları  |Kayıt yönetimi  |İletişim uyumluluğu  |İçeriden risk yönetimi  |
 |:---------|:---------|:---------|:---------|:---------|:---------|:---------|
@@ -168,16 +166,16 @@ Bu bölümdeki tabloda, 17a-4 LLC ortaklığıyla sağlanan üçüncü taraf ver
 
 ### <a name="celltrust-data-connectors"></a>CellTrust veri bağlayıcıları
 
-Bu bölümdeki tabloda, CellTrust ile ortaklaşa sağlanan üçüncü taraf veri bağlayıcısı listelenir. Tabloda ayrıca üçüncü taraf verileri içeri aktardıktan ve Microsoft 365 arşivledikten sonra uygulayabileceğiniz uyumluluk çözümleri de özetlenebilir. Her uyumluluk çözümünün daha ayrıntılı açıklaması ve üçüncü taraf verilerini nasıl desteklediği hakkında daha ayrıntılı bilgi için [Üçüncü taraf verilerini destekleyen](#overview-of-compliance-solutions-that-support-third-party-data) uyumluluk çözümlerine genel bakış bölümüne bakın.
+Bu bölümdeki tabloda, CellTrust ile ortaklaşa sağlanan üçüncü taraf veri bağlayıcısı listelenir. Tabloda, üçüncü taraf verileri Microsoft 365'te içeri aktarıp arşivledikten sonra uygulayabileceğiniz uyumluluk çözümleri de özetlenebilir. Her uyumluluk çözümünün daha ayrıntılı açıklaması ve üçüncü taraf verilerini nasıl desteklediği hakkında daha ayrıntılı bilgi için [Üçüncü taraf verilerini destekleyen](#overview-of-compliance-solutions-that-support-third-party-data) uyumluluk çözümlerine genel bakış bölümüne bakın.
 
-Microsoft 365'da üçüncü taraf verileri arşivlemeden önce, kuruluşunuz için arşivleme hizmetini (*CellTrust SL2* olarak adlandırılır) ayarlamak için CellTrust ile çalışmanız gerekir. Daha fazla bilgi için **, Üçüncü taraf veri** sütunundaki bağlantıya tıklayarak CellTrust SL2 bağlayıcısı oluşturmaya yönelik adım adım yönergelere gidin.
+Microsoft 365'te üçüncü taraf verilerini arşivlemeden önce, kuruluşunuzun arşivleme hizmetini ( *CellTrust SL2* olarak adlandırılır) ayarlamak için CellTrust ile çalışmanız gerekir. Daha fazla bilgi için **, Üçüncü taraf veri** sütunundaki bağlantıya tıklayarak CellTrust SL2 bağlayıcısı oluşturmaya yönelik adım adım yönergelere gidin.
 
 |Üçüncü taraf verileri  |Dava tutma|Ediscovery  |Bekletme ayarları  |Kayıt yönetimi  |İletişim uyumluluğu  |İçeriden risk yönetimi  |
 |:---------|:---------|:---------|:---------|:---------|:---------|:---------|
 |[CellTrust SL2](archive-data-from-celltrustsl2.md)     |![Onay işareti.](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)||
 ||||||||
 
-CellTrust SL2 veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda da kullanılabilir. Daha fazla bilgi için bu makalenin [ABD Kamu bulutundaki Veri bağlayıcıları](#data-connectors-in-the-us-government-cloud) bölümüne bakın.
+CellTrust SL2 veri bağlayıcısı, Microsoft 365 US Government bulutundaki GCC ortamlarında da kullanılabilir. Daha fazla bilgi için bu makalenin [ABD Kamu bulutundaki Veri bağlayıcıları](#data-connectors-in-the-us-government-cloud) bölümüne bakın.
 
 ## <a name="overview-of-compliance-solutions-that-support-third-party-data"></a>Üçüncü taraf verilerini destekleyen uyumluluk çözümlerine genel bakış
 
@@ -189,7 +187,7 @@ Aşağıdaki bölümlerde, Microsoft Purview çözümlerinin önceki tabloda lis
 
 ### <a name="ediscovery"></a>Ediscovery
 
-Microsoft 365'deki üç birincil eBulma aracı İçerik arama, Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium) araçlarıdır.
+Microsoft 365'teki üç birincil eBulma aracı İçerik arama, Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium) araçlarıdır.
 
 - **[İçerik araması](content-search.md).** İçeri aktardığınız üçüncü taraf verileri için posta kutularını aramak için içerik arama aracını kullanabilirsiniz. Arama sonuçlarınızı daraltmak ve arama sonuçlarını dışarı aktarmak için arama sorgularını ve koşullarını kullanabilirsiniz.
 
@@ -197,7 +195,7 @@ Microsoft 365'deki üç birincil eBulma aracı İçerik arama, Microsoft Purview
 
 - **[eBulma (Premium)](overview-ediscovery-20.md).** Bu güçlü araç, bir olaya koruyucu eklemenizi, koruyucu verilerini beklemeye almanızı ve ardından temalar ve yinelenen algılama gibi daha fazla analiz için bir koruyucunun üçüncü taraf verilerini gözden geçirmenize izin vererek eBulma (Standart) işlevini genişletir. Üçüncü taraf verileri bir gözden geçirme kümesine yükledikten sonra sorgulayabilir ve dar bir sonuç kümesine filtreleyebilirsiniz.
 
-   Hem eBulma (Standart) hem de eBulma (Premium), kuruluşunuzun yasal veya iç soruşturmalarıyla ilgili olabilecek üçüncü taraf verileri yönetmenize olanak sağlar.
+   Hem eKeşif (Standart) hem de eBulma (Premium), kuruluşunuzun yasal veya iç araştırmalarıyla ilgili olabilecek üçüncü taraf verileri yönetmenize olanak sağlar.
 
 ### <a name="retention-settings"></a>Bekletme ayarları
 
@@ -205,7 +203,7 @@ Saklama süresi dolduktan sonra üçüncü taraf verileri (ve diğer posta kutus
 
 ### <a name="records-management"></a>Kayıt yönetimi
 
-Microsoft 365'daki [kayıt yönetimi](records-management.md) özelliği, üçüncü taraf verilerini kayıt olarak bildirmenizi sağlar. Bu, posta kutularındaki üçüncü taraf verilerini kayıt olarak işaretleyen bir bekletme etiketi uygulayan kullanıcılar tarafından el ile yapılabilir. Ya da üçüncü taraf verilerindeki hassas bilgileri, anahtar sözcükleri veya içerik türlerini tanımlayarak bekletme etiketlerini otomatik olarak uygulayabilirsiniz.
+Microsoft 365'teki [kayıt yönetimi](records-management.md) özelliği, üçüncü taraf verilerini kayıt olarak bildirmenizi sağlar. Bu, posta kutularındaki üçüncü taraf verilerini kayıt olarak işaretleyen bir bekletme etiketi uygulayan kullanıcılar tarafından el ile yapılabilir. Ya da üçüncü taraf verilerindeki hassas bilgileri, anahtar sözcükleri veya içerik türlerini tanımlayarak bekletme etiketlerini otomatik olarak uygulayabilirsiniz.
 
 ### <a name="communication-compliance"></a>İletişim uyumluluğu
 
@@ -217,7 +215,7 @@ Seçmeli İk verileri gibi üçüncü taraf verilerden gelen sinyaller, [Insider
 
 ## <a name="using-ediscovery-tools-to-search-for-third-party-data"></a>Üçüncü taraf verileri aramak için eBulma araçlarını kullanma
 
-Kullanıcı posta kutularında üçüncü taraf verileri içeri aktarmak ve arşivlemek için veri bağlayıcılarını kullandıktan sonra, üçüncü taraf verileri aramak için Microsoft 365 eBulma araçlarını kullanabilirsiniz. Üçüncü taraf verileri korumak için eBulma (Standart) ve eBulma (Premium) durumlarıyla ilişkili sorgu tabanlı tutmalar oluşturmak için eBulma araçlarını da kullanabilirsiniz. eBulma araçları hakkında daha fazla bilgi için bkz. [Microsoft 365'de eBulma çözümleri](ediscovery.md).
+Kullanıcı posta kutularında üçüncü taraf verileri içeri aktarmak ve arşivlemek için veri bağlayıcılarını kullandıktan sonra, üçüncü taraf verileri aramak için Microsoft 365 eKeşif araçlarını kullanabilirsiniz. Üçüncü taraf verilerini korumak için eBulma (Standart) ve eBulma (Premium) durumlarıyla ilişkili sorgu tabanlı tutmalar oluşturmak için eBulma araçlarını da kullanabilirsiniz. eBulma araçları hakkında daha fazla bilgi için bkz. [Microsoft 365'te eBulma çözümleri](ediscovery.md).
 
 Veri bağlayıcısı kullanarak kullanıcı posta kutularına aktardığınız herhangi bir üçüncü taraf veri türünü aramak (veya ayrı tutmak) için aşağıdaki arama sorgusunu kullanabilirsiniz. Aramanın kapsamını kullanıcı posta kutularına göre daraltmaya özen gösterin.
 
@@ -267,11 +265,11 @@ eBulma arama sorguları oluşturma hakkında daha fazla bilgi için bkz. [eBulma
 
 ## <a name="data-connectors-in-the-us-government-cloud"></a>ABD Kamu bulutundaki veri bağlayıcıları
 
-Bazı veri bağlayıcıları ABD Kamu bulutunda kullanılabilir. Aşağıdaki bölümlerde, üçüncü taraf veri bağlayıcılarını destekleyen belirli kamu ortamları gösterilir. ABD Kamu bulutları hakkında daha fazla bilgi için bkz. [US Government Microsoft 365](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/microsoft-365-government-how-to-buy).
+Bazı veri bağlayıcıları ABD Kamu bulutunda kullanılabilir. Aşağıdaki bölümlerde, üçüncü taraf veri bağlayıcılarını destekleyen belirli kamu ortamları gösterilir. ABD Kamu bulutları hakkında daha fazla bilgi için bkz. [Microsoft 365 US Government](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/microsoft-365-government-how-to-buy).
 
 ### <a name="veritas-data-connectors-in-the-us-government-cloud-preview"></a>ABD Kamu bulutundaki Veritas veri bağlayıcıları (önizleme)
 
-|Veri bağlayıcısı  |GCC  |yüksek GCC  |Dod  |
+|Veri bağlayıcısı  |GCC  |GCC Yüksek  |Dod  |
 |:---------|:---------|:---------|:---------|
 |CellTrust| Evet | Hayır | Hayır |
 |MS SQL üzerinde Cisco Jabber| Evet | Hayır | Hayır |
@@ -306,7 +304,7 @@ Bazı veri bağlayıcıları ABD Kamu bulutunda kullanılabilir. Aşağıdaki b�
 
 ### <a name="telemessage-data-connectors-in-the-us-government-cloud"></a>ABD Kamu bulutunda TeleMessage veri bağlayıcıları
 
-|Veri bağlayıcısı  |GCC  |yüksek GCC  |Dod  |
+|Veri bağlayıcısı  |GCC  |GCC Yüksek  |Dod  |
 |:---------|:---------|:---------|:---------|
 |Android Arşivleyici | Evet | Hayır | Hayır |
 |AT&T SMS/MMS Ağ Arşivleyicisi | Evet | Hayır | Hayır |
@@ -324,7 +322,7 @@ Bazı veri bağlayıcıları ABD Kamu bulutunda kullanılabilir. Aşağıdaki b�
 
 ### <a name="17a-4-data-connectors-in-the-us-government-cloud"></a>ABD Kamu bulutunda 17a-4 veri bağlayıcıları
 
-|Veri bağlayıcısı  |GCC  |yüksek GCC  |Dod  |
+|Veri bağlayıcısı  |GCC  |GCC Yüksek  |Dod  |
 |:---------|:---------|:---------|:---------|
 |BlackBerry DataParser | Evet | Hayır | Hayır |
 |Bloomberg DataParser  | Evet | Hayır | Hayır |
@@ -348,13 +346,13 @@ Bazı veri bağlayıcıları ABD Kamu bulutunda kullanılabilir. Aşağıdaki b�
 
 ### <a name="celltrust-data-connectors-in-the-us-government-cloud"></a>ABD Kamu bulutunda CellTrust veri bağlayıcıları
 
-|Veri bağlayıcısı  |GCC  |yüksek GCC  |Dod  |
+|Veri bağlayıcısı  |GCC  |GCC Yüksek  |Dod  |
 |:---------|:---------|:---------|:---------|
 |CellTrust SL2 | Evet | Hayır | Hayır |
 |||||
 
 ## <a name="working-with-a-microsoft-partner-to-archive-third-party-data"></a>Üçüncü taraf verileri arşivlemek için bir Microsoft iş ortağıyla çalışma
 
-Üçüncü taraf verileri içeri aktarma ve arşivleme için bir diğer seçenek de kuruluşunuzun bir Microsoft İş Ortağı ile çalışmasıdır. Üçüncü taraf veri türü Microsoft uyumluluk merkezinde bulunan veri bağlayıcıları tarafından desteklenmiyorsa, üçüncü taraf veri kaynağındaki öğeleri düzenli olarak ayıklayacak şekilde yapılandırılacak özel bir bağlayıcı sağlayabilecek ve ardından üçüncü taraf BIR API ile Microsoft buluta bağlanıp bu öğeleri Microsoft 365 aktarabilecek bir iş ortağıyla çalışabilirsiniz. İş ortağı bağlayıcısı ayrıca bir öğenin içeriğini üçüncü taraf veri kaynağından bir e-posta iletisine dönüştürür ve ardından Microsoft 365 bir posta kutusuna aktarır.
+Üçüncü taraf verileri içeri aktarma ve arşivleme için bir diğer seçenek de kuruluşunuzun bir Microsoft İş Ortağı ile çalışmasıdır. Üçüncü taraf veri türü Microsoft uyumluluk merkezinde bulunan veri bağlayıcıları tarafından desteklenmiyorsa, üçüncü taraf veri kaynağındaki öğeleri düzenli aralıklarla ayıklayacak şekilde yapılandırılacak özel bir bağlayıcı sağlayabilecek ve ardından üçüncü taraf BIR API ile Microsoft buluta bağlanıp bu öğeleri Microsoft 365'e aktarabilecek bir iş ortağıyla çalışabilirsiniz. İş ortağı bağlayıcısı ayrıca bir öğenin içeriğini üçüncü taraf veri kaynağından e-posta iletisine dönüştürür ve ardından Microsoft 365'teki bir posta kutusuna aktarır.
 
-Birlikte çalışabileceğiniz iş ortaklarının listesi ve bu yöntemin adım adım işlemi için bkz. [Microsoft 365'da üçüncü taraf verileri arşivlemek için bir iş ortağıyla çalışma](work-with-partner-to-archive-third-party-data.md).
+Birlikte çalışabileceğiniz iş ortaklarının listesi ve bu yöntemin adım adım işlemi için bkz. [Microsoft 365'te üçüncü taraf verilerini arşivleyen bir iş ortağıyla çalışma](work-with-partner-to-archive-third-party-data.md).

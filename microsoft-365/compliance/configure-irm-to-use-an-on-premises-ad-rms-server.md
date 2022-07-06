@@ -15,36 +15,34 @@ search.appverid:
 ms.assetid: 3ecde857-4b7c-451d-b4aa-9eeffc8a8c61
 ms.collection:
 - M365-security-compliance
-description: Active Directory Rights Management Hizmeti (AD RMS) sunucusunu kullanmak için Exchange Online'da Bilgi Rights Management (IRM) yapılandırmayı öğrenin.
+description: Exchange Online'da Bilgi Hakları Yönetimi'ni (IRM) Active Directory Rights Management Service (AD RMS) sunucusu kullanacak şekilde yapılandırmayı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: dac33407a9a45da59d0b3a766ab8a695a0f5a076
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 5bd4a104d4cceedbdb82c1ff2baac0b547b74fbe
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66018151"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637515"
 ---
 # <a name="configure-irm-to-use-an-on-premises-ad-rms-server"></a>IRM’yi bir şirket içi AD RMS sunucusunda kullanmak üzere yapılandırma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Exchange Online'daki Bilgi Hakları Yönetimi (IRM), şirket içi dağıtımlarla kullanmak için Windows Server 2008 ve sonraki sürümlerde bir bilgi koruma teknolojisi olan Active Directory Rights Management Services'i (AD RMS) kullanır. E-posta iletisine AD RMS hak ilkesi şablonu uygulanarak e-postaya IRM koruması uygulanır. Korumanın çevrimiçi, çevrimdışı ve kuruluşunuzun güvenlik duvarının içinde ve dışında gerçekleşmesi için, haklar iletinin kendisine eklenir.
 
-Exchange Online'daki Bilgi Rights Management (IRM), şirket içi dağıtımlarla kullanmak için Windows Server 2008 ve sonraki sürümlerde bir bilgi koruma teknolojisi olan Active Directory Rights Management Services (AD RMS) kullanır. E-posta iletisine AD RMS hak ilkesi şablonu uygulanarak e-postaya IRM koruması uygulanır. Korumanın çevrimiçi, çevrimdışı ve kuruluşunuzun güvenlik duvarının içinde ve dışında gerçekleşmesi için, haklar iletinin kendisine eklenir.
+Bu konu başlığında, IRM'yi AD RMS sunucusu kullanacak şekilde nasıl yapılandırabileceğiniz gösterilmektedir. Azure Active Directory ve Azure Rights Management ile Microsoft Purview İleti Şifrelemesi kullanma hakkında bilgi için [bkz. İleti şifrelemesi SSS](./ome-faq.yml).
 
-Bu konu başlığında, IRM'yi AD RMS sunucusu kullanacak şekilde nasıl yapılandırabileceğiniz gösterilmektedir. Azure Active Directory ve Azure Rights Management ile Microsoft Purview İleti Şifrelemesi'ni kullanma hakkında bilgi için bkz. [İleti şifrelemesi SSS](./ome-faq.yml).
-
-Exchange Online'da IRM hakkında daha fazla bilgi edinmek için bkz. [Exchange Online bilgi Rights Management](information-rights-management-in-exchange-online.md).
+Exchange Online'da IRM hakkında daha fazla bilgi edinmek için bkz. [Exchange Online'de Bilgi Hakları Yönetimi](information-rights-management-in-exchange-online.md).
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
 - Bu görevi tamamlamak için tahmini süre: 30 dakika
 
-- Bu yordamı veya yordamları gerçekleştirebilmeniz için, önce izinlerin atanması gerekir. Hangi izinlere ihtiyacınız olduğunu görmek için, [Microsoft Mesajlaşma ilkesi ve uyumluluk izinleri](/Exchange/permissions/feature-permissions/policy-and-compliance-permissions) konusunun "Bilgi Rights Management" girdisine bakın.
+- Bu yordamı veya yordamları gerçekleştirebilmeniz için, önce izinlerin atanması gerekir. Hangi izinlere ihtiyacınız olduğunu görmek için, [Microsoft Mesajlaşma ilkesi ve uyumluluk izinleri](/Exchange/permissions/feature-permissions/policy-and-compliance-permissions) konusunda "Bilgi Hakları Yönetimi" girdisine bakın.
 
-- AD RMS sunucusu Windows Server 2008 veya üzerini çalıştırıyor olmalıdır. AD RMS'yi dağıtma hakkında ayrıntılı bilgi için bkz. [AD RMS Kümesi Yükleme](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc726041(v=ws.11)).
+- AD RMS sunucusu Windows Server 2008 veya sonraki bir sürümünü çalıştırıyor olmalıdır. AD RMS'yi dağıtma hakkında ayrıntılı bilgi için bkz. [AD RMS Kümesi Yükleme](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc726041(v=ws.11)).
 
-- Windows PowerShell yükleme ve yapılandırma ve hizmete bağlanma hakkında ayrıntılı bilgi için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+- Windows PowerShell yükleme ve yapılandırma ve hizmete bağlanma hakkında ayrıntılı bilgi için bkz[. PowerShell Exchange Online bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
 
-- Bu konudaki yordamlara uygulanabilecek klavye kısayolları hakkında bilgi için bkz. [Exchange Online'daki Exchange yönetim merkezi için klavye kısayolları](/Exchange/accessibility/keyboard-shortcuts-in-admin-center).
+- Bu konudaki yordamlara uygulanabilecek klavye kısayolları hakkında bilgi için bkz. [Exchange Online'de Exchange yönetim merkezi için klavye kısayolları](/Exchange/accessibility/keyboard-shortcuts-in-admin-center).
 
 > [!TIP]
 > Sorun mu yaşıyorsunuz? Exchange forumlarında yardım isteyin. [Exchange Server, Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=60612) veya [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351) forumlarını ziyaret edin.[](https://go.microsoft.com/fwlink/p/?linkId=267542)
@@ -76,7 +74,7 @@ TPD'yi içeri aktardığınızda, Exchange Online depolanır ve korunur.
 
 6. **Parola** ve **Parolayı Onayla** kutularına, güvenilen yayımlama etki alanı dosyasını şifrelemek için kullanılacak güçlü bir parola yazın. TPD'yi bulut tabanlı e-posta kuruluşunuza aktarırken bu parolayı belirtmeniz gerekir.
 
-### <a name="step-2-use-the-exchange-management-shell-to-import-the-tpd-to-exchange-online"></a>2. Adım: TPD'yi Exchange Online aktarmak için Exchange Yönetim Kabuğu'nı kullanın
+### <a name="step-2-use-the-exchange-management-shell-to-import-the-tpd-to-exchange-online"></a>2. Adım: TPD'yi Exchange Online içeri aktarmak için Exchange Yönetim Kabuğu'nı kullanma
 
 TPD bir XML dosyasına aktarıldıktan sonra, Exchange Online içeri aktarmanız gerekir. TPD içeri aktarıldığında kuruluşunuzun AD RMS şablonları da içeri aktarılır. İlk TPD içeri aktarıldığında, bulut tabanlı kuruluşunuz için varsayılan TPD olur. Başka bir TPD'yi içeri aktarırsanız, **Varsayılan** anahtarını kullanarak bunu kullanıcılar için kullanılabilen varsayılan TPD yapabilirsiniz.
 
@@ -102,7 +100,7 @@ Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Import-RMSTrustedPub
 
 TPD'yi başarıyla içeri aktardığınızdan emin olmak için **get-RMSTrustedPublishingDomain** cmdlet'ini çalıştırarak Exchange Online kuruluşunuzdaki TPD'leri alın. Ayrıntılar için [bkz. Get-RMSTrustedPublishingDomain'deki](/powershell/module/exchange/get-rmstrustedpublishingdomain) örnekler.
 
-### <a name="step-3-use-the-exchange-management-shell-to-distribute-an-ad-rms-rights-policy-template"></a>3. Adım: AD RMS hak ilkesi şablonunu dağıtmak için Exchange Yönetim Kabuğu'nı kullanma
+### <a name="step-3-use-the-exchange-management-shell-to-distribute-an-ad-rms-rights-policy-template"></a>3. Adım: Ad RMS hak ilkesi şablonunu dağıtmak için Exchange Management Shell'i kullanma
 
 TPD'yi içeri aktardıktan sonra, bir AD RMS hak ilkesi şablonunun dağıtılmış olduğundan emin olmanız gerekir. Dağıtılmış şablon, Web üzerinde Outlook (eski adıyla Outlook Web App) kullanıcıları tarafından görülebilir ve bu şablon daha sonra şablonları bir e-posta iletisine uygulayabilir.
 

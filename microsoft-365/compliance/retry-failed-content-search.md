@@ -16,16 +16,14 @@ search.appverid:
 ms.assetid: ''
 description: Araştırma sırasında, içerik konumu hataları olan İçerik Aramalarını çözmek için Yeniden Dene düğmesini kullanabilirsiniz.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 5345b346e8c66f6983d67081839248e4c66be7d8
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: c524be95ac72f44e58b03958694d26c52a401e40
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090439"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638179"
 ---
 # <a name="retry-a-content-search-to-resolve-a-content-location-error"></a>İçerik konumu hatasını çözmek için İçerik Arama'yı yeniden deneyin
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Çok sayıda posta kutusunda arama yapmak için güvenlik ve uyumluluk merkezinde İçerik Arama'yı kullandığınızda, hataya benzer arama hataları alabilirsiniz:
 
@@ -54,7 +52,7 @@ Aramanın yeniden başlatılması genellikle farklı sunucularda benzer hatalara
 
 Bu, aramanın yalnızca başarısız olan posta kutuları için yeniden denenerek sonuçlanır. Aramayı yeniden denediğinizde, başarıyla döndürülen diğer sonuçlar korunur.
 
-## <a name="tips-to-avoid-content-location-errors"></a>İçerik konumu hatalarını önlemek için İpuçları
+## <a name="tips-to-avoid-content-location-errors"></a>İçerik konumu hatalarını önleme ipuçları
 
 burada, içerik konumu hatalarının bazı ek nedenleri ve çok sayıda posta kutusu ararken bunlardan kaçınmanıza yardımcı olacak bazı ipuçları yer alır.
 

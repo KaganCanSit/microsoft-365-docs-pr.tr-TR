@@ -17,16 +17,14 @@ search.appverid:
 ms.assetid: 1b092f7c-ea55-44f5-b419-63f3458fd7e0
 ROBOTS: NOINDEX, NOFOLLOW
 description: Genel işleme kalitesini test etmek, karşılaştırmak ve doğrulamak için eBulma'da (Premium) Batch hesaplamasının ardından Test sekmesini kullanmayı öğrenin.
-ms.openlocfilehash: 0b3d6c70bdfef4dec8e8a5d08d4e72f80d6fec77
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 5c1fabf677dd305fb91d77e94af0e18304280d45
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095476"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637053"
 ---
 # <a name="test-relevance-analysis-in-ediscovery-premium"></a>eBulma'da İlgi Analizini Test Et (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
   
 Microsoft Purview eKeşif(Premium) içindeki Test sekmesi, genel işleme kalitesini test etme, karşılaştırma ve doğrulamanızı sağlar. Bu testler Batch hesaplaması sonrasında gerçekleştirilir. Bir uzman, koleksiyondaki dosyaları etiketleyerek etiketlenen her dosyanın davayla ilgili olup olmadığı konusunda son kararı verir.
   
@@ -34,7 +32,7 @@ Tek ve birden çok sorunlu senaryolarda testler genellikle sorun başına gerçe
   
 ## <a name="testing-the-rest"></a>Gerisini test etme
 
-"Geri Kalanları Test Et" testi, örneğin son eBulma (Premium) sonuçlarına göre yalnızca belirli bir İlgi kesme puanının üzerindeki dosyaları gözden geçirmek için önemli kararları doğrulamak için kullanılır. Uzman, belirli bir kesme puanı altındaki bir dosya örneğini inceler ve bu kümedeki ilgili dosyaların sayısını değerlendirir.
+"Rest'i Test Et" testi, örneğin son eBulma (Premium) sonuçlarına göre yalnızca belirli bir İlgi kesme puanının üzerindeki dosyaları gözden geçirmek için önemli kararları doğrulamak için kullanılır. Uzman, belirli bir kesme puanı altındaki bir dosya örneğini inceler ve bu kümedeki ilgili dosyaların sayısını değerlendirir.
   
 Bu test, istatistikler ve Gözden Geçirme kümesi ile Rest popülasyonunu test et arasında bir karşılaştırma sağlar. Gözden geçirme kümesinin sonuçları Eğitim sırasında İlgi'ye göre hesaplanır. Sonuçlar, ayarlara ve giriş parametrelerine dayalı hesaplamaları içerir, örneğin:
   

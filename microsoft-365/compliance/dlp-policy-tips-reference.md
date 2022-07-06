@@ -19,16 +19,14 @@ ms.collection:
 recommendations: false
 description: Veri kaybı önleme (DLP) ilkesine bir ilke ipucu eklemeyi öğrenin ve kullanıcıya DLP ilkesiyle çakişen içerikle çalıştığını bildirin.
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: f9702916831839ac384cd262854fd0a88f90a8ea
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 04743bdabba4089a7cfdbb46fbb25d427927f6c0
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953671"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638355"
 ---
 # <a name="data-loss-prevention-policy-tips-reference"></a>Veri Kaybı Önleme ilkesi ipuçları referansı
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Outlook Web Access'teki DLP ilkesi ipuçları, aşağıdakiler dışında bir DLP ilkesindeki Exchange iş yükünde geçerli olan tüm koşullar, özel durumlar ve eylemler için desteklenir:
 
@@ -64,9 +62,9 @@ Outlook Web Access'teki DLP ilkesi ipuçları, aşağıdakiler dışında bir DL
 - Önceden ekli e-posta konusu
 - O365 İleti Şifrelemesi ve hak korumasını kaldırma
 
-## <a name="outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions"></a>Outlook 2013 ve üzeri, yalnızca bazı koşullar ve özel durumlar için ilke ipuçlarının gösterilmesini destekler
+## <a name="outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions"></a>Outlook 2013 ve üzeri yalnızca bazı koşullar ve özel durumlar için ilke ipuçlarını göstermeyi destekler
 
-Şu anda, Outlook 2013 ve sonraki sürümleri, aşağıda belirtilen koşullar ve ilgili özel durumlar dışında herhangi bir koşul veya özel durum içermeyen ilkeler için ilke ipuçlarının gösterilmesini destekler:
+Şu anda, Outlook 2013 ve üzeri, aşağıda belirtilen koşullar ve ilgili özel durumlar dışında herhangi bir koşul veya özel durum içermeyen ilkeler için ilke ipuçlarının gösterilmesini destekler:
 
 - İçerik içerir (yalnızca Hassas bilgi türleri için çalışır. Duyarlılık etiketleri desteklenmez)
 - İçerik paylaşılıyor
@@ -75,7 +73,7 @@ Tüm koşulların, içerikle eşleşecekleri ve içerik üzerinde koruyucu eylem
 
 ## <a name="outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types"></a>Outlook 2013 ve üzeri ile Masaüstündeki Office uygulamaları yalnızca bazı hassas bilgi türlerine yönelik ilke ipuçlarını gösteren destek
 
-Masaüstünde Outlook (2013 ve üzeri) ve Masaüstü'ndeki Office uygulamalarında (Word, Excel, PowerPoint) DLP ilkesi ipuçlarını göstermek için algılanacak kullanıma hazır hassas bilgi türlerinin listesi şunlardır:
+Masaüstünde Outlook (2013 ve üzeri) ve Masaüstündeki Office uygulamalarında (Word, Excel, PowerPoint) DLP ilkesi ipuçlarını göstermek için algılanacak kullanıma hazır hassas bilgi türlerinin listesi şunlardır:
 
 - ABA Yönlendirme Numarası
 - Arjantin Ulusal Kimlik (DNI) Numarası
@@ -90,15 +88,15 @@ Masaüstünde Outlook (2013 ve üzeri) ve Masaüstü'ndeki Office uygulamaların
 - Azure Redis Cache Bağlantı Dizesi  
 - Azure SAS  
 - bağlantı dizesini Azure Service Bus  
-- Azure Depolama Hesap Anahtarı  
-- Azure Depolama Hesap Anahtarı (Genel)  
+- Azure Depolama Hesabı Anahtarı  
+- Azure Depolama Hesabı Anahtarı (Genel)  
 - Belçika Ulusal Numarası
 - Brezilya CPF Numarası
 - Brezilya Tüzel Kişilik Numarası (CNPJ)
 - Brezilya Ulusal Kimlik Kartı (RG)
 - Kanada Banka Hesap Numarası
 - Kanada Ehliyet Numarası
-- Kanada Sistem Sağlığı Hizmeti Numarası
+- Kanada Sağlık Hizmeti Numarası
 - Kanada Pasaport Numarası
 - Kanada Kişisel Sağlık Kimlik Numarası (PHIN)
 - Kanada Sosyal Sigorta Numarası
@@ -169,7 +167,7 @@ Masaüstünde Outlook (2013 ve üzeri) ve Masaüstü'ndeki Office uygulamaların
 - Türkiye Ulusal Kimlik numarası
 - INGİLTERE. Ehliyet Numarası
 - INGİLTERE. Seçim Rulosu Numarası
-- INGİLTERE. Ulusal Sistem Sağlığı Hizmeti Numarası
+- INGİLTERE. Ulusal Sağlık Hizmeti Numarası
 - INGİLTERE. Ulusal Sigorta Numarası (NINO)
 - Birleşik Krallık / Birleşik Krallık Pasaport Numarası
 - ABD Banka Hesap Numarası
@@ -204,8 +202,8 @@ Uç nokta cihazlarında bulunan belgelerde algılanacak kullanıma açık hassas
 - Azure Redis Cache Bağlantı Dizesi 
 - Azure SAS 
 - bağlantı dizesini Azure Service Bus 
-- Azure Depolama Hesap Anahtarı 
-- Azure Depolama Hesap Anahtarı (Genel) 
+- Azure Depolama Hesabı Anahtarı 
+- Azure Depolama Hesabı Anahtarı (Genel) 
 - Belçika Ehliyet Numarası 
 - Belçika Ulusal Numarası 
 - Belçika Pasaport Numarası 
@@ -218,7 +216,7 @@ Uç nokta cihazlarında bulunan belgelerde algılanacak kullanıma açık hassas
 - Bulgaristan Tekdüzen Sivil Numarası 
 - Kanada Banka Hesap Numarası 
 - Kanada Ehliyet Numarası 
-- Kanada Sistem Sağlığı Hizmeti Numarası 
+- Kanada Sağlık Hizmeti Numarası 
 - Kanada Pasaport Numarası 
 - Kanada Kişisel Sağlık Kimlik Numarası (PHIN) 
 - Kanada Sosyal Sigorta Numarası 
@@ -376,7 +374,7 @@ Uç nokta cihazlarında bulunan belgelerde algılanacak kullanıma açık hassas
 - Türkiye Ulusal Kimlik numarası 
 - INGİLTERE. Ehliyet Numarası 
 - INGİLTERE. Seçim Rulosu Numarası 
-- INGİLTERE. Ulusal Sistem Sağlığı Hizmeti Numarası 
+- INGİLTERE. Ulusal Sağlık Hizmeti Numarası 
 - INGİLTERE. Ulusal Sigorta Numarası (NINO) 
 - INGİLTERE. Benzersiz Vergi Mükellefi Başvuru Numarası 
 - Birleşik Krallık / Birleşik Krallık Pasaport Numarası 
@@ -393,17 +391,17 @@ Yukarıdaki kullanıma açık hassas bilgi türlerine ek olarak özel hassas bil
 
 |**Uygulama ve platform**|**DLP ilkesi ipucu desteği**|**Desteklenen hassas bilgi türleri**|**Koşul ve eylemler desteklenir**|**Açıklamalar**|
 |:--|:--|:--|:--|:--|
-|**Web'de Outlook**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Tüm|Alt küme -sini||
-|**Outlook Win32 (2105 derleme 14026.20000 ve altı aylık kanal ver. 2102 derleme 13801.20862)**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alt küme -sini|Alt küme -sini|Bkz[. Outlook 2013 ve sonraki sürümler, yalnızca bazı koşullar ve özel durumlar için ilke ipuçlarının gösterilmesini](#outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions) destekler ve [Outlook 2013 ve sonraki sürümleri ve Masaüstünde Office uygulamaları, hassas bilgi türleri için destekle ilgili ayrıntılar için yalnızca bazı hassas bilgi türlerine yönelik ilke ipuçlarını](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) ve Outlook DLP ilkesi ipuçlarını göstermek için desteklenen DLP koşulları ve eylemleri için ilke ipuçlarını gösterir  Win32.|
-|**Outlook Mobile (iOS, Android)/mac Outlook**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Hiçbiri|Hiçbiri|DLP ilkesi ipuçları Outlook mobil cihazlarda desteklenmez|
+|**Web Üzerinde Outlook**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Tüm|Alt küme -sini||
+|**Outlook Win32 (2105 derleme 14026.20000 ve altı aylık kanal ver. 2102 derleme 13801.20862)**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alt küme -sini|Alt küme -sini|Bkz [. Outlook 2013 ve üzeri, yalnızca bazı koşullar ve özel durumlar için ilke ipuçlarının gösterilmesini](#outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions) destekler ve [Outlook 2013 ve üzeri ile Masaüstünde Office uygulamaları](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) , outlook Win32'de DLP ilke ipuçlarını göstermek için desteklenen DLP koşulları ve eylemleri ve hassas bilgi türleri desteğiyle ilgili ayrıntılar için yalnızca bazı hassas bilgi türlerine yönelik ilke ipuçlarını gösterir.|
+|**Outlook Mobile (iOS, Android)/Outlook Mac**|:::image type="icon" source="../media/crsmrk.png" border="false":::|yok|yok|DLP ilkesi ipuçları Outlook Mobile'da desteklenmiyor|
 |**SharePoint Online/OneDrive İş Web istemcisi**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Tüm|DLP'deki tüm SPO/ODB önkoşulları ve eylemleri||
-|**win32/ OneDrive İş Win32 istemci SharePoint**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Hiçbiri|Hiçbiri|DLP ilkesi ipuçları SharePoint veya OneDrive masaüstü istemci uygulamalarında desteklenmez|
-|**Word, Excel PowerPoint Web İstemcisi**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Tüm|DLP'deki tüm SPO/ODB önkoşulları ve eylemleri|Belge SPO veya ODB web uygulamasında barındırılıyorsa ve DLP ilkesi zaten damgalanmışsa DLP ilkesi ipucu desteklenir.|
-|**Word, Excel, PowerPoint Mobile İstemcisi**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Hiçbiri|Hiçbiri|DLP ilkesi ipuçları, Office için mobil uygulamalarda desteklenmez.|
-|**Teams Web/ Teams Desktop/ Teams Mobile/ Teams Mac**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Tüm|DLP ilkesindeki tüm Teams önkoşulları|İlke ipuçları, bir ileti "Bu ileti bayrakla işaretlendi. Ne yapabilirim?" Bağlantıya tıklandığında, kullanıcı algılanan hassas bilgi türlerini gözden geçirebilir ve yönetici tarafından izin veriliyorsa bir sorunu geçersiz kılabilir veya bildirebilir. Dosyalar için hiçbir ilke ipucu gösterilmediğini unutmayın. Alıcı belgeye erişmeye çalıştığında, izin verilmiyorsa erişim reddedilir.|
+|**SharePoint Win32/ OneDrive İş Win32 istemcisi**|:::image type="icon" source="../media/crsmrk.png" border="false":::|yok|yok|DLP ilkesi ipuçları SharePoint veya OneDrive masaüstü istemci uygulamalarında desteklenmez|
+|**Word, Excel, PowerPoint Web İstemcisi**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Tüm|DLP'deki tüm SPO/ODB önkoşulları ve eylemleri|Belge SPO veya ODB web uygulamasında barındırılıyorsa ve DLP ilkesi zaten damgalanmışsa DLP ilkesi ipucu desteklenir.|
+|**Word, Excel, PowerPoint Mobile İstemcisi**|:::image type="icon" source="../media/crsmrk.png" border="false":::|yok|yok|DLP ilkesi ipuçları Office için mobil uygulamalarda desteklenmez.|
+|**Teams Web/ Teams Masaüstü/ Teams Mobile/ Teams Mac**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Tüm|DLP ilkesindeki tüm Teams önkoşulları|İlke ipuçları, bir ileti "Bu ileti bayrakla işaretlendi. Ne yapabilirim?" Bağlantıya tıklandığında, kullanıcı algılanan hassas bilgi türlerini gözden geçirebilir ve yönetici tarafından izin veriliyorsa bir sorunu geçersiz kılabilir veya bildirebilir. Dosyalar için hiçbir ilke ipucu gösterilmediğini unutmayın. Alıcı belgeye erişmeye çalıştığında, izin verilmiyorsa erişim reddedilir.|
 |**Win32 Uç Nokta Cihazları**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alt küme -sini|DLP ilkesindeki tüm Uç Nokta DLP önkoşulları ve eylemleri|Bkz. [Uç Noktada Veri Kaybı Önleme yalnızca bazı hassas bilgi türleri için ilke ipuçlarını destekler](#data-loss-prevention-on-endpoint-devices-supports-policy-tips-for-only-some-sensitive-information-types)|
 |**macOS cihazları**|yalnızca varsayılan ipuçları|Tüm|Alt küme -sini|Veri kaybı önleme ilkeleri macOS cihazlarda uygulanabilir. Özel ilke ipuçları desteklenmez.|
-|**Üçüncü taraf bulut uygulamaları**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Hiçbiri|Hiçbiri|Veri Kaybı Önleme ilkesi ipuçları üçüncü taraf bulut uygulamalarında desteklenmez|
-|**Şirket içi**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Hiçbiri|Hiçbiri||
-|**Word, Excel PowerPoint Win32 İstemcisi**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Alt küme -sini|Alt küme -sini|Desteklenen [hassas bilgi türleri listesi için yalnızca bazı hassas bilgi türlerine yönelik ilke ipuçlarını gösteren masaüstü desteğinde Outlook 2013 ve sonraki sürümlerine ve Office uygulamalarına](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) bakın</br></br>WXP istemci uygulamalarına yönelik ilke ipuçları, DLP ilkesindeki koşulların veya eylemlerin tam olarak aşağıda veya bir alt kümesine sahip olan tüm DLP ilkeleri için SharePoint Online veya OneDrive İş Sitelerinde depolanan belgeler için çalışır:</br> <ul><li>İçerik hassas bilgi türleri içeriyor</li><li>Erişim Kapsamı (İçerik dahili/harici olarak paylaşılır)</li><li>Kullanıcıya Bildir (ilke ipuçları/kullanıcı bildirimleri)</li><li>Herkesi engelle</li><li>Olay raporları</li></ul></br> Başka bir koşul veya eylem varsa, söz konusu ilkenin DLP ilke ipucu Word, Excel veya PowerPoint masaüstü uygulamalarında görünmez.</br>Diğer ayrıntılar için bkz. [Excel, PowerPoint ve Word'de ilke ipuçları](use-notifications-and-policy-tips.md#policy-tips-in-excel-powerpoint-and-word)|
+|**Üçüncü taraf bulut uygulamaları**|:::image type="icon" source="../media/crsmrk.png" border="false":::|yok|yok|Veri Kaybı Önleme ilkesi ipuçları üçüncü taraf bulut uygulamalarında desteklenmez|
+|**Şirket içi**|:::image type="icon" source="../media/crsmrk.png" border="false":::|yok|yok||
+|**Word, Excel, PowerPoint Win32 İstemcisi**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Alt küme -sini|Alt küme -sini|Desteklenen [hassas bilgi türleri listesi için yalnızca bazı hassas bilgi türlerine yönelik ilke ipuçlarını gösteren Outlook 2013 ve sonraki sürümlerine ve Masaüstü'nde Office uygulamalarına](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) bakın</br></br>WXP istemci uygulamalarına yönelik ilke ipuçları, DLP ilkesindeki koşulların veya eylemlerin tam olarak aşağıda veya bir alt kümesine sahip olan tüm DLP ilkeleri için SharePoint Online'da veya OneDrive İş Sitelerinde depolanan belgeler için çalışır:</br> <ul><li>İçerik hassas bilgi türleri içeriyor</li><li>Erişim Kapsamı (İçerik dahili/harici olarak paylaşılır)</li><li>Kullanıcıya Bildir (ilke ipuçları/kullanıcı bildirimleri)</li><li>Herkesi engelle</li><li>Olay raporları</li></ul></br> Başka bir koşul veya eylem varsa, söz konusu ilkenin DLP ilke ipucu Word, Excel veya PowerPoint'in masaüstü uygulamalarında görünmez.</br>Diğer ayrıntılar için bkz. [Excel, PowerPoint ve Word'de ilke ipuçları](use-notifications-and-policy-tips.md#policy-tips-in-excel-powerpoint-and-word)|
 ||||||

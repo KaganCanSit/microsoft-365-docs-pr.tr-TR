@@ -17,16 +17,14 @@ search.appverid:
 ms.assetid: 35d0ecdb-7cb0-44be-ad5c-69df2f8f8b25
 ms.custom: seo-marvel-apr2020
 description: etkin olmayan posta kutusunun içeriğini içeren yeni bir posta kutusuna dönüştürerek Office 365'da etkin olmayan posta kutusunun içeriğini kurtarmayı öğrenin.
-ms.openlocfilehash: 2c679407cb4f7203bb69d88c871bd844694a7c47
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: f09104703807532770c7ea5b660e1088589883ec
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66101612"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639676"
 ---
 # <a name="recover-an-inactive-mailbox"></a>Etkin olmayan posta kutusunu kurtarma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Etkin olmayan bir posta kutusu (geçici olarak silinen posta kutusu türüdür) kuruluşunuzdan ayrıldıktan sonra eski bir çalışanın e-postasını korumak için kullanılır. Bu çalışan kuruluşunuza geri dönerse veya başka bir çalışan eski çalışanın iş sorumluluklarını üstlenirse, etkin olmayan posta kutusunun içeriğini kullanıcının kullanımına sunmanın iki yolu vardır:
 
@@ -44,7 +42,7 @@ Etkin olmayan bir posta kutusunu kurtarma ve geri yükleme arasındaki farklar h
 
 ## <a name="requirements-to-recover-an-inactive-mailbox"></a>Etkin olmayan posta kutusunu kurtarma gereksinimleri
 
-- Etkin olmayan bir posta kutusunu kurtarmak için powershell Exchange Online kullanmanız gerekir. Bu yordam için Exchange yönetim merkezini (EAC) veya Microsoft Purview uyumluluk portalı kullanamazsınız. Exchange Online PowerShell'i kullanmaya yönelik adım adım yönergeler için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+- Etkin olmayan bir posta kutusunu kurtarmak için powershell Exchange Online kullanmanız gerekir. Bu yordam için Exchange yönetim merkezini (EAC) veya Microsoft Purview uyumluluk portalı kullanamazsınız. Exchange Online PowerShell'i kullanmaya yönelik adım adım yönergeler için bkz. [PowerShell'Exchange Online bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Kuruluşunuzdaki etkin olmayan posta kutularının kimlik bilgilerini almak için aşağıdaki komutu çalıştırın.
 
@@ -85,9 +83,9 @@ Etkin olmayan bir posta kutusunu kurtardıktan sonra yeni bir kullanıcı hesab�
 
   - Etkin olmayan posta kutusuna uygulanan ayrı tutma, kurtarılmadan önce etkin olmayan posta kutusuna uygulanan ayrı tutma türüne göre değiştirilir veya kaldırılır.
     
-    - **Koruma Kilidi ile bekletme ilkesini Microsoft 365.** Etkin olmayan posta kutusu [Koruma Kilidi](retention-preservation-lock.md) olan bir bekletme ilkesine dahil edildiyse, kurtarılan posta kutusu aynı bekletme ilkesine atanır.
+    - **Koruma Kilidi ile Microsoft 365 bekletme ilkesi.** Etkin olmayan posta kutusu [Koruma Kilidi](retention-preservation-lock.md) olan bir bekletme ilkesine dahil edildiyse, kurtarılan posta kutusu aynı bekletme ilkesine atanır.
     
-    - **Koruma Kilidi olmadan bekletme ilkesini Microsoft 365.** Etkin olmayan posta kutusu Microsoft 365 bekletme ilkesinden kaldırılır. Ancak, belirli bir yaştan daha eski içeriği silen kuruluş genelinde saklama ilkeleri temelinde posta kutusu içeriğinin silinmesini önlemek için kurtarılan posta kutusunda Dava Tutma etkinleştirilir. Dava Bekletme'yi tutabilir veya kaldırabilirsiniz. Daha fazla bilgi için bkz. [Dava Tutma oluşturma](create-a-litigation-hold.md).
+    - **Koruma Kilidi olmadan Microsoft 365 bekletme ilkesi.** Etkin olmayan posta kutusu Microsoft 365 bekletme ilkesinden kaldırılır. Ancak, belirli bir yaştan daha eski içeriği silen kuruluş genelinde saklama ilkeleri temelinde posta kutusu içeriğinin silinmesini önlemek için kurtarılan posta kutusunda Dava Tutma etkinleştirilir. Dava Bekletme'yi tutabilir veya kaldırabilirsiniz. Daha fazla bilgi için bkz. [Dava Tutma oluşturma](create-a-litigation-hold.md).
 
     - **Dava Beklemede.** Etkin olmayan posta kutusu için Dava Bekletme etkinleştirildiyse, kurtarılan posta kutusundan kaldırılır.
 
@@ -95,7 +93,7 @@ Etkin olmayan bir posta kutusunu kurtardıktan sonra yeni bir kullanıcı hesab�
 
   - Tek öğe kurtarma süresi ( **RetainDeletedItemsFor** posta kutusu özelliği tarafından tanımlanır) 30 gün olarak ayarlanır. Genellikle, Exchange Online içinde yeni bir posta kutusu oluşturulduğunda, bu saklama süresi 14 gün olarak ayarlanır. Bunu en fazla 30 gün değerine ayarlamak, etkin olmayan posta kutusundan kalıcı olarak silinmiş (veya temizlenmiş) tüm verileri kurtarmak için daha fazla zaman sağlar. Ayrıca tek öğe kurtarmayı devre dışı bırakabilir veya tek öğe kurtarma süresini varsayılan 14 gün olarak ayarlayabilirsiniz. Daha fazla bilgi için bkz. [Posta kutusu için tek öğe kurtarmayı etkinleştirme veya devre dışı bırakma](/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-single-item-recovery).
 
-  - Bekletme saklama etkindir ve saklama süresi 30 gün olarak ayarlanır. Bu, varsayılan Exchange bekletme ilkesinin ve yeni posta kutusuna atanan kuruluş genelinde veya Exchange çapında Microsoft 365 bekletme ilkelerinin 30 gün boyunca işlenmeyeceği anlamına gelir. Bu, geri dönen çalışana veya kurtarılan etkin olmayan posta kutusunun yeni sahibine eski iletileri yönetme süresi verir. Aksi takdirde, Exchange veya Microsoft 365 bekletme ilkesi, Exchange veya Microsoft 365 bekletme ilkeleri için yapılandırılan ayarlara bağlı olarak süresi dolmuş eski posta kutusu öğelerini silebilir (veya öğeleri arşiv posta kutusuna taşıyabilir). 30 gün sonra bekletme saklama süresi dolar, **RetentionHoldEnabled** posta kutusu özelliği **False** olarak ayarlanır ve Yönetilen Klasör Yardımcısı posta kutusuna atanan ilkeleri işlemeye başlar. Bu ek süreye ihtiyacınız yoksa bekletme saklamayı kaldırabilirsiniz. Alternatif olarak, **Set-Mailbox -EndDateForRetentionHold** komutunu kullanarak bekletme saklama süresini artırabilirsiniz. Daha fazla bilgi için bkz [. Saklama bekletmeye posta kutusu yerleştirme](/exchange/security-and-compliance/messaging-records-management/mailbox-retention-hold).
+  - Bekletme saklama etkindir ve saklama süresi 30 gün olarak ayarlanır. Bu, varsayılan Exchange bekletme ilkesinin ve yeni posta kutusuna atanan kuruluş genelinde veya Exchange genelinde microsoft 365 saklama ilkelerinin 30 gün boyunca işlenmeyeceği anlamına gelir. Bu, geri dönen çalışana veya kurtarılan etkin olmayan posta kutusunun yeni sahibine eski iletileri yönetme süresi verir. Aksi takdirde, Exchange veya Microsoft 365 bekletme ilkesi, Exchange veya Microsoft 365 bekletme ilkeleri için yapılandırılan ayarlara bağlı olarak süresi dolmuş olan eski posta kutusu öğelerini silebilir (veya arşiv posta kutusuna taşıyabilir). 30 gün sonra bekletme saklama süresi dolar, **RetentionHoldEnabled** posta kutusu özelliği **False** olarak ayarlanır ve Yönetilen Klasör Yardımcısı posta kutusuna atanan ilkeleri işlemeye başlar. Bu ek süreye ihtiyacınız yoksa bekletme saklamayı kaldırabilirsiniz. Alternatif olarak, **Set-Mailbox -EndDateForRetentionHold** komutunu kullanarak bekletme saklama süresini artırabilirsiniz. Daha fazla bilgi için bkz [. Saklama bekletmeye posta kutusu yerleştirme](/exchange/security-and-compliance/messaging-records-management/mailbox-retention-hold).
 
 - **Etkin olmayan posta kutusunun özgün durumunu korumanız gerekiyorsa kurtarılan posta kutusuna ayrı tutun.** Yeni posta kutusu sahibinin veya bekletme ilkesinin kurtarılan etkin olmayan posta kutusundan iletileri kalıcı olarak silmesini önlemek için, posta kutusunu Dava Tutma'ya yerleştirebilirsiniz. Daha fazla bilgi için bkz. [Dava Tutma oluşturma](./create-a-litigation-hold.md).
 

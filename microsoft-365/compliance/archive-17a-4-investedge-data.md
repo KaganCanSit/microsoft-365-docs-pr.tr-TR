@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365'de InvestEdge verilerini arşivleye bir bağlayıcı ayarlama
+title: Microsoft 365'te InvestEdge verilerini arşivleye bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -11,25 +11,23 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Microsoft 365'da InvestEdge verilerini içeri aktarmak ve arşivlemek için 17a-4 InvestEdge DataParser bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: db6135acc0b498c7f3985e058eb90f83d5cf1cc0
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+description: Microsoft 365'te InvestEdge verilerini içeri aktarmak ve arşivlemek için 17a-4 InvestEdge DataParser bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
+ms.openlocfilehash: 09c0e83ff7e81af6a05a4a60f1ae3efb540bc2d9
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318414"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66640708"
 ---
 # <a name="set-up-a-connector-to-archive-investedge-data"></a>InvestEdge verilerini arşivleye bağlayıcı ayarlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Verileri InvestEdge'den Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için 17a-4 LLC'deki InvestEdge [DataParser'ı](https://www.17a-4.com/investedge-dataparser/) kullanın. DataParser, üçüncü taraf veri kaynağından öğeleri yakalamak ve bu öğeleri Microsoft 365'e aktarmak için yapılandırılmış bir InvestEdge bağlayıcısı içerir. InvestEdge DataParser bağlayıcısı InvestEdge verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'teki kullanıcı posta kutularına aktarır.
 
-17a-4 LLC'deki [InvestEdge DataParser'ı](https://www.17a-4.com/investedge-dataparser/) kullanarak Verileri InvestEdge'den Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarın ve arşivleyebilirsiniz. DataParser, üçüncü taraf veri kaynağındaki öğeleri yakalamak ve bu öğeleri Microsoft 365 aktarmak için yapılandırılmış bir InvestEdge bağlayıcısı içerir. InvestEdge DataParser bağlayıcısı InvestEdge verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
-
-InvestEdge verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft Purview özellikleri uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlerken InvestEdge bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+InvestEdge verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'te verileri içeri aktarmak ve arşivlerken InvestEdge bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-investedge-data"></a>InvestEdge verilerini arşivleme işlemine genel bakış
 
-Aşağıdaki genel bakış, Microsoft 365'da InvestEdge verilerini arşivlerken veri bağlayıcısı kullanma işlemini açıklar.
+Aşağıdaki genel bakış, Microsoft 365'te InvestEdge verilerini arşivlerken veri bağlayıcısı kullanma işlemini açıklar.
 
 ![17a-4'ten InvestEdge verileri için arşivleme iş akışı.](../media/InvestEdgeDataParserConnectorWorkflow.png)
 
@@ -47,13 +45,13 @@ Aşağıdaki genel bakış, Microsoft 365'da InvestEdge verilerini arşivlerken 
 
 - 1. Adımda InvestEdge DataParser bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu 17a-4 veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
+- Bu 17a-4 veri bağlayıcısı, Microsoft 365 US Government bulutundaki GCC ortamlarında kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerini Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolamayı, iletmeyi ve işlemeyi içerebilir ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="step-1-set-up-a-investedge-dataparser-connector"></a>1. Adım: InvestEdge DataParser bağlayıcısı ayarlama
 
 İlk adım, uyumluluk portalındaki Veri bağlayıcıları sayfasına erişmek ve InvestEdge verileri için bir 17a-4 bağlayıcısı oluşturmaktır.
 
-1. Veri **bağlayıcılarıInvestEdge DataParser'a**<https://compliance.microsoft.com> gidin ve tıklayın. > 
+1. **Veri bağlayıcıları****InvestEdge DataParser'a**<https://compliance.microsoft.com> >  gidin ve tıklayın.
 
 2. **InvestEdge DataParser** ürün açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın.
 
@@ -69,7 +67,7 @@ InvestEdge DataParser bağlayıcısını yapılandırmak için 17a-4 Desteği il
 
 ## <a name="step-3-map-users"></a>3. Adım: Kullanıcıları eşleme
 
-InvestEdge DataParser bağlayıcısı, verileri Microsoft 365 içeri aktarmadan önce kullanıcıları otomatik olarak Microsoft 365 e-posta adresleriyle eşler.
+InvestEdge DataParser bağlayıcısı, verileri Microsoft 365'e aktarmadan önce kullanıcıları otomatik olarak Microsoft 365 e-posta adresleriyle eşler.
 
 ## <a name="step-4-monitor-the-investedge-dataparser-connector"></a>4. Adım: InvestEdge DataParser bağlayıcısını izleme
 

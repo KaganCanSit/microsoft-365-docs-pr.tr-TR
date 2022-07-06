@@ -19,33 +19,31 @@ search.appverid:
 - MET150
 ms.assetid: e893b19a-660c-41f2-9074-d3631c95a014
 ms.custom: seo-marvel-apr2020
-description: Yöneticilerin denetim günlüğünde arama yapma özelliğini etkinleştirmek veya devre dışı bırakmak için Microsoft Purview uyumluluk portalında Denetim günlüğü arama özelliğini açma veya kapatma.
-ms.openlocfilehash: 3602a35169670b61a124cda40c9ab50b481571d8
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Yöneticilerin denetim günlüğünde arama yapma özelliğini etkinleştirmek veya devre dışı bırakmak için Microsoft Purview uyumluluk portalı Denetim günlüğü arama özelliğini açma veya kapatma.
+ms.openlocfilehash: 7a757b07796f2b25fc6269a41d51f27e696e77cd
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65078877"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66640280"
 ---
 # <a name="turn-auditing-on-or-off"></a>Denetimi açma veya kapatma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Denetim günlüğü, Microsoft 365 ve Office 365 kurumsal kuruluşlar için varsayılan olarak açılır. Ancak, yeni bir Microsoft 365 veya Office 365 kuruluşu kurarken, kuruluşunuzun denetim durumunu doğrulamanız gerekir. Yönergeler için bu [makalenin Kuruluşunuzun denetim durumunu doğrulama](#verify-the-auditing-status-for-your-organization) bölümüne bakın. 
 
-Microsoft 365 ve Office 365 kurumsal kuruluşlar için denetim günlüğü varsayılan olarak açılır. Ancak yeni bir Microsoft 365 veya Office 365 kuruluş ayarlarken kuruluşunuzun denetim durumunu doğrulamanız gerekir. Yönergeler için bu [makalenin Kuruluşunuzun denetim durumunu doğrulama](#verify-the-auditing-status-for-your-organization) bölümüne bakın. 
-
-Microsoft Purview uyumluluk portalında denetim açıkken, kuruluşunuzdaki kullanıcı ve yönetici etkinlikleri denetim günlüğüne kaydedilir ve kullanıcılara atanan lisansa bağlı olarak 90 gün boyunca ve bir yıla kadar saklanır. Ancak, kuruluşunuzun denetim günlüğü verilerini kaydetmek ve tutmak istememesi için nedenleri olabilir. Bu gibi durumlarda, genel yönetici Microsoft 365 denetimi kapatmaya karar verebilir.
+Microsoft Purview uyumluluk portalı denetim açıkken, kuruluşunuzdaki kullanıcı ve yönetici etkinliği denetim günlüğüne kaydedilir ve kullanıcılara atanan lisansa bağlı olarak 90 gün boyunca ve bir yıla kadar saklanır. Ancak, kuruluşunuzun denetim günlüğü verilerini kaydetmek ve tutmak istememesi için nedenleri olabilir. Bu gibi durumlarda, genel yönetici Microsoft 365'te denetimi kapatmaya karar verebilir.
 
 > [!IMPORTANT]
-> Microsoft 365 denetimi kapatırsanız, kuruluşunuzun denetim verilerine erişmek için Office 365 Yönetim Etkinliği API'sini veya Microsoft Sentinel'i kullanamazsınız. Bu makaledeki adımları izleyerek denetimi kapatmak, uyumluluk portalını kullanarak denetim günlüğünde arama yaptığınızda veya Exchange Online PowerShell'de **Search-UnifiedAuditLog** cmdlet'ini çalıştırdığınızda hiçbir sonuç döndürülmeyecek anlamına gelir. Bu, denetim günlüklerinin Office 365 Yönetim Etkinliği API'si veya Microsoft Sentinel aracılığıyla kullanılamayacağı anlamına da gelir.
+> Microsoft 365'te denetimi kapatırsanız, kuruluşunuzun denetim verilerine erişmek için Office 365 Yönetim Etkinliği API'sini veya Microsoft Sentinel'i kullanamazsınız. Bu makaledeki adımları izleyerek denetimi kapatmak, uyumluluk portalını kullanarak denetim günlüğünde arama yaptığınızda veya Exchange Online PowerShell'de **Search-UnifiedAuditLog** cmdlet'ini çalıştırdığınızda hiçbir sonuç döndürülmeyecek anlamına gelir. Bu, denetim günlüklerinin Office 365 Yönetim Etkinliği API'si veya Microsoft Sentinel aracılığıyla kullanılamayacağı anlamına da gelir.
   
 ## <a name="before-you-turn-auditing-on-or-off"></a>Denetimi açmadan veya kapatmadan önce
 
-- Microsoft 365 kuruluşunuzda denetimi açmak veya kapatmak için Exchange Online'da Denetim Günlükleri rolüne atanmış olmanız gerekir. Varsayılan olarak, bu rol Exchange yönetim merkezindeki **İzinler** sayfasındaki Uyumluluk Yönetimi ve Kuruluş Yönetimi rol gruplarına atanır. Microsoft 365'deki genel yöneticiler, Exchange Online'deki Kuruluş Yönetimi rol grubunun üyeleridir.
+- Microsoft 365 kuruluşunuzda denetimi açmak veya kapatmak için Exchange Online'da Denetim Günlükleri rolüne atanmış olmanız gerekir. Varsayılan olarak, bu rol Exchange yönetim merkezindeki **İzinler** sayfasındaki Uyumluluk Yönetimi ve Kuruluş Yönetimi rol gruplarına atanır. Microsoft 365'teki genel yöneticiler, Exchange Online Kuruluş Yönetimi rol grubunun üyeleridir.
 
     > [!NOTE]
     > Denetimi açmak veya kapatmak için kullanıcılara Exchange Online izinleri atanmalıdır. Kullanıcılara uyumluluk portalındaki **İzinler sayfasında Denetim Günlükleri** rolünü atarsanız, denetimi açamaz veya kapatamaz. Bunun nedeni, temel alınan cmdlet'in Exchange Online bir PowerShell cmdlet'i olmasıdır.
 
-- Denetim günlüğünde arama yapma hakkında adım adım yönergeler için bkz. [Denetim günlüğünde arama](search-the-audit-log-in-security-and-compliance.md) yapma. Microsoft 365 Yönetim Etkinliği API'si hakkında daha fazla bilgi için bkz. [Microsoft 365 Yönetim API'leriyle Kullanmaya başlayın](/office/office-365-management-api/get-started-with-office-365-management-apis).
+- Denetim günlüğünde arama yapma hakkında adım adım yönergeler için bkz. [Denetim günlüğünde arama](search-the-audit-log-in-security-and-compliance.md) yapma. Microsoft 365 Yönetim Etkinliği API'si hakkında daha fazla bilgi için bkz. [Microsoft 365 Yönetim API'lerini kullanmaya başlama](/office/office-365-management-api/get-started-with-office-365-management-apis).
 
 ## <a name="verify-the-auditing-status-for-your-organization"></a>Kuruluşunuz için denetim durumunu doğrulama
 
@@ -80,7 +78,7 @@ Kuruluşunuzda denetim açık değilse uyumluluk portalında veya powershell Exc
 
 ### <a name="use-powershell-to-turn-on-auditing"></a>Denetimi açmak için PowerShell kullanma
 
-1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Exchange Online PowerShell’e bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Denetimi açmak için aşağıdaki PowerShell komutunu çalıştırın.
 
@@ -94,7 +92,7 @@ Kuruluşunuzda denetim açık değilse uyumluluk portalında veya powershell Exc
 
 Denetimi kapatmak için Exchange Online PowerShell kullanmanız gerekir.
   
-1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Exchange Online PowerShell’e bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Denetimi kapatmak için aşağıdaki PowerShell komutunu çalıştırın.
 
@@ -118,9 +116,9 @@ Denetimi kapatmak için Exchange Online PowerShell kullanmanız gerekir.
 
 ## <a name="audit-records-when-auditing-status-is-changed"></a>Denetim durumu değiştirildiğinde kayıtları denetleme
 
-Kuruluşunuzdaki denetim durumundaki değişiklikler kendileri denetleniyor. Bu, denetim açık veya kapalı olduğunda denetim kayıtlarının günlüğe kaydedildiğini gösterir. Exchange yönetici denetim günlüğünde bu denetim kayıtlarını arayabilirsiniz.
+Kuruluşunuzdaki denetim durumundaki değişiklikler kendileri denetleniyor. Bu, denetim açık veya kapalı olduğunda denetim kayıtlarının günlüğe kaydedildiğini gösterir. Exchange yöneticisi denetim günlüğünde bu denetim kayıtlarını arayabilirsiniz.
 
-Denetimi açar veya kapatırken oluşturulan denetim kayıtlarını Exchange yönetici denetim günlüğünde aramak için [PowerShell'Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell) aşağıdaki komutu çalıştırın:
+Denetimi açar veya kapatırken oluşturulan denetim kayıtları için Exchange yönetici denetim günlüğünde arama yapmak için [PowerShell'Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell) aşağıdaki komutu çalıştırın:
 
 ```powershell
 Search-AdminAuditLog -Cmdlets Set-AdminAuditLogConfig -Parameters UnifiedAuditLogIngestionEnabled
@@ -140,4 +138,4 @@ Bu olaylar için denetim kayıtları, denetim durumunun ne zaman değiştirildi�
 
 değeri `Confirm` *CmdletParameters* özelliğine dahil edilmez. Bu, **Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $false** komutu çalıştırılarak birleşik denetim günlüğünün kapatıldığını gösterir.
 
-Exchange yönetici denetim günlüğünde arama yapma hakkında daha fazla bilgi için bkz[. Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog).
+Exchange yöneticisi denetim günlüğünde arama yapma hakkında daha fazla bilgi için bkz [. Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog).

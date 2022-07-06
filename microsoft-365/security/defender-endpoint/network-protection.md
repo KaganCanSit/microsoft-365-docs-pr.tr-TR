@@ -19,12 +19,12 @@ ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 61541cf74640035845ac04889834d12ea6730ad8
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: 604938426dfd8818647a5fa7b71069b4527ec877
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66530341"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636457"
 ---
 # <a name="protect-your-network"></a>Ağınızı koruyun
 
@@ -144,20 +144,6 @@ Kullanıcı bir web sitesini ziyaret eder:
 İlk biçiminde fidye yazılımı, önceden programlanmış ve sınırlı, belirli sonuçlara (örneğin, bir bilgisayarı şifrelemeye) odaklanmış bir ticari tehdittir. Ancak fidye yazılımı insan odaklı, uyarlamalı ve daha büyük ölçekli ve daha yaygın sonuçlara odaklanan gelişmiş bir tehdit haline gelmiştir; bir kuruluşun tüm varlıklarını veya verilerini fidye için tutmak gibi.
 
 Komut ve Denetim sunucuları (C2) desteği bu fidye yazılımı evriminin önemli bir parçasıdır ve bu saldırıların hedefledikleri ortama uyum sağlamasına olanak tanır. Komut ve denetim altyapısı bağlantısının kesilmesi, saldırının bir sonraki aşamasına ilerlemesini durdurur.
-
-#### <a name="detecting-and-remediating-cobaltstrike-public-preview"></a>CobaltStrike'i algılama ve düzeltme (genel önizleme)
-
-İnsan tarafından çalıştırılan fidye yazılımı saldırılarında kullanılan en yaygın sömürü sonrası çerçevelerden biri CobaltStrike'dir. Microsoft'taki Tehdit Bilgileri ekipleri, kötü amaçlı aktörler tarafından kullanılan belirli stratejilere ve tehdit vektörlerine karşı savunmak için kullanılabilecek davranış desenlerini tanımlamak için fidye yazılımı dağıtan birden çok etkinlik grubunda _Taktikler, Teknikler_ ve Yordamlar'ı (TTP) izler. Bu fidye yazılımı etkinlik gruplarının tümü, saldırı yaşam döngüsünün bir noktasında, uygulamalı klavye etkinliğini etkinleştirmek için kurbanın bilgisayarına bir CobaltStrike İşareti dağıtmayı içerir.
-
-CobaltStrike, farklı protokollere yanıt veren birden çok dinleyici barındırma özelliğinden ana istemci tarafı bileşeninin (Beacon) kod ekleme ve yararlanma sonrası işleri çalıştırma şekline kadar saldırının birden çok yönünün özelleştirilmesini sağlar. Microsoft Defender CobaltStrike'i algıladığında, önemli risk göstergelerini (IoC) akıllı bir şekilde bulabilir ve toplayabilir. Yakalanan bu göstergeler, algılama ve koruma amacıyla Microsoft'un ürün yığınında paylaşılır.
-
-Uç Nokta için Defender'ın komut ve denetim algılaması CobaltStrike ile sınırlı değildir. Uç Nokta için Defender, birden çok kötü amaçlı yazılım ailesinin önemli ICS'lerini yakalayabilir. Göstergeler, müşterileri korumak ve bir risk söz konusu olduğunda onları uyarmak için Microsoft koruma yığınında paylaşılır.
-
-Komut ve denetim iletişiminin engellenmesi, hedefli bir saldırıyı ciddi şekilde engelleyerek güvenlik ekibinize ilk giriş vektörlerini bulmaları ve başka bir saldırı girişiminden önce kapatmaları için zaman tanır.
-
-<!-- Hide {this intro with no subsequent list items}
-[For additional details about Microsoft Defender's command and control detection, see **ADD LINK TO BLOG**.]
--->
 
 ## <a name="smartscreen-unblock"></a>SmartScreen Engellemesini Kaldır
 

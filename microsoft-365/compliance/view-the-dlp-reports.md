@@ -19,18 +19,16 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: DLP ilkesi eşleşmelerinin, geçersiz kılmalarının veya hatalı pozitiflerin sayısını görüntülemek ve zaman içinde eğilimin artıp artmadığını görmek için Office 365'daki DLP raporlarını kullanın.
-ms.openlocfilehash: b264a0e0b76397be99d7586ac793dac501b6672e
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 6f60aefaa1548e3c3aed2ca1643de42f412cf5cf
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66011642"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641108"
 ---
 # <a name="view-the-reports-for-data-loss-prevention"></a>Veri kaybı önleme raporlarını görüntüleme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview veri kaybı önleme (DLP) ilkelerinizi oluşturduktan sonra, bunların istediğiniz gibi çalıştığını ve uyumlu kalmanıza yardımcı olduğunu doğrulamanız gerekir. Microsoft Purview uyumluluk portalındaki DLP raporlarıyla şunları hızla görüntüleyebilirsiniz:
+Microsoft Purview veri kaybı önleme (DLP) ilkelerinizi oluşturduktan sonra, bunların istediğiniz gibi çalıştığını ve uyumlu kalmanıza yardımcı olduğunu doğrulamanız gerekir. Microsoft Purview uyumluluk portalı DLP raporlarıyla şunları hızla görüntüleyebilirsiniz:
 
 - **DLP ilkesi eşleşmeleri** Bu rapor, DLP ilkesi eşleşmelerinin zaman içindeki sayısını gösterir. Raporu tarihe, konuma, ilkeye veya eyleme göre filtreleyebilirsiniz. Bu raporu aşağıdakiler için kullanabilirsiniz:
 
@@ -92,7 +90,7 @@ Güvenlik & Uyumluluk Merkezi'nde DLP raporlarını görüntülemek için aşağ
 
 DLP raporlama cmdlet'lerini kullanmak için şu adımları uygulayın:
 
-1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell)
+1. [Güvenlik & Uyumluluğu PowerShell'e bağlanma](/powershell/exchange/connect-to-scc-powershell)
 
 2. Şu cmdlet'leri kullanın:
 
@@ -102,7 +100,7 @@ DLP raporlama cmdlet'lerini kullanmak için şu adımları uygulayın:
 
 Ancak DLP raporlarının Exchange Online dahil olmak üzere Microsoft 365 genelinden veri çekmesi gerekir. Bu nedenle, DLP raporları için aşağıdaki cmdlet'ler Exchange Online PowerShell'de kullanılabilir. Bu DLP raporları için cmdlet'leri kullanmak için şu adımları uygulayın:
 
-1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell)
+1. [Exchange Online PowerShell’e bağlanma](/powershell/exchange/connect-to-exchange-online-powershell)
 
 2. Şu cmdlet'leri kullanın:
 

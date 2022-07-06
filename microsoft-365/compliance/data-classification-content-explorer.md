@@ -19,16 +19,14 @@ search.appverid:
 - MOE150
 - MET150
 description: İçerik gezgini etiketli öğeleri yerel olarak görüntülemenizi sağlar.
-ms.openlocfilehash: fdc67df9819054eedbe84ce647d77177039cd4a8
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: ca3fc3deb542af582f2c38457bbd460c1241b5ee
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65623316"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637361"
 ---
 # <a name="get-started-with-content-explorer"></a>İçerik gezginini kullanmaya başlama
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 İçerik gezgini, genel bakış sayfasında özetlenmiş öğeleri yerel olarak görüntülemenizi sağlar.
 
@@ -40,7 +38,7 @@ Lisans gereksinimleri için bkz[. Information Protection: Veri Sınıflandırma 
 
 İçerik gezgini sekmesine erişim elde etmek için, bu rollerden veya rol gruplarından herhangi birinde bir hesaba üyelik atanmalıdır. 
 
-**rol gruplarını Microsoft 365**
+**Microsoft 365 rol grupları**
 
 - Genel yönetici
 - Uyumluluk yöneticisi
@@ -78,7 +76,7 @@ Genel yönetici, gerekli İçerik Gezgini Liste Görüntüleyicisi'ni ve İçeri
 
 Aşağıda, önizleme aşamasında olan geçerli rollerin listesi yer alır. Bunlar hakkında daha fazla bilgi edinmek için bkz [. Güvenlik & Uyumluluk Merkezi'ndeki Roller](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Information Protection Yöneticisi
+- Information Protection Yönetici
 - Information Protection Analisti
 - Information Protection Araştırmacısı
 - Information Protection Okuyucu
@@ -97,13 +95,13 @@ Aşağıda, önizleme aşamasında olan geçerli rol gruplarının listesi yer a
 
 ### <a name="sensitive-information-types"></a>Hassas bilgi türleri
 
-[DLP ilkesi](dlp-learn-about-dlp.md), hassas bilgi türü olarak tanımlanan **hassas bilgilerin** korunmasına yardımcı olabilir. Microsoft 365, birçok farklı bölgeden kullanıma hazır [birçok ortak hassas bilgi türü için tanımlar](sensitive-information-type-entity-definitions.md) içerir. Örneğin, kredi kartı numarası, banka hesap numaraları, ulusal kimlik numaraları ve Windows Canlı Kimlik hizmet numaraları.
+[DLP ilkesi](dlp-learn-about-dlp.md), hassas bilgi türü olarak tanımlanan **hassas bilgilerin** korunmasına yardımcı olabilir. Microsoft 365, kullanımınıza hazır birçok farklı bölgeden birçok [ortak hassas bilgi türü için tanımlar](sensitive-information-type-entity-definitions.md) içerir. Örneğin, kredi kartı numarası, banka hesabı numaraları, ulusal kimlik numaraları ve Windows Live ID hizmet numaraları.
 
 ### <a name="sensitivity-labels"></a>Duyarlılık etiketleri
 
 [Duyarlılık etiketi](sensitivity-labels.md), öğenin kuruluşunuzdaki değerini gösteren bir etikettir. El ile veya otomatik olarak uygulanabilir. Uygulandıktan sonra etiket belgeye eklenir ve belgenin gittiği her yerde belgeyi izler. Duyarlılık etiketi, zorunlu filigran veya şifreleme gibi çeşitli koruyucu davranışlar sağlar.
 
-İlgili verilerin veri sınıflandırma sayfasında gösterilmesi için SharePoint ve OneDrive dosyalar için duyarlılık etiketleri etkinleştirilmelidir. Daha fazla bilgi için bkz[. SharePoint ve OneDrive Office dosyaları için duyarlılık etiketlerini etkinleştirme](sensitivity-labels-sharepoint-onedrive-files.md).
+İlgili verilerin veri sınıflandırma sayfasında gösterilmesi için SharePoint ve OneDrive'daki dosyalar için duyarlılık etiketlerinin etkinleştirilmesi gerekir. Daha fazla bilgi için bkz [. SharePoint ve OneDrive'da Office dosyaları için duyarlılık etiketlerini etkinleştirme](sensitivity-labels-sharepoint-onedrive-files.md).
 
 ### <a name="retention-labels"></a>Bekletme etiketleri
 
@@ -111,7 +109,7 @@ Aşağıda, önizleme aşamasında olan geçerli rol gruplarının listesi yer a
 
 ### <a name="how-to-use-content-explorer"></a>İçerik gezginini kullanma
 
-1. **Microsoft Purview uyumluluk portalı**  >  **Data** **classificationContent** >  gezginini açın.
+1. **Microsoft Purview uyumluluk portalı**  >  **Veri sınıflandırma** > **İçerik gezginini** açın.
 2. Etiketin adını veya hassas bilgi türünü biliyorsanız, bunu filtre kutusuna yazabilirsiniz.
 3. Alternatif olarak, etiket türünü genişletip listeden etiketi seçerek öğeye göz atabilirsiniz.
 4. **Tüm konumlar'ın** altında bir konum seçin ve öğedeki klasör yapısının detayına gidin.
@@ -136,7 +134,7 @@ Arama aracının kapsamı **Tüm konumlar** bölmesinde görüntülenen araçtı
 
 **Seçilen konum Exchange** veya **Teams** olduğunda, örneğin `user@domainname.com`posta kutusunun tam e-posta adresini arayabilirsiniz.
 
-**konum SharePoint** veya **OneDrive** seçildiğinde, site adları, klasörleri ve dosyalarında detaya gittiğiniz zaman arama aracı görüntülenir. 
+**SharePoint** veya **OneDrive** konumu seçildiğinde, site adları, klasörleri ve dosyalarında detaya gittiğiniz zaman arama aracı görüntülenir. 
 
 Arama yapabileceğiniz yer:
 

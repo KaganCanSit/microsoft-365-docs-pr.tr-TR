@@ -18,18 +18,16 @@ search.appverid:
 ms.assetid: 0d4d0f35-390b-4518-800e-0c7ec95e946c
 ms.custom: seo-marvel-apr2020
 description: Bu makalede, Microsoft 365 denetim günlüğü kayıtlarını dışarı aktarmayı, yapılandırmayı ve görüntülemeyi öğreneceksiniz.
-ms.openlocfilehash: 73771e41c785bbf74c843821400b65a7049b902a
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: b528dcd669749198490b028db4bbd18fe313f1ee
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098096"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66640104"
 ---
 # <a name="export-configure-and-view-audit-log-records"></a>Denetim günlüğü kayıtlarını dışa aktarma, yapılandırma ve görüntüleme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Denetim günlüğünde arama yaptıktan ve arama sonuçlarını bir CSV dosyasına indirdikten sonra, dosya her olay hakkında ek bilgiler içeren **AuditData** adlı bir sütun içerir. Bu sütundaki veriler, virgülle ayrılmış *property:value* çiftleri olarak yapılandırılan birden çok özellik içeren bir JSON nesnesi olarak biçimlendirilir. Excel'daki Power Query Düzenleyicisi JSON dönüştürme özelliğini kullanarak **AuditData** sütunundaki JSON nesnesindeki her özelliği birden çok sütuna bölerek her özelliğin kendi sütununa sahip olmasını sağlayabilirsiniz. Bu, aradığınız denetim verilerini hızla bulmanıza yardımcı olabilecek bu özelliklerden birini veya daha fazlasını sıralamanıza ve filtrelemenize olanak tanır.
+Denetim günlüğünde arama yaptıktan ve arama sonuçlarını bir CSV dosyasına indirdikten sonra, dosya her olay hakkında ek bilgiler içeren **AuditData** adlı bir sütun içerir. Bu sütundaki veriler, virgülle ayrılmış *property:value* çiftleri olarak yapılandırılan birden çok özellik içeren bir JSON nesnesi olarak biçimlendirilir. Excel'deki Power Query Düzenleyicisi JSON dönüştürme özelliğini kullanarak **AuditData** sütunundaki JSON nesnesindeki her özelliği birden çok sütuna bölerek her özelliğin kendi sütununa sahip olmasını sağlayabilirsiniz. Bu, aradığınız denetim verilerini hızla bulmanıza yardımcı olabilecek bu özelliklerden birini veya daha fazlasını sıralamanıza ve filtrelemenize olanak tanır.
 
 ## <a name="step-1-export-audit-log-search-results"></a>1. Adım: Denetim günlüğü arama sonuçlarını dışarı aktarma
 
@@ -37,7 +35,7 @@ Denetim günlüğünde arama yaptıktan ve arama sonuçlarını bir CSV dosyası
   
 1. [Bir denetim günlüğü araması](search-the-audit-log-in-security-and-compliance.md#search-the-audit-log) çalıştırın ve istediğiniz sonuçları elde edene kadar gerekirse arama ölçütlerini düzeltin.
 
-2. Arama sonuçları sayfasında **Dışarı Aktar** >  **Tüm sonuçları indir'e** tıklayın.
+2. Arama sonuçları sayfasında Dışarı **Aktar** > **Tüm sonuçları indir'e** tıklayın.
 
    ![Tüm sonuçları indir'e tıklayın.](../media/ExportAuditSearchResults.png)
 
@@ -50,7 +48,7 @@ Denetim günlüğünde arama yaptıktan ve arama sonuçlarını bir CSV dosyası
 
 ## <a name="step-2-format-the-exported-audit-log-using-the-power-query-editor"></a>2. Adım: Power Query Düzenleyicisi kullanarak dışarı aktarılan denetim günlüğünü biçimlendirme
 
-Sonraki adım, **AuditData** sütunundaki JSON nesnesindeki her özelliği kendi sütununa bölmek için Excel'deki Power Query Düzenleyicisi JSON dönüştürme özelliğini kullanmaktır. Ardından belirli özelliklerin değerlerine göre kayıtları görüntülemek için sütunları filtreleyebilirsiniz. Bu, aradığınız denetim verilerini hızla bulmanıza yardımcı olabilir.
+Sonraki adım, Excel'de Power Query Düzenleyicisi JSON dönüştürme özelliğini kullanarak **AuditData** sütunundaki JSON nesnesindeki her özelliği kendi sütununa bölmektir. Ardından belirli özelliklerin değerlerine göre kayıtları görüntülemek için sütunları filtreleyebilirsiniz. Bu, aradığınız denetim verilerini hızla bulmanıza yardımcı olabilir.
 
 1. Office 365, Excel 2019 veya Excel 2016 için Excel'de boş bir çalışma kitabı açın.
 
@@ -96,13 +94,13 @@ Sonraki adım, **AuditData** sütunundaki JSON nesnesindeki her özelliği kendi
 
 9. **Tamam**'a tıklayın.
 
-    **AuditData** sütunu birden çok sütuna bölünür. Her yeni sütun AuditData JSON nesnesindeki bir özelliğe karşılık gelir. Sütundaki her satır özelliğin değerini içerir. Özellik bir değer içermiyorsa *null* değer görüntülenir. Excel,null değerleri olan hücreler boştur.
+    **AuditData** sütunu birden çok sütuna bölünür. Her yeni sütun AuditData JSON nesnesindeki bir özelliğe karşılık gelir. Sütundaki her satır özelliğin değerini içerir. Özellik bir değer içermiyorsa *null* değer görüntülenir. Excel'de null değerleri olan hücreler boştur.
   
-10. **Giriş** sekmesinde, Power Query Düzenleyicisi kapatmak ve dönüştürülmüş CSV dosyasını Excel çalışma kitabında açmak için **Yükle & Kapat'a** tıklayın.
+10. **Giriş** sekmesinde Kapat **& Yükle'ye** tıklayarak Power Query Düzenleyicisi kapatın ve dönüştürülen CSV dosyasını bir Excel çalışma kitabında açın.
 
 ## <a name="use-powershell-to-search-and-export-audit-log-records"></a>Denetim günlüğü kayıtlarını aramak ve dışarı aktarmak için PowerShell kullanma
 
-Microsoft Purview uyumluluk portalında denetim günlüğü arama aracını kullanmak yerine, Exchange Online PowerShell'de [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) cmdlet'ini kullanarak denetim günlüğü aramasının sonuçlarını CSV dosyasına aktarabilirsiniz. Ardından, Power Query düzenleyicisini kullanarak denetim günlüğünü biçimlendirmek için 2. Adım'da açıklanan yordamın aynısını izleyebilirsiniz. PowerShell cmdlet'ini kullanmanın avantajlarından biri, *RecordType* parametresini kullanarak belirli bir hizmetten gelen olayları aramanızdır. Aşağıda, Denetim Kayıtları'nı CSV dosyasına aktarmak için PowerShell'i kullanarak 2. Adımda açıklandığı gibi **AuditData** sütunundaki JSON nesnesini dönüştürmek için Power Query düzenleyicisini kullanabileceğiniz birkaç örnek verilmiştir.
+Microsoft Purview uyumluluk portalı denetim günlüğü arama aracını kullanmak yerine, Exchange Online PowerShell'de [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) cmdlet'ini kullanarak denetim günlüğü aramasının sonuçlarını CSV dosyasına aktarabilirsiniz. Ardından, Power Query düzenleyicisini kullanarak denetim günlüğünü biçimlendirmek için 2. Adım'da açıklanan yordamın aynısını izleyebilirsiniz. PowerShell cmdlet'ini kullanmanın avantajlarından biri, *RecordType* parametresini kullanarak belirli bir hizmetten gelen olayları aramanızdır. Aşağıda, Denetim Kayıtları'nı CSV dosyasına aktarmak için PowerShell'i kullanarak 2. Adımda açıklandığı gibi **AuditData** sütunundaki JSON nesnesini dönüştürmek için Power Query düzenleyicisini kullanabileceğiniz birkaç örnek verilmiştir.
 
 Bu örnekte, SharePoint paylaşım işlemleriyle ilgili tüm kayıtları döndürmek için aşağıdaki komutları çalıştırın.
 
@@ -128,7 +126,7 @@ $auditlog = Search-UnifiedAuditLog -StartDate 06/01/2019 -EndDate 06/30/2019 -Re
 $auditlog | Select-Object -Property CreationDate,UserIds,RecordType,AuditData | Export-Csv -Append -Path c:\AuditLogs\PowerShellAuditlog.csv -NoTypeInformation
 ```
 
-## <a name="tips-for-exporting-and-viewing-the-audit-log"></a>Denetim günlüğünü dışarı aktarmak ve görüntülemek için İpuçları
+## <a name="tips-for-exporting-and-viewing-the-audit-log"></a>Denetim günlüğünü dışarı aktarma ve görüntüleme ipuçları
 
 **Aşağıda, AuditData** sütununu birden çok sütuna bölmek için JSON dönüştürme özelliğini kullanmadan önce ve sonra denetim günlüğünü dışarı aktarma ve görüntülemeye ilişkin bazı ipuçları ve örnekler verilmiştir.
 

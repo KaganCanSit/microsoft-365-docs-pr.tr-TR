@@ -17,16 +17,14 @@ search.appverid:
 - MET150
 description: Uyumluluk Merkezi'nde özel hassas bilgi türlerini oluşturmayı, değiştirmeyi, kaldırmayı ve test etmeyi öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 0d93259cfe76419e253c450c4cd5ed7f03f3b85c
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: 733e043ed92e601812046dd5e50405ee28ee33da
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65753528"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638620"
 ---
 # <a name="create-custom-sensitive-information-types-in-the-compliance-center"></a>Uyumluluk merkezinde özel hassas bilgi türleri oluşturma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Önceden yapılandırılmış hassas bilgi türleri gereksinimlerinizi karşılamıyorsa, tamamen tanımladığınız kendi özel hassas bilgi türlerinizi oluşturabilir veya önceden yapılandırılmış bilgi türlerinden birini kopyalayıp değiştirebilirsiniz.
 
@@ -145,7 +143,7 @@ Listedeki herhangi bir hassas bilgi türünü test edebilirsiniz. Bir ilkede kul
 
 2. Uyumluluk Merkezi'nde **Veri sınıflandırması** \> **Hassas bilgi türleri'ne** gidin ve listeden hassas bilgi türünü seçerek ayrıntılar bölmesini açın ve **Test'i** seçin.
 
-3. Bir dosya Upload ve **Test'i** seçin.
+3. Bir dosyayı karşıya yükleyin ve **Test'i** seçin.
 
 4. **Sonuçlarla eşleşir** sayfasında sonuçları gözden geçirin ve **Son'u** seçin.
 

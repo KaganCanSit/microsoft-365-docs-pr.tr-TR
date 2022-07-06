@@ -15,21 +15,19 @@ search.appverid:
 - MET150
 ms.assetid: 04e9de2d-765b-457b-a98a-d0f60bfb13f2
 description: eBulma arama sonuçlarını dışarı aktarırken bilgisayarınıza indirilen PST dosyalarının varsayılan boyutunu değiştirebilirsiniz.
-ms.openlocfilehash: 135c83f734e0687c8d477ab434d0aa539224f39a
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: e2387f403854561c9906f252ad39be740c62ae19
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100841"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638796"
 ---
 # <a name="change-the-size-of-pst-files-when-exporting-ediscovery-search-results"></a>eBulma arama sonuçlarını dışarı aktarırken PST dosyalarının boyutunu değiştirme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Farklı Microsoft eBulma araçlarından eBulma aramasının e-posta sonuçlarını dışarı aktarmak için eBulma Dışarı Aktarma aracını kullandığınızda, dışarı aktarılabilir pst dosyasının varsayılan boyutu 10 GB'tır. Bu varsayılan boyutu değiştirmek istiyorsanız, arama sonuçlarını dışarı aktarmak için kullandığınız bilgisayarda Windows Kayıt Defteri'ni düzenleyebilirsiniz. Bunun bir nedeni, PST dosyasının DVD, cd veya USB sürücüsü gibi çıkarılabilir medyaya sığabilmesidir. 
   
 > [!NOTE]
-> Microsoft Purview uyumluluk portalında İçerik arama aracı kullanılırken arama sonuçlarını dışarı aktarmak için eBulma Dışarı Aktarma aracı kullanılır.
+> eBulma Dışarı Aktarma aracı, Microsoft Purview uyumluluk portalı İçerik arama aracı kullanılırken arama sonuçlarını dışarı aktarmak için kullanılır.
   
 ## <a name="create-a-registry-setting-to-change-the-size-of-pst-files-when-you-export-ediscovery-search-results"></a>eBulma arama sonuçlarını dışarı aktarırken PST dosyalarının boyutunu değiştirmek için bir kayıt defteri ayarı oluşturma
 

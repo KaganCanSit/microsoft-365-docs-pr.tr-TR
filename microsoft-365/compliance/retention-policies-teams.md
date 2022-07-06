@@ -17,25 +17,23 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Teams için geçerli olan bekletme ilkeleri hakkında bilgi edinin.
-ms.openlocfilehash: f289b8da5a4b21214887fd6429e977e434a9cd0b
-ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
+ms.openlocfilehash: c7f60dbb29d2755ba41661ab3aea6b20b97cef06
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65811032"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66640532"
 ---
 # <a name="learn-about-retention-for-microsoft-teams"></a>Microsoft Teams için bekletme hakkında bilgi edinin
 
->*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+>*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 > [!NOTE]
-> Teams'da sohbetlerinizin veya iletilerinizin bir bekletme ilkesi tarafından silindiğini belirten bir ileti görüyorsanız bkz. [Bekletme ilkeleriyle ilgili iletileri Teams](https://support.microsoft.com/office/teams-messages-about-retention-policies-c151fa2f-1558-4cf9-8e51-854e925b483b).
+> Teams'de sohbetlerinizin veya iletilerinizin bir bekletme ilkesi tarafından silindiğini belirten bir ileti görüyorsanız bkz. [Bekletme ilkeleriyle ilgili Teams iletileri](https://support.microsoft.com/office/teams-messages-about-retention-policies-c151fa2f-1558-4cf9-8e51-854e925b483b).
 > 
 > Bu sayfadaki bilgiler, bu bekletme ilkelerini yöneten BT yöneticilerine yöneliktir.
 
-Bu makaledeki bilgiler, Microsoft Teams iletilere özgü bilgiler içerdiğinden [Bekletme hakkında bilgi edinin'i](retention.md) destekler.
+Bu makaledeki bilgiler, Microsoft Teams iletilerine özgü bilgiler içerdiğinden [Bekletme hakkında bilgi edinin'e](retention.md) eklenmiştir.
 
 Diğer iş yükleri için bkz:
 
@@ -48,50 +46,50 @@ Diğer iş yükleri için bkz:
 > [!NOTE]
 > Bekletme ilkeleri artık şu anda önizleme aşamasında olan [paylaşılan kanalları](/MicrosoftTeams/shared-channels) destekliyor. Paylaşılan kanallar, saklama ayarlarını üst kanaldan devralır.
 
-Teams sohbet iletileri, kanal iletileri ve özel kanal iletileri, Teams saklama ilkeleri kullanılarak silinebilir ve iletilerdeki metinlere ek olarak, uyumluluk nedenleriyle aşağıdaki öğeler korunabilir: Eklenmiş resimler, tablolar, köprü metni bağlantıları, diğer Teams iletilerine ve dosyalarına bağlantılar ve [kart içeriği](/microsoftteams/platform/task-modules-and-cards/what-are-cards). Sohbet iletileri ve özel kanal iletileri konuşmadaki kişilerin tüm adlarını, kanal iletileri ise ekip adını ve ileti başlığını (varsa) içerir. 
+Teams sohbetleri iletileri, kanal iletileri ve özel kanal iletileri Teams için bekletme ilkeleri kullanılarak silinebilir ve iletilerdeki metinlere ek olarak, uyumluluk nedenleriyle aşağıdaki öğeler korunabilir: Ekli resimler, tablolar, köprü metni bağlantıları, diğer Teams iletilerine ve dosyalarına bağlantılar ve [kart içeriği](/microsoftteams/platform/task-modules-and-cards/what-are-cards). Sohbet iletileri ve özel kanal iletileri konuşmadaki kişilerin tüm adlarını, kanal iletileri ise ekip adını ve ileti başlığını (varsa) içerir. 
 
-Teams için bekletme ilkelerini kullandığınızda kod parçacıkları, Teams mobil istemciden kaydedilen sesli notlar, küçük resimler, duyuru görüntüleri ve başkalarından gelen ifade biçimindeki tepkiler korunmaz.
+Kod parçacıkları, Teams mobil istemcisinden kaydedilen sesli notlar, küçük resimler, duyuru görüntüleri ve ifade biçimindeki diğer kişilerden gelen tepkiler, Teams için bekletme ilkelerini kullandığınızda korunmaz.
 
-Teams ile kullandığınız e-postalar ve dosyalar Teams saklama ilkelerine dahil değildir. Bu öğelerin kendi bekletme ilkeleri vardır.
+Teams ile kullandığınız e-postalar ve dosyalar Teams için bekletme ilkelerine dahil değildir. Bu öğelerin kendi bekletme ilkeleri vardır.
 
 ## <a name="how-retention-works-with-microsoft-teams"></a>Bekletme Microsoft Teams ile nasıl çalışır?
 
-Uyumluluk gereksinimlerinizin arka uç depolama ve işlemleri tarafından nasıl karşılandığını ve şu anda Teams uygulamasında görünen iletiler yerine eBulma araçları tarafından doğrulanması gerektiğini anlamak için bu bölümü kullanın.
+Uyumluluk gereksinimlerinizin arka uç depolama ve işlemleri tarafından nasıl karşılandığını ve Şu anda Teams uygulamasında görünen iletiler yerine eBulma araçları tarafından doğrulanması gerektiğini anlamak için bu bölümü kullanın.
 
-Teams'da sohbetlerden ve kanal iletilerinden verileri saklamak ve bu sohbetleri ve iletileri silmek için bekletme ilkesi kullanabilirsiniz. Arka planda, bu iletilerden kopyalanan verileri depolamak için Exchange posta kutuları kullanılır. Teams sohbetlerdeki veriler, sohbete dahil edilen her kullanıcının posta kutusunda gizli bir klasörde depolanır ve Teams kanal iletileri için grup posta kutusundaki benzer bir gizli klasör kullanılır. Bu gizli klasörler, kullanıcılar veya yöneticiler tarafından doğrudan erişilebilir olacak şekilde tasarlanmamıştır, bunun yerine uyumluluk yöneticilerinin eBulma araçlarıyla arayabileceği verileri depolar.
+Teams'te sohbetlerden ve kanal iletilerinden verileri saklamak ve bu sohbetleri ve iletileri silmek için bekletme ilkesi kullanabilirsiniz. Arka planda Exchange posta kutuları, bu iletilerden kopyalanan verileri depolamak için kullanılır. Teams sohbetlerindeki veriler sohbete dahil edilen her kullanıcının posta kutusunda gizli bir klasörde depolanır ve Teams kanal iletileri için grup posta kutusundaki benzer bir gizli klasör kullanılır. Bu gizli klasörler, kullanıcılar veya yöneticiler tarafından doğrudan erişilebilir olacak şekilde tasarlanmamıştır, bunun yerine uyumluluk yöneticilerinin eBulma araçlarıyla arayabileceği verileri depolar.
 
 Bu posta kutuları, RecipientTypeDetails özniteliklerine göre listelenir:
 
 - **UserMailbox**: Bu posta kutuları, bulut tabanlı Teams kullanıcıları için ileti verilerini depolar.
 - **MailUser**: Bu posta kutuları [, şirket içi Teams kullanıcıları](search-cloud-based-mailboxes-for-on-premises-users.md) için ileti verilerini depolar.
-- **GroupMailbox**: Bu posta kutuları Teams standart kanal için ileti verilerini depolar.
-- **SubstrateGroup**: Bu posta kutuları paylaşılan Teams kanal için ileti verilerini depolar.
+- **GroupMailbox**: Bu posta kutuları, Teams standart kanalları için ileti verilerini depolar.
+- **SubstrateGroup**: Bu posta kutuları, Teams paylaşılan kanalları için ileti verilerini depolar.
 
-Teams konferans odaları için kullanılan RoomMailbox gibi diğer posta kutusu türleri, Teams bekletme ilkeleri için desteklenmez.
+Teams konferans odaları için kullanılan RoomMailbox gibi diğer posta kutusu türleri Teams saklama ilkeleri için desteklenmez.
 
-Teams, tüm iletiler (sohbetler ve kanal iletileri) için birincil depolama alanı olarak Azure destekli bir sohbet hizmeti kullanır. Uyumluluk nedeniyle Teams iletileri silmeniz gerekiyorsa, Teams bekletme ilkeleri iletilerin oluşturulduğu zaman temelinde belirli bir süre sonra silinebilir. İletiler daha sonra uyumluluk işlemleri için depolandıkları Exchange posta kutularından ve temel alınan Azure destekli sohbet hizmeti tarafından kullanılan birincil depolama alanından kalıcı olarak silinir. Temel alınan mimari hakkında daha fazla bilgi için Microsoft Teams [ve](/MicrosoftTeams/security-compliance-overview) özellikle [de Information Protection Mimarisi](/MicrosoftTeams/security-compliance-overview#information-protection-architecture) bölümünde güvenlik ve uyumluluk bölümüne bakın.
+Teams, tüm iletiler (sohbetler ve kanal iletileri) için birincil depolama alanı olarak Azure destekli bir sohbet hizmeti kullanır. Uyumluluk nedeniyle Teams iletilerini silmeniz gerekiyorsa, Teams için bekletme ilkeleri iletilerin oluşturulduğu zaman temelinde belirli bir süre sonra silinebilir. İletiler daha sonra hem uyumluluk işlemleri için depolandıkları Exchange posta kutularından hem de temel Alınan Azure destekli sohbet hizmeti tarafından kullanılan birincil depolama alanından kalıcı olarak silinir. Temel alınan mimari hakkında daha fazla bilgi için [Microsoft Teams'de güvenlik ve uyumluluk](/MicrosoftTeams/security-compliance-overview) ve özellikle [de Information Protection Mimarisi](/MicrosoftTeams/security-compliance-overview#information-protection-architecture) bölümüne bakın.
 
-Teams sohbetlerden ve kanal iletilerinden gelen bu veriler posta kutularında depolansa da, **Teams kanal iletileri** ve **Teams sohbet konumları** için bir bekletme ilkesi yapılandırmanız gerekir. Teams sohbetler ve kanal iletileri, Exchange kullanıcı veya grup posta kutuları için yapılandırılmış bekletme ilkelerine dahil değildir. Benzer şekilde, Teams saklama ilkeleri posta kutularında depolanan diğer e-posta öğelerini etkilemez.
+Teams sohbetlerinden ve kanal iletilerinden gelen bu veriler posta kutularında depolansa da **, Teams kanal iletileri** ve **Teams sohbetleri konumları** için bir bekletme ilkesi yapılandırmanız gerekir. Teams sohbetleri ve kanal iletileri, Exchange kullanıcısı veya grup posta kutuları için yapılandırılmış bekletme ilkelerine dahil değildir. Benzer şekilde, Teams için bekletme ilkeleri posta kutularında depolanan diğer e-posta öğelerini etkilemez.
 
 Bir kullanıcı sohbete eklenirse, kendisiyle paylaşılan tüm iletilerin bir kopyası posta kutusuna gönderilir. Bu iletilerin oluşturulma tarihi yeni kullanıcı için değişmez ve tüm kullanıcılar için aynı kalır.
 
 > [!NOTE]
-> Bir kullanıcı, Teams iletileri koruyan etkin bir bekletme ilkesine dahil edilirse ve bu ilkeye dahil edilen bir kullanıcının posta kutusunu silerseniz, posta kutusu Teams verilerini korumak için [etkin olmayan bir posta kutusuna](inactive-mailboxes-in-office-365.md) dönüştürülür. Kullanıcı için bu Teams verilerini saklamanız gerekmiyorsa, kullanıcı hesabını bekletme ilkesinden hariç tutun ve posta kutusunu silmeden önce [bu değişikliğin geçerli olmasını bekleyin](create-retention-policies.md#how-long-it-takes-for-retention-policies-to-take-effect).
+> Bir kullanıcı Teams iletilerini koruyan etkin bir saklama ilkesine dahil edilirse ve bu ilkeye dahil edilen bir kullanıcının posta kutusunu silerseniz, posta kutusu Teams verilerini korumak için [etkin olmayan bir posta kutusuna](inactive-mailboxes-in-office-365.md) dönüştürülür. Bu Teams verilerini kullanıcı için saklamanız gerekmiyorsa, kullanıcı hesabını bekletme ilkesinden hariç tutun ve posta kutusunu silmeden önce [bu değişikliğin geçerli olmasını bekleyin](create-retention-policies.md#how-long-it-takes-for-retention-policies-to-take-effect) .
 
 Sohbet ve kanal iletileri için bekletme ilkesi yapılandırıldıktan sonra, Exchange hizmetinden bir zamanlayıcı işi, bu Teams iletilerinin depolandığı gizli posta kutusu klasöründeki öğeleri düzenli aralıklarla değerlendirir. Zamanlayıcı işinin çalışması genellikle 1-7 gün sürer. Bu öğelerin saklama süreleri dolduğunda, kalıcı olarak silinmeden önce "geçici olarak silinen" öğeleri depolamak için her kullanıcı veya grup posta kutusunda bulunan başka bir gizli klasör olan SubstrateHolds klasörüne taşınırlar. 
 
 İletiler en az 1 gün boyunca SubstrateHolds klasöründe kalır ve silinmeye uygunsa zamanlayıcı işi bir sonraki çalıştırılışında bunları kalıcı olarak siler.
 
 > [!IMPORTANT]
-> [İlk bekletme ilkesi](retention.md#the-principles-of-retention-or-what-takes-precedence) nedeniyle ve Teams sohbet ve kanal iletileri Exchange Online posta kutularında depolandığından, posta kutusu aynı konum için başka bir Teams bekletme ilkesinden etkileniyorsa, Dava Tutma, bekletmeyi geciktirme veya yasal veya soruşturma amacıyla posta kutusuna bir eBulma saklaması uygulandığında SubstrateHolds klasöründen kalıcı silme işlemi her zaman askıya alınır.  Sebep.
+> [İlk saklama ilkesi](retention.md#the-principles-of-retention-or-what-takes-precedence) nedeniyle ve Teams sohbeti ve kanal iletileri Exchange Online posta kutularında depolandığından, posta kutusu aynı konum, Dava Bekletme, gecikme bekletme ilkesinden etkileniyorsa veya posta kutusuna yasal veya araştırıcı nedenlerle eBulma ayrılığı uygulandığında SubstrateHolds klasöründen kalıcı silme işlemi her zaman askıya alınır.
 >
-> Posta kutusu geçerli bir ayrı tutmada yer alırken, silinen Teams sohbet ve kanal iletileri artık Teams uygulamasında görünmez, ancak eBulma ile bulunabilir olmaya devam eder.
+> Posta kutusu geçerli bir ayrı tutmada yer alırken, silinen Teams sohbeti ve kanal iletileri artık Teams uygulamasında görünmez, ancak eBulma ile bulunabilir olmaya devam eder.
 
 Sohbet ve kanal iletileri için bekletme ilkesi yapılandırıldıktan sonra, içeriğin izlediği yollar bekletme ilkesinin tutulup silineceği, yalnızca korunacak veya yalnızca silineceği durumlarına bağlıdır.
 
 Bekletme ilkesi korunup silinecekse:
 
-![Teams sohbet ve kanal iletileri için bekletme akışı diyagramı.](../media/teamsretentionlifecycle.png)
+![Teams sohbeti ve kanal iletileri için bekletme akışı diyagramı.](../media/teamsretentionlifecycle.png)
 
 Diyagramdaki iki yol için:
 
@@ -102,12 +100,12 @@ Diyagramdaki iki yol için:
 > [!NOTE]
 > Gizli klasörler de dahil olmak üzere posta kutularında depolanan iletiler eKeşif araçları tarafından aranabilir. İletiler SubstrateHolds klasöründen kalıcı olarak silinene kadar eBulma araçları tarafından aranabilir durumda kalır.
 
-Bekletme süresinin süresi dolduğunda ve bir iletiyi SubstrateHolds klasörüne taşıdığında, arka uç Azure sohbet hizmetine bir silme işlemi iletilir ve bu işlem aynı işlemi Teams istemci uygulamasına geçirir. Bu iletişim veya önbelleğe almadaki gecikmeler, kullanıcıların kısa bir süre boyunca bu iletileri Teams uygulamasında görmeye devam etmelerini açıklayabilir.
+Saklama süresinin süresi dolduğunda ve bir iletiyi SubstrateHolds klasörüne taşıdığınızda, arka uç Azure sohbet hizmetine bir silme işlemi iletilir ve bu işlem aynı işlemi Teams istemci uygulamasına geçirir. Bu iletişim veya önbelleğe almadaki gecikmeler, kullanıcıların kısa bir süre boyunca bu iletileri Teams uygulamasında görmeye devam etmelerini açıklayabilir.
 
 Azure sohbet hizmetinin bekletme ilkesi nedeniyle silme komutu aldığı bu senaryoda, Teams istemci uygulamasındaki ilgili ileti konuşmadaki tüm kullanıcılar için silinir. Bu kullanıcılardan bazıları başka bir kuruluştan olabilir, saklama süresi daha uzun olan bir bekletme ilkesine sahip olabilir veya bu kullanıcılara hiçbir bekletme ilkesi atanmamış olabilir. Bu kullanıcılar için, iletilerin kopyaları posta kutularında depolanmaya devam eder ve iletiler başka bir bekletme ilkesi tarafından kalıcı olarak silinene kadar eBulma için aranabilir durumda kalır.
 
 > [!IMPORTANT]
-> Teams uygulamasında görünen iletiler, uyumluluk gereksinimleri için tutulup tutulmadıklarını veya kalıcı olarak silinip silinmediklerinin doğru bir yansıması değildir.
+> Teams uygulamasında görünen iletiler, uyumluluk gereksinimleri için tutulup tutulmadıklarını veya kalıcı olarak silindiklerinin doğru bir yansıması değildir.
 
 Bekletme ilkesi yalnızca saklama veya yalnızca silme olduğunda, içeriğin yolları saklama ve silme çeşitlemeleridir.
 
@@ -186,32 +184,32 @@ Kullanıcı iletiyi düzenlemez veya silmezse örnek bekletme sonucu:
 
 Bu örnekte gösterildiği gibi, yalnızca bir gün sonra iletileri silmek için bir bekletme ilkesi yapılandırabilirsiniz ancak hizmet, uyumlu bir silme işlemi sağlamak için birden çok işlemden geçer. Sonuç olarak, 1 gün sonra gerçekleştirilen silme eylemi, eBulma aramalarında artık döndürülmemesi için iletinin kalıcı olarak silinmesi 16 gün sürebilir.
 
-## <a name="skype-for-business-and-teams-interop-chats"></a>birlikte çalışma sohbetlerini Skype Kurumsal ve Teams
+## <a name="skype-for-business-and-teams-interop-chats"></a>Skype Kurumsal ve Teams birlikte çalışma sohbetleri
 
-Skype Kurumsal sohbet Teams geldiğinde, Teams sohbet yazışmasında bir ileti olur ve uygun posta kutusuna gönderilir. Teams bekletme ilkeleri, Teams iş parçacığından gelen bu iletilere uygulanır. 
+Teams'e Skype Kurumsal bir sohbet geldiğinde, teams sohbet yazışmasında bir iletiye dönüşür ve uygun posta kutusuna gönderilir. Teams bekletme ilkeleri, Teams yazışmasından gelen bu iletilere uygulanır. 
 
-Ancak, konuşma geçmişi Skype Kurumsal için ve Skype Kurumsal istemci tarafından geçmişin bir posta kutusuna kaydedildiği açıksa, bu sohbet verileri bir Teams bekletme ilkesi tarafından işlenmez. Bu içerik için Skype Kurumsal için yapılandırılmış bir bekletme ilkesi kullanın.
+Ancak, konuşma geçmişi Skype Kurumsal için ve Skype Kurumsal istemci tarafından geçmişin bir posta kutusuna kaydedildiğini gösterirse, bu sohbet verileri teams saklama ilkesi tarafından işlenmez. Bu içerik için Skype Kurumsal için yapılandırılmış bir bekletme ilkesi kullanın.
 
 ## <a name="meetings-and-external-users"></a>Toplantılar ve dış kullanıcılar
 
-Kanal toplantı iletileri kanal iletileriyle aynı şekilde depolanır, bu nedenle bu veriler için bekletme ilkenizi yapılandırırken **kanal iletilerinin konumunu Teams** seçin.
+Kanal toplantı iletileri, kanal iletileriyle aynı şekilde depolanır, bu nedenle bekletme ilkenizi yapılandırırken bu veriler için **Teams kanal iletileri** konumunu seçin.
 
-Hazırlıksız ve zamanlanmış toplantı iletileri grup sohbeti iletileriyle aynı şekilde depolanır, bu nedenle bu veriler için bekletme ilkenizi yapılandırırken **Teams sohbetler** konumunu seçin.
+Anlık ve zamanlanmış toplantı iletileri grup sohbeti iletileriyle aynı şekilde depolanır, bu nedenle bu veriler için bekletme ilkenizi yapılandırırken **Teams sohbetleri** konumunu seçin.
 
 Kuruluşunuzun barındır olduğu bir toplantıya dış kullanıcılar dahil edildiğinde:
 
 - Dış kullanıcı kiracınızda bir konuk hesabı kullanarak katılırsa, toplantıdan gelen iletiler hem kullanıcılarınızın posta kutusunda hem de konuk hesabına verilen gölge posta kutusunda depolanır. Ancak, saklama ilkeleri, konumun tamamı için bir bekletme ilkesine dahil olarak bildirilse de (bazen "kuruluş genelinde ilke" olarak da bilinir) gölge posta kutuları için desteklenmez.
 
-- Dış kullanıcı başka bir Microsoft 365 kuruluştaki bir hesabı kullanarak katılırsa, bu kullanıcının başka bir kiracıdaki posta kutusunda depolandığı için bekletme ilkeleriniz bu kullanıcının iletilerini silemez. Ancak aynı toplantı için bekletme ilkeleriniz kullanıcılarınız için iletileri silebilir.
+- Dış kullanıcı başka bir Microsoft 365 kuruluşundan bir hesap kullanarak katılırsa, bekletme ilkeleriniz bu kullanıcının başka bir kiracıdaki posta kutusunda depolandığından iletileri silemez. Ancak aynı toplantı için bekletme ilkeleriniz kullanıcılarınız için iletileri silebilir.
 
 ## <a name="when-a-user-leaves-the-organization"></a>Kullanıcı kuruluştan ayrıldığında 
 
 Exchange Online'de posta kutusu olan bir kullanıcı kuruluşunuzdan ayrılırsa ve Microsoft 365 hesabı silinirse, bekletmeye tabi olan sohbet iletileri etkin olmayan bir posta kutusunda depolanır. Sohbet iletileri, posta kutusu devre dışı bırakılmadan önce kullanıcıya yerleştirilen bekletme ilkesine tabi kalır ve içerik eBulma aramasında kullanılabilir. Daha fazla bilgi için bkz [. Etkin olmayan posta kutuları hakkında bilgi edinin](inactive-mailboxes-in-office-365.md). 
 
-Kullanıcı Teams'da herhangi bir dosya depoladıysa, SharePoint ve OneDrive için [eşdeğer bölüme](retention-policies-sharepoint.md#when-a-user-leaves-the-organization) bakın.
+Kullanıcı Teams'de herhangi bir dosya depoladıysa SharePoint ve OneDrive için [eşdeğer bölüme](retention-policies-sharepoint.md#when-a-user-leaves-the-organization) bakın.
 
 ## <a name="configuration-guidance"></a>Yapılandırma kılavuzu
 
-Microsoft 365'de saklamayı yapılandırma konusunda yeniyseniz bkz. [Veri yaşam döngüsü yönetimiyle Kullanmaya başlayın](get-started-with-data-lifecycle-management.md).
+Microsoft 365'te saklamayı yapılandırmaya yeni başladıysanız bkz. [Veri yaşam döngüsü yönetimini kullanmaya başlama](get-started-with-data-lifecycle-management.md).
 
-Teams için bekletme ilkesi yapılandırmaya hazırsanız bkz. [Bekletme ilkeleri oluşturma ve yapılandırma](create-retention-policies.md).
+Teams için bir bekletme ilkesi yapılandırmaya hazırsanız bkz. [Bekletme ilkeleri oluşturma ve yapılandırma](create-retention-policies.md).

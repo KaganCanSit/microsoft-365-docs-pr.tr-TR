@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365'de PostgreSQL verilerini arşivleme amacıyla Cisco Jabber'ı arşivleme bağlayıcısı ayarlama
+title: Microsoft 365'te PostgreSQL verilerini arşivleme amacıyla Cisco Jabber'ı arşivleme bağlayıcısı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -14,25 +14,23 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
-description: PostgreSQL'de Cisco Jabber'dan Microsoft 365 verileri içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalı bağlayıcı ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: a435ee321d14c6eddf445f6dddcfdecc86c1963b
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+description: PostgreSQL'de Cisco Jabber'dan Microsoft 365'e veri içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalı bağlayıcıyı ayarlamayı ve kullanmayı öğrenin.
+ms.openlocfilehash: 9dd35756931c8d60538601332555dbc5cbf108b3
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318822"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636655"
 ---
 # <a name="set-up-a-connector-to-archive-cisco-jabber-on-postgresql-data"></a>PostgreSQL verilerinde Cisco Jabber'ı arşivleme bağlayıcısı ayarlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Cisco Jabber platformundaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalı bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağındaki öğeleri yakalamak (düzenli olarak) ve bu öğeleri Microsoft 365'e aktarmak için yapılandırılmış [postgreSQL üzerinde Cisco Jabber](https://www.veritas.com/insights/merge1/jabber) bağlayıcısı sağlar. Bağlayıcı, PostgreSQL üzerinde Cisco Jabber'dan gelen iletiler, sohbetler ve paylaşılan içerik gibi içerikleri e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'te kullanıcının posta kutusuna aktarır.
 
-Cisco Jabber platformundaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalı bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağından öğeleri yakalamak (düzenli olarak) ve bu öğeleri Microsoft 365 içeri aktarmak için yapılandırılmış [postgreSQL üzerinde Cisco Jabber](https://www.veritas.com/insights/merge1/jabber) bağlayıcısı sağlar. Bağlayıcı, PostgreSQL üzerinde Cisco Jabber'dan gelen iletiler, sohbetler ve paylaşılan içerik gibi içerikleri e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'de kullanıcının posta kutusuna aktarır.
-
-PostgreSQL'deki Cisco Jabber verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri gibi Microsoft Purview özellikleri uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için PostgreSQL üzerinde Cisco Jabber bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+PostgreSQL'deki Cisco Jabber verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri gibi Microsoft Purview özelliklerini uygulayabilirsiniz. Microsoft 365'te verileri içeri aktarmak ve arşivlemek için PostgreSQL üzerinde Cisco Jabber bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-cisco-jabber-on-postgresql-data"></a>PostgreSQL verilerinde Cisco Jabber'ı arşivleme işlemine genel bakış
 
-Aşağıdaki genel bakış, Microsoft 365'de PostgreSQL'de Cisco Jabber verilerini arşivleme amacıyla bağlayıcı kullanma işlemini açıklar.
+Aşağıdaki genel bakış, Microsoft 365'te PostgreSQL üzerinde Cisco Jabber verilerini arşivleme amacıyla bağlayıcı kullanma işlemini açıklar.
 
 ![PostgreSQL verilerinde Cisco Jabber için arşivleme iş akışı.](../media/CiscoJabberonPostgreSQLConnectorWorkflow.png)
 
@@ -50,7 +48,7 @@ Aşağıdaki genel bakış, Microsoft 365'de PostgreSQL'de Cisco Jabber verileri
 
 - 1. Adımda PostgreSQL'de Cisco Jabber bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu Veritas veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
+- Bu Veritas veri bağlayıcısı, Microsoft 365 US Government bulutundaki GCC ortamlarında genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerini Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolamayı, iletmeyi ve işlemeyi içerebilir ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="step-1-set-up-the-cisco-jabber-on-postgresql-connector"></a>1. Adım: PostgreSQL'de Cisco Jabber bağlayıcısını ayarlama
 
@@ -76,7 +74,7 @@ Aşağıdaki genel bakış, Microsoft 365'de PostgreSQL'de Cisco Jabber verileri
 
 Kullanıcıları eşlemek ve uyumluluk portalında bağlayıcı kurulumunu tamamlamak için şu adımları izleyin:
 
-1. **PostgreSQL kullanıcılarını Microsoft 365 için Cisco Jabber** harita sayfasında otomatik kullanıcı eşlemesini etkinleştirin. PostgreSQL üzerindeki Cisco Jabber öğeleri, kuruluşunuzdaki kullanıcıların *e-posta adreslerini içeren E-posta* adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcıyla ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır.
+1. **PostgreSQL kullanıcılarını Microsoft 365 kullanıcıları ile eşleme** sayfasında, otomatik kullanıcı eşlemesini etkinleştirin. PostgreSQL üzerindeki Cisco Jabber öğeleri, kuruluşunuzdaki kullanıcıların *e-posta adreslerini içeren E-posta* adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcısı ile ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır.
 
 2. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve yeni bağlayıcının içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları** sayfasına gidin.
 

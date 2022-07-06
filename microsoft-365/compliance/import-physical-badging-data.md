@@ -14,23 +14,21 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-description: Yöneticiler, kuruluşlarının fiziksel badging sisteminden Microsoft 365 verileri içeri aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, bu verileri, kuruluşunuz için olası bir iç tehdit oluşturabilecek belirli kullanıcılar tarafından fiziksel binalarınıza erişimi algılamanıza yardımcı olmak için şirket içi risk yönetimi ilkelerinde kullanmanıza olanak tanır.
-ms.openlocfilehash: 41fd7f1214b231668b56e9326055ad736dcd387e
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+description: Yöneticiler, kuruluşlarının fiziksel badging sisteminden Microsoft 365'e veri aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, bu verileri, kuruluşunuz için olası bir iç tehdit oluşturabilecek belirli kullanıcılar tarafından fiziksel binalarınıza erişimi algılamanıza yardımcı olmak için şirket içi risk yönetimi ilkelerinde kullanmanıza olanak tanır.
+ms.openlocfilehash: 90e0a421397683fe05161b27b1743354713de516
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66044026"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641438"
 ---
 # <a name="set-up-a-connector-to-import-physical-badging-data-preview"></a>Fiziksel badging verilerini içeri aktarmak için bağlayıcı ayarlama (önizleme)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Çalışanın ham fiziksel erişim olayları veya kuruluşunuzun badging sistemi tarafından oluşturulan fiziksel erişim alarmları gibi fiziksel badging verilerini içeri aktarmak için Microsoft Purview uyumluluk portalında bir veri bağlayıcısı ayarlayabilirsiniz. Fiziksel erişim noktalarına örnek olarak bir bina veya sunucu odası ya da veri merkezine giriş verilebilir. Fiziksel badging verileri, kuruluşunuzun kuruluşunuzdaki kötü amaçlı etkinliklerden veya veri hırsızlığından korunmasına yardımcı olmak için Microsoft 365 [insider risk yönetimi çözümü](insider-risk-management.md) tarafından kullanılabilir.
+Çalışanın ham fiziksel erişim olayları veya kuruluşunuzun badging sistemi tarafından oluşturulan fiziksel erişim alarmları gibi fiziksel badging verilerini içeri aktarmak için Microsoft Purview uyumluluk portalı bir veri bağlayıcısı ayarlayabilirsiniz. Fiziksel erişim noktalarına örnek olarak bir bina veya sunucu odası ya da veri merkezine giriş verilebilir. Fiziksel badging verileri, kuruluşunuzun kuruluşunuzdaki kötü amaçlı etkinliklerden veya veri hırsızlığından korunmasına yardımcı olmak için Microsoft 365 [insider risk yönetimi çözümü](insider-risk-management.md) tarafından kullanılabilir.
 
 Fiziksel bir badging bağlayıcısı ayarlamak aşağıdaki görevlerden oluşur:
 
-- fiziksel badging verileri içeren bir JSON yükünü kabul eden bir API uç noktasına erişmek için Azure Active Directory (Azure AD) içinde bir uygulama oluşturma.
+- Fiziksel badging verileri içeren bir JSON yükünü kabul eden bir API uç noktasına erişmek için Azure Active Directory'de (Azure AD) uygulama oluşturma.
 
 - Fiziksel badging veri bağlayıcısı tarafından tanımlanan bir şema ile JSON yükünü oluşturma.
 
@@ -42,16 +40,16 @@ Fiziksel bir badging bağlayıcısı ayarlamak aşağıdaki görevlerden oluşur
 
 ## <a name="before-you-set-up-the-connector"></a>Bağlayıcıyı ayarlamadan önce
 
-- 3. Adımda fiziksel badging bağlayıcısını oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
+- 3. Adımda fiziksel badging bağlayıcısını oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
    > [!NOTE]
-   > Veri Bağlayıcısı Yönetici rolü şu anda ABD Kamu GCC Yüksek ve DoD ortamlarında desteklenmemaktadır. Bu nedenle, GCC Yüksek ve DoD ortamlarında İk bağlayıcısını oluşturan kullanıcıya Exchange Online'da Posta Kutusu İçeri Aktarma İçeri Aktarma rolü atanmalıdır. Varsayılan olarak, bu rol Exchange Online'daki hiçbir rol grubuna atanmaz. Posta Kutusu İçeri Aktarma Dışarı Aktarma rolünü Exchange Online'deki Kuruluş Yönetimi rol grubuna ekleyebilirsiniz. Ya da yeni bir rol grubu oluşturabilir, Posta Kutusu İçeri Aktarma Dışarı Aktarma rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilirsiniz. Daha fazla bilgi için "[Exchange Online rol gruplarını](/Exchange/permissions-exo/role-groups#create-role-groups) yönetme" makalesindeki Rol grupları oluşturma veya [Rol gruplarını değiştirme](/Exchange/permissions-exo/role-groups#modify-role-groups) bölümlerine bakın.
+   > Veri Bağlayıcısı Yönetici rolü şu anda US Government GCC High ve DoD ortamlarında desteklenmiyor. Bu nedenle, GCC High ve DoD ortamlarında İk bağlayıcısını oluşturan kullanıcıya Exchange Online'da Posta Kutusu İçeri Aktarma Dışarı Aktarma rolü atanmalıdır. Varsayılan olarak, bu rol Exchange Online'daki hiçbir rol grubuna atanmaz. Posta Kutusu İçeri Aktarma Dışarı Aktarma rolünü Exchange Online'deki Kuruluş Yönetimi rol grubuna ekleyebilirsiniz. Ya da yeni bir rol grubu oluşturabilir, Posta Kutusu İçeri Aktarma Dışarı Aktarma rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilirsiniz. Daha fazla bilgi için "[Exchange Online rol gruplarını](/Exchange/permissions-exo/role-groups#create-role-groups) yönetme" makalesindeki Rol grupları oluşturma veya [Rol gruplarını değiştirme](/Exchange/permissions-exo/role-groups#modify-role-groups) bölümlerine bakın.
 
 - Kuruluşunuzun fiziksel badging sisteminden (günlük olarak) verilerin nasıl alınacağını veya dışarı aktarıldığını belirlemeniz ve 2. Adım'da açıklanan bir JSON dosyası oluşturmanız gerekir. 4. Adımda çalıştırdığınız betik, JSON dosyasındaki verileri API uç noktasına iletir.
 
 - 4. Adımda çalıştırdığınız örnek betik, fiziksel badging verilerini JSON dosyasından bağlayıcı API'sine göndererek iç risk yönetimi çözümü tarafından kullanılabilmesini sağlar. Bu örnek betik, herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betik, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiğin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
 
-- Bu bağlayıcı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısı dışında olan ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında olmayan üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
+- Bu bağlayıcı, Microsoft 365 US Government bulutundaki GCC ortamlarında kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerini Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolamayı, iletmeyi ve işlemeyi içerebilir ve bu nedenle Microsoft Purview ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="step-1-create-an-app-in-azure-active-directory"></a>1. Adım: Azure Active Directory'de uygulama oluşturma
 
@@ -172,7 +170,7 @@ Sonraki adım, uyumluluk portalında fiziksel bir badging bağlayıcısı oluşt
 
 Fiziksel bir badging bağlayıcısı ayarlamanın sonraki adımı, JSON dosyasındaki (2. Adımda oluşturduğunuz) fiziksel badging verilerini 1. Adımda oluşturduğunuz API uç noktasına gönderecek bir betik çalıştırmaktır. Başvurunuz için örnek bir betik sağlıyoruz ve JSON dosyasını API uç noktasına göndermek için bu betiği kullanmayı veya kendi betiğinizi oluşturmayı seçebilirsiniz.
 
-Betiği çalıştırdıktan sonra, fiziksel badging verilerini içeren JSON dosyası Microsoft 365 kuruluşunuza gönderilerek şirket içi risk yönetimi çözümü tarafından erişilebilir. Fiziksel badging verilerini günlük olarak göndermenizi öneririz. Bunu yapmak için, fiziksel badging sisteminizden her gün JSON dosyasını oluşturma işlemini otomatikleştirebilir ve ardından verileri göndermek için betiği zamanlayabilirsiniz.
+Betiği çalıştırdıktan sonra, fiziksel badging verilerini içeren JSON dosyası Microsoft 365 kuruluşunuza iletilir ve bu dosyaya insider risk yönetimi çözümü tarafından erişilebilir. Fiziksel badging verilerini günlük olarak göndermenizi öneririz. Bunu yapmak için, fiziksel badging sisteminizden her gün JSON dosyasını oluşturma işlemini otomatikleştirebilir ve ardından verileri göndermek için betiği zamanlayabilirsiniz.
 
 > [!NOTE]
 > API tarafından işlenebilen JSON dosyasındaki kayıt sayısı üst sınırı 50.000 kayıttır.
@@ -199,7 +197,7 @@ Betiği çalıştırdıktan sonra, fiziksel badging verilerini içeren JSON dosy
 
    |Parametre|Açıklama|
    |---|---|
-   |tenantId|Bu, 1. Adımda aldığınız Microsoft 365 kuruluşunuzun kimliğidir. Ayrıca kuruluşunuzun tenantId değerini Azure AD yönetim merkezindeki **Genel Bakış** dikey penceresinden de edinebilirsiniz. Bu, kuruluşunuzu tanımlamak için kullanılır.|
+   |tenantId|Bu, 1. Adımda edindiğiniz Microsoft 365 kuruluşunuzun kimliğidir. Ayrıca kuruluşunuzun tenantId değerini Azure AD yönetim merkezindeki **Genel Bakış** dikey penceresinden de edinebilirsiniz. Bu, kuruluşunuzu tanımlamak için kullanılır.|
    |Appıd|Bu, 1. Adımda Azure AD oluşturduğunuz uygulamanın Azure AD uygulama kimliğidir. Bu, Azure AD tarafından betik Microsoft 365 kuruluşunuza erişmeye çalıştığında kimlik doğrulaması için kullanılır.|
    |appSecret|Bu, 1. Adımda Azure AD oluşturduğunuz uygulamanın Azure AD uygulama gizli dizisidir. Bu, kimlik doğrulaması için de kullanılır.|
    |Jobıd|Bu, 3. Adımda oluşturduğunuz fiziksel badging bağlayıcısının İş Kimliğidir. Bu, Microsoft buluta gönderilen fiziksel badging verilerini fiziksel badging bağlayıcısıyla ilişkilendirmek için kullanılır.|
@@ -212,7 +210,7 @@ Betiği çalıştırdıktan sonra, fiziksel badging verilerini içeren JSON dosy
    .\PhysicalBadging.ps1 -tenantId d5723623-11cf-4e2e-b5a5-01d1506273g9 -appId 29ee526e-f9a7-4e98-a682-67f41bfd643e -appSecret MNubVGbcQDkGCnn -jobId b8be4a7d-e338-43eb-a69e-c513cd458eba -jsonFilePath 'C:\Users\contosoadmin\Desktop\Data\physical_badging_data.json'
    ```
 
-   Karşıya yükleme başarılı olursa, betik **Upload Başarılı** iletisini görüntüler.
+   Karşıya yükleme başarılı olursa, betik **Karşıya Yükleme Başarılı** iletisini görüntüler.
 
    Birden çok JSON dosyanız varsa, her dosya için betiği çalıştırmanız gerekir.
 
@@ -241,7 +239,7 @@ Fiziksel badging bağlayıcısını oluşturduktan ve fiziksel badging verilerin
 
 Kuruluşunuzdaki en son fiziksel badging verilerinin insider risk yönetimi çözümü gibi araçlar tarafından kullanılabildiğinden emin olmak için, betiği günde bir kez gibi yinelenen bir şekilde otomatik olarak çalışacak şekilde zamanlamanızı öneririz. Bu, fiziksel badging verilerini JSON dosyasına benzer bir zamanlamaya göre (aynı değilse) güncelleştirmenizi de gerektirir, böylece kuruluşunuzdan ayrılan çalışanlar hakkında en son bilgileri içerir. Amaç, fiziksel badging bağlayıcısının bunu insider risk yönetimi çözümü için kullanılabilir hale getirebilmesi için en güncel fiziksel badging verilerini karşıya yüklemektir.
 
-Betiği her gün otomatik olarak çalıştırmak için Windows'da Görev Zamanlayıcı uygulamasını kullanabilirsiniz.
+Betiği her gün otomatik olarak çalıştırmak için Windows'ta Görev Zamanlayıcı uygulamasını kullanabilirsiniz.
 
 1. Yerel bilgisayarınızda, Windows **Başlat** düğmesine tıklayın ve görev **zamanlayıcı** yazın.
 
@@ -259,7 +257,7 @@ Betiği her gün otomatik olarak çalıştırmak için Windows'da Görev Zamanla
 
 6. **Tetikleyiciler** sekmesini seçin, **Yeni'ye** tıklayın ve aşağıdaki işlemleri yapın:
 
-   1. **Ayarlar** altında **Günlük** seçeneğini belirleyin ve ardından betiği ilk kez çalıştırmak için bir tarih ve saat seçin. Betik her gün belirtilen saatte çalıştırılır.
+   1. **Ayarlar'ın** altında **Günlük** seçeneğini belirleyin ve ardından betiği ilk kez çalıştırmak için bir tarih ve saat seçin. Betik her gün belirtilen saatte çalıştırılır.
 
    2. **Gelişmiş ayarlar'ın** altında **Etkin** onay kutusunun seçili olduğundan emin olun.
 
