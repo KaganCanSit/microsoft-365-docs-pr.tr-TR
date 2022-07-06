@@ -18,25 +18,23 @@ search.appverid:
 - MOE150
 - MET150
 description: Bekletme etiketlerini yayımlama yönergelerini kullanarak, ihtiyacınız olan şeyleri korumak ve olmayanları silmek için bunları uygulamalara uygulayabilirsiniz.
-ms.openlocfilehash: b96d5f3df440db58aff63bffca11523f7c09d8ee
-ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
+ms.openlocfilehash: 54e2a7f5f9776438ad36d51d43b38ed379cb35d0
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66128931"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630355"
 ---
 # <a name="publish-retention-labels-and-apply-them-in-apps"></a>Bekletme etiketlerini yayımlama ve uygulamalarda uygulama
 
->*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+>*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 > [!NOTE]
 > Bu senaryo, [mevzuat kayıtları](records-management.md#records) da dahil olmak üzere tüm bekletme etiketi yapılandırmaları için desteklenir.
 
 [Bekletme etiketlerini](retention.md) yayımlamanıza ve bunları belgelere ve e-postalara uygulamanıza yardımcı olması için aşağıdaki bilgileri kullanın.
 
-Bekletme etiketleri, ihtiyacınız olanları korumanıza ve öğe düzeyinde (belge veya e-posta) olmayan öğeleri silmenize yardımcı olur. Ayrıca, Microsoft 365 verileriniz için [kayıt yönetimi](records-management.md) çözümünün bir parçası olarak bir öğeyi kayıt olarak bildirmek için de kullanılırlar.
+Bekletme etiketleri, ihtiyacınız olanları korumanıza ve öğe düzeyinde (belge veya e-posta) olmayan öğeleri silmenize yardımcı olur. Ayrıca, Microsoft 365 verileriniz için [kayıt yönetimi](records-management.md) çözümünün bir parçası olarak bir öğeyi kayıt olarak bildirmek için de kullanılır.
 
 Bekletme etiketlerini kuruluşunuzdaki kişilerin içeriği sınıflandırabilmeleri için kullanılabilir hale getirmek iki adımlı bir işlemdir: 
 
@@ -76,7 +74,7 @@ Bekletme etiketi ilkenizi oluşturmadan önce **bunun uyarlamalı** mı yoksa **
 
 5. Seçtiğiniz kapsama bağlı olarak:
     
-    - **Uyarlamalı**: **Uyarlamalı ilke kapsamlarını ve konumlarını seçin** sayfasında **Kapsam ekle'yi** seçin ve oluşturulmuş bir veya daha fazla uyarlamalı kapsam seçin. Ardından bir veya daha fazla konum seçin. Seçebileceğiniz konumlar eklenen [kapsam türlerine](retention-settings.md#configuration-information-for-adaptive-scopes) bağlıdır. Örneğin, yalnızca bir **Kullanıcı** kapsam türü eklediyseniz, **Exchange e-postayı** seçebilirsiniz, ancak **siteleri SharePoint seçemezsiniz**. 
+    - **Uyarlamalı**: **Uyarlamalı ilke kapsamlarını ve konumlarını seçin** sayfasında **Kapsam ekle'yi** seçin ve oluşturulmuş bir veya daha fazla uyarlamalı kapsam seçin. Ardından bir veya daha fazla konum seçin. Seçebileceğiniz konumlar eklenen [kapsam türlerine](retention-settings.md#configuration-information-for-adaptive-scopes) bağlıdır. Örneğin, yalnızca bir **Kullanıcı** kapsam türü eklediyseniz **, Exchange e-postasını** seçebilirsiniz ancak **SharePoint sitelerini** seçemezsiniz. 
     
     - **Statik**' i seçtiyseniz: **Konumları seçin** sayfasında konumlardan herhangi birini açın veya kapatın. Her konum için, [ilkeyi konumun tamamına uygulamak için](retention-settings.md#a-policy-that-applies-to-entire-locations) varsayılan olarak bırakabilir veya [ekleme ve dışlamaları belirtebilirsiniz](retention-settings.md#a-policy-with-specific-inclusions-or-exclusions)
     
@@ -86,25 +84,25 @@ Var olan bir bekletme etiketi ilkesini düzenlemek için (ilke türü **Yayımla
 
 ## <a name="when-retention-labels-become-available-to-apply"></a>Bekletme etiketleri uygulanabilecek duruma geldiğinde
 
-Bekletme etiketlerini SharePoint veya OneDrive yayımlarsanız, bu etiketler genellikle kullanıcıların bir gün içinde seçmesi için görünür. Ancak yedi güne kadar izin verin. 
+Bekletme etiketlerini SharePoint veya OneDrive'da yayımlarsanız, bu etiketler genellikle kullanıcıların bir gün içinde seçmesi için görünür. Ancak yedi güne kadar izin verin. 
 
-Bekletme etiketlerini Exchange yayımlarsanız, bu bekletme etiketlerinin kullanıcılar için görünmesi yedi güne kadar sürebilir. Exchange için tüm bekletme ayarlarında olduğu gibi, posta kutusu en az 10 MB veri içermelidir.
+Bekletme etiketlerini Exchange'de yayımlarsanız, bu bekletme etiketlerinin kullanıcılar için görünmesi yedi güne kadar sürebilir. Exchange için tüm bekletme ayarlarında olduğu gibi, posta kutusu en az 10 MB veri içermelidir.
 
 ![Yayımlanan etiketlerin ne zaman etkin olduğunu açıklayan diyagram.](../media/retention-labels-published-timings.png)
 
 Etiketler yedi gün sonra görünmüyorsa, Microsoft Purview uyumluluk portalı Etiket **ilkeleri** sayfasından etiket ilkesini seçerek etiket ilkesinin **Durumunu** denetleyin. Duruma **(Hata)** eklendiğini ve konumların ayrıntılarında ilkenin dağıtılmasının beklenenden uzun sürdüğünü veya ilkeyi yeniden dağıtmayı denediğini belirten bir ileti görürseniz, ilke dağıtımını yeniden denemek için [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) veya [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
 
-1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+1. [Güvenlik & Uyumluluğu PowerShell'e bağlanın](/powershell/exchange/connect-to-scc-powershell).
 
 2. Aşağıdaki komutlardan birini çalıştırın:
     
-    - özel **kanal iletileri Teams** ilke konumları için **kullanıcı iletilerini ve Yammer** **topluluk iletilerini Yammer**:
+    - İlke konumları **için Teams özel kanal iletileri**, **Yammer kullanıcı iletileri** ve **Yammer topluluk iletileri**:
     
         ```PowerShell
         Set-AppRetentionCompliancePolicy -Identity <policy name> -RetryDistribution
         ```
     
-    - Exchange **e-posta, SharePoint** **siteleri**, **Teams kanal iletileri** gibi diğer tüm ilke konumları için:
+    - **Exchange e-postası**, **SharePoint siteleri**, **Teams kanal iletileri** gibi diğer tüm ilke konumları için:
     
         ```PowerShell
         Set-RetentionCompliancePolicy -Identity <policy name> -RetryDistribution
@@ -114,7 +112,7 @@ Etiketler yedi gün sonra görünmüyorsa, Microsoft Purview uyumluluk portalı 
 
 Exchange Online'da bekletme etiketleri, yedi günde bir çalışan bir işlem tarafından son kullanıcıların kullanımına sunulur. PowerShell'i kullanarak bu işlemin en son ne zaman çalıştırılacağını görebilir ve bu nedenle ne zaman yeniden çalıştırılacağını belirleyebilirsiniz.
   
-1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Exchange Online PowerShell’e bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
     
 2. Bu komutları çalıştırın.
     

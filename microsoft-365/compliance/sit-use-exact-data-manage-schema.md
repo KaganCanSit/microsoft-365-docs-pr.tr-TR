@@ -17,16 +17,14 @@ search.appverid:
 - MET150
 description: Tam veri eşleştirme şemanızı düzenlemeyi veya kaldırmayı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 29cfefbd6bf9bb9f92fe5ed7664575ec75adfa12
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: fb8a9d014bb4654ce39b0bb6312f8b20cd6d781e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014684"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629155"
 ---
 # <a name="manage-your-exact-data-match-schema"></a>Tam veri eşleşme şemanızı yönetme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 ## <a name="editing-the-schema-for-edm-based-classification-manually"></a>EDM tabanlı sınıflandırma için şemayı el ile düzenleme
 
@@ -37,7 +35,7 @@ EDM şemanızda, örneğin **edm.xml** dosyasında, EDM tabanlı sınıflandırm
 
 1. **edm.xml** dosyanızı düzenleyin (bu dosya, [Tam veri eşleştirmeye dayalı hassas bilgi türleri için şema oluşturma](sit-get-started-exact-data-match-create-schema.md#create-the-schema-for-exact-data-match-based-sensitive-information-types) bölümünde açıklanan dosyadır.
 
-2. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+2. [Güvenlik & Uyumluluğu PowerShell'e bağlanın](/powershell/exchange/connect-to-scc-powershell).
 
 3. Veritabanı şemanızı güncelleştirmek için aşağıdaki komutu çalıştırın:
 
@@ -65,7 +63,7 @@ EDM şemanızda, örneğin **edm.xml** dosyasında, EDM tabanlı sınıflandırm
 
 EDM tabanlı sınıflandırma için kullandığınız şemayı kaldırmak istiyorsanız şu adımları izleyin:
 
-1. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+1. [Güvenlik & Uyumluluğu PowerShell'e bağlanın](/powershell/exchange/connect-to-scc-powershell).
 
 2. Kaldırmak istediğiniz "hasta kayıtlarının" veri deposu adını (örnek olarak patientrecords deposunu kullanarak) değiştirerek aşağıdaki komutu çalıştırın:
 

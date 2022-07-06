@@ -15,17 +15,15 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Taslak koleksiyon, eBulma (Premium) durumunda, koleksiyonun arama sorgusuyla eşleşen bir arama tahmini döndüren bir eBulma (Premium) durumundaki gözaltı ve gözetim dışı veri kaynaklarının eBulma aramasıdır. Sonuçları gözden geçirme kümesine işlemeden önce arama istatistiklerini gözden geçirebilir, öğelerin örneklemesini önizleyebilir ve koleksiyonu düzeltip yeniden çalıştırabilirsiniz.
-ms.openlocfilehash: 50fb63658541c07a312a502dbbe7d68a26467d14
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Taslak koleksiyon, koleksiyonun arama sorgusuyla eşleşen bir arama tahmini döndüren bir eBulma (Premium) durumundaki gözetim ve gözetim dışı veri kaynaklarının eBulma aramasıdır. Sonuçları gözden geçirme kümesine işlemeden önce arama istatistiklerini gözden geçirebilir, öğelerin örneklemesini önizleyebilir ve koleksiyonu düzeltip yeniden çalıştırabilirsiniz.
+ms.openlocfilehash: 979573503e448a731c487018b525d6ddb1d7d08f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096104"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630179"
 ---
 # <a name="create-a-draft-collection-in-ediscovery-premium"></a>eBulma'da taslak koleksiyon oluşturma (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Olay için koruyucuları ve koruyucu olmayan veri kaynaklarını belirledikten sonra, ilgili bir belge kümesini belirlemeye ve bulmaya hazır olursunuz. Bunu, veri kaynaklarında ilgili içerik aramak için Koleksiyonlar aracını kullanarak yaparsınız. Bunu, belirtilen veri kaynaklarında arama ölçütlerinizle eşleşen içerik arayan bir koleksiyon oluşturarak yaparsınız. Öğelerin bulunduğuna ilişkin bir tahmin olan *bir taslak koleksiyon* oluşturma seçeneğiniz vardır veya öğeleri otomatik olarak bir gözden geçirme kümesine ekleyen bir koleksiyon oluşturabilirsiniz. Taslak koleksiyon oluşturduğunuzda, bulunan öğelerin toplam sayısı ve boyutu, bulundukları farklı veri kaynakları ve arama sorgusuyla ilgili istatistikler gibi arama sorgusuyla eşleşen tahmini sonuçlar hakkındaki bilgileri görüntüleyebilirsiniz. Koleksiyon tarafından döndürülen öğelerin bir örneğini de önizleyebilirsiniz. Bu istatistikleri kullanarak arama sorgusunu değiştirebilir ve sonuçlarınızı daraltmak için taslak koleksiyonu yeniden çalıştırabilirsiniz. Koleksiyon sonuçlarından memnun olduğunuzda, koleksiyonu bir gözden geçirme kümesine işleyebilirsiniz. Bir taslak koleksiyonu işlediğiniz zaman, koleksiyon tarafından döndürülen öğeler gözden geçirme, analiz ve dışarı aktarma için bir gözden geçirme kümesine eklenir.
 
@@ -37,13 +35,13 @@ Olay için koruyucuları ve koruyucu olmayan veri kaynaklarını belirledikten s
 
   - [Bir vakaya yediemin olmayan veri kaynakları ekleme](non-custodial-data-sources.md)
 
-- Bir taslak koleksiyonda servis talebiyle ilgili olabilecek içerik için ek veri kaynaklarını (servis talebine koruyucu veya gözetimsiz konum olarak eklenmemiş olanlar) arayabilirsiniz. Bu veri kaynakları posta kutularını, SharePoint siteleri ve Teams içerebilir. Bu durum sizin durumunuz için geçerliyse, bunları koleksiyona ekleyebilmek için bu veri kaynaklarının listesini derleyin.
+- Bir taslak koleksiyonda servis talebiyle ilgili olabilecek içerik için ek veri kaynaklarını (servis talebine koruyucu veya gözetimsiz konum olarak eklenmemiş olanlar) arayabilirsiniz. Bu veri kaynakları posta kutularını, SharePoint sitelerini ve Teams'i içerebilir. Bu durum sizin durumunuz için geçerliyse, bunları koleksiyona ekleyebilmek için bu veri kaynaklarının listesini derleyin.
 
 ## <a name="create-a-draft-collection"></a>Taslak koleksiyon oluşturma
 
-1. Microsoft Purview uyumluluk portalında eBulma (Premium) servis talebini açın ve **koleksiyonlar** sekmesini seçin.
+1. Microsoft Purview uyumluluk portalı, eBulma (Premium) servis talebini açın ve **koleksiyonlar** sekmesini seçin.
 
-2. **Koleksiyonlar** sayfasında Yeni **koleksiyonStandard koleksiyonu'nu** >  seçin.
+2. **Koleksiyonlar** sayfasında **Yeni koleksiyon****Standart koleksiyon'ı** >  seçin.
 
 3. Koleksiyon için bir ad (gerekli) ve açıklama (isteğe bağlı) yazın. Koleksiyon oluşturulduktan sonra adı değiştiremezsiniz, ancak açıklamayı değiştirebilirsiniz.
 
@@ -61,16 +59,16 @@ Olay için koruyucuları ve koruyucu olmayan veri kaynaklarını belirledikten s
 
 6. **Ek veri kaynakları** sayfasında, koleksiyonun bir parçası olarak aranacak diğer posta kutularını ve siteleri seçebilirsiniz. Bu tür veri kaynakları, olayda koruyucu veya gözetimsiz veri konumu olarak eklenmemiştir. Ek veri kaynaklarında arama yaparken iki seçeneğiniz de vardır:
 
-   - Belirli bir hizmetin tüm içerik konumlarında arama yapmak için (posta kutuları, Exchange SharePoint ve OneDrive siteleri veya ortak klasörler Exchange) **Durum** sütununda karşılık gelen **Tümünü seç** iki durumlu düğmesini tıklatın. Bu seçenek, seçili hizmetteki tüm içerik konumlarında arama yapacaktır.
+   - Belirli bir hizmetin (Exchange posta kutuları, SharePoint ve OneDrive siteleri veya Exchange ortak klasörleri) tüm içerik konumlarında arama yapmak için **, Durum** sütununda karşılık gelen **Tümünü seç** iki durumlu düğmesine tıklayın. Bu seçenek, seçili hizmetteki tüm içerik konumlarında arama yapacaktır.
 
-   - Bir hizmetin belirli içerik konumunu aramak için **, Durum** sütununda karşılık gelen **Tümünü seç** iki durumlu düğmesine tıklayın ve ardından Belirli içerik konumlarında arama yapmak için **Kullanıcılar, gruplar veya ekipler** (Exchange posta kutuları için) veya Siteleri **seçin** (SharePoint ve OneDrive siteleri) seçeneğine tıklayın.
+   - Bir hizmetin belirli bir içerik konumunu aramak için **, Durum** sütununda karşılık gelen **Tümünü seç** iki durumlu düğmesine tıklayın ve ardından Belirli içerik konumlarında arama yapmak için **Kullanıcılar, gruplar veya ekipler** (Exchange posta kutuları için) veya Siteleri **seçin** (SharePoint ve OneDrive siteleri) seçeneğine tıklayın.
 
 7. **Koşullar** sayfasında, önceki sihirbaz sayfalarında tanımladığınız veri kaynaklarından öğeleri toplamak için kullanılan arama sorgusunu oluşturabilirsiniz. Anahtar sözcükleri, property:value çiftlerini arayabilir veya anahtar sözcük listesi kullanabilirsiniz. Koleksiyonun kapsamını daraltmak için çeşitli arama koşulları da ekleyebilirsiniz. Daha fazla bilgi için bkz. [Koleksiyonlar için arama sorguları oluşturma](building-search-queries.md).
 
 8. **Taslak olarak kaydet veya gözden geçirme kümesine ekle** sayfasında **Koleksiyonu taslak olarak kaydet'i** seçin.
 
    > [!NOTE]
-   > Bu sayfadaki diğer seçenek öğeleri toplamanıza ve doğrudan bir gözden geçirme kümesine eklemenize olanak tanır. Koleksiyon sonuçlarının istatistiklerini gözden geçirebileceğiniz ve bir örneğin önizlemesini görüntüleyebileceğiniz bir taslak koleksiyon oluşturmak yerine, bu seçenek bu işlemi atlar ve koleksiyonu otomatik olarak bir gözden geçirme kümesine ekler. Koleksiyonu bir gözden geçirme kümesine eklemek için ikinci seçeneği belirlerseniz, Microsoft Teams ve Yammer sohbet konuşma yazışmalarının tamamını toplama ve bulut eklerini (modern ekler olarak da adlandırılır) toplama gibi yapılandırabileceğiniz ek *ayarlara* sahip olursunuz. Bu ayarlar hakkında daha fazla bilgi için bkz [. Taslak koleksiyonu gözden geçirme kümesine işleme](commit-draft-collection.md).
+   > Bu sayfadaki diğer seçenek öğeleri toplamanıza ve doğrudan bir gözden geçirme kümesine eklemenize olanak tanır. Koleksiyon sonuçlarının istatistiklerini gözden geçirebileceğiniz ve bir örneğin önizlemesini görüntüleyebileceğiniz bir taslak koleksiyon oluşturmak yerine, bu seçenek bu işlemi atlar ve koleksiyonu otomatik olarak bir gözden geçirme kümesine ekler. Koleksiyonu bir gözden geçirme kümesine eklemek için ikinci seçeneği belirlerseniz, Microsoft Teams ve Yammer'da sohbet konuşma yazışmalarının tamamını toplama ve bulut eklerini ( *modern ekler* olarak da adlandırılır) toplama gibi yapılandırmanız gereken ek ayarlar vardır. Bu ayarlar hakkında daha fazla bilgi için bkz [. Taslak koleksiyonu gözden geçirme kümesine işleme](commit-draft-collection.md).
 
 9. **Koleksiyonunuzu gözden geçirin** sayfasında, önceki sayfalarda yapılandırdığınız koleksiyon ayarlarını gözden geçirebilir ve güncelleştirebilirsiniz.
 
@@ -106,11 +104,11 @@ Koleksiyon açılır sayfasından yapabileceklerinin listesi aşağıdadır:
 
 - **Koleksiyonda arama yapılan koruyucuların** ve gözetim dışı veri kaynaklarının) listesini görüntülemek için Veri kaynakları sekmesini seçin. Arama yapılan ek içerik konumları **Özet** sekmesindeki **Konumlar** altında listelenir.
 
-- Koleksiyonla ilgili istatistikleri görüntülemek için **İstatistikleri ara** sekmesini seçin. Bu, her hizmette bulunan öğelerin toplam sayısını ve boyutunu (örneğin, posta kutuları veya SharePoint siteleri Exchange) ve koleksiyon tarafından kullanılan arama sorgusunun farklı bileşenleri tarafından döndürülen öğe sayısıyla ilgili istatistikleri görüntüleyen bir koşul raporu içerir. Daha fazla bilgi için bkz [. Koleksiyon istatistikleri ve raporları](collection-statistics-reports.md).
+- Koleksiyonla ilgili istatistikleri görüntülemek için **İstatistikleri ara** sekmesini seçin. Bu, her hizmette bulunan öğelerin toplam sayısını ve boyutunu (örneğin, Exchange posta kutuları veya SharePoint siteleri) ve koleksiyon tarafından kullanılan arama sorgusunun farklı bileşenleri tarafından döndürülen öğe sayısıyla ilgili istatistikleri görüntüleyen bir koşul raporunu içerir. Daha fazla bilgi için bkz [. Koleksiyon istatistikleri ve raporları](collection-statistics-reports.md).
 
 - Koleksiyon tarafından döndürülen öğelerin bir örneğini önizlemek için **Örneği gözden geçir** 'e (açılır sayfanın en altında yer alır) tıklayın.
 
-- Taslak koleksiyonu bir gözden geçirme kümesine işleyin (**ActionsEdit** >  **koleksiyonu'na** tıklayarak). Bu, koleksiyonu yeniden çalıştırdığınız (geçerli ayarları kullanarak) ve koleksiyon tarafından döndürülen öğeleri bir gözden geçirme kümesine eklediğiniz anlamına gelir. Daha önce açıklandığı gibi, koleksiyonu bir gözden geçirme kümesine eklediğinizde ek ayarları da yapılandırabilirsiniz (konuşma yazışması ve bulut tabanlı ekler gibi). Daha fazla bilgi ve adım adım yönergeler için bkz. [Taslak koleksiyonu gözden geçirme kümesine işleme](commit-draft-collection.md).
+- Taslak koleksiyonu bir gözden geçirme kümesine işleyin ( **Eylemler** > **Koleksiyonu düzenle'ye** tıklayarak). Bu, koleksiyonu yeniden çalıştırdığınız (geçerli ayarları kullanarak) ve koleksiyon tarafından döndürülen öğeleri bir gözden geçirme kümesine eklediğiniz anlamına gelir. Daha önce açıklandığı gibi, koleksiyonu bir gözden geçirme kümesine eklediğinizde ek ayarları da yapılandırabilirsiniz (konuşma yazışması ve bulut tabanlı ekler gibi). Daha fazla bilgi ve adım adım yönergeler için bkz. [Taslak koleksiyonu gözden geçirme kümesine işleme](commit-draft-collection.md).
 
 ## <a name="manage-a-draft-collection"></a>Taslak koleksiyonu yönetme
 

@@ -13,20 +13,18 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: eBulma 'da (Premium) metin, açıklama ekleme, dönüştürülen veya yerel görünüm gibi içeriği nasıl görüntüleyebileceğinizi seçin.
+description: eBulma (Premium) uygulamasında metin, açıklama ekleme, dönüştürme veya yerel görünüm gibi içerikleri nasıl görüntüleyebileceğinizi seçin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: d21ee5f24b12f010ba9869ca1dfe9af9251ab64c
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: c5373734b0442d872f5c98ce40876c7be8d95990
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093536"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627029"
 ---
 # <a name="view-documents-in-a-review-set-in-ediscovery-premium"></a>Belgeleri eBulma'da (Premium) bir gözden geçirme kümesinde görüntüleme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-eBulma (Premium) içeriği farklı amaçlarla çeşitli görüntüleyiciler aracılığıyla görüntüler. Çeşitli görüntüleyiciler, bir gözden geçirme kümesindeki herhangi bir belgeye tıklayarak kullanılabilir. Şu anda sağlanan görüntüleyiciler şunlardır:
+eKeşif (Premium), içeriği farklı amaçlarla çeşitli izleyiciler aracılığıyla görüntüler. Çeşitli görüntüleyiciler, bir gözden geçirme kümesindeki herhangi bir belgeye tıklayarak kullanılabilir. Şu anda sağlanan görüntüleyiciler şunlardır:
 
 - Dosya meta verileri
 - Yerel görünüm
@@ -42,7 +40,7 @@ Bu panel, belgeyle ilişkili çeşitli meta verileri görüntülemek için açı
 
 ## <a name="native-view"></a>Yerel görünüm
 
-Yerel görüntüleyici, belgenin en zengin görünümünü görüntüler. Yüzlerce dosya türünü destekler ve mümkün olan en doğru yerel deneyimi görüntülemeye yöneliktir. görüntüleyici, Microsoft Office dosyalarda belge açıklamaları, Excel formüller, gizli satırlar/sütunlar ve PowerPoint notlar gibi içerikleri görüntülemek için Office uygulamalarının web sürümünü kullanır.
+Yerel görüntüleyici, belgenin en zengin görünümünü görüntüler. Yüzlerce dosya türünü destekler ve mümkün olan en doğru yerel deneyimi görüntülemeye yöneliktir. Microsoft Office dosyalarında görüntüleyici, belge açıklamaları, Excel formülleri, gizli satırlar/sütunlar ve PowerPoint notları gibi içerikleri görüntülemek için Office uygulamalarının web sürümünü kullanır.
 
 ![Yerel görünüm
 ](../media/Reviewimage3.png)

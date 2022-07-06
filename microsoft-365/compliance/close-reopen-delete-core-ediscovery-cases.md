@@ -17,18 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Bu makalede, eBulma (Standart) servis taleplerinin nasıl yönetileceğini açıklanmaktadır. Bu, bir servis talebini kapatmayı, kapalı bir servis talebini yeniden açmayı ve bir servis talebini silmeyi içerir.
-ms.openlocfilehash: f527d206e7112534db557928daf6ab8942c60d1c
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 5c2efd96f563eb2947b17e1cc857613d27981dac
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318326"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66628869"
 ---
 # <a name="close-reopen-and-delete-a-ediscovery-standard-case"></a>eBulma (Standart) servis talebini kapatma, yeniden açma ve silme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Bu makalede, Microsoft 365 Microsoft Purview eKeşif (Standart) servis taleplerinin nasıl kapatıldığı, yeniden açıldığı ve silineceği açıklanır.
+Bu makalede, Microsoft 365'te Microsoft Purview eKeşif (Standart) servis taleplerinin nasıl kapatıldığı, yeniden açıldığı ve silineceği açıklanır.
 
 ## <a name="close-a-case"></a>Servis talebini kapatma
 
@@ -44,7 +42,7 @@ Bir eBulma (Standart) olayı tarafından desteklenen yasal dava veya araştırma
 
 Bir servis talebini kapatmak için:
   
-1. Uyumluluk portalında, kuruluşunuzdaki **eBulma** >  **(Standart)** servis taleplerinin listesini görüntülemek için eBulma (Standart) seçeneğine tıklayın.
+1. Uyumluluk portalında, kuruluşunuzdaki **eBulma** > **(Standart)** servis taleplerinin listesini görüntülemek için eBulma eBulma (Standart) seçeneğine tıklayın.
 
 2. Kapatmak istediğiniz servis talebinin adına tıklayın.
 
@@ -104,7 +102,7 @@ eBulma ayrı tutmasını silmek için:
 
 Bir servis talebini silmek için:
 
-1. Uyumluluk portalında, kuruluşunuzdaki **eBulma** >  **(Standart)** servis taleplerinin listesini görüntülemek için eBulma (Standart) seçeneğine tıklayın.
+1. Uyumluluk portalında, kuruluşunuzdaki **eBulma** > **(Standart)** servis taleplerinin listesini görüntülemek için eBulma eBulma (Standart) seçeneğine tıklayın.
 
 2. Silmek istediğiniz servis talebinin adına tıklayın.
 

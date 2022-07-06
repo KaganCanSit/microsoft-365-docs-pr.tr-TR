@@ -1,5 +1,5 @@
 ---
-title: Exchange Online RMS ile posta şifrelemesi
+title: AD RMS ile Exchange Online posta şifrelemesi
 f1.keywords:
 - NOCSH
 ms.author: krowley
@@ -15,36 +15,36 @@ search.appverid:
 ms.assetid: 2c956776-0016-4be6-b4cd-133a237f4a9e
 ms.custom:
 - seo-marvel-apr2020
-description: IRM'yi, Exchange Online gereksinimlerini karşılamak üzere şirket içi Active Directory Rights Management Service (AD RMS) kullanmak üzere yapılandırmayı öğrenin.
-ms.openlocfilehash: 867293d5afa29242409cc92702ff8b505ed21196
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Exchange Online IRM'yi kuruluşunuzun gereksinimlerini karşılamak için şirket içi Active Directory Rights Management Service'i (AD RMS) kullanacak şekilde yapılandırmayı öğrenin.
+ms.openlocfilehash: 926bea0b1f9379d2eaad2bc7c5bd672f98329b8a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984692"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66628803"
 ---
-# <a name="exchange-online-mail-encryption-with-ad-rms"></a>Exchange Online RMS ile posta şifrelemesi
+# <a name="exchange-online-mail-encryption-with-ad-rms"></a>AD RMS ile Exchange Online posta şifrelemesi
 
-E-posta iletilerinin ve eklerin Exchange Online çevrimiçi ve çevrimdışı korunmasını sağlayan Bilgi Hakları Yönetimi (IRM) işlevselliği, bilgi sızıntısını önlemeye yardımcı olur. Gerekirse, Exchange Online gereksinimlerinizi karşılamak için IRM'yi şirket içi Active Directory Rights Management Service'i (AD RMS) kullanmak üzere yapılandırabilirsiniz. Bu sık karşılaşılan bir durum değildir. AD RMS'yi kullanmak için gereksiniminiz yoksa, [bunun yerine OFFICE 365 İLETI ŞIFRELEMESI](ome.md) kullanın. 
+Bilgi sızıntısını önlemeye yardımcı olmak için Exchange Online, e-posta iletilerinin ve eklerinin çevrimiçi ve çevrimdışı korunmasını sağlayan Bilgi Hakları Yönetimi (IRM) işlevselliğini içerir. Exchange Online IRM'yi, kuruluşunuzun gereksinimlerini karşılamak için gerekirse şirket içi Active Directory Rights Management Service'i (AD RMS) kullanacak şekilde yapılandırabilirsiniz. Bu yaygın bir durum değildir. AD RMS kullanma gereksiniminiz yoksa bunun yerine [Microsoft Purview İleti Şifrelemesi](ome.md) kullanın.
 
-IRM koruması, Microsoft Outlook veya Web üzerinde Outlook'daki kullanıcılar tarafından uygulanabilir ve aktarım koruma kurallarını veya toplu koruma kurallarını Outlook tarafından uygulanabilir. IRM, sizin ve kullanıcılarının e-posta içinde hassas verilere kimlerin eriş erişeb, ilet, yazdırılabilir veya kopyalayıp kopyalay kullanıcılar tarafından kontrol musunuz? denetlemenize yardımcı olur.
+IRM koruması Microsoft Outlook veya Web üzerinde Outlook kullanıcıları tarafından uygulanabilir ve yöneticiler tarafından aktarım koruma kuralları veya Outlook koruma kuralları kullanılarak uygulanabilir. IRM, sizin ve kullanıcılarınızın e-posta içindeki hassas verilere kimlerin erişebileceğini, iletebileceğini, yazdırabileceğini veya kopyalayabileceğini denetlemenize yardımcı olur.
   
-## <a name="changes-to-how-irm-works-with-office-365-message-encryption-ome-and-azure-active-directory"></a>IRM'nin IRM'de (OME) Office 365 İleti Şifrelemesi çalışma ve çalışma Azure Active Directory
+## <a name="changes-to-how-irm-works-with-message-encryption-and-azure-active-directory"></a>İleti şifreleme ve Azure Active Directory ile IRM'nin çalışma şeklindeki değişiklikler
 
-Eylül 2017'den itibaren, Office 365 İleti Şifrelemesi özellikleri ayar tarihine kadar IRM'yi Azure Rights Management (Azure RMS) ile kullanmak üzere de ayarlamıştınız. Artık IRM'yi Azure RMS ile ayrı olarak ayarlamazsınız. Bunun yerine, OME ve hak yönetimi sorunsuz bir şekilde birlikte çalışır. Yeni özellikler hakkında daha fazla ayrıntı için bkz. [SSS Office 365 İleti Şifrelemesi bakın](./ome-faq.yml). Kurum içindeki yeni OME özelliklerini kullanmaya başlamaya hazırsanız, bkz. [Azure Information Protection'ın Office 365 İleti Şifrelemesi](./set-up-new-message-encryption-capabilities.md) yeni özellikler ayarlama.
+Eylül 2017 itibarıyla, kuruluşunuz için Microsoft Purview İleti Şifrelemesi ayarladığınızda, IRM'yi Azure Rights Management (Azure RMS) ile kullanılacak şekilde de ayarlarsınız. Artık Azure RMS ile IRM'i ayrı olarak ayarlamazsınız. Bunun yerine, ileti şifreleme ve hak yönetimi birlikte sorunsuz bir şekilde çalışır. Microsoft Purview İleti Şifrelemesi hakkında daha fazla ayrıntı için bkz. [İleti Şifrelemesi SSS](./ome-faq.yml). Kuruluşunuzdaki Microsoft Purview İleti Şifrelemesi kullanmaya başlamaya hazırsanız bkz. [Microsoft Purview İleti Şifrelemesi ayarlama](./set-up-new-message-encryption-capabilities.md).
   
-## <a name="how-irm-works-with-exchange-online-and-active-directory-rights-management-services"></a>IRM diğer çalışanlarla Exchange Online ve Active Directory Rights Management Services
+## <a name="how-irm-works-with-exchange-online-and-active-directory-rights-management-services"></a>IRM Exchange Online ve Active Directory Rights Management Services ile nasıl çalışır?
 
-Exchange Online IRM, Windows Server 2008 ve sonraki bir Active Directory Rights Management Services bilgi koruma teknolojisi olan şirket içi E-posta (AD RMS) kullanır. IRM koruması, e-posta iletisine bir AD RMS hak ilkesi şablonu uygulanarak e-postaya uygulanır. Haklar iletinin kendisine iliştirilir ve böylelikle koruma, hem çevrimiçi, hem çevrimdışı hem de kurum güvenlik duvarı içinde ve dışında gerçekleşir.
+Exchange Online IRM, Windows Server 2008 ve sonraki sürümlerde bir bilgi koruma teknolojisi olan şirket içi Active Directory Rights Management Services'ı (AD RMS) kullanır. E-posta iletisine AD RMS hak ilkesi şablonu uygulanarak e-postaya IRM koruması uygulanır. Korumanın çevrimiçi, çevrimdışı ve kuruluşunuzun güvenlik duvarının içinde ve dışında gerçekleşmesi için, haklar iletinin kendisine eklenir.
   
-Kullanıcılar, alıcıların bir ileti üzerinde sahip olduğu izinleri denetim altına almak için e-posta iletisine şablon uygulayabilir. İletiden bilgi iletme, iletiden bilgi ayıklama, ileti kaydetme veya iletiyi yazdırma gibi eylemler, iletiye AD RMS hakları ilkesi uygulanarak denetlenebilirsiniz.
+Kullanıcılar, alıcıların iletideki izinlerini denetlemek için bir e-posta iletisine şablon uygulayabilir. İletiye iletme, iletiden bilgi ayıklama, ileti kaydetme veya ileti yazdırma gibi eylemler, iletiye bir AD RMS hak ilkesi uygulanarak denetlenebilir.
   
-IRM'yi, Windows Server 2008 veya sonraki bir Windows AD RMS sunucusunu kullanmak üzere yapılandırabilirsiniz. Bulut tabanlı kuruluş için AD RMS hak ilkesi şablonlarını yönetmek için bu AD RMS sunucusunu kullanabilirsiniz. Outlook, kullanıcıların göndermekte olduğu iletilere IRM koruması uygulamalarına olanak sağlamak için AD RMS sunucusuna da güven verir. Ayrıntılar için bkz. [IRM'yi şirket içi AD RMS sunucusunu kullanmak üzere yapılandırma](configure-irm-to-use-an-on-premises-ad-rms-server.md). 
+IRM'yi Windows Server 2008 veya üzerini çalıştıran bir AD RMS sunucusu kullanacak şekilde yapılandırabilirsiniz. Bulut tabanlı kuruluşunuz için AD RMS hak ilkesi şablonlarını yönetmek için bu AD RMS sunucusunu kullanabilirsiniz. Outlook, kullanıcıların gönderdikleri iletilere IRM koruması uygulamasına olanak tanımak için AD RMS sunucusuna da dayanır. Ayrıntılar için bkz. [IRM'yi şirket içi AD RMS sunucusu kullanacak şekilde yapılandırma](configure-irm-to-use-an-on-premises-ad-rms-server.md).
   
-Etkinleştirildikten sonra, IRM koruması iletilere aşağıdaki gibi uygulanabilir:
+Etkinleştirildikten sonra IRM koruması iletilere aşağıdaki gibi uygulanabilir:
   
-- **Kullanıcılar şablonlar ve şablonlar kullanarak el ile Outlook ve Web üzerinde Outlook.** Kullanıcılar, İzinleri ayarla listesinden şablonu seçerek e-posta iletisine AD RMS hak **ilkesi şablonu uygulayabilirler** . Kullanıcılar IRM korumalı bir ileti gönderirken, desteklenen bir biçim kullanan ekli dosyalar da iletiyle aynı IRM korumasını alır. IRM koruması Word, Excel ve PowerPoint dosyalarının yanı sıra .xps dosyaları ve ekli e-posta iletileriyle ilişkilendirilmiş dosyalara uygulanır. 
-    
-- **Yöneticiler, IRM korumasını otomatik olarak hem aktarım hem de diğer kullanıcılara uygulamak Outlook aktarım Web üzerinde Outlook.** IRM ile koruma iletileri için aktarım koruma kuralları oluşturabilirsiniz. Aktarım koruma kuralı eylemsini yapılandırarak, kural koşuluna uygun iletilere AD RMS hak ilkesi şablonu uygulayabilirsiniz. IRM'yi etkinleştirdikten sonra, kuruluşun AD RMS hak ilkesi şablonları iletiye hak koruması uygulama adlı aktarım koruma kuralı **eylemiyle kullanılabilir**.
-    
-- **Yöneticiler özel koruma Outlook oluşturabilir.** Outlook koruma kuralları, gönderenin departmanını, iletinin kime gönderildiğini ve alıcıların kuruluş içinde mi yoksa dışında mı olduğunu içeren ileti koşullarına bağlı olarak, Outlook 2010'da iletilere otomatik olarak IRM koruması uygulamaz (Web üzerinde Outlook değil). Ayrıntılar için bkz[. Özel koruma Outlook oluşturma](/exchange/create-an-outlook-protection-rule-exchange-2013-help).
+- **Kullanıcılar Outlook ve Web üzerinde Outlook kullanarak el ile şablon uygulayabilir.** Kullanıcılar, **izinleri ayarla** listesinden şablonu seçerek bir e-posta iletisine AD RMS hak ilkesi şablonu uygulayabilir. Kullanıcılar IRM korumalı bir ileti gönderdiğinde, desteklenen biçimi kullanan ekli dosyalar da iletiyle aynı IRM korumasını alır. IRM koruması Word, Excel ve PowerPoint ile ilişkilendirilmiş dosyalara, ayrıca .xps dosyalarına ve ekli e-posta iletilerine uygulanır.
+
+- **Yöneticiler, hem Outlook'a hem de Web üzerinde Outlook otomatik olarak IRM koruması uygulamak için aktarım koruma kurallarını kullanabilir.** IRM korumalı iletilere aktarım koruma kuralları oluşturabilirsiniz. Aktarım koruma kuralı eylemini, kural koşulunu karşılayan iletilere AD RMS hak ilkesi şablonu uygulayacak şekilde yapılandırın. IRM'yi etkinleştirdikten sonra, kuruluşunuzun AD RMS hak ilkesi şablonları, **ile iletiye hak korumasını uygula** adlı aktarım koruma kuralı eylemiyle kullanılabilir.
+
+- **Yöneticiler Outlook koruma kuralları oluşturabilir.** Outlook koruma kuralları, gönderenin bölümünü, iletinin kime gönderildiğini ve alıcıların kuruluşunuzun içinde veya dışında olup olmadığını içeren ileti koşullarına göre Outlook 2010'daki iletilere (Web üzerinde Outlook değil) otomatik olarak IRM koruması uygular. Ayrıntılar için bkz. [Outlook Koruma Kuralı Oluşturma](/exchange/create-an-outlook-protection-rule-exchange-2013-help).

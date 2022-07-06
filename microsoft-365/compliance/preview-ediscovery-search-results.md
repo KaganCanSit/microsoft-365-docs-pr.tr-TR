@@ -19,23 +19,21 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Microsoft Purview uyumluluk portalında İçerik araması veya eBulma (Standart) araması tarafından döndürülen sonuçların bir örneğini önizleme.
-ms.openlocfilehash: acbfebc5935666299dc6a717d70f9c426a6d61cd
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Microsoft Purview uyumluluk portalı İçerik araması veya eBulma (Standart) araması tarafından döndürülen sonuçların örneğini önizleme.
+ms.openlocfilehash: f369148c6f898c4150d0c86f898640f71ab367a0
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099641"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66628605"
 ---
 # <a name="preview-ediscovery-search-results"></a>eKeşif arama sonuçlarını önizleme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Bir İçerik araması veya Microsoft Purview eKeşif (Standart) olayıyla ilişkilendirilmiş bir arama çalıştırdıktan sonra, arama tarafından döndürülen sonuçların bir örneğini önizleyebilirsiniz. Arama sorgusu tarafından döndürülen öğelerin önizlemesini görüntülemek, aramanın umduğun sonuçları döndüreceğini veya arama sorgusunu değiştirip aramayı yeniden çalıştırmanız gerekip gerekmediğini belirlemenize yardımcı olabilir.
+İçerik araması veya Microsoft Purview eKeşif (Standart) servis talebiyle ilişkilendirilmiş bir arama çalıştırdıktan sonra, arama tarafından döndürülen sonuçların bir örneğini önizleyebilirsiniz. Arama sorgusu tarafından döndürülen öğelerin önizlemesini görüntülemek, aramanın umduğun sonuçları döndüreceğini veya arama sorgusunu değiştirip aramayı yeniden çalıştırmanız gerekip gerekmediğini belirlemenize yardımcı olabilir.
 
 Arama tarafından döndürülen sonuçların örneğini önizlemek için:
 
-1. Microsoft Purview uyumluluk portalında İçerik arama sayfasına veya eBulma (Standart) servis talebine gidin.
+1. Microsoft Purview uyumluluk portalı İçerik arama sayfasına veya eBulma (Standart) servis talebine gidin.
 
 2. Açılır sayfayı görüntülemek için arama'yı seçin.
 

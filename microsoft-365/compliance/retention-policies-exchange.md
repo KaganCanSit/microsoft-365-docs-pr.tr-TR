@@ -16,21 +16,19 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Bekletmenin Exchange için nasıl çalıştığını öğrenin.
-ms.openlocfilehash: b49a21f5358bb8d4b25c1b164d30180f1fa265d9
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+description: Exchange'de bekletmenin nasıl çalıştığını öğrenin.
+ms.openlocfilehash: 1b4c255e2a228801ece0c98d0ac8686b3582ab30
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285956"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626017"
 ---
 # <a name="learn-about-retention-for-exchange"></a>Exchange için bekletme hakkında bilgi edinin
 
->*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Güvenlik & uyumluluğu için Microsoft 365 lisanslama kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Bu makaledeki bilgiler, Exchange özgü bilgiler içerdiğinden [Saklama hakkında bilgi edinin](retention.md) ekini ekler.  Diğer iş yükleri için bkz:
+Bu makaledeki bilgiler, Exchange'e özgü bilgiler içerdiğinden [Elde tutma hakkında bilgi edinin](retention.md) ekini ekler.  Diğer iş yükleri için bkz:
 
 - [SharePoint ve OneDrive için bekletme hakkında bilgi edinin](retention-policies-sharepoint.md)
 - [Microsoft Teams için bekletme hakkında bilgi edinin](retention-policies-teams.md)
@@ -38,17 +36,17 @@ Bu makaledeki bilgiler, Exchange özgü bilgiler içerdiğinden [Saklama hakkın
 
 ## <a name="whats-included-for-retention-and-deletion"></a>Saklama ve silmeye dahil olanlar
 
-Kullanıcı posta kutularından ve paylaşılan posta kutularından gelen aşağıdaki Exchange öğeleri bekletme ilkeleri ve bekletme etiketleri kullanılarak korunabilir ve silinebilir: Posta iletileri (alınan iletiler, taslaklar, gönderilmiş iletiler dahil) ekleri, bitiş tarihleri olan görevler ve notlar. 
+Kullanıcı posta kutularından ve paylaşılan posta kutularından gelen aşağıdaki Exchange öğeleri bekletme ilkeleri ve bekletme etiketleri kullanılarak korunabilir ve silinebilir: Posta iletileri (alınan iletiler, taslaklar, gönderilmiş iletiler dahil) ekleri, bitiş tarihi olan görevler ve notlar. 
 
 Bitiş tarihi olan takvim öğeleri bekletme ilkeleri için desteklenir ancak bekletme etiketleri için desteklenmez.
 
 Kişiler ve bitiş tarihi olmayan görevler ve takvim öğeleri desteklenmez.
 
-Posta kutusunda depolanan Skype ve Teams iletileri gibi diğer öğeler, Exchange saklama ilkelerine veya etiketlerine dahil değildir. Bu öğelerin kendi bekletme ilkeleri vardır.
+Bir posta kutusunda depolanan Skype ve Teams iletileri gibi diğer öğeler Exchange için bekletme ilkelerine veya etiketlere dahil değildir. Bu öğelerin kendi bekletme ilkeleri vardır.
 
 Bekletme ayarları uygulanmadan önce posta kutuları en az 10 MB veriye sahip olmalıdır ve bekletme etiketleri bu verilere yayımlanabilir.
 
-## <a name="how-retention-works-for-exchange"></a>Bekletme Exchange için nasıl çalışır?
+## <a name="how-retention-works-for-exchange"></a>Exchange için bekletme nasıl çalışır?
 
 Hem posta kutusu hem de ortak klasör, öğeleri korumak için [Kurtarılabilir Öğeler klasörünü](/exchange/security-and-compliance/recoverable-items-folder/recoverable-items-folder) kullanır. Yalnızca eBulma izinleri atanmış kişiler başka bir kullanıcının Kurtarılabilir Öğeler klasöründeki öğeleri görüntüleyebilir.
   
@@ -59,11 +57,11 @@ Exchange verilerine bekletme ayarları uyguladığınızda, zamanlayıcı işi K
 > [!NOTE]
 > [İlk saklama ilkesi](retention.md#the-principles-of-retention-or-what-takes-precedence) nedeniyle, aynı öğenin başka bir bekletme ilkesi veya saklama etiketi nedeniyle korunması gerekiyorsa veya yasal veya araştırma amaçlı olarak eBulma tutmaları altındaysa kalıcı silme işlemi her zaman askıya alınır.
 
-Zamanlayıcı işinin çalışması yedi güne kadar sürebilir ve Exchange konumu en az 10 MB içermelidir.
+Zamanlayıcı işinin çalıştırılması yedi güne kadar sürebilir ve Exchange konumunun en az 10 MB içermesi gerekir.
   
 Kullanıcı bir posta kutusu öğesinin konu, gövde, ekler, gönderenler ve alıcılar veya ileti için gönderilen veya alınan tarih gibi özelliklerini değiştirmeye çalıştığında, değişiklik işlenmeden önce özgün öğenin bir kopyası Kurtarılabilir Öğeler klasörüne kaydedilir. Bu eylem sonraki her değişiklik için gerçekleşir. Saklama süresinin sonunda Kurtarılabilir Öğeler klasöründeki kopyalar kalıcı olarak silinir.
 
-bekletme ayarları Exchange içeriğe uygulandıktan sonra, içeriğin izlediği yollar bekletme ayarlarının tutulup silineceği, yalnızca korunacağı veya silineceği durumuna bağlıdır.
+Exchange içeriğine bekletme ayarları uygulandıktan sonra, içeriğin izlediği yollar bekletme ayarlarının tutulup silineceği, yalnızca korunacağı veya yalnızca silineceği durumuna bağlıdır.
 
 Bekletme ayarlarının saklanması ve silinmesi gerektiğinde:
 
@@ -89,7 +87,7 @@ Bekletme ayarları yalnızca saklama veya yalnızca silme olduğunda, içerik yo
 
 ## <a name="user-notification-of-expiry-date"></a>Süre sonu tarihi için kullanıcı bildirimi
 
-diğer Microsoft 365 iş yükleri için bekletme ilkelerinin aksine, Exchange için bekletme ilkeleri, her e-posta iletisinin en üstünde öğe için en kısa süre sonu tarihine sahip bekletme ilkesinin adını ve bu öğenin hesaplanan süre sonu tarihini görüntüleyerek bir kullanıcı iletişim durumu gösterir. Bekletme ilkesi öğeleri silmezse (yalnızca saklama) kullanıcılar bu bildirimi görmez.
+Exchange için bekletme ilkeleri, diğer Microsoft 365 iş yüklerinin bekletme ilkelerinden farklı olarak, her e-posta iletisinin en üstünde öğe için en kısa süre sonu tarihine sahip bekletme ilkesinin adını ve bu öğenin hesaplanan süre sonu tarihini görüntüleyerek bir kullanıcı iletişim durumu gösterir. Bekletme ilkesi öğeleri silmezse (yalnızca saklama) kullanıcılar bu bildirimi görmez.
 
 Bir e-posta iletisine bekletme etiketi uygulanırsa, bu etiketin adı ve karşılık gelen süre sonu tarihi her zaman görüntülenir ve posta kutusuna uygulanan bekletme ilkesindeki adı ve tarihi değiştirir.
 
@@ -99,11 +97,11 @@ Bu bağlamda, e-postanın silineceği süre sonu tarihinin, kullanıcıların e-
 
 Bir kullanıcı kuruluşunuzdan ayrılırsa ve kullanıcının posta kutusu bekletme ilkesine dahil edilirse, kullanıcının Microsoft 365 hesabı silindiğinde posta kutusu etkin olmayan bir posta kutusuna dönüşür. Etkin olmayan posta kutusunun içeriği, posta kutusu devre dışı bırakılmadan önce posta kutusuna yerleştirilen bekletme ilkesine tabidir ve içerik eBulma aramasında kullanılabilir. Daha fazla bilgi için bkz. [Exchange Online'da etkin olmayan posta kutuları](inactive-mailboxes-in-office-365.md).
 
-Veriler kalıcı olarak silindiği veya saklama süresinin dolduğu için bekletme ayarları artık geçerli olmadığında, Exchange yöneticisi [artık etkin olmayan posta kutusunu silebilir](delete-an-inactive-mailbox.md). Bu senaryoda, etkin olmayan posta kutusu otomatik olarak silinmez.
+Veriler kalıcı olarak silindiği veya saklama süresinin dolduğu için bekletme ayarları artık geçerli olmadığında, Exchange yöneticisi artık [etkin olmayan posta kutusunu silebilir](delete-an-inactive-mailbox.md). Bu senaryoda, etkin olmayan posta kutusu otomatik olarak silinmez.
 
 ## <a name="configuration-guidance"></a>Yapılandırma kılavuzu
 
-Microsoft 365'de saklamayı yapılandırma konusunda yeniyseniz bkz. [Veri yaşam döngüsü yönetimiyle Kullanmaya başlayın](get-started-with-data-lifecycle-management.md).
+Microsoft 365'te saklamayı yapılandırmaya yeni başladıysanız bkz. [Veri yaşam döngüsü yönetimini kullanmaya başlama](get-started-with-data-lifecycle-management.md).
 
 Exchange için bir bekletme ilkesi veya bekletme etiketi yapılandırmaya hazırsanız aşağıdaki yönergelere bakın:
 - [Bekletme ilkeleri oluşturma ve yapılandırma](create-retention-policies.md)

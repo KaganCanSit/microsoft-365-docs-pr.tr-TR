@@ -14,20 +14,18 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: eBulma'da (Premium) OCR işlevselliği tarafından desteklenen görüntü dosyası türleri de dahil olmak üzere Microsoft 365 eBulma'da (Premium) desteklenen dosya türlerinin listesi.
+description: Microsoft 365 eKeşif'te (Premium) desteklenen dosya türlerinin listesi; eBulma'da (Premium) OCR işlevselliği tarafından desteklenen görüntü dosyası türleri.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 422200b3015ff86566507cbe3f63bc2a75a84bea
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: faa367800653e320621336e98f9e8fc684b222ee
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095806"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631039"
 ---
 # <a name="supported-file-types-in-ediscovery-premium"></a>eBulma'da desteklenen dosya türleri (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview eKeşif (Premium) birçok farklı düzeyde birçok dosya türünü destekler. Destek dosyaları türleri bu makaledeki aşağıdaki tablolarda açıklanmıştır. Bu liste sonlandırılmamıştır ve doğrulama testimize devam ettiğimizde yeni dosya türleri ekleyeceğiz. Bu tablolar, metin ayıklama (ve görüntü dosyaları için Optik Karakter Tanıma veya OCR metin ayıklama) için bir dosya türünün desteklenip desteklenmediğini, yerel görüntüleyicide görüntülenebilir olduğunu ve ayrıca eBulma'da (Premium) Ek Açıklama görüntüleyicisinde desteklenip desteklenmediğini gösterir.
+Microsoft Purview eKeşif (Premium), birçok farklı düzeyde birçok dosya türünü destekler. Destek dosyaları türleri bu makaledeki aşağıdaki tablolarda açıklanmıştır. Bu liste sonlandırılmamıştır ve doğrulama testimize devam ettiğimizde yeni dosya türleri ekleyeceğiz. Bu tablolar, metin ayıklama (ve görüntü dosyaları için Optik Karakter Tanıma veya OCR metin ayıklama) için bir dosya türünün desteklenip desteklenmediğini, yerel görüntüleyicide görüntülenip görüntülenmediğini ve ayrıca eBulma'da (Premium) Ek Açıklama görüntüleyicisinde desteklenip desteklenmediğini gösterir.
 
 ## <a name="archive--container"></a>Arşiv / Kapsayıcı
 

@@ -17,59 +17,59 @@ ms.assetid: 6501b5ef-6bf7-43df-b60d-f65781847d6c
 ms.collection:
 - M365-security-compliance
 - SPO_Content
-description: OneDrive İş ve SharePoint Online'da veri güvenliği için temel şifreleme öğelerini anlama.
+description: OneDrive İş ve SharePoint Online'da veri güvenliği için şifrelemenin temel öğelerini anlama.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 25bebc8fd5ab9b820667f5220785b021230ca6e1
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 5b56caed2a93bf482509a4a90a8bbc3a828d76e7
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985705"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630157"
 ---
 # <a name="data-encryption-in-onedrive-for-business-and-sharepoint-online"></a>Data Encryption in OneDrive for Business and SharePoint Online
 
-OneDrive İş ve SharePoint Online'da veri güvenliği için temel şifreleme öğelerini anlama.
+OneDrive İş ve SharePoint Online'da veri güvenliği için şifrelemenin temel öğelerini anlama.
   
-## <a name="security-and-data-encryption-in-office-365"></a>e-Office 365'de güvenlik ve veri Office 365
+## <a name="security-and-data-encryption-in-office-365"></a>Office 365'de güvenlik ve veri şifrelemesi
 
-Microsoft 365 kapsamlı bir koruma sunan yüksek güvenli bir ortamdır: fiziksel veri merkezi güvenliği, ağ güvenliği, erişim güvenliği, uygulama güvenliği ve veri güvenliği. Bu makale özellikle OneDrive İş SharePoint Online için veri güvenliğinin in-transit ve yerinde şifreleme SharePoint üzerinde odaklanmektedir.
+Microsoft 365, fiziksel veri merkezi güvenliği, ağ güvenliği, erişim güvenliği, uygulama güvenliği ve veri güvenliği olmak üzere birden çok katmanda kapsamlı koruma sunan son derece güvenli bir ortamdır. Bu makale özellikle OneDrive İş ve SharePoint Online için veri güvenliğinin aktarım ve bekleyen şifreleme tarafına odaklanır.
   
-Veri şifrelemenin nasıl çalıştığını aşağıdaki videoda izleyin.
+Aşağıdaki videoda veri şifrelemenin nasıl çalıştığını izleyin.
   
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/dea0dec4-4077-4095-9a32-19b94ea2da4b?autoplay=false]
   
-## <a name="encryption-of-data-in-transit"></a>Geçişte veri şifrelemesi
+## <a name="encryption-of-data-in-transit"></a>Aktarımdaki verilerin şifresi
 
-OneDrive İş SharePoint Online'da, verilerin veri merkezlerine giriş ve çıkışları iki senaryodan çıkar.
+OneDrive İş ve SharePoint Online'da, verilerin veri merkezlerine girip çıktığı iki senaryo vardır.
   
-- **Sunucuyla istemci iletişimi** İnternet üzerinden OneDrive İş,SSL/TLS bağlantıları kullanır. 2048 bit anahtarları kullanılarak tüm SSL bağlantıları kurulur.
+- **Sunucuyla istemci iletişimi** İnternet üzerinden OneDrive İş iletişiminde SSL/TLS bağlantıları kullanılır. Tüm SSL bağlantıları 2048 bit anahtarlar kullanılarak kurulur.
 
-- **Veri merkezleri arasında veri hareketi** Verileri veri merkezleri arasında taşımanın en önemli nedeni, olağanüstü durum kurtarmayı etkinleştirmek için coğrafi çoğaltmadır. Örneğin, işlem SQL Server blob depolama deltaları bu boru boyunca hareket ediyor. Bu veriler özel ağ kullanılarak zaten ilet açıksa da, bu veriler en iyi sınıf şifrelemeyle daha da korunur. 
+- **Veri merkezleri arasında veri taşıma** Verileri veri merkezleri arasında taşımanın birincil nedeni, olağanüstü durum kurtarmayı etkinleştirmek için coğrafi çoğaltmadır. Örneğin, SQL Server işlem günlükleri ve blob depolama deltaları bu kanal boyunca ilerler. Bu veriler zaten özel bir ağ kullanılarak iletilmiş olsa da, sınıfının en iyisi şifreleme ile daha da korunur. 
 
-## <a name="encryption-of-data-at-rest"></a>Beklemede verilerin şifreleniyor
+## <a name="encryption-of-data-at-rest"></a>Bekleyen verilerin şifrelenmesi
 
-Beklemede şifreleme iki bileşen içerir: BitLocker disk düzeyinde şifreleme ve müşteri içeriğinin dosya başına şifrelemesi.
+Bekleyen şifreleme iki bileşen içerir: BitLocker disk düzeyinde şifreleme ve müşteri içeriğinin dosya başına şifrelenmesi.
   
-BitLocker, servis genelinde OneDrive İş ve SharePoint Online için dağıtıldı. Dosya başına şifreleme aynı zamanda OneDrive İş ve SharePoint Online'da Microsoft 365 çok kiracılı teknoloji üzerine yerleşik yeni ayrılmış ortamlarda da kullanılabilir.
+BitLocker, hizmet genelinde OneDrive İş ve SharePoint Online için dağıtılır. Dosya başına şifreleme, microsoft 365 çok kiracılı ve çok kiracılı teknoloji üzerine oluşturulmuş yeni ayrılmış ortamlarda OneDrive İş ve SharePoint Online'da da bulunur.
   
-BitLocker diskte yer alan tüm verileri şifrelerken, her dosya için benzersiz bir şifreleme anahtarı daha da ileriye doğru ilerler. Ayrıca, her dosyanın her güncelleştirmesi kendi şifreleme anahtarı kullanılarak şifrelenir. Şifrelenmiş içeriğin anahtarları, fiziksel olarak içerikten ayrı bir konumda depolanır. Bu şifrelemenin her adımı, 256 bit anahtarları olan Gelişmiş Şifreleme Standardı (AES) kullanır ve Federal Bilgi İşleme Standardı (FIPS) 140-2 ile uyumludur. Şifrelenmiş içerik, veri merkezi genelinde bir dizi kapsayıcıya dağıtılır ve her kapsayıcıda benzersiz kimlik bilgileri vardır. Bu kimlik bilgileri, içerik veya içerik anahtarlarından ayrı bir fiziksel konumda depolanır.
+BitLocker disk üzerindeki tüm verileri şifrelese de, dosya başına şifreleme, her dosya için benzersiz bir şifreleme anahtarı ekleyerek daha da ileri gider. Ayrıca, her dosyaya yapılan her güncelleştirme kendi şifreleme anahtarı kullanılarak şifrelenir. Şifrelenmiş içeriğin anahtarları, içerikten fiziksel olarak ayrı bir konumda depolanır. Bu şifrelemenin her adımında 256 bit anahtarlarla Gelişmiş Şifreleme Standardı (AES) kullanılır ve Federal Bilgi İşleme Standardı (FIPS) 140-2 uyumludur. Şifrelenmiş içerik, veri merkezi genelinde bir dizi kapsayıcıya dağıtılır ve her kapsayıcının benzersiz kimlik bilgileri vardır. Bu kimlik bilgileri, içerikten veya içerik anahtarlarından ayrı bir fiziksel konumda depolanır.
   
-FIPS 140-2 uyumluluğu hakkında ek bilgi için [bkz. FIPS 140-2 Uyumluluk](/previous-versions/sql/sql-server-2008-r2/bb326611(v=sql.105)).
+FIPS 140-2 uyumluluğu hakkında ek bilgi için bkz. [FIPS 140-2 Uyumluluğu](/previous-versions/sql/sql-server-2008-r2/bb326611(v=sql.105)).
   
-Beklemede dosya düzeyinde şifreleme, hemen sınırsız depolama alanı büyümesine olanak sağlamak ve koruma korumasını etkinleştirmek için blob depolamadan faydalanır. OneDrive İş SharePoint Online'daki tüm müşteri içeriği blob depolama alanına geçirilir. Bu verilerin güvenliği şöyle sağlandı:
+Bekleyen dosya düzeyinde şifreleme, neredeyse sınırsız depolama büyümesi sağlamak ve benzeri görülmemiş bir koruma sağlamak için blob depolamadan yararlanır. OneDrive İş ve SharePoint Online'daki tüm müşteri içeriği blob depolamaya geçirilecektir. Verilerin güvenliği şu şekilde sağlanır:
   
-1. Tüm içerik şifrelenmiştir, potansiyel olarak birden çok anahtarla ve veri merkezi genelinde dağıtılmıştır. Depolanmış olan her dosya, boyutuna bağlı olarak bir veya birden çok öbek halinde kaydedilir. Ardından, her öbek kendi benzersiz anahtarı kullanılarak şifrelenir. Güncelleştirmeler benzer şekilde ele alınarak işlenir: kullanıcı tarafından gönderilen değişiklik kümesi veya değişiklik değişiklikleri öbeklere göre şifrelenir ve her biri kendi anahtarıyla şifrelenir.
+1. Tüm içerik şifrelenir, potansiyel olarak birden çok anahtarla şifrelenir ve veri merkezine dağıtılır. Depolanacak her dosya, boyutuna bağlı olarak bir veya daha fazla öbeklere ayrılır. Ardından her öbek kendi benzersiz anahtarı kullanılarak şifrelenir. Güncelleştirmeler benzer şekilde işlenir: Kullanıcı tarafından gönderilen değişiklik veya değişiklik kümesi öbeklere ayrılır ve her biri kendi anahtarıyla şifrelenir.
 
-2. Bu öbeklerin (dosyalar, dosya parçaları ve güncelleştirme parçaları) hepsi blob mağazamızda bloblar olarak depolanır. Ayrıca, birden çok blob kapsayıcısı arasında rastgele dağıtılmıştır.
+2. Bu öbeklerin tümü (dosyalar, dosya parçaları ve güncelleştirme deltaları) blob depomuzda blob olarak depolanır. Ayrıca birden çok blob kapsayıcısı arasında rastgele dağıtılır.
 
-3. Dosyanın bileşenlerinden yeniden bir araya gelen dosyayı yeniden derlerken kullanılan "eşleme", İçerik Veritabanında depolanır.
+3. Dosyayı bileşenlerinden yeniden derlemek için kullanılan "harita" İçerik Veritabanında depolanır.
 
-4. Her blob kapsayıcısını erişim türü (okuma, yazma, numarala ve sil) başına kendi benzersiz kimlik bilgileri vardır. Her kimlik bilgileri kümesi güvenli Anahtar Deposu'nda tutularak düzenli aralıklarla yenilenir.
+4. Her blob kapsayıcısı, erişim türü başına kendi benzersiz kimlik bilgilerine sahiptir (okuma, yazma, listeleme ve silme). Her kimlik bilgisi kümesi güvenli Anahtar Deposu'nda tutulur ve düzenli olarak yenilenir.
 
-Başka bir deyişle, ayrı bir işleve sahip olan, geri alınan dosya başına şifrelemeye katılan üç farklı depo türü vardır:
+Başka bir deyişle, bekleyen dosya başına şifrelemeye dahil olan ve her biri ayrı bir işleve sahip üç farklı depo türü vardır:
   
-- İçerik, blob deposunda şifrelenmiş bloblar olarak depolanır. İçerik öbeklerinin anahtarı şifrelenir ve içerik veritabanında ayrı olarak depolanır. İçeriğin şifresinin nasıl çözülebilecek olduğuna dair hiçbir ipucu yoktur.
+- İçerik, blob deposunda şifrelenmiş bloblar olarak depolanır. Her içerik öbeklerinin anahtarı şifrelenir ve içerik veritabanında ayrı olarak depolanır. İçeriğin kendisi, şifresinin nasıl çözülebileceği hakkında hiçbir ipucu tutmaz.
 
-- İçerik Veritabanı, en son SQL Server veritabanıdır. Blob mağazasından yapılan tüm içerik bloblarını ve bu blobların şifresini çözmek için gereken anahtarların yanı sıra bu blobların şifresini çözmek için gereken tüm içerik bloblarını bulmak ve yeniden bire bir yapmak için gereken eşlemeyi tutar.
+- İçerik Veritabanı bir SQL Server veritabanıdır. Blob deposunda tutulan tüm içerik bloblarını ve bu blobların şifresini çözmek için gereken anahtarları bulmak ve yeniden bir araya getirmek için gereken haritayı tutar.
 
-Bu üç depolama bileşeni (blob deposu, İçerik Veritabanı ve Anahtar Deposu) fiziksel olarak birbirinden ayrıdır. Bileşenlerden herhangi birsinde bulunan bilgiler kendi başına kullanılamaz. Bu, güvenlik düzeyi sağlar. Bu üç öbeklere erişmeniz, kullanılabilir olması için anahtarların şifresini çözmeniz, anahtarları karşılık gelen öbeklerle ilişkilendirmeniz, öbeklerin şifresini çözmeniz veya bir belgeyi ilişkili öbeklerden yeniden oluşturmanız imkansızdır.
+Bu üç depolama bileşeninin her biri (blob deposu, İçerik Veritabanı ve Anahtar Deposu) fiziksel olarak ayrıdır. Bileşenlerden herhangi birinde tutulan bilgiler tek başına kullanılamaz. Bu, daha önce görülmemiş bir güvenlik düzeyi sağlar. Üçüne de erişim olmadan öbeklerin anahtarlarını almak, kullanılabilir hale getirmek için anahtarların şifresini çözmek, anahtarları karşılık gelen öbekleriyle ilişkilendirmek, herhangi bir öbeklerin şifresini çözmek veya bir belgeyi kendi bağlı öbeklerinden yeniden yapılandırmak mümkün değildir.

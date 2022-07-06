@@ -17,16 +17,14 @@ search.appverid:
 - MET150
 description: Tam veri eşleşmesi hassas bilgi türü/kural paketi oluşturma
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: ff493f7af88d377bcf008d13752969107cfd65e7
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 16da97f249eff856fd1b0e671d71d813b3cbac73
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017196"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66628517"
 ---
 # <a name="create-exact-data-match-sensitive-information-typerule-package"></a>Tam veri eşleşmesi hassas bilgi türü/kural paketi oluşturma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Uyumluluk merkezindeki [EDM şemasını ve SIT sihirbazını](#use-the-edm-schema-and-sit-wizard) kullanarak tam veri eşleşmesi (EDM) hassas bilgi türü (SIT) oluşturabilir veya kural paketi XML dosyasını [el ile](#create-a-rule-package-manually) oluşturabilirsiniz. Ayrıca, şemayı oluşturmak için bir yöntem kullanarak her ikisini de birleştirebilir ve daha sonra diğer yöntemi kullanarak düzenleyebilirsiniz.
 
@@ -60,7 +58,7 @@ Bkz [. Hassas bilgi türü varlık tanımları](sensitive-information-type-entit
 
 ### <a name="use-the-exact-data-match-schema-and-sensitive-information-type-pattern-wizard"></a>Tam veri eşleme şemasını ve hassas bilgi türü deseni sihirbazını kullanma
 
-1. Kiracınızın Microsoft Purview uyumluluk portalında **Veri sınıflandırması** > **Tam veri eşleşmeleri'ne** gidin.
+1. Kiracınızın Microsoft Purview uyumluluk portalı **Veri sınıflandırması** > **Tam veri eşleşmeleri'ne** gidin.
 
 2. Hassas bilgi türü yapılandırma sihirbazını açmak için **EDM hassas bilgi türlerini** ve **EDM hassas bilgi türü oluştur'u** seçin.
 
@@ -107,7 +105,7 @@ Bu, herhangi bir belge veya e-postadaki tek tek her sözcük veya numarayla eşl
 
 **E-posta adresleri**: E-posta adreslerini tanımlamak kolay olabilir, ancak içerikte çok yaygın olduklarından, birincil alan olarak kullanıldığında sistemde önemli bir yüke neden olabilirler. Bunları yalnızca ikincil kanıt olarak kullanın. Birincil kanıt olarak kullanılması gerekiyorsa, e-postalarda veya `From` `To` alanlarında kullanımlarını dışlamak ve eşleştirilmesi gereken gereksiz dize sayısını azaltmak için şirketinizin e-posta adresiyle bunları dışlamak için mantığı kullanan özel bir hassas bilgi türü tanımlamayı deneyin.
 
-**Telefon sayılar**: Telefon sayılar ülke ön ekleri, alan kodları ve ayırıcılar dahil veya hariç olmak üzere birçok farklı biçimde gelebilir. Yükü en düşük düzeyde tutarken hatalı negatifleri azaltmak için bunları yalnızca ikincil öğeler olarak kullanın, parantez ve tireler gibi olası tüm ayırıcıları hariç tutun ve yalnızca hassas veri tablonuza her zaman telefon numarasında bulunacak bölümü ekleyin.
+**Telefon numaraları**: Telefon numaraları ülke ön ekleri, alan kodları ve ayırıcılar dahil veya hariç olmak üzere birçok farklı biçimde gelebilir. Yükü en düşük düzeyde tutarken hatalı negatifleri azaltmak için bunları yalnızca ikincil öğeler olarak kullanın, parantez ve tireler gibi olası tüm ayırıcıları hariç tutun ve yalnızca hassas veri tablonuza her zaman telefon numarasında bulunacak bölümü ekleyin.
 
 **Kişinin adları**: Bu EDM türünün sınıflandırma öğesi olarak normal bir ifadeyi temel alan hassas bir bilgi türü kullanıyorsanız, ortak sözcüklerden ayırt etmek zor olduğundan, kişinin adlarını birincil öğe olarak kullanmayın.
 
@@ -143,7 +141,7 @@ Bu yordamda, kural paketi (Unicode kodlamalı) olarak adlandırılan XML biçimi
 > [!NOTE]
 > Eşlediğiniz SIT çok sözcüklü doğrulayıcı kanıtı algılayabilirse, el ile oluşturulan bir kural paketinde tanımladığınız ikincil öğeler SIT ile eşlenebilir. Örneğin, bu destekleyici kanıt alanı bu deseni algılayan bir SIT ile eşlenmediyse, içerikteki içeriği alanlardan birinde karşıya yüklenen terimle `John Smith` ayrı ayrı karşılaştırıp `John` `Smith` bulduğumuz için ad `John Smith` ikincil öğe olarak eşleşmez.
 >
-> Microsoft 365 kiracıda 10 kural paketi sınırı vardır. Kural paketi rastgele sayıda hassas bilgi türü içerebileceğinden, bu yöntemi kullanarak yeni bir hassas bilgi türü tanımlamak istediğinizde yeni bir kural paketi oluşturmaktan kaçınabilir, bunun yerine mevcut bir kural paketini dışarı aktarabilir ve yeniden yüklemeden önce hassas bilgi türlerinizi XML'ye ekleyebilirsiniz.
+> Microsoft 365 kiracısında 10 kural paketi sınırı vardır. Kural paketi rastgele sayıda hassas bilgi türü içerebileceğinden, bu yöntemi kullanarak yeni bir hassas bilgi türü tanımlamak istediğinizde yeni bir kural paketi oluşturmaktan kaçınabilir, bunun yerine mevcut bir kural paketini dışarı aktarabilir ve yeniden yüklemeden önce hassas bilgi türlerinizi XML'ye ekleyebilirsiniz.
 
 1. Xml biçiminde (Unicode kodlama ile) aşağıdaki örneğe benzer bir kural paketi oluşturun. (Örneğimizi kopyalayabilir, değiştirebilir ve kullanabilirsiniz.)
 
@@ -206,7 +204,7 @@ Bu yordamda, kural paketi (Unicode kodlamalı) olarak adlandırılan XML biçimi
       </RulePackage>
       ```
 
-2. Aşağıdaki PowerShell komutunu çalıştırarak kural paketini Upload:
+2. Aşağıdaki PowerShell komutunu çalıştırarak kural paketini karşıya yükleyin:
 
    ```powershell
    New-DlpSensitiveInformationTypeRulePackage -FileData ([System.IO.File]::ReadAllBytes('.\\rulepack.xml'))

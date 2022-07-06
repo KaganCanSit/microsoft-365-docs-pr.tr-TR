@@ -17,16 +17,14 @@ search.appverid:
 ms.assetid: 97e06a7a-ef9a-4ce8-baea-18b9e20449a3
 description: Etkin olmayan bir posta kutusunun içeriğini mevcut posta kutusuna geri yüklemeyi (veya birleştirmeyi) öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 66f9e75a76b4fb1bda0f9ae0f70cfe12c816d2bb
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 7c1a976013f522e45b4e96d6b28653fa860fe16f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438235"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629233"
 ---
 # <a name="restore-an-inactive-mailbox"></a>Etkin olmayan posta kutusunu geri yükleme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Etkin olmayan bir posta kutusu (geçici olarak silinen posta kutusu türüdür) kuruluşunuzdan ayrıldıktan sonra eski bir çalışanın e-postasını tutmak için kullanılır. Başka bir çalışan, ayrılan çalışanın iş sorumluluklarını üstlenirse veya bu çalışan kuruluşunuza geri dönerse, etkin olmayan posta kutusunun içeriğini kullanıcının kullanımına sunmanın iki yolu vardır:
 
@@ -44,7 +42,7 @@ Etkin olmayan posta kutusunu geri yükleme ve kurtarma arasındaki farklar hakk�
 
 ## <a name="requirements-to-restore-an-inactive-mailbox"></a>Etkin olmayan posta kutusunu geri yükleme gereksinimleri
 
-- Etkin olmayan bir posta kutusunu geri yüklemek için powershell Exchange Online kullanmanız gerekir. Bu yordam için Exchange yönetim merkezini (EAC) veya Microsoft Purview uyumluluk portalı kullanamazsınız. Exchange Online PowerShell'i kullanmaya yönelik adım adım yönergeler için bkz. [PowerShell'i Exchange Online için Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+- Etkin olmayan bir posta kutusunu geri yüklemek için powershell Exchange Online kullanmanız gerekir. Bu yordam için Exchange yönetim merkezini (EAC) veya Microsoft Purview uyumluluk portalı kullanamazsınız. Exchange Online PowerShell'i kullanmaya yönelik adım adım yönergeler için bkz. [PowerShell'Exchange Online bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Kuruluşunuzdaki etkin olmayan posta kutularına ilişkin kimlik bilgilerini almak için powershell Exchange Online aşağıdaki komutu çalıştırın.
 
@@ -152,7 +150,7 @@ Etkin olmayan bir posta kutusunun arşiv posta kutusu varsa, bunu mevcut bir pos
   Get-Mailbox -InactiveMailboxOnly | Format-List Name,PrimarySMTPAddress,DistinguishedName,ExchangeGUID,LegacyExchangeDN,ArchiveStatus
   ```
 
-- **Etkin olmayan posta kutusu içeriğini korumak için bir Microsoft 365 bekletme ilkesi veya Dava Bekletmesi kullanın.** Geri yüklendikten sonra etkin olmayan posta kutusunun durumunu korumak istiyorsanız, etkin olmayan posta kutusunu geri yüklemeden önce hedef posta kutusuna [bir Microsoft 365 bekletme ilkesi](retention.md) uygulayabilir veya hedef posta kutusunu [Dava Tutma'ya](create-a-litigation-hold.md) yerleştirebilirsiniz. Bu, tüm öğelerin hedef posta kutusuna geri yüklendikten sonra etkin olmayan posta kutusundan kalıcı olarak silinmesini engeller.
+- **Etkin olmayan posta kutusu içeriğini korumak için microsoft 365 saklama ilkesi veya Dava Tutma veya kullanma.** Geri yüklendikten sonra etkin olmayan posta kutusunun durumunu korumak istiyorsanız, etkin olmayan posta kutusunu geri yüklemeden önce hedef posta kutusuna bir [Microsoft 365 bekletme ilkesi](retention.md) uygulayabilir veya hedef posta kutusunu [Dava Tutma'ya](create-a-litigation-hold.md) yerleştirebilirsiniz. Bu, tüm öğelerin hedef posta kutusuna geri yüklendikten sonra etkin olmayan posta kutusundan kalıcı olarak silinmesini engeller.
 
 - **Etkin olmayan bir posta kutusunu geri yüklemeden önce hedef posta kutusunda bekletmeyi etkinleştirin.** Etkin olmayan posta kutusundan gelen posta kutusu öğeleri eski olabileceğinden, etkin olmayan posta kutusunu geri yüklemeden önce hedef posta kutusunda bekletmeyi etkinleştirmeyi düşünebilirsiniz. Bir posta kutusunu bekletme saklamaya aldığınızda, kendisine atanan bekletme ilkesi bekletme saklama kaldırılana kadar veya bekletme saklama süresi dolana kadar işlenmez. Bu, hedef posta kutusunun sahibine etkin olmayan posta kutusundan eski iletileri yönetme süresi verir. Aksi takdirde bekletme ilkesi, hedef posta kutusu için yapılandırılan bekletme ayarlarına bağlı olarak süresi dolmuş eski öğeleri silebilir (veya öğeleri arşiv posta kutusuna taşıyabilir). Daha fazla bilgi için bkz[. Exchange Online bekletme bekletmeye posta kutusu yerleştirme](/exchange/security-and-compliance/messaging-records-management/mailbox-retention-hold).
 

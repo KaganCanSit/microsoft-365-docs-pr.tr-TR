@@ -15,19 +15,17 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Kuruluşunuzdaki her durumda herhangi bir gözetim iletişimine eklenebilmeleri için eBulma'da (Premium) kuruluş genelinde veren memurlar ekleyebilirsiniz.
-ms.openlocfilehash: 894da37088599d1c8b0f9d473bf64311a09cc566
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Kuruluşunuzda her durumda herhangi bir gözetim iletişimine eklenebilmeleri için eKeşif (Premium) içinde kuruluş genelinde veren memurlar ekleyebilirsiniz.
+ms.openlocfilehash: 0a3383f9f725a7d5afacd1cab504eefc97b91fd3
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093646"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627701"
 ---
 # <a name="manage-issuing-officers-in-ediscovery-premium"></a>eBulma'da veren memurları yönetme (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Siz veya diğerleri saklama bildirimi veya koruyucu olan bir kullanıcıya gönderilen başka bir iletişim türü oluşturduğunuzda, veren bir memur belirtmeniz gerekir. Bildirim, belirtilen veren memur adına koruyucuya gönderilir. Örneğin, kuruluşunuzdaki bir avukat, bir olayda koruyuculara ayrı tutma bildirimleri oluşturmak ve göndermekle sorumlu olabilir. Bu senaryoda, paralegal kuruluşta veren memur olarak bir avukat belirtebilir. Who veren bir memur olarak belirtilebilir? Koruyucu iletişim için veren bir memur olarak seçilebilen iki tür kullanıcı vardır:
+Siz veya diğerleri saklama bildirimi veya koruyucu olan bir kullanıcıya gönderilen başka bir iletişim türü oluşturduğunuzda, veren bir memur belirtmeniz gerekir. Bildirim, belirtilen veren memur adına koruyucuya gönderilir. Örneğin, kuruluşunuzdaki bir avukat, bir olayda koruyuculara ayrı tutma bildirimleri oluşturmak ve göndermekle sorumlu olabilir. Bu senaryoda, paralegal kuruluşta veren memur olarak bir avukat belirtebilir. Kim veren bir memur olarak belirtilebilir? Koruyucu iletişim için veren bir memur olarak seçilebilen iki tür kullanıcı vardır:
 
 - İletişimin adına gönderildiği özel servis talebinin herhangi bir üyesi.
 
@@ -37,15 +35,15 @@ Bu makalede, kuruluş genelinde veren memurlar listesine kullanıcı ekleme ve k
 
 ## <a name="before-you-add-an-issuing-officer"></a>Veren bir memur eklemeden önce
 
-- Veren memurları eklemek veya kaldırmak için kuruluşunuzda eBulma Yöneticisi olmanız gerekir. Daha fazla bilgi için bkz. [Microsoft Purview uyumluluk portalında eBulma izinleri atama](assign-ediscovery-permissions.md)  
+- Veren memurları eklemek veya kaldırmak için kuruluşunuzda eBulma Yöneticisi olmanız gerekir. Daha fazla bilgi için bkz[. Microsoft Purview uyumluluk portalı eBulma izinleri atama](assign-ediscovery-permissions.md)  
 
 - Veren memur olarak eklenen kullanıcının Microsoft 365 kuruluşunuzda etkin bir posta kutusu olmalıdır.
 
-- Kuruluşunuzda en fazla 15 veren memur olabilir. Veren memur olarak belirtilebilen bir davanın üyeleri bu sınıra doğru sayılmaz. Bu sınır yalnızca eBulma'daki (Premium) **Veren memurlar** sayfasına eklenebilen kullanıcı sayısı için geçerlidir.
+- Kuruluşunuzda en fazla 15 veren memur olabilir. Veren memur olarak belirtilebilen bir davanın üyeleri bu sınıra doğru sayılmaz. Bu sınır yalnızca eBulma (Premium) içindeki **Veren memurlar** sayfasına eklenebilen kullanıcı sayısı için geçerlidir.
 
 ## <a name="add-an-issuing-officer"></a>Veren bir memur ekleme
 
-1. Uyumluluk portalında [eBulma (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) bölümüne gidin ve **eBulma (Premium) ayarlarına** tıklayın.
+1. Uyumluluk portalında [eBulma (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) seçeneğine gidin ve **ardından eBulma (Premium) ayarları'na** tıklayın.
 
    ![eBulma (Premium) ayarlarını seçin](..\media\HistoricalVersions1.png)
 
@@ -59,7 +57,7 @@ Kullanıcıları veren memur olarak ekledikten sonra, siz veya diğer kullanıc�
 
 ## <a name="remove-an-issuing-officer"></a>Veren bir memuru kaldırma
 
-1. Uyumluluk portalında [eBulma (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) bölümüne gidin ve **eBulma (Premium) ayarlarına** tıklayın.
+1. Uyumluluk portalında [eBulma (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) seçeneğine gidin ve **ardından eBulma (Premium) ayarları'na** tıklayın.
 
 2. **Ayarlar** sayfasında Veren **memurlar** sekmesini seçin.
 

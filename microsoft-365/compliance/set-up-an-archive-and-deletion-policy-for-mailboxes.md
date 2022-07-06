@@ -23,16 +23,14 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Öğeleri otomatik olarak kullanıcının arşiv posta kutusuna taşımak için özel bir Microsoft Mesajlaşma Kayıt Yönetimi (MRM) arşivleme ve silme ilkesi oluşturma.
-ms.openlocfilehash: 9ea642dc9d6aa4e66938703b45a8af0bab53476f
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 7002f28d5926ac02cf01e7ab26b02cddfbd58404
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66013012"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626061"
 ---
 # <a name="customize-an-archive-and-deletion-policy-for-mailboxes-in-your-organization"></a>Kuruluşunuzdaki posta kutuları için arşiv ve silme ilkesini özelleştirme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview yöneticileri, öğeleri otomatik olarak kullanıcının arşiv [posta kutusuna taşıyan ve posta kutusundan](archive-mailboxes.md) öğeleri otomatik olarak silecek bir arşivleme ve silme ilkesi oluşturabilir.
 
@@ -68,7 +66,7 @@ Kendi kuruluşunuzdaki posta kutuları için arşiv ve silme ilkesi ayarlamak i�
 
 İlk adım, kuruluşunuzdaki her kullanıcının bir arşiv posta kutusuna sahip olduğundan emin olmaktır. "Arşive Taşı" bekletme eylemine sahip bir bekletme etiketinin saklama süresi dolduktan sonra öğeyi taşıyabilmesi için kullanıcının arşiv posta kutusunun etkinleştirilmesi gerekir.
 
-Arşiv posta kutularını etkinleştirme yönergeleri için bkz [. Microsoft Purview uyumluluk portalında arşiv posta kutularını etkinleştirme](enable-archive-mailboxes.md).
+Arşiv posta kutularını etkinleştirme yönergeleri için bkz[. Microsoft Purview uyumluluk portalı arşiv posta kutularını etkinleştirme](enable-archive-mailboxes.md).
   
 > [!NOTE]
 > Bu işlem sırasında, işlemi tamamlamadan önce belirli bir noktada etkinleştirildiği sürece arşiv posta kutularını istediğiniz zaman etkinleştirebilirsiniz. Arşiv posta kutusu etkinleştirilmemişse, kendisine atanmış arşiv veya silme ilkesi olan öğeler üzerinde hiçbir işlem yapılmaz.
@@ -99,7 +97,7 @@ Yeni bekletme etiketleri oluşturmak için, Exchange Online kuruluşunuzda <a hr
 
 2. **Posta kutusunun tamamına otomatik olarak uygulanan yeni etiket (varsayılan)** sayfasında aşağıdaki alanları tamamlayın: 
 
-    ![Yeni bir arşiv varsayılan ilke etiketi oluşturmak için Ayarlar.](../media/41c0a43c-9c72-44e0-8947-da0831896432.png)
+    ![Yeni bir arşiv varsayılan ilke etiketi oluşturma ayarları.](../media/41c0a43c-9c72-44e0-8947-da0831896432.png)
   
    1. **Adı** Yeni bekletme etiketi için bir ad yazın. 
 
@@ -121,7 +119,7 @@ Ardından, başka bir özel DPT oluşturacaksınız, ancak bu, 7 yıl sonra öğ
 
 2. **Posta kutusunun tamamına otomatik olarak uygulanan yeni etiket (varsayılan)** sayfasında aşağıdaki alanları tamamlayın: 
 
-    ![Yeni bir silme varsayılan ilke etiketi oluşturmak için Ayarlar.](../media/f1f0ff62-eec9-4824-8e7c-d93dcfb09a79.png)
+    ![Yeni silme varsayılan ilke etiketi oluşturma ayarları.](../media/f1f0ff62-eec9-4824-8e7c-d93dcfb09a79.png)
   
    1. **Adı** Yeni bekletme etiketi için bir ad yazın. 
 
@@ -143,7 +141,7 @@ Oluşturulacak son bekletme etiketi, Silinmiş Öğeler klasörü için özel bi
 
 2. **Varsayılan klasöre otomatik olarak uygulanan Yeni etiketi** sayfasında aşağıdaki alanları tamamlayın:
 
-    ![Silinmiş Öğeler klasörü için yeni bir bekletme ilkesi etiketi oluşturmak Ayarlar.](../media/6f3104bd-5edb-48ac-884d-5fe13d81dd1d.png)
+    ![Silinmiş Öğeler klasörü için yeni bir bekletme ilkesi etiketi oluşturma ayarları.](../media/6f3104bd-5edb-48ac-884d-5fe13d81dd1d.png)
   
    1. **Adı** Yeni bekletme etiketi için bir ad yazın. 
 
@@ -222,7 +220,7 @@ Yeni bir posta kutusu oluşturulduğunda, varsayılan olarak Varsayılan MRM ilk
   
 Exchange Online PowerShell'e bağlanma ve ardından yönetilen klasör yardımcısı'nı kuruluşunuzdaki her posta kutusunda çalıştırma adımları aşağıdadır.
 
-1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Exchange Online PowerShell’e bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
   
 2. Kuruluşunuzdaki tüm kullanıcı posta kutuları için Yönetilen Klasör Yardımcısı'nı başlatmak için aşağıdaki iki komutu çalıştırın.
 
@@ -252,7 +250,7 @@ Son olarak, posta kutusu kullanıcısı devre dışı bırakılmış bir hesaba 
 
 Bunu, kuruluşunuzun varsayılan posta kutusu planını güncelleştirmek için Exchange Online PowerShell kullanarak yaparsınız. *Posta kutusu planı*, yeni posta kutularında özellikleri otomatik olarak yapılandıran bir şablondur.  Bu isteğe bağlı adımda, posta kutusu planına atanan geçerli bekletme ilkesini (varsayılan olarak, Varsayılan MRM İlkesi) 3. Adımda oluşturduğunuz MRM bekletme ilkesiyle değiştirebilirsiniz. Posta kutusu planını güncelleştirdikten sonra, yeni MRM bekletme ilkesi yeni posta kutularına atanır.
 
-1. [PowerShell'i Exchange Online Bağlan](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Exchange Online PowerShell’e bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Kuruluşunuzdaki posta kutusu planları hakkında bilgi görüntülemek için aşağıdaki komutu çalıştırın.
 
@@ -288,6 +286,6 @@ Bunu, kuruluşunuzun varsayılan posta kutusu planını güncelleştirmek için 
     |Hiçbir Zaman Silme  <br/> |Bu etiket, öğelerin bekletme ilkesi tarafından silinmesini engeller.  <br/> |Yerleşik  <br/> |Kişisel; bu etiket kullanıcılar tarafından uygulanabilir.  <br/> |
     |Kişisel 1 yıl arşive taşıma  <br/> |Öğeleri 1 yıl sonra arşiv posta kutusuna taşır.  <br/> |Yerleşik  <br/> |Kişisel; bu etiket kullanıcılar tarafından uygulanabilir.  <br/> |
 
-    > <sup>\*</sup>Kullanıcılar, silinmiş öğe saklama süresi içinde silinmiş bir öğeyi kurtarmak için Outlook ve Web üzerinde Outlook (eski adıyla Outlook Web App) içindeki Silinmiş Öğeleri Kurtar aracını kullanabilir ve bu da varsayılan olarak Exchange Online 14 gündür. Yönetici, silinmiş öğe saklama süresini en fazla 30 güne yükseltmek için PowerShell Exchange Online kullanabilir. Daha fazla bilgi için bkz. [Windows için Outlook'da silinen öğeleri kurtarma](https://support.office.com/article/49e81f3c-c8f4-4426-a0b9-c0fd751d48ce) ve [Exchange Online bir posta kutusunun silinmiş öğe saklama süresini değiştirme](/exchange/recipients-in-exchange-online/manage-user-mailboxes/change-deleted-item-retention).
+    > <sup>\*</sup>Kullanıcılar, Silinmiş Öğeleri Kurtarma aracını Outlook'ta ve Web üzerinde Outlook (eski adıyla Outlook Web App) kullanarak silinmiş bir öğeyi silinmiş öğe saklama süresi içinde kurtarabilir ve bu da varsayılan olarak Exchange Online 14 gündür. Yönetici, silinmiş öğe saklama süresini en fazla 30 güne yükseltmek için PowerShell Exchange Online kullanabilir. Daha fazla bilgi için bkz. [Windows için Outlook'ta silinen öğeleri kurtarma](https://support.office.com/article/49e81f3c-c8f4-4426-a0b9-c0fd751d48ce) ve [Exchange Online bir posta kutusunun silinmiş öğe saklama süresini değiştirme](/exchange/recipients-in-exchange-online/manage-user-mailboxes/change-deleted-item-retention).
   
 - **Kurtarılabilir Öğeler 14 gün Arşive Taşı** bekletme etiketinin kullanılması, kullanıcının birincil posta kutusunda Kurtarılabilir Öğeler klasöründe depolama alanı boşaltmaya yardımcı olur. Bu, kullanıcının posta kutusu beklemeye alındığında yararlıdır; başka bir deyişle kullanıcının posta kutusundan hiçbir şey kalıcı olarak silinmez. Öğeleri arşiv posta kutusuna taşımadan, birincil posta kutusunda Kurtarılabilir Öğeler klasörünün depolama kotasına ulaşılması mümkündür. Bu ve bundan kaçınma hakkında daha fazla bilgi için bkz. [Beklemedeki posta kutuları için Kurtarılabilir Öğeler kotasını artırma](./increase-the-recoverable-quota-for-mailboxes-on-hold.md).

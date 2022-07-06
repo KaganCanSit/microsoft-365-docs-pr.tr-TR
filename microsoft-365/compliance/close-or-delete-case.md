@@ -15,36 +15,34 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Microsoft Purview eKeşif (Premium) olayı tarafından desteklenen bir araştırma veya yasal olay kapatıldığında veya silindiğinde ne olacağını öğrenin.
+description: bir Microsoft Purview eKeşif (Premium) olayı tarafından desteklenen bir araştırma veya yasal olay kapatıldığında veya silindiğinde ne olacağını öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: f6428360c76862a0c4ff0c81b1cb83fb8760d789
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: ce8b98be7605361984b179c045856144bfb8d4b8
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096088"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626831"
 ---
 # <a name="close-or-delete-an-ediscovery-premium-case"></a>eBulma (Premium) servis talebini kapatma veya silme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview eBulma (Premium) olayı tarafından desteklenen yasal dava veya araştırma tamamlandığında, bir servis talebini kapatabilir veya silebilirsiniz. Kapatılan bir olayı da yeniden açabilirsiniz.
+bir Microsoft Purview eKeşif (Premium) olayı tarafından desteklenen yasal dava veya araştırma tamamlandığında, bir servis talebini kapatabilir veya silebilirsiniz. Kapatılan bir olayı da yeniden açabilirsiniz.
 
 ## <a name="close-a-case"></a>Servis talebini kapatma
 
-eBulma (Premium) servis talebini kapattığınızda şunlar olur:
+Bir eBulma (Premium) servis talebini kapattığınızda şunlar olur:
 
 - Servis talebi ayrı tutmada herhangi bir içerik konumu içeriyorsa, bu ayrı tutmalar kapatılır. Ayrı tutma kapatıldıktan sonra, beklemede olan içerik konumlarına 30 günlük yetkisiz kullanım süresi ( *gecikmeli saklama* olarak adlandırılır) uygulanır. Bu, içeriğin hemen silinmesini önlemeye yardımcı olur ve yöneticilere gecikme saklama süresi dolduktan sonra kalıcı olarak silinecek içeriği arama veya kurtarma fırsatı verir. Daha fazla bilgi için bkz. [eBulma ayrılığından içerik konumlarını kaldırma](create-ediscovery-holds.md#removing-content-locations-from-an-ediscovery-hold).
 
-- Servis talebi kapatıldığında yalnızca bu servis talebiyle ilişkili ayrı tutmalar kapatılır. Diğer ayrı tutmalar bir içerik konumuna (Dava Ayrı Tutma, Microsoft Purview eBulma (Standart) ayrı tutma veya farklı bir eBulma (Premium) durumundan ayrı tutma gibi) yerleştiriliyorsa bu ayrı tutmalar yine korunur.
+- Servis talebi kapatıldığında yalnızca bu servis talebiyle ilişkili ayrı tutmalar kapatılır. Diğer ayrı tutmalar bir içerik konumuna (Dava Tutma, Microsoft Purview eKeşif (Standart) ayrı tutma veya farklı bir eBulma (Premium) durumundan ayrı tutma gibi) yerleştiriliyorsa, bu ayrı tutmalar yine korunur.
 
-- Servis talebi, Microsoft Purview uyumluluk portalındaki eBulma sayfasında listelenmeye devam etmektedir. Kapalı bir servis talebinin ayrıntıları, saklamaları, aramaları ve üyeleri korunur.
+- Servis talebi, Microsoft Purview uyumluluk portalı eBulma sayfasında listelenmeye devam etmektedir. Kapalı bir servis talebinin ayrıntıları, saklamaları, aramaları ve üyeleri korunur.
 
-- Servis talebi kapandıktan sonra düzenleyebilirsiniz. Örneğin, eBulma'da (Premium) üyeleri ekleyebilir veya kaldırabilir, arama oluşturabilir, arama sonuçlarını dışarı aktarabilir ve arama sonuçlarını analiz için hazırlayabilirsiniz. Etkin ve kapalı servis talepleri arasındaki temel fark, servis talebi kapatıldığında tutmaların kapalı olmasıdır.
+- Servis talebi kapandıktan sonra düzenleyebilirsiniz. Örneğin, üyeleri ekleyebilir veya kaldırabilir, arama oluşturabilir, arama sonuçlarını dışarı aktarabilir ve arama sonuçlarını eBulma'da (Premium) analiz için hazırlayabilirsiniz. Etkin ve kapalı servis talepleri arasındaki temel fark, servis talebi kapatıldığında tutmaların kapalı olmasıdır.
 
 Bir servis talebini kapatmak için:
 
-1. **eBulma (Premium)** sayfasında kapatmak istediğiniz servis talebini seçin.
+1. **eBulma (Premium)** sayfasında, kapatmak istediğiniz servis talebini seçin.
 
 2. **Ayarlar** sekmesinde, **Servis Talebi Bilgileri'nin** altında **Seç'e** tıklayın.
 
@@ -60,7 +58,7 @@ Bir eBulma (Premium) servis talebini yeniden açtığınızda, servis talebi kap
 
 Kapalı bir olayı yeniden açmak için:
 
-1. **eBulma (Premium)** sayfasında yeniden açmak istediğiniz servis talebini seçin.
+1. **eBulma (Premium)** sayfasında, yeniden açmak istediğiniz servis talebini seçin.
 
 2. **Ayarlar** sekmesinde, **Servis Talebi Bilgileri'nin** altında **Seç'e** tıklayın.
 
@@ -70,7 +68,7 @@ Kapalı bir olayı yeniden açmak için:
 
 ## <a name="delete-a-case"></a>Servis talebini silme
 
-Hem etkin hem de kapalı eBulma (Premium) servis taleplerini silebilirsiniz. Bir servis talebini sildiğinizde, servis talebiyle ilişkili tüm bileşenler (koruyucuların listesi, iletişimler, aramalar, gözden geçirme kümeleri ve dışarı aktarma işi gibi) silinir. Servis talebi, Microsoft Purview uyumluluk portalındaki **eBulma (Premium)** sayfasındaki servis talebi listesinden kaldırılır. Silinen bir olayı kurtaramaz veya yeniden açamazsınız.
+Hem etkin hem de kapalı eBulma (Premium) servis taleplerini silebilirsiniz. Bir servis talebini sildiğinizde, servis talebiyle ilişkili tüm bileşenler (koruyucuların listesi, iletişimler, aramalar, gözden geçirme kümeleri ve dışarı aktarma işi gibi) silinir. Servis talebi, Microsoft Purview uyumluluk portalı **eBulma (Premium)** sayfasındaki servis talebi listesinden kaldırılır. Silinen bir olayı kurtaramaz veya yeniden açamazsınız.
 
 > [!NOTE]
 > Veri taşması senaryolarında, bir gözden geçirme kümesindeki öğeleri kaldırmanın tek yolu eBulma (Premium) servis talebini silmektir. Diğer "arama ve temizleme" yöntemleri, gözden geçirme kümesindeki öğeleri kaldırmaz.

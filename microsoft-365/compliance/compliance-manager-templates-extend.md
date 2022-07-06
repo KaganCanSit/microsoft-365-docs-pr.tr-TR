@@ -1,5 +1,5 @@
 ---
-title: Microsoft Uyumluluk Yöneticisi'nde değerlendirme şablonlarını genişletme
+title: Microsoft Purview Uyumluluk Yöneticisi'nde değerlendirme şablonlarını genişletme
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,60 +17,60 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Uyumluluk Yöneticisi'nde değerlendirme şablonlarını genişleterek denetim ekleme ve değiştirme hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: 4c9e4543a046e09733711500ae6162a547e3602b
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Denetim eklemek ve değiştirmek için Microsoft Purview Uyumluluk Yöneticisi'nde değerlendirme şablonlarını genişletmeyi öğrenin.
+ms.openlocfilehash: b4cf642e7b5a9dac47cd513251c05a802f16b77b
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63316219"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630465"
 ---
-# <a name="extend-assessment-templates-in-microsoft-compliance-manager"></a>Microsoft Uyumluluk Yöneticisi'nde değerlendirme şablonlarını genişletme
+# <a name="extend-assessment-templates-in-microsoft-purview-compliance-manager"></a>Microsoft Purview Uyumluluk Yöneticisi'nde değerlendirme şablonlarını genişletme
 
-Uyumluluk Yöneticisi, mevcut bir şablona kendi denetimlerinizi ve geliştirme eylemlerinizi ekleme seçeneği sunar. Bu işlem şablon genişletme olarak adlandırılan bir işlemdir.
+Uyumluluk Yöneticisi, mevcut bir şablona kendi denetimlerinizi ve iyileştirme eylemlerinizi ekleme seçeneği sunar. Bu işleme şablonu genişletme denir.
 
-Şablonu genişletmek için, Microsoft değerlendirme şablonlarını veya evrensel değerlendirme şablonlarını genişletip genişletmenize bağlı olarak, şablon verilerini değiştirmek için özel yönergeler kullanırsınız.
+Şablonu genişletmek için, Microsoft değerlendirme şablonlarını veya evrensel değerlendirme şablonlarını genişletip genişletmediğinize bağlı olarak şablon verilerini değiştirmek için özel yönergeler kullanacaksınız.
 
 ## <a name="extend-microsoft-assessment-templates"></a>Microsoft değerlendirme şablonlarını genişletme
 
-Şablonla birlikte kullanmak üzere oluşturulmuş bir Şablon gibi bir Microsoft Microsoft 365, microsoft tarafından yayımlanan güncelleştirmeleri almaya devam ediyor olabilir. İlgili düzenleme veya üründe değişiklik olduğunda güncelleştirmeler olabilir (bkz. [Değerlendirmelerde yapılan güncelleştirmeleri kabul etme](compliance-manager-assessments.md#accept-updates-to-assessments)).
+Microsoft 365 ile kullanılmak üzere oluşturulmuş bir şablon gibi bir Microsoft şablonunu genişlettiğiniz zaman, microsoft tarafından yayımlanan güncelleştirmeleri almaya devam edebilir. Güncelleştirmeler ilgili düzenlemede veya üründe değişiklikler olduğunda gerçekleşebilir (bkz. [Değerlendirme güncelleştirmelerini kabul etme](compliance-manager-assessments.md#accept-updates-to-assessments)).
 
 ### <a name="prepare-template-data-and-create-extension"></a>Şablon verilerini hazırlama ve uzantı oluşturma
 
-Hazırlanmak için, gerekli şablon verilerini içeri aktaran özel olarak biçimlendirilmiş bir Excel elektronik tabloyu toplamanız gerekir. Aşağıdaki Excel, Değerlendirme şablonu verilerini değerlendirmeyle biçimlendirme ve Değerlendirme şablonu verileri Excel aynı biçimde [olur, ancak](compliance-manager-templates-format-excel.md) uzantılar için özel gereksinimler vardır. Hataları önlemeye yardımcı olmak için şu ek noktalara bakın:
+Hazırlamak için, gerekli şablon verilerini içeri aktarmak için özel olarak biçimlendirilmiş bir Excel elektronik tablosu oluşturmanız gerekir. Excel dosyaları, [Excel ile değerlendirme şablonu verilerini biçimlendirme](compliance-manager-templates-format-excel.md) konusunda belirtilen biçimi izler, ancak uzantılar için özel gereksinimler vardır. Hataları önlemeye yardımcı olmak için şu ek noktalara bakın:
 
-- Elektronik tablo, yalnızca değerlendirmeye eklemek istediğiniz eylemleri ve denetimleri içeriyor olabilir.
-- Elektronik tablo, değiştirmek istediğiniz değerlendirmede önceden var olan denetim veya eylemleri içeramaz.
-- Şablon başlığına "uzantı" ifadesini eklemeyi düşünün. Örneğin, "GDPR – [şirket adı] uzantısı." Bu, değerlendirme şablonları sayfanız üzerinde, Microsoft tarafından sağlanan  standart şablondan veya benzer bir adı olan özel şablondan farklı olarak listeden daha kolay bulun sağlar.
+- Elektronik tablonuz yalnızca değerlendirmeye eklemek istediğiniz eylemleri ve denetimleri içermelidir.
+- Elektronik tablo, değiştirmek istediğiniz değerlendirmede zaten var olan denetimlerin veya eylemlerin hiçbirini içeremez.
+- Şablonunuzun başlığına "uzantı" eklemeyi göz önünde bulundurun; örneğin, "GDPR – [şirketinizin adı] uzantısı." Bu, **değerlendirme şablonları** sayfanızdaki listede Microsoft tarafından sağlanan standart şablondan veya benzer ada sahip özel bir şablondan farklı olarak tanımlanmasını kolaylaştırır.
 
-Elektronik tablonuzu biçimlendirdikten sonra, aşağıdaki adımları izleyin.
+Elektronik tablonuzu biçimlendirdikten sonra aşağıdaki adımları izleyin.
 
-1. Değerlendirme şablonları **sayfanıza gidin ve** Yeni şablon **oluştur'a tıklayın**. Bir şablon oluşturma sihirbazı açılır.
+1. **Değerlendirme şablonları** sayfanıza gidin ve **Yeni şablon oluştur'u** seçin. Şablon oluşturma sihirbazı açılır.
 
-2. Oluşturmak istediğiniz şablon türünü seçin. Bu durumda, Microsoft şablonunu **genişlet'i ve ardından Microsoft** şablonunu **seçin**.
+2. Oluşturmak istediğiniz şablon türünü seçin. Bu durumda Microsoft **şablonunu genişlet'i** ve ardından **Microsoft şablonu seç'i seçin**.
 
-3. Ekrannizin sağ tarafında, tüm şablonların listesini ve etkin veya etkin değil durumlarını gösteren bir şablon seçimi açılır bölmesi görüntülenir. **Etkinleştirilen şablonlar sayaç**, şu anda kullanmakta olan toplam şablon sayısının dışında kaç şablon olduğunu gösterir. Sınırınızı aştıysanız, ileti çubuğu size bildirim sağlar.
+3. Ekranınızın sağ tarafında tüm şablonların listesini ve bunların etkin veya etkin olmayan durumunu gösteren bir şablon seçimi açılır penceresi görüntülenir. **Etkinleştirilmiş şablonlar** sayacınız, kullanılabilir toplam sayıdan kaç tane şablonun şu anda kullanımda olduğunu gösterir. Sınırınızı aştıysanız, bir ileti çubuğu bildirim sağlar.
 
-4. Ekrannizin sağ tarafında bir şablon seçimi açılır bölmesi görüntülenir. Kullanmak **istediğiniz** şablonu bulmak üzere filtreler uygulamak için Ara'ya
+4. Ekranınızın sağ tarafında bir şablon seçimi açılır penceresi görüntülenir. İstediğiniz şablonu bulmak için filtre uygulamak için **Arama'yı** kullanma
 
-5. Şablona bu kez bastıktan sonra adının sol radyo düğmesini seçin ve sonra da Kaydet'i **seçin**.
+5. Şablonunuzu bulduklarından sonra adının sol tarafındaki radyo düğmesini ve ardından **Kaydet'i** seçin.
 
-6. Sonraki ekranda seçtiğiniz şablon gösterilir. Doğruysa, Sonraki'yi **seçin**. (Yanlışsa, yeniden **seçmek için Farklı bir şablon** seçin öğesini seçin.)
+6. Sonraki ekranda seçtiğiniz şablon gösterilir. Doğruysa **İleri'yi** seçin. (Yanlışsa, yeniden seçmek için **Farklı bir şablon seçin'i** seçin.)
 
-7. dosyanın **Upload,** tüm gerekli şablon verilerini içeren biçimlendirilmiş  Excel bulmak ve karşıya yüklemek için Gözat'ı seçin.
+7. **Dosyayı karşıya yükle** ekranında **Gözat'ı** seçerek tüm gerekli şablon verilerini içeren biçimlendirilmiş Excel dosyanızı bulun ve karşıya yükleyin.
 
-8. Dosyanız ile ilgili sorun yoksa karşıya yüklenen dosyanın adını sonraki ekranda gösterir. Devam **etmek** için Sonraki'yi seçin (dosyayı değiştirmek için farklı bir **Upload seçin**).
+8. Dosyanızla ilgili bir sorun yoksa, bir sonraki ekranda karşıya yüklenen dosyanın adı gösterilir. Devam etmek için **İleri'yi** seçin (dosyayı değiştirmeniz gerekiyorsa **Farklı bir dosyayı karşıya yükle'yi** seçin).
 
-    - Dosyanız ile ilgili bir sorun varsa, sorunun ne olduğunu en üst düzeye alan bir hata iletisiyle açıklar. Dosyanızı düzeltmeniz ve yeniden karşıya yüklemeniz gerekir. Elektronik tablonuzu yanlış biçimlendirilmişse veya bazı alanlarda geçersiz bilgiler varsa hatalar meydana gelir.
+    - Dosyanızla ilgili bir sorun varsa, en üstteki hata iletisi sorunun ne olduğunu açıklar. Dosyanızı düzeltmeniz ve yeniden yüklemeniz gerekir. Elektronik tablonuz yanlış biçimlendirilirse veya belirli alanlarda geçersiz bilgiler varsa hatalar oluşur.
 
-9. Gözden **Geçir ve bitiş** ekranı, geliştirme eylemlerinin ve denetimlerin sayısını ve şablon için en yüksek puanı gösterir. Onaylamaya hazır olduğunda, Sonraki'yi **seçin**. (Değişiklik yapmak için farklı bir dosya **Upload seçin**.)
+9. **Gözden geçir ve bitir** ekranı, iyileştirme eylemlerinin ve denetimlerinin sayısını ve şablonun en yüksek puanını gösterir. Onaylamaya hazır olduğunuzda **İleri'yi** seçin. (Değişiklik yapmanız gerekiyorsa **Farklı bir dosya yükle'yi** seçin.)
 
-10. Son ekranda yeni bir şablonun oluşturulmuş olduğu onaylar. **Sihirbazdan çıkmak** için Bitti'yi seçin.
+10. Son ekranda yeni bir şablon oluşturulduğu onaylanır. **Sihirbazdan çıkmak için Bitti'yi** seçin.
 
-11. Yeni şablonun ayrıntılar sayfasına ulaşabilirsiniz. Buradan Değerlendirme oluştur'a seçerek değerlendirmenizi **oluşturabilirsiniz**. Kılavuz için değerlendirmeleri [oluşturma ve yönetme.'ye bakın](compliance-manager-assessments.md#create-assessments).
+11. Yeni şablonunuzun ayrıntılar sayfasına ulaşırsınız. Buradan Değerlendirme oluştur'u seçerek **değerlendirmenizi** oluşturabilirsiniz. Rehberlik için bkz. [Değerlendirmeleri derleme ve yönetme](compliance-manager-assessments.md#create-assessments).
 
 ## <a name="extend-universal-assessment-templates"></a>Evrensel değerlendirme şablonlarını genişletme
 
-Şablonların evrensel sürümleri, ürüne özgü değerlendirmelerinizi özelleştirmek için de uzatılabilir. Evrensel şablon kullanarak bir değerlendirme  oluşturursanız ve değerlendirme benzersiz bir ürün ve sertifika bileşimine sahip olduğunda özel bir uzantı şablonu alırsınız. Bu dosya, ihtiyaçlarına göre değiştirilebilir. Şablonu düzenleme konusunda yol gösterici yönergeler için, şablonu değiştirme [yönergelerine bakın](compliance-manager-templates-modify.md).
+Ürüne özgü değerlendirmelerinizi özelleştirmek için şablonların evrensel sürümleri de genişletilebilir. Evrensel bir şablon kullanarak değerlendirme oluşturduğunuzda özel bir uzantı şablonu alırsınız ve değerlendirmenin benzersiz bir ürün ve sertifikasyon birleşimi vardır. Bu dosya gereksinimlerinizi karşılayacak şekilde değiştirilebilir. Şablonu düzenleme hakkında yönergeler için, şablonu [değiştirme](compliance-manager-templates-modify.md) yönergelerine bakın.
 
-Evrensel şablonu düzenlerken, şablonda yer alan tüm içerik değiştirilebilir, ancak bu işlem üst şablonla devralmayı bozacak. Bu, üst şablon yenilendiğinde artık Microsoft'tan güncelleştirmeleri otomatik olarak almayacak anlamına gelir.
+Evrensel şablonu düzenlerken, şablondaki tüm içerik değiştirilebilir, ancak bunun yapılması üst şablonla devralmayı bozar. Bu, üst şablon yenilenirse artık Microsoft'tan güncelleştirmeleri otomatik olarak alamayacağı anlamına gelir.

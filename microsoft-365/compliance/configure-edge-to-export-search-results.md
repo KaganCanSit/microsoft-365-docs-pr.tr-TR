@@ -12,23 +12,21 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: güvenlik ve uyumluluk merkezinde İçerik Arama ve eBulma'dan arama sonuçlarını indirmek için ClickOnce desteğinin Microsoft Edge en yeni sürümünü kullanmasını etkinleştirmeniz gerekir.
-ms.openlocfilehash: 13556b08a0eaec5ed11bdaf09014a3988cd56829
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Güvenlik ve uyumluluk merkezinde İçerik Arama ve eBulma'dan arama sonuçlarını indirmek için Microsoft Edge'in en yeni sürümünü kullanmak için ClickOnce desteğini etkinleştirmeniz gerekir.
+ms.openlocfilehash: f93ab1da1b76d435cc1ce684aa459b4c131dfff8
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092447"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630399"
 ---
 # <a name="use-the-ediscovery-export-tool-in-microsoft-edge"></a>Microsoft Edge'de eBulma Dışarı Aktarma Aracı'nı kullanma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Microsoft Edge'in en yeni sürümünde yapılan son değişikliklerin sonucunda ClickOnce desteği artık varsayılan olarak etkin değildir. İçerik Arama veya eBulma arama sonuçlarını indirmek için eBulma Dışarı Aktarma Aracı'nı kullanmaya devam etmek için [Microsoft Internet Explorer'ı](https://support.microsoft.com/help/17621/internet-explorer-downloads) kullanmanız veya Microsoft Edge'in en yeni sürümünde ClickOnce desteğini etkinleştirmeniz gerekir.
 
-en yeni Microsoft Edge sürümünde yapılan son değişikliklerin sonucunda ClickOnce desteği artık varsayılan olarak etkin değildir. İçerik Arama veya eBulma arama sonuçlarını indirmek için eBulma Dışarı Aktarma Aracı'nı kullanmaya devam etmek için [Microsoft Internet Explorer'ı](https://support.microsoft.com/help/17621/internet-explorer-downloads) kullanmanız veya Microsoft Edge en yeni sürümünde ClickOnce desteğini etkinleştirmeniz gerekir.
+## <a name="enable-clickonce-support-in-microsoft-edge"></a>Microsoft Edge'de ClickOnce desteğini etkinleştirme
 
-## <a name="enable-clickonce-support-in-microsoft-edge"></a>Microsoft Edge'da ClickOnce desteğini etkinleştirme
-
-1. Microsoft Edge'da **edge://flags/#edge-click-once** gidin.
+1. Microsoft Edge'de **edge://flags/#edge-click-once** gidin.
 
 2. Açılan listede mevcut değer **Varsayılan** veya **Devre Dışı** olarak ayarlandıysa, **etkin** olarak değiştirin.
 
@@ -38,7 +36,7 @@ en yeni Microsoft Edge sürümünde yapılan son değişikliklerin sonucunda Cli
 
    ![Yeniden Başlat'a tıklayın.](../media/ClickOnceimage2.png)
 
-**Not:** Kuruluşlar ClickOnce desteğini devre dışı bırakmak için grup ilkesi kullanabilir. ClickOnce desteği için bir kuruluş ilkesi olup olmadığını denetlemek için **edge://policy** gidin. Aşağıdaki ekran görüntüsünde ClickOnce tüm kuruluş genelinde etkinleştirildiği gösterilmektedir. Bu ilke değeri **false** olarak ayarlanırsa, kuruluşunuzdaki bir yöneticiye başvurmanız gerekir.
+**Not:** Kuruluşlar ClickOnce desteğini devre dışı bırakmak için grup ilkesi kullanabilir. ClickOnce desteği için bir kuruluş ilkesi olup olmadığını denetlemek için **edge://policy** gidin. Aşağıdaki ekran görüntüsünde ClickOnce'un tüm kuruluş genelinde etkinleştirildiği gösterilmektedir. Bu ilke değeri **false** olarak ayarlanırsa, kuruluşunuzdaki bir yöneticiye başvurmanız gerekir.
 
 ![Edge kuruluş ilkelerinin listesi.](../media/ClickOnceimage3.png)
 

@@ -17,21 +17,19 @@ search.appverid:
 ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
-description: E-posta yoluyla yasal saklama bildirimleri göndermek ve takip etmek ve ayrıca yükümlülük durumunu izlemek için eKeşif (Premium) kullanmayı öğrenin.
-ms.openlocfilehash: 21f02f25518fe2ff1c2e4bf80e43de476d381595
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: E-posta yoluyla yasal saklama bildirimleri göndermek ve takip etmek ve ayrıca yükümlülük durumunu izlemek için eKeşif 'i (Premium) kullanmayı öğrenin.
+ms.openlocfilehash: 3322228dbdc27463bde16de0aa71900cbc80ca58
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100621"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627801"
 ---
 # <a name="acknowledge-a-hold-notification"></a>Bekletme bildirimini onaylama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 Bir mevzuat talebine veya soruşturmasına yanıt verirken, koruyucuları elektronik olarak depolanan bilgileri (ESI) ve etkin veya yakın bir yasal konuyla ilgili olabilecek her türlü malzemeyi koruma yükümlülüğü hakkında bilgilendirmeniz gerekebilir. Gönderildikten sonra, hukuk ekipleri her koruyucunun verilen yönergeleri aldığını, okuduğunu, anladığını ve izlemeyi kabul ettiğini bilmelidir.
 
-eKeşif (Premium), yasal saklama bildirimlerini e-posta yoluyla gönderip takip etmenizi sağlar. E-posta bildirimlerine ek olarak, her koruyucu bireyselleştirilmiş bir Uyumluluk Portalı'na erişebilir ve bu sayede koruyucuların yükümlülük durumlarındaki değişikliklerden haberdar edilmesine olanak sağlar.
+eKeşif (Premium), koruyucularınızı takip etme süresini, maliyetini ve çabasını azaltmaya yardımcı olmak için yasal saklama bildirimlerini e-posta ile göndermenize ve takip etmenizi sağlar. E-posta bildirimlerine ek olarak, her koruyucu bireyselleştirilmiş bir Uyumluluk Portalı'na erişebilir ve bu sayede koruyucuların yükümlülük durumlarındaki değişikliklerden haberdar edilmesine olanak sağlar.
 
 ## <a name="email-notifications"></a>E-posta bildirimleri
 

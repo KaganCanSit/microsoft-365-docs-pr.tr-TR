@@ -18,18 +18,16 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Kuruluşunuzun gereksinimlerini karşılayan kuralları kullanmanıza olanak sağlayacak özel bir hassas bilgi türü oluşturmayı öğrenin.
-ms.openlocfilehash: 69a9808cda2d30cc350da40f6c4f677598c6a000
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 14fb645a4b7f58f609995bc71edae24090c83cc7
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66016426"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630995"
 ---
 # <a name="customize-a-built-in-sensitive-information-type"></a>Yerleşik hassas bilgi türünü özelleştirme
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-İçerikte hassas bilgiler ararken, bu bilgileri *kural* olarak adlandırılan bölümde açıklamanız gerekir. Microsoft Purview Veri Kaybı Önleme (DLP), hemen kullanabileceğiniz en yaygın hassas bilgi türlerine yönelik kurallar içerir. Bu kuralları kullanmak için bir ilkeye eklemeniz gerekir. Bu yerleşik kuralları kuruluşunuzun özel gereksinimlerini karşılayacak şekilde ayarlamak istediğinizi ve özel bir hassas bilgi türü oluşturarak bunu yapabileceğinizi fark edebilirsiniz. Bu konu başlığı altında, mevcut kural koleksiyonunu içeren XML dosyasının daha geniş bir yelpazedeki olası kredi kartı bilgilerini algılamak için nasıl özelleştirileceği gösterilmektedir.
+İçerikte hassas bilgiler ararken, bu bilgileri *kural* olarak adlandırılan bölümde açıklamanız gerekir. Microsoft Purview Veri Kaybı Önleme (DLP), hemen kullanabileceğiniz en yaygın hassas bilgi türleri için kurallar içerir. Bu kuralları kullanmak için bir ilkeye eklemeniz gerekir. Bu yerleşik kuralları kuruluşunuzun özel gereksinimlerini karşılayacak şekilde ayarlamak istediğinizi ve özel bir hassas bilgi türü oluşturarak bunu yapabileceğinizi fark edebilirsiniz. Bu konu başlığı altında, mevcut kural koleksiyonunu içeren XML dosyasının daha geniş bir yelpazedeki olası kredi kartı bilgilerini algılamak için nasıl özelleştirileceği gösterilmektedir.
 
 Bu örneği alıp diğer yerleşik hassas bilgi türlerine uygulayabilirsiniz. Varsayılan hassas bilgi türlerinin ve XML tanımlarının listesi için bkz [. Hassas bilgi türü varlık tanımları](sensitive-information-type-entity-definitions.md).
 
@@ -159,7 +157,7 @@ Tüm XML kuralı tanımları aşağıdaki genel şablon üzerinde oluşturulur. 
 
 ## <a name="remove-the-corroborative-evidence-requirement-from-a-sensitive-information-type"></a>Hassas bilgi türünden doğrulayıcı kanıt gereksinimini kaldırma
 
-Artık Microsoft Purview uyumluluk portalına yükleyebileceğiniz yeni bir hassas bilgi türünüz olduğuna göre, sonraki adım kuralı daha belirgin hale getirmektir. Kuralı, sağlama toplamını geçiren ancak anahtar sözcükler gibi ek (destekleyici) kanıt gerektirmeyen 16 basamaklı bir sayı arayabilecek şekilde değiştirin. Bunu yapmak için, XML'in doğrulayıcı kanıt arayabilen bölümünü kaldırmanız gerekir. Doğrulayıcı kanıt, hatalı pozitif sonuçların azaltılmasında çok yararlıdır. Bu durumda genellikle kredi kartı numarasının yanında belirli anahtar sözcükler veya son kullanma tarihi vardır. Bu kanıtı kaldırırsanız, örnekte 85 olan değerini düşürerek `confidenceLevel`bir kredi kartı numarası bulduğunuzdan ne kadar emin olduğunuzu da ayarlamanız gerekir.
+artık Microsoft Purview uyumluluk portalı karşıya yükleyebileceğiniz yeni bir hassas bilgi türünüz olduğuna göre, sonraki adım kuralı daha belirgin hale getirmektir. Kuralı, sağlama toplamını geçiren ancak anahtar sözcükler gibi ek (destekleyici) kanıt gerektirmeyen 16 basamaklı bir sayı arayabilecek şekilde değiştirin. Bunu yapmak için, XML'in doğrulayıcı kanıt arayabilen bölümünü kaldırmanız gerekir. Doğrulayıcı kanıt, hatalı pozitif sonuçların azaltılmasında çok yararlıdır. Bu durumda genellikle kredi kartı numarasının yanında belirli anahtar sözcükler veya son kullanma tarihi vardır. Bu kanıtı kaldırırsanız, örnekte 85 olan değerini düşürerek `confidenceLevel`bir kredi kartı numarası bulduğunuzdan ne kadar emin olduğunuzu da ayarlamanız gerekir.
 
 ```xml
 <Entity id="db80b3da-0056-436e-b0ca-1f4cf7080d1f" patternsProximity="300"
@@ -197,13 +195,13 @@ Doğrulayıcı kanıt gerektirebilir, ancak farklı veya ek anahtar sözcükler 
     </Keyword>
 ```
 
-## <a name="upload-your-rule"></a>Kuralınızı Upload
+## <a name="upload-your-rule"></a>Kuralınızı karşıya yükleme
 
 Kuralınızı karşıya yüklemek için aşağıdakileri yapmanız gerekir.
 
 1. Unicode kodlamalı .xml dosyası olarak kaydedin. Dosya farklı bir kodlamayla kaydedilirse kural çalışmayacağından bu önemlidir.
 
-2. [Güvenlik & Uyumluluğu PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
+2. [Güvenlik & Uyumluluğu PowerShell'e bağlanın](/powershell/exchange/connect-to-scc-powershell).
 
 3. PowerShell'de aşağıdakileri yazın.
 

@@ -17,22 +17,20 @@ search.appverid:
 ms.assetid: ''
 description: eBulma (Premium) servis talebini yönetirken servis talebine erişebilen üyeleri eklemeyi veya kaldırmayı öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 85a8673e7e3c31ab12cda0109f6c06762adeabf3
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0b3ed53ee897e88d70a7b1322999e5b81de8ed81
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091885"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627723"
 ---
 # <a name="add-or-remove-members-from-a-case"></a>Bir vakaya üye ekleme veya kaldırma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Olaya kimlerin erişebileceğini yönetmek için üye ekleyebilir veya kaldırabilirsiniz. Ancak, bir üyenin bir eBulma (Premium) olayına erişebilmesi (ve bu durumda görevleri gerçekleştirmesi) için kullanıcıyı Microsoft Purview uyumluluk portalının **İzinler** sayfasındaki eBulma Yöneticisi rol grubuna eklemeniz gerekir. Daha fazla bilgi için bkz. [eBulma izinleri atama](./assign-ediscovery-permissions.md).
+Olaya kimlerin erişebileceğini yönetmek için üye ekleyebilir veya kaldırabilirsiniz. Ancak, bir üyenin bir eBulma (Premium) olayına erişebilmesi (ve bu durumda görevleri gerçekleştirmesi) için kullanıcıyı Microsoft Purview uyumluluk portalı **İzinler** sayfasındaki eBulma Yöneticisi rol grubuna eklemeniz gerekir. Daha fazla bilgi için bkz. [eBulma izinleri atama](./assign-ediscovery-permissions.md).
 
 1. **eBulma (Premium)** sayfasında, üye eklemek istediğiniz servis talebine gidin.
 
-2. **Ayarlar** sekmesine tıklayın ve ardından **Access & izinleri** kutucuğunda **Seç'e** tıklayın.
+2. **Ayarlar** sekmesine tıklayın ve erişim **& izinleri** kutucuğunda **Seç'e** tıklayın.
 
 3. **Üyeleri yönet'in** altında, olaya üye eklemek için **Ekle'ye** tıklayın. Ayrıca, Rol gruplarını yönet altında  **Ekle'ye** tıklayarak olaya **bir rol grubu** eklemeyi de seçebilirsiniz.
 

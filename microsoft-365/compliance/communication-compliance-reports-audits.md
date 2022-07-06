@@ -19,16 +19,14 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 998f074529089f5c0309f6799900a628915d3959
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: 27c166f3c9df0dead57f977b00cab41eb82347ad
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65893404"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630503"
 ---
 # <a name="use-communication-compliance-reports-and-audits"></a>İletişim uyumluluk raporlarını ve denetimlerini kullanma
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 ## <a name="reports"></a>Raporlar
 
@@ -93,12 +91,11 @@ Tüm ayrıntılı raporların rapor ayrıntılarını içeren bir .csv dosyası 
 
     - **E-posta**: Exchange e-posta iletilerinde hassas bilgi türleri algılandı.
     - **Teams**: Microsoft Teams kanallarında ve sohbet iletilerinde hassas bilgi türleri algılandı.
-    - **Skype Kurumsal: Skype** Kurumsal iletişimlerinde hassas bilgi türleri algılandı.
     - **Yammer**: Yammer gelen kutularında, gönderilerinde, sohbetlerde ve yanıtlarda hassas bilgi türleri algılandı.
     - **Üçüncü taraf kaynaklar**: Kuruluşunuzda yapılandırılan üçüncü taraf bağlayıcılarla ilişkili etkinlikler için hassas bilgi türleri algılandı. Rapordaki belirli bir hassas bilgi türünün üçüncü taraf kaynaklarının dökümünü görüntülemek için farenizi Üçüncü taraf kaynak sütunundaki hassas bilgi türünün değerinin üzerine getirin.
     - **Diğer**: İç sistem işleme için kullanılan hassas bilgi türleri. Rapor için bu kaynağın seçilmesi veya seçiminin kaldırılması hiçbir değeri etkilemez.
 
-### <a name="message-details-report-preview"></a>İleti ayrıntıları raporu (önizleme)
+### <a name="message-details-report"></a>İleti ayrıntıları raporu
 
 Özel raporlar oluşturun ve **İlkeler** sekmesindeki belirli ilkelerde yer alan iletilerin ayrıntılarını gözden geçirin. Bu raporlar, iletilerin tüm gözden geçirmeleri ve özelleştirilebilir bir zaman aralığı için iletilerin durumu için bir rapor anlık görüntüsü oluşturmak için kullanılabilir. Rapor oluşturduktan sonra, **ayrıntılar raporunu İleti ayrıntıları raporları** sekmesinde .csv dosyası olarak görüntüleyebilir ve indirebilirsiniz.
 
@@ -106,7 +103,7 @@ Tüm ayrıntılı raporların rapor ayrıntılarını içeren bir .csv dosyası 
 
 Yeni bir ileti ayrıntıları raporu oluşturmak için aşağıdaki adımları tamamlayın:
 
-1. *İletişim Uyumluluk Araştırmacıları* rol grubunun üyesi olan bir hesapla Microsoft Purview uyumluluk portalında oturum açın.
+1. *İletişim Uyumluluğu Araştırmacıları* rol grubunun üyesi olan bir hesapla Microsoft Purview uyumluluk portalı oturum açın.
 2. **İlkeler** sekmesine gidin, bir ilke seçin ve ardından **İleti ayrıntıları raporu oluştur'u** seçin.
 3. **İleti ayrıntıları raporu oluştur** bölmesinde Rapor adı alanına rapor için bir **ad** girin.
 4. **Tarih aralığı seçin bölümünde**, rapor için bir *Başlangıç tarihi* ve *Bitiş tarihi* seçin.
@@ -146,7 +143,7 @@ Bazı durumlarda, kullanıcı etkinliklerinin ve iletişimlerinin denetimini kan
 > [!IMPORTANT]
 > İletişim uyumluluk olayları kaydedilmeden önce kuruluşunuz için denetimin etkinleştirilmesi gerekir. Denetimi etkinleştirmek için bkz [. Denetim günlüğünü etkinleştirme](communication-compliance-configure.md#step-2-required-enable-the-audit-log). Etkinlikler Microsoft 365 Denetim günlüğünde yakalanan olayları tetiklediğinde, bu olayların iletişim uyumluluk ilkelerinde görüntülenebilmesi 48 saat kadar sürebilir.
 
-İletişim uyumluluk ilkesi güncelleştirme etkinliklerini görüntülemek için, herhangi bir **ilkenin ana sayfasında İlke güncelleştirmelerini dışarı aktar** denetimini seçin. Güncelleştirme etkinliklerini dışarı aktarmak için *Size Genel Yönetici* veya *İletişim Uyumluluğu Yöneticisi* rolleri atanmalıdır. Bu eylem, aşağıdaki bilgileri içeren .csv biçiminde bir denetim dosyası oluşturur:
+İletişim uyumluluk ilkesi güncelleştirme etkinliklerini görüntülemek için, herhangi bir **ilkenin ana sayfasında İlke güncelleştirmelerini dışarı aktar** denetimini seçin. Güncelleştirme etkinliklerini dışarı aktarmak için *Genel Yönetici* veya *İletişim Uyumluluğu Yönetici* rolleri atanmış olmalıdır. Bu eylem, aşağıdaki bilgileri içeren .csv biçiminde bir denetim dosyası oluşturur:
 
 |**Alan**|**Ayrıntılar**|
 |:-----|:-----|
@@ -155,7 +152,7 @@ Bazı durumlarda, kullanıcı etkinliklerinin ve iletişimlerinin denetimini kan
 | **Operasyonlar** | İlke üzerinde gerçekleştirilen güncelleştirme işlemleri. |
 | **AuditData** | Bu alan, tüm ilke güncelleştirme etkinlikleri için ana veri kaynağıdır. Tüm güncelleştirme etkinlikleri kaydedilir ve virgülle ayrılmıştır. |
 
-bir ilkenin iletişim uyumluluğu gözden geçirme etkinliklerini görüntülemek için, belirli bir ilkenin **Genel Bakış** sayfasında **Gözden geçirme etkinliklerini dışarı aktar** denetimini seçin. Gözden geçirme etkinliklerini dışarı aktarmak için *Genel Yönetici* veya *İletişim Uyumluluğu Yöneticisi* rollerine atanmış olmanız gerekir. Bu eylem, aşağıdaki bilgileri içeren .csv biçiminde bir denetim dosyası oluşturur:
+bir ilkenin iletişim uyumluluğu gözden geçirme etkinliklerini görüntülemek için, belirli bir ilkenin **Genel Bakış** sayfasında **Gözden geçirme etkinliklerini dışarı aktar** denetimini seçin. Gözden geçirme etkinliklerini dışarı aktarmak için *Genel Yönetici* veya *İletişim Uyumluluğu Yönetici* rolleri atanmış olmalıdır. Bu eylem, aşağıdaki bilgileri içeren .csv biçiminde bir denetim dosyası oluşturur:
 
 |**Alan**|**Ayrıntılar**|
 |:-----|:-----|

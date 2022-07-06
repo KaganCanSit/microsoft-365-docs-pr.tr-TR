@@ -16,21 +16,19 @@ search.appverid:
 - MET150
 ms.assetid: 8576cc86-d51b-4285-b54b-67184714cc62
 ROBOTS: NOINDEX, NOFOLLOW
-description: eBulma'nın İlgi eğitim aşamasında (Premium) 40 dosyadan oluşan bir eğitim örneğini etiketleme ve bunlarla çalışma adımlarını öğrenin.
-ms.openlocfilehash: 3e2deb66658aacc8fdd50f2dea5ba082afb8a5e6
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: eKeşif'in (Premium) İlgi eğitim aşamasında 40 dosyadan oluşan bir eğitim örneğini etiketleme ve bunlarla çalışma adımlarını öğrenin.
+ms.openlocfilehash: 8f3d92564d908344155b55b5f84dc6357324a388
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090395"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627271"
 ---
 # <a name="tagging-and-relevance-training-in-ediscovery-premium"></a>eBulma'da etiketleme ve İlgi eğitimi (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
   
-Bu makalede, Microsoft Purview eKeşif'te (Premium) İlgi eğitim modülüyle çalışma yordamı açıklanmaktadır.
+Bu makalede, Microsoft Purview eKeşif (Premium) içindeki İlgi eğitim modülüyle çalışma yordamı açıklanmaktadır.
   
-Değerlendirme eBulma(Premium) içinde tamamlandıktan ve İlgi eğitim aşamasına girdikten sonra, etiketleme için Etiket sekmesine 40 dosyadan oluşan bir eğitim örneği getirilir.
+Değerlendirme eBulma (Premium) içinde tamamlandıktan ve İlgi eğitim aşamasına girdikten sonra etiketleme için Etiket sekmesine 40 dosyadan oluşan bir eğitim örneği getirilir.
   
 ## <a name="performing-relevance-training"></a>İlgi eğitimi gerçekleştirme
 

@@ -11,25 +11,23 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Yöneticiler, Microsoft 365'daki Bloomberg Message e-posta aracından verileri içeri aktarmak ve arşivlemek için bir veri bağlayıcısı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, İçerik Arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: f13fcad1586776711cfc726ab633c411f2eaa383
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Yöneticiler, Microsoft 365'teki Bloomberg İletisi e-posta aracından verileri içeri aktarmak ve arşivlemek için bir veri bağlayıcısı ayarlayabilir. Bu sayede Microsoft 365'teki üçüncü taraf veri kaynaklarından verileri arşivleyebilir, böylece kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, İçerik Arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
+ms.openlocfilehash: 43dd41c8a0d1aa438ed978e86fc0a45da01d7835
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65078360"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630807"
 ---
 # <a name="set-up-a-connector-to-archive-bloomberg-message-data"></a>Bloomberg İleti verilerini arşivleye bir bağlayıcı ayarlama
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+[Bloomberg Message](https://www.bloomberg.com/professional/product/collaboration/) işbirliği aracından finansal hizmetler e-posta verilerini içeri aktarmak ve arşiv etmek için Microsoft Purview uyumluluk portalı bir veri bağlayıcısı kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her gün bir kez kuruluşunuzun Bloomberg güvenli FTP (SFTP) sitesine bağlanır ve e-posta öğelerini Microsoft 365'teki posta kutularına aktarır.
 
-[Bloomberg Message](https://www.bloomberg.com/professional/product/collaboration/) işbirliği aracından finansal hizmetler e-posta verilerini içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir veri bağlayıcısı kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her gün bir kez kuruluşunuzun Bloomberg güvenli FTP (SFTP) sitesine bağlanır ve e-posta öğelerini Microsoft 365 posta kutularına aktarır.
-
-Bloomberg İleti verileri kullanıcı posta kutularında depolandıktan sonra, Dava tutma, içerik arama, Yerinde arşivleme, denetim, İletişim uyumluluğu ve Microsoft 365 bekletme ilkeleri gibi Microsoft Purview özelliklerini Bloomberg İleti verilerine uygulayabilirsiniz. Örneğin, içerik arama aracını kullanarak Bloomberg İleti e-postalarında arama yapabilir veya Bloomberg İleti verilerini içeren posta kutusunu eBulma (Premium) durumundaki bir koruyucuyla ilişkilendirebilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlerken Bloomberg Message bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+Bloomberg İleti verileri kullanıcı posta kutularında depolandıktan sonra, Dava tutma, içerik arama, Yerinde arşivleme, denetim, İletişim uyumluluğu ve Microsoft 365 bekletme ilkeleri gibi Microsoft Purview özelliklerini Bloomberg İleti verilerine uygulayabilirsiniz. Örneğin, içerik arama aracını kullanarak Bloomberg İleti e-postalarında arama yapabilir veya Bloomberg İleti verilerini içeren posta kutusunu eBulma (Premium) durumundaki bir koruyucuyla ilişkilendirebilirsiniz. Microsoft 365'te verileri içeri aktarmak ve arşivlerken Bloomberg Message bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-bloomberg-message-data"></a>Bloomberg İleti verilerini arşivleme hakkında genel bakış
 
-Aşağıdaki genel bakış, bloomberg message verilerini Microsoft 365 arşivleye bağlayıcı kullanma işlemini açıklar.
+Aşağıdaki genel bakış, Microsoft 365'te Bloomberg Message verilerini arşivleyen bir bağlayıcı kullanma işlemini açıklar.
 
 ![Bloomberg İleti içeri aktarma ve arşiv işlemi.](../media/BloombergMessageArchiving.png)
 
@@ -37,7 +35,7 @@ Aşağıdaki genel bakış, bloomberg message verilerini Microsoft 365 arşivley
 
 2. Her 24 saatte bir Bloomberg Message'dan gelen e-posta iletileri Bloomberg SFTP sitesine kopyalanır.
 
-3. Uyumluluk portalında oluşturduğunuz Bloomberg Message bağlayıcısı her gün Bloomberg SFTP sitesine bağlanır ve önceki 24 saat içindeki e-posta iletilerini Microsoft Cloud'daki güvenli bir Azure Depolama alanına aktarır.
+3. Uyumluluk portalında oluşturduğunuz Bloomberg İleti bağlayıcısı her gün Bloomberg SFTP sitesine bağlanır ve önceki 24 saat içindeki e-posta iletilerini Microsoft Bulutu'ndaki güvenli bir Azure Depolama alanına aktarır.
 
 4. Bağlayıcı, e-posta iletisi öğelerini belirli bir kullanıcının posta kutusuna aktarır. Belirli bir kullanıcının posta kutusunda BloombergMessage adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır.
 
@@ -45,9 +43,9 @@ Aşağıdaki genel bakış, bloomberg message verilerini Microsoft 365 arşivley
 
 ## <a name="before-you-set-up-a-connector"></a>Bağlayıcıyı ayarlamadan önce
 
-Bloomberg İleti verilerini arşivlerken gereken uygulama adımlarından bazıları Microsoft 365 dışındadır ve bağlayıcıyı uyumluluk merkezinde oluşturabilmeniz için önce tamamlanması gerekir.
+Bloomberg İleti verilerini arşivlerken gereken uygulama adımlarından bazıları Microsoft 365'in dışındadır ve bağlayıcıyı uyumluluk merkezinde oluşturabilmeniz için önce tamamlanması gerekir.
 
-- Bloomberg Message bağlayıcısı ayarlamak için Oldukça İyi Gizlilik (PGP) ve Secure Shell (SSH) için anahtarlar ve anahtar parolaları kullanmanız gerekir. Bu anahtarlar Bloomberg SFTP sitesini yapılandırmak için kullanılır ve bağlayıcı tarafından verileri Microsoft 365 içeri aktarmak için Bloomberg SFTP sitesine bağlanmak için kullanılır. PGP anahtarı, Bloomberg SFTP sitesinden Microsoft 365 aktarılan verilerin şifrelenmesini yapılandırmak için kullanılır. Bağlayıcı Bloomberg SFTP sitesine bağlandığında güvenli bir uzaktan oturum açmayı etkinleştirmek için güvenli kabuğu yapılandırmak için SSH anahtarı kullanılır.
+- Bloomberg Message bağlayıcısı ayarlamak için Oldukça İyi Gizlilik (PGP) ve Secure Shell (SSH) için anahtarlar ve anahtar parolaları kullanmanız gerekir. Bu anahtarlar Bloomberg SFTP sitesini yapılandırmak için kullanılır ve bağlayıcı tarafından Verileri Microsoft 365'e aktarmak üzere Bloomberg SFTP sitesine bağlanmak için kullanılır. PGP anahtarı, Bloomberg SFTP sitesinden Microsoft 365'e aktarılan verilerin şifrelenmesini yapılandırmak için kullanılır. Bağlayıcı Bloomberg SFTP sitesine bağlandığında güvenli bir uzaktan oturum açmayı etkinleştirmek için güvenli kabuğu yapılandırmak için SSH anahtarı kullanılır.
 
   Bağlayıcıyı ayarlarken, Microsoft tarafından sağlanan ortak anahtarları ve anahtar parolalarını kullanma seçeneğiniz vardır veya kendi özel anahtarlarınızı ve parolalarınızı kullanabilirsiniz. Microsoft tarafından sağlanan ortak anahtarları kullanmanızı öneririz. Ancak, kuruluşunuz özel anahtarlar kullanarak zaten bir Bloomberg SFTP sitesi yapılandırdıysa, aynı özel anahtarları kullanarak bir bağlayıcı oluşturabilirsiniz.
 
@@ -71,9 +69,9 @@ Bloomberg İleti verilerini arşivlerken gereken uygulama adımlarından bazıla
 
   - Bloomberg SFTP sitesi için bağlantı noktası numarası
 
-- Bloomberg Message bağlayıcısı tek bir günde toplam 200.000 öğeyi içeri aktarabilir. SFTP sitesinde 200.000'den fazla öğe varsa, bu öğelerin hiçbiri Microsoft 365 aktarılamaz.
+- Bloomberg Message bağlayıcısı tek bir günde toplam 200.000 öğeyi içeri aktarabilir. SFTP sitesinde 200.000'den fazla öğe varsa, bu öğelerin hiçbiri Microsoft 365'e aktarılamaz.
 
-- 3. Adımda bir Bloomberg İleti bağlayıcısı oluşturan (ve 1. Adımda ortak anahtarları ve IP adresini indiren) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [Microsoft Purview uyumluluk portalındaki İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
+- 3. Adımda Bloomberg İleti bağlayıcısı oluşturan (ve 1. Adımda ortak anahtarları ve IP adresini indiren) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, uyumluluk portalındaki **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft Purview uyumluluk portalı İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
 ## <a name="set-up-a-connector-using-public-keys"></a>Ortak anahtarları kullanarak bağlayıcı ayarlama
 
@@ -101,11 +99,11 @@ Bu bölümdeki adımlarda Pretty Good Privacy (PGP) ve Secure Shell (SSH) için 
 
    Bu dosyalar, 2. Adımda Bloomberg SFTP sitesini yapılandırmak için kullanılan aşağıdaki öğeleri içerir:
 
-   - PGP ortak anahtarı: Bu anahtar, Bloomberg SFTP sitesinden Microsoft 365 aktarılan verilerin şifrelenmesini yapılandırmak için kullanılır.
+   - PGP ortak anahtarı: Bu anahtar, Bloomberg SFTP sitesinden Microsoft 365'e aktarılan verilerin şifrelenmesini yapılandırmak için kullanılır.
 
    - SSH ortak anahtarı: Bu anahtar, bağlayıcı Bloomberg SFTP sitesine bağlandığında güvenli bir uzaktan oturum açmayı etkinleştirmek için güvenli kabuğu yapılandırmak için kullanılır.
 
-   - IP adresi: Bloomberg SFTP sitesi, bu IP adresinden gelen bağlantı isteklerini kabul etmek üzere yapılandırılmıştır. Aynı IP adresi, Bloomberg Message bağlayıcısı tarafından SFTP sitesine bağlanmak ve Bloomberg Message verilerini Microsoft 365 aktarmak için kullanılır.
+   - IP adresi: Bloomberg SFTP sitesi, bu IP adresinden gelen bağlantı isteklerini kabul etmek üzere yapılandırılmıştır. Aynı IP adresi, Bloomberg Message bağlayıcısı tarafından SFTP sitesine bağlanmak ve Bloomberg Message verilerini Microsoft 365'e aktarmak için kullanılır.
 
 7. Sihirbazı kapatmak için **İptal'e** tıklayın. Bağlayıcıyı oluşturmak için 3. Adımda bu sihirbaza geri dönersiniz.
 
@@ -114,14 +112,14 @@ Bu bölümdeki adımlarda Pretty Good Privacy (PGP) ve Secure Shell (SSH) için 
 > [!NOTE]
 > Kuruluşunuz daha önce genel PGP ve SSH anahtarlarını kullanarak Anlık Bloomberg verilerini arşivleme amacıyla bir Bloomberg SFTP sitesi ayarladıysa, başka bir tane ayarlamanız gerekmez. 3. Adımda bağlayıcıyı oluştururken aynı SFTP sitesini belirtebilirsiniz.
 
-Sonraki adım, Bloomberg SFTP sitesi için PGP şifrelemesini ve SSH kimlik doğrulamasını yapılandırmak üzere 1. Adımda edindiğiniz PGP ve SSH ortak anahtarlarını ve IP adresini kullanmaktır. Bu, 3. Adımda oluşturduğunuz Bloomberg Message bağlayıcısının Bloomberg SFTP sitesine bağlanmasını ve Bloomberg Message verilerini Microsoft 365 aktarmasını sağlar. Bloomberg SFTP sitenizi ayarlamak için Bloomberg müşteri desteğiyle çalışmanız gerekir. Yardım için [Bloomberg müşteri desteğine](https://service.bloomberg.com/portal/sessions/new?utm_source=bloomberg-menu&utm_medium=csc) başvurun.
+Sonraki adım, Bloomberg SFTP sitesi için PGP şifrelemesini ve SSH kimlik doğrulamasını yapılandırmak üzere 1. Adımda edindiğiniz PGP ve SSH ortak anahtarlarını ve IP adresini kullanmaktır. Bu, 3. Adımda oluşturduğunuz Bloomberg Message bağlayıcısının Bloomberg SFTP sitesine bağlanmasını ve Bloomberg Message verilerini Microsoft 365'e aktarmasını sağlar. Bloomberg SFTP sitenizi ayarlamak için Bloomberg müşteri desteğiyle çalışmanız gerekir. Yardım için [Bloomberg müşteri desteğine](https://service.bloomberg.com/portal/sessions/new?utm_source=bloomberg-menu&utm_medium=csc) başvurun.
 
 > [!IMPORTANT]
 > Bloomberg, 1. Adımda indirdiğiniz üç dosyayı bir e-posta iletisine eklemenizi ve Bloomberg SFTP sitenizi ayarlamak için onlarla çalışırken müşteri destek ekibine göndermenizi önerir.
 
 ### <a name="step-3-create-a-bloomberg-message-connector"></a>3. Adım: Bloomberg İleti bağlayıcısı oluşturma
 
-Son adım, uyumluluk portalında bir Bloomberg İleti bağlayıcısı oluşturmaktır. Bağlayıcı, Bloomberg SFTP sitesine bağlanmak ve e-posta iletilerini Microsoft 365 ilgili kullanıcı posta kutusu kutularına aktarmak için sağladığınız bilgileri kullanır.
+Son adım, uyumluluk portalında bir Bloomberg İleti bağlayıcısı oluşturmaktır. Bağlayıcı, Bloomberg SFTP sitesine bağlanmak ve e-posta iletilerini Microsoft 365'teki ilgili kullanıcı posta kutusu kutularına aktarmak için sağladığınız bilgileri kullanır.
 
 1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** <https://compliance.microsoft.com> gidin ve tıklayın.
 
@@ -153,10 +151,10 @@ Son adım, uyumluluk portalında bir Bloomberg İleti bağlayıcısı oluşturma
 
      - **Yalnızca Dava tutan kullanıcılar**. Yalnızca posta kutuları Dava tutmada yer alan kullanıcılar için verileri içeri aktarmak için bu seçeneği belirleyin. Bu seçenek, LitigationHoldEnabled özelliği True olarak ayarlanmış kullanıcı posta kutularına veri aktarır. Daha fazla bilgi için bkz. [Dava tutma oluşturma](create-a-litigation-hold.md).
 
-9. **Kullanıcıları Microsoft 365 için Eşleme Bloomberg İletisi sayfasında** otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlayın.
+9. **Bloomberg İletisi kullanıcılarını Microsoft 365 kullanıcılarına eşle** sayfasında otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlayın.
 
    > [!NOTE]
-   > Bağlayıcı, ileti öğelerini belirli bir kullanıcının posta kutusuna aktarır. Belirli bir kullanıcının posta kutusunda **BloombergMessage** adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, *CorporateEmailAddress* özelliğinin değerini kullanarak yapar. Her sohbet iletisi bu özelliği içerir ve özellik, sohbet iletisinin her katılımcısının e-posta adresiyle doldurulur. *CorporateEmailAddress* özelliğinin değerini kullanarak otomatik kullanıcı eşlemesine ek olarak, csv eşleme dosyasını karşıya yükleyerek özel eşleme de tanımlayabilirsiniz. Eşleme dosyası Bloomberg UUID'sini ve her kullanıcı için ilgili Microsoft 365 posta kutusu adresini içermelidir. Otomatik kullanıcı eşlemesini etkinleştirir ve özel bir eşleme sağlarsanız, bağlayıcı her ileti öğesi için önce özel eşleme dosyasına bakar. Kullanıcının Bloomberg UUID'sine karşılık gelen geçerli bir Microsoft 365 kullanıcı bulamazsa, bağlayıcı sohbet öğesinin *CorporateEmailAddress* özelliğini kullanır. Bağlayıcı, özel eşleme dosyasında veya ileti öğesinin *CorporateEmailAddress* özelliğinde geçerli bir Microsoft 365 kullanıcısı bulamazsa, öğe içeri aktarılamaz.
+   > Bağlayıcı, ileti öğelerini belirli bir kullanıcının posta kutusuna aktarır. Belirli bir kullanıcının posta kutusunda **BloombergMessage** adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, *CorporateEmailAddress* özelliğinin değerini kullanarak yapar. Her sohbet iletisi bu özelliği içerir ve özellik, sohbet iletisinin her katılımcısının e-posta adresiyle doldurulur. *CorporateEmailAddress* özelliğinin değerini kullanarak otomatik kullanıcı eşlemesine ek olarak, csv eşleme dosyasını karşıya yükleyerek özel eşleme de tanımlayabilirsiniz. Eşleme dosyası Her kullanıcı için Bloomberg UUID ve ilgili Microsoft 365 posta kutusu adresini içermelidir. Otomatik kullanıcı eşlemesini etkinleştirir ve özel bir eşleme sağlarsanız, bağlayıcı her ileti öğesi için önce özel eşleme dosyasına bakar. Kullanıcının Bloomberg UUID'sine karşılık gelen geçerli bir Microsoft 365 kullanıcısı bulamazsa, bağlayıcı sohbet öğesinin *CorporateEmailAddress* özelliğini kullanır. Bağlayıcı, özel eşleme dosyasında veya ileti öğesinin *CorporateEmailAddress* özelliğinde geçerli bir Microsoft 365 kullanıcısı bulamazsa, öğe içeri aktarılamaz.
 
 10. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve ardından **Son'a** tıklayarak bağlayıcıyı oluşturun.
 
@@ -171,7 +169,7 @@ Bu bölümdeki adımlarda, PGP ve SSH özel anahtarlarını kullanarak Bloomberg
 > [!NOTE]
 > Kuruluşunuz daha önce PGP ve SSH özel anahtarlarını kullanarak Instant Bloomberg verilerini arşivleme amacıyla bir Bloomberg SFTP sitesi yapılandırdıysa, başka bir tane yapılandırmanız gerekmez. 2. Adımda bağlayıcıyı oluştururken aynı SFTP sitesini belirtebilirsiniz.
 
-Kuruluşunuz bir Bloomberg SFTP sitesi kurmak için PGP ve SSH özel anahtarlarını kullandıysa, bir IP adresi edinmeniz ve bunu Bloomberg müşteri desteğine sağlamanız gerekir. Bloomberg SFTP sitesi, bu IP adresinden gelen bağlantı isteklerini kabul etmek için yapılandırılmalıdır. Aynı IP adresi, Bloomberg Message bağlayıcısı tarafından SFTP sitesine bağlanmak ve Bloomberg Message verilerini Microsoft 365 aktarmak için kullanılır.
+Kuruluşunuz bir Bloomberg SFTP sitesi kurmak için PGP ve SSH özel anahtarlarını kullandıysa, bir IP adresi edinmeniz ve bunu Bloomberg müşteri desteğine sağlamanız gerekir. Bloomberg SFTP sitesi, bu IP adresinden gelen bağlantı isteklerini kabul etmek için yapılandırılmalıdır. Aynı IP adresi, Bloomberg Message bağlayıcısı tarafından SFTP sitesine bağlanmak ve Bloomberg Message verilerini Microsoft 365'e aktarmak için kullanılır.
 
 IP adresini almak için:
 
@@ -195,7 +193,7 @@ Bloomberg SFTP sitenizi bu IP adresinden gelen bağlantı isteklerini kabul edec
 
 ### <a name="step-2-create-a-bloomberg-message-connector"></a>2. Adım: Bloomberg İleti bağlayıcısı oluşturma
 
-Bloomberg SFTP siteniz yapılandırıldıktan sonra, sonraki adım uyumluluk portalında bir Bloomberg Message bağlayıcısı oluşturmaktır. Bağlayıcı, Bloomberg SFTP sitesine bağlanmak ve e-posta iletilerini Microsoft 365 ilgili kullanıcı posta kutusu kutularına aktarmak için sağladığınız bilgileri kullanır. Bu adımı tamamlamak için Bloomberg SFTP sitenizi ayarlamak için kullandığınız aynı özel anahtarların ve anahtar parolalarının kopyalarına sahip olduğunuzdan emin olun.
+Bloomberg SFTP siteniz yapılandırıldıktan sonra, sonraki adım uyumluluk portalında bir Bloomberg Message bağlayıcısı oluşturmaktır. Bağlayıcı, Bloomberg SFTP sitesine bağlanmak ve e-posta iletilerini Microsoft 365'teki ilgili kullanıcı posta kutusu kutularına aktarmak için sağladığınız bilgileri kullanır. Bu adımı tamamlamak için Bloomberg SFTP sitenizi ayarlamak için kullandığınız aynı özel anahtarların ve anahtar parolalarının kopyalarına sahip olduğunuzdan emin olun.
 
 1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** <https://compliance.microsoft.com> gidin ve tıklayın.
 
@@ -237,10 +235,10 @@ Bloomberg SFTP siteniz yapılandırıldıktan sonra, sonraki adım uyumluluk por
 
      - **Yalnızca Dava tutan kullanıcılar**. Yalnızca posta kutuları Dava tutmada yer alan kullanıcılar için verileri içeri aktarmak için bu seçeneği belirleyin. Bu seçenek, LitigationHoldEnabled özelliği True olarak ayarlanmış kullanıcı posta kutularına veri aktarır. Daha fazla bilgi için bkz. [Dava tutma oluşturma](create-a-litigation-hold.md).
 
-9. **Kullanıcıları Microsoft 365 için Eşleme Bloomberg İletisi sayfasında** otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlayın.
+9. **Bloomberg İletisi kullanıcılarını Microsoft 365 kullanıcılarına eşle** sayfasında otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlayın.
 
    > [!NOTE]
-   > Bağlayıcı, ileti öğelerini belirli bir kullanıcının posta kutusuna aktarır. Belirli bir kullanıcının posta kutusunda **BloombergMessage** adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, *CorporateEmailAddress* özelliğinin değerini kullanarak yapar. Her sohbet iletisi bu özelliği içerir ve özellik, sohbet iletisinin her katılımcısının e-posta adresiyle doldurulur. *CorporateEmailAddress* özelliğinin değerini kullanarak otomatik kullanıcı eşlemesine ek olarak, csv eşleme dosyasını karşıya yükleyerek özel eşleme de tanımlayabilirsiniz. Eşleme dosyası Bloomberg UUID'sini ve her kullanıcı için ilgili Microsoft 365 posta kutusu adresini içermelidir. Otomatik kullanıcı eşlemesini etkinleştirir ve özel bir eşleme sağlarsanız, bağlayıcı her ileti öğesi için önce özel eşleme dosyasına bakar. Kullanıcının Bloomberg UUID'sine karşılık gelen geçerli bir Microsoft 365 kullanıcı bulamazsa, bağlayıcı sohbet öğesinin *CorporateEmailAddress* özelliğini kullanır. Bağlayıcı, özel eşleme dosyasında veya ileti öğesinin *CorporateEmailAddress* özelliğinde geçerli bir Microsoft 365 kullanıcısı bulamazsa, öğe içeri aktarılamaz.
+   > Bağlayıcı, ileti öğelerini belirli bir kullanıcının posta kutusuna aktarır. Belirli bir kullanıcının posta kutusunda **BloombergMessage** adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, *CorporateEmailAddress* özelliğinin değerini kullanarak yapar. Her sohbet iletisi bu özelliği içerir ve özellik, sohbet iletisinin her katılımcısının e-posta adresiyle doldurulur. *CorporateEmailAddress* özelliğinin değerini kullanarak otomatik kullanıcı eşlemesine ek olarak, csv eşleme dosyasını karşıya yükleyerek özel eşleme de tanımlayabilirsiniz. Eşleme dosyası Her kullanıcı için Bloomberg UUID ve ilgili Microsoft 365 posta kutusu adresini içermelidir. Otomatik kullanıcı eşlemesini etkinleştirir ve özel bir eşleme sağlarsanız, bağlayıcı her ileti öğesi için önce özel eşleme dosyasına bakar. Kullanıcının Bloomberg UUID'sine karşılık gelen geçerli bir Microsoft 365 kullanıcısı bulamazsa, bağlayıcı sohbet öğesinin *CorporateEmailAddress* özelliğini kullanır. Bağlayıcı, özel eşleme dosyasında veya ileti öğesinin *CorporateEmailAddress* özelliğinde geçerli bir Microsoft 365 kullanıcısı bulamazsa, öğe içeri aktarılamaz.
 
 10. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve ardından **Son'a** tıklayarak bağlayıcıyı oluşturun.
 
@@ -248,4 +246,4 @@ Bloomberg SFTP siteniz yapılandırıldıktan sonra, sonraki adım uyumluluk por
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-- Microsoft 365 içeri aktarılan Bloomberg İleti e-postasının yazışmaları desteklenmez. Bir kişiye gönderilen tek tek iletiler içeri aktarılır, ancak yazışma konuşmasında sunulmaz. Microsoft, Bloomberg Message veri bağlayıcısının sonraki sürümlerinde yazışmayı desteklemek için çalışmaktadır.
+- Microsoft 365'e aktarılan Bloomberg İletisi e-postasının yazışmaları desteklenmez. Bir kişiye gönderilen tek tek iletiler içeri aktarılır, ancak yazışma konuşmasında sunulmaz. Microsoft, Bloomberg Message veri bağlayıcısının sonraki sürümlerinde yazışmayı desteklemek için çalışmaktadır.

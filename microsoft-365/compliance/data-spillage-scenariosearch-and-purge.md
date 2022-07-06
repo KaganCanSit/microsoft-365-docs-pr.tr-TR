@@ -14,16 +14,14 @@ search.appverid:
 - MET150
 ms.assetid: d945f7dd-f62f-4ca7-b3e7-469824cfd493
 description: Kuruluşunuzdaki bir veri sızıntısı olayını yönetmek ve yanıtlamak için eBulma ve arama araçlarını kullanın.
-ms.openlocfilehash: 9be20d6c8eab99206a5510be6f21d3ca24114e0e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: b65d6057921d310c3e22e5494218271c7693c162
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65086963"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630201"
 ---
 # <a name="ediscovery-solution-series-data-spillage-scenario---search-and-purge"></a>eBulma çözüm serisi: Veri taşması senaryosu - Arama ve temizleme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
  **Veri taşması nedir ve neden önem vermelisiniz?** Veri taşması, gizli bir belgenin güvenilmeyen bir ortama yayımlanmasıdır. Bir veri taşması olayı algılandığında, dökülmenin boyutunu ve konumlarını hızla değerlendirmek, çevresindeki kullanıcı etkinliklerini incelemek ve ardından taşan verileri sistemden kalıcı olarak temizlemek önemlidir.
   
@@ -33,7 +31,7 @@ Contoso'da baş bilgi güvenlik görevlisisiniz. Bir çalışanın bilmeden çok
   
 ### <a name="scope-of-this-article"></a>Bu makalenin kapsamı
 
-Bu belgede, erişilebilir veya kurtarılabilir olmaması için iletinin Microsoft 365 kalıcı olarak nasıl kaldırılacağına ilişkin yönergelerin listesi sağlanır. Bir iletiyi silmek ve silinmiş öğe saklama süresi dolana kadar kurtarılabilir hale getirmek için bkz. [Kuruluşunuzda e-posta iletilerini arama ve silme](search-for-and-delete-messages-in-your-organization.md).
+Bu belge, erişilebilir veya kurtarılabilir olmaması için iletiyi Microsoft 365'ten kalıcı olarak kaldırma yönergelerinin listesini sağlar. Bir iletiyi silmek ve silinmiş öğe saklama süresi dolana kadar kurtarılabilir hale getirmek için bkz. [Kuruluşunuzda e-posta iletilerini arama ve silme](search-for-and-delete-messages-in-your-organization.md).
   
 ## <a name="workflow-for-managing-data-spillage-incidents"></a>Veri taşması olaylarını yönetmek için iş akışı
 
@@ -52,13 +50,13 @@ Veri taşması olayının nasıl yönetileceğini aşağıda bulabilirsiniz:
 
 ## <a name="things-to-know-before-you-start"></a>Başlamadan önce bilmeniz gerekenler
 
-- Bu makalede açıklanan veri taşması iş akışı, Microsoft Teams sohbet iletilerini silmez. Teams sohbet iletilerini aramak ve silmek için bkz[. Teams sohbet iletilerini arama ve temizleme](search-and-delete-Teams-chat-messages.md).
+- Bu makalede açıklanan veri taşması iş akışı, Microsoft Teams'de sohbet iletilerini silmez. Teams sohbet iletilerini aramak ve silmek için bkz. [Teams'de sohbet iletilerini arama ve temizleme](search-and-delete-Teams-chat-messages.md).
 
 - Bir posta kutusu beklemede olduğunda, saklama süresi dolana veya saklama serbest bırakılana kadar silinmiş bir ileti Kurtarılabilir Öğeler klasöründe kalır. [6. adım](#step-6-prepare-the-mailboxes) , posta kutularından ayrı tutmanın nasıl kaldırılacağını açıklar. Saklamayı kaldırmadan önce kayıt yönetiminize veya hukuk departmanlarınıza danışın. Kuruluşunuzun beklemedeki posta kutusunun mı yoksa veri taşması olayının mı öncelikli olduğunu tanımlayan bir ilkesi olabilir. 
 
 - Veri taşması araştırmacısının servis talebine kimlerin erişebileceğini arayıp yönetebileceği kullanıcı posta kutularını denetlemek için uyumluluk sınırları ayarlayabilir ve [1. Adım'da](#optional-step-1-manage-who-can-access-the-case-and-set-compliance-boundaries) açıklanan özel bir rol grubu oluşturabilirsiniz. Bunu yapmak için Kuruluş Yönetimi rol grubunun bir üyesi olmanız veya rol yönetimi rolüne atanmış olmanız gerekir. Siz veya kuruluşunuzdaki bir yönetici uyumluluk sınırlarını zaten ayarladıysanız, 1. Adımı atlayabilirsiniz.
 
-- Servis talebi oluşturmak için eBulma Yöneticisi rol grubunun üyesi olmanız veya Servis Talebi Yönetimi rolüne atanmış özel bir rol grubunun üyesi olmanız gerekir. Üye değilseniz, Microsoft 365 yöneticisinden [sizi eBulma yöneticisi rol grubuna eklemesini](assign-ediscovery-permissions.md) isteyin.
+- Servis talebi oluşturmak için eBulma Yöneticisi rol grubunun üyesi olmanız veya Servis Talebi Yönetimi rolüne atanmış özel bir rol grubunun üyesi olmanız gerekir. Üye değilseniz, microsoft 365 yöneticisinden [sizi eBulma yöneticisi rol grubuna eklemesini](assign-ediscovery-permissions.md) isteyin.
 
 - İçerik Araması oluşturmak ve çalıştırmak için eBulma Yöneticisi rol grubunun üyesi olmanız veya Uyumluluk Araması yönetim rolüne atanmış olmanız gerekir. İletileri silmek için Kuruluş Yönetimi rol grubunun üyesi olmanız veya Arama ve Temizleme yönetimi rolüne sahip olmanız gerekir. Rol grubuna kullanıcı ekleme hakkında bilgi için bkz. [eBulma izinleri atama](./assign-ediscovery-permissions.md).
 
@@ -66,7 +64,7 @@ Veri taşması olayının nasıl yönetileceğini aşağıda bulabilirsiniz:
 
 ## <a name="optional-step-1-manage-who-can-access-the-case-and-set-compliance-boundaries"></a>(İsteğe bağlı) 1. Adım: Servis talebine kimlerin erişebileceğini yönetme ve uyumluluk sınırlarını ayarlama
 
-Kuruluş uygulamanıza bağlı olarak, veri taşması olayını araştırmak ve uyumluluk sınırlarını ayarlamak için kullanılan eBulma olayına kimlerin erişebileceğini denetlemeniz gerekir. Bunu yapmanın en kolay yolu, araştırmacıları Microsoft Purview uyumluluk portalında mevcut bir rol grubunun üyesi olarak eklemek ve ardından rol grubunu eBulma olayının bir üyesi olarak eklemektir. Yerleşik eBulma rol grupları ve eBulma olayına üye ekleme hakkında bilgi için bkz. [eBulma izinleri atama](assign-ediscovery-permissions.md).
+Kuruluş uygulamanıza bağlı olarak, veri taşması olayını araştırmak ve uyumluluk sınırlarını ayarlamak için kullanılan eBulma olayına kimlerin erişebileceğini denetlemeniz gerekir. Bunu yapmanın en kolay yolu, araştırmacıları Microsoft Purview uyumluluk portalı mevcut bir rol grubunun üyesi olarak eklemek ve ardından rol grubunu eBulma olayının bir üyesi olarak eklemektir. Yerleşik eBulma rol grupları ve eBulma olayına üye ekleme hakkında bilgi için bkz. [eBulma izinleri atama](assign-ediscovery-permissions.md).
   
 Ayrıca, kuruluş gereksinimlerinize uygun yeni bir rol grubu da oluşturabilirsiniz. Örneğin, kuruluştaki bir grup veri taşması araştırmacısının tüm veri taşması olaylarına erişmesini ve bu olaylarda işbirliği yapmalarını isteyebilirsiniz. Bunu yapmak için bir "Veri Taşması Araştırmacısı" rol grubu oluşturabilir, uygun rolleri (Dışarı Aktarma, RMS Şifre Çözme, Gözden Geçirme, Önizleme, Uyumluluk Araması ve Olay Yönetimi) atayabilir, veri taşması araştırmacılarını rol grubuna ekleyebilir ve ardından rol grubunu veri taşması eBulma olayının bir üyesi olarak eKleyebilirsiniz. Bunun nasıl yapılacağını açıklayan ayrıntılı yönergeler için bkz. [Office 365'da eBulma araştırmaları için uyumluluk sınırlarını ayarlama](set-up-compliance-boundaries.md). 
   
@@ -74,7 +72,7 @@ Ayrıca, kuruluş gereksinimlerinize uygun yeni bir rol grubu da oluşturabilirs
 
 eBulma olayı, veri taşması araştırmanızı yönetmek için etkili bir yol sağlar. 1. Adımda oluşturduğunuz rol grubuna üye ekleyebilir, rol grubunu yeni bir eBulma olayının üyesi olarak ekleyebilir, taşan verileri bulmak için yinelemeli aramalar yapabilir, paylaşacak bir raporu dışarı aktarabilir, servis talebinin durumunu izleyebilir ve gerekirse servis talebinin ayrıntılarına geri bakabilirsiniz. Veri taşması olayları için kullanılan eBulma olayları için bir adlandırma kuralı oluşturmayı göz önünde bulundurun ve gerekirse gelecekte bulup başvurabilmeniz için olay adı ve açıklamasında olabildiğince fazla bilgi sağlayın.
   
-Yeni bir servis talebi oluşturmak için güvenlik ve uyumluluk merkezinde eBulma özelliğini kullanabilirsiniz. [eBulma (Standart) ile Kullanmaya başlayın'da](get-started-core-ediscovery.md#step-3-create-a-ediscovery-standard-case) "Yeni servis talebi oluşturma" konusuna bakın.
+Yeni bir servis talebi oluşturmak için güvenlik ve uyumluluk merkezinde eBulma özelliğini kullanabilirsiniz. [eKeşif kullanmaya başlama (Standart)](get-started-core-ediscovery.md#step-3-create-a-ediscovery-standard-case) bölümünde "Yeni servis talebi oluşturma" konusuna bakın.
   
 ## <a name="step-3-search-for-the-spilled-data"></a>3. Adım: Taşan verileri arama
 

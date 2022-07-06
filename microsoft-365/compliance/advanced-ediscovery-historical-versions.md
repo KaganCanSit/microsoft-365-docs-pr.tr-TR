@@ -15,44 +15,42 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: SharePoint ve OneDrive depolanan belgelerin tüm sürümlerinden içerik toplamak için eBulma'daki (Premium) geçmiş sürümleri kullanın.
-ms.openlocfilehash: 2b71d79fae15b5bc8bafbf32fc189dad9b314d40
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: SharePoint ve OneDrive'da depolanan belgelerin tüm sürümlerinden içerik toplamak için eBulma(Premium) içinde geçmiş sürümleri kullanın.
+ms.openlocfilehash: 3706da8c9383dfdd3d6b41f309f8b84920648842
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092557"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627745"
 ---
 # <a name="set-up-historical-versions-in-ediscovery-premium-preview"></a>eBulma'da geçmiş sürümleri ayarlama (Premium) (önizleme)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+eKeşif (Premium) içindeki geçmiş sürümler özelliği, kuruluşunuzdaki eBulma yöneticilerinin SharePoint Online ve OneDrive İş'da depolanan tüm belge sürümlerinde içerik aramasına ve toplamasına olanak tanır. Ardından bu içeriği analiz ve gözden geçirme için bir gözden geçirme kümesine ekleyebilirsiniz. Bu, aynı belgenin en son sürümü ilgili bilgileri içermese bile, bir belgenin olay veya araştırmayla ilgili olabilecek belirli bir sürümündeki içeriği bulmanıza ve gözden geçirmenize yardımcı olur.
 
-eKeşif'teki (Premium) geçmiş sürümler özelliği, kuruluşunuzdaki eBulma yöneticilerinin SharePoint Online ve OneDrive İş'da depolanan tüm belge sürümlerinde içerik aramasına ve toplamasına olanak tanır. Ardından bu içeriği analiz ve gözden geçirme için bir gözden geçirme kümesine ekleyebilirsiniz. Bu, aynı belgenin en son sürümü ilgili bilgileri içermese bile, bir belgenin olay veya araştırmayla ilgili olabilecek belirli bir sürümündeki içeriği bulmanıza ve gözden geçirmenize yardımcı olur.
+eBulma'daki (Premium) geçmiş sürüm özelliğini desteklemek için, SharePoint yöneticilerinin kuruluşlarındaki sitelerde sürüm oluşturmayı etkinleştirmesi gerekir. Ardından, kullanıcılar SharePoint veya OneDrive'daki belgeleri değiştirdiğinde, belge kaydedildiğinde (veya otomatik kaydedildiğinde) örtük normal sürümler oluşturulur. SharePoint sürüm oluşturma, SharePoint öğelerinde (belgeler, olaylar ve görevler dahil) gerçekleştirilen etkinliğin izlenmesine olanak tanır. Bu sürüm oluşturma özelliği, yasal araştırmalarda kanıt sağlayabilecek bir denetim izi bırakır. Bir belgenin bu eski sürümleri, yasal bir konuda mahkeme keşfi sırasında hassas veya ilgili içeriğe sahip bu tür sürümleri paylaşması gerekebilecek kuruluş tarafından kullanılabilir.
 
-eBulma'da (Premium) geçmiş sürüm özelliğini desteklemek için, SharePoint yöneticilerin kuruluşlarındaki siteler için sürüm oluşturmayı etkinleştirmesi gerekir. Ardından, kullanıcılar belgeleri SharePoint veya OneDrive değiştirdiğinde, belge kaydedildiğinde (veya otomatik kaydedildiğinde) örtük normal sürümler oluşturulur. SharePoint sürüm oluşturma, SharePoint öğelerde (belgeler, olaylar ve görevler dahil) gerçekleştirilen etkinliğin izlenmesine olanak tanır. Bu sürüm oluşturma özelliği, yasal araştırmalarda kanıt sağlayabilecek bir denetim izi bırakır. Bir belgenin bu eski sürümleri, yasal bir konuda mahkeme keşfi sırasında hassas veya ilgili içeriğe sahip bu tür sürümleri paylaşması gerekebilecek kuruluş tarafından kullanılabilir.
-
-Bir eBulma yöneticisi kuruluşun geçmiş sürümlerini açıp belirli SharePoint siteleri için etkinleştirdikten sonra, SharePoint içerik gönderme hizmeti etkinleştirilmiş sitelerdeki belgelerin tüm ana ve ikincil sürümlerini tarar ve sonra bu sürümleri dizin oluşturma için gönderir. Gezinme ve dizin oluşturma işlemi tamamlandıktan sonra belgeler ve sürümleri eBulma araması için kullanılabilir. Belirli bir sürüme erişilebildiği sürece (sürüm geçmişine göre) bu sürüm eBulma (Premium) koleksiyonu aramasında bulunabilir.
+Bir eBulma yöneticisi kuruluşun geçmiş sürümlerini açıp belirli SharePoint siteleri için etkinleştirdikten sonra, SharePoint içerik gönderme hizmeti etkinleştirilmiş sitelerdeki belgelerin tüm önemli ve ikincil sürümlerini tarar ve sonra bu sürümleri dizin oluşturma için gönderir. Gezinme ve dizin oluşturma işlemi tamamlandıktan sonra belgeler ve sürümleri eBulma araması için kullanılabilir. Belirli bir sürüme erişilebildiği sürece (sürüm geçmişine göre) bu sürüm eBulma (Premium) koleksiyonu aramasında bulunabilir.
 
 ## <a name="set-up-historical-versions"></a>Geçmiş sürümleri ayarlama
 
-eBulma'da (Premium) geçmiş sürümleri etkinleştirmek için kuruluşunuzun bu sürümü açması ve ardından belirli siteleri etkinleştirmesi ve böylece söz konusu sitelerde depolanan tüm belge sürümlerinin arama için dizine kaydedilmesi gerekir. Geçmiş sürümler için eBulma 'yı (Premium) ayarlamadan önce, SharePoint sürüm oluşturma desteğini etkinleştirmeniz gerekir.
+eKeşif'te (Premium) geçmiş sürümleri etkinleştirmek için kuruluşunuzun bu sürümü açıp belirli siteleri etkinleştirmesi gerekir; böylece söz konusu sitelerde depolanan belgelerin tüm sürümleri arama için dizinlenir. Geçmiş sürümler için eBulma 'yı (Premium) ayarlamadan önce SharePoint'te sürüm oluşturma desteğini etkinleştirmeniz gerekir.
 
-### <a name="step-1-turn-on-versioning-in-sharepoint"></a>1. Adım: SharePoint'da sürüm oluşturma özelliğini açma
+### <a name="step-1-turn-on-versioning-in-sharepoint"></a>1. Adım: SharePoint'te sürüm oluşturmayı açma
 
-İlk adım, belgenin tüm sürümlerinin korunması için SharePoint Online'da sürüm oluşturmayı açmaktır. Yönergeler için bkz[. SharePoint'de sürüm oluşturma](/microsoft-365/community/versioning-basics-best-practices).
+İlk adım, belgenin tüm sürümlerinin korunması için SharePoint Online'da sürüm oluşturmayı açmaktır. Yönergeler için bkz. [SharePoint'te sürüm oluşturma](/microsoft-365/community/versioning-basics-best-practices).
 
 ### <a name="step-2-turn-on-historical-versions"></a>2. Adım: Geçmiş sürümleri açma
 
-Sonraki adım, eBulma'da (Premium) geçmiş sürümleri açmaktır. Kuruluşunuzun geçmiş sürümlerini açmak için, bir kişinin genel yönetici veya eBulma Yöneticisi (eBulma Yöneticisi rol grubundaki eBulma Yöneticisi alt grubunun üyesi) olması gerekir. Geçmiş sürümler açıldıktan sonra tüm kuruluşunuz için geçerli olur.
+Bir sonraki adım, eBulma'da (Premium) geçmiş sürümleri açmaktır. Kuruluşunuzun geçmiş sürümlerini açmak için, bir kişinin genel yönetici veya eBulma Yöneticisi (eBulma Yöneticisi rol grubundaki eBulma Yöneticisi alt grubunun üyesi) olması gerekir. Geçmiş sürümler açıldıktan sonra tüm kuruluşunuz için geçerli olur.
 
 > [!IMPORTANT]
 > Geçmiş sürümleri etkinleştirdikten sonra, genel önizleme sırasında kapatamazsınız. Geçmiş sürümler genel kullanıma sunulduktan sonra kapatabilirsiniz.
 
-1. Microsoft Purview uyumluluk portalında [eBulma (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) seçeneğine gidin ve **eBulma (Premium) ayarları'na** tıklayın.
+1. Microsoft Purview uyumluluk portalı [, eBulma (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) seçeneğine gidin ve **ardından eBulma (Premium) ayarları'na** tıklayın.
 
    ![eBulma (Premium) ayarlarını seçin](..\media\HistoricalVersions1.png)
 
-2. **Ayarlar** sayfasında **Geçmiş sürümler (önizleme)** sekmesini seçin ve geçmiş **sürümler kiracı denetimi** iki durumlu düğmesini açık konuma getirin.
+2. Ayarlar sayfasında **Geçmiş sürümler (önizleme)** sekmesini seçin ve geçmiş **sürümler kiracı denetimi** iki durumlu düğmesini açık konuma getirin.
 
    ![Geçmiş sürümleri etkinleştirmek için iki durumlu düğmeyi açma](..\media\HistoricalVersions2.png)
 
@@ -62,16 +60,16 @@ Sonraki adım, eBulma'da (Premium) geçmiş sürümleri açmaktır. Kuruluşunuz
 
 ### <a name="step-3-activate-sharepoint-sites"></a>3. Adım: SharePoint sitelerini etkinleştirme
 
-Kuruluşunuz için geçmiş sürümleri etkinleştirdikten sonra, son adım geçmiş sürümleri desteklemek üzere SharePoint siteleri etkinleştirmektir. Bir siteyi etkinleştirdiğinizde ( **Geçmiş sürümler** sekmesinde site listesine ekleyerek), site yeniden gezinilir ve bu sitede depolanan belgelerin tüm sürümleri arama için dizine eklenir.
+Kuruluşunuz için geçmiş sürümleri etkinleştirdikten sonra, son adım SharePoint sitelerini geçmiş sürümleri destekleyecek şekilde etkinleştirmektir. Bir siteyi etkinleştirdiğinizde ( **Geçmiş sürümler** sekmesinde site listesine ekleyerek), site yeniden gezinilir ve bu sitede depolanan belgelerin tüm sürümleri arama için dizine eklenir.
 
 > [!NOTE]
 > Geçmiş sürümlerin genel önizlemesi sırasında kuruluş başına 100 site etkinleştirmesi sınırı vardır. Geçmiş sürümler için bir siteyi etkinleştirdiğinizde veya devre dışı bırakdığınızda etkinleştirme bu sınıra göre sayılır. Birden çok siteyi etkinleştirirseniz, her site tek bir etkinleştirme olarak sayılır. Etkinleştirmelerin toplam sayısı **Geçmiş sürümler** sekmesinde görüntülenir.
 
-1. eBulma (Premium) **Ayarlar** sayfasındaki **Geçmiş sürümler** sekmesinde, siteleri geçmiş sürümler için etkinleştirmek için **Etkinleştir'e** tıklayın.
+1. eBulma (Premium) **Ayarları** sayfasındaki **Geçmiş sürümler** sekmesinde, siteleri geçmiş sürümler için etkinleştirmek için **Etkinleştir'e** tıklayın.
 
    ![Geçmiş sürümlere yönelik siteleri etkinleştirmek için Etkinleştir'e tıklayın](..\media\HistoricalVersions3.png)  
 
-   Kuruluşunuzdaki tüm SharePoint sitelerin listesini içeren bir açılır sayfa görüntülenir.
+   Kuruluşunuzdaki tüm SharePoint sitelerinin listesini içeren bir açılır sayfa görüntülenir.
 
 2. Etkinleştirmek istediğiniz siteyi seçin ve ardından **etkinleştir'e** tıklayarak geçmiş sürümlerde etkinleştirin. Belirli bir siteyi aramak için arama kutusunu kullanabilirsiniz.
 
@@ -89,7 +87,7 @@ Kuruluşunuz için geçmiş sürümleri etkinleştirdikten sonra, son adım geç
 
 **Bir taslak koleksiyonu gözden geçirme kümesine işlerken "tüm sürümleri toplama" seçeneğinin geçmiş sürümleri arasında ne fark vardır?**
 
-Şu anda arama için belgelerin yalnızca en son sürümü dizine alınmış durumdadır. Başka bir deyişle, taslak koleksiyonu çalıştırdığınızda yalnızca belgelerin en son sürümleri aranabilir. Belge koleksiyon için anahtar sözcük sorgusuyla eşleşiyorsa, koleksiyon sonuçlarında döndürülür. Ancak, belgenin en son sürümü bir arama sorgusuyla eşleşmiyorsa, belgenin eski sürümleri anahtar sözcüğü içeriyorsa belge döndürülmez. eBulma (Premium), bu durumu hafifletmeye yardımcı olmak için, [bir koleksiyonu gözden geçirme kümesine işlerken](commit-draft-collection.md#commit-a-draft-collection-to-a-review-set) belgenin tüm sürümlerini toplamanıza olanak sağlar. Bu, anahtar sözcüğü içerebilecek eski sürümlerin gözden geçirme kümesine ekleneceğini gösterir.
+Şu anda arama için belgelerin yalnızca en son sürümü dizine alınmış durumdadır. Başka bir deyişle, taslak koleksiyonu çalıştırdığınızda yalnızca belgelerin en son sürümleri aranabilir. Belge koleksiyon için anahtar sözcük sorgusuyla eşleşiyorsa, koleksiyon sonuçlarında döndürülür. Ancak, belgenin en son sürümü bir arama sorgusuyla eşleşmiyorsa, belgenin eski sürümleri anahtar sözcüğü içeriyorsa belge döndürülmez. Bu durumu hafifletmeye yardımcı olmak için eBulma (Premium), [bir koleksiyonu bir gözden geçirme kümesine işlerken](commit-draft-collection.md#commit-a-draft-collection-to-a-review-set) belgenin tüm sürümlerini toplamanıza olanak sağlar. Bu, anahtar sözcüğü içerebilecek eski sürümlerin gözden geçirme kümesine ekleneceğini gösterir.
 
 Bir siteyi etkinleştirdiğinizde, belgenin tüm sürümleri (yalnızca son sürüm değil) arama için dizine eklendiğinden, geçmiş sürümler "tüm sürümleri toplama"dan farklı ve daha verimlidir. Sonuç olarak, belgenin eski bir sürümü arama sorgusuyla eşleşen bir anahtar sözcük içeriyorsa, koleksiyon tarafından döndürülür.
 

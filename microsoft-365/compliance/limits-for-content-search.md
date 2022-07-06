@@ -16,25 +16,23 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 78fe3147-1979-4c41-83bb-aeccf244368d
-description: Microsoft Purview uyumluluk portalında İçerik arama ve eBulma (Standart) özellikleri için geçerli olan sınırlar hakkında bilgi edinin.
-ms.openlocfilehash: f20c33781b8dd9f92091e1b0c459137a4edd33ed
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Microsoft Purview uyumluluk portalı İçerik arama ve eBulma (Standart) özellikleri için geçerli olan sınırlar hakkında bilgi edinin.
+ms.openlocfilehash: 79078818ca3975dcbfee0ce72b93f1c3d6039802
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014882"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629541"
 ---
 # <a name="limits-for-ediscovery-search"></a>eBulma arama sınırları
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Microsoft Purview uyumluluk portalı eBulma arama araçlarına çeşitli sınırlar uygulanır. Buna **İçerik arama** sayfasında çalıştırılacak aramalar ve eBulma **(Standart)** sayfasında eBulma olayıyla ilişkili aramalar dahildir. Bu sınırlar, kuruluşlara sağlanan hizmetlerin durumunu ve kalitesini korumaya yardımcı olur. Arama için Exchange Online'da e-posta iletilerinin dizinlenmesiyle ilgili sınırlar da vardır. eBulma aramalarının veya e-posta dizin oluşturmanın sınırlarını değiştiremezsiniz, ancak eBulma aramalarını planlarken, çalıştırırken ve sorun giderirken bu sınırları dikkate alabilmeniz için bunları bilmeniz gerekir.
 
-Microsoft Purview uyumluluk portalında eBulma arama araçlarına çeşitli sınırlar uygulanır. Buna **İçerik arama** sayfasında çalıştırılacak aramalar ve eBulma **(Standart)** sayfasında eBulma olayıyla ilişkili aramalar dahildir. Bu sınırlar, kuruluşlara sağlanan hizmetlerin durumunu ve kalitesini korumaya yardımcı olur. Arama için Exchange Online'da e-posta iletilerinin dizinlenmesiyle ilgili sınırlar da vardır. eBulma aramalarının veya e-posta dizin oluşturmanın sınırlarını değiştiremezsiniz, ancak eBulma aramalarını planlarken, çalıştırırken ve sorun giderirken bu sınırları dikkate alabilmeniz için bunları bilmeniz gerekir.
-
-Microsoft Purview eBulma (Premium) aracıyla ilgili sınırlar için bkz. [eBulmadaki sınırlar (Premium)](limits-ediscovery20.md)
+Microsoft Purview eKeşif (Premium) aracıyla ilgili sınırlar için bkz. [eBulma'daki sınırlar (Premium)](limits-ediscovery20.md)
 
 ## <a name="search-limits"></a>Arama sınırları
 
-Aşağıdaki tabloda, uyumluluk portalında içerik arama aracı kullanılırken ve Bir Microsoft Purview eKeşif (Standart) olayıyla ilişkili aramalar için arama sınırları listelenir.
+Aşağıdaki tabloda, uyumluluk portalında içerik arama aracı kullanılırken ve bir Microsoft Purview eKeşif (Standart) servis talebiyle ilişkili aramalar için arama sınırları listelenir.
 
 <br>
 
@@ -49,7 +47,7 @@ Aşağıdaki tabloda, uyumluluk portalında içerik arama aracı kullanılırken
 |İçerik Arama sonuçlarının önizlemesini görüntülerken önizleme sayfasında görüntülenen kullanıcı posta kutusu başına en fazla öğe sayısı.|100|
 |Arama sonuçlarının önizlemesini görüntülerken önizleme sayfasında görüntülenebilen tüm kullanıcı posta kutularında bulunan en fazla öğe sayısı. En yeni öğeler görüntülenir.|1.000 <sup>2</sup>|
 |Arama sonuçları için önizlenebilen en fazla kullanıcı posta kutusu sayısı. Arama sorgusuyla eşleşen içerik içeren 1000'den fazla posta kutusu varsa, yalnızca en fazla arama sonucuna sahip ilk 1000 posta kutusu önizleme için kullanılabilir.|1,000|
-|Arama sonuçlarının önizlemesini görüntülerken önizleme sayfasında görüntülenen SharePoint ve OneDrive İş sitelerinde bulunan en fazla öğe sayısı. En yeni öğeler görüntülenir.|200|
+|SharePoint ve OneDrive İş sitelerinde bulunan ve arama sonuçlarının önizlemesini görüntülerken önizleme sayfasında görüntülenen en fazla öğe sayısı. En yeni öğeler görüntülenir.|200|
 |Arama sonuçları için önizlenebilen en fazla site sayısı (SharePoint ve OneDrive İş). Arama sorgusuyla eşleşen içerik içeren toplam 200'den fazla site varsa, yalnızca en çok arama sonucuna sahip ilk 200 site önizleme için kullanılabilir.|200|
 |İçerik arama sonuçlarının önizlemesini görüntülerken önizleme sayfasında görüntülenen ortak klasör posta kutusu başına en fazla öğe sayısı.|100|
 |İçerik arama sonuçlarının önizlemesini görüntülerken önizleme sayfasında görüntülenen tüm ortak klasör posta kutularında bulunan en fazla öğe sayısı.|200|
@@ -66,7 +64,7 @@ Aşağıdaki tabloda, uyumluluk portalında içerik arama aracı kullanılırken
 >
 > <sup>2</sup> Önizleme sayfasının amacı, sonuçların sınırlı bir örneğini göstermektir. Binlerce sonuç içeren çok büyük aramalar için bile önizleme sayfasında gösterilen öğelerin sayısı 1000'in mümkün olan en yüksek değerinden çok daha az olabilir ve genellikle de olacaktır. Arama sonuçlarının tamamını görmek için sonuçları dışarı aktarmanız gerekir.
 >
-> <sup>3</sup> SharePoint ve OneDrive İş konumları ararken, aranmakta olan sitelerin URL'lerindeki karakterler bu sınıra göre sayılır.
+> <sup>3</sup> SharePoint ve OneDrive İş konumlarında arama yaparken, aranmakta olan sitelerin URL'lerindeki karakterler bu sınıra göre sayılır.
 >
 > <sup>4</sup> Tümcecik olmayan sorgular için (çift tırnak işareti kullanmayan bir anahtar sözcük değeri) özel bir ön ek dizini kullanırız. Bu, bir sözcüğün belgede olduğunu, ancak belgede nerede olduğunu söylemediğini bildirir. Tümcecik sorgusu yapmak için (çift tırnak işaretli bir anahtar sözcük değeri), tümcecikteki sözcüklerin belge içindeki konumunu karşılaştırmamız gerekir. Başka bir deyişle, tümcecik sorguları için ön ek dizinini kullanamayız. Bu durumda, ön ekin genişletilmesi olası tüm sözcüklerle sorguyu dahili olarak genişletiriz; örneğin, `"time*"` öğesini olarak `"time OR timer OR times OR timex OR timeboxed OR ..."`genişletebilir. 10.000, sorguyla eşleşen belge sayısı değil, sözcüğün genişletebileceği en fazla değişken sayısıdır. Tümcecik olmayan terimler için üst sınır yoktur.
 
@@ -138,7 +136,7 @@ Aşağıdaki tabloda, bir e-posta iletisinin dizine alınmamış bir öğe veya 
 
 İçerik aramaları hakkında bilgi için bkz:
 
-- [Microsoft 365'da içerik arama](content-search.md)
+- [Microsoft 365'te içerik arama](content-search.md)
 
 - [eBulma (Standart) durumunda içerik arama](search-for-content-in-core-ediscovery.md)
 

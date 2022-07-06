@@ -15,19 +15,17 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 ROBOTS: NOINDEX, NOFOLLOW
-description: Yöneticiler, Twitter verilerini Microsoft 365 içeri aktarmak ve arşiv etmek için yerel bir bağlayıcı ayarlayabilir. Bu veriler Microsoft 365 aktarıldıktan sonra, kuruluşunuzun Twitter verilerinin idaresini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: a928e24c73fcbb290bde2caa0f508610fc18728d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Yöneticiler, Twitter verilerini Microsoft 365'e aktarmak ve arşiv etmek için yerel bir bağlayıcı ayarlayabilir. Bu veriler Microsoft 365'e aktarıldıktan sonra, kuruluşunuzun Twitter verilerinin idaresini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
+ms.openlocfilehash: bdc678fe1240b4b82a47d5cd091ee309a8153daa
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090971"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627767"
 ---
 # <a name="deploy-a-connector-to-archive-twitter-data"></a>Twitter verilerini arşivleye bağlayıcı dağıtma
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Bu makale, kuruluşunuzun Twitter hesabından Microsoft 365 verileri içeri aktarmak için Office 365 İçeri Aktarma hizmetini kullanan bir bağlayıcıyı dağıtmaya yönelik adım adım işlemi içerir. Bu işleme üst düzey bir genel bakış ve Twitter bağlayıcısı dağıtmak için gereken önkoşulların listesi için bkz. [Twitter verilerini arşivleye bağlayıcı ayarlama ](archive-twitter-data-with-sample-connector.md).
+Bu makale, kuruluşunuzun Twitter hesabından Microsoft 365'e veri aktarmak için Office 365 İçeri Aktarma hizmetini kullanan bir bağlayıcıyı dağıtmaya yönelik adım adım işlemi içerir. Bu işleme üst düzey bir genel bakış ve Twitter bağlayıcısı dağıtmak için gereken önkoşulların listesi için bkz. [Twitter verilerini arşivleye bağlayıcı ayarlama ](archive-twitter-data-with-sample-connector.md).
 
 ## <a name="step-1-create-an-app-in-azure-active-directory"></a>1. Adım: Azure Active Directory'de uygulama oluşturma
 
@@ -35,9 +33,9 @@ Bu makale, kuruluşunuzun Twitter hesabından Microsoft 365 verileri içeri akta
 
    ![Azure'da oturum açın.](../media/TCimage01.png)
 
-2. Sol gezinti bölmesinde **Azure Active Directory'e** tıklayın.
+2. Sol gezinti bölmesinde **Azure Active Directory'ye** tıklayın.
 
-   ![Azure Active Directory'a gidin.](../media/TCimage02.png)
+   ![Azure Active Directory'ye gidin.](../media/TCimage02.png)
 
 3. Sol gezinti bölmesinde **Uygulama kayıtları (Önizleme)** seçeneğine ve ardından **Yeni kayıt'a** tıklayın.
 
@@ -59,18 +57,18 @@ Bu makale, kuruluşunuzun Twitter hesabından Microsoft 365 verileri içeri akta
 
    ![Gizli diziyi yazın ve süre sonu seçin.](../media/TCimage08.png)
 
-8. Gizli dizinin değerini kopyalayın ve bir metin dosyasına veya başka bir depolama konumuna kaydedin. Bu, sonraki adımlarda kullandığınız AAD uygulama gizli dizisidir.
+8. Gizli dizinin değerini kopyalayın ve bir metin dosyasına veya başka bir depolama konumuna kaydedin. Bu, sonraki adımlarda kullanacağınız AAD uygulama gizli dizisidir.
 
    ![Gizli diziyi kopyalayıp kaydedin.](../media/TCimage09.png)
 
 
-## <a name="step-2-deploy-the-connector-web-service-from-github-to-your-azure-account"></a>2. Adım: Bağlayıcı web hizmetini GitHub Azure hesabınıza dağıtma
+## <a name="step-2-deploy-the-connector-web-service-from-github-to-your-azure-account"></a>2. Adım: Bağlayıcı web hizmetini GitHub'dan Azure hesabınıza dağıtma
 
 1. [Bu GitHub sitesine](https://github.com/microsoft/m365-sample-twitter-connector-csharp-aspnet) gidin ve **Azure'a Dağıt'a** tıklayın.
 
     ![Azure giriş sayfasına gidin.](../media/FBCimage11.png)
 
-2. **Azure'a Dağıt'a** tıkladıktan sonra özel şablon sayfası içeren bir Azure portal yönlendirilirsiniz. **Temel bilgiler** ve **Ayarlar** ayrıntılarını doldurun ve **Satın Al'a** tıklayın.
+2. **Azure'a Dağıt'a** tıkladıktan sonra özel şablon sayfası içeren bir Azure portal yönlendirilirsiniz. **Temel Bilgiler** ve **Ayarlar** ayrıntılarını doldurun ve **satın al'a** tıklayın.
 
    ![Kaynak oluştur'a tıklayın ve depolama hesabı yazın.](../media/FBCimage12.png)
 
@@ -88,7 +86,7 @@ Bu makale, kuruluşunuzun Twitter hesabından Microsoft 365 verileri içeri akta
 
 3. Dağıtım başarılı olduktan sonra sayfa aşağıdaki ekran görüntüsüne benzer:
 
-    ![Depolama'a tıklayın ve ardından Depolama hesabına tıklayın.](../media/FBCimage13.png)
+    ![Depolama'ya ve ardından Depolama hesabı'ne tıklayın.](../media/FBCimage13.png)
 
 ## <a name="step-3-create-the-twitter-app"></a>3. Adım: Twitter uygulamasını oluşturma
 
@@ -141,7 +139,7 @@ Twitter geliştirici uygulaması artık kullanıma hazırdır.
 
    ![Oturum açma sayfasını görüntülemek için Yapılandır'a tıklayın.](../media/FBCimage42.png)
 
-3. Kiracı Kimliği kutusuna kiracı kimliğinizi (2. Adımda edindiğiniz) yazın veya yapıştırın. Parola kutusuna APISecretKey (2. Adımda edindiğiniz) yazın veya yapıştırın ve yapılandırma ayrıntıları sayfasını görüntülemek için **Yapılandırma Ayarlar Ayarla'ya** tıklayın.
+3. Kiracı Kimliği kutusuna kiracı kimliğinizi (2. Adımda edindiğiniz) yazın veya yapıştırın. Parola kutusuna APISecretKey (2. Adımda edindiğiniz) yazın veya yapıştırın ve yapılandırma ayrıntıları sayfasını görüntülemek için **Yapılandırma Ayarlarını Ayarla'ya** tıklayın.
 
    ![Kiracı kimliği ve API gizli anahtarı kullanarak oturum açın.](../media/TCimage35.png)
 
@@ -163,7 +161,7 @@ Twitter geliştirici uygulaması artık kullanıma hazırdır.
 
 ## <a name="step-5-set-up-a-twitter-connector-in-the-compliance-portal"></a>5. Adım: Uyumluluk portalında Twitter bağlayıcısı ayarlama
 
-1. Microsoft Purview uyumluluk portalına gidin ve /a<**Veri bağlayıcıları** sayfasını seçin<a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank">.
+1. Microsoft Purview uyumluluk portalı gidin ve /a<**Veri bağlayıcıları** sayfasını seçin<a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank">.
 
 2. **Twitter'ın** altındaki **Veri bağlayıcıları** sayfasında **Görüntüle'ye** tıklayın.
 
@@ -185,7 +183,7 @@ Twitter geliştirici uygulaması artık kullanıma hazırdır.
 
 6. Bağlantı başarıyla doğrulandıktan sonra **İleri'ye** tıklayın.
 
-7. **Verileri içeri aktarmak için Microsoft 365 yetki ver** sayfasında APISecretKey'i yeniden yazın veya yapıştırın ve ardından **Oturum aç web uygulaması'na** tıklayın.
+7. **Microsoft 365'i veri içeri aktarma yetkisi ver** sayfasında APISecretKey'i yeniden yazın veya yapıştırın ve ardından **Web uygulamasını oturum aç'a** tıklayın.
 
 8. **Twitter ile oturum aç'a** tıklayın.
 
