@@ -1,7 +1,7 @@
 ---
 title: Microsoft Güvenlik Puanı
-description: Güvenlik portalında Microsoft Güvenli Puanı Microsoft 365 Defender, güvenlik nedenlerinizi nasıl geliştirin ve güvenlik yöneticilerinin neler beklemesi olduğunu açıklar.
-keywords: microsoft güvenli puan, güvenli puan, office 365 güvenli puanı, microsoft güvenlik puanı, Microsoft 365 Defender portalı, geliştirme eylemleri
+description: Microsoft 365 Defender portalında Microsoft Güvenli Puanını, güvenlik duruşunuzu nasıl iyileştirebileceğinizi ve güvenlik yöneticilerinin neler bekleyebileceğinizi açıklar.
+keywords: microsoft güvenli puanı, güvenli puan, office 365 güvenli puanı, microsoft güvenlik puanı, Microsoft 365 Defender portalı, iyileştirme eylemleri
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -23,94 +23,94 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: ed80d57d25fea2f3c19b6fe6363f993569c68a92
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 33e4ae46c6ec75d615cf64efe93d7b5bd8a77905
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499458"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617038"
 ---
 # <a name="microsoft-secure-score"></a>Microsoft Güvenlik Puanı
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-Microsoft Güvenli Puanı, kuruluşun güvenlik mezralarının bir ölçümüdür ve yapılan daha fazla geliştirme eylemine işaret eden daha yüksek bir sayıdır. Microsoft 365 Defender https://security.microsoft.com/securescore [portalında bulunabilir](microsoft-365-defender.md#the-microsoft-365-defender-portal).
+Microsoft Güvenli Puan, bir kuruluşun güvenlik duruşunun ölçümüdür ve daha yüksek bir sayı daha fazla geliştirme eylemi gerçekleştirildiğini gösterir. [Microsoft 365 Defender portalında](microsoft-365-defender-portal.md) bulunabilirhttps://security.microsoft.com/securescore.
 
-Güvenli Puan önerilerine göre, kuruluş tehditlere karşı koruma suz. Kuruluşlar, Microsoft 365 Defender portalında yer alan merkezi bir panodan kimliklerinin, uygulamalarının ve cihazlarının güvenliğini Microsoft 365 ve üzerinde çalışır.
+Güvenli Puan önerilerini takip edin, kuruluşunuzu tehditlere karşı koruyabilirsiniz. kuruluşlar, Microsoft 365 Defender portalındaki merkezi bir panodan Microsoft 365 kimlikleri, uygulamaları ve cihazlarının güvenliğini izleyebilir ve üzerinde çalışabilir.
 
 Güvenli Puan kuruluşlara yardımcı olur:  
 
-* Kuruluşun güvenlik durumunu raporla.
-* Keşfederlik, görünürlük, rehberlik ve denetim sağlayarak güvenlik sorumluluklarını geliştirin.  
-* Karşılaştırmalar ile karşılaştırın ve ana performans göstergeleri (KPY) ortayayın.
+* Kuruluşun güvenlik duruşunun geçerli durumunu rapor edin.
+* Bulunabilirlik, görünürlük, rehberlik ve denetim sağlayarak güvenlik duruşlarını geliştirin.  
+* Karşılaştırmalarla karşılaştırın ve ana performans göstergelerini (KPI' ler) oluşturun.
 
-Güvenli puan'a hızlı bir genel bakış için bu videoyu izleyin.
+Güvenli puana hızlı bir genel bakış için bu videoyu izleyin.
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWUPrP]
 
-Kuruluşlar, ölçümlerin ve eğilimlerin güçlü görselleştirmelerine, diğer Microsoft ürünleriyle tümleştirmeye, benzer kuruluşlarla puan karşılaştırmalarına ve daha birçok öğeye erişim elde etmektedir. Puan, üçüncü taraf çözümlerinin önerilen eylemleri çözümlediğiniz durumlarını da yansıtabilirsiniz.
+Kuruluşlar ölçümlerin ve eğilimlerin sağlam görselleştirmelerine, diğer Microsoft ürünleriyle tümleştirmeye, benzer kuruluşlarla puan karşılaştırmasına ve çok daha fazlasına erişim elde eder. Puan, üçüncü taraf çözümlerin önerilen eylemleri ele aldığı zamanları da yansıtabilir.
 
-:::image type="content" source="../../media/secure-score/secure-score-home-page.png" alt-text="Web portalının Microsoft Güvenli Puanı Microsoft 365 Defender sayfası" lightbox="../../media/secure-score/secure-score-home-page.png":::
+:::image type="content" source="../../media/secure-score/secure-score-home-page.png" alt-text="Microsoft 365 Defender portalındaki Microsoft Güvenli Puan giriş sayfası" lightbox="../../media/secure-score/secure-score-home-page.png":::
 
 ## <a name="how-it-works"></a>Nasıl çalışır?
 
 Aşağıdaki eylemler için size puan verilir:
 
 - Önerilen güvenlik özelliklerini yapılandırma
-- Güvenlikle ilgili görevler yapma
-- Üçüncü taraf bir uygulama veya yazılım ya da alternatif bir azaltma ile iyileştirme eylemlerini ele
+- Güvenlikle ilgili görevleri gerçekleştirme
+- İyileştirme eylemini üçüncü taraf bir uygulama veya yazılımla veya alternatif bir risk azaltmayla ele alma
 
-Bazı geliştirme eylemleri yalnızca tümüyle tamamlandığında puanlar sağlar. Bazı cihazlarda veya kullanıcılarda tamamlanan kısmi puanlar vardır. Geliştirme eylemlerinden birini gerçekleştiremenizi ya da üzerinde işlem yapmak istemenizi istemiyorsanız, riski veya kalan riski kabul etmeye seçebilirsiniz.
+Bazı iyileştirme eylemleri yalnızca tam olarak tamamlandığında puan verir. Bazı cihazlar veya kullanıcılar için tamamlandıysa bazıları kısmi puan verir. İyileştirme eylemlerinden birini gerçekleştiremiyor veya uygulamak istemiyorsanız riski veya kalan riski kabul etmeyi seçebilirsiniz.
 
-Desteklenen Microsoft ürünlerinden biri için lisansınız varsa, o ürünler için önerilere bakın. Lisans sürümü, aboneliği veya planına bakılmaksızın, bir ürün için tüm olası iyileştirmeleri gösteririz. Bu şekilde, güvenlikle ilgili en iyi uygulamaları anlıyoruz ve puanınızı geliştireceğiz. Güvenli Puan ile temsil edilen mutlak güvenlik nedenniz, belirli bir ürün için kuruma ait lisanslar ne olursa olsun aynı kalır. Güvenliğin kullanılabilirlik ile dengelenmeleri gerektiğini ve her önerinin ortamınıza uygun olmadığını unutmayın.
+Desteklenen Microsoft ürünlerinden biri için lisansınız varsa bu ürünlerle ilgili önerileri görürsünüz. Lisans sürümü, abonelik veya plandan bağımsız olarak bir ürün için tüm olası iyileştirmeleri gösteririz. Bu şekilde en iyi güvenlik uygulamalarını anlayabilir ve puanınızı geliştirebilirsiniz. Güvenli Puan ile temsil edilen mutlak güvenlik duruşunuz, kuruluşunuzun belirli bir ürün için sahip olduğu lisanslar ne olursa olsun aynı kalır. Güvenliğin kullanılabilirlik ile dengelenmesi gerektiğini ve her önerinin ortamınızda çalışamadığını unutmayın.
 
-Puanınız, görsel öğelerde ve geliştirme eylem sayfalarında sunulan bilgileri yansıtacak şekilde gerçek zamanlı olarak güncelleştirilir. Güvenli Puan, her eylem için elde edilen puanlar hakkında sistem verilerini almak için de günlük olarak eşitler.
+Puanınız, görselleştirmeler ve iyileştirme eylem sayfalarında sunulan bilgileri yansıtacak şekilde gerçek zamanlı olarak güncelleştirilir. Güvenli Puan ayrıca her eylem için elde edilen puanlarınızla ilgili sistem verilerini almak için günlük olarak eşitlenir.
 
 ### <a name="key-scenarios"></a>Önemli senaryolar
 
-- [Geçerli puanınızı denetleme](microsoft-secure-score-improvement-actions.md#check-your-current-score)
-- [Puanınızı sizinki gibi kuruluşlarla karşılaştırma](microsoft-secure-score-history-metrics-trends.md#compare-your-score-to-organizations-like-yours)
-- [Geliştirme eylemlerini görüntüleme ve eylem planına karar verme](microsoft-secure-score-improvement-actions.md#take-action-to-improve-your-score)
-- [Araştırma veya uygulama için iş akışlarını başlatma](microsoft-secure-score-improvement-actions.md#view-improvement-action-details)
+- [Geçerli puanınızı denetleyin](microsoft-secure-score-improvement-actions.md#check-your-current-score)
+- [Puanınızı sizinki gibi kuruluşlarla karşılaştırın](microsoft-secure-score-history-metrics-trends.md#compare-your-score-to-organizations-like-yours)
+- [İyileştirme eylemlerini görüntüleme ve eylem planına karar verme](microsoft-secure-score-improvement-actions.md#take-action-to-improve-your-score)
+- [Araştırmak veya uygulamak için iş akışları başlatma](microsoft-secure-score-improvement-actions.md#view-improvement-action-details)
 
-### <a name="how-improvement-actions-are-scored"></a>Geliştirme eylemleri nasıl puanlandı
+### <a name="how-improvement-actions-are-scored"></a>İyileştirme eylemleri nasıl puanlanmıştır?
 
-Her geliştirme eylemi 10 puana veya daha kısa sürede değerindedir ve bunların çoğu ikili biçimde puanlandı. Yeni ilke oluşturma veya belirli bir ayarı açma gibi geliştirme eylemlerini gerçekleştirseniz, puanların %100'ını elde etmiş sayılırsınız. Diğer geliştirme eylemleri için puanlar toplam yapılandırmanın yüzdesi olarak verilir.
+Her iyileştirme eylemi 10 puan veya daha azdır ve çoğu ikili bir şekilde puanlanır. Yeni bir ilke oluşturma veya belirli bir ayarı açma gibi iyileştirme eylemini uygularsanız, noktaların %100'lerini alırsınız. Diğer iyileştirme eylemleri için puanlar toplam yapılandırmanın yüzdesi olarak verilir.
 
-Örneğin, geliştirme amaçlı bir eylem, tüm kullanıcılarınızı çok faktörlü kimlik doğrulamasıyla koruyarak 10 puan alasınız. Toplam 100 kullanıcıdan yalnızca 50'sinde korumalısınız, bu nedenle 5 puanlık (50 korumalı / 100 toplam * 10 max pts = 5 pts) kısmi puan alırsınız.
+Örneğin, bir geliştirme eylemi, çok faktörlü kimlik doğrulaması ile tüm kullanıcılarınızı koruyarak 10 puan elde ettiğinizi belirtir. Toplam 100 kullanıcıdan yalnızca 50'sini koruduğunuz için 5 puanlık kısmi puan alırsınız (50 korumalı / 100 toplam * 10 maksimum pts = 5 pt).
 
-### <a name="products-included-in-secure-score"></a>Güvenli Puan'a dahil edilen ürünler
+### <a name="products-included-in-secure-score"></a>Güvenli Puana dahil olan ürünler
 
-Şu anda aşağıdaki ürünlerle ilgili öneriler vardır:
+Şu anda aşağıdaki ürünler için öneriler vardır:
 
-- Microsoft 365 (diğer Exchange Online)
+- Microsoft 365 (Exchange Online dahil)
 - Azure Active Directory
 - Uç Nokta için Microsoft Defender
 - Kimlik için Microsoft Defender
 - Bulut Uygulamaları için Defender
 - Microsoft Teams
 
-Öneriler güvenlik ürünleri için ürünler yakında hazır olacak. Öneriler, her ürünle ilişkili tüm saldırı yüzeylerini kaplamaz, ancak iyi bir taban çizgisidir. Ayrıca, geliştirme eylemlerini üçüncü taraf veya alternatif bir azaltma kapsamında olarak işaretabilirsiniz.
+Diğer güvenlik ürünlerine yönelik öneriler yakında sunulacaktır. Öneriler, her ürünle ilişkili tüm saldırı yüzeylerini kapsamaz, ancak iyi bir temeldir. Ayrıca, geliştirme eylemlerini üçüncü taraf veya alternatif risk azaltma kapsamında olarak işaretleyebilirsiniz.
 
 ### <a name="security-defaults"></a>Güvenlik varsayılanları
 
-Microsoft Güvenli Puanı'nın, Azure Active Directory'de [](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults)güvenlik varsayılanlarını desteklemeye yönelik güncelleştirilmiş geliştirme eylemleri vardır ve bu da yaygın saldırılar için önceden yapılandırılmış güvenlik ayarlarıyla organizasyonu korumaya yardımcı olur.
+Microsoft Güvenli Puan, [Azure Active Directory'de güvenlik varsayılanlarını](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) destekleyecek şekilde iyileştirme eylemlerini güncelleştirdi ve bu da yaygın saldırılar için önceden yapılandırılmış güvenlik ayarlarıyla kuruluşunuzun korunmasına yardımcı olmasını kolaylaştırdı.
 
-Güvenlik varsayılanlarını kullanırsanız, aşağıdaki geliştirme eylemleri için size tam puan verilecektir:
+Güvenlik varsayılanlarını açarsanız, aşağıdaki iyileştirme eylemleri için tam puan alırsınız:
 
-- Tüm kullanıcıların, güvenli erişim için çok faktörlü kimlik doğrulamasını tamamlayama (9 nokta)
-- Yönetim rolleri için MFA gerektir (10 puan)
-- Eski kimlik doğrulamayı engellemek için ilkeyi etkinleştir (7 puan)
+- Tüm kullanıcıların güvenli erişim için çok faktörlü kimlik doğrulamasını tamamlayabildiğine emin olun (9 nokta)
+- Yönetim rolleri için MFA gerektir (10 nokta)
+- Eski kimlik doğrulamasını engellemek için ilkeyi etkinleştirme (7 nokta)
 
 >[!IMPORTANT]
->Güvenlik varsayılanları, "oturum açma riski ilkesi" ve "kullanıcı risk ilkesi" geliştirme eylemlerine benzer güvenlik özellikleri içerir. Bu ilkeleri güvenlik varsayılanları yerine "Alternatif etki azaltma yoluyla çözümlendi" durumuna güncelleştirmenizi öneririz.
+>Güvenlik varsayılanları, "oturum açma riski ilkesi" ve "kullanıcı riski ilkesi" geliştirme eylemlerine benzer güvenlik özellikleri içerir. Bu ilkeleri güvenlik varsayılanlarının üzerine ayarlamak yerine durumlarını "Alternatif risk azaltma yoluyla çözümlendi" olarak güncelleştirmenizi öneririz.
 
 ## <a name="required-permissions"></a>Gerekli izinler
 
-Microsoft Secure Score'a erişim iznine sahip olmak için bu puanlar için size aşağıdaki Azure Active Directory.
+Microsoft Güvenli Puanı'na erişim iznine sahip olmak için Azure Active Directory'de aşağıdaki rollerden birine atanmış olmanız gerekir.
 
 ### <a name="read-and-write-roles"></a>Rolleri okuma ve yazma
 
-Okuma ve yazma erişimiyle, değişiklik yapabilirsiniz ve Güvenli Puan ile doğrudan etkileşim kurabilirsiniz. Ayrıca, diğer kullanıcılara salt okunur erişim de atabilirsiniz.
+Okuma ve yazma erişimiyle değişiklik yapabilir ve Güvenli Puan ile doğrudan etkileşim kurabilirsiniz. Diğer kullanıcılara da salt okunur erişim atayabilirsiniz.
 
 * Genel yönetici
 * Güvenlik yöneticisi
@@ -119,26 +119,26 @@ Okuma ve yazma erişimiyle, değişiklik yapabilirsiniz ve Güvenli Puan ile do�
 
 ### <a name="read-only-roles"></a>Salt okunur roller
 
-Salt okunur erişimle, iyileştirme eylemi, puan bölgeleri düzenleme veya özel karşılaştırmaları düzenleme durumlarını veya notları düzenleyemezsiniz.
+Salt okunur erişim sayesinde, bir iyileştirme eyleminin durumunu veya notlarını düzenleyemez, puan bölgelerini düzenleyemez veya özel karşılaştırmaları düzenleyemezsiniz.
 
 * Yardım masası yöneticisi
 * Kullanıcı yöneticisi
 * Hizmet destek yöneticisi
 * Güvenlik gözetmeni
 * Güvenlik operatörü
-* Genel okuyucu
+* Genel gözetmen
 
 ## <a name="risk-awareness"></a>Risk farkındalığı
 
-Microsoft Güvenli Puanı; sistem yapılandırmalarına, kullanıcı davranışına ve güvenlikle ilgili diğer ölçümlere dayalı olarak güvenlik nedennizin sayısal bir özetidir. Bu, sistem veya verilerinizin ihlal olma ihtimalinin mutlak bir ölçümü değildir. Bunun yerine, Microsoft ortamında ihlal olma riskini dengelemeye yardımcı olacak güvenlik denetimlerine sahip olma kapsamınızı temsil eder. Hiçbir çevrimiçi hizmet güvenlik ihlallerinden uzak değildir ve güvenlik puanı herhangi bir şekilde güvenlik ihlallerine karşı bir garanti olarak yorumlanmayacaktır.
+Microsoft Güvenli Puan, sistem yapılandırmalarına, kullanıcı davranışına ve güvenlikle ilgili diğer ölçümlere göre güvenlik duruşunuzun sayısal bir özetidir. Sisteminizin veya verilerinizin ihlal edilme olasılığının mutlak ölçümü değildir. Bunun yerine, Microsoft ortamınızda ihlal edilme riskini dengelemeye yardımcı olabilecek güvenlik denetimlerini benimsediğiniz kapsamı temsil eder. Hiçbir çevrimiçi hizmetin güvenlik ihlallerinden etkilenmez ve güvenlik puanı hiçbir şekilde güvenlik ihlaline karşı bir garanti olarak yorumlanamaz.
 
-## <a name="we-want-to-hear-from-you"></a>Bize haber almak için
+## <a name="we-want-to-hear-from-you"></a>Sizden haber almak istiyoruz
 
-Herhangi bir sorun varsa, Güvenlik, Gizlilik ve Uyumluluk topluluğuna [göndererek & sağlayın](https://techcommunity.microsoft.com/t5/Security-Privacy-Compliance/bd-p/security_privacy) . Topluluğu izliyoruz ve yardım sağacağız.
+Herhangi bir sorununuz varsa [Güvenlik, Gizlilik & Uyumluluk](https://techcommunity.microsoft.com/t5/Security-Privacy-Compliance/bd-p/security_privacy) topluluğuna göndererek bize bildirin. Topluluğu izliyoruz ve yardım sağlayacağız.
 
 ## <a name="related-resources"></a>İlgili kaynaklar
 
 - [Güvenlik duruşlarınızı değerlendirin](microsoft-secure-score-improvement-actions.md)
 - [Microsoft Güvenli Puan geçmişinizi izleme ve hedefleri karşılama](microsoft-secure-score-history-metrics-trends.md)
 - [Yapılacak yenilikler](microsoft-secure-score-whats-coming.md)
-- [Yeni gelenler](microsoft-secure-score-whats-new.md)
+- [Yenilikler](microsoft-secure-score-whats-new.md)

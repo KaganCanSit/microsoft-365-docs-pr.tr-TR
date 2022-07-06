@@ -19,12 +19,12 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
-ms.openlocfilehash: bac70dd864e1ab72fae5fbefa2a8da12cce4f6e7
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: dd8721bd8c62a99180f9e8cf34b05c5ec6c8b4c8
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64667240"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617204"
 ---
 # <a name="microsoft-defender-for-endpoint-in-microsoft-365-defender"></a>Microsoft 365 Defender'da Uç Nokta için Microsoft Defender
 
@@ -57,11 +57,11 @@ Aşağıdaki resimde ve tabloda, Microsoft Defender Güvenlik Merkezi ile Micros
 | Yapılandırma yönetimi | Yapılandırma yönetimi |
 | Ayarlar | Ayarlar | 
 
-'daki <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">https://security.microsoft.com</a> geliştirilmiş [Microsoft 365 Defender](microsoft-365-defender.md#the-microsoft-365-defender-portal), e-posta, işbirliği, kimlik ve cihaz tehditlerini koruyan, algılayan, araştıran ve yanıt veren güvenlik özelliklerini birleştirir. Bu, Microsoft Defender Güvenlik Merkezi ve Office 365 Güvenlik & Uyumluluk merkezi de dahil olmak üzere mevcut Microsoft güvenlik portallarından işlevleri bir araya getirir.
+'daki <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">https://security.microsoft.com</a> geliştirilmiş [Microsoft 365 Defender](microsoft-365-defender-portal.md), e-posta, işbirliği, kimlik ve cihaz tehditlerini koruyan, algılayan, araştıran ve yanıt veren güvenlik özelliklerini birleştirir. Bu, Microsoft Defender Güvenlik Merkezi ve Office 365 Güvenlik & Uyumluluk merkezi de dahil olmak üzere mevcut Microsoft güvenlik portallarından işlevleri bir araya getirir.
 
 Microsoft Defender Güvenlik Merkezi hakkında bilgi sahibiyseniz, bu makale Microsoft 365 Defender bazı değişiklikleri ve geliştirmeleri açıklamaya yardımcı olur. Ancak, dikkat etmeniz gereken bazı yeni ve güncelleştirilmiş öğeler vardır.
 
-Tarihsel olarak[, Microsoft Defender Güvenlik Merkezi](/windows/security/threat-protection/microsoft-defender-atp/portal-overview) Uç Nokta için Microsoft Defender için ev olmuştur. Enterprise güvenlik ekipleri bunu olası gelişmiş kalıcı tehdit etkinliği veya veri ihlalleri uyarılarını izlemek ve yanıtlamaya yardımcı olmak için kullandı. Portal sayısını azaltmaya yardımcı olmak için Microsoft 365 Defender Microsoft kimlikleriniz, verileriniz, cihazlarınız, uygulamalarınız ve altyapınız genelinde güvenliği izlemek ve yönetmek için bir ev olacaktır.
+Tarihsel olarak[, Microsoft Defender Güvenlik Merkezi](/windows/security/threat-protection/microsoft-defender-atp/portal-overview) Uç Nokta için Microsoft Defender için ev olmuştur. Kurumsal güvenlik ekipleri bunu, olası gelişmiş kalıcı tehdit etkinliği veya veri ihlalleri uyarılarını izlemek ve yanıtlamaya yardımcı olmak için kullanmıştı. Portal sayısını azaltmaya yardımcı olmak için Microsoft 365 Defender Microsoft kimlikleriniz, verileriniz, cihazlarınız, uygulamalarınız ve altyapınız genelinde güvenliği izlemek ve yönetmek için bir ev olacaktır.
 
 Microsoft 365 Defender'daki Uç Nokta için Microsoft Defender, [yönetilen güvenlik hizmeti sağlayıcılarına (MSSP) Microsoft Defender Güvenlik Merkezi](/windows/security/threat-protection/microsoft-defender-atp/grant-mssp-access) [aynı şekilde erişim verilmesini](mssp-access.md) destekler.
 
@@ -70,8 +70,8 @@ Microsoft 365 Defender'daki Uç Nokta için Microsoft Defender, [yönetilen güv
 
 > [!Note]
 > Microsoft 365 Defender şu şekilde kullanılamaz:
->- ABD Government Community Cloud (GCC)
->- ABD Government Community Cloud Yüksek (GCC Yüksek)
+>- US Government Community Cloud (GCC)
+>- US Government Community Cloud High (GCC High)
 >- ABD Savunma Bakanlığı
 >- Ticari lisansa sahip tüm ABD kamu kurumları
 
@@ -170,7 +170,7 @@ Raporları görüntüleyin, ayarlarınızı değiştirin ve kullanıcı rollerin
 
 ### <a name="siem-api-connections"></a>SIEM API bağlantıları
 
-[Uç Nokta için Defender SIEM API'sini](../defender-endpoint/enable-siem-integration.md) kullanıyorsanız, bunu yapmaya devam edebilirsiniz. API yüküne uyarı sayfasına veya Microsoft 365 güvenlik portalındaki olay sayfasına işaret eden yeni bağlantılar ekledik. Yeni API alanları LinkToMTP ve IncidentLinkToMTP'i içerir. Daha fazla bilgi için bkz. [Hesapları Uç Nokta için Microsoft Defender Microsoft 365 Defender yeniden yönlendirme](./microsoft-365-security-mde-redirection.md).
+[Uç Nokta için Defender SIEM API'sini](../defender-endpoint/enable-siem-integration.md) kullanıyorsanız, bunu yapmaya devam edebilirsiniz. API yüküne Uyarı sayfasına veya Microsoft 365 güvenlik portalındaki olay sayfasına işaret eden yeni bağlantılar ekledik. Yeni API alanları LinkToMTP ve IncidentLinkToMTP'i içerir. Daha fazla bilgi için bkz. [Hesapları Uç Nokta için Microsoft Defender Microsoft 365 Defender yeniden yönlendirme](./microsoft-365-security-mde-redirection.md).
 
 ### <a name="email-alerts"></a>E-posta uyarıları
 

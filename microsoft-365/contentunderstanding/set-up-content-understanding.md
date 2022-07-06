@@ -15,12 +15,12 @@ ms.custom:
 search.appverid: MET150
 ms.localizationpriority: high
 description: SharePoint Syntex ayarlama
-ms.openlocfilehash: 97d12527667de1583f787844da11a4ad875f34ba
-ms.sourcegitcommit: 37111bc0c5a6cc4690f7144a019bbff11d44858f
+ms.openlocfilehash: 3511719e4f396141217a2b4711f642c675ac781e
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65463153"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617248"
 ---
 # <a name="set-up-sharepoint-syntex"></a>SharePoint Syntex ayarlama
 
@@ -28,14 +28,14 @@ Yöneticiler <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target=
 
 Başlamadan önce aşağıdakileri göz önünde bulundurun:
 
-- Form işlemeyi hangi SharePoint sitelerde etkinleştirebilirsiniz? Bunların tümü, bazıları veya belirli siteler mi?
+- Form işlemeyi hangi SharePoint sitelerinde etkinleştireceksiniz? Bunların tümü, bazıları veya belirli siteler mi?
 - Varsayılan içerik merkezinize ne ad vereceksiniz?
 
 İlk kurulumdan sonra <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> ayarlarınızı değiştirebilirsiniz.
 
 Kurulumdan önce ortamınızda içerik anlama özelliğini ayarlamanın ve yapılandırmanın en iyi yolunu planladığınızdan emin olun. Örneğin, aşağıdaki kararları vermeniz gerekir:
 
-- Form işlemeyi etkinleştirmek istediğiniz SharePoint siteler - bunların tümü, bazıları veya seçili siteler
+- Form işlemeyi etkinleştirmek istediğiniz SharePoint siteleri - bunların tümü, bazıları veya seçili siteler
 - İçerik merkezinizin adı ve yöneticileri
 
 ## <a name="requirements"></a>Gereksinimler 
@@ -57,13 +57,13 @@ Form işleme modelleri oluşturabilmeniz için önce özel ortama [AI Builder kr
 
 ### <a name="licensing"></a>Lisanslama
 
-SharePoint Syntex kullanmak için kuruluşunuzun SharePoint Syntex aboneliğine sahip olması ve her kullanıcıya aşağıdaki lisansların atanmış olması gerekir:
+SharePoint Syntex kullanmak için kuruluşunuzun SharePoint Syntex aboneliği ve her kullanıcının atanmış bir lisansı olmalıdır. SharePoint Syntex lisansları, tümü atanması gereken aşağıdaki uygulamaları içerir:
 
 - SharePoint Syntex
 - SharePoint Syntex - SPO türü
 - SharePoint Syntex için Common Data Service
 
-Form işlemeyi kullanmak için AI Builder kredilerine de ihtiyacınız vardır. 300 veya daha fazla lisanslı kullanıcınız varsa, her ay bir AI Builder kredisi ayırması sağlanır.
+Form işlemeyi kullanmak için AI Builder kredilerine de ihtiyacınız vardır. SharePoint Syntex lisanslı her kullanıcı için her ay bir AI Builder kredisi ayırması sağlanır.
 
 SharePoint Syntex lisanslama hakkında ayrıntılı bilgi için bkz. [lisanslama SharePoint Syntex](syntex-licensing.md)
 
@@ -73,17 +73,17 @@ SharePoint Syntex lisanslama hakkında ayrıntılı bilgi için bkz. [lisanslama
 
 2. **Dosyalar ve içerik** bölümünde **İçerik anlama işlemini otomatikleştir'i** seçin. Geçerli AI Builder kredi kullanılabilirliğinizin **Bir bakışta** bölümünde gösterildiğini unutmayın.<br/>
 
-3. **İçerik anlama sürecini otomatikleştir** sayfasında **Kullanmaya başlayın'e** tıklayarak kurulum işlemine göz atın. <br/>
+3. **İçerik anlama işlemini otomatikleştir** sayfasında, Kurulum işleminde izlenmek için **Başlarken'e** tıklayın. <br/>
 
     > [!div class="mx-imgBorder"]
     > ![Kurulumu başlatın.](../media/content-understanding/admin-content-understanding-get-started.png)</br>
 
-4. **Form İşlemeyi Yapılandır** sayfasında, kullanıcıların belirli SharePoint belge kitaplıklarında form işleme modelleri oluşturmasına izin vermek isteyip istemediğinizi seçebilirsiniz. Belge kitaplığı şeridinde, etkinleştirildiği SharePoint belge kitaplıklarında **form işleme modeli oluşturma** seçeneği sağlanacaktır.
+4. **Form İşlemeyi Yapılandır** sayfasında, kullanıcıların belirli SharePoint belge kitaplıklarında form işleme modelleri oluşturmasına izin vermek isteyip istemediğinizi seçebilirsiniz. Belge kitaplığı şeridinde, etkin olduğu SharePoint belge kitaplıklarında **form işleme modeli oluşturma** seçeneği sağlanacaktır.
  
-     **Form işleme modeli oluşturma seçeneği gösterilecek SharePoint kitaplıklar** için şunları seçebilirsiniz:</br>
-      - **Kuruluşunuzdaki tüm SharePoint** kitaplıkları için tüm SharePoint sitelerdeki kitaplıklar.</br>
-      - **Seçili SharePoint sitelerdeki kitaplıklar** ve ardından kullanılabilir hale getirmek istediğiniz siteleri seçin veya en fazla 50 sitenin listesini karşıya yükleyin.</br>
-      - **Herhangi bir** sitenin kullanımına açmak istemiyorsanız SharePoint kitaplık yok (kurulumdan sonra bunu değiştirebilirsiniz).
+     **Form işleme modeli oluşturma seçeneği hangi SharePoint kitaplıkları tarafından gösterilmelidir**? için şunları seçebilirsiniz:</br>
+      - **Kuruluşunuzdaki tüm SharePoint kitaplıklarının** kullanımına açmak için tüm SharePoint sitelerindeki kitaplıklar.</br>
+      - **Seçili SharePoint sitelerindeki kitaplıklar** ve kullanılabilir hale getirmek istediğiniz siteleri seçin veya en fazla 50 sitenin listesini karşıya yükleyin.</br>
+      - Herhangi bir sitenin kullanımına açmak istemiyorsanız **SharePoint kitaplığı** yok (kurulumdan sonra bunu değiştirebilirsiniz).
 
    > [!div class="mx-imgBorder"]
    > ![Form işleme sitesi seçeneklerini yapılandırın.](../media/content-understanding/admin-configforms.png)
@@ -101,7 +101,7 @@ SharePoint Syntex lisanslama hakkında ayrıntılı bilgi için bkz. [lisanslama
 
     **İleri**'ye tıklayın.
 
-5. **İçerik Merkezi Oluştur** sayfasında, kullanıcılarınızın belge anlama modelleri oluşturup yönetebileceği bir SharePoint içerik merkezi sitesi oluşturabilirsiniz. daha önce SharePoint yönetim merkezinden bir içerik merkezi oluşturduysanız, bu bilgiler burada görüntülenir ve **İleri'yi** seçebilirsiniz.
+5. **İçerik Merkezi Oluştur** sayfasında, kullanıcılarınızın belge anlama modelleri oluşturup yönetebileceği bir SharePoint içerik merkezi sitesi oluşturabilirsiniz. Daha önce SharePoint yönetim merkezinden bir içerik merkezi oluşturduysanız, bu bilgiler burada görüntülenir ve **İleri'yi** seçebilirsiniz.
 
     1. **Site adı** alanına, içerik merkezi sitenize vermek istediğiniz adı yazın.
     

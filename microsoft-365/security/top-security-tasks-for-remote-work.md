@@ -17,12 +17,12 @@ ms.collection:
 - remotework
 ms.custom: admindeeplinkDEFENDER
 description: İş e-postanızı ve verilerinizi fidye yazılımı, kimlik avı ve kötü amaçlı ekler gibi siber tehditlere karşı koruyun.
-ms.openlocfilehash: 3c3a6ad89a795a45a0f76f868fbc6d23a52b963b
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: bc1dd84e83e5c5f1828e65203585d38acc28de5e
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319231"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617270"
 ---
 # <a name="top-12-tasks-for-security-teams-to-support-working-from-home"></a>Güvenlik ekiplerinin evden çalışmayı desteklemesi için en önemli 12 görev
 
@@ -33,10 +33,10 @@ ms.locfileid: "65319231"
 
 Microsoft'un iş planlarından birini kullanan küçük veya orta ölçekli bir kuruluşsanız, bunun yerine şu kaynaklara bakın:
 
-- [İş planları için Microsoft 365 güvenliğini sağlamaya yönelik en iyi yöntemler](../admin/security-and-compliance/secure-your-business-data.md)
+- [İş için Microsoft 365 planlarının güvenliğini sağlamaya yönelik en iyi yöntemler](../admin/security-and-compliance/secure-your-business-data.md)
 - [Kampanyalar için Microsoft 365](../business-premium/index.md) (Microsoft 365 İş için önerilen bir güvenlik yapılandırması içerir)
 
-Kurumsal planlarımızı kullanan müşteriler için Microsoft, aşağıdaki tabloda listelenen ve hizmet planınız için geçerli olan görevleri tamamlamanızı önerir. Microsoft 365 kurumsal plan satın almak yerine abonelikleri birleştiriyorsanız, aşağıdakileri not edin:
+Kurumsal planlarımızı kullanan müşteriler için Microsoft, aşağıdaki tabloda listelenen ve hizmet planınız için geçerli olan görevleri tamamlamanızı önerir. Microsoft 365 kurumsal planı satın almak yerine abonelikleri birleştiriyorsanız aşağıdakileri not edin:
 
 - Microsoft 365 E3 Enterprise Mobility + Security (EMS) E3 ve Azure AD P1 içerir
 - Microsoft 365 E5 EMS E5 ve Azure AD P2 içerir
@@ -58,7 +58,7 @@ Kurumsal planlarımızı kullanan müşteriler için Microsoft, aşağıdaki tab
 |11|[Bulut Uygulamaları için Microsoft Defender’ı kullanmaya başlayın](#11-get-started-with-microsoft-defender-for-cloud-apps)|||![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |12|[Tehditleri izleme ve eylem gerçekleştirme](#12-monitor-for-threats-and-take-action)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 
-Başlamadan önce Microsoft 365 Defender <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">portalında Microsoft 365</a> [Güvenli Puanınızı](./defender/microsoft-secure-score.md) denetleyin. Merkezi bir panodan Microsoft 365 kimlikleriniz, verileriniz, uygulamalarınız, cihazlarınız ve altyapınızın güvenliğini izleyebilir ve geliştirebilirsiniz. Önerilen güvenlik özelliklerini yapılandırma, güvenlikle ilgili görevleri gerçekleştirme (raporları görüntüleme gibi) veya üçüncü taraf bir uygulama veya yazılımla önerileri ele almak için size puan verilir. Bu makalede önerilen görevler puanınızı yükseltir.
+Başlamadan önce <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında</a> [Microsoft 365 Güvenli Puanınızı](./defender/microsoft-secure-score.md) denetleyin. Merkezi bir panodan Microsoft 365 kimlikleriniz, verileriniz, uygulamalarınız, cihazlarınız ve altyapınızın güvenliğini izleyebilir ve geliştirebilirsiniz. Önerilen güvenlik özelliklerini yapılandırma, güvenlikle ilgili görevleri gerçekleştirme (raporları görüntüleme gibi) veya üçüncü taraf bir uygulama veya yazılımla önerileri ele almak için size puan verilir. Bu makalede önerilen görevler puanınızı yükseltir.
 
 :::image type="content" source="../media/secure-score.png" alt-text="Microsoft 365 Defender portalındaki Microsoft Güvenli Puan ekranı" lightbox="../media/secure-score.png":::
 
@@ -103,9 +103,9 @@ Planların özeti de dahil olmak üzere genel bakış için bkz. [Office 365 iç
 
 Genel Yöneticiniz şu korumaları yapılandırabilir:
 
-- [Kasa Bağlantıları ilkelerini ayarlama](office-365-security/set-up-safe-links-policies.md)
-- [Kasa Bağlantıları için genel ayarları yapılandırma](office-365-security/configure-global-settings-for-safe-links.md)
-- [Kasa Ek ilkelerini ayarlama](office-365-security/set-up-safe-attachments-policies.md)
+- [Güvenli Bağlantılar ilkelerini ayarlama](office-365-security/set-up-safe-links-policies.md)
+- [Güvenli Bağlantılar için genel ayarları yapılandırma](office-365-security/configure-global-settings-for-safe-links.md)
+- [Güvenli Ekler ilkelerini ayarlama](office-365-security/set-up-safe-attachments-policies.md)
 
 Bu iş yükleri için Office 365 için Defender yapılandırmak için Exchange Online yöneticiniz ve SharePoint Online yöneticinizle birlikte çalışmanız gerekir:
 
@@ -144,7 +144,7 @@ Daha da iyisi, Microsoft bu uygulama koruma çerçevesini bir dizi koşullu eri�
 
 Mobil uygulama korumasını yapılandırmak için [Ortak kimlik ve cihaz erişim ilkeleri](./office-365-security/identity-access-policies.md) bölümündeki yönergeleri kullanın:
 
- 1. iOS ve Android için ilkeler oluşturmak için [APP veri koruma ilkelerini uygulama](./office-365-security/identity-access-policies.md#apply-app-data-protection-policies) kılavuzunu kullanın. Temel koruma için Düzey 2 (gelişmiş veri koruması) önerilir.
+ 1. iOS ve Android [için ilkeler oluşturmak için APP veri koruma ilkelerini uygulama](./office-365-security/identity-access-policies.md#apply-app-data-protection-policies) kılavuzunu kullanın. Temel koruma için Düzey 2 (gelişmiş veri koruması) önerilir.
  2. [Onaylı uygulamalar ve APP koruması gerektir](./office-365-security/identity-access-policies.md#require-approved-apps-and-app-protection) için bir koşullu erişim kuralı oluşturun.
 
 ## <a name="7-configure-mfa-and-conditional-access-for-guests-including-intune-mobile-app-protection"></a>7: Intune mobil uygulama koruması da dahil olmak üzere konuklar için MFA ve koşullu erişimi yapılandırma
@@ -165,13 +165,13 @@ Oluşturduğunuz Intune mobil uygulama koruma ilkeleri, onaylı uygulamalar ve A
 
 ## <a name="8-enroll-pcs-into-device-management-and-require-compliant-pcs"></a>8: Bilgisayarları cihaz yönetimine kaydetme ve uyumlu bilgisayarlar gerektirme
 
-İş gücünüzün cihazlarını kaydetmek için çeşitli yöntemler vardır. Her yöntem cihazın sahipliğine (kişisel veya kurumsal), cihaz türüne (iOS, Windows, Android) ve yönetim gereksinimlerine (sıfırlama, benzite, kilitleme) bağlıdır. Bu işlem biraz zaman alabilir. Bkz. [Cihazları Microsoft Intune kaydetme](/mem/intune/enrollment/).
+İş gücünüzün cihazlarını kaydetmek için çeşitli yöntemler vardır. Her yöntem cihazın sahipliğine (kişisel veya kurumsal), cihaz türüne (iOS, Windows, Android) ve yönetim gereksinimlerine (sıfırlama, benzim, kilitleme) bağlıdır. Bu işlem biraz zaman alabilir. Bkz. [Cihazları Microsoft Intune kaydetme](/mem/intune/enrollment/).
 
 Başlamanın en hızlı yolu[, Windows 10 cihazlar için otomatik kayıt ayarlamaktır](/mem/intune/enrollment/quickstart-setup-auto-enrollment).
 
 Bu öğreticilerden de yararlanabilirsiniz:
 
-- [Windows cihazları Intune kaydetmek için Autopilot kullanma](/mem/intune/enrollment/tutorial-use-autopilot-enroll-devices)
+- [Windows cihazlarını Intune kaydetmek için Autopilot kullanma](/mem/intune/enrollment/tutorial-use-autopilot-enroll-devices)
 - [iOS/iPadOS cihazlarını Intune kaydetmek için Apple Business Manager'da (ABM) Apple'ın Kurumsal Cihaz Kaydı özelliklerini kullanma](/mem/intune/enrollment/tutorial-use-device-enrollment-program-enroll-ios)
 
 Cihazları kaydettikten sonra, [şu ilkeleri oluşturmak için Ortak kimlik ve cihaz erişim ilkeleri'ndeki](./office-365-security/identity-access-policies.md) yönergeleri kullanın:
@@ -187,7 +187,7 @@ Bir cihazı yalnızca bir kuruluş yönetebilir, bu nedenle konuk hesaplarını 
 
 VPN yoğunlaştırıcıları, merkezi ağ çıkış ekipmanları (ara sunucular ve veri kaybı önleme cihazları gibi), merkezi internet bant genişliği, backhaul MPLS devreleri, NAT özelliği vb. gibi ağ öğeleri, bunları kullanan tüm işletmenin yükü nedeniyle aniden muazzam bir yük altına konur. Sonuçta düşük performans ve üretkenlik ile birlikte evden çalışmaya uyum sağlayan kullanıcılar için kötü bir kullanıcı deneyimi elde edilir.
 
-Trafiği bir kurumsal ağ üzerinden geri yönlendirerek geleneksel olarak sağlanan korumalardan bazıları, kullanıcılarınızın eriştiği bulut uygulamaları tarafından sağlanır. Bu makalede bu adıma ulaştıysanız, Microsoft 365 hizmetleri ve verileri için bir dizi gelişmiş bulut güvenliği denetimi uygulamış olursunuz. Bu denetimler gerçekleştiğinde, uzak kullanıcıların trafiğini doğrudan Office 365 yönlendirmeye hazır olabilirsiniz. Diğer uygulamalara erişim için hala bir VPN bağlantısına ihtiyacınız varsa, bölünmüş tünel uygulayarak performansınızı ve kullanıcı deneyiminizi büyük ölçüde geliştirebilirsiniz. Kuruluşunuzda anlaşmaya vardığınızda, bu işlem iyi eşgüdümlü bir ağ ekibi tarafından bir gün içinde gerçekleştirilebilir.
+Trafiği bir kurumsal ağ üzerinden geri yönlendirerek geleneksel olarak sağlanan korumalardan bazıları, kullanıcılarınızın eriştiği bulut uygulamaları tarafından sağlanır. Bu makaledeki bu adıma ulaştıysanız, Microsoft 365 hizmetleri ve verileri için bir dizi gelişmiş bulut güvenliği denetimi uygulamış olursunuz. Bu denetimler gerçekleştiğinde, uzak kullanıcıların trafiğini doğrudan Office 365 yönlendirmeye hazır olabilirsiniz. Diğer uygulamalara erişim için hala bir VPN bağlantısına ihtiyacınız varsa, bölünmüş tünel uygulayarak performansınızı ve kullanıcı deneyiminizi büyük ölçüde geliştirebilirsiniz. Kuruluşunuzda anlaşmaya vardığınızda, bu işlem iyi eşgüdümlü bir ağ ekibi tarafından bir gün içinde gerçekleştirilebilir.
 
 Daha fazla bilgi için Docs'ta şu kaynaklara bakın:
 
@@ -212,7 +212,7 @@ Microsoft 365, kuruluşunuzdaki kullanıcıları bilgilendirmeye yardımcı olma
 |Kavram|Kaynaklar|
 |---|---|
 |Microsoft 365|[Özelleştirilebilir öğrenme yolları](/office365/customlearning/) <p>Bu kaynaklar, kuruluşunuzdaki son kullanıcılar için eğitimi bir araya getirebilmenize yardımcı olabilir|
-|Microsoft 365 güvenlik|[Learning modülü: kuruluşunuzun güvenliğini Microsoft 365 yerleşik, akıllı güvenlikle sağlama](/learn/modules/security-with-microsoft-365) <p>Bu modül, Microsoft 365 güvenlik özelliklerinin birlikte nasıl çalıştığını açıklamanıza ve bu güvenlik özelliklerinin avantajlarını açıklamanıza olanak tanır.|
+|Microsoft 365 güvenliği|[Öğrenme modülü: Microsoft 365'ten yerleşik ve akıllı güvenlikle kuruluşunuzun güvenliğini sağlama](/learn/modules/security-with-microsoft-365) <p>Bu modül, Microsoft 365 güvenlik özelliklerinin birlikte nasıl çalıştığını açıklamanızı ve bu güvenlik özelliklerinin avantajlarını açıklamanızı sağlar.|
 |Çok faktörlü kimlik doğrulaması|[İki aşamalı doğrulama: Ek doğrulama sayfası nedir?](/azure/active-directory/user-help/multi-factor-authentication-end-user-first-time) <p>Bu makale, son kullanıcıların çok faktörlü kimlik doğrulamasının ne olduğunu ve kuruluşunuzda neden kullanıldığını anlamasına yardımcı olur.|
 
 Microsoft, bu kılavuza ek olarak, kullanıcılarınızın bu makalede açıklanan eylemleri gerçekleştirmelerini önerir: [Hesabınızı ve cihazlarınızı korsanlara ve kötü amaçlı yazılımlara karşı koruma](https://support.office.com/article/066d6216-a56b-4f90-9af3-b3a1e9a327d6.aspx). Bu eylemler şunlardır:
@@ -227,13 +227,13 @@ Microsoft, kullanıcıların aşağıdaki makalelerde önerilen eylemleri gerçe
 
 - [Gmail hesabınızı 2 aşamalı doğrulama ile koruma](https://go.microsoft.com/fwlink/p/?linkid=2015688)
 
-## <a name="11-get-started-with-microsoft-defender-for-cloud-apps"></a>11: Microsoft Defender for Cloud Apps ile Kullanmaya başlayın
+## <a name="11-get-started-with-microsoft-defender-for-cloud-apps"></a>11: Microsoft Defender for Cloud Apps kullanmaya başlama
 
-[Microsoft Defender for Cloud Apps](/cloud-app-security), tüm bulut hizmetlerinizde siber tehditleri belirlemek ve mücadele etmek için zengin görünürlük, veri seyahati üzerinde denetim ve gelişmiş analiz sağlar. Bulut için Defender Uygulamaları kullanmaya başladıktan sonra, anomali algılama ilkeleri otomatik olarak etkinleştirilir, ancak Bulut için Defender Uygulamalar'ın tüm anomali algılama uyarılarının tetiklenmediği yedi günlük ilk öğrenme süresi vardır.
+[Microsoft Defender for Cloud Apps](/cloud-app-security), tüm bulut hizmetlerinizde siber tehditleri belirlemek ve mücadele etmek için zengin görünürlük, veri seyahati üzerinde denetim ve gelişmiş analiz sağlar. Cloud Apps için Defender'ı kullanmaya başladıktan sonra, anomali algılama ilkeleri otomatik olarak etkinleştirilir, ancak Cloud Apps için Defender'ın ilk öğrenme süresi yedi gündür ve bu süre boyunca tüm anomali algılama uyarıları tetiklenmez.
 
-şimdi Bulut için Defender Uygulamaları ile Kullanmaya başlayın. Daha sonra daha gelişmiş izleme ve denetimler ayarlayabilirsiniz.
+Cloud Apps için Defender'ı kullanmaya başlayın. Daha sonra daha gelişmiş izleme ve denetimler ayarlayabilirsiniz.
 
-- [Hızlı Başlangıç: Bulut için Defender Uygulamaları ile Kullanmaya başlayın](/cloud-app-security/getting-started-with-cloud-app-security)
+- [Hızlı Başlangıç: Cloud Apps için Defender'ı kullanmaya başlama](/cloud-app-security/getting-started-with-cloud-app-security)
 - [Anlık davranış analizi ve anomali algılaması alma](/cloud-app-security/anomaly-detection-policy)
 - [Microsoft Defender for Cloud Apps hakkında daha fazla bilgi edinin](/cloud-app-security/what-is-cloud-app-security)
 - [Yeni özellikleri ve özellikleri gözden geçirme](/cloud-app-security/release-notes)
@@ -243,11 +243,11 @@ Microsoft, kullanıcıların aşağıdaki makalelerde önerilen eylemleri gerçe
 
 Microsoft 365, durumu izlemenin ve uygun eylemleri gerçekleştirmenin çeşitli yollarını içerir. En iyi başlangıç noktanız, kuruluşunuzun [Microsoft Güvenli Puanını](./defender/microsoft-secure-score.md) ve dikkatinizi gerektiren uyarıları veya varlıkları görüntüleyebileceğiniz <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalıdır</a>.
 
-- [Microsoft 365 Defender portalıyla Kullanmaya başlayın](./defender/microsoft-365-defender.md#the-microsoft-365-defender-portal)
-- [Microsoft 365'de güvenlik portallarına bakın](./defender/portals.md)
+- [Microsoft 365 Defender portalını kullanmaya başlama](./defender/microsoft-365-defender-portal.md)
+- [Microsoft 365'te güvenlik portallarına bakın](./defender/portals.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Tebrikler! En önemli güvenlik korumalarından bazılarını hızlı bir şekilde uyguladınız ve kuruluşunuz çok daha güvenlidir. Artık tehdit koruma özellikleri (Uç Nokta için Microsoft Defender dahil), veri sınıflandırma ve koruma özellikleri ve yönetim hesaplarının güvenliğini sağlama konusunda daha da ileri gitmeye hazırsınız. Microsoft 365 için daha ayrıntılı, yöntemsel güvenlik önerileri kümesi için bkz. [Microsoft 365 İş İçin Güvenlik Karar Alıcılar (BDM)](Microsoft-365-security-for-bdm.md).
+Tebrikler! En önemli güvenlik korumalarından bazılarını hızlı bir şekilde uyguladınız ve kuruluşunuz çok daha güvenlidir. Artık tehdit koruma özellikleri (Uç Nokta için Microsoft Defender dahil), veri sınıflandırma ve koruma özellikleri ve yönetim hesaplarının güvenliğini sağlama konusunda daha da ileri gitmeye hazırsınız. Microsoft 365 için daha ayrıntılı ve yöntemli bir güvenlik önerileri kümesi için bkz. [İş İçin Microsoft 365 Güvenliği Karar Alıcılar (BDM'ler).](Microsoft-365-security-for-bdm.md)
 
-Ayrıca docs.microsoft.com/security'da Microsoft'un yeni [Bulut için Defender](/security) ziyaret edin.
+Microsoft'un yeni Bulut için Defender [on docs.microsoft.com/security'ni](/security) de ziyaret edin.

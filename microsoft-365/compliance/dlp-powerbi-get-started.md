@@ -1,5 +1,5 @@
 ---
-title: Veriler için veri kaybı önlemeyi Power BI
+title: Power BI için DLP kullanmaya başlama
 f1.keywords:
 - CSH
 ms.author: chrfox
@@ -19,89 +19,91 @@ ms.collection:
 ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
-description: DLP'yi PowerBI konumlarına hazırlama ve dağıtma.
-ms.openlocfilehash: a1ea5321b77db1b4e7741f4d41cdd485adbd0b97
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+description: DLP için hazırlanma ve PowerBI konumlarına dağıtma.
+ms.openlocfilehash: f831d42898e491258a53423c1d59b9f50c0b289d
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63717350"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66616940"
 ---
-# <a name="get-started-with-data-loss-prevention-policies-for-power-bi-preview"></a>Yeni yönetim (önizleme) için Veri kaybı önleme Power BI ilkeleriyle çalışmaya başlama
+# <a name="get-started-with-data-loss-prevention-policies-for-power-bi-preview"></a>Power BI için Veri kaybını önleme ilkelerini kullanmaya başlama (önizleme)
 
-Kuruluşların hassas verilerini algılamalarına ve korumalarına yardımcı olmak için veri [Microsoft 365 önleme (DLP) güvenlik güvenliklerini](/microsoft-365/compliance/dlp-learn-about-dlp) desteklemesini Power BI. PowerBI veri kümesi DLP ilkesinde yer alan ölçütle eşlendiğinde, hassas içeriğin doğasını açıklayan bir uyarı tetiklenir. Bu uyarı, yöneticiler tarafından izlenmesi ve yönetimi için Microsoft  uyumluluk portalında yer alan veri kaybı önleme Uyarılar sekmesine de kaydedilir. Ayrıca yöneticilere ve belirli kullanıcılara e-posta uyarıları gönderilebilir.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-## <a name="considerations-and-limitations"></a>Dikkate alınacak noktalar ve sınırlamalar
+Kuruluşların hassas verilerini algılamalarına ve korumalarına yardımcı olmak için [Microsoft Purview veri kaybı önleme (DLP) ilkeleri](/microsoft-365/compliance/dlp-learn-about-dlp) Power BI'ı destekler. Bir PowerBI veri kümesi bir DLP ilkesindeki ölçütle eşleştiğinde, hassas içeriğin doğasını açıklayan bir uyarı tetiklenebilir. Bu uyarı, yöneticiler tarafından izlenmesi ve yönetilmesi için Microsoft uyumluluk portalındaki veri kaybı önleme **Uyarıları** sekmesine de kaydedilir. Ayrıca, yöneticilere ve belirtilen kullanıcılara e-posta uyarıları gönderilebilir.
 
-- DLP ilkeleri çalışma alanları için geçerlidir. Yalnızca Nesil2'nin Premium alanında barındırılan çalışma alanları kullanılabilir.
-- DLP veri kümesi değerlendirme iş yükleri kapasiteyi etkiler. DLP değerlendirme iş yüklerinin tarifesi desteklenmiyor.
-- Hem klasik hem de yeni deneyim çalışma alanları, Yeni Nesil2'de farklı bir kapasitede barındırıldıklarında Premium destek sağlar.
-- Bu çalışma için özel bir DLP özel ilkesi Power BI. DLP şablonları desteklenmiyor.
-- DLP konumu destek duyarlılık etiketlerine ve hassas bilgi türlerine koşullar olarak uygulanan DLP İlkeleri. 
-- Power BI için DLP ilkeleri, [DirectQuery](/power-bi/connect-data/desktop-use-directquery) veya canlı bağlantı yoluyla kendi veri kaynağına bağlanan örnek veri kümelerinde[, akış](/power-bi/connect-data/service-real-time-streaming) veri kümelerinde veya veri [kümelerinde desteklanmaz](/power-bi/connect-data/desktop-directquery-about#live-connections).
-- Bağımsız bulutlarda Power BI DLP ilkeleri desteklanmaz.
+## <a name="considerations-and-limitations"></a>Dikkat edilmesi gerekenler ve sınırlamalar
 
-## <a name="licensing-and-permissions"></a>Lisans ve izinler
+- DLP ilkeleri çalışma alanları için geçerlidir. Yalnızca Premium 2. Nesil kapasitelerinde barındırılan çalışma alanları desteklenir. Daha fazla bilgi için bkz. [Power BI Premium 2. Nesil nedir?](/power-bi/enterprise/service-premium-gen2-what-is).
+- DLP veri kümesi değerlendirme iş yükleri kapasiteyi etkiler. DLP değerlendirme iş yükleri için ölçüm desteklenmez.
+- Hem klasik hem de yeni deneyim çalışma alanları, Premium 2. Nesil kapasitelerinde barındırılıyorsa desteklenir.
+- Power BI için özel bir DLP özel ilkesi oluşturmanız gerekir. DLP şablonları desteklenmez.
+- DLP konumuna uygulanan DLP ilkeleri, duyarlılık etiketlerini ve hassas bilgi türlerini koşul olarak destekler. 
+- Power BI için DLP ilkeleri, [DirectQuery](/power-bi/connect-data/desktop-use-directquery) veya [canlı bağlantı](/power-bi/connect-data/desktop-directquery-about#live-connections) aracılığıyla veri kaynaklarına bağlanan örnek veri kümeleri, [akış veri kümeleri](/power-bi/connect-data/service-real-time-streaming) veya veri kümeleri için desteklenmez.
+- Power BI için DLP ilkeleri bağımsız bulutlarda desteklenmez.
 
-### <a name="skusubscriptions-licensing"></a>SKU/abonelik lisansı
+## <a name="licensing-and-permissions"></a>Lisanslama ve izinler
 
-Power BI için DLP'ye başlamadan önce, Microsoft 365 [onaylamanız gerekir](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1). Tam lisanslama kılavuzu için, güvenlik [Microsoft 365 uyumluluğu için güvenlik & bakın](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
+### <a name="skusubscriptions-licensing"></a>SKU/abonelik lisanslama
+
+Power BI için DLP'yi kullanmaya başlamadan önce [Microsoft 365 aboneliğinizi](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1) onaylamanız gerekir. Tam lisanslama yönergeleri için bkz. [Güvenlik & uyumluluğu için Microsoft 365 kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
 
 ### <a name="permissions"></a>İzinler
 
-Etkinlik gezgininde Power BI için [DLP'den veriler ekleyebilirsiniz](/microsoft-365/compliance/data-classification-activity-explorer). Etkinlik gezginine izin veren dört rol vardır; verilere erişim için kullanıyorsanız bu hesaplardan herhangi birinin üyesi olması gerekir.
+Power BI için DLP verileri [Etkinlik gezgininde](/microsoft-365/compliance/data-classification-activity-explorer) görüntülenebilir. Etkinlik gezginine izin veren dört rol vardır; verilere erişmek için kullandığınız hesap bunlardan herhangi birinin üyesi olmalıdır.
 
 - Genel yönetici
 - Uyumluluk yöneticisi
 - Güvenlik yöneticisi
 - Uyumluluk veri yöneticisi
 
-## <a name="how-dlp-policies-for-power-bi-work"></a>Yeni iş için DLP Power BI çalışma
+## <a name="how-dlp-policies-for-power-bi-work"></a>Power BI için DLP ilkeleri nasıl çalışır?
 
-Uyumluluk portalının veri kaybını önleme bölümünde bir DLP ilkesi tanımlarsınız. Bkz [. Veri kaybı önleme ilkesi tasarlama](dlp-policy-design.md#design-a-data-loss-prevention-policy). İlkede, algılamak istediğiniz duyarlılık etiketlerini belirtirsiniz. Ayrıca, ilke belirtilen duyarlılık etiketinin uygulandığı bir veri kümesi algılayana kadar gerçekleşecek eylemlerini de belirtirsiniz. DLP ilkeleri bu işlemler için iki Power BI:
+Uyumluluk portalının veri kaybı önleme bölümünde bir DLP ilkesi tanımlarsınız. Bkz. [Veri kaybı önleme ilkesi tasarlama](dlp-policy-design.md#design-a-data-loss-prevention-policy). İlkede, algılamak istediğiniz duyarlılık etiketlerini belirtirsiniz. Ayrıca, ilke belirtilen duyarlılık etiketi uygulanmış bir veri kümesi algıladığında gerçekleşecek eylemleri de belirtirsiniz. DLP ilkeleri Power BI için iki eylemi destekler:
 
 - İlke ipuçları aracılığıyla kullanıcı bildirimi.
-- Uyarılar. Uyarılar, yöneticilere ve kullanıcılara e-postayla gönderebilirsiniz. Ayrıca yöneticiler, uyumluluk merkezinin Uyarılar sekmesindeki **uyarıları** izleyebilir ve yönetebilir. 
+- Uyarı. Uyarılar, yöneticilere ve kullanıcılara e-posta ile gönderilebilir. Ayrıca, yöneticiler uyumluluk merkezindeki **Uyarılar** sekmesinde uyarıları izleyebilir ve yönetebilir. 
 
-Bir veri kümesi DLP tarafından değerlendirilip DLP ilkesi koşullarıyla eşlenince, ilkede tanımlanan eylemler uygulanır. Veri kümesi aşağıdaki gibi olduğunda, veri kümesi değerlendirilir:
+Bir veri kümesi DLP tarafından değerlendirildiğinde ve bir DLP ilkesindeki koşullarla eşleştiğinde, ilkede tanımlanan eylemler uygulanır. Bir veri kümesi aşağıdaki durumlarda değerlendirilir:
 
-- Yayımla
+- Yayımlamak
 - Yeniden Yayımla
-- isteğe bağlı yenileme
-- Zamanlanan yenileme
+- İsteğe bağlı yenileme
+- Zamanlanmış yenileme
 
 >[!NOTE]
-> Aşağıdakilerden biri doğruysa, veri kümesi DLP değerlendirmesini gerçekleştirin:
-> - Olayın başlatıcısı hizmet sorumlusudır.
+> Aşağıdakilerden biri doğruysa veri kümesinin DLP değerlendirmesi gerçekleşmez:
+> - Olayın başlatıcısı bir hizmet sorumlusudur.
 > - Veri kümesi sahibi bir hizmet sorumlusu veya B2B kullanıcısıdır.
 
-### <a name="what-happens-when-a-dataset-matches-a-dlp-policy"></a>Veri kümesi bir DLP ilkesiyle eşleni olduğunda ne olur?
+### <a name="what-happens-when-a-dataset-matches-a-dlp-policy"></a>Veri kümesi DLP ilkesiyle eşleştiğinde ne olur?
 
-Veri kümesi bir DLP ilkesiyle eş olduğunda:
+Bir veri kümesi DLP ilkesiyle eşleştiğinde:
 
-- İlkenin yapılandırılmış kullanıcı bildirimi varsa, kullanıcının DLP ilkesiyle eş Power BI için görev çubuğunda kalkan simgesiyle işaretlenir.
+- İlkenin yapılandırılmış kullanıcı bildirimi varsa, Power BI hizmeti bir DLP ilkesiyle eşleşeceğini belirtmek için bir kalkan simgesiyle işaretlenir.
 
-    ![Listelerde veri kümesinde ilke ipucu rozetinin ekran görüntüsü.](../media/dlp-power-bi-policy-tip-on-dataset.png)
+    ![Listelerdeki veri kümesinde ilke ipucu rozetinin ekran görüntüsü.](../media/dlp-power-bi-policy-tip-on-dataset.png)
 
-    İlkenin eşleşmesi ve algılanan hassas bilgi türünün nasıl iş açılması gerektiğini açıklayan bir ilke ipucu görmek için veri kümesi ayrıntıları sayfasını açın.
+    İlke eşleşmesini ve algılanan hassas bilgi türünün nasıl işlenmesi gerektiğini açıklayan bir ilke ipucu görmek için veri kümesi ayrıntıları sayfasını açın.
 
-    ![Veri kümesi ayrıntıları sayfasında ilke ipucu ekran görüntüsü.](../media/dlp-power-bi-policy-tip-in-dataset-details.png)
+    ![Veri kümesi ayrıntıları sayfasındaki ilke ipucunun ekran görüntüsü.](../media/dlp-power-bi-policy-tip-in-dataset-details.png)
 
     >[!NOTE]
-    > İlke ipucu gizlendiğinde silinmez. Sayfayı bir sonraki ziyaretinde görünecektir.
+    > İlke ipucunu gizlerseniz silinmez. Sayfayı bir sonraki ziyaret ışınızda görüntülenir.
 
-- İlkede uyarılar etkinse, uyumluluk merkezinin **dlp Uyarıları** sekmesine bir uyarı kaydedilir ve (yapılandırıldısa) yöneticilere ve/veya belirtilen kullanıcılara bir e-posta gönderilir. Aşağıdaki resimde, uyumluluk **merkezinin** veri kaybı önleme bölümündeki Uyarılar sekmesi görüntülenir.
+- İlkede uyarılar etkinleştirilirse, uyumluluk merkezindeki dlp **Uyarıları** sekmesine bir uyarı kaydedilir ve (yapılandırıldıysa) yöneticilere ve/veya belirtilen kullanıcılara bir e-posta gönderilir. Aşağıdaki görüntüde, Microsoft Purview uyumluluk portalı veri kaybı önleme bölümündeki **Uyarılar** sekmesi gösterilmektedir.
 
-    ![Uyumluluk merkezinde Uyarılar sekmesinin ekran görüntüsü.](../media/dlp-power-bi-alerts-tab.png)
+    ![Uyumluluk merkezindeki Uyarılar sekmesinin ekran görüntüsü.](../media/dlp-power-bi-alerts-tab.png)
 
-## <a name="configure-a-dlp-policy-for-power-bi"></a>DLP ilkesi yapılandırma Power BI
+## <a name="configure-a-dlp-policy-for-power-bi"></a>Power BI için DLP ilkesi yapılandırma
 
-DLP ilkesi oluşturma [, test etme ve ayarlama'daki yordamları izleyin ve](create-test-tune-dlp-policy.md#create-test-and-tune-a-dlp-policy) özel şablonu kullanın.
+[DLP ilkesi oluşturma, test edin ve ayarlayın ve](create-test-tune-dlp-policy.md#create-test-and-tune-a-dlp-policy) özel şablonu kullanın.
 
 > [!IMPORTANT]
-> İlke için DLP ilkenizin konumlarını Power BI, yalnızca dış Power BI seçin. Başka konum seçme, bu yapılandırma desteklenmiyor. 
+> Power BI için DLP ilkenizin konumlarını seçtiğinizde yalnızca Power BI konumunu seçin. Başka bir konum seçmeyin, bu yapılandırma desteklenmez. 
 
-<!--1. Log into the [Microsoft 365 compliance portal](https://compliance.microsoft.com).
+<!--1. Log into the [Microsoft Purview compliance portal](https://compliance.microsoft.com).
 
 1. Choose the **Data loss prevention** solution in the navigation pane, select the **Policies** tab, choose **Create policy**.
 
@@ -221,7 +223,7 @@ Assign a severity level that will be shown in alerts generated from this policy.
  
 ## Monitor and manage policy alerts
 
-Log into the Microsoft 365 compliance portal and navigate to **Data loss prevention > Alerts**.
+Log into the Microsoft Purview compliance portal and navigate to **Data loss prevention > Alerts**.
 
 ![Screenshot of D L P Alerts tab.](media/service-security-dlp-policies-for-power-bi/power-bi-dlp-alerts-tab.png)
 
@@ -230,5 +232,5 @@ Click on an alert to start drilling down to its details and to see management op
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [Veri kaybı önleme hakkında daha fazla bilgi edinme](/microsoft-365/compliance/dlp-learn-about-dlp)
-- [Power BI'de duyarlılık etiketleri](/power-bi/enterprise/service-security-sensitivity-label-overview)
-- [Denetim şeması için duyarlılık etiketleri Power BI](/power-bi/enterprise/service-security-sensitivity-label-audit-schema)
+- [Power BI'da duyarlılık etiketleri](/power-bi/enterprise/service-security-sensitivity-label-overview)
+- [Power BI'da duyarlılık etiketleri için şemayı denetleme](/power-bi/enterprise/service-security-sensitivity-label-audit-schema)

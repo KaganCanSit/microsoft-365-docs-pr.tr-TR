@@ -16,22 +16,22 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
-description: Office 365 için Microsoft Defender otomatik araştırma ve yanıt özelliklerini kullanarak Kullanmaya başlayın.
+description: Office 365 için Microsoft Defender'de otomatik araştırma ve yanıt özelliklerini kullanmaya başlayın.
 ms.custom:
 - air
 - seo-marvel-mar2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ca64509321ff43bbe8b7baf7ec7dfa270d9afdc4
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 0fda154f8eb52ddab024a7f5bb02f980c9a05894
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941533"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617162"
 ---
 # <a name="automated-investigation-and-response-air-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'de otomatik araştırma ve yanıt (AIR)
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Uygulandığı öğe**
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
@@ -81,25 +81,25 @@ Her otomatik araştırma sırasında ve sonrasında güvenlik operasyonları eki
 - [Kötü amaçlı yazılımdan koruma](protect-against-threats.md#part-1---anti-malware-protection-in-eop)
 - [Kimlik avından koruma](../office-365-security/protect-against-threats.md#part-2---anti-phishing-protection-in-eop-and-defender-for-office-365)
 - [İstenmeyen posta önleme koruma](protect-against-threats.md#part-3---anti-spam-protection-in-eop)
-- [Kasa Bağlantıları ve Kasa Ekleri](protect-against-threats.md#part-4---protection-from-malicious-urls-and-files-safe-links-and-safe-attachments-in-defender-for-office-365)
+- [Güvenli Bağlantılar ve Güvenli Ekler](protect-against-threats.md#part-4---protection-from-malicious-urls-and-files-safe-links-and-safe-attachments-in-defender-for-office-365)
 
 Ayrıca, [kuruluşunuzun uyarı ilkelerini](../../compliance/alert-policies.md), özellikle [de Tehdit yönetimi kategorisindeki varsayılan ilkeleri gözden geçirmeyi](../../compliance/alert-policies.md#default-alert-policies) unutmayın.
 
 ## <a name="which-alert-policies-trigger-automated-investigations"></a>Hangi uyarı ilkeleri otomatik araştırmayı tetikler?
 
-Microsoft 365, Exchange yönetici izinlerinin kötüye kullanımı, kötü amaçlı yazılım etkinliği, olası dış ve iç tehditler ile bilgi idaresi risklerinin belirlenmesine yardımcı olan birçok yerleşik uyarı ilkesi sağlar. [Varsayılan uyarı ilkelerinin](../../compliance/alert-policies.md#default-alert-policies) bazıları otomatik araştırma tetikleyebilir. Aşağıdaki tabloda otomatik araştırma tetikleyen uyarılar, Microsoft 365 Defender portalındaki önem dereceleri ve bunların nasıl oluşturulduğu açıklanmaktadır:
+Microsoft 365, Exchange yönetici izinlerinin kötüye kullanımı, kötü amaçlı yazılım etkinliği, olası dış ve iç tehditler ve bilgi idaresi risklerini belirlemeye yardımcı olan birçok yerleşik uyarı ilkesi sağlar. [Varsayılan uyarı ilkelerinin](../../compliance/alert-policies.md#default-alert-policies) bazıları otomatik araştırma tetikleyebilir. Aşağıdaki tabloda otomatik araştırma tetikleyen uyarılar, Microsoft 365 Defender portalındaki önem dereceleri ve bunların nasıl oluşturulduğu açıklanmaktadır:
 
-|Uyarı|Önem|Uyarı nasıl oluşturulur?|
+|Uyarı|Önem derecesi|Uyarı nasıl oluşturulur?|
 |---|---|---|
-|Kötü amaçlı olabilecek bir URL tıklaması algılandı|**Yüksek**|Aşağıdakilerden herhangi biri gerçekleştiğinde bu uyarı oluşturulur: <ul><li>Kuruluşunuzdaki [Kasa Bağlantıları](safe-links.md) tarafından korunan bir kullanıcı kötü amaçlı bir bağlantıya tıklar</li><li>URL'ler için karar değişiklikleri Office 365 için Microsoft Defender</li><li>Kullanıcılar Kasa Bağlantılar uyarı sayfalarını geçersiz kılar (kuruluşunuzun [Kasa Bağlantılar ilkesine](set-up-safe-links-policies.md) göre).</li></ul> <p> Bu uyarıyı tetikleyen olaylar hakkında daha fazla bilgi için bkz. [Kasa Bağlantıları ilkelerini ayarlama](set-up-safe-links-policies.md).|
+|Kötü amaçlı olabilecek bir URL tıklaması algılandı|**Yüksek**|Aşağıdakilerden herhangi biri gerçekleştiğinde bu uyarı oluşturulur: <ul><li>Kuruluşunuzdaki [Güvenli Bağlantılar](safe-links.md) tarafından korunan bir kullanıcı kötü amaçlı bir bağlantıya tıklar</li><li>URL'ler için karar değişiklikleri Office 365 için Microsoft Defender</li><li>Kullanıcılar Güvenli Bağlantılar uyarı sayfalarını (kuruluşunuzun [Güvenli Bağlantılar ilkesine](set-up-safe-links-policies.md) göre) geçersiz kılar.</li></ul> <p> Bu uyarıyı tetikleyen olaylar hakkında daha fazla bilgi için bkz. [Güvenli Bağlantılar ilkelerini ayarlama](set-up-safe-links-policies.md).|
 |E-posta iletisi bir kullanıcı tarafından kötü amaçlı yazılım veya kimlik avı olarak bildirilir|**Bilgi**|Kuruluşunuzdaki kullanıcılar, [Rapor İletisi eklentisini veya Rapor](enable-the-report-message-add-in.md) Kimlik [Avı](enable-the-report-phish-add-in.md) eklentisini kullanarak iletileri kimlik avı e-postası olarak bildirdiğinde bu uyarı oluşturulur.|
 |Kötü amaçlı yazılım içeren e-posta iletileri teslimden sonra kaldırılır|**Bilgi**|Kötü amaçlı yazılım içeren tüm e-posta iletileri kuruluşunuzdaki posta kutularına teslim edildiğinde bu uyarı oluşturulur. Bu olay oluşursa, Microsoft [sıfır saatlik otomatik temizleme (ZAP)](zero-hour-auto-purge.md) kullanarak virüslü iletileri Exchange Online posta kutularından kaldırır.|
 |Kimlik avı URL'lerini içeren e-posta iletileri teslimden sonra kaldırılır|**Bilgi**|Bu uyarı, kimlik avı içeren iletiler kuruluşunuzdaki posta kutularına teslim edildiğinde oluşturulur. Bu olay oluşursa, Microsoft [zap](zero-hour-auto-purge.md) kullanarak Exchange Online posta kutularından virüslü iletileri kaldırır.|
 |Şüpheli e-posta gönderme desenleri algılandı|**Orta**|Bu uyarı, kuruluşunuzdaki biri şüpheli e-posta gönderdiğinde ve e-posta göndermesi kısıtlanma riskiyle karşılandığında oluşturulur. Uyarı, hesabın gizliliğinin ihlal edilmiş olduğunu ancak kullanıcıyı kısıtlayabilecek kadar ciddi olmadığını gösteren davranışlar için erken uyarıdır. <p> Nadir olsa da, bu ilke tarafından oluşturulan bir uyarı bir anomali olabilir. Ancak [, kullanıcı hesabının gizliliğinin ihlal edilip edilmediğini denetlemek iyi bir fikirdir](responding-to-a-compromised-email-account.md).|
-|Kullanıcının e-posta göndermesi kısıtlandı|**Yüksek**|Kuruluşunuzdaki birinin giden posta göndermesi kısıtlandığında bu uyarı oluşturulur. Bu uyarı genellikle [bir e-posta hesabının güvenliği aşıldığında sonuçlanır](responding-to-a-compromised-email-account.md). <p> Kısıtlı kullanıcılar hakkında daha fazla bilgi için bkz. [Microsoft 365'deki Kısıtlı Kullanıcılar portalından engellenen kullanıcıları kaldırma](removing-user-from-restricted-users-portal-after-spam.md).|
+|Kullanıcının e-posta göndermesi kısıtlandı|**Yüksek**|Kuruluşunuzdaki birinin giden posta göndermesi kısıtlandığında bu uyarı oluşturulur. Bu uyarı genellikle [bir e-posta hesabının güvenliği aşıldığında sonuçlanır](responding-to-a-compromised-email-account.md). <p> Kısıtlı kullanıcılar hakkında daha fazla bilgi için bkz. [Microsoft 365'teki Kısıtlı Kullanıcılar portalından engellenen kullanıcıları kaldırma](removing-user-from-restricted-users-portal-after-spam.md).|
 
 > [!TIP]
-> Uyarı ilkeleri hakkında daha fazla bilgi edinmek veya varsayılan ayarları düzenlemek için [Bkz. Microsoft Purview uyumluluk portalında uyarı ilkeleri](../../compliance/alert-policies.md).
+> Uyarı ilkeleri hakkında daha fazla bilgi edinmek veya varsayılan ayarları düzenlemek için [Microsoft Purview uyumluluk portalı uyarı ilkeleri bölümüne](../../compliance/alert-policies.md) bakın.
 
 ## <a name="required-permissions-to-use-air-capabilities"></a>AIR özelliklerini kullanmak için gerekli izinler
 
@@ -107,8 +107,8 @@ Microsoft 365, Exchange yönetici izinlerinin kötüye kullanımı, kötü amaç
 
 |Görev|Gerekli rol veya rol|
 |---|---|
-|AIR özelliklerini ayarlama|Aşağıdaki rollerden biri: <ul><li>Genel Yönetici</li><li>Güvenlik Yöneticisi</li></ul> <p> Bu roller [Azure Active Directory](/azure/active-directory/roles/permissions-reference) veya [Microsoft 365 Defender portalında](permissions-microsoft-365-security-center.md) atanabilir.|
-|Otomatik araştırma başlatın <p> --- veya --- <p> Önerilen eylemleri onaylama veya reddetme|[Azure Active Directory veya Microsoft 365 Defender](/azure/active-directory/roles/permissions-reference) [portalında](permissions-microsoft-365-security-center.md) atanan aşağıdaki rollerden biri: <ul><li>Genel Yönetici</li><li>Güvenlik Yöneticisi</li><li>Güvenlik İşleci</li><li>Güvenlik Okuyucusu <br> --- ve --- </li><li>Arama ve Temizleme (bu rol yalnızca [Microsoft 365 Defender portalında](permissions-microsoft-365-security-center.md) atanır. Orada yeni bir **E-posta & işbirliği** rol grubu oluşturmanız ve arama ve temizleme rolünü bu yeni rol grubuna eklemeniz gerekebilir.</li></ul>|
+|AIR özelliklerini ayarlama|Aşağıdaki rollerden biri: <ul><li>Genel Yönetici</li><li>Güvenlik Yöneticisi</li></ul> <p> Bu roller [Azure Active Directory'de](/azure/active-directory/roles/permissions-reference) veya [Microsoft 365 Defender portalında](permissions-microsoft-365-security-center.md) atanabilir.|
+|Otomatik araştırma başlatın <p> --- veya --- <p> Önerilen eylemleri onaylama veya reddetme|[Azure Active Directory'de](/azure/active-directory/roles/permissions-reference) veya [Microsoft 365 Defender portalında](permissions-microsoft-365-security-center.md) atanan aşağıdaki rollerden biri: <ul><li>Genel Yönetici</li><li>Güvenlik Yöneticisi</li><li>Güvenlik İşleci</li><li>Güvenlik Okuyucusu <br> --- ve --- </li><li>Arama ve Temizleme (bu rol yalnızca [Microsoft 365 Defender portalında](permissions-microsoft-365-security-center.md) atanır. Orada yeni bir **E-posta & işbirliği** rol grubu oluşturmanız ve arama ve temizleme rolünü bu yeni rol grubuna eklemeniz gerekebilir.</li></ul>|
 
 ## <a name="required-licenses"></a>Gerekli lisanslar
 
@@ -120,7 +120,7 @@ Microsoft 365, Exchange yönetici izinlerinin kötüye kullanımı, kötü amaç
 
 ## <a name="changes-are-coming-soon-in-your-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalınızda yakında değişiklikler geliyor
 
-Office 365 için Microsoft Defender'da ZATEN AIR özelliklerini kullanıyorsanız[, geliştirilmiş Microsoft 365 Defender portalında](../defender/microsoft-365-defender.md#the-microsoft-365-defender-portal) bazı değişiklikler görmek üzeresiniz.
+Office 365 için Microsoft Defender'da ZATEN AIR özelliklerini kullanıyorsanız[, geliştirilmiş Microsoft 365 Defender portalında](../defender/microsoft-365-defender-portal.md) bazı değişiklikler görmek üzeresiniz.
 
 :::image type="content" source="../../media/m3d-action-center-unified.png" alt-text="Birleşik İşlem merkezi" lightbox="../../media/m3d-action-center-unified.png":::
 
